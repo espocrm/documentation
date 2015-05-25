@@ -1,3 +1,5 @@
+#Roles Management
+
 ##Overview
 
 In order to restrict access for some users you need to use Roles. Administrator can manage roles in Administration panel. Each role defines an access to certain areas (scopes) which is applied to users who own that role.
@@ -12,14 +14,14 @@ For example, user belongs to team ‘Sales’. That team has single role ‘Sale
 
 ‘Salesman’ role is defined the following way:
 Lead:
-```read – team
-edit – own
-delete – no```
+`read – team`
+`edit – own`
+`delete – no`
 
 Opportunity:
-```read – team
-edit – own
-delete – no```
+`read – team`
+`edit – own`
+`delete – no`
 
 Users will be able to read only those leads and opportunities which belong to ‘Sales Department’ team (‘Teams’ field).
 User will be able to edit only those leads and opportunities which they are assigned to or those they have created.
@@ -29,13 +31,13 @@ We want to give more rights to a certain user who holds sales manager position i
 
 ‘Sales Manager’ role is defined the following way:
 Lead:
-```read – team
-edit – team
-delete – team```
+`read – team`
+`edit – team`
+`delete – team`
 
 Opportunity:
-```read – team
-edit – team
-delete – team```
+`read – team`
+`edit – team`
+`delete – team`
 
 Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
