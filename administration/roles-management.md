@@ -58,4 +58,4 @@ Set this parameter to restrict ability to re-assign entries to another user and/
 
 ##Default Permissions
 
-By default (if there are no any applied) users can read and edit all records. But can't remove any ones except those they have created and they are assigned to at the same time.
+By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
