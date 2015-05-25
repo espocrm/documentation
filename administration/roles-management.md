@@ -51,3 +51,7 @@ delete – team
 ```
 
 Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
+
+##Assignment Permission
+
+Set this parameter to restrict ability to re-assign entries to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
