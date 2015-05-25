@@ -32,38 +32,38 @@ So, you need to execute the displayed command in the terminal via SSH, or set th
 It should be 755 for directories, 644 for files, and 775 for `data` directory. 
 Also make sure that you have the correct _owner_ and _group_.
 
-{image1}
+![1](../_static/images/administration/installation/1.png)
 
 If you see the following screen, the permission is correct and you can start installing EspoCRM.
 
-{image2}
+![2](../_static/images/administration/installation/2.png)
 
 On this page, you can read and accept the License Agreement.
 
-{image3}
+![3](../_static/images/administration/installation/3.png)
 
 Enter the details for your newly created MySQL database.
 
-{image4}
+![4](../_static/images/administration/installation/4.png)
 
 Enter the user name and password of Administrator EspoCRM.
 
-{image5}
+![5](../_static/images/administration/installation/5.png)
 
 On this page you can set the default settings of EspoCRM, such as date and time format, timezone, currency and others.
 
-{image6}
+![6](../_static/images/administration/installation/6.png)
 
 Enter SMTP settings for outgoing emails, if you want to have the ability to send emails. 
 This step can be skipped by clicking the _Next_ button. 
 All of these options can be added/changed in EspoCRM after installation.
 
-{image7}
+![7](../_static/images/administration/installation/7.png)
 
 Congratulation! Installation is complete. 
 The last thing to setup Scheduled Tasks to be run by your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems.
 
-{image8}
+![8](../_static/images/administration/installation/8.png)
 
 We hope you will enjoy working in EspoCRM.
 
