@@ -8,6 +8,8 @@ One user can have multiple roles. Those roles can be selected for a specific use
 
 If a user has multiple roles then they will be merged so that permissive rule will have a higher priority. That allows administrator to manage access level control easily and flexibly.
 
+It's possible to see what permissions is applied to a certain user by clicking 'Access' button on the user's detail view.
+
 ##Example
 
 For example, user belongs to team ‘Sales’. That team has single role ‘Salesman’. So all users from this team will obtain ‘Salesman’ role.
