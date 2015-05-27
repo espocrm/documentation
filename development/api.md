@@ -211,7 +211,7 @@ Get parameters:
 
 `PUT {entityType}/{id}/subscription`
 
-#### Follow record
+#### Unfollow record
 
 `DELETE {entityType}/{id}/subscription`
 
