@@ -24,7 +24,7 @@ GET parameters:
 
 _Example_
 
-`GET Account?offset=0maxSize=20`
+`GET Account?offset=0&maxSize=20`
 
 Returns:
 ```
