@@ -58,6 +58,7 @@ Payload: Object of entity attributes needed to be changed.
 Returns attributes in JSON object.
 
 Example: `PATCH Account/5564764442a6d024c`
+
 Payload:
 ```
 {
@@ -98,6 +99,7 @@ Payload:
 3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criterias.
 
 Example: `POST Account/5564764442a6d024c/opportunities`
+
 Payload:
 ```
 {
@@ -115,6 +117,7 @@ Payload:
 2. JSON with `ids` array attribute.
 
 Example: `DELETE Account/5564764442a6d024c/opportunities`
+
 Payload:
 ```
 {
