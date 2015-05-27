@@ -14,9 +14,17 @@ Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in 
 
 `GET {entityType}`
 
+GET parameters:
+
+* `offset` - (int) offset;
+* `maxSize` - (int) max size;
+* `where` - (array) filters;
+* `sortBy` - (string) field to sort by;
+* `asc` - (bool) sort direction.
+
 _Example_
 
-`GET Account`
+`GET Account?offset=0maxSize=20`
 
 Returns:
 ```
@@ -60,6 +68,10 @@ Payload:
 
 `PATCH {entityType}/{id}`
 
+or
+
+`PUT {entityType}/{id}`
+
 Payload: Object of entity attributes needed to be changed.
 
 Returns attributes in JSON object.
@@ -88,6 +100,12 @@ _Example_
 ### List Related Entities
 
 `GET {entityType}/{id}/{link}`
+
+* `offset` - (int) offset;
+* `maxSize` - (int) max size;
+* `where` - (array) filters;
+* `sortBy` - (string) field to sort by;
+* `asc` - (bool) sort direction.
 
 _Example_
 
@@ -141,5 +159,20 @@ Payload:
   "id": "55646fd85955c28c5"
 }
 ```
+
+## Stream
+
+### List stream entries related to a specific record
+
+`GET {entityType}/{id}/stream`
+
+### Follow record
+
+`PUT {entityType}/{id}/subscription`
+
+### Follow record
+
+`DELETE {entityType}/{id}/subscription`
+
 
 
