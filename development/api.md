@@ -8,12 +8,14 @@ Most of api functions return JSON. POST, PATCH calls usually need some JSON data
 
 Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: `GET api/v1/Contact/55643ca033f7ab4c5`.
 
-
 ## Authentication
 
-EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication).
+EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
 
-The proper way of authentication:
+`"Authorization: Basic " + base64Encode(userName  + ':' + passwordOrToken)`
+
+
+The proper way of work with api:
 
 1. Obtain access token by `GET App/user` request with username and password passed in `Authorization` header.
 2. Use this token instead of password in `Authorization` header for all further request.
