@@ -6,7 +6,9 @@ You can learn how API works if you trace what's going in the network tab in your
 
 Most of api functions return JSON. POST, PATCH calls usually need some JSON data in payload.
 
-Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: `GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
+Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: 
+
+`GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
 ## Authentication
 
