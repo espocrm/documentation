@@ -14,9 +14,11 @@ Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in 
 
 `GET {entityType}`
 
-Example: `GET Account`
+_Example_
 
-Returns JSON:
+`GET Account`
+
+Returns:
 ```
 {
   "list": [... array of records...],
@@ -30,7 +32,9 @@ Returns JSON:
 
 Returns attributes in JSON object.
 
-Example: `GET Account/5564764442a6d024c`
+_Example_
+
+`GET Account/5564764442a6d024c`
 
 ### Create Entity
 
@@ -40,7 +44,10 @@ Payload: Object of entity attributes.
 
 Returns entity attributes in JSON object.
 
-Example: `POST Account`
+_Example_
+
+`POST Account`
+
 Payload:
 ```
 {
@@ -57,7 +64,9 @@ Payload: Object of entity attributes needed to be changed.
 
 Returns attributes in JSON object.
 
-Example: `PATCH Account/5564764442a6d024c`
+_Example_
+
+`PATCH Account/5564764442a6d024c`
 
 Payload:
 ```
@@ -70,7 +79,9 @@ Payload:
 
 `DELETE {entityType}/{id}`
 
-Example: `DELETE Account/5564764442a6d024c`
+_Example_
+
+`DELETE Account/5564764442a6d024c`
 
 ## Related Entities
 
@@ -78,7 +89,9 @@ Example: `DELETE Account/5564764442a6d024c`
 
 `GET {entityType}/{id}/{link}`
 
-Example: `GET Account/5564764442a6d024c/opportunities`
+_Example_
+
+`GET Account/5564764442a6d024c/opportunities`
 
 Returns:
 ```
@@ -98,7 +111,9 @@ Payload:
 2. `ids` array attribute.
 3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criterias.
 
-Example: `POST Account/5564764442a6d024c/opportunities`
+_Example_
+
+`POST Account/5564764442a6d024c/opportunities`
 
 Payload:
 ```
@@ -116,7 +131,9 @@ Payload:
 1. JSON with `id` attribute.
 2. JSON with `ids` array attribute.
 
-Example: `DELETE Account/5564764442a6d024c/opportunities`
+_Example_
+
+`DELETE Account/5564764442a6d024c/opportunities`
 
 Payload:
 ```
