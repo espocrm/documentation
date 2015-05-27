@@ -28,10 +28,11 @@ The proper way of work with api:
 
 Returnts:
 
+* `token` - access token to use;
 * `acl` - information about user access;
 * `preferences` - user preferences;
-* `user` - user record attributes;
-* `token` - access token to use
+* `user` - user record attributes.
+
 
 ## CRUD Operations
 
@@ -119,6 +120,7 @@ Payload:
 _Example_
 
 `DELETE Account/5564764442a6d024c`
+
 
 ## Related Entities
 
