@@ -14,14 +14,13 @@ EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_acces
 
 `"Authorization: Basic " + base64Encode(userName  + ':' + passwordOrToken)`
 
-
 The proper way of work with api:
 
 1. Obtain access token by `GET App/user` request with username and password passed in `Authorization` header.
 2. Use this token instead of password in `Authorization` header for all further request.
 3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
 
-### Authentication Token / User Specific Data
+#### Authentication Token / User Specific Data
 
 `GET App/user`
 
@@ -34,7 +33,7 @@ Returnts:
 
 ## CRUD Operations
 
-### List Entities
+#### List Entities
 
 `GET {entityType}`
 
@@ -58,7 +57,7 @@ Returns:
 }
 ```
 
-### Read Entity
+#### Read Entity
 
 `GET {entityType}/{id}`
 
@@ -68,7 +67,7 @@ _Example_
 
 `GET Account/5564764442a6d024c`
 
-### Create Entity
+#### Create Entity
 
 `POST {entityType}`
 
@@ -88,7 +87,7 @@ Payload:
 }
 ```
 
-### Update Entity
+#### Update Entity
 
 `PATCH {entityType}/{id}`
 
@@ -111,7 +110,7 @@ Payload:
 }
 ```
 
-### DELETE Entity
+#### DELETE Entity
 
 `DELETE {entityType}/{id}`
 
@@ -121,7 +120,7 @@ _Example_
 
 ## Related Entities
 
-### List Related Entities
+#### List Related Entities
 
 `GET {entityType}/{id}/{link}`
 
@@ -143,7 +142,7 @@ Returns:
 }
 ```
 
-### Link Entity
+#### Link Entity
 
 `POST {entityType}/{id}/{link}`
 
@@ -164,7 +163,7 @@ Payload:
 }
 ```
 
-### Unlink Entity
+#### Unlink Entity
 
 `DELETE {entityType}/{id}/{link}`
 
@@ -186,7 +185,7 @@ Payload:
 
 ## Stream
 
-### List stream entries for the current user
+#### List stream entries for the current user
 
 `GET Stream`
 
@@ -195,7 +194,7 @@ Get parameters:
 * `offset` - (int) offset;
 * `maxSize` - (int) max size;
 
-### List stream entries related to a specific record
+#### List stream entries related to a specific record
 
 `GET {entityType}/{id}/stream`
 
@@ -204,11 +203,11 @@ Get parameters:
 * `offset` - (int) offset;
 * `maxSize` - (int) max size;
 
-### Follow record
+#### Follow record
 
 `PUT {entityType}/{id}/subscription`
 
-### Follow record
+#### Follow record
 
 `DELETE {entityType}/{id}/subscription`
 
