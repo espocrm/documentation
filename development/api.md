@@ -92,6 +92,7 @@ Returns:
 `POST {entityType}/{id}/{link}`
 
 Payload:
+
 1. `id` attribute.
 2. `ids` array attribute.
 3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criterias.
@@ -109,6 +110,7 @@ Payload:
 `DELETE {entityType}/{id}/{link}`
 
 Payload:
+
 1. JSON with `id` attribute.
 2. JSON with `ids` array attribute.
 
