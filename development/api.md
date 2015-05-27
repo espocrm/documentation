@@ -8,6 +8,28 @@ Most of api functions return JSON. POST, PATCH calls usually need some JSON data
 
 Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: `GET api/v1/Contact/55643ca033f7ab4c5`.
 
+
+## Authentication
+
+EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication).
+
+The proper way of authentication:
+
+1. Obtain access token by `GET App/user` request with username and password passed in `Authorization` header.
+2. Use this token instead of password in `Authorization` header for all further request.
+3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
+
+### Authentication Token / User Specific Data
+
+`GET App/user`
+
+Returnts:
+
+* `acl` - information about user access;
+* `preferences` - user preferences;
+* `user` - user record attributes;
+* `token` - access token to use
+
 ## CRUD Operations
 
 ### List Entities
@@ -162,9 +184,23 @@ Payload:
 
 ## Stream
 
+### List stream entries for the current user
+
+`GET Stream`
+
+Get parameters:
+
+* `offset` - (int) offset;
+* `maxSize` - (int) max size;
+
 ### List stream entries related to a specific record
 
 `GET {entityType}/{id}/stream`
+
+Get parameters:
+
+* `offset` - (int) offset;
+* `maxSize` - (int) max size;
 
 ### Follow record
 
