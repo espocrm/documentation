@@ -113,7 +113,7 @@ Payload:
 }
 ```
 
-#### DELETE Entity
+#### Delete Entity
 
 `DELETE {entityType}/{id}`
 
