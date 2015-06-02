@@ -14,14 +14,16 @@ Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in 
 
 EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
 
-`"Authorization: Basic " + base64Encode(userName  + ':' + passwordOrToken)`
+`"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's more better to use auth tokens when you work with api:
+It's more better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+```
+"Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
+```
 
-1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header:
-`"Espo-Authorization: " + base64Encode(userName  + ':' + password)`.
-2. Use this token instead of password in `Authorization` header for all further request.
+1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header.
+2. Use this token instead of password in `Espo-Authorization` header for all further request.
 3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
 
 #### Authentication Token / User Specific Data
