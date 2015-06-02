@@ -16,9 +16,11 @@ EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_acces
 
 `"Authorization: Basic " + base64Encode(userName  + ':' + passwordOrToken)`
 
-The proper way of work with api:
 
-1. Obtain access token by `GET App/user` request with username and password passed in `Authorization` header.
+It's more better to use auth tokens when you work with api:
+
+1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header:
+`"Espo-Authorization: " + base64Encode(userName  + ':' + password)`.
 2. Use this token instead of password in `Authorization` header for all further request.
 3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
 
