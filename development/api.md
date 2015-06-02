@@ -26,7 +26,7 @@ The proper way of work with api:
 
 `GET App/user`
 
-Returnts:
+Returns:
 
 * `token` - access token to use;
 * `acl` - information about user access;
