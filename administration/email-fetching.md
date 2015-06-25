@@ -1,5 +1,9 @@
 #Email Fetching
 
+
+>Important. Cron should be configured in your system to make Email Fetching feature working. You can find the infornation in your EspoCRM: Administration > Scheduled Jobs.
+
+
 ##Overview
 
 EspoCRM has an ability to monitor IMAP mailboxes. Email can be archived in two ways: Inbound Emails and Email Accounts. Inbound Emails are intended for group mailboxes: the most common case is a support box. Emal Accounts are intended for users’ personal mailboxes.
