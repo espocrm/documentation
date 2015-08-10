@@ -4,7 +4,7 @@ EspoCRM provides the ability to fetch emails from IMAP box. This makes possible 
 
 ##Setup IMAP account
 
-User can setup IMAP account on Email Accounts page (Emails tab > top-right menu > Email Accounts).
+User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
 Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
 
