@@ -4,7 +4,7 @@
 
 Sometimes you have `hasMany` relationship and also need to have an ability to select primary record of the all related. As example, `Contacts` field of Case entity.
 
->Need to create `Contacts` field for our custom entity `Stock`. 
+>Need to create `contacts` linkMultiple field with a primary for our custom entity `Stock`. 
 >
 
 ###Step 1
