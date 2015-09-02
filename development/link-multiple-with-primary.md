@@ -1,4 +1,4 @@
-# Link Multiple with Primary
+# Link Multiple field with Primary
 
 ~For EspoCRM 3.6.0 and greater.~
 
