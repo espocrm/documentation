@@ -44,24 +44,24 @@ $entityManager->getRepository('Account')->remove($account);
 
 #### Find
 ```php
-$entityManager->getRepository('Account')->where(array(
+$accountList = $entityManager->getRepository('Account')->where(array(
     'type' => 'Customer',    
 ))->find();
 ```
 ```php
-$entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
 ```
 
 #### Find the first one
 ```php
-$entityManager->getRepository('Account')->where(array(
+$account = $entityManager->getRepository('Account')->where(array(
     'type' => 'Customer',    
 ))->findOne();
 ```
 
 #### Find related
 ```php
-$entityManager->getRepository('Account')->findRelated($account, 'opportunities');
+$opportunityList = $entityManager->getRepository('Account')->findRelated($account, 'opportunities');
 ```
 
 #### Relate entities
