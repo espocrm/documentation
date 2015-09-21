@@ -23,9 +23,20 @@ or
 ```php
 $account = $entityManager->getRepository('Account')->get($accountId);
 ```
-#### Set
+
+#### Get value
 ```php
-$account->set('name', 'Test Account');
+$fieldValue = $account->get('fieldName');
+```
+
+#### Has value
+```php
+$fieldNameIsSet = $account->has('fieldName'); // true or false
+```
+
+#### Set value
+```php
+$account->set('fieldName', 'Test Account');
 ```
 
 ```php
