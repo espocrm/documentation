@@ -23,6 +23,17 @@ or
 ```php
 $account = $entityManager->getRepository('Account')->get($accountId);
 ```
+#### Set
+```php
+$account->set('name', 'Test Account');
+```
+
+```php
+$account->set(array(
+  'name' => 'Test Account',
+  'assignedUserId' => '1'
+));
+```
 
 #### Store
 ```php
