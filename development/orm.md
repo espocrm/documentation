@@ -52,7 +52,7 @@ $entityManager->getRepository('Account')->where(array(
 $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
 ```
 
-#### Find first one
+#### Find the first one
 ```php
 $entityManager->getRepository('Account')->where(array(
     'type' => 'Customer',    
