@@ -17,5 +17,5 @@
 * [Metadata](https://github.com/espocrm/documentation/blob/master/development/metadata.md)
 * [Dynamic Forms](https://github.com/espocrm/documentation/blob/master/development/dynamic-forms.md)
 * [Link Multiple field with Primary](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
-* [Extension Package](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
+* [Extension Packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 
