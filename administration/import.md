@@ -5,14 +5,14 @@ Imprort is accessible only for admin users. Administration > Import. You are abl
 ## Step 1
 
 Select what type of records you need to import (Entity Type field).
-Select a CSV file. A file should be formated with UTF-8.
-Select `What to do?`. Create Only, Create & Update, Update Only.
+Select a CSV file. A file should be formated with `UTF-8`.
+Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Update Only'.
 
-`Create Only` - select it if you want record be only created.
-`Create & Update` - records will be created but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the Step 2.
-`Update only` - only records with matching field values will be found it will be updated.
+* `Create Only` - select it if you want record be only created.
+* `Create & Update` - records will be created but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the _Step 2_.
+* `Update only` - only records with matching field values will be found it will be updated.
 
-Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
+Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. Click _Next_ button
 
 ![1](../_static/images/administration/import/step-1.png)
 
