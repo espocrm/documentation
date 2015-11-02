@@ -14,6 +14,8 @@ Select `What to do?`. Create Only, Create & Update, Update Only.
 
 Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
 
+![1](../_static/images/administration/import/step-1.png)
+
 ## Step 2
 
 Setup the field mapping: how fields correspond to columns of the csv file. You can skip not needed columns here.
@@ -21,6 +23,8 @@ In cases of 'Create & Update' and 'Update only' you need to check fields by whic
 Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
 
 After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once.
+
+![2](../_static/images/administration/import/step-2.png)
 
 ## How to import into Target List
 
