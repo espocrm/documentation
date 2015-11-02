@@ -46,9 +46,9 @@ After you have added new field you will need to put this field on layouts (Admin
 
 You can create new relationships between both out-of-box and custom entities. There are 3 avaialable relationship types:
 
-* One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity.
+* One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
 
-* Many-to-One: the same as One-to-Many but vice versa.
+* Many-to-One: the same as One-to-Many but vice versa;
 
 * Many-to-Many: relationship panels on both sides.
 
