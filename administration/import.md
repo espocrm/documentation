@@ -12,7 +12,9 @@ Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Upda
 * `Create & Update` - records will be created but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the _Step 2_.
 * `Update only` - only records with matching field values will be found it will be updated.
 
-Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. Click _Next_ button
+Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
+
+Click _Next_ button to preceed to the _Step 2_.
 
 ![1](../_static/images/administration/import/step-1.png)
 
@@ -23,6 +25,8 @@ In cases of 'Create & Update' and 'Update only' you need to check fields by whic
 Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
 
 After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once.
+
+Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
 
 ![2](../_static/images/administration/import/step-2.png)
 
