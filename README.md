@@ -13,6 +13,7 @@
 ###User Guide
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
+* [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 
 ###Development
 * [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
