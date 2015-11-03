@@ -48,7 +48,7 @@ If you want to know that your recipient opened the link from your email you need
 
 _For Administrators_
 
-What to do if emails are not sent out.
+#### What to do if emails are not sent out.
 
 1. Check if _Sent Test_ works. If does't work then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
@@ -56,7 +56,7 @@ What to do if emails are not sent out.
 4. Check `Scheduling` field of `Check Group Email Accounts` Scheduled Job. By default it set to run at night. You can change it to make it to run every hour.
 
 
-What if Tracking URLs has wrong url that does not lead to your crm.
+#### What if Tracking URLs has wrong url that does not lead to your crm.
 
 Check 'siteUrl' paramater in `data/config.php` file. It mube be set as URL of your EspoCRM accessible from the external world.
 
