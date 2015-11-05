@@ -56,7 +56,9 @@ Our user will be able to manager all leads and opportunities from the â€˜Salesâ€
 
 ##Assignment Permission
 
-Set this parameter to restrict ability to re-assign entries to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
+Set this parameter to restrict ability to re-assign records to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
+
+It also defines whether user is able to post to stream of another users/teams.
 
 ##Default Permissions
 
