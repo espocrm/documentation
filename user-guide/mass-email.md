@@ -7,7 +7,7 @@ You need to have at least one Target List with target records and Email Template
 1. Create new Campaign with a status `Email` or `Newsletter`. Select one or a few target lists in `Target Lists` field.
 2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure _Status_ set as `Pending`.
 
-If everything is setup right emails should go out. By default they should be sent at night. Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
+If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
 
 You can check if emails are sent in Log panel.
 
@@ -53,7 +53,6 @@ _For Administrators_
 1. Check if _Sent Test_ works. If does't work then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
 3. Check if you have `Check Group Email Accounts` Scheduled Job and it is `Active`. Check if there are something in Log.
-4. Check `Scheduling` field of `Check Group Email Accounts` Scheduled Job. By default it set to run at night. You can change it to make it to run every hour.
 
 
 #### What if Tracking URLs has wrong url that does not lead to your crm.
