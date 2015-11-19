@@ -9,6 +9,7 @@
 * [Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * [B2C](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
 * [LDAP Authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
+* [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
 
 ###User Guide
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
