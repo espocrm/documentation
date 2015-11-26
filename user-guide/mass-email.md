@@ -43,6 +43,9 @@ If you want to know that your recipient opened the link from your email you need
 <a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
  ```
 
+## Excluding Target Lists
+
+Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
 
 ## Troubleshooting
 
