@@ -79,3 +79,5 @@ Allows to control an access for a specific fields.
 By default user can read all fields if one can read the record. User can edit any field if one can edit the record. You can restrict access to specific fields using Field Level Security.
 
 In edit view  of a role record in Field Level section click plus icon next to the specific scope then select needed field. Then you will be able to specify the access level for `read` and `edit` actions. There are to options: `yes` and `no`.
+
+![1](../_static/images/administration/roles-management/field-level-secutiry.png)
