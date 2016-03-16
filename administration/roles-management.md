@@ -1,6 +1,6 @@
-#Roles Management
+# Roles Management
 
-##Overview
+## Overview
 
 In order to restrict access for some users you need to use Roles. Administrator can manage roles in Administration panel. Each role defines an access to certain areas (scopes) which is applied to users who own that role.
 
@@ -18,16 +18,20 @@ For example, user belongs to team ‘Sales’. That team has single role ‘Sale
 
 Lead:
 ```
+create - yes
 read – team
 edit – own
 delete – no
+stream - team
 ```
 
 Opportunity:
 ```
+create - yes
 read – team
 edit – own
 delete – no
+stream - team
 ```
 
 Users will be able to read only those leads and opportunities which belong to ‘Sales Department’ team (‘Teams’ field).
@@ -40,24 +44,38 @@ We want to give more rights to a certain user who holds sales manager position i
 
 Lead:
 ```
+create - yes
 read – team
 edit – team
 delete – team
+stream - team
 ```
 
 Opportunity:
 ```
+create - yes
 read – team
 edit – team
 delete – team
+stream - team
 ```
 
 Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
 
-##Assignment Permission
+## Assignment Permission
 
-Set this parameter to restrict ability to re-assign entries to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
+Set this parameter to restrict ability to re-assign records to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
 
-##Default Permissions
+It also defines whether user is able to post to stream of another users/teams.
+
+## Default Permissions
 
 By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
+
+## Field Level Security
+
+Allows to control an access for a specific fields.
+
+By default user can read all fields if one can read the record. User can edit any field if one can edit the record. You can restrict access to specific fields using Field Level Security.
+
+In edit view  of a role record in Field Level section click plus icon next to the specific scope then select needed field. Then you will be able to specify the access level for `read` and `edit` actions. There are to options: `yes` and `no`.
