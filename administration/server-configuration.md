@@ -85,7 +85,34 @@ Afterward, run this command in a terminal:
 service apache2 restart
 ```
 
-###3. Add RewriteBase path
+###3. Enable HTTP AUTHORIZATION support (only for FastCGI)
+
+FastCGI does not support HTTP AUTHORIZATION by the default. If you use FastCGI, you have to enable it in your VirtualHost or apache2.conf (httpd.conf) by adding the following code:
+
+For Fcgid module:
+```
+<IfModule mod_fcgid.c>
+  FcgidPassHeader Authorization
+  FcgidPassHeader Proxy-Authorization
+  FcgidPassHeader HTTP_AUTHORIZATION  
+</IfModule>
+```
+
+For FastCgi module:
+```
+<IfModule mod_fastcgi.c>
+   FastCgiConfig -pass-header Authorization \
+                        -pass-header Proxy-Authorization \
+                        -pass-header HTTP_AUTHORIZATION  
+</IfModule>
+```
+
+To check which module is currently uses, run this command and find the module:
+```
+apache2ctl -M
+```
+
+###4. Add RewriteBase path
 
 Open a file api/v1/.htaccess and replace the following line:
 
