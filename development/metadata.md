@@ -57,7 +57,7 @@ Since metadata is merged recursively you can easily redefine json objects and ar
 ```json
 {
   "fields": {
-    "employeeAmount": {
+    "employeeCount": {
       "type": "int"
     },
     "type": {
