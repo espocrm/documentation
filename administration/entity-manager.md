@@ -13,14 +13,21 @@ Click `Create Entity` button on Entity Manager page. Specify name, labels and ty
 
 ## Update existing entity
 
-Click `Edit` link on a certain entity. You will be able to change labels, default order and an availability of Stream.
+If you click `Edit` link on a certain entity you will be able to change some parameters of that entity.
+
+* Labels - singular and plural name of the entity.
+* Default order records are sorted by in list views.
+* Stream - whether Stream feature is enabled for this entity.
+* Disabled - check if you don't need this entity in your system.
+* Text Filter Fields - what fields to search in for the main text filter and global search.
+
 
 ## Fields
 
 By clicking `Fields` link you will be moved to the separated page. There you will be able to Create new fields or update existing ones. There are following types of fields available in Entity Manager:
 
 * Address - address with street, city, state, postal code and country;
-* Array - list of values, with the ability to select multiple values (not good option if you need to search by this field);
+* Array - list of values, with the ability to select multiple values (not good option if you need to search by this field); users can add their own values if options are not specified.
 * Attachment Multiple - multiple file attachments;
 * Auto-increment - read only generated number;
 * Boolean - checkbox, true of false;
@@ -38,7 +45,11 @@ By clicking `Fields` link you will be moved to the separated page. There you wil
 * Varchar - short text;
 * Wysiwyg - the similar to Text field, with the ability to format text.
 
-You can set a field as `required` or not required, specify `default value`, set as `audited` (to be able to see updates of the field in Stream) and other options specific to a type of field.
+Parameters:
+* Required - whether filling in of the field is mandatory.
+* Default Value - Value of the field set upon creating new record.
+* Audited - updates of the field will be logged in Stream.
+
 
 After you have added new field you will need to put this field on layouts (Administration > Layout Manager).
 
@@ -47,9 +58,10 @@ After you have added new field you will need to put this field on layouts (Admin
 You can create new relationships between both out-of-box and custom entities. There are 3 avaialable relationship types:
 
 * One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
-
 * Many-to-One: the same as One-to-Many but vice versa;
-
 * Many-to-Many: relationship panels on both sides.
+
+Parameter 'Link Multiple Field' implied that field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not good option if your relationiosh supposes to have a lot of linked records that can slow down loading of detail view screen.
+
 
 
