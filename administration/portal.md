@@ -45,4 +45,4 @@ Assigned User and Teams fields are read only for portal users.
 
 ## Access to Portal
 
-You can find the url for your portal in 'URL' field of the portal record. You can use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need fill in 'Custom URL' field.
+You can find the url for your portal in 'URL' field of the portal record. You can use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
