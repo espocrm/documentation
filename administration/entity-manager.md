@@ -61,7 +61,7 @@ You can create new relationships between both out-of-box and custom entities. Th
 * Many-to-One: the same as One-to-Many but vice versa;
 * Many-to-Many: relationship panels on both sides.
 
-Parameter 'Link Multiple Field' implied that field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not good option if your relationiosh supposes to have a lot of linked records that can slow down loading of detail view screen.
+Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not good option if your relationiosh supposes to have a lot of linked records, that can slow down loading of detail view screen.
 
 
 
