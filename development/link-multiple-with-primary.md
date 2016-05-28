@@ -2,7 +2,7 @@
 
 ~For EspoCRM 3.6.0 and greater.~
 
-Sometimes you have `hasMany` relationship and also need to have an ability to select primary record of the all related. As example, `Contacts` field of Case entity.
+Sometimes you have `hasMany` relationship and need to have an ability to select primary record of among related ones. As example, `Contacts` field of Case entity.
 
 >Need to create `contacts` linkMultiple field with a primary for our custom entity `Stock`. 
 >
