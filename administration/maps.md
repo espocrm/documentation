@@ -12,3 +12,7 @@ You can also configure the height of your field.
 
 `Administration > Entity Manager > Choose entity > Fields > find the map field and click on it > edit the height and save.`
 
+## Api Key
+
+Since EspoCRM version 4.2.0 you need to specify Api Key to use Google Maps (Administration > Integration > Google Maps).
+
