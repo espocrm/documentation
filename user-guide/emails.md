@@ -2,7 +2,7 @@
 
 EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
 
-##Setup IMAP accounts
+##IMAP accounts
 
 User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
