@@ -10,6 +10,8 @@ Specify what folders to monitor in Monitored Folders field. By default it's set 
 
 *Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
 
+There is an ability to specify **Folder** in Persnoal Email Account. Incoming emails will be put in that folder.
+
 ##SMTP accounts
 
 Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
