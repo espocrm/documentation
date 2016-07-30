@@ -12,7 +12,9 @@ Specify what folders to monitor in Monitored Folders field. By default it's set 
 
 ##Setup SMTP
 
-User can setup SMTP settings in Preferences. Administrator also can allow to use system SMTP (make it Shared).
+Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+
+Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of **User** record.
 
 ##Working with Emails
 
@@ -43,4 +45,10 @@ There is ability to **select template** of your email.
 
 You can setup **email signature** in Preferences.
 
-If you **save email as draft** you can edit it later. Just change filter to Draft to show all draft emails
+##Email Filters
+
+Administrator can create global email filters to skip not desirable emails. It's available in Administration > Email Filters.
+
+Regular user can create email filters for their Personal Email Accounts or for their entire inbox. There are two types of filters:
+* Skip - email will be put in **Trash** or not imported if filter is related to Personal Email Account;
+* Put in Folder - imported emails will be put into specified user's folder automatically.
