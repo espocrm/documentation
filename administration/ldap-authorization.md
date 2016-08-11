@@ -1,45 +1,55 @@
 #Ldap Authorization
 
-We will show how to configure LDAP authorization for EspoCRM. In our case we will use OpenLDAP server. Let’s go.
+In this guide, we will show how to configure LDAP authorization for EspoCRM. Let’s go.
 
-Go to OpenLDAP server and create a base DN for the EspoCRM users like
+Go to your LDAP server and create a base DN for the EspoCRM users like
 ```
-ou=Espocrm,dc=company,dc=com
-```
-
-Add a user `tester` inside the `ou=Espocrm` DN. So, the full DN for the user will be
-```
-cn=tester,ou=Espocrm,dc=company,dc=com
+OU=users,OU=espocrm,DC=test,DC=local
 ```
 
-Then, go to EspoCRM  Authentication settings in the Administrator panel, select `LDAP` method and fill the LDAP details:
+We have to create a system user which will have access to the users DN (“OU=users,OU=espocrm,DC=test,DC=local”). So, the full DN for this system user will be
+```
+CN=LDAP System User,OU=users,OU=espocrm,DC=test,DC=local
+```
+Now, we can add LDAP user to access to EspoCRM. E.g. Espo Tester with the username “tester” inside the “OU=users,OU=espocrm,DC=test,DC=local” DN. Please note: to be able to use this login format for EspoCRM, you have to specify the “Username Attribute” and “Base DN” options.
 
-![1](../_static/images/administration/ldap-authorization/1.png)
+Then, go to EspoCRM  Authentication settings in the Administrator panel, select `LDAP` method and fill in the LDAP details:
 
-Where
-* Host – LDAP IP or host name;
-* Port – connection port;
-* Auth – credentials for the LDAP server (Username, Password);
-* Security – SSL or TSL protocol;
-* Bind Requires Dn – if need to format the username in the DN form;
-* User Login Filter – the group of users who will have possibility to use EspoCRM, e.g. `businessCategory=espocrm`, so all users who has defined this field with value `espocrm` in the LDAP server will use EspoCRM;
-* Base Dn – the default base DN used for searching;
-* Account Canonical Form – type of account canonical form. There are 4 options:
+![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
+
+* Host – LDAP IP or host name.
+* Port – connection port.
+* Auth – access credentials for the LDAP server:
+* Full User DN – the full system user DN which allows to search other users.
+* Password – the password to access the LDAP server.
+* Security – SSL or TSL protocol.
+* Username Attribute – the attribute to identify the user. For Active Directory it can be “userPrincipalName” or “sAMAccountName”.
+* Account Canonical Form – type of your account canonical form. There are 4 options:
 * Dn – the form in the format `CN=tester,CN=Espocrm,DC=company,DC=com`.
 * Username – the form `tester`.
 * Backslash – the form `COMPANY\tester`.
 * Principal – the form `tester@company.com`.
-* Try Username Split – if need to split a username with the domain.
-* Opt Referrals – if referrals should be followed for the LDAP client;
-* Create User in EspoCRM – if create a user in EspoCRM from the LDAP.
+* Bind Requires Dn – if need to format the username in the DN form.
+* Base Dn – the default base DN which is used for searching users.
+* User Login Filter – the filter which allows to restrict users who are able to use EspoCRM. E.g. `memberOf=CN=espoGroup,OU=groups,OU=espocrm,DC=test,DC=lan`.
+* Account Domain Name – The domain which is used for authorization the LDAP server.
+* Account Domain Name Short – The short domain which is used for authorization the LDAP server.
+* Try Username Split – the option to split a username with the domain.
+* Opt Referrals – if referrals should be followed to the LDAP client.
+* Create User in EspoCRM – this option allows EspoCRM to create a user from the LDAP..
+* User First Name Attribute – LDAP attribute which is used to determine the user first name.
+* User Last Name Attribute – LDAP attribute which is used to determine the user last name.
+* User Title Attribute – LDAP attribute which is used to determine the user title.
+* User Email Address Attribute – LDAP attribute which is used to determine the user email address.
+* User Phone Number Attribute – LDAP attribute which is used to determine the user phone number.
 
-Now let's try to authenticate our `tester` user. Go to the login page and enter user credentials.
+Now, go to the login page and enter user credentials.
 
-![2](../_static/images/administration/ldap-authorization/2.png)
+![2](../_static/images/administration/ldap-authorization/ldap-login.png)
 
 User has been authenticated and automatically created in the EspoCRM.
 
-For more information about configuring LDAP you can read on the [Zend\Ldap library](http://framework.zend.com/manual/2.2/en/modules/zend.ldap.introduction.html) page, as EspoCRM uses this library.
+More information about configuring LDAP you can read on the [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/) page, as EspoCRM uses this library.
 
 
 
