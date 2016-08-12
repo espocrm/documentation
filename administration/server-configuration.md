@@ -1,10 +1,10 @@
 #Server Configuration
 
-EspoCRM can be installed on the Apache, Nginx, or IIS server with support PHP version 5.4 or greater and MySQL version 5.1 or greater.
+EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.4 or greater and MySQL version 5.1 or greater.
 
 ##Configuration Recommendations for EspoCRM
 
-###PHP requirements
+###PHP Requirements
 
 EspoCRM requires PHP 5.4 or greater, with the following extensions enabled:
 
@@ -12,7 +12,9 @@ EspoCRM requires PHP 5.4 or greater, with the following extensions enabled:
 * [JSON](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
 * [GD](http://php.net/manual/en/book.image.php) – to manipulate images;
 * [Mcrypt](http://php.net/manual/en/book.mcrypt.php) – to ensure the highest protection.
-
+* [Zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions.
+* [IMAP](http://php.net/manual/en/book.imap.php) – to use mailboxes in EspoCRM.
+* Other necessary libraries: [mbstring](http://php.net/manual/en/book.mbstring.php), [cURL](http://php.net/manual/en/book.curl.php).
 
 php.ini:
 
@@ -27,8 +29,8 @@ upload_max_filesize = 50M
 
 ###MySQL Requirements
 
-
-EspoCRM supports MySQL version 5.1 or greater. These are no any special peculiarities. All default settings are good for EspoCRM.
+EspoCRM supports MySQL version 5.1 or greater.
+These are no special peculiarities. All default settings are good for EspoCRM.
 
 ##Required Permissions for Unix-based Systems
 
@@ -46,7 +48,7 @@ find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
 find data custom -type d -exec chmod 775 {} + && find data custom -type f -exec chmod 664 {} +;
 ```
 
-Also, all files should be owned and group-owned by the webserver process. It can be `www`, `www-data`, `apache`, etc.
+All files should be owned and group-owned by the webserver process. It can be “www”, “www-data”, “apache”, etc.
 Note: On shared hosts, files should be owned and group-owned by your user account.
 
 To set the owner and group-owner, execute these commands in the terminal:
@@ -56,74 +58,23 @@ cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
 
-##Fixing the issue “API Error: EspoCRM API unavailable”.
+##Setup a crontab
 
-Do only necessary steps. After each step check if the issue is solved.
+To setup a crontab on a UNIX system, take the following steps:
 
-###1. Enable “mod_rewrite” support in Apache
-
-To enable “mod_rewrite,” run these commands in a Terminal:
-
+* 1. Login as administrator into your EspoCRM instance.
+* 2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
 ```
-a2enmod rewrite
-service apache2 restart
+* * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
-
-###2. Enable .htaccess support
-
-To enable .htaccess support, add/edit the Server Configuration Settings (apache2.conf, httpd.conf):
-
+* 3. Open a terminal and run this command:
 ```
-<Directory /PATH_TO_ESPO/>
-AllowOverride All
-</Directory>
+crontab -e -u WEBSERVER_USER
 ```
+WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
+* 4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
-Afterward, run this command in a terminal:
+##Configuration instructions based on your server:
 
-```
-service apache2 restart
-```
-
-###3. Add RewriteBase path
-
-Open a file api/v1/.htaccess and replace the following line:
-
-```
-# RewriteBase /
-```
-
-to
-
-```
-RewriteBase /REQUEST_URI/api/v1/
-```
-
-where `REQUEST_URI` is a part of URL, e.g. for `http://example.com/espocrm/`, REQUEST_URI is /espocrm.
-
-##Enable HTTP AUTHORIZATION support (only for FastCGI)
-
-FastCGI does not support HTTP AUTHORIZATION by the default. If you use FastCGI, you have to enable it in your VirtualHost or apache2.conf (httpd.conf) by adding the following code:
-
-For Fcgid module:
-```
-<IfModule mod_fcgid.c>
-  FcgidPassHeader Authorization
-  FcgidPassHeader Proxy-Authorization
-  FcgidPassHeader HTTP_AUTHORIZATION  
-</IfModule>
-```
-
-For FastCgi module:
-```
-<IfModule mod_fastcgi.c>
-   FastCgiConfig -pass-header Authorization \
-                        -pass-header Proxy-Authorization \
-                        -pass-header HTTP_AUTHORIZATION  
-</IfModule>
-```
-
-To check which module is currently uses, run this command and find the module:
-```
-apache2ctl -M
-```
+* [Apache server configuration](apache-server-configuration.md).
+* [Nginx server configuration](nginx-server-configuration.md).
