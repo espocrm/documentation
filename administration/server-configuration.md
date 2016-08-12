@@ -1,8 +1,8 @@
-#Server Configuration
+#Server Configuration for EspoCRM
 
 EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.4 or greater and MySQL version 5.1 or greater.
 
-##Configuration Recommendations for EspoCRM
+##Configuration Recommendations
 
 ###PHP Requirements
 
