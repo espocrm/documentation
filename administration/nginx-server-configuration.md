@@ -1,6 +1,6 @@
 #Nginx server configuration for EspoCRM
 
-These instructions are supplementary to the [Server Configuration](administration/server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
 
 ##PHP requirements
 
@@ -76,7 +76,7 @@ If you don’t have this file, you have to create it. For this open a terminal a
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [ guideline](administration/nginx-virtual-host.md).
+And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [ guideline](nginx-virtual-host.md).
 
 Run this command in a terminal to check if everything is fine:
 
