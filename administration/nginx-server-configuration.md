@@ -76,7 +76,7 @@ If you don’t have this file, you have to create it. For this open a terminal a
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this guideline.
+And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [ guideline](administration/nginx-virtual-host.md).
 
 Run this command in a terminal to check if everything is fine:
 
