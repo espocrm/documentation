@@ -1,4 +1,4 @@
-#Apache server configuration
+#Apache server configuration for EspoCRM
 
 These instructions are supplementary to the [Server Configuration](administration/server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
 
