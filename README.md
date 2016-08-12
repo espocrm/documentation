@@ -2,6 +2,8 @@
 
 ### Administration
 * [Server Configuration](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md)
+ * [Apache](https://github.com/espocrm/documentation/blob/master/administration/apache-server-configuration.md)
+ * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
 * [Installation](https://github.com/espocrm/documentation/blob/master/administration/installation.md)
 * [Roles Management (Access Control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
 * [Email Fetching](https://github.com/espocrm/documentation/blob/master/administration/email-fetching.md)
