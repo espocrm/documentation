@@ -39,6 +39,7 @@ By clicking `Fields` link you will be moved to the separated page. There you wil
 * Float - number with a decimal part;
 * Image - uploading image file with a preview;
 * Int - whole number;
+* Number - autoincrement number of string type with a possible prefix and a specific length;
 * Multi-enum - list of values, with the ability to select multiple values (not good option if you need to search by this field), similar to Array but nicer.
 * Text - text area, for long multiline texts;
 * Url - for links;
