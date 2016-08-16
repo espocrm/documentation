@@ -12,6 +12,8 @@
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
 * [LDAP Authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
+ * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
+ * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
 * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
 
 ### User Guide
