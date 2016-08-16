@@ -1,6 +1,6 @@
-#LDAP authorization for Active Directory
+#LDAP authorization for OpenLDAP
 
-Example of configuration LDAP authorization for the Active Directory server. The full guide of configuration LDAP authorization is described [here](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md).
+Example of configuration LDAP authorization for OpenLDAP server. The full guide of configuration LDAP authorization is described [here](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md).
 
 ```
 Host: espo.local
