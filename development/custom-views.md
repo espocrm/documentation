@@ -1,6 +1,6 @@
 # Custom Views
 
-## EspoCRM framework provides flexible abilities to define custom views for certail entity types. They must be defined it `clientDefs` category of metadata.
+EspoCRM framework provides flexible abilities to define custom views for certail entity types. They must be defined it `clientDefs` category of metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
@@ -82,7 +82,8 @@ List view contains Record/List view, Header and Search Form View.
 
 `client/custom/src/views/your-entity-type/record/list.js`
 
-List/Record vie contains rows of records.
+List/Record view contains rows of records.
+
 
 It worths to mention that you need to inherit your view class from specific class for your entity if one already exists.
 
