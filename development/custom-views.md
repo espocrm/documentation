@@ -88,7 +88,7 @@ List/Record view contains rows of records.
 It worths to mention that you need to inherit your view class from specific class for your entity if one already exists.
 
 ```javascript
-Espo.define('custom:views/email/record/detail', 'views/record/email/record/detail', function (Dep) {
+Espo.define('custom:views/email/record/detail', 'views/email/record/detail', function (Dep) {
 
 });
 ```
