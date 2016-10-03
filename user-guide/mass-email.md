@@ -30,7 +30,7 @@ By default the system will append opt-out to all sent emails. But you can use cu
 
 Example:
 ```html
-<a href="{optOutLink}">Unsubsribe from the mailing list.</a>
+<a href="{optOutUrl}">Unsubsribe from the mailing list.</a>
 ```
 
 ## Tracking URL
