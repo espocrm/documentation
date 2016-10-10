@@ -11,6 +11,13 @@ Entity Manager is available in Administration panel. It provides an ability to h
 
 Click `Create Entity` button on Entity Manager page. Specify name, labels and type. If you select `Person` type your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check `Stream` if you want your entity to have stream panel and users be able to Follow entities of this type.
 
+Types:
+
+* Base - empty entity only with basic fields like Name, Assigned User, Teams, Description.
+* Base Plus - like Base but with Activities, History, Tasks panels (available since 4.3.0).
+* Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
+* Event - Date Start, Date End, Duration, Parent, Status fields. Available in Calendar and Activities panel (since 4.3.0, must be enabled at Administration > Settings).
+
 ## Update existing entity
 
 If you click `Edit` link on a certain entity you will be able to change some parameters of that entity.
@@ -63,6 +70,4 @@ You can create new relationships between both out-of-box and custom entities. Th
 * Many-to-Many: relationship panels on both sides.
 
 Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not good option if your relationiosh supposes to have a lot of linked records, that can slow down loading of detail view screen.
-
-
 
