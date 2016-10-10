@@ -30,6 +30,3 @@
 * [Link Multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
 * [Extension Packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 
-
-Source: [https://www.espocrm.com/documentation/](https://www.espocrm.com/documentation/ "EspoCRM Documentation")
-
