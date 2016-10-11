@@ -15,8 +15,9 @@ Types:
 
 * Base - empty entity only with basic fields like Name, Assigned User, Teams, Description.
 * Base Plus - like Base but with Activities, History, Tasks panels (available since 4.3.0).
-* Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
 * Event - Date Start, Date End, Duration, Parent, Status fields. Available in Calendar and Activities panel (since 4.3.0, must be enabled at Administration > Settings).
+* Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
+* Company - Email, Phone, Billing Address, Shipping Address fields. Activities, History, Tasks panels.
 
 ## Update existing entity
 
