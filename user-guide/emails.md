@@ -21,29 +21,29 @@ Users can have multiple SMTP accounts (since version 4.2.0). But email addresses
 ## Working with Emails
 
 Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
-You can see all your emails in Emails tab. There is a filter to show Inbox, Sent, Draft emails.
+You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
 
-Status field indicates how the email was created. Sent means it was sent from CRM, *Archived* – fetched from IMAP account, *Draft* – means that email was created as a draft.
+*Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
 
-When new email come the system tries to recognize which record this email belongs to. It can link it to Account, Lead, Opportunity, Case (and Contact in B2C mode). If it wasn't recognized user can link it manually filling *Parent* field.
+When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized then user can link it manually by filling in *Parent* field.
 
 If an email came from a new potential client user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
 
-It's also possible to **create Task or Case** from the email entry.
+It's also possible to **create Task or Case** from an email record.
 
-If email addresses (from, to, cc) in an email entry are known to the system it will show the person it is related to (Contact or Lead). If some email address is new you can **create contact** right from there.
+If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can **create contact** right from there.
 
-All emails related to a specific record are shown in History panel of that record. If some email is related e.g. to opportunity but opportunity is related to the account, it will shown both in opportunity and account.
+All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
 
 ## Sending Emails
 
-You can compose new email few ways:
+You can compose new email by a few ways:
 * *Compose Email* button on Emails list view;
 * replying on another email;
 * clicking on an email address of some record;
 * *Compose Email* action of Activities panel.
 
-There is ability to **select template** of your email.
+There is an ability to **select template** of your email.
 
 You can setup **email signature** in Preferences.
 
