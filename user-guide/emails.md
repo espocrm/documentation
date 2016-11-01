@@ -47,10 +47,17 @@ There is ability to **select template** of your email.
 
 You can setup **email signature** in Preferences.
 
+##Email Folders
+
+Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you wan't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+
 ##Email Filters
 
-Administrator can create global email filters to skip not desirable emails. It's available in Administration > Email Filters.
+Administrator can create global email filters to skip not desirable emails. They are available at Administration > Email Filters.
 
-Regular user can create email filters for their Personal Email Accounts or for their entire inbox. There are two types of filters:
-* Skip - email will be put in**Trash* or not imported if filter is related to Personal Email Account;
+Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
+
+There are two types of filters:
+* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
 * Put in Folder - imported emails will be put into specified user's folder automatically.
+
