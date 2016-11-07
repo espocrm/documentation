@@ -1,6 +1,6 @@
 # Import
 
-Imprort is accessible only for admin users. Administration > Import. You are able to import only from CSV files.
+Import is accessible only for admin users. Administration > Import. You are able to import only from CSV files.
 
 ## Step 1
 
