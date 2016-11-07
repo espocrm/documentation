@@ -15,6 +15,7 @@ Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Upda
 Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
 
 * `Header Row` - whether CSV file has the first row with field names.
+* `Execute in idle` - recommended if you have a big bunch of records to be imported. Import will be processed via cron. Status will be set to 'Complete' when import process is finished.
 * `Skip searching for duplicates` - it will decrease import runtime. 
 
 Click _Next_ button to preceed to the _Step 2_.
