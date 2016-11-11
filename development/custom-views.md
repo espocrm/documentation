@@ -53,7 +53,7 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
     },
     
     afterRender: function () {
-      Dep.prototype.setup.call(this);
+      Dep.prototype.afterRender.call(this);
       
       // Custom code to be invoked right after rendering, when DOM is avaiable.
       this.$el.find('label[data-name="myField"]').addClass('hidden');
