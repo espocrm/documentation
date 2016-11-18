@@ -1,5 +1,7 @@
 # Dynamic Forms
 
+Since version 4.3.0 it's possible to define dynamic form through admin's UI in Entity Manager.
+
 There is an ability to define a form behavior in EspoCRM. 
 
 ## Example
