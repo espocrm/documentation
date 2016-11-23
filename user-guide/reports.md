@@ -1,6 +1,6 @@
 # Reports
 
-Reports is a feature available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
 There are two types of reports: List and Grid.  
 
