@@ -18,6 +18,7 @@ At _Filters_ section you can specify criteria that determines what records will 
 
 _Runtime Filters_ allows you to specify different filters before you run the report.
 
+You can __export__ list report results in csv format.
 
 ## Grid Reports
 
@@ -43,10 +44,8 @@ You can display any report on dashboard. For this you need add Report dashlet an
 
 ## Email Sending
 
-It's possible to make system to send report results to certain users on specified time. This must be configured for certain reports individually.
+It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
 
 ## Syncing with Target Lists
 
-It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending.
-
-This feature is available on detail view of any target list at 'Sync with Reports' panel.
+It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
