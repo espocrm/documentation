@@ -72,3 +72,5 @@ You can create new relationships between both out-of-box and custom entities. Th
 
 Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not good option if your relationiosh supposes to have a lot of linked records, that can slow down loading of detail view screen.
 
+If parameter 'Audited' is checked then updates of the relationship will be logged in Stream.
+
