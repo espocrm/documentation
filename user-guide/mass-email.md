@@ -61,7 +61,7 @@ _For Administrators_
 
 1. Check if _Sent Test_ works. If does't work then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
-3. Check if you have `Check Group Email Accounts` Scheduled Job and it is `Active`. Check if there are something in Log.
+3. Check if you have `Check Group Email Accounts` Scheduled Job and it is `Active`. Check if there is something in Log.
 
 
 #### What if Tracking URLs has wrong url that does not lead to your crm.
