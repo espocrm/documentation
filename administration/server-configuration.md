@@ -16,6 +16,8 @@ EspoCRM requires PHP 5.5 or greater, with the following extensions enabled:
 * [IMAP](http://php.net/manual/en/book.imap.php) – to use mailboxes in EspoCRM.
 * Other necessary libraries: [mbstring](http://php.net/manual/en/book.mbstring.php), [cURL](http://php.net/manual/en/book.curl.php).
 
+It's also recommended to have [mailparse](https://pecl.php.net/package/mailparse) pecl extension installed.
+
 php.ini:
 
 ```
