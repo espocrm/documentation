@@ -40,7 +40,7 @@ When you access data by path `clientDefs.Account.views.edit` the first lexeme `c
 ```json
 {
   "views": {
-    "edit": "Crm:Account.Views.Edit" 
+    "edit": "crm:views/account/views/edit" 
   }
 }
 ```
