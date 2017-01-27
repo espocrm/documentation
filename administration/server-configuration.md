@@ -11,15 +11,15 @@ EspoCRM requires PHP 5.5 or greater, with the following extensions enabled:
 * [PDO](http://php.net/manual/en/book.pdo.php) – to access MySQL in PHP;
 * [JSON](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
 * [GD](http://php.net/manual/en/book.image.php) – to manipulate images;
-* [Mcrypt](http://php.net/manual/en/book.mcrypt.php) – to ensure the highest protection;
+* [OpenSSL](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
 * [Zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
-* [IMAP](http://php.net/manual/en/book.imap.php) – to use mailboxes in EspoCRM;
+* [IMAP](http://php.net/manual/en/book.imap.php) – to monitore mailboxes in EspoCRM;
 * [mbstring](http://php.net/manual/en/book.mbstring.php);
 * [cURL](http://php.net/manual/en/book.curl.php).
 
 It's also recommended to have [mailparse](https://pecl.php.net/package/mailparse) pecl extension installed. It's needed for smooth working of email fetching feature.
 
-php.ini:
+php.ini settings:
 
 ```
 max_execution_time = 180
