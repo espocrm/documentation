@@ -53,3 +53,7 @@ Quote PDF can be send in email as an attachment. Open quote record, click dropdo
 You can create a Number field via Entity Manager for Quote entity type. Administration > Entity Manager > Quote > Fields > Add Filed > Number. Then you need to place it in on detail view using Layout Manager.
 
 The value will be incremented by every new quote. There is an ability to specify the next number as well as prefix.
+
+## Invoices
+
+Quote can be treated as an invoice if its status became `Approved`. Then _Date Invoiced_, _Invoice Number_ fields show up. You can use different template for invoices for printing.
