@@ -22,6 +22,7 @@
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
+* [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
 
 ### Development
 * [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
