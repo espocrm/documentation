@@ -15,6 +15,7 @@
  * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
  * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
 * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
+* [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
 
 ### User Guide
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
