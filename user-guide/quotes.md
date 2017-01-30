@@ -1,8 +1,8 @@
 # Quotes
 
-Quotes has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
+Quotes has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
 
-You can add Quotes panel to Accunt's detail view to be able to see related quotes. You can do it at Layout Manager > Accounts > Relationships.
+You can add Quotes panel to Accunt's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
 
 ## Templates
 
