@@ -4,7 +4,7 @@ Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extens
 
 Workflows automate your business process an easy way. You can find it in the Administration panel. To create workflow rule you need to define:
 
-* Entity Type - what entity type workflow is applied to;
+* Target Entity - what entity type workflow is applied to;
 * Trigger Type - when workflow will be triggered;
 * Conditions - conditions need to be met to trigger workflow;
 * Actions - what to do if workflow is triggered.
@@ -25,8 +25,8 @@ You can specify conditions that must be met to trigger the workflow.
 Some available condition types:
 
 * _Equals_ - whether the field equals to specific value or value of another field.
-* _Was equals_ - whether the field was equal to specific value just before the workflow was triggered.
-* _Changed_ - whether the field was changed just before the workflow were triggered.
+* _Was equals_ - whether the field was equal to specific value before the workflow was triggered.
+* _Changed_ - whether the field was changed before the workflow were triggered.
 
 
 ## Actions
@@ -68,19 +68,19 @@ Unrelates the target entity from another specific entity. E.g. removes a specifi
 Assign the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
 
 * Round-Robin - users are choosen from the top to the bottom of a list (team) and then starting again.
-* Least-Busy - user who has fewer assigned records will be selected for assignment.
+* Least-Busy - user who has fewer assigned records will be chosen for assignment.
 
-_List Report_ - For Least-Busy distribution determines what record will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
+_List Report_ - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
 
 ### Make Followed
 
-Forces specific users to follow the target entity or a specific related entity.
+Forces specific users to follow the target entity or a specificied related entity.
 
 ### Trigger Another Workflow
 
 Allows to make sequential workflows. It's possible to branch workflow by condition: you can setup the workflow to trigger two workflows with different conditions defined in that workflows.
 
-It's possible to delay executing of sequential workflow. In sequential wokflow you can define the condition that checks whether specifiec fields were changed since the parent workflow were triggered.
+It's possible to delay executing of sequential workflow. In the sequential wokflow you can define the condition that checks whether specifiec fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
 
 ### Run Service Action
 
