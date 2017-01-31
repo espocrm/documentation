@@ -8,6 +8,10 @@ Quotes has a relationship with Opportunity. You can add Quotes panel to Opportun
 
 You can add Quotes panel to Accunt's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
 
+## Quote Items
+
+Quote has a list of items. Each item can represent a certain product or a service with description, quantity, tax rate, list price and unit price fields. It's possible to sort items manually.
+
 ## Templates
 
 By default there are two available templates: Quote and Invoice. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
