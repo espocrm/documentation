@@ -53,7 +53,7 @@ Users can populate target lists manually using _Select_ action on the correspond
 
 ## Populating target lists with Reports
 
-[Reports](reports.md) feature provides an ability to populate target lists with records matching specific criteria.
+[Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
 
 ## Excluding Target Lists
 
