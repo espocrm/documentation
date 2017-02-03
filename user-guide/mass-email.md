@@ -49,6 +49,9 @@ If you want to know that your recipient opened the link from your email you need
 
 Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
 
+## Populating target lists with Reports
+
+[Reports](reports.md) feature provides an ability to populate target lists with records matching specific criteria.
 ## Campaign Log
 
 At Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
