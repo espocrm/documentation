@@ -18,7 +18,7 @@ At _Filters_ section you can specify criteria that determines what records will 
 
 _Runtime Filters_ allow you to specify different filters before you run the report.
 
-You can __export__ list report results in csv format. This format can be opened by various application like Excel, Calc.
+You can __export__ list report results in csv format. This format can be opened by various applications like Excel, Calc.
 
 ## Grid Reports
 
@@ -40,7 +40,7 @@ Grid report allows displaying results in a chart form. There are following _char
 
 ## Displaying on dashboard
 
-You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet's options.
+You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
 
 ## Email Sending
 
