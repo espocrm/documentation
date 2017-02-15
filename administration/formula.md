@@ -1,4 +1,4 @@
-# Calculated fields (formula)
+# Calculated Fields (Formula)
 
 In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved. 
 It provides an ability to automatically set specific fields (attributes) with values derived from calculation.
