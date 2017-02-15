@@ -28,6 +28,8 @@ Some available condition types:
 * _Was equals_ - whether the field was equal to specific value before the workflow was triggered.
 * _Changed_ - whether the field was changed before the workflow were triggered.
 
+There are two ways how conditions can be specified: with UI confition builder or with formula. Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). Note: There should not be delimiter `;` used in formula if you define condition.
+
 
 ## Actions
 
@@ -37,19 +39,19 @@ System will send email using a specified email template. A recipient’s email a
 
 ### Create Entity
 
-System will create the new record of any entity type.
+System will create the new record of any entity type. It's possible to define formula to calculate fields.
 
 ### Create Related Entity
 
-System will create the record related to the target record. Target entity should be related with related entity by one-to-many or many-to-many link.
+System will create the record related to the target record. Target entity should be related with related entity by one-to-many or many-to-many link. It's possible to define formula to calculate fields.
 
 ### Update Entity
 
-Allows changing of specific fields of the target record.
+Allows changing of specific fields of the target record. It's possible to define formula to calculate fields.
 
 ### Update Related Entity
 
-Allows changing of specific fields of related record or records.
+Allows changing of specific fields of related record or records. It's possible to define formula to calculate fields.
 
 ### Create Notification
 
@@ -85,3 +87,12 @@ It's possible to delay executing of sequential workflow. In the sequential wokfl
 ### Run Service Action
 
 Allows to execute specific php code.
+
+## Using Formula in Actions
+
+It's possible to define formula to calculate fields for Create Entity, Update Entity, Create Related Entity, Update Related Entity. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
+
+Example:
+```
+name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
+```
