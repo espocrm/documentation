@@ -16,6 +16,7 @@
  * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
 * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
 * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
+* [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
 
 ### User Guide
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
