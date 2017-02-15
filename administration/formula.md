@@ -17,6 +17,7 @@ There are operators, functions attributes and values that can be used in formula
 * `=` - assignment.
 * `||` - logical OR,
 * `&&` - logical AND,
+* `!` - logical NOT,
 * `+`- numeric summation,
 * `-` - numeric subtraction,
 * `*` - numeric multiplication,
