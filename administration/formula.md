@@ -39,9 +39,9 @@ Priority of operators:
 
 ### Attributes
 
-Attributes represents fields values of the target entity. You can insert available attributes by clicking on the plus button.
+Attributes represent fields values of the target entity. You can insert available attributes by clicking on the plus button.
 
-It's also possible to access to attributes of related entities with following format `linkName.attributeName`.
+It's possible to access to attributes of related entities with following format `linkName.attributeName`.
 
 
 ### Functions
@@ -109,7 +109,6 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 
 
 ## Examples
-
 
 ```
 ifThen(
