@@ -5,6 +5,8 @@ It provides an ability to automatically set specific fields (attributes) with va
 
 To edit formula follow Administration > Entity Manager > dropdown menu at the right on the row of needed entity > Formula.
 
+You also might need to set fields, that supposed to be calculated, Read-only via Entity Manager.
+
 
 ## Syntax
 
