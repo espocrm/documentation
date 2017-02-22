@@ -72,6 +72,8 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 
 `datetime\\format(VALUE, TIMEZONE, FORMAT)` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
 
+`datetime\\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
+
 `datetime\\addMinutes(VALUE, MINUTES)` Add MINUTES to datetime VALUE. MINUTES can be negative.
 
 `datetime\\addHours(VALUE, HOURS)` Add HOURS to datetime VALUE. HOURS can be negative.
