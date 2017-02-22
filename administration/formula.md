@@ -109,6 +109,14 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 * Integer numbers. E.g. 1, 100, 40300.
 * Float numbers. E.g. 5.2.
 
+### Variables
+
+It's possible to define custom variables in formula.
+```
+$someVariableName = 'Test';
+description = $test;
+```
+
 
 ## Examples
 
