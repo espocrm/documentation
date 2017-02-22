@@ -70,7 +70,7 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 
 `datetime\\now()` Returns current datetime.
 
-`datetime\\format(VALUE, TIMEZONE)` Converts date or datetime VALUE into string formatted according to application settings. It TIMEZONE is omitted then default time zone will be used.
+`datetime\\format(VALUE, TIMEZONE, FORMAT)` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
 
 `datetime\\addMinutes(VALUE, MINUTES)` Add MINUTES to datetime VALUE. MINUTES can be negative.
 
