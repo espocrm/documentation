@@ -88,6 +88,8 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 
 `number\\format(VALUE)` Converts numeric VALUE into string formatted according to application settings.
 
+`number\\abs(VALUE)` Absolute value. Return null if VALUE is not numeric.
+
 `entity\\isNew()` Return TRUE if the entity is new (being created) and FALSE if not (being updated).
 
 `entity\\isAttributeChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was changed.
