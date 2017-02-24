@@ -12,6 +12,8 @@ You can add Quotes panel to Accunt's detail view to be able to see related quote
 
 Quote has a list of items. Each item can represent a certain product or a service with description, quantity, tax rate, list price and unit price fields. It's possible to sort items manually.
 
+There is an ability to add custon fields for Quote Item entity using Entity Manager.
+
 ## Templates
 
 By default there are two available templates: Quote and Invoice. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
