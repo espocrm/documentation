@@ -1,4 +1,4 @@
-#Ldap Authorization
+# Ldap Authorization
 
 In this guide, we will show how to configure LDAP authorization for EspoCRM. Let’s go.
 
