@@ -1,6 +1,6 @@
-#Installation
+# Installation
 
-###Requirements
+### Requirements
 EspoCRM runs on the most hosting providers. Requirements include the following:
 
 * PHP 5.5 or latest version of PHP with enabled pdo, json, GD library, mcrypt extensions (usually enabled by default);
@@ -8,10 +8,10 @@ EspoCRM runs on the most hosting providers. Requirements include the following:
 
 See [Server Configuration](server-configuration.md) article for more information.
 
-###1. Download the EspoCRM installation package
+### 1. Download the EspoCRM installation package
 To get the latest version of EspoCRM follow [download page](http://www.espocrm.com/download/) link.
 
-###2. Upload the EspoCRM Files to Your Server
+### 2. Upload the EspoCRM Files to Your Server
 
 Once the download is complete, upload the package to your web server. 
 To upload it you can use SSH, FTP or the hosting administration panel.
@@ -19,11 +19,11 @@ Extract the archive to your public web server directory (e.g., `public_html`, `w
 
 _Note: For FTP, you need to extract the archive before uploading to your web server._
 
-###3. Create a MySQL Database for EspoCRM to use
+### 3. Create a MySQL Database for EspoCRM to use
 
 Go to your hosting administration panel, or to SSH, and create a new database and user for EspoCRM (e.g., `MySQL Databases` in cPanel).
 
-###4. Run EspoCRM installation process
+### 4. Run EspoCRM installation process
 
 Now, open your web browser, and go to the URL with EspoCRM files (e.g., `http://yourdomain.com/espo`).
 
