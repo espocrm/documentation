@@ -1,8 +1,8 @@
-#Nginx server configuration for EspoCRM
+# Nginx server configuration for EspoCRM
 
 These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
 
-##PHP requirements
+## PHP requirements
 
 To install all necessary libraries, run these commands in a terminal:
 
@@ -13,11 +13,11 @@ sudo phpenmod mcrypt imap mbstring
 sudo service nginx restart
 ```
 
-##Fixing the issue “API Error: EspoCRM API is unavailable”:
+## Fixing the issue “API Error: EspoCRM API is unavailable”:
 
 Take only necessary steps. After each step check if the issue is solved.
 
-###1. Enable rewrite rules in Nginx server
+### 1. Enable rewrite rules in Nginx server
 
 Add this code to your Nginx server block config file (/etc/nginx/sites-available/YOUR_SITE) inside “server” block:
 
@@ -90,7 +90,7 @@ If so, run the command to restart nginx server:
 sudo service nginx restart
 ```
 
-###2. Add RewriteBase path
+### 2. Add RewriteBase path
 
 Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
 
