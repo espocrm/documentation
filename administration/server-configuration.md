@@ -1,10 +1,10 @@
-#Server Configuration for EspoCRM
+# Server Configuration for EspoCRM
 
 EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.5 or greater and MySQL version 5.1 or greater.
 
-##Configuration Recommendations
+## Configuration Recommendations
 
-###PHP Requirements
+### PHP Requirements
 
 EspoCRM requires PHP 5.5 or greater, with the following extensions enabled:
 
@@ -30,12 +30,12 @@ upload_max_filesize = 50M
 ```
 
 
-###MySQL Requirements
+### MySQL Requirements
 
 EspoCRM supports MySQL version 5.1 or greater.
 These are no special peculiarities. All default settings are good for EspoCRM.
 
-##Required Permissions for Unix-based Systems
+## Required Permissions for Unix-based Systems
 
 The files and directories should have the following permissions:
 
@@ -61,7 +61,7 @@ cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
 
-##Setup a crontab
+## Setup a crontab
 
 To setup a crontab on a UNIX system, take the following steps:
 
@@ -77,7 +77,7 @@ crontab -e -u WEBSERVER_USER
 WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
 * 4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
-##Configuration instructions based on your server:
+## Configuration instructions based on your server:
 
 * [Apache server configuration](apache-server-configuration.md).
 * [Nginx server configuration](nginx-server-configuration.md).
