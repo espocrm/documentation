@@ -1,4 +1,4 @@
-#LDAP authorization for Active Directory
+# LDAP authorization for Active Directory
 
 Example of configuration LDAP authorization for the Active Directory server. The full guide of configuration LDAP authorization is described [here](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md).
 
