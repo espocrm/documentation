@@ -24,6 +24,8 @@ Add this code to your Nginx server block config file (/etc/nginx/sites-available
 ```
 server {   
     # ...
+    
+    client_max_body_size 50M;
  
     location /api/v1/ {
         if (!-e $request_filename){
