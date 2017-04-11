@@ -1,5 +1,7 @@
 # Custom Views
 
+## Record Views
+
 EspoCRM framework provides flexible abilities to define custom views for certail entity types. They must be defined it `clientDefs` category of metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
@@ -93,5 +95,20 @@ Espo.define('custom:views/email/record/detail', 'views/email/record/detail', fun
 });
 ```
 
+## Field Views
 
+Custom views for specific fields should be specified in entityDefs section of metadata.
+
+`custom/Espo/Custom/Resources/metadata/entityDefs/YourEntityType.json`
+
+
+
+```json
+{
+  "fields": {
+    "yourFieldName": {
+      "views": "custom:views/your-entity-type/fields/your-field-name"
+    }  
+  }
+}
 
