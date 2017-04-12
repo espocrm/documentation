@@ -90,6 +90,8 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 
 `number\\abs(VALUE)` Absolute value. Return null if VALUE is not numeric.
 
+`number\\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
+
 `entity\\isNew()` Return TRUE if the entity is new (being created) and FALSE if not (being updated).
 
 `entity\\isAttributeChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was changed.
