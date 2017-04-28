@@ -158,3 +158,7 @@ ifThenElse(
 );
 
 ```
+
+## Using formula in Workflows
+
+You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
