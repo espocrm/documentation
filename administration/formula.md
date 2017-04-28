@@ -108,6 +108,8 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 
 `env\\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
 
+`array\\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields (since version 4.7.0).
+
 
 ### Values
 
