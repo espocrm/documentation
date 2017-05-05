@@ -81,16 +81,22 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `datetime\format(VALUE, TIMEZONE, FORMAT)` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
 
 ##### datetime\date
-`datetime\format(VALUE)` Returns date of the month (1-31). `0` if VALUE if empty. (since version 4.7.0)
+`datetime\date(VALUE)` Returns date of the month (1-31). `0` if VALUE if empty. (since version 4.7.0)
 
 ##### datetime\months
-`datetime\format(VALUE)` Returns month (1-12). `0` if VALUE if empty. (since version 4.7.0)
+`datetime\months(VALUE)` Returns month (1-12). `0` if VALUE if empty. (since version 4.7.0)
 
 ##### datetime\year
-`datetime\format(VALUE)` Returns year. `0` if VALUE if empty. (since version 4.7.0)
+`datetime\year(VALUE)` Returns year. `0` if VALUE if empty. (since version 4.7.0)
+
+##### datetime\hour
+`datetime\hour(VALUE)` Returns hour (0-23). `-1` if VALUE if empty. (since version 4.7.0)
+
+##### datetime\minute
+`datetime\minute(VALUE)` Returns minute (0-59). `-1` if VALUE if empty. (since version 4.7.0)
 
 ##### datetime\dayOfWeek
-`datetime\format(VALUE)` Returns day of the week (1-7). `0` if VALUE if empty. `1` - for Sunday. (since version 4.7.0)
+`datetime\dayOfWeek(VALUE)` Returns day of the week (1-7). `0` if VALUE if empty. `1` - for Sunday. (since version 4.7.0)
 
 ##### datetime\diff
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
