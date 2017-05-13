@@ -44,9 +44,13 @@ Grid report allows displaying results in a chart form. There are following _char
 
 Simple to use type of filters. You can also pick fields of target entity as well as related entitites.
 
+![Field filter](../_static/images/user-guide/reports/filter-field.png)
+
 ### OR group
 
 OR means that at least one condition under the group must be met.
+
+![OR group](../_static/images/user-guide/reports/filter-or.png)
 
 ### AND group
 
@@ -56,6 +60,8 @@ AND means that all conditions under the group must be met.
 
 Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
 
+![NOT group](../_static/images/user-guide/reports/filter-not.png)
+
 ### Complex Expression
 
 For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
@@ -63,6 +69,8 @@ For more advanced use. You can apply function for certain database column and co
 Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
 
 Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
+
+![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
 
 ## Displaying on dashboard
 
