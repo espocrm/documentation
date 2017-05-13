@@ -38,6 +38,32 @@ _Runtime Filters_ allows you to specify different filters before you run the rep
 
 Grid report allows displaying results in a chart form. There are following _chart types_: Bar (Horizontal), Bar (Vertical), Pie, Line.
 
+## Filters
+
+### Field filter
+
+Simple to use type of filters. You can also pick fields of target entity as well as related entitites.
+
+### OR group
+
+OR means that at least one condition under the group must be met.
+
+### AND group
+
+AND means that all conditions under the group must be met.
+
+### NOT group
+
+Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
+
+### Complex Expression
+
+For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
+
+Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
+
+Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
+
 ## Displaying on dashboard
 
 You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
