@@ -18,7 +18,7 @@ At _Filters_ section you can specify criteria that determines what records will 
 
 _Runtime Filters_ allow you to specify different filters before you run the report.
 
-You can __export__ list report results in csv format. This format can be opened by various applications like Excel, Calc.
+You can __export__ list report results to excel and csv formats.
 
 ## Grid Reports
 
@@ -37,6 +37,8 @@ At _Filters_ section you can specify criteria that determines what records will 
 _Runtime Filters_ allows you to specify different filters before you run the report.
 
 Grid report allows displaying results in a chart form. There are following _chart types_: Bar (Horizontal), Bar (Vertical), Pie, Line.
+
+It's possible to __export__ grid report results to excel and csv formats.
 
 ## Filters
 
