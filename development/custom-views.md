@@ -107,7 +107,7 @@ Custom views for specific fields should be specified in entityDefs section of me
 {
   "fields": {
     "yourFieldName": {
-      "views": "custom:views/your-entity-type/fields/your-field-name"
+      "view": "custom:views/your-entity-type/fields/your-field-name"
     }  
   }
 }
