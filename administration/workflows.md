@@ -2,7 +2,7 @@
 
 Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-Workflows automate your business process an easy way. You can find it in the Administration panel. To create workflow rule you need to define:
+Workflows automate your business process an easy way. You can find it in the Administration panel. To create a workflow rule you need to define:
 
 * Target Entity - what entity type workflow is applied to;
 * Trigger Type - when workflow will be triggered;
@@ -14,7 +14,7 @@ Workflows automate your business process an easy way. You can find it in the Adm
 
 * **After record created** - Triggered only when a new record is created. If specified conditions are met then actions will be run.
 * **After record saved** - Triggered when a new or existing record is saved. If specified conditions are met then actions will be run.
-* **Scheduled** - Triggered according defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by specified list report. So you need also to create list report.
+* **Scheduled** - Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by specified list report. So you need also to create list report.
 * **Sequential** - Supposed to be run by another workflow. Provides an ability to make a complex logic.
 
 
@@ -25,7 +25,7 @@ You can specify conditions that must be met to trigger the workflow.
 Some available condition types:
 
 * _Equals_ - whether the field equals to specific value or value of another field.
-* _Was equals_ - whether the field was equal to specific value before the workflow was triggered.
+* _Was equal_ - whether the field was equal to specific value before the workflow was triggered.
 * _Changed_ - whether the field was changed before the workflow were triggered.
 
 There are two ways how conditions can be specified: with UI confition builder or with formula. Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). Note: There should not be delimiter `;` used in formula if you define condition.
@@ -35,7 +35,7 @@ There are two ways how conditions can be specified: with UI confition builder or
 
 ### Send Email
 
-System will send email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
+System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
 
 ### Create Entity
 
@@ -43,7 +43,7 @@ System will create the new record of any entity type. It's possible to define fo
 
 ### Create Related Entity
 
-System will create the record related to the target record. Target entity should be related with related entity by one-to-many or many-to-many link. It's possible to define formula to calculate fields.
+System will create the record related to the target record. It's possible to define formula to calculate fields.
 
 ### Update Entity
 
@@ -51,7 +51,7 @@ Allows changing of specific fields of the target record. It's possible to define
 
 ### Update Related Entity
 
-Allows changing of specific fields of related record or records. It's possible to define formula to calculate fields.
+Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
 
 ### Create Notification
 
