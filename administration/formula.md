@@ -34,8 +34,8 @@ There are operators, functions attributes and values that can be used in formula
 
 Priority of operators:
 * `=`;
-* `'||`, `&&`;
-* `'==`, `!=`, `>`, `<`, `>=`, `<=`;
+* `||`, `&&`;
+* `==`, `!=`, `>`, `<`, `>=`, `<=`;
 * `+`, `-`;
 * `*`, `/`, `%`.
 
