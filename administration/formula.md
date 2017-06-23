@@ -96,7 +96,7 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `datetime\minute(VALUE)` Returns minute (0-59). `-1` if VALUE if empty. (since version 4.7.0)
 
 ##### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE)` Returns day of the week (1-7). `0` if VALUE if empty. `1` - for Sunday. (since version 4.7.0)
+`datetime\dayOfWeek(VALUE)` Returns day of the week (0-6). `-1` if VALUE if empty. `0` - for Sunday. (since version 4.7.3)
 
 ##### datetime\diff
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
