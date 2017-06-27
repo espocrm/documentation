@@ -30,6 +30,10 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
   
   return Dep.extend({
     template: 'custom:your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
+    middleView: 'custom:your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
+    sideView: 'custom:your-entity-type/record/detail-side',     // Here is your custom view. Omit if you don't need it.
+    bottomView: 'custom:your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
+    
     setup: function () {
       Dep.prototype.setup.call(this);
       
@@ -63,6 +67,11 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
 });
 
 ```
+
+### Custom Template
+You are able to create a custom template with the following path:
+`client/custom/res/templates/your-entity-type/record/detail.tpl`
+
 
 
 `client/custom/src/views/your-entity-type/detail.js`
