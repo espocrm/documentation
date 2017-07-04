@@ -12,7 +12,7 @@ It's possible to see what permissions is applied to a certain user by clicking '
 
 ![1](../_static/images/administration/roles-management/scope-level.png)
 
-##Example
+## Example
 
 For example, user belongs to team ‘Sales’. That team has single role ‘Salesman’. So all users from this team will obtain ‘Salesman’ role.
 
