@@ -1,6 +1,6 @@
 # Create a Scheduled Job
 
-To define a custom Scheduled Job create a file `advanced/custom/Espo/Custom/Jobs/{JOB_NAME}.php` with the content
+To define a custom Scheduled Job create a file `custom/Espo/Custom/Jobs/{JOB_NAME}.php` with the content
 
 ```
 namespace Espo\Custom\Jobs; 
