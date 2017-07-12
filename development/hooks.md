@@ -19,12 +19,12 @@ The main hook types are:
 - afterMassRelate
 
 ### New Hook Type
-You can use own one hook type and trigger it with
+You can use your own hook type and trigger it with
 
 `$this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);`
 
 ## Hook Order
-If you have several hooks, related to one Entity Type and with the same hook type, and order of running is important, you can set a `public static $order` property in integer value
+If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property in integer value
 
 Ascending order - the hook with the smallest order number runs first.
 
