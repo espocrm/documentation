@@ -10,26 +10,26 @@ To create a hook, you need:
 
 The main hook types are:
 
-- beforeSave
-- afterSave
-- beforeRemove
-- afterRemove
-- afterRelate
-- afterUnrelate
-- afterMassRelate
+- beforeSave;
+- afterSave;
+- beforeRemove;
+- afterRemove;
+- afterRelate;
+- afterUnrelate;
+- afterMassRelate.
 
 ### New Hook Type
 You can use your own hook type and trigger it with
 
-`$this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);`
+`$this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);`.
 
 ## Hook Order
-If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property in integer value
+If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property in an integer value.
 
 Ascending order - the hook with the smallest order number runs first.
 
 ## _Example_
-This example set Account Name for new Leads, if it is not set.
+This example sets Account Name for new Leads, if it is not set.
 
 `custom/Espo/Custom/Hooks/Lead/AccountName.php`
 
@@ -43,8 +43,8 @@ class AccountName extends \Espo\Core\Hooks\Base
     public function beforeSave(Entity $entity, array $options = array())
     {
         if($entity->isNew() && !$entity->get('accountName')) { 
-            $entity->set("accountName","No Account");
-	   }
+            $entity->set("accountName", "No Account");
+	}
     }
 }
 ```
