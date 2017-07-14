@@ -1,6 +1,6 @@
 # New funtion in Formula
 
-EspoCRM provides the possibility to develop custom functions for formulas. 
+EspoCRM provides the possibility to create custom functions that can be userd in formula. 
 
 If your function is related to the one of groups like String, Logic, Date, create a file in __{GroupName}Group__ folder, named __{FunctionName}Type.php__ with __{FunctionName}Type__ class declaration. You need to define the method __'process'__.
 
@@ -41,9 +41,9 @@ class ContainsType extends \Espo\Core\Formula\Functions\Base
     }
 }
 ```
-## Add the function to the list
+## Adding the function to the list
 
-To add the created function to the function list of formulas, create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
+In order to add the created function to the function list of formula, create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
 ```
 {
     "functionList": [
@@ -55,5 +55,4 @@ To add the created function to the function list of formulas, create a file `cus
 ```
 
 __Clear cache__ and use this function in formula. You can type it `string\contains(HAYSTACK, NEEDLE, OFFSET)` or select from function list, if you add it.
-
 
