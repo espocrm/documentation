@@ -1,6 +1,6 @@
-# New funtion in Formula
+# Defining new funtions for Formula
 
-EspoCRM provides the possibility to create custom functions that can be userd in formula. 
+EspoCRM provides the possibility to create custom functions that can be used in formula. 
 
 If your function is related to the one of groups like String, Logic, Date, create a file in __{GroupName}Group__ folder, named __{FunctionName}Type.php__ with __{FunctionName}Type__ class declaration. You need to define the method __'process'__.
 
