@@ -48,3 +48,6 @@ class AccountName extends \Espo\Core\Hooks\Base
     }
 }
 ```
+
+## Global Hooks
+If you need to apply a hook for all entities, you can use common hooks. To do this, put your hook class in Common directory, e.g. `custom/Espo/Custom/Hooks/Common/{HookName}.php`.
