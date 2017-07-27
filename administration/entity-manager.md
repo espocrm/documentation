@@ -38,13 +38,14 @@ By clicking `Fields` link you will be moved to the separated page. There you wil
 * Array - list of values, with the ability to select multiple values (not good option if you need to search by this field); users can add their own values if options are not specified.
 * Attachment Multiple - multiple file attachments;
 * Auto-increment - read only generated number;
-* Boolean - checkbox, true of false;
+* Boolean - checkbox, true or false;
 * Currency - for currency values;
 * Date;
 * DateTime;
 * Enum - selectbox, with the ability to select only one value;
 * File - uploading one file;
 * Float - number with a decimal part;
+* Foreign - a field of related entity;
 * Image - uploading image file with a preview;
 * Int - whole number;
 * Number - autoincrement number of string type with a possible prefix and a specific length;
