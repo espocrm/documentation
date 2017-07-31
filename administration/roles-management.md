@@ -74,6 +74,8 @@ It also defines whether user is able to post to stream of another users/teams.
 
 By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
 
+There is an ability to restrict an access applied by default by enabling 'ACL Strict Mode' at Administration > Settings.
+
 ## Field Level Security
 
 Allows to control an access for a specific fields.
