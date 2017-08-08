@@ -47,7 +47,7 @@ Assigned User and Teams fields are read only for portal users.
 
 You can find the url for your portal in 'URL' field of the portal record. Also it's possible to use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
 
-### Example
+### Access portal by Custom URL for Apache server
 
 Custom URL: my-portal-host-name.com.
 
@@ -84,4 +84,3 @@ Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is avaia
   RewriteCond %{REQUEST_URI} !^/portal/{PORTAL_ID}/.*$
   RewriteRule ^(.*)$ /portal/{PORTAL_ID}/$1 [L]
 ```
-
