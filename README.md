@@ -33,5 +33,9 @@
 * [Dynamic Forms](https://github.com/espocrm/documentation/blob/master/development/dynamic-forms.md)
 * [Link Multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
 * [Extension Packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
+* [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
+* [Creating Scheduled Job](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
+* [Defining new funtions for Formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
+
 
 [Documentation on the website](https://www.espocrm.com/documentation/)
