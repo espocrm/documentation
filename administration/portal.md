@@ -45,4 +45,43 @@ Assigned User and Teams fields are read only for portal users.
 
 ## Access to Portal
 
-You can find the url for your portal in 'URL' field of the portal record. You can use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
+You can find the url for your portal in 'URL' field of the portal record. Also it's possible to use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
+
+### Example
+
+Custom URL: my-portal-host-name.com.
+
+#### crm.portal.conf
+```
+<VirtualHost *:80>
+	DocumentRoot /path/to/espocrm/instance/
+	ServerName my-portal-host-name.com
+
+    <Directory /path/to/espocrm/instance/>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+ServerAlias my-portal-host-name.com
+
+```
+
+#### Mod rewrite rules
+
+Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is avaialble in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
+
+```
+  RewriteCond %{HTTP_HOST} ^portal-host-name.com$
+  RewriteRule ^client - [L]
+
+  RewriteCond %{HTTP_HOST} ^portal-host-name.com$
+  RewriteCond %{REQUEST_URI} !^/portal/{PORTAL_ID}/.*$
+  RewriteRule ^(.*)$ /portal/{PORTAL_ID}/$1 [L]
+```
+
