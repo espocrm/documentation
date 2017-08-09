@@ -158,6 +158,9 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 ##### array\includes
 `array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
 
+##### array\length
+`array\length(LIST)` Returns count of elements in LIST. (since version 4.8.1)
+
 
 ### Values
 
