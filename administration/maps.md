@@ -2,7 +2,7 @@
 
 ## How to show the map based on an address field
 
-Since 3.9.0 version every Address field has a corresponding Map field. All you need is to put it on Detail layout. It uses Google Maps service.
+Every Address field has its corresponding Map field. All you need is to put it on Detail layout. It uses Google Maps service.
 
 `Administration > Layout Manager > Choose entity (Account, Contact, Lead or custom one) > Detail > Drag & Drop Map field.`
 
