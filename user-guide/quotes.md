@@ -22,6 +22,8 @@ For more precise editing use Code View mode.
 
 You can print fields of related records as placeholders in your template. E.g. {{account.type}} – type of related Account, {{assignedUser.lastName}} – last name of assigned user. If your line item is a product you can print product’s fields. E.g. {{product.length}}, {{product.color}}, where length and color are custom fields of Product entity.
 
+Looping through quote items:
+
 ```
 <!-- {{#each itemList}} -->
   <td>{{order}}</td>
