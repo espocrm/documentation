@@ -2,8 +2,8 @@
 
 ### Administration
 * [Server Configuration](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md)
- * [Apache](https://github.com/espocrm/documentation/blob/master/administration/apache-server-configuration.md)
- * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
+  * [Apache](https://github.com/espocrm/documentation/blob/master/administration/apache-server-configuration.md)
+  * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
 * [Installation](https://github.com/espocrm/documentation/blob/master/administration/installation.md)
 * [Roles Management (Access Control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
 * [Email Fetching](https://github.com/espocrm/documentation/blob/master/administration/email-fetching.md)
@@ -12,8 +12,8 @@
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
 * [LDAP Authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
- * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
- * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
+  * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
+  * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
 * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
 * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
 * [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
