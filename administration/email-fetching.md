@@ -3,8 +3,6 @@
 
 >Important. Cron should be configured in your system to make Email Fetching feature working. You can find the information in your EspoCRM at Administration > Scheduled Jobs.
 
-> It's recommended to have [mailparse](https://pecl.php.net/package/mailparse) pecl extension installed. It's needed for smooth working of email fetching feature.
-
 
 ## Overview
 
