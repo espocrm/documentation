@@ -30,14 +30,14 @@ By default the system will append opt-out to all sent emails. But you can use cu
 
 Example:
 ```html
-<a href="{optOutUrl}">Unsubsribe from the mailing list.</a>
+<a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
 ```
 
 Administrator can disable mandatory opt-out link being added by system at Administration > Outbound Emails.
 
 ## Tracking URL
 
-If you want to know that your recipient opened the link from your email you need to create Tracking URL. Specify any _Name_
+If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
  and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
 
  Example:
@@ -69,14 +69,14 @@ _For Administrators_
 
 #### What to do if emails are not sent out.
 
-1. Check if _Sent Test_ works. If does't work then check if system SMTP settings are correct.
+1. Check if _Send Test_ works. If does't work, then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
 3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
 
 
 #### What if Tracking URLs has wrong url that does not lead to your crm.
 
-Check 'siteUrl' paramater in `data/config.php` file. It mube be set as URL of your EspoCRM accessible from the external world.
+Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of your EspoCRM accessible from the external world.
 
 
 
