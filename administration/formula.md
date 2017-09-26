@@ -141,7 +141,9 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `entity\attributeFetched(ATTRIBUTE)` Attribute that was set when target entity was fetched from database. Before it was modified.
 
 ##### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field.
+`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field. 
+
+`entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
 
 ##### entity\hasLinkMultipleId
 `entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
