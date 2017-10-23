@@ -18,9 +18,23 @@ There is an ability to add custon fields for Quote Item entity using Entity Mana
 
 By default there are two available templates: Quote and Invoice. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
 
-For more precise editing use Code View mode.
+For more precise editing it's recommended to use Code View mode.
 
-You can print fields of related records as placeholders in your template. E.g. {{account.type}} – type of related Account, {{assignedUser.lastName}} – last name of assigned user. If your line item is a product you can print product’s fields. E.g. {{product.length}}, {{product.color}}, where length and color are custom fields of Product entity.
+You can print fields of Quote record as well as fields of related records by utilizing placeholders in your template.
+
+Examples:
+`{{accountName}}` – Account name,
+`{{{billingAddressStreet}}}` – street,
+`{{account.type}}` – type of related Account,
+`{{assignedUser.lastName}}` – last name of the assigned user.
+
+If your line item is a product you can print product’s fields. 
+
+Examples:
+`{{product.length}}`, 
+`{{product.color}}`.
+
+Length and color are custom fields of Product entity in examples.
 
 Looping through quote items:
 
