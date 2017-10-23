@@ -24,14 +24,18 @@ You can print fields of Quote record as well as fields of related records by uti
 
 Examples:
 `{{accountName}}` – Account name,
+
 `{{{billingAddressStreet}}}` – street,
+
 `{{account.type}}` – type of related Account,
+
 `{{assignedUser.lastName}}` – last name of the assigned user.
 
 If your line item is a product you can print product’s fields. 
 
 Examples:
 `{{product.length}}`, 
+
 `{{product.color}}`.
 
 Length and color are custom fields of Product entity in examples.
