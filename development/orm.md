@@ -70,6 +70,19 @@ $accountList = $entityManager->getRepository('Account')->where(array(
     'type' => 'Customer',    
 ))->find();
 ```
+
+Descending order:
+
+```php
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', true)->find();
+```
+
+Ascending order:
+```php
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt')->find();
+```
+
+or:
 ```php
 $accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
 ```
