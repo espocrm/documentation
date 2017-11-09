@@ -51,15 +51,12 @@ System will create the record related to the target record. It's possible to def
 
 Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`;
+If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
 ### Update Related Record
 
 Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
 
-### Create Notification
-
-Notify specified users or user related to the target entity with some message. It's possible to use placeholders in message template: {entity} - target record, {user} - current user.
 
 ### Link with Another Record
 
@@ -78,6 +75,10 @@ Assign the target record to user by distribution rule. There are two available r
 
 _List Report_ - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
 
+### Create Notification
+
+Notify specific users with the message. It's possible to use placeholders in message template: {entity} - target record, {user} - current user.
+
 ### Make Followed
 
 Forces specific users to follow the target entity or a specificied related entity.
@@ -90,7 +91,12 @@ It's possible to delay executing of sequential workflow. In the sequential wokfl
 
 ### Run Service Action
 
-Allows to execute specific php code.
+Allows to run specific service scripts. By default there are following actions available:
+
+* Send Invitations - for Meetings/Calls;
+* Add Items - for Quotes.
+
+Developers can write their own service actions: https://www.espocrm.com/features/add-custom-service-methods-for-workflow/.
 
 ## Using Formula in Actions
 
