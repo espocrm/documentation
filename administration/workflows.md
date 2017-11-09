@@ -37,19 +37,23 @@ There are two ways how conditions can be specified: with UI confition builder or
 
 System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
 
-### Create Entity
+### Create Record
 
-System will create the new record of any entity type. It's possible to define formula to calculate fields.
+System will create the new record of any entity type. If there is a relationship between the target record and creating record it's possible to relate records. 
 
-### Create Related Entity
+There is an ability to define formula to calculate fields.
+
+### Create Related Record
 
 System will create the record related to the target record. It's possible to define formula to calculate fields.
 
-### Update Entity
+### Update Target Record
 
-Allows changing of specific fields of the target record. It's possible to define formula to calculate fields.
+Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
 
-### Update Related Entity
+If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula script function entity\addLinkMultipleId(LINK, ID). Example: `entity\addLinkMultipleId('teams', 'teamId')`;
+
+### Update Related Record
 
 Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
 
@@ -57,11 +61,11 @@ Allows changing of specific fields of the related record or records. It's possib
 
 Notify specified users or user related to the target entity with some message. It's possible to use placeholders in message template: {entity} - target record, {user} - current user.
 
-### Link with Another Entity
+### Link with Another Record
 
 Relates the target entity with another specific entity. E.g. adds specific team to the record.
 
-### Unlink with Another Entity
+### Unlink with Another Record
 
 Unrelates the target entity from another specific entity. E.g. removes a specific team from the record.
 
