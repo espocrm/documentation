@@ -51,7 +51,7 @@ System will create the record related to the target record. It's possible to def
 
 Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula script function entity\addLinkMultipleId(LINK, ID). Example: `entity\addLinkMultipleId('teams', 'teamId')`;
+If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`;
 
 ### Update Related Record
 
