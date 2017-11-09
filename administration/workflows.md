@@ -94,7 +94,7 @@ It's possible to delay executing of sequential workflow. In the sequential wokfl
 Allows to run specific service scripts. By default there are following actions available:
 
 * Send Invitations - for Meetings/Calls;
-* Add Items - for Quotes.
+* Add Quote Items - for Quotes.
 
 Developers can write their own service actions: https://www.espocrm.com/features/add-custom-service-methods-for-workflow/.
 
