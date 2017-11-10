@@ -77,6 +77,8 @@ Custom formatting for currency values (since version 4.8.3):
 ```
 Value `10000.5` will be printer as `10 000,50`. 
 
+To display text fileds (multiline) use triple braces: `{{{description}}}`.
+
 ## Print to PDF
 
 Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template.
