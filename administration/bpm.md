@@ -2,6 +2,8 @@
 
 Business Process Management (BPM) tool provides an ability to model and automate business processes in EspoCRM. It is available in Advanced Pack extension.
 
+![BPM example](../_static/images/administration/bpm/example-1.png)
+
 ### Difference with Workflows tool
 
 Workflows tool is intented for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
@@ -182,3 +184,17 @@ Through UI there is an ability to check conditions for following records:
 * User task records, allowing checking the resolution.
 
 It's also possible to define conditions in espo formula language.
+
+## Examples
+
+### Example 1
+
+![Example 1](../_static/images/administration/bpm/example-1.png)
+
+### Example 2
+
+![Example 2](../_static/images/administration/bpm/example-2.png)
+
+### Example 3
+
+![Example 3](../_static/images/administration/bpm/example-3.png)
