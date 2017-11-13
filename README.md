@@ -9,14 +9,16 @@
 * [Email Fetching](https://github.com/espocrm/documentation/blob/master/administration/email-fetching.md)
 * [Entity Manager: Entities, Fields, Relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
 * [Data Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
+* [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
+* [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
+* [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
 * [LDAP Authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
   * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
 * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
-* [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
-* [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
+
 
 ### User Guide
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
