@@ -78,9 +78,9 @@ In case of diverging it defines a single flow (path) that will be chosen accordi
 
 In case of converging it just directs the flow to the outcoming element. It doesn't get blocked after the flow came though, so parallel flows won't be merged into the single flow.
 
-![exclusive gateway divergent](../_static/images/administration/bpmn/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpmn/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Inclusive Gateway
 
@@ -90,7 +90,7 @@ In case of diverging can direct to one or multiple parallel flows (paths), depen
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
 
-![inclusive gateway](../_static/images/administration/bpmn/gateway-inclusive.png)
+![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -104,7 +104,7 @@ In case of diverging it splits flow into multiple parallel flows. There is no pa
 
 In case of converging it waits until all incoming flow come and then continue to the next outgoing element.
 
-![parallel gateway](../_static/images/administration/bpmn/gateway-parallel.png)
+![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -118,7 +118,7 @@ It stops the flow until any of outgoing event gets triggered. Triggered event de
 
 Only intermediate events can be on the other end of outgoing sequence flows.
 
-![event based gateway](../_static/images/administration/bpmn/gateway-event-based.png)
+![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
 
 ### Tasks
 
