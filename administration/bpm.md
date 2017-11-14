@@ -12,7 +12,7 @@ BPM tool is intended for more complex business flows, where can be diverging and
 
 ## Process Flowcharts
 
-Available from Administration panel. Also can be added as a tab on the navigation panel.
+Available from administration panel. Also can be added as a tab on the navigation panel.
 
 Flowcharts intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
 
@@ -24,7 +24,7 @@ To show details and parameters of a certain flowchart element you need to click 
 
 ## Processes
 
-Processes are available from Administration panel.  Also can be added as a tab on the navigation panel.
+Processes are available from administration panel.  Also can be added as a tab on the navigation panel.
 
 Process represents business process instance. When it's initiated it gets status 'Started'. When process is finished it gets status 'Ended'. The process also can be stopped manually by the user who has an access to edit the process. If it's stopped manually it gets status 'Stopped'.
 
