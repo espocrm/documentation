@@ -4,8 +4,6 @@ Business Process Management (BPM) tool provides an ability to model and automate
 
 ![BPM example](../_static/images/administration/bpm/bpm-1.png)
 
-BPM tool  .
-
 ### Difference with Workflows tool
 
 Workflows tool is intented for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
