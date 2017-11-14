@@ -24,6 +24,8 @@ You can __export__ list report results to excel and csv formats.
 
 Grid reports result summarized values grouped by specified fields. These reports can be displayed as a chart.
 
+![Grid reports](../_static/images/user-guide/reports/grid.png)
+
 To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
 
 At _Group By_ field pick one or two fields you want your report data be grouped by. It's possible to group by year, month, day for date fields. If you group by two fields your report will be considered as three-dimensional.
