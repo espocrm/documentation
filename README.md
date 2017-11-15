@@ -14,11 +14,9 @@
 * [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
 * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
-
 * [LDAP Authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
   * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
-  
 * Misc
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
