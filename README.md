@@ -6,7 +6,7 @@
   * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
 * [Installation](https://github.com/espocrm/documentation/blob/master/administration/installation.md)
 * [Roles Management (access control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
-* [Email Fetching](https://github.com/espocrm/documentation/blob/master/administration/email-fetching.md)
+* [Emails](https://github.com/espocrm/documentation/blob/master/administration/emails.md)
 * [Entity Manager: entities, fields, relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
 * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
 * [Data Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
