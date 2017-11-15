@@ -10,11 +10,11 @@
 * Customization
   * [Entity Manager: entities, fields, relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
   * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
-* [Data Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * Automation
   * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
   * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
   * [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
+* [Data Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [LDAP Authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
