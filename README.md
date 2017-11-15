@@ -8,6 +8,7 @@
 * [Roles Management (Access Control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
 * [Email Fetching](https://github.com/espocrm/documentation/blob/master/administration/email-fetching.md)
 * [Entity Manager: Entities, Fields, Relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
+* [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
 * [Data Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
 * [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
