@@ -60,7 +60,7 @@ Parameters:
 * Default Value - Value of the field set upon creating new record.
 * Audited - updates of the field will be logged in Stream.
 
-*Note*: After you have added the new field you need to put this field on layouts (Administration > Layout Manager).
+**Note**: After you have added the new field you need to put this field on layouts (Administration > Layout Manager).
 
 ### Dynamic Logic
 
