@@ -42,9 +42,9 @@ class AccountName extends \Espo\Core\Hooks\Base
 {    
     public function beforeSave(Entity $entity, array $options = array())
     {
-        if($entity->isNew() && !$entity->get('accountName')) { 
+        if ($entity->isNew() && !$entity->get('accountName')) { 
             $entity->set("accountName", "No Account");
-	}
+        }
     }
 }
 ```
