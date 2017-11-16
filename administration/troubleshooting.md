@@ -1,6 +1,6 @@
 # Troubleshooting
 
-## Find out the problem
+## Check logs
 
 To find out the problem, you have to check error log files.
 
