@@ -58,7 +58,11 @@ This event stops the flow until specified criteria is met.
 
 #### Timer Intermediate Event
 
-This event stops the flow and waits as long as it's specified by event's parameters. For more complex timer setting you can utilize formula. Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+This event stops the flow and waits as long as it's specified by event's parameters.
+
+For more complex timer setting you can utilize formula. Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+
+By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
 
 #### End Event
 
