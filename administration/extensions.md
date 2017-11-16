@@ -1,4 +1,4 @@
-Extensions
+# Extensions
 
 ## How to install an extension
 
