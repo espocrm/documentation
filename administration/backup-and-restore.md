@@ -72,7 +72,7 @@ The files should be owner by a web-server user and have correct permissions. Ple
 
 ### Step 3. Import database dump
 
-Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in a configuration file `<espocrm-directory>/data/config.php`. To import your database from the dump, run the command in a terminal:
+Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in a configuration file `ESPOCRM_DIRECTORY/data/config.php`. To import your database from the dump, run the command in a terminal:
 
 ```bash
 mysql --user=YOUR_USER --password=YOUR_USER YOUR_DATABASE_NAME < db.sql
