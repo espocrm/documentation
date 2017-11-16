@@ -30,7 +30,7 @@ You can use a script to backup all needed data. Please, login via SSH and run th
 ### Download a script
 
 ```bash
-wget https://raw.githubusercontent.com/espocrm/documentation/master/administration/backup.sh
+wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scripts/backup.sh
 ```
 
 ### Run the script
