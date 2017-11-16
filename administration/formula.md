@@ -102,22 +102,33 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
 
 ##### datetime\addMinutes
-`datetime\addMinutes(VALUE, MINUTES)` Add MINUTES to datetime VALUE. MINUTES can be negative.
+`datetime\addMinutes(VALUE, MINUTES)` Adds MINUTES to datetime VALUE. MINUTES can be negative.
 
 ##### datetime\addHours
-`datetime\addHours(VALUE, HOURS)` Add HOURS to datetime VALUE. HOURS can be negative.
+`datetime\addHours(VALUE, HOURS)` Adds HOURS to datetime VALUE. HOURS can be negative.
 
 ##### datetime\addDays
-`datetime\addDays(VALUE, DAYS)` Add HOURS to date or datetime VALUE. DAYS can be negative.
+`datetime\addDays(VALUE, DAYS)` Adds HOURS to date or datetime VALUE. DAYS can be negative.
 
 ##### datetime\addWeeks
-`datetime\addWeeks(VALUE, WEEKS)` Add WEEKS to date or datetime VALUE. WEEKS can be negative.
+`datetime\addWeeks(VALUE, WEEKS)` Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
 
 ##### datetime\addMonths
-`datetime\addMonths(VALUE, MONTHS)` Add MONTHS to date or datetime VALUE. MONTHS can be negative.
+`datetime\addMonths(VALUE, MONTHS)` Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
 
 ##### datetime\addYears
-`datetime\addYears(VALUE, YEARS)` Add YEARS to date or datetime VALUE. YEARS can be negative.
+`datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
+
+#### datetime\closest
+`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 4.8.5)
+
+TYPE can be one of following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to finds closest in the past. If TIMEZONE is ommited then default timezone is used.
+
+Examples:
+
+`datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
+
+`datetime\closest('2017-11-20, 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
 
 ##### number\format
 `number\format(VALUE)` Converts numeric VALUE into string formatted according to application settings.
