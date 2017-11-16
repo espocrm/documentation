@@ -50,73 +50,73 @@ It's possible to access to attributes of related entities with following format 
 
 Format of function use: `groupName\functionName(argument1, argument2, ..., argumentN)`.
 
-#### Out-of-the-box functions
+Out-of-the-box functions are listed bellow.
 
-##### ifThenElse
+#### ifThenElse
 `ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met then do CONSEQUENT. If not -- then do ALTERNATIVE.
 
-##### ifThen
+#### ifThen
 `ifThen(CONDITION, CONSEQUENT)` If CONDITION is met then do CONSEQUENT. If not -- do nothing.
 
-##### string\concatenate(
+#### string\concatenate(
 `string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
 
-##### string\substring
+#### string\substring
 `string\substring(STRING, START, LENGTH)`  Extracts the characters from a STRING by START position and LENGTH.
 
 If LENGTH is omitted, the substring starting from START until the end of the STRING will be returned.
 
 If LENGTH is negative, then that many characters will be omitted from the end of STRING.
 
-##### string\\trim
+#### string\\trim
 `string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
 
-##### datetime\\today
+#### datetime\\today
 `datetime\today()` Returns today's date.
 
-##### datetime\now
+#### datetime\now
 `datetime\now()` Returns current datetime.
 
-##### datetime\format
+#### datetime\format
 `datetime\format(VALUE, TIMEZONE, FORMAT)` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
 
-##### datetime\date
+#### datetime\date
 `datetime\date(VALUE)` Returns date of the month (1-31). `0` if VALUE if empty. (since version 4.7.0)
 
-##### datetime\months
+#### datetime\months
 `datetime\months(VALUE)` Returns month (1-12). `0` if VALUE if empty. (since version 4.7.0)
 
-##### datetime\year
+#### datetime\year
 `datetime\year(VALUE)` Returns year. `0` if VALUE if empty. (since version 4.7.0)
 
-##### datetime\hour
+#### datetime\hour
 `datetime\hour(VALUE)` Returns hour (0-23). `-1` if VALUE if empty. (since version 4.7.0)
 
-##### datetime\minute
+#### datetime\minute
 `datetime\minute(VALUE)` Returns minute (0-59). `-1` if VALUE if empty. (since version 4.7.0)
 
-##### datetime\dayOfWeek
+#### datetime\dayOfWeek
 `datetime\dayOfWeek(VALUE)` Returns day of the week (0-6). `-1` if VALUE if empty. `0` - for Sunday. (since version 4.7.3)
 
-##### datetime\diff
+#### datetime\diff
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
 
-##### datetime\addMinutes
+#### datetime\addMinutes
 `datetime\addMinutes(VALUE, MINUTES)` Adds MINUTES to datetime VALUE. MINUTES can be negative.
 
-##### datetime\addHours
+#### datetime\addHours
 `datetime\addHours(VALUE, HOURS)` Adds HOURS to datetime VALUE. HOURS can be negative.
 
-##### datetime\addDays
+#### datetime\addDays
 `datetime\addDays(VALUE, DAYS)` Adds HOURS to date or datetime VALUE. DAYS can be negative.
 
-##### datetime\addWeeks
+#### datetime\addWeeks
 `datetime\addWeeks(VALUE, WEEKS)` Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
 
-##### datetime\addMonths
+#### datetime\addMonths
 `datetime\addMonths(VALUE, MONTHS)` Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
 
-##### datetime\addYears
+#### datetime\addYears
 `datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
 
 #### datetime\closest
@@ -132,51 +132,51 @@ Examples:
 
 `datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
 
-##### number\format
+#### number\format
 `number\format(VALUE)` Converts numeric VALUE into string formatted according to application settings.
 
-##### number\abs
+#### number\abs
 `number\abs(VALUE)` Absolute value. Return null if VALUE is not numeric.
 
-##### number\round
+#### number\round
 `number\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
 
-##### entity\isNew
+#### entity\isNew
 `entity\isNew()` Return TRUE if the entity is new (being created) and FALSE if not (being updated).
 
-##### entity\\isAttributeChanged
+#### entity\\isAttributeChanged
 `entity\isAttributeChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was changed.
 
-##### entity\isAttributeNotChanged
+#### entity\isAttributeNotChanged
 `entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was not changed.
 
-##### entity\attributeFetched
+#### entity\attributeFetched
 `entity\attributeFetched(ATTRIBUTE)` Attribute that was set when target entity was fetched from database. Before it was modified.
 
-##### entity\addLinkMultipleId
+#### entity\addLinkMultipleId
 `entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field. 
 
 `entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
 
-##### entity\hasLinkMultipleId
+#### entity\hasLinkMultipleId
 `entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
 
-##### entity\isRelated
+#### entity\isRelated
 `entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
 
-##### env\userAttribute
+#### env\userAttribute
 `env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
 
-##### list
+#### list
 `list(VALUE-1, ... VALUE-N)` Returns array. (since version 4.7.0)
 
-##### array\includes
+#### array\includes
 `array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
 
-##### array\push
+#### array\push
 `array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 4.8.5)
 
-##### array\length
+#### array\length
 `array\length(LIST)` Returns count of elements in LIST. (since version 4.8.1)
 
 
