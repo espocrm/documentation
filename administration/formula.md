@@ -128,7 +128,9 @@ Examples:
 
 `datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
 
-`datetime\closest('2017-11-20, 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
+`datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
+
+`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
 
 ##### number\format
 `number\format(VALUE)` Converts numeric VALUE into string formatted according to application settings.
