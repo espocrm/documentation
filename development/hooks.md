@@ -33,7 +33,7 @@ This example sets Account Name for new Leads, if it is not set.
 
 `custom/Espo/Custom/Hooks/Lead/AccountName.php`
 
-```
+```php
 namespace Espo\Custom\Hooks\Lead;
 
 use Espo\ORM\Entity;
