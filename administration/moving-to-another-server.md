@@ -4,7 +4,7 @@ Follow these steps to move EspoCRM to another server:
 
 ### Step 1. Backup files
 
-Open a file manager or login via SSH to archive all avaialable files from the EspoCRM directory. More details: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
+Open a file manager or login via SSH to archive all available files from the EspoCRM directory. More details: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
 
 ### Step 2. Backup your database
 
@@ -12,7 +12,7 @@ The data is stored in database (MySQL, MariaDB) should be backed up. Please foll
 
 ### Step 3. Copy files and database backups to another server
 
-Copy a backup of files and backupd of your database to a new server.
+Copy backups of files and of your database to a new server.
 
 ### Step 4. Unarchive backup files
 
@@ -29,11 +29,11 @@ Set required permissions and files owner, https://www.espocrm.com/documentation
 
 ### Step 7. Import your database backup
 
-First, you have to create a new database with a user in MySQL. To import your database from the backup, follow the instuctions: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
+First, you have to create a new database with a user in MySQL. To import your database from the backup, follow the instuction: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
 
 ### Step 8. Correct EspoCRM configurations
 
-After successfully importing and server configuration, please correct EspoCRM configurations in the file `ESPOCRM_DIRECTORY/data/config.php`:
+After successfully importing and configuring the server, please correct EspoCRM configurations in the file `ESPOCRM_DIRECTORY/data/config.php`:
 
  * database connection settings:
   
