@@ -4,7 +4,7 @@ EspoCRM consists of files and database data. All these data need for creating a 
 
 ### Step 1. Backup files
 
-Create an archieve of the directory content of installed EspoCRM. For Ubuntu the default path is "/var/www/html". You may use this command:
+Create an archieve of the directory content of installed EspoCRM. For Ubuntu the default path is `/var/www/html`. You may use this command:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
@@ -12,7 +12,7 @@ tar -czf "files.tar.gz" -C /var/www/html .
 
 ### Step 2. Backup database
 
-To backup all your data, you have to know the database name and access credentials. You can find the database name in a configuration file `/ESPOCRM_DIRECTORY/data/config.php` under section "database". You can use this command to backup your database:
+To backup all your data, you have to know the database name and access credentials. You can find the database name in a configuration file `/ESPOCRM_DIRECTORY/data/config.php` under section `database`. You can use this command to backup your database:
 
 ```bash
 mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
