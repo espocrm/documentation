@@ -10,7 +10,7 @@ EspoCRM logs located at `<ESPOCRM_DIRECTORY>/logs/*.log` and contain some error 
 
 #### Apache error logs
 
-For Ubuntu server an apache error log located at `/var/log/apache2/error.log` and contains all error information.
+For Ubuntu server an apache error log located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different in other systems. 
 
 ## Enable debugging mode
 
@@ -42,7 +42,7 @@ to
 
 Note: crontab should be configured under web-server user, e.g. `crontab -e -u www-data`.
 
-3. Wait for a while and check Scheduled Jobs if any jobs were executed (see Log sub panel).
+3. Wait for a while and check Scheduled Jobs if any jobs were executed (see a Log panel).
 
 #### Problem #2. Crontab is configured, but Scheduled Jobs are not working
 
@@ -70,5 +70,5 @@ sudo -u www-data php cron.php
 
 where `www-data` is a web-server user.
 
-4. If there are no errors, check Scheduled Job if any job was executed (see Log sub panel).
+4. If there are no errors, check Scheduled Job if any job was executed (see a Log panel).
 
