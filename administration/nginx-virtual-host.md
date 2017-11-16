@@ -1,8 +1,8 @@
-#Configure a Virtual Host on Nginx for EspoCRM
+# Configuring a Virtual Host on Nginx for EspoCRM
 
 In this guide, we will show how to configure a virtual host on Nginx for EspoCRM on Ubuntu server.
 
-##Create a server block file
+## Create a server block file
 
 To create this file, open a terminal and run the command:
 
