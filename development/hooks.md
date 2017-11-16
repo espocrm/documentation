@@ -28,7 +28,7 @@ If you have several hooks, related to one Entity Type and with the same hook typ
 
 Ascending order - the hook with the smallest order number runs first.
 
-## _Example_
+## Example
 This example sets Account Name for new Leads, if it is not set.
 
 `custom/Espo/Custom/Hooks/Lead/AccountName.php`
