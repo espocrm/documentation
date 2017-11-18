@@ -12,10 +12,36 @@ Workflows automate your business process an easy way. You can find it in the Adm
 
 ## Trigger Types
 
-* **After record created** - Triggered only when a new record is created. If specified conditions are met then actions will be run.
-* **After record saved** - Triggered when a new or existing record is saved. If specified conditions are met then actions will be run.
-* **Scheduled** - Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by specified list report. So you need also to create list report.
-* **Sequential** - Supposed to be run by another workflow. Provides an ability to make a complex logic.
+### After record created 
+
+Triggered only when a new record is created. If specified conditions are met then actions will be executed.
+
+### After record saved
+
+Triggered when a new record is created or an existing record is updated. If specified conditions are met then actions will be run.
+
+### Scheduled
+
+Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. So you need also to create a list report.
+
+Scheduling is specified in a crontab notation.
+
+```
+* * * * * *
+| | | | | | 
+| | | | | +-- Year              (range: 1900-3000)
+| | | | +---- Day of the Week   (range: 1-7, 1 standing for Monday)
+| | | +------ Month of the Year (range: 1-12)
+| | +-------- Day of the Month  (range: 1-31)
+| +---------- Hour              (range: 0-23)
++------------ Minute            (range: 0-59)
+```
+
+### Sequential
+
+Supposed to be run by another workflow. Provides an ability to make a complex logic. 
+
+Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
 
 ## Conditions
 
