@@ -147,6 +147,8 @@ Task can execute following actions:
 * Make Followed - makes specific users to follow the target record, the process record or any record created by the process;
 * Run Service Action - runs custom service actions implemented by developers.
 
+Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+
 #### Send Message Task
 
 Sends email message to specific recipient.
