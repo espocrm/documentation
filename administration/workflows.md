@@ -138,7 +138,7 @@ Developers can write their own service actions. See [more detail](../development
 
 ## Using Formula in Actions
 
-It's possible to define formula to calculate fields for Create Entity, Update Entity, Create Related Entity, Update Related Entity. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
+It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
 
 Example:
 ```
