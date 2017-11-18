@@ -19,7 +19,9 @@ Workflows automate your business process an easy way. You can find it in the Adm
 
 ## Conditions
 
-You can specify conditions that must be met to trigger the workflow.
+You can specify conditions that must be met to trigger the workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
+
+### UI condition builder
 
 Some available condition types:
 
@@ -32,7 +34,9 @@ Some available condition types:
 * _changed_ - the field was changed;
 * _not changed_ - the field was not changed.
 
-There are two ways how conditions can be specified: with the UI condition builder and with formula. Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
+### Formula conditions
+
+Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
 
 Note: There should not be any `;` delimiter used in formula code when it determines a condition.
 
