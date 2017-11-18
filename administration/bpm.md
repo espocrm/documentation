@@ -189,6 +189,8 @@ Through UI there is an ability to check conditions for following records:
 
 It's also possible to define conditions in espo formula language.
 
+Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
+
 ## Examples
 
 ### Example 1
