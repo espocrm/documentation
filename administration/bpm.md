@@ -60,7 +60,7 @@ This event stops the flow until specified criteria is met.
 
 This event stops the flow and waits as long as it's specified by event's parameters.
 
-For more complex timer setting you can utilize formula. Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+For more complex timer setting you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
 
@@ -170,7 +170,7 @@ It's possible to read the resolution of the passed user task within diverging ga
 
 #### Script Task
 
-Executes the script in Espo-formula language. All set variables (`$variableName`) will be stored and available withing the process.
+Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available withing the process.
 
 ### Flows
 
@@ -189,7 +189,7 @@ Through UI there is an ability to check conditions for following records:
 * Records created by the process via tasks;
 * User task records, allowing checking the resolution.
 
-It's also possible to define conditions in espo formula language.
+It's also possible to define conditions in [espo-formula](formula.md) language.
 
 Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
 
