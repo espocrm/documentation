@@ -17,19 +17,24 @@ Workflows automate your business process an easy way. You can find it in the Adm
 * **Scheduled** - Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by specified list report. So you need also to create list report.
 * **Sequential** - Supposed to be run by another workflow. Provides an ability to make a complex logic.
 
-
 ## Conditions
 
 You can specify conditions that must be met to trigger the workflow.
 
 Some available condition types:
 
-* _Equals_ - whether the field equals to specific value or value of another field.
-* _Was equal_ - whether the field was equal to specific value before the workflow was triggered.
-* _Changed_ - whether the field was changed before the workflow were triggered.
+* _equals_ - the field equals to a specific value or a value of another field;
+* _was equal_ - the field was equal to a specific value before the workflow was triggered;
+* _not equals_ - the field does not equal to a specific value or a value of another field;
+* _was not equal_ - the field was not equal to specific value before the workflow was triggered;
+* _empty_ - the field value is empty;
+* _not empty_ - the field value is not empty;
+* _changed_ - the field was changed;
+* _not changed_ - the field was not changed.
 
-There are two ways how conditions can be specified: with UI confition builder or with formula. Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). Note: There should not be delimiter `;` used in formula if you define condition.
+There are two ways how conditions can be specified: with the UI condition builder and with formula. Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
 
+Note: There should not be any `;` delimiter used in formula code when it determines a condition.
 
 ## Actions
 
@@ -56,7 +61,6 @@ If you need to add new items to the Link-Multiple field w/o loosing existing dat
 ### Update Related Record
 
 Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
-
 
 ### Link with Another Record
 
