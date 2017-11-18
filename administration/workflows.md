@@ -18,7 +18,9 @@ Triggered only when a new record is created. If specified conditions are met the
 
 ### After record saved
 
-Triggered when a new record is created or an existing record is updated. If specified conditions are met then actions will be run.
+Triggered when a new record is created or an existing record is updated. If specified conditions are met then actions will be executed.
+
+For workflow rules with this type of trigger it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed then execute some actions.
 
 ### Scheduled
 
@@ -39,7 +41,7 @@ Scheduling is specified in a crontab notation.
 
 ### Sequential
 
-Supposed to be run by another workflow. Provides an ability to make a complex logic. 
+Used rarely. Supposed to be run by another workflow. Provides an ability to make a complex logic. 
 
 Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
 
