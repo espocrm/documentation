@@ -98,7 +98,7 @@ Allows to run specific service scripts. By default there are following actions a
 * Send Invitations - for Meetings/Calls;
 * Add Quote Items - for Quotes.
 
-Developers can write their own service actions: https://www.espocrm.com/features/add-custom-service-methods-for-workflow/.
+Developers can write their own service actions. See [more detail](https://www.espocrm.com/features/add-custom-service-methods-for-workflow/).
 
 ## Using Formula in Actions
 
