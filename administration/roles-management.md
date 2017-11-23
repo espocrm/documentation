@@ -84,7 +84,7 @@ Defines an access to portal information, ability to post messages to portal user
 
 Defines an access to group email accounts, an ability to send emails from group SMTP.
 
-### Default Permissions
+## Permissions by Default 
 
 By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
 
