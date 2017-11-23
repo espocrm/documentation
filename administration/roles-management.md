@@ -64,7 +64,7 @@ stream - team
 
 Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
 
-## Permissions
+## Special Permissions
 
 ### Assignment Permission
 
