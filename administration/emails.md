@@ -12,7 +12,13 @@ As email is coming the system is trying to link it with an appropriate record (A
 
 ## Group Email Accounts
 
-Only administrator can setup Group Email Accounts. It’s possible to select team that incoming emails will be assigned to. There is an ability to make the system send auto-reply email.
+Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails. Sending emails from group accounts is available since 4.9.0 version.
+
+Teams field determines which teams incoming emails will be assigned to. 
+
+If the group email account has SMTP and it's checked as shared then an access will be controlled by Roles through Group Email Account permission. Teams field will be used if permission level is set to 'team'.
+
+There is an ability to make the system to send an auto-reply for incoming emails.
 
 ## Email-to-Case
 
