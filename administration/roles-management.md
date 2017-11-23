@@ -64,25 +64,27 @@ stream - team
 
 Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
 
-## Assignment Permission
+## Permissions
+
+### Assignment Permission
 
 Set this parameter to restrict ability to re-assign records to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
 
 It also defines whether user is able to post to stream of another users/teams.
 
-## User Permission
+### User Permission
 
 Allows to restrict an ability for users to view activities, calendar and stream of other users.
 
-## Portal Permission
+### Portal Permission
 
 Defines an access to portal information, ability to post messages to portal users.
 
-## Group Email Account Permission
+### Group Email Account Permission
 
 Defines an access to group email accounts, an ability to send emails from group SMTP.
 
-## Default Permissions
+### Default Permissions
 
 By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
 
