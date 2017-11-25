@@ -83,8 +83,8 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 #### datetime\date
 `datetime\date(VALUE)` Returns date of the month (1-31). `0` if VALUE if empty. (since version 4.7.0)
 
-#### datetime\months
-`datetime\months(VALUE)` Returns month (1-12). `0` if VALUE if empty. (since version 4.7.0)
+#### datetime\month
+`datetime\month(VALUE)` Returns month (1-12). `0` if VALUE if empty. (since version 4.7.0)
 
 #### datetime\year
 `datetime\year(VALUE)` Returns year. `0` if VALUE if empty. (since version 4.7.0)
