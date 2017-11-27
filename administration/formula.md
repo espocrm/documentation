@@ -78,25 +78,25 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `datetime\now()` Returns current datetime.
 
 #### datetime\format
-`datetime\format(VALUE, TIMEZONE, FORMAT)` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
+`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
 
 #### datetime\date
-`datetime\date(VALUE)` Returns date of the month (1-31). `0` if VALUE if empty. (since version 4.7.0)
+`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE if empty. If TIMEZONE is ommited then system timezone is used. (since version 4.7.0)
 
 #### datetime\month
-`datetime\month(VALUE)` Returns month (1-12). `0` if VALUE if empty. (since version 4.7.0)
+`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE if empty. If TIMEZONE is ommited then system timezone is used. (since version 4.7.0)
 
 #### datetime\year
-`datetime\year(VALUE)` Returns year. `0` if VALUE if empty. (since version 4.7.0)
+`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE if empty. If TIMEZONE is ommited then system timezone is used. (since version 4.7.0)
 
 #### datetime\hour
-`datetime\hour(VALUE)` Returns hour (0-23). `-1` if VALUE if empty. (since version 4.7.0)
+`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE if empty. If TIMEZONE is ommited then system timezone is used. (since version 4.7.0)
 
 #### datetime\minute
-`datetime\minute(VALUE)` Returns minute (0-59). `-1` if VALUE if empty. (since version 4.7.0)
+`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE if empty. If TIMEZONE is ommited then system timezone is used. (since version 4.7.0)
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE)` Returns day of the week (0-6). `-1` if VALUE if empty. `0` - for Sunday. (since version 4.7.3)
+`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE if empty. `0` - for Sunday. If TIMEZONE is ommited then system timezone is used. (since version 4.7.3)
 
 #### datetime\diff
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
