@@ -126,11 +126,11 @@ Only intermediate events can be on the other end of outgoing sequence flows.
 
 ![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
 
-### Tasks
+### Activities
+
+Activities are displayed as rounded rectangles.
 
 #### Task
-
-Tasks are displayed as rounded rectangles.
 
 Task can execute following actions:
 
