@@ -161,6 +161,9 @@ Examples:
 #### entity\hasLinkMultipleId
 `entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
 
+#### entity\removeLinkMultipleId
+`entity\removeLinkMultipleId(LINK, ID)` Removes specific ID from the Link Multiple field.
+
 #### entity\isRelated
 `entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
 
