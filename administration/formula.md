@@ -150,6 +150,12 @@ Examples:
 #### number\round
 `number\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
 
+#### number\floor
+`number\floor(VALUE)` Returns the next lowest integer value by rounding down value if necessary. (since version 4.9.0)
+
+#### number\ceil
+`number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary. (since version 4.9.0)
+
 #### entity\isNew
 `entity\isNew()` Return TRUE if the entity is new (being created) and FALSE if not (being updated).
 
