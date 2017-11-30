@@ -135,7 +135,7 @@ Examples:
 #### number\format
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR then system defaults are used.
 
-Example:
+Examples:
 
 `number\format(2.666667, 2)` - results 2.67;
 
