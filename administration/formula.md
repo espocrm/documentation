@@ -147,11 +147,19 @@ Examples:
 #### entity\\isAttributeChanged
 `entity\isAttributeChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was changed.
 
+Example:
+
+`entity\isAttributeChanged('status')`
+
 #### entity\isAttributeNotChanged
 `entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was not changed.
 
 #### entity\attributeFetched
 `entity\attributeFetched(ATTRIBUTE)` Attribute that was set when target entity was fetched from database. Before it was modified.
+
+Example:
+
+`entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
 `entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field. 
