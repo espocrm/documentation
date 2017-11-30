@@ -133,7 +133,14 @@ Examples:
 `datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
 
 #### number\format
-`number\format(VALUE)` Converts numeric VALUE into string formatted according to application settings.
+`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR then system defaults are used.
+
+Example:
+
+`number\format(2.666667, 2)` - results 2.67;
+`number\format(1000, 2)` - results 1,000.00;
+`number\format(10.1, 0)` - results 10;
+
 
 #### number\abs
 `number\abs(VALUE)` Absolute value. Return null if VALUE is not numeric.
