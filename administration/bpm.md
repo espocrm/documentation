@@ -1,20 +1,20 @@
 # Business Process Management
 
-Business Process Management (BPM) tool provides an ability to model and automate business processes in EspoCRM. It's an engine to execute business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
 
 ![BPM example](../_static/images/administration/bpm/bpm-1.png)
 
-### Difference with Workflows tool
+### Difference from Workflows tool
 
-Workflows tool is intented for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
+Workflows tool is intended for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
 
-BPM tool is intended for more complex business flows, where can be diverging and converging flows, execution delays, user interactions. A flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
+BPM tool is intended for more complex business flows, where there can be diverging and converging flows, execution delays, user interactions. A flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
 
 ## Process Flowcharts
 
-Available from administration panel. Also can be added as a tab on the navigation panel.
+The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
 
-Flowcharts intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
+Flowcharts are intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
 
 Every flowchart has its specific entity type (Target Type field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
 
@@ -24,9 +24,9 @@ To show details and parameters of a certain flowchart element you need to click 
 
 ## Processes
 
-Processes are available from administration panel.  Also can be added as a tab on the navigation panel.
+Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
 
-Process represents business process instance. When it's initiated it gets status 'Started'. When process is finished it gets status 'Ended'. The process also can be stopped manually by the user who has an access to edit the process. If it's stopped manually it gets status 'Stopped'.
+Process represents business process instance. When it's initiated it gets the status 'Started'. When process is finished it gets the status 'Ended'. The process can also be stopped manually by an user who has the access to edit the process. If it's stopped manually it gets status the 'Stopped'.
 
 The process is executed according the flowchart. Flowchart of process can't be changed after process is started.
 
