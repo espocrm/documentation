@@ -2,8 +2,6 @@
 
 > Important. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) should be configured in your system to make email fetching working. You can find the information in your EspoCRM at Administration > Scheduled Jobs.
 
-> Note. For more reliable work it's recommended to install mailparse pecl php extension. Mailparse should be enabled for php-cli.
-
 ## Overview
 
 EspoCRM has an ability to monitor IMAP mailboxes. Email can be archived in two ways: Group Email Accounts and Personal Email Accounts. Group Inbound Accounts are intended for group mailboxes: the most common case is a support box. Personal Email Accounts are intended for users’ personal mailboxes.
