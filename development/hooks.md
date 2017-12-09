@@ -1,10 +1,10 @@
 # Hooks
 
 ## Create a Hook
-To create a hook, you need:
-- to create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
-- to declare hook type action;
-- Clear Cache in Administartion.
+To create a hook, you need to:
+- create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
+- declare hook type action;
+- clear Cache in Administration.
 
 ## Hook Types
 

@@ -2,7 +2,7 @@
 
 ## Record Views
 
-EspoCRM framework provides flexible abilities to define custom views for certail entity types. They must be defined it `clientDefs` category of metadata.
+EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined it `clientDefs` category of metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
@@ -81,7 +81,7 @@ Detail view contains Record/Detail view and Header.
 `client/custom/src/views/your-entity-type/edit.js`
 `client/custom/src/views/your-entity-type/record/edit.js`
 
-The same as detail but is used when record is being created or edied not in inline-edit mode.
+The same as detail but is used when record is being created or edited not in inline-edit mode.
 
 
 `client/custom/src/views/your-entity-type/list.js`
@@ -94,7 +94,7 @@ List view contains Record/List view, Header and Search Form View.
 List/Record view contains rows of records.
 
 
-It worths to mention that you need to inherit your view class from specific class for your entity if one already exists.
+It is worth being mentioned that you need to inherit your view class from specific class for your entity if one already exists.
 
 ```javascript
 Espo.define('custom:views/email/record/detail', 'views/email/record/detail', function (Dep) {
