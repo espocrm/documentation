@@ -47,8 +47,8 @@ By clicking `Fields` link you will be moved to a separate page. There you will b
 * Float - number with a decimal part;
 * Foreign - a field of related entity;
 * Image - uploading image file with a preview;
-* Int - whole number;
-* Number - autoincrement number of string type with a possible prefix and a specific length;
+* Integer - whole number;
+* Number - auto-incrementing number of string type with a possible prefix and a specific length;
 * Multi-enum - list of values, with the ability to select multiple values (not a good option if you need to search by this field), similar to Array but nicer.
 * Text - text area, for long multiline texts;
 * Url - for links;
