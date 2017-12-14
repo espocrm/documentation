@@ -71,6 +71,12 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 #### string\\trim
 `string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
 
+#### string\\lowerCase
+`string\lowerCase(STRING)` Converts letters to lower case. (since version 5.0.0)
+
+#### string\\upperCase
+`string\upperCase(STRING)` Converts letters to upper case. (since version 5.0.0)
+
 #### datetime\\today
 `datetime\today()` Returns today's date.
 
@@ -120,7 +126,7 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
 
 #### datetime\closest
-`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 4.8.5)
+`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 5.0.0)
 
 TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted then default timezone is used.
 
@@ -200,7 +206,7 @@ Example:
 `array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
 
 #### array\push
-`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 4.8.5)
+`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 5.0.0)
 
 #### array\length
 `array\length(LIST)` Returns count of elements in LIST. (since version 4.8.1)
