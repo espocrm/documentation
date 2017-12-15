@@ -1,6 +1,6 @@
 # How to upgrade EspoCRM
 
-EspoCRM can be upgraded to the latest version in a few steps:
+EspoCRM can be upgraded to the latest version by the following steps:
 
 ### Step 1. Check your current version
 
@@ -18,4 +18,4 @@ Create a backup of your EspoCRM files and data before upgrading. Follow this [in
 
 Go to Administration > Upgrade. Upload and install one by one upgrade packages.
 
-To make sure that you have successfully upgraded to the latest version, go to Menu > About.
+To make sure you have successfully upgraded to the latest version, go to Menu > About.
