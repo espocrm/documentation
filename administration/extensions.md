@@ -17,7 +17,7 @@ In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP int
 1. Download the new version of needed extension.
 2. Login as an administrator.
 3. Go to Administration > Extensions.
-4. Upload your new extension package (zip file) without uninstallation of the already installed version.
+4. Upload your new extension package (zip file) without uninstalling the already installed version.
 5. Click Install button.
 
 
