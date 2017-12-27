@@ -10,7 +10,7 @@ To check your current version go to Administration > Upgrade page.
 
 Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
 
-### Step 3. Create a backup
+### Step 3. Create a backup (optional)
 
 Create a backup of your EspoCRM files and data before upgrading. Follow this [instruction](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) to get it done.
 
