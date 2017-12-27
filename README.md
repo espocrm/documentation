@@ -5,8 +5,6 @@
   * [Apache](https://github.com/espocrm/documentation/blob/master/administration/apache-server-configuration.md)
   * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
 * [Installation](https://github.com/espocrm/documentation/blob/master/administration/installation.md)
-* [Backup and Restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
-* [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
 * [Upgrading](https://github.com/espocrm/documentation/blob/master/administration/upgrading.md)
 * [Roles Management (access control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
 * [Emails](https://github.com/espocrm/documentation/blob/master/administration/emails.md)
@@ -27,6 +25,8 @@
 * Misc
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
+  * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
+  * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
 
 
 ### User Guide
@@ -45,7 +45,7 @@
 * [Link Multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
 * [Extension Packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
-* [Creating Scheduled Job](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
+* [Creating custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
 * [Defining new funtions for Formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
 
 
