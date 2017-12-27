@@ -5,11 +5,15 @@
   * [Apache](https://github.com/espocrm/documentation/blob/master/administration/apache-server-configuration.md)
   * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
 * [Installation](https://github.com/espocrm/documentation/blob/master/administration/installation.md)
+* [Backup and Restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
+* [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
+* [Upgrading](https://github.com/espocrm/documentation/blob/master/administration/upgrading.md)
 * [Roles Management (access control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
 * [Emails](https://github.com/espocrm/documentation/blob/master/administration/emails.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
   * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
+  * [Extensions](https://github.com/espocrm/documentation/blob/master/administration/extensions.md)
 * Automation
   * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
   * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
@@ -19,6 +23,7 @@
 * [LDAP Authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
   * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
+* [Troubleshooting](https://github.com/espocrm/documentation/blob/master/administration/troubleshooting.md)
 * Misc
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
