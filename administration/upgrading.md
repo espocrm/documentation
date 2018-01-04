@@ -18,4 +18,12 @@ Create a backup of your EspoCRM files and data before upgrading. Follow [these i
 
 Go to Administration > Upgrade. Upload and install one by one upgrade packages.
 
-To make sure you have successfully upgraded to the latest version, go to Menu > About.
+You can check whether you have the latest version at Menu > About.
+
+## Upgrade via CLI
+
+You can also run upgrade via command line interface. You need to execute the following command from EspoCRM root directory:
+
+```
+php upgrade.php /path/to/upgrade/package.zip
+```
