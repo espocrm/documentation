@@ -13,7 +13,7 @@ use \Espo\ORM\Entity;
  
 class TestService extends \Espo\Core\Services\Base
 {
-    public function testServiceAction($workflowId, Entity $entity, array $additionalParameters = null)
+    public function testServiceAction($workflowId, Entity $entity, $additionalParameters = null)
     {
         // your code here
     }
