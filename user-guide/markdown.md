@@ -2,6 +2,23 @@
 
 Text fields supports markdown syntax.
 
+## Code
+```
+`some text`
+```
+
+`some text`
+
+## Multiline code
+
+```markdown
+``` some text ``` 
+```
+
+```
+some text
+```
+
 ## Strong text
 
 ```
@@ -60,5 +77,5 @@ Text fields supports markdown syntax.
 * Another item.
 ```
 
-*. Some item;
-*. Another item.
+* Some item;
+* Another item.
