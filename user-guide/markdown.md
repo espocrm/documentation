@@ -79,3 +79,10 @@ some text
 
 * Some item
 * Another item
+
+## Horizontal line
+
+```
+___
+```
+
