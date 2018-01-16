@@ -1,6 +1,6 @@
 # Markdown syntax
 
-Text fields supports markdown syntax.
+Text fields support markdown syntax.
 
 ## Code
 ```
