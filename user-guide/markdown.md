@@ -63,19 +63,19 @@ some text
 ## Numbered list
 
 ```
-1. Some item;
-2. Another item.
+1. Some item
+2. Another item
 ```
 
-1. Some item;
-2. Another item.
+1. Some item
+2. Another item
 
 ## Unnumbered list
 
 ```
-* Some item;
-* Another item.
+* Some item
+* Another item
 ```
 
-* Some item;
-* Another item.
+* Some item
+* Another item
