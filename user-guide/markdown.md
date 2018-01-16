@@ -11,7 +11,7 @@ Text fields supports markdown syntax.
 
 ## Multiline code
 
-```markdown
+```
 ``` some text ``` 
 ```
 
