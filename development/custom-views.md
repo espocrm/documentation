@@ -29,10 +29,10 @@ Record/Detail view contains all panels with fields, relations and other data you
 Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
   
   return Dep.extend({
-    template: 'custom:your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
-    middleView: 'custom:your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
-    sideView: 'custom:your-entity-type/record/detail-side',     // Here is your custom view. Omit if you don't need it.
-    bottomView: 'custom:your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
+    template: 'custom:views/your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
+    middleView: 'custom:views/your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
+    sideView: 'custom:views/your-entity-type/record/detail-side',     // Here is your custom view. Omit if you don't need it.
+    bottomView: 'custom:views/your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
     
     setup: function () {
       Dep.prototype.setup.call(this);
