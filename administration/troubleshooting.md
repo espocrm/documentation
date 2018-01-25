@@ -76,7 +76,7 @@ where `www-data` is a web-server user.
 
 This can happen sometimes on some shared hostings.
 
-Check the  permissions of files:
+Check permissions of the files:
 /index.php
 /api/v1/index.php
 
