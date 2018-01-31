@@ -78,5 +78,8 @@ _For Administrators_
 
 Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of your EspoCRM accessible from the external world.
 
+#### Bounced emails are not being logged
 
+Bounced emails can be handled by group email account only. Make sure that you have a group email account that monitores the mailbox bounced emails are sent to.
 
+Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
