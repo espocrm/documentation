@@ -1,7 +1,7 @@
 # Business Process Management
 
 La herramienta Business Process Management (BPM) brinda la capacidad de modelar y automatizar procesos comerciales en EspoCRM. Es un motor que ejecuta procesos comerciales descritos en el estándar BPMN 2.0. La herramienta BPM está disponible en la extensión 
-![BPM example](../_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/bpm-1.png)
 
 ### Diferencia de la herramienta de flujos de trabajo
 
@@ -83,9 +83,9 @@ En caso de divergencia, define un único flujo (camino) que se elegirá según l
 
 En caso de convergencia, solo dirige el flujo hacia el elemento saliente. No se bloquea después del flujo, por lo que los flujos paralelos no se fusionarán en un solo flujo.
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Puertas de enlace inclusivos
 
@@ -95,113 +95,113 @@ En caso de divergencia, puede dirigir a uno o múltiples flujos paralelos (rutas
 
 Si es necesario fusionar los flujos paralelos producidos por una puerta de enlace inclusiva divergente, debe utilizar una puerta de enlace inclusiva convergente. Esperará todos los flujos entrantes y luego continuará hacia el elemento saliente.
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 Nota: Las pasarelas divergentes y convergentes deben estar equilibradas.
 
 Nota: Si uno de los flujos paralelos se ha terminado por algún motivo, la puerta de enlace divergente nunca se procesará. El proceso será bloqueado. Evite un diseño de diagrama de flujo que pueda provocar tal situación.
 
-#### Parallel Gateway
+#### Puertas de Enlace Paralelas
 
-Can diverge or converge flows.
+Puede divergir o converger flujos.
 
-In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
+En caso de divergencia, el flujo se divide en múltiples flujos paralelos. No hay parámetros para este tipo de puerta de enlace.
 
-In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
+En caso de convergencia, espera hasta que lleguen todos los flujos entrantes y luego continúa hasta el siguiente elemento saliente.
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-parallel.png)
 
-Note: Diverging and converging gateways must be balanced.
+Nota: Las pasarelas divergentes y convergentes deben estar equilibradas.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Nota: Si uno de los flujos paralelos se ha terminado por algún motivo, la puerta de enlace divergente nunca se procesará. El proceso será bloqueado. Evite un diseño de diagrama de flujo que pueda provocar tal situación.
 
-#### Event Based Gateway
+#### Puertas de Enlace basadas en eventos
 
-Can only diverge flows.
+Solo puede divergir flujos.
 
-It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
+Detiene el flujo hasta que cualquiera de los eventos salientes se active. El evento desencadenado determina el flujo único. Otros eventos salientes son rechazados.
 
-Only intermediate events can be on the other end of outgoing sequence flows.
+Solo los eventos intermedios pueden estar en el otro extremo de los flujos de secuencia de salida.
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-event-based.png)
 
-### Activities
+### Actividades
 
-Activities are displayed as rounded rectangles.
+Las actividades se muestran como rectángulos redondeados.
 
-#### Task
+#### Tareas
 
-Task can execute following the actions:
+La tarea se puede ejecutar siguiendo las acciones:
 
-* Create Record - creates new record of any entity type;
-* Create Related Record - creates new record related to the target record;
-* Update Target Record;
-* Update Related Record - updates the record or records related to the target record;
-* Update Created Record - updates specific field of any record created in the current process;
-* Update Process Record - can be used to assign the process to specific user or team;
-* Link to Another Record - links the target record with a specified record;
-* Unlink from Another Record - unlinks the target record from the specified record;
-* Apply Assignment Rule - assigns the target record, the process record or any record created by the process according to the specific rule;
-* Create Notification - creates in-app notification for specific users;
-* Make Followed - makes specific users follow the target record, the process record or any record created by the process;
-* Run Service Action - runs custom service actions implemented by developers.
+* Crear registro: crea un nuevo registro de cualquier tipo de entidad;
+* Crear registro relacionado: crea un nuevo registro relacionado con el registro objetivo;
+* Actualizar registro objetivo;
+* Actualizar registro relacionado: actualiza el registro o los registros relacionados con el registro objetivo;
+* Actualizar registro creado: actualiza el campo específico de cualquier registro creado en el proceso actual;
+* Registro de proceso de actualización: se puede usar para asignar el proceso a un usuario o equipo específico;
+* Enlace a otro registro: vincula el registro objetivo con un registro especificado;
+* Desvincular de otro registro: desvincula el registro objetivo del registro especificado;
+* Aplicar regla de asignación: asigna el registro objetivo, el registro del proceso o cualquier registro creado por el proceso de acuerdo con la regla específica;
+* Crear notificación: crea notificaciones en la aplicación para usuarios específicos;
+* Hacer seguimiento: hace que los usuarios específicos sigan el registro objetivo, el registro del proceso o cualquier registro creado por el proceso;
+* Ejecutar acción de servicio: ejecuta acciones de servicio personalizadas implementadas por los desarrolladores.
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+Las acciones disponibles para la tarea son casi las mismas que en la función de flujo de trabajo. Ver más detalles sobre [acciones del flujo de trabajo](workflows.md#actions).
 
-#### Send Message Task
+#### Enviar mensaje de Tarea
 
-Sends email message to specific recipient.
+Envía un mensaje de correo electrónico a un destinatario específico.
 
-#### User Task
+#### Tarea de usuario
 
-Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
+Proporciona una capacidad flexible de interacción del usuario. Detiene la ejecución hasta que el usuario (especificado explícitamente o por regla de asignación) resuelve la tarea. El registro de Tarea de usuario de proceso se creará en el sistema. Por defecto hay tres tipos de acciones: Aprobar, Revisar, Lograr.
 
-* Approve type requires the user to chose between 'Approved' and 'Declined'.
-* Review type gives only one option: 'Reviewed'.
-* Accomplish type has two options: 'Completed' and 'Failed'.
+* El tipo de aprobación requiere que el usuario elija entre 'Aprobado' y 'Rechazado'.
+* El tipo de revisión brinda solo una opción: 'Revisado'.
+* El tipo de realización tiene dos opciones: 'Completado' y 'Fallido'.
 
 
-The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
+El usuario asignado al registro de Tarea de usuario de proceso creado recibirá una notificación en la aplicación. El administrador también puede habilitar las notificaciones por correo electrónico.
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+Los usuarios también pueden agregar el dashlet Tareas de usuario de proceso en su tablero para ver sus tareas de usuario de proceso reales.
 
-It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
+Es posible leer la resolución de la tarea del usuario pasado dentro de puertas de enlace divergentes o eventos condicionales, haciendo una ramificación en el flujo del proceso.
 
-#### Script Task
+#### Tarea de script
 
-Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available within the process.
+Ejecuta el script en lenguaje [espo-formula](formula.md). Todas las variables establecidas (`$variableName`) se almacenarán y estarán disponibles dentro del proceso.
 
-### Flows
+### Flujos
 
-#### Sequence Flow
+#### Flujo de secuencia
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+Representado como una flecha sólida. Indica el orden en que se ejecutarán los elementos del proceso.
 
-## Conditions
+## Condiciones
 
-Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
+Los eventos condicionales, las puertas de enlace divergentes exclusivas e inclusivas tienen condiciones que determinan el flujo del proceso.
 
-Through UI there is an ability to check conditions for the following records:
+A través de la interfaz de usuario existe la posibilidad de verificar las condiciones para los siguientes registros:
 
-* Target record;
-* Records related to the target through many-to-one and children-to-parent relationships;
-* Records created by the process via tasks;
-* User task records, which allows checking the resolution.
+* Registro objetivo;
+* Registros relacionados con el objetivo a través de relaciones de muchos a uno e hijos a padres;
+* Registros creados por el proceso a través de tareas;
+* Registros de tareas del usuario, lo que permite verificar la resolución.
 
-It's also possible to define conditions in [Espo-formula](formula.md) language.
+También es posible definir condiciones en el lenguaje [Espo-formula](formula.md).
 
-Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
+Las condiciones en la herramienta BPM son las mismas que en la función de flujo de trabajo. Ver más detalles sobre [las condiciones del flujo de trabajo](workflows.md#conditions).
 
-## Examples
+## Ejemplos
 
-### Example 1
+### Ejemplo 1
 
-![Example 1](../_static/images/administration/bpm/example-1.png)
+![Example 1](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/example-1.png)
 
-### Example 2
+### Ejemplo 2
 
-![Example 2](../_static/images/administration/bpm/example-2.png)
+![Example 2](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/example-2.png)
 
-### Example 3
+### Ejemplo 3
 
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![Example 3](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/example-3.png)
