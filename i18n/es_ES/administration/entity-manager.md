@@ -18,64 +18,63 @@ Types:
 * Persona: correo electrónico, teléfono, nombre, apellido, saludo, campos de dirección. Actividades, historia, paneles de tareas.
 * Empresa: correo electrónico, teléfono, dirección de facturación, campos de dirección de envío. Actividades, historia, paneles de tareas.
 
-## Update existing entity
+## Actualizar la entidad existente
 
-If you click `Edit` link on a certain entity you will be able to change some parameters of that entity.
+Si hace clic en el enlace `Editar` en una entidad determinada, podrá cambiar algunos parámetros de esa entidad.
 
-* Labels - singular and plural name of the entity.
-* Default order records are sorted by in list views.
-* Stream - whether Stream feature is enabled for this entity.
-* Disabled - check if you don't need this entity in your system.
-* Text Filter Fields - what fields to search in for the main text filter and global search.
-
-
-## Fields
-
-By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones. The following types of fields are available in Entity Manager:
-
-* Address - address with street, city, state, postal code and country;
-* Array - list of values, with the ability to select multiple values (not a good option if you need to search by this field); users can add their own values if options are not specified.
-* Attachment Multiple - multiple file attachments;
-* Auto-increment - read only generated number;
-* Boolean - checkbox, true or false;
-* Currency - for currency values;
-* Date;
-* DateTime;
-* Enum - selectbox, with the ability to select only one value;
-* File - uploading one file;
-* Float - number with a decimal part;
-* Foreign - a field of related entity;
-* Image - uploading image file with a preview;
-* Integer - whole number;
-* Number - auto-incrementing number of string type with a possible prefix and a specific length;
-* Multi-enum - list of values, with the ability to select multiple values (not a good option if you need to search by this field), similar to Array but nicer.
-* Text - text area, for long multiline texts;
-* Url - for links;
-* Varchar - short text;
-* Wysiwyg - similar to Text field, with the ability to format text.
-
-Parameters:
-* Required - whether filling in of the field is mandatory.
-* Default Value - Value of the field set upon creating new record.
-* Audited - updates of the field will be logged in Stream.
-
-**Note**: After you have added the new field you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
-
-### Dynamic Logic
-
-Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
-
-For Enum, Array and Multi Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met.
+* Etiquetas - nombre singular y plural de la entidad.
+* Los registros de pedidos predeterminados están ordenados por vistas de lista.
+* Stream - si la función Stream está habilitada para esta entidad.
+* Deshabilitado - compruebe si no necesita esta entidad en su sistema.
+* Campos de filtro de texto - en qué campos buscar el filtro de texto principal y la búsqueda global.
 
 
-## Relationships
+## Campos
 
-You can create new relationships between both out-of-box and custom entities. There are 3 available relationship types:
+Al hacer clic en el enlace `Campos` , se moverá a una página separada. Allí podrá crear nuevos campos o actualizar los existentes. Los siguientes tipos de campos están disponibles en Entity Manager:
 
-* One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
-* Many-to-One: the same as One-to-Many but vice versa;
-* Many-to-Many: relationship panels on both sides.
+* Dirección - dirección con calle, ciudad, estado, código postal y país;
+* Matriz - lista de valores, con la capacidad de seleccionar valores múltiples (no es una buena opción si necesita buscar por este campo); los usuarios pueden agregar sus propios valores si las opciones no están especificadas.
+* Archivo Adjunto Múltiple - archivos adjuntos múltiples;
+* Aumento automático - solo lectura generada;
+* Booleano - casilla de verificación, verdadero o falso;
+* Moneda - para valores de moneda;
+* Fecha;
+* Fecha y hora;
+* Enum - seleccione el cuadro, con la capacidad de seleccionar solo un valor;
+* Archivo - cargando un archivo;
+* Flotante - número con una parte decimal;
+* Extranjero - un campo de entidad relacionada;
+* Imagen - carga del archivo de imagen con una vista previa;
+* Entero - número entero;
+* Número - número de autoincremento del tipo de cadena con un posible prefijo y una longitud específica;
+* Multi-enumeración - lista de valores, con la capacidad de seleccionar valores múltiples (no es una buena opción si necesita buscar en este campo), similar a Matriz pero más agradable.
+* Texto - área de texto, para textos largos de líneas múltiples;
+* Url - para enlaces;
+* Varchar - texto corto;
+* Wysiwyg - similar al campo de texto, con la capacidad de formatear texto.
 
-Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of detail view screen.
+Parámetros:
+* Obligatorio - si el llenado del campo es obligatorio.
+* Valor predeterminado - valor del campo establecido al crear un nuevo registro.
+* Auditado - las actualizaciones del campo se registrarán en Stream.
 
-If parameter 'Audited' is checked then updates of the relationship will be logged in Stream.
+**Nota**: Después de haber agregado el nuevo campo, debe poner este campo en [diseños](layout-manager.md) (Administration > Layout Manager).
+
+### Lógica Dinámica
+
+Brinda la capacidad de hacer formas dinámicas. Es posible definir las condiciones que hacen que ciertos campos sean visibles, obligatorios o de solo lectura. Las condiciones se verificarán automáticamente cuando se cambien los datos en el formulario.
+
+Para los campos Enum, Array y Multi Enum, es posible definir diferentes conjuntos de opciones que estarán disponibles para el campo dependiendo de qué condición se cumpla.
+
+## Relaciones
+
+Puede crear nuevas relaciones entre entidades personalizadas y listas para usar. Hay 3 tipos de relaciones disponibles:
+
+* Uno a muchos: después de haber creado esta relación, puede colocar un campo de enlace en el diseño detallado de la entidad correcta y agregar el panel de relaciones a la entidad izquierda;
+* Muchos-a-Uno: lo mismo que Uno-a-Muchos, pero viceversa;
+* Muchos a muchos: paneles de relaciones en ambos lados.
+
+El parámetro `Link Multiple Field` implica que el campo del tipo `linkMultiple` se creará junto con la relación. Puedes poner un campo así en el diseño. Es conveniente para la recolección rápida de registros relacionados. No es una buena opción si su relación está destinada a tener muchos registros vinculados que pueden ralentizar la carga de la pantalla de vista detallada.
+
+Si el parámetro 'Auditado' está marcado, las actualizaciones de la relación se registrarán en Stream.
