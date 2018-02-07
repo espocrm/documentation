@@ -1,40 +1,40 @@
 # Emails
 
-> Importante. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) should be configured in your system to make email fetching work. You can find the information in your EspoCRM at Administration > Scheduled Jobs.
+> Importante. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) debe configurarse en su sistema para que funcione el correo electrónico. Puede encontrar la información en su EspoCRM en Administration > Scheduled Jobs.
 
 ## Vista General
 
-EspoCRM has an ability to monitor IMAP mailboxes. Email can be archived in two ways: Group Email Accounts and Personal Email Accounts. Group Inbound Accounts are intended for group mailboxes: the most common case is a support box. Personal Email Accounts are intended for users’ personal mailboxes.
+EspoCRM tiene la capacidad de monitorear los buzones IMAP. El correo electrónico se puede archivar de dos maneras: Cuentas de correo electrónico grupales y Cuentas de correo electrónico personales. Las cuentas entrantes grupales están destinadas a buzones grupales: el caso más común es un buzón de soporte. Las cuentas de correo electrónico personales están destinadas a los buzones de correo personales de los usuarios.
 
-As an email is coming the system tries to link it with the appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not in To or CC.
+A medida que se recibe un correo electrónico, el sistema intenta vincularlo con el registro apropiado (Cuentas, Plomo, Oportunidad, Caso). Los usuarios que sigan ese registro recibirán una notificación sobre un nuevo correo electrónico en el sistema, incluso si no están en A o CC.
 
-## Group Email Accounts
+## Cuentas de correo grupal
 
-Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails. Sending emails from group accounts has been available since 4.9.0 version.
+Solo el administrador puede configurar cuentas de correo electrónico grupales. Las cuentas de correo grupal se pueden usar para recibir y enviar correos electrónicos. El envío de correos electrónicos desde cuentas de grupo ha estado disponible desde la versión 4.9.0.
 
-Teams field determines which teams incoming emails will be assigned to. 
+El campo Equipos determina a qué equipos se asignarán los correos electrónicos entrantes. 
 
-If the group email account has SMTP and it's checked as shared then an access will be controlled by Roles through Group Email Account permission. Teams field will be used if permission level is set to 'team'.
+Si la cuenta de correo electrónico grupal tiene SMTP y se marca como compartida, un acceso será controlado por Roles a través del permiso de Cuenta de correo electrónico grupal. El campo Equipos se usará si el nivel de permiso se establece en 'equipo'.
 
-There is an ability to make the system send an auto-reply for incoming emails.
+Existe la posibilidad de que el sistema envíe una respuesta automática para los correos electrónicos entrantes.
 
-## Email-to-Case
+## Email-A-Case
 
-There is an option to make the system create cases from incoming group emails. 
-This feature is intended for support teams. 
-Cases can be distributed to users from a specified team according to these ways: 
-`direct assignment`, `round-robin` and `less-busy`. 
-Only the first email in the thread creates a new case. 
-Every subsequent one will be linked to the existing case record and displayed in its Stream panel.
+Existe una opción para que el sistema cree casos a partir de correos electrónicos de grupos entrantes.
+Esta función está destinada a los equipos de soporte. 
+Los casos se pueden distribuir a los usuarios de un equipo específico de acuerdo con estas formas:
+`direct assignment`, `round-robin` y `less-busy`. 
+Solo el primer correo electrónico en el hilo crea un nuevo caso.
+Cada uno posterior se vinculará con el registro de caso existente y se mostrará en su panel de Stream.
 
-When users want to send a reply to the customer they need to make sure that the case is selected as a parent of the email that is being sent. It will make the customer reply to the group email address rather than to the user’s own.
+Cuando los usuarios desean enviar una respuesta al cliente, deben asegurarse de que el caso esté seleccionado como padre del correo electrónico que se está enviando. Hará que el cliente responda a la dirección de correo electrónico del grupo en lugar de a la del usuario.
 
-## Personal Email Accounts
+## Cuentas personales de correo electrónico
 
-Users can setup their own email accounts that need to be monitored. Emails > Top Right Dropdown Menu > Personal Email Accounts. Administrator also can manage users' email accounts.
+Los usuarios pueden configurar sus propias cuentas de correo electrónico que necesitan ser monitoreadas.  Emails > Top Right Dropdown Menu > Personal Email Accounts. El administrador también puede administrar las cuentas de correo electrónico de los usuarios.
 
-## Email Filters
+## Filtros de correo electrónico
 
-These allow the filtering of incoming emails according to specified criteria. E.g. if you don't want notification messages sent by some application to be imported to EspoCRM you can create filter to make EspoCRM skip them.
+Estos permiten el filtrado de correos electrónicos entrantes según criterios específicos. por ejemplo. Si no desea que se importen mensajes de notificación enviados por alguna aplicación a EspoCRM, puede crear un filtro para hacer que EspoCRM los omita.
 
-Admin can create global filters, applied to all email accounts. Users can create filters for their own personal email account and for entire inbox.
+El administrador puede crear filtros globales, aplicados a todas las cuentas de correo electrónico. Los usuarios pueden crear filtros para su propia cuenta de correo electrónico personal y para la bandeja de entrada completa.
