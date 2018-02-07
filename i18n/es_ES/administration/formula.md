@@ -1,114 +1,114 @@
-# Calculated Fields (Formula)
+# Campos calculados (fórmula)
 
-In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved. 
-It provides an ability to automatically set specific fields (attributes) with values derived from calculation.
+En el administrador de entidades, es posible definir el script (fórmula) para un tipo de entidad específico. Este script se ejecutará cada vez que se guarde el registro.
+Proporciona la capacidad de establecer automáticamente campos específicos (atributos) con valores derivados del cálculo.
 
-To edit formula follow Administration > Entity Manager > dropdown menu at the right on the row of needed entity > Formula.
+Para editar la fórmula, siga el menú desplegable Administration > Entity Manager > dropdown menu a la derecha en la fila de entidad necesaria> Fórmula.
 
-You also might need to set fields, that are supposed to be calculated, Read-only via Entity Manager.
+También es posible que necesite establecer campos, que se supone que deben calcularse, de solo lectura a través de Entity Manager.
 
 
-## Syntax
+## Sintaxis
 
-EspoCRM formula is written in the simple language designed specifically for this feature.
+La fórmula de EspoCRM está escrita en el lenguaje simple diseñado específicamente para esta función.
 
-There are operators, functions attributes and values that can be used in formula. Separated expressions must be delimited by character `;`.
+Hay operadores, atributos de funciones y valores que se pueden usar en la fórmula. Las expresiones separadas deben estar delimitadas por caracteres `;`.
 
-### Operators
+### Operadores
 
-* `=` - assignment.
-* `||` - logical OR,
-* `&&` - logical AND,
-* `!` - logical NOT,
-* `+`- numeric summation,
-* `-` - numeric subtraction,
-* `*` - numeric multiplication,
-* `/` - numeric division,
-* `%` - numeric modulo,
-* `==` - comparison equals,
-* `!=` - comparison not equals,
-* `>` - comparison greater than,
-* `<` - comparison less than,
-* `>=` - comparison greater than or equals,
-* `<=` - comparison less than or equals.
+* `=` - asignación.
+* `||` - O logico,
+* `&&` - Y logico,
+* `!` - NO logico,
+* `+`- suma numerica,
+* `-` - resta numerica,
+* `*` - multiplicacion numerica,
+* `/` - Division numerica,
+* `%` - Modulo numerico,
+* `==` - comparación igual que,
+* `!=` - comparación distinto que,
+* `>` - comparación mayor que,
+* `<` - Comparación menor que,
+* `>=` - comparación mayor que o igual a,
+* `<=` - comparación menor que o igual.
 
-Priority of operators:
+Prioridad de los operadores:
 * `=`;
 * `||`, `&&`;
 * `==`, `!=`, `>`, `<`, `>=`, `<=`;
 * `+`, `-`;
 * `*`, `/`, `%`.
 
-### Attributes
+### Atributos
 
-Attributes represent field values of the target entity. You can insert available attributes by clicking on the plus button.
+Los atributos representan valores de campo de la entidad objetivo. Puede insertar atributos disponibles haciendo clic en el botón más.
 
-It's possible to access attributes of related entities with the following format `linkName.attributeName`.
+Es posible acceder a atributos de entidades relacionadas con el siguiente formato `linkName.attributeName`.
 
 
-### Functions
+### Funciones
 
-Format of function use: `groupName\functionName(argument1, argument2, ..., argumentN)`.
+Formato de uso de la función: `groupName\functionName(argument1, argument2, ..., argumentN)`.
 
-Out-of-the-box functions are listed below.
+Las funciones listas para usar se enumeran a continuación.
 
 #### ifThenElse
-`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met then do CONSEQUENT. If not -- then do ALTERNATIVE.
+`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` Si se cumple CONDICIÓN, entonces hace CONSECUENT. Si no -- hace ALTERNATIVE.
 
 #### ifThen
-`ifThen(CONDITION, CONSEQUENT)` If CONDITION is met then do CONSEQUENT. If not -- do nothing.
+`ifThen(CONDITION, CONSEQUENT)` Si se cumple CONDICIÓN, entonces hace CONSECUENT. Si no -- no hace nada.
 
 #### string\concatenate(
-`string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
+`string\concatenate(STRING_1, STRING_2)` Concatena dos o más cadenas.
 
 #### string\substring
-`string\substring(STRING, START, LENGTH)`  Extracts the characters from a STRING by START position and LENGTH.
+`string\substring(STRING, START, LENGTH)`  Extrae los caracteres de un STRING por la posición START y LENGTH.
 
-If LENGTH is omitted, the substring starting from START until the end of the STRING will be returned.
+Si se omite LONGITUD, se devolverá la subcadena que comienza desde START hasta el final de STRING.
 
-If LENGTH is negative, then that many characters will be omitted from the end of STRING.
+Si LENGTH es negativo, se omitirán muchos caracteres al final de STRING.
 
 #### string\\trim
-`string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
+`string\trim(STRING)` Quita espacios en blanco desde el principio y el final de STRING.
 
 #### string\\lowerCase
-`string\lowerCase(STRING)` Converts letters to lower case. (since version 5.0.0)
+`string\lowerCase(STRING)` Convierte letras a minúsculas. (desde la versión 5.0.0)
 
 #### string\\upperCase
-`string\upperCase(STRING)` Converts letters to upper case. (since version 5.0.0)
+`string\upperCase(STRING)` Convierte letras a mayúsculas. (desde la versión 5.0.0)
 
 #### datetime\\today
-`datetime\today()` Returns today's date.
+`datetime\today()` Devuelve la fecha de hoy.
 
 #### datetime\now
-`datetime\now()` Returns current datetime.
+`datetime\now()` Devuelve la fecha actual.
 
 #### datetime\format
-`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
+`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Convierte VALOR de fecha o de fecha y hora en una cadena formateada según la configuración de la aplicación. TIMEZONE y FORMAT se pueden omitir. Si se omite TIMEZONE, se usará la zona horaria predeterminada. Si se omite FORMAT, se usará el formato predeterminado.
 
 #### datetime\date
-`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\date(VALUE, [TIMEZONE])` Devuelve la fecha del mes (1-31). `0` si VALUE está vacío. Si se omite TIMEZONE, se utiliza la zona horaria del sistema. (desde la versión 4.7.0)
 
 #### datetime\month
-`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\month(VALUE, [TIMEZONE])` Devuelve el mes (1-12). `0` si VALUE está vacío. Si se omite TIMEZONE, se utiliza la zona horaria del sistema. (desde la versión 4.7.0)
 
 #### datetime\year
-`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\year(VALUE, [TIMEZONE])` Año de devoluciones `0` si VALUE está vacío. Si se omite TIMEZONE, se utiliza la zona horaria del sistema. (desde la versión 4.7.0)
 
 #### datetime\hour
-`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\hour(VALUE, [TIMEZONE])` Hora de devolución (0-23). `-1` si VALUE está vacío. Si se omite TIMEZONE, se utiliza la zona horaria del sistema. (desde la versión 4.7.0)
 
 #### datetime\minute
-`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\minute(VALUE, [TIMEZONE])` Devuelve el minuto (0-59). `-1` si VALUE está vacío. Si se omite TIMEZONE, se utiliza la zona horaria del sistema. (desde la versión 4.7.0)
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted then system timezone is used. (since version 4.7.3)
+`datetime\dayOfWeek(VALUE, [TIMEZONE])` Devuelve el día de la semana (0-6). `-1` si VALUE está vacío. `0` - para el domingo. Si se omite TIMEZONE, se utiliza la zona horaria del sistema. (desde la versión 4.7.3)
 
 #### datetime\diff
-`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
+`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Devuelve la diferencia entre dos fechas o fechas. INTERVAL_TYPE puede ser 'años', 'meses', 'días', 'horas', 'minutos'. Devuelve `null` si falla. El resultado será negativo si VALUE_1 <VALOR_2.
 
 #### datetime\addMinutes
-`datetime\addMinutes(VALUE, MINUTES)` Adds MINUTES to datetime VALUE. MINUTES can be negative.
+`datetime\addMinutes(VALUE, MINUTES)` Haga clic en el botón Eliminar. Agrega MINUTOS a datetime VALUE. MINUTOS puede ser negativo.
 
 #### datetime\addHours
 `datetime\addHours(VALUE, HOURS)` Adds HOURS to datetime VALUE. HOURS can be negative.
