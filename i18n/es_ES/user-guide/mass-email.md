@@ -50,9 +50,9 @@ Las Listas de Objetivos contienen las listas de Cuentas, Contactos, Clientes Pot
 
 Los usuarios pueden completar manualmente las listas de objetivos usando la acción _Seleccionar_ en el panel correspondiente en la vista detallada de la Lista de Objetivos. Existe la habilidad de filtrar y luego seleccionar todos los resultados de la búsqueda.
 
-## Poblar listas de objetivos con Informes
+## Poblar Listas de objetivos con Informes
 
-La función [Reportes](reports.md # syncing-with-target-lists) proporciona la capacidad de rellenar listas de objetivos con registros que coincidan con criterios específicos.
+La función [Reportes](reports.md#syncing-with-target-lists) proporciona la capacidad de rellenar listas de objetivos con registros que coincidan con criterios específicos.
 
 ## Excluir Listas de Objetivos
 
@@ -74,7 +74,7 @@ _Para los Administradores_
 
 #### ¿Qué pasa si la URL de Rastreo tiene una URL incorrecta que no conduce a su crm?
 
-Compruebe el parámetro 'siteUrl' en el archivo `data / config.php`. Debe establecerse como URL de su EspoCRM accesible desde el mundo externo.
+Compruebe el parámetro 'siteUrl' en el archivo `data/config.php`. Debe establecerse como URL de su EspoCRM accesible desde el mundo externo.
 
 #### Los correos electrónicos devueltos no se registran
 
