@@ -1,41 +1,41 @@
-# Manage extensions
+# Administrar extensiones
 
-## How to install an extension
+## Cómo instalar una extensión
 
-In order to install EspoCRM extension (e.g. Advanced Pack, VoIP Integration):
+Para instalar la extensión de EspoCRM (por ejemplo, Paquete avanzado, Integración de VoIP):
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Upload your extension package (zip file).
-4. Click Install button.
-
-
-## How to upgrade an extension
-
-In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP integration) to a newer version:
-
-1. Download the new version of needed extension.
-2. Login as an administrator.
-3. Go to Administration > Extensions.
-4. Upload your new extension package (zip file) without uninstalling the already installed version.
-5. Click Install button.
+1. Inicia sesión como administrador.
+2. Vaya a Administration > Extensions.
+3. Cargue su paquete de extensión (archivo zip).
+4. Haga clic en el botón Instalar.
 
 
-## How to uninstall an extension
+## Cómo actualizar una extensión
 
-Steps to uninstall an installed extension:
+Para actualizar una extensión ya instalada (por ejemplo, paquete avanzado, integración de VoIP) a una versión más nueva:
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Find needed extension on the list of available extensions.
-4. Click Uninstall button.
+1. Descargue la nueva versión de la extensión necesaria.
+2. Inicia sesión como administrador.
+3. Vaya a Administration > Extensions.
+4. Suba su nuevo paquete de extensión (archivo zip) sin desinstalar la versión ya instalada.
+5. Haga clic en el botón Instalar.
 
 
-## How to delete an extension
+## Cómo desinstalar una extensión
 
-When an extension is uninstalled, it is still available in the system. It can be completely deleted. Steps to delete an extension:
+Pasos para desinstalar una extensión instalada:
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Find the needed extension in the list of available extensions.
-4. Click Remove button.
+1. Inicia sesión como administrador.
+2. Vaya a Administration > Extensions.
+3. Encuentra la extensión necesaria en la lista de extensiones disponibles.
+4. Haga clic en el botón Desinstalar.
+
+
+## Cómo eliminar una extensión
+
+Cuando se desinstala una extensión, todavía está disponible en el sistema. Puede ser completamente eliminado. Pasos para eliminar una extensión:
+
+1. Inicia sesión como administrador.
+2. Vaya a Administration > Extensions.
+3. Encuentra la extensión necesaria en la lista de extensiones disponibles.
+4. Haga clic en el botón Eliminar.
