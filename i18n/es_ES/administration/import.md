@@ -1,39 +1,38 @@
-# Import
+# Importar
 
-Import is accessible only for admin users. Administration > Import. You are able to import only from CSV files.
+Importar solo es accesible para usuarios administrativos. Administration> Import Puede importar solo desde archivos CSV.
 
-## Step 1
+## Paso 1
 
-Select what type of records you need to import (Entity Type field).
-Select a CSV file. A file should be formated with `UTF-8`.
-Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Update Only'.
+Seleccione qué tipo de registros necesita importar (campo Tipo de entidad).
+Seleccione un archivo CSV. Un archivo debe formatearse con `UTF-8`.
+Seleccione `¿Qué hacer?`. Opciones disponibles: 'Crear solo', 'Crear y actualizar', 'Solo actualizar'.
 
-* `Create Only` - select it if you want record be only created.
-* `Create & Update` - records will be created but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the _Step 2_.
-* `Update only` - only records with matching field values will be found it will be updated.
-
+* `Create Only` - selecciónelo si quiere que el registro se cree solo.
+* `Crear y actualizar`: se crearán registros, pero si se encuentran registros con valores de campo coincidentes, se actualizarán. Podrás comprobar con qué campos coincidir en el _Step 2_.
+* `Solo actualización`: solo se encontrarán registros con valores de campo coincidentes, se actualizarán.
 Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
 
-* `Header Row` - whether CSV file has the first row with field names.
-* `Execute in idle` - recommended if you have a big bunch of records to be imported. Import will be processed via cron. Status will be set to 'Complete' when import process is finished.
-* `Skip searching for duplicates` - it will decrease import runtime. 
+* `Header Row` - si el archivo CSV tiene la primera fila con los nombres de los campos.
+* `Execute in ocioso`: recomendado si tiene un gran grupo de registros para importar. La importación se procesará a través de cron. El estado se establecerá en 'Completado' cuando finalice el proceso de importación.
+* `Omitir búsqueda de duplicados` - disminuirá el tiempo de ejecución de importación.
 
-Click _Next_ button to preceed to the _Step 2_.
+Haga clic en el botón _Next_ para pasar al _Paso 2_ ..
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://github.com/espocrm/documentation/blob/master/_static/images/administration/import/step-1.png)
 
-## Step 2
+## Paso 2
 
-Setup the field mapping: how fields correspond to columns of the csv file. You can skip not needed columns here.
-In cases of 'Create & Update' and 'Update only' you need to check fields by which records that should be updated will be found.
-Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
+Configure la asignación de campo: cómo los campos corresponden a las columnas del archivo csv. Puede omitir las columnas que no sean necesarias aquí.
+En los casos de 'Crear y actualizar' y 'Actualizar solamente', debe verificar los campos por los cuales se encontrarán los registros que se deben actualizar.
+Agregue los valores predeterminados con los que desea que se establezcan los registros nuevos y actualizados. P.ej. puede especificar campos de Usuario asignado o Equipos.
 
-After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once. Note: Revert doesn't work with updated records.
+Una vez realizada la importación, podrá revertir los registros creados, ver duplicados y registros actualizados. Duplicar significa que hubo un registro similar en el sistema. Puede eliminar todos los duplicados importados a la vez. Nota: Revertir no funciona con registros actualizados.
 
-Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
+Click en el boton _Run Import_ para continuar. Puede tomar algún tiempo antes de que finalice un proceso de importación. Si desea importar un gran grupo de registros (depende de la configuración de su servidor, generalmente si hay más de 200 registros), debe asegurarse de que el parámetro php `set_time_limit` sea lo suficientemente grande.
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://github.com/espocrm/documentation/blob/master/_static/images/administration/import/step-2.png)
 
-## How to import into Target List
+## Cómo importar a la lista de objetivos
 
-When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
+Cuando importa Contactos, Clientes potenciales o Cuentas, puede agregarlos a una lista de objetivos. En el Paso 2, debe agregar el campo Lista de objetivos en el panel `Valores predeterminados` y seleccionar un registro de lista de objetivos necesario. También puede usar la importación `Actualizar solo` o` Crear y actualizar` para agregar objetivos existentes a una lista de objetivos.
