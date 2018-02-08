@@ -1,6 +1,6 @@
-# Creating Scheduled Job
+# Creando un Trabajo Agendado
 
-To define a custom Scheduled Job create a file `custom/Espo/Custom/Jobs/{JOB_NAME}.php` with the content.
+Para definir un trabajo Agendado personalizado, cree un archivo `custom/Espo/Custom/Jobs/{JOB_NAME}.php` con el contenido.
 
 ```
 namespace Espo\Custom\Jobs; 
@@ -15,7 +15,7 @@ class {JOB_NAME} extends \Espo\Core\Jobs\Base
 }
 ```
 
-Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/{language}/ScheduledJob.json`).
+También puede establecer una etiqueta para su trabajo (`custom/Espo/Custom/Resources/i18n/{language}/ScheduledJob.json`).
 ```
 {
   "options": { 
@@ -26,4 +26,4 @@ Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/{lang
 }
 ```
 
-To implement the changes, go to Administration panel and Clear Cache.
+Para implementar los cambios, diríjase al panel de Administración para Vacia Caché.
