@@ -1,16 +1,16 @@
-# Configuring a Virtual Host on Nginx for EspoCRM
+# Configurar un host virtual en Nginx para EspoCRM
 
-In this guide we will show how to configure a virtual host on Nginx for EspoCRM on Ubuntu server.
+En esta guía mostraremos cómo configurar un host virtual en Nginx para EspoCRM en el servidor de Ubuntu.
 
-## Create a server block file
+## Crear un archivo de bloque de servidor
 
-To create this file, open a terminal and run the command:
+Para crear este archivo, abra un terminal y ejecute el comando:
 
 ```
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
+sudo cp /etc/nginx/sites-available/default/etc/nginx/sites-available/espocrm.conf
 ```
 
-Now, open this file (/etc/nginx/sites-available/espocrm.conf) and modify the code following the format printed below (some settings may be different based on your configuration):
+Ahora, abra este archivo (/etc/nginx/sites-available/espocrm.conf) y modifique el código siguiendo el formato impreso a continuación (algunas configuraciones pueden ser diferentes en función de su configuración):
 
 ```
 server {
@@ -89,9 +89,9 @@ server {
 }
 ```
 
-## Enable this server block
+## Habilita este bloque de servidor
 
-Create a symbolic link:
+Crea un enlace simbólico:
 
 ```
 sudo ln -s /etc/nginx/sites-available/espocrm.conf /etc/nginx/sites-enabled/
@@ -109,12 +109,12 @@ And restart Nginx server:
 sudo service nginx restart
 ```
 
-## Configure your local hosts (optional, for a local domain only)
+## Configure sus hosts locales (opcional, solo para un dominio local)
 
-If you added a local domain, you have to configure it on your local computer (not on the server). For Ubuntu, open the file `/etc/hosts` and add the line:
+Si agregó un dominio local, debe configurarlo en su computadora local (no en el servidor). Para Ubuntu, abra el archivo `/ etc/hosts` y agregue la línea:
 
 ```
-192.168.1.1 espocrm.local  # specify the IP address of your Nginx server
+192.168.1.1 espocrm.local  # especifique la dirección IP de su servidor Nginx
 ```
 
-For Windows, please follow these [instructions](http://support.microsoft.com/kb/923947).
+Para Windows, siga estas [instrucciones](http://support.microsoft.com/kb/923947).
