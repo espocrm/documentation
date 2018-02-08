@@ -1,13 +1,13 @@
-# Link Multiple field with Primary
+# Vincule Varios Campos con Primario
 
-~For EspoCRM 3.6.0 and greater.~
+~Para EspoCRM 3.6.0 y superiores~
 
-Sometimes you have `hasMany` relationship and need to have an ability to select primary record among related ones. As example, `Contacts` field of Case entity.
+A veces tiene relaciones `hasMany` y necesitas tener la capacidad de seleccionar un historial primario entre los relaciones. Como ejemplo, el campo `Contacts` de entidad Caso.
 
->Need to create `contacts` linkMultiple field with a primary for our custom entity `Stock`. 
+>Necesita crear `contacts`, vincule Varios campos con un primario para nuestra entidad personalizada `Stock`. 
 >
 
-###Step 1
+###Paso 1
 `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`
 ```json
 {
@@ -40,7 +40,7 @@ Sometimes you have `hasMany` relationship and need to have an ability to select 
 }
 ```
 
-###Step 2
+###Paso 2
 `custom/Espo/Custom/Resources/metadata/entityDefs/Contact.json`
 ```json
 {
@@ -62,7 +62,7 @@ Sometimes you have `hasMany` relationship and need to have an ability to select 
 }
 ```
 
-###Step 3
+###Paso 3
 `custom/Espo/Custom/Repositories/Stock.php`
 ```php
 <?php
@@ -106,7 +106,7 @@ class Stock extends \Espo\Core\ORM\Repositories\RDB
 }
 ```
 
-###Step 4
+###Paso 4
 `client/custom/src/views/stock/fields/contacts.js`
 ```js
 Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
@@ -116,11 +116,11 @@ Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-wi
 });
 ```
 
-###Step 5
-Run Rebuild
+###Paso 5
+Ejecutar Reconstrucción
 
 ###Step 6
-Execute SQL query
+Ejecute consulta SQR
 ```sql
 UPDATE stock
 JOIN contact_stock
