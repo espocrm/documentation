@@ -4,21 +4,21 @@
 
 You need to have at least one Target List with target records and Email Template in your crm.
 
-Anda harus memiliki setidaknya satu Daftar Target dengan catatan target dan Template Email di crm Anda.
+Anda harus memiliki setidaknya satu Daftar Target dengan target catatan dan Email Template dalam crm anda.
 
 Jika semuanya benar setup email harus keluar. Mereka harus dikirim setiap jam dengan porsi (Anda dapat mengubah ukuran porsi di Administration> Outbound Emails). Administrator dapat mengubahnya dengan memperbarui bidang `Penjadwalan` dari` Periksa Akun Email' Pekerjaan Terjadwal. 
 
 You can check if emails are sent in Log panel.
 
-Anda dapat memeriksa apakah email dikirim ke panel Log.
+Anda dapat memeriksa apakah email yang dikirim dalam Log panel.
 
 ## Test what will be sent to recipients
 
-## Uji apa yang akan dikirim ke penerima
+## Tes apa yang akan dikirim ke penerima
 
 Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
 
-Klik tarik-turun kanan pada baris email massal di _Mass Email_ panel dan kemudian klik _Send Test_.
+Klik kanan dropdown pada email massal baris di _Mass Email_ panel, dan kemudian klik _kirim Test_.
 
 ## Log
 
@@ -29,12 +29,12 @@ In log you can see:
 * Recipients who opted out;
 * Bounced emails (not delivered to recipient).
 
-Dalam log Anda bisa melihat:
-* Email terkirim;
+Dalam log, anda dapat melihat:
+* Mengirim email;
 * Email dibuka oleh penerima;
 * Tautan diklik oleh penerima;
 * Penerima yang memilih keluar;
-* Email terpental (tidak terkirim ke penerima).
+* Membangun email (tidak dikirimkan kepada penerima).
 
 ## Opt-out link
 
@@ -42,7 +42,7 @@ Dalam log Anda bisa melihat:
 
 By default the system will append opt-out to all sent emails. But you can use custom one in your Email Template.
 
-Secara default sistem akan menambahkan opt-out ke semua email yang dikirim. Tapi Anda bisa menggunakan custom one di Template Email Anda.
+Secara default sistem akan menambahkan opt-out untuk semua email yang dikirim. Tapi anda dapat menggunakan satu kustom di Template Email anda.
 
 Example:
 ```html
@@ -52,11 +52,11 @@ Example:
 Administrator can disable mandatory opt-out link being added by system at Administration > Outbound Emails.
 
 Contoh:
-`` `html
-<a href="{optOutUrl}"> Berhenti berlangganan dari milis. </a>
-`` `
+``html
+<a href="{optOutUrl}">berhenti Berlangganan dari mailing list.</a>
+``
 
-Administrator dapat menonaktifkan link opt-out wajib yang ditambahkan oleh sistem di Administration> Email keluar.
+Administrator dapat menonaktifkan wajib opt-out link yang ditambahkan oleh sistem Administrasi > Email Keluar.
 
 ## Tracking URL
 
@@ -65,8 +65,8 @@ Administrator dapat menonaktifkan link opt-out wajib yang ditambahkan oleh siste
 If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
  and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
  
- Jika Anda ingin tahu bahwa penerima Anda membuka tautan dari email Anda, Anda perlu membuat URL Pelacakan. Tentukan _Name_ apapun
-  dan _URL_ di mana link Anda harus mengarah ke. Kemudian Anda perlu menempelkan kode yang dihasilkan ke Template Email Anda.
+ Jika anda ingin tahu bahwa penerima anda membuka link dari email anda, yang anda butuhkan untuk membuat URL Pelacakan. Menentukan _Name_
+dan _URL_ di mana link anda harus mengarah ke. Kemudian anda akan perlu untuk paste kode yang dihasilkan menjadi Template Email anda.
 
  Example:
  ```html
@@ -86,25 +86,25 @@ Users can populate target lists manually using _Select_ tindakan pada panel yang
 
 ## Daftar Target
 
-Daftar Target berisi daftar catatan Akun, Kontak, Pimpinan dan Pengguna.
+Target berisi daftar Akun, Kontak, Memimpin dan Pengguna catatan.
 
-Pengguna dapat mengisi daftar target secara manual dengan menggunakan _Select_ action pada panel yang sesuai pada tampilan detail Daftar Target. Ada kemampuan untuk melakukan penyaringan lalu pilih semua hasil pencarian.
+Pengguna dapat mengisi target daftar secara manual menggunakan _Select_ tindakan pada panel yang sesuai pada tampilan detail Daftar Target. Ada kemampuan untuk membuat penyaringan dan kemudian pilih semua hasil pencarian.
 
 ## Populating target lists with Reports
 
 [Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
 
-## Mengisi daftar target dengan Laporan
+## Mengisi daftar sasaran dengan Laporan
 
-[Reports] (reports.md # syncing-dengan-daftar target) fitur menyediakan kemampuan untuk mengisi daftar target dengan catatan yang sesuai dengan kriteria spesifik.
+[Laporan](laporan.md#sinkronisasi-dengan-target-list) fitur ini memberikan kemampuan untuk mengisi daftar sasaran dengan catatan yang sesuai dengan kriteria tertentu.
 
 ## Excluding Target Lists
 
 Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
 
-## Tidak termasuk Daftar Target
+## Tidak termasuk Target Daftar
 
-Tentukan Daftar Penawaran Tidak Termasuk untuk tidak mengirim email massal kepada penerima tertentu. Jika ada catatan dengan alamat email yang cocok dengan alamat email dari catatan yang tidak termasuk, rekaman pertama akan dikecualikan juga.
+Menentukan tidak Termasuk Target Daftar untuk menghindari mengirim email massal ke penerima tertentu. Jika ada record dengan alamat email yang sesuai dengan alamat email apapun termasuk catatan pertama akan dikeluarkan juga.
 
 ## Campaign Log
 
@@ -112,13 +112,14 @@ At Campaign Log you can see emails that have been sent, opened emails, bounced e
 
 ## Log Kampanye
 
-Di Campaign Log Anda dapat melihat email yang telah dikirim, email terbuka, email terpental, yang memilih ikut serta, dan siapa yang mengeklik tautan di email. Anda bisa memanfaatkan log ini dengan membuat Daftar Target (dropdown di pojok kanan atas pada panel) berdasarkan catatan dari log. Misalnya, Anda hanya memilih kontak yang diklik pada link (tracking url).
+Pada Kampanye Log anda dapat melihat email yang telah dikirim, membuka email, memantul email, yang memilih keluar, dan yang mengklik link dalam email. Itu mungkin untuk menggunakan log ini dengan membuat Daftar Target (dropdown di pojok kanan atas pada panel) yang didasarkan pada catatan dari log. Misalnya, anda memilih hanya kontak yang diklik pada link (url pelacakan).
 
 ## Troubleshooting
 
 _For Administrators_
 
 ## Penyelesaian masalah
+
 _Untuk administrator_
 
 #### What to do if emails are not sent out.
@@ -127,19 +128,19 @@ _Untuk administrator_
 2. Check if you have setup cron for your system.
 3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
 
-#### Apa yang harus dilakukan jika email tidak terkirim.
+#### Apa yang harus dilakukan jika email tidak dikirim..
 
-1. Periksa apakah _Send Tes_ bekerja. Jika tidak berhasil, maka periksa apakah setting sistem SMTP benar.
-2. Periksa apakah Anda memiliki setup cron untuk sistem Anda.
-3. Periksa apakah Anda memiliki 'Kirim Email Massal' Pekerjaan yang Dijadwalkan dan itu `Aktif` (Administrasi> Pekerjaan Terjadwal> Kirim Email Massal). Periksa apakah ada sesuatu di Log.
+1. Periksa apakah _kirim Test_ bekerja. Jika tidak bekerja, kemudian memeriksa apakah sistem pengaturan SMTP adalah benar.
+2. Periksa jika anda memiliki setup cron untuk sistem anda.
+3. Periksa apakah anda memiliki `Kirim Email Massal` Dijadwalkan Pekerjaan dan itu `Aktif` (Administrasi > Dijadwalkan Pekerjaan > Kirim Email Massal). Periksa jika ada sesuatu dalam Log.
 
 #### What if Tracking URLs has wrong url that does not lead to your crm.
 
 Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of your EspoCRM accessible from the external world.
 
-#### Bagaimana jika URL Pelacakan memiliki url salah yang tidak mengarah ke crm Anda.
+#### Bagaimana jika Url Pelacakan memiliki url yang salah yang tidak mengarah ke crm anda.
 
-Periksa parameter 'siteUrl' di file `data / config.php`. Ini harus ditetapkan sebagai URL EspoCRM Anda dapat diakses dari dunia luar.
+Periksa 'siteUrl' parameter `data/config.php` file. Itu harus ditetapkan sebagai URL anda EspoCRM dapat diakses dari dunia luar
 
 #### Bounced emails are not being logged
 
@@ -149,6 +150,6 @@ Also some mail server providers can deviate from standards, so bounced emails ca
 
 #### email yang dipantulkan tidak masuk log
 
-Email terpental hanya bisa ditangani oleh akun email grup. Pastikan bahwa Anda memiliki akun email grup yang memonitor kotak pesan yang memantul email dikirim.
+Bangkit email dapat ditangani oleh kelompok akun email saja. Pastikan bahwa anda memiliki sebuah kelompok akun email yang monitores kotak memantul email yang dikirim.
 
-Juga beberapa penyedia server email bisa menyimpang dari standar, sehingga email yang terpental tidak bisa dibedakan.
+Juga beberapa mail server penyedia dapat menyimpang dari standar, sehingga terpental email tidak dapat dibedakan.
