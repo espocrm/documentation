@@ -71,6 +71,6 @@ Hal ini memungkinkan Anda untuk menggunakan folder tertentu di badan tempalte em
 
 Anda dapat menggunakan tambahan folder khusus di badan tempate: {optOutUrl} dan {optOutLink}.
 ```
-<a href="{optOutUrl}">Unsubscribe</a>
+<a href="{optOutUrl}">Berhenti berlangganan</a>
 ```
 Ini adalah tautan berhenti berlangganan email massal.
