@@ -1,8 +1,8 @@
-# Custom Views
+# Vistas Personalizadas
 
-## Record Views
+## Historial de Vistas
 
-EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined it `clientDefs` category of metadata.
+El marco metodológico de EspoCRM facilita habilidades flexibles para definir vistas personalizadas para ciertos tipos de entidad. Estos deben definirlo en la categoría `clientDefs` de metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
@@ -23,7 +23,7 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 
 `client/custom/src/views/your-entity-type/record/detail.js`
 
-Record/Detail view contains all panels with fields, relations and other data you can see on detail view. It doesn't contain header and buttons in the top-right corner.
+La vista Historial/Detalle contiene todos los paneles con campos, relaciones y otros datos que podrá ver en vista detallada. No contiene encabezado y los botones están en la esquina superior derecha. 
 
 ```javascript
 Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
@@ -68,33 +68,33 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
 
 ```
 
-You are able to create a custom template with the following path:
+Se le permite crear una plantilla personalizada con la ruta siguiente:
 `client/custom/res/templates/your-entity-type/record/detail.tpl`
 
 
 
 `client/custom/src/views/your-entity-type/detail.js`
 
-Detail view contains Record/Detail view and Header.
+La vista detallada contiene vista de Historial/Detalle y Encabezado.
 
 
 `client/custom/src/views/your-entity-type/edit.js`
 `client/custom/src/views/your-entity-type/record/edit.js`
 
-The same as detail but is used when record is being created or edited not in inline-edit mode.
+Lo mismo que detallada pero es utilizada cuando se está creando o editando un historial, no en el modo de edición en línea.
 
 
 `client/custom/src/views/your-entity-type/list.js`
 
-List view contains Record/List view, Header and Search Form View.
+La vista de Lista contiene vista de Historial/Lista, Encabezado y Vista en Forma de Búsqueda.
 
 
 `client/custom/src/views/your-entity-type/record/list.js`
 
-List/Record view contains rows of records.
+La vista de Lista/Historial contiene filas de historial.
 
 
-It is worth being mentioned that you need to inherit your view class from specific class for your entity if one already exists.
+Vale la pena mencionar que usted necesita heredar su clase de vista de una clase específica para su entidad si ya existe alguna.
 
 ```javascript
 Espo.define('custom:views/email/record/detail', 'views/email/record/detail', function (Dep) {
@@ -102,9 +102,9 @@ Espo.define('custom:views/email/record/detail', 'views/email/record/detail', fun
 });
 ```
 
-## Field Views
+## Vistas de Campo
 
-Custom views for specific fields should be specified in entityDefs section of metadata.
+Las vistas personalizadas para campos específicos deberían ser especificadas en la sección entityDefs de metadata.
 
 `custom/Espo/Custom/Resources/metadata/entityDefs/YourEntityType.json`
 
