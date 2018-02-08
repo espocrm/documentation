@@ -1,76 +1,76 @@
-# Guidelines on Using Emails
+# Panduan Menggunakan Email
 
-EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+EspoCRM membolehkan untuk mengambil email dari kotak IMAP. Hal ini memungkinkan untuk menggunakan EspoCRM sebagai klien email dan juga  fitur khusus CRM.
 
-## IMAP accounts
+## Akun IMAP
 
-*Note: You need to have [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
+*Catatan: Anda harus mempunyai [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) yang dikonfigurasi dengan benar di sistem Anda agar email masuk bekerja.*
 
-User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+Pengguna dapat mengatur akun IMAP pada halaman Akun Email Pribadi (Tab email> menu kanan atas> Akun Email Pribadi).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
+Tentukan folder mana yang akan dipantau pada kolom Folder Pantauan. Secara default itu diatur ke KOTAK MASUK. Jika Anda menggunakan beberapa klien email eksternal untuk mengirim email, Anda dapat menambahkan folder Terkirim untuk mengarsipkan email tersebut.
 
-*Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
+*Fetch Since* mengizinkan Anda untuk memilih tanggal email dari mana yang harus diarsipkan. Tetapkan ke beberapa tanggal sebelum hari ini jika Anda perlu mengarsipkan email lama.
 
-There is an ability to specify *Folder* in Persnoal Email Account. Incoming emails will be put in that folder.
+Anda dibolehkan menentukan *Folder* dalam Akun Email Pribadi. Email masuk akan dimasukkan ke delam folder tersebut.
 
-## SMTP accounts
+## Akun SMTP
 
-Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+Pengguna dapat mengatur pengaturan SMTP di Preferensi seperti di Akun Email Pribadi mereka. Administrator juga dapat mengizinkan untuk menggunakan sistem SMTP (bersamaan).
 
-Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of *User* record.
+Pengguna dapat mempunyai beberapa akun SMTP (sejak versi 4.2.0). Tetapi alamat email pengguna dapat digunakan untuk mengirim email dari yang sudah ditentukan oleh alamat email dari riwayat *Pengguna*.
 
-## Working with Emails
+## Bekerja dengan Email
 
-Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
-You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
+Email diambil oleh cron (di latar belakang) setiap beberapa menit (periode dapat ditentukan oleh Administrator).
+Anda dapat melihat semua email Anda di tab Email. Disana ada folder standar Kotak Masuk, Terkirim, Draft di sebelah kiri.
 
-*Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
+Kolom *Status*. `Terkirim` artinya dikirim dari CRM, `Diarsipkan` - diambil dari akun IMAP atau diarsipkan secara manual, `Draft` - artinya email dibuat sebagai draft.
 
-When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized then user can link it manually by filling in *Parent* field.
+Ketika email baru masuk sistem akan mencoba mengenali catatan email mana yang menjadi miliknya. Ini dapat ditautkan dengan Akun, Judul, Kemungkinan, Kejadian (dan Kontak pada mode B2C) dll. Jika tidak dikenali maka pengguna bisa menautkannya secara manual dengan mengisi kolom *Utama*.
 
-If an email came from a new potential client user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
+Jika email berasal dari pengguna klien potensial baru dapat **Mengubahnya ke Judul**. Buka entri email dan klik Buat Judul di menu kanan atas.
 
-It's also possible to **create Task or Case** from an email record.
+Ini juga memungkinkan untuk **membuat Task atau Kejadian** dari catatan sebuah email.
 
-If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can **create contact** right from there.
+Jika alamat email (dari, ke, cc) pada catatan email diketahui sistem akan menampilkan orang yang mereka kenal (Kontak, Pimpinan, Pengguna dll). Jika email tersebut baru Anda dapat **membuat kontak** langsung dari sana.
 
-All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
+Semua alamat email yang terkait dengan catatan tertentu ditampilkan di panel Riwayat catatan itu. Jika beberapa email saja yang terkait, misalnya, untuk kesempatan tetapi kesempatan akan terkait dengan akun, maka akan ditunjukan ke kesempatan dan akun.
 
-## Sending Emails
+## Mengirim Email
 
-You can compose new email by a few ways:
-* *Compose Email* button on Emails list view;
-* replying on another email;
-* clicking on an email address of some record;
-* *Compose Email* action of Activities panel.
+Anda dapat menulis email baru dengan cara berikut:
+* Tombol *Tulis Email* pada tampilan daftar Email;
+* membalas email lain;
+* mengklik alamat email dari beberapa catatan;
+* Tindakan *Tulis Email* pada panel Aktivitas.
 
-There is an ability to **select template** of your email.
+Ada pilihan untuk **memilih template** dari email anda.
 
-You can setup **email signature** in Preferences.
+Anda dapat mengatur **tanda tangan email** di Preferensi.
 
-## Email Folders
+## Folder Email
 
-Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you wan't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Pengguna dapat membuat folder email mereka sendiri untuk memasukkan beberapa email agar santai. Daftar folder yang tersedia tersedia di halaman Email di sisi kiri. Untuk membuat atau mengedit folder ikuti Email> geser kebawah di pojok kanan atas> Folder. `Lewati Notifikasi` artinya Anda tidak akan diberi tahu tentang email masuk yang masuk ke folder tertentu. Dengan memanfaatkan Email Filter, memungkinkan memasukkan email ke folder secara otomatis menurut kriteria tertentu.
 
-## Email Filters
+## Penyaring Email
 
-Administrator can create global email filters to skip not desirable emails. They are available at Administration > Email Filters.
+Administrator dapat membuat filter email global untuk melewatkan email yang tidak diinginkan. Penyaring email tersedia di Administrasi> Penyaring Email.
 
-Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
+Pengguna biasa dapat membuat filter email untuk Akun Email Pribadi mereka atau untuk keseluruhan kotak masuk mereka. Mereka tersedia di Email> geser kebawah di pojok kanan atas> Filter.
 
-There are two types of filters:
-* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder - imported emails will be put into specified user's folder automatically.
+Ada dua jenis penyaringan:
+* Lewati - email akan dimasukan dalam *Sampah* atau tidak diimpor jika penyaringna tersebut terkait dengan Akun Email Personal.
+* Masukkan ke Folder - email yang diimpor akan dimasukan ke folder tertentu pengguna secara otomatis.
 
-## Email Templates
+## Template Email
 
-Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sendings and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
+Template email tersedia di Email> geser kebawah di pojok kanan atas> Template Email. Template Email dapat digunakan baik untuk pengiriman email massal dan untuk email biasa. Kotak centang `One-off` berarti template email seharusnya hanya digunakan sekali saja, seperti biasa digunakan untuk pemasaran email.
 
-It's possible to use placefolders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
+Hal ini memungkinkan Anda untuk menggunakan folder tertentu di badan tempalte email dan subjek, misalnya {Account.name}, {Person.emailAddress}. Mereka akan diganti dengan nilai catatan terkait.
 
-You can use additional reserved placefolders in template body: {optOutUrl} and {optOutLink}.
+Anda dapat menggunakan tambahan folder khusus di badan tempate: {optOutUrl} dan {optOutLink}.
 ```
 <a href="{optOutUrl}">Unsubscribe</a>
 ```
-This is unsubscribe link for mass email.
+Ini adalah tautan berhenti berlangganan email massal.
