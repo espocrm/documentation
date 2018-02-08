@@ -1,77 +1,76 @@
-# Mass Email
+# Toplu Eposta
 
-## How to send mass email
+## Nasıl toplu eposta gönderilir
 
-You need to have at least one Target List with target records and Email Template in your crm.
+crmnizde en az hedef kayıtların olduğu bir Hedef Listesi ve Eposta Şablonu olmalıdır.
 
-1. Create new Campaign with a status `Email` or `Newsletter`. Select one or a few target lists in `Target Lists` field.
-2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure _Status_ set as `Pending`.
+1.`Eposta` or `Bülten` olarak yeni bir Kampanya yarat. `Hedef Listeleri` alanından bir veya daha fazla hedef listesi seç.
+2. Kampanya kaydı yaratıldıktan sonra bu kampanya için Toplu Eposta yarat: Toplu Eposta panelindeki artıya tıkla. Epostaların gönderilmesi gereken _Başlama tarihi_ belirle ve _Eposta Şablonu_ seç. _Durum_u `Beklenen` olarak ayarladığınıza emin olun.
 
-If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
+Her şey doğru ayarlandıysa epostalar gitmelidir. Epostalar her saat parçalar halinde gönderilmelidir (parça büyüklüğünü Yönetim > Giden Epostalar kısmından değiştirebilirsiniz). Yönetici `Programlama` alanından `Grup Eposta Hesaplarını Kontrol Et` Programlanmış İşi güncelleyerek değiştirebilir.
 
-You can check if emails are sent in Log panel.
+Log panelinden epostaların gönderilip gönderilmediğini kontrol edebilirsiniz.
 
-## Test what will be sent to recipients
+## Alıcılara neyin gönderileceğini test et
 
-Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
+_Toplu Eposta_ panelinde toplu eposta sırasının sağ açılır listesine tıkla ve sonra _Test Gönder_e tıkla.
 
 ## Log
 
-In log you can see:
-* Sent email;
-* Emails opened by recipient;
-* Links clicked by recipient;
-* Recipients who opted out;
-* Bounced emails (not delivered to recipient).
+Log'da şunları görebilirsiniz:
+* Gönderilmiş eposta;
+* Alıcı tarafından açılmış eposta;
+* Alıcı tarafından tıklanmış linkler;
+* Ayrılan alıcılar;
+* Geri seken epostalar (alıcıya iletilmemiş).
 
-## Opt-out link
+## Ayrılma Linki
 
-By default the system will append opt-out to all sent emails. But you can use custom one in your Email Template.
+Sistem varsayılan olarak ayrılmayı tüm gönderilmiş epostalara ekleyecektir. Ama siz Eposta Şablonunuzda özel bir tane kullanabilirsiniz.
 
-Example:
+Örnek:
 ```html
-<a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
+<a href="{optOutUrl}">Mail listesinden çık.</a>
 ```
 
-Administrator can disable mandatory opt-out link being added by system at Administration > Outbound Emails.
+Yönetici sistem tarafından eklenmiş zorunlu ayrılma linkini Yönetim > Giden Epostalar kısmından devre dışı bırakabilir.
 
-## Tracking URL
+## URL İzleme
 
-If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
- and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
+Eğer alıcınızın epostadaki linki açtığını bilmek istiyorsanız, bir URL İzleme yaratmalısınız. Linkinizin gitmesi gereken herhangi bir _İsim_ ve _URL_ belirleyin. Sonra, Eposta Şablonunuza yaratılan kodu yapıştırmalısınız.
 
- Example:
+ Örnek:
  ```html
-<a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
+<a href="{trackingUrl:55f2c87b09a220a78}">Demomuzu deneyin</a>
  ```
  
-## Target Lists
+## Hedef Listeler
 
-Target Lists contains the lists of Accounts, Contacts, Leads and Users records. 
+Hedef Listeler Hesap, Kişiler, Destekler ve Kullanıcıların kayıt listelerini içerir.
 
-Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all result of search.
+Kullanıcılar Hedef Listesinin detaylı görünümüne denk düşen panelde _Seç_ eylemini kullanarak hedef listesini elle doldurabilirler. Filtreleme ve sonra aramanın tüm sonuçlarını seçme yetisi vardır.
 
-## Populating target lists with Reports
+## Hedef listelerini raporlarla doldurmak
 
-[Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
+[Reports](reports.md#syncing-with-target-lists) özelliği hedef listelerinin spesifik kriterlerle eşleşen kayıtlarla doldurulmasını sağlar.
 
-## Excluding Target Lists
+## Dışarda Tutulan Hedef Listeleri
 
-Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
+Toplu epostaları belli alıcılara göndermekten kaçınmak için Dışarda Tutulan Hedef Listelerini belirleyin. Eğer dışarıda tutulmuş bir eposta adresinin kaydıyla eşleşen bir eposta adresi kaydı varsa, ilk kayıt da dışarıda tutulacaktır.
 
-## Campaign Log
+## Kampanya Logu
 
-At Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+Kampanya Logunda gönderilmiş epostaları, açılmış epostaları, geri sekmiş epostaları, ayrılanları ve epostadaki linke tıklayanları görebilirsiniz. Bu logu, logdaki kayıtları baz alarak bir Hedef Listesi (panelde sağ-üst köşedeki açılır liste) yaratarak kullanmak mümkündür. Örneğin, sadece linke tıklamış kişileri seçersiniz (URL izleme).
 
-## Troubleshooting
+## Sorun Giderme
 
-_For Administrators_
+_Yöneticiler için_
 
-#### What to do if emails are not sent out.
+#### Epostalar gönderilmezse yapılacaklar
 
-1. Check if _Send Test_ works. If does't work, then check if system SMTP settings are correct.
-2. Check if you have setup cron for your system.
-3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
+1. _Test Gönder_ çalışıyor mu diye kontrol edin. Eğer çalışmıyorsa, SMTP sistem ayarlarının doğruluğunu kontrol edin.
+2. Sisteminiz için kurulum cronu olup olmadığını kontrol edin.
+3. `Toplu Eposta Gönder`de Planlanmış İş var mı kontrol edin ve `Aktif` olup olmadığına bakın (Yönetim > Planlanmış İşler > Toplu Eposta Gönder). Log'da bir şey olup olmadığını kontrol edin.
 
 
 #### What if Tracking URLs has wrong url that does not lead to your crm.
