@@ -7,50 +7,50 @@ Vaya a su servidor LDAP y cree un DN base para los usuarios de EspoCRM
 cn=espo-users,ou=users,dc=espo,dc=local
 ```
 
-Tenemos que crear un usuario del sistema que tendrá acceso a los usuarios DN (“cn=espo-users,ou=users,dc=espo,dc=local”). So, the full DN for this system user will be
+Tenemos que crear un usuario del sistema que tendrá acceso a los usuarios DN (“cn=espo-users,ou=users,dc=espo,dc=local”). Entonces, el DN completo para este usuario del sistema será
 ```
 cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 ```
-Now, we can add LDAP user to access to EspoCRM. E.g. Espo Tester with the username “tester” inside the “cn=espo-users,ou=users,dc=espo,dc=local” DN. Please note: to be able to use this login format for EspoCRM, you have to specify the “Username Attribute” and “Base DN” options.
+Ahora, podemos agregar usuarios de LDAP para acceder a EspoCRM. por ejemplo. Espo Tester con el nombre de usuario "tester" dentro de  “cn=espo-users,ou=users,dc=espo,dc=local” DN. Tenga en cuenta: para poder utilizar este formato de inicio de sesión para EspoCRM, debe especificar las opciones "Nombre de usuario" y "DN base".
 
-Then, go to EspoCRM  Authentication settings in the Administrator panel, select `LDAP` method and fill in the LDAP details:
+A continuación, vaya a la configuración de Autenticación de EspoCRM en el panel Administrador, seleccione el método `LDAP` y complete los detalles de LDAP:
 
 ![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
 
-* Host – LDAP IP or host name.
-* Port – connection port.
-* Auth – access credentials for the LDAP server:
- * Full User DN – the full system user DN which allows to search other users.
- * Password – the password to access the LDAP server.
-* Security – SSL or TSL protocol.
-* Username Attribute – the attribute to identify the user. For Active Directory it can be “userPrincipalName” or “sAMAccountName”.
-* Account Canonical Form – type of your account canonical form. There are 4 options:
- * Dn – the form in the format `CN=tester,CN=Espocrm,DC=company,DC=com`.
- * Username – the form `tester`.
- * Backslash – the form `COMPANY\tester`.
- * Principal – the form `tester@company.com`.
-* Bind Requires Dn – if need to format the username in the DN form.
-* Base Dn – the default base DN which is used for searching users.
-* User Login Filter – the filter which allows to restrict users who are able to use EspoCRM. E.g. `memberOf=cn=espoGroup,cn=espo-users,ou=users,dc=espo,dc=local`.
-* Account Domain Name – The domain which is used for authorization the LDAP server.
-* Account Domain Name Short – The short domain which is used for authorization the LDAP server.
-* Try Username Split – the option to split a username with the domain.
-* Opt Referrals – if referrals should be followed to the LDAP client.
-* Create User in EspoCRM – this option allows EspoCRM to create a user from the LDAP.
- * User First Name Attribute – LDAP attribute which is used to determine the user first name.
- * User Last Name Attribute – LDAP attribute which is used to determine the user last name.
- * User Title Attribute – LDAP attribute which is used to determine the user title.
- * User Email Address Attribute – LDAP attribute which is used to determine the user email address.
- * User Phone Number Attribute – LDAP attribute which is used to determine the user phone number.
+* Host: IP de LDAP o nombre de host.
+* Puerto - puerto de conexión.
+* Auth: credenciales de acceso para el servidor LDAP:
+  * DN de usuario completo: el DN de usuario del sistema completo que permite buscar a otros usuarios.
+  * Contraseña: la contraseña para acceder al servidor LDAP.
+* Seguridad: protocolo SSL o TSL.
+* Atributo de nombre de usuario: el atributo para identificar al usuario. Para Active Directory puede ser "userPrincipalName" o "sAMAccountName".
+* Formulario canónico de la cuenta: tipo de formulario canónico de su cuenta. Hay 4 opciones:
+  * Dn - la forma en el formato `CN = probador, CN = Espocrm, DC = compañía, DC = com`.
+  * Nombre de usuario - el formulario `probador`.
+  * Barra diagonal: el formulario `COMPAÑÍA \ probador`.
+  * Principal - el formulario `tester @ company.com`.
+* Enlace Requiere Dn - si es necesario formatear el nombre de usuario en el formulario DN.
+* Base Dn: el DN base predeterminado que se utiliza para buscar usuarios.
+* Filtro de inicio de sesión de usuario: el filtro que permite restringir a los usuarios que pueden usar EspoCRM. Por ejemplo. `memberOf = cn = espoGroup, cn = espo-users, ou = usuarios, dc = espo, dc = local`.
+* Nombre de dominio de la cuenta: el dominio que se utiliza para autorizar el servidor LDAP.
+* Nombre de dominio de cuenta corto: el dominio corto que se utiliza para autorizar el servidor LDAP.
+* Pruebe el nombre de usuario dividido: la opción de dividir un nombre de usuario con el dominio.
+* Opt Referencias - si las referencias deben seguirse al cliente LDAP.
+* Crear usuario en EspoCRM: esta opción permite a EspoCRM crear un usuario desde LDAP.
+  * Atributo del nombre del usuario: atributo LDAP que se utiliza para determinar el nombre del usuario.
+  * Atributo del apellido del usuario: atributo LDAP que se utiliza para determinar el apellido del usuario.
+  * Atributo de título de usuario: atributo LDAP que se utiliza para determinar el título del usuario.
+  * Atributo de dirección de correo electrónico de usuario: atributo LDAP que se utiliza para determinar la dirección de correo electrónico del usuario.
+  * Atributo del número de teléfono del usuario: atributo LDAP que se utiliza para determinar el número de teléfono del usuario.
 
-Now, go to the login page and enter user credentials.
+Ahora, vaya a la página de inicio de sesión e ingrese las credenciales de usuario.
 
 ![2](../_static/images/administration/ldap-authorization/ldap-login.png)
 
-User has been authenticated and automatically created in the EspoCRM.
+El usuario ha sido autenticado y creado automáticamente en el EspoCRM.
 
-##Configuration instructions based on your server:
-* [Active Directory server](ldap-authorization-for-ad.md)
-* [OpenLDAP server](ldap-authorization-for-openldap.md)
+##Instrucciones de configuración basadas en su servidor:
+* [Servidor de Active Directory](ldap-authorization-for-ad.md)
+* [Servidor OpenLDAP](ldap-authorization-for-openldap.md)
 
-More information about configuring LDAP you can read on the [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/) page, as EspoCRM uses this library.
+Puede obtener más información sobre la configuración de LDAP en la página [Biblioteca Zend \ Ldap](https://zendframework.github.io/zend-ldap/intro/), ya que EspoCRM utiliza esta biblioteca.
