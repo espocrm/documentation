@@ -1,6 +1,6 @@
 # Configuring a Virtual Host on Nginx for EspoCRM
 
-In this guide, we will show how to configure a virtual host on Nginx for EspoCRM on Ubuntu server.
+In this guide we will show how to configure a virtual host on Nginx for EspoCRM on Ubuntu server.
 
 ## Create a server block file
 
@@ -89,7 +89,7 @@ server {
 }
 ```
 
-##Enable this server block
+## Enable this server block
 
 Create a symbolic link:
 
@@ -109,9 +109,9 @@ And restart Nginx server:
 sudo service nginx restart
 ```
 
-##Configure your local hosts (optional, for a local domain only)
+## Configure your local hosts (optional, for a local domain only)
 
-If you added a local domain, you have to configure it on your local computer (not on the server). For Ubuntu, open the file /etc/hosts and add the line:
+If you added a local domain, you have to configure it on your local computer (not on the server). For Ubuntu, open the file `/etc/hosts` and add the line:
 
 ```
 192.168.1.1 espocrm.local  # specify the IP address of your Nginx server
