@@ -1,38 +1,38 @@
 # Portal
 
-Portal provides an ability to access specific crm data and functions for your customers and partners. Administrator can create multiple portals. Each portal can have its own settings, dashlboard, user list, access control settings.
+Portal proporciona la capacidad de acceder a datos y funciones de crm específicos para sus clientes y socios. El administrador puede crear múltiples portales. Cada portal puede tener su propia configuración, dashlboard, lista de usuarios, configuración de control de acceso.
 
-To create portal follow Administration > Portals, click Create Portal button.
+Para crear un portal, siga Administración> Portales, haga clic en el botón Crear portal.
 
-* `Is Active`. If not check portal won't be available for anybody.
-* `Is Default`. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
-* `Roles`. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
-* `Tab List`. Tabs which will be shown in navigation bar.
-* `Dashboard Layout`. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
-* `URL`. Read only field that displays the link you can access the portal with.
+* `is active`. Si no, el portal de verificación no estará disponible para nadie.
+* `is default`. Significa que el portal estará disponible por URL más corta: http (s): // YOUR_ESPO_URL / portal.
+* `Roles`. Especifique uno o varios roles del portal que se aplicarán a los usuarios que hayan iniciado sesión en el portal. Más información sobre los roles del portal a continuación.
+* `Tab List`. Pestañas que se mostrarán en la barra de navegación.
+* `Dashboard Layout` . Especifique los dashlets que se mostrarán en la página de inicio del portal. Tenga en cuenta que los usuarios del portal no pueden configurar su tablero.
+* `URL`. Campo de solo lectura que muestra el enlace al que puede acceder el portal.
 
-## Portal Users
+## Usuarios del portal
 
-Administrators can create portal users.
+Los administradores pueden crear usuarios del portal.
 
-1. Administration > Users.
-2. Click right dropdown next to Create User.
-3. Click Create Portal User.
-4. Select Contact the portal user will be linked with.
-5. Fill the form and click save.
+1. Administración> Usuarios.
+2. Haz clic en el menú desplegable a la derecha junto a Crear usuario.
+3. Haga clic en Crear usuario del portal.
+4. Seleccione Contactar con el que se vinculará el usuario del portal.
+5. Rellene el formulario y haga clic en guardar.
 
-Portal user should be linked to Portal record to be able to access that portal.
+El usuario del portal debe estar vinculado al registro del Portal para poder acceder a ese portal.
 
-## Portal Roles
+## Roles del portal
 
-Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
+Los roles del portal son similares a los roles regulares en EspoCRM pero con algunas distinciones.
 
-* `not-set` level denies an access.
-* `own` level means that the record is created by the user. E.g. portal user cased some case and this case is owned by this user.
-* `account` level means that the record is related to the account the portal user is related to.
-* `contact` level means that the record is related to the contact the portal user is related to.
+* el nivel `not-set` niega un acceso.
+* el nivel `own` significa que el registro es creado por el usuario. P.ej. el usuario del portal presentó un caso y este caso pertenece a este usuario.
+* nivel de `account` significa que el registro está relacionado con la cuenta con la que el usuario del portal está relacionado.
+* nivel de `contact` significa que el registro está relacionado con el contacto con el que está relacionado el usuario del portal.
 
-Assigned User and Teams fields are read only for portal users.
+Los campos de Usuario asignado y Equipos son de solo lectura para usuarios del portal.
 
 ### Example
 
