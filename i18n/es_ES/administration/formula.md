@@ -111,116 +111,116 @@ Si LENGTH es negativo, se omitirán muchos caracteres al final de STRING.
 `datetime\addMinutes(VALUE, MINUTES)` Haga clic en el botón Eliminar. Agrega MINUTOS a datetime VALUE. MINUTOS puede ser negativo.
 
 #### datetime\addHours
-`datetime\addHours(VALUE, HOURS)` Adds HOURS to datetime VALUE. HOURS can be negative.
+`datetime\addHours(VALUE, HOURS)` Agrega HOURS a fecha y hora VALUE. HOURS puede ser negativo.
 
 #### datetime\addDays
-`datetime\addDays(VALUE, DAYS)` Adds DAYS to date or datetime VALUE. DAYS can be negative.
+`datetime\addDays(VALUE, DAYS)` Agrega DAYS a fecha y hora VALUE. DAYS puede ser negativo.
 
 #### datetime\addWeeks
-`datetime\addWeeks(VALUE, WEEKS)` Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
+`datetime\addWeeks(VALUE, WEEKS)` Agrega WEEKS a fecha y hora VALUE. WEEKS puede ser negativo.
 
 #### datetime\addMonths
-`datetime\addMonths(VALUE, MONTHS)` Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
+`datetime\addMonths(VALUE, MONTHS)` Agrega MONTHS a fecha y hora VALUE. MONTHS puede ser negativo.
 
 #### datetime\addYears
-`datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
+`datetime\addYears(VALUE, YEARS)` Agrega YEARS a fecha y hora VALUE. YEARS puede ser negativo.
 
 #### datetime\closest
-`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 5.0.0)
+`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Devuelve la fecha más cercana o la fecha y hora a VALUE según los argumentos pasados. (desde la versión 5.0.0)
 
-TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted then default timezone is used.
+TYPE puede ser uno de los siguientes valores: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET es un valor entero o un valor de cadena. IS_PAST significa encontrar lo más cercano en el pasado. Si se omite TIMEZONE, se usa la zona horaria predeterminada.
 
-Examples:
+Ejemplos:
 
-`datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
+`datetime\closest(datetime\now(), 'time', '20:00')` Devolverá el valor de fecha y hora más cercano en el futuro con 20:00 horas.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
+`datetime\closest('2017-11-20', 'date', 1, true)` devolverá `2017-11-01`, el primer día del mes.
 
-`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
+`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Regresará el próximo lunes (el comienzo del día).
 
 #### number\format
-`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR then system defaults are used.
+`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Convierte VALOR numérico en una cadena formateada según un formato específico o la configuración de la aplicación predeterminada. Si se utilizan DECIMALS, DECIMAL_MARK o THOUSAND_SEPARATOR, se utilizan los valores predeterminados del sistema.
 
-Examples:
+Ejemplos:
 
-`number\format(2.666667, 2)` - results 2.67;
+`number\format(2.666667, 2)` - resulta 2.67;
 
-`number\format(1000, 2)` - results 1,000.00;
+`number\format(1000, 2)` - resulta 1,000.00;
 
-`number\format(10.1, 0)` - results 10.
+`number\format(10.1, 0)` - resulta 10.
 
 
 #### number\abs
-`number\abs(VALUE)` Absolute value. Returns null if VALUE is not numeric.
+`number\abs(VALUE)` Valor absoluto. Devuelve nulo si VALUE no es numérico.
 
 #### number\round
-`number\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
+`number\round(VALUE, PRECISION)` Devuelve el valor redondeado de VALOR a la PRECISIÓN especificada (número de dígitos después del punto decimal). PRECISION también puede ser negativo o cero (predeterminado).
 
 #### number\floor
-`number\floor(VALUE)` Returns the next lowest integer value by rounding down value if necessary. (since version 4.9.0)
+`number\floor(VALUE)`Devuelve el siguiente valor entero más bajo al redondear el valor si es necesario. (desde la versión 4.9.0)
 
 #### number\ceil
-`number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary. (since version 4.9.0)
+`number\ceil(VALUE)` Devuelve el siguiente valor entero más alto redondeando el valor si es necesario. (desde la versión 4.9.0)
 
 #### entity\isNew
-`entity\isNew()` Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
+`entity\isNew()` Devuelve TRUE si la entidad es nueva (se está creando) y FALSE si no (se está actualizando).
 
 #### entity\\isAttributeChanged
-`entity\isAttributeChanged(ATTRIBUTE)` Returns TRUE if ATTRIBUTE of the entity was changed.
+`entity\isAttributeChanged(ATTRIBUTE)` Devuelve TRUE si se modificó ATTRIBUTE de la entidad.
 
-Example:
+Ejemplo:
 
 `entity\isAttributeChanged('status')`
 
 #### entity\isAttributeNotChanged
-`entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was not changed.
+`entity\isAttributeNotChanged(ATTRIBUTE)` Devuelve TRUE si ATTRIBUTE de la entidad no fue cambiado.
 
 #### entity\attributeFetched
-`entity\attributeFetched(ATTRIBUTE)` Attribute that was set when target entity was fetched from database. Before it was modified.
+`entity\attributeFetched(ATTRIBUTE)` Atributo que se estableció cuando la entidad objetivo se extrajo de la base de datos. Antes de que fuera modificado.
 
-Example:
+Ejemplo:
 
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field. 
+`entity\addLinkMultipleId(LINK, ID)` Agrega ID para vincular múltiples campos. Por ejemplo, agregue 'someTeamId' al campo 'equipos'. 
 
-`entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
+`entity\addLinkMultipleId(LINK, ID_LIST)` Agrega la lista de identificadores. (desde la versión 4.8.3)
 
 #### entity\hasLinkMultipleId
-`entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
+`entity\hasLinkMultipleId(LINK, ID)` Comprueba si el campo Enlace múltiple tiene una ID específica.
 
 #### entity\removeLinkMultipleId
-`entity\removeLinkMultipleId(LINK, ID)` Removes a specific ID from the Link Multiple field.
+`entity\removeLinkMultipleId(LINK, ID)` Elimina una ID específica del campo link multiple.
 
 #### entity\isRelated
-`entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
+`entity\isRelated(LINK, ID)` Comprueba si la entidad objetivo está relacionada con otra entidad representada por LINK e ID.
 
 #### env\userAttribute
-`env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
+`env\userAttribute(ATTRIBUTE)` Devuelve ATTRIBUTE del usuario actual.
 
 #### list
-`list(VALUE-1, ... VALUE-N)` Returns array. (since version 4.7.0)
+`list(VALUE-1, ... VALUE-N)` Devuelve una matriz. (desde la versión 4.7.0)
 
 #### array\includes
-`array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
+`array\includes(LIST, VALUE)` Devuelve verdadero si LIST contiene VALOR. Se puede usar para campos de Array y Multi-Enum. (desde la versión 4.7.0)
 
 #### array\push
-`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 5.0.0)
+`array\push(LIST, VALUE1 [, VALUE2 ...])` Agrega uno o más elementos al final de una matriz y devuelve la nueva matriz. (desde la versión 5.0.0)
 
 #### array\length
-`array\length(LIST)` Returns count of elements in LIST. (since version 4.8.1)
+`array\length(LIST)` Devuelve el recuento de elementos en LIST. (desde la versión 4.8.1)
 
 
 ### Values
 
-* Strings. E.g. 'some string';
-* Integer numbers. E.g. 1, 100, 40300.
-* Float numbers. E.g. 5.2.
+* Strings. Por ejemplo. 'alguna cadena de texto';
+* Numeros enteros. Por ejemplo. 1, 100, 40300.
+* Numeros decimales. Por ejemplo. 5,2.
 
 ### Variables
 
-It's possible to define custom variables in formula.
+Es posible definir variables personalizadas en fórmula.
 ```
 $someVariableName = 'Test';
 description = $test;
@@ -264,4 +264,4 @@ ifThenElse(
 
 ## Using formula in Workflows
 
-You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
+Puede utilizar la fórmula en condiciones y acciones de flujo de trabajo. Consulte [documentación de flujos de trabajo](workflows.md) para obtener más información.
