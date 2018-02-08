@@ -1,63 +1,63 @@
 # Layout Manager
 
-Layout Manager is available in administration panel. Provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+Layout Manager está disponible en el panel de administración. Ofrece la posibilidad de personalizar la apariencia de detalles, editar, mostrar vistas, así como también buscar filtros y campos para formularios de actualización masiva.
 
-## List
+## Listas
 
-The main layout for the list view. Defines columns and their parameters.
+El diseño principal de la vista de lista. Define columnas y sus parámetros.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![List](https://github.com/espocrm/documentation/blob/master/_static/images/administration/layout-manager/list.png)
 
-Available parameters for columns are listed below.
+Los parámetros disponibles para las columnas se enumeran a continuación.
 
-### Width (%)
+### Ancho (%)
 
-Width of column in percent, empty means auto-width.
+Ancho de columna en porcentaje, vacío significa ancho automático.
 
 ### Link
 
-If checked then the field will be displayed as a link to the detail view of the record. Usually used for name fields.
+Si se selecciona, el campo se mostrará como un enlace a la vista de detalle del registro. Usualmente se usa para campos de nombre.
 
-### Not Sortable
+### No ordenable
 
-Disables an ability to sort the column.
+Desactiva la capacidad de ordenar la columna.
 
 ### Align
 
 Align the column to the left or to the right.
 
-## Detail
+## Detalles
 
-The main layout for the detail view and the edit view. Defines panels, rows and cells. Cells contain fields.
+El diseño principal de la vista de detalles y la vista de edición. Define paneles, filas y celdas. Las celdas contienen campos.
 
-The row can contain two cells or one cell that is expanded to the full width of the row. To add the row with an expanded cell you need to add the new row and click on a minus sign on any cell.
+La fila puede contener dos celdas o una celda que se expande al ancho completo de la fila. Para agregar la fila con una celda expandida, debe agregar la nueva fila y hacer clic en un signo menos en cualquier celda.
 
-![Detail](../_static/images/administration/layout-manager/detail.png)
+![Detail](https://github.com/espocrm/documentation/blob/master/_static/images/administration/layout-manager/detail.png)
 
-## List (Small)
+## Lista (pequeña)
 
-The list layout for relationship panels. Also can be used in other places where it's reasonable to display lists in the narrow view.
+El diseño de la lista para paneles de relaciones. También se puede usar en otros lugares donde es razonable mostrar listas en la vista estrecha.
 
-## Detail (Small)
+## Detalle (Pequeño)
 
-The detail view for quick create, quick view and quick edit forms.
+La vista de detalle para crear rápidamente, vista rápida y formularios de edición rápida.
 
-## Search Filters
+## Filtros de búsqueda
 
-The list of fields available in the list view to search by.
+La lista de campos disponibles en la vista de lista para buscar por.
 
-## Mass Update
+## Actualización masiva
 
-The list of fields availabe in the Mass Update form.
+La lista de campos disponibles en el formulario de Actualización masiva.
 
-## Relationship Panels
+## Paneles de relación
 
-The list of relationship panels displayed on the detail view at the bottom. Panels can be re-ordered. It's possible to define the color of panel with the Style parameter.
+La lista de paneles de relaciones que se muestran en la vista de detalles en la parte inferior. Los paneles pueden ser reordenados. Es posible definir el color del panel con el parámetro Estilo.
 
-## Side Panels
+## Paneles laterales
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter.
+Paneles laterales para Detalle, Editar, Detalle Pequeño, Editar formularios pequeños. Proporciona la capacidad de ocultar o reordenar los paneles de actividades, historial, tareas y otros. Los paneles pueden ser coloreados por el parámetro Estilo.
 
-## Additional Layouts
+## Diseños adicionales
 
-Some entity types contain additional layouts: Convert Lead, List for Account.
+Algunos tipos de entidades contienen diseños adicionales: Convertir plomo, Lista para cuenta.
