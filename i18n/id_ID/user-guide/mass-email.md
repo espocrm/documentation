@@ -9,14 +9,6 @@ You need to have at least one Target List with target records and Email Template
 
 Anda harus memiliki setidaknya satu Daftar Target dengan catatan target dan Template Email di crm Anda.
 
-1. Create new Campaign with a status `Email` or `Newsletter`. Select one or a few target lists in `Target Lists` field.
-2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure _Status_ set as `Pending`
-
-If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
-
-1. Buat Campaign baru dengan status `Email` atau` Newsletter`. Pilih satu atau beberapa daftar target di bidang `Daftar Target`.
-2. Setelah rekaman Kampanye dibuat buat Email Massal untuk kampanye ini: klik plus pada panel Email Massa. Tentukan _Date Start_ - saat email harus dikirim, dan pilih _Email Template_. Pastikan _Status_ ditetapkan sebagai `Pending`.
-
 Jika semuanya benar setup email harus keluar. Mereka harus dikirim setiap jam dengan porsi (Anda dapat mengubah ukuran porsi di Administration> Outbound Emails). Administrator dapat mengubahnya dengan memperbarui bidang `Penjadwalan` dari` Periksa Akun Email' Pekerjaan Terjadwal. 
 
 You can check if emails are sent in Log panel.
