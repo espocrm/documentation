@@ -1,10 +1,10 @@
-# Nginx server configuration for EspoCRM
+# Configuración del servidor Nginx para EspoCRM
 
-These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+Estas instrucciones son suplementarias a la guía [Server Configuration] (server-configuration.md). Tenga en cuenta que todos los ajustes de configuración enumerados aquí se realizan en el servidor de Ubuntu.
 
-## PHP requirements
+## Requisitos de PHP
 
-To install all necessary libraries, run these commands in a terminal:
+Para instalar todas las librerias necesarias, ejecute estos comandos en una terminal:
 
 ```
 sudo apt-get update
@@ -13,13 +13,13 @@ sudo phpenmod mcrypt imap mbstring
 sudo service nginx restart
 ```
 
-## Fixing the issue “API Error: EspoCRM API is unavailable”:
+## Solucionando el problema "Error de la API: la API de EspoCRM no está disponible":
 
-Take only necessary steps. After each step check if the issue is solved.
+Tome solo los pasos necesarios. Después de cada paso, compruebe si el problema está resuelto.
 
-### 1. Enable rewrite rules in Nginx server
+### 1. Habilitar reglas de reescritura en el servidor Nginx
 
-Add this code to your Nginx server block config file (/etc/nginx/sites-available/YOUR_SITE) inside “server” block:
+Agregue este código a su archivo de configuración de bloque de servidor Nginx (/etc/nginx/sites-available/TU_SITIO) dentro del bloque "servidor":
 
 ```
 server {   
@@ -86,37 +86,37 @@ server {
 }
 ```
 
-If you don’t have this file, you have to create it. For this open a terminal and run the command:
+Si no tiene este archivo, debe crearlo. Para esto abra una terminal y ejecute el comando:
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [ guideline](nginx-virtual-host.md).
+Y agregue el código enumerado arriba. Para obtener más información sobre cómo configurar un nuevo host virtual en Nginx, lea esta [guía](nginx-virtual-host.md).
 
-Run this command in a terminal to check if everything is fine:
+Ejecute este comando en una terminal para verificar si todo está bien:
 
 ```
 sudo nginx -t
 ```
 
-If so, run the command to restart nginx server:
+Si es así, ejecute el comando para reiniciar el servidor nginx:
 
 ```
 sudo service nginx restart
 ```
 
-### 2. Add RewriteBase path
+### 2. Agregue la ruta RewriteBase
 
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
+Abra un archivo /ESPOCRM_DIRECTORY/api/v1/.htaccess y reemplace la siguiente línea:
 
 ```
 # RewriteBase /
 ```
-with 
+con
 
 ```
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where REQUEST_URI is a part of URL, e.g. for “http://example.com/espocrm/”, REQUEST_URI is “espocrm”.
+donde REQUEST_URI es parte de la URL, p. para "http://example.com/espocrm/", REQUEST_URI es "espocrm".
