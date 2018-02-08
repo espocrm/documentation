@@ -1,16 +1,16 @@
-# Extension Packages
+# Paquetes de Extensión
 
-Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel under `Customization` section.
+Las extensiones le permiten añadir más funcionalidad a EspoCRM. Estas pueden ser instaladas por el panel del Administrador bajo la sección `Customization`.
 
-## How to create extension package
+## Cómo crear un paquete de extensión
 
-A File structure of package:
+Una estructura de archivo de paquete:
 
-* `/manifest.json` – a file that contains extension properties;
-* `/files` – a directory that contains the extension files;
-* `/scripts` – contains the extension scripts.
+* `/manifest.json` – un archivo que contiene propiedades de extensión;
+* `/files` – un directorio que contiene propiedades de extensión;
+* `/scripts` – contiene los scripts de extensión.
 
-### Manifest
+### Manifiesto
 ```json
 {
  "name": "Extension Name",
@@ -25,23 +25,23 @@ A File structure of package:
 }
 ```
 
-* Syntax of `version` and `acceptableVersions` is described by the v2.0.0 specification found at http://semver.org.
-* `delete` - is the list of core files that need to be deleted. This parameter is not recommended to use. You can omit it.
+* La sintaxis de la `version` y `acceptableVersions` es descrita por la especificación de v2.0.0 que se puede encontrar en http://semver.org.
+* `delete` - es la lista de archivos centrales que necesitan ser borrados. No se recomienda el uso de este parámetro. Los puede omitir.
 
-### Files
+### Archivos
 
-All extension files should be placed in `files` directory. They will be copied to EspoCRM core directory.
+Todos los archivos de extensión deberían ser colocados en el directorio de `files`. Serán copiados al directorio central de EspoCRM.
 
 ### Scripts
 
-For different purposes EspoCRM supports the following types of scripts. All of them should be  placed in `scripts` directory.
+Para diferentes propositos EspoCRM respalda los siguientes tipos de script. Todos estos deberían ser colocados en el directorio de `scripts`.
 
-* `BeforeInstall.php` – a script executed before an installation process;
-* `AfterInstall.php` – executed once the installation process is finished;
-* `BeforeUninstall.php` – executed before uninstallation process;
-* `AfterUninstall.php` – executed once the uninstallation process is finished.
+* `BeforeInstall.php` – un script ejecutado antes de un proceso de instalación;
+* `AfterInstall.php` – ejecutado una vez que el proceso de instalación finalice;
+* `BeforeUninstall.php` – ejecutado antes del proceso de desinstalación;
+* `AfterUninstall.php` – ejecutado una vez que el proceso de desinslación finalice.
 
-Example:
+Ejemplo:
 
 ```php
 class AfterInstall
@@ -61,6 +61,6 @@ class AfterInstall
 }
 ```
 
-### Package
+### Paquete
 
-At the end, we need to pack all these files into a .zip archive.
+Al final, necesitamos colocar todos estos archivos en un archivo .zip.
