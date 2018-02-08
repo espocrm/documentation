@@ -12,16 +12,16 @@ $account = $entityManager->getEntity('Cuenta')
 ```
 o
 ```php
-$account = $entityManager->getRepository('Cuenta')->get();
+$account = $entityManager->getRepository('Account')->get();
 ```
 
 #### Obtener existente
 ```php
-$account = $entityManager->getEntity('Cuenta', $accountId);
+$account = $entityManager->getEntity('Account', $accountId);
 ```
 o
 ```php
-$account = $entityManager->getRepository('Cuenta')->get($accountId);
+$account = $entityManager->getRepository('Account')->get($accountId);
 ```
 
 #### Obtener valor
@@ -52,7 +52,7 @@ $entityManager->saveEntity($account);
 ```
 or
 ```php
-$entityManager->getRepository('Cuenta')->save($account);
+$entityManager->getRepository('Account')->save($account);
 ```
 
 #### Remover
@@ -61,29 +61,29 @@ $entityManager->removeEntity($account);
 ```
 or
 ```php
-$entityManager->getRepository('Cuenta')->remove($account);
+$entityManager->getRepository('Account')->remove($account);
 ```
 
 #### Encontrar
 ```php
-$accountList = $entityManager->getRepository('Cuenta')->where(array(
+$accountList = $entityManager->getRepository('Account')->where(array(
     'tipo' => 'Cliente',    
 ))->find();
 ```
 
 Orden descendiente:
 ```php
-$accountList = $entityManager->getRepository('Cuenta')->limit(0, 10)->order('creadoEn', true)->find();
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('creadoEn', true)->find();
 ```
 
 Orden ascendente:
 ```php
-$accountList = $entityManager->getRepository('Cuenta')->limit(0, 10)->order('creadoEn')->find();
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('creadoEn')->find();
 ```
 
 o:
 ```php
-$accountList = $entityManager->getRepository('Cuenta')->limit(0, 10)->order('creadoEn', 'DESC')->find();
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('creadoEn', 'DESC')->find();
 ```
 
 #### Encontrar el primero
@@ -95,23 +95,23 @@ $account = $entityManager->getRepository('Cuenta')->where(array(
 
 #### Encontrar relacionado
 ```php
-$opportunityList = $entityManager->getRepository('Cuenta')->findRelated($account, 'oportunidades');
+$opportunityList = $entityManager->getRepository('Account')->findRelated($account, 'oportunidades');
 ```
 
 #### Entidades relacionadas
 ```php
-$entityManager->getRepository('Cuenta')->relate($account, 'oportunidades', $opportunity);
+$entityManager->getRepository('Account')->relate($account, 'oportunidades', $opportunity);
 ```
 or
 ```php
-$entityManager->getRepository('Cuenta')->relate($account, 'oportunidades', $opportunityId);
+$entityManager->getRepository('Account')->relate($account, 'oportunidades', $opportunityId);
 ```
 
 #### Entidades no relacionadas
 ```php
-$entityManager->getRepository('Cuenta')->unrelate($account, 'oportunidades', $opportunity);
+$entityManager->getRepository('Account')->unrelate($account, 'oportunidades', $opportunity);
 ```
 or
 ```php
-$entityManager->getRepository('Cuenta')->unrelate($account, 'oportunidades', $opportunityId);
+$entityManager->getRepository('Account')->unrelate($account, 'oportunidades', $opportunityId);
 ```
