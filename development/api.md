@@ -1,62 +1,62 @@
 # REST API
 
-EspoCRM is a single page application so a frontend uses REST API to connect with a backend. 
-All operations you perform using UI you can implement via API calls using your programing language. 
-You can learn how API works if you trace what's going in the network tab in your browser console.
+EspoCRM es una aplicación de una sóla página para que una interfaz utilice REST API para conectarse con un motor.
+Todas las operaciones que realice utilizando UI, las puede implementar a través de llamadas a API utilizando su lenguaje de programación.
+Puede aprender sobre cómo funciona el API si rastrea lo que ocurre en la pestaña de red en la cónsola de su buscador.
 
-Most of api functions return JSON. POST, PATCH calls usually need some JSON data in payload.
+La mayoría de las funciones api arrojan JSON. Las llamadas POST, PATCH suelen necesitar algunos datos JSON en carga útil.
 
-Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: 
+El URL base de EspoCRM es: `api/v1/`. Necesita insertarlo al principio de las expresiones en esta referencia. Ejemplo;
 
 `GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
-## Authentication
+## Autenticación
 
-EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
+El API de EspoCRM utiliza [Autenticación Básica](https://es.wikipedia.org/wiki/Autenticación_de_acceso_básica). El nombre de usuario y la contraseña/token son pasados por el encabezado `Authorization` codificado en base64.
 
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's more better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+Es mucho mejor utilizar el token de autenticación en lugar de la contraseña cuando se trabaja con api. En este caso usted necesitará proporcionar el nombre de usuario y la contraseña/token en el encabezado `Espo-Authorization`. 
 ```
 "Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
 ```
 
-1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header.
-2. Use this token instead of password in `Espo-Authorization` header for all further request.
-3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
+1. Obtenga el token de acceso pidiendo `GET App/user` con el nombre de usuario y la contraseña pasada en el encabezado `Espo-Authorization`.
+2. Utilice este token en lugar de la contraseña en el encabezado `Espo-Authorization` para todos los siguientes pedidos.
+3. Si el pedido arroja un error 403, eso significa que el nombre de usuario/contraseña es incorrecto o que el token ya no es valido.
 
-#### Authentication Token / User Specific Data
+#### Token de Autenticación / Datos Específicos de Usuario
 
 `GET App/user`
 
-Returns:
+Arroja:
 
-* `token` - access token to use;
-* `acl` - information about user access;
-* `preferences` - user preferences;
-* `user` - user record attributes.
+* `token` - el token de acceso a utilizar;
+* `acl` - información sobre el acceso del usuario;
+* `preferences` - preferencias del usuario;
+* `user` - historial de atributos del usuario.
 
 
-## CRUD Operations
+## Operaciones CRUD
 
-#### List Entities
+#### Listar Entidades
 
 `GET {entityType}`
 
-GET parameters:
+Obtenga parametros:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `offset` - (int) compensar;
+* `maxSize` - (int) tamaño máximo;
+* `where` - (array) filtros;
+* `sortBy` - (string) campo a clasificar por;
+* `asc` - (bool) dirección de clasificación.
 
-_Example_
+_Ejemplo_
 
 `GET Account?offset=0&maxSize=20`
 
-Returns:
+Arroja:
 ```
 {
   "list": [... array of records...],
@@ -64,29 +64,29 @@ Returns:
 }
 ```
 
-#### Read Entity
+#### Leer Entidad
 
 `GET {entityType}/{id}`
 
-Returns attributes in JSON object.
+Arroja atributos en un objeto JSON.
 
-_Example_
+_Ejemplo_
 
 `GET Account/5564764442a6d024c`
 
-#### Create Entity
+#### Crear Entidad
 
 `POST {entityType}`
 
-Payload: Object of entity attributes.
+Carga útil: Objeto de los atributos de entidad
 
-Returns entity attributes in JSON object.
+Arroja atributos de entidad en un objeto JSON.
 
-_Example_
+_Ejemplo_
 
 `POST Account`
 
-Payload:
+Carga útil:
 ```
 {
   "name": "Test",
@@ -94,55 +94,55 @@ Payload:
 }
 ```
 
-#### Update Entity
+#### Actualizar Entidad
 
 `PATCH {entityType}/{id}`
 
-or
+o
 
 `PUT {entityType}/{id}`
 
-Payload: Object of entity attributes needed to be changed.
+Carga útil: Objeto de los atributos de entidad que se necesitan para ser cambiados.
 
-Returns attributes in JSON object.
+Arroja atributos en objeto JSON.
 
-_Example_
+_Ejemplo_
 
 `PATCH Account/5564764442a6d024c`
 
-Payload:
+Carga útil:
 ```
 {
   "assignedUserId": "1"
 }
 ```
 
-#### Delete Entity
+#### Eliminar Entidad
 
 `DELETE {entityType}/{id}`
 
-_Example_
+_Ejemplo_
 
 `DELETE Account/5564764442a6d024c`
 
 
-## Related Entities
+## Entidades Relacionadas
 
-#### List Related Entities
+#### Listar Entidades Relacionadas
 
 `GET {entityType}/{id}/{link}`
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `offset` - (int) compensar;
+* `maxSize` - (int) tamaño máximo;
+* `where` - (array) filtros;
+* `sortBy` - (string) campo a clasificar;
+* `asc` - (bool) dirección de clasificación.
 
-_Example_
+_Ejemplo_
 
 `GET Account/5564764442a6d024c/opportunities`
 
-Returns:
+Arroja:
 ```
 {
   "list": [... array of records...],
@@ -150,72 +150,75 @@ Returns:
 }
 ```
 
-#### Link Entity
+#### Vincular Entidad
 
 `POST {entityType}/{id}/{link}`
 
-Payload:
+Carga útil:
 
-1. `id` attribute.
-2. `ids` array attribute.
-3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criterias.
+1. `id` atributo.
+2. `ids` formar atributo.
+3. `"massRelate": true` y `"where": {...}` para relacionar varios historiales por criterios de búsqueda.
 
-_Example_
+_Ejemplo_
 
 `POST Account/5564764442a6d024c/opportunities`
 
-Payload:
+Carga útil:
 ```
 {
   "id": "55646fd85955c28c5"
 }
 ```
 
-#### Unlink Entity
+#### Desvincular Entidad
 
 `DELETE {entityType}/{id}/{link}`
 
-Payload:
+Carga útil
 
-1. JSON with `id` attribute.
-2. JSON with `ids` array attribute.
+1. JSON con `id` atributo.
+2. JSON con `ids` formar atributo.
 
-_Example_
+_Ejemplo_
 
 `DELETE Account/5564764442a6d024c/opportunities`
 
-Payload:
+Carga útil:
 ```
 {
   "id": "55646fd85955c28c5"
 }
 ```
 
-## Stream
+
+## Transmisión
 
 #### List stream entries for the current user
 
+#### Listar entradas de transmisión para el usuario actual
+
 `GET Stream`
 
-Get parameters:
+Obtener parametros:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
+* `offset` - (int) compensar;
+* `maxSize` - (int) tamaño máximo;
 
-#### List stream entries related to a specific record
+#### Listar entradas de transmisión relaciondas a un historial específico
 
 `GET {entityType}/{id}/stream`
 
-Get parameters:
+Obtener parametros:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
+* `offset` - (int) compensar;
+* `maxSize` - (int) tamaño máximo;
 
-#### Follow record
+#### Seguir al historial
 
 `PUT {entityType}/{id}/subscription`
 
-#### Unfollow record
+#### Dejar de al seguir hitorial
 
 `DELETE {entityType}/{id}/subscription`
 
