@@ -1,110 +1,110 @@
 # Business Process Management
 
-Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+A ferramenta Business Process Management (BPM) dá a habilidade de modelar e automatizar os processos de negócios eno EspoCRM. É um motor que executa processos de negócios descrito no BPMN 2.0 padrão. A ferramenta BPM está disponível na extenção [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
 ![BPM example](../_static/images/administration/bpm/bpm-1.png)
 
-### Difference from Workflows tool
+### Diferença da ferramenta Workflows
 
-Workflows tool is intended for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
+A ferramenta Workflows está destinada para automação de regras simples de negócios, sem fluxo sequencial de itens, quando não há necessidade de mostrar o fluxo em gráficos.
 
-BPM tool is intended for more complex business flows, where there can be diverging and converging flows, execution delays, user interactions. A flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
+A ferramenta BPM é destinada a fluxos de negócios mais complexos, onde pode haver fluxos divergindo e convergindo, atrasos na execução, interações do usuário. Um fluxograma faz os processos do negócio mais compreensivos para um humano, um log permite ver como o processo foi mantido.
 
-## Process Flowcharts
+## Fluxogramas dos Processos
 
-The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
+O link para os fluxogramas dos processos está disponível no painel de administração. Isso também pode ser adicionado como uma aba no painel de navegação.
 
-Flowcharts are intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
+Fluxogramas são destinados para a modelagem de processos de negócios. Administradores podem criar e editar fluxogramas. Usuários comuns podem somente ver os fluxogramas.
 
-Every flowchart has its specific entity type (Target Type field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
+Cada fluxograma tem seu tipo de entidade específica (campo Target Type). O fluxograma determina a execução de instâncias de processos futuros. Ele consite de elementos do fluxograma e conexões entre elementos.
 
-If process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
+Se os processos do fluxograma tem o campo 'Is Active' desmarcado, ele não iniciará as instâncias dos processos.
 
-To show details and parameters of a certain flowchart element you need to click on it. In edit mode you will be able to edit parameters.
+Para mostrar detalhes e parâmetros de certo elemento do fluxograma, você precisa clicar nele. Em modo de edição você é capaz de editar parâmetros.
 
-## Processes
+## Processos
 
-Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
+Os processos estão disponíveis no painel de administração. O link também pode ser adicionado à aba no painel de navegação.
 
-Process represents business process instance. When it's initiated it gets the status 'Started'. When process is finished it gets the status 'Ended'. The process can also be stopped manually by a user who has an access to edit the process. If it's stopped manually it gets status the 'Stopped'.
+Os processos representam instâncias de processos de negócios. Quando ele é iniciado, seu estado para a ser 'Started'. Quando o processo é finalizado, seu estado passa a ser 'Ended'. O processo pode também ser parado manualmente por um usuário que tenha acesso à edição de processos. Se ele é parado manualmente, seu estado passa a ser 'Stopped'.
 
-The process is executed according the flowchart. Flowchart of process can't be changed after process is started.
+O processo é executado de acordo com o fluxograma. O processo de fluxograma não pode ser mudado depois que o processo é iniciado.
 
-The process obligatorily is related to single target record.
+O processo obrigatoriamente está relacionado a um único registro alvo.
 
-Processes can be started automatically (upon specific conditions or by scheduling) or manually (where there is at least one Start Event in the flowchart). To start process manually the user needs to click 'Start Process' button on the list view of processes.
+Os processos podem ser iniciados automaticamente (sob condições específicas ou através de agendamento) ou manualmente (onde há pelo menos um 'Iniciar Evento' no fluxograma). Para começar processos manualmente o usuário precisa clicar no botão 'Iniciar Processo' na lista de processos.
 
-## Flowchart Elements
+## Elementos dos Fluxogramas
 
-### Events
+### Eventos
 
-Events are displayed on a flowchart as circles.
+Eventos são mostrados nos fluxogramas como círculos.
 
-#### Start Event
+#### Iniciar Evento
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click  'Start Process' button on the list view of processes.
+Não tem parâmetros. É um ponto de início do processo. Iniciar Evento pode ser iniciado manualmente por um usuário que tenha acesso para criar processos. O usuário precisa clicar no botão 'Iniciar Processo' na lista de processos.
 
-#### Conditional Start Event
+#### Iniciar Evento Condicional
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of trigger: 'After record created', 'After record saved'.
+Um ponto de início do processo. É suposto para ser acionado automaticamente quando condições específicas são atendidas. Há dois tipos de acionamentos: 'Depois de um registro criado', 'Depois de um registro salvo'.
 
-#### Timer Start Event
+#### Iniciar Processo Agendado
 
-A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
+Um ponto de início do processo. Isso inicia processos por agendamento. Você precisa especificar a lista de reporte que retorna registros para iniciar processos e agendar na notação do crontab.
 
-#### Conditional Intermediate Event
+#### Evento Intermediário Condicional
 
-This event stops the flow until specified criteria is met.
+Esse evento para o fluxo até que critérios específicos sejam atendidos.
 
-#### Timer Intermediate Event
+#### Evento Intermediário Agendado
 
-This event stops the flow and waits as long as is specified by event's parameters.
+Esse evento para o fluxo e esperar o quanto for especificado pelos parâmetros dos eventos.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+Para agendamentos mais complexos você pode utilizar [fórmula](formula.md). Scripts de fórmula devem retornar um valor Data-Tempo (em fuso horário UTC). Uma vez que esse tempo chega, o fluxo procederá para o próximo elemento.
 
-By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
+Através da utilização da função de fórmula datetime\closest, é possível definir o relógio para uma hora específica no futuro, por exemplo, o início do próximo dia de trabalho.  
 
-#### End Event
+#### Fim de Evento
 
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
+Finaliza o fluxo atual. Ele não finaliza fluxos sendo executados em paralelo. Quando o fluxo chega ao fim do evento e não há qualquer coisa executando em paralelo, o processo finaliza.
 
-#### Terminate End Event
+#### Fim de Evento Conclusivo
 
-Ends all flows. Process is subsequently ended.
+Finaliza todos os fluxos. Processo é subsequentemente finalizado.
 
-### Gateways
+### Entradas
 
-Gateways are displayed as diamonds.
+Entradas são mostrados como diamantes.
 
-#### Exclusive Gateway
+#### Entrada Exclusiva
 
-Can diverge or converge flows.
+Pode divergir ou convergir fluxos.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+No caso de divergência, ela define um único fluxo (caminho) que será escolhido de acordo com critérios específicos. A primeira condição atendida determina o fluxo, próximas condições são omitidas. Há uma habilidade de especificar fluxo padrão. O fluxo padrão é escolhido se não existem quaisquer condições atendidas. O fluxo padrão está marcado com um sinal de barra.
 
-In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
+No caso de convergência, ela apenas direciona o fluxo para o elemento de saída. Ela não é bloqueada após o fluxo passar através, então fluxos paralelos não serão unidos em um único fluxo.
 
 ![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
 ![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
-#### Inclusive Gateway
+#### Entrada Inclusiva
 
-Can diverge or converge flows.
+Pode divergir ou convergir fluxos.
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+No caso de divergência, ela pode direcionar um ou múltiplos fluxos paralelos (caminhos), dependendo do atendimento de critérios de cada fluxo. O fluxo padrão é escolhido se não existem quaisquer condições atendidas. O fluxo padrão está marcado com um sinal de barra.
 
-If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
+Se há necessidade de unir fluxos paralelos produzidos por uma entrada inclusiva divergente, você precisa usar uma entrada inclusiva convergente. Ela vai esperar for todos os fluxos de entrada e então seguir para o elemento de saída.
 
 ![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
 
-Note: Diverging and converging gateways must be balanced.
+Nota: Entradas divergentes e convergentes devem ser balanceadas.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Nota: Se um dos fluxos paralelos foi finalizado por algum motivo então a entrada divergente nunca será processada. O processo será bloqueado. Evite um design de fluxograma que possa trazer tal situação.
 
 #### Parallel Gateway
 
-Can diverge or converge flows.
+Pode divergir ou convergir fluxos.
 
 In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
 
@@ -112,9 +112,9 @@ In case of converging it waits until all incoming flows come and then continues 
 
 ![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
 
-Note: Diverging and converging gateways must be balanced.
+Nota: Entradas divergentes e convergentes devem ser balanceadas.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Nota: Se um dos fluxos paralelos foi finalizado por algum motivo então a entrada divergente nunca será processada. O processo será bloqueado. Evite um design de fluxograma que possa trazer tal situação.
 
 #### Event Based Gateway
 
