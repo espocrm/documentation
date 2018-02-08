@@ -1,8 +1,8 @@
-# Stream
+# Secuencia
 
-Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post to own stream and to stream of another users (since version 3.8.0). There are two kinds of stream in EspoCRM: record stream and user stream.
+La secuencia en EspoCRM es un feed donde puedes ver actualizaciones y nuevas adiciones para los registros que sigues. También puede publicar en su propia secuencia y en la secuencia de los otros usuarios (desde la versión 3.8.0). Hay dos tipos de secuencia en EspoCRM: secuencia de registro y secuencia de usuario.
 
-By default the following entities have a stream: Accounts, Contacts, Leads, Opportunities, Cases. Administrators can enable or disable stream for a certain entity in [Entity Manager](../administration/entity-manager.md).
+Por defecto, las siguientes entidades tienen una secuencia: Cuentas, Contactos, Ejemplos, Oportunidades, Casos. Administradores pueden habilitar o deshabilitar una secuencia para una determinada entidad en [Administrador de Entidad](../administration/entity-manager.md).
 
 ## Record Stream
 
