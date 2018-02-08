@@ -1,68 +1,68 @@
-# Installation
+# Instalación
 
-### Requirements
-EspoCRM runs on the most hosting providers. Requirements include the following:
+### Requisitos
+EspoCRM se ejecuta en la mayoría de los proveedores de alojamiento. Los requisitos incluyen lo siguiente:
 
-* PHP 5.5 or latest version of PHP with enabled pdo, json, GD library, mcrypt extensions (usually enabled by default);
-* MySQL 5.1 or higher.
+* PHP 5.5 o la última versión de PHP con habilitado pdo, json, biblioteca GD, extensiones mcrypt (generalmente habilitadas por defecto);
+* MySQL 5.1 o superior.
 
-See [Server Configuration](server-configuration.md) article for more information.
+Consulte el artículo [Configuracion del servidor](server-configuration.md) para más información.
 
-### 1. Download the EspoCRM installation package
-To get the latest version of EspoCRM follow [download page](http://www.espocrm.com/download/) link.
+### 1. Descargue el paquete de instalación de EspoCRM
+Para obtener la última versión de EspoCRM, siga el enlace [descargar página](http://www.espocrm.com/download/).
 
-### 2. Upload the EspoCRM Files to Your Server
+### 2. Cargue los archivos de EspoCRM a su servidor
 
-Once the download is complete, upload the package to your web server. 
-To upload it you can use SSH, FTP or the hosting administration panel.
-Extract the archive to your public web server directory (e.g., `public_html`, `www`, etc.).
+Una vez que se completa la descarga, suba el paquete a su servidor web.
+Para subirlo, puede usar SSH, FTP o el panel de administración de hosting.
+Extraiga el archivo a su directorio público del servidor web (por ejemplo, `public_html`,` www`, etc.).
 
-_Note: For FTP, you need to extract the archive before uploading to your web server._
+_Nota: para FTP, necesita extraer el archivo antes de cargarlo en su servidor web._
 
-### 3. Create a MySQL Database for EspoCRM to use
+### 3. Crear una base de datos MySQL para que EspoCRM use
 
-Go to your hosting administration panel, or to SSH, and create a new database and user for EspoCRM (e.g., `MySQL Databases` in cPanel).
+Vaya a su panel de administración de hosting, o a SSH, y cree una nueva base de datos y usuario para EspoCRM (por ejemplo, `Bases de datos MySQL` en cPanel).
 
-### 4. Run EspoCRM installation process
+### 4. Ejecute el proceso de instalación de EspoCRM
 
-Now, open your web browser, and go to the URL with EspoCRM files (e.g., `http://yourdomain.com/espo`).
+Ahora, abra su navegador web y vaya a la URL con los archivos de EspoCRM (Por ejemplo, `http://yourdomain.com/espo`).
 
-If you see this screen, you have a "Permission denied" error. 
-So, you need to execute the displayed command in the terminal via SSH, or set the correct permission. 
-It should be 755 for directories, 644 for files, and 775 for `data` directory. 
-Also make sure that you have the correct _owner_ and _group_.
+Si ve esta pantalla, tiene un error "Permiso denegado".
+Por lo tanto, debe ejecutar el comando que se muestra en el terminal a través de SSH o establecer el permiso correcto.
+Debe ser 755 para directorios, 644 para archivos y 775 para directorio `datos`.
+También asegúrese de tener el _owner_ y _group_ correcto.
 
-![1](../_static/images/administration/installation/1.png)
+![1](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/1.png)
 
-If you see the following screen, the permission is correct and you can start installing EspoCRM.
+Si ve la siguiente pantalla, el permiso es correcto y puede comenzar a instalar EspoCRM.
 
-![2](../_static/images/administration/installation/2.png)
+![2](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/2.png)
 
-On this page, you can read and accept the License Agreement.
+En esta página, puede leer y aceptar el Acuerdo de licencia.
 
-![3](../_static/images/administration/installation/3.png)
+![3](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/3.png)
 
-Enter the details for your newly created MySQL database.
+Ingrese los detalles de su base de datos MySQL recién creada.
 
-![4](../_static/images/administration/installation/4.png)
+![4](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/4.png)
 
-Enter the user name and password of Administrator EspoCRM.
+Ingrese el nombre de usuario y la contraseña del administrador EspoCRM.
 
-![5](../_static/images/administration/installation/5.png)
+![5](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/5.png)
 
-On this page you can set the default settings of EspoCRM, such as date and time format, timezone, currency and others.
+En esta página puede establecer la configuración predeterminada de EspoCRM, como el formato de fecha y hora, la zona horaria, la moneda y otros.
 
-![6](../_static/images/administration/installation/6.png)
+![6](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/6.png)
 
-Enter SMTP settings for outgoing emails, if you want to have the ability to send emails. 
-This step can be skipped by clicking the _Next_ button. 
-All of these options can be added/changed in EspoCRM after installation.
+Ingrese la configuración de SMTP para los correos electrónicos salientes, si desea tener la capacidad de enviar correos electrónicos.
+Este paso se puede omitir haciendo clic en el botón _Next_.
+Todas estas opciones se pueden agregar / cambiar en EspoCRM después de la instalación.
 
-![7](../_static/images/administration/installation/7.png)
+![7](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/7.png)
 
-Congratulation! Installation is complete. 
-The last thing to setup Scheduled Tasks to be run by your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems.
+¡Felicidades! La instalación esta completa.
+Lo último para configurar las tareas programadas para que las ejecute su sistema. Se puede hacer ejecutando `crontab -e` en linux cli y en _Windows Tasks Scheduler_ en sistemas Windows.
 
-![8](../_static/images/administration/installation/8.png)
+![8](https://github.com/espocrm/documentation/blob/master/_static/images/administration/installation/8.png)
 
-We hope you will enjoy working in EspoCRM.
+Esperamos que disfrute trabajando en EspoCRM.
