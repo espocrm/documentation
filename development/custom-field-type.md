@@ -1,24 +1,25 @@
-# Creating Custom Field Type
+# Creando un Campo Personalizado de Tipo
 
-### Field Definition
+## Definición de Campo
 
-Create a file `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` with needed parameters.
+Cree un archivo `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` con parametros necesitados.
 ```
 {
    "view": "custom:views/fields/{field-type}"`
 }
 ```
 
-Use out-of-the-box field types as examples: `/application/Espo/Resources/metadata/fields`.
- 
-### Translation
+Utilice tipos de campo particulares como ejemplo: `/application/Espo/Resources/metadata/fields`.
 
-The label is used in Entity Manager can be set in `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` in section `fieldTypes`.
-If you need to add translation to other language, use needed language [language code](https://en.wikipedia.org/wiki/ISO_639-1)_[country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) instead of `en_US`. In `data/config.php` in section `languageList` you can find the list of included languages.
+`/application/Espo/Resources/metadata/fields`.
 
-### View
+### Traducción
 
-Create the view for the field `client/custom/src/views/fields/{field-type}.js` and define its templates
+La etiqueta se utiliza en el Administrador de Entidad. Puede ser configurada en `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` en la sección `fieldTypes`. Si necesita añadir traducciones a otro idioma, utilice [código de lenguaje](https://en.wikipedia.org/wiki/ISO_639-1)_[código de país](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) en lugar de `en_US`. En `data/config.php` en la sección `languageList` puede encontrar la lista de los lenguajes incluídos.
+
+### Visualización
+
+Cree la visualización para el campo `client/custom/src/views/fields/{field-type}.js` y defina sus plantillas
 ```
 Espo.define('custom:views/fields/[field-type]', 'views/fields/base', function (Dep) {
     
@@ -28,8 +29,8 @@ Espo.define('custom:views/fields/[field-type]', 'views/fields/base', function (D
 });
 ```
 
-Use out-of-the-box field types as examples:
-- `/client/src/views/fields` - views;
-- `/client/res/templates/fields` - templates.
+Utilice tipos de campo particulares como ejemplo
+- `/client/src/views/fields` - visualizaciones;
+- `/client/res/templates/fields` - plantillass.
 
-Then you need to run rebuild at the administration panel.
+Luego necesita ejecutar reconstrucción en el panel de administración.
