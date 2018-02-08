@@ -1,34 +1,34 @@
-# Stream
+# Secuencia
 
-Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post to own stream and to stream of another users (since version 3.8.0). There are two kinds of stream in EspoCRM: record stream and user stream.
+La secuencia en EspoCRM es un feed donde puedes ver actualizaciones y nuevas adiciones para los registros que sigues. También puede publicar en su propia secuencia y en la secuencia de los otros usuarios (desde la versión 3.8.0). Hay dos tipos de secuencia en EspoCRM: secuencia de registro y secuencia de usuario.
 
-By default the following entities have a stream: Accounts, Contacts, Leads, Opportunities, Cases. Administrators can enable or disable stream for a certain entity in [Entity Manager](../administration/entity-manager.md).
+Por defecto, las siguientes entidades tienen una secuencia: Cuentas, Contactos, Ejemplos, Oportunidades, Casos. Administradores pueden habilitar o deshabilitar una secuencia para una determinada entidad en [Administrador de Entidad](../administration/entity-manager.md).
 
-## Record Stream
+## Secuencia de Registro
 
-Record Stream is shown in a Stream panel of a certain record on the detail view. Posts, updates and new additions related to the current record are displaed here.
+Las Secuencias de Registro se muestran en el panel de secuencias de cierto registro en la vista del detalle. Publicaciones, actualizaciones y nuevas adiciones relacionadas con el registro actual se muestran aquí.
 
-## User Stream
+## Secuencia de Usuario
 
-Users can see their stream in Stream dashlet as well as under Stream tab. Users also can see stream of another users in the user's detail view, if they have an access that is controlled by `User Pemission` field of Roles.
+Los usuarios pueden ver su secuencia en el dashlet de Secuencia así como en la pestaña de Secuencia. Los usuarios también pueden ver la secuencia de otros usuarios en la vista de detalle del usuario, si tienen un acceso eso es controlado por el campo de roles `User Pemission`.
 
-In user stream you can see posts, updates and new additions related to records the user follows. You also can see posts addressed to the user. Those posts are not related to any record.
+En la secuencia de usuario usted puede ver publicaciones, actualizaciones y nuevas adiciones relacionadas con los registros que sigue el usuario. También puede ver las publicaciones dirigidas al usuario. Esas publicaciones no están relacionadas con ningún registro.
 
-## Notifications
+## Notificaciones
 
-You will recieve notifications about new additions to your stream that were caused by another users.
+Usted recibirá notificaciones sobre nuevas adiciones en su secuencia que fueron causadas por otros usiarios.
 
-## Posts
+## Publicaciones
 
-You can create post related to a certain record. You also able to attach multiple files and images to your post. If you want to mention somebody in your post you need just type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it.
+Usted puede crear una publicación relacionada con cierto registro. Usted también puede adjuntar diversos archivos e imágenes en sus publicaciones. Si usted quiere mencionar a alguien en su publicación solo necesita escribir el símbolo `@` y seguidamente escribir el nombre del usuario. El usuario a quien usted mencionó en su publicación será notificado de ello.
 
-## Posts to users
+## Publicaciones para usuarios
 
-_This feature is available since version 3.8.0._
+_Esta opción está disponible a partir de la versión 3.8.0._
 
-Users can create post to certain users, to certain teams, to all users and to self. An access for this ability is controlled by `Assignment Permission` field of Roles.
+Los usuarios pueden crear publicaciones dirigidas a ciertos usuarios, a ciertos equipos, a todos los usuarios y a uno mismo. Un acceso para esta opción está controlado por el campo de Roles `Assignment Permission`.
 
-## Filtering
+## Filtrado
 
-You can filter what to show in a stream: `All`, `Posts` or `Updates`.  
+Puede filtrar lo que quiere mostrar en una secuencia: `All`, `Posts` o `Updates`.  
 
