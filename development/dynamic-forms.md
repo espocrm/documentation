@@ -1,15 +1,15 @@
-# Dynamic Forms
+# Formas Dinámicas
 
-Note: Since version 4.3.0 it's possible to define dynamic form through admin's UI in Entity Manager.
+Nota: Desde la versión 4.3.0 es posible definir formas dinámicas a través del UI del admin en el Administrador de Entidades.
 
-There is an ability to define a form behavior in EspoCRM. 
+Existe una habilidad para definir un comportamiento de forma en EspoCRM.
 
-## Example
+## Ejemplo
 
-> Need to show _nextStep_ field on an Opportunity detail view only if stage is 'Closed Won'.
+> Necesita mostrar el campo _nextStep_ en una vista de detalle de Oportunidad sólo si la etapa es 'Closed Won'.
 >
 
-Create file `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
+Cree el archivo `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
 ```json
 {
   "formDependency": {
@@ -33,8 +33,8 @@ Create file `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
 }
 ```
 
-That means that _nextStep_ field will be hidden by default and shown if stage equals to 'Closed Won'.
+Eso significa que el campo _nextStep_ estará escondido por defecto y se mostrará si la estapa es igual a 'Closed Won'.
 
-The list of available actions: `show`, `hide`, `setRequired`, `setNotRequired`.
+La lista de acciones disponibles: `show`, `hide`, `setRequired`, `setNotRequired`.
 
-There is also ability to hide/show panels. Specify panel names in `panels`, attribute the same way as `fields`.
+También existe la habilidad de esconder/mostrar paneles. Especifique los nombres de panel en `panels`, atribuya de la misma manera que `fields`.
