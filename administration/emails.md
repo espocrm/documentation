@@ -1,40 +1,40 @@
-# Emails
+# Email
 
-> Important. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) should be configured in your system to make email fetching work. You can find the information in your EspoCRM at Administration > Scheduled Jobs.
+> Penting [Cron] (https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) harus dikonfigurasi di sistem Anda untuk melakukan pengambilan email. Anda dapat menemukan informasi di EspoCRM Anda di Administration> Scheduled Jobs.
 
-## Overview
+## Ikhtisar
 
-EspoCRM has an ability to monitor IMAP mailboxes. Email can be archived in two ways: Group Email Accounts and Personal Email Accounts. Group Inbound Accounts are intended for group mailboxes: the most common case is a support box. Personal Email Accounts are intended for users’ personal mailboxes.
+EspoCRM memiliki kemampuan untuk memantau kotak pesan IMAP. Email dapat diarsipkan dalam dua cara: Akun Email Grup dan Akun Email Pribadi. Akun Inbound Grup ditujukan untuk kotak pesan grup: kasus yang paling umum adalah kotak dukungan. Akun Email Pribadi ditujukan untuk kotak pesan pribadi pengguna.
 
-As an email is coming the system tries to link it with the appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not in To or CC.
+Sebagai email yang masuk, sistem mencoba menautkannya dengan catatan yang sesuai (Accounts, Lead, Opportunity, Case). Pengguna yang mengikuti rekaman tersebut akan menerima pemberitahuan tentang email baru di sistem, meski tidak berada di To atau CC.
 
-## Group Email Accounts
+## Akun Email Grup
 
-Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails. Sending emails from group accounts has been available since 4.9.0 version.
+Hanya administrator yang dapat mengatur Akun Email Grup. Akun Email Grup dapat digunakan untuk menerima dan mengirim email. Mengirim email dari akun grup telah tersedia sejak versi 4.9.0.
 
-Teams field determines which teams incoming emails will be assigned to. 
+Bidang tim menentukan tim email masuk mana yang akan ditugaskan.
 
-If the group email account has SMTP and it's checked as shared then an access will be controlled by Roles through Group Email Account permission. Teams field will be used if permission level is set to 'team'.
+Jika akun email grup memiliki SMTP dan dicentang sebagai shared maka akses akan dikontrol oleh Peran melalui izin Akun Email Grup. Lapangan tim akan digunakan jika level izin diset ke 'tim'.
 
-There is an ability to make the system send an auto-reply for incoming emails.
+Ada kemampuan untuk membuat sistem mengirim balasan otomatis untuk email masuk.
 
 ## Email-to-Case
 
-There is an option to make the system create cases from incoming group emails. 
-This feature is intended for support teams. 
-Cases can be distributed to users from a specified team according to these ways: 
-`direct assignment`, `round-robin` and `less-busy`. 
-Only the first email in the thread creates a new case. 
-Every subsequent one will be linked to the existing case record and displayed in its Stream panel.
+Ada pilihan untuk membuat sistem membuat kasus dari email grup yang masuk.
+Fitur ini ditujukan untuk tim pendukung.
+Kasus dapat didistribusikan ke pengguna dari tim tertentu sesuai dengan cara berikut:
+`direct assignment`,` round-robin` dan `less-busy`.
+Hanya email pertama di thread yang menciptakan kasus baru.
+Setiap berikutnya akan dihubungkan dengan catatan kasus yang ada dan ditampilkan di panel Stream-nya.
 
-When users want to send a reply to the customer they need to make sure that the case is selected as a parent of the email that is being sent. It will make the customer reply to the group email address rather than to the user’s own.
+Saat pengguna ingin mengirim balasan kepada pelanggan yang mereka butuhkan untuk memastikan bahwa kasus tersebut dipilih sebagai orang tua dari email yang sedang dikirim. Ini akan membuat pelanggan membalas alamat email grup daripada ke pengguna sendiri.
 
-## Personal Email Accounts
+## Akun Email Pribadi
 
-Users can setup their own email accounts that need to be monitored. Emails > Top Right Dropdown Menu > Personal Email Accounts. Administrator also can manage users' email accounts.
+Pengguna bisa mensetup akun email mereka sendiri yang perlu dipantau. Email> Menu Dropdown Kanan Atas> Akun Email Pribadi. Administrator juga bisa mengatur akun email pengguna.
 
-## Email Filters
+## Filter Email
 
-These allow the filtering of incoming emails according to specified criteria. E.g. if you don't want notification messages sent by some application to be imported to EspoCRM you can create filter to make EspoCRM skip them.
+Ini memungkinkan penyaringan email masuk sesuai dengan kriteria yang ditentukan. Misalnya. Jika Anda tidak ingin pesan pemberitahuan dikirim oleh beberapa aplikasi untuk diimpor ke EspoCRM Anda dapat membuat filter untuk membuat EspoCRM melewatkannya.
 
-Admin can create global filters, applied to all email accounts. Users can create filters for their own personal email account and for entire inbox.
+Admin dapat membuat filter global, diterapkan ke semua akun email. Pengguna dapat membuat filter untuk akun email pribadi mereka dan untuk keseluruhan kotak masuk.
