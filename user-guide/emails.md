@@ -1,20 +1,20 @@
-# Guidelines on Using Emails
+# Panduan Menggunakan Email
 
-EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+EspoCRM membolehkan untuk mengambil email dari kotak IMAP. Hal ini memungkinkan untuk menggunakan EspoCRM sebagai klien email dan juga  fitur khusus CRM.
 
-## IMAP accounts
+## Akun IMAP
 
-*Note: You need to have [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
+*Catatan: Anda harus mempunyai [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) yang dikonfigurasi dengan benar di sistem Anda agar email masuk bekerja.*
 
-User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+Pengguna dapat mengatur akun IMAP pada halaman Akun Email Pribadi (Tab email> menu kanan atas> Akun Email Pribadi).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
+Tentukan folder mana yang akan dipantau pada kolom Folder Pantauan. Secara default itu diatur ke KOTAK MASUK. Jika Anda menggunakan beberapa klien email eksternal untuk mengirim email, Anda dapat menambahkan folder Terkirim untuk mengarsipkan email tersebut.
 
-*Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
+*Fetch Since* mengizinkan Anda untuk memilih tanggal email dari mana yang harus diarsipkan. Tetapkan ke beberapa tanggal sebelum hari ini jika Anda perlu mengarsipkan email lama.
 
-There is an ability to specify *Folder* in Persnoal Email Account. Incoming emails will be put in that folder.
+Anda dibolehkan mementukan *Folder* dalam Akun Email Pribadi. Email masuk akan dimasukkan ke delam folder tersebut.
 
-## SMTP accounts
+## Akun SMTP
 
 Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
 
