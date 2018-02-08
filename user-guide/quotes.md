@@ -1,10 +1,10 @@
-# Quotes
+# Cotizaciones
 
-Quotes feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+La opción de cotizaciones está disponible en [Paquete Avanzado](https://www.espocrm.com/extensions/advanced-pack/).
 
-Quotes are specific group of products or services with their quantities and prices that you quote to customers.
+Las cotizaciones son un grupo específico de productos o servicios con sus cantidades  precios el cual usted cotiza a los clientes.
 
-Quotes has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
+Las cotizaciones están relacionadas con la oportinidad. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
 
 You can add Quotes panel to Accunt's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
 
