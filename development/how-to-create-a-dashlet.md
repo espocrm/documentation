@@ -1,21 +1,21 @@
-# How to create a dashlet
+# Cómo crear un dashlet
 
-Create a file `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.json` with your dashlet configuration.
+Cree un archivo `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.json` con su configuración de dashlet.
 
-Here you need to define `"view"`, and you could set `"aclScope"`, `"entityType"`, and `"options"`.
+Aquí necesita definir `"view"`, y podría configurar `"aclScope"`, `"entityType"`, y `"options"`.
 
-If it's typical list dashlet, use `"view":"views/dashlets/abstract/record-list"`, if not, create own view (https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
+Si es una lista de dashlet típica, utilice `"view":"views/dashlets/abstract/record-list"`, si no, cree su propia vista (https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
 
-## Options
-By default in dashlet options you can set _Title_ and _Auto-refresh Interval_.
+## Opciones
+Por defecto, en las opciones de dashlet puede configurar _Title_ y _Auto-refresh Interval_.
 
-Additional option fields you can set in `"options"` > `"fields"`.
+Puede configurar los campos de opciones adiconales en `"options"` > `"fields"`.
 
-To define fields position set the layout in in `"options"` > `"layout"` > `"rows"`
+Para definir la posición de los campos, configure la disposición en `"options"` > `"layout"` > `"rows"`.
 
-Also you can define other options, if your view needs more data.
+También puede definir otras opciones, si su vista necesita más datos.
 
-## Example
+## Ejemplo 
 
 `application/Espo/Modules/Crm/Resources/metadata/dashlets/Cases.json`
 
@@ -98,10 +98,11 @@ Also you can define other options, if your view needs more data.
     }
 }
 ```
-There you can see some examples `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
 
-## Translation
+Ahí puede ver algunos ejemplos `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
 
-Translation to dashlet is in `Global` scope, in `"dashlets"` section.
+## Traducción 
 
-__After all don't forget to Clear Cache in Administration.__
+La traducción a dashlet está en el rango `Global`, en la sección `"dashlets"`.
+
+__Después de todo no olvide limpiar el Caché en Administración.__
