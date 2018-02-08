@@ -1,6 +1,6 @@
 # Haritalar
 
-## Nasıl bir adres alanına dayalı haritayı gösterilir
+## Adres alanına dayalı bir harita nasıl gösterilir
 
 Her adres alanına karşılık gelen Harita alanı vardır. İhtiyacınız olan tek şey Ayrıntılar düzenine koymaktır. Sistem Google Haritalar servisini kullanıyor.
 
