@@ -50,6 +50,7 @@
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
 * [Creating custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
 * [Defining new funtions for Formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
+* [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
 
 
 [Documentation on the website](https://www.espocrm.com/documentation/)
