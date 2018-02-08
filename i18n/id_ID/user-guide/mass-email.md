@@ -1,8 +1,5 @@
-# Mass Email
-
 # Email massal
 
-## How to send mass email
 ## Bagaimana mengirim email massal
 
 You need to have at least one Target List with target records and Email Template in your crm.
@@ -22,8 +19,6 @@ Anda dapat memeriksa apakah email dikirim ke panel Log.
 Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
 
 Klik tarik-turun kanan pada baris email massal di _Mass Email_ panel dan kemudian klik _Send Test_.
-
-## Log
 
 ## Log
 
