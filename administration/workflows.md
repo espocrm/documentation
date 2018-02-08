@@ -1,146 +1,161 @@
-# Workflows
+# Flujos de Trabajo
 
-Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+La función de flujos de trabajo está disponible en [Paquete avanzado](https://www.espocrm.com/extensions/advanced-pack/).
 
-Workflows automate your business process an easy way. You can find it in the Administration panel. To create a workflow rule you need to define:
+Los flujos de trabajo automatizan su proceso comercial de una manera fácil. Puede encontrarlo en el panel de Administración. Para crear una regla de flujo de trabajo, debe definir:
 
-* Target Entity - what entity type workflow is applied to;
-* Trigger Type - when workflow will be triggered;
-* Conditions - conditions need to be met to trigger workflow;
-* Actions - what to do if workflow is triggered.
+* Entidad Objetivo: a qué tipo de flujo de trabajo de la entidad se aplica;
+* Tipo Disparador: cuando se activará el flujo de trabajo;
+* Condiciones: se deben cumplir las condiciones para activar el flujo de trabajo;
+* Acciones: qué hacer si se activa el flujo de trabajo.
 
 
-## Trigger Types
+## Tipos de Disparadores
 
-### After record created 
+### Después de crear el registro
 
-Triggered only when a new record is created. If specified conditions are met then actions will be executed.
+Disparado solo cuando se crea un nuevo registro. Si se cumplen las condiciones especificadas, se ejecutarán las acciones.
 
-### After record saved
+### Después de guardar el registro
 
-Triggered when a new record is created or an existing record is updated. If specified conditions are met then actions will be executed.
+Se activa cuando se crea un nuevo registro o se actualiza un registro existente. Si se cumplen las condiciones especificadas, se ejecutarán las acciones.
 
-For workflow rules with this type of trigger it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed then execute some actions.
+Para las reglas de flujo de trabajo con este tipo de desencadenador, es una práctica común tener una condición que verifique si algún campo se 'cambió'. P.ej. Si el estado de Case cambia, entonces ejecuta algunas acciones.
 
-### Scheduled
+### Programado
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. So you need also to create a list report.
+Activado según la programación definida. Puede configurarlo para que se ejecute todos los días, todas las semanas, etc. Las acciones se aplicarán a los registros devueltos por un informe de lista especificado. Entonces también necesita crear un informe de lista.
 
-Scheduling is specified in a crontab notation.
+La programación se especifica en una notación crontab.
 
 ```
 * * * * * *
 | | | | | | 
-| | | | | +-- Year              (range: 1900-3000)
-| | | | +---- Day of the Week   (range: 1-7, 1 standing for Monday)
-| | | +------ Month of the Year (range: 1-12)
-| | +-------- Day of the Month  (range: 1-31)
-| +---------- Hour              (range: 0-23)
-+------------ Minute            (range: 0-59)
+| | | | | +-- Año               (rango: 1900-3000)
+| | | | +---- Día de la Semana  (rango: 1-7, siendo 1 para Lunes)
+| | | +------ Mes del Año       (rango: 1-12)
+| | +-------- Día del Mes       (rango: 1-31)
+| +---------- Hora              (rango: 0-23)
++------------ Minuto            (rango: 0-59)
 ```
 
-### Sequential
+### Secuencial
 
-Used rarely. Supposed to be run by another workflow. Provides an ability to make a complex logic. 
+Usado raramente. Se supone que debe ser ejecutado por otro flujo de trabajo. Brinda la capacidad de hacer una lógica compleja.
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+Nota: Para flujos de trabajo secuenciales, se recomienda utilizar [herramienta BPM] (bpm.md) en lugar de una función de Flujos de trabajo.
 
-## Conditions
+## Condiciones
 
-You can specify conditions that must be met to trigger the workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
+Puede especificar las condiciones que se deben cumplir para activar el flujo de trabajo. Hay dos formas de especificar condiciones: con el constructor de condiciones de UI y con la fórmula.
 
-### UI condition builder
+### Constructor de condiciones de IU
 
-Some available condition types:
+Algunos tipos de condiciones disponibles:
 
-* _equals_ - the field equals to a specific value or a value of another field;
-* _was equal_ - the field was equal to a specific value before the workflow was triggered;
-* _not equals_ - the field does not equal to a specific value or a value of another field;
-* _was not equal_ - the field was not equal to specific value before the workflow was triggered;
-* _empty_ - the field value is empty;
-* _not empty_ - the field value is not empty;
-* _changed_ - the field was changed;
-* _not changed_ - the field was not changed.
+* _equals_ - el campo es igual a un valor específico o un valor de otro campo;
+* _was equal_ - el campo era igual a un valor específico antes de que se activara el flujo de trabajo;
+* _not equals_ - el campo no es igual a un valor específico o un valor de otro campo;
+* _was not equal_ - el campo no era igual al valor específico antes de que se activara el flujo de trabajo;
+* _empty_ - el valor del campo está vacío;
+* _not empty_ - el valor del campo no está vacío;
+* _changed_ - el campo fue cambiado;
+* _not changed_ - el campo no fue cambiado.
 
-### Formula conditions
+### Condiciones de la fórmula
 
-Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
+La fórmula proporciona la capacidad de definir condiciones de cualquier complejidad. Para leer acerca de la sintaxis de fórmulas siga [este artículo] (formula.md).
 
-Note: There should not be any `;` delimiter used in formula code when it determines a condition.
+Nota: No debe haber ningún delimitador `;` utilizado en el código de fórmula cuando determina una condición.
 
-## Actions
+## Acciones
 
-### Send Email
+### Enviar correo electrónico
 
-System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
+El sistema enviará un correo electrónico usando una plantilla de correo electrónico especificada. La dirección de correo electrónico de un destinatario puede tomarse del registro objetivo, cualquier registro relacionado, el usuario actual, los seguidores, los usuarios del equipo o especificados. El correo electrónico puede enviarse de inmediato o retrasarse por un intervalo específico.
 
-### Create Record
+### Crear registro
 
-System will create the new record of any entity type. If there is a relationship between the target record and creating record it's possible to relate records. 
+El sistema creará el nuevo registro de cualquier tipo de entidad. Si existe una relación entre el registro objetivo y la creación de registros, es posible relacionar los registros.
 
-There is an ability to define formula to calculate fields.
+Existe la capacidad de definir fórmulas para calcular campos.
 
-### Create Related Record
+### Crear registro relacionado
 
-System will create the record related to the target record. It's possible to define formula to calculate fields.
+El sistema creará el registro relacionado con el registro objetivo. Es posible definir una fórmula para calcular campos.
 
-### Update Target Record
+### Actualizar registro de destino
 
-Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
+Permite el cambio de campos específicos del registro objetivo. Es posible definir una fórmula para calcular campos.
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
+Si necesita agregar nuevos elementos al campo Múltiple de enlace sin perder los datos existentes (por ejemplo, Equipos), necesita utilizar la función de fórmula entity\addLinkMultipleId. Ejemplo: `entity\addLinkMultipleId('teams', 'teamId')`.
 
-### Update Related Record
+### Actualizar registro relacionados
 
-Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
+Permite el cambio de campos específicos del registro o registros relacionados. Es posible definir una fórmula para calcular campos.
 
-### Link with Another Record
+### Enlace con otro registro
 
-Relates the target entity with another specific entity. E.g. adds specific team to the record.
+Relaciona la entidad objetivo con otra entidad específica. P.ej. agrega equipo específico al registro.
 
-### Unlink with Another Record
+### Desvincular con otro registro
 
-Unrelates the target entity from another specific entity. E.g. removes a specific team from the record.
+Desrelaciona la entidad objetivo de otra entidad específica. P.ej. elimina un equipo específico del registro.
 
-### Apply Assignment Rule
+### Aplicar Regla de Asignación
 
-Assign the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
+Asigne el registro objetivo al usuario por regla de distribución. Hay dos reglas disponibles: Round-Robin y Least-Busy.
 
-* Round-Robin - users are choosen from the top to the bottom of a list (team) and then starting again.
-* Least-Busy - user who has fewer assigned records will be chosen for assignment.
+* Round-Robin: los usuarios son elegidos desde la parte superior a la parte inferior de una lista (equipo) y luego comienzan de nuevo.
+* Menos ocupado: el usuario que tenga menos registros asignados será elegido para la asignación.
 
-_List Report_ - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
+_List Report_ - Para la distribución Least-Busy determina qué registros se tendrán en cuenta para calcular el número de registros asignados. P.ej. para Cases, necesitamos tomar solo registros con estado activo.
 
-### Create Notification
+### Crear Notificación
 
-Notify specific users with the message. It's possible to use placeholders in message template: {entity} - target record, {user} - current user.
+Notificar a usuarios específicos con el mensaje. Es posible utilizar marcadores de posición en la plantilla de mensaje: {entidad} - registro de destino, {usuario} - usuario actual.
 
-### Make Followed
+### Hacer Seguidores
 
-Forces specific users to follow the target entity or a specificied related entity.
+Obliga a usuarios específicos a seguir a la entidad objetivo o a una entidad relacionada específica.
 
-### Trigger Another Workflow
+### Activa Otro Flujo de Trabajo
 
-Allows to make sequential workflows. It's possible to branch workflow by condition: you can setup the workflow to trigger two workflows with different conditions defined in that workflows.
+Permite hacer flujos de trabajo secuenciales. Es posible derivar el flujo de trabajo por condición: puede configurar el flujo de trabajo para desencadenar dos flujos de trabajo con diferentes condiciones definidas en esos flujos de trabajo.
 
-It's possible to delay executing of sequential workflow. In the sequential wokflow you can define the condition that checks whether specifiec fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
+Es posible retrasar la ejecución del flujo de trabajo secuencial. En el flujo e trabajo secuencial, puede definir la condición que verifica si los campos específicos se cambiaron desde que se desencadenó el flujo de trabajo primario mediante los tipos de condición _Changed_ y _Was Equal_.
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+Nota: Para flujos de trabajo secuenciales, se recomienda utilizar [herramienta BPM] (bpm.md) en lugar de una función de Flujos de trabajo.
 
-### Run Service Action
+### Ejecutar Acción de Servicio
 
-Allows to run specific service scripts. By default there are following actions available:
+Permite ejecutar scripts de servicio específicos. Por defecto hay las siguientes acciones disponibles:
 
-* Send Invitations - for Meetings/Calls;
-* Add Quote Items - for Quotes.
+* Enviar Invitaciones: para Reuniones/Llamadas;
+* Agregar Elementos de Ccotización - para Cotizaciones.
 
-Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
+Los desarrolladores pueden escribir sus propias acciones de servicio. Ver [más detalles](../development/workflow-service-actions.md).
 
-## Using Formula in Actions
+## Usar Fórmula en Acciones
 
-It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
+Es posible definir la fórmula para calcular campos para Crear registro, Actualizar registro objetivo, Crear registro relacionado, Actualizar registro relacionado. Para los dos últimos, para acceder a los atributos de la entidad objetivo, debe usar la función `targetEntity\attribute`. Para acceder a los atributos de la entidad objetivo que se estableció antes de que se activara el flujo de trabajo, use la función `targetEntity\attributeFetched`.
 
-Example:
+Nota: Para flujos de trabajo secuenciales, se recomienda utilizar [herramienta BPM] (bpm.md) en lugar de una función de Flujos de trabajo.
+
+### Ejecutar Acción de Servicio
+
+Permite ejecutar scripts de servicio específicos. Por defecto hay las siguientes acciones disponibles:
+
+* Enviar invitaciones: para Reuniones/Llamadas;
+* Agregar Elementos de Cotización - para Cotizaciones.
+
+Los desarrolladores pueden escribir sus propias acciones de servicio. Ver [más detalles] (../development/workflow-service-actions.md).
+
+## Usar Fórmula en Acciones
+
+Es posible definir la fórmula para calcular campos para Crear registro, Actualizar registro objetivo, Crear registro relacionado, Actualizar registro relacionado. Para los dos últimos, para acceder a los atributos de la entidad objetivo, debe usar la función `targetEntity\attribute`. Para acceder a los atributos de la entidad objetivo que se estableció antes de que se activara el flujo de trabajo, use la función `targetEntity\attributeFetched`.
+
+Ejemplo:
 ```
 name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
 ```
