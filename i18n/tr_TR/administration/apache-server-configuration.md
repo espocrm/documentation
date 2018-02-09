@@ -1,10 +1,10 @@
-# Apache server configuration for EspoCRM
+# EspoCRM için Apache sunucu yapılandırması
 
-These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+Bu talimatlar [Sunucu Yapılandırması](server-configuration.md) klavuzuna tamamlayıcıdır. Burada listelenen tüm yapılandırma ayarlarının Ubuntu sunucusunda yapıldığını lütfen unutmayın.
 
-## PHP requirements
+## PHP gereksinimleri
 
-To install all necessary libraries, run these commands in a terminal:
+Gerekli tüm kütüphaneleri yüklemek için bu komutları bir terminalde çalıştırın:
 
 ```
 sudo apt-get update
@@ -13,22 +13,22 @@ sudo phpenmod mcrypt imap mbstring
 sudo service apache2 restart
 ```
 
-## Fixing the issue “API Error: EspoCRM API is unavailable”:
+## API Hatası: EspoCRM API'sı kullanılamıyor sorunu giderildi:
 
-Take only necessary steps. After each step check if the issue is solved.
+Gerekli adımları yapın. Her adımda sorunun çözülüp çözülmediğini kontrol edin.
 
-### 1. Enable “mod_rewrite” support in Apache
+### 1. Apache'de "mod_rewrite" desteğini etkinleştirin 
 
-To enable “mod_rewrite,” run these commands in a terminal:
+"mod_rewrite" işlevini etkinleştirmek için bu komutları bir terminalde çalıştırın:
 
 ```
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
 
-### 2. Enable .htaccess support
+### 2. .htaccess desteğini etkinleştirin
 
-To enable .htaccess support, add/edit the Server Configuration Settings /etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf or /etc/apache2/apache2.conf (/etc/httpd/conf/httpd.conf):
+.htaccess desteğini etkinleştirmek için, ekle/düzelt Sunucu Yapılandırma Ayarları /etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf ya da /etc/apache2/apache2.conf (/etc/httpd/conf/httpd.conf):
 
 ```
 <Directory /PATH_TO_ESPO/>
@@ -36,34 +36,34 @@ AllowOverride All
 </Directory>
 ```
 
-Afterward, run this command in a terminal:
+Daha sonra, bu komutu bir terminalde çalıştırın:
 
 ```
 sudo service apache2 restart
 ```
 
-### 3. Add RewriteBase path
+### 3. RewriteBase yolunu ekleyin
 
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
+/ESPOCRM_DIRECTORY/api/v1/.htaccess dosyasını açın ve aşağıdaki satırı değiştirin:
 
 ```
 # RewriteBase /
 ```
 
-with
+ile
 
 ```
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where REQUEST_URI is a part of URL, e.g. for “http://example.com/espocrm/”, REQUEST_URI is “espocrm”.
+REQUEST_URI, URL'nin bir parçasıdır; ör: "http://example.com/espocrm/" için REQUEST_URI "espocrm" dur.
 
 
-## Enable HTTP AUTHORIZATION support (only for FastCGI).
+## HTTP YETKİLENDİRME desteğini etkinleştir (sadece FastCGI için).
 
-FastCGI does not support HTTP AUTHORIZATION by default. If you use FastCGI, you have to enable it in your VirtualHost or /etc/apache2/apache2.conf (httpd.conf) by adding the following code:
+FastCGI varsayılan olarak HTTP YETKİLENDİRME'yi desteklemez. FastCGI kullanıyorsanız, aşağıdaki kodu ekleyerek VirtualHost veya /etc/apache2/apache2.conf dosyanızda (httpd.conf) etkinleştirmeniz gerekir:
 
-For Fcgid module:
+Fcgid modülü için:
 
 ```
 <IfModule mod_fcgid.c>
@@ -73,7 +73,7 @@ For Fcgid module:
 </IfModule>
 ```
 
-For FastCgi module:
+FastCgi modülü için:
 
 ```
 <IfModule mod_fastcgi.c>
@@ -83,7 +83,7 @@ For FastCgi module:
 </IfModule>
 ```
 
-To check which module is currently being used, run this command and find the module:
+Hangi modülün şuanda kullanıldığını kontrol etmek için bu komutu çalıştırın ve modülü bulun:
 
 ```
 apache2ctl -M
