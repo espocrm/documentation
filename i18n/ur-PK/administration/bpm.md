@@ -62,19 +62,19 @@ Doesn't have parameters. It's a starting point of the process. Start Event can b
 ابتدائی مرحلہ کی کوئی متعین مقداریں نہیں ہوتیں۔ یہ اس عمل کا ابتدائی نقطہ ہے۔ ابتدائی مرحلہ ایسے استعمال کنندہ کی طرف سے مینوئل شروع کیا جاسکتا ہے کہ جسے پراسیسز کو بنانے تک رسائی ہوتی ہے۔ پھر استعمال کنندہ کو پراسسز والی فہرست پر 'Start Process' کے بٹن پر کلک کرنے کی ضرورت ہوتی ہے۔
 
 Conditional Start Event
-مشروط ابتدائی مرحلہ
+مشروط شروع کرنے والا مرحلہ۔
 
 A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of trigger: 'After record created', 'After record saved'.
 عمل (پراسس) کا ایک ابتدائی نقطہ ہے۔ جب خاص حالات ہوں تو یہ خودکار طور پر متحرک ہو جاتا ہے۔ اس ٹرگر کی دو اقسام ہیں: 'After record created', 'After record saved'.
 
 Timer Start Event
-ابتدائی مرحلے کا ٹائمر
+ابتدائی مرحلے کا ٹائمر۔
 
 A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
 یہ عمل کا ابتدائی نقطہ ہے۔۔ یہ پراسسز کو ترتیب سے شروع کرتا ہے۔  آپ کو رپورٹ کی فہرست مخصوص کرنے کی ضرورت ہے کہ جو ابتدائی پراسسز اور ترتیبات کے ریکارڈز کو ‘crontab’ نوٹیشن میں لوٹاتاہے۔
 
 Conditional Intermediate Event
-مشروط درمیانی مرحلہ
+مشروط درمیانی مرحلہ۔
 
 This event stops the flow until specified criteria is met.
 یہ مرحلہ کام کے بہاؤ کو تب تک روک دیتا ہے جب تک کہ مخصوص معیار پورا نہیں ہو جاتا۔
@@ -83,71 +83,99 @@ Timer Intermediate Event
 درمیانی مرحلے کا ٹائمر
 
 This event stops the flow and waits as long as is specified by event's parameters.
-
+یہ مرحلہ بہاؤ کو روک دیتا ہے اور انتظار کرتا ہے جب تک مرحلے کی متعین مقداروں کی جانب سے مخصوص ہوتا ہے۔
 For more complex timer settings you can utilize formula. Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+مزید پیچیدہ ٹائمر ترتیبات کےلیے آپ کلیے (فارمولے) کا استعمال کرسکتے ہیں۔ فارمولہ سکرپٹ  کو تاریخ-وقت کی قدر (آفاقی مربوط وقت کے ٹائم زون کے مطابق) لوٹانی چاہیے۔ ایک دفعہ جب وہ وقت آجائے تو کام اگلے عنصر کی طرف بڑھ جائے گا۔
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
+تاریخ-وقت/قریب-ترین کلیے کا استعمال کرتے ہوئے یہ ممکن ہے کہ ٹائمر کو مستقبل کے ایک خاص وقت کےلیے سیٹ کر دیا جائے، مثال کے طور پر نئے کام کے دن کی ابتداء۔
 End Event
-
 Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
+آخری مرحلہ موجودہ بہاؤ کو ختم کرتا ہے۔ یہ متوازی چلتے ہوئے بہاؤ کو ختم نہیں کرتا۔ جب کام کا بہاؤ آخری مرحلے پر پہنچتا ہے اور اگر اس کے متوازی کوئی کام نہ چل رہا ہو تو پراسیس ختم ہوجاتا ہے۔
+
 Terminate End Event
-
 Ends all flows. Process is subsequently ended.
+ختم کرنے والا آخری مرحلہ کام کے ہر بہاؤ کو ختم کر دیتا ہے۔ پراسیس (عمل) بعد میں ختم ہو جاتا ہے۔
+
 Gateways
-
 Gateways are displayed as diamonds.
-Exclusive Gateway
+گیٹ ویز (دروازے)
+یہ دروازے ہیروں کی مانند دکھائی دیتے ہیں۔
 
+Exclusive Gateway
 Can diverge or converge flows.
+خصوصی دروازے بہاؤ کو منتشر اور ملا سکتے ہیں۔
 
 In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
-
+انتشار کی صورت میں یہ ایک ہی بہاؤ (راستے) کی وضاحت کرتا ہے جو کہ مخصوص معیار کے مطابق چنا جائے گا۔ پہلی پوری ہونے والی شرط بہاؤ کا تعین کرتی ہے، اگلی شرائط نکال دی جاتی ہیں۔ یہ ایک صلاحیت ہوتی ہے جو معیاری بہاؤ کو مخصوص کرتی ہے۔ معیاری بہاؤ چنا جاتا ہے جب کوئی شرط پوری نہ ہو۔ معیاری بہاؤ کا سلیش کی علامت سے نشان لگا ہوتا ہے۔
 In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
-
+بہاؤ کے میلان کی صورت میں یہ صرف بہاؤ کو باہر جاتے ہوئے عنصر کی طرف رخ دیتا ہے۔  جب بہاؤ وہاں آتے ہیں تو یہ رکتا نہیں، اس لیے متوازی بہاؤ ایک ہی بہاؤ میں ضم نہیں ہوتے۔
 exclusive gateway divergent
-
+خصوصی انتشار کا گیٹ وے (دروازہ)
 exclusive gateway convergent
-Inclusive Gateway
+خصوصی میلان کا گیٹ وے (دروازہ)
 
+Inclusive Gateway
 Can diverge or converge flows.
+مشمول گیٹ وے (دروازہ) بہاؤ کو منتشر یا ملا سکتا ہے۔
 
 In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+انتشار کی صورت میں یہ ایک یا زیادہ متوازی بہاؤ (راستوں) میں سے ہر ایک کو ان کے معیار پر پورا اترنے کے حساب سے رخ دیتا ہے۔ معیاری بہاؤ اختیار کیا جاتا ہے اگر کوئی شرط پوری نہ ہو۔ معیاری بہاؤ کا سلیش کی علامت سے نشان لگا ہوتا ہے۔
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
+اگر مشمول گیٹ وے (دروازے) سے پیدا ہونے والے متوازی بہاؤ کو ضم کرنے کی ضرورت ہو تو آپ کو میلان والے مشمول گیٹ وے کے استعمال کی ضرورت ہوگی۔ یہ تمام آنے والے بہاؤ کا انتظار کرے گا اور پھر باہر جانے والے عنصر کی طرف جاری ہوجائے گا۔
 
 inclusive gateway
+مشمول گیٹ وے
 
 Note: Diverging and converging gateways must be balanced.
+نوٹ: انتتشار اور میلان والے دروازوں کا متوازن ہونا ضروری ہے۔
 
 Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
-Parallel Gateway
+نوٹ: اگر ایک متوازی بہاؤ کسی وجہ سے ختم ہو جائے تو انتشاری گیٹ وے کبھی نہیں تیار ہو سکے گا۔ یہ عمل رک جائے گا۔ ایسے گراف چارٹ سے بچیے جو اس طرح کی صورتحال پیدا کرسکتا ہے۔
 
+Parallel Gateway
 Can diverge or converge flows.
+متوازی گیٹ وے بہاؤ کو منتشر اور ملا سکتا ہے۔
 
 In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
+انتشار کی صورت میں یہ بہاؤ کو زیادہ متوازی بہاؤ(راستوں) میں تقسیم کر دیتا ہے۔ اس طرح کے گیٹ وے کےلیے کوئی متعین مقداریں نہیں ہوتیں۔
 
 In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
+میلان کی صورت میں یہ انتظار کرتا ہے جب تک کہ تمام آمدہ بہاؤ آجائیں اور پھر یہ اگلے باہر جانے عنصر کی طرف جاری ہوجاتا ہے۔
 
 parallel gateway
+متوازی گیٹ وے
 
 Note: Diverging and converging gateways must be balanced.
+نوٹ: انتتشار اور میلان والے دروازوں کا متوازن ہونا ضروری ہے۔
 
 Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
-Event Based Gateway
+نوٹ: اگر ایک متوازی بہاؤ کسی وجہ سے ختم ہو جائے تو انتشاری گیٹ وے کبھی نہیں تیار ہو سکے گا۔ یہ عمل رک جائے گا۔ ایسے گراف چارٹ سے بچیے جو اس طرح کی صورتحال پیدا کرسکتا ہے۔
 
+Event Based Gateway
 Can only diverge flows.
+مرحلے کی بنیاد پر گیٹ وے صرف بہاؤ کو منتشر کر سکتا ہے۔
 
 It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
-
+یہ باہر جانے والے مراحل کے شروع ہونے تک بہاؤ کو روک دیتا ہے۔ شروع ہونے والا مرحلہ  واحد بہاؤ کا تعین کرتا ہے۔ باقی باہر جانے والے مراحل مسترد ہوجاتے ہیں۔
 Only intermediate events can be on the other end of outgoing sequence flows.
+صرف درمیانی مراحل ہی باہر جانے والے ترتیبی بہاؤ کے آخری سرے پر ہوسکتے ہیں۔
 
 event based gateway
+مرحلے کی بنیاد پر گیٹ وے
+
 Activities
+سرگرمیاں
 
 Activities are displayed as rounded rectangles.
+سرگرمیاں دائروی مستطیلوں کی صورت میں دکھائی دیتی ہیں۔
+
 Task
+ٹاسک (کام)
 
 Task can execute following the actions:
+ٹاسک مندرجہ ذیل افعال سرانجام دے سکتا ہے۔
 
     Create Record - creates new record of any entity type;
     Create Related Record - creates new record related to the target record;
@@ -161,52 +189,86 @@ Task can execute following the actions:
     Create Notification - creates in-app notification for specific users;
     Make Followed - makes specific users follow the target record, the process record or any record created by the process;
     Run Service Action - runs custom service actions implemented by developers.
+ریکارڈ بناتا ہے – کسی بھی شناخت کے نئے ریکارڈ بناتا ہے؛
+متعلقہ ریکارڈ بناتا ہے – کسی بھی ہدف سے متعلقہ نئے ریکارڈ بناتا ہے؛
+ہدفی ریکارڈ کی تجدید کرتا ہے؛
+متعلقہ ریکارڈ کی تجدید کرتا ہے – ریکارڈ یا ہدفی ریکارڈ سے متعلق ریکارڈوں کی تجدید کرتا ہے؛
+بنائے ہوئے ریکارڈ کی تجدید کرتا ہے – موجودہ عمل میں کسی بھی شعبے کے بنائے گئے ریکارڈ کی تجدید کرتا ہے؛
+عمل کے ریکارڈ کی تجدید کرتا ہے – کسی مخصوص استعمال کنندہ یا ٹیم کی طرف عمل کو تفیض کرنے کےلیے استعمال ہوسکتا ہے؛
+کسی دوسرے ریکارڈ سے مربوط کرتا ہے – ہدفی ریکارڈ کو کسی مخصوص ریکارڈ سے مربوط کرتا ہے؛
+کسی دوسرے ریکارڈ سے غیر منسلک (منقطع) کرتا ہے- ہدفی ریکارڈ کو کسی مخصوص ریکارڈ سے غیر منسلک کرتا ہے؛
+تفویضی کردار کو لاگو کرتا ہے – ہدفی کردار کو تفویض کرتا ہے، ریکارڈ کو تیار کرتا ہے یا کسی بھی ریکارڈ کو مخصوص اصول کے تحت بناتا ہے؛
+اطلاعات کو بناتا ہے – ایپ کے اندر مخصوص استعمال کنندہ کےلیے اطلاعات کو بناتا ہے؛
+پیروی ممکن بناتا ہے – مخصوص استعمال کنندوں کو ہدفی ریکارڈ کی پیروی کرواتا ہے، ریکارڈ کو یا پراسس میں بنے ہوئے ریکارڈ کو تیار (پراسس) کرتا ہے؛
+سروس ایکشن (دیکھ بھال والے کام) کو چلاتا ہے – ڈویلپرز کی طرف سے لاگو کردہ سروس ایکشن (افعال) کو چلاتا ہے؛
 
 Actions available for task are almost the same as in Workflow feature. See more details about workflow's actions.
+کام کے بہاؤ والی خصوصیت میں ٹاسک کےلیے مہیا اکثر افعال ایک یسے ہوتے ہیں۔ کام کے بہاؤ کے افعال (ایکشنز) کے بارے میں مزید تفصیلات دیکھیے۔
 Send Message Task
-
 Sends email message to specific recipient.
-User Task
+سینڈ میسج ٹاسک (مقررہ کام کا پیغام بھیجنے والا) مخصوص وصول کنندے کو ایمیل پیغام بھیجتا ہے۔
 
+User Task
 Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
+یوزر ٹاسک (استعمال کنندے کا مقررہ کام) استعمال کنندے سے رابطے کےلیے لچکدار اہلیت فراہم کرتا ہے۔ یہ تنصیب روک دیتا ہے جب تک کہ استعمال کنندہ ( جو مخصوص کیا گیا ہو یا تفویض کردہ ہو) ٹاسک کو حل کرتا ہے۔ پراسس یوزر ٹاسک ریکارڈ (استعمال کنندے کے ٹاسک ریکارڈ کا عمل) سسٹم میں بنا دیا جائے گا۔ معیار کے مطابق ایکشنز کی تین اقسام ہیں: ایپروو (منظور کرنا) ، ریویو (جائزہ لینا) ، ایکامپلش (تکمیل کرنا)۔ 
 
     Approve type requires the user to chose between 'Approved' and 'Declined'.
     Review type gives only one option: 'Reviewed'.
     Accomplish type has two options: 'Completed' and 'Failed'.
+ایپروو (منظوری) والی قسم میں استعمال کنندے کو 'Approved'  اور   'Declined'میں سے کسی ایک کو چننا ہوتا ہے۔
+ریویو (جائزے) والی قسم صرف ایک آپشن دیتی ہے: 'Reviewed'
+ایکامپلش (تکمیل) والی قسم میں دو آپشنز ہوتے ہیں: 'Completed'  اور  'Failed'
 
 The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
+بنائے گئے استعمال کنندہ کے مقرر کردہ ریکارڈ کے عمل کی طرف تفویض کردہ استعمال کنندہ کو ایپ میں اطلاعات موصول ہوں گی۔ منتظم ای میل اطلاعات کو بھی فعال کر سکتا ہے۔ 
 
 Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
-
+استعمال کنندے پراسس یوزر ٹاسک ڈیشلٹ (یوزر کے مقررہ ڈیشلٹ کے عمل) کو حقیقی پراسیس یوزر ٹاسک دیکھنے کےلیے اپنے ڈیش بورڈ پر بھی شامل کرسکتے ہیں۔
 It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
-Script Task
+یہ ممکن ہے کہ انتشاری گیٹ وےز (دروازوں) یا مشروط مراحل، جذباتی عمل کے بہاؤ میں دبائے ہوئے یوزر ٹاسک کی قرارداد پڑھی جائے۔
 
+Script Task
 Executes the script in espo-formula language. All set variables ($variableName) will be stored and available within the process.
+سکرپٹ ٹاسک سکرپٹ کی ہسپانوی-فارمولے والی زبان میں سکرپٹ کی تنصیب کرتا ہے۔ تمام سیٹ کردہ متغیرات ($variableName) پراسیس کے اندر محفوظ اور مہیا ہوں گی۔
 Flows
 Sequence Flow
-
 Represented as a solid arrow. Indicates the order in which process elements will be executed.
-Conditions
+بہاؤ 
+ترتیبی بہاؤ ٹھوس قطار کی نمائندگی کرتا ہے۔ یہ اس ترتیب کی طرف اشارہ کرتا ہے جس میں پراسس کے عناصر کی تنصیب کی جائے گی۔ 
 
+Conditions
 Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
+شرائط
+مشروط مراحل، خصوصی یا مشمول انتشاری گیٹ ویز کی شرائط ہوتی ہیں جو پراسیس (عمل) کے بہاؤ کا تعین کرتی ہیں۔
 
 Through UI there is an ability to check conditions for the following records:
+یوزر انٹرفیس کے ذریعے ان شرائط کو مندرجہ ذیل ریکارڈز کےلیے جانچنے کی اہلیت ہوتی ہے۔
 
     Target record;
     Records related to the target through many-to-one and children-to-parent relationships;
     Records created by the process via tasks;
     User task records, which allows checking the resolution.
+ہدفی ریکارڈ؛
+ایسے ریکارڈ جو زیادہ-سے-ایک اور بچوں-سے-والدین کے تعلقات کے ذریعے ہدف سے جڑے (متعلقہ) ہوتے ہیں؛
+مقررکردہ کاموں (ٹاسک) کے ذریعے پراسس سے بنے ہوئے ریکارڈز؛
+یوزر ٹاسک ریکارڈز (استعمال کنندے کے مقررہ ریکارڈز)، جو قرارداد کو جانچنے کی اجازت دیتے ہیں۔
 
 It's also possible to define conditions in Espo-formula language.
+یہ بھی ممکن ہے کہ شرائط کی ہسپانوی-فارمولے والی زبان میں تعریف کی جائے۔
 
 Conditions in BPM tool are the same as in Workflow feature. See more details about workflow's conditions.
+بی ایم پی ٹول (کارباری عمل کے انتظام کے آلے) میں شرائط کام کے بہاؤ والے فیچر کی شرائط کی طرح ہیں۔ کام کے بہاؤ کی شرائط  سے متعلقہ مزید تفصیلات دیکھئے۔
 Examples
-Example 1
+مثالیں
 
 Example 1
-Example 2
+ پہلی مثال
+https://github.com/espocrm/documentation/raw/master/_static/images/administration/bpm/example-1.png
 
 Example 2
-Example 3
+ دوسری مثال
+https://github.com/espocrm/documentation/raw/master/_static/images/administration/bpm/example-2.png
 
 Example 3
+تیسری مثال
+https://github.com/espocrm/documentation/raw/master/_static/images/administration/bpm/example-3.png
