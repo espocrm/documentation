@@ -1,29 +1,29 @@
-# How to upgrade EspoCRM
+# Come aggiornare EspoCRM
 
-EspoCRM can be upgraded to the latest version by the following steps:
+EspoCRM può essere aggiornato alla versione più recente tramite le seguenti fasi:
 
-### Step 1. Check your current version
+### Passo 1. Verificare la versione corrente
 
-To check your current version go to Administration > Upgrade page.
+per controllare la vostra versione attuale andare a Amministrazione > pagina di aggiornamento.
 
-### Step 2. Download needed upgrade packages
+### Passo 2. È necessario scaricare i pacchetti di aggiornamento
 
-Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
+vai alla pagina upgrade https://www.espocrm.com/download/upgrades/ e basato sulla vostra attuale versione download pacchetti richiesti.
 
-### Step 3. Create a backup (optional)
+### Passo 3. Creare una copia di backup (opzionale)
 
-Create a backup of your EspoCRM files and data before upgrading. Follow [these instructions](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) to get it done.
+consente di creare un backup del vostro EspoCRM dei file e dei dati prima di eseguire l'aggiornamento. [Seguire queste istruzioni](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) per averlo fatto.
 
-### Step 4. Upgrade process
+### Passo 4. Processo di aggiornamento
 
-Go to Administration > Upgrade. Upload and install one by one upgrade packages.
+Vai su Amministrazione > Aggiornamento. Caricare e installare uno per uno i pacchetti di aggiornamento.
 
-You can check whether you have the latest version at Menu > About.
+È possibile verificare se si dispone della versione più recente in corrispondenza di Menu > Informazioni su.
 
-## Upgrade via CLI
+## Upgrade tramite CLI
 
-You can also run upgrade via command line interface. You need to execute the following command from EspoCRM root directory:
+è anche possibile eseguire upgrade tramite interfaccia a riga di comando. È necessario eseguire il seguente comando da root EspoCRM directory:
 
-```
-php upgrade.php /path/to/upgrade/package.zip
-```
+'''
+php upgrade.php /percorso/al/aggiornamento/package.zip
+'''
