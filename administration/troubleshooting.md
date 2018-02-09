@@ -1,20 +1,20 @@
-# Troubleshooting
+# Solución de problemas
 
-## Check logs
+## Verificar registros
 
-To find out the problem, you have to check error log files.
+Para averiguar el problema, debe verificar los archivos de registro de errores.
 
-#### EspoCRM error logs
+#### Registros de errores de EspoCRM
 
-EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/logs/*.log` and contain some error information.
+Los registros de EspoCRM se encuentran en `<DIROCRM_DIRECTORY>/logs/* Log` y contienen algunos datos de error.
 
-#### Apache error logs
+#### Registros de errores de Apache
 
-For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems. 
+Para el servidor Ubuntu, un registro de error de apache se encuentra en `/var/log/apache2/error.log` y contiene toda la información de error. La ubicación de los archivos de registro puede ser diferente en otros sistemas.
 
-## Enable debugging mode
+## Habilitar el modo de depuración
 
-To enable debugging mode, go to installed EspoCRM directory, open the file `data/config.php` and change the value:
+Para habilitar el modo de depuración, vaya al directorio EspoCRM instalado, abra el archivo `data/config.php` y cambie el valor:
 
 ```
 'logger' => [
@@ -32,57 +32,69 @@ to
 ]
 ```
 
-## Scheduled Jobs are not working
+## Los Trabajos Programados no funcionan
 
-#### Problem #1: Your crontab is not configured
+#### Problema #1:: Tu crontab no está configurado
 
-1. Login via SSH to your server.
+1. Ingresa a través de SSH a tu servidor.
 
-2. Configure your crontab by following these steps: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Configure su crontab siguiendo estos pasos: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
 
-Note: Crontab should be configured under web-server user, e.g. `crontab -e -u www-data`.
+Nota: Crontab debe configurarse en usuario del servidor web, p. `crontab -e -u www-data`.
 
-3. Wait for a while and check Scheduled Jobs to see if any jobs were executed (see a Log panel).
+3. Espere un momento y revise los trabajos programados para ver si se ejecutó alguna tarea (vea un panel de registro).
 
-#### Problem #2. Crontab is configured, but Scheduled Jobs are not working
+#### Problema # 2. Crontab está configurado, pero los trabajos programados no funcionan
 
-To make sure there are no errors when cron is running, try to run the cron command in a terminal:
+Para asegurarse de que no haya errores cuando se está ejecutando cron, intente ejecutar el comando cron en una terminal:
 
-1. Login via SSH to your server.
+1. Ingresa a través de SSH a tu servidor.
 
-2. Go to the directory where EspoCRM is installed. E.g. for `/var/www/html/espocrm` directory the command is:
+2. Configure su crontab siguiendo estos pasos: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+
+Nota: Crontab debe configurarse en usuario del servidor web, p. `crontab -e -u www-data`.
+
+3. Espere un momento y revise los trabajos programados para ver si se ejecutó alguna tarea (vea un panel de registro).
+
+#### Problema # 2. Crontab está configurado, pero los trabajos programados no funcionan
+
+Para asegurarse de que no haya errores cuando se está ejecutando cron, intente ejecutar el comando cron en una terminal:
+
+1. Ingresa a través de SSH a tu servidor.
+
+2. Vaya al directorio donde está instalado EspoCRM. P.ej. para el directorio `/var/www/html/espocrm` el comando es:
 
 ```bash
 cd /var/www/html/espocrm
 ```
 
-3. Run the crontab command:
+3. Ejecute el comando crontab:
 
 ```bash
 php cron.php
 ```
 
-Note: It should be executed under web-server user. If you are logged in as root, the command should be (e.g for Ubuntu):
+Nota: debe ejecutarse en usuario del servidor web. Si ha iniciado sesión como root, el comando debería ser (por ejemplo, para Ubuntu):
 
 ```bash
 sudo -u www-data php cron.php
 ```
 
-where `www-data` is a web-server user.
+donde `www-data` es un usuario del servidor web.
 
-4. If there are no errors, check Scheduled Jobs to see if any job was executed (see a Log panel).
+4. Si no hay errores, revise los trabajos programados para ver si se ejecutó algún trabajo (consulte un panel de registro).
 
-## EspoCRM is not loading after updgare
+## EspoCRM no se carga después del updgare
 
-This can happen sometimes on some shared hostings.
+Esto puede suceder a veces en algunos alojamientos compartidos.
 
-Check permissions of the files:
+Verifique los permisos de los archivos:
 /index.php
 /api/v1/index.php
 
-They must be 644. If any of those file has permission 664 you need to change it to 644. Use your hosting's control panel or chmod command.
+Deben ser 644. Si alguno de esos archivos tiene permiso 664, debe cambiarlo a 644. Utilice el panel de control de su hosting o el comando chmod.
 
 ```
 chmod 644 /path/to/file
 ```
-More information about file permissions: [here](server-configuration.md#required-permissions-for-unix-based-systems).
+Más información sobre permisos de archivos: [aquí] (server-configuration.md # required-permissions-for-unix-based-systems).
