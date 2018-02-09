@@ -1,83 +1,82 @@
-# Entity Manager
+# Gestor de Entidad
 
-Entity Manager is available in Administration panel. It provides an ability to highly customize your EspoCRM instance. You are able to do the following:
+El Gestor de Entidad está disponible en el panel de Administración. Provee una habilidad para personalizar al máximo su instancia de EspoCRM. Usted puede hacer lo siguiente. 
 
-* Add new types of entities.
-* Customize existing types of entities: change labels, default order in list view, enable or disable stream.
-* Configure fields: add new, customize existing ones.
-* Configure relationships: add new, change labels of existing ones.
+* Agregar nuevos tipos de entidades.
+* Personalizar los tipos existentes de entidades: cambiar etiquetas, ordernar por defecto la vista de la lista, habilitar o deshabilitar stream. 
+* Configurar campos: agregar uno nuevo, personalizar los existentes.
+* Configurar las relaciones: agregar una nuevo, cambiar etiquetas de las existentes.
 
-## Creating new entity
+## Creando una nueva entidad
 
-Click `Create Entity` button on Entity Manager page. Specify name, labels and type. If you select `Person` type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check `Stream` if you want your entity to have stream panel and users to be able to Follow entities of this type.
+Haga click en el botón `Create Entity` en la página del Gestor de la Entidad. Especifique el nombre, etiqueta y tipo. Si selecciona el tipo `Person`, su entidad tendrá Correo Electrónico, Teléfono, Primer Nombre, Apellido, y  campos de Saludo. Chequee `Stream` si desea que su identidad tenga un panel de stream y que los usuarios puedan seguir a entidades de este tipo.    
 
-Types:
+Tipos:
 
-* Base - empty entity only with basic fields like Name, Assigned User, Teams, Description.
-* Base Plus - like Base but with Activities, History, Tasks panels (available since 4.3.0).
-* Event - Date Start, Date End, Duration, Parent, Status fields. Available in Calendar and Activities panel (since 4.3.0, must be enabled at Administration > Settings).
-* Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
-* Company - Email, Phone, Billing Address, Shipping Address fields. Activities, History, Tasks panels.
+* Base - entidad vacìa con solo los campos básicos como Nombre, Usuario Asignado, Equipos, Descripción.
+* Base Plus - igual que Base pero con paneles de Actividades, Historia, Tareas (disponible desde 4.3.0).
+* Evento - Fecha de inicio, Fecha de Finalización, Duración, Padre, campo de Status. Disponible en el panel de Calendario y Actividades (desde 4.3.0, debe ser habilitado en Administración > Configuraciones).
+* Persona - Correo electrónico, Teléfono, Primer Nombre, Primer Apellido, Saludo, campo de Dirección. Paneles de Actividades, Historia, Tareas.
+* Compañía - campos de Correo Electrónico, Teléfono, Dirección de Facturación, Dirección de Envio. Paneles de Actividades, Historia, Tareas. 
 
-## Update existing entity
+## Actualizar una entidad existente
 
-If you click `Edit` link on a certain entity you will be able to change some parameters of that entity.
+Si pulsa click en el enlace `Edit` de una determinada entidad usted será capaz de cambiar los parámetros de dicha entidad. 
 
-* Labels - singular and plural name of the entity.
-* Default order records are sorted by in list views.
-* Stream - whether Stream feature is enabled for this entity.
-* Disabled - check if you don't need this entity in your system.
-* Text Filter Fields - what fields to search in for the main text filter and global search.
+* Etiquetas - nombre singular y plurar de la entidad
+* Los registros de órdenes predeterminado son ordenados en la vista de las listas.
+* Stream - si la característica Stream está habilitada para esta entidad.
+* Deshabilitado - chequee si no necesita a esta entidad en su sistema
+* Campos de Filtro de Texto - en cuales campos buscar por el filtro de texto principal y la búsqueda global. 
 
+## Campos
 
-## Fields
+Al darle click en el enlace `Fields` usted será movido a una página sepadada. Allí usted será capaz de crear nuevos campos o actualizar los existentes. Los siguientes tipos de campo están disponibles en el Gestor de Entidad:
 
-By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones. The following types of fields are available in Entity Manager:
+* Dirección - direccióon con calle, ciudad, estado, código postal y país;
+* Formación - lista de valores, con la habilidad para seleccionar múltiples valores (no es una buena opción si usted necesita buscar en este campo) los usuarios pueden agregar sus propios valores si las opciones no son específicadas.  
+* Múltiples adjuntos - múltiples archivos adjuntos;
+* Incremento automático - lea solo números generados;
+* Booleano - lista de chequeo, verdadero o falso; 
+* Moneda - para los valores de las monedas;
+* Fecha; 
+* Hora del día;
+* Enumeración - opción para seleccionar, con la capacidad para solo seleccionar un valor;
+* Archivo - subiendo un archivo;
+* Flotar - número con una parte decimal; 
+* Extranjero - un campo de una entidad relacionada;
+* Imágen - subir una imágen con una vista previa;
+* Entero - número completo;
+* Número - número que se incrementa automáticamente;
+* Enumeración múltiple - lista de valores, con la habilidad para seleccionar múltiples valores (no es una buena opción si usted necesitabuscar en este campo), similar a formación pero más agradable;
+* Texto - área de texto, para largos y múltiples textos;
+* URL - para enlaces;
+* Varchar - texto corto;
+* Wysiwyg - similar al campo Texto, con la habilidad de darle formato al texto
 
-* Address - address with street, city, state, postal code and country;
-* Array - list of values, with the ability to select multiple values (not a good option if you need to search by this field); users can add their own values if options are not specified.
-* Attachment Multiple - multiple file attachments;
-* Auto-increment - read only generated number;
-* Boolean - checkbox, true or false;
-* Currency - for currency values;
-* Date;
-* DateTime;
-* Enum - selectbox, with the ability to select only one value;
-* File - uploading one file;
-* Float - number with a decimal part;
-* Foreign - a field of related entity;
-* Image - uploading image file with a preview;
-* Integer - whole number;
-* Number - auto-incrementing number of string type with a possible prefix and a specific length;
-* Multi-enum - list of values, with the ability to select multiple values (not a good option if you need to search by this field), similar to Array but nicer.
-* Text - text area, for long multiline texts;
-* Url - for links;
-* Varchar - short text;
-* Wysiwyg - similar to Text field, with the ability to format text.
+Parámetros:
+* Requerido - si llenar el campo es obligatorio.
+* Valor Predeterminado - Valor del campo fijado al crear el nuevo registro.
+* Auditado - actualizaciones del campo serán logueadas en Stream. 
 
-Parameters:
-* Required - whether filling in of the field is mandatory.
-* Default Value - Value of the field set upon creating new record.
-* Audited - updates of the field will be logged in Stream.
+**Nota**: Después de que haya agregado el nuevo campo usted necesita poner este campo en [layouts](layout-manager.md) (Administración Gestor de Diseño).
 
-**Note**: After you have added the new field you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
+### Lógica Dinamica
 
-### Dynamic Logic
+Provee la habilidad para hacer formas dinámicas. Es posible definir las condiciones haciendo a ciertos campos visibles, requeridos o de solo lectura. Las condiciones serán chequeadas automáticamente cuando los datos en la forma estén cambiados.
 
-Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
+Para los campos Enumerar, Formación y Enumeración Múltiple es posble definir diferentes conjuntos de opciones que estarán disponibles para el campo dependiendo si la condición es satisfecha.
 
-For Enum, Array and Multi Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met.
+## Relaciones
 
+Usted puede crear nuevas relaciones entre entidades fuera de la caja y personalizadas. Hay 3 tipos de relaciones: 
 
-## Relationships
+* Uno-para-Varios: después de que haya creado esta relación, usted puede poner un enlace de campo para el diseño detallado a la derecha de la entidad correta y agregar un panel de relaciones a la izquierda de la entidad; 
+* Varios-para-Uno: igual que Uno-para-Varios solo que viceversa;
+* Varios-para-Varios: panel de relaciones en ambos lados
 
-You can create new relationships between both out-of-box and custom entities. There are 3 available relationship types:
+El parámetro 'Enlazar múltiples campos' implica que el campo tipo `linkMultiple`será creado junto con la relación. Usted puede poner dicho campo en el diseño. Es conveniente para elegir rapidamente o registros relacionados. No es una buena opción si su relación tiene como intensión tener muchos registros enlazados que pueden ralentizar la carga de la vista de la pantalla de los detalles. 
 
-* One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
-* Many-to-One: the same as One-to-Many but vice versa;
-* Many-to-Many: relationship panels on both sides.
+Si el parámetro 'Auditado' está elegido entonces las actualizaciones de la relación serán logueadas en Stream
 
-Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of detail view screen.
-
-If parameter 'Audited' is checked then updates of the relationship will be logged in Stream.
 
