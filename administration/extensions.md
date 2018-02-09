@@ -1,41 +1,41 @@
-# Manage extensions
+#Kelola ekstensi
 
-## How to install an extension
+## Bagaimana cara memasang ekstensi
 
-In order to install EspoCRM extension (e.g. Advanced Pack, VoIP Integration):
+Untuk memasang ekstensi EspoCRM (misalnya Paket Lanjutan, Integrasi VoIP):
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Upload your extension package (zip file).
-4. Click Install button.
-
-
-## How to upgrade an extension
-
-In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP integration) to a newer version:
-
-1. Download the new version of needed extension.
-2. Login as an administrator.
-3. Go to Administration > Extensions.
-4. Upload your new extension package (zip file) without uninstalling the already installed version.
-5. Click Install button.
+1. Masuk sebagai administrasi.
+2. Masuk ke Administrasi> Ekstensi.
+3. Unggah paket ekstensi Anda (zip file).
+4. Klik tombol Pasang.
 
 
-## How to uninstall an extension
+## Bagaimana memperbarui ekstensi
 
-Steps to uninstall an installed extension:
+Untuk meningkatkan versi ekstensi yang sudah terpasang (misalnya, Paket Lanjutan, integrasi VoIP) ke versi yang lebih baru:
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Find needed extension on the list of available extensions.
-4. Click Uninstall button.
+1. Unduh d versi baru dari ekstensi yang dibutuhkan.
+2. Masuk sebagai administrasi.
+3. Pergi ke Administrasi> Ekstensi.
+4. Unggah paket ekstensi baru Anda (zip file) tanpa menguninstall versi yang sudah terinstal.
+5. Klik tombol Pasang.
 
 
-## How to delete an extension
+## Bagaimana cara menghapus ekstensi
 
-When an extension is uninstalled, it is still available in the system. It can be completely deleted. Steps to delete an extension:
+Langkah-langkah untuk mencopot pemasangan ekstensi yang terpasang:
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Find the needed extension in the list of available extensions.
-4. Click Remove button.
+1. Massuk sebagai administrasi.
+2. Masuk ke Administrasi> Ekstensi.
+3. Temukan ekstensi yang dibutuhkan pada daftar ekstensi yang tersedia.
+4. Klik tombol Mencopot pemasangan.
+
+
+## Bagaimana cara menghapus ekstensi
+
+Bila ekstensi dicopot pemasangannya, sistem tersebut masih tersedia di sistem. Ini bisa benar-benar dihapus. Langkah-langkah untuk menghapus ekstensi:
+
+1. Masuk sebagai administrasi.
+2. Masuk ke Administrasi> Ekstensi.
+3. Temukan ekstensi yang dibutuhkan dalam daftar ekstensi yang tersedia.
+4. Klik tombol Hapus.
