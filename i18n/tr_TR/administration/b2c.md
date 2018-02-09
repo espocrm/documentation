@@ -1,9 +1,9 @@
-#Configuring EspoCRM for B2C (Business-to-Client)
+#B2C için (İşyerinden Müşteriye) EspoCRM'yi yapılandırma
 
-By default EspoCRM is configured to use for B2B business. But you can easily setup it for B2C.
+EspoCRM, B2B işletmesi için kullanılacak şekilde varsayılan olarak yapılandırılmıştır. Ancak B2C için kolayca kurabilirsiniz.
 
-* Change `b2cMode` to true in your config file `data/config.php`. Since version 4.3.0 it can be configured at Administration > Seetings.
-* Remove *Account* tab from the navigation menu (Administration > User Interface).
-* Remove *Account* fields from your layouts (Administation > Layout Manager).
-* Disable an access to *Account* scope for all your roles (Administration > Roles).
-* Remove Account from picklists of all parent fields (Administration > Entity Manager > {Meeting/Call/Task/Email} > Fields > Parent).
+* `Data / config.php` yapılandırma dosyasında `b2cMode` parametresini değiştirin. Yönetim>Ayarlar bölümünden Sürüm 4.3.0'dan itibaren yapılandırılabilir.
+* Navigasyon menüsünden *Hesap* sekmesini kaldırın (Yönetim>Kullanıcı Arayüzü).
+* *Hesap* alanlarını Layout'larınızdan kaldırın (Yönetim>Layout Yöneticisi).
+* *Hesap* kapsamına erişimi için tüm rollerinizi devre dışı bırakın (Yönetim> Roller).
+* Tüm ana alanların seçim listelerinden Hesabı kaldırın (Yönetim> Kuruluş Yöneticisi> {Toplantı / Arama / Görev / E-posta}> Alanlar> Ebeveyn)
