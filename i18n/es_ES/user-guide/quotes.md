@@ -1,46 +1,49 @@
 # Cotizaciones
 
-La opción de cotizaciones está disponible en [Paquete Avanzado](https://www.espocrm.com/extensions/advanced-pack/).
+La función de Cotizaciones está disponible en [Paquete avanzado](https://www.espocrm.com/extensions/advanced-pack/).
 
-Las cotizaciones son un grupo específico de productos o servicios con sus cantidades  precios el cual usted cotiza a los clientes.
+Las cotizaciones son un grupo específico de productos o servicios con sus cantidades y precios que usted cotiza a los clientes.
 
-Las cotizaciones están relacionadas con la oportinidad. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
+La cotización tienen una relación con Oportunidad. Puede agregar el panel Cotizaciones a la vista detallada de Oportunidad en Administración > Administrador de Diseño > Oportunidades > Relaciones. Al crear una nueva cotización vinculada a una oportunidad, transfiere artículos de oportunidad a la cotización.
 
-You can add Quotes panel to Accunt's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
+Puede agregar el panel Cotizaciones a la vista detallada de la cuenta para poder ver las cotizaciones relacionadas. Puede hacerlo en Administración > Administrador de Diseño > Cuentas > Relaciones.
 
-## Quote Items
+## Cotización de Artículos
 
-Quote has a list of items. Each item can represent a certain product or a service with description, quantity, tax rate, list price and unit price fields. It's possible to sort items manually.
+La cotización tiene una lista de artículos. Cada artículo puede representar un determinado producto o servicio con campos de descripción, cantidad, tasa de impuesto, precio de lista y precio unitario. Es posible ordenar los artículos manualmente.
 
-There is an ability to add custon fields for Quote Item entity using Entity Manager.
+Existe la posibilidad de agregar campos personalizados para la entidad Cotizar Artículo usando Gerente de la Entidad.
 
-## Templates
+## Plantillas
 
-By default there are two available templates: Quote and Invoice. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
+Por defecto hay dos plantillas disponibles: Cotización y Factura. Puede crear nuevas plantillas (vista por lista de Cotizaciones > menú desplegable en la parte superior derecha > Plantillas) así como también editar las existentes.
 
-For more precise editing it's recommended to use Code View mode.
+Para una edición más precisa, se recomienda usar el modo de Visualización de Código.
 
-You can print fields of Quote record as well as fields of related records by utilizing placeholders in your template.
+Puede imprimir los campos del registro de Cotizaciones, así como los campos de los registros relacionados mediante el uso de contenedores de posición en su plantilla.
 
-Examples:
-`{{accountName}}` – Account name,
+Ejemplos:
 
-`{{{billingAddressStreet}}}` – street,
+`{{accountName}}` – Nombre de la cuenta,
 
-`{{account.type}}` – type of related Account,
+`{{{billingAddressStreet}}}` – calle,
 
-`{{assignedUser.lastName}}` – last name of the assigned user.
+`{{account.type}}` – tipo de Cuenta relacionada,
 
-If your line item is a product you can print product’s fields. 
+`{{assignedUser.lastName}}` – apellido del usuario asignado.
 
-Examples:
+Si su elemento en línea es un producto, puede imprimir los campos del producto.
+
+
+Ejemplos:
+
 `{{product.length}}`, 
 
 `{{product.color}}`.
 
-Length and color are custom fields of Product entity in examples.
+La longitud y el color son campos personalizados de la entidad Producto en ejemplos.
 
-Looping through quote items:
+Haciendo loop a través de artículos de cotización:
 
 ```
 <!-- {{#each itemList}} -->
@@ -53,53 +56,52 @@ Looping through quote items:
   <td align="right">{{amount}}</td>
 <!-- {{/each}} -->
 ```
-
-It's possible to print image fields: 
+Es posible imprimir campos de imagen:
 
 ```
 <img src="{{file imageId}}">
 ```
-where `imageId` – the name of custom image field in Quote entity concatenated with the suffix `Id`.
+donde `imageId` - el nombre del campo de imagen personalizado en la entidad de Cotización concatenada con el sufijo `Id`.
 
-For product line item:
+Para la línea de productos:
 ```
 <img src="{{file product.photoId}}">
 ```
 
-To display float numbers (like quantity, unitPrice etc.) w/o fractional part (as integer) use following expressions (since version 4.8.3):
+Para mostrar números flotantes (como cantidad, precio unitario, etc.) sin partes fraccionarias (como número entero), use las siguientes expresiones (desde la versión 4.8.3):
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
-Custom formatting for currency values (since version 4.8.3):
+Formateo personalizado para valores de moneda (desde la versión 4.8.3):
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
-Value `10000.5` will be printer as `10 000,50`. 
+El valor `10000.5` se imprimirá como `10 000,50`.
 
-To display text fileds (multiline) use triple braces: `{{{description}}}`.
+Para mostrar campos de texto (líneas múltiples) use llaves triples: `{{{description}}}`.
 
-## Print to PDF
+## Imprimir en PDF
 
-Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template.
+Las cotizaciones se pueden imprimir en PDF. Esta acción está disponible en el menú desplegable al lado del botón Editar en la vista detallada de la cotización. Luego se le pedirá que seleccione Plantilla.
 
-## Email Quote
+## Cotización de Correo Electrónico
 
-Quote PDF can be send in email as an attachment. Open quote record, click dropdown next to Edit button and the click Email PDF.
+El PDF de la cotización se puede enviar por correo electrónico como archivo adjunto. Abra el registro de cotización, haga clic en el menú desplegable al lado del botón Editar y luego haga clic en Correo Electrónico PDF.
 
-## Automatic numbering
+## Numeración Automática
 
-You can create a Number field via Entity Manager for Quote entity type. Administration > Entity Manager > Quote > Fields > Add Filed > Number. Then you need to place it in on detail view using Layout Manager.
+Puede crear un campo Número a través del Administrador de Entidades para el tipo de entidad Cotización. Administración > Administrador de Entidades > Cotizar > Campos > Agregar Campo > Número. Luego debe colocarlo en la vista de detalles usando el Administrador de Diseños.
 
-The value will be incremented by every new quote. There is an ability to specify the next number as well as prefix.
+El valor se incrementará con cada nueva cotización. Existe la posibilidad de especificar el siguiente número y el prefijo.
 
-## Default tax
+## Impuesto Predeterminado
 
-Available since EspoCRM 4.8.0.
+Disponible desde EspoCRM 4.8.0.
 
-1. Specify default Tax record at Administration > Entity Manager > Quotes > fields > Tax > Default.
-2. Specify default tax rate at Administration > Entity Manager > Quotes > fields > Tax Rate > Default.
+1. Especifique el registro de Impuestos predeterminado en Administración > Administrador de Entidades > Cotizaciones > Campos > Impuestos > Predeterminado.
+ 2. Especifique la tasa de impuesto predeterminada en Administración > Administrador Entidades > Cotizaciones > Campos > Tasa de Impuestos > Predeterminado.
 
-## Invoices
+## Facturas
 
-Quote can be treated as an invoice if its status became `Approved`. Then _Date Invoiced_, _Invoice Number_ fields show up. You can use different template for invoices for printing.
+La cotización puede tratarse como una factura si su estado se convierte en `Aprobado`. Luego aparecen los campos _Fecha Facturada_, _Número de Factura_. Puede usar diferentes plantillas para facturas para impresión.
