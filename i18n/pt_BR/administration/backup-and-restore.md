@@ -2,7 +2,7 @@
 
 ## Como fazer uma cópia de segurança do EspoCRM manualmente
 
-EspoCRM consiste em arquivos e informações da base de dados. Todas essas informações são necessárias para criar uma cópia de segurança completa do EspoCRM. Aqui estão as instruções de como fazer isso em servidor Ubunto com MySQL.
+EspoCRM consiste em arquivos e informações da base de dados. Todas essas informações são necessárias para criar uma cópia de segurança completa do EspoCRM. Aqui estão as instruções de como fazer isso em servidor Ubuntu com MySQL.
 
 ### Passo 1. Cópia de segurança dos arquivos
 
@@ -40,7 +40,7 @@ wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scri
 ```bash
 bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
 ```
-where
+onde
  * `PATH_TO_ESPOCRM` é um caminho para o diretório do EspoCRM instalado.
  * `BACKUP_PATH` é um caminho para o diretório da cópia de segurança.
 
@@ -52,7 +52,7 @@ bash ./backup.sh /var/www/html /opt/backups
 
 Nota: Se seu usuário MySQL não tem os direitos necessários para despejar sua base de dados, será solicitado que você entre com as credenciais de outro usuário MySQL.
 
-Após a criação bem sucedida, você receberá um caminho para a cópia de segurança criada.
+Após a criação bem-sucedida, você receberá um caminho para a cópia de segurança criada.
 
 ## Restauração do EspoCRM a partir de uma cópia de segurança
 
@@ -87,7 +87,7 @@ Verifique se seu crontab está configurado apropriadamente. Execute o comando ab
 ```bash
 sudo crontab -l -u www-data
 ```
-where:
+onde:
  * `www-data` é seu usuário do servidor de web.
 
 Se você tem que fazer quaisquer mudanças, use esse comando:

@@ -1,6 +1,6 @@
 # Business Process Management
 
-A ferramenta Business Process Management (BPM) dá a habilidade de modelar e automatizar os processos de negócios eno EspoCRM. É um motor que executa processos de negócios descrito no BPMN 2.0 padrão. A ferramenta BPM está disponível na extenção [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+A ferramenta Business Process Management (BPM) dá a habilidade de modelar e automatizar os processos de negócios no EspoCRM. É um motor que executa processos de negócios descrito no BPMN 2.0 padrão. A ferramenta BPM está disponível na extensão [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
 ![BPM example](../_static/images/administration/bpm/bpm-1.png)
 
@@ -16,9 +16,9 @@ O link para os fluxogramas dos processos está disponível no painel de administ
 
 Fluxogramas são destinados para a modelagem de processos de negócios. Administradores podem criar e editar fluxogramas. Usuários comuns podem somente ver os fluxogramas.
 
-Cada fluxograma tem seu tipo de entidade específica (campo Target Type). O fluxograma determina a execução de instâncias de processos futuros. Ele consite de elementos do fluxograma e conexões entre elementos.
+Cada fluxograma tem seu tipo de entidade específica (campo Target Type). O fluxograma determina a execução de instâncias de processos futuros. Ele consiste de elementos do fluxograma e conexões entre elementos.
 
-Se os processos do fluxograma tem o campo 'Is Active' desmarcado, ele não iniciará as instâncias dos processos.
+Se os processos do fluxograma têm o campo 'Is Active' desmarcado, ele não iniciará as instâncias dos processos.
 
 Para mostrar detalhes e parâmetros de certo elemento do fluxograma, você precisa clicar nele. Em modo de edição você é capaz de editar parâmetros.
 
@@ -102,13 +102,13 @@ Nota: Entradas divergentes e convergentes devem ser balanceadas.
 
 Nota: Se um dos fluxos paralelos foi finalizado por algum motivo então a entrada divergente nunca será processada. O processo será bloqueado. Evite um design de fluxograma que possa trazer tal situação.
 
-#### Parallel Gateway
+#### Entrada Paralela
 
 Pode divergir ou convergir fluxos.
 
-In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
+Em caso de divergência, ela divide o fluxo em múltiplos fluxos paralelos. Não há parâmetros para esse tipo de entrada.
 
-In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
+Em caso de convergência, ela espera até todos os fluxos de entrada venham e então continua para o próximo elemento de saída.
 
 ![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
 
@@ -116,93 +116,93 @@ Nota: Entradas divergentes e convergentes devem ser balanceadas.
 
 Nota: Se um dos fluxos paralelos foi finalizado por algum motivo então a entrada divergente nunca será processada. O processo será bloqueado. Evite um design de fluxograma que possa trazer tal situação.
 
-#### Event Based Gateway
+#### Entrada Baseada em Evento
 
-Can only diverge flows.
+Pode somente divergir fluxos.
 
-It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
+Ela para o fluxo até qualquer dos eventos de saída seja disparado. O evento disparado determina o único fluxo. Outros eventos de saída são rejeitados.
 
-Only intermediate events can be on the other end of outgoing sequence flows.
+Somente eventos intermediários podem estar na outra saído do fluxo de sequência de saída.
 
 ![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
 
-### Activities
+### Atividades
 
-Activities are displayed as rounded rectangles.
+Atividades são mostradas como retângulos arredondados.
 
-#### Task
+#### Tarefas
 
-Task can execute following the actions:
+Tarefas podem executar as ações seguintes:
 
-* Create Record - creates new record of any entity type;
-* Create Related Record - creates new record related to the target record;
-* Update Target Record;
-* Update Related Record - updates the record or records related to the target record;
-* Update Created Record - updates specific field of any record created in the current process;
-* Update Process Record - can be used to assign the process to specific user or team;
-* Link to Another Record - links the target record with a specified record;
-* Unlink from Another Record - unlinks the target record from the specified record;
-* Apply Assignment Rule - assigns the target record, the process record or any record created by the process according to the specific rule;
-* Create Notification - creates in-app notification for specific users;
-* Make Followed - makes specific users follow the target record, the process record or any record created by the process;
-* Run Service Action - runs custom service actions implemented by developers.
+* Criar Registro - cria um novo registro de qualquer tipo de entidade;
+* Criar Registro Relacionado - cria um novo registro relacionado ao registro alvo;
+* Atualizar Registro Alvo;
+* Atualizar Registro Relacionado - atualiza o registro ou registros relacionados ao registro alvo;
+* Atualizar Registro Criado - atualiza um campo específico de qualquer registro criado no processo atual;
+* Atualizar Processo de Registro - pode ser usado para designar o processo a um usuário ou time específico;
+* Ligar a Outro Registro - liga o registro alvo com um registro específico;
+* Romper Ligação de Outro Registro - rompe a ligação do registro alvo do registro especificado;
+* Aplicar Regra de Designação - designa o registro alvo, o registro do processo ou qualquer registro criado pelo processo de acordo com a regra específica;
+* Criar Notificação - cria notificação dentro do aplicativo para usuários específicos;
+* Fazer Seguido - faz um usuário específico seguir o registro alvo, o registro do processo ou qualquer registro criado pelo processo;
+* Executar Ação de Serviço - executa ações de serviços personalizados implementados por desenvolvedores.
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+Ações disponíveis para tarefas são quase as mesmas como na característica Fluxo de Trabalho. Veja mais detalhes sobre [ações de fluxo de trabalho](workflows.md#actions).
 
-#### Send Message Task
+#### Enviar Mensagem de Tarefa
 
-Sends email message to specific recipient.
+Envia mensagem por email para um receptor específico.
 
-#### User Task
+#### Tarefa de Usuário
 
-Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
+Providencia uma habilidade flexível de interação de usuário. Ela para a execução até que o usuário (explicitamente especificado ou por regra de designação) conclua a tarefa. O registro da Tarefa do Processo do Usuário será criado no sistema. Por padrão, existem três tipos de ações: Aprovar, Rever e Concluir.
 
-* Approve type requires the user to chose between 'Approved' and 'Declined'.
-* Review type gives only one option: 'Reviewed'.
-* Accomplish type has two options: 'Completed' and 'Failed'.
+* As do tipo Aprovar exige que o usuário escolha entre 'Aprovada' ou 'Recusada'.
+* As do tipo Revisar somente dão uma opção: 'Revisado'.
+* As do tipo Concluir possuem duas opções: 'Completada' e 'Falhada'.
 
 
-The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
+O usuário designado a criar o registro da Tarefa do Processo do Usuário receberá uma notificação dentro do aplicativo. O administrador pode também ativar notificações por email.
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+Usuários podem também adicionar Tarefas do Usuário do Processo como pequenas informações em seu painel de controle para ver tarefas do usuário do processo atual deles.
 
-It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
+É possível ler a resolução da tarefa de usuário passada dentro de uma entrada divergente ou eventos condicionais, fazendo ramificação no fluxo do processo.
 
-#### Script Task
+#### Tarefa de Script
 
-Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available within the process.
+Executa o script na linguagem [espo-fórmula](formula.md) Todas as variáveis definidas (`$variableName`) serão guardadas e estarão disponíveis dentro do processo.
 
-### Flows
+### Fluxos
 
-#### Sequence Flow
+#### Sequência de Fluxos
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+Representadas como uma flecha sólida. Indica a ordem em que os elementos do processo serão executados.
 
-## Conditions
+## Condições
 
-Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
+Entradas de eventos condicionais, exclusivas e inclusivas divergentes, possuem condições que determinam o fluxo do processo.
 
-Through UI there is an ability to check conditions for the following records:
+Através da UI há uma habilidade de verificar condições para os seguintes registros:
 
-* Target record;
-* Records related to the target through many-to-one and children-to-parent relationships;
-* Records created by the process via tasks;
-* User task records, which allows checking the resolution.
+* Registro Alvo;
+* Registros relacionados ao alvo através de relacionamentos muitos-para-um e filho-para-pai;
+* Registros criados pelos processos através de tarefas;
+* Registros de tarefas de usuários, que permitem a verificação da resolução.
 
-It's also possible to define conditions in [Espo-formula](formula.md) language.
+É possível também definir condições na linguagem [Espo-fórmula](formula.md).
 
-Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
+Condições na ferramenta BPM são as mesmas como na característica Fluxo de Trabalho. Veja mais detalhes sobre isso em [condições dos fluxos de trabalhos](workflows.md#conditions).
 
-## Examples
+## Exemplos
 
-### Example 1
+### Exemplo 1
 
-![Example 1](../_static/images/administration/bpm/example-1.png)
+![Exemplo 1](../_static/images/administration/bpm/example-1.png)
 
-### Example 2
+### Exemplo 2
 
-![Example 2](../_static/images/administration/bpm/example-2.png)
+![Exemplo 2](../_static/images/administration/bpm/example-2.png)
 
-### Example 3
+### Exemplo 3
 
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![Exemplo 3](../_static/images/administration/bpm/example-3.png)
