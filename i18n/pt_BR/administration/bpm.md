@@ -147,7 +147,7 @@ Tarefas podem executar as ações seguintes:
 * Fazer Seguido - faz um usuário específico seguir o registro alvo, o registro do processo ou qualquer registro criado pelo processo;
 * Executar Ação de Serviço - executa ações de serviços personalizados implementados por desenvolvedores.
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+Ações disponíveis para tarefas são quase as mesmas como na característica Fluxo de Trabalho. Veja mais detalhes sobre [ações de fluxo de trabalho](workflows.md#actions).
 
 #### Enviar Mensagem de Tarefa
 
@@ -164,7 +164,7 @@ Providencia uma habilidade flexível de interação de usuário. Ela para a exec
 
 O usuário designado a criar o registro da Tarefa do Processo do Usuário receberá uma notificação dentro do aplicativo. O administrador pode também ativar notificações por email.
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+Usuários podem também adicionar Tarefas do Usuário do Processo como pequenas informações em seu painel de controle para ver tarefas do usuário do processo atual deles.
 
 É possível ler a resolução da tarefa de usuário passada dentro de uma entrada divergente ou eventos condicionais, fazendo ramificação no fluxo do processo.
 
@@ -176,11 +176,11 @@ Executa o script na linguagem [espo-fórmula](formula.md) Todas as variáveis de
 
 #### Sequência de Fluxos
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+Representadas como uma flexa sólida. Indica a ordem em que os elementos do processo serão executados.
 
 ## Condições
 
-Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
+Entradas de eventos condicionais, exclusivas e inclusivas divergentes, possuem condições que determinam o fluxo do processo.
 
 Através da UI há uma habilidade de verificar condições para os seguintes registros:
 
