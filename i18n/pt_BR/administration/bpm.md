@@ -139,7 +139,7 @@ Tarefas podem executar as ações seguintes:
 * Atualizar Registro Alvo;
 * Atualizar Registro Relacionado - atualiza o registro ou registros relacionados ao registro alvo;
 * Atualizar Registro Criado - atualiza um campo específico de qualquer registro criado no processo atual;
-* Atualizar Processo de Registro - pode ser usado para designar o processo a um usário ou time específico;
+* Atualizar Processo de Registro - pode ser usado para designar o processo a um usuário ou time específico;
 * Ligar a Outro Registro - liga o registro alvo com um registro específico;
 * Romper Ligação de Outro Registro - rompe a ligação do registro alvo do registro especificado;
 * Aplicar Regra de Designação - designa o registro alvo, o registro do processo ou qualquer registro criado pelo processo de acordo com a regra específica;
@@ -155,7 +155,7 @@ Envia mensagem por email para um receptor específico.
 
 #### Tarefa de Usuário
 
-Providencia uma habilidade flexível de interação de usuário. Ela para a execução até que o usuário (explicitamente especificado ou por regra de designação) conclua a tarefa. O registro da Tarefa do Processo do Usuário será criada no sistema. Por padrão, existem três tipos de ações: Aprovar, Rever e Concluir.
+Providencia uma habilidade flexível de interação de usuário. Ela para a execução até que o usuário (explicitamente especificado ou por regra de designação) conclua a tarefa. O registro da Tarefa do Processo do Usuário será criado no sistema. Por padrão, existem três tipos de ações: Aprovar, Rever e Concluir.
 
 * As do tipo Aprovar exige que o usuário escolha entre 'Aprovada' ou 'Recusada'.
 * As do tipo Revisar somente dão uma opção: 'Revisado'.
@@ -176,7 +176,7 @@ Executa o script na linguagem [espo-fórmula](formula.md) Todas as variáveis de
 
 #### Sequência de Fluxos
 
-Representadas como uma flexa sólida. Indica a ordem em que os elementos do processo serão executados.
+Representadas como uma flecha sólida. Indica a ordem em que os elementos do processo serão executados.
 
 ## Condições
 
