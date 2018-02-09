@@ -1,11 +1,11 @@
 # Gerenciador de Entidades
 
-O Gerenciador de Entidades está disponível através do panel 'Administração'. Ele fornece uma capacidade altamente personalizar sua instância de EspoCRM. Você é capaz de fazer o seguinte:
+O Gerenciador de Entidades está disponível através do painel 'Administração'. Ele fornece uma capacidade altamente personalizar sua instância de EspoCRM. Você é capaz de fazer o seguinte:
 
 * Adicionar novos tipos de entidades.
 * Personalizar tipos de entidades existentes: mudas rótulos, ordem padrão visto como lista, habilitar ou desabilitar transmissão.
 * Configurar campos: adicionar novo, personalizar os existentes.
-* Configurar relacionamentos: adicionar novo, mudar rótolos dos existentes.
+* Configurar relacionamentos: adicionar novo, mudar rótulos dos existentes.
 
 ## Criando novas entidades
 
@@ -36,7 +36,7 @@ Ao clicar no link 'Campos' você será direcionado para uma página separada. L�
 
 * Endereço - endereço com rua, cidade, estado, código postal e país;
 * Arranjo - lista de valores, com a capacidade de selecionar valores múltiplos (não é uma boa opção se você precisa pesquisar através desse campo); os usuários podem adicionar seus próprios valores se as opções não foram especificadas.
-* Anexar Múltiplo - anexagem de vários arquivos;
+* Anexar Múltiplo - anexar vários arquivos;
 * Auto-incremento - lê o número gerado;
 * Booleano - caixa para marcar, verdadeiro ou falso;
 * Moeda - para valores monetários;
@@ -46,7 +46,7 @@ Ao clicar no link 'Campos' você será direcionado para uma página separada. L�
 * Arquivo - carregar um arquivo;
 * Decimal - número com casas decimais;
 * Externo - um campo de uma entidade relacionada;
-* Imagem - carregar um arquivo de imagem com pré-vizualização;
+* Imagem - carregar um arquivo de imagem com pré-visualização;
 * Inteiro - número inteiro;
 * Número - número em uma sequência de caracteres que se auto-incrementa, com um possível prefixo e um tamanho específico;
 * Multi-enum - lista de valores, com a capacidade de selecionar valores múltiplos (não é uma boa opção se você necessita pesquisar nesse campo), similar ao Arranjo mas melhor.
@@ -57,8 +57,8 @@ Ao clicar no link 'Campos' você será direcionado para uma página separada. L�
 
 Parâmetros:
 * Requeridos - se o preenchimento do campo é obrigatório.
-* Valor Padrão - Valor do campo difinido através da criação de um novo registro.
-* Auditado - atualiações do campo serão registradas na Transmissão
+* Valor Padrão - Valor do campo definido através da criação de um novo registro.
+* Auditado - atualizações do campo serão registradas na Transmissão
 
 **Nota**: Após você ter adicionar um novo campo, você precisa colocar esse campo em [layouts](layout-manager.md) (Administração > Gerenciador de Layout).
 
@@ -79,5 +79,5 @@ Você pode criar novos relacionamentos entre ambos fora-da-caixa ou entidades pe
 
 O parâmetro 'Ligar Vários Campos' implica que o campo do tipo 'linkMultiple' será criado junto ao relacionamento. Você pode colocar tal campo no layout. É conveniente para rápida escolha de registros relacionados. Não é uma boa opção se seu relacionamento é intencionado para ter muitos registros ligados, que pode causar lentidão no carregamento de detalhes na tela de visualização.
 
-Se o parâmetro 'Auditado' está marcado, então as atualizações dos relacionamento serão registradas na Transmissão.
+Se o parâmetro 'Auditado' está marcado, então as atualizações dos relacionamentos serão registradas na Transmissão.
 

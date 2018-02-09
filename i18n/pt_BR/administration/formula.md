@@ -1,7 +1,7 @@
 # Campos com Cálculos (Fórmulas)
 
 No gerenciador de entidades é possível definir um script (fórmula) para entidades de tipos específicos. Esse script será executado todas as vezes antes do registro ser salvo. 
-Ele garante a capacidade de atumaticamente definir campos específicos (atributos) com valores derivados dos cálculos.
+Ele garante a capacidade de automaticamente definir campos específicos (atributos) com valores derivados dos cálculos.
 
 Para editar uma fórmula siga Administração > Gerenciador de Entidades > Menu deslizante à direita na linha da entidade desejada > Fórmula.
 
@@ -12,7 +12,7 @@ Você também pode precisar definir campos, que são deveriam ser calculados, So
 
 As fórmulas em EspoCRM é escrita em uma única linguagem designada especificamente para essa característica.
 
-Há operadores, atributos de funções e valores que podem ser usados nas fórmulas. Expressões separadas devem ser delimitadas por caracter ';'.
+Há operadores, atributos de funções e valores que podem ser usados nas fórmulas. Expressões separadas devem ser delimitadas por caractere ';'.
 
 ### Operadores
 
