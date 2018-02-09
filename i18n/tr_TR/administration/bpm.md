@@ -1,208 +1,213 @@
-# Business Process Management
+# İş Süreçleri Yönetimi
 
-Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+İş Süreçleri Yönetimi (BPM) aracı, EspoCRM'deki iş süreçlerini modelleme ve otomatikleştirme imkanı sağlar. BPMN 2.0 standardında açıklanan iş süreçlerini yürüten bir motordur. BPM aracı, [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) uzantısında bulunur.
 
-![BPM example](../_static/images/administration/bpm/bpm-1.png)
+![BPM örneği](../_static/images/administration/bpm/bpm-1.png)
 
-### Difference from Workflows tool
+### İş Akışı araçlarının farkı
 
-Workflows tool is intended for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
+İş akışı aracı, akışın grafiksel olarak görüntülenmesine gerek olmadığı zaman, ardışık akış öğeleri olmaksızın basit işletme kurallarının otomasyonu için tasarlanmıştır.
 
-BPM tool is intended for more complex business flows, where there can be diverging and converging flows, execution delays, user interactions. A flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
+BPM aracı, birbirinden uzaklaşan ve yaklaşan akışlar, uygulama gecikmeleri ve kullanıcı etkileşimleri gibi daha karmaşık iş akışları için tasarlanmıştır. Bir akış şeması görünümü, iş süreçlerini bir insan için daha anlaşılır kılmakta, bir günlük işlemin nasıl yapıldığının görülmesini sağlamaktadır.
 
-## Process Flowcharts
+## İşlem Akış Şemaları
 
-The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
+İşlem akış çizelgelerine bağlantısı, yönetim panelinden edinilebilir.Gezinme panelinde bir sekme da olarak eklenebilir.
 
-Flowcharts are intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
+Akış çizelgeleri, iş süreçlerin modellemesi için tasarlanmıştır.Yönetici akış şemalarını oluşturabilir ve düzenleyebilir. Normal kullanıcılar yalnızca akış çizelgelerini görüntüleyebilirler.
 
-Every flowchart has its specific entity type (Target Type field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
+Her akış şemasının sipesifik bir varlık türü (Hedef Türü alanı) vardır. Akış çizelgesi gelecek işlem örneklerinin yürütülmesini belirtir. Bu, akış elemanları ve elemanlar arasındaki bağlantıları içerir.
 
-If process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
+İşlem akış şeması denetlenmemiş 'Etkin mi?' Alana sahipse süreç örneklerini başlatmaz.
 
-To show details and parameters of a certain flowchart element you need to click on it. In edit mode you will be able to edit parameters.
+Belli bir akış şeması öğesinin ayrıntılarını ve parametrelerini görmek için üzerini tıklamanız gerekir.Düzenleme modunda parametreleri düzenleyebileceksiniz.
 
-## Processes
+## İşlemler
 
-Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
+İşlemler yönetim panelinde mevcuttr. Bağlantı, gezinme panelinde bir sekme olarak da eklenebilir.
 
-Process represents business process instance. When it's initiated it gets the status 'Started'. When process is finished it gets the status 'Ended'. The process can also be stopped manually by a user who has an access to edit the process. If it's stopped manually it gets status the 'Stopped'.
+İşlem, iş süreci örneğini temsil eder. Başlatıldığında 'Başlamış' durumuna gelir. İşlem tamamlandığında 'Sona Erdi' durumu alır. Süreç, işlemi düzenlemeye erişimi olan bir kullanıcı tarafından da manuel olarak durdurulabilir. El ile durdurulursa durum 'Durduruldu' durumuna gelir.
 
-The process is executed according the flowchart. Flowchart of process can't be changed after process is started.
+İşlem akış şemasına göre gerçekleştirilir. İşlem başladıktan sonra akış şeması değiştirilemez.
 
-The process obligatorily is related to single target record.
+Süreç tek bir hedefe kayıt ile ilgilidir.
 
-Processes can be started automatically (upon specific conditions or by scheduling) or manually (where there is at least one Start Event in the flowchart). To start process manually the user needs to click 'Start Process' button on the list view of processes.
+Süreçler otomatik olarak (belirli koşullar veya çizelgeleme ile) veya manuel olarak (akış şemasında en az bir Başlama Olayı olduğunda) başlatılabilir. İşlemin manuel olarak başlatılması için, kullanıcının süreçlerin listelenmiş görünümünde 'İşlemi Başlat' butonuna tıklaması gerekir.
 
-## Flowchart Elements
+## Akış Şeması Öğeleri
 
-### Events
+### Etkinlikler
 
-Events are displayed on a flowchart as circles.
+Olaylar akış şemasında daireler şeklinde gösterilir.
 
-#### Start Event
+#### Etkinliği Başlat
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click  'Start Process' button on the list view of processes.
+Parametre yok. Bu sürecin başlangıç noktasıdır. Etkinliğin başlatılması, süreç oluşturma erişimine sahip bir kullanıcı tarafından manuel olarak başlatılabilir. Kullanıcı, işlemlerin listelenmiş görünümünde 'İşlemi Başlat' butonuna tıklamalıdır.
 
-#### Conditional Start Event
+#### Şartlı Başlama Olayı
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of trigger: 'After record created', 'After record saved'.
+Sürecin başlangıç noktası. Belirtilen koşullar sağlandığında otomatik olarak tetiklenmesi gerekiyor. İki tür tetikleyici vardır: 'Kayıt oluşturulduktan sonra' ve 'Kaydedildikten sonra'.
 
-#### Timer Start Event
+#### Zamanlayıcı Başlatma Olayı
 
-A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
+İşlemin başlama noktası. Süreçleri zaman çizelgesi ile başlatır. İşlem başlatma ve crontab gösteriminde zamanlama için kayıtları döndüren listeleme raporunun belirtilmesi gerekir.
 
-#### Conditional Intermediate Event
+#### Koşullu Ara Durum
 
-This event stops the flow until specified criteria is met.
+Bu olay, belirtilen ölçütler yerine getirilene kadar akışı durdurur.
 
-#### Timer Intermediate Event
+#### Zamanlayıcı Ara Olayı
 
-This event stops the flow and waits as long as is specified by event's parameters.
+Bu olay akışını durdurur ve olayın parametreleri tarafından belirtildiği sürece bekler.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+Daha karmaşık zamanlayıcı ayarları için [formula] (formula.md) kullanabilirsiniz. Formül komut dosyaları, Tarih-Saat değerlerini döndürmelidir(UTC saat dilimi içinde). Zamanı geldiğinde akış bir sonraki elemana ilerletilecektir.
 
-By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
+Tarih-saate en yakın formül fonksiyonunu kullanarak, zamanlayıcıyı ilerideki belirli bir zamana ayarlamak mümkündür, örn. bir sonraki iş gününün başlangıcı şeklinde.  
 
-#### End Event
+#### Etkinlik Sonu
 
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
+Akımı sonlandırır. Paralel olarak çalışan akışları sona erdirmez. Akış son olaya ulaştığında ve paralel çalışan hiçbir şey olmadığında işlem son bulur.
 
-#### Terminate End Event
+#### Olayı sona erdirmek
 
-Ends all flows. Process is subsequently ended.
+Tüm akışları bitirir. İşlem daha sonra bitirilir.
 
-### Gateways
+### Ağ geçitleri
 
-Gateways are displayed as diamonds.
+Ağ geçitleri elmas olarak görüntülenir.
 
-#### Exclusive Gateway
+#### Özel Ağ Geçidi
 
-Can diverge or converge flows.
+Akışları ayırabilir veya bir araya getirebilir.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+Sapma durumunda, belirtilen kriterlere göre seçilecek tek bir akış (yol) tanımlanır. İlk karşılaşılan koşul akışı belirler, sonraki koşullar atlanır. Akışı varsayılan olarak belirtme olanağı vardır. Varsayılan akış, herhangi bir karşılanmış koşulları yoksa seçilir.
+Varsayılan akış, eğik çizgi işareti ile işaretlenmiştir.
 
-In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+Yakınsama durumunda, akış sadece giden elemana yönlendirilir. Akış geldiğinde bloke olmaz, paralel akışlar tek bir akışla birleştirilmez.
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
-#### Inclusive Gateway
+![özel farklı ağ geçidi](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-Can diverge or converge flows.
+![yakınsak ağ geçidi ](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+#### Kapsamlı Ağ Geçidi
 
-If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
+Akışı ayrıştırabilir veya bir araya getirebilir.
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+Ayrılması durumunda, her bir akışın ölçütlerinin başarısına bağlı olarak bir veya birden çok paralel akışa (yollar) yönlendirilebilir.
+Varsayılan yol, herhangi bir karşılanma koşulları yoksa seçilir. Varsayılan akış, eğik çizgi işareti ile işaretlenmiştir.
 
-Note: Diverging and converging gateways must be balanced.
+Genişleyen bir kapsayıcı ağ geçidi tarafından üretilen paralel akışları birleştirmek gerekiyorsa, kapsayıcı bir ağ geçidi kullanmanız gerekir. Gelen akışların hepsini bekleyecek ve giden öğeye devam edecektir.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+![kapsayıcı ağ geçidi](../_static/images/administration/bpm/gateway-inclusive.png)
 
-#### Parallel Gateway
+Not: Ayrılan ve birbirine yaklaşan ağ geçitleri dengelenmelidir.
 
-Can diverge or converge flows.
+Not: Paralel akışlardan bir tanesi herhangi bir nedenden dolayı kesilirse, ayrılan ağ geçidi hiçbir zaman işlenmeyecektir. İşlem bloke edilecektir. Böyle bir durumu getirebilecek bir akış şeması tasarımından kaçınınız.
 
-In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
+#### Paralel Ağ Geçidi
 
-In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
+Akışı ayrıştırabilir veya bir araya getirebilir.
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+Ayrışması durumunda akış birden fazla paralel akışa bölünür. Bu ağ geçidi için hiçbir parametre mevcut değil.
 
-Note: Diverging and converging gateways must be balanced.
+Yakınsama durumunda tüm gelen akışlar gelene kadar beklenir ve bir sonraki giden elemana geçilir.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+![paralel ağ geçidi](../_static/images/administration/bpm/gateway-parallel.png)
 
-#### Event Based Gateway
+Not: Ayrışan ve birbirine yaklaşan ağ geçitleri dengelenmelidir.
 
-Can only diverge flows.
+Not: Paralel akışlardan bir tanesi herhangi bir nedenden dolayı kesilirse, farklı ağ geçidi hiçbir zaman işlenmeyecektir. Böyle bir durumu gerçekleştirebilecek bir akış şeması tasarımından kaçınınız.
 
-It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
+#### Etkinlik Tabanlı Ağ geçidi
 
-Only intermediate events can be on the other end of outgoing sequence flows.
+Akışı yalnızca birbirinden uzaklaştırabilir.
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+Giden olaylardan herhangi biri tetiklenene kadar akışı durdurur. Başlatılan olay tek akışı belirler.Diğer giden olaylar reddedilir.
 
-### Activities
+Giden dizi akışlarının diğer ucunda sadece orta dereceli olaylar olabilir.
 
-Activities are displayed as rounded rectangles.
 
-#### Task
+![etkinlik tabanlı ağ geçidi](../_static/images/administration/bpm/gateway-event-based.png)
 
-Task can execute following the actions:
+### Aktiviteler
 
-* Create Record - creates new record of any entity type;
-* Create Related Record - creates new record related to the target record;
-* Update Target Record;
-* Update Related Record - updates the record or records related to the target record;
-* Update Created Record - updates specific field of any record created in the current process;
-* Update Process Record - can be used to assign the process to specific user or team;
-* Link to Another Record - links the target record with a specified record;
-* Unlink from Another Record - unlinks the target record from the specified record;
-* Apply Assignment Rule - assigns the target record, the process record or any record created by the process according to the specific rule;
-* Create Notification - creates in-app notification for specific users;
-* Make Followed - makes specific users follow the target record, the process record or any record created by the process;
-* Run Service Action - runs custom service actions implemented by developers.
+Olaylar dönen dikdörtgenler halinde gösterilir.
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+#### Görev
 
-#### Send Message Task
+Görev, işlemlerin ardından gerçekleştirebilir:
 
-Sends email message to specific recipient.
+* Kayıt Oluştur - Herhangi bir varlık türünün yeni kaydını oluşturur;
+* İlişkili Kayıt Yarat - hedef kayıtla ilgili yeni kayıt oluşturur;
+* Hedef Kaydı Güncelle;
+* İligili Kaydı Güncelleme - kayıtları veya hedef kaydıyla ilgili kayıtları günceller;
+* Oluşturulan Kaydı Güncelle - geçerli işlemlerle oluşturulan herhangi bir kaydın belirli alanını günceller;
+* İşlem Kaydı Güncelleme - işlemi belirli bir kullanıcıya veya ekibe atamak için kullanılabilir;
+* Diğer Kayıt Bağlantısı - hedef kaydı belirlenmiş bir kayıtla birleştirir;
+* Diğer Kayıttan Bağlantısını Kaldırın - hedef kaydın belirtilen kayıttan kaldırılmasını sağlayın;
+* Atama Kuralını Uygula - Hedef kaydı, süreç kaydını veya proses tarafından oluşturulan herhangi bir kaydı belirli kurallara göre atar;
+* Bildirim Oluştur - belirli kullanıcılar için uygulama içi bildirim oluşturur;
+* Takip Etmek - belirli kullanıcıların hedef kaydı, işlem kaydını veya süreç tarafından oluşturulan herhangi bir kaydı izlemesini sağlar;
+* Hizmet Eylemini Çalıştır - geliştiriciler tarafından uygulanan özel hizmet eylemlerini çalıştırır.
 
-#### User Task
+Görev için uygulanabilir işlemler, iş Akışı özelliğinde olduğu gibi hemen hemen aynıdır. [Iş akışının eylemleri] hakkında daha fazla ayrıntıya bakmak için(workflows.md#actions).
 
-Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
+#### Mesaj Gönderme Görevi
 
-* Approve type requires the user to chose between 'Approved' and 'Declined'.
-* Review type gives only one option: 'Reviewed'.
-* Accomplish type has two options: 'Completed' and 'Failed'.
+Belirli bir alıcıya e-posta mesajı gönderir.
 
+#### Kullanıların Görevi
 
-The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
+Kullanıcı etkileşimi için esnek bir yetenek sağlar. Kullanıcı (açıkça belirtilmiş veya atama kuralı tarafından) görevi tamamlayana kadar yürütmeyi durdurur. İşlem Kullanıcılı Görevi kaydı sistemde yaratılacaktır. Varsayılan olarak üç eylem türü vardır: Onayla, Gözden Geçir, Başar.
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+* Onay türü, kullanıcının "Onaylandı" ve "Reddedildi" seçeneklerinden birini seçmesini gerektirir.
+* İnceleme türü yalnızca bir seçenek sunar: 'İncelendi'.
+* Başarılı tipte iki seçenek vardır: 'Tamamlandı' ve 'Başarısız'.
 
-It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
 
-#### Script Task
+Oluşturulan İşlem Kullanıcılı Görevi kaydına atanan kullanıcı, uygulama içi bildirim alacaktır. Yönetici ayrıca e-posta bildirimlerini de etkinleştirebilir.
 
-Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available within the process.
+Kullanıcılar gerçek işlem kullanıcılı görevlerini görmek için gösterge tablolarına İşlem Kullanıcılı görevlerin dashletini de ekleyebilirler.
 
-### Flows
+Geçen ağ geçitlerinde veya koşullu olaylarda geçen kullanıcı görevinin çözünürlüğünü okumak mümkündür, böylece süreç akışında dallanma meydana gelir.
 
-#### Sequence Flow
+#### Komut Dosyası Görevi
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+Komut dosyasını [espo-formula] (formula.md) dili ile çalıştırır. Ayarlanan tüm değişkenler (`$ variableName`) süreç içinde saklanır ve kullanılabilirdir.
 
-## Conditions
+### Akımlar
 
-Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
+#### Dizi Akışı
 
-Through UI there is an ability to check conditions for the following records:
+Katı bir ok şeklinde temsil edilir. İşlem öğelerinin yürütülme sırasını belirtir.
 
-* Target record;
-* Records related to the target through many-to-one and children-to-parent relationships;
-* Records created by the process via tasks;
-* User task records, which allows checking the resolution.
+## Koşullar
 
-It's also possible to define conditions in [Espo-formula](formula.md) language.
+Şartlı olaylar, özel ve kapsayıcı ayrılan ağ geçitleri, işlemin akışını belirleyen koşullara sahiptir.
 
-Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
+UI aracılığıyla aşağıdaki kayıtların koşullarını kontrol etme olanağı vardır:
 
-## Examples
+* Kayıtlı hedef;
+* Bire bir ile çocuk-ebeveyn ilişkileri yoluyla hedefle ilgili kayıtlar;
+* İşlem tarafından görevler vasıtasıyla yaratılan kayıtlar;
+* Çözünürlüğün kontrol edilmesini sağlayan kullanıcı görev kayıtları.
 
-### Example 1
+[Espo-formula] (formula.md) dilinde koşulları tanımlamak da mümkündür.
 
-![Example 1](../_static/images/administration/bpm/example-1.png)
+BPM aracındaki koşullar İş Akışı özelliğindeki koşullarla aynıdır. [Iş akışı koşulları] hakkında daha fazla ayrıntıya buradan bakın(workflows.md#conditions).
 
-### Example 2
+## Örnekler
 
-![Example 2](../_static/images/administration/bpm/example-2.png)
+### Örnek 1
 
-### Example 3
+![Örnek 1](../_static/images/administration/bpm/example-1.png)
 
-![Example 3](../_static/images/administration/bpm/example-3.png)
+### Örnek 2
+
+![Örnek 2](../_static/images/administration/bpm/example-2.png)
+
+### Örnek 3
+
+![Örnek 3](../_static/images/administration/bpm/example-3.png)
