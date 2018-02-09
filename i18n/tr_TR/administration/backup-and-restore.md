@@ -1,99 +1,99 @@
-# Backup and Restore
+# Yedekleme ve Geri Yükleme
 
-## How to backup EspoCRM manually
+## Nasıl EspoCRM'yi manuel olarak yedeklemerim? 
 
-EspoCRM consists of files and database data. All these data are needed in order to create a full backup of EspoCRM. Here are instructions on how to do it on Ubuntu server with MySQL.
+EspoCRM, dosyalar ve veritabanı verilerini içerir.Tüm bu veriler, EspoCRM'nin tam bir yedek kopyasını oluşturmak için gereklidir. Burada Ubuntu sunucusunda MySQL ile nasıl yapılacağına dair talimatlar var.
 
-### Step 1. Backup files
+### 1. Adım Dosyaları Yedekleme
 
-Create an archive of the directory content of installed EspoCRM. For Ubuntu the default path is `/var/www/html`. You may use this command:
+Yüklü EspoCRM'nin dizin içeriğinin bir arşivini oluşturun. Ubuntu için varsayılan yol `/var/www/html`'dir. Bu komutu kullanabilirsiniz.
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
 ```
 
-### Step 2. Backup database
+### 2. Adım Veritabanı Yedekleme
 
-To backup all your data, you have to know the database name and access credentials. You can find the database name in the configuration file `/ESPOCRM_DIRECTORY/data/config.php` under section `database`. You can use this command to backup your database:
+Tüm verilerinizi yedeklemek için, veritabanı adını ve erişim kimlik bilgilerini bilmeniz gerekmektedir. Veritabanı adını `database` bölümündeki  `/ESPOCRM_DIRECTORY/data/config.php` yapılandırma dosyasında bulabilirsiniz. Veritabanınızı yedeklemek için bu komutu kullanabilirsiniz:
 
 ```bash
 mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
 ```
 
-### Step 3. Copy the backup
+### 3. Adım Yedeklemeyi Kopyalamak 
 
-That's all. Now, you have to copy the created backup to a safe place.
+Hepsi bu kadar. Şimdi oluşturulan yedeklemeyi güvenli bir yere kopyalamanız gerekiyor.
 
+## EspoCRM bir script ile nasıl yedeklerim?
 
-## How to backup EspoCRM with a script
+Gerekli tüm verileri yedeklemek için bir komut dizini kullanabilirsiniz. SSH ile giriş yapın ve komutları çalıştırın (Ubuntu sunucusunda test edilmiştir).
 
-You can use a script to backup all needed data. Login via SSH and run the commands (tested on Ubuntu server).
-
-### Download a script
+### Komut Dosyasını İndir
 
 ```bash
 wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scripts/backup.sh
 ```
 
-### Run the script
+### Komut Dosyasını Çalıştır
 
 ```bash
 bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
 ```
-where
- * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory.
- * `BACKUP_PATH` is a path to backup directory.
+nerede:
+ * `PATH_TO_ESPOCRM` kurulu EspoCRM dizininin bir yoludur.
+ * `BACKUP_PATH` yedekleme dizininin bir yoludur.
 
-For Ubuntu server it is:
+Ubuntu sunucusu için:
 
 ```bash
 bash ./backup.sh /var/www/html /opt/backups
 ```
 
-Note: If your MySQL user doesn't have needed rights to dump your database, you will be promted to enter credentials of another MySQL user.
+Not: MySQL kullanıcınız veritabanınızı boşaltmak için gerekli haklara sahip değilse, başka bir MySQL kullanıcısının kimlik bilgilerini girmeniz istenecektir.
 
-After successful creation, you will get a path to the created backup.
+Başarılı oluşturmadan sonra, oluşturulan yedekleme yolunu edininiz.
 
-## Restore EspoCRM from a backup
+## EspoCRM'yi yedekten geri yükleme
 
-You can restore EspoCRM from the backup created as described above.
+EspoCRM'yi, yukarıda açıklandığı gibi oluşturulan yedeklemeden geri yükleyebilirsiniz.
 
-### Step 1. Unarchive backup files
+### 1. Adım Yedek Dosyalarını arşivden çıkartma
 
-To unarchive files, you can use Archive Manager or run the below command. Files need to be placed in the web-server directory.
+Dosyaları arşivden çıkartman için Arşiv Yöneticisi'ni kullanabilir veya aşağıdaki komutu çalıştırabilirsiniz. Dosyaların Web sunucusu dizinine yerleştirilmesi gerekir.
 
 ```bash
 tar -xzf "files.tar.gz" -C /var/www/html
 ```
-where:
- * `/var/www/html` is a web-server directory.
+nerede:
+ * `/var/www/html` bir web sunucusu yoludur.
 
-### Step 2. Set required permissions
+### 2. Adım Gerekli İzinleri Ayarlamak
 
-The files should be owned by a web-server user and have correct permissions. Please set required permissions by following this instruction: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+Dosyaların bir web sunucusu kullanıcısına ait olması ve doğru izinlere sahip olması gerekir. Lütfen şu talimatları izleyerek gerekli izinleri ayarlayın: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
 
-### Step 3. Import database dump
+### 3. Adım Veritabanı Dökümünü Almak
 
-Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config.php`. To import your database from the dump, run the command below in a terminal:
+Veritabanı dökümü aynı kullanıcı kimlik bilgileriyle veritabanına alınmalıdır, aksi halde düzeltme yapılandırma `ESPOCRM_DIRECTORY/data/config.php` dosyasında yapılmalıdır. Veritabanınızın dökümlerini almak için, bir terminalde aşağıdaki komutu çalıştırın:
 
 ```bash
 mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
 ```
 
-### Step 4. Check/configure crontab
+### 4. Adım Crontabı kontrol etmek/yapılandırmak
 
-Check if your crontab is configured properly. Run the command below and check if a path to EspoCRM is correct:
+Crontab'ınızın düzgün yapılandırıldığını kontrol ediniz. Aşağıdaki komutu çalıştırın ve EspoCRM'ye giden yolun doğru olup olmadığını kontrol edin:
 
 ```bash
 sudo crontab -l -u www-data
 ```
-where:
+nerede:
  * `www-data` is your web-server user.
 
-If you have to make any changes, use this command:
+Herhangi bir değişiklik yapmanız gerekiyorsa şu komutu kullanın:
 
 ```bash
 sudo crontab -l -u www-data
 ```
 
-More details about configuring crontab for EspoCRM is described here [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+Crontab'ı EspoCRM için yapılandırmayla ilgili daha fazla ayrıntı burada açıklanmaktadır[www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+
