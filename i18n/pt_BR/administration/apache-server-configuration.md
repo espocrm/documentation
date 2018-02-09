@@ -1,6 +1,6 @@
 # Configuração do servidor Apache para EspoCRM
 
-Essas instruções são suplementares às orientações [Configuração do Servidor](server-configuration.md). Por favor, note que todas as configuraçãos listadas aqui são feitas em servidor Ubuntu.
+Essas instruções são suplementares às orientações [Configuração do Servidor](server-configuration.md). Por favor, note que todas as configurações listadas aqui são feitas em servidor Ubuntu.
 
 ## Requerimentos de PHP
 

@@ -1,6 +1,6 @@
 # Business Process Management
 
-A ferramenta Business Process Management (BPM) dá a habilidade de modelar e automatizar os processos de negócios eno EspoCRM. É um motor que executa processos de negócios descrito no BPMN 2.0 padrão. A ferramenta BPM está disponível na extenção [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+A ferramenta Business Process Management (BPM) dá a habilidade de modelar e automatizar os processos de negócios no EspoCRM. É um motor que executa processos de negócios descrito no BPMN 2.0 padrão. A ferramenta BPM está disponível na extensão [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
 ![BPM example](../_static/images/administration/bpm/bpm-1.png)
 
@@ -16,9 +16,9 @@ O link para os fluxogramas dos processos está disponível no painel de administ
 
 Fluxogramas são destinados para a modelagem de processos de negócios. Administradores podem criar e editar fluxogramas. Usuários comuns podem somente ver os fluxogramas.
 
-Cada fluxograma tem seu tipo de entidade específica (campo Target Type). O fluxograma determina a execução de instâncias de processos futuros. Ele consite de elementos do fluxograma e conexões entre elementos.
+Cada fluxograma tem seu tipo de entidade específica (campo Target Type). O fluxograma determina a execução de instâncias de processos futuros. Ele consiste de elementos do fluxograma e conexões entre elementos.
 
-Se os processos do fluxograma tem o campo 'Is Active' desmarcado, ele não iniciará as instâncias dos processos.
+Se os processos do fluxograma têm o campo 'Is Active' desmarcado, ele não iniciará as instâncias dos processos.
 
 Para mostrar detalhes e parâmetros de certo elemento do fluxograma, você precisa clicar nele. Em modo de edição você é capaz de editar parâmetros.
 
