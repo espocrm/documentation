@@ -14,7 +14,7 @@ Somente o administrador pode configurar Grupo de Contas de Email. Os Grupo de Co
 
 O campo 'times' determina a quais times serão atribuídos os emails que estão chegando. 
 
-Se o grupo de contas de email tem SMTP e está verificado como divididos, então um acesso será controlado por Papéis através da permissão do Grupo de Contas de Email. O campo 'times' será usado se o nível de permissão estiver difinido como 'time'.
+Se o grupo de contas de email tem SMTP e está verificado como divididos, então um acesso será controlado por Papéis através da permissão do Grupo de Contas de Email. O campo 'times' será usado se o nível de permissão estiver definido como 'time'.
 
 Existe uma habilidade de fazer o sistema enviar uma mensagem automática para emails recebidos.
 
