@@ -23,7 +23,7 @@ Untuk pengeditan yang lebih tepat, sebaiknya menggunakan mode Tampilan Kode.
 Anda dapat mencetak bidang catatan kutipan serta bidang catatan terkait dengan memanfaatkan placeholder di template Anda.
 
 Contoh:
-`{{accountName}}` – nama Akun,
+`{{accountName}}` – nama Akun
 
 `{{{billingAddressStreet}}}` – jalan,
 
