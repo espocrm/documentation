@@ -1,89 +1,91 @@
-# Reports
+# Raporlar
 
-Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Raporların özelliği [Gelişmiş Paket] (https://www.espocrm.com/extensions/advanced-pack/) adresinde mevcuttur.
 
-There are two types of reports: List and Grid.  
+İki tür rapor vardır: Listeli ve Izgaralı.  
 
-## List Reports
+## Liste Raporları
 
-List report results the list of records that meet the specified criteria.
+Rapor sonuçlarını, belirtilen kriterleri karşılayan kayıtların listesini yapınız.
 
-To create new list report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at List Report section.
+Yeni liste raporu oluşturmak için Raporlar sekmesini ve ardından Rapor Oluştur düğmesini tıklayınız. İstenilen Öğe Türü'nü seçiniz ve Liste Raporu bölümünde Oluştur düğmesini tıklayınız.
 
-At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column e.g. width and align.
+_Sütunlar_ alanında görüntülemek istediğiniz alanları seçin. Aşağıda, her sütunun görüntü parametrelerini belirtebilirsiniz; örneğin: genişlik ve hizalamak.
 
-Choose needed sorting at _List Order_ field. 
+_Liste komutu_ alanını sıralamak için gerekli olanını seçiniz. 
 
-At _Filters_ section you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
+_Filtreler_ bölümünde, raporunuzda hangi kayıtların listeleneceğini belirleyen ölçütleri belirtebilirsiniz. Buradaki mantıksal operatörlerin 'VEYA' ve 'VE' değerlerini kullanabilirsiniz.
 
-_Runtime Filters_ allow you to specify different filters before you run the report.
+_Çalışma zamanlı filtreler_, raporu çalıştırmadan önce farklı filtreler belirlemenize izin verir.
 
-You can __export__ list report results to excel and csv formats.
+Excel ve CSV formatlarının listelenmiş rapor sonuçlarını  __dışarıya aktarabilirsiniz__.
 
-## Grid Reports
+## Izgara Raporları
 
-Grid reports result summarized values grouped by specified fields. These reports can be displayed as a chart.
+Izgara raporları, belirtilen alanlarla gruplandırılmış, özetlenmiş değerleri verir. Bu raporlar bir grafik olarak görüntülenebilirler.
+
 
 ![Grid reports](../_static/images/user-guide/reports/grid.png)
 
-To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
+Yeni ızgara raporu oluşturmak için Raporlar sekmesine tıklayın ve ardından Rapor Oluştur butonuna tıklayınız. Gerekli Öğe Türü'nü seçin ve Izgara Raporu bölümünde Oluştur butonuna tıklayınız.
 
-At _Group By_ field pick one or two fields you want your report data be grouped by. It's possible to group by year, month, day for date fields. If you group by two fields your report will be considered as three-dimensional.
+_Grupla_ alanında, rapor verilerinizin gruplandırılmasını istediğiniz bir veya iki alanı seçiniz. Tarih alanlarına yıl, ay ve gün bazında gruplama yapmak mümkündür.Eğer iki alana da gruplarsanız, raporunuz üç boyutlu olarak kabul edilir.
 
-At _Columns_ field select one or more aggregate functions like COUNT, SUM (summation), MIN, MAX, AVG (average).
+_Sütunlar_ kısmında, COUNT, SUM (toplam), MIN, MAX, AVG (ortalama) gibi bir veya daha fazla toplama işlevini seçiniz.
 
-_Order by_ field defines how report data will be sorted.
+_Gruplama_ alanı rapor verilerinin nasıl sıralanacağını tanımlar.
 
-At _Filters_ section you can specify criteria that determines what records will be used in your report. You can use logical operators 'OR' and 'AND' here.
+_Filtreler_ bölümünde, raporunuzda hangi kayıtların kullanılacağını belirleyen ölçütleri belirtebilirsiniz. Buradaki mantıksal operatörlerin 'VEYA' ve 'VE' değerlerini kullanabilirsiniz.
 
-_Runtime Filters_ allows you to specify different filters before you run the report.
+_Çalışma zamanlı filtreler_, raporu çalıştırmadan önce farklı filtreler belirlemenize izin verir.
 
-Grid report allows displaying results in a chart form. There are following _chart types_: Bar (Horizontal), Bar (Vertical), Pie, Line.
+Izgara raporu, sonuçları grafik formunda görüntülemenize izin verir. Aşağıdaki  _grafik türleri_ ardından şunlardır:Bar (Yatay), Bar (Dikey), Pie, Çizgi.
 
-It's possible to __export__ grid report results to excel and csv formats.
+Excel ve CSV formatlarının listelenmiş rapor sonuçlarını  __dışarıya aktarabilirsiniz__.
 
-## Filters
+## Filtreler
 
-### Field filter
+### Alan Filtresi
 
-Simple to use type of filters. You can also pick fields of target entity as well as related entitites.
+Basit filtre türlerini kullanınız. Ayrıca, hedef varlığın alanlarını ve ilgili varlıkları da seçebilirsiniz.
 
-![Field filter](../_static/images/user-guide/reports/filter-field.png)
+![Alan filtresi](../_static/images/user-guide/reports/filter-field.png)
 
-### OR group
+### VEYA grubu
 
-OR means that at least one condition under the group must be met.
+VEYA, gruptaki en az bir koşulun yerine getirilmesi gerektiği anlamına gelir.
 
-![OR group](../_static/images/user-guide/reports/filter-or.png)
+![VEYA grubu](../_static/images/user-guide/reports/filter-or.png)
 
-### AND group
+### VE grubu
 
-AND means that all conditions under the group must be met.
+VE, gruptaki tüm koşulların yerine getirilmesi gerektiği anlamına gelir.
 
-### NOT group
+### DEĞİL grubu
 
-Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
+Belirtilen kriterlere uymayan kayıtları filtreleme olanağı sağlar. Örneğin. Kapalı Kazanılan veya Kapatılı Kaybedilmiş Durumularıyla fırsat bulamayan hesapları listeleme.
 
-![NOT group](../_static/images/user-guide/reports/filter-not.png)
+![DEĞİL grubu](../_static/images/user-guide/reports/filter-not.png)
 
-### Complex Expression
+### Karmaşık İfade
 
-For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
+Daha gelişmiş kullanım içindir. Belli bir veritabanı sütunu için işlevi uygulayabilir ve [formül] (../administration/formula.md) ifadesinin sonucuyla karşılaştırabilirsiniz.
 
-Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
 
-Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
+Not: Sadece basit bir dize değeri ile karşılaştırmanız gerekiyorsa ona, `'bazı dize'` tek tırnak işaretlerini koymalısınız.
 
-![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
+Not: Form kayıtları belirli kayıtlara uygulanmadığından varlık kaydı ile etkileşim kurmayı amaçlayan fonksiyonlar burada geçerli olmayacaktır.
 
-## Displaying on dashboard
+![Karmaşık İfade filtresi](../_static/images/user-guide/reports/filter-complex.png)
 
-You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
+## Gösterge tablosunda gösteriliyor
 
-## Email Sending
+Gösterge tablosundaki herhangi bir raporu görüntüleyebilirsiniz. Bunun için Report dashlet'ni eklemeniz ve ardından dashlet seçeneklerinden gerekli raporu seçmeniz gerekmektedir.
 
-It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
+## E-posta Gönderme
 
-## Syncing with Target Lists
+Belli zamana göre belirli kullanıcılara rapor sonuçlarını göndermek için sistemi düzenli olarak yapmak mümkündür. Bu, belirli raporlar için ayrı ayrı yapılandırılmalıdır.
 
-It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
+## Hedef Listelerle Senkronizasyon
+
+Liste raporlarının sonuçları ile senkronize edilmiş hedef listelerinin olması mümkündür. E-postalar yalnızca gönderim sırasındaki bazı ölçütleri karşılayan kişilere göndermek istediğinizde toplu e-posta için uygundur. Bu özellik, 'Raporlarla Senkronize Etme' panelindeki herhangi bir hedef listesinin ayrıntılı görünümünde bulunur.
