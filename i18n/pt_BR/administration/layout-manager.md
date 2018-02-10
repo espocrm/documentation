@@ -1,63 +1,63 @@
-# Layout Manager
+# Gerenciador de Layout
 
-Layout Manager is available in administration panel. Provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+O Gerenciador de Layout está disponível no painel de administração. Ele permite personalizar a aparência de detalhes, editar, listas de visualização assim como filtros de pesquisas e campos para formulário de atualizações em massa.
 
-## List
+## Listas
 
-The main layout for the list view. Defines columns and their parameters.
+O layout principal para a lista de visualização. Define as colunas e seus parâmetros.
 
 ![List](../_static/images/administration/layout-manager/list.png)
 
-Available parameters for columns are listed below.
+Os parâmetros disponíveis para colunas estão listadas abaixo.
 
-### Width (%)
+### Largura (%)
 
-Width of column in percent, empty means auto-width.
+A largura da coluna em percentagem, vazio significa largura automática.
 
 ### Link
 
-If checked then the field will be displayed as a link to the detail view of the record. Usually used for name fields.
+Se marcado, o campo será mostrado como um link para a visualização de detalhes dos registros. Normalmente usado para nomes dos campos.
 
-### Not Sortable
+### Não Organizável
 
-Disables an ability to sort the column.
+Desabilita a capacidade de organizar as colunas.
 
-### Align
+### Alinhamento
 
-Align the column to the left or to the right.
+Alinha a coluna à esquerda ou à direita.
 
-## Detail
+## Detalhes
 
-The main layout for the detail view and the edit view. Defines panels, rows and cells. Cells contain fields.
+O layout principal para a visualização de detalhes e editar visualização. Formata painéis, linhas e células. Células contêm campos.
 
-The row can contain two cells or one cell that is expanded to the full width of the row. To add the row with an expanded cell you need to add the new row and click on a minus sign on any cell.
+As linhas podem conter duas células ou uma células que está expandida à largura máxima da linha. Para adicionar linhas com uma célula expandida, você precisa adicionar a nova linha e clicar no sinal de menos em qualquer célula.
 
 ![Detail](../_static/images/administration/layout-manager/detail.png)
 
-## List (Small)
+## Lista (Pequena)
 
-The list layout for relationship panels. Also can be used in other places where it's reasonable to display lists in the narrow view.
+O layout de lista para painéis de relacionamentos. Também pode ser usado em outros locais onde é aceitável mostrar listas em uma visualização estreita.
 
-## Detail (Small)
+## Detalhes (Pequeno)
 
-The detail view for quick create, quick view and quick edit forms.
+A visualização de detalhes para criar rapidamente, ver rapidamente ou editar rapidamente os fomulários.
 
-## Search Filters
+## Filtros de Pesquisa
 
-The list of fields available in the list view to search by.
+A lista de campos disponíveis na visualização de lista para serem pesquisados.
 
-## Mass Update
+## Atualização em Massa
 
-The list of fields availabe in the Mass Update form.
+A lista de campos disponíveis no fomulário de Atualização em Massa.
 
-## Relationship Panels
+## Painéis de Relacionamento
 
-The list of relationship panels displayed on the detail view at the bottom. Panels can be re-ordered. It's possible to define the color of panel with the Style parameter.
+A lista de painéis de relacionamentos mostrada na visualização detalhada na parte inferior. Painéis podem ser reordenados. É possível definir as cores dos painéis com o parâmetro Estilo.
 
-## Side Panels
+## Painéis Laterais
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter.
+Painéis laterais para Detalhes, Editar, Detalhes Menor, Editar Menor. Dá a capacidade de esconde ou reordenar painéis em lista como: Atividades, Histórico, Tarefas e outros. Painéis podem ser coloridos pelo parâmetro Estilo.
 
-## Additional Layouts
+## Layouts Adicionais
 
-Some entity types contain additional layouts: Convert Lead, List for Account.
+Alguns tipos de entidades contém layouts adicionais: Converter Condução, Lista para Conta.
