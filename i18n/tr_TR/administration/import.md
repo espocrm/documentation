@@ -1,39 +1,39 @@
-# Import
+# İçeri Aktarmak
 
-Import is accessible only for admin users. Administration > Import. You are able to import only from CSV files.
+İçeri veri aktarma yalnızca yönetici kullanıcıları tarafından erişilebilir. Yönetim>İçe Aktar. Yalnızca CSV dosyalarından içe aktarabilirsiniz.
 
-## Step 1
+## 1. Adım
 
-Select what type of records you need to import (Entity Type field).
-Select a CSV file. A file should be formated with `UTF-8`.
-Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Update Only'.
+İhtiyacınız olan gereken kayıt türünü seçin (Varlık Türü alanı).
+Bir CSV dosyası seçin. Bir dosya, `UTF-8` formatı ile biçimlendirilmelidir.
+`Ne yapacaksınız?`ı seçin. Mevcut seçenekler: 'Yalnızca Oluştur', 'Oluştur ve Güncelle', 'Sadece Güncelle'.
 
-* `Create Only` - select it if you want record be only created.
-* `Create & Update` - records will be created but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the _Step 2_.
-* `Update only` - only records with matching field values will be found it will be updated.
+* `Sadece Oluştur` - kaydı sadece yaratmak istiyorsanız seçiniz.
+* `Oluştur & Güncelle`- kayıtlar oluşturulur, ancak eşleşen alan değerlerine sahip kayıtlar bulunursa değiştirilir._2. Adım_'da hangi alanların eşleşeceğini kontrol edebileceksiniz.
+* `Sadece güncelle` - eşleşen alan değerlerine sahip kayıtlar güncellenecektir.
 
-Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
+Bir CSV dosyasını seçtikten sonra Önizleme panelinde nasıl ayrıştırılacağını görebilirsiniz.Özelliklerini güncellediğinizde önizleme değişecektir.
 
-* `Header Row` - whether CSV file has the first row with field names.
-* `Execute in idle` - recommended if you have a big bunch of records to be imported. Import will be processed via cron. Status will be set to 'Complete' when import process is finished.
-* `Skip searching for duplicates` - it will decrease import runtime. 
 
-Click _Next_ button to preceed to the _Step 2_.
+* `Başlık Satırı`- CSV dosyasının alan adlarına sahip ilk satıra sahip olup olmadığını.
+* `Boşta çalıştır`- içeri aktarılacak büyük bir kayıt grubunuz varsa önerilir. Aktarım, cron üzerinden işlenecektir. İçe aktarma işlemi tamamlandığında durum 'Tamamlandı' olarak ayarlanacaktır.
+* `Kopyalama için aramayı geçmek` - içeri aktarım çalışma süresini azaltacaktır.
+
+
+_ 2. Adım_ işlemine geçmek için _Next_ düğmesini tıklayın.
 
 ![1](../_static/images/administration/import/step-1.png)
 
-## Step 2
+## 2. Adım
 
-Setup the field mapping: how fields correspond to columns of the csv file. You can skip not needed columns here.
-In cases of 'Create & Update' and 'Update only' you need to check fields by which records that should be updated will be found.
-Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
+Alan eşlemesini ayarlayın: alanların CSV dosyasının sütunlarına nasıl karşılık geldiğini belirleyin. Burada gerekli olmayan sütunları atlayabilirsiniz.'Oluştur & Güncelle' ve 'Sadece güncelle' durumlarında, güncellenecek kayıtların bulunup bulunmadığını kontrol etmeniz gerekmektedir.Yeni ve güncellenmiş kayıtlardan ayarlanmasını istediğiniz varsayılan değerleri ekleyiniz. Örneğin. Atanmış Kullanıcı veya Ekip alanları belirtebilirsiniz.
 
-After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once. Note: Revert doesn't work with updated records.
+İçe aktarma işlemi tamamlandıktan sonra oluşturulan kayıtları geri alabilir, kopyalayabilir ve güncellenmiş kayıtları görebilirsiniz.Kopyalanan, sistemde benzer kayıt olduğu anlamına gelir.İçe aktarılan tüm kopyaları aynı anda kaldırabilirsiniz.Not: Geri çevirmek, güncellenmiş kayıtlarla çalışmaz.
 
-Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
+Devam etmek için _Run Import_ düğmesine tıklayın. İçe aktarma işlemi bitmeden biraz zaman alabilir. Bir sürü kayıt ithal etmek istiyorsanız (sunucu yapılandırmasına bağlı, genellikle 200'den fazla kayıt varsa), php parametresinin `set_time_limit` yeterince büyük olduğundan emin olmanız gerekir.
 
 ![2](../_static/images/administration/import/step-2.png)
 
-## How to import into Target List
+## Hedef Listeye nasıl aktarılır?
 
-When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
+Kişileri, Rehberleri veya Hesapları içe aktardığınızda bunları bazı hedef listelerine ekleyebilirsiniz. 2. Adım'da 'Varsayılan Değerler' paneline Hedef Liste alanını eklemeniz ve gerekli bir hedef liste kaydını seçmeniz gerekmektedir. Var olan hedefleri bir hedef listesine eklemek için 'Sadece güncelle' veya 'Oluştur ve Güncelle' işlemini kullanabilirsiniz.
