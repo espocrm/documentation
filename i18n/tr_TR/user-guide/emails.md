@@ -1,76 +1,77 @@
-# Guidelines on Using Emails
+# E-posta Kullanım Yönergeleri
 
-EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+EspoCRM, e-postaları IMAP kutusundan alabilme imkanı sağlar. Bu, EspoCRM'i, CRM'e özgü özelliklerle birlikte e-posta istemcisi olarak kullanmayı mümkün kılar.
 
-## IMAP accounts
+## IMAP hesapları
 
-*Note: You need to have [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
+*Not: Gelen iç e-postaların çalışabilmesi için sisteminizde [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) doğru bir şekilde yapılandırılmış olmalıdır.*
 
-User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+Kullanıcı, Kişisel E-posta Hesapları sayfasında IMAP hesabı kulurumunu yapabilir (E-postalar sekmesi > sağ-üst menü > Kişisel E-posta Hesapları).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
+İzlenen Klasörler alanında hangi klasörlerin izleneceğini belirtin. Varsayılan olarak GELEN KUTUSU ayarlanmıştır. E-posta göndermek için harici e-posta istemcileri kullanırsanız, bu e-postaları arşivlemek için Gönderilmişler klasörü ekleyebilirsiniz.
 
-*Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
+*Fetch Since*, e-postaların arşivlenme tarihini seçmenizi sağlar. Eski e-postaları arşivlemeniz gerekiyorsa, bugünden önceki bir tarihe ayarlayın.
 
-There is an ability to specify *Folder* in Persnoal Email Account. Incoming emails will be put in that folder.
+Kişisel E-Posta Hesabında  *Klasör* belirtebilme imkanı vardır. Gelen e-postalar bu klasöre konacaktır.
 
-## SMTP accounts
+## SMTP hesapları
 
-Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+Kullanıcılar Tercihler'de ve de Kişisel E-Posta Hesapları'nda SMTP ayarlarını yapabilir. Ayrıca Yönetici, SMTP sisteminin kullanmasına izin verebilir (Paylaşımlı yapabilir).
 
-Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of *User* record.
+Kullanıcılar birden fazla SMTP hesabına sahip olabilir (sürüm 4.2.0'dan bu yana). Ancak kullanıcıların e-posta göndermek için kullanabilecekleri e-posta adresleri *Kullanıcı* kaydı e-posta adresleri tarafından tanımlanır.
 
-## Working with Emails
+## E-postalarla Çalışma
 
-Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
-You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
+E-postalar, (arka planda) cron tarafından birkaç dakikada bir çekilir (süre yönetici tarafından belirtilebilir).
+Tüm e-postalarınızı E-postalar sekmesinde görebilirsiniz. Solda standart olan Gelen Kutusu, Gönderilmiş, Taslak e-postalar klasörler vardır.
 
-*Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
+*Durum* alanı. `Gönderildi`, CRM'den gönderildi anlamına gelir, `Arşivlendi` - IMAP hesabından çekilen veya el ile arşivlendiği, `Taslak` – e-postanın bir taslak olarak oluşturulduğu manasına gelir.
 
-When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized then user can link it manually by filling in *Parent* field.
+Yeni e-posta geldiğinde sistem, bu e-postanın hangi kayda ait olduğunu tanımaya çalışır. Hesap, Müşteri Adayı, Fırsat, Olay (ve B2C modunda İletişim) vb. ile bağlantı kurabilir. Bu tanınmadığı takdirde, kullanıcı, *Üst öğe* alanını doldurarak manuel olarak bağlayabilir.
 
-If an email came from a new potential client user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
+E-posta yeni bir potansiyel müşteridense kullanıcı onu **Müşteri Adayı'na dönüştürebilir**. E-posta girişi'ni açın ve sağ üst menüdeki Müşteri Adayı Yarat'a tıklayın.
 
-It's also possible to **create Task or Case** from an email record.
+Bir e-posta kaydından **Görev veya Olay yaratmak** da mümkündür.
 
-If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can **create contact** right from there.
+Bir e-posta kaydındaki e-posta adresleri (from, to, cc) sistem tarafından biliniyorsa ilgili olduğu kişiyi gösterecektir (Kişi, Olay, Kullanıcı vb.). Bazı e-posta adresi yeni ise **kişi eklenebilir**.
 
-All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
+Belirli bir kayıtla ilgili tüm e-postalar o kaydın Geçmiş panelinde gösterilir. Bazı e-postalar, örneğin, fırsatla ilgiliyse, ancak fırsat da hesapla ilgiliyse, o e-posta hem fırsatta hem de hesapta gösterilir.
 
-## Sending Emails
+## E-posta Gönderimi
 
-You can compose new email by a few ways:
-* *Compose Email* button on Emails list view;
-* replying on another email;
-* clicking on an email address of some record;
-* *Compose Email* action of Activities panel.
+Birkaç yoldan yeni bir e-posta yazabilirsiniz:
+* E-postalar listesi görünümünde *E-posta yaz* düğmesiyle;
+* başka bir e-postayı yanıtlayarak;
+* bazı kayıtların bir e-posta adresini tıklayarak;
+* Etkinlikler panelinde *E-posta yaz* eylemiyle.
 
-There is an ability to **select template** of your email.
+E-postanızın **şablon seçebilme** özelliği vardır.
 
-You can setup **email signature** in Preferences.
+Tercihler'de **e-posta imzanızı** ayarlayabilirsiniz.
 
-## Email Folders
+## E-posta Klasörleri
 
-Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you wan't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Kullanıcılar, bazı e-postaları kolayca yerleştirmek için kendi e-posta klasörlerini oluşturabilir. Mevcut klasörlerin listesi, sol taraftaki E-postalar sayfasında mevcuttur. Klasör oluşturmak veya düzenlemek için E-postalar > sağ üst köşedeki açılır menü > Klasörler yolunu izleyin. `Bildirimi Atla`, belirli klasöre gelen e-postalar hakkında bildirim almayacağınız anlamına gelir. E-posta Filtreleri'ni kullanarak e-postaları belirli ölçütlere göre otomatik olarak klasörlere yerleştirmek mümkündür.
 
-## Email Filters
+## E-posta Filtreleri
 
-Administrator can create global email filters to skip not desirable emails. They are available at Administration > Email Filters.
+Yönetici istenmeyen e-postaları atlamak için genel e-posta filtreleri oluşturabilir. Bunlar Yönetim > E-posta Filtreleri'nde bulunur.
 
-Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
+Normal kullanıcı, Kişisel E-Posta Hesapları veya tüm gelen kutuları için e-posta filtreleri oluşturabilir. E-postalar > sağ-üst köşedeki açılır menü > Filtreler altında bulunur.
 
-There are two types of filters:
-* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder - imported emails will be put into specified user's folder automatically.
+İki tip filtre vardır:
+* Atlama - e-posta, *Çöp Kutusu'na* konur yada filtre Kişisel E-Posta Hesabı ile ilişkiliyse içe aktarım yapılmaz;
+* Klasöre Koy - içe aktarılmış e-postalar otomatik olarak kullanıcının belirtilmiş klasörüne konur.
 
-## Email Templates
+## E-posta Şablonları
 
-Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sendings and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
+E-posta şablonları, E-postalar > sağ-üst köşedeki açılır menü > E-posta Şablonları altında bulunur. Hem toplu hem de normal e-postalar gönderimleri için kullanılabilir. `Bir kerelik` onay kutusu, e-posta pazarlamasında alışılageldiği gibi, e-posta şablonunun sadece bir kez kullanılacağı anlamına gelir.
 
-It's possible to use placefolders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
+E-posta şablonu gövdesinde ve başlığında yertutucu kullanmak mümkündür; örn.
+ {Account.name}, {Person.emailAddress}. Bunlar, kayıtların ilgili değerleri ile değiştirilir.
 
-You can use additional reserved placefolders in template body: {optOutUrl} and {optOutLink}.
+Ayrıca şablon gövdesinde ayrılmış yertutucular kullanabilirsiniz: {optOutUrl} ve {optOutLink}.
 ```
-<a href="{optOutUrl}">Unsubscribe</a>
+<a href="{optOutUrl}">Abonelikten çık</a>
 ```
-This is unsubscribe link for mass email.
+Bu toplu e-posta üyeliğinden çıkma bağlantısıdır.
