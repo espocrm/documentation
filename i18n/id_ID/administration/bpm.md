@@ -1,386 +1,207 @@
 # Manajemen Proses Bisnis
 
-Manajemen Proses bisnis (BPM) alat ini menyediakan kemampuan untuk model dan mengotomatisasi proses bisnis di EspoCRM. Itu sebuah mesin yang menjalankan proses bisnis yang dijelaskan dalam BPMN 2.0 standar ektensi. BPM tool yang tersedia di [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/)
+Alat Manajemen Proses Bisnis (MPB) menyediakan kemampuan untuk memodelkan dan mengotomatisasi proses bisnis di EspoCRM. Ini adalah proses bisnis pelaksana mesin yang dijelaskan dalam standar BPMN 2.0. Alat BPM tersedia di ekstensi [Paket Lanjutan](https://www.espocrm.com/extensions/advanced-pack/).
 
+![contoh MPB](../_static/images/administration/bpm/bpm-1.png)
 
-![BPM contoh](../_static/images/administration/bpm/bpm-1.png)
+### Perbedaan alat Alur Kerja
 
-### Perbedaan dari Alur alat kerja
+Alur kerja kerja ditujukan untuk otomatisasi aturan bisnis sederhana, selain item alur berurutan, jika tidak perlu menampilkan arus secara grafis.
 
-Alur kerja alat ini dimaksudkan untuk otomatisasi sederhana aturan bisnis, w/o berurutan aliran barang, ketika tidak ada kebutuhan untuk menampilkan aliran grafis.
+Alat MPB ditujukan untuk arus bisnis yang lebih kompleks, dimana ada arus divergen dan konvergen, penundaan eksekusi, interaksi pengguna. Tampilan alur kerja membuat proses bisnis lebih mudah dipahami bagi manusia, sebuah log memungkinkan untuk melihat bagaimana prosesnya dilakukan.
 
-BPM alat ini ditujukan untuk bisnis lebih kompleks mengalir, di mana bisa ada divergen dan konvergen mengalir, pelaksanaan, keterlambatan, interaksi pengguna. Flowchart view membuat proses bisnis lebih dipahami bagi manusia, log ini memungkinkan untuk melihat bagaimana proses itu dilakukan.
+## Proses Alur Kerja
 
+Tautan untuk memproses alur kerja tersedia dari panel administrasi. Ini juga bisa ditambahkan sebagai tab pada panel navigasi.
 
+Alur kerja ditujukan untuk pemodelan proses bisnis. Administrator dapat membuat dan mengedit alur kerja. Pengguna biasa hanya dapat melihat alur kerja.
 
+Setiap alur kerja memiliki tipe entitas khusus (bidang Tipe Sasaran). Alur kerja menentukan pelaksanaan contoh proses di kemudian. Ini terdiri dari elemen alur kerja dan koneksi antar elemen.
 
+Jika proses alur kerja memiliki bidang 'Aktif' yang tidak dicentang maka tidak akan melakukan proses instance.
 
+Untuk menampilkan rincian dan parameter elemen alur kerja tertentu Anda perlu mengkliknya. Dalam mode edit Anda dapat mengubah parameter.
 
+## Pengolahan
 
-## Proses Diagram Alur
-Link untuk proses diagram alur tersedia dari panel administrasi. Hal ini juga dapat ditambahkan sebagai tab di panel navigasi.
+Pengolahan tersedia dari panel administrasi. Tautan ini juga bisa ditambahkan sebagai tab pada panel navigasi.
 
+Pengolahan  mewakili contoh proses bisnis. Saat diinisiasi akan mendapat status 'Dimulai'. Saat proses selesai akan mendapat status 'Berakhir'. Pengolahannya juga bisa dihentikan secara manual oleh pengguna yang memiliki akses untuk mengubah pengolahannya. Jika dihentikan secara manual, statusnya akan 'Berhenti'.
 
+Pengolahan dijalankan sesuai dengan alur kerja. Proses alur kerja tidak dapat diubah setelah proses dimulai.
 
+Pengolahan wajib berkaitan dengan catatan target tunggal.
 
-Setiap flowchart memiliki entitas tertentu jenis (Jenis Target field). Flowchart menentukan pelaksanaan depan contoh proses. Ini terdiri dari flowchart elemen-elemen dan hubungan antar elemen.
+Pengolahan dapat dimulai secara otomatis (pada kondisi tertentu atau dengan penjadwalan) atau manual (setidaknya ada satu Perihal Awal di alur kerja). Untuk memulai proses secara manual, pengguna perlu mengklik tombol 'Mulai Pengolahan' pada daftar tampilan pengolahan.
 
-Jika flowchart proses memiliki dicentang 'Active' maka tidak akan memulai proses kasus.
+## Elemen Alur Kerja
 
-Untuk menunjukkan rincian dan parameter tertentu flowchart elemen yang anda butuhkan untuk klik di atasnya. Dalam mode edit, anda akan dapat mengedit parameter.
+### Perihal
 
+Perihal ditampilkan pada alur kerja sebagai lingkaran.
 
+#### Memulai Perihal
 
+Tidak memiliki parameter. Ini adalah titik awal prosesnya. Memulai Perihal dapat dimulai secara manual oleh pengguna yang memiliki akses untuk membuat proses. Pengguna perlu mengklik tombol 'Mulai Proses' pada tampilan daftar proses.
 
+#### Memulai Perihal Bersyarat
 
+Titik awal proses. Ini seharusnya dipicu secara otomatis saat kondisi tertentu terpenuhi. Ada dua jenis pemicu: 'Setelah Rekaman Dibuat', 'Setelah Rekaman Disimpan'.
 
+#### Waktu Memulai Perihal
 
+Titik awal proses. Ini memulai proses dengan penjadwalan. Anda perlu menentukan daftar laporan yang mengembalikan rekaman untuk memulai proses dan penjadwalan dalam notasi *crontab*.
 
+#### Perihal Menengah Bersyarat
 
+Perihal ini menghentikan alur sampai kriteria tertentu terpenuhi.
 
+#### Perihal Waktu Menengah
 
+Acara ini menghentikan alur dan menunggu selama ditentukan oleh parameter perihal.
 
-## Proses
+Untuk pengaturan waktu yang lebih kompleks Anda bisa menggunakan [rumus](formula.md). Skrip rumus harus mengembalikan nilai Tanggal-Waktu (dalam zona waktu UTC). Setelah waktu ini tiba alur akan dilanjutkan ke elemen berikutnya.
 
-Prosesnya tersedia dari panel administrasi. Link ini juga bisa ditambahkan sebagai tab pada panel navigasi.
+Dengan memanfaatkan fungsi rumus *datetime\closest*, Memungkinkan untuk menetapkan waktu ke waktu tertentu di masa mendatang, misalnya awal hari kerja berikutnya. 
 
-Proses mewakili contoh proses bisnis. Saat diinisiasi itu mendapat status 'Started'. Saat proses selesai itu mendapat status 'Ended'. Prosesnya juga bisa dihentikan secara manual oleh pengguna yang memiliki akses untuk mengedit prosesnya. Jika dihentikan secara manual, statusnya akan 'Berhenti'.
+#### Akhir Perihal
 
-Proses dijalankan sesuai dengan flowchart. Flowchart proses tidak dapat diubah setelah proses dimulai.
+Mengakhiri alur terkini. Ini tidak mengakhiri alur yang mengalir secara paralel. Saat alur mencapai akhir perihal dan tidak ada yang berjalan pada paralel maka prosesnya akan berakhir.
 
-Prosesnya wajib berkaitan dengan catatan target tunggal.
+#### Mengakhiri Perihal
 
-Proses dapat dimulai secara otomatis (pada kondisi tertentu atau dengan penjadwalan) atau manual (setidaknya ada satu Start Event di flowchart). Untuk memulai proses secara manual, pengguna perlu mengklik tombol 'Start Process' pada daftar tampilan proses.
+Mengakhiri semua alur. Perihal selanjutnya berakhir.
 
+### Gateway
 
+Gateway ditampilkan sebagai berlian.
 
+#### Gateway Eksklusif
 
+Bisa alur menyimpang atau menyatu.
 
+Dalam kasus divergen mendefinisikan satu alur (jalur) yang akan dipilih sesuai kriteria yang ditentukan. Kondisi pertama yang terpenuhi menentukan alur, kondisi selanjutnya dihilangkan. Ada kemampuan untuk menentukan alur default. Alur default dipilih jika tidak ada kondisi yang terpenuhi. Alur default ditandai dengan tanda garis miring.
 
+Jika konvergen hanya mengarahkan alur ke elemen keluar. Itu tidak tersumbat setelah arus datang, jadi alur sejajar tidak akan tergabung dalam alur tunggal.
 
+![gateway divergent eksklusif](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
+![gateway convergent eksklusif](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
+#### Gateway Inklusif
 
+Bisa alur menyimpang atau menyatu.
 
+Dalam kasus divergen, ia dapat mengarahkan ke satu atau beberapa alur sejajar (jalur), tergantung pada pemenuhan kriteria setiap alur. Alur default dipilih jika tidak ada kondisi yang terpenuhi. Alur default ditandai dengan tanda garis miring.
 
-## Flowchart Elements
+Jika ada kebutuhan untuk menggabungkan alur yang dihasilkan oleh gateway inverging inklusif Anda perlu menggunakan gateway inklusif yang konvergen. Ini akan menunggu semua alur masuk dan kemudian melanjutkan ke elemen keluar.
 
-## Elemen alir alur
+![gateway inklusif](../_static/images/administration/bpm/gateway-inclusive.png)
 
-### Events
+Catatan: Gateways diverging dan konvergen harus seimbang.
 
-### Acara
+Catatan: Jika salah satu alur telah berakhir karena beberapa alasan, maka gateway divergen tidak akan pernah diproses. Prosesnya akan diblokir. Hindari desain alur kerja yang bisa membawa situasi seperti itu.
 
-Events are displayed on a flowchart as circles.
+#### Gateway Paralel
 
-Acara ditampilkan pada diagram alir sebagai lingkaran.
+Bisa alur menyimpang atau menyatu.
 
-#### Start Event
+Dalam kasus divergen itu dibagi mengalir ke beberapa alur paralel. Tidak ada parameter untuk tipe gateway ini.
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click  'Start Process' button on the list view of processes.
+Jika terjadi konvergen, menunggu sampai semua alur masuk kemudian berlanjut ke elemen keluar berikutnya.
 
-#### mulai acara
+![gateway paralel](../_static/images/administration/bpm/gateway-parallel.png)
 
-Tidak memiliki parameter Ini adalah titik awal prosesnya. Start Event dapat dimulai secara manual oleh pengguna yang memiliki akses untuk membuat proses. Pengguna perlu mengklik tombol 'Start Process' pada tampilan daftar proses.
+Catatan: Gateways divergen dan konvergen harus seimbang.
 
-#### Conditional Start Event
+Catatan: Jika salah satu alur paralel telah berakhir karena beberapa alasan, maka gateway divergen tidak akan pernah diproses. Prosesnya akan diblokir. Hindari desain alur kerja yang bisa membawa situasi seperti itu.
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of trigger: 'After record created', 'After record saved'.
+#### Gateway Berdasarkan Perihal
 
-#### Acara Mulai Bersyarat
+Hanya bisa alur menyimpang.
 
-Titik awal proses. Ini seharusnya dipicu secara otomatis saat kondisi tertentu terpenuhi. Ada dua jenis pemicu: 'After record created', 'After record saved'.
+Ini memberhentikan alur sampai ada kejadian keluar yang dipicu. Perihal yang dipicu menentukan alur tunggal. Perihal keluar lainnya akan ditolak.
 
-#### Timer Start Event
+Hanya Perihal mengengah yang bisa berada di ujung alur deras keluar lainnya.
 
-A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
+![gateway berdasarkan perihal](../_static/images/administration/bpm/gateway-event-based.png)
 
-#### Waktu Mulai acara
+### Aktivitas
 
-Titik awal proses. Ini memulai proses dengan penjadwalan. Anda perlu menentukan daftar laporan yang mengembalikan catatan untuk memulai proses dan penjadwalan dalam notasi crontab.
-
-#### Conditional Intermediate Event
-
-This event stops the flow until specified criteria is met.
-
-#### Acara Intermediate Bersyarat
-
-Acara ini menghentikan aliran sampai kriteria tertentu terpenuhi.
-
-#### Timer Intermediate Event
-
-This event stops the flow and waits as long as is specified by event's parameters.
-
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
-
-By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
-
-#### Timer Intermediate Event
-
-Acara ini menghentikan arus dan menunggu selama ditentukan oleh parameter acara.
-
-Untuk pengaturan timer yang lebih kompleks Anda bisa menggunakan [formula] (formula.md). Skrip rumus harus mengembalikan nilai Date-Time (dalam zona waktu UTC). Setelah waktu ini tiba arus akan dilanjutkan ke elemen berikutnya.
-
-Dengan memanfaatkan fungsi rumus di depan datetime, mungkin menetapkan timer ke waktu tertentu di masa mendatang, mis. awal hari kerja berikutnya.
-
-#### End Event
-
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
-
-#### akhir acara
-
-Mengakhiri arus. Ini tidak mengakhiri arus yang mengalir secara paralel. Saat arus mencapai akhir acara dan tidak ada yang berjalan paralel maka prosesnya akan berakhir.
-
-#### Terminate End Event
-
-Ends all flows. Process is subsequently ended.
-
-#### Hentikan Akhir Acara
-
-Berakhir semua mengalir. Proses selanjutnya berakhir.
-
-### Gateways
-
-Gateways are displayed as diamonds.
-
-### Cara Gerbang
-
-Gateways ditampilkan sebagai berlian.
-
-#### Exclusive Gateway
-
-Can diverge or converge flows.
-
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
-
-In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
-
-#### cara Gate Eksklusif
-
-Bisa menyimpang atau menyatu arus.
-
-Dalam kasus divergen itu mendefinisikan satu aliran (jalur) yang akan dipilih sesuai kriteria yang ditentukan. Kondisi pertama yang terpenuhi menentukan arus, kondisi selanjutnya dihilangkan. Ada kemampuan untuk menentukan arus default. Aliran default dipilih jika tidak ada kondisi yang terpenuhi. Aliran default ditandai dengan tanda garis miring.
-
-Jika konvergen hanya mengarahkan arus ke elemen keluar. Itu tidak tersumbat setelah arus datang, jadi arus sejajar tidak akan tergabung dalam arus tunggal.
-
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
-
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
-
-#### Termasuk Gateway
-
-Dapat menyimpang atau berkumpul mengalir.
-
-Dalam kasus divergen, ia dapat mengarahkan ke satu atau beberapa arus sejajar (jalur), tergantung pada pemenuhan kriteria setiap aliran. Aliran default dipilih jika tidak ada kondisi yang terpenuhi. Aliran default ditandai dengan tanda garis miring.
-
-Jika ada kebutuhan untuk menggabungkan arus paralel yang dihasilkan oleh gateway inverging inklusif Anda perlu menggunakan gateway inklusif yang konvergen. Ini akan menunggu semua arus masuk dan kemudian melanjutkan ke elemen keluar.
-
-
-
-
-
-
-
-
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
-
-Note: Diverging and converging gateways must be balanced.
-
-Catatan: Jika salah satu dari aliran paralel telah berakhir untuk beberapa alasan maka divergen gateway tidak akan diproses. Proses yang akan diblokir. Menghindari flowchart desain yang dapat membawa situasi seperti ini.
-
-
-
-
-
-#### Parallel Gateway
-
-Can diverge or converge flows.
-
-In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
-
-In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
-
-#### Temukan cara Gerbang Paralel
-
-Bisa menyimpang atau menyatu arus.
-
-Dalam kasus divergen itu dibagi mengalir ke beberapa arus paralel. Tidak ada parameter untuk tipe gateway ini.
-
-Jika terjadi konvergen, menunggu sampai semua arus masuk masuk dan kemudian berlanjut ke elemen keluar berikutnya.
-
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
-
-Note: Diverging and converging gateways must be balanced.
-
-Catatan: Jika salah satu dari aliran paralel telah berakhir untuk beberapa alasan maka divergen gateway tidak akan diproses. Proses yang akan diblokir. Menghindari flowchart desain yang dapat membawa situasi seperti ini.
-
-
-
-
-#### Event Based Gateway
-
-Can only diverge flows.
-
-It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
-
-Only intermediate events can be on the other end of outgoing sequence flows.
-
-#### cara berdasarkan gerbang
-
-Hanya bisa menyimpang aliran.
-
-Ini berhenti mengalir sampai ada kejadian keluar yang dipicu. Triggered event menentukan aliran tunggal. Acara keluar lainnya ditolak.
-
-Hanya kejadian antara bisa berada di ujung arus deras keluar lainnya.
-
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
-
-### Activities
-
-Activities are displayed as rounded rectangles.
-
-### Kegiatan
-
-Kegiatan ditampilkan sebagai persegi panjang bulat.
+Aktifitas ditampilkan sebagai persegi panjang bulat.
 
 #### Tugas
 
 Tugas dapat melakukan tindakan berikut:
 
-* Membuat Catatan - menciptakan rekor baru dari setiap tipe entitas;
-* Membuat Catatan Terkait - menciptakan rekor baru terkait dengan target rekor;
-* Update Target Rekam;
-* Update yang Terkait Rekor - update record atau catatan yang berkaitan dengan target rekor;
-* Update Menciptakan Rekor - update bidang tertentu dari setiap catatan yang dibuat pada saat proses;
-* Proses Update Record - dapat digunakan untuk menetapkan proses untuk pengguna tertentu atau tim;
-* Link ke Catatan Lain - link target rekor dengan yang ditentukan catatan;
-* Batalkan tautannya dari Rekor Lain - unlinks target rekor dari yang ditentukan catatan;
-* Menerapkan Penetapan Aturan - menetapkan target catatan, proses record atau catatan yang dibuat oleh proses yang menurut aturan tertentu;
-* Membuat Pemberitahuan - membuat di-app pemberitahuan untuk pengguna tertentu;
-* Membuat Diikuti - membuat pengguna tertentu mengikuti target catatan, proses record atau catatan yang dibuat oleh proses;
-* Menjalankan Layanan Tindakan - menjalankan layanan kustom tindakan-tindakan yang dilaksanakan oleh pengembang.
+* Buat Rekaman - membuat rekaman baru dari tipe entitas apa pun;
+* Buat Rekaman Terkait - membuat rekaman baru yang terkait dengan rekaman target;
+* Perbarui Target Rekaman;
+* Perbarui Rekaman Terkait - perbarui rekaman atau rekaman yang terkait dengan rekaman target;
+* Perbarui Rekaman yang Dibuat - memperbarui bidang spesifik dari setiap rekaman yang dibuat dalam proses saat ini;
+* Perbarui Proses Rekaman - dapat digunakan untuk menetapkan proses ke pengguna atau tim tertentu;
+* Tautan ke Rekaman Lain - menghubungkan rekaman target dengan rekaman yang ditentukan;
+* Batalkan Tautan dari Rekaman Lain - hapus rekaman sasaran dari rekaman yang ditentukan;
+* Terapkan Aturan Tugas - memberikan rekaman target, rekaman proses atau rekaman yang dibuat oleh proses sesuai dengan peraturan khusus;
+* Buat Pemberitahuan - buat pemberitahuan dalam aplikasi untuk pengguna tertentu;
+* Buat Diikuti - membuat pengguna tertentu mengikuti rekaman target, rekaman proses atau rekaman yang dibuat oleh proses;
+* Jalankan Tindakan - menjalankan tindakan layanan kustom yang dilakukan oleh pengembang.
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+Tindakan yang tersedia untuk tugas hampir sama seperti pada fitur Alur Kerja. Lihat rincian lebih lanjut tentang [tindakan alur kerja](workingflows.md#actions).
 
+#### Mengirim Pesan Tugas
 
+Mengirim pesan surel ke penerima tertentu.
 
+#### Tugas Pengguna
 
+Menyediakan kemampuan interaksi pengguna yang fleksibel. Ini berhenti eksekusi sampai pengguna (ditentukan secara eksplisit atau oleh aturan tugas) menyelesaikan tugasnya. Proses catatan Tugas Pengguna akan dibuat di sistem. Secara default ada tiga jenis tindakan: Setujui, Review, Diselesaikan.
 
+* Tipe setujui mengharuskan pengguna untuk memilih antara 'Disetujui' dan 'Ditolak'.
+* Tipe ulasan hanya memberikan satu pilihan: 'diulas'.
+* Tipe yang tersertifikasi memiliki dua pilihan: 'Selesai' dan 'Gagal'.
 
+Pengguna yang ditugaskan ke catatan Proses Tugas Pengguna  yang dibuat akan menerima notifikasi dalam aplikasi. Administrator juga dapat mengaktifkan pemberitahuan surel.
 
+Pengguna juga dapat menambahkan dashlet Proses Tugas Pengguna di dasbor mereka untuk melihat proses aktual tugas pengguna mereka.
 
+Ini memungkinkan untuk membaca resolusi tugas pengguna yang lewat di dalam gateway yang berbeda atau kejadian bersyarat, yang membuat kerusakan dalam aliran proses.
 
+#### Tugas Skrip
 
-
-
-
-
-
-
-
-
-Tindakan yang tersedia untuk tugas hampir sama seperti pada fitur Workflow. Lihat rincian lebih lanjut tentang [tindakan alur kerja] (workingflows.md # actions).
-
-#### Send Message Task
-
-Sends email message to specific recipient.
-
-#### Kirim pesan tugas
-
-Mengirim pesan email ke penerima tertentu.
-
-#### Tugas pengguna
-
-Menyediakan fleksibel kemampuan interaksi pengguna. Berhenti eksekusi sampai pengguna (yang ditentukan secara eksplisit atau dengan penetapan aturan) menyelesaikan tugas. Proses Pengguna catatan Tugas yang akan dibuat dalam sistem. Secara default ada tiga jenis tindakan: Menyetujui, Review, Mencapai.
-
-* Menyetujui jenis mengharuskan pengguna untuk memilih antara 'Disetujui' dan 'Menurun'.
-* Review tipe hanya memberikan satu opsi: 'Review'.
-* Mencapai jenis memiliki dua pilihan: 'Selesai' dan 'Gagal'.
-Bersyarat peristiwa, eksklusif dan inklusif divergen gateway memiliki kondisi yang menentukan aliran proses.
-
-
-The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
-
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
-
-It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
-
-
-
-
-
-
-
-
-
-
-Pengguna yang ditugaskan ke catatan Tugas Pengguna Proses yang dibuat akan menerima notifikasi dalam aplikasi. Administrator juga dapat mengaktifkan pemberitahuan email.
-
-Pengguna juga dapat menambahkan dashlet Tugas Pengguna Proses di dasbor mereka untuk melihat tugas pengguna proses aktual mereka.
-
-Anda bisa membaca resolusi tugas pengguna yang lewat di dalam gerbang yang berbeda atau kejadian bersyarat, yang membuat kerusakan dalam aliran proses.
-
-#### Script Task
-
-Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available within the process.
-
-#### tugas skrip
-
-Jalankan script dalam bahasa [espo-formula] (formula.md). Semua variabel set (`$variableName`) akan disimpan dan tersedia dalam proses.
-
-### Flows
-
-#### Sequence Flow
-
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+Eksekusi skrip dalam bahasa [rumus-espo](formula.md). Semua variabel yang diatur (`$variableName`) akan disimpan dan tersedia dalam proses.
 
 ### Arus
 
-#### Sequence Flow
+#### Urutan Arus
 
-Diwakili sebagai panah padat. Menunjukkan urutan elemen proses yang akan dijalankan.
+Diwakili sebagai panah tebal. Menunjukkan urutan elemen proses yang akan dijalankan.
 
 ## Kondisi
 
-Bersyarat peristiwa, eksklusif dan inklusif divergen gateway memiliki kondisi yang menentukan aliran proses.
+Perihal bersyarat, gateway invergen eksklusif dan inklusif memiliki kondisi yang menentukan proses arus.
 
 Melalui UI ada kemampuan untuk memeriksa kondisi untuk catatan berikut:
 
-* Target rekam;
-* Catatan terkait dengan target melalui banyak-ke-satu dan anak-anak-untuk-orangtua hubungan;
-* Catatan yang dibuat oleh proses melalui tugas-tugas;
-* Pengguna tugas catatan, yang memungkinkan memeriksa resolusi.
-Tugas dapat mengeksekusi mengikuti tindakan:
+* Target rekaman;
+* Rekaman terkait dengan target melalui hubungan banyak-ke-satu dan hubungan antara anak-ke-induk;
+* Rekaman dibuat oleh proses melalui tugas;
+* Rekaman tugas pengguna, yang memungkinkan pengecekan resolusinya.
 
-It's also possible to define conditions in [Espo-formula](formula.md) language.
+Ini juga memungkinkan untuk mendefinisikan kondisi dalam bahasa [Rumus-espo](formula.md).
 
-Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
+Kondisi alat MPB sama seperti pada fitur Alur Kerja. Lihat rincian lebih lanjut tentang [kondisi alur kerja](workflows.md#conditions).
 
+## Contoh
 
+### Contoh 1
 
+![Contoh 1](../_static/images/administration/bpm/example-1.png)
 
+### Contoh 2
 
+![Contoh 2](../_static/images/administration/bpm/example-2.png)
 
+### Contoh 3
 
-
-
-
-
-
-Ini juga memungkinkan untuk mendefinisikan kondisi dalam bahasa [Espo-formula] (formula.md).
-
-Kondisi alat BPM sama seperti pada fitur Workflow. Lihat rincian lebih lanjut tentang [kondisi alur kerja] (kondisi workflows.md #).
-
-## Examples
-
-### Example 1
-
-![Example 1](../_static/images/administration/bpm/example-1.png)
-
-### Example 2
-
-![Example 2](../_static/images/administration/bpm/example-2.png)
-
-### Example 3
-
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![Contoh 3](../_static/images/administration/bpm/example-3.png)
