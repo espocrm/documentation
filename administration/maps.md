@@ -1,18 +1,18 @@
-# Maps
+# Haritalar
 
-## How to show the map based on an address field
+## Adres alanına dayalı bir harita nasıl gösterilir
 
-Every Address field has its corresponding Map field. All you need is to put it on Detail layout. It uses Google Maps service.
+Her adres alanına karşılık gelen Harita alanı vardır. İhtiyacınız olan tek şey Ayrıntılar düzenine koymaktır. Sistem Google Haritalar servisini kullanıyor.
 
-`Administration > Layout Manager > Choose entity (Account, Contact, Lead or custom one) > Detail > Drag & Drop Map field.`
+`Yönetim> Düzen Yöneticisi> Öğeyi seçin (Hesap, Kişi, İpucu veya özel olan)> Ayrıntı> Sürükle ve Bırak Haritası alanını seçin.`
 
-Make the cell wide using the minus sign.
+Eksi işaretini kullanarak hücrenin geniş olmasını sağlayın.
 
-You can also configure the height of your field.
+Ayrıca alanınızın yüksekliğini de yapılandırabilirsiniz.
 
-`Administration > Entity Manager > Choose entity > Fields > find the map field and click on it > edit the height and save.`
+``Yönetici> Öğe Yöneticisi> Öğe seçin> Alanlar> harita alanını bulun ve üzerine tıklayın> yüksekliği düzenleyin ve kaydedin.`
 
-## Api Key
+## Api Anahtarı
 
-Since EspoCRM version 4.2.0 you need to specify Api Key to use Google Maps (Administration > Integration > Google Maps).
+EspoCRM 4.2.0 sürümünden bu yana Google Haritalar'ı (Yönetim> Entegrasyon> Google Haritalar) kullanmak için Api Anahtar'ı belirtmeniz gerekir.
 
