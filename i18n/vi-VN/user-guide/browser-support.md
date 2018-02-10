@@ -5,3 +5,4 @@ Chúng tôi đề xuất sử dụng phiên bản mới nhất của Google Chro
 Microsoft Edge và Safari cũng được hỗ trợ, nhưng có ít sự đảm bảo rằng mọi chức năng sẽ hoạt động tốt trên những trình duyệt này.
 
 Chúng tôi cực kì không khuyến khích sử dụng Internet Explorer 11.
+
