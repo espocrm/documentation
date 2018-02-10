@@ -1,34 +1,35 @@
 # Stream
 
-Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post to own stream and to stream of another users (since version 3.8.0). There are two kinds of stream in EspoCRM: record stream and user stream.
+Stream trong EspoCRM là một bảng tin nơi bạn có thể theo dõi các cập nhật và bổ sung cho bản ghi mà bạn đang theo dõi. Bạn cũng có thể đăng lên stream của riêng bạn và lên stream của những người dùng khác (từ phiên bản 3.8.0 trở đi). Có hai loại stream trong Espo CRM: stream bản ghi và stream người dùng.
 
-By default the following entities have a stream: Accounts, Contacts, Leads, Opportunities, Cases. Administrators can enable or disable stream for a certain entity in [Entity Manager](../administration/entity-manager.md).
+Mặc định thì những thực thể sau có một stream: Tài khoản, Danh bạ, Khách hàng tiềm năng, Cơ hội, Vụ việc. Quản trị viên có thể kích hoạt hoặc vô hiệu hóa stream cho một thực thể nhất định trong [Entity Manager](../administration/entity-manager.md).
 
-## Record Stream
+## Stream Bản Ghi
 
-Record Stream is shown in a Stream panel of a certain record on the detail view. Posts, updates and new additions related to the current record are displaed here.
+Steam Bản Ghi được hiển thị trong một bảng điều khiển Stream của một bản ghi nhất định khi xem chi tiết. Các bài viết, cập nhật và những bổ sung mới liên quan tới bản ghi hiện tại cũng được hiển thị ở đây.
 
-## User Stream
+## Stream Người Dùng
 
-Users can see their stream in Stream dashlet as well as under Stream tab. Users also can see stream of another users in the user's detail view, if they have an access that is controlled by `User Pemission` field of Roles.
+Người dùng có thể xem stream của họ trong Stream dashlet cũng như dưới tab Stream. Người dùng cũng có thể thấy stream của người dùng khác trong xem chi tiết người dùng, nếu họ có quyền truy cập được kiểm soát bởi trường `Quyền Người Dùng` của Danh sách Quyền.
 
-In user stream you can see posts, updates and new additions related to records the user follows. You also can see posts addressed to the user. Those posts are not related to any record.
+Trong luồng người dùng bạn có thể xem bài viết, cập nhật và bổ sung mới liên quan tới các bản ghi mà người dùng đang theo dõi. Bạn cũng có thể xem các bài viết được gửi cho người dùng. Những bài viết này không liên quan tới bất kì bản ghi nào.
 
-## Notifications
+## Thông báo
 
-You will recieve notifications about new additions to your stream that were caused by another users.
+Bạn sẽ nhận được thông báo về những bổ sung mới tới stream của bạn khi những thay đổi này được thực hiện bởi 1 người dùng khác.
 
-## Posts
+## Bài viết
 
-You can create post related to a certain record. You also able to attach multiple files and images to your post. If you want to mention somebody in your post you need just type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it.
+Bạn có thể tạo bài viết liên quan tới một bản ghi nhất định. Bạn cũng có thể đính kèm nhiều tập tin và hình ảnh vào bài viết của bạn. Nếu bạn muốn đề cập tới ai đó trong vài viết của mình bạn cần nhập kí hiệu `@` và bắt đầu nhập tên của người dùng đó. Người dùng mà bạn đề cập trong bài viết sẽ được thông báo về nó.
 
-## Posts to users
+## Bài viết tới người dùng
 
-_This feature is available since version 3.8.0._
+_Tính năng này khả dụng từ phiên bản 3.8.0._
 
-Users can create post to certain users, to certain teams, to all users and to self. An access for this ability is controlled by `Assignment Permission` field of Roles.
+Người dùng có thể tạo bài viết tới một người dùng nhất định, tới những nhóm nhất định, tới mọi người dùng và tới bản thân. Quyền truy xuất tới khả năng này được kiểm soát bởi trường `Quyền Được Cấp` của Danh sách Quyền.
 
-## Filtering
 
-You can filter what to show in a stream: `All`, `Posts` or `Updates`.  
+## Bộ Lọc
+
+Bạn có thể lọc những gì muốn xem trong một stream:  `Tất cả`, `Bài Viết` hoặc `Cập nhật`.  
 
