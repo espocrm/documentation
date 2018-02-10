@@ -192,6 +192,12 @@ $contactList = $entityManager->getRepository('Contact')->distinct()->join('oppor
 $contactList = $entityManager->getRepository('Contact')->distinct()->leftJoin('opportunities')->where(...)->find();
 ```
 
+```
+$contactList = $entityManager->getRepository('Contact')->distinct()->join(['opportunities', 'aliasForJoinedTable'])->where([
+  'aliasForJoinedTable.stage' => 'Closed Won'
+])->find();
+```
+
 #### Group By
 
 ```
