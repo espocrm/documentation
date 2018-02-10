@@ -1,40 +1,43 @@
-# Emails
+# E-Postalar
 
-> Important. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) should be configured in your system to make email fetching work. You can find the information in your EspoCRM at Administration > Scheduled Jobs.
+> Önemli. E-posta alma işini yapmak için sisteminizde yapılandırılmalıdır [Cron] (https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab). Bilgileri, Yönetim> Zamanlanmış İşler bölümünde EspoCRM'yi bulabilirsiniz.
 
-## Overview
+## Genel Bakış
 
-EspoCRM has an ability to monitor IMAP mailboxes. Email can be archived in two ways: Group Email Accounts and Personal Email Accounts. Group Inbound Accounts are intended for group mailboxes: the most common case is a support box. Personal Email Accounts are intended for users’ personal mailboxes.
+EspoCRM, IMAP posta kutularını izleyebilme özelliğine sahiptir. E-posta iki şekilde arşivlenebilir bunlar: Grup E-posta Hesapları ve Kişisel E-posta Hesaplarıdır. Grup Gelen Hesaplar, grup posta kutuları için tasarlanmıştır: en yaygın olanı bir destek kutusudur.Kişisel E-posta Hesapları, kullanıcıların kişisel posta kutularına yönelik tasarlanmıştır.
 
-As an email is coming the system tries to link it with the appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not in To or CC.
 
-## Group Email Accounts
+Bir e-posta geldiğinde sistem uygun kaydı (Hesapları, Rehberi, Fırsatı, Durumu) bağlamaya çalışır. Bu kaydı takip eden kullanıcılar CC değillerse bile, sistemdeki yeni bir e-postayla ilgili bildirim alırlar.
 
-Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails. Sending emails from group accounts has been available since 4.9.0 version.
+## Grup E-posta Hesapları
 
-Teams field determines which teams incoming emails will be assigned to. 
+Grup E-posta Hesaplarını yalnızca yöneticiler kurabilir. Grup E-posta Hesapları hem e-posta alma hem de gönderme için kullanılabilir.
+Grup hesaplarından e-posta göndermek 4.9.0 sürümünden beri mevcuttur.
 
-If the group email account has SMTP and it's checked as shared then an access will be controlled by Roles through Group Email Account permission. Teams field will be used if permission level is set to 'team'.
+Takım alanları hangi ekiplerin gelen e-postalara atanacağını belirtirler.
 
-There is an ability to make the system send an auto-reply for incoming emails.
+Eğer grup e-posta hesabının SMTP'si varsa ve paylaşılan olarak işaretlenmişse erişim, Grup E-posta Hesabının izni aracılığıyla Roller tarafından kontrol edilecektir. İzin seviyesi 'takım' olarak ayarlanırsa, Takımlar alanı kullanılacaktır.
 
-## Email-to-Case
+Sistemin, gelen e-postalar için otomatik cevap göndermesini sağlayan bir özelliği vardır.
 
-There is an option to make the system create cases from incoming group emails. 
-This feature is intended for support teams. 
-Cases can be distributed to users from a specified team according to these ways: 
+## Kutuya E-postayla Gönder
+
+Sistemin, gelen grup e-postalarından kutular oluşturmasını sağlamak için bir seçenek vardır. 
+Bu özellik, destek ekipleri için tasarlanmıştır.
+Durumlar, belirtilen takımdaki kullanıcılara şu şekillerde dağıtılabilir:
 `direct assignment`, `round-robin` and `less-busy`. 
-Only the first email in the thread creates a new case. 
-Every subsequent one will be linked to the existing case record and displayed in its Stream panel.
+Sadece ilk e-posta tredin içerisinde yeni bir kutu oluşturur.
+Ardından gelen her biri, mevcut kutu kaydına bağlanır ve akış panelinde görüntülenir.
 
-When users want to send a reply to the customer they need to make sure that the case is selected as a parent of the email that is being sent. It will make the customer reply to the group email address rather than to the user’s own.
+Kullanıcılar müşteriye bir cevap göndermek istediğinde, gönderilen e-postanın ebeveyni kutunun seçili olduğundan emin olunmalıdır. Bu, kullanıcının kendine değil müşterinin grup e-posta adresine cevap vermesini sağlayacaktır.
 
-## Personal Email Accounts
+## Kişisel E-posta Hesapları
 
-Users can setup their own email accounts that need to be monitored. Emails > Top Right Dropdown Menu > Personal Email Accounts. Administrator also can manage users' email accounts.
+Kullanıcılar, izlenmesi gereken kendi e-posta hesaplarını kurabilirler. E-postalar>En Sağdaki Açılır Menü>Kişisel E-posta Hesapları. Yönetici aynı zamanda kullanıcıların e-posta hesaplarını yönetebilir.
 
-## Email Filters
+## E-posta Filtreleri
 
-These allow the filtering of incoming emails according to specified criteria. E.g. if you don't want notification messages sent by some application to be imported to EspoCRM you can create filter to make EspoCRM skip them.
+Bunlar, gelen e-postaların belirtilen kriterlere göre filtrelenmesine izin verir. Örneğin. Bazı uygulama tarafından gönderilen bildirim mesajlarının EspoCRM'ye aktarılmasını istemiyorsanız, EspoCRM'yi geçmek için filtre oluşturabilirsiniz.
 
-Admin can create global filters, applied to all email accounts. Users can create filters for their own personal email account and for entire inbox.
+
+Yönetici, tüm e-posta hesaplarına uygulanan genel filtreler oluşturabilir. Kullanıcılar kendi kişisel e-posta hesapları ve bütün gelen kutuları için filtreler oluşturabilirler.
