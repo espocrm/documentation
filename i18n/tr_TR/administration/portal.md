@@ -1,55 +1,57 @@
 # Portal
 
-Portal provides an ability to access specific crm data and functions for your customers and partners. Administrator can create multiple portals. Each portal can have its own settings, dashlboard, user list, access control settings.
+Portal, müşterileri ve ortakları için belirli CRM verisine ve işlevlerine erişme olanağı sağlar. Yönetici, birden fazla portal oluşturabilir. Her portal kendi ayarlarına, kumanda paneline, kullanıcı listesine, erişim kontrolü ayarlarına sahip olabilir.
 
-To create portal follow Administration > Portals, click Create Portal button.
+Portal oluşturmak için, Yönetim> Portallar'ı takip edin, Portal Oluştur butonuna tıklayınız.
 
-* `Is Active`. If not check portal won't be available for anybody.
-* `Is Default`. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
-* `Roles`. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
-* `Tab List`. Tabs which will be shown in navigation bar.
-* `Dashboard Layout`. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
-* `URL`. Read only field that displays the link you can access the portal with.
+* `Is Active`. Değilse portal kimseye açık olmayacaktır.
+* `Is Default`. Bu, portalın daha kısa bir URL ile kullanıma sunulacağı anlamına gelir: http (s): // YOUR_ESPO_URL/portal..
+* `Roles`. Portala giriş yapan kullanıcılara uygulanacak bir veya birden fazla portal rolünü belirtiniz. Portal rolleri hakkında daha fazla bilgi aşağıda bulabilirsiniz.
+* `Tab List`. Navigasyon çubuğunda gösterilecek sekmeler.
+* `Dashboard Layout`. Portalın giriş sayfasında görüntülenen dashletleri belirtiniz. Portal kullanıcılarının gösterge tablosunu yapılandıramayacağını unutmayınız.
+* `URL`. Portala erişebileceğiniz bağlantıyı gösteren sadece okunabilen alandır.
 
-## Portal Users
 
-Administrators can create portal users.
+## Portal Kullanıcıları
 
-1. Administration > Users.
-2. Click right dropdown next to Create User.
-3. Click Create Portal User.
-4. Select Contact the portal user will be linked with.
-5. Fill the form and click save.
+Yöneticiler portal kullanıcıları oluşturabilir.
 
-Portal user should be linked to Portal record to be able to access that portal.
+1. Yönetim>Kullanıcılar.
+2. Kullanıcı Oluştur'un yanındaki sağ açılır menüye tıklayınız.
+3. Portal Kullanıcısı Oluştur'a tıklayınız.
+4. Portal kullanıcısı ile iletişim kuracak olan bağlantıyı seçiniz.
+5. Formu doldurun ve Kaydet'e tıklayınız.
 
-## Portal Roles
+Portal kullanıcısı, o portala erişebilmek için Portal kaydına bağlanmalıdır.
 
-Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
+## Portal Rolleri
 
-* `not-set` level denies an access.
-* `own` level means that the record is created by the user. E.g. portal user cased some case and this case is owned by this user.
-* `account` level means that the record is related to the account the portal user is related to.
-* `contact` level means that the record is related to the contact the portal user is related to.
+Portal rolleri, EspoCRM'deki normal rollere benzer ancak birkaç farklılığa sahiptir.
 
-Assigned User and Teams fields are read only for portal users.
+* `not-set` seviyesinde bir erişimi reddeder.
+* `own` seviyesi, kayıtların kullanıcı tarafından oluşturulduğu anlamına gelir. Örneğin. portal kullanıcısı bazı durumlara katlandı ve bu durum, bu kullanıcıya aittir.
+* `account` düzeyinde kayıt, portal kullanıcısının ilişkili olduğu hesaba bağlı olduğu anlamına gelir.
+* `contact` seviyesi, kayıtların portal kullanıcısının ilgili bulunduğu kişiyle ilişkili olduğu anlamına gelir.
 
-### Example
+Atanan Kullanıcının ve Takımların alanları, portal kullanıcıları için yalnızca okunurdur.
 
-`Portal users should be able to create cases, view cases related to their account; they should be able to view knowledge base.`
+### Örnek
 
-1. Open Create Portal Role form (Administration > Portal Roles > Create Role).
-2. Enable access to Cases, set: `create - yes, read - account, edit - no, delete - no, stream - account`.
-3. Enable access to Knowledge Base, set `create - no, read - account, edit - no, delete - no`.
-4. Edit your portal record (Administration > Portals). Select your portal role in Roles field and then save.
+`Portal kullanıcıları, durumlar oluşturabilir, hesaplarıyla ilgili durumları görebilir; bilgi tabanını görebilmelidirler.`
 
-## Access to Portal
+1. Portal Rolü Oluşturma formunu açınız (Yönetim> Portal Rolleri> Rol Oluştur).
+2. Durumlar'a erişimi etkinleştirin, ayarlayınız: `create - yes, read - account, edit - no, delete - no, stream - account`.
+3. Bilgi Tabanına erişimi etkinleştirin, ayarlayınız: `create - no, read - account, edit - no, delete - no`.
+4. Portal kaydınızı düzenleyiniz (Yönetim> Portallar). Roller alanında portal rolünü seçiniz ve sonra kaydediniz.
 
-You can find the url for your portal in 'URL' field of the portal record. Also it's possible to use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
 
-### Access portal by Custom URL for Apache server
+## Portal'a Erişim
 
-Custom URL: my-portal-host-name.com.
+Portal kayıtınızın 'URL' alanında portalınızdaki URL'yi bulabilirsiniz. Ayrıca farklı URL'ler ile erişebilmek için sunucu yapılandırma araçlarını da (mod_rewrite gibi) kullanmak mümkündür. Bu durumda, 'Özel URL' alanını doldurmanız gerekmektedir.
+
+### Apache sunucusu için Özel URL ile portala erişim
+
+Özel URL: my-portal-host-name.com.
 
 #### crm.portal.conf
 ```
@@ -72,9 +74,9 @@ ServerAlias my-portal-host-name.com
 
 ```
 
-#### Mod rewrite rules
+#### Mod yeniden yazma kuralları
 
-Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is avaialble in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
+`{PORTAL_ID}` yerinde portal kayıt kimliğini belirtiniz. Portal kaydı kimliğini, portal kaydının ayrıntılı görünümünü açtığınızda web tarayıcınızın adres çubuğunda kullanılabilirdir. Gibi: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 bir portal kaydı kimliğidir.
 
 ```
   RewriteCond %{HTTP_HOST} ^portal-host-name.com$
