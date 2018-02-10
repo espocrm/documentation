@@ -66,9 +66,9 @@ $entityManager->getRepository('Account')->remove($account);
 
 #### Find
 ```php
-$accountList = $entityManager->getRepository('Account')->where(array(
+$accountList = $entityManager->getRepository('Account')->where([
     'type' => 'Customer',    
-))->find();
+])->find();
 ```
 
 Descending order:
@@ -89,9 +89,9 @@ $accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('cr
 
 #### Find the first one
 ```php
-$account = $entityManager->getRepository('Account')->where(array(
+$account = $entityManager->getRepository('Account')->where([
     'type' => 'Customer',    
-))->findOne();
+])->findOne();
 ```
 
 #### Find related
