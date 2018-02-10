@@ -1,6 +1,6 @@
-# LDAP authorization for OpenLDAP
+# Autorização LDAP para OpenLDAP
 
-Example of configuration LDAP authorization for OpenLDAP server. The full guide of configuration LDAP authorization is described [here](ldap-authorization.md).
+Exemplo de configuração de autorização LDAP para servidor OpenLDAP. O guia completo de configuração de configuração LDAP está descrito [aqui](ldap-authorization.md).
 
 ```
 Host: espo.local
