@@ -2,7 +2,7 @@
 
 Kendi akışınıza ve (sürüm 3.8.0'dan bu yana) başka kullanıcıların akışına gönderim yapabilirsiniz. EspoCRM'de iki tür yayın bulunur: kayıt akışı ve kullanıcı akışı.
 
-Varsayılan olarak, aşağıdaki öğeler bir akışa sahiptir: Hesaplar, Kişiler, Talepler, Fırsatlar, Olaylar. Yöneticiler, [Öğe Yöneticisi](../administration/entity-manager.md)'inden belirli bir öğe için akışı etkinleştirebilir veya devre dışı bırakabilir.
+Varsayılan olarak, aşağıdaki öğeler bir akışa sahiptir: Hesaplar, Kişiler, Müşteri Adayları, Fırsatlar, Olaylar. Yöneticiler, [Öğe Yöneticisi](../administration/entity-manager.md)'inden belirli bir öğe için akışı etkinleştirebilir veya devre dışı bırakabilir.
 
 ## Kayıt Akışı
 
