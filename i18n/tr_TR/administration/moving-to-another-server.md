@@ -1,41 +1,42 @@
-# Moving EspoCRM to another server
+# EspoCRM'yi başka bir sunucuya taşımak
 
-Follow these steps to move EspoCRM to another server:
+EspoCRM'yi başka bir sunucuya taşımak için şu adımları izleyiniz:
 
-### Step 1. Backup files
+### 1. Adım Dosyaları Yedekleyiniz
 
-Open a file manager or login via SSH to archive all available files from the EspoCRM directory. More details: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
+EspoCRM dizininden mevcut tüm dosyaları arşivlemek için dosya yöneticisini açın veya SSH ile giriş yapın. Daha fazla detay: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
 
-### Step 2. Backup your database
+### 2. Adım Veritabanını Yedekleyiniz
 
-The data stored in database (MySQL, MariaDB) should be backed up. Please follow this recommendation: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
+Veritabanında saklanan veriler (MySQL, MariaDB) yedeklenmelidir. Lütfen bu öneriyi uygulayın: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
 
-### Step 3. Copy files and database backups to another server
+### 3. Adım Dosyaların ve veritabanının yedeklerini başka bir sunucuya kopyalayınız
 
-Copy backups of files and of your database to a new server.
+Dosyaların ve veritabanınızın yedeklerini yeni bir sunucuya kopyalayınız.
 
-### Step 4. Unarchive backup files
+### 4. Adım Yedeklenmiş dosyala arşivden çıkartınız
 
-To unarchive backup files, you can use Archive Manager or this instruction: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files. 
-Note: Files need to be placed in the web-server directory.
+Yedeklenmi dosyaların arşivden çıkartılması için Arşiv Yöneticisini veya şu talimatları kullanabilirsiniz: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files. 
+Not: Dosyaların web sunucusu dizinine yerleştirilmesi gerekmektedir.
 
-### Step 5. Configure a server
+### 5. Adım Bir Sunucu yapılanrınız
 
-Configure a new server based on the recommendations here: https://www.espocrm.com/documentation/administration/server-configuration/.
+Buradaki önerilere dayanan yeni bir sunucu yapılandırınız: https://www.espocrm.com/documentation/administration/server-configuration/.
 
-### Step 6. Correct permissions
+### 6. Adım Uygun İzinler
 
-Set required permissions and files owner, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
+Gerekli izinleri ve dosya sahiplerini ayarlayınız, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
 
-### Step 7. Import your database backup
+### 7. Adım Veritabanı yedeklerinizi içe aktarınız
 
-First, you have to create a new database with a user in MySQL. To import your database from the backup, follow the instuction: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
 
-### Step 8. Correct EspoCRM configurations
+Öncelikle, MySQL'de bir kullanıcıyla yeni bir veritabanı oluşturmanız geremektedir. Veritabanınızı yedeklerini içeri aktarmak için aşağıdaki talimatları uygulayınız: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
 
-After successfully importing and configuring the server, please correct EspoCRM configurations in the file `ESPOCRM_DIRECTORY/data/config.php`:
+### 8. Adım Uygun EspoCRM yapılandırmaları
 
- * database connection settings:
+Sunucuyu başarılı bir şekilde içe aktardıktan ve yapılandırdıktan sonra, `ESPOCRM_DIRECTORY/data/config.php` dosyasındaki EspoCRM yapılandırmalarını düzeltiniz:
+
+ * veritabanı bağlantı ayarları:
   
   ```php
   'database' => [
@@ -48,13 +49,14 @@ After successfully importing and configuring the server, please correct EspoCRM 
     ],
   ```
    
-   * "siteUrl" - if your domain name (URL) is changed:
-  
+   * "siteUrl" - Eğer alan adınız (URL) değiştirilirse:
+
+
   ```php
   'siteUrl' => 'https://new-link.com',
   ```
   
-  * default files owner (only if different):
+  * varsayılan dosya sahipleri (sadece farklıysa):
   
   ```php
   'defaultPermissions' => [
@@ -63,11 +65,12 @@ After successfully importing and configuring the server, please correct EspoCRM 
     ]
   ```
 
-  where `www-data` is your web-server user.
+  Neredeki 'www-data' web sunucusu kullanıcısıdır?
 
-### Step 9. Setup a crontab
 
-Setup a crontab, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
-Note: it should be configured under your web-server user.
+### 9. Adım bir crontab kurulumu
 
-That's all. Now, your EspoCRM instance is running on a new server.
+Bir crontab kurulumu için, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+Not: web-sunucu kullanıcısı altında yapılandırılmalıdır.
+
+Hepsi bu kadar. Şimdi, EspoCRM örneğiniz yeni bir sunucuda çalışıyor.
