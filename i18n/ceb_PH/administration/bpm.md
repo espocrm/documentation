@@ -177,7 +177,6 @@ Mu-eksikyut sa script sa sulod sa [espo-formula](formula.md) nga pinulongan. Ang
 
 #### Sequence nga Flow
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
 Girepresanta isip usa ka solid nga udyong o arrow. Mupakita sa order kung asa ang mga proseso na elemento kay i-eksikyut.
 
 ## Mga Kondisyon
