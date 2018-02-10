@@ -1,76 +1,78 @@
-# Guidelines on Using Emails
+# Diretrizes sobre o Uso do Correio Eletronico
 
-EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+O EspoCRM porporciona a capacidade de procurar correio eletrónico na caixa IMAP. Isto faz com que seja  possivel usar o EspoCRM como um cliente de correio eletrónico juntamente com os recursos específicos do CRM.
 
-## IMAP accounts
+## Contas IMAP
 
-*Note: You need to have [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
+*Nota: Deves ter o [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) configurado corretamente no teu sistema para que o correio eletrónico recebido funcione.*
 
-User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+O utilizador pode configurar a conta IMAP na página de contas de correio eletrónico pessoais (guia do correio eletrónico> menu superior direito> Contas de Correio Eletrónico Pessoais).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
+Especifica quais as pastas que são para monitorizar no campo Pastas Monitorizadas. Por padrão, ele está configurado no INBOX. Se usas um cliente de correio eletrónico externo para enviar mensagens de correio eletrónico, Podes adicionar a pasta Enviada para arquivar este correio eletrónico.
 
-*Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
+*Pesquisa Desde* permite que escolhas a data a partir da qual as mensagens de correio eletrónico devem ser arquivadas. Configura-o para uma data antes de hoje, se precisares de arquivar correio eletrónico antigo.
 
-There is an ability to specify *Folder* in Persnoal Email Account. Incoming emails will be put in that folder.
+Existe a possibilidade de especificares a *Pasta* na Conta Pessoal de Correio Eletrónico. As mensagens de correio eletrónico recebidas serão colocadas nessa pasta.
 
-## SMTP accounts
+## Contas SMTP
 
-Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+Os utilizadores podem configurar as configurações do SMTP em Preferências, bem como nas suas Contas de Correio Eletrónico Pessoais. O administrador também pode permitir o uso do sistema SMTP (torna-lo Compartilhado).
 
-Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of *User* record.
+Os utilizadores podem ter várias contas SMTP (a partir da versão 4.2.0). Mas os endereços de correio eletrónico que o utilizador pode usar para enviar mensagens de correio eletrónico são definidos pelos endereços de correio eletrónico do registro *Utilizador*.
 
-## Working with Emails
+## Trabalhar com Correio Eletrónico
 
-Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
-You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
+As mensagens de correio eletrónico são capturados pelo cron (em segundo plano) a cada poucos minutos (o período pode ser especificado pelo Administrador).
+Pode ver todos as tuas mensagens de corrreio eletrónico na aba Correio Eletrónico. Existem as pastas padrão, Recebidas, Enviadas, Rascunhos no lado esquerdo.
 
-*Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
+O campo de *Estado*. `Enviado` significa que foi enviado a partir do CRM, `Arquivado` - retirado da conta IMAP ou arquivado manualmente, `Rascunho` - significa que o correio electrónico foi criado como um rascunho.
 
-When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized then user can link it manually by filling in *Parent* field.
+Quando uma nova mensagem de correio eletrónico chega, o sistema tenta reconhecer a qual registro este correio eletrónico pertence. Podes vinculá-lo com a Conta, Potencial Cliente, Oportunidade, Caso (e Contato no modo B2C) etc. Se não for reconhecido, o utilizador pode conetá-lo manualmente, preenchendo o campo *Pai*.
 
-If an email came from a new potential client user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
+Quando uma nova mensagem de correio eletrónico vier de um novo potencial cliente, o utilizador pode **converte-lo em Potencial Cliente**. Abre a entrada de correio eletrónico e clica em Criar potencial cliente no menu superior direito.
 
-It's also possible to **create Task or Case** from an email record.
+Também é possível **criar Tarefa ou Caso** a partir de um registro de correio eletrónico.
 
-If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can **create contact** right from there.
+Se os endereços de correio eletrónico (de, para, cc) num registro de correio eletrónico forem reconhecidas pelo sistema, será mostrado a pessoa com quem eles estão relacionados (Contato, Potencial Cliente, Utilizador, etc.). Se qualquer endereço de correio eletrónico for novo, podes **criar contato** diretamente de lá.
 
-All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
+Todas as mensagens de correio eletrónico relacionados a um registro específico émostrado no painel Histórico desse registro. Se algum correio eletrónico estiver relacionado, por exemplo, com oportunidade, mas a oportunidade está relacionada à conta, ela será mostrada em oportunidade e em conta
 
-## Sending Emails
+## Enviar Correio Electrónico
 
-You can compose new email by a few ways:
-* *Compose Email* button on Emails list view;
-* replying on another email;
-* clicking on an email address of some record;
-* *Compose Email* action of Activities panel.
+Podes escrever uma nova mensagem de correio eletrónico de várias formas:
+* Botão de *Escrever Correio Eletrónico* na lista de Correio Eletrónico;
+* responder a outro correio eletrónico;
+* clicar num endereço de correio eletrónico de algum registro;
+* ação *Escrever Correio Eletrónico* no painel de Atividades.
 
-There is an ability to **select template** of your email.
+Existe a possibilidade de **selecionares o modelo** no teu correio eletrónico.
 
-You can setup **email signature** in Preferences.
+Podes configurar a **assinatura do correio eletrónico** em Preferências.
 
-## Email Folders
+## Pastas de Correio Electrónico
 
-Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you wan't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Os utilizadores podem criar as suas próprias pastas de correio eletrónico de acordo com a conviniência para colocar algumas das mensagens de correio eletrónico. A lista de pastas disponíveis está disponível na página de Correio Eletrónico no lado esquerdo. Para criar ou editar pastas, siga o Correio Eletrónico> menu suspenso no canto superior direito> Pastas.`Ignorar Notificação` significa que não serás notificado sobre as mensagens de correio eletrónico recebidas que pertençam à pasta especificada. Ao usares os Filtros de Correio Eletrónico, é possível colocares as mensagens de correio eletrónico nas pastas automaticamente de acordo com os critérios específicos.
 
-## Email Filters
+## Filtros de Correio Eletrónico
 
-Administrator can create global email filters to skip not desirable emails. They are available at Administration > Email Filters.
+O administrador pode criar filtros de correio eletrónico globais para ignorar o correio eletrónico indesejado. Estão disponíveis em Administração> Filtros de Correio Eletrónico Email.
 
-Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
+O utilizador regular pode criar filtros de correio eletrónico para as suas contas de correio eletrónico pessoais ou para toda a sua caixa de entrada completa. Estão disponíveis em Correio Eletrónico > menu suspenso no canto superior direito> Filtros.
 
-There are two types of filters:
-* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder - imported emails will be put into specified user's folder automatically.
+Existem dois tipos de filtros:
+* Ignorar - o correio eletrónico será colocado no *Lixo* ou não será importado se o filtro estiver relacionado a Conta Pessoal de Correio Eletrónico;
+* Colocar pasta – as mensagens de correio eletrónico importados serão automaticamente colocados na pasta de utilizador especificada.
 
-## Email Templates
+## Modelos de Correio Eletrónico
 
-Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sendings and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
+Os modelos de correio eletrónico estão disponíveis em Correio Eletrónico > menu suspenso no canto superior direito> Modelos de correio eletrónico. Podem ser usados para correio eletrónico em massa e correio eletrónico regular. A caixa de verificação `One-off` significa que o modelo de correio eletrónico será usado apenas uma vez, que é usual para o marketing por correio eletrónico.
 
-It's possible to use placefolders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
+É possível usar os espaços reservados da pasta no corpo do modelo de correio eletrónico e o assunto, por exemplo. {Account.name}, {Person.emailAddress}. Serão substituídos por valores de registros relacionados.
 
-You can use additional reserved placefolders in template body: {optOutUrl} and {optOutLink}.
+ Podes usar marcadores de espaço de pasta reservados adicionais no corpo do modelo: {optOutUrl} e {optOutLink}.
 ```
-<a href="{optOutUrl}">Unsubscribe</a>
+
+<a href="{optOutUrl}">Cancelar a inscrição</a>
 ```
-This is unsubscribe link for mass email.
+
+Este é uma ligação para cancelar a inscrição de correio eletrónico em massa.
