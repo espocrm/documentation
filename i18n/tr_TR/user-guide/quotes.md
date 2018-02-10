@@ -1,46 +1,46 @@
-# Quotes
+# Fiyatlandırma
 
-Quotes feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Fiyatların özelliği [Gelişmiş Paket] içerisinde mevcuttur.(https://www.espocrm.com/extensions/advanced-pack/).
 
-Quotes are specific group of products or services with their quantities and prices that you quote to customers.
+Fiyatlandırma, müşterilere teklif ettiğiniz miktar ve fiyatlarla belirli ürün veya hizmet grubudur.
 
-Quotes has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
+Fiyatlandırma fırsat ile bir ilişkilidir. Fırsatlar ayrıntısını fiyatlandırma paneline  Yönetim> Düzen Yöneticisi> Fırsatlar> İlişkilere ekleyebilirsiniz.Bir fırsata bağlı yeni bir fiyat teklifi hazırlarken fırsat öğelerini fiyat teklifine aktarılır.
 
-You can add Quotes panel to Accunt's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
+İlgili teklifleri görebilmek için Hesapın detaylı görünümüne Fiyat panelini ekleyebilirsiniz. Bunu, Yönetim>Düzen Yöneticisi> Hesaplar> İlişkilerde de yapabilirsiniz.
 
-## Quote Items
+## Ürünlerin Fiyatandırması
 
-Quote has a list of items. Each item can represent a certain product or a service with description, quantity, tax rate, list price and unit price fields. It's possible to sort items manually.
+Fiyatlandırmanın bir ürün listesi vardır. Her bir madde, açıklama, miktar, vergi oranı, liste fiyatı ve birim fiyat alanlarıyla belli bir ürünü veya hizmeti temsil edebilir. Öğeleri manuel olarak sıralamak mümkündür.
 
-There is an ability to add custon fields for Quote Item entity using Entity Manager.
+Varlık Yöneticisi'ni kullanarak Fiyat Elemanı varlığı için özel alanlar ekleme özelliği vardır.
 
-## Templates
+## Şablonlar
 
-By default there are two available templates: Quote and Invoice. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
+Varsayılan olarak iki mevcut şablon vardır: Fiyat ve Fatura. Yeni şablonları (Quotes list view> top-right dropdown menu> Templates) oluşturabilir ve var olanları düzenleyebilirsiniz.
 
-For more precise editing it's recommended to use Code View mode.
+Daha hassas düzenleme için Kod Görünümü modunu kullanmanız önerilir.
 
-You can print fields of Quote record as well as fields of related records by utilizing placeholders in your template.
+Şablonunuzdaki yer tutucuları kullanarak Fiyatlandırma kayıt alanlarını ve ilgili kayıt alanlarını yazdırabilirsiniz.
 
-Examples:
-`{{accountName}}` – Account name,
+Örnekler:
+`{{accountName}}` – Hesap adı,
 
-`{{{billingAddressStreet}}}` – street,
+`{{{billingAddressStreet}}}` – Soka,
 
-`{{account.type}}` – type of related Account,
+`{{account.type}}` – ilgili hesap türü,
 
-`{{assignedUser.lastName}}` – last name of the assigned user.
+`{{assignedUser.lastName}}` – atanmış kullanıcının soyadı.
 
-If your line item is a product you can print product’s fields. 
+Satır öğeniz bir ürünse, ürün alanlarını yazdırabilirsiniz.
 
-Examples:
+Örnekler:
 `{{product.length}}`, 
 
 `{{product.color}}`.
 
-Length and color are custom fields of Product entity in examples.
+Uzunluk ve renk, örneklerde Ürün varlığının özel alanlarıdır.
 
-Looping through quote items:
+Teklif ürünleriyle döngü:
 
 ```
 <!-- {{#each itemList}} -->
@@ -54,52 +54,57 @@ Looping through quote items:
 <!-- {{/each}} -->
 ```
 
-It's possible to print image fields: 
+Resim alanlarını basmak mümkündür:
 
 ```
 <img src="{{file imageId}}">
 ```
-where `imageId` – the name of custom image field in Quote entity concatenated with the suffix `Id`.
+Nerede `imageId` – Fiyat nesnesinde özel imaj alanının adını `ID` sonekiyle bitiştirilir.
 
-For product line item:
+Ürün için üretim hattı:
+
 ```
 <img src="{{file product.photoId}}">
 ```
 
-To display float numbers (like quantity, unitPrice etc.) w/o fractional part (as integer) use following expressions (since version 4.8.3):
+Virgüllü sayıları (örneğin miktar, birim fiyat vb.) Görüntülemek için kesirli kısmı (tam sayı olarak) aşağıdaki ifadeleri kullanınız (sürüm 4.8.3'ten beri):
+
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
-Custom formatting for currency values (since version 4.8.3):
+Para birimi değerleri için özel biçimlendirme (sürüm 4.8.3'ten beri):
+
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
-Value `10000.5` will be printer as `10 000,50`. 
+ `10000.5` değeri  `10 000,50` yazıcı olacaktır. 
 
-To display text fileds (multiline) use triple braces: `{{{description}}}`.
+Metin alanlarını görüntülemek için (çok satırlı) üçlü parantez kullanın: `{{{description}}}`.
 
-## Print to PDF
+## PDF'ye yazdır
 
-Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template.
+Fiyatlandırmalar PDF'ye yazdırılabilir. Bu işlem teklifin ayrıntılı görünümü Düzenle düğmesinin yanında açılır menüde mevcuttur.Devamında Şablon'u seçmeniz istenecektir.
 
-## Email Quote
 
-Quote PDF can be send in email as an attachment. Open quote record, click dropdown next to Edit button and the click Email PDF.
+## E-Postaya gönderilen fiyatlar
 
-## Automatic numbering
+Fiyatlandırmalar PDF e-postayla ek olarak gönderilebilir. Teklif kaydını açın, Düzenle butonunun yanındaki açılır listeye tıklayın ve E-posta PDF'e göndermeye tıklayın..
 
-You can create a Number field via Entity Manager for Quote entity type. Administration > Entity Manager > Quote > Fields > Add Filed > Number. Then you need to place it in on detail view using Layout Manager.
+## Otomatik numaralandırma
 
-The value will be incremented by every new quote. There is an ability to specify the next number as well as prefix.
+Fiyatlandırmanın varlık türü için Varlık Yöneticisi aracılığıyla bir numara alanı oluşturabilirsiniz. Yönetim> Varlık Yönetimi> Fiyatlar> Alanlar> Alan Ekle> Numara. Ardından, Düzen Yöneticisi'ni kullanarak ayrıntılı görünümüne yerleştirmeniz gerekmektedir.
 
-## Default tax
+Değer, her yeni teklif tarafından artırılacaktır. Önekin yanı sıra sonraki numarayı belirtme olanağı da vardır.
 
-Available since EspoCRM 4.8.0.
+## Varsayılan vergi
 
-1. Specify default Tax record at Administration > Entity Manager > Quotes > fields > Tax > Default.
-2. Specify default tax rate at Administration > Entity Manager > Quotes > fields > Tax Rate > Default.
+EspoCRM 4.8.0'dan beri mevcut.
 
-## Invoices
+1. Yönetim> Kuruluş Yöneticisi> Fiyatlar > Alanlar> Vergi> Varsayılan'da, varsayılan vergi kaydını belirtin.
+2. Varsayılan vergi oranını Yönetim> Kuruluş Yöneticisi> Fiyatlar> Alanlar> Vergi Oranı> Varsayılan değerlerinden belirleyin.
 
-Quote can be treated as an invoice if its status became `Approved`. Then _Date Invoiced_, _Invoice Number_ fields show up. You can use different template for invoices for printing.
+## Faturalar
+
+Fiyatlandırma durumu `Onaylandığında` bir fatura olarak ele alınabilir.Ardından Faturalandırılmış Tarih, Fatura Numarası alanları görülür. Faturaları yazdırmak için farklı şablon kullanabilirsiniz.
+
