@@ -67,7 +67,7 @@ $entityManager->getRepository('Account')->remove($account);
 #### Find
 ```php
 $accountList = $entityManager->getRepository('Account')->where([
-    'type' => 'Customer',    
+    'type' => 'Customer'
 ])->find();
 ```
 
@@ -90,7 +90,7 @@ $accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('cr
 #### Find the first one
 ```php
 $account = $entityManager->getRepository('Account')->where([
-    'type' => 'Customer',    
+    'type' => 'Customer',   
 ])->findOne();
 ```
 
@@ -115,5 +115,41 @@ $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $o
 or
 ```php
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
+```
+
+#### Where clause
+
+##### Comparison operators
+
+Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'amount>=' => 100
+ ])->findOne();
+```
+
+##### IN and NOT IN operators
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'stage' => ['Closed Lost', 'Closed Won']
+ ])->findOne();
+```
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'stage!=' => ['Closed Lost', 'Closed Won']
+ ])->findOne();
+```
+
+##### LIKE operators
+
+Supported  operators: `*` -- LIKE, `!*` -- NOT LIKE.
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'name*' => '%service%'
+ ])->findOne();
 ```
 
