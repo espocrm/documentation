@@ -1,83 +1,82 @@
-# Entity Manager
+# Varlık Yöneticisi
 
-Entity Manager is available in Administration panel. It provides an ability to highly customize your EspoCRM instance. You are able to do the following:
+Varlık Yöneticisi, Yönetici panelinde kullanılabilir. EspoCRM örneğini iyi derecede özelleştirmek için bir olanak sağlar. Aşağıdakileri yapabilirsiniz:
 
-* Add new types of entities.
-* Customize existing types of entities: change labels, default order in list view, enable or disable stream.
-* Configure fields: add new, customize existing ones.
-* Configure relationships: add new, change labels of existing ones.
+* Yeni varlık türlerini ekleyin.
+* Varlık türlerini özelleştirin: etiketleri değiştirin, liste görünümünde varsayılan sıralama, akışı etkinleştirin veya devre dışı bırakın.
+* Alanları yapılandırın: yeni alan ekleyin, mevcut alanları özelleştirin.
+* İlişkileri yapılandırın: yeni ekleyin, mevcut olanların etiketlerini değiştirin.
 
-## Creating new entity
+## Yeni varlık oluşturmak
 
-Click `Create Entity` button on Entity Manager page. Specify name, labels and type. If you select `Person` type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check `Stream` if you want your entity to have stream panel and users to be able to Follow entities of this type.
-
-Types:
-
-* Base - empty entity only with basic fields like Name, Assigned User, Teams, Description.
-* Base Plus - like Base but with Activities, History, Tasks panels (available since 4.3.0).
-* Event - Date Start, Date End, Duration, Parent, Status fields. Available in Calendar and Activities panel (since 4.3.0, must be enabled at Administration > Settings).
-* Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
-* Company - Email, Phone, Billing Address, Shipping Address fields. Activities, History, Tasks panels.
-
-## Update existing entity
-
-If you click `Edit` link on a certain entity you will be able to change some parameters of that entity.
-
-* Labels - singular and plural name of the entity.
-* Default order records are sorted by in list views.
-* Stream - whether Stream feature is enabled for this entity.
-* Disabled - check if you don't need this entity in your system.
-* Text Filter Fields - what fields to search in for the main text filter and global search.
+Varlık Yöneticisi sayfasındaki 'Varlık Yarat' düğmesini tıklayın. Adını, etiketlerini ve türünü belirtin. Eğer 'Kişi' türünü seçerseniz, varlığınız E-posta, Telefon, İsim, Soyisim ve Selamlaşma alanlarına sahip olacaktır. Varlığınızın akış paneli olmasını ve kullanıcıların bu tür varlıkları takip etmesini istiyorsanız "Akış"'ı kontrol edin.
 
 
-## Fields
+Türler:
 
-By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones. The following types of fields are available in Entity Manager:
+* Taban - Sadece isim, atanmış kullanıcı, takımlar, açıklamalar gibi temel alanlar içeren boş varlıklar.
+* Taban Artı - Tabana benzer ancak Aktiviteler, Geçmiş ve Görevler panelleriyle birlikte. (4.3.0'dan itibaren kullanılabilir).
+* Etkinlik - Başlangıç Tarihi, Bitiş Tarihi, Süre, Ebeveyn, Durum alanlarıdır.Takvim ve Etkinlikler panelinde mevcuttur (4.3.0'dan bu yana, Yönetim> Ayarlar'da etkinleştirilmelidir).
+* Kişi - E-posta, Telefon, Adı, Soyadı, Selamlama, Adres alanlarını. Etkinlikler, Tarihçe, Görevler panellerini barındırır.
+* Şirket - E-posta, Telefon, Fatura Adresi, Nakliye Adresi alanlarını. Etkinlikler, Tarihçe, Görevler panellerini barındırır.
 
-* Address - address with street, city, state, postal code and country;
-* Array - list of values, with the ability to select multiple values (not a good option if you need to search by this field); users can add their own values if options are not specified.
-* Attachment Multiple - multiple file attachments;
-* Auto-increment - read only generated number;
-* Boolean - checkbox, true or false;
-* Currency - for currency values;
-* Date;
-* DateTime;
-* Enum - selectbox, with the ability to select only one value;
-* File - uploading one file;
-* Float - number with a decimal part;
-* Foreign - a field of related entity;
-* Image - uploading image file with a preview;
-* Integer - whole number;
-* Number - auto-incrementing number of string type with a possible prefix and a specific length;
-* Multi-enum - list of values, with the ability to select multiple values (not a good option if you need to search by this field), similar to Array but nicer.
-* Text - text area, for long multiline texts;
-* Url - for links;
-* Varchar - short text;
-* Wysiwyg - similar to Text field, with the ability to format text.
+## Mevcut varlığı güncelle
 
-Parameters:
-* Required - whether filling in of the field is mandatory.
-* Default Value - Value of the field set upon creating new record.
-* Audited - updates of the field will be logged in Stream.
+Belli bir varlık üzerinde `Düzenle` bağlantısını tıklarsanız, o varlığın bazı parametrelerini değiştirebileceksiniz.
 
-**Note**: After you have added the new field you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
-
-### Dynamic Logic
-
-Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
-
-For Enum, Array and Multi Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met.
+* Etiketler - varlığın tekil ve çoğul adı..
+* Varsayılan sipariş kayıtları liste görünümlerine göre sıralanır.
+* Akış - Akış özelliğinin bu varlık için etkinleştirilip etkinleştirilmediği.
+* Devre dışı - sisteminizde bu öğeye ihtiyacınız yok ise kontrol edin.
+* Metin Filtresi Alanları - ana metin filtresi ve genel arama için hangi alanları arayacaklarını.
 
 
-## Relationships
+## Alanlar
 
-You can create new relationships between both out-of-box and custom entities. There are 3 available relationship types:
+'Alanlar' bağlantısını tıklayarak ayrı bir sayfaya geçeceksiniz. Orada yeni alanlar oluşturabilir veya mevcut alanları güncelleyebilirsiniz. Varlık Yöneticisinde şu alan türleri mevcuttur:
 
-* One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
-* Many-to-One: the same as One-to-Many but vice versa;
-* Many-to-Many: relationship panels on both sides.
+* Adres -  sokak, şehir, eyalet, posta kodu ve ülke iledir adres;
+* Dizi - birden fazla değeri seçebilme olanağıyla değerlerin listesidir (bu alana arama yapmanız gerekiyorsa iyi bir seçenek değildir); seçenekler belirtilmemişse, kullanıcılar kendi değerlerini ekleyebilir.
+* Çoklu Eklenti - çoklu dosya ekleri;
+* Otomatik artış - yalnızca üretilen sayıları okumak;
+* Boolean - onay kutusu, doğru veya yanlış;
+* Para birimi - para birimlerine değer vermek için;
+* Tarih;
+* Tarih Saat;
+* Enum - yalnızca bir değer seçme olanağı bulunan kutuyu seçin;
+* Dosya - bir dosya yüklemek;
+* Float - ondalık kısmı olan sayı;
+* Yabancı - varlık ile lgili bir alan;
+* Görüntü - önizleme ile görüntü dosyasını yükleme;
+* Tamsayı - tamsayı;
+* Sayı - mümkün ön ek ve belirli bir uzunluk ile otomatik artan sayıda dize türü;
+* Çoklu-enum - değerlerin listesi, birden fazla değer seçme yeteneğine sahipken (Diziye benzer şekilde değilse iyi bir seçenek değil) Diziye benzerdir ancak daha güzeldir.
+* Metin - metin alanı, uzun satırlı metinler için;
+* Url - bağlantılar için;
+* Varchar - kısa metin;
+* Göründüğü gibi çıktı - Metin formatının becerisi ile text alanına benzer;
 
-Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of detail view screen.
+Parametreler:
+* Gerekli - alanın doldurulması zorunludur.
+* Varsayılan Değer - Yeni kayıt oluştururken alanın değeridir.
+* Denetlendi - alandaki güncellemeler Akış'da günlüğe kaydedilecek.
 
-If parameter 'Audited' is checked then updates of the relationship will be logged in Stream.
+**Not**: Yeni alanı ekledikten sonra [düzenlerini] (layout-manager.md) (Yönetim> Düzen Yöneticisi) üzerine bu alanı koymanız gerekir..
 
+### Dinamik Mantık
+
+Formları dinamik hale getirme olanağı sağlar. Bazı alanları görünür, gerekli veya sadece okunan hale getiren koşulları tanımlamak mümkündür. Formdaki veriler değiştirildiğinde koşullar otomatik olarak kontrol edilir.
+
+Enum, Dizi ve Çoklu-Enum alanlarında, karşılaşılan koşullara bağlı olarak alan için kullanılabilecek farklı seçenek kümeleri tanımlamak mümkündür.
+
+## İlişkiler
+
+Hem başlangıçtaki hem de özel öğeler arasında yeni ilişkiler oluşturabilirsiniz. Kullanılabilir 3 ilişki türü vardır bunlar:
+
+* Birden Çok'a: Bu ilişkiyi oluşturduktan sonra, doğru varlığın ayrıntılı düzenine bir bağlantı alanı yerleştirebilir ve solundaki varlık için ilişki paneli ekleyebilirsiniz;
+* Çoktan Bir'e: Birden çoğa benzer ama tam terside olabilir.
+* Çoktan çoğa: Her iki taraftaki ilişki panelleri.
+
+'Birden Fazla Bağlantı' parametresi, 'çoklu bağlantı' alanının ilişkiyle birlikte oluşturulacağını belirtir. Düzene böyle bir alan koyabilirsiniz. İlgili kayıtların hızlıca toplanması için uygundur. İlişkileriniz, ayrıntılı görünüm ekranının yüklenmesini yavaşlatan çok sayıda bağlantılı kayıt içeriyorsa, bu iyi bir seçenek değildir.
+
+Parametre 'Denetlendi' işaretlendiyse ilişkinin güncellemeleri Akış'daki günlüğe kaydedilir.
