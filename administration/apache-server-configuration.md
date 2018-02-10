@@ -1,10 +1,10 @@
-# Apache server configuration for EspoCRM
+# EspoCRM এর জন্য Apache সার্ভার কনফিগারেশন
 
-These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+এই নির্দেশাবলী থেকে সম্পূরক Server Configuration](server-configuration.md) গাইডলাইন। দয়া করে মনে রাখবেন এখানে তালিকাভুক্ত সমস্ত কনফিগারেশন সেটিংস উবুন্টু সার্ভারে তৈরি করা হয়েছে।
 
-## PHP requirements
+## পিএইচপির প্রয়োজনীয়তা
 
-To install all necessary libraries, run these commands in a terminal:
+সমস্ত প্রয়োজনীয় লাইব্রেরিগুলি ইনস্টল করতে, এই কমান্ডগুলি একটি টার্মিনালে চালান:
 
 ```
 sudo apt-get update
@@ -13,22 +13,22 @@ sudo phpenmod mcrypt imap mbstring
 sudo service apache2 restart
 ```
 
-## Fixing the issue “API Error: EspoCRM API is unavailable”:
+## সমস্যাটি সমাধান করা “API Error: EspoCRM API is unavailable”:
 
-Take only necessary steps. After each step check if the issue is solved.
+প্রয়োজনীয় পদক্ষেপ নিন। সমস্যাটি সমাধান করা হলে প্রতিটি পদক্ষেপের পরে পরীক্ষা করুন।
 
-### 1. Enable “mod_rewrite” support in Apache
+### 1. Apache- তে "mod_rewrite" সমর্থন সক্ষম করুন
 
-To enable “mod_rewrite,” run these commands in a terminal:
+"Mod_rewrite" সক্ষম করতে, টার্মিনালে এই কমান্ডগুলি চালনা করুন:
 
 ```
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
 
-### 2. Enable .htaccess support
+### 2. সমর্থন সক্ষম করুন .htaccess
 
-To enable .htaccess support, add/edit the Server Configuration Settings /etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf or /etc/apache2/apache2.conf (/etc/httpd/conf/httpd.conf):
+.htaccess সমর্থন সক্ষম করতে, সার্ভার কনফিগারেশন যোগ/সম্পাদনা করুন Settings /etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf বা /etc/apache2/apache2.conf (/etc/httpd/conf/httpd.conf):
 
 ```
 <Directory /PATH_TO_ESPO/>
@@ -36,34 +36,34 @@ AllowOverride All
 </Directory>
 ```
 
-Afterward, run this command in a terminal:
+পরে, এই কমান্ডটি একটি টার্মিনালে চালান:
 
 ```
 sudo service apache2 restart
 ```
 
-### 3. Add RewriteBase path
+### 3. RewriteBase পাথ যোগ করুন
 
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
+একটি ফাইল /ESPOCRM_DIRECTORY/api/v1/.htaccess খুলুন এবং নিম্নলিখিত লাইন প্রতিস্থাপন করুন:
 
 ```
 # RewriteBase /
 ```
 
-with
+সাথে
 
 ```
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where REQUEST_URI is a part of URL, e.g. for “http://example.com/espocrm/”, REQUEST_URI is “espocrm”.
+যেখানে REQUEST_URI URL এর একটি অংশ, যেমন "http://example.com/espocrm/" এর জন্য, REQUEST_URI "espocrm"
 
 
-## Enable HTTP AUTHORIZATION support (only for FastCGI).
+## HTTP AUTHORIZATION সমর্থন সক্ষম করুন (শুধুমাত্র FastCGI এর জন্য)।
 
-FastCGI does not support HTTP AUTHORIZATION by default. If you use FastCGI, you have to enable it in your VirtualHost or /etc/apache2/apache2.conf (httpd.conf) by adding the following code:
+FastCGI ডিফল্ট হিসাবে HTTP AUTHORIZATION সমর্থন করে না যদি আপনি FastCGI ব্যবহার করেন তবে নিম্নলিখিত কোডগুলি যুক্ত করে আপনার VirtualHost অথবা /etc/apache2/apache2.conf (httpd.conf) এ এটি সক্রিয় করতে হবে:
 
-For Fcgid module:
+Fcgid মডিউল জন্য:
 
 ```
 <IfModule mod_fcgid.c>
@@ -73,7 +73,7 @@ For Fcgid module:
 </IfModule>
 ```
 
-For FastCgi module:
+Fcgid মডিউল জন্য:
 
 ```
 <IfModule mod_fastcgi.c>
@@ -83,7 +83,7 @@ For FastCgi module:
 </IfModule>
 ```
 
-To check which module is currently being used, run this command and find the module:
+বর্তমানে যে মডিউলটি ব্যবহৃত হচ্ছে তা পরীক্ষা করতে, এই কমান্ডটি চালান এবং মডিউল খুঁজুন:
 
 ```
 apache2ctl -M
