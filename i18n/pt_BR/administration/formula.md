@@ -1,7 +1,7 @@
 # Campos com Cálculos (Fórmulas)
 
 No gerenciador de entidades é possível definir um script (fórmula) para entidades de tipos específicos. Esse script será executado todas as vezes antes do registro ser salvo. 
-Ele garante a capacidade de atumaticamente definir campos específicos (atributos) com valores derivados dos cálculos.
+Ele garante a capacidade de automaticamente definir campos específicos (atributos) com valores derivados dos cálculos.
 
 Para editar uma fórmula siga Administração > Gerenciador de Entidades > Menu deslizante à direita na linha da entidade desejada > Fórmula.
 
@@ -12,7 +12,7 @@ Você também pode precisar definir campos, que são deveriam ser calculados, So
 
 As fórmulas em EspoCRM é escrita em uma única linguagem designada especificamente para essa característica.
 
-Há operadores, atributos de funções e valores que podem ser usados nas fórmulas. Expressões separadas devem ser delimitadas por caracter ';'.
+Há operadores, atributos de funções e valores que podem ser usados nas fórmulas. Expressões separadas devem ser delimitadas por caractere ';'.
 
 ### Operadores
 
@@ -39,188 +39,188 @@ Priority of operators:
 * `+`, `-`;
 * `*`, `/`, `%`.
 
-### Attributes
+### Atributos
 
-Attributes represent field values of the target entity. You can insert available attributes by clicking on the plus button.
+Atributos representam campos de valores da entidade visada. Você pode inserir atributos disponíveis ao clicar no botão mais.
 
-It's possible to access attributes of related entities with the following format `linkName.attributeName`.
+É possível acessar atributos de entidades relacionadas com o formato seguinte: `linkName.attributeName`. 
 
 
-### Functions
+### Funções
 
-Format of function use: `groupName\functionName(argument1, argument2, ..., argumentN)`.
+Formato de uso das funções: `groupName\functionName(argument1, argument2, ..., argumentN)`.
 
-Out-of-the-box functions are listed below.
+Funções fora-da-caixa estão listadas abaixo.
 
 #### ifThenElse
-`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met then do CONSEQUENT. If not -- then do ALTERNATIVE.
+`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` Se a CONDITION está satisfeita, então faça CONSEQUENT. Se não está -- então faça ALTERNATIVE.
 
 #### ifThen
-`ifThen(CONDITION, CONSEQUENT)` If CONDITION is met then do CONSEQUENT. If not -- do nothing.
+`ifThen(CONDITION, CONSEQUENT)` Se a CONDITION está satisfeita, então faça CONSEQUENT. Se não está -- não faça nada.
 
 #### string\concatenate(
-`string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
+`string\concatenate(STRING_1, STRING_2)` Concatena duas ou mais sequências de caracteres.
 
 #### string\substring
-`string\substring(STRING, START, LENGTH)`  Extracts the characters from a STRING by START position and LENGTH.
+`string\substring(STRING, START, LENGTH)`  Extrai os caracteres da STRING na posição START e LENGTH.
 
-If LENGTH is omitted, the substring starting from START until the end of the STRING will be returned.
+Se LENGTH for omitida, será retornada a subsequência de caracteres iniciada em START até o fim da STRING.
 
-If LENGTH is negative, then that many characters will be omitted from the end of STRING.
+Se LENGTH for negativo, então aquela quantidade de caracteres serão omitidos do final da STRING.
 
 #### string\\trim
-`string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
+`string\trim(STRING)` Retira espaço em branco do início e do fim da STRING.
 
 #### string\\lowerCase
-`string\lowerCase(STRING)` Converts letters to lower case. (since version 5.0.0)
+`string\lowerCase(STRING)` Converte as letras para minúsculas. (desde a versão 5.0.0)
 
 #### string\\upperCase
-`string\upperCase(STRING)` Converts letters to upper case. (since version 5.0.0)
+`string\upperCase(STRING)` Converte as letras para maiúsculas. (desde a versão 5.0.0)
 
 #### datetime\\today
-`datetime\today()` Returns today's date.
+`datetime\today()` Retorna a data de hoje.
 
 #### datetime\now
-`datetime\now()` Returns current datetime.
+`datetime\now()` Retorna a data e hora atual.
 
 #### datetime\format
-`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
+`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converte a data ou data e hora VALUE em uma sequência de caracteres formatada de acordo com as configurações do aplicativo. TIMEZONE e FORMAT podem ser omitidos. Se o TIMEZONE for omitida, então o fuso horário padrão será usado. Se o FORMAT for omitido, então o formato padrão será usado.
 
 #### datetime\date
-`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\date(VALUE, [TIMEZONE])` Retorna a data do mês (1-31). `0` se VALUE estiver vazio. Se o TIMEZONE for omitido, então o fuso horário do sistema é usado. (desde a versão 4.7.0)
 
 #### datetime\month
-`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\month(VALUE, [TIMEZONE])` Retorna o mês (1-12). `0` se VALUE estiver vazio. Se o TIMEZONE for omitido, então o fuso horário do sistema é usado. (desde a versão 4.7.0)
 
 #### datetime\year
-`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\year(VALUE, [TIMEZONE])` Retorna o ano. `0` se VALUE estiver vazio. Se o TIMEZONE for omitido, então o fuso horário do sistema é usado. (desde a versão 4.7.0)
 
 #### datetime\hour
-`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\hour(VALUE, [TIMEZONE])` Retorna a hora (0-23). `-1` se VALUE estiver vazio. Se o TIMEZONE for omitido, então o fuso horário do sistema é usado. (desde a versão 4.7.0)
 
 #### datetime\minute
-`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\minute(VALUE, [TIMEZONE])` Retorna os minutos (0-59). `-1` se VALUE estiver vazio. Se o TIMEZONE for omitido, então o fuso horário do sistema é usado. (desde a versão 4.7.0)
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted then system timezone is used. (since version 4.7.3)
+`datetime\dayOfWeek(VALUE, [TIMEZONE])` Retorna o dia da semana (0-6). `-1` se VALUE estiver vazio. `0` - para domingo. Se o TIMEZONE for omitido, então o fuso horário do sistema é usado. (since version 4.7.3)
 
 #### datetime\diff
-`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
+`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Retorna a diferença entre duas datas ou datas e horas. INTERVAL_TYPE pode ser 'anos', 'meses', 'dias', 'horas', 'minutos'. Retorna `nulo` se falhar. O resultado será negativo se VALUE_1 < VALUE_2.
 
 #### datetime\addMinutes
-`datetime\addMinutes(VALUE, MINUTES)` Adds MINUTES to datetime VALUE. MINUTES can be negative.
+`datetime\addMinutes(VALUE, MINUTES)` Adiciona MINUTES à data e hora VALUE. MINUTES podem ser negativo.
 
 #### datetime\addHours
-`datetime\addHours(VALUE, HOURS)` Adds HOURS to datetime VALUE. HOURS can be negative.
+`datetime\addHours(VALUE, HOURS)` Adiciona HOURS à data e hora VALUE. HOURS pode ser negativo.
 
 #### datetime\addDays
-`datetime\addDays(VALUE, DAYS)` Adds DAYS to date or datetime VALUE. DAYS can be negative.
+`datetime\addDays(VALUE, DAYS)` Adiciona DAYS à data ou data e hora VALUE. DAYS pode ser negativo.
 
 #### datetime\addWeeks
-`datetime\addWeeks(VALUE, WEEKS)` Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
+`datetime\addWeeks(VALUE, WEEKS)` Adiciona WEEKS à data ou data e hora VALUE. WEEKS pode ser negativo.
 
 #### datetime\addMonths
-`datetime\addMonths(VALUE, MONTHS)` Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
+`datetime\addMonths(VALUE, MONTHS)` Adiciona MONTHS à data ou data e hora VALUE. MONTHS pode ser negativo.
 
 #### datetime\addYears
-`datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
+`datetime\addYears(VALUE, YEARS)` Adiciona YEARS à data ou data e hora VALUE. YEARS pode ser negativo.
 
 #### datetime\closest
-`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 5.0.0)
+`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Retorna a data ou data e hora mais próxima do VALUE baseada nos argumentos passados. (desde a versão 5.0.0)
 
-TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted then default timezone is used.
+TYPE pode ser one dos seguintes valores: 'horário', 'minuto', 'hora', 'data', 'mês', 'diaDaSemana'. TARGET é um valor inteiro ou uma sequência de caracteres. IS_PAST significa achar o mais próximo no passado. Se TIMEZONE for omitida, então o fuso horário padrão é usado.
 
-Examples:
+Exemplos:
 
-`datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
+`datetime\closest(datetime\now(), 'time', '20:00')` Retornará o valor  de data e hora mais próximo no futuro com o horário 20:00.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
+`datetime\closest('2017-11-20', 'date', 1, true)` Retornará `2017-11-01`, o primeiro dia do mês. 
 
-`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
+`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Retornará a próxima segunda-feira (o início do dia). 
 
 #### number\format
-`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR then system defaults are used.
+`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converte VALUE numérico em sequência de caracteres formatada de acordo com um formato específico ou configurações do aplicativo padrão. Se DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR então os padrões do sistema serão usados.
 
-Examples:
+Exemplos:
 
-`number\format(2.666667, 2)` - results 2.67;
+`number\format(2.666667, 2)` - resultará 2.67;
 
-`number\format(1000, 2)` - results 1,000.00;
+`number\format(1000, 2)` - resultará 1,000.00;
 
-`number\format(10.1, 0)` - results 10.
+`number\format(10.1, 0)` - resultará 10.
 
 
 #### number\abs
-`number\abs(VALUE)` Absolute value. Returns null if VALUE is not numeric.
+`number\abs(VALUE)` Valor absoluto. Retorna nulo se VALUE não é numérico.
 
 #### number\round
-`number\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
+`number\round(VALUE, PRECISION)` Retorna um valor arredondado de VALUE a uma PRECISION especificada (o número de dígitos depois do ponto decimal). PRECISION também pode ser negativo ou zero (padrão).
 
 #### number\floor
-`number\floor(VALUE)` Returns the next lowest integer value by rounding down value if necessary. (since version 4.9.0)
+`number\floor(VALUE)` Retorna o próximo inteiro de menor valor através do arredondamento para baixo, se necessário. (desde a versão 4.9.0)
 
 #### number\ceil
-`number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary. (since version 4.9.0)
+`number\ceil(VALUE)` Retorna o próximo inteiro de maior valor através do arredondamento para cima, se necessário. (desde a versão 4.9.0)
 
 #### entity\isNew
-`entity\isNew()` Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
+`entity\isNew()` Retorna TRUE se a entidade é nova (está sendo criada) e FALSE se não está (está sendo atualizada).
 
 #### entity\\isAttributeChanged
-`entity\isAttributeChanged(ATTRIBUTE)` Returns TRUE if ATTRIBUTE of the entity was changed.
+`entity\isAttributeChanged(ATTRIBUTE)` Retorna TRUE se o ATTRIBUTE da entidade mudou.
 
-Example:
+Exemplo:
 
 `entity\isAttributeChanged('status')`
 
 #### entity\isAttributeNotChanged
-`entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was not changed.
+`entity\isAttributeNotChanged(ATTRIBUTE)` Retorna TRUE se o ATTRIBUTE da entidade não obteve mudanças.
 
 #### entity\attributeFetched
-`entity\attributeFetched(ATTRIBUTE)` Attribute that was set when target entity was fetched from database. Before it was modified.
+`entity\attributeFetched(ATTRIBUTE)` Atributo que foi definido quando a entidade visada foi buscada na base de dados. Antes dela ser modificada.
 
-Example:
+Exemplo:
 
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field. 
+`entity\addLinkMultipleId(LINK, ID)` Adiciona ID para o campo Links Múltiplos. Por exemplo, adiciona 'someTeamId' ao campo 'teams'. 
 
-`entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
+`entity\addLinkMultipleId(LINK, ID_LIST)` Adiciona a lista de IDs. (desde a versão 4.8.3)
 
 #### entity\hasLinkMultipleId
-`entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
+`entity\hasLinkMultipleId(LINK, ID)` Verifica se o campo Links Múltiplos tem um ID específico.
 
 #### entity\removeLinkMultipleId
-`entity\removeLinkMultipleId(LINK, ID)` Removes a specific ID from the Link Multiple field.
+`entity\removeLinkMultipleId(LINK, ID)` Remove um ID específico do campo Links Múltiplos.
 
 #### entity\isRelated
-`entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
+`entity\isRelated(LINK, ID)` Verifica se a entidade visada está relacionada com outra entidade representada por LINK e ID.
 
 #### env\userAttribute
-`env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
+`env\userAttribute(ATTRIBUTE)` Retorna o ATTRIBUTE do usuário atual.
 
 #### list
-`list(VALUE-1, ... VALUE-N)` Returns array. (since version 4.7.0)
+`list(VALUE-1, ... VALUE-N)` Retorna arranjo. (desde a versão 4.7.0)
 
 #### array\includes
-`array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
+`array\includes(LIST, VALUE)` Retorna verdadeiro se LIST contêm VALUE. Pode ser usado pelos campos Arranjo e Multi-enum. (desde a versão 4.7.0)
 
 #### array\push
-`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 5.0.0)
+`array\push(LIST, VALUE1 [, VALUE2 ...])` Adiciona um ou mais elementos no final de um arranjo e retorna o novo arranjo. (desde a versão 5.0.0)
 
 #### array\length
-`array\length(LIST)` Returns count of elements in LIST. (since version 4.8.1)
+`array\length(LIST)` Retorna a contagem dos elementos em LIST. (desde a versão 4.8.1)
 
 
-### Values
+### Valores
 
-* Strings. E.g. 'some string';
-* Integer numbers. E.g. 1, 100, 40300.
-* Float numbers. E.g. 5.2.
+* Sequências de caracteres. Ex: 'uma sequência de caracteres qualquer';
+* Números inteiros. Ex: 1, 100, 40300.
+* Números decimais. Ex: 5.2.
 
-### Variables
+### Variáveis
 
-It's possible to define custom variables in formula.
+É possível definir variáveis padronizadas nas fórmulas.
 ```
 $someVariableName = 'Test';
 description = $test;
@@ -262,6 +262,6 @@ ifThenElse(
 
 ```
 
-## Using formula in Workflows
+## Usando fórmulas em Fluxos de Trabalho
 
-You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
+Você pode utilizar fórmulas nas condições e ações dos fluxos de trabalhos. Veja [documentação dos fluxos de trabalho](workflows.md) para mais informações.
