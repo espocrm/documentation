@@ -1,99 +1,99 @@
-# Backup and Restore
+# ব্যাকআপ এবং পুনঃস্থাপন
 
-## How to backup EspoCRM manually
+## কিভাবে নিজে EspoCRM ব্যাকআপ করবেন
 
-EspoCRM consists of files and database data. All these data are needed in order to create a full backup of EspoCRM. Here are instructions on how to do it on Ubuntu server with MySQL.
+EspoCRM ফাইল এবং ডাটাবেস ডেটা নিয়ে গঠিত। EspoCRM এর একটি সম্পূর্ণ ব্যাকআপ তৈরি করার জন্য এই সমস্ত ডেটা প্রয়োজন। এখানে উবুন্টু সার্ভারের সাথে মাইএসকিউএল কিভাবে কাজ করে তার নির্দেশনা।
 
-### Step 1. Backup files
+### Step 1. ব্যাকআপ ফাইল
 
-Create an archive of the directory content of installed EspoCRM. For Ubuntu the default path is `/var/www/html`. You may use this command:
+ইনস্টল করা EspoCRM এর ডকুমেন্টের বিষয়বস্তু সংরক্ষণ করুন। উবুন্টুর জন্য ডিফল্ট পাথ হয় `/var/www/html`. আপনি এই পাথ ব্যাবহার করতে পারেন:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
 ```
 
-### Step 2. Backup database
+### Step 2. ব্যাকআপ ডাটাবেস
 
-To backup all your data, you have to know the database name and access credentials. You can find the database name in the configuration file `/ESPOCRM_DIRECTORY/data/config.php` under section `database`. You can use this command to backup your database:
+আপনার সমস্ত ডেটা ব্যাকআপ করতে, আপনাকে ডাটাবেস নাম এবং অ্যাক্সেস শংসাপত্রগুলি জানতে হবে। আপনি কনফিগারেশন ফাইলে ডাটাবেস নামটি খুঁজে পেতে পারেন `/ESPOCRM_DIRECTORY/data/config.php` অধীন অধ্যায় `database`. আপনি এই কমান্ড ব্যবহার করে আপনার ডাটাবেস ব্যাকআপ করতে পারেন:
 
 ```bash
 mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
 ```
 
-### Step 3. Copy the backup
+### Step 3. ব্যাকআপ অনুলিপি করুন
 
-That's all. Now, you have to copy the created backup to a safe place.
+এখানেই শেষ. এখন, আপনি তৈরি ব্যাকআপ একটি নিরাপদ স্থানে কপি করতে হবে।
 
 
-## How to backup EspoCRM with a script
+## একটি স্ক্রিপ্ট এর সঙ্গে EspoCRM ব্যাকআপ করবেন কিভাবে
 
-You can use a script to backup all needed data. Login via SSH and run the commands (tested on Ubuntu server).
+আপনি সমস্ত প্রয়োজনীয় তথ্য ব্যাকআপ করার জন্য একটি স্ক্রিপ্ট ব্যবহার করতে পারেন। SSH এর মাধ্যমে লগইন করুন এবং কমান্ডগুলি চালান (উবুন্টু সার্ভারে পরীক্ষিত)।
 
-### Download a script
+### একটি স্ক্রিপ্ট ডাউনলোড করুন
 
 ```bash
 wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scripts/backup.sh
 ```
 
-### Run the script
+### স্ক্রিপ্ট চালান
 
 ```bash
 bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
 ```
-where
- * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory.
- * `BACKUP_PATH` is a path to backup directory.
+কোথায়:
+ * `PATH_TO_ESPOCRM`EspoCRM ডিরেক্টরিটি ইনস্টল করার একটি পথ.
+ * `BACKUP_PATH` ব্যাকআপ ডিরেক্টরি একটি পথ.
 
-For Ubuntu server it is:
+উবুন্টু সার্ভারের জন্য এটি হল:
 
 ```bash
 bash ./backup.sh /var/www/html /opt/backups
 ```
 
-Note: If your MySQL user doesn't have needed rights to dump your database, you will be promted to enter credentials of another MySQL user.
+দ্রষ্টব্য: যদি আপনার মাইএসকিউএল ব্যবহারকারীকে আপনার ডাটাবেস ডাম্প করার জন্য প্রয়োজনীয় অধিকার না থাকে, তাহলে আপনাকে অন্য মাইএসকিউএল ব্যবহারকারীর শংসাপত্রগুলি প্রবেশ করতে প্রমান করা হবে।
 
-After successful creation, you will get a path to the created backup.
+সফল নির্মাণের পরে, আপনি তৈরি ব্যাকআপ একটি পাথ পাবেন।
 
-## Restore EspoCRM from a backup
+## ব্যাকআপ থেকে EspoCRM পুনরুদ্ধার করুন
 
-You can restore EspoCRM from the backup created as described above.
+আপনি উপরে বর্ণিত হিসাবে তৈরি ব্যাকআপ থেকে EspoCRM পুনরুদ্ধার করতে পারেন।
 
-### Step 1. Unarchive backup files
+### Step 1. ব্যাকআপ ফাইলগুলি আনআর্কাইভ করুন
 
-To unarchive files, you can use Archive Manager or run the below command. Files need to be placed in the web-server directory.
+আর্কাইভ ফাইলগুলিতে, আপনি আর্কাইভ ম্যানেজার ব্যবহার করতে পারেন বা নিম্নোক্ত কমান্ডটি চালাতে পারেন। ফাইলগুলি ওয়েব-সার্ভারের ডিরেক্টরির মধ্যে স্থাপন করা প্রয়োজন।
 
 ```bash
 tar -xzf "files.tar.gz" -C /var/www/html
 ```
-where:
+কোথায়:
  * `/var/www/html` is a web-server directory.
 
-### Step 2. Set required permissions
+### Step 2. প্রয়োজনীয় অনুমতিগুলি সেট করুন
 
-The files should be owned by a web-server user and have correct permissions. Please set required permissions by following this instruction: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+ফাইলগুলির একটি ওয়েব সার্ভার ব্যবহারকারীর মালিকানা থাকা উচিত এবং সঠিক অনুমতি আছে। এই নির্দেশ অনুসরণ করে প্রয়োজনীয় অনুমতি সেট করুন:[www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
 
-### Step 3. Import database dump
+### Step 3. ডাটাবেস ডাম্প আমদানি করুন
 
-Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config.php`. To import your database from the dump, run the command below in a terminal:
+ডেটাবেস ডাম্প একই ব্যবহারকারীর শংসাপত্রের সাথে একই ডাটাবেসে আমদানি করা উচিত, অন্যথায় কনফিগারেশন ফাইলের সংশোধন করা উচিত `ESPOCRM_DIRECTORY/data/config.php`. ডাম্প থেকে আপনার ডাটাবেস আমদানি করতে, টার্মিনালে নীচের কমান্ডটি চালান:
 
 ```bash
 mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
 ```
 
-### Step 4. Check/configure crontab
+### Step 4. চেক/কনফিগার করুন crontab
 
-Check if your crontab is configured properly. Run the command below and check if a path to EspoCRM is correct:
+আপনার crontab সঠিকভাবে কনফিগার করা হয় কিনা তা পরীক্ষা করুন। নীচের কমান্ডটি চালান এবং চেক করুন যদি এস্পোসিআরএম সঠিক পথে থাকে:
 
 ```bash
 sudo crontab -l -u www-data
 ```
-where:
+কোথায়:
  * `www-data` is your web-server user.
 
-If you have to make any changes, use this command:
+যদি আপনি কোনও পরিবর্তন করতে চান তবে এই কমান্ডটি ব্যবহার করুন:
 
 ```bash
 sudo crontab -l -u www-data
 ```
 
-More details about configuring crontab for EspoCRM is described here [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+EspoCRM জন্য crontab কনফিগার সম্পর্কে আরো বিবরণ এখানে বর্ণিত আছে [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
