@@ -1,76 +1,76 @@
-# Business Process Management
+# ব্যবসা প্রক্রিয়া ম্যানেজমেন্ট
 
-Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+ব্যবসায় প্রক্রিয়া ব্যবস্থাপনা (BPM) টুল EspoCRM- এ ব্যবসায়িক প্রক্রিয়ার মডেল এবং স্বয়ংক্রিয় করার ক্ষমতা প্রদান করে। এটি একটি ইঞ্জিন বিপিএমএন 2.0 স্ট্যাণ্ডার্ড বর্ণিত ব্যবসা প্রক্রিয়া নির্বাহ। BPM সরঞ্জাম পাওয়া যায় [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
 
 ![BPM example](../_static/images/administration/bpm/bpm-1.png)
 
-### Difference from Workflows tool
+### ওয়ার্কফ্লা টুল থেকে পার্থক্য
 
-Workflows tool is intended for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
+ওয়ার্কফ্লো টুলটি সহজ ব্যবসা নিয়মগুলির অটোমেশন, W/O ক্রমবর্ধমান প্রবাহের আইটেমগুলির জন্য নির্ধারিত হয়, যখন প্রফ্রাইনটি গ্রাফিকালি প্রদর্শন করার প্রয়োজন নেই।
 
-BPM tool is intended for more complex business flows, where there can be diverging and converging flows, execution delays, user interactions. A flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
+বি.পি.এম টুল আরও জটিল ব্যবসা প্রবাহের উদ্দেশ্যে হয়, যেখানে ডাইভারজিং এবং কনভারজিং ফ্লো, এক্সিকিউশন বিলম্ব, ইউজার ইন্টারঅ্যাকশন থাকতে পারে। একটি ফ্লোচার্ট ভিউ একটি মানুষের জন্য ব্যবসায়িক প্রক্রিয়া আরও বোধগম্য করে তোলে, একটি লগ প্রক্রিয়া কিভাবে অনুষ্ঠিত হয়েছিল তা দেখতে পারবেন।
 
-## Process Flowcharts
+## প্রক্রিয়া ফ্লোচার্টগুলি
 
-The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
+ফ্লোচার্ট প্রক্রিয়া লিঙ্কটি প্রশাসনের প্যানেল থেকে পাওয়া যায়। এটি ন্যাভিগেশন প্যানেলের একটি ট্যাবে যোগ করা যাবে।
 
-Flowcharts are intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
+ফ্লোচার্ট ব্যবসার প্রক্রিয়া মডেলিং জন্য উদ্দেশ্যে করা হয়। প্রশাসক ফ্লোচার্টগুলি তৈরি এবং সম্পাদনা করতে পারেন। নিয়মিত ব্যবহারকারীরা কেবলমাত্র ফ্লোচার্টগুলি দেখতে পারেন।
 
-Every flowchart has its specific entity type (Target Type field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
+প্রতিটি ফ্লোচার্টের নির্দিষ্ট সত্তা টাইপ আছে (টার্গেট প্রকার ক্ষেত্র)। ফ্লোচার্ট ভবিষ্যতে প্রক্রিয়াকরণগুলির বাস্তবায়ন নির্ধারণ করে। এটি ফ্লোচার্ট উপাদান এবং উপাদানগুলির মধ্যে সংযোগগুলি অন্তর্ভুক্ত করে।
 
-If process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
+যদি প্রক্রিয়া ফ্লোচার্টটি অনির্বাচিত হয় তবে 'Is Active' ক্ষেত্র তারপর এটি উদাহরণ প্রক্রিয়া আরম্ভ হবে না.
 
-To show details and parameters of a certain flowchart element you need to click on it. In edit mode you will be able to edit parameters.
+একটি নির্দিষ্ট ফ্লোচার্ট উপাদানের বিবরণ এবং প্যারামিটারগুলি দেখানোর জন্য আপনাকে এটি ক্লিক করতে হবে। সম্পাদনা মোডে আপনি প্যারামিটার সম্পাদনা করতে সক্ষম হবেন।
 
-## Processes
+## প্রক্রিয়া
 
-Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
+প্রক্রিয়াগুলি প্রশাসনের প্যানেল থেকে পাওয়া যায়। সংযোগটিও নেভিগেশন প্যানেলের একটি ট্যাবে যোগ করা যেতে পারে।
 
-Process represents business process instance. When it's initiated it gets the status 'Started'. When process is finished it gets the status 'Ended'. The process can also be stopped manually by a user who has an access to edit the process. If it's stopped manually it gets status the 'Stopped'.
+প্রক্রিয়া ব্যবসায়িক প্রক্রিয়ার উদাহরণ উপস্থাপন করে। এটি শুরু যখন এটি অবস্থা পায় 'Started'. প্রক্রিয়া শেষ হলে এটি অবস্থা পায় 'Ended'. প্রসেসটি এমন একটি ব্যবহারকারীর দ্বারা বন্ধ করা যায় যা প্রসেসটি সম্পাদনা করার অ্যাক্সেস আছে। এটি ম্যানুয়ালি বন্ধ হলে এটি অবস্থা পায়'Stopped'।
 
-The process is executed according the flowchart. Flowchart of process can't be changed after process is started.
+প্রক্রিয়াটি ফ্লোচার্ট অনুযায়ী কার্যকর করা হয়। প্রক্রিয়াটি শুরু হওয়ার পরে প্রক্রিয়াটির ফ্লোচার্ট পরিবর্তন করা যাবে না।
 
-The process obligatorily is related to single target record.
+প্রক্রিয়াটি দায়বদ্ধভাবে একক লক্ষ্যের রেকর্ডের সাথে সম্পর্কিত।
 
-Processes can be started automatically (upon specific conditions or by scheduling) or manually (where there is at least one Start Event in the flowchart). To start process manually the user needs to click 'Start Process' button on the list view of processes.
+প্রক্রিয়াগুলি স্বয়ংক্রিয়ভাবে শুরু হতে পারে (নির্দিষ্ট শর্ত বা নির্ধারিত সময়ে) বা ম্যানুয়ালি (যেখানে ফ্লোচার্টে অন্তত একটি স্টার্ট ইভেন্ট আছে)। প্রক্রিয়াটি শুরু করতে ব্যবহারকারীকে ক্লিক করতে হবে'Start Process'প্রসেস তালিকা বোতাম।
 
-## Flowchart Elements
+## ফ্লোচার্ট এলিমেন্টস
 
-### Events
+### ঘটনাবলী
 
-Events are displayed on a flowchart as circles.
+চেনাশোনাগুলি হিসাবে একটি ফ্লোচার্টে ইভেন্টগুলি প্রদর্শিত হয়
 
-#### Start Event
+#### ইভেন্ট শুরু করুন
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click  'Start Process' button on the list view of processes.
+প্যারামিটার নেই এটি প্রক্রিয়া একটি শুরু বিন্দু। স্টার্ট ইভেন্টটি এমন ব্যবহারকারীর দ্বারা শুরু করা যেতে পারে যা প্রসেস তৈরির অ্যাক্সেস আছে। ব্যবহারকারীকে ক্লিক করতে হবে 'Start Process' প্রসেস তালিকায় বোতাম.
 
-#### Conditional Start Event
+#### শর্তসাপেক্ষ স্টার্ট ইভেন্ট
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of trigger: 'After record created', 'After record saved'.
+প্রক্রিয়া শুরু একটি বিন্দু। নির্দিষ্ট শর্ত পূরণ করা হয় যখন এটা স্বয়ংক্রিয়ভাবে ট্রিগার হতে অনুমিত হয়। ট্রিগার দুটি ধরনের আছে:'After record created', 'After record saved'.
 
-#### Timer Start Event
+#### টাইমার স্টার্ট ইভেন্ট
 
-A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
+প্রক্রিয়া শুরু একটি বিন্দু। এটি নির্ধারণের মাধ্যমে প্রসেস আরম্ভ করে। আপনি প্রসেস শুরু করার জন্য ক্রসব্লব নোটিএনে নির্ধারিত লিস্ট প্রতিবেদনগুলি নির্দিষ্ট করতে হবে।
 
-#### Conditional Intermediate Event
+#### শর্তসাপেক্ষ ইন্টারমিডিয়েট ইভেন্ট
 
-This event stops the flow until specified criteria is met.
+নির্দিষ্ট মাপকাঠি পূরণ করা হয় না হওয়া পর্যন্ত এই ঘটনাটি প্রবাহ বন্ধ করে দেয়।
 
-#### Timer Intermediate Event
+#### টাইমার ইন্টারমিডিয়েট ইভেন্ট
 
-This event stops the flow and waits as long as is specified by event's parameters.
+এই ইভেন্ট প্রবাহ বন্ধ এবং ইভেন্ট এর পরামিতি দ্বারা নির্দিষ্ট হিসাবে যতক্ষণ অপেক্ষা করছে।
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+আরো জটিল টাইমার সেটিংসের জন্য আপনি ব্যবহার করতে পারেন [formula](formula.md). সূত্র স্ক্রিপ্টগুলি তারিখ-সময় মান (UTC টাইমজোনে) ফেরত দিতে হবে। একবার এই সময় আসে প্রবাহ পরের উপাদান এগিয়ে যেতে হবে।সূত্র ফাংশনটি ভবিষ্যতে একটি নির্দিষ্ট সময় টাইমার সেট করা সম্ভব, উদাহরণস্বরূপ। পরের কাজ দিবসের শুরুতে
 
-By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
+ব্যবহার করে datetime\closest সূত্র ফাংশনটি ভবিষ্যতে একটি নির্দিষ্ট সময় টাইমার সেট করা সম্ভব, উদাহরণস্বরূপ। পরের কাজ দিবসের শুরুতে।
 
-#### End Event
+#### শেষ ইভেন্ট
 
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
+বর্তমান প্রবাহ শেষ। এটা সমান্তরাল মধ্যে চলমান প্রবাহ শেষ না। প্রবাহ সমাপ্তি ঘটনা পৌঁছেছে এবং সমান্তরালে চলমান কোন কিছু নেই তারপর প্রক্রিয়া শেষ হয়।
 
-#### Terminate End Event
+#### শেষ ইভেন্ট বন্ধ করুন
 
-Ends all flows. Process is subsequently ended.
+সব প্রবাহ শেষ প্রক্রিয়া পরবর্তীকালে শেষ হয়
 
 ### Gateways
 
