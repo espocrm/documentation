@@ -1,24 +1,24 @@
-# Roles Management
+# Rol Yönetimi
 
-## Overview
+## Genel Bakış
 
-In order to restrict access for some users you need to use Roles. Administrator can manage roles in Administration panel. Each role defines an access to certain areas (scopes) which is applied to users who own that role.
+Bazı kullanıcıların erişimini kısıtlamak için Rolleri kullanmanız gerekmektedir. Yönetici, Yönetim panelindeki rolleri yönetebilir. Her rol, bu rolü kullanan kullanıcılara uygulanan belirli alanlara (kapsamlar) erişimi tanımlamaktadır.
 
-One user can have multiple roles. Those roles can be selected for a specific user (‘Roles’ field in User entry) and/or be inherited from the teams that user belongs to.
+Bir kullanıcı birden çok role sahip olabilir. Bu roller, belirli bir kullanıcı için seçilebilir (Kullanıcı girdisinde 'Roller' alanı) ve/veya kullanıcının ait olduğu ekiplerden devralınabilir.
 
-If a user has multiple roles then they will be merged so that permissive rule will have a higher priority. That allows administrator to manage access level control easily and flexibly.
+Bir kullanıcının birden fazla rolü varsa, izin verilen kuralın daha yüksek önceliğe sahip olması için birleştirileceklerdir.Bu, yöneticinin erişim seviyesi denetimini kolay ve esnek bir şekilde yönetmesini sağlamaktadır.
 
-It's possible to see what permissions is applied to a certain user by clicking 'Access' button on the user's detail view.
+Kullanıcının ayrıntılı görünümünde 'Erişim' butonuna tıklayarak belirli bir kullanıcıya hangi izinlerin uygulandığını görmek mümkündür.
 
 ![1](../_static/images/administration/roles-management/scope-level.png)
 
-## Example
+## Örnek
 
-For example, user belongs to team ‘Sales’. That team has single role ‘Salesman’. So all users from this team will obtain ‘Salesman’ role.
+Örneğin, kullanıcı 'Satış' ekibine aittir. Bu ekibin tek bir "Satış elemanı" rolü vardır. Böylece bu takımdaki tüm kullanıcılar 'Satışçı' rolünü alacaklardır.
 
-‘Salesman’ role is defined the following way:
+'Satış elemanı' rolü şu şekilde tanımlanır:
 
-Lead:
+Rehber:
 ```
 create - yes
 read – team
@@ -27,7 +27,7 @@ delete – no
 stream - team
 ```
 
-Opportunity:
+İmkan: 
 ```
 create - yes
 read – team
@@ -36,15 +36,15 @@ delete – no
 stream - team
 ```
 
-Users will be able to read only those leads and opportunities which belong to ‘Sales Department’ team (‘Teams’ field).
-User will be able to edit only those leads and opportunities which they are assigned to or those they have created.
-Users won’t be able to remove any leads or opportunities.
+Kullanıcılar, yalnızca 'Satış Departmanı' ekibine ('Takımlar' alanı) ait olan potansiyel satışları ve fırsatları okuyabilmektedir.
+Kullanıcı yalnızca atadığı fırsatları veya yarattığı fırsatları düzenleyebilir.Kullanıcılar potansiyel satışları veya fırsatları kaldıramaz.
 
-We want to give more rights to a certain user who holds sales manager position in the company. This employee must have an ability to read/edit/delete all records from ‘Sales’ team. The user should belong to our ‘Sales’ team. But we need to create the new role ‘Sales Manager’ and select this role for that user in ‘Roles’ field.
+Şirkette satış yöneticisi pozisyonuna sahip belirli bir kullanıcıya daha fazla hak vermek istiyoruz. Bu çalışanın 'Satış' takımındaki tüm kayıtları okuma / düzenleme / silme becerisine sahip olması gerekmektedir. Kullanıcı, 'Satış' takımımıza ait olmalıdır. Ancak yeni rolü 'Satış Yöneticisi' oluşturmalıdır ve bu rolü bu kullanıcı için 'Roller' alanından seçmeliyiz.
 
-‘Sales Manager’ role is defined the following way:
+'Satış Müdürü' rolü şu şekilde tanımlanır:
 
-Lead:
+
+Rehber:
 ```
 create - yes
 read – team
@@ -53,7 +53,7 @@ delete – team
 stream - team
 ```
 
-Opportunity:
+İmkan:
 ```
 create - yes
 read – team
@@ -62,44 +62,44 @@ delete – team
 stream - team
 ```
 
-Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
+Kullanıcılarımız 'Satış' ekibinden tüm olası pazarlama fırsatlarını  yönetebilir.
 
-## Special Permissions
+## Özel İzinler
 
-### Assignment Permission
+### Atama İzni
 
-Set this parameter to restrict ability to re-assign records to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
+Kayıtları başka bir kullanıcıya ve/veya takımlara yeniden atama yeteneğini sınırlandırmak için bu parametreyi ayarlayınız. Eğer 'Takım' belirtirseniz - yalnızca kendi takım(ları)ın  kullanıcılarına atamak mümkün olacaktır.Eğer `hayır` ise - kullanıcılar yeniden atayamazlar.
 
-It also defines whether user is able to post to stream of another users/teams.
+Ayrıca, kullanıcının başka kullanıcıların/takımların akışına yayın yapıp yapamayacağını tanımlar.
 
-### User Permission
+### Kullanıcı İzinleri
 
-Allows to restrict an ability for users to view activities, calendar and stream of other users.
+Kullanıcıların diğer kullanıcıların etkinliklerini, takvimlerini ve yayın akışlarını görüntüleme olanağını kısıtlamasına izin verir.
 
-### Portal Permission
+### Portal İzni
 
-Defines an access to portal information, ability to post messages to portal users.
+Portal bilgilerine erişim, portal kullanıcılarına mesaj gönderme becerisi tanımlamaktadır.
 
-### Group Email Account Permission
+### E-posta Grup Hesabı İzinleri
 
-Defines an access to group email accounts, an ability to send emails from group SMTP.
+Grup e-posta hesaplarına  erişimi, SMTP grubundan e-posta gönderme becerisini tanımlamaktadır.
 
-### Export Permission
+### Dışarıya Aktarma İzinleri
 
-Defenies whether user have an ability to export records. (since version 4.9.0)
+Kullanıcıların kayıtları dışa aktarma yeteneği olup olmadığını değerlendirir. (sürüm 4.9.0'dan beri)
 
-## Permissions by Default 
+## Varsayılanlara Göre İzinler
 
-By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
+Varsayılan olarak kullanıcılar (herhangi bir uygulama yoksa)  tüm kayıtları okuyabilirler ve düzenleyebilirler. Ancak, oluşturdukları ve bunlarla aynı anda atananların haricindeki herhangi bir şeyi silemezler.
 
-There is an ability to restrict an access applied by default by enabling 'ACL Strict Mode' at Administration > Settings.
+Varsayılan olarak uygulanan erişim, Yönetim>Ayarlar kısmında 'ACL Strict Mode' özelliğini etkinleştirerek kısıtlama olanağı sağlar.
 
-## Field Level Security
+## Alan Seviyesinde Güvenlik
 
-Allows to control an access for a specific fields.
+Belirli bir alana erişimi kontrol etmeyi sağlar.
 
-By default user can read all fields if one can read the record. User can edit any field if one can edit the record. You can restrict access to specific fields using Field Level Security.
+Varsayılan kullanıcı olarak, kayıtları okuyabilirse tüm alanları okuyabilir. Alan Seviyesinde Güvenlik özelliğini kullanarak belirli alanlara erişimi kısıtlayabilirsiniz.
 
-In edit view  of a role record in Field Level section click plus icon next to the specific scope then select needed field. Then you will be able to specify the access level for `read` and `edit` actions. There are to options: `yes` and `no`.
+Alan Seviyesi bölümündeki bir rol kaydının düzenleme görünümündeki, belirli kapsamın yanındaki artı simgesine tıklayınız ve ardından gerekli alanı seçiniz. Ardından, `read` ve` edit` eylemleri için erişim seviyesini belirleyebileceksiniz. Var olan seçenekler: `evet` ve `hayır`.
 
 ![2](../_static/images/administration/roles-management/field-level-secutiry.png)
