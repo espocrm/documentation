@@ -189,11 +189,15 @@ $contactList = $entityManager->getRepository('Contact')->distinct()->join('oppor
 ```
 
 ```
-$contactList = $entityManager->getRepository('Contact')->distinct()->leftJoin('opportunities')->where(...)->find();
+$contactList = $entityManager->getRepository('Contact')
+->distinct()->leftJoin('opportunities')->where(...)->find();
 ```
 
 ```
-$contactList = $entityManager->getRepository('Contact')->distinct()->join(['opportunities', 'aliasForJoinedTable'])->where([
+$contactList = $entityManager->getRepository('Contact')
+->distinct()
+->join(['opportunities', 'aliasForJoinedTable'])
+->where([
   'aliasForJoinedTable.stage' => 'Closed Won'
 ])->find();
 ```
@@ -212,12 +216,12 @@ $selectParams = [
 
 // applying left joins for currency convertion
 $this->getEntityManager()->getRepository('Opportunity')->handleSelectParams($selectParams);
- 
 
 $pdo = $this->getEntityManager()->getPDO();
 $sql = $this->getEntityManager()->getQuery()->createSelectQuery('Opportunity', $selectParams);
 $sth = $pdo->prepare($sql);
 $sth->execute();
 
-$rowList = $sth->fetchAll(\PDO::FETCH_ASSOC); // results
+// results
+$rowList = $sth->fetchAll(\PDO::FETCH_ASSOC); 
 ```
