@@ -1,39 +1,39 @@
-# Import
+# Importar
 
-Import is accessible only for admin users. Administration > Import. You are able to import only from CSV files.
+Importar é acessível somente a usuários administradores. Administração > Importar. Você será capaz de importar somente arquivos CSV.
 
-## Step 1
+## Passo 1
 
-Select what type of records you need to import (Entity Type field).
-Select a CSV file. A file should be formated with `UTF-8`.
-Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Update Only'.
+Selecione qual o tipo de registro você precisa importar (campo Tipo de Entidade).
+Selecione um arquivo CSV. Um arquivo deveria estar formatado com 'UTF-8'.
+Selecione 'O que fazer?'. Opções disponíveis: 'Somente Criar', 'Criar & Atualizar', 'Somente Atualizar'.
 
-* `Create Only` - select it if you want record be only created.
-* `Create & Update` - records will be created but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the _Step 2_.
-* `Update only` - only records with matching field values will be found it will be updated.
+* `Somente Criar` - selecione se você quiser que o registro seja apenas criado.
+* `Criar & Atualizar` - os registros serão criados, mas se registros campo de valores coincidentes forem encontrados, eles serão atualizados. Você será capaz de verificar quais campos coincidir no _Passo 2_.
+* `Somente Atualizar` - apenas registros com valores de campos coincidentes serão encontrados e serão atualizados.
 
-Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
+Uma vez que você selecionar um arquivo csv, você será capaz de ver como ele deveria ser analisado no painel de pré-visualização. Quando você muda as propriedades, a pré-visualização será atualizada. 
 
-* `Header Row` - whether CSV file has the first row with field names.
-* `Execute in idle` - recommended if you have a big bunch of records to be imported. Import will be processed via cron. Status will be set to 'Complete' when import process is finished.
-* `Skip searching for duplicates` - it will decrease import runtime. 
+* `Linha do Cabeçalho' - se o arquivo CSV tem a primeira linha com nomes dos campos.
+* `Executar em segundo plano' - recomendado se você tem uma grande quantidade de registros a serem importados. Importar será processado através de cron. O estado será definido como 'Completo' quando o processo de importação finalizar.
+* `Pular pesquisa por duplicações` - isso vai diminuir o tempo de execução da importação. 
 
-Click _Next_ button to preceed to the _Step 2_.
+Clique no botão _Próximo_ para seguir para o _Passo 2_.
 
 ![1](../_static/images/administration/import/step-1.png)
 
-## Step 2
+## Passo 2
 
-Setup the field mapping: how fields correspond to columns of the csv file. You can skip not needed columns here.
-In cases of 'Create & Update' and 'Update only' you need to check fields by which records that should be updated will be found.
-Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
+Configure o mapeamento de campo: como os campos correspondem à colunas no arquivo CSV. Você pode pular colunas não necessárias aqui.
+Em caso de 'Criar & Atualizar' e 'Somente Atualização' você precisa verificar os campos pelos quais os registros que devem ser atualizados serão encontrados.
+Adicione valores padrões novos que você deseja e atualize os registros para defini-los. Ex: você pode especificar os campos Usuário Designado ou Times.
 
-After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once. Note: Revert doesn't work with updated records.
+Após completar a importação você será capaz de reverter registros criados, ver duplicatas e atualizar registros. Duplicata significa que existia um registro similar no sistema. Você pode remover todas as duplicatas importadas de uma vez. Nota: Reverter não funciona com registros atualizados.
 
-Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
+Clique no botão _Executar Importação_ para seguir. Pode levar algum tempo até que o processo de importação seja finalizado. Se você precisar importar uma grande quantidade de registros (dependendo das configurações do servidor, normalmente mais que 200 registros) você precisa ter certeza que o parâmetro php 'set_time_limit' tem tamanho suficiente.
 
 ![2](../_static/images/administration/import/step-2.png)
 
-## How to import into Target List
+## Como importar para Listas Destino
 
-When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
+Quando você importa Contatos, Conduções ou Contas, você pode adicioná-las a uma lista destino. No Passo 2 você precisa adicionar o campo Lista Destino no painel 'Valores Padrões' e selecionar um registro de lista destino desejada. Você pode também usar a importação 'Somente Atualizar' ou 'Criar & Atualizar' para adicionar destinos existentes a uma lista destino.
