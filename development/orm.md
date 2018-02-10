@@ -174,7 +174,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->findOne();
 ```
 
-#### Distict
+#### Distinct
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->distinct()->where(...)->find();
