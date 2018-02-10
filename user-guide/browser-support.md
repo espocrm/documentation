@@ -1,7 +1,8 @@
-# Browser support
+# Tarayıcı desteği
 
-We recommend using the latest versions of Google Chrome or Mozilla Firefox. EspoCRM works the best in these browsers. We regularly test all features in these browsers.
+Google Chrome ve Mozilla Firefox'un son sürümlerini kullanmayı öneriyoruz. EspoCRM bu tarayıcılarda en iyi şekilde çalışır. Düzenli olarak tüm özellikleri bu tarayıcılarda test ediyoruz.
 
-Microsoft Edge and Safari are also supported, but there are less guarantees that everything will be working smoothly.
+Microsoft Edge ve Safari de desteklenir fakat her şeyin rahatça çalışacak olmasının daha az garantisi vardır.
 
-We heighly do not recommend using Internet Explorer 11.
+Internet Explorer 11 kullanmayı şiddetle önermiyoruz.
+
