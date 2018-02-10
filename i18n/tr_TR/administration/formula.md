@@ -1,230 +1,225 @@
-# Hesaplanmış Alanlar (Formül)
+# Hesaplanan Alanlar (Formül)
 
-Varlık yöneticisinde, belirli varlık türü için komut dosyasını (formül) tanımlamak mümkündür. Bu script, kayıt kaydedilmeden önce her defasında yürütülecektir.
+Varlık modunda spesifik varlık türü için script (formül) tanımlamak mümkündür. Bu script kayıt kaydedilmesinden önce her zaman gerçekleştirilmiş olacaktır. 
+
+Hesaplamadan elde edilmiş değerler ile otomatik olarak spsifik alanları (semboller) ayarlamak için bir yetenek sağlar.
+
+Formülü düzenlemek için şunu izleyin, Yönetim > Varlık Yöneticisi > gerekli varlık sırasındaki sağdaki açılır menü > Formül.
+
+Ayrıca hesaplanmış varsayılan, Varlık Yöneticisi aracılığıyla salt okunur alanları ayarlamanız gerekebilir. 
+
+## Sözdizimi
+
+EspoCRM formülü bu özellik için spesifik olarak tasarlanmış basit dilde yazılır.
  
-Hesaplamadan türetilen değerler ile belirli alanların (niteliklerin) otomatik olarak ayarlaması olanağını sağlar.
-
-Formülü düzenlemek için, Yönetim> Varlık Yöneticisi>Açılır menüsündeki gerekli satırın sağındaki Entity>Formül yolunu izleyin.
-
-Hesaplanması beklenen alanları, Varlık Yöneticisi aracılığıyla sadece okunur olarak ayarlamanız gerekebilir.
-
-
-## Söz Dizimi
-
-EspoCRM formülü, bu özellik için özel olarak tasarlanmış olan basit dilde yazılmıştır.
-
-Formülde kullanılabilen operatörlerin, işlevsel nitelikleri ve değerleri vardır. Ayrılmış ifadeler `;` karakteriyle sınırlandırılmalıdır.
+Formülde kullanılan operatörler, fonksiyon simgeleri ve değerler vardır. Ayrılmış ifadeler `;` karakteri ile sınırlandırılmış olmalıdır.
 
 ### Operatörler
 
 * `=` - atama.
-* `||` - mantıksal VEYA,
-* `&&` - mantıksal VE,
-* `!` - mantıksal DEĞİL,
+* `||` - mantıksal OR,
+* `&&` - mantıksal AND,
+* `!` - mantıksal NOT,
 * `+`- sayısal toplama,
 * `-` - sayısal çıkarma,
 * `*` - sayısal çarpma,
 * `/` - sayısal bölme,
-* `%` - sayısal yüzde,
-* `==` - eşittir karşılaştırması,
-* `!=` - eşit değildir karşılaştırması,
-* `>` - büyüktür karşılaştırması,
-* `<` - küçüktür karşılaştırması,
-* `>=` - büyük veya eşittir kaşılaştırması,
-* `<=` - küçük veya eşittir karşılaştırması.
+* `%` - sayısal modulo,
+* `==` - karşılaştırma eşit,
+* `!=` - karşılaştırma eşit değil,
+* `>` - karşılaştırma daha büyük,
+* `<` - karşılaştırma daha küçük,
+* `>=` - karşılaştırma daha büyük veya eşit,
+* `<=` - karşılaştırma daha küçük veya eşit.
 
-Operatörlerin öncelik sırası:
+Operatörlerin önceliği:
 * `=`;
 * `||`, `&&`;
 * `==`, `!=`, `>`, `<`, `>=`, `<=`;
 * `+`, `-`;
 * `*`, `/`, `%`.
 
-### Öznitelikler
+### Semboller
 
-Nitelikler, hedef varlığın alan değerlerini temsil eder. Artı düğmesine tıklayarak mevcut özelliklere ekleyebilirsiniz..
+Semboller hedef varlığın alan değerlerini temsil eder. Artı butonuna tıklayarak geçerli simgeleri girebilirsiniz.
 
-İlişkili varlığın niteliklerine aşağıdaki `linkName.attributeName` formatıyla erişmek mümkündür:
-
+Takip eden `linkName.attributeName` format ile ilgili varlıkların sembollerine erişim mümkündür.
 
 ### Fonksiyonlar
 
-Fonksiyon kullanım şekli: `groupName\functionName(argument1, argument2, ..., argumentN)`.
+Fonksiyon kullanım biçimi: `groupName\functionName(argument1, argument2, ..., argumentN)`.
 
-Kutudan çıkan işlevler aşağıda listelenmiştir.
+Kutu dışındaki fonksiyonlar aşağıda listelenmiştir.
 
 #### ifThenElse
-`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` CONDITION sağlanırsa, CONSEQUENT'i yapın. Değilse - ALTERNATİF'i yapın.
-
+`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` CONDITION ile karşılaşılırsa CONSEQUENT yap. Değilse -- o zaman ALTERNATIVE yap.
 
 #### ifThen
-`ifThen(CONDITION, CONSEQUENT)` CONDITION karşılanırsa, CONSEQUENT'i yapın. Yoksa - başka hiçbir şey yapmayın.
+`ifThen(CONDITION, CONSEQUENT)` CONDITION ile karşılaşılırsa CONSEQUENT yap. Değilse -- hiçbir şey yapma. 
 
 #### string\concatenate(
-`string\concatenate(STRING_1, STRING_2)` İki veya daha fazla stringleri birleştirir.
+`string\concatenate(STRING_1, STRING_2)` İki veya daha fazla diziyi sıralar.
 
 #### string\substring
-`string\substring(STRING, START, LENGTH)`  Karakterleri STRING'in başlangıç konumuna ve uzunluğuna göre ayıklar. 
+`string\substring(STRING, START, LENGTH)`  START konumu ve LENGTH ile bir STRING'den karakterleri çıkarır.   
 
-LENGTH atlanırsa, başlanğıçtan başlayıp STRING'in sonuna kadar olan alt dize döndürülür.
+LENGTH çıkarılırsa, START'tan STRING'in sonuna kadar başlatılan alt dizi getirilmiş olacak.
 
-LENGTH negatifse, bu birçok karakter STRING'in sonuna çıkartılır.
+LENGTH negatifse, o zaman bu birçok karakter STRING'in sonundan çıkarılmış olacak.
 
 #### string\\trim
-`string\trim(STRING)` STRING'in başından ve sonundan itibaren boşlukları giderir.
+`string\trim(STRING)` Başlangıçtan ve STRING'in sonundan beyazalanı çıkarır.
 
 #### string\\lowerCase
-`string\lowerCase(STRING)` Harfleri küçük harfe dönüştürür. (5.0.0 sürümünden bu yana)
+`string\lowerCase(STRING)` Harfleri küçük harfe dönüştürür. (Sürüm 5.0.0'den beri)
 
 #### string\\upperCase
-`string\upperCase(STRING)` Harfleri büyük harfe dönüştürür. (5.0.0 sürümünden bu yana)
+`string\upperCase(STRING)` Harfleri büyük harfe dönüştürür. (Sürüm 5.0.0'den beri)
 
 #### datetime\\today
-`datetime\today()` Bugünün tarihini döndürür.
+`datetime\today()` Bugünün tarhini getirir.
 
 #### datetime\now
-`datetime\now()` Geçerli tarih saatini döndürür.
+`datetime\now()` Geçerli tarih saati getirir.
 
 #### datetime\format
-`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Uygulama ayarlarına göre biçimlendirilmiş stringin biçimine tarih veya tarih saatinin DEĞER'ini dönüştürür. SAAT DİLİMİ ve FORMATI atlanabilir. SAAT DİLİMİ atlanırsa, varsayılan saat dilimi kullanılacaktır.Eğer FORMAT atlanırsa varsayılan format kullanılır.
+`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Tarih veya tarih saat VALUE'yu uygulama ayarlarına göre biçimlendirilmiş diziye dönüştürür. TIMEZONE ve FORMAT çıkarılablir. TIMEZONE çıkarılırsa o zaman varsayılan zaman dilimi kullanılır. FORMAT çıkarılırsa o zaman varsayılan format kullanılır. 
 
 #### datetime\date
-`datetime\date(VALUE, [TIMEZONE])` Ayın tarihini döndürür (1-31).  Eğer SAAT DİLİMİ atlandıysa sistem saat dilimi kullanılır. (sürüm 4.7.0'dan beri)
+`datetime\date(VALUE, [TIMEZONE])` Ayın gününü getirir (1-31). `0` VALUE boşsa. TIMEZONE çıkarılırsa o zaman sistem zaman dilimi kullanılır. (4.7.0 sürümünden beri)
 
 #### datetime\month
-`datetime\month(VALUE, [TIMEZONE])` Ayları döndürür(1-12). Eğer DEĞERİ `0` ise boştur. Eğer SAAT DİLİMİ atlandıysa sistem saat dilimi kullanılır. (sürüm 4.7.0'dan beri)
+`datetime\month(VALUE, [TIMEZONE])` Ayı getirir (1-12). `0` VALUE boşsa. TIMEZONE çıkarılırsa o zaman sistem zaman dilimi kullanılır. (4.7.0 sürümünden beri)
 
 #### datetime\year
-`datetime\year(VALUE, [TIMEZONE])` Yılı döndürür. Eğer DEĞERİ `0` ise boştur. Eğer SAAT DİLİMİ atlandıysa sistem saat dilimi kullanılır. (sürüm 4.7.0'dan beri)
+`datetime\year(VALUE, [TIMEZONE])` Yılı getirir. `0` VALUE boşsa. TIMEZONE çıkarılırsa o zaman sistem zaman dilimi kullanılır. (4.7.0 sürümünden beri)
 
 #### datetime\hour
-`datetime\hour(VALUE, [TIMEZONE])` Saati döndürür (0-23). Eğer DEĞERİ `-1` ise boştur. Eğer SAAT DİLİMİ atlandıysa sistem saat dilimi kullanılır. (sürüm 4.7.0'dan beri)
+`datetime\hour(VALUE, [TIMEZONE])` Saati getirir (0-23). `-1` VALUE boşsa. TIMEZONE çıkarılırsa o zaman sistem zaman dilimi kullanılır. (4.7.0 sürümünden beri)
 
 #### datetime\minute
-`datetime\minute(VALUE, [TIMEZONE])` Dakikayı döndürür (0-59). Eğer DEĞERİ `-1` ise boştur. Eğer SAAT DİLİMİ atlandıysa sistem saat dilimi kullanılır. (sürüm 4.7.0'dan beri)
+`datetime\minute(VALUE, [TIMEZONE])` Dakikayı getirir (0-59). `-1` VALUE boşsa. TIMEZONE çıkarılırsa o zaman sistem zaman dilimi kullanılır. (4.7.0 sürümünden beri)
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE, [TIMEZONE])` Haftanın günlerini döndürür (0-6). Eğer DEĞERİ `-1` ise boştur `0` ise Pazar günüdür. ğer SAAT DİLİMİ atlandıysa sistem saat dilimi kullanılır. (sürüm 4.7.3'dan beri)
-
+`datetime\dayOfWeek(VALUE, [TIMEZONE])` Haftanın günlerini getirir (0-6). `-1` VALUE boşsa. `0` Pazar için. TIMEZONE çıkarılırsa o zaman sistem zaman dilimi kullanılır. (4.7.0 sürümünden beri)
 
 #### datetime\diff
-`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` İki tarih veya tarih arasındaki farkı döndürür. INTERVAL_TYPE, 'yıl', 'ay', 'gün', 'saat', 'dakika' olabilir. Eğer başarısız olursa `boşş` döndürür. VALUE_1<VALUE_2 olan sonuç negatiftir.
+`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` İki tarih veya zaman dilimi arasındaki farkı getirir. INTERVAL_TYPE 'yıllar', 'aylar', 'günler', 'saatler', 'dakikalar' olabilir. Başarısız olursa `null` getirir. VALUE_1 < VALUE_2 sağlanırsa sonuç negatif olacaktır. 
 
 #### datetime\addMinutes
-`datetime\addMinutes(VALUE, MINUTES)` Tarih DEĞERİ için DAKİKA eklendi. DAKİKALAR negatif olabilir.
+`datetime\addMinutes(VALUE, MINUTES)` Zaman dilimi VALUE'ya MINUTES ekler. MINUTES negatif olabilir.
 
 #### datetime\addHours
-`datetime\addHours(VALUE, HOURS)` Tarih DEĞERİ için SAAT eklendi. SAATLER negatif olabilir.
+`datetime\addHours(VALUE, HOURS)` Zaman dilimi VALUE'ya HOURS ekler. HOURS negatif olabilir.
 
 #### datetime\addDays
-`datetime\addDays(VALUE, DAYS)` Tarih DEĞERİ için GÜNLER eklendi. GÜNLER negatif olabilir.
+`datetime\addDays(VALUE, DAYS)` Zaman veya zaman dilimi VALUE'ya DAYS ekler. DAYS negatif olabilir.
 
 #### datetime\addWeeks
-`datetime\addWeeks(VALUE, WEEKS)` Tarih DEĞERİ için HAFTALAR eklendi. HAFTALAR negatif olabilir.
+`datetime\addWeeks(VALUE, WEEKS)` Zaman veya zaman dilimi VALUE'ya WEEKS ekler. WEEKS negatif olabilir.
 
 #### datetime\addMonths
-`datetime\addMonths(VALUE, MONTHS)` Tarih DEĞERİ için AYLAR eklendi. AYLAR negatif olabilir.
+`datetime\addMonths(VALUE, MONTHS)` Zaman veya zaman dilimi VALUE'ya MONTHS ekler. MONTHS negatif olabilir.
 
 #### datetime\addYears
-`datetime\addYears(VALUE, YEARS)` Tarih DEĞERİ için YILLAR eklendi. YILLAR negatif olabilir.
+`datetime\addYears(VALUE, YEARS)` Zaman veya zaman dilimi VALUE'ya YEARS ekler. YEARS negatif olabilir.
 
 #### datetime\closest
-`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Geçilen bağımsız değişkenlere dayanarak en yakın tarihi veya zaman dilimi DEĞERİNİ döndürür. (
+`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` En yakın zaman veya zaman dilimini geçmiş argümana bağlı VALUE'ye getirir. (Sürüm 5.0.0'dan beri) 
 
-TİP şu değerlerden biri olabilir: 'zaman', 'dakika', 'saat', 'tarih', 'ay', 'HaftanınGünleri'. HEDEF bir tamsayı değer veya string değeridir. IS_PAST, geçmişe en yakın olanı bulmak anlamına gelir. ZAMAN DİLİMİ atlanırsa varsayılan saat dilimi kullanılır.
+TYPE sıralanan şu değerlerden biri olabilir: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET bir tamsayı değeri veya bir dizi değeridir. IS_PAST geçmişteki en yakını bulmak anlamına gelir. TIMEZONE çıkarılırsa o zaman varsayılan zaman dilimi kullanılır. 
 
 Örnekler:
 
-`datetime\closest(datetime\now(), 'time', '20:00')` Gelecek olan 20:00'a en yakın saat dilimi değerini döndürür.
+`datetime\closest(datetime\now(), 'time', '20:00')` Gelecekteki en yakın zaman dilimini 20:00 zamanı getirecek.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Ayın ilk günü olan `2018-02-01`'i geri döndürür.
+`datetime\closest('2017-11-20', 'date', 1, true)` `2017-11-01`, ayın ilk gününü getirecek. 
 
-`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Sonraki Pazartesi gününü (günün başında) döndürür.
+`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Gelecek Pazartesi'yi (günün başlangıcı) getirecek. 
 
 #### number\format
-`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Sayısal DEĞERİNİ, belirli bir biçimde veya varsayılan uygulama ayarlarına göre biçimlendirilmiş string haline dönüştürür. Eğer ONDALIK,  DECIMAL_MARK veya THOUSAND_SEPARATOR ise, sistem varsayılanları kullanır.
+`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Sayısal VALUE'yu bir spesifik biçime veya varsayılan uygulama ayarlarına göre biçimlendirilmiş diziye dönüştürür. DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR ise, o zaman sistem varsayılanları kullanılır. 
 
 Örnekler:
 
-`number\format(2.666667, 2)` - sonuçlar 2.67;
+`number\format(2.666667, 2)` - 2.67 sonuçlar;
 
-`number\format(1000, 2)` - sonuçlar 1,000.00;
+`number\format(1000, 2)` - 1,000.00 sonuçlar; 
 
-`number\format(10.1, 0)` - sonuçlar 10.
+`number\format(10.1, 0)` - 10 sonuçlar.
 
 
 #### number\abs
-`number\abs(VALUE)` Mutlak değer. DEĞERİ sayısal değilse boş döndürür.
+`number\abs(VALUE)` Kesin değer. VALUE sayısal değilse geçersiz olarak getirir. .
 
 #### number\round
-`number\round(VALUE, PRECISION)` DEĞERİN yuvarlanması, belirtilen HASSASİYETİ (ondalık noktasından sonraki basamak sayısı) döndürür. HASSASİYET negatif veya sıfır olabilir (varsayılan).
+`number\round(VALUE, PRECISION)` VALUE'nun yuvarlanmış değerini belirli PREECISION'a getirir (ondalık noktadan sonraki basamak sayısı). PRECISION negatif veya sıfır (varsayılan) olabilir. 
 
 #### number\floor
-`number\floor(VALUE)` Gerektiğinde değeri yuvarlarken bir sonraki en düşük tamsayı değerini döndürür. (sürüm 4.9.0'dan beri)
+`number\floor(VALUE)` Gerekliyse aşağı yuvarlayarak sonraki en küçük tam sayı değeerini getirir. (4.9.0 sürümünden beri)
 
 #### number\ceil
-`number\ceil(VALUE)` Gerektiğinde değeri yuvarlarken bir sonraki en yüksek tamsayı değerini döndürür. (sürüm 4.9.0'dan beri)
+`number\ceil(VALUE)` Gerekliyse yukarı yuvarlayarak sonraki en büyük tam sayı değeerini getirir. (4.9.0 sürümünden beri)
 
 #### entity\isNew
-`entity\isNew()` Varlık yeni(yaratılan) ise DOĞRU, değilse (güncellenirken) FALSE döndürür.
+`entity\isNew()` Varlık yeniyse (oluşturuluyorsa) TRUE ve değilse (güncelleniyorsa) FALSE getirir.
 
 #### entity\\isAttributeChanged
-`entity\isAttributeChanged(ATTRIBUTE)` Varlığın ÖZNİTELİK değeri değiştiyse, TRUE değerini döndürülür.
+`entity\isAttributeChanged(ATTRIBUTE)` Varlığın ATTRIBUTE'u değiştirilmişse TRUE getirir.
 
 Örnek:
 
 `entity\isAttributeChanged('status')`
 
 #### entity\isAttributeNotChanged
-`entity\isAttributeNotChanged(ATTRIBUTE)` Varlığın ÖZNİTELİK değeri değiştirilmediyse, TRUE değerini döndürülür.
+`entity\isAttributeNotChanged(ATTRIBUTE)` Varlığın ATTRIBUTE'u değiştirilmemişse TRUE getirir.
 
 #### entity\attributeFetched
-`entity\attributeFetched(ATTRIBUTE)` Hedef varlık veritabanından alındığında belirlenen özelliktir. Değişiklik yapılmadan önceki.
+`entity\attributeFetched(ATTRIBUTE)` Hedef varlık veritabanından çekildiğinde ayarlanmış simge. Değiştirilmeden önce.
 
 Örnek:
 
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Birden Fazla Bağlantı Noktasına ID ekler. Örneğin, 'teams' alanına 'someTeamId' ekleyin.
+`entity\addLinkMultipleId(LINK, ID)` Link Çoklu alana kimlik ekler. Örneğin, 'teams' alanına 'someTeamId' ekle.
 
-`entity\addLinkMultipleId(LINK, ID_LIST)` Kimliklerin listesini ekler. (sürüm 4.8.3'ten beri)
+`entity\addLinkMultipleId(LINK, ID_LIST)` Kimliklerin listesini ekler. (4.8.3 sürümünden beri)
 
 #### entity\hasLinkMultipleId
-`entity\hasLinkMultipleId(LINK, ID)` Çoklu bağlantı alanının belirli ID'ye sahip olup olmadığını kontrol eder.
-
+`entity\hasLinkMultipleId(LINK, ID)` Link Çoklu alanın belirli kimliğinin olup olmadığını denetler.
 
 #### entity\removeLinkMultipleId
-`entity\removeLinkMultipleId(LINK, ID)` Birden Fazla Bağlantı alanındaki belirli bir kimliği kaldırır.
+`entity\removeLinkMultipleId(LINK, ID)` Link Çoklu alandan belirli bir kimlik kaldırır.
 
 #### entity\isRelated
-`entity\isRelated(LINK, ID)` Hedef varlığın LINK ve kimlik tarafından temsil edilen başka bir varlıkla ilişkisi olup olmadığını kontrol eder.
+`entity\isRelated(LINK, ID)` Hedef varlığın LINK ve ID ile temsil edilen başka bir varlık ile ilgili olup olmalığını denetler. 
 
 #### env\userAttribute
-`env\userAttribute(ATTRIBUTE)` Geçerli kullanıcının ÖZNİTELİK değerini döndürür.
+`env\userAttribute(ATTRIBUTE)` Geçerli kullanıcının ATTRIBUTE'unu getirir.
 
 #### list
-`list(VALUE-1, ... VALUE-N)` Diziyi döndürür. (sürüm 4.7.0'dan beri)
+`list(VALUE-1, ... VALUE-N)` Sıralama getirir. (4.7.0 sürümünden beri)
 
 #### array\includes
-`array\includes(LIST, VALUE)` LISTE, DEĞER içeriyorsa TRUE döndürür. Dizi ve Çoklu-Enum alanları için kullanılabilir.(sürüm 4.7.0'dan beri)
+`array\includes(LIST, VALUE)` LIST, VALUE içeriyorsa true getirir. Sıralama ve ÇokluSıra alanlarında kullanılabilir. (4.7.0 sürümünden beri)
 
 #### array\push
-`array\push(LIST, VALUE1 [, VALUE2 ...])` Bir dizinin sonuna bir veya daha fazla öğe ekler, ve yeni diziyi döndürür. (5.0.0 sürümünden bu yana)
+`array\push(LIST, VALUE1 [, VALUE2 ...])` Bir sıralamanın sonuna bir veya daha fazla eleman ekler ve yeni sıralama getirir. (5.0.0 sürümünden beri)
 
 #### array\length
-`array\length(LIST)` LISTE içindeki elemanların sayısını döndürür. (sürüm 4.8.1'den beri)
+`array\length(LIST)` LIST içindeki eleman sayısını getirir. (4.8.1 sürümünden beri) 
+
 
 ### Değerler
 
-* Strings. Örneğin: 'some string';
-* Tamsayılar. Örneğin: 1, 100, 40300.
-* Virgüllü sayılar. Örneğin: 5.2.
+* Diziler. Örn. 'bazı diziler';
+* Tam sayılar. Örn. 1, 100, 40300.
+* Kesirli sayılar. Örn. 5.2.
 
 ### Değişkenler
 
 Formülde özel değişkenler tanımlamak mümkündür.
-
 ```
 $someVariableName = 'Test';
 description = $test;
@@ -266,6 +261,7 @@ ifThenElse(
 
 ```
 
-## İş Akışlarında formül kullanma
+## İş akışında formül kullanımı
 
-Formülü iş akışı koşullarında ve işlemlerde kullanabilirsiniz. Daha fazla bilgi için [iş akış belgeleri] (workflows.md) konusuna bakın.
+İş akışı durumlarında ve çalışmalarında formülden yararlanabilirsiniz. Daha fazla bilgi için [workflows documentation](workflows.md)'ye bakın.
+
