@@ -117,6 +117,8 @@ or
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
 ```
 
+### Select Query Paramaters
+
 #### Where clause
 
 ##### Comparison operators
@@ -170,6 +172,24 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
     ]
   ]
 ])->findOne();
+```
+
+#### Distict
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->distinct()->where(...)->find();
+```
+
+#### Join
+
+```
+$contactList = $entityManager->getRepository('Contact')->distinct()->join('opportunities')->where([
+  'opportunities.stage' => 'Closed Won'
+])->find();
+```
+
+```
+$contactList = $entityManager->getRepository('Contact')->distinct()->leftJoin('opportunities')->where(...)->find();
 ```
 
 #### Group By
