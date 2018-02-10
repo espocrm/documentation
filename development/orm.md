@@ -126,7 +126,7 @@ Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   'amount>=' => 100
- ])->findOne();
+])->find();
 ```
 
 ##### IN and NOT IN operators
@@ -134,22 +134,64 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   'stage' => ['Closed Lost', 'Closed Won']
- ])->findOne();
+ ])->find();
 ```
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   'stage!=' => ['Closed Lost', 'Closed Won']
- ])->findOne();
+])->find();
 ```
 
 ##### LIKE operators
 
-Supported  operators: `*` -- LIKE, `!*` -- NOT LIKE.
+Supported  operators: 
+* `*` - LIKE,
+* `!*` -- NOT LIKE.
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   'name*' => '%service%'
- ])->findOne();
+])->find();
 ```
 
+##### OR, AND operators
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  [
+    'OR' => [
+      ['stage' => 'Closed Won'],
+      ['stage' => 'Closed Lost']
+    ],
+    'AND' => [
+      'amountConverted>' => 100,
+      'amountConverted<=' => 999
+    ]
+  ]
+])->findOne();
+```
+
+#### Group By
+
+```
+$selectParams = [
+  'select' => ['MONTH:closeDate', 'SUM:amountConverted']
+  'groupBy' => ['MONTH:closeDate'],
+  'whereClause' => [
+    'stage' => 'Closed Won'
+  ],
+  'orderBy' => 1 // ordering by the first column
+];
+
+// applying left joins for currency convertion
+$this->getEntityManager()->getRepository('Opportunity')->handleSelectParams($selectParams);
+ 
+
+$pdo = $this->getEntityManager()->getPDO();
+$sql = $this->getEntityManager()->getQuery()->createSelectQuery('Opportunity', $selectParams);
+$sth = $pdo->prepare($sql);
+$sth->execute();
+
+$rowList = $sth->fetchAll(\PDO::FETCH_ASSOC); // results
+```
