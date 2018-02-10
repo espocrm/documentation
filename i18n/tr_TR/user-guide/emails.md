@@ -1,77 +1,78 @@
-# E-posta Kullanım Yönergeleri
+# Eposta Kullanım Önerileri
 
-EspoCRM, e-postaları IMAP kutusundan alabilme imkanı sağlar. Bu, EspoCRM'i, CRM'e özgü özelliklerle birlikte e-posta istemcisi olarak kullanmayı mümkün kılar.
+EspoCRM epostaları IMAP kutusundan getirme yetisi sağlar ve bu EspoCRM'yi eposta işlemcisi olarak CRM'ye özel özelliklerle birlikte kullanmayı mümkün kılar.
+EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
 
 ## IMAP hesapları
 
-*Not: Gelen iç e-postaların çalışabilmesi için sisteminizde [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) doğru bir şekilde yapılandırılmış olmalıdır.*
+*Not: Almalısınız [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) sisteminizde gelen mailleri çalışır durumda tutmak için düzgünce yapılandırılmıştır.*
 
-Kullanıcı, Kişisel E-posta Hesapları sayfasında IMAP hesabı kulurumunu yapabilir (E-postalar sekmesi > sağ-üst menü > Kişisel E-posta Hesapları).
+Kullanıcı IMAP hesabını Kişisel Eposta Hesapları sayfasından ayarlayabilir (Epostalar sekmesi > sağ-üst menü > Kişisel Eposta Hesapları).
 
-İzlenen Klasörler alanında hangi klasörlerin izleneceğini belirtin. Varsayılan olarak GELEN KUTUSU ayarlanmıştır. E-posta göndermek için harici e-posta istemcileri kullanırsanız, bu e-postaları arşivlemek için Gönderilmişler klasörü ekleyebilirsiniz.
+Gözlenen Dosyalar alanında yönetilecek dosyaların hangileri olduğunu belirtiniz. Varsayılan ayarlarda GELEN KUTUSU olarak ayarlanmıştır. Eğer epostalarınızı göndermek için dış eposta istemcileri kullanıyorsanız bu epostaları arşivleyerek Gönderilmişler dosyasına ekleyebilirsiniz.
 
-*Fetch Since*, e-postaların arşivlenme tarihini seçmenizi sağlar. Eski e-postaları arşivlemeniz gerekiyorsa, bugünden önceki bir tarihe ayarlayın.
 
-Kişisel E-Posta Hesabında  *Klasör* belirtebilme imkanı vardır. Gelen e-postalar bu klasöre konacaktır.
+*Getirme Tarihi* epostaların hangi tarihten itibaren arşivlenmiş olacağını seçmenize izin verir. Eski epostaları arşivlemeye ihtiyacınız varsa tarihi bugünden önce herhangi bir zamana ayarlayın.
 
-## SMTP hesapları
+Kişisel Eposta Hesabında *Dosta* belirleme yetisi vardır. Gelen epostalar bu dosyaya koyulacaktır.
 
-Kullanıcılar Tercihler'de ve de Kişisel E-Posta Hesapları'nda SMTP ayarlarını yapabilir. Ayrıca Yönetici, SMTP sisteminin kullanmasına izin verebilir (Paylaşımlı yapabilir).
+## SMTP Hesapları
 
-Kullanıcılar birden fazla SMTP hesabına sahip olabilir (sürüm 4.2.0'dan bu yana). Ancak kullanıcıların e-posta göndermek için kullanabilecekleri e-posta adresleri *Kullanıcı* kaydı e-posta adresleri tarafından tanımlanır.
+Kullanıcılar SMTP ayarlarını Kişisel Eposta Hesaplarında olduğu gibi Tercihler kısmından yapabilirler. Yönetici de SMTP sistemini kullanmaya izin verebilir (Paylaşımlı yapın). 
 
-## E-postalarla Çalışma
+Kullanıcılar birden fazla SMTP hesabına sahip olabilirler (4.2.0 versiyonundan beri). Ama, burayı epostalarını göndermek için kullanan eposta adreslerinin kullanıcısı *Kullanıcı* kaydının eposta adreslerinden belirlenir.
 
-E-postalar, (arka planda) cron tarafından birkaç dakikada bir çekilir (süre yönetici tarafından belirtilebilir).
-Tüm e-postalarınızı E-postalar sekmesinde görebilirsiniz. Solda standart olan Gelen Kutusu, Gönderilmiş, Taslak e-postalar klasörler vardır.
+## Epostalarla Çalışmak
 
-*Durum* alanı. `Gönderildi`, CRM'den gönderildi anlamına gelir, `Arşivlendi` - IMAP hesabından çekilen veya el ile arşivlendiği, `Taslak` – e-postanın bir taslak olarak oluşturulduğu manasına gelir.
+Epostalar her birkaç dakikada bir(zaman aralığı Yönetici tarafından belirlenebilir) cron ile getirilir(arkaplanda). Epostalar sekmesinde bütün epostalarınızı görebilirsiniz. Sol tarafta Gelen Kutusu, Gönderilen, Taslak epostalar olarak standart dosyalar bulunmaktadır.
 
-Yeni e-posta geldiğinde sistem, bu e-postanın hangi kayda ait olduğunu tanımaya çalışır. Hesap, Müşteri Adayı, Fırsat, Olay (ve B2C modunda İletişim) vb. ile bağlantı kurabilir. Bu tanınmadığı takdirde, kullanıcı, *Üst öğe* alanını doldurarak manuel olarak bağlayabilir.
 
-E-posta yeni bir potansiyel müşteridense kullanıcı onu **Müşteri Adayı'na dönüştürebilir**. E-posta girişi'ni açın ve sağ üst menüdeki Müşteri Adayı Yarat'a tıklayın.
+*Durum* alanı. `Gönderildi` CRM'den gönderildiği anlamına gelir, `Arşivlendi` – IMAP hesabından getirilmiş veya elle arşivlenmiş, `Taslak` – epostanın taslak olarak yaratılmış olduğu anlamına gelir.
 
-Bir e-posta kaydından **Görev veya Olay yaratmak** da mümkündür.
+Yeni bir eposta geldiği zaman sistem bu epostanın hangi kayda ait olduğunu tanımaya çalışır. Bu mail Hesap, Kılavuz, Fırsat, Durum(B2C moduyla etkileşim halindedir) vb. ile bağlantılı olabilir. Eğer mail tanınmazsa kullanıcı elle *Üst öğe* alanını doldurarak bağlantı kurabilir.
 
-Bir e-posta kaydındaki e-posta adresleri (from, to, cc) sistem tarafından biliniyorsa ilgili olduğu kişiyi gösterecektir (Kişi, Olay, Kullanıcı vb.). Bazı e-posta adresi yeni ise **kişi eklenebilir**.
+Eğer eposta potansiyel yeni bir istemciden geliyorsa kullanıcı **Kılavuze çevirebilir** . Eposta öğesini açın ve sağ-üst menüden Kılavuz Yarat sekmesine tıklayın.
 
-Belirli bir kayıtla ilgili tüm e-postalar o kaydın Geçmiş panelinde gösterilir. Bazı e-postalar, örneğin, fırsatla ilgiliyse, ancak fırsat da hesapla ilgiliyse, o e-posta hem fırsatta hem de hesapta gösterilir.
+Eposta kaydından **Durum veya Görev yaratmak** da mümkündür.
 
-## E-posta Gönderimi
+Eğer bir email kaydındaki email adresleri (-dan, -a, cc) sistemce biliniyorsa, sistem ilgili olduğu kişiyi gösterecektir (Kişi, Kılavuz, Kullanıcı vb). Eğer bazı eposta adresleri yeniyse hemen oradan **kişi yaratabilirsiniz**.
 
-Birkaç yoldan yeni bir e-posta yazabilirsiniz:
-* E-postalar listesi görünümünde *E-posta yaz* düğmesiyle;
-* başka bir e-postayı yanıtlayarak;
-* bazı kayıtların bir e-posta adresini tıklayarak;
-* Etkinlikler panelinde *E-posta yaz* eylemiyle.
+Bütün epostalar o kaydın Geçmiş panelinde gösterilen spesifik bir kayıtla ilgilidir. Örneğin, eğer bazı epostalar fırsatla ilgiliyse ama fırsatlar hesapla ilgiliyse, bu epostalar hem fırsatlarda hem de hesapta gösterilecektir.
 
-E-postanızın **şablon seçebilme** özelliği vardır.
+## Eposta Yollama
 
-Tercihler'de **e-posta imzanızı** ayarlayabilirsiniz.
+Birkaç yolla yeni eposta oluşturabilirsiniz:
+* Eposta listesi görünümündeki *Eposta Oluştur* butonu ile;
+* bir başka maile cevap vererek;
+* bir kaydın bir eposta adresine tıklayarak;
+* Aktiviteler panelinden *Eposta Oluştur* işlemiyle.
 
-## E-posta Klasörleri
+Epostanız için **şablon seçme** yetisi vardır.
 
-Kullanıcılar, bazı e-postaları kolayca yerleştirmek için kendi e-posta klasörlerini oluşturabilir. Mevcut klasörlerin listesi, sol taraftaki E-postalar sayfasında mevcuttur. Klasör oluşturmak veya düzenlemek için E-postalar > sağ üst köşedeki açılır menü > Klasörler yolunu izleyin. `Bildirimi Atla`, belirli klasöre gelen e-postalar hakkında bildirim almayacağınız anlamına gelir. E-posta Filtreleri'ni kullanarak e-postaları belirli ölçütlere göre otomatik olarak klasörlere yerleştirmek mümkündür.
+Tercihlerden **eposta imzanızı** ayarlayabilirsiniz.
 
-## E-posta Filtreleri
+## Email Dosyaları
 
-Yönetici istenmeyen e-postaları atlamak için genel e-posta filtreleri oluşturabilir. Bunlar Yönetim > E-posta Filtreleri'nde bulunur.
+Kullanıcılar kolaylık olsun diye bazı epostaları koymak için kendi eposta dosyalarını yaratabilirler. Uygun dosyaların listesi Epostalar sayfasının sol tarafında mevcuttur. Dosyaları yaratmak veya düzenlemek için Epostalar > sağ-üst köşedeki açılır liste > Dosyalar takip edilir. 'Bildirimleri Atla' belirli bir dosyaya düşen epostalar hakkında bildirim almayacağınız anlamına gelir. Eposta Filtrelerini kullanarak epostaları otomatik olarak spesifik bir kritere dayanarak dosyalara koymanız mümkündür.
 
-Normal kullanıcı, Kişisel E-Posta Hesapları veya tüm gelen kutuları için e-posta filtreleri oluşturabilir. E-postalar > sağ-üst köşedeki açılır menü > Filtreler altında bulunur.
+## Eposta Filtreleri
 
-İki tip filtre vardır:
-* Atlama - e-posta, *Çöp Kutusu'na* konur yada filtre Kişisel E-Posta Hesabı ile ilişkiliyse içe aktarım yapılmaz;
-* Klasöre Koy - içe aktarılmış e-postalar otomatik olarak kullanıcının belirtilmiş klasörüne konur.
+Yönetici istenmeyen epostaları atlamak için global eposta filtreleri yaratabilir. Bu filtreler Yönetim > Eposta Filtreleri sekmesinde mevcuttur.
 
-## E-posta Şablonları
+Düzenli kullanıcılar kendi Kişisel Eposta Hesapları veya kendi gelen kutuları için eposta filtreleri yaratabilirler. Bu filtreler Epostalar > sağ-üst köşedeki açılır kapanır liste > Filtreler takip edilir.
 
-E-posta şablonları, E-postalar > sağ-üst köşedeki açılır menü > E-posta Şablonları altında bulunur. Hem toplu hem de normal e-postalar gönderimleri için kullanılabilir. `Bir kerelik` onay kutusu, e-posta pazarlamasında alışılageldiği gibi, e-posta şablonunun sadece bir kez kullanılacağı anlamına gelir.
+İki tip filtre mevcuttur:
+* Geç - email *Çöp*e koyulur veya filtre Kişisel Eposta Hesabıyla alakalıysa aktarılmayacaktır;
+* Dosyaya koy - aktarılmış epostalar otomatik olarak özelleştirilmiş kullanıcı dosyasına koyulacaktır.
 
-E-posta şablonu gövdesinde ve başlığında yertutucu kullanmak mümkündür; örn.
- {Account.name}, {Person.emailAddress}. Bunlar, kayıtların ilgili değerleri ile değiştirilir.
+## Eposta Şablonları
 
-Ayrıca şablon gövdesinde ayrılmış yertutucular kullanabilirsiniz: {optOutUrl} ve {optOutLink}.
+Epostalar > sağ-üst köşedeki açılır kapanır liste > Eposta Şablonları kısmında eposta şablonları mevcuttur. Hem toplu eposta gönderimlerinde, hem de normal epostalar için kullanılabilir. 'Tek seferlik' onay kutusu eposta şablonunun sadece tek bir sefer kullanılması gerektiği anlamına gelir ki bu eposta marketing için alışılmış bir durumdur.
+
+Eposta şablonunun gövde ve konusunda dosyaları kullanmak mümkündür örneğin {Hesap.adı}, {Kişi.epostaAdresi}. İlgili kayıtların değerleri onların yerine gelecektir.
+
+Ek mahfuz dosyaları şablon gövdesinde kullanabilirsiniz: {optOutUrl} ve {optOutLink}.
 ```
-<a href="{optOutUrl}">Abonelikten çık</a>
+<a href="{optOutUrl}">Unsubscribe</a>
 ```
-Bu toplu e-posta üyeliğinden çıkma bağlantısıdır.
+Bu toplu eposta için aboneliği kaldırma linkidir.
