@@ -1,7 +1,7 @@
-# Browser support
+# Các trình duyệt được hỗ trợ
 
-We recommend using the latest versions of Google Chrome or Mozilla Firefox. EspoCRM works the best in these browsers. We regularly test all features in these browsers.
+Chúng tôi đề xuất sử dụng phiên bản mới nhất của Google Chrome hoặc Mozilla Firefox. EspoCRM hoạt động tốt nhất trên những trình duyệt này. Chúng tôi thường xuyên thử nghiệm tất cả tính năng mới trên những trình duyệt này.
 
-Microsoft Edge and Safari are also supported, but there are less guarantees that everything will be working smoothly.
+Microsoft Edge và Safari cũng được hỗ trợ, nhưng có ít sự đảm bảo rằng mọi chức năng sẽ hoạt động tốt trên những trình duyệt này.
 
-We heighly do not recommend using Internet Explorer 11.
+Chúng tôi cực kì không khuyến khích sử dụng Internet Explorer 11.
