@@ -84,9 +84,9 @@
 
 একটি ডাইভারজিং সমেত গেটওয়ে দ্বারা উত্পন্ন সমান্তরাল প্রবাহগুলিকে একত্রিত করার জন্য যদি প্রয়োজন হয় তাহলে আপনাকে একটি সংযোজক সমন্বিত প্রবেশপথ ব্যবহার করতে হবে। এটি সমস্ত ইনকামিং প্রবাহের জন্য অপেক্ষা করবে এবং তারপর বহির্মুখী উপাদানটি চালিয়ে যাবে।
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![এক্সক্লুসিভ গেটওয়ে divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![এক্সক্লুসিভ গেটওয়ে convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### সমেত গেটওয়ে
 
@@ -96,7 +96,7 @@
 
 একটি ডাইভারজিং সমেত গেটওয়ে দ্বারা উত্পন্ন সমান্তরাল প্রবাহগুলিকে একত্রিত করার জন্য যদি প্রয়োজন হয় তাহলে আপনাকে একটি সংযোজক সমন্বিত প্রবেশপথ ব্যবহার করতে হবে। এটি সমস্ত ইনকামিং প্রবাহের জন্য অপেক্ষা করবে এবং তারপর বহির্মুখী উপাদানটি চালিয়ে যাবে।
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+![সমেত গেটওয়ে](../_static/images/administration/bpm/gateway-inclusive.png)
 
 দ্রষ্টব্য: Diverging এবং গেটওয়ে converging সমতুল্য হতে হবে।
 
@@ -110,99 +110,99 @@
 
 সমস্ত ইনকামিং প্রবাহ আসা পর্যন্ত এবং এটি পরবর্তী বহির্মুখী উপাদান অবধি চলতে না হওয়া পর্যন্ত এটি converging ক্ষেত্রে অপেক্ষা।
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+![সমান্তরাল গেটওয়ে](../_static/images/administration/bpm/gateway-parallel.png)
 
 দ্রষ্টব্য: Diverging এবং গেটওয়ে converging সমতুল্য হতে হবে।
 
 দ্রষ্টব্য: যদি সমান্তরাল প্রবাহ এক কারণে কিছু কারণে শেষ হয়েছে, তাহলে গেটওয়ে ডুভারিং প্রক্রিয়া করা হবে না। প্রক্রিয়া ব্লক করা হবে। এমন একটি ফ্লোচার্ট ডিজাইন এড়িয়ে চলুন যা এমন পরিস্থিতি নিয়ে আসতে পারে।
 
-#### Event Based Gateway
+#### ইভেন্ট ভিত্তিক গেটওয়ে
 
-Can only diverge flows.
+শুধুমাত্র প্রবাহ বিচ্ছিন্ন করতে পারেন।
 
-It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
+এটি বহির্মুখী ঘটনাগুলির সূত্রপাত না হওয়া পর্যন্ত এটি প্রবাহ বন্ধ করে দেয়। উত্তেজিত ইভেন্ট একক প্রবাহ নির্ধারণ করে। অন্যান্য আউটগোয়িং ইভেন্টগুলি বাতিল হয়ে যায়।
 
-Only intermediate events can be on the other end of outgoing sequence flows.
+শুধুমাত্র অন্তর্বর্তী অনুষ্ঠান বহির্বিভাগের ক্রম প্রবাহের অন্য প্রান্তে হতে পারে।
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+![ইভেন্ট ভিত্তিক গেটওয়ে](../_static/images/administration/bpm/gateway-event-based.png)
 
-### Activities
+### ক্রিয়াকলাপ
 
-Activities are displayed as rounded rectangles.
+ক্রিয়াকলাপগুলি গোলাকার আয়তক্ষেত্র হিসাবে প্রদর্শিত হয়।
 
-#### Task
+#### কার্য
 
-Task can execute following the actions:
+টাস্কগুলি ক্রিয়াগুলিকে অনুসরণ করতে পারে:
 
-* Create Record - creates new record of any entity type;
-* Create Related Record - creates new record related to the target record;
-* Update Target Record;
-* Update Related Record - updates the record or records related to the target record;
-* Update Created Record - updates specific field of any record created in the current process;
-* Update Process Record - can be used to assign the process to specific user or team;
-* Link to Another Record - links the target record with a specified record;
-* Unlink from Another Record - unlinks the target record from the specified record;
-* Apply Assignment Rule - assigns the target record, the process record or any record created by the process according to the specific rule;
-* Create Notification - creates in-app notification for specific users;
-* Make Followed - makes specific users follow the target record, the process record or any record created by the process;
-* Run Service Action - runs custom service actions implemented by developers.
+* রেকর্ড তৈরি করুন - কোনো সত্তা টাইপের নতুন রেকর্ড তৈরি করে;
+* সম্পর্কিত রেকর্ড তৈরি করুন - লক্ষ্য রেকর্ড সম্পর্কিত নতুন রেকর্ড তৈরি করে;
+* আপডেট টার্গেট রেকর্ড;
+* আপডেট সম্পর্কিত রেকর্ড - লক্ষ্য রেকর্ড সম্পর্কিত রেকর্ড বা রেকর্ড আপডেট;
+* আপডেট তৈরি করা রেকর্ড - বর্তমান প্রক্রিয়ায় তৈরি যে কোনো রেকর্ডের নির্দিষ্ট ক্ষেত্রের আপডেট;
+* আপডেট প্রক্রিয়া রেকর্ড - নির্দিষ্ট ব্যবহারকারী বা দলের প্রসেস বরাদ্দ করতে ব্যবহার করা যেতে পারে;
+* অন্য রেকর্ড লিঙ্ক - একটি নির্দিষ্ট রেকর্ড সঙ্গে লক্ষ্য রেকর্ড লিঙ্ক;
+* অন্য রেকর্ড থেকে আনলিঙ্ক - নির্দিষ্ট রেকর্ড থেকে লক্ষ্য রেকর্ড লঙ্ঘন;
+* বরাদ্দকরণ নিয়ম প্রয়োগ করুন - টার্গেটের রেকর্ড নির্দিষ্ট করে, প্রসেস রেকর্ড বা নির্দিষ্ট নিয়ম অনুযায়ী প্রক্রিয়া দ্বারা তৈরি কোন রেকর্ড;
+* বিজ্ঞপ্তি তৈরি করুন - নির্দিষ্ট ব্যবহারকারীদের জন্য অ্যাপ্লিকেশন বিজ্ঞপ্তি তৈরি করে;
+* অনুসরণ করুন - বিশেষ ব্যবহারকারী লক্ষ্য রেকর্ড অনুসরণ করে, প্রসেস রেকর্ড বা প্রক্রিয়া দ্বারা তৈরি কোন রেকর্ড;
+* চালান সার্ভিস অ্যাকশন - কাস্টম সেবা কর্মগুলি ডেভেলপারদের দ্বারা বাস্তবায়িত করে।
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+টাস্কের জন্য উপলব্ধ কর্মগুলি ওয়ার্কফ্লো বৈশিষ্ট্য হিসাবে প্রায় একই। সম্পর্কে আরো বিস্তারিত দেখুন [workflow's actions](workflows.md#actions).
 
-#### Send Message Task
+#### বার্তা প্রেরণ কার্য
 
-Sends email message to specific recipient.
+নির্দিষ্ট প্রাপককে ইমেল বার্তা পাঠায়
 
-#### User Task
+#### ব্যবহারকারী টাস্ক
 
-Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
+ব্যবহারকারীর মিথস্ক্রিয়া একটি নমনীয় ক্ষমতা প্রদান করে। এটি কার্যকরী না হওয়া পর্যন্ত ব্যবহারকারী (সুনির্দিষ্টভাবে বা নিয়োগের নিয়মের দ্বারা নির্দিষ্ট করা হয়) টাস্ককে সংশোধন করে। পদ্ধতি ব্যবহারকারী টাস্ক রেকর্ড সিস্টেমের মধ্যে তৈরি করা হবে। ডিফল্টরূপে তিনটি অ্যাকশন প্রকার রয়েছে: অনুমোদন, পর্যালোচনা, সম্পন্ন করুন।
 
-* Approve type requires the user to chose between 'Approved' and 'Declined'.
-* Review type gives only one option: 'Reviewed'.
-* Accomplish type has two options: 'Completed' and 'Failed'.
+* টাইপ অনুমোদন ব্যবহারকারী 'অনুমোদন' এবং 'প্রত্যাখ্যান' মধ্যে নির্বাচন করতে প্রয়োজন।
+* রিভিউ টাইপ কেবল একটি বিকল্প দেয়: 'পর্যালোচনা'।
+* সম্পূর্ণ উপায়ে দুটি বিকল্প রয়েছে: 'সমাপ্ত' এবং 'ব্যর্থ'।
 
 
-The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
+তৈরি করা প্রসেস ইউজার টাস্ক রেকর্ডে নির্ধারিত ইউজার ইন-অ্যাপের বিজ্ঞপ্তি পাবেন। প্রশাসক ইমেল বিজ্ঞপ্তিগুলি সক্ষম করতে পারেন।
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+ব্যবহারকারীরা তাদের ড্যাশবোর্ডে প্রসেস ইউজার টাস্ক ড্যাশলেট যোগ করতে পারেন তাদের প্রকৃত প্রসেস ব্যবহারকারী কাজ দেখতে।
 
 It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
 
-#### Script Task
+#### স্ক্রিপ্ট টাস্ক
 
-Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available within the process.
+মধ্যে স্ক্রিপ্ট সঞ্চালন ভাষা [espo-formula](formula.md)। সমস্ত সেট ভেরিয়েবল সঞ্চিত এবং (`$variableName`) প্রসেসের মধ্যে উপলব্ধ হবে।
 
-### Flows
+### ফ্লো
 
-#### Sequence Flow
+#### ক্রম ফ্লো
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+একটি কঠিন তীর হিসাবে প্রতিনিধিত্ব। ক্রিয়া নির্দেশ করে যা প্রক্রিয়া উপাদানগুলি কার্যকর করা হবে।
 
-## Conditions
+## পরিবেশ
 
-Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
+শর্তসাপেক্ষ ইভেন্টগুলি, একচেটিয়া এবং সমেত দ্বিমাত্রিক গেটওয়েগুলির প্রক্রিয়াগুলির প্রবাহকে নির্ধারণ করে.
 
-Through UI there is an ability to check conditions for the following records:
+UI এর মাধ্যমে নিম্নোক্ত রেকর্ডের জন্য শর্তগুলি পরীক্ষা করার ক্ষমতা রয়েছে:
 
-* Target record;
-* Records related to the target through many-to-one and children-to-parent relationships;
-* Records created by the process via tasks;
-* User task records, which allows checking the resolution.
+* লক্ষ্য রেকর্ড;
+* অনেকগুলি থেকে এক এবং শিশুদের-থেকে-পিতামাতার সম্পর্কের মাধ্যমে লক্ষ্য সম্পর্কিত রেকর্ড;
+* কর্মের মাধ্যমে প্রক্রিয়া দ্বারা তৈরি রেকর্ড;
+* ব্যবহারকারী টাস্ক রেকর্ড, যা রেজল্যুশন পরীক্ষা করতে পারবেন।
 
-It's also possible to define conditions in [Espo-formula](formula.md) language.
+শর্তগুলি সংজ্ঞায়িত করাও সম্ভব [Espo-formula](formula.md) ভাষাতে।
 
-Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
+BPM সরঞ্জামের শর্তগুলি ওয়ার্কফ্লো বৈশিষ্ট্য হিসাবে একই। সম্পর্কে আরো বিস্তারিত দেখুন [workflow's conditions](workflows.md#conditions).
 
-## Examples
+## উদাহরণ
 
-### Example 1
+### উদাহরণ 1
 
-![Example 1](../_static/images/administration/bpm/example-1.png)
+![উদাহরণ 1](../_static/images/administration/bpm/example-1.png)
 
-### Example 2
+### উদাহরণ 2
 
-![Example 2](../_static/images/administration/bpm/example-2.png)
+![উদাহরণ 2](../_static/images/administration/bpm/example-2.png)
 
-### Example 3
+### উদাহরণ 3
 
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![উদাহরণ 3](../_static/images/administration/bpm/example-3.png)
