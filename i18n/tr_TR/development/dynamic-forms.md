@@ -1,15 +1,15 @@
-# Dynamic Forms
+# Dinamik Formlar
 
-Note: Since version 4.3.0 it's possible to define dynamic form through admin's UI in Entity Manager.
+Not: 4.3.0 versiyonundan bu yana, Varlık Yöneticisi'ndeki yönetici arayüzü aracılığıyla dinamik formu tanımlamak mümkündür.
 
-There is an ability to define a form behavior in EspoCRM. 
+EspoCRM'de form davranışını tanımlama yeteneği vardır.
 
-## Example
+## Örnek
 
-> Need to show _nextStep_ field on an Opportunity detail view only if stage is 'Closed Won'.
+> _nextStep_ alanını Fırsat Ayrıntısı görünümünde yalnızca Sahne Alanı  'Closed Won' olduğunda göstermeniz gerekmektedir.
 >
 
-Create file `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
+Dosya oluşturun `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
 ```json
 {
   "formDependency": {
@@ -33,8 +33,9 @@ Create file `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
 }
 ```
 
-That means that _nextStep_ field will be hidden by default and shown if stage equals to 'Closed Won'.
+Bu, _nextStep_ alanı varsayılan olarak gizleneceğini ve sahne alanı 'Closed Won' ile aynı ise, gösterileceği anlamına gelmektedir.
 
-The list of available actions: `show`, `hide`, `setRequired`, `setNotRequired`.
+Kullanılabilir işlemlerin listesi: `show`, `hide`, `setRequired`, `setNotRequired`.
 
-There is also ability to hide/show panels. Specify panel names in `panels`, attribute the same way as `fields`.
+Panelleri hide/show  özelliği de vardır. `fields` ile aynı şekilde, `panels` içindeki panel adlarını belirtiniz.
+
