@@ -1,8 +1,8 @@
-# Adding custom service action for Workflow
+# İş Akışı için özel hizmet işlemi eklemek
 
-Workflows allow to create custom service actions. This example will show how this can be done for a Call entity.
+İş akışları, özel hizmet eylemleri oluşturmanıza olanak tanımaktadır. Bu örnekte, bunun bir Arama öğesi için nasıl yapılacağı gösterilecektir.
 
-## Step 1. Create service class
+## 1. Adım: Hizmet Sınıfı Oluşturun
 
 ```php
 <?php
@@ -20,9 +20,9 @@ class TestService extends \Espo\Core\Services\Base
 }
 ```
 
-## Step 2. Define the run service method in metadata
+## 2. Adım: Meta verilerde çalışma hizmeti yöntemini tanımlayın
 
-Create/edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/Workflow.json`
+Dosyayı oluştur/düzenle `custom/Espo/Custom/Resources/metadata/entityDefs/Workflow.json`
 
 ```json
 {
@@ -36,11 +36,11 @@ Create/edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/Workflow.
     }
 }
 ```
-Note: You can also create metadata file Workflow.json file in your module directory.
+Not: Meta veri dosyası olan Workflow.json dosyasını modül dizininizde de oluşturabilirsiniz.
 
-## Step 3. Add a label
+## 3. Adım: Etiket Eklemek
 
-Add or edit (if file exists) the file `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
+Dosyayı ekleyin veya (varsa) düzenleyin `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
 
 ```json
 {
@@ -49,7 +49,7 @@ Add or edit (if file exists) the file `custom/Espo/Custom/Resources/i18n/en_US/W
     }
 }
 ```
-Or if you have the same method name for several entity types, you can define different translation for them.
+Ya da birkaç varlık türü için aynı yöntem adına sahipseniz, onlar için farklı çeviri tanımlayabilirsiniz.
 
 ```json
 {
@@ -59,11 +59,11 @@ Or if you have the same method name for several entity types, you can define dif
     }
 }
 ```
-Note: You can also create language file Workflow.json file in your module directory.
+Not: Modül dizininizde dil dosyası olarak Workflow.json dosyası da oluşturabilirsiniz.
 
-## Step 4. Add usage tips (optional)
+## 4. Adım: Kullanım ipuçları ekleyin (isteğe bağlı)
 
-Add or edit the file `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
+Dosyayı ekle veya düzenle `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
 
 ```json
 {
@@ -72,7 +72,7 @@ Add or edit the file `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
     }
 }
 ```
-Or if you have the same method name for several entity types, you can define different tips xts for them.
+Veya birkaç varlık türü için aynı yöntem adına sahipseniz, onlar için farklı ipuçları tanımlayabilirsiniz.
 
 ```json
 {
@@ -83,6 +83,6 @@ Or if you have the same method name for several entity types, you can define dif
 }
 ```
 
-## Step 5. Clear cache
+## 5. Adım: Önbelleği Temizle
 
-Administration panel > Clear Cache. Now the service action is available for Workflows in the Run Service Action form.
+Yönetim paneli>Önbelleği Temizle. Artık, hizmet eylemi, Hizmet Çalıştırma İşlemi formunda İş Akışları için kullanılabilir.
