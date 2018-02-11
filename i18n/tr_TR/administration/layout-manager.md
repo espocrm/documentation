@@ -1,63 +1,63 @@
-# Layout Manager
+# Düzen Yöneticisi
 
-Layout Manager is available in administration panel. Provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+Düzen Yöneticisi, yönetim panelinde bulunmaktadır. Ayrıntılı görünümünü özelleştirme, düzenlem, listeleme ve kütle-güncelleme formları için arama filtreleri ve alanlarını düzenleme özelliğini sağlar.
 
-## List
+## Liste
 
-The main layout for the list view. Defines columns and their parameters.
+Liste görünümünün ana düzenidir. Sütunları ve parametreleri tanımlanır.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![Liste](../_static/images/administration/layout-manager/list.png)
 
-Available parameters for columns are listed below.
+Sütunlar için kullanılabilen parametreler aşağıda listelenmiştir.
 
-### Width (%)
+### Genişlik (%)
 
-Width of column in percent, empty means auto-width.
+Sütun genişliği yüzdesi boş ise otomatik genişlik anlamına gelmektedir.
 
-### Link
+### Bağlantı
 
-If checked then the field will be displayed as a link to the detail view of the record. Usually used for name fields.
+Onaylanırsa, alan kayıtın ayrıntı görünümünde bir bağlantı olarak gösterilir.Genellikle isim alanlarında kullanılır.
 
-### Not Sortable
+### Sınıflanırılamaz
 
-Disables an ability to sort the column.
+Sütun sıralama özelliğini devre dışı bırakır.
 
-### Align
+### Hızalama
 
-Align the column to the left or to the right.
+Sütunu sola veya sağa hizalayın.
 
-## Detail
+## Detay
 
-The main layout for the detail view and the edit view. Defines panels, rows and cells. Cells contain fields.
+Ayrıntılı görünüm ve düzenleme görünümü için ana düzenleme. Panelleri, satırları ve hücreleri tanımlamaktadır. Hücreler alanlar içerir.
 
-The row can contain two cells or one cell that is expanded to the full width of the row. To add the row with an expanded cell you need to add the new row and click on a minus sign on any cell.
+Satır, satırın tam boyutunda genişletilmiş iki hücre veya bir hücre içerebilir. Genişletilmiş bir hücre ile satırı eklemek için, yeni satırı ekleyin ve herhangi bir hücrenin negatif işaretine tıklatmanız gerekmektedir.
 
-![Detail](../_static/images/administration/layout-manager/detail.png)
+![Detay](../_static/images/administration/layout-manager/detail.png)
 
-## List (Small)
+## Liste (Küçük)
 
-The list layout for relationship panels. Also can be used in other places where it's reasonable to display lists in the narrow view.
+İlişki panelleri için liste düzenidir. Ayrıca, sınırlı görünümde listeleri görüntülemek makul olan diğer yerlerde de kullanılabilir.
 
-## Detail (Small)
+## Detay (Küçük)
 
-The detail view for quick create, quick view and quick edit forms.
+Hızlı oluşturma, hızlı görünüm ve hızlı düzenleme formları için ayrıntılı görünümdür.
 
-## Search Filters
+## Arama Filtreleri
 
-The list of fields available in the list view to search by.
+Liste görünümünde bulunan alanların listesi ile aramak içindir.
 
-## Mass Update
+## Kütleyi Güncellemek
 
-The list of fields availabe in the Mass Update form.
+Toplu Kütle Güncelleştirme formunda bulunan alanların listesi.
 
-## Relationship Panels
+## İlişki Panelleri
 
-The list of relationship panels displayed on the detail view at the bottom. Panels can be re-ordered. It's possible to define the color of panel with the Style parameter.
+Alttaki detay görünümünde gösterilen ilişki panellerinin listesi. Paneller yeniden düzenlenebilir. Stil parametresi ile panel rengini tanımlamak mümkündür.
 
-## Side Panels
+## Yan paneller
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter.
+Yan paneller; Detay, Düzen, Küçük Detay, Küçük Formları düzenlemek içindir. Panel listesinde Faaliyetler, Tarih, Görevler ve diğerlerini gizlemeyi ya da yeniden düzenleme özelliğini sağlar.Paneller Stil parametresi ile renklendirilebilir.
 
-## Additional Layouts
+## İlave Düzenlemeler
 
-Some entity types contain additional layouts: Convert Lead, List for Account.
+Bazı varlık türleri ek düzenleri içerir: Rehper Dönüştürme, Hesap Listesi.
