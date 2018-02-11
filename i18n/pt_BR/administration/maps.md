@@ -1,18 +1,18 @@
-# Maps
+# Mapas
 
-## How to show the map based on an address field
+## Como mostrar o mapa baseado em seu campo endereço
 
-Every Address field has its corresponding Map field. All you need is to put it on Detail layout. It uses Google Maps service.
+Cada campo Endereço tem seu campo Mapa correspondente. Tudo o que você precisa fazer é colocá-lo no layout Detalhes. Ele usa o serviço do Google Maps.
 
-`Administration > Layout Manager > Choose entity (Account, Contact, Lead or custom one) > Detail > Drag & Drop Map field.`
+`Administração > Gerenciador de Layout > Escolher entidade (Conta, Contato, Condução ou personalizado) > Detalhes > Arrastar & Soltar o campo Mapa.`
 
-Make the cell wide using the minus sign.
+Faça a célula larga usando o sinal de menos.
 
-You can also configure the height of your field.
+Você pode também configurar a altura do seu campo.
 
-`Administration > Entity Manager > Choose entity > Fields > find the map field and click on it > edit the height and save.`
+`Administração > Gerenciador de Entidade > Escolher entidade > Campos > ache o campo mapa e clique nele > edite a altura e salve.`
 
-## Api Key
+## Chave de API
 
-Since EspoCRM version 4.2.0 you need to specify Api Key to use Google Maps (Administration > Integration > Google Maps).
+Desde a versão 4.2.0 do EspoCRM, você precisa especificar uma Chave de API para usar Google Maps (Administração > Integração > Google Maps).
 

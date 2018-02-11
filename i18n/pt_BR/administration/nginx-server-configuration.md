@@ -1,4 +1,4 @@
-# Nginx server configuration for EspoCRM
+# Configuração de servidor Nginx para EspoCRM
 
 Essas instruções são suplementares às orientações [Configuração do Servidor](server-configuration.md). Por favor, note que todas as configurações listadas aqui são feitas em servidor Ubuntu.
 
@@ -17,9 +17,9 @@ sudo service nginx restart
 
 Siga apenas os passos necessários. Após cada passo, verifique se o problema foi resolvido.
 
-### 1. Enable rewrite rules in Nginx server
+### 1. Habilite sobrescrever regras no servidor Nginx
 
-Add this code to your Nginx server block config file (/etc/nginx/sites-available/YOUR_SITE) inside “server” block:
+Adicione esse código para o arquivo de configuração do bloco de seu servidor Nginx (/etc/nginx/sites-available/SEU_SITE) dentro do bloco “server”:
 
 ```
 server {   
@@ -86,21 +86,21 @@ server {
 }
 ```
 
-If you don’t have this file, you have to create it. For this open a terminal and run the command:
+Se você não possui esse arquivo, você deve criá-lo. Para isso, abra um terminal e execute o comando:
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [ guideline](nginx-virtual-host.md).
+Adicione o código listado acima. Para mais informações em como configurar um novo Virtual Host em Nginx, por favor, leia esse [guia](nginx-virtual-host.md).
 
-Run this command in a terminal to check if everything is fine:
+Execute esse comando em um terminal para verificar se tudo está bem:
 
 ```
 sudo nginx -t
 ```
 
-If so, run the command to restart nginx server:
+Se estiver, execute o comando para reinicializar o servidor Nginx:
 
 ```
 sudo service nginx restart
@@ -113,10 +113,10 @@ Abrir um arquivo /ESPOCRM_DIRECTORY/api/v1/.htaccess e substituir a seguinte lin
 ```
 # RewriteBase /
 ```
-with 
+por 
 
 ```
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-onde, REQUEST_URI é uma parte de uma URL, por exemplo, para “http://example.com/espocrm/”, REQUEST_URI é “espocrm”.
+onde, REQUEST_URI é uma parte de uma URL, por exemplo, para “http://exemplo.com/espocrm/”, REQUEST_URI é “espocrm”.

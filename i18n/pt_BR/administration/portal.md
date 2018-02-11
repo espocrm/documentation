@@ -1,55 +1,55 @@
 # Portal
 
-Portal provides an ability to access specific crm data and functions for your customers and partners. Administrator can create multiple portals. Each portal can have its own settings, dashlboard, user list, access control settings.
+Portal fornece uma capacidade de acessar dados de crm e funções específicas para seus clientes e parceiros. O Administrador pode criar múltiplos portais. Cada portal pode ter suas próprias configurações, painel de controle, lista de usuários, configurações de controle de acesso.
 
-To create portal follow Administration > Portals, click Create Portal button.
+Para criar um portal vá em: Administração > Portais, clique no botão Criar Portal.
 
-* `Is Active`. If not check portal won't be available for anybody.
-* `Is Default`. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
-* `Roles`. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
-* `Tab List`. Tabs which will be shown in navigation bar.
-* `Dashboard Layout`. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
-* `URL`. Read only field that displays the link you can access the portal with.
+* `Está Ativo`. Se não for marcado, o portal não estará disponível para ninguém.
+* `É Padrão`. Significa que o portal estará disponível através de uma URL mais curta: http(s)://SUA_ESPO_URL/portal.
+* `Funções`. Especifique um ou múltiplas funções do portal que serão aplicados aos usuários logados no portal. Mais informações sobre funções do portal estão abaixo.
+* `Lista de Abas`. Abas que serão mostradas na barra de navegação.
+* `Layout do Painel de Controle`. Especifica dashlets que serão mostradas na página inicial do portal. Note que os usuários do portal não podem configurar o painel de controle deles.
+* `URL`. Campo somente leitura que mostra o link pelo qual você pode acessar o portal.
 
-## Portal Users
+## Usuários do Portal
 
-Administrators can create portal users.
+Administradores podem criar usuários do portal.
 
-1. Administration > Users.
-2. Click right dropdown next to Create User.
-3. Click Create Portal User.
-4. Select Contact the portal user will be linked with.
-5. Fill the form and click save.
+1. Administração > Usuários
+2. Clique no menu suspenso à direita próximo a Criar Usuário.
+3. Clique em Criar Usuário do Portal.
+4. Selecione o contato em que o usuário do portal vai estar ligado.
+5. Preencha o formulário e clique em salvar.
 
-Portal user should be linked to Portal record to be able to access that portal.
+O usuário do portal deve estar ligado ao registro do Portal para ser capaz de acessar aquele portal.
 
-## Portal Roles
+## Funções do Portal
 
-Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
+As funções do portal são similares à funções regulares no EspoCRM, mas com algumas distinções
 
-* `not-set` level denies an access.
-* `own` level means that the record is created by the user. E.g. portal user cased some case and this case is owned by this user.
-* `account` level means that the record is related to the account the portal user is related to.
-* `contact` level means that the record is related to the contact the portal user is related to.
+* o nível `não-definido` nega um acesso.
+* o nível `próprio` significa que o registro é criado pelo usuário. Ex: o usuário do portal empacotou um caso e esse caso é propriedade desse usuário.
+* o nível `conta` significa que o registro está relacionado à conta que o usuário do portal está relacionado.
+* o nível 'contato' significa que aquele registro está relacionado ao contato que usuário do portal está relacionado.
 
-Assigned User and Teams fields are read only for portal users.
+Os campos Usuário Designado e Times são somente leitura para usuários do portal.
 
-### Example
+### Exemplo
 
-`Portal users should be able to create cases, view cases related to their account; they should be able to view knowledge base.`
+`Os usuários do portal devem ser capazes de criar casos, ver casos relacionados à conta deles; eles devem ser capazes de ver a base de conhecimentos.`
 
-1. Open Create Portal Role form (Administration > Portal Roles > Create Role).
-2. Enable access to Cases, set: `create - yes, read - account, edit - no, delete - no, stream - account`.
-3. Enable access to Knowledge Base, set `create - no, read - account, edit - no, delete - no`.
-4. Edit your portal record (Administration > Portals). Select your portal role in Roles field and then save.
+1. Abra o fomulário Criar Função do Portal (Administração > Funções do Portal > Criar Função).
+2. Habilitar acesso aos Casos, defina: `criar - sim, ler - conta, editar - não, apagar - não, transmitir - conta`.
+3. Habilitar acesso à Base de Conhecimentos, defina: `criar - não, ler - conta, editar - não, apagar - não`.
+4. Editar seu registro no portal (Administração > Portais). Selecione a função de seu portal no campo Funções e então salve.
 
-## Access to Portal
+## Acesso ao Portal
 
-You can find the url for your portal in 'URL' field of the portal record. Also it's possible to use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
+Você pode encontrar a URL para seu portal no campo 'URL' no registro do portal. Também é possível usar as ferramentas de configuração do servidor (como mod_rewrite) para ser capaz de acessar através de uma URL diferente. Nesse caso, você precisa preencher o campo 'URL Personalizada'.
 
-### Access portal by Custom URL for Apache server
+### Acessar o portal através de uma URL Personalizada para servidor Apache
 
-Custom URL: my-portal-host-name.com.
+URL Personalizada: my-portal-host-name.com.
 
 #### crm.portal.conf
 ```
@@ -72,9 +72,9 @@ ServerAlias my-portal-host-name.com
 
 ```
 
-#### Mod rewrite rules
+#### Regras de sobrescrita mod
 
-Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is avaialble in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
+Especifique o ID do registro do portal em vez de `{PORTAL_ID}`. O ID do registro do portal está disponível na barra de endereços de seu navegador quando você abre a visualização detalhada do registro do portal. Como em: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 é um ID de registro do portal.
 
 ```
   RewriteCond %{HTTP_HOST} ^portal-host-name.com$
