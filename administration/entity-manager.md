@@ -72,8 +72,8 @@ Formları dinamik yapma yeteneği sağlar. Bazı alanları görünür, gerekli y
 
 Hem ilk çalıştırmada hem de özel varlıklar arasında yeni ilişki türleri oluşturabilirsiniz. Kullanılabilen 3 ilişki türü vardır.
 
+* Birden Çoğa: bu ilişkiyi oluşturduktan sonra sağ öğenin ayrıntı düzenine bir bağlantı alanı yerleştirebilir ve sol öğeye ilişki paneli ekleyebilirsiniz;
 * Çoktan Bire: Birden Çoğa ile aynı ama tam tersi;
-* Many-to-Many: relationship panels on both sides.
 * Çoktan Çoğa: her iki taraftaki ilişki panelleri.
 
 'Birçok Alan Bağlanma' parametresi `linkMultiple` alanının ilişkiyle birlikte oluşturulacağını belirtir.Düzene böyle bir alan koyabilirsiniz. İlgili kayıtların hızlı toplanması için uygundur. Eğer ilişkiniz ayrıntılı görünüm ekranını yavaşlatabilen birçok bağlantılı kayıt içeriyorsa bu iyi bir seçenek değildir.
