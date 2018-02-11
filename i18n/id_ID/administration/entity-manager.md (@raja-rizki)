@@ -1,0 +1,80 @@
+# Manajer Entitas
+
+Entity Manager tersedia di panel administrasi. Ini menyediakan kemampuan untuk sepenuhnya menyesuaikan contoh EspoCRM Anda. Anda dapat melakukan hal berikut:
+
+* Tambahkan jenis entitas baru.
+* Sesuaikan jenis entitas yang ada: ubah label, urutan default dalam tampilan daftar, aktifkan atau nonaktifkan transmisi.
+* Mengkonfigurasi bidang: menambahkan baru, menyesuaikan yang sudah ada.
+* Mengkonfigurasi hubungan: menambahkan yang baru, mengubah yang sudah ada.
+
+## Membuat entitas baru
+
+Klik pada tombol "Create entity" di halaman Administrator entitas. Tentukan nama, label dan jenisnya. Jika Anda memilih `Orang`, entitas Anda akan memiliki bidang Email, Telepon, Nama Depan, Nama Belakang dan Ucapan. Centang `Stream` jika Anda ingin entitas Anda memiliki panel alir dan pengguna dapat mengikuti entitas jenis ini.
+Jenis:
+
+* Base: entitas kosong hanya dengan bidang dasar seperti Name, Assigned User, Equipment, Description.
+* Base Plus - sebagai Base namun dengan panel Kegiatan, Sejarah, Tugas (tersedia dari 4.3.0).
+* Acara: tanggal mulai, tanggal akhir, durasi, orang tua, bidang status. Tersedia di panel Calendar and Activities (sejak 4.3.0, harus diaktifkan di Administration> Settings).
+* Orang: email, telepon, nama, nama keluarga, salam, alamat bidang. Kegiatan, sejarah, panel tugas.
+* Perusahaan: email, telepon, alamat penagihan, alamat pengiriman. Kegiatan, sejarah, panel tugas.
+
+## Perbarui entitas yang ada
+
+Jika Anda mengklik link `Edit` pada entitas tertentu Anda akan dapat mengubah beberapa parameter dari entitas itu.
+
+* Label - nama singular dan plural dari entitas.
+* Catatan pesanan default diurutkan berdasarkan daftar tampilan.
+Stream - jika fitur Stream diaktifkan untuk entitas ini.
+* Dinonaktifkan - periksa apakah Anda tidak memerlukan entitas ini di sistem Anda.
+* Text Filter Fields - bidang apa yang dicari di filter teks utama dan pencarian global.
+
+## Bidang
+
+Dengan mengklik link `Fields` Anda akan dipindahkan ke halaman yang terpisah. Di sana Anda akan bisa membuat field baru atau mengupdate yang sudah ada. Jenis bidang berikut tersedia di Entity Manager:
+
+* Alamat - alamat dengan jalan, kota, negara bagian, kode pos dan negara;
+Array - daftar nilai, dengan kemampuan untuk memilih beberapa nilai (bukan pilihan yang baik jika Anda perlu mencari dengan bidang ini); pengguna dapat menambahkan nilai mereka sendiri jika opsi tidak ditentukan.
+Lampiran Beberapa - beberapa lampiran file;
+* Auto-increment - read only generated number;
+* Boolean - kotak centang, benar atau salah;
+* Mata uang - untuk nilai mata uang;
+Tanggal;
+* Tanggal Waktu;
+* Enum - kotak pilih, dengan kemampuan untuk memilih hanya satu nilai;
+* File - mengunggah satu file;
+* Float - angka dengan bagian desimal;
+* Asing - bidang entitas terkait;
+* Gambar - mengunggah file gambar dengan preview;
+* Integer - bilangan bulat;
+* Nomor - jumlah incrementing otomatis tipe string dengan awalan yang mungkin dan panjang tertentu;
+* Multi-enum - daftar nilai, dengan kemampuan untuk memilih beberapa nilai (bukan pilihan yang baik jika Anda perlu mencari dengan bidang ini), mirip dengan Array tapi lebih bagus.
+* Text - text area, untuk teks multiline yang panjang;
+Url - untuk link;
+* Varchar - teks pendek;
+* Wysiwyg - mirip dengan Text field, dengan kemampuan untuk memformat teks.
+
+Parameter:
+Diperlukan - apakah pengisian di lapangan adalah wajib.
+* Nilai Default - Nilai bidang yang ditetapkan saat membuat catatan baru.
+* Audit - pembaruan lapangan akan dicatat di Stream.
+
+**Catatan**: Setelah menambahkan bidang baru, Anda perlu menempatkan bidang ini di [layout] (layout-manager.md) (Administration> Layout Manager).
+
+### Logika Dinamis
+
+Menyediakan kemampuan untuk membuat bentuk dinamis. Mungkin untuk menentukan kondisi yang membuat bidang tertentu terlihat, dibutuhkan atau hanya-baca. Kondisi akan diperiksa secara otomatis bila data dalam bentuk berubah.
+
+Untuk bidang Enum, Array dan Multi Enum, mungkin untuk menentukan rangkaian opsi yang berbeda yang akan tersedia untuk lapangan tergantung pada kondisi yang terpenuhi.
+
+
+## Hubungan
+
+Anda dapat membuat hubungan baru antara entitas out-of-box dan custom. Ada 3 jenis hubungan yang tersedia:
+
+* Satu-ke-Banyak: setelah Anda membuat hubungan ini, Anda dapat memasukkan bidang tautan ke tata letak detail entitas yang benar dan menambahkan panel hubungan ke entitas kiri;
+* Many-to-One: sama seperti One-to-Many tapi sebaliknya;
+* Many-to-Many: panel hubungan di kedua sisi.
+
+Parameter 'Link Multiple Field' menyiratkan bahwa bidang tipe `linkMultiple` akan dibuat bersamaan dengan hubungan. Anda dapat menempatkan bidang semacam itu pada tata letak. Ini mudah untuk memilih catatan terkait dengan cepat. Ini bukan pilihan yang baik jika hubungan Anda dimaksudkan untuk memiliki banyak catatan terkait yang dapat memperlambat pemuatan layar tampilan detail.
+
+Jika parameter 'Audited' diperiksa maka pembaruan hubungan akan dicatat di Stream.
