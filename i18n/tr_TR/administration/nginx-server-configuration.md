@@ -1,10 +1,10 @@
-# Nginx server configuration for EspoCRM
+# EspoCRM için Nginx sunucu yapılandırması
 
-These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+Bu talimatlar, [Sunucu Yapılandırması] (server-configuration.md) yönergesine tamamlayıcıdır. Lütfen Burada listelenen tüm yapılandırma ayarlarının Ubuntu sunucusunda yapıldığını unutmayınız.
 
-## PHP requirements
+## PHP Gereksinimleri
 
-To install all necessary libraries, run these commands in a terminal:
+Gerekli tüm kütüphaneleri kurmak için bu komutları bir terminalde çalıştırınız:
 
 ```
 sudo apt-get update
@@ -13,13 +13,13 @@ sudo phpenmod mcrypt imap mbstring
 sudo service nginx restart
 ```
 
-## Fixing the issue “API Error: EspoCRM API is unavailable”:
+## "API Hatası: EspoCRM API'sı kullanılamıyor" sorunu giderildi:
 
-Take only necessary steps. After each step check if the issue is solved.
+Gerekli adımları atınız. Her adımın ardından sorunun çözülüp çözülmediğini kontrol ediniz.
 
-### 1. Enable rewrite rules in Nginx server
+### 1. Nginx Sunucusunda yeniden yazma kurallarını etkinleştirin
 
-Add this code to your Nginx server block config file (/etc/nginx/sites-available/YOUR_SITE) inside “server” block:
+Bu kodu, "sunucu" bloğundaki Nginx sunucu bloğu yapılandırma dosyanıza (/etc/nginx/sites-available/YOUR_SITE) ekleyiniz:
 
 ```
 server {   
@@ -86,37 +86,38 @@ server {
 }
 ```
 
-If you don’t have this file, you have to create it. For this open a terminal and run the command:
+Bu dosyaya sahip değilseniz onu oluşturmanız gerekmektedir. Bunun için bir terminal açın ve aşağıdaki komutu çalıştırınız:
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [ guideline](nginx-virtual-host.md).
+Ve yukarıda listelenmiş kodu ekleyiniz. Yeni bir Sanal Ana Makinayı Nginx'te nasıl yapılandıracağınız hakkında daha fazla bilgi için lütfen bu [yönerge] (nginx-virtual-host.md) dosyasını okuyunuz.
 
-Run this command in a terminal to check if everything is fine:
+Her şeyin yolunda olup olmadığını kontrol etmek için bu komutu bir terminalde çalıştırınız:
 
 ```
 sudo nginx -t
 ```
 
-If so, run the command to restart nginx server:
+Eğer öyleyse, nginx sunucusunu başlatmak için komutu çalıştırınız:
 
 ```
 sudo service nginx restart
 ```
 
-### 2. Add RewriteBase path
+### 2. Temel Yeniden yazma yolunu ekle
 
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
+/ESPOCRM_DIRECTORY/api/v1/.htaccess dosyasını açınız ve aşağıdaki satırı değiştiriniz:
 
 ```
 # RewriteBase /
 ```
-with 
+ile 
 
 ```
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where REQUEST_URI is a part of URL, e.g. for “http://example.com/espocrm/”, REQUEST_URI is “espocrm”.
+Nerede REQUEST_URI, URL'nin bir parçasıdır; örneğin. "http://example.com/espocrm/" için REQUEST_URI "espocrm" dir.
+
