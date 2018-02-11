@@ -67,9 +67,9 @@ There are two types of filters:
 
 Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sendings and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
 
-It's possible to use placefolders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
+It's possible to use placeholders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
 
-You can use additional reserved placefolders in template body: {optOutUrl} and {optOutLink}.
+You can use additional reserved placeholders in template body: {optOutUrl} and {optOutLink}.
 ```
 <a href="{optOutUrl}">Unsubscribe</a>
 ```
