@@ -1,62 +1,62 @@
-# REST API
+# REST Uygulaması(API)
 
-EspoCRM is a single page application so a frontend uses REST API to connect with a backend. 
-All operations you perform using UI you can implement via API calls using your programing language. 
-You can learn how API works if you trace what's going in the network tab in your browser console.
+EspoCRM bir tek sayfa uygulamasıdır, bu nedenle bir ön uç,  arka uçla bağlanmantılı olmak için REST API'yı kullanmaktadır.
+Programlama dilinizi kullanarak API çağrılarıyla uygulayabileceğiniz UI'yı kullanarak gerçekleştirdiğiniz tüm işlemlerdir.
+Tarayıcı konsolunuzdaki ağ sekmesinde neler olduğunu takip ederseniz API'nın nasıl çalıştığını öğrenebilirsiniz.
 
-Most of api functions return JSON. POST, PATCH calls usually need some JSON data in payload.
+Çoğu API fonksiyonları JSON'u döndürür. POST, PATCH çağrıları genelde yük altında, bazı JSON verilerine ihtiyaç duyarlar.
 
-Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: 
+EspoCRM API'sinin temel URL'si: `api/v1/`. Bu referans içindeki ifadelerle başa eklemeniz gerekmektedir. Örneğin:
 
 `GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
-## Authentication
+## Yetkilendirme
 
-EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
+EspoCRM API'sı [Temel Kimlik Doğrulaması]nı (http://en.wikipedia.org/wiki/Basic_access_authentication) kullanır. Kullanıcı adı ve şifre/simge, base64'de kodlanmıştır 'Yetkilendirme' başlığı sayesinde geçirilir.
 
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's more better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+API ile çalışırken şifre yerine onay simgesi kullanmak daha iyidir. Bu durumda, `Espo-Yetkilendirme` başlığında kullanıcı adı ve şifre/simge girmeniz gerekecektir.
 ```
 "Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
 ```
 
-1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header.
-2. Use this token instead of password in `Espo-Authorization` header for all further request.
-3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
+1. `Espo-Yetkilendirme` başlığında elde edilen kullanıcı adı ve şifreyle `GET App/user` isteği ile erişim simgesini edininiz.
+2. Daha fazla istek için `Espo-Yetkilendirme` başlığındaki şifre yerine bu simgeyi kullanınız.
+3. Eğer İstek, 403 hatası döndürürse, kullanıcı adı/şifre yanlış veya simge artık geçerli değil demektir.
 
-#### Authentication Token / User Specific Data
+#### Kimlik Doğrulama Simgesi/Kullanıcıya Özgü Veri
 
 `GET App/user`
 
-Returns:
+Sonuçlar:
 
-* `token` - access token to use;
-* `acl` - information about user access;
-* `preferences` - user preferences;
-* `user` - user record attributes.
+* `token` - kullanmak için erişim izni;
+* `acl` - kullanıcı erişimi hakkındaki bilgi;
+* `preferences` - Kullanıcı tercihleri;
+* `user` - kullanıcı kayıtlı özellikleri.
 
 
-## CRUD Operations
+## CRUD İşlemleri
 
-#### List Entities
+#### Listelenmiş Varlıklar
 
 `GET {entityType}`
 
-GET parameters:
+GET parametleri:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `offset` - (int) ofset;
+* `maxSize` - (int) maksimum boyut;
+* `where` - (array) filtreler;
+* `sortBy` - (string) sıralamak için alan;
+* `asc` - (bool) sıralama yönü.
 
-_Example_
+_Örnek_
 
 `GET Account?offset=0&maxSize=20`
 
-Returns:
+Sonuçlar:
 ```
 {
   "list": [... array of records...],
@@ -64,25 +64,25 @@ Returns:
 }
 ```
 
-#### Read Entity
+#### Varlıkları Oku
 
 `GET {entityType}/{id}`
 
-Returns attributes in JSON object.
+JSON nesnesindeki öznitelikleri döndürür.
 
-_Example_
+_Örnek_
 
 `GET Account/5564764442a6d024c`
 
-#### Create Entity
+#### Varlık Yarat
 
 `POST {entityType}`
 
-Payload: Object of entity attributes.
+Payload: Varlık özniteliklerinin nesnesidir.
 
-Returns entity attributes in JSON object.
+JSON nesnesindeki öznitelikleri döndürür.
 
-_Example_
+_Örnek_
 
 `POST Account`
 
@@ -94,19 +94,19 @@ Payload:
 }
 ```
 
-#### Update Entity
+#### Varlığı Güncelleme
 
 `PATCH {entityType}/{id}`
 
-or
+veya
 
 `PUT {entityType}/{id}`
 
-Payload: Object of entity attributes needed to be changed.
+Payload: Varlık özelliklerinin nesnesinin değiştirilmesi gereklidir.
 
-Returns attributes in JSON object.
+JSON nesnesindeki öznitelikleri döndürür.
 
-_Example_
+_Örnek_
 
 `PATCH Account/5564764442a6d024c`
 
@@ -117,32 +117,32 @@ Payload:
 }
 ```
 
-#### Delete Entity
+#### Varlığı Silmek
 
 `DELETE {entityType}/{id}`
 
-_Example_
+_Örnek_
 
 `DELETE Account/5564764442a6d024c`
 
 
-## Related Entities
+## İlgili Varlıklar
 
-#### List Related Entities
+#### İlişkili Varlıkları Listele
 
 `GET {entityType}/{id}/{link}`
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `offset` - (int) ofset;
+* `maxSize` - (int) maksimum boyut;
+* `where` - (array) filtreler;
+* `sortBy` - (string) sıralamak için alan;
+* `asc` - (bool) sıralama yönü.
 
-_Example_
+_Örnek_
 
 `GET Account/5564764442a6d024c/opportunities`
 
-Returns:
+Sonuçlar:
 ```
 {
   "list": [... array of records...],
@@ -150,17 +150,17 @@ Returns:
 }
 ```
 
-#### Link Entity
+#### Varlıkların Bağlantısı
 
 `POST {entityType}/{id}/{link}`
 
 Payload:
 
-1. `id` attribute.
-2. `ids` array attribute.
-3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criterias.
+1. `id` nitelik.
+2. `ids` dizi niteliği.
+3. `"massRelate": true` ve `"where": {...}` arama kriterlerine göre birden fazla kaydı ilişkilendirmek içindir.
 
-_Example_
+_Örnek_
 
 `POST Account/5564764442a6d024c/opportunities`
 
@@ -171,16 +171,16 @@ Payload:
 }
 ```
 
-#### Unlink Entity
+#### Varlığın Bağlantısını Kopartmak
 
 `DELETE {entityType}/{id}/{link}`
 
 Payload:
 
-1. JSON with `id` attribute.
-2. JSON with `ids` array attribute.
+1. JSON, `id` özniteliği ile birliktedir.
+2. JSON `ids` dizi özniteliği iledir.
 
-_Example_
+_Örnek_
 
 `DELETE Account/5564764442a6d024c/opportunities`
 
@@ -191,31 +191,31 @@ Payload:
 }
 ```
 
-## Stream
+## Akış
 
-#### List stream entries for the current user
+#### Varsayılan kullanıcı için akış girdilerini listelemek
 
 `GET Stream`
 
-Get parameters:
+Get parametleri:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
+* `offset` - (int) ofset;
+* `maxSize` - (int) maksimum boyut;
 
-#### List stream entries related to a specific record
+#### Belirli bir kayda ilişkin akış girdilerini listelemek
 
 `GET {entityType}/{id}/stream`
 
-Get parameters:
+Get parametleri:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
+* `offset` - (int) ofset;
+* `maxSize` - (int) maksimum boyut;
 
-#### Follow record
+#### Kaydı takip et
 
 `PUT {entityType}/{id}/subscription`
 
-#### Unfollow record
+#### Kaydın takibini bırak
 
 `DELETE {entityType}/{id}/subscription`
 
