@@ -106,10 +106,16 @@ Provides an ability to make forms dynamic. It's possible to define conditions ma
 For Enum, Array and Multi Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met.
 اینم کےلیے، رینج اور زیادہ اینم والے شعبہ جات۔ یہ ممکن ہے کہ مختلف اختیارات کے جوڑوں کی وضاحت کی جائے کہ جو ایسے شعبے کےلیے مہیا ہوں گے جو کہ شرائط کے پورا ہونے پر منحصر ہے۔
 Relationships
+تعلقات
 You can create new relationships between both out-of-box and custom entities. There are 3 available relationship types:
+آپ خانے سے باہر اور خود بنائی ہوئی وجودی شناختوں دونوں کے ساتھ نئے تعلقات بنا سکتے ہیں۔ تین قسم کے تعلقات مہیا ہوتے ہیں:
 •	One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
 •	Many-to-One: the same as One-to-Many but vice versa;
 •	Many-to-Many: relationship panels on both sides.
+•	ایک-سے-زیادہ: جب آپ نے تعلقات بنے لیے تو آپ دائیں وجود کی لے آؤٹ تفصیلات میں ایک ربط فیلڈ ڈال سکتے ہیں اور بائیں وجود کےلیے تعلقات پینل شامل کر سکتے ہیں۔
+•	بہت-سے-ایک: بالکل ایک-سے-بہت جیسا مگر اس کے الٹ ؛
+•	بہت-سے-بہت: دونوں طرف سے تعلقات پینلز۔
 Parameter 'Link Multiple Field' implies that the field of linkMultiple type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of detail view screen.
 If parameter 'Audited' is checked then updates of the relationship will be logged in Stream.
-
+'بہت سے شعبوں کا ربط' کی متعین مقدار یہ دلالت کرتی ہے کہ linkMultiple کی قسم تعلقات کے ہمراہ بنائی جائے گی۔ آپ ایسا شعبہ لے آؤٹ پر بھی ڈال سکتے ہیں۔ یہ متعلقہ ریکارڈس کو جلدی سے اٹھانے کےلیے آرام دہ ہے۔ یہ اچھا اختیار نہیں اگر آپ کا تعلق بہت سے مربوط ریکارڈ سے اس لیے ہے کہ وہ تفصیل کے منظر کی تختی کی لوڈنگ کو آہستہ کر دے۔
+اگر متعین مقدار 'Audited' ہے (پڑتال کیا ہوا) منتخب کردہ ہے تو تعلقات کی تجدیدات سٹریم (برقی ندی) میں داخل کر دی جائیں گی۔
