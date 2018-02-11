@@ -1,25 +1,26 @@
-# Server Configuration for EspoCRM
+# EspoCRM için Sunucu Yapılandırması
 
-EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.6 or greater and MySQL version 5.1 or greater.
+EspoCRM Apache'de  ([talimatlar](apache-server-configuration.md)), Nginx'te ([talimatlar](nginx-server-configuration.md)), veya PHP sürüm 5.6 veya daha üstü ve MySQL sürüm 5.1 veya daha üstü desteklenen IIS sunucusu için kurulabilir.
 
-## Configuration Recommendations
+## Önerilen Yapılandırmalar
 
-### PHP Requirements
+### PHP Gereksinimleri
 
-EspoCRM requires PHP 5.6 or greater, with the following extensions enabled:
+EspoCRM, aşağıdaki uzantıların etkinleştirilmiş hali ile PHP 5.6 veya üst sürümünü gerektirir:
 
-* [PDO](http://php.net/manual/en/book.pdo.php) – to access MySQL in PHP;
-* [JSON](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
-* [GD](http://php.net/manual/en/book.image.php) – to manipulate images;
-* [OpenSSL](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
-* [Zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
-* [IMAP](http://php.net/manual/en/book.imap.php) – to monitore mailboxes in EspoCRM;
+* [PDO](http://php.net/manual/en/book.pdo.php) – PHP'de MySQL'e erişmek;
+* [JSON](http://php.net/manual/en/book.json.php) – kaynaklar bu formatı kullanır (meta veriler, düzen, diller ve diğerleri);
+* [GD](http://php.net/manual/en/book.image.php) – görüntüleri değiştirmek;
+* [OpenSSL](http://php.net/manual/en/book.openssl.php) – en yüksek korumayı sağlamak için;
+* [Zip](http://php.net/manual/en/book.zip.php) – EspoCRM sürümünü güncelleyip uzantıları yükleyebilmek;
+* [IMAP](http://php.net/manual/en/book.imap.php) – EspoCRM'deki posta kutularını izlemek için;
 * [mbstring](http://php.net/manual/en/book.mbstring.php);
 * [cURL](http://php.net/manual/en/book.curl.php).
 
-It's also recommended to have [mailparse](https://pecl.php.net/package/mailparse) pecl extension installed. It's needed for smooth working of email fetching feature.
+Ayrıca, [mailparse] (https://pecl.php.net/package/mailparse) pecl uzantısının kurulu olması önerilmektedir.E-postayı alma özelliğinin sorunsuz çalışması için gereklidir.
 
-php.ini settings:
+
+php.ini ayarları:
 
 ```
 max_execution_time = 180
@@ -30,20 +31,20 @@ upload_max_filesize = 50M
 ```
 
 
-### MySQL Requirements
+### MySQL Gereksinimleri
 
-EspoCRM supports MySQL version 5.1 or greater.
-These are no special peculiarities. All default settings are good for EspoCRM.
+EspoCRM, MySQL sürüm 5.1 veya daha yeni sürümünü desteklemektedir.
+Hiçbir özel özellik yoktur.Tüm varsayılan ayarlar EspoCRM için iyidir.
 
-## Required Permissions for Unix-based Systems
+## Unix Tabanlı Sistemler için Gerekli İzinler
 
-The files and directories should have the following permissions:
+Dosyalar ve dizinler aşağıdaki izinlere sahip olmalıdır:
 
-* `/data`, `/custom`, `/client/custom` – should be writable all files, directories and subdirectories (664 for files, 775 for directories, including all subdirectories and files);
-* `/application/Espo/Modules`, `/client/modules` – should be writable the current directory (775 for the current directory, 644 for files, 755 for directories and subdirectories);
-* All other files and directories should be readable (644 for files, 755 for directories).
+* `/data`, `/custom`, `/client/custom` – tüm dosyalar, dizinler ve alt dizinler (dosyalar için 664, dizinler için 775, tüm alt dizinler ve dosyalar da dahil olmak üzere) yazılabilir olmalıdır;
+* `/application/Espo/Modules`, `/client/modules` – geçerli dizin de (mevcut dizin için 775, dosyalar için 644, dizinler ve alt dizinler için 755) yazılabilir olmalıdır;
+* Diğer tüm dosyalar ve dizinler okunabilir olmalıdır (dosyalar için 644, dizinler için 755).
 
-To set the permissions, execute these commands in the terminal:
+İzinleri ayarlamak için terminaldeki şu komutları çalıştırınız:
 
 ```
 cd <PATH-TO-ESPOCRM-DIRECTORY>
@@ -51,34 +52,34 @@ find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
 find data custom -type d -exec chmod 775 {} + && find data custom -type f -exec chmod 664 {} +;
 ```
 
-All files should be owned and group-owned by the webserver process. It can be “www-data”, “daemon”, “apache”, “www”, etc.  
-Note: On Bitnami Stack, files should be owned and group-owned by “daemon” user.  
-Note: On shared hosts, files should be owned and group-owned by your user account.
+Tüm dosyalar, web sunucusu işlemleri tarafından sahip olunmalı ve gruba ait olmalıdır."Www-data", "daemon", "apache", "www" vb. Olabilirler.
+Not: Bitnami Yığınındaki, dosyaların "daemon" kullanıcısı tarafından sahibi olunduğu ve gruba ait olması gerekir.
+Not: Paylaşılan ana makinelerdeki dosyalar kullanıcı hesabınıza ait ve gruba ait olmalıdır.
 
-To set the owner and group-owner, execute these commands in the terminal:
+Sahibi ve grup sahibini ayarlamak için terminaldeki şu komutları çalıştırın:
 
 ```
 cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
 
-## Setup a crontab
+## Bir crontab kurulumu
 
-To setup a crontab on a UNIX system, take the following steps:
+Bir UNIX sisteminde bir crontab kurmak için aşağıdaki adımları izleyiniz:
 
-* 1. Login as administrator into your EspoCRM instance.
-* 2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
+* 1. EspoCRM örneğinize yönetici olarak giriş yapınız.
+* 2. Yönetici panelindeki Zamanlanmış İşler bölümüne gidiniz (Menü>Yönetim>Zamanlanmış İşler) ve crontab için dizeyi kopyalayınız. Bu şuna benzemektedir:
 ```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
-* 3. Open a terminal and run this command:
+* 3. Bir terminal açın ve şu komutu çalıştırınız:
 ```
 crontab -e -u WEBSERVER_USER
 ```
-WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
-* 4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
+WEBSERVER_USER  "www", "www-data", "apache" vb. Oolabilir(web sunucunuza bağlıdır).
+* 4. Kopyaladığınız dizeyi (2. adımdan) yapıştırın ve crontab dosyasını (nano düzenleyici için Ctrl + O, ardından Ctrl + X) kaydediniz.
 
-## Configuration instructions based on your server:
+## Sunucunuza dayalı yapılandırma talimatları:
 
-* [Apache server configuration](apache-server-configuration.md).
-* [Nginx server configuration](nginx-server-configuration.md).
+* [Apache sunucu yapılandırması](apache-server-configuration.md).
+* [Nginx sunucu yapılandırması](nginx-server-configuration.md).
