@@ -1,24 +1,25 @@
-# Creating Custom Field Type
+# Özel Alan Türü Oluşturmak
 
-### Field Definition
+### Alan Tanımlaması
 
-Create a file `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` with needed parameters.
+Gerekli parametrelerle `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` dosyasını oluşturunuz.
+
 ```
 {
    "view": "custom:views/fields/{field-type}"`
 }
 ```
 
-Use out-of-the-box field types as examples: `/application/Espo/Resources/metadata/fields`.
+Kutudan çıkmış alan türlerini örnek olarak kullanımı: `/application/Espo/Resources/metadata/fields`.
  
-### Translation
+### Çeviri
 
-The label is used in Entity Manager can be set in `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` in section `fieldTypes`.
-If you need to add translation to other language, use needed language [language code](https://en.wikipedia.org/wiki/ISO_639-1)_[country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) instead of `en_US`. In `data/config.php` in section `languageList` you can find the list of included languages.
+Etiket, Varlık Yöneticisi'nde, `fieldTypes` bölümündeki `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` ayarında kullanılabilir.
+Başka bir dile çeviri eklemeniz gerekiyorsa, `en_US` yerine gerekli dili [dil kodu] kullanınız (https://en.wikipedia.org/wiki/ISO_639-1)_[ülke kodu](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). `LanguageList` bölümündeki` data/ config.php` bölümünde bulunan dillerin listesini bulabilirsiniz.
 
-### View
+### Görünüm
 
-Create the view for the field `client/custom/src/views/fields/{field-type}.js` and define its templates
+`client/custom/src/views/fields/{field-type}.js`  alanı için görünümü oluşturun ve şablonlarını tanımlayınız.
 ```
 Espo.define('custom:views/fields/[field-type]', 'views/fields/base', function (Dep) {
     
@@ -28,8 +29,8 @@ Espo.define('custom:views/fields/[field-type]', 'views/fields/base', function (D
 });
 ```
 
-Use out-of-the-box field types as examples:
-- `/client/src/views/fields` - views;
-- `/client/res/templates/fields` - templates.
+Kutudan çıkmış alan türlerini örnek olarak kullanımı:
+- `/client/src/views/fields` - görünümler;
+- `/client/res/templates/fields` - şablonları.
 
-Then you need to run rebuild at the administration panel.
+Sonra yeniden yönetim panelinde çalıştırmanız gerekmektedir.
