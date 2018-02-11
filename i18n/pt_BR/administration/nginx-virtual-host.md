@@ -1,6 +1,6 @@
 # Configurando um Host Virtual em Nginx para EspoCRM
 
-Nesse guia, nós vamos mostrar como configurar um host virtual em nginx para EspoCRM em servidor Ubuntu.
+Nesse guia, nós vamos mostrar como configurar um host virtual em Nginx para EspoCRM em servidor Ubuntu.
 
 ## Crie um arquivo de bloco do servidor
 
