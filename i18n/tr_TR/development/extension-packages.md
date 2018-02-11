@@ -1,14 +1,14 @@
-# Extension Packages
+# Uzantı Paketleri
 
-Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel under `Customization` section.
+Uzantılar, EspoCRM'ye fazladan işlevsellik eklemenizi sağlarlar. Yönetici paneli tarafından `Customization` bölümü altında kurulabilirler.
 
-## How to create extension package
+## Uzantı paketi nasıl oluşturulur?
 
-A File structure of package:
+Bir paketin dosya yapısı:
 
-* `/manifest.json` – a file that contains extension properties;
-* `/files` – a directory that contains the extension files;
-* `/scripts` – contains the extension scripts.
+* `/manifest.json` – uzantı özellikleri içeren bir dosyadır;
+* `/files` – uzantı dosyalarını içeren bir dizindir;
+* `/scripts` – uzantı komut dosyalarını içerir.
 
 ### Manifest
 ```json
@@ -25,23 +25,23 @@ A File structure of package:
 }
 ```
 
-* Syntax of `version` and `acceptableVersions` is described by the v2.0.0 specification found at http://semver.org.
-* `delete` - is the list of core files that need to be deleted. This parameter is not recommended to use. You can omit it.
+* `version` ve `acceptableVersions` sözdizimi, http://semver.org'da bulunan v2.0.0 belirtilmesiyle tanımlanmıştır.
+* `delete` - silinmesi gereken temel dosyaların listesidir.Bu parametrenin kullanılması tavsiye edilmez. Atlayabilirsiniz.
 
-### Files
+### Dosyalar
 
-All extension files should be placed in `files` directory. They will be copied to EspoCRM core directory.
+Tüm uzantı dosyaları `files` dizinine yerleştirilmelidir. EspoCRM çekirdek dizinine kopyalanırlar.
 
-### Scripts
+### Komut Dosyaları
 
-For different purposes EspoCRM supports the following types of scripts. All of them should be  placed in `scripts` directory.
+Farklı amaçlar için, EspoCRM aşağıdaki komut türlerini desteklemektedir. Hepsi "scripts" dizini içerisine yerleştirilmelidir.
 
-* `BeforeInstall.php` – a script executed before an installation process;
-* `AfterInstall.php` – executed once the installation process is finished;
-* `BeforeUninstall.php` – executed before uninstallation process;
-* `AfterUninstall.php` – executed once the uninstallation process is finished.
+* `BeforeInstall.php` – bir yükleme işlemi öncesinde çalıştırılan bir komut dosyasıdır;
+* `AfterInstall.php` – kurulum işlemi tamamlandıktan sonra sonlanır;
+* `BeforeUninstall.php` – kaldırma işleminden önce yürütülendir;
+* `AfterUninstall.php` – kaldırma işlemi tamamlandıktan sonra gerçekleştirilir.
 
-Example:
+Örnek:
 
 ```php
 class AfterInstall
@@ -61,6 +61,6 @@ class AfterInstall
 }
 ```
 
-### Package
+### Paket
 
-At the end, we need to pack all these files into a .zip archive.
+Sonuç olarak, tüm bu dosyaları bir .zip arşivine yerleştirmeliyiz.
