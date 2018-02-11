@@ -1,45 +1,45 @@
-# Configuring a Virtual Host on Nginx for EspoCRM
+# Configurando um Host Virtual em Nginx para EspoCRM
 
-In this guide we will show how to configure a virtual host on Nginx for EspoCRM on Ubuntu server.
+Nesse guia, nós vamos mostrar como configurar um host virtual em Nginx para EspoCRM em servidor Ubuntu.
 
-## Create a server block file
+## Crie um arquivo de bloco do servidor
 
-To create this file, open a terminal and run the command:
+Para criar esse arquivo, abra o terminal e execute o comando:
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-Now, open this file (/etc/nginx/sites-available/espocrm.conf) and modify the code following the format printed below (some settings may be different based on your configuration):
+Agora, abra esse arquivo (/etc/nginx/sites-available/espocrm.conf) e modifique o código seguindo o formato mostrado abaixo (algumas configurações podem ser diferentes baseadas na configuração do seu servidor):
 
 ```
 server {
     listen 80;
     listen [::]:80;
  
-    server_name espocrm.local; # Replace espocrm.local to your domain name
-    root /var/www/html/espocrm; # Specify your EspoCRM document root
+    server_name espocrm.local; # Substitua espocrm.local pelo nome de seu domínio
+    root /var/www/html/espocrm; # Especifique a raiz do documento de seu EspoCRM
  
     index index.php index.html index.htm;
  
-    # SSL configuration
+    # Configuração SSL
     #
     # listen 443 ssl;
     # listen [::]:443 ssl;
     # include snippets/snakeoil.conf;    
  
-    # Specify your PHP (php-cgi or php-fpm) based on your configuration
+    # Especificar seu PHP (php-cgi or php-fpm) baseado em suas configurações
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
  
-        # With php7.0-cgi alone:
+        # Com apenas o php7.0-cgi:
         # fastcgi_pass 127.0.0.1:9000;
  
-        # With php7.0-fpm:
+        # Com o php7.0-fpm:
         fastcgi_pass unix:/run/php/php7.0-fpm.sock;
     }    
  
-    # Add rewrite rules
+    # Adicionar sobrescrever regras
     location / {
         try_files $uri $uri/ =404;
     }
@@ -89,32 +89,32 @@ server {
 }
 ```
 
-## Enable this server block
+## Habilitar o bloco desse servidor
 
-Create a symbolic link:
+Crie uma ligação simbólica:
 
 ```
 sudo ln -s /etc/nginx/sites-available/espocrm.conf /etc/nginx/sites-enabled/
 ````
 
-Run this command to check if everything is fine:
+Execute esse comando para verificar se tudo está certo:
 
 ```
 sudo nginx -t
 ```
 
-And restart Nginx server:
+E reinicialize o servidor Nginx:
 
 ```
 sudo service nginx restart
 ```
 
-## Configure your local hosts (optional, for a local domain only)
+## Configure seus hosts locais (opcional, somente para um domínio local)
 
-If you added a local domain, you have to configure it on your local computer (not on the server). For Ubuntu, open the file `/etc/hosts` and add the line:
+Se você adicionou um domínio local, você deve configurá-lo em seu computador local (não no servidor). Para Ubuntu, abra o arquivo `/etc/hosts` e adicione essa linha:
 
 ```
-192.168.1.1 espocrm.local  # specify the IP address of your Nginx server
+192.168.1.1 espocrm.local  # especifique o endereço de IP do seu servidor Nginx
 ```
 
-For Windows, please follow these [instructions](http://support.microsoft.com/kb/923947).
+Para Windows, por favor, siga essas [instruções](http://support.microsoft.com/kb/923947).
