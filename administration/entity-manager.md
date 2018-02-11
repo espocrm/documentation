@@ -79,4 +79,3 @@ Hem ilk çalıştırmada hem de özel varlıklar arasında yeni ilişki türleri
 'Birçok Alan Bağlanma' parametresi `linkMultiple` alanının ilişkiyle birlikte oluşturulacağını belirtir.Düzene böyle bir alan koyabilirsiniz. İlgili kayıtların hızlı toplanması için uygundur. Eğer ilişkiniz ayrıntılı görünüm ekranını yavaşlatabilen birçok bağlantılı kayıt içeriyorsa bu iyi bir seçenek değildir.
 
 Eğer 'Denetlendi' parametresi işaretlendiyse ilişki güncellemeleri Akışa kaydedilecektir.
-
