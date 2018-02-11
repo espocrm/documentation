@@ -1,32 +1,32 @@
-# Workflows
+# İş Akışları
 
-Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+İş akışları özelliği, [Gelişmiş Paket]'de mevcuttur (https://www.espocrm.com/extensions/advanced-pack/).
 
-Workflows automate your business process an easy way. You can find it in the Administration panel. To create a workflow rule you need to define:
+İş akışları, işlemlerinizi kolay bir şekilde otomatikleştirir. Bunu Yönetim panelinde bulabilirsiniz. Bir iş akışı kuralı oluşturmak için şunları tanımlamanız gerekmektedir:
 
-* Target Entity - what entity type workflow is applied to;
-* Trigger Type - when workflow will be triggered;
-* Conditions - conditions need to be met to trigger workflow;
-* Actions - what to do if workflow is triggered.
+* Hedef Varlık - hangi varlık türü iş akışına uygulanır;
+* Tetikleyici Türü - iş akışı tetiklendiğinde;
+* Koşullar - iş akışını tetiklemek için gerekli koşulların yerine getirilmesi gerekir;
+* Eylemler - iş akışı tetiklenirse ne yapılacak?
 
 
-## Trigger Types
+## Tetikleyici Tipleri
 
-### After record created 
+### Kayıt Oluşturulduktan sonra 
 
-Triggered only when a new record is created. If specified conditions are met then actions will be executed.
+Yalnızca yeni bir kayıt oluşturulduğunda tetiklenmektedir. Belirtilen koşullar yerine getirilirse olaylar gerçekleştirilir.
 
-### After record saved
+### Kayıt kaydedildikten sonra
 
-Triggered when a new record is created or an existing record is updated. If specified conditions are met then actions will be executed.
+Yeni bir kayıt oluşturulduğunda veya mevcut bir kayıt güncellendiğinde başlatılır. Belirtilen koşullar yerine getirilirse olaylar gerçekleştirilir.
 
-For workflow rules with this type of trigger it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed then execute some actions.
+Bu tür tetiklemeye sahip iş akışı kuralları için, bazı alanların 'değiştirildi' olup olmadığını kontrol eden bir koşul olması yaygın bir uygulamadır. Örneğin, Olayların durumu değişirse, bazı işlemleri gerçekleştiriniz.
 
-### Scheduled
+### Zamanlanmış
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. So you need also to create a list report.
+Tanımlanan zamanlamaya göre başlatıldı. Her gün, her hafta, vb. çalıştırmak için kurulum yapabilirsiniz. Belirli bir liste raporu tarafından geri gönderilen kayıtlar için eylemler uygulanacaktır.Dolayısıyla bir liste raporu oluşturmanız gerekmektedir.
 
-Scheduling is specified in a crontab notation.
+Tarifeleme bir crontab notlarında belirtilmiştir.
 
 ```
 * * * * * *
@@ -39,108 +39,108 @@ Scheduling is specified in a crontab notation.
 +------------ Minute            (range: 0-59)
 ```
 
-### Sequential
+### Ardışık
 
-Used rarely. Supposed to be run by another workflow. Provides an ability to make a complex logic. 
+Nadiren kullanılırdı. Başka bir iş akışı tarafından çalıştırılması gerekiyordu.Bir karmaşık mantıksal yapma özelliğini sağlar.
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+Not: Sıralı iş akışları için bir İş Akışı özelliği yerine [BPM aracı] (bpm.md) kullanmanız önerilir.
 
-## Conditions
+## Koşullar
 
-You can specify conditions that must be met to trigger the workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
+İş akışını başlatmak için yerine getirilmesi gereken koşulları belirtebilirsiniz. Koşulların nasıl belirtileceğini göstermenin iki yolu vardır: UI koşul oluşturucu ve formüldür.
 
-### UI condition builder
+### UI Koşul Oluşturucu
 
-Some available condition types:
+Bazı mevcut koşul türleri:
 
-* _equals_ - the field equals to a specific value or a value of another field;
-* _was equal_ - the field was equal to a specific value before the workflow was triggered;
-* _not equals_ - the field does not equal to a specific value or a value of another field;
-* _was not equal_ - the field was not equal to specific value before the workflow was triggered;
-* _empty_ - the field value is empty;
-* _not empty_ - the field value is not empty;
-* _changed_ - the field was changed;
-* _not changed_ - the field was not changed.
+* _equals_ - alan belirli bir değere veya başka bir alanın değerine eşittir;
+* _was equal_ - iş akışı tetiklenmeden önce alan belirli bir değere eşittir;
+* _not equals_ - alan belirli bir değere veya başka bir alanın değerine eşit değildir;
+* _was not equal_ - iş akışı tetiklenmeden önce alan belirli bir değere eşit değildir;
+* _empty_ - alan değeri boştur;
+* _not empty_ - alan değeri boş değildir;
+* _changed_ - alan değiştirildi;
+* _not changed_ - alan değiştirilmedi.
 
-### Formula conditions
+### Formül koşulları
 
-Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
+Förmül herhangi bir karmaşıklığın koşullarını tanımlama olanağı sağlamaktadır.Formül sözdizimini okumak için [Bu yazı] (formula.md) bölümüne bakınız.
 
-Note: There should not be any `;` delimiter used in formula code when it determines a condition.
+Not: Bir koşul belirlediğinde formül kodunda kullanılan `;` sınırlandırıcı olmamalıdır.
 
-## Actions
+## Eylemler
 
-### Send Email
+### E-posta Göndermek
 
-System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
+Sistem belirtişmiş e-posta şablonunu kullanarak bir e-posta gönderir. Bir alıcının e-posta adresi, hedef kaydı, ilişkili herhangi bir kaydı, geçerli kullanıcıyı, takipçileri, takım üyelerinden veya belirtilenlerden alınabilir. E-posta hemen gönderilebilir veya belirli bir süre için gecikir.
 
-### Create Record
+### Kayıt Oluşturma
 
-System will create the new record of any entity type. If there is a relationship between the target record and creating record it's possible to relate records. 
+Sistem herhangi bir öğe türünün yeni kaydını oluşturacaktır. Hedef kayıt ile kayıt oluşturma arasında bir ilişki varsa, kayıtları ilişkilendirmek mümkündür. 
 
-There is an ability to define formula to calculate fields.
+Alanları hesaplamak için formül tanımlama özelliği vardır.
 
-### Create Related Record
+### İlgili Kayıt Oluşturma
 
-System will create the record related to the target record. It's possible to define formula to calculate fields.
+Sistem hedef kayıtla ilgili kayıt oluşturacaktır. Alanları hesaplamak için formülü tanımlamak mümkündür.
 
-### Update Target Record
+### Hedef Kaydı Güncellemek
 
-Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
+Hedef kaydın belirli alanlarını değiştirmeye izin verirlir. Alanları hesaplamak için formülü tanımlamak mümkündür.
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
+Mevcut verileri kaybetmeden (örneğin, Takımlar) Çoklu-Bağlantı alanına yeni öğeler eklemeniz gerekiyorsa formül fonksiyonu entity\addLinkMultipleId kullanmanız gerekir. Örneğin: `entity\addLinkMultipleId('teams', 'teamId')`.
 
-### Update Related Record
+### İlgili Kaydı Güncellemek
 
-Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
+İlgili kayıt veya kayıtların belirli alanlarının değiştirilmesine izin verirlir. Alanları hesaplamak için formülü tanımlamak mümkündür.
 
-### Link with Another Record
+### Başka Bir Kayıtla Bağlantı Kurmak
 
-Relates the target entity with another specific entity. E.g. adds specific team to the record.
+Hedef varlığı başka bir belirli varlıkla ilişkilendirir. Örneğin, kayıta özel takım eklendi.
 
-### Unlink with Another Record
+### Başka Bir Kayıtla Bağlantı Koparmak
 
-Unrelates the target entity from another specific entity. E.g. removes a specific team from the record.
+Hedef birimi başka bir belirli varlıkla ilişkilendirmez. Örneğin, belli bir ekibi kayıtlardan kaldırır.
 
-### Apply Assignment Rule
+### Görev Kuralı Atamak
 
-Assign the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
+Hedef kaydı, dağılım kuralına göre kullanıcıya atayınız. İki geçerli kural vardır: Round-Robin ve Least-Busy.
 
-* Round-Robin - users are choosen from the top to the bottom of a list (team) and then starting again.
-* Least-Busy - user who has fewer assigned records will be chosen for assignment.
+* Round-Robin - kullanıcılar bir listenin en üstünden en altına (takım) seçilir ve tekrar başlarlar.
+* Least-Busy - kayıtlı atama sayısı daha az olan kullanıcı görev için seçilecektir.
 
-_List Report_ - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
+_List Report_ - Least-Busy dağıtımında, hesapların atanmış kayıtlarının sayısını hesaplamak için nelerin dikkkate alınacağını belirler. Örneğin. Olaylar için yalnızca aktif durumdaki kayıtları almamız gerekmektedir.
 
-### Create Notification
+### Bildirim Oluşturmak
 
-Notify specific users with the message. It's possible to use placeholders in message template: {entity} - target record, {user} - current user.
+Belirli kullanıcıları mesajla bilgilendir. Mesaj şablonunda yer belirleyicilerin kullanılması mümkündür: {entity}-hedef kayıt, {user}-geçerli kullanıcı.
 
-### Make Followed
+### Takip Et
 
-Forces specific users to follow the target entity or a specificied related entity.
+Belirli kullanıcıları hedef varlığı veya belirtilen ilgili bir varlığı izlemek için zorlar.
 
-### Trigger Another Workflow
+### Başka Bir İş Akışını Tetiklemek
 
-Allows to make sequential workflows. It's possible to branch workflow by condition: you can setup the workflow to trigger two workflows with different conditions defined in that workflows.
+Ardışık iş akışlarını oluşturmaya izin verir. İş akışını duruma göre şubelendirmek mümkündür: iş akışını, iş akışlarında tanımlanan farklı koşullarla iki iş akışını başlatacak şekilde ayarlayabilirsiniz.
 
-It's possible to delay executing of sequential workflow. In the sequential wokflow you can define the condition that checks whether specifiec fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
+Sıralı iş akışının yürütülmesini geciktirmek mümkündür. Sıralı iş akışında, üst iş akışı _ Changed_ ve _Was Equal_ koşul türleri kullanılarak tetiklendiğinden dolayı, özel alanların değiştirilip değiştirilmediğini kontrol eden koşul tanımlayabilirsiniz.
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+NNot: Sıralı iş akışları için bir İş Akışı özelliği yerine [BPM aracı] (bpm.md) kullanmanız önerilir.
 
-### Run Service Action
+### Hizmet Eylemini Çalıştırmak
 
-Allows to run specific service scripts. By default there are following actions available:
+Belirli hizmet komut dosyalarını çalıştırmaya izin verir. Varsayılan olarak aşağıdaki eylemleri kullanabilirsiniz:
 
-* Send Invitations - for Meetings/Calls;
-* Add Quote Items - for Quotes.
+* Davetiyeleri Gönder - for Meetings/Calls;
+* Alıntı Ekle - for Quotes.
 
-Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
+Geliştiriciler kendi hizmet işlemlerini yazabilir. Bkz. [Ayrıntılı bilgi] (../ development / workflow-service-actions.md).
 
-## Using Formula in Actions
+## İşlemlerde Formül Kullanımı
 
-It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
+Kayıt Oluştur, Hedef Kaydı Güncelle, İlgili Kaydı Oluştur, İlgili Kayıtları Güncelle alanlarını hesaplamak için formül tanımlamak mümkündür. Son iki yılda, hedef varlığın özelliklerine erişmek için, `targetEntity \ attribute` işlevini kullanmalısınız. İş akışı tetiklenmeden önce belirlenen hedef öğenin özelliklerine erişmek için,  `targetEntity \ attributeFetched` işlemini kullanınız.
 
-Example:
+Örnek:
 ```
 name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
 ```
