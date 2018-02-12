@@ -1,6 +1,6 @@
-# Creating Scheduled Job
+# Tworzenie Planowanych Prac
 
-To define a custom Scheduled Job create a file `custom/Espo/Custom/Jobs/{JOB_NAME}.php` with the content.
+Aby utworzyć niestandardową Zaplanowaną Prace stwórz plik `custom/Espo/Custom/Jobs/{JOB_NAME}.php` z zawartością.
 
 ```
 namespace Espo\Custom\Jobs; 
@@ -15,7 +15,7 @@ class {JOB_NAME} extends \Espo\Core\Jobs\Base
 }
 ```
 
-Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/{language}/ScheduledJob.json`).
+Możesz również swtorzyć etykietę dla swojej pracy(`custom/Espo/Custom/Resources/i18n/{language}/ScheduledJob.json`).
 ```
 {
   "options": { 
@@ -26,4 +26,4 @@ Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/{lang
 }
 ```
 
-To implement the changes, go to Administration panel and Clear Cache.
+Aby zaimplementować zmiany, idź do panelu administratora i wyczyść Cache.

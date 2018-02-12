@@ -1,76 +1,76 @@
-# Guidelines on Using Emails
+# Wytyczne korzystania z wiadomości email
 
-EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+EspoCRM udostępnia możliwość pobierania wiadomości email z IMAP. Umożliwia to wykorzystanie EspoCRM jako klienta poczty wraz z funkcjami specyficznymi dla CRM.
 
-## IMAP accounts
+## Konta IMAP
 
-*Note: You need to have [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
+*Uwaga: Musisz mieć [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) właściwie skonfigurowany w swoim systemie aby poprawnie działały przychodzące wiadomości e-mail.*
 
-User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+Użytkownik może ustawić konto IMAP na stronie: Osobiste Konta Email (Zakładka Email > górne-prawe menu > Osobiste konta email).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
+Określ jaki folder sprawdzać w polu Monitorowane Foldery. Domyślnie jest ustawiona skrzynka odbiorcza. Jeśli korzystasz z zewnętrznego klienta do wysyłania wiadomości email możesz dodać folder z wysłanymi wiadomościami aby zarchiwizować te emaile.
 
-*Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
+*Pobierz od* umożliwia ustawienie daty od której wiadomości email będą archiwizowane. Ustaw jakąś wcześniejszą datę jeśli chcesz zarchiwizować stare wiadomości.
 
-There is an ability to specify *Folder* in Persnoal Email Account. Incoming emails will be put in that folder.
+Istnieje możliwość określenia *Folderu* w Osobistych Kontach Email. Przychodzące wiadomości będą umieszczane w tym katalogu.
 
-## SMTP accounts
+## Konta SMTP
 
-Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+Użytkownicy mogą ustawić ustawienia SMTP w Preferencjach, tak samo jak w swoich Osobistych Kontach Email. Administrator również może zezwolić na używanie systemu SMTP (udostępnić go).
 
-Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of *User* record.
+Użytkownicy mogą mieć wiele kont SMTP (od wersji 4.2.9). Ale adresy z których użytkownik może wysyłać wiadomości email są definiowane przez adres email z rekordu *Użytkownika*  .
 
-## Working with Emails
+## Praca z wiadomościami Email
 
-Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
-You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
+Wiadomości Email są pobierane przez cron'a (w tle) co kilka minut (okres czasu jest ustawiany przez administratora).
+Wszystkie swoje wiadomości email możesz zobaczyć w zakładce Email. Są tam standardowe foldery: Skrzynka odbiorcza, Wysłane, Szkice wiadomości po lewej stronie.
 
-*Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
+Polce *status*. `Wysłane` oznacza, że wiadomość została wysłana z CRM, `Zarchiwizowano` – pobrano z konta IMPA lub zarchiwizowano ręcznie, `Szkic` – oznacza, że wiadomość została stworzona jako szkic.
 
-When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized then user can link it manually by filling in *Parent* field.
+Kiedy do systemu przyjdzie nowy email, system próbuje rozpoznać do której części należy ta wiadomość. Może połączyć go z  Kontem, Kontaktem, Zdarzeniem, Sprawą (i Kontraktem w trybie B2C) itd. Jeśli nie został rozpoznany, użytkownik może połączyć go ręcznie przez wypełnienie pola *Rodzic*.
 
-If an email came from a new potential client user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
+Jeśli wiadomość przyszła od nowego potencjalnego klienta, użytkownik może **zmienić ją w Kontakt**. Otwórz wiadomość i naciśnij Stwórz Kontakt w prawym górnym menu.
 
-It's also possible to **create Task or Case** from an email record.
+Możliwe jest również **tworzenie Zadań i Warunków** z wiadomości email.
 
-If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can **create contact** right from there.
+Jeśli adres wiadomości(od, do, cc) w wiadomości istnieją w systemie, system pokaże osobę powiązaną z (Kontaktem, Wiadomością, Użytkownikiem itd). Jeśli adres jest nowy, możesz z tego miejsca **stworzyć kontakt**.
 
-All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
+Wszystkie wiadomości email powiązane z specyficznym rekordem, są pokazane w panelu Historii tego rekordu. Jeśli jakaś wiadomość jest powiązana, na przykład, ze zdarzeniem ale zdarzenie jest powiązana z kontem, zostanie pokazana zarówno w zdarzeniu oraz w koncie.
 
-## Sending Emails
+## Wysyłanie wiadomości Email
 
-You can compose new email by a few ways:
-* *Compose Email* button on Emails list view;
-* replying on another email;
-* clicking on an email address of some record;
-* *Compose Email* action of Activities panel.
+Możesz tworzyć wiadomość na kilka sposobów:
+* *Utwórz wiadomości Email* przycisk na liście wiadomości
+* odpowiadanie na inną wiadomość;
+* kliknięcie na adres poczty email któregoś z rekordów;
+* *Utwórz wiadomości Email* akcja w panelu Działania.
 
-There is an ability to **select template** of your email.
+Istnieje możliwość **wybrania szablonu** swojej wiadomości.
 
-You can setup **email signature** in Preferences.
+Możesz ustawić **podpis wiadomości email** w Preferencjach.
 
-## Email Folders
+## Folder Email
 
-Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you wan't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Użytkownicy mogą tworzyć swoje własne foldery email, aby umieszczać tam niektóre ze swoich wiadomości. Lista dostępnych folderów jest widoczna po lewej stronie strony Wiadomości Email. Aby stworzyć lub edytować folder postępuj następująco Wiadomości Email > rozwijane menu w prawym górnym rogu > Foldery. `Pomiń Powiadomienia` oznacz, żę nie będziesz powiadamiany o przyjściu nowej wiadomości, która trafi do określonego folderu. Filtry poczty umożliwiają automatyczne umieszczanie wiadomości email w w folderach według określonych kryteriów.
 
-## Email Filters
+## Filtry Wiadomości Email
 
-Administrator can create global email filters to skip not desirable emails. They are available at Administration > Email Filters.
+Administrator może stworzyć globalny filtr, który pominie niepożądane wiadomości email. Jest to dostępne w Administracja > Filtry Wiadomości Email.
 
-Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
+Zwykły użytkownik może stworzyć filtr dla swoich Osobistych Kont Email lub dla całej Skrzynki odbiorczej. Jest to dostępne w Wiadomości Email > rozwijane menu w górnych prawym narożniku > Filtry.
 
-There are two types of filters:
-* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder - imported emails will be put into specified user's folder automatically.
+Istnieją dwa rodzaje filtrów:
+* Pomiń - wiadomość zostanie umieszczona w *Koszu* lub nie zostanie zaimportowane, jeśli filtr jest powiązany z Osobistym Kontem Email;
+* Umieść w folderze - zaimportowane wiadomości zostaną automatycznie umieszczone w konkretnym folderze.
 
-## Email Templates
+## Szablony Wiadomości
 
-Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sendings and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
+Szablony wiadomości są dostępne w Wiadomości Email > rozwijane menu w górnym prawym narożniku > Szablony Wiadomości. Mogą być używane zarówno w wiadomościach wysyłanych masowo oraz w zwykłych emailach. `One-off` checkbox oznacza, że szablon powinien zostać wykorzystany tylko raz, jest to popularne w wiadomościach marketingowych.
 
-It's possible to use placeholders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
+Możliwe jest wykorzystanie symboli zastępczych w treści szablonów wiadomości oraz tytule np. {Account.name}, {Person.emailAddress}. Zostaną zastąpione wartościami powiązanymi z rekordem.
 
-You can use additional reserved placeholders in template body: {optOutUrl} and {optOutLink}.
+Możesz wykorzystać dodatkowe zarezerwowane symbole zastępcze w treści szablonu: {optOutUrl} oraz {optOutLink}.
 ```
-<a href="{optOutUrl}">Unsubscribe</a>
+<a href="{optOutUrl}">Anuluj subskrypcję</a>
 ```
-This is unsubscribe link for mass email.
+Link do anulowania subskrypcji dla masowych wiadomości email

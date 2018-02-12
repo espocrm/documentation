@@ -1,7 +1,7 @@
-# Browser support
+# Wsparcie przeglądarek internetowych
 
-We recommend using the latest versions of Google Chrome or Mozilla Firefox. EspoCRM works the best in these browsers. We regularly test all features in these browsers.
+Zalecamy korzystanie z najnowszych wersji przeglądarek internetowych, taki jak: Google Chrome lub Mozilla Firefox. EspoCRM najlepiej współpracuje z tymi przeglądarkami. Regularnie testujemy wszystkie funkcjonalności na tych przeglądarkach.
 
-Microsoft Edge and Safari are also supported, but there are less guarantees that everything will be working smoothly.
+Microsoft Edge oraz Safari również są wspierane, ale jest mniejsza gwarancja, że wszystko będzie działało płynnie.
 
-We heighly do not recommend using Internet Explorer 11.
+Zdecydowanie nie zalecamy korzystania z przeglądarki Internet Explorer 11.

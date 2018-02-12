@@ -1,65 +1,65 @@
 # REST API
 
-EspoCRM is a single page application so a frontend uses REST API to connect with a backend. 
-All operations you perform using UI you can implement via API calls using your programing language. 
-You can learn how API works if you trace what's going in the network tab in your browser console.
+EspoCRM jest aplikacją typu SPA - Single Page Application, Część klienta komunikuje sięz częścią serwerową za pomocą REST API. 
+Wszystkie operacje, które wykonujesz korzystając z UI możesz zaimplementować poprzez odwoływanie się za pomocą swojego języka programowania do API.
+Możesz nauczyć się jak działa API, jeśli będziesz śledził co się dzieje w zakładce Sieć w konsoli swojej przeglądarki internetowej.
 
-Most of api functions return JSON. POST, PATCH calls usually need some JSON data in payload.
+Większość funkcji API zwraca JSON. POST, PATCH wywołania zazwyczaj wymagają danych w formacie JSON w ładunku zapytania.
 
-Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: 
+Bazowym adresem URL EspoCRM API jest: `api/v1/`. Musisz przełożyć to przed wyrażeniem w odwołaniu. Przykład: 
 
 `GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
-## Authentication
+## Autentykacja
 
 EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
 
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's more better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+Kiedy pracuje się z API, dużo lepiej jest wykorzystać tokeny zamiast haseł do autoryzacji. W tym przypadku, musisz dostarczyć nazwe użytkownika oraz hasło/token w nagłówku `Espo-Authorization`.
 ```
 "Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
 ```
 
-1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header.
-2. Use this token instead of password in `Espo-Authorization` header for all further request.
-3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
+1. Uzyskaj token dostępu przez `GET App/user` żadanie z nazwą użytkownika oraz hasłem przekazne w nagłówku `Espo-Authorization`.
+2. Wykorzystaj ten token zamiast hasła w nagłówku `Espo-Authorization` w każdych kolejnych żądaniach.
+3. Jeśli żądanie zwróci błąd 403, oznacza to, że nazwa użytkownika/hasło jest błędne lub token nie jest już ważny.
 
 #### Authentication Token / User Specific Data
 
 `GET App/user`
 
-Returns:
+Zwracane dane:
 
-* `token` - access token to use;
-* `acl` - information about user access;
-* `preferences` - user preferences;
+* `token` - token dostępu;
+* `acl` - informacje o dostępie użytkownika;
+* `preferences` - preferencje użytkownika;
 * `user` - user record attributes.
 
 
-## CRUD Operations
+## Operacje CRUD
 
-#### List Entities
+#### Elementy Listy
 
 `GET {entityType}`
 
-GET parameters:
+Parametry żądania GET:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `offset` - (liczba całkowita) offset;
+* `maxSize` - (liczba całkowita) maksymalny rozmiar;
+* `where` - (tablica) filtry;
+* `sortBy` - (ciąg znaków) field to sort by;
+* `asc` - (wartość binarna) kierunek sortowania.
 
 _Example_
 
 `GET Account?offset=0&maxSize=20`
 
-Returns:
+Zwracane wartości:
 ```
 {
-  "list": [... array of records...],
+  "list": [... tablica rekordów...],
   "total": {totalCountOfRecords}
 }
 ```
@@ -68,19 +68,19 @@ Returns:
 
 `GET {entityType}/{id}`
 
-Returns attributes in JSON object.
+Zwraca atrybuty jako obiekt JSON.
 
 _Example_
 
 `GET Account/5564764442a6d024c`
 
-#### Create Entity
+#### Stwórz Obiekt
 
 `POST {entityType}`
 
 Payload: Object of entity attributes.
 
-Returns entity attributes in JSON object.
+Zwraca entity attributes in JSON object.
 
 _Example_
 
@@ -94,17 +94,17 @@ Payload:
 }
 ```
 
-#### Update Entity
+#### Aktualizuj Obiekt
 
 `PATCH {entityType}/{id}`
 
-or
+lub
 
 `PUT {entityType}/{id}`
 
 Payload: Object of entity attributes needed to be changed.
 
-Returns attributes in JSON object.
+Zwraca atrybuty jako obiekt JSON.
 
 _Example_
 
@@ -117,7 +117,7 @@ Payload:
 }
 ```
 
-#### Delete Entity
+#### Usuń obiekt
 
 `DELETE {entityType}/{id}`
 
