@@ -1,75 +1,66 @@
-# Installation
+# Namestitev
 
-### Requirements
-EspoCRM runs on the most hosting providers. Requirements include the following:
+### Zahteve
+EspoCRM deluje na večini domen ponudnikov gostovanja. K zahtevam spada naslednje:
 
-* PHP 5.6 or latest version of PHP with enabled pdo, json, GD library, mcrypt extensions (usually enabled by default);
-* MySQL 5.5.3 or higher.
+* PHP 5.6 ali najnovejša verzija PHP z omogočenimi pdo, json, GD library, mcrypt razširitvami (ponavadi so že privzeto omogočene);
+* MySQL 5.5.3 ali novejši.
 
-See [Server Configuration](server-configuration.md) article for more information.
+Glej članek [Konfiguracija strežnika](server-configuration.md) za več informacij.
 
-### 1. Download the EspoCRM installation package
-To get the latest version of EspoCRM follow [download page](http://www.espocrm.com/download/) link.
+### 1. Prenesite EspoCRM namestitveni paket
+Za najnovejšo različico EspoCRM obiščite to [stran za prenos](http://www.espocrm.com/download/).
 
-### 2. Upload the EspoCRM Files to Your Server
+### 2. Naložite EspoCRM datoteke na svoj strežnik
 
-Once the download is complete, upload the package to your web server. 
-To upload it you can use SSH, FTP or the hosting administration panel.
-Extract the archive to your public web server directory (e.g., `public_html`, `www`, etc.).
+Ko bo prenos paketa končan, ga naložite na svoj spletni strežnik.
+V na namen lahko uporabite SSH, FTP ali gostujoči administratorski panel.
+Arhiv ekstrahirajte na svoj javni direktorij spletnega strežnika (npr. `public_html`, `www` itd.).
 
-_Note: For FTP, you need to extract the archive before uploading to your web server._
+_Opomba: Če uporabljate FTP, morate arhiv ekstrahirati prej, preden ga naložite na svoj spletni strežnik._
 
-### 3. Create a MySQL Database for EspoCRM to use
+### 3. Ustvarite MySQL podatkovno bazo za EspoCRM
 
-Go to your hosting administration panel, or to SSH, and create a new database and user for EspoCRM (e.g., `MySQL Databases` in cPanel).
+Pojdite v svoj gostujoči administratorski panel ali uporabite SSH ter ustvarite novo podatkovno bazo in uporabnika za EspoCRM (npr. `MySQL Databases` v cPanel-u).
 
-### 4. Run EspoCRM installation process
+### 4. Zaženite EspoCRM namestitveni postopek
 
-Now, open your web browser, and go to the URL with EspoCRM files (e.g., `http://yourdomain.com/espo`).
+Zdaj odprite svoj brskalnik in pojdite na URL z EspoCRM datotekami (npr. `http://yourdomain.com/espo`).
 
-If you see this screen, you have a "Permission denied" error. 
-So, you need to execute the displayed command in the terminal via SSH, or set the correct permission. 
-It should be 755 for directories, 644 for files, and 775 for `data` directory. 
-Also make sure that you have the correct _owner_ and _group_.
+Če vidite ta zaslon, je prišlo do napake "Nimate pravic".
+Torej morate zagnati prikazani ukaz v terminalu prek SSH oziroma nastaviti pravilne pravice (755 za direktorije, 644 za datoteke in 775 za direktorij `data`. Prav tako poskrbite, da bosta pravilno določena lastnik (_owner_) in skupina (_group_).
 
 ![1](../_static/images/administration/installation/1.png)
 
-If you see the following screen, the permission is correct and you can start installing EspoCRM.
+Če vidite naslednji zaslon, so pravice pravilne in lahko začnete z namestitvijo EspoCRM.
 
 ![2](../_static/images/administration/installation/2.png)
 
-On this page, you can read and accept the License Agreement.
+Na tej strani lahko preberete in sprejmete Licenčno pogodbo.
 
 ![3](../_static/images/administration/installation/3.png)
 
-Enter the details for your newly created MySQL database.
+Vnesite podrobnosti za svojo novo ustvarjeno MySQL podatkovno bazo.
 
 ![4](../_static/images/administration/installation/4.png)
 
-Enter the user name and password of Administrator EspoCRM.
+Vnesite uporabniško ime in geslo administratorja EspoCRM.
 
 ![5](../_static/images/administration/installation/5.png)
 
-On this page you can set the default settings of EspoCRM, such as date and time format, timezone, currency and others.
+Na tej strani lahko določite privzete nastavitve za EspoCRM, kot so format datuma in časa, časovni pas, valuto in drugo.
 
 ![6](../_static/images/administration/installation/6.png)
 
-Enter SMTP settings for outgoing emails, if you want to have the ability to send emails. 
-This step can be skipped by clicking the _Next_ button. 
-All of these options can be added/changed in EspoCRM after installation.
+Vnesite SMTP nastavitve za odhodno e-pošto, če želite imeti možnost pošiljanja e-pošte.
+Ta korak lahko preskočite s klikom na gumb _Naprej_.
+Vse te možnosti lahko dodate/uredite v EspoCRM po namestitvi.
 
 ![7](../_static/images/administration/installation/7.png)
 
-Congratulation! Installation is complete. 
-The last thing to setup Scheduled Tasks to be run by your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems.
+Čestitamo! Namestitev je končana.
+Kot zadnji korak je potrebno nastaviti funkcijo razporejanja opravil, da bo potekala na vašem sistemu. To lahko storite tako, da zaženete `crontab -e` v linux opravilni vrstici ter v _Windows Tasks Scheduler_ v operacijskem sistemu Windows.
 
 ![8](../_static/images/administration/installation/8.png)
 
-We hope you will enjoy working in EspoCRM.
-
-
-
-
-
-
-
+Upamo, da boste z veseljem delali v EspoCRM.

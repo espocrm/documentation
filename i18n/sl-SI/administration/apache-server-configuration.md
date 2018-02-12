@@ -1,10 +1,10 @@
-# Apache server configuration for EspoCRM
+# Konfiguracija Apache strežnika za EspoCRM
 
-These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+Ta navodila dopolnjujejo navodila [Konfiguracija strežnika](server-configuration.md). Upoštevajte, prosimo, da so vse tukaj omenjene nastavitve narejene na Ubuntu strežniku.
 
-## PHP requirements
+## PHP zahteve
 
-To install all necessary libraries, run these commands in a terminal:
+Za namestitev vseh potrebnih knjižnic vnesite v terminalu naslednje ukaze:
 
 ```
 sudo apt-get update
@@ -13,22 +13,22 @@ sudo phpenmod mcrypt imap mbstring
 sudo service apache2 restart
 ```
 
-## Fixing the issue “API Error: EspoCRM API is unavailable”:
+## Odprava napake “API Error: EspoCRM API is unavailable”:
 
-Take only necessary steps. After each step check if the issue is solved.
+Naredite samo potrebne korake. Po vsakem koraku preverite, ali je napaka odpravljena.
 
-### 1. Enable “mod_rewrite” support in Apache
+### 1. Omogočite “mod_rewrite” podporo v Apache
 
-To enable “mod_rewrite,” run these commands in a terminal:
+Da bi omogočili “mod_rewrite”, zaženite v terminalu naslednja ukaza:
 
 ```
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
 
-### 2. Enable .htaccess support
+### 2. Omogočite podporo za .htaccess
 
-To enable .htaccess support, add/edit the Server Configuration Settings /etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf or /etc/apache2/apache2.conf (/etc/httpd/conf/httpd.conf):
+Da bi omogočili podporo za .htaccess, dodajte/uredite nastavitve za konfiguracijo strežnika /etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf ali /etc/apache2/apache2.conf (/etc/httpd/conf/httpd.conf):
 
 ```
 <Directory /PATH_TO_ESPO/>
@@ -36,34 +36,34 @@ AllowOverride All
 </Directory>
 ```
 
-Afterward, run this command in a terminal:
+Zatem zaženite v terminalu naslednji ukaz:
 
 ```
 sudo service apache2 restart
 ```
 
-### 3. Add RewriteBase path
+### 3. Dodajte RewriteBase pot
 
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
+Odprite datoteko /ESPOCRM_DIRECTORY/api/v1/.htaccess in zamenjajte naslednjo vrstico:
 
 ```
 # RewriteBase /
 ```
 
-with
+z
 
 ```
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where REQUEST_URI is a part of URL, e.g. for “http://example.com/espocrm/”, REQUEST_URI is “espocrm”.
+pri čemer je REQUEST_URI del URL-ja, na primer za “http://example.com/espocrm/” je REQUEST_URI “espocrm”.
 
 
-## Enable HTTP AUTHORIZATION support (only for FastCGI).
+## Omogočite podporo za HTTP AUTHORIZATION (samo za FastCGI).
 
-FastCGI does not support HTTP AUTHORIZATION by default. If you use FastCGI, you have to enable it in your VirtualHost or /etc/apache2/apache2.conf (httpd.conf) by adding the following code:
+FastCGI ne podpira HTTP AUTHORIZATION kot privzeto nastavitev. Če uporabljate FastCGI, jo morate omogočiti v datoteki VirtualHost ali /etc/apache2/apache2.conf (httpd.conf), tako da dodate naslednjo kodo:
 
-For Fcgid module:
+Za Fcgid modul:
 
 ```
 <IfModule mod_fcgid.c>
@@ -73,7 +73,7 @@ For Fcgid module:
 </IfModule>
 ```
 
-For FastCgi module:
+Za FastCgi modul:
 
 ```
 <IfModule mod_fastcgi.c>
@@ -83,7 +83,7 @@ For FastCgi module:
 </IfModule>
 ```
 
-To check which module is currently being used, run this command and find the module:
+Da bi preverili, kateri modul je trenutno v uporabi, zaženite ta ukaz in poiščite ustrezni modul:
 
 ```
 apache2ctl -M

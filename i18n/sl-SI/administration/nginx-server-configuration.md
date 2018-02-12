@@ -1,10 +1,10 @@
-# Nginx server configuration for EspoCRM
+# Konfiguracija Nginx strežnika za EspoCRM
 
-These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+Ta navodila dopolnjujejo navodila [Konfiguracija strežnika](server-configuration.md). Upoštevajte, prosimo, da so vse tukaj omenjene nastavitve narejene na Ubuntu strežniku.
 
-## PHP requirements
+## PHP zahteve
 
-To install all necessary libraries, run these commands in a terminal:
+Za namestitev vseh potrebnih knjižnic vnesite v terminalu naslednje ukaze:
 
 ```
 sudo apt-get update
@@ -13,30 +13,30 @@ sudo phpenmod mcrypt imap mbstring
 sudo service nginx restart
 ```
 
-## Fixing the issue “API Error: EspoCRM API is unavailable”:
+## Odprava napake “API Error: EspoCRM API is unavailable”:
 
-Take only necessary steps. After each step check if the issue is solved.
+Naredite samo potrebne korake. Po vsakem koraku preverite, ali je napaka odpravljena.
 
-### 1. Enable rewrite rules in Nginx server
+### 1. Omogočite pravila za prepisovanje (rewrite rules) na Nginx strežniku
 
-Add this code to your Nginx server block config file (/etc/nginx/sites-available/YOUR_SITE) inside “server” block:
+Dodajte naslednjo kodo v konfiguracijsko datoteko za Nginx strežniški blok (/etc/nginx/sites-available/YOUR_SITE) znotraj “server” bloka:
 
 ```
 server {   
     # ...
-    
+
     client_max_body_size 50M;
-    
+
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
- 
+
     location /api/v1/ {
         if (!-e $request_filename){
             rewrite ^/api/v1/(.*)$ /api/v1/index.php last; break;
         }
     }
-    
+
     location /portal/ {
         try_files $uri $uri/ /portal/index.php?$query_string;
     }
@@ -46,11 +46,11 @@ server {
             rewrite ^/api/v1/(.*)$ /api/v1/portal-access/index.php last; break;
         }
     }
- 
+
     location ~ /reset/?$ {
         try_files /reset.html =404;
     }
- 
+
     location ^~ (data|api)/ {
         if (-e $request_filename){
             return 403;
@@ -86,37 +86,37 @@ server {
 }
 ```
 
-If you don’t have this file, you have to create it. For this open a terminal and run the command:
+Če ta datoteka ne obstaja, jo morate ustvariti. To lahko storite tako, da v terminalu zaženete ta ukaz:
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [ guideline](nginx-virtual-host.md).
+In dodajte kodo, ki je navedena zgoraj. Za več informacij, kako skonfigurirati nov Virtual Host na Nginx strežniku, prosimo, preberite ta [ navodila](nginx-virtual-host.md).
 
-Run this command in a terminal to check if everything is fine:
+Zaženite ta ukaz v terminalu, da bi preverili, ali je vse v redu:
 
 ```
 sudo nginx -t
 ```
 
-If so, run the command to restart nginx server:
+Če je, z naslednjim ukazom ponovno zaženite nginx strežnik:
 
 ```
 sudo service nginx restart
 ```
 
-### 2. Add RewriteBase path
+### 2. Dodajte RewriteBase pot
 
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
+Odprite datoteko /ESPOCRM_DIRECTORY/api/v1/.htaccess in zamenjajte naslednjo vrstico:
 
 ```
 # RewriteBase /
 ```
-with 
+z
 
 ```
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where REQUEST_URI is a part of URL, e.g. for “http://example.com/espocrm/”, REQUEST_URI is “espocrm”.
+pri čemer je REQUEST_URI del URL-ja, na primer za “http://example.com/espocrm/” je REQUEST_URI “espocrm”.
