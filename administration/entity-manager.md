@@ -16,7 +16,7 @@ Türler:
 * Temel - sadece Ad, Atanan Kullanıcı, Takımlar, Tanımlama gibi basit alanlar içeren boş öğe.
 * Temel İlave - Temel gibi ancak Etkinlikler, Geçmiş ve Görevler panelleri (4.3.0'dan itibaren kullanılabilir).
 * Etkinlik - Başlama Tarihi, Bitiş Tarihi, Süre, Ana Öğe, Durum alanları. Takvim ve Aktiviteler panelinde kullanılabilir(4.3.0'dan itibaren, Yönetim > Ayarlar etkinleştirilmelidir).
-* Person - Eposta, Telefon, Ad, Soyad, Selamlama, Adres alanları. Aktiviteler, Geçmiş, Görevler panelleri.
+* Kişi - Eposta, Telefon, Ad, Soyad, Selamlama, Adres alanları. Aktiviteler, Geçmiş, Görevler panelleri.
 * Şirket - Eposta, Telefon, Fatura Adresi, Teslimat Adresi alanları. Aktiviteler, Geçmiş, Görevler panelleri.
 
 ## Varolan öğeleri Güncelle
