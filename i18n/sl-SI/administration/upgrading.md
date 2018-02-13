@@ -1,28 +1,28 @@
-# How to upgrade EspoCRM
+# Kako nadgraditi EspoCRM
 
-EspoCRM can be upgraded to the latest version by the following steps:
+EspoCRM lahko nadgradite na najnovejšo verzijo z upoštevanjem naslednjih korakov:
 
-### Step 1. Check your current version
+### 1. korak: Preverite trenutno verzijo
 
-To check your current version go to Administration > Upgrade page.
+Da bi preverili trenutno verzijo, obiščite stran Administration > Upgrade.
 
-### Step 2. Download needed upgrade packages
+### 2. korak: Prenesite potrebne pakete za nadgradnjo
 
-Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
+Obiščite stran za nadgradnjo https://www.espocrm.com/download/upgrades/ in glede na vašo trenutno verzijo prenesite potrebne pakete.
 
-### Step 3. Create a backup (optional)
+### 3. korak: Ustvarite varnostno kopijo (po želji)
 
-Create a backup of your EspoCRM files and data before upgrading. Follow [these instructions](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) to get it done.
+Pred nadgradnjo ustvarite varnostno kopijo svojih EspoCRM datotek in podatkov. Pri tem upoštevajte [ta navodila](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md).
 
-### Step 4. Upgrade process
+### 4. korak: Postopek nadgradnje
 
-Go to Administration > Upgrade. Upload and install one by one upgrade packages.
+Obiščite stran Administration > Upgrade. Drugega za drugim naložite in namestite pakete za nadgradnjo.
 
-You can check whether you have the latest version at Menu > About.
+To, ali imate najnovejšo verzijo, lahko preverite na Menu > About.
 
-## Upgrade via CLI
+## Nadgradnja prek ukazne vrstice
 
-You can also run upgrade via command line interface. You need to execute the following command from EspoCRM root directory:
+Nadgradnjo lahko zaženete tudi z uporabo ukazne vrstice. V EspoCRM glavnem direktoriju zaženite naslednji ukaz:
 
 ```
 php upgrade.php /path/to/upgrade/package.zip
