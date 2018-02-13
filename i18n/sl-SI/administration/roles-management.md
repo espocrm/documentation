@@ -1,24 +1,24 @@
-# Roles Management
+# Upravljanje vlog
 
-## Overview
+## Pregled
 
-In order to restrict access for some users you need to use Roles. Administrator can manage roles in Administration panel. Each role defines an access to certain areas (scopes) which is applied to users who own that role.
+Da bi omejili dostop za nekatere uporabnike, morate uporabiti Vloge (Roles). Administrator lahko upravlja vloge v administratorskem panelu. Vsaka vloga določa dostop do določenih področij in je dodeljen uporabnikom, ki imajo to vlogo.
 
-One user can have multiple roles. Those roles can be selected for a specific user (‘Roles’ field in User entry) and/or be inherited from the teams that user belongs to.
+En uporabnik ima lahko več vlog. Te vloge so lahko izbrane za specifičnega uporabnika (polje ‘Roles’ pri postavki User) in/ali so podedovane od tima, ki mu uporabnik pripada.
 
-If a user has multiple roles then they will be merged so that permissive rule will have a higher priority. That allows administrator to manage access level control easily and flexibly.
+Če ima uporabnik več vlog, potem se te združijo, tako da ima vloga z več pravicami višjo prioriteto. To omogoča administratorju, da z lahkoto in veliko fleksibilnostjo upravlja nastavitve stopenj dostopa.
 
-It's possible to see what permissions is applied to a certain user by clicking 'Access' button on the user's detail view.
+To, katere pravice ima določeni uporabnik, lahko preverite tako, da kliknete na gumb 'Access' na podrobnem pogledu uporabnika.
 
 ![1](../_static/images/administration/roles-management/scope-level.png)
 
-## Example
+## Primer
 
-For example, user belongs to team ‘Sales’. That team has single role ‘Salesman’. So all users from this team will obtain ‘Salesman’ role.
+Denimo, da uporabnik pripada timu ‘Sales’. Ta tim ima samo eno vlogo, ‘Salesman’. Torej bodo vsi uporabniki iz tega tima dobili vlogo ‘Salesman’.
 
-‘Salesman’ role is defined the following way:
+Vloga ‘Salesman’ je določena takole:
 
-Lead:
+Sled:
 ```
 create - yes
 read – team
@@ -27,7 +27,7 @@ delete – no
 stream - team
 ```
 
-Opportunity:
+Priložnost:
 ```
 create - yes
 read – team
@@ -36,15 +36,13 @@ delete – no
 stream - team
 ```
 
-Users will be able to read only those leads and opportunities which belong to ‘Sales Department’ team (‘Teams’ field).
-User will be able to edit only those leads and opportunities which they are assigned to or those they have created.
-Users won’t be able to remove any leads or opportunities.
+Uporabniki bodo lahko imeli vpogled samo v tiste sledi in priložnosti, ki pripadajo timu ‘Sales Department’ (polje ‘Teams’). Uporabniki bodo lahko urejali samo tiste sledi in priložnosti, ki so jim dodeljene oziroma tiste, ki so jih sami ustvarili. Uporabniki ne bodo mogli odstraniti nobene sledi ali priložnosti.
 
-We want to give more rights to a certain user who holds sales manager position in the company. This employee must have an ability to read/edit/delete all records from ‘Sales’ team. The user should belong to our ‘Sales’ team. But we need to create the new role ‘Sales Manager’ and select this role for that user in ‘Roles’ field.
+Določenemu uporabniku, ki ima v podjetju položaj vodje prodaje, želimo omogočiti več pravic. Ta uslužbenec mora imeti možnost branja/urejanja/brisanja vseh zapisov tima ‘Sales’. Uporabnik bi moral pripadati našemu timu ‘Sales’. Vendar moramo ustvariti novo vlogo ‘Sales Manager’ in za tega uporabnika izbrati to vlogo v polju ‘Roles’.
 
-‘Sales Manager’ role is defined the following way:
+Vloga ‘Sales Manager’ je določena takole:
 
-Lead:
+Sled:
 ```
 create - yes
 read – team
@@ -53,7 +51,7 @@ delete – team
 stream - team
 ```
 
-Opportunity:
+Priložnost:
 ```
 create - yes
 read – team
@@ -62,44 +60,44 @@ delete – team
 stream - team
 ```
 
-Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
+Naš uporabnik bo lahko upravljal vse sledi in priložnosti tima ‘Sales’.
 
-## Special Permissions
+## Posebne pravice
 
-### Assignment Permission
+### Pravice dodeljevanja
 
-Set this parameter to restrict ability to re-assign records to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
+Nastavite ta parameter, če želite omejiti možnost dodeljevanja/premeščanja zapisov drugemu uporabniku in/ali timu. Če izberete `team`, potem bo možno dodeljevati le uporabnikom znotraj lastnega tima(ov). Če pa izberete `no`, uporabniki sploh ne bodo mogli dodeljevati/premeščati zapisov.
 
-It also defines whether user is able to post to stream of another users/teams.
+Ta pravica prav tako določa, ali uporabnik lahko objavlja na tok drugih uporabnikov/timov.
 
-### User Permission
+### Pravice uporabnika
 
-Allows to restrict an ability for users to view activities, calendar and stream of other users.
+Omogočajo, da se uporabnikom omeji možnost vpogleda v aktivnosti, koledar in tok drugih uporabnikov.
 
-### Portal Permission
+### Pravice portala
 
-Defines an access to portal information, ability to post messages to portal users.
+Določajo dostop do informacij na portalu, možnost objavljanja sporočil uporabnikom portala.
 
-### Group Email Account Permission
+### Pravice računa skupinske e-pošte
 
-Defines an access to group email accounts, an ability to send emails from group SMTP.
+Določajo dostop računov skupinske e-pošte, možnost pošiljanja e-pošte iz skupinskega SMTP.
 
-### Export Permission
+### Pravice izvažanja
 
-Defenies whether user have an ability to export records. (since version 4.9.0)
+Določajo, ali uporabnik lahko izvaža zapise. (od verzije 4.9.0 dalje)
 
-## Permissions by Default 
+## Privzete nastavitve
 
-By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
+Če ni določenih nobenih pravic, potem lahko uporabniki berejo in urejajo vse zapise. Vendar pa jih ne morejo brisati, razen tistih, ki so jih sami ustvarili in so jim hkrati tudi dodeljeni.
 
-There is an ability to restrict an access applied by default by enabling 'ACL Strict Mode' at Administration > Settings.
+Vseeno obstaja možnost, da se omeji dostop, ki je določen na začetku, tako da se omogoči način 'ACL Strict Mode' pod Administration > Settings.
 
-## Field Level Security
+## Varnost na nivoju polj
 
-Allows to control an access for a specific fields.
+Omogoča nadzor dostopa za določena polja.
 
-By default user can read all fields if one can read the record. User can edit any field if one can edit the record. You can restrict access to specific fields using Field Level Security.
+Privzete nastavitve so takšne, da lahko uporabnik bere vsa polja, če lahko bere zapis. Uporabnik lahko ureja vsako polje, če lahko ureja zapis. Dostop do določenih polj lahko omejite z uporabo varnosti na nivoju polj (Field Level Security).
 
-In edit view  of a role record in Field Level section click plus icon next to the specific scope then select needed field. Then you will be able to specify the access level for `read` and `edit` actions. There are to options: `yes` and `no`.
+V pogledu za urejanje zapisa vloge v razdelku Field Level kliknite na ikono poleg določenega območja in nato izberite ustrezno polje. Zatem boste lahko določili stopnjo dostopa za akcijo `read` (branje) in `edit` (urejanje). Obstajata dve možnosti: `yes` in `no`.
 
 ![2](../_static/images/administration/roles-management/field-level-secutiry.png)
