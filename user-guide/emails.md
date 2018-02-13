@@ -1,6 +1,8 @@
 # Guidelines on Using Emails
+# E-postaları Kullanma ile İlgili Kurallar
 
 EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+EspoCRM, e-postaları IMAP kutusundan alabilme olanağı sağlar. Bu, EspoCRM'yi e-posta istemcisi olarak CRM'e özgü özelliklerle birlikte mümkün kılar.
 
 ## IMAP accounts
 
