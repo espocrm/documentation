@@ -78,9 +78,9 @@ Omogočajo, da se uporabnikom omeji možnost vpogleda v aktivnosti, koledar in t
 
 Določajo dostop do informacij na portalu, možnost objavljanja sporočil uporabnikom portala.
 
-### Pravice računa skupinske e-pošte
+### Pravice skupinskega e-poštnega računa
 
-Določajo dostop računov skupinske e-pošte, možnost pošiljanja e-pošte iz skupinskega SMTP.
+Določajo dostop do skupinskih e-poštnih računov, možnost pošiljanja e-pošte iz skupinskega SMTP.
 
 ### Pravice izvažanja
 
