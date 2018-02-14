@@ -78,7 +78,7 @@ Note: Functions intended to interact with entity record will not work here becau
 
 ### Having group
 
-Having group provides an ability to use aggregate functions COUNT, SUM, MAX, MIN, AVG. 
+Having group provides an ability to filter with using aggregate functions COUNT, SUM, MAX, MIN, AVG.
 
 Some use cases:
 
