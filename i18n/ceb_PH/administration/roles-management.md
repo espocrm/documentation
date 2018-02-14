@@ -1,6 +1,6 @@
 # Management sa mga Role
 
-## Overview
+## Ang Kinatibuk-an
 
 Para ma-restrict ang access sa ubang mga user, gikinahanglan nimo gamiton ang Roles. Ang administrador kay maka dumala ug mga role sa Administration panel. Ang tagsa-tagsa ka mga role kay nag-define sa access sa ubang mga area (mga scope) nga asa i-apply sa mga user nga nakatag-iya ana nga role.
 
