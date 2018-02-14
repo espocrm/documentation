@@ -52,4 +52,4 @@
 * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
 
 
-[Documentation on the website](https://www.espocrm.com/documentation/)
+[Documentation on the website](https://www.espocrm.com/documentation/) 
