@@ -1,63 +1,64 @@
-# Layout Manager
+# Upravljalnik postavitev
 
-Layout Manager is available in administration panel. Provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+Upravljalnik postavitev je na voljo v panelu Administracija.
+Omogoča vam, da prilagodite videz podrobnostnih, urejevalnih, seznamskih pogledov kakor tudi iskalnih filtrov in polj obrazcev za masovno posodobitev.
 
-## List
+## Seznam
 
-The main layout for the list view. Defines columns and their parameters.
+Glavna postavitev za seznamski pogled. Določa stolpce in njihove parametre.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![Seznam](../_static/images/administration/layout-manager/list.png)
 
-Available parameters for columns are listed below.
+Razpoložljivi parametri za stolpce so navedeni spodaj.
 
-### Width (%)
+### Širina (%)
 
-Width of column in percent, empty means auto-width.
+Širina stolpca v odstotkih, prazno pomeni samodejna nastavitev širine.
 
-### Link
+### Povezava
 
-If checked then the field will be displayed as a link to the detail view of the record. Usually used for name fields.
+Če je ta parameter označen, potem bo polje prikazano kot povezava na podrobnostni pregled zapisa. Ponavadi se uporablja za polja z imeni.
 
-### Not Sortable
+### Brez sortiranja
 
-Disables an ability to sort the column.
+Onemogoči možnost sortiranja stolpca.
 
-### Align
+### Poravnava
 
-Align the column to the left or to the right.
+Možnost leve ali desne poravnave stolpca.
 
-## Detail
+## Podrobnosti
 
-The main layout for the detail view and the edit view. Defines panels, rows and cells. Cells contain fields.
+Glavna postavitev za podrobnostni pogled in urejevalni pogled. Določa panele, vrstice in celice. Celice vsebujejo polja.
 
-The row can contain two cells or one cell that is expanded to the full width of the row. To add the row with an expanded cell you need to add the new row and click on a minus sign on any cell.
+Vrstica lahko vsebuje dve celici ali eno celico, ki se razteza po celotni širini vrstice. Če želite dodati vrstico z razširjeno celico, morate dodati nov stolpec in klikniti na znak minus pri kateri koli celici.
 
-![Detail](../_static/images/administration/layout-manager/detail.png)
+![Podrobnosti](../_static/images/administration/layout-manager/detail.png)
 
-## List (Small)
+## Seznam (majhen)
 
-The list layout for relationship panels. Also can be used in other places where it's reasonable to display lists in the narrow view.
+Seznamska postavitev za relacijske panele. Lahko se uporabi tudi na drugih mestih, kjer je razumno prikazati sezname v ozkem pogledu.
 
-## Detail (Small)
+## Podrobnosti (majhen)
 
-The detail view for quick create, quick view and quick edit forms.
+Podrobnostni pogled za obrazce hitro ustvarjanje, hitri pogled in hitro urejanje.
 
-## Search Filters
+## Iskalni filtri
 
-The list of fields available in the list view to search by.
+Seznam polj po katerih se lahko išče, ki so na voljo v seznamskem pogledu.
 
-## Mass Update
+## Masovna posodobitev
 
-The list of fields availabe in the Mass Update form.
+Seznam polj, ki so na voljo na obrazcu Masovna posodobitev.
 
-## Relationship Panels
+## Relacijski paneli
 
-The list of relationship panels displayed on the detail view at the bottom. Panels can be re-ordered. It's possible to define the color of panel with the Style parameter.
+Seznam relacijskih panelov, ki je prikazan na dnu podrobnostnega pogleda. Panele se lahko prerazporedi. Panelu lahko določite barvo s parametrom Stil.
 
-## Side Panels
+## Stranski paneli
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter.
+Stranski paneli za obrazce Podrobnosti, Urejanje, Podrobnosti majhen, Urejanje majhen. Omogoča vam, da skrijete ali prerazporedite seznamske panele Aktivnosti, Zgodovina, Opravila in še druge. Panelom lahko določite barvo s parametrom Stil.
 
-## Additional Layouts
+## Dodatne postavitve
 
-Some entity types contain additional layouts: Convert Lead, List for Account.
+Nekateri tipi entitet vsebujejo še dodatne postavitve: Pretvarjanje sledi, Seznam za račun.
