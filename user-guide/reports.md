@@ -83,9 +83,7 @@ Having group provides an ability to use aggregate functions COUNT, SUM, MAX, MIN
 Some use cases:
 
 * List accounts having more than one opportunities. `COUNT / opportunities.id / Grater Than / 1`.
-* Grid report showing accounts grouped by industry with a revenue more than 1,000. `SUM / opportunities.amount / Greater Than / 1000`.
-
-
+* Grid report showing accounts grouped by industry where revenue is more than 1,000. `SUM / opportunities.amount / Greater Than / 1000`.
 
 Note: Compatible with EspoCRM versions 5.1.0 and greater.
 
