@@ -8,7 +8,7 @@ Da bi preverili trenutno verzijo, obiščite stran Administration > Upgrade.
 
 ### 2. korak: Prenesite potrebne pakete za nadgradnjo
 
-Obiščite stran za nadgradnjo https://www.espocrm.com/download/upgrades/ in glede na vašo trenutno verzijo prenesite potrebne pakete.
+Obiščite stran za nadgradnjo https://www.espocrm.com/download/upgrades/ in upoštevajoč vašo trenutno verzijo prenesite potrebne pakete.
 
 ### 3. korak: Ustvarite varnostno kopijo (po želji)
 
