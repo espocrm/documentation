@@ -1,39 +1,41 @@
 # Impor
 
-Impor hanya dapat diakses oleh admin. Administrasi> Impor. Anda dapat mengimpor hanya dari berkas CSV.
+Impor hanya dapat diakses pleh pengguna admin. Administrasi > Impor. Anda hanya dapat mengimpor dari file CSV.
 
 ## Langkah 1
 
-Pilih jenis catatan yang perlu Anda impor (jenis badan lapangan).
-Pilih berkas CSV. berkas harus diformat dengan `UTF-8`.
-Pilih `Apa yang Harus Dilakukan ?`. Pilihan yang tersedia: 'Hanya Buat', 'Buat & Perbarui', 'Hanya Perbarui'.
+Pilih jenis catatan apa yang perlu Anda impor (bidang Tipe Entity).
+Pilih file CSV. File harus berformat `UTF-8`.
+Pilih `What to do?`. Pilihan yang tersedia: 'Buat Saja', 'Buat & Perbarui', 'Perbarui Saja'.
 
-* `Hanya Buat` - pilih itu jika anda hanya ingin dibuat rekaman.
-* `Buat & Perbarui` - catatan akan dibuat tapi jika catatan dengan nilai field yang cocok ditemukan maka akan diperbarui. Anda dapat memeriksa bidang apa yang cocok dengan di _Step 2_.
-* `Hanya Perbarui` - hanya catatan dengan nilai field yang sesuai akan ditemukan maka akan diperbarui.
+* `Buat Saja` - pilih ini jika Anda hanya ingin rekaman dibuat saja.
+* `Buat & Perbarui` - rekaman akan dibuat tetapi jika rekaman sesuai dengan nilai bidang maka akan diperbarui. Anda dapat memeriksa bidang-bidang apa saja yang cocok dengan _Langkah 2_.
+* `Perbarui Saja` - only records with matching field values will be found it will be updated.
+hanya rekaman yang cocok dengan nilai bidang yang akan ditemukan yang akan diperbarui.
 
-Setelah Anda memilih berkas csv Anda dapat melihat bagaimana hal itu harus diuraikan pada panel Pratinjau. Saat Anda mengubah properti, pratinjau akan diperbarui.
+Setelah Anda memilih file csv Anda dapat melihat bagaimana file tersebut harus diuraikan dalam panel Pratinjau. Jika Anda mengubah properties tinjauan akan diperbarui.
 
-* `Baris Tajuk` - apakah berkas CSV memiliki baris pertama dengan nama field
-* `Jalankan saat menganggur` - disarankan jika Anda memiliki banyak catatan untuk diimpor. Impor akan diproses melalui cron. Status akan diatur ke 'Lengkap' saat proses impor selesai.
-* `Lewati mencari duplikat` - itu akan mengurangi jalan waktu impor  
+* `Header Row` - Apakah CSV file berada pada baris pertama dalam nama bidang.
+* `Execute in idle` - disararankan jika Anda memiliki sekelompok besar rekaman yang akan diimpor. Impor akan diproses melalui cron. Status akan diatur ke 'Selesai' setelah proses impor selesai.
+* `Skip searching for duplicates` - hal ini dapat mengurangi jangka waktu impor. 
 
-Klik tombol _Lanjutkan_ untuk lanjut ke _Tahap 2_.
+Klik tombol _Berikutnya_ untuk memproses ke _Langkah 2_.
 
 ![1](../_static/images/administration/import/step-1.png)
 
-## Tahap 2
+## Langkah 2
 
-Mempersiapkan pemetaan lapangan: bagaimana kolom sesuai dengan kolom dari file csv. Anda bisa melewatkan kolom yang tidak dibutuhkan disini.
-Dalam kasus 'Buat & Perbarui' dan 'Perbarui saja', Anda perlu memeriksa bidang dimana catatan yang harus diperbarui akan ditemukan.
-Tambahkan nilai default yang Anda inginkan untuk catatan baru dan yang diperbarui. Misalnya. Anda dapat menentukan bidang User atau Tim yang Ditugaskan.
+Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
 
-Setelah impor selesai, Anda akan dapat mengembalikan catatan yang dibuat, melihat duplikat dan rekaman yang diperbarui. Duplikat berarti ada catatan serupa dalam sistem. Anda dapat menghapus semua duplikat yang diimpor sekaligus. Catatan: Kembalikan tidak bekerja dengan catatan yang diperbarui.
+Tambahkan nilai-nilai default baru yang Anda inginkan dan catatan Anda akan diperbarui dengan Misalnya Anda dapat menentukan yang spesifik seperti bidang Ketetapan Pengguna atau Tim.
 
-Klik tombol _Run Impor_ untuk melanjutkan. Mungkin diperlukan beberapa saat sebelum proses impor selesai. Jika Anda ingin mengimpor sejumlah besar catatan (tergantung pada konfigurasi server Anda, biasanya jika lebih dari 200 catatan), Anda harus memastikan bahwa parameter php `atur_batas_waktu` cukup besar.
+Setelah impor dilakukan, Anda akan dapat kembali menciptakan rekaman, lihat duplikat dan catatan yang diperbarui. Duplikat berarti ada rekaman yang serupa dalam sistem. Anda dapat menghapus semua file impor duplikat sekaligus. Catatan: pemulihan tidak bekerja pada  rekaman yang diperbarui.
+
+Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
+Klik tombol _Jalankan Impor_ untuk melanjutkan. Mungkin diperlukan beberapa waktu sebelum proses impor selesai. Jika Anda ingin mengimpor sebagian besar rekaman (tergantung pada konfigurasi server Anda, biasanya jika lebih dari 200 catatan) Anda perlu memastikan bahwa php parameter 'set_time_limit' cukup besar.
 
 ![2](../_static/images/administration/import/step-2.png)
 
-## Cara mengimpor ke Daftar Target
+## Bagaimana mengimpor ke Daftar Target
 
-Saat Anda mengimpor Kontak, Memimpin atau Akun, Anda dapat menambahkannya ke beberapa daftar target. Pada Langkah 2 Anda perlu menambahkan kolom Daftar Target `Nilai Bawaan` panel dan pilih daftar target daftar yang dibutuhkan. Anda juga bisa menggunakan `Hanya Perbarui` atau `Buat & Perbarui` impor untuk menambahkan target yang ada ke daftar target.
+Bila Anda mengimpor kontak, Judul atau akun  Anda dapat menambahkannya ke beberapa sasaran daftar. Pada langkah 2, Anda perlu menambahkan bidang daftar Target  pada panel 'Nilai Default' dan pilih sebuah rekaman dari daftar target yang diperlukan. Anda juga dapat menggunakan impor 'hanya perbarui' atau 'Buat & Perbarui' untuk menambahkan target yang ada untuk daftar target.
