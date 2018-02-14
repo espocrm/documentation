@@ -1,41 +1,41 @@
-# Manage extensions
+# Upravljanje razširitev
 
-## How to install an extension
+## Kako namestiti razširitev
 
-In order to install EspoCRM extension (e.g. Advanced Pack, VoIP Integration):
+Za namestitev EspoCRM razširitve (na primer Napredni paket, VoIP integracija):
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Upload your extension package (zip file).
-4. Click Install button.
-
-
-## How to upgrade an extension
-
-In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP integration) to a newer version:
-
-1. Download the new version of needed extension.
-2. Login as an administrator.
-3. Go to Administration > Extensions.
-4. Upload your new extension package (zip file) without uninstalling the already installed version.
-5. Click Install button.
+1. Prijavite se kot administrator.
+2. Pojdite na Administracija > Razširitve.
+3. Naložite svoj razširitveni paket (zip datoteko).
+4. Kliknite gumb Namesti.
 
 
-## How to uninstall an extension
+## Kako nadgraditi razširitev
 
-Steps to uninstall an installed extension:
+Za nadgradnjo že nameščene razširitve (na primer Napredni paket, VoIP integracija) na novejšo verzijo:
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Find needed extension on the list of available extensions.
-4. Click Uninstall button.
+1. Prenesite novo verzijo potrebne razširitve.
+2. Prijavite se kot administrator.
+3. Pojdite na Administracija > Razširitve.
+4. Naložite svoj novi razširitevni paket (zip datoteko), ne da bi prej odstranili že nameščeno verzijo.
+5. Kliknite gumb Namesti.
 
 
-## How to delete an extension
+## Kako odstraniti razširitev (uninstall)
 
-When an extension is uninstalled, it is still available in the system. It can be completely deleted. Steps to delete an extension:
+Koraki za odstranitev nameščene razširitve:
 
-1. Login as an administrator.
-2. Go to Administration > Extensions.
-3. Find the needed extension in the list of available extensions.
-4. Click Remove button.
+1. Prijavite se kot administrator.
+2. Pojdite na Administracija > Razširitve.
+3. Poiščite potrebno razširitev v seznamu razpoložljivih razširitev.
+4. Kliknite gumb Odstrani.
+
+
+## Kako zbrisati razširitev
+
+Ko je razširitev odstranjena, je še vedno na voljo v sistemu. Lahko jo popolnoma zbrišete. Koraki za brisanje razširitve:
+
+1. Prijavite se kot administrator.
+2. Pojdite na Administracija > Razširitve.
+3. Poiščite potrebno razširitev v seznamu razpoložljivih razširitev.
+4. Kliknite gumb Zbriši.
