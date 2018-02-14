@@ -1,6 +1,6 @@
 # Portal
 
-Ang portal kay muhatag og abilidad nga mu-access sa specific nga crm data ug mga function para sa inyohang mga customer og partner. Ang administrador kay makahimo og nagkalain-laing mga portal. Ang kada usa ka portal kay mamahimong manag-iya ug iyahang kaugalingong mga setting, dashboard, user list, ug mga access control setting.
+Ang portal kay muhatag og abilidad nga mu-access sa ispisipiko nga crm data ug mga function para sa inyohang mga kustomer og partner. Ang administrador kay makahimo og nagkalain-laing mga portal. Ang kada usa ka portal kay mamahimong manag-iya ug iyahang kaugalingong mga setting, dashboard, lista sa user, ug mga access kontrol nga setting.
 
 Para muhimo og portal sunda ang Administration > Portals, i-click ang Create Portal nga pindutanan.
 

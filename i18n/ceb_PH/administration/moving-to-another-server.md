@@ -1,42 +1,42 @@
-# Pagbalhin sa EspoCRM ngadto sa laing server
+# Pagbalhin sa EspoCRM ngadto sa laing serber
 
-Sunda kini nga mga lakang aron mabalhin ang EspoCRM ngadto sa laing server:
+Sunda kini nga mga lakang aron mabalhin ang EspoCRM ngadto sa laing serber:
 
-### Step 1. Mga backup file
+### Una nga lakang. Mga backup file
 
 Pag-abli ug usa ka file manager o pag-login gamit ang SSH para i-archive ang tanang files nga pwede ma-archive gikan sa EspoCRM nga direktoryo: Mga dugang nga detalye: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
 
-### Step 2. Back-upi ang imohang database
+### Ika-duha nga lakang. Back-upi ang imohang database
 
 Ang data nga nasulod sa database (MySQL, MariaDB) kay gikinahanglan naback-up. Palihug ug sunod sa mga rekomendasyon:
 https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
 
-### Step 3. Kopyaha ang mga file ug mga database backup ngadto sa laing server
+### Ika-tulo nga lakang. Kopyaha ang mga file ug mga database backup ngadto sa laing serber
 
-Pagkopya og mga backup nga mga file ug ang imohang database ngadto sa bag-ong server.
+Pagkopya og mga backup nga mga file ug ang imohang database ngadto sa bag-ong serber.
 
-### Step 4. I-unarchive ang mga backup file
+### Ika-upat nga lakang. I-unarchive ang mga backup file
 
 Para i-unarchive ang mga backup, pwede kang mugamit og Archive Manager o kani nga mga pagtudlo: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files. 
-Timan-e: Ang mga file nanginahanglan nga iplastar ngadto sa web-server nga direktoryo.
+Timan-e: Ang mga file nanginahanglan nga iplastar ngadto sa web-serber nga direktoryo.
 
-### Step 5. I-configure ang usa ka server
+### Ika-lima nga lakang. I-konpigyur ang usa ka serber
 
-I-configure ang usa ka bag-ong server base sa mga rekomendasyon diri: https://www.espocrm.com/documentation/administration/server-configuration/.
+I-konpigyur ang usa ka bag-ong serber base sa mga rekomendasyon diri: https://www.espocrm.com/documentation/administration/serber-configuration/.
 
-### Step 6. Sakto nga mga permission
+### Ika-unom nga lakang. Sakto nga mga permission
 
-I-set ang mga gikinahanglang mga permission og ang tag-iya sa mga file, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
+I-set ang mga gikinahanglang mga permission og ang tag-iya sa mga file, https://www.espocrm.com/documentation/administration/serber-configuration/#user-content-required-permissions-for-unix-based-systems.
 
-### Step 7. I-import ang imohang database backup
+### Ika-pito nga lakang. I-import ang imohang database backup
 
 Una, gikinahanglan nimong muhimo og bag-o nga database gamit ang usa ka user sa MySQL. Para ma-import ang imohang database gikan sa backup, sunda ang kaning mga giya: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
 
-### Step 8. Sakto nga mga EspoCRM configuration
+### Ika-walo nga lakang. Sakto nga mga EspoCRM configuration
 
-Human sa malampusong pag-import ug pag-configure sa server, palihug og usab para masakto ang EspoCRM nga mga configuration sa file nga `ESPOCRM_DIRECTORY/data/config.php`:
+Human sa malampusong pag-import ug pag-konpigyur sa serber, palihug og usab para masakto ang EspoCRM nga mga configuration sa file nga `ESPOCRM_DIRECTORY/data/config.php`:
 
- * database connection settings:
+ * mga setting sa koneksyon sa database:
   
   ```php
   'database' => [
@@ -55,7 +55,7 @@ Human sa malampusong pag-import ug pag-configure sa server, palihug og usab para
   'siteUrl' => 'https://new-link.com',
   ```
   
-  * default files owner (kung lahi ra):
+  * tag-iya sa mga default file (kung lahi ra):
   
   ```php
   'defaultPermissions' => [
@@ -64,11 +64,11 @@ Human sa malampusong pag-import ug pag-configure sa server, palihug og usab para
     ]
   ```
 
-  kung asa ang `www-data` kay ang web-server nga user.
+  kung asa ang `www-data` kay ang web-serber nga user.
 
-### Step 9. Pag-setup sa usa ka crontab
+### Ika-siyam nga lakang. Pag-setup sa usa ka crontab
 
-Pag-setup sa usa ka crontab, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
-Timan-e: gikinahanglan i-configure kini gamit ang imohang web-server nga user.
+Pag-setup sa usa ka crontab, https://www.espocrm.com/documentation/administration/serber-configuration/#user-content-setup-a-crontab.
+Timan-e: gikinahanglan i-konpigyur kini gamit ang imohang web-serber nga user.
 
-Mao ra tong tanan. Karon, ang imohang EspoCRM instance kay nagdagan sa bag-o nga server.
+Mao ra tong tanan. Karon, ang imohang EspoCRM instance kay nagdagan sa bag-o nga serber.
