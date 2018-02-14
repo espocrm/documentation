@@ -1,58 +1,57 @@
-# Defining new funtions for Formula
+# Définition de nouvelles fonctions pour la Formule
 
-EspoCRM provides the possibility to create custom functions that can be used in formula. 
+EspoCRM offre la possibilité de créer des fonctions personnalisées qui peuvent être utilisés dans la formule. 
 
-If your function is related to the one of groups like String, Logic, Date, create a file in __{GroupName}Group__ folder, named __{FunctionName}Type.php__ with __{FunctionName}Type__ class declaration. You need to define the method __'process'__.
+Si votre fonction est liée à l'un des groupes comme la Chaîne, de la Logique, de la Date, de créer un fichier dans __{GroupName}Group__ dossier, nommé __{Nomfonction}Type.php__ __{Nomfonction}Type__ déclaration de la classe. Vous devez définir la méthode __'processus'__.
 
-For example, let's create a new string function for checking if a string (HAYSTACK) contains another string (NEEDLE) with a possible offset (OFFSET).
+Par exemple, nous allons créer une nouvelle chaîne de fonction permettant de vérifier si une chaîne de caractères (MEULE de foin) contient une autre chaîne (à l'AIGUILLE) avec un possible décalage (OFFSET).
 
-Create a file `application/Espo/Core/Formula/Functions/StringGroup/ContainsType.php` with the code:
+Créer un fichier `application/Espo/Core/Formula/Functions/StringGroup/ContainsType.php " avec le code:
 
-```
-namespace Espo\Core\Formula\Functions\StringGroup;
+``
+espace de noms Espo\Core\Formule\Fonctions\StringGroup;
 
-use \Espo\Core\Exceptions\Error;
+utiliser \Espo\Core\Exceptions\Erreur;
 
-class ContainsType extends \Espo\Core\Formula\Functions\Base
+classe ContainsType s'étend \Espo\Core\Formule\Fonctions\Base
 {
-    public function process(\StdClass $item)
-    {
-        if (!property_exists($item, 'value')) {
-            throw new Error();
-        }
-
-        if (!is_array($item->value)) {
-            throw new Error();
-        }
-
-        if (count($item->value) < 2) {
-            throw new Error();
-        }
-
-        $haystack = $this->evaluate($item->value[0]);
-        $needle = $this->evaluate($item->value[1]);
-
-        if (count($item->value) > 2) {
-            $offset = $this->evaluate($item->value[2]);
-            return !(strpos($haystack, $needle, $offset) === false);
-        } else {
-            return !(strpos($haystack, $needle) === false);
-        }
-    }
-}
-```
-## Adding the function to the list
-
-In order to add the created function to the function list of formula, create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
-```
+public function process(\StdClass $item)
 {
-    "functionList": [
-        {
-            "name": "string\\contains",
-            "insertText": "string\\contains(HAYSTACK, NEEDLE, OFFSET)"
-        }
+if (!property_exists($article, 'valeur')) {
+throw new Error();
 }
-```
 
-__Clear cache__ and use this function in formula. You can type it `string\contains(HAYSTACK, NEEDLE, OFFSET)` or select from function list, if you add it.
+if (!is_array($item->valeur)) {
+throw new Error();
+}
 
+if (count($item->valeur) < 2) {
+throw new Error();
+}
+
+ $botte de foin = $this->évaluer($item->valeur[0]);
+$needle = $this->évaluer($item->valeur[1]);
+
+if (count($item->valeur) > 2) {
+$offset = $this->évaluer($item->valeur[2]);
+de retour !(strpos($haystack, $aiguille, $offset) === false);
+} else {
+de retour !(strpos($haystack, $aiguille) === false);
+}
+}
+}
+``
+## Ajout de la fonction à la liste
+
+Pour ajouter à la création de la fonction de la liste des fonctions de la formule, créer un fichier " custom/Espo/Custom/Ressources/métadonnées/app/formule.json " et ajoutez le code:
+``
+{
+"functionList": [
+{
+"nom": "string\\contient",
+"insertText": "string\\contient(la botte de FOIN, AIGUILLE, OFFSET)"
+}
+}
+``
+
+__"Vider le cache" __ et de l'utilisation de cette fonction dans la formule. Vous pouvez taper " string\contient(la botte de FOIN, AIGUILLE, OFFSET) ou sélectionner à partir de la fonction de la liste, si vous l'ajoutez.
