@@ -1,76 +1,75 @@
-# Guidelines on Using Emails
+﻿# Руководство по использованию электронных писем
 
-EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+EspoCRM предоставляет возможность получать электронные письма из окна IMAP. Это позволяет использовать EspoCRM в качестве почтового клиента вместе с функциями, специфичными для CRM
 
-## IMAP accounts
+## Учетные записи IMAP
 
-*Note: You need to have [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
+*Примечание. Необходимо иметь [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab), правильно настроенный в вашей системе, чтобы работали входящие сообщения.*
 
-User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+Пользователь может настроить учетную запись IMAP на странице «Личные учетные записи электронной почты» (вкладка «Электронная почта») в правом верхнем меню «Личные учетные записи электронной почты»).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
+Укажите, какие папки следует отслеживать в поле «Контролируемые папки». По умолчанию установлено значение INBOX. Если вы используете какой-либо внешний почтовый клиент для отправки электронной почты, вы можете добавить папку Sent для архивирования этих писем.
 
-*Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
+*Fetch Since* позволяет вам выбирать дату, с которой следует архивировать электронные письма. Установите его на дату до сегодняшнего дня, если вам нужно архивировать старые письма.
 
-There is an ability to specify *Folder* in Persnoal Email Account. Incoming emails will be put in that folder.
+Существует возможность указать *папку* в личной учетной записи электронной почты. Входящие письма будут помещены в эту папку
 
-## SMTP accounts
+## Учетные записи SMTP
 
-Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+Пользователи могут настраивать параметры SMTP в настройках, а также в личных учетных записях электронной почты. Администратор также может разрешить использовать системный SMTP (сделать его общим).
 
-Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of *User* record.
+Пользователи могут иметь несколько учетных записей SMTP (начиная с версии 4.2.0). Но адреса электронной почты пользователь может использовать только для отправки сообщений с определенных адресов электронной почты *User*.
 
-## Working with Emails
+## Работа с электронными письмами
 
-Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
-You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
+Письма извлекаются в cron (в фоновом режиме) каждые несколько минут (период может быть указан администратором). Вы можете увидеть все свои электронные письма на вкладке «Электронная почта». Существуют стандартные папки Входящие, Отправленные, Черновики электронной почты с левой стороны
 
-*Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
+*Статус* «Отправлено» означает, что он был отправлен из CRM, «Архивировано» - извлечен из учетной записи IMAP или заархивирован вручную, «Проект» - означает, что электронная почта была создана как черновик.
 
-When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized then user can link it manually by filling in *Parent* field.
+Когда приходит новое письмо, система пытается распознать, к какой записи принадлежит это электронное письмо. Он может связывать его с Account, Lead, Opportunity, Case (и Contact в режиме B2C) и т.д. Если он не был распознан, пользователь может связать его вручную, заполнив поле *Parent*.
 
-If an email came from a new potential client user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
+Если электронное письмо поступило от нового потенциального клиента, пользователь может **преобразовать его в Lead**. Откройте вкладку «Электронная почта» и нажмите «Создать Lead» в правом верхнем меню.
 
-It's also possible to **create Task or Case** from an email record.
+Также возможно **создать задачу или случай** из записи электронной почты.
 
-If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can **create contact** right from there.
+Если в системе известны адреса электронной почты (от, до, cc) в записи электронной почты, он покажет учетную запись, с которым они связаны (контакт, ведущий, пользователь и т. д.). Если какой-то новый адрес электронной почты, вы можете **создать контакт** прямо оттуда.
 
-All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
+Все электронные письма, относящиеся к определенной записи, отображаются на панели «История» этой записи. Если какая-либо электронная почта связана, например, с возможностью, но возможность связана с учетной записью, она будет показана как в случае, так и в учетной записи.
 
-## Sending Emails
+## Отправка писем
 
-You can compose new email by a few ways:
-* *Compose Email* button on Emails list view;
-* replying on another email;
-* clicking on an email address of some record;
-* *Compose Email* action of Activities panel.
+Вы можете создать новое электронное письмо несколькими способами:
+* *Созданием электронной почты* на экране списка адресов электронной почты;
+* ответом на другое электронное письмо;
+* нажатием на адрес электронной почты какой-либо записи;
+* *Compose Email* действием на панели действий.
 
-There is an ability to **select template** of your email.
+Существует возможность **выбрать шаблон** вашей электронной почты.
 
-You can setup **email signature** in Preferences.
+Вы можете настроить **подпись электронной почты** в настройках.
 
-## Email Folders
+## Папки
 
-Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you wan't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Пользователи могут создавать свои собственные папки электронной почты, чтобы поместить некоторые электронные письма для удобства. Список доступных папок доступен на странице электронной почты с левой стороны. Чтобы создать или изменить папки, следуйте по электронной почте> раскрывающийся список в правом верхнем углу> Папки. `Skip Notification` означает, что вы не будете уведомлены о входящих письмах, которые попадают в определенную папку. Используя фильтры электронной почты, вы можете автоматически отправлять электронные письма в папки по определенным критериям.
 
-## Email Filters
+## Фильтры
 
-Administrator can create global email filters to skip not desirable emails. They are available at Administration > Email Filters.
+Администратор может создавать глобальные фильтры электронной почты, чтобы пропускать нежелательные электронные письма. Они доступны в разделе «Администрирование»> «Фильтры электронной почты».
 
-Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
+Обычный пользователь может создавать фильтры электронной почты для своих личных учетных записей электронной почты или для всех входящих почтовых ящиков. Они доступны в раскрывающемся списке «Электронная почта»> в правом верхнем углу> Фильтры.
 
-There are two types of filters:
-* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder - imported emails will be put into specified user's folder automatically.
+Существует два типа фильтров:
+* Пропустить - электронная почта будет помещена в *Корзина* или не импортирована, если фильтр связан с Личным почтовым аккаунтом;
+* Поместить в папку - импортированные письма будут автоматически помещены в указанную папку пользователя.
 
-## Email Templates
+## Шаблоны
 
-Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sendings and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
+Шаблоны электронной почты доступны по адресу электронной почта > раскрывающийся список в правом верхнем углу> шаблоны электронной почты. Они могут использоваться как для массовых почтовых отправлений, так и для обычных электронных писем. Флажок «Одноразовый» означает, что шаблон электронной почты должен использоваться только один раз, что обычно используется для электронного маркетинга.
 
-It's possible to use placeholders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
+Можно использовать заполнители в теле шаблона электронной почты и теме, например. {Account.name}, {Person.emailAddress}. Они будут заменены значениями связанных записей.
 
-You can use additional reserved placeholders in template body: {optOutUrl} and {optOutLink}.
+Вы можете использовать дополнительные зарезервированные заполнители в шаблоне: {optOutUrl} and {optOutLink}.
 ```
-<a href="{optOutUrl}">Unsubscribe</a>
+<a href="{optOutUrl}">Отказаться от подписки</a>
 ```
-This is unsubscribe link for mass email.
+Это ссылка чтобы отписаться от массовых электронных писем.
