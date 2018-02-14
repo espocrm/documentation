@@ -1,83 +1,82 @@
-# Entity Manager
+# Upravljalnik entitet
 
-Entity Manager is available in Administration panel. It provides an ability to highly customize your EspoCRM instance. You are able to do the following:
+Upravljalnik entitet je na voljo v panelu Administracija. Omogoča vam, da svoj EspoCRM sistem popolnoma prilagodite svojim potrebam. Omogoča vam naslednje:
 
-* Add new types of entities.
-* Customize existing types of entities: change labels, default order in list view, enable or disable stream.
-* Configure fields: add new, customize existing ones.
-* Configure relationships: add new, change labels of existing ones.
+* Dodajanje novih tipov entitet.
+* Prilagajanje obstoječih tipov entitet: lahko spremenite oznake, privzeti vrstni red v seznamskem pogledu, omogočite ali onemogočite tok.
+* Prilagajanje polj: lahko dodate nova polja, prilagodite obstoječa.
+* Prilagajanje relacij: lahko dodate nove relacije, spremenite oznake za obstoječe.
 
-## Creating new entity
+## Ustvarjanje nove entitete
 
-Click `Create Entity` button on Entity Manager page. Specify name, labels and type. If you select `Person` type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check `Stream` if you want your entity to have stream panel and users to be able to Follow entities of this type.
+Kliknite gumb `Ustvari entiteto` na strani Upravljalnik entitet. Določite ime, oznako in tip. Če izberete tip `Oseba`, bo vaša entiteta vsebovala polja E-pošta, Telefon, Ime, Priimek in Pozdrav. Označite `Tok`, če želite, da bo imela vaša entiteta panel s prikazom toka ter da bodo uporabniki lahko sledili entitetam tega tipa.
 
-Types:
+Tipi:
 
-* Base - empty entity only with basic fields like Name, Assigned User, Teams, Description.
-* Base Plus - like Base but with Activities, History, Tasks panels (available since 4.3.0).
-* Event - Date Start, Date End, Duration, Parent, Status fields. Available in Calendar and Activities panel (since 4.3.0, must be enabled at Administration > Settings).
-* Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
-* Company - Email, Phone, Billing Address, Shipping Address fields. Activities, History, Tasks panels.
+* Osnovni - prazna entiteta s samo osnovnimi polji, kot so Ime, Dodeljeni uporabnik, Timi, Opis.
+* Osnovni plus - podoben tipu Osnovni, toda s paneli Aktivnosti, Zgodovina, Opravila (na voljo od verzije 4.3.0).
+* Dogodek - polja Začetni datum, Končni datum, Trajanje, Starš, Status. Na voljo v panelu Koledar in Aktivnosti (od verzije 4.3.0, potrebno omogočiti v Administracija > Nastavitve).
+* Oseba - polja E-pošta, Telefon, Ime, Priimek, Pozdrav, Naslov. Paneli Aktivnosti, Zgodovina, Opravila.
+* Podjetje - polja E-pošta, Telefon, Naslov za izstavitev računa, Naslov za dostavo. Paneli Aktivnosti, Zgodovina, Opravila.
 
-## Update existing entity
+## Posodabljanje obstoječe entitete
 
-If you click `Edit` link on a certain entity you will be able to change some parameters of that entity.
+Če pri določeni entiteti kliknete povezavo `Uredi`, boste lahko spremenili nekatere parametre te entitete.
 
-* Labels - singular and plural name of the entity.
-* Default order records are sorted by in list views.
-* Stream - whether Stream feature is enabled for this entity.
-* Disabled - check if you don't need this entity in your system.
-* Text Filter Fields - what fields to search in for the main text filter and global search.
-
-
-## Fields
-
-By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones. The following types of fields are available in Entity Manager:
-
-* Address - address with street, city, state, postal code and country;
-* Array - list of values, with the ability to select multiple values (not a good option if you need to search by this field); users can add their own values if options are not specified.
-* Attachment Multiple - multiple file attachments;
-* Auto-increment - read only generated number;
-* Boolean - checkbox, true or false;
-* Currency - for currency values;
-* Date;
-* DateTime;
-* Enum - selectbox, with the ability to select only one value;
-* File - uploading one file;
-* Float - number with a decimal part;
-* Foreign - a field of related entity;
-* Image - uploading image file with a preview;
-* Integer - whole number;
-* Number - auto-incrementing number of string type with a possible prefix and a specific length;
-* Multi-enum - list of values, with the ability to select multiple values (not a good option if you need to search by this field), similar to Array but nicer.
-* Text - text area, for long multiline texts;
-* Url - for links;
-* Varchar - short text;
-* Wysiwyg - similar to Text field, with the ability to format text.
-
-Parameters:
-* Required - whether filling in of the field is mandatory.
-* Default Value - Value of the field set upon creating new record.
-* Audited - updates of the field will be logged in Stream.
-
-**Note**: After you have added the new field you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
-
-### Dynamic Logic
-
-Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
-
-For Enum, Array and Multi Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met.
+* Oznake - ime entitete v ednini in množini.
+* Privzeti vrstni red, po katerem so zapisi sortirani v seznamskih pogledih.
+* Tok - ali je možnost Tok omogočena za to entiteto.
+* Onemogočena - označite, če ne potrebujete te entitete v svojem sistemu.
+* Besedilna filtrirna polja - v katerih poljih naj išče glavni besedilni filter in globalni iskalnik.
 
 
-## Relationships
+## Polja
 
-You can create new relationships between both out-of-box and custom entities. There are 3 available relationship types:
+Klik na povezavo `Polja` vas bo prestavil na ločeno stran. Na njej boste lahko ustvarili nova polja ali posodobili že obstoječa. V Upravljalniku entitet so na voljo naslednji tipi polj:
 
-* One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
-* Many-to-One: the same as One-to-Many but vice versa;
-* Many-to-Many: relationship panels on both sides.
+* Naslov - naslov, ki je sestavljen iz ulice, mesta, zvezne države, poštne številke in države;
+* Tabela - seznam vrednosti z možnostjo izbire več vrednosti (ni dobra izbira, če morate iskati po tem polju); uporabniki lahko dodajo svoje vrednosti, če ni kako drugače določeno.
+* Večkratna priponka - več pripetih datotek;
+* Samodejno oštevilčevanje - generirana številka, ki jo je mogoče le brati;
+* Boolean - potrditveno polje, pravilno ali napačno;
+* Valuta - za vrednosti valut;
+* Datum;
+* Datum in čas;
+* Enum - izbirno poljo z možnostjo izbire le ene vrednosti;
+* Datoteka - nalaganje ene datoteke;
+* Plavajoča vejica - decimalna številka;
+* Foreign - polje povezane entitete;
+* Slika - nalaganje slikovne datoteke s predogledom;
+* Integer - celo število;
+* Številka - auto-incrementing number of string type with a possible prefix and a specific length;
+* Multi-enum - seznam vrednosti z možnostjo izbire več vrednosti (ni dobra izbira, če morate iskati po tem polju), podobno Tabeli, vendar lepše.
+* Besedilo - besedilno področje za dolga, večvrstična besedila;
+* Url - za povezave;
+* Varchar - kratko besedilo;
+* Wysiwyg - podobno besedilnemu polju, z možnostjo oblikovanja besedila.
 
-Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of detail view screen.
+Parametri:
+* Zahtevano - ali mora polje obvezno vsebovati vrednost.
+* Privzeta vrednost - vrednost polja ob ustvaritvi novega zapisa.
+* Sledenje - spremembe polja se bodo beležile v Tok.
 
-If parameter 'Audited' is checked then updates of the relationship will be logged in Stream.
+**Opomba**: Potem ko dodate novo polje, morate to polje dodati na [postavitve](layout-manager.md) (Administracija > Upravljalnik postavitev).
 
+### Dinamična logika
+
+Omogoča možnost izdelave dinamičnih obrazcev. Možno je določiti pogoje, kdaj bodo določena polja vidna, zahtevana ali samo bralna. Pogoji se preverijo samodejno, ko se podatki na obrazcu spremenijo.
+
+Za Enum, Tabelo in Multi Enum polja je možno določiti različne skupke možnosti, ki bodo na voljo za polje, odvisno od tega, kateri pogoj je izpolnjen.
+
+
+## Relacije
+
+Ustvarite lahko nove relacije tako med privzetimi kot prilagojenimi entitetami. Obstajajo trije tipi relacij:
+
+* Eden proti več: potem ko ste ustvarili to relacijo, lahko dodate Url polje v postavitev s prikazom podrobnosti desne entitete in dodate relacijski panel levi entiteti;
+* Več proti eden: enako kot Eden proti več, vendar ravno obratno;
+* Več proti več: relacijska panela na obeh straneh.
+
+Parameter 'Poveži večkratno polje' kaže na to, da bo polje tipa `linkMultiple` ustvarjeno skupaj z relacijo. Takšno polje lahko dodate postavitvi. Je prikladno za hitro izbiro povezanih zapisov. Ni pa dobra izbira, če ima vaša relacija veliko povezanih zapisov, ki lahko upočasnijo nalaganje zaslona s prikazom podrobnosti.
+
+Če je označen parameter 'Sledenje', se bodo spremembe relacije beležile v Tok.
