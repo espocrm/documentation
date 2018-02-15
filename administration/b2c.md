@@ -1,4 +1,4 @@
-#Configuring EspoCRM for B2C (Business-to-Client)
+# Configuring EspoCRM for B2C (Business-to-Client)
 
 By default EspoCRM is configured to use for B2B business. But you can easily setup it for B2C.
 
