@@ -16,4 +16,3 @@ fare la cella ampia utilizzando il segno meno.
 
 poiché EspoCRM versione 4.2.0 è necessario specificare la chiave API per utilizzare Google Maps (Amministrazione > Integrazione > Google Maps).
 
-'''
