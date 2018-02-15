@@ -1,0 +1,197 @@
+ # Backup and Restore
++Sauvegarder et restauration
+ 
+ ## How to backup EspoCRM manually
++Comment sauvegarder manuellement  EspoCRM 
+ 
+ EspoCRM consists of files and database data. All these data are needed in order to create a full backup of EspoCRM. Here are 
+ instructions on how to do it on Ubuntu server with MySQL.
++EspoCRM se compose des fichiers et des données (data). Toutes ces données sont nécessaires pour sauvegarder complètement 
+'EspoCRM.Comment le faire. sur un serveur Ubuntu avec MySQL.Voici les instructions :
+ 
+ ### Step 1. Backup files
++   Étape 1. Sauvegarder des fichiers
++
+ 
+ Create an archive of the directory content of installed EspoCRM. For Ubuntu the default path is `/var/www/html`. You may
+ use this command:
+ 
+ ```bash
+ tar -czf "files.tar.gz" -C /var/www/html .
+ ```
++Créez une archive du contenu du répertoire d’EspoCRM installé. Pour Ubuntu,le chemin par défaut est / var / www / html. 
+Vous pouvez appliquer cette commande.
++
++tar -czf "fichiers.tar.gz" -C / var / www / html.
+ 
+ ### Step 2. Backup database
++          Étape 2. Sauvegarder la base de données
++
+ 
+ To backup all your data, you have to know the database name and access credentials. You can find the database name in 
+ the configuration file `/ESPOCRM_DIRECTORY/data/config.php` under section `database`. You can use this command to backup 
+ your database:
+ 
+ ```bash
+ mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
++
++Pour sauvegarder toutes vos données, vous devez savoir  le nom de la base de données et l’accés des informations d'identi
+fication. Vous pouvez trouver le nom de la base de données dans le fichier de configuration /ESPOCRM_DIRECTORY/data/config.
+php sous la base de données de section. Vous pouvez utuliser cette commande pour sauvegarder votre base de données
++bash
++
++mysqldump --UTULİSATEUR = VOTRE_UTULİSATEUR --CODE DE CHİFFRE = VOTRE_CODE DE CHİFFRE VOTRE_BASE DE DONNES_NOM> "db.sql"
++
+ ```
+ 
+ ### Step 3. Copy the backup
+-
++    Étape 3.Copier la sauvegarde    
+ That's all. Now, you have to copy the created backup to a safe place.
+-
++C'est tout. Maintenant, vous devez copier la sauvegarde créée dans une place sûr.
+ 
+ ## How to backup EspoCRM with a script
++    Comment sauvegarder EspoCRM avec un script
+ 
+ You can use a script to backup all needed data. Login via SSH and run the commands (tested on Ubuntu server).
++Vous pouvez utiliser un script pour sauvegarder toutes les données nécessaires. Connectez-vous via SSH et exécutez les 
+commandes (testées sur le serveur Ubuntu
+ 
+ ### Download a script
+-
+-```bash
++    Télécharger un scrip
++    
++    t```bash
+ wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scripts/backup.sh
+ ```
+ 
++
+ ### Run the script
++    Exécuter le script
+ 
+ ```bash
+ bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
+ ```
+ where
+  * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory.
+  * `BACKUP_PATH` is a path to backup directory.
++ 
++ où
++
++PATH_TO_ESPOCRM est un chemin d'accès au répertoire EspoCRM installé.
++BACKUP_PATH est un chemin d'accès au répertoire de sauvegarde
++
+ 
+ For Ubuntu server it is:
++Pour le serveur Ubuntu,cela est :
+ 
+ ```bash
+ bash ./backup.sh /var/www/html /opt/backups
++bash ./backup.sh / var / www / html / opt / sauvegardes
+ ```
+ 
+ Note: If your MySQL user doesn't have needed rights to dump your database, you will be promted to enter credentials of 
+ another MySQL user.
+ 
++Remarquer: Si votre utilisateur MySQL n'a pas les droits nécessaires pour décharger  votre base de données, vous serez 
+invité à entrer les informations d'identification d'un autre utilisateur MySQL.
++
+ After successful creation, you will get a path to the created backup.
++Après une création réussie, vous allez obtenir un chemin vers la sauvegarde créée
++
+ 
+ ## Restore EspoCRM from a backup
++  Restaurer EspoCRM à partir d'une sauvegarde
+ 
+ You can restore EspoCRM from the backup created as described above.
++Vous pouvez restaurer EspoCRM à partir de la sauvegarde créée comme décrit ci-dessus.
+ 
+ ### Step 1. Unarchive backup files
++    Étape 1. Désarchiver les fichiers de sauvegarde
+ 
+ To unarchive files, you can use Archive Manager or run the below command. Files need to be placed in the web-server directory.
+ 
+@@ -67,20 +103,42 @@ tar -xzf "files.tar.gz" -C /var/www/html
+ ```
+ where:
+  * `/var/www/html` is a web-server directory.
++ 
++ Pour désarchiver les fichiers, vous pouvez utiliser le gestionnaire d'archives ou exécuter la commande ci-dessous. Les
+fichiers doivent être placés dans le répertoire du serveur Web
++
++   ```bash
++tar -xzf "fichiers.tar.gz" -C / var / www / html
++
++où:
++
++     / var / www / html est un répertoire de serveur Web.
++
+ 
+ ### Step 2. Set required permissions
+ 
++    Etape 2. Régler les autorisations requises
++
+ The files should be owned by a web-server user and have correct permissions. Please set required permissions by following 
+ this instruction: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for
+ -unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-
+ permissions-for-unix-based-systems).
+ 
++Les fichiers doivent appartenir à un utilisateur de serveur Web et avoir les permissions correctes. Veuillez régler définir
+les autorisations requises en suivant cette instruction s’il vous plait. www.espocrm.com/documentation/administration/server-
+configuration/#user-content-required-permissions-for-unix-based-systems.
++
++
++
+ ### Step 3. Import database dump
++    Étape 3. ımporter la base de données dump
+ 
+ Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made 
+ in the configuration file `ESPOCRM_
+ DIRECTORY/data/config.php`. To import your database from the dump, run the command below in a terminal:
+ 
+ ```bash
+ mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
++
++La base de données dump doit être importée dans la même base de données avec les mêmes informations d'utilisateur, Sinon la 
+confirmation doit être effectuée dans le fichier de configuration ESPOCRM_DIRECTORY / data / config.php. Pour importer votre 
+base de données à partir de la décharge , exécutez la commande ci-dessous dans un terminal
+ ```
++mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
++
+ 
+ ### Step 4. Check/configure crontab
++    Étape 4. Vérifier / configurer crontab
+ 
+ Check if your crontab is configured properly. Run the command below and check if a path to EspoCRM is correct:
+ 
+@@ -94,6 +152,20 @@ If you have to make any changes, use this command:
+ 
+ ```bash
+ sudo crontab -l -u www-data
+-```
+ 
+-More details about configuring crontab for EspoCRM is described here [www.espocrm.com/documentation/administration/server-
+configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-
+content-setup-a-crontab).
++Vérifiez si votre crontab est configuré d’une façon convenable.Exécutez la commande ci-dessous et vérifiez si un chemin vers
+EspoCRM est correct:
++
++sudo crontab -l -u www-data
++
++où:
++
++    . www-data est votre utilisateur de serveur Web.
++
++Si vous devez faire un changement quelconque utilisez cette commande:
++
++sudo crontab -l -u www-data
++
++
++`More details about configuring crontab for EspoCRM is described here [www.espocrm.com/documentation/administration/server-
+configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-
+content-setup-a-crontab).
++
++Plus de détails sur la configuration de crontab pour EspoCRM est décrit ici www.espocrm.com/documentation/administration/
+server-configuration/#user-content-setup-a-crontab
