@@ -1,80 +1,80 @@
-# Business Process Management
+# Upravljanje poslovnih procesov
 
-Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+Orodje Upravljanje poslovnih procesov (BPM) vam omogoča, da v EspoCRM oblikujete in avtomatizirate poslovne procese. Gre za stroj, ki izvaja poslovne procese, opisane v BPMN 2.0 standardu. Orodje BPM je na voljo v razširitvi [Napredni paket](https://www.espocrm.com/extensions/advanced-pack/).
 
-![BPM example](../_static/images/administration/bpm/bpm-1.png)
+![Primer BPM-ja](../_static/images/administration/bpm/bpm-1.png)
 
-### Difference from Workflows tool
+### Kako se razlikuje od orodja Potek dela
 
-Workflows tool is intended for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
+Orodje Potek dela je namenjeno avtomatizaciji preprostih poslovnih pravil, brez zaporednih elementov, ki prikazujejo potek, ko pač ni potrebno grafično prikazati poteka.
 
-BPM tool is intended for more complex business flows, where there can be diverging and converging flows, execution delays, user interactions. A flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
+Orodje BPM je namenjeno kompleksnejšim poslovnim potekom, pri katerih so lahko tudi razhajajoči in stekajoči se tokovi, zamiki izvajanja, posegi uporabnika. Pogled s prikazom poteka omogoča, da je poslovni proces bolj razumljiv človeku; dnevnik omogoča, da lahko vidite, kako je proces potekal.
 
-## Process Flowcharts
+## Diagrami s prikazom poteka procesov
 
-The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
+V administracijskem panelu je na voljo povezava do diagramov s prikazom poteka procesov. Doda se jo lahko tudi kot jeziček na navigacijskem panelu.
 
-Flowcharts are intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
+Diagrami s prikazom poteka so namenjeni oblikovanju poslovnih procesov. Administrator lahko ustvari in ureja takšne diagrame. Redni uporabniki pa lahko diagrame zgolj vidijo.
 
-Every flowchart has its specific entity type (Target Type field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
+Vsak diagram ima svoj specifični tip entitete (polje Tip cilja). Diagram določa izvajanje prihodnjih ustvarjenih procesov. Na njem so zajeti elementi, ki prikazujejo potek, ter povezave med elementi.
 
-If process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
+Če pri diagramu ni označeno polje 'Aktiven', potem ne bo sproženo ustvarjanje procesov.
 
-To show details and parameters of a certain flowchart element you need to click on it. In edit mode you will be able to edit parameters.
+Za prikaz podrobnosti in parametrov določenega elementa na diagramu morate klikniti nanj. V urejevalnem načinu boste lahko urejali parametre.  
 
-## Processes
+## Procesi
 
-Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
+Do Procesov lahko pridete iz administracijskega panela. Povezavo se lahko doda tudi kot jeziček na navigacijskem panelu.
 
-Process represents business process instance. When it's initiated it gets the status 'Started'. When process is finished it gets the status 'Ended'. The process can also be stopped manually by a user who has an access to edit the process. If it's stopped manually it gets status the 'Stopped'.
+Proces predstavlja ustvarjen poslovni proces. Ko se zažene, prejme status 'Zagnan'. Ko se proces konča, prejme status 'Končan'. Proces lahko ročno ustavi tudi uporabnik, ki ima pravice za urejanje procesa. Če se ga ustavi ročno, prejme status 'Ustavljen'.
 
-The process is executed according the flowchart. Flowchart of process can't be changed after process is started.
+Proces se zažene glede na diagram poteka. Ko je proces enkrat zagnan, ne morete spremeniti diagrama poteka processa.
 
-The process obligatorily is related to single target record.
+Nujno je, da je proces povezan z enim samim ciljnim zapisom.
 
-Processes can be started automatically (upon specific conditions or by scheduling) or manually (where there is at least one Start Event in the flowchart). To start process manually the user needs to click 'Start Process' button on the list view of processes.
+Procesi se lahko zaženejo samodejno (ko so izpolnjeni določeni pogoji oziroma glede na urnik) ali ročno (če obstaja vsaj en dogodek Začetek v diagramu poteka). Da bi uporabnik ročno zagnal proces, mora klikniti gumb 'Zaženi proces' na seznamskem pogledu procesov.
 
-## Flowchart Elements
+## Elementi Diagrama poteka
 
-### Events
+### Dogodki
 
-Events are displayed on a flowchart as circles.
+Dogodki so na diagramu prikazani kot krogci.
 
-#### Start Event
+#### Dogodek Začetek
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click  'Start Process' button on the list view of processes.
+Nima parametrov. Gre za začetno točko procesa. Dogodek Začetek lahko ročno zažene uporabnik, ki ima pravice za ustvarjanje procesov. Uporabnik mora klikniti gumb 'Zaženi proces' na seznamskem pogledu procesov.
 
-#### Conditional Start Event
+#### Dogodek Pogojni začetek
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of trigger: 'After record created', 'After record saved'.
+Začetna točka procesa. Zažene se samodejno, ko so izpolnjeni določeni pogoji. Obstajata dva tipa sprožilcev: 'Po ustvaritvi zapisa', 'Po shranjevanju zapisa'.
 
-#### Timer Start Event
+#### Dogodek Časovno določen začetek
 
-A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
+Začetna točka procesa. Procese zažene ob določenem času. Določiti morate seznamsko poročilo, ki vrne zapise za ustvarjanje procesov ter časovno razvrščanje v obliki, primerni za crontab.
 
-#### Conditional Intermediate Event
+#### Dogodek Pogojno nadaljevanje
 
-This event stops the flow until specified criteria is met.
+Ta dogodek ustavi potek, dokler ni izpolnjen vnaprej določeni pogoj.
 
-#### Timer Intermediate Event
+#### Dogodek Časovno določeno nadaljevanje
 
-This event stops the flow and waits as long as is specified by event's parameters.
+Ta dogodek ustavi potek in čaka tako dolgo, kot to določajo parametri dogodka.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+Za kompleksnejše časovne nastavitve se lahko okorisite [formule](formula.md). Skripi s formulami bi morali vrniti vrednost Datum-Čas (v UTC časovnem pasu). Ko nastopi vnaprej določeni čas, se tok nadaljuje z naslednjim elementom.
 
-By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
+Z uporabo funkcije datetime\closest je mogoče nastaviti števec na določen čas v prihodnosti, na primer na začetek naslednjega delovnega dne.
 
-#### End Event
+#### Dogodek Konec
 
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
+Konča trenutni potek. Ne ustavi drugih tokov, ki potekajo vzporedno. Ko potek pride do dogodka Konec in ni nobenih vzporednih tokov, se proces konča.
 
-#### Terminate End Event
+#### Dogodek Takojšnji konec
 
-Ends all flows. Process is subsequently ended.
+Konča vse tokove. Proces se zatem konča.
 
-### Gateways
+### Prehodi
 
-Gateways are displayed as diamonds.
+Prehodi so prikazani kot diamanti.
 
 #### Exclusive Gateway
 
