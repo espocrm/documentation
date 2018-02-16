@@ -18,9 +18,9 @@ You can print fields of the record as well as fields of related records by utili
 
 Examples: 
 
-* `{{name}}` – The name of the record;
+* `{{name}}` – Name of the record;
 * `{{assignedUserName}}` - Assigned User;
-* `{{account.name}}` - The of the related account.
+* `{{account.name}}` - Name of the related account.
 
 It's possible to print image fields:
 ```
