@@ -27,7 +27,7 @@ It's possible to print image fields:
 <img src="{{file imageId}}">
 ```
 
-where `imageId` – the name of custom image field in Quote entity concatenated with the suffix Id.
+where `imageId` – the name of custom image field named `image`, concatenated with the suffix `Id`.
 
 To display float numbers w/o fractional part (as integer) use the following expression:
 ```
