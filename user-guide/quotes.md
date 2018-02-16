@@ -59,14 +59,14 @@ It's possible to print image fields:
 ```
 <img src="{{file imageId}}">
 ```
-where `imageId` – the name of custom image field in Quote entity concatenated with the suffix `Id`.
+where `imageId` – the name of custom image field, concatenated with the suffix `Id`.
 
 For product line item:
 ```
 <img src="{{file product.photoId}}">
 ```
 
-To display float numbers (like quantity, unitPrice etc.) w/o fractional part (as integer) use following expressions (since version 4.8.3):
+To display float numbers (like quantity, unitPrice etc.) w/o fractional part (as integer) use the following expression (since version 4.8.3):
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```

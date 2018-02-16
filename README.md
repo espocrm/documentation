@@ -36,6 +36,7 @@
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
 * [Markdown syntax](https://github.com/espocrm/documentation/blob/master/user-guide/markdown.md)
+* [Printing to PDF](https://github.com/espocrm/documentation/blob/master/user-guide/printing-to-pdf.md)
 * Misc
   * [Browser support](https://github.com/espocrm/documentation/blob/master/user-guide/browser-support.md)
 
