@@ -59,7 +59,7 @@ It's possible to print image fields:
 ```
 <img src="{{file imageId}}">
 ```
-where `imageId` – the name of custom image field in Quote entity concatenated with the suffix `Id`.
+where `imageId` – the name of custom image field, concatenated with the suffix `Id`.
 
 For product line item:
 ```
