@@ -27,7 +27,7 @@ It's possible to print image fields:
 <img src="{{file imageId}}">
 ```
 
-where imageId – the name of custom image field in Quote entity concatenated with the suffix Id.
+where `imageId` – the name of custom image field in Quote entity concatenated with the suffix Id.
 
 To display float numbers w/o fractional part (as integer) use the following expression:
 ```
@@ -39,6 +39,6 @@ Custom formatting for currency values:
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
 
-Value 10000.5 will be printer as 10 000,50.
+Value `10000.5` will be printer as `10 000,50`.
 
 To display text fileds (multiline) use triple braces: ```{{{description}}}```.
