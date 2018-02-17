@@ -4,9 +4,9 @@ Orodje Upravljanje poslovnih procesov (BPM) vam omogoča, da v EspoCRM oblikujet
 
 ![Primer BPM-ja](../_static/images/administration/bpm/bpm-1.png)
 
-### Kako se razlikuje od orodja Potek dela
+### Kako se razlikuje od orodja Delovni tokovi
 
-Orodje Potek dela je namenjeno avtomatizaciji preprostih poslovnih pravil, brez zaporednih elementov, ki prikazujejo potek, ko pač ni potrebno grafično prikazati poteka.
+Orodje Delovni tokovi je namenjeno avtomatizaciji preprostih poslovnih pravil, brez zaporednih elementov, ki prikazujejo potek, skratka ko ni potrebno grafično prikazati poteka dela.
 
 Orodje BPM je namenjeno kompleksnejšim poslovnim potekom, pri katerih so lahko tudi razhajajoči in stekajoči se tokovi, zamiki izvajanja, posegi uporabnika. Pogled s prikazom poteka omogoča, da je poslovni proces bolj razumljiv človeku; dnevnik omogoča, da lahko vidite, kako je proces potekal.
 
@@ -76,133 +76,134 @@ Konča vse tokove. Proces se zatem konča.
 
 Prehodi so prikazani kot diamanti.
 
-#### Exclusive Gateway
+#### Ekskluzivni prehod
 
-Can diverge or converge flows.
+Lahko razcepi ali združi tokove.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+Ko pride do razcepitve, prehod določi posamični tok (pot), ki bo izbran glede na vnaprej določene pogoje. Prvi izpolnjeni pogoj določi tok, drugi pogoji se ne upoštevajo. Možno je določiti privzeti tok. Privzeti tok je izbran, če ni izpolnjen noben pogoj. Privzeti tok je označen s poševnico.
 
-In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
+Ko se tokovi združijo, prehod zgolj usmeri tok na izhodni element. Potem ko tok preide skozi prehod, se ta ne zapre, zato se vzporedni tokovi ne bodo združili v en sam tok.
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![ekskluzivni prehod - razcepitev](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![ekskluzivni prehod - združitev](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
-#### Inclusive Gateway
+#### Inkluzivni prehod
 
-Can diverge or converge flows.
+Lahko razcepi ali združi tokove.
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+Ko pride do razcepitve, prehod lahko preusmeri tok na enega ali več vzporednih tokov (poti), odvisno od izpolnjenih pogojev vsakega toka. Privzeti tok je izbran, če ni izpolnjen noben pogoj. Privzeti tok je označen s poševnico.
 
-If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
+Če je potrebno združiti vzporedne tokove, ki so nastali zaradi razcepitvenega inkluzivnega prehoda, morate uporabiti združitveni inkluzivni prehod. Ta bo počakal na vse vhodne tokove in bo šele nato usmeril tok na izhodni element.
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+![inkluzivni prehod](../_static/images/administration/bpm/gateway-inclusive.png)
 
-Note: Diverging and converging gateways must be balanced.
+Opomba: Razcepitveni in združitveni prehodi morajo biti v ravnovesju.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Opomba: Če je eden od vzporednih tokov iz določenega razloga končal svojo pot, potem razcepitveni prehod nikoli ne bo aktiviran. Proces se bo ustavil. Ogibajte se takšnih diagramov poteka, ki lahko povzročijo takšno težavo.
 
-#### Parallel Gateway
+#### Vzporedni prehod
 
-Can diverge or converge flows.
+Lahko razcepi ali združi tokove.
 
-In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
+Ko pride do razcepitve, razcepi tok v več vzporednih tokov. Za ta tip prehoda ni nobenih parametrov.
 
-In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
+Ko pride do združitve, prehod počaka na vse vhodne tokove in šele nato usmeri tok na naslednji izhodni element.
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+![vzporedni prehod](../_static/images/administration/bpm/gateway-parallel.png)
 
-Note: Diverging and converging gateways must be balanced.
+Opomba: Razcepitveni in združitveni prehodi morajo biti v ravnovesju.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Opomba: Če je eden od vzporednih tokov iz določenega razloga končal svojo pot, potem razcepitveni prehod nikoli ne bo aktiviran. Proces se bo ustavil. Ogibajte se takšnih diagramov poteka, ki lahko povzročijo takšno težavo.
 
-#### Event Based Gateway
+#### Z dogodki sprožen prehod
 
-Can only diverge flows.
+Lahko samo razcepi tokove.
 
-It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
+Ustavi tok, dokler ni sprožen kateri koli od izhodnih dogodkov. Sproženi dogodek določi en sam tok. Drugi izhodni dogodki so zavrnjeni.
 
-Only intermediate events can be on the other end of outgoing sequence flows.
+Na drugi strani izhodnih zaporednih tokov so lahko samo nadaljevalni dogodki.
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+![z dogodki sprožen prehod](../_static/images/administration/bpm/gateway-event-based.png)
 
-### Activities
+### Aktivnosti
 
-Activities are displayed as rounded rectangles.
+Aktivnosti so prikazane kot zaobljeni pravokotniki.
 
-#### Task
+#### Naloga
 
-Task can execute following the actions:
+Naloga lahko izvrši naslednje akcije:
 
-* Create Record - creates new record of any entity type;
-* Create Related Record - creates new record related to the target record;
-* Update Target Record;
-* Update Related Record - updates the record or records related to the target record;
-* Update Created Record - updates specific field of any record created in the current process;
-* Update Process Record - can be used to assign the process to specific user or team;
-* Link to Another Record - links the target record with a specified record;
-* Unlink from Another Record - unlinks the target record from the specified record;
-* Apply Assignment Rule - assigns the target record, the process record or any record created by the process according to the specific rule;
-* Create Notification - creates in-app notification for specific users;
-* Make Followed - makes specific users follow the target record, the process record or any record created by the process;
-* Run Service Action - runs custom service actions implemented by developers.
+* Ustvari zapis - ustvari nov zapis katerega koli tipa entitete;
+* Ustvari povezani zapis - ustvari nov zapis, ki je povezan s ciljnim zapisom;
+* Posodobi ciljni zapis;
+* Posodobi povezani zapis - posodobi zapis ali zapise, ki so povezani s ciljnim zapisom;
+* Posodobi ustvarjeni zapis - posodobi določeno polje katerega koli zapisa, ki je bil ustvarjen v trenutnem procesu;
+* Posodobi zapis procesa - lahko se uporabi za dodelitev procesa določenemu uporabniku ali timu;
+* Poveži z drugim zapisom - poveže ciljni zapis z izbranim zapisom;
+* Prekini povezavo z drugim zapisom - povzroči, da ciljni zapis ni več povezan z izbranim zapisom;
+* Uporabi dodelitveno pravilo - določi ciljni zapis, zapis procesa ali kateri drug zapis, ki ga je ustvaril proces glede na določeno pravilo;
+* Ustvari obvestilo - ustvari obvestilo znotraj aplikacije za določene uporabnike;
+* Ustvari sledenje - povzroči, da določeni uporabniki sledijo ciljni zapis, zapis procesa ali kateri drug zapis, ki ga je ustvaril proces;
+* Zaženi storitveno akcijo - zažene storitvene akcije po meri, ki jih izdelajo razvijalci.
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
+Akcije, ki so na voljo za nalogo, so skoraj enake tistim pri Delovnem toku. Poglejte si več podrobnosti glede [akcij pri delovnem toku](workflows.md#actions).
 
-#### Send Message Task
+#### Pošlji sporočilo z nalogo
 
-Sends email message to specific recipient.
+Pošlje e-poštno sporočilo določenemu prejemniku.
 
-#### User Task
+#### Uporabnikova naloga
 
-Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
+Omogoča prilagodljiv sistem uporabnikove interakcije. Ustavi izvajanje, dokler uporabnik (določen eksplicitno ali z dodelitvenim pravilom) ne opravi naloge. V sistemu bo ustvarjen zapis Proces uporabnikove naloge.
+Originalno so na voljo trije tipi akcij: Sprejmi, Preglej, Opravi.
 
-* Approve type requires the user to chose between 'Approved' and 'Declined'.
-* Review type gives only one option: 'Reviewed'.
-* Accomplish type has two options: 'Completed' and 'Failed'.
+* Tip Sprejmi zahteva, da uporabnik izbere med 'Sprejeto' in 'Zavrnjeno'.
+* Tip Preglej ima samo eno možnost: 'Pregledano'.
+* Tip Opravi ima dve možnosti: 'Opravljeno' in 'Neopravljeno'.
 
 
-The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
+Uporabnik, ki je določen ustvarjenemu zapisu Proces uporabnikove naloge, bo prejemal obvestila znotraj aplikacije. Administrator lahko omogoči tudi e-poštna obvestila.
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+Uporabniki lahko prav tako dodajo element Proces uporabnikove naloge na svojo nadzorno ploščo, da lahko spremljajo dejanski proces svojih nalog.
 
-It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
+Obstaja možnost branja rešitve opravljene uporabnikove naloge znotraj razcepitvenih prehodov ali pogojnih dogodkov, s čimer se naredi ustrezna razcepitev v poteku procesa.
 
-#### Script Task
+#### Skriptna naloga
 
-Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available within the process.
+Zažene skript v [Espo-formula](formula.md) jeziku. Vse določene spremenljivke (`$imeSpremenljivke`) bodo shranjene in na voljo znotraj procesa.
 
-### Flows
+### Tokovi
 
-#### Sequence Flow
+#### Zaporedni tok
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+Predstavljen je z neprekinjeno puščico. Prikazuje zaporedje, v katerem bodo elementi procesa izvršeni.
 
-## Conditions
+## Pogoji
 
-Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
+Pogojni dogodki - ekskluzivni in inkluzivni razcepitveni prehodi imajo pogoje, ki določajo potek procesa.
 
-Through UI there is an ability to check conditions for the following records:
+V uporabniškem vmesniku se lahko označi pogoje za naslednje zapise:
 
-* Target record;
-* Records related to the target through many-to-one and children-to-parent relationships;
-* Records created by the process via tasks;
-* User task records, which allows checking the resolution.
+* Ciljni zapis;
+* Zapisi, ki so povezani s ciljem z relacijami več proti eden in otroci proti starši;
+* Zapisi, ki jih je ustvaril proces s pomočjo nalog;
+* Zapisi uporabnikovih nalog, ki omogočajo pregled rešitev naloge.
 
-It's also possible to define conditions in [Espo-formula](formula.md) language.
+Pogoje je prav tako možno določiti v [Espo-formula](formula.md) jeziku.
 
-Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
+Pogoji v orodju BPM so enaki kot pri orodju Delovni tokovi. Poglejte si več podrobnosti o [pogojih delovnega toka](workflows.md#conditions).
 
-## Examples
+## Primeri
 
-### Example 1
+### Primer 1
 
-![Example 1](../_static/images/administration/bpm/example-1.png)
+![Primer 1](../_static/images/administration/bpm/example-1.png)
 
-### Example 2
+### Primer 2
 
-![Example 2](../_static/images/administration/bpm/example-2.png)
+![Primer 2](../_static/images/administration/bpm/example-2.png)
 
-### Example 3
+### Primer 3
 
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![Primer 3](../_static/images/administration/bpm/example-3.png)
