@@ -18,7 +18,7 @@ When the new case is created by a portal user it's not assigned to any user. By 
 
 To prevent overlooking of new cases users can add Case entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new case.
 
-Note: If there is no portal user accociated with linked contact then customer won't receive email notifications about updates in the Stream. You need to use emails for communication.
+Note: If there is no portal user accociated with a linked contact then customer won't receive email notifications about updates in the Stream. You need to use emails for communication.
 
 ### Email-to-Case
 
