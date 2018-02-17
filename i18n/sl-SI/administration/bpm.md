@@ -60,7 +60,7 @@ Ta dogodek ustavi potek, dokler ni izpolnjen vnaprej določeni pogoj.
 
 Ta dogodek ustavi potek in čaka tako dolgo, kot to določajo parametri dogodka.
 
-Za kompleksnejše časovne nastavitve se lahko okorisite [formule](formula.md). Skripi s formulami bi morali vrniti vrednost Datum-Čas (v UTC časovnem pasu). Ko nastopi vnaprej določeni čas, se tok nadaljuje z naslednjim elementom.
+Za kompleksnejše časovne nastavitve se lahko okorisite [formule](formula.md). Skripti s formulami bi morali vrniti vrednost Datum-Čas (v UTC časovnem pasu). Ko nastopi vnaprej določeni čas, se tok nadaljuje z naslednjim elementom.
 
 Z uporabo funkcije datetime\closest je mogoče nastaviti števec na določen čas v prihodnosti, na primer na začetek naslednjega delovnega dne.
 
