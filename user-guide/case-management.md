@@ -8,6 +8,7 @@ New cases are supposed to be created by the following scenarios:
 
 * Manually by CRM users;
 * Manually by users of the customer portal;
+* Through the API (e.g. through the web form);
 * Automatically when a new email came to a specific mailbox.
 * Automatically by a Workflow rule.
 
