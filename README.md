@@ -37,9 +37,9 @@
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
-* [Markdown syntax](https://github.com/espocrm/documentation/blob/master/user-guide/markdown.md)
-* [Printing to PDF](https://github.com/espocrm/documentation/blob/master/user-guide/printing-to-pdf.md)
 * Misc
+  * [Printing to PDF](https://github.com/espocrm/documentation/blob/master/user-guide/printing-to-pdf.md)
+  * [Markdown syntax](https://github.com/espocrm/documentation/blob/master/user-guide/markdown.md)
   * [Browser support](https://github.com/espocrm/documentation/blob/master/user-guide/browser-support.md)
 
 ### Development
