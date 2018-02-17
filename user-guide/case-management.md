@@ -13,13 +13,13 @@ New cases are supposed to be created by the following scenarios:
 
 Case record has a stream that can be utilized for a communication between customer and service. CRM users can also make internal posts that won't be visible in a customer portal. 
 
-When the new case is created by a portal user it's not assigned to any user. By utilizing Workflows administrator can create rule that will notify certain users about a new case in the system. Workflows also provides an ability to apply assignment rule to new cases, i.e. Round-Robin and Least-Busy rules. For more complex business flows it's recommended to utilize BPM tool.
+When the new case is created by a portal user it's not assigned to any user. By utilizing [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md) administrator can create rule that will notify certain users about a new case in the system. Workflows also provides an ability to apply assignment rule to new cases, i.e. Round-Robin and Least-Busy rules. For more complex business flows it's recommended to utilize [BPM tool](https://github.com/espocrm/documentation/blob/master/administration/bpm.md).
 
 To prevent overlooking of new cases users can add Case entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new case.
 
 ### Email-to-Case
 
-Administrator can set up Group Email Account that will create a new case on each new inbound email. For more information see here.
+Administrator can set up Group Email Account that will create a new case on each new inbound email. For more information [see here](https://github.com/espocrm/documentation/blob/master/administration/emails.md).
 
 ### Knowledge Base
 
@@ -27,5 +27,4 @@ Users can relate knowledge base articles to the case record.
 
 ### Customer Portal
 
-Administrator can create a portal where customers will be able to create cases.
-
+Administrator can create a [portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md) where customers will be able to create cases.
