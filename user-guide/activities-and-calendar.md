@@ -18,7 +18,7 @@ Accounts, Contacts, Leads, Opportunities, Cases have the Activities panel on the
 
 There are 3 types of attendees supported: Users, Contacts, Leads. For each attendee it's possible to specify acceptance status: Accepted, Tentative, Declined. There is an ability to send invitation emails to attendees by clicking the button in the top-right corner. Attendees will be able to set their acceptance status by clicking on a corresponding link in the email.
 
-### Reminder
+### Reminders
 
 There are two types of reminders: Popup (in-app message) and Email.
 
@@ -30,9 +30,9 @@ Default duration can be changed by administrator at Administration > Entity Mana
 
 Date Start and Date Due fields are not required. Dates can be specified with or without time parts.
 
-### Reminder
+### Reminders
 
-Reminder for the task record will be available only if Date Due is specified and it has time part.
+Reminders for the task record will be available only if Date Due is specified and it has time part.
 
 ## Calendar
 
