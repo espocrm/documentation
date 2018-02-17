@@ -49,7 +49,6 @@ Users can add Calendar on their dashboard.
 
 It's possible to view calendar of another user (is you have an access determined by roles). Calendar button is available on the user's detail view.
 
-## Shared Calendar
+### Shared Calendar
 
 Shared calendar is available only in Timeline view. It allows to view events of multiple users.
-
