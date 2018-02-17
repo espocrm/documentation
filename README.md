@@ -34,6 +34,7 @@
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
 * [Sales management](https://github.com/espocrm/documentation/blob/master/user-guide/sales-management.md)
 * [Case management](https://github.com/espocrm/documentation/blob/master/user-guide/case-management.md)
+* [Activities and Calendar](https://github.com/espocrm/documentation/blob/master/user-guide/activities-and-calendar.md)
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
