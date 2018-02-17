@@ -32,6 +32,7 @@
 ### User Guide
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
+* [Sales management](https://github.com/espocrm/documentation/blob/master/user-guide/sales-management.md)
 * [Case management](https://github.com/espocrm/documentation/blob/master/user-guide/case-management.md)
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
