@@ -1,12 +1,12 @@
 # EspoCRM Documentation
 
 ### Administration
-* [Server Configuration](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md)
+* [Server configuration](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md)
   * [Apache](https://github.com/espocrm/documentation/blob/master/administration/apache-server-configuration.md)
   * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
 * [Installation](https://github.com/espocrm/documentation/blob/master/administration/installation.md)
 * [Upgrading](https://github.com/espocrm/documentation/blob/master/administration/upgrading.md)
-* [Roles Management (access control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
+* [Roles management (access control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
 * [Emails](https://github.com/espocrm/documentation/blob/master/administration/emails.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
@@ -32,7 +32,7 @@
 ### User Guide
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
-* [Case Management](https://github.com/espocrm/documentation/blob/master/user-guide/case-management.md)
+* [Case management](https://github.com/espocrm/documentation/blob/master/user-guide/case-management.md)
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
@@ -45,9 +45,9 @@
 * [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
 * [ORM: How to manage entities](https://github.com/espocrm/documentation/blob/master/development/orm.md)
 * [Metadata](https://github.com/espocrm/documentation/blob/master/development/metadata.md)
-* [Custom Views](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
+* [Custom views](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
 * [Link Multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
-* [Extension Packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
+* [Extension packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
 * [Creating custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
 * [Defining new funtions for Formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
