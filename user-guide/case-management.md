@@ -18,6 +18,8 @@ When the new case is created by a portal user it's not assigned to any user. By 
 
 To prevent overlooking of new cases users can add Case entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new case.
 
+Note: If there is no portal user accociated with linked contact then customer won't receive email notifications about updates in the Stream. You need to use emails for communication.
+
 ### Email-to-Case
 
 Administrator can set up Group Email Account that will create a new case on each new inbound email. For more information [see here](https://github.com/espocrm/documentation/blob/master/administration/emails.md).
@@ -29,3 +31,5 @@ Users can relate knowledge base articles to the case record.
 ### Customer Portal
 
 Administrator can create a [portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md) where customers will be able to create cases.
+
+Since portal users automatically follow their cases, they will receive email notifications about new messages in the Stream.
