@@ -14,33 +14,33 @@
 
 Существует возможность добавлять поля custon для объекта Quote Item с помощью Entity Manager.
 
-## Templates
+## Шаблоны
 
-By default there are two available templates: Quote and Invoice. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
+По умолчанию есть два доступных шаблона: Quote и Invoice. Вы можете создавать новые шаблоны (Список котировок > Меню справа вверху > Шаблоны), а также редактировать существующие.
 
-For more precise editing it's recommended to use Code View mode.
+Для более точного редактирования рекомендуется использовать режим просмотра кода.
 
-You can print fields of Quote record as well as fields of related records by utilizing placeholders in your template.
+Вы можете печатать поля записи котировок, а также поля соответствующих записей, используя заполнители в вашем шаблоне.
 
-Examples:
-`{{accountName}}` – Account name,
+Примеры:
+`{{accountName}}` – Имя аккаунта,
 
-`{{{billingAddressStreet}}}` – street,
+`{{{billingAddressStreet}}}` – адрес,
 
-`{{account.type}}` – type of related Account,
+`{{account.type}}` – тип учетной записи,
 
-`{{assignedUser.lastName}}` – last name of the assigned user.
+`{{assignedUser.lastName}}` – последнее имя присвоенное пользователю.
 
-If your line item is a product you can print product’s fields. 
+Если это продукт, вы можете печатать поля продукта.
 
-Examples:
+Примеры:
 `{{product.length}}`, 
 
 `{{product.color}}`.
 
-Length and color are custom fields of Product entity in examples.
+Длина и цвет - это пользовательские поля объекта Product в примерах.
 
-Looping through quote items:
+Котировка по пунктам:
 
 ```
 <!-- {{#each itemList}} -->
@@ -54,52 +54,52 @@ Looping through quote items:
 <!-- {{/each}} -->
 ```
 
-It's possible to print image fields: 
+Можно напечатать поля изображения:
 
 ```
 <img src="{{file imageId}}">
 ```
-where `imageId` – the name of custom image field, concatenated with the suffix `Id`.
+где `imageId` - имя поля настраиваемого изображения в элементе Quote, объединенное с суффиксом `Id`.
 
-For product line item:
+Для продукта:
 ```
 <img src="{{file product.photoId}}">
 ```
 
-To display float numbers (like quantity, unitPrice etc.) w/o fractional part (as integer) use the following expression (since version 4.8.3):
+Для отображения различных чисел (количество, unitPrice и т. д.), без дробной части (как целое) используйте следующие выражения (начиная с версии 4.8.3):
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
-Custom formatting for currency values (since version 4.8.3):
+Пользовательское форматирование значений валюты (начиная с версии 4.8.3):
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
-Value `10000.5` will be printer as `10 000,50`. 
+Значение `10000.5` нужно напечатать вот так: `10 000,50`.
 
-To display text fileds (multiline) use triple braces: `{{{description}}}`.
+Для отображения текстовых полей (многострочных) используйте тройные фигурные скобки: `{{{description}}}`.
 
-## Print to PDF
+## Печать в PDF
 
-Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template.
+Котировки могут быть напечатаны в формате PDF. Это действие доступно в раскрывающемся списке рядом с кнопкой «Редактировать» в подробном представлении котировки. Затем вам будет предложено выбрать «Шаблон».
 
 ## Email Quote
 
-Quote PDF can be send in email as an attachment. Open quote record, click dropdown next to Edit button and the click Email PDF.
+Котировку PDF можно отправить по электронной почте в виде вложения. Открыть запись цитаты, щелкнуть выпадающий список рядом с кнопкой «Редактировать» и щелчком по электронной почте «PDF».
 
-## Automatic numbering
+## Автоматическая нумерация
 
-You can create a Number field via Entity Manager for Quote entity type. Administration > Entity Manager > Quote > Fields > Add Filed > Number. Then you need to place it in on detail view using Layout Manager.
+Вы можете создать поле Number через Entity Manager для типа объекта Quote. Администрирование > Менеджер сущностей > Цитата > Поля > Добавить > Номер. Затем вам нужно поместить его в подробное представление с помощью менеджера компоновки.
 
-The value will be incremented by every new quote. There is an ability to specify the next number as well as prefix.
+Значение будет увеличено на каждую новую котировку. Существует возможность указать следующий номер, а также префикс.
 
-## Default tax
+## Налог по умолчанию
 
-Available since EspoCRM 4.8.0.
+Доступно с EspoCRM 4.8.0.
 
-1. Specify default Tax record at Administration > Entity Manager > Quotes > fields > Tax > Default.
-2. Specify default tax rate at Administration > Entity Manager > Quotes > fields > Tax Rate > Default.
+1. Укажите учетную запись по умолчанию в Administration > Entity Manager > Quotes > fields > Tax > Default.
+2. Укажите ставку налога по умолчанию в Administration> Entity Manager > Quotes > fields > Tax Rate > Default.
 
-## Invoices
+## Счета
 
-Quote can be treated as an invoice if its status became `Approved`. Then _Date Invoiced_, _Invoice Number_ fields show up. You can use different template for invoices for printing.
+Котировка может рассматриваться как счет, если ее статус стал «Подтвержден». Появляются поля _Date Invoiced_, _Invoice Number_. Вы можете использовать другой шаблон счетов для печати.
