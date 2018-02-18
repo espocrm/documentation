@@ -51,7 +51,7 @@ Możesz ustawić **podpis wiadomości email** w Preferencjach.
 
 ## Folder Email
 
-Użytkownicy mogą tworzyć swoje własne foldery email, aby umieszczać tam niektóre ze swoich wiadomości. Lista dostępnych folderów jest widoczna po lewej stronie strony Wiadomości Email. Aby stworzyć lub edytować folder postępuj następująco Wiadomości Email > rozwijane menu w prawym górnym rogu > Foldery. `Pomiń Powiadomienia` oznacz, żę nie będziesz powiadamiany o przyjściu nowej wiadomości, która trafi do określonego folderu. Filtry poczty umożliwiają automatyczne umieszczanie wiadomości email w w folderach według określonych kryteriów.
+Użytkownicy mogą tworzyć swoje własne foldery email, aby umieszczać tam niektóre ze swoich wiadomości. Lista dostępnych folderów jest widoczna po lewej stronie strony Wiadomości Email. Aby stworzyć lub edytować folder postępuj następująco Wiadomości Email > rozwijane menu w prawym górnym rogu > Foldery. `Pomiń Powiadomienia` oznacz, że nie będziesz powiadamiany o przyjściu nowej wiadomości, która trafi do określonego folderu. Filtry poczty umożliwiają automatyczne umieszczanie wiadomości email w folderach według określonych kryteriów.
 
 ## Filtry Wiadomości Email
 
