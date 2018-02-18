@@ -1,18 +1,17 @@
-# Maps
+# Zemljevidi
 
-## How to show the map based on an address field
+## Kako prikazati zemljevid glede na informacije v polju Naslov
 
-Every Address field has its corresponding Map field. All you need is to put it on Detail layout. It uses Google Maps service.
+Vsako polje Naslov ima tudi ustrezno polje Zemljevid. Vse, kar morate storiti, je to, da ga namestite na postavitev Podrobnosti. Uporablja storitev Google Zemljevidi.
 
-`Administration > Layout Manager > Choose entity (Account, Contact, Lead or custom one) > Detail > Drag & Drop Map field.`
+`Administracija > Upravljalnik postavitev > Izberite entiteto (Račun, Kontakt, Sled ali po meri) > Podrobnosti > Povlecite in spustite polje Zemljevid.`
 
-Make the cell wide using the minus sign.
+Razširite polje z uporabo znaka minus.
 
-You can also configure the height of your field.
+Prav tako lahko spremenite višino svojega polja.
 
-`Administration > Entity Manager > Choose entity > Fields > find the map field and click on it > edit the height and save.`
+`Administracija > Upravljalnik postavitev > Izberite entiteto > Polja > poiščite polje Zemljevid in kliknite nanj > uredite višino in shranite.`
 
-## Api Key
+## Api ključ
 
-Since EspoCRM version 4.2.0 you need to specify Api Key to use Google Maps (Administration > Integration > Google Maps).
-
+Od EspoCRM verzije 4.2.0 dalje morate določiti Api ključ, če želite uporabljati Googlje Zemljevidi (Administracija > Integracija > Google Zemljevidi)
