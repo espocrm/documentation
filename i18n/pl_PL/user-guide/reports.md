@@ -1,24 +1,24 @@
-# Reports
+# Raporty
 
-Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Funkcjonalność raportów jest dostępna w [Zaawansowany pakiet](https://www.espocrm.com/extensions/advanced-pack/).
 
-There are two types of reports: List and Grid.  
+Są dwa rodzaje raportów: Lista i Siatka.  
 
-## List Reports
+## Lista raportów
 
-List report results the list of records that meet the specified criteria.
+Lista raportów wyświetla listę rekordów, które spełniają określone kryteria.
 
-To create new list report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at List Report section.
+Aby stworzyć nową listę raportów naciśnij na zakładkę Raporty a następnie naciśnij przycisk Stwórz Raport. Wybierz potrzebny rodzaj jednostki i następnie naciśnij Stwórz Raport w sekcji Lista Raportów.
 
-At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column e.g. width and align.
+W polu _Columns_ wybierz pola, które chciałbyś wyświetlić. Poniżej możesz określić parametry wyświetlania dla każdej kolumny np. szerokość i wyrównanie.
 
-Choose needed sorting at _List Order_ field. 
+Wybierz sortowanie w polu _List Order_. 
 
-At _Filters_ section you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
+W sekcji _Filters_ możesz określić kryteria, które determinują jakie rekordy będą wylistowane w raporcie. Możesz używać operatorów logicznych 'OR' i 'AND'.
 
-_Runtime Filters_ allow you to specify different filters before you run the report.
+_Runtime Filters_ pozwalają określać inne filtry zanim uruchomisz raport.
 
-You can __export__ list report results to excel and csv formats.
+Możesz __export__ rezultaty z listy raportów do pliku CSV lub Excela.
 
 ## Grid Reports
 
@@ -42,48 +42,48 @@ Grid report allows displaying results in a chart form. There are following _char
 
 It's possible to __export__ grid report results to excel and csv formats.
 
-## Filters
+## Filtry
 
-### Field filter
+### Filtr polowy
 
-Simple to use type of filters. You can also pick fields of target entity as well as related entitites.
+Prosty typ filtru w użyciu. Możesz również wybrać pola docelowej jednostki tak samo jak powiązanych jednostek.
 
 ![Field filter](../_static/images/user-guide/reports/filter-field.png)
 
-### OR group
+### Wyrażenie OR
 
-OR means that at least one condition under the group must be met.
+OR oznacza, że co najmniej jeden z warunków musi zostać spełniony.
 
-![OR group](../_static/images/user-guide/reports/filter-or.png)
+![OR](../_static/images/user-guide/reports/filter-or.png)
 
-### AND group
+### Wyrażenie AND
 
-AND means that all conditions under the group must be met.
+AND oznacza, że wszystkie warunki muszą być spełnione.
 
-### NOT group
+### Wyrażenie NOT
 
-Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
+Umożliwia filtrowanie rekordy, które nie spełniają określonych kryteriów. Np. lista kont, które nie mają statusu Wygrane Zamknięte lub Stracone Zamknięte.
 
-![NOT group](../_static/images/user-guide/reports/filter-not.png)
+![NOT](../_static/images/user-guide/reports/filter-not.png)
 
-### Complex Expression
+### Złożone wyrażenia
 
-For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
+Dla bardziej zaawansowanych zastosowań. Możesz zastosować funkcje dla pewnej kolumny bazy danych i porównać ją z rezultatem wyrażenia [wzór](../administration/formula.md).
 
-Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
+Uwaga: Jeśli chcesz porównać proste ciągi znakowe powinieneś umieścić je w pojedyncze apostrofy `'some string'`.
 
-Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
+Uwaga: Funkcje przeznaczone do interakcji z jednostkami rekordów nie będą tutaj działać ponieważ wzór nie jest przeznaczony do określnych rekordów.
 
-![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
+![Filtr wyrażeń złożonych](../_static/images/user-guide/reports/filter-complex.png)
 
-## Displaying on dashboard
+## Wyświetlanie na panelu
 
-You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
+Każdy raport możesz wyświetlić w panelu. Aby to zrobić musisz dodać raport do szybkiego dostępu i następnie wybrać potrzebny raport w opcjach szybkiego dostępu.
 
-## Email Sending
+## Wysyłanie wiadomości email
 
-It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
+Możliwe jest zrobienie systemu do wysyłania raportów do określonych użytkowników w określonym czasie. Musi to być skonfigurowane dla każdego raportu indywidualnie.
 
-## Syncing with Target Lists
+## Synchronizowanie z listami docelowymi
 
-It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
+Możliwe jest synchronizowanie listy docelowych rezultatami listy raportów. Jest to wygodne dla masowych wiadomości e-mail, gdy chcesz wysyłać wiadomości tylko do osób, które spełniają kryteria w momencie wysyłania. Funkcja jest dostępna w widoku szczegółów każdej listy docelowej w panelu 'Synchronizuj z Raportami'.

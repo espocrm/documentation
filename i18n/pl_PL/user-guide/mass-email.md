@@ -1,85 +1,85 @@
-# Mass Email
+# Masowe Wiadomości Email
 
-## How to send mass email
+## Jak wysyłać  masowe wiadomości email
 
-You need to have at least one Target List with target records and Email Template in your crm.
+Musisz mieć przynajmniej jedną listę docelową z docelowymi rekordami i szablonem wiadomości email w swoim CRM.
 
-1. Create new Campaign with a status `Email` or `Newsletter`. Select one or a few target lists in `Target Lists` field.
-2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure _Status_ set as `Pending`.
+1. Stwórz nową akcję ze statusem `Email` lub `Newsletter`. Wybierz jedną lub kilka docelowych list w polu `Target Lists`.
+2. Po akcji jest tworzona masowa wiadomość email dla tej akcji: naciśnij przycisk plus w panelu Wiadomości Masowych. Ustaw _Date Start_ - kiedy wiadomość powinna być wysłana, i wybierz _Email Template_. Upewnij się, że _Status_ jest ustawiony na `Pending`.
 
-If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
+Jeśli wszystko jej poprawnie ustawione wiadomość email powinna zostać wysłana. Powinny być wysyłane porcjami co godzinę (możesz zmienić rozmiar porcji w Administracja > Wychodzące wiadomości Email). Administrator możę zmienić to przez aktualizację pola `Scheduling` z `Check Group Email Accounts` Zaplanowanych zadań.
 
-You can check if emails are sent in Log panel.
+W panelu Logów możesz sprawdzić czy wiadomości zostały wysłane.
 
-## Test what will be sent to recipients
+## Testowanie co zostanie wysłane do odbiorców
 
-Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
+Naciśnij prawym przyciskiem w wierszu masowe wiadomości email na _Mass Email_ panel następnie naciśnij _Send Test_.
 
-## Log
+## Zapisy
 
-In log you can see:
-* Sent email;
-* Emails opened by recipient;
-* Links clicked by recipient;
-* Recipients who opted out;
-* Bounced emails (not delivered to recipient).
+W zapisach możesz zobaczyć:
+* Wysłane wiadomości;
+* Wiadomości email otwarte przez odbiorców;
+* Odnośniki kliknięte przez odbiorców;
+* Odbiorcy, którzy zrezygnowali;
+* Odrzucone wiadomości (nie dostarczone do odbiorców).
 
-## Opt-out link
+## Link rezygnacji
 
-By default the system will append opt-out to all sent emails. But you can use custom one in your Email Template.
+Domyślnie system doda link z adresem do rezygnacji do wszystkich wysłanych wiadomości email. Możesz wykorzystać go zmienić na niestandardowy w swoim szablonie wiadomości.
 
-Example:
+Przykład:
 ```html
-<a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
+<a href="{optOutUrl}">Wypisz się z listy mailingowej.</a>
 ```
 
-Administrator can disable mandatory opt-out link being added by system at Administration > Outbound Emails.
+Administrator może wyłączyć obowiązkowy adres do rezygnacji dodawany przez system w Administracja > Wychodzące wiadomości.
 
-## Tracking URL
+## Link monitorujący
 
-If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
- and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
+Jeśli chcesz wiedzieć, czy odbiorca wszedł w link z Twojej wiadomości email, musisz stworzyć link monitorujący. Określić _Name_
+ oraz _URL_ gdzie powinien prowadzić Twój link. Następnie musisz wkleić wygenerowany kod do szablonu wiadomości.
 
- Example:
+ Przykład:
  ```html
-<a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
+<a href="{trackingUrl:55f2c87b09a220a78}">Wypróbuj naszą wersje demonstracyjną</a>
  ```
  
-## Target Lists
+## Listy docelowe
 
-Target Lists contains the lists of Accounts, Contacts, Leads and Users records. 
+Listy docelowe zawierają listy z Kontami, Kontaktami, Wskazówkami i Użytkownikami. 
 
-Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all result of search.
+Użytkownicy mogą wypełniać te listy ręcznie poprzez akcję _Select_ w panelu korespondencji w szczegółach Listy docelowej . Jest możliwość filtrowania oraz wybrania wszystkich wyszukanych rezultatów.
 
-## Populating target lists with Reports
+## Uzupełnianie listy docelowej z raportami
 
-[Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
+[Raporty](reports.md#syncing-with-target-lists) funkcja umożliwiająca uzupełnienie listy docelowej z rekordami spełniającymi określone kryteria.
 
-## Excluding Target Lists
+## Lista pominiętych osób
 
-Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
+Określanie listy pominiętych osób w listach docelowych aby uniknąć wysyłania masowych wiadomości do określonych odbiorców. Jeśli jest tam rekord z adresem email zawierającym się w liście pominiętych odbiorców, pierwszy rekord zostanie również pominięty.
 
-## Campaign Log
+## Dziennik kamapanii
 
-At Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+W dzienniku kampanii możesz zobaczyć adresy email do których została wysłana wiadomość, otworzyli wiadomości email, pominięte wiadomości, kto zrezygnował, oraz kto wszedł w link z wiadomości email. Jest możliwe wykorzystanie dziennika logów przez stworzenie Listy docelowej (rozwijane menu w prawym górnym narożniku panelu) bazującym na rekordach z dziennika. Na przykład, wybierasz tylko kontakty, które weszły w link z wiadomości (link monitorujący).
 
-## Troubleshooting
+## Rozwiązywanie problemów
 
-_For Administrators_
+_Dla Administratorów_
 
-#### What to do if emails are not sent out.
+#### Co zrobić jak wiadomość nie została wysłana.
 
-1. Check if _Send Test_ works. If does't work, then check if system SMTP settings are correct.
-2. Check if you have setup cron for your system.
-3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
+1. Sprawdź czy działa _Wysyłanie Testowe_. Jeśli nie działa, sprawdź, czy ustawienia systemu SMTP są poprawne.
+2. Sprawdź czy masz ustawiony Cron w swoim systemie.
+3. Sprawdź czy masz zaplanowane zadanie `Wyślij masowe wiadomości email` i jest ono `Aktywne` (Administracja > Zaplanowane Zadania > Wysyłanie Wiadomości Masowych). Sprawdź czy jest coś w dzienniku logowania.
 
 
-#### What if Tracking URLs has wrong url that does not lead to your crm.
+#### Co w przypadku gdy link docelowy jest zły i nie prowadzi do Twojego CRM.
 
-Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of your EspoCRM accessible from the external world.
+Sprawdź parametr 'siteUrl' w pliku `data/config.php`. Musi być ustawiony publiczny adres Twojego EspoCRM.
 
-#### Bounced emails are not being logged
+#### Odrzucone wiadomości email nie są zapisywane w dzienniku logowania
 
-Bounced emails can be handled by group email account only. Make sure that you have a group email account that monitores the mailbox bounced emails are sent to.
+Odrzucone wiadomości mogą być obsłużone tylko przez konta grupowych wiadomości email. Upewnij się, że masz konto grupowych wiadomości email, które monitoruje wysyłanie wiadomości.
 
-Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
+Niektóre serwery mailingowe mogą różnić się od standardowych, więc odrzucane wiadomości mogą nie być odróżniane.

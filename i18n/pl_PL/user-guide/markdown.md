@@ -1,86 +1,86 @@
-# Markdown syntax
+# Składnia Markdown
 
-Text fields support markdown syntax.
+Pola tekstowe wspierają składnie Markdown
 
-## Code
+## Kod
 ```
-`some text`
-```
-
-`some text`
-
-## Multiline code
-
-```
-``` some text ``` 
+`jakiś tekst`
 ```
 
-```
-some text
-```
+`jakiś tekst`
 
-## Strong text
+## Wieloliniowy kod
 
 ```
+``` jakiś tekst ``` 
+```
+
+```
+jakiś tekst
+```
+
+## Pogrubiony tekst
+
+```
+**jakiś tekst**
+```
+
 **some text**
-```
 
-**some text**
-
-## Emphasized text
+## Podkreślony tekst
 
 ```
-*some text*
+*jakiś tekst*
 ```
 
-*some text*
+*jakiś tekst*
 
-## Deleted text
-
-```
-~~some text~~
-```
-
-~~some text~~
-
-## Blockquote
+## Skreślony tekst
 
 ```
-> some
+~~jakiś tekst~~
+```
+
+~~jakiś tekst~~
+
+## Długi cytat
+
+```
+> jakiś
 > test
 ```
 
-> some
-> text
+> jakiś
+> tekst
 
 ## Link
 
 ```
-[link text](https://www.espocrm.com)
+[tekst odnośnika](https://www.espocrm.com)
 ```
-[link text](https://www.espocrm.com)
+[tekst odnośnika](https://www.espocrm.com)
 
-## Numbered list
+## Numerowana lista
 
 ```
+1. jakiś przedmiot
+2. inny przedmiot
+```
+
 1. Some item
 2. Another item
-```
 
-1. Some item
-2. Another item
-
-## Unnumbered list
+## Nienumerowana lista
 
 ```
-* Some item
-* Another item
+* Jakiś przedmiot
+* Inny przedmiot
 ```
 
-* Some item
-* Another item
+* Jakiś przedmiot
+* Inny przedmiot
 
-## Horizontal line
+## Linia pozioma
 
 ```
 ___
