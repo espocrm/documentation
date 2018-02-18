@@ -1,9 +1,9 @@
-#Configuring EspoCRM for B2C (Business-to-Client)
+#Konfiguracija EspoCRM za B2C (Podjetje s stranko)
 
-By default EspoCRM is configured to use for B2B business. But you can easily setup it for B2C.
+EspoCRM je privzeto konfiguriran za poslovanje B2B (podjetje s podjetjem). Vendar ga lahko preprosto nastavite za poslovanje B2C (podjetje s stranko).
 
-* Change `b2cMode` to true in your config file `data/config.php`. Since version 4.3.0 it can be configured at Administration > Seetings.
-* Remove *Account* tab from the navigation menu (Administration > User Interface).
-* Remove *Account* fields from your layouts (Administation > Layout Manager).
-* Disable an access to *Account* scope for all your roles (Administration > Roles).
-* Remove Account from picklists of all parent fields (Administration > Entity Manager > {Meeting/Call/Task/Email} > Fields > Parent).
+* Spremenite `b2cMode` na "true" v svoji konfiguracijski datoteki `data/config.php`. Od verzije 4.3.0 lahko to skonfigurirate v Administracija > Nastavitve.
+* Odstranite jeziček *Račun* iz navigacijskega menija (Administracija > Uporabniški vmesnik).
+* Odstranite polja *Račun* iz svojih postavitev (Administracija > Upravljalnik postavitev).
+* Onemogočite dostop do območja *Račun* za vse svoje vloge (Administracija > Vloge).
+* Odstranite Račun iz padajočih seznamov vseh nadrejenih polj (Administracija > Upravljalnik entitet > {Sestanek/Klic/Naloga/E-pošta} > Polja > Starš).

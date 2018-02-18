@@ -1,6 +1,6 @@
-# LDAP authorization for Active Directory
+# LDAP avtorizacija za Active Directory
 
-Example of configuration LDAP authorization for the Active Directory server. The full guide of configuration LDAP authorization is described [here](ldap-authorization.md).
+Primer konfiguracije LDAP avtorizacije za Active Directory strežnik. Podrobna navodila za konfiguracijo LDAP avtorizacije najdete [tukaj](ldap-authorization.md).
 
 ```
 Host: espo.local

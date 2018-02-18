@@ -1,3 +1,3 @@
-# Emails
+# E-pošta
 
-The document is moved to [here](emails.md).
+Dokument je bil prestavljen [sem](emails.md).
