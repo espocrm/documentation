@@ -4,9 +4,9 @@ Orodje Delovni tokovi (Workflows) je na voljo v [Naprednem paketu](https://www.e
 
 Delovni tokovi na preprost način avtomatizirajo vaš poslovni proces. To orodje lahko najdete v administracijskem panelu. Da bi ustvarili pravilo delovnega toka, morate določiti:
 
-* Ciljna entiteta - kateremu tipu entitete je delovni tok pripisan;
+* Ciljno entiteto - kateremu tipu entitete je delovni tok pripisan;
 * Tip sprožilca - kdaj se bo delovni tok sprožil;
-* Pogoji - da bi se delovni tok sprožil, morajo biti izpolnjeni pogoji;
+* Pogoje - da bi se delovni tok sprožil, morajo biti izpolnjeni pogoji;
 * Akcije - kaj je treba narediti, ko se delovni tok sproži.
 
 
