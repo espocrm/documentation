@@ -1,146 +1,146 @@
-# Workflows
+# Delovni tokovi
 
-Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Orodje Delovni tokovi (Workflows) je na voljo v [Naprednem paketu](https://www.espocrm.com/extensions/advanced-pack/).
 
-Workflows automate your business process an easy way. You can find it in the Administration panel. To create a workflow rule you need to define:
+Delovni tokovi na preprost način avtomatizirajo vaš poslovni proces. To orodje lahko najdete v administracijskem panelu. Da bi ustvarili pravilo delovnega toka, morate določiti:
 
-* Target Entity - what entity type workflow is applied to;
-* Trigger Type - when workflow will be triggered;
-* Conditions - conditions need to be met to trigger workflow;
-* Actions - what to do if workflow is triggered.
+* Ciljna entiteta - kateremu tipu entitete je delovni tok pripisan;
+* Tip sprožilca - kdaj se bo delovni tok sprožil;
+* Pogoji - da bi se delovni tok sprožil, morajo biti izpolnjeni pogoji;
+* Akcije - kaj je treba narediti, ko se delovni tok sproži.
 
 
-## Trigger Types
+## Tipi sprožilcev
 
-### After record created 
+### Po ustvarjenem zapisu
 
-Triggered only when a new record is created. If specified conditions are met then actions will be executed.
+Sproži se samo, ko je ustvarjen nov zapis. Če so navedeni pogoji izpolnjeni, se izvršijo akcije.
 
-### After record saved
+### Po shranjenem zapisu
 
-Triggered when a new record is created or an existing record is updated. If specified conditions are met then actions will be executed.
+Sproži se, ko je ustvarjen nov zapis oziroma je obstoječi zapis posodobljen. Če so navedeni pogoji izpolnjeni, se izvršijo akcije.
 
-For workflow rules with this type of trigger it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed then execute some actions.
+Za pravila delovnih tokov s tem tipom sprožilca je običajno, da imajo izbran pogoj, ki preverja, ali se je katero polje spremenilo. Na primer, če se je status Primera spremenil, potem se izvrši določena akcija.
 
-### Scheduled
+### Časovno določen
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. So you need also to create a list report.
+Sproži se glede na vnaprej določen urnik. Lahko ga nastavite, da se zažene vsak dan, vsak teden itn. Akcije bodo dodeljene zapisom, ki so ustvarjeni kot rezultat določenega poročila v obliki seznama. Torej morate ustvariti tudi poročilo v obliki seznama.
 
-Scheduling is specified in a crontab notation.
+Čas izvajanja se določi v obliki, primerni za crontab.
 
 ```
 * * * * * *
-| | | | | | 
-| | | | | +-- Year              (range: 1900-3000)
-| | | | +---- Day of the Week   (range: 1-7, 1 standing for Monday)
-| | | +------ Month of the Year (range: 1-12)
-| | +-------- Day of the Month  (range: 1-31)
-| +---------- Hour              (range: 0-23)
-+------------ Minute            (range: 0-59)
+| | | | | |
+| | | | | +-- Leto              (razpon: 1900-3000)
+| | | | +---- Dan v tednu       (razpon: 1-7, 1 pomeni ponedeljek)
+| | | +------ Mesec v letu      (razpon: 1-12)
+| | +-------- Dan v mesecu      (razpon: 1-31)
+| +---------- ura               (razpon: 0-23)
++------------ Minuta            (razpon: 0-59)
 ```
 
-### Sequential
+### Zaporedni
 
-Used rarely. Supposed to be run by another workflow. Provides an ability to make a complex logic. 
+Redko se uporablja. Mišljeno je, da ga zažene drug delovni tok. Omogoča vam, da ustvarite zapleteno logiko.
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+Opomba: Za zaporedne delovne tokove je priporočljivo uporabiti [orodje Upravljanje poslovnih procesov](bpm.md) namesto orodja Delovni tokovi.
 
-## Conditions
+## Pogoji
 
-You can specify conditions that must be met to trigger the workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
+Določite lahko pogoje, ki morajo biti izpolnjeni, da bi se sprožil neki delovni tok. Obstajata dva načina za določanje pogojev: v uporabniškem vmesniku za izdelavo pogojev in s formulo.
 
-### UI condition builder
+### Uporabniški vmesnik za izdelavo pogojev
 
-Some available condition types:
+Nekateri tipi pogojev, ki so na voljo:
 
-* _equals_ - the field equals to a specific value or a value of another field;
-* _was equal_ - the field was equal to a specific value before the workflow was triggered;
-* _not equals_ - the field does not equal to a specific value or a value of another field;
-* _was not equal_ - the field was not equal to specific value before the workflow was triggered;
-* _empty_ - the field value is empty;
-* _not empty_ - the field value is not empty;
-* _changed_ - the field was changed;
-* _not changed_ - the field was not changed.
+* _equals_ - polje je enako določeni vrednosti oziroma vrednosti nekega drugega polja;
+* _was equal_ - polje je bilo enako določeni vrednosti, preden je bil delovni tok sprožen;
+* _not equals_ - polje ni enako določeni vrednosti oziroma vrednosti nekega drugega polja;
+* _was not equal_ - polje ni bilo enako določeni vrednosti, preden je bil delovni tok sprožen;
+* _empty_ - vrednost polja je prazna;
+* _not empty_ - vrednost polja ni prazna;
+* _changed_ - polje je bilo spremenjeno;
+* _not changed_ - polje ni bilo spremenjeno.
 
-### Formula conditions
+### Pogoji s formulo
 
-Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
+Formula vam omogoča, da določite pogoje katere koli kompleksnosti. Da bi izvedeli več o sintaksi formul, si poglejte [ta članek](formula.md).
 
-Note: There should not be any `;` delimiter used in formula code when it determines a condition.
+Opomba: Ko določate pogoj, ne sme biti v formuli uporabljeno ločilo `;`.
 
-## Actions
+## Akcije
 
-### Send Email
+### Pošlji e-pošto
 
-System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
+Sistem bo poslal e-pošto, pri čemer bo uporabil določeno e-poštno predlogo. E-poštni naslov prejemnika je lahko vzet iz ciljnega zapisa, katerega koli povezanega zapisa, trenutnega uporabnika, sledilca, timskega uporabnika ali pa je ročno določen. E-pošta je lahko poslana takoj ali pa z določenim časovnim zamikom.
 
-### Create Record
+### Ustvari zapis
 
-System will create the new record of any entity type. If there is a relationship between the target record and creating record it's possible to relate records. 
+Sistem bo ustvaril nov zapis katerega koli tipa entitete. Če obstaja relacija med ciljnim zapisom in ustvarjenim zapisom, je možno narediti povezavo med zapisoma.
 
-There is an ability to define formula to calculate fields.
+Mogoče je tudi določili formulo, ki bo izračunala polja.
 
-### Create Related Record
+### Ustvari povezani zapis
 
-System will create the record related to the target record. It's possible to define formula to calculate fields.
+Sistem bo ustvaril zapis, ki bo povezan s ciljnim zapisom. Mogoče je določiti formulo, ki bo izračunala polja.
 
-### Update Target Record
+### Posodobi ciljni zapis
 
-Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
+Dopušča možnost spreminjanja določenih polj ciljnega zapisa. Mogoče je določiti formulo, ki bo izračunala polja.
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
+Če morate dodati nove elemente polju Poveži-Več (Link-Multiple), ne da bi izgubili obstoječe podatke (na primer Timi), morate uporabiti funkcijo formule entity\addLinkMultipleId. Primer: `entity\addLinkMultipleId('teams', 'teamId')`.
 
-### Update Related Record
+### Posodobi povezani zapis
 
-Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
+Omogoča spreminjanje določenih polj povezanega zapisa oziroma zapisov. Mogoče je določiti formulo, ki bo izračunala polja.
 
-### Link with Another Record
+### Poveži z drugim zapisom
 
-Relates the target entity with another specific entity. E.g. adds specific team to the record.
+Ciljno entiteto poveže z drugo izbrano entiteto. Na primer, zapisu doda določen tim.
 
-### Unlink with Another Record
+### Prekini povezavo z drugim zapisom
 
-Unrelates the target entity from another specific entity. E.g. removes a specific team from the record.
+Prekine povezavo ciljnega zapisa z drugo izbrano entiteto. Na primer, odstrani določen tim iz zapisa.
 
-### Apply Assignment Rule
+### Uporabi določitveno pravilo
 
-Assign the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
+Uporabniku določi ciljni zapis s porazdelitvenim pravilom. Na voljo sta dve pravili: krožno dodeljevanje in najmanj zaseden.
 
-* Round-Robin - users are choosen from the top to the bottom of a list (team) and then starting again.
-* Least-Busy - user who has fewer assigned records will be chosen for assignment.
+* Krožno dodeljevanje - uporabniki so izbrani od vrha proti dnu seznama (tima) in potem znova od vrha.
+* Najmanj zaseden - nalogo bo dobil uporabnik, ki mu je dodeljeno manj zapisov.
 
-_List Report_ - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
+_Poročilo v obliki seznama_ - Za porazdelitev Najmanj zaseden določi, kateri zapisi bodo uporabljeni za izračun števila dodeljenih zapisov. Na primer, za Primere moramo izbrati samo zapise z aktivnim statusom.
 
-### Create Notification
+### Ustvari obvestilo
 
-Notify specific users with the message. It's possible to use placeholders in message template: {entity} - target record, {user} - current user.
+Izbrane uporabnike obvesti s sporočilom. V predlogi sporočila je mogoče uporabiti polja s spremenljivkami. {entity} - ciljni zapis, {user} - trenutni uporabnik.
 
-### Make Followed
+### Določi sledenje
 
-Forces specific users to follow the target entity or a specificied related entity.
+Izbranim uporabnikom določi, da sledijo ciljni entiteti oziroma izbrani povezani entiteti.
 
-### Trigger Another Workflow
+### Sproži drug delovni tok
 
-Allows to make sequential workflows. It's possible to branch workflow by condition: you can setup the workflow to trigger two workflows with different conditions defined in that workflows.
+Omogoča ustvaritev zaporednih delovnih tokov. Obstaja možnost razcepitve delovnega toka z uporabo pogoja: delovni tok lahko nastavite tako, da sproži dva toka z različnima pogojema, definiranima v tema delovnima tokovoma.  
 
-It's possible to delay executing of sequential workflow. In the sequential wokflow you can define the condition that checks whether specifiec fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
+Mogoče je tudi nastaviti zakasnitev izvajanja zaporednega delovnega toka. V zaporednem delovnem toku lahko določite pogoj, ki preverja, ali so se določena polja spremenila, odkar je bil sprožen nadrejeni delovni tok, in sicer s tipoma pogojev _Changed_ in _Was Equal_.
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+Opomba: Za zaporedne delovne tokove je priporočljivo uporabiti [orodje Upravljanje poslovnih procesov](bpm.md) namesto orodja Delovni tokovi.
 
-### Run Service Action
+### Zaženi storitveno akcijo
 
-Allows to run specific service scripts. By default there are following actions available:
+Omogoča, da zaženete določene storitvene skripte. Originalno sta na voljo naslednji akciji:
 
-* Send Invitations - for Meetings/Calls;
-* Add Quote Items - for Quotes.
+* Pošlji povabila - za Sestanke/Klice;
+* Dodaj Navedene elemente - za Navedke.
 
-Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
+Razvijalci lahko napišejo svoje storitvene akcije. Preberite si [več podrobnosti](../development/workflow-service-actions.md).
 
-## Using Formula in Actions
+## Uporaba formule pri akcijah
 
-It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
+Možno je določiti formulo, ki bo izračunala polja za Ustvari zapis, Posodobi ciljni zapis, Ustvari povezani zapis, Posodobi povezani zapis. Da bi pri zadnjih dveh lahko imeli dostop do atributov ciljne entitete, bi morali uporabiti funkcijo `targetEntity\attribute`. Da bi imeli dostop do atributov ciljne entitete, ki je bila določena, preden je bil sprožen delovni tok, uporabite funkcijo `targetEntity\attributeFetched`.
 
-Example:
+Primer:
 ```
 name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
 ```
