@@ -78,7 +78,7 @@ Sistem bo poslal e-pošto, pri čemer bo uporabil določeno e-poštno predlogo. 
 
 Sistem bo ustvaril nov zapis katerega koli tipa entitete. Če obstaja relacija med ciljnim zapisom in ustvarjenim zapisom, je možno narediti povezavo med zapisoma.
 
-Mogoče je tudi določili formulo, ki bo izračunala polja.
+Mogoče je tudi določiti formulo, ki bo izračunala polja.
 
 ### Ustvari povezani zapis
 
@@ -131,7 +131,7 @@ Opomba: Za zaporedne delovne tokove je priporočljivo uporabiti [orodje Upravlja
 
 Omogoča, da zaženete določene storitvene skripte. Originalno sta na voljo naslednji akciji:
 
-* Pošlji povabila - za Sestanke/Klice;
+* Pošlji vabila - za Sestanke/Klice;
 * Dodaj Navedene elemente - za Navedke.
 
 Razvijalci lahko napišejo svoje storitvene akcije. Preberite si [več podrobnosti](../development/workflow-service-actions.md).
