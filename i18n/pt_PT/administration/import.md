@@ -20,7 +20,7 @@ Uma vez que selecionares um arquivo csv, serás capaz de ver como ele deveria se
 
 Clica no botão _Próximo_ para seguir para o _Passo 2_.
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
 
 ## Passo 2
 
@@ -32,7 +32,7 @@ Após completar a importação tu serás capaz de reverter registros criados, ve
 
 Clica no botão _Executar Importação_ para seguir. Pode levar algum tempo até que o processo de importação seja finalizado. Se precisares de importar uma grande quantidade de registros (dependendo das configurações do servidor, normalmente mais que 200 registros) precisas de ter a certeza que o parâmetro php 'set_time_limit' tem tamanho suficiente.
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
 ## Como importar para Listas Destino
 

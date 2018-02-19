@@ -24,7 +24,7 @@ _Runtime Filters_ позволяют вам указывать разные фи
 
 В отчете по сетке суммируются значения, сгруппированные по указанным полям. Эти отчеты могут отображаться в виде диаграммы.
 
-![Grid reports](../_static/images/user-guide/reports/grid.png)
+![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 Чтобы создать новый отчет о сетях, нажмите вкладку «Отчеты», а затем нажмите кнопку «Создать отчет». Выберите необходимый тип объекта, затем нажмите кнопку «Создать» в разделе «Отчет по сетке».
 
@@ -48,13 +48,13 @@ _Runtime Filters_ позволяет вам указать разные филь
 
 Простой в использовании тип фильтров. Вы также можете выбрать поля целевого объекта, а также связанные с ним объекты.
 
-![Field filter](../_static/images/user-guide/reports/filter-field.png)
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
 ### Или в группе
 
 Или означает, что по крайней мере одно условие в группе должно быть выполнено.
 
-![OR group](../_static/images/user-guide/reports/filter-or.png)
+![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
 ### И в группе
 
@@ -64,7 +64,7 @@ _Runtime Filters_ позволяет вам указать разные филь
 
 Обеспечивает возможность фильтрации записей, не соответствующих заданным критериям. Например: перечисление учетных записей, которые не имеют возможности с закрытым статусом «Закрытый успешный или закрытый неудачный».
 
-![NOT group](../_static/images/user-guide/reports/filter-not.png)
+![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Комплексное выражение
 
@@ -74,7 +74,7 @@ _Runtime Filters_ позволяет вам указать разные филь
 
 Примечание. Функции, предназначенные для взаимодействия с записью сущности, здесь не работают, потому что формальная форма не применяется к конкретной записи.
 
-![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
+![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
 ## Отображение на панели управления
 

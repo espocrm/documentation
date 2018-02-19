@@ -2,7 +2,7 @@
 
 Orodje Upravljanje poslovnih procesov (BPM) vam omogoča, da v EspoCRM oblikujete in avtomatizirate poslovne procese. Gre za stroj, ki izvaja poslovne procese, opisane v BPMN 2.0 standardu. Orodje BPM je na voljo v razširitvi [Napredni paket](https://www.espocrm.com/extensions/advanced-pack/).
 
-![Primer BPM-ja](../_static/images/administration/bpm/bpm-1.png)
+![Primer BPM-ja](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
 
 ### Kako se razlikuje od orodja Delovni tokovi
 
@@ -84,9 +84,9 @@ Ko pride do razcepitve, prehod določi posamični tok (pot), ki bo izbran glede 
 
 Ko se tokovi združijo, prehod zgolj usmeri tok na izhodni element. Potem ko tok preide skozi prehod, se ta ne zapre, zato se vzporedni tokovi ne bodo združili v en sam tok.
 
-![ekskluzivni prehod - razcepitev](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![ekskluzivni prehod - razcepitev](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![ekskluzivni prehod - združitev](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![ekskluzivni prehod - združitev](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Inkluzivni prehod
 
@@ -96,7 +96,7 @@ Ko pride do razcepitve, prehod lahko preusmeri tok na enega ali več vzporednih 
 
 Če je potrebno združiti vzporedne tokove, ki so nastali zaradi razcepitvenega inkluzivnega prehoda, morate uporabiti združitveni inkluzivni prehod. Ta bo počakal na vse vhodne tokove in bo šele nato usmeril tok na izhodni element.
 
-![inkluzivni prehod](../_static/images/administration/bpm/gateway-inclusive.png)
+![inkluzivni prehod](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 Opomba: Razcepitveni in združitveni prehodi morajo biti v ravnovesju.
 
@@ -110,7 +110,7 @@ Ko pride do razcepitve, razcepi tok v več vzporednih tokov. Za ta tip prehoda n
 
 Ko pride do združitve, prehod počaka na vse vhodne tokove in šele nato usmeri tok na naslednji izhodni element.
 
-![vzporedni prehod](../_static/images/administration/bpm/gateway-parallel.png)
+![vzporedni prehod](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
 
 Opomba: Razcepitveni in združitveni prehodi morajo biti v ravnovesju.
 
@@ -124,7 +124,7 @@ Ustavi tok, dokler ni sprožen kateri koli od izhodnih dogodkov. Sproženi dogod
 
 Na drugi strani izhodnih zaporednih tokov so lahko samo nadaljevalni dogodki.
 
-![z dogodki sprožen prehod](../_static/images/administration/bpm/gateway-event-based.png)
+![z dogodki sprožen prehod](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Aktivnosti
 
@@ -198,12 +198,12 @@ Pogoji v orodju BPM so enaki kot pri orodju Delovni tokovi. Poglejte si več pod
 
 ### Primer 1
 
-![Primer 1](../_static/images/administration/bpm/example-1.png)
+![Primer 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
 
 ### Primer 2
 
-![Primer 2](../_static/images/administration/bpm/example-2.png)
+![Primer 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
 
 ### Primer 3
 
-![Primer 3](../_static/images/administration/bpm/example-3.png)
+![Primer 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)

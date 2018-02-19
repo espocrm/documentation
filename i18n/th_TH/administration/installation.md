@@ -32,39 +32,39 @@ _หมายเหตุ: สำหรับ FTP คุณต้องแยก
 มันควรจะเป็น 755 สำหรับ directories, 644 สำหรับ ไฟล์, และ 775 สำหรับ `data` directory. 
 และตรวจสอบให้แน่ใจว่าคุณมีข้อมูลถูกต้อง _owner_ and _group_.
 
-![1](../_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
 
 หากคุณเห็นหน้าจอต่อไปนี้, สิทธิ์ permission ถูกต้องและคุณสามารถเริ่มติดตั้ง EspoCRM ได้
 
-![2](../_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
 
 ในหน้านี้คุณสามารถอ่านและยอมรับข้อตกลงในใบอนุญาต
 
-![3](../_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
 
 ระบุรายละเอียดสำหรับฐานข้อมูล MySQL ที่จะสร้างขึ้นใหม่
 
-![4](../_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
 
 ระบุชื่อผู้ใช้และรหัสผ่านของผู้ดูแล EspoCRM
 
-![5](../_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
 
 ในหน้านี้คุณสามารถตั้งค่าเริ่มต้นของ EspoCRM, เช่น รูปแบบ วันที่ และ เวลา , เขตเวลา , สกุลเงิน และอื่น ๆ 
 
-![6](../_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
 
 ระบุ การตั้งค่า SMTP สำหรับอีเมลขาออก, ถ้าคุณต้องการมีความสามารถในการส่งอีเมล
 
 ขั้นตอนนี้ สามารถข้ามได้ด้วย การคลิกที่ปุ่ม _Next_  
 ตัวเลือกทั้งหมด เหล่านี้สามารถเพิ่ม / แลกเปลี่ยนใน EspoCRM หลังจาก ทำการติดตั้งแล้วได้ด้วย
 
-![7](../_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
 
 การแสดงความยินดี! การติดตั้งเสร็จสมบูรณ์แล้ว
 สิ่งสุดท้ายที่จะตั้งค่า Scheduled Tasks ให้ระบบ ของคุณดำเนินการ สามารถ ทำได้ โดยการเรียกใช้`crontab -e` ใน linux cli และ ใน _Windows Tasks Scheduler_ ใน ระบบ Windows 
 
-![8](../_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
 
 เราหวังว่าคุณจะสนุกกับการทำงานใน EspoCRM.
 

@@ -2,7 +2,7 @@
 
 A ferramenta Business Process Management (BPM) dá a habilidade de modelar e automatizar os processos de negócios no EspoCRM. É um motor que executa processos de negócios descrito no BPMN 2.0 padrão. A ferramenta BPM está disponível na extensão [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-![BPM example](../_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
 
 ### Diferença da ferramenta Workflows
 
@@ -84,9 +84,9 @@ No caso de divergência, ela define um único fluxo (caminho) que será escolhid
 
 No caso de convergência, ela apenas direciona o fluxo para o elemento de saída. Ela não é bloqueada após o fluxo passar através, então fluxos paralelos não serão unidos em um único fluxo.
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Entrada Inclusiva
 
@@ -96,7 +96,7 @@ No caso de divergência, ela pode direcionar um ou múltiplos fluxos paralelos (
 
 Se há necessidade de unir fluxos paralelos produzidos por uma entrada inclusiva divergente, tu precisas usar uma entrada inclusiva convergente. Ela vai esperar for todos os fluxos de entrada e então seguir para o elemento de saída.
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 Nota: Entradas divergentes e convergentes devem ser balanceadas.
 
@@ -110,7 +110,7 @@ Em caso de divergência, ela divide o fluxo em múltiplos fluxos paralelos. Não
 
 Em caso de convergência, ela espera até todos os fluxos de entrada venham e então continua para o próximo elemento de saída.
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
 
 Nota: Entradas divergentes e convergentes devem ser balanceadas.
 
@@ -124,7 +124,7 @@ Ela para o fluxo até qualquer dos eventos de saída seja disparado. O evento di
 
 Somente eventos intermediários podem estar na outra saído do fluxo de sequência de saída.
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Atividades
 
@@ -197,10 +197,10 @@ Condições na ferramenta BPM são as mesmas como na característica Fluxo de Tr
 
 ### Exemplo 1
 
-![Exemplo 1](../_static/images/administration/bpm/example-1.png)
+![Exemplo 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
 
 ### Exemplo 2
 
-![Exemplo 2](../_static/images/administration/bpm/example-2.png)
+![Exemplo 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
 
 ### Exemplo 3

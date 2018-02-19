@@ -2,7 +2,7 @@
 
 Instrumentul Managementul Proceselor de Afaceri (BPM) oferă abilitatea de a modela și automatiza procesele de afaceri în EspoCRM. Este un motor care execută procesele de afaceri descrise în standardul BPMN 2.0. Instrumentul BPM este disponibil în extensia [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-![BPM example](../_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
 
 ### Diferență față de instrumentul fluxurilor de lucru
 
@@ -84,9 +84,9 @@ Poate diverge sau converge fluxuri.
 
 În cazul convergenței, direcționează fluxul spre elementul de ieșire. Nu se blochează după ce fluxul a venit, iar fluxurile paralele nu vor fi unite în fluxul unic.
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Gateway Inclusive
 
@@ -96,7 +96,7 @@ Poate diverge sau converge fluxurile.
 
 Dacă există o necesitate de îmbinare a fluxurilor paralele produse de un gateway divergent incluziv, trebuie să utilizați un gateway convergent incluziv. Aceasta va aștepta toate fluxurile de intrare și apoi va continua cu elementul de ieșire.
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 Rețineți: Gateway divergente sau convergente trebuie să fie balansate.
 
@@ -110,7 +110,7 @@ Poate diverge sau converge fluxurile.
 
 In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
 
 Note: Gateway divergente sau convergente trebuie să fie balansate.
 
@@ -124,7 +124,7 @@ Acesta oprește fluxul până la declanșarea oricărui eveniment de ieșire. Ev
 
 Doar evenimentele intermediare pot fi la finalul secvenței de ieșire al fluxului.
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Activități
 
@@ -197,12 +197,12 @@ Condițiile în instrumentul BPM sunt aceleași ca în caracteristica Fluxului d
 
 ### Exemplul 1
 
-![Example 1](../_static/images/administration/bpm/example-1.png)
+![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
 
 ### Exemplul 2
 
-![Example 2](../_static/images/administration/bpm/example-2.png)
+![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
 
 ### Exemplul 3
 
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)

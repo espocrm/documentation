@@ -2,7 +2,7 @@
 
 Ang Business Process Management (BPM) tool ay nagbibigay kakayahang mag-model at mag-automate ng isang business process sa EspoCRM. Ito ay isang engine na nagpapatupad ng business process na inilalarawan sa BPMN 2.0 standard. Ang BPM tool ay makukuha sa [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) na extension.
 
-![BPM example](../_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
 
 ### Pagkakaiba mula sa Workflows tool
 
@@ -84,9 +84,9 @@ Kung sakaling ito ay diverging, tumutukoy ito ng iisang flow (path) na pwedeng p
 
 Kung sakaling ito ay converging, dinidirekta ang flow sa palabas na elemento. Hindi ito bina-block kahit na nakarating na ang flow, kaya ang mga parallel flow ay hindi pagsasama-samahin upang maging isang solo na flow.
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Inclusive na Gateway
 
@@ -96,7 +96,7 @@ Kung sakaling ito ay diverging, maaari itong idirekta sa isa or maramihang paral
 
 Kung mayroong isang pangangailangan na pagsamahin ang mga parallel flow na nagawa sa pamamagitan ng divering inclusive gateway, kailangan mong gumamit ng isang convering inclusive gateway. Ito ay maghihintay para sa lahat ng papasok na flow at pagkatapos ay magpapatuloy sa papalabas na elemento.
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 Tandaan: Ang mga divering at converging gateway ay dapat na balanse. 
 
@@ -110,7 +110,7 @@ Kung sakaling ito ay divering, hinahati nito ang flow sa loob ng maramihang para
 
 Kung sakaling ito ay converging, naghihintay ito hanggang sa lahat ng papasok nga flow ay dumating at pagkatapos ay magpapatuloy sa susunod na papalabas na elemento.
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
 
 Tandaan: Ang mga divering at converging gateway ay dapat na balanse. 
 
@@ -124,7 +124,7 @@ Hinihinto nito ang flow hanggang sa anumang palabas na event ay matri-trigger. A
 
 Ang mga intermediate event lamang ang maaaring nasa kabilang dulo ng mga papalabas na sequence flow. 
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Mga Aktibidad
 
@@ -197,10 +197,10 @@ tungkol sa [workflow's conditions](workflows.md#conditions).
 ## Mga Halimbawa
 
 ### Unang Halimbawa
-![Example 1](../_static/images/administration/bpm/example-1.png)
+![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
 
 ### Pangalawang Halimbawa
-![Example 2](../_static/images/administration/bpm/example-2.png)
+![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
 
 #### Pangatlong Halimbawa
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)

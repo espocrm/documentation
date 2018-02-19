@@ -6,7 +6,7 @@ Managerul de Aspect este diponibil în panoul de administrație. Oferă posibili
 
 Principalul aspect pentru vizulaizarea lisei. Definește coloane și parametrii lor.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 Parametrii disponibili sunt listați mai jos.
 
@@ -32,7 +32,7 @@ Aspectul principal pentru vizualizarea detaliilor și vizualizarea editării. De
 
 Rândul poate conține două celule sau o celulă care este extinsă să ocupe lățimea completă a rândului. Pentru a adăuga un rând cu o celulă extinsă, trebuie să adaugi un rând nou și să apeși pe semnul minus de pe oricare celulă.
 
-![Detail](../_static/images/administration/layout-manager/detail.png)
+![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## Listă (Mică)
 

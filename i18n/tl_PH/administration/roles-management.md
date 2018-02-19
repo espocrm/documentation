@@ -10,7 +10,7 @@ Kung ang user ay mayroong maraming tungkulin, ito ay pagsasama-samahin upang ang
 
 Posible ring makita ang mga permiso na i-aaply sa isang partikular na user sa pamamagitan ng pag-click ng 'Access'na buton sa detail view ng user. 
 
-![1](../_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
 
 ## Halimbawa
 
@@ -102,4 +102,4 @@ Batay sa default, ang user ay maaaring magbasa ng lahat ng mga filed kung ito ay
 
 Sa edit view ng isang role record sa seksyon ng Field lebel, i-click ang plus icon kasunod ng partikular na scope at piliin ang kinakailangang field. Pagkatapos ay maaari mo ng tukuyin ang access level para sa `read` at `edit` na mga aksyon. Mayroong dawalang mga opsyon: `yes` at `no`.
 
-![2](../_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)

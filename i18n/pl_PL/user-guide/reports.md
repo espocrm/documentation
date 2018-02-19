@@ -24,7 +24,7 @@ Możesz __export__ rezultaty z listy raportów do pliku CSV lub Excela.
 
 Grid reports result summarized values grouped by specified fields. These reports can be displayed as a chart.
 
-![Grid reports](../_static/images/user-guide/reports/grid.png)
+![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
 
@@ -48,13 +48,13 @@ It's possible to __export__ grid report results to excel and csv formats.
 
 Prosty typ filtru w użyciu. Możesz również wybrać pola docelowej jednostki tak samo jak powiązanych jednostek.
 
-![Field filter](../_static/images/user-guide/reports/filter-field.png)
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
 ### Wyrażenie OR
 
 OR oznacza, że co najmniej jeden z warunków musi zostać spełniony.
 
-![OR](../_static/images/user-guide/reports/filter-or.png)
+![OR](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
 ### Wyrażenie AND
 
@@ -64,7 +64,7 @@ AND oznacza, że wszystkie warunki muszą być spełnione.
 
 Umożliwia filtrowanie rekordy, które nie spełniają określonych kryteriów. Np. lista kont, które nie mają statusu Wygrane Zamknięte lub Stracone Zamknięte.
 
-![NOT](../_static/images/user-guide/reports/filter-not.png)
+![NOT](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Złożone wyrażenia
 
@@ -74,7 +74,7 @@ Uwaga: Jeśli chcesz porównać proste ciągi znakowe powinieneś umieścić je 
 
 Uwaga: Funkcje przeznaczone do interakcji z jednostkami rekordów nie będą tutaj działać ponieważ wzór nie jest przeznaczony do określnych rekordów.
 
-![Filtr wyrażeń złożonych](../_static/images/user-guide/reports/filter-complex.png)
+![Filtr wyrażeń złożonych](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
 ## Wyświetlanie na panelu
 

@@ -10,7 +10,7 @@ Bir kullanıcının birden fazla rolü varsa, izin verilen kuralın daha yüksek
 
 Kullanıcının ayrıntılı görünümünde 'Erişim' butonuna tıklayarak belirli bir kullanıcıya hangi izinlerin uygulandığını görmek mümkündür.
 
-![1](../_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
 
 ## Örnek
 
@@ -102,4 +102,4 @@ Varsayılan kullanıcı olarak, kayıtları okuyabilirse tüm alanları okuyabil
 
 Alan Seviyesi bölümündeki bir rol kaydının düzenleme görünümündeki, belirli kapsamın yanındaki artı simgesine tıklayınız ve ardından gerekli alanı seçiniz. Ardından, `read` ve` edit` eylemleri için erişim seviyesini belirleyebileceksiniz. Var olan seçenekler: `evet` ve `hayır`.
 
-![2](../_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)

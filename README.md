@@ -12,6 +12,7 @@
   * [Entity Manager: entities, fields, relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
   * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
   * [Extensions](https://github.com/espocrm/documentation/blob/master/administration/extensions.md)
+  * [Dynamic forms](https://github.com/espocrm/documentation/blob/master/administration/dynamic-logic.md)
 * Automation
   * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
   * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)

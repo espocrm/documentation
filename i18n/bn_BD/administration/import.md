@@ -20,7 +20,7 @@
 
 পদক্ষেপ 2_ এ এগিয়ে যাওয়ার জন্য _Next_ বোতাম ক্লিক করুন
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
 
 ## ধাপ ২
 
@@ -32,7 +32,7 @@
 
 এগিয়ে যাওয়ার জন্য _ আমদানি করুন _ বোতামটি ক্লিক করুন একটি আমদানি প্রক্রিয়া সম্পন্ন হওয়ার আগে এটি কিছু সময় লাগতে পারে। যদি আপনি একটি বড় গুচ্ছ রেকর্ড আমদানি করতে চান (আপনার সার্ভার কনফিগারেশন উপর নির্ভর করে, সাধারণত যদি 200 রেকর্ডের বেশি) আপনি যে php পরামিতি নিশ্চিত করতে প্রয়োজন`set_time_limit` যথেষ্ট বড়।
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
 ## লক্ষ্য তালিকাতে কিভাবে আমদানি করতে হয়
 

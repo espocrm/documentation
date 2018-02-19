@@ -2,7 +2,7 @@
 
 İş Süreçleri Yönetimi (BPM) aracı, EspoCRM'deki iş süreçlerini modelleme ve otomatikleştirme imkanı sağlar. BPMN 2.0 standardında açıklanan iş süreçlerini yürüten bir motordur. BPM aracı, [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) uzantısında bulunur.
 
-![BPM örneği](../_static/images/administration/bpm/bpm-1.png)
+![BPM örneği](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
 
 ### İş Akışı araçlarının farkı
 
@@ -87,9 +87,9 @@ Varsayılan akış, eğik çizgi işareti ile işaretlenmiştir.
 Yakınsama durumunda, akış sadece giden elemana yönlendirilir. Akış geldiğinde bloke olmaz, paralel akışlar tek bir akışla birleştirilmez.
 
 
-![özel farklı ağ geçidi](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![özel farklı ağ geçidi](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![yakınsak ağ geçidi ](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![yakınsak ağ geçidi ](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Kapsamlı Ağ Geçidi
 
@@ -100,7 +100,7 @@ Varsayılan yol, herhangi bir karşılanma koşulları yoksa seçilir. Varsayıl
 
 Genişleyen bir kapsayıcı ağ geçidi tarafından üretilen paralel akışları birleştirmek gerekiyorsa, kapsayıcı bir ağ geçidi kullanmanız gerekir. Gelen akışların hepsini bekleyecek ve giden öğeye devam edecektir.
 
-![kapsayıcı ağ geçidi](../_static/images/administration/bpm/gateway-inclusive.png)
+![kapsayıcı ağ geçidi](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 Not: Ayrılan ve birbirine yaklaşan ağ geçitleri dengelenmelidir.
 
@@ -114,7 +114,7 @@ Ayrışması durumunda akış birden fazla paralel akışa bölünür. Bu ağ ge
 
 Yakınsama durumunda tüm gelen akışlar gelene kadar beklenir ve bir sonraki giden elemana geçilir.
 
-![paralel ağ geçidi](../_static/images/administration/bpm/gateway-parallel.png)
+![paralel ağ geçidi](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
 
 Not: Ayrışan ve birbirine yaklaşan ağ geçitleri dengelenmelidir.
 
@@ -129,7 +129,7 @@ Giden olaylardan herhangi biri tetiklenene kadar akışı durdurur. Başlatılan
 Giden dizi akışlarının diğer ucunda sadece orta dereceli olaylar olabilir.
 
 
-![etkinlik tabanlı ağ geçidi](../_static/images/administration/bpm/gateway-event-based.png)
+![etkinlik tabanlı ağ geçidi](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Aktiviteler
 
@@ -202,12 +202,12 @@ BPM aracındaki koşullar İş Akışı özelliğindeki koşullarla aynıdır. [
 
 ### Örnek 1
 
-![Örnek 1](../_static/images/administration/bpm/example-1.png)
+![Örnek 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
 
 ### Örnek 2
 
-![Örnek 2](../_static/images/administration/bpm/example-2.png)
+![Örnek 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
 
 ### Örnek 3
 
-![Örnek 3](../_static/images/administration/bpm/example-3.png)
+![Örnek 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)

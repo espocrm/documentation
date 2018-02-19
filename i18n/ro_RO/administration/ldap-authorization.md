@@ -15,7 +15,7 @@ Acum, poți adăuga un utilizator LDAP pentru a accesa EspoCRM. Ex. Espo Tester 
 
 Apoi, mergi la setările de Autentificare EspoCRM din panoul de administrare, selectează metoda `LDAP` și completează detaliile LDAP:
 
-![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Gazdă – LDAP IP sau numele gazdei.
 * Port – portul de conexiune.
@@ -45,7 +45,7 @@ Apoi, mergi la setările de Autentificare EspoCRM din panoul de administrare, se
 
 Acum, mergi la pagina de autentificare și introdu acreditările.
 
-![2](../_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
 
 Utilizatorul a fost autentificat și creeat automat în EspoCRM.
 

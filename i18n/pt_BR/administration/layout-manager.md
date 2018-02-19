@@ -6,7 +6,7 @@ O Gerenciador de Layout está disponível no painel de administração. Ele perm
 
 O layout principal para a lista de visualização. Define as colunas e seus parâmetros.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 Os parâmetros disponíveis para colunas estão listadas abaixo.
 
@@ -32,7 +32,7 @@ O layout principal para a visualização de detalhes e editar visualização. Fo
 
 As linhas podem conter duas células ou uma células que está expandida à largura máxima da linha. Para adicionar linhas com uma célula expandida, você precisa adicionar a nova linha e clicar no sinal de menos em qualquer célula.
 
-![Detail](../_static/images/administration/layout-manager/detail.png)
+![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## Lista (Pequena)
 

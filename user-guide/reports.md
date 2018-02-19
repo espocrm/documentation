@@ -24,7 +24,7 @@ You can __export__ list report results to excel and csv formats.
 
 Grid reports result summarized values grouped by specified fields. These reports can be displayed as a chart.
 
-![Grid reports](../_static/images/user-guide/reports/grid.png)
+![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
 
@@ -48,13 +48,13 @@ It's possible to __export__ grid report results to excel and csv formats.
 
 Simple to use type of filters. You can also pick fields of target entity as well as related entitites.
 
-![Field filter](../_static/images/user-guide/reports/filter-field.png)
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
 ### OR group
 
 OR means that at least one condition under the group must be met.
 
-![OR group](../_static/images/user-guide/reports/filter-or.png)
+![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
 ### AND group
 
@@ -64,7 +64,7 @@ AND means that all conditions under the group must be met.
 
 Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
 
-![NOT group](../_static/images/user-guide/reports/filter-not.png)
+![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Complex Expression
 
@@ -74,7 +74,7 @@ Note: If you need to compare just with a simple string value you should put it i
 
 Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
 
-![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
+![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
 ### Having group
 

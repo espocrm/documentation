@@ -22,7 +22,7 @@ Bir CSV dosyasını seçtikten sonra Önizleme panelinde nasıl ayrıştırılac
 
 _ 2. Adım_ işlemine geçmek için _Next_ düğmesini tıklayın.
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
 
 ## 2. Adım
 
@@ -32,7 +32,7 @@ Alan eşlemesini ayarlayın: alanların CSV dosyasının sütunlarına nasıl ka
 
 Devam etmek için _Run Import_ düğmesine tıklayın. İçe aktarma işlemi bitmeden biraz zaman alabilir. Bir sürü kayıt ithal etmek istiyorsanız (sunucu yapılandırmasına bağlı, genellikle 200'den fazla kayıt varsa), php parametresinin `set_time_limit` yeterince büyük olduğundan emin olmanız gerekir.
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
 ## Hedef Listeye nasıl aktarılır?
 

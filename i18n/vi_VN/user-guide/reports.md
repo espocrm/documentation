@@ -1,89 +1,89 @@
-# Reports
+# Báo cáo
 
-Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Tính năng báo cáo chỉ khả dụng ở [Bản Mở Rộng](https://www.espocrm.com/extensions/advanced-pack/).
 
-There are two types of reports: List and Grid.  
+Có hai loại báo cáo: Danh sách và Lưới.
 
-## List Reports
+## Báo Cáo Danh sách
 
-List report results the list of records that meet the specified criteria.
+Kết quả của báo cáo danh sách là danh sách các bản ghi phù hợp với các tiêu chí nhất định.
 
-To create new list report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at List Report section.
+Để tạo báo cách danh sách mới thì nhấp chuột vào tab báo cáo rồi nhấp vào nút Tạo báo cáo. Chọn loại đối tượng cần thiết rồi nhấp vào nút Tạo ở khu vực báo cáo danh sách.
 
-At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column e.g. width and align.
+Ở trường _Cột_ chọn những trường mà bạn muốn hiển thị. Bạn cũng có thể chọn các biến hiển thị cho từng cột, ví dụ độ rộng và căn lề.
 
-Choose needed sorting at _List Order_ field. 
+Chọn thứ tự sắp xếp cần thiết ở trường _Thứ tự danh sách_.
 
-At _Filters_ section you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
+Ở khu vực _Bộ lọc_ bạn có thể xác định tiêu chí định hình nên bản ghi sẽ được liệt kê trong danh sách của bạn. Bạn có thể sử dụng toán tử luận lý như 'OR' hoặc 'AND' ở đây.
 
-_Runtime Filters_ allow you to specify different filters before you run the report.
+_Bộ lọc Runtime_ cho phép bạn xác định các bộ lọc khác nhau trước khi bạn chạy báo cáo.
 
-You can __export__ list report results to excel and csv formats.
+Bạn có thể __xuất__ kết quả của báo cáo danh sách thành định dạng excel và csv.
 
-## Grid Reports
+##  Báo cáo lưới
 
-Grid reports result summarized values grouped by specified fields. These reports can be displayed as a chart.
+Kết quả của báo cáo lưới tóm tắt các giá trị được gộp thành nhóm dựa trên các trường xác định. Những báo cáo này có thể được hiển thị thành một biểu đồ.
 
-![Grid reports](../_static/images/user-guide/reports/grid.png)
+![Báo cáo lưới](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
-To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
+Để tạo báo cách danh sách mới thì nhấp chuột vào tab báo cáo rồi nhấp vào nút Tạo báo cáo. Chọn loại đối tượng cần thiết rồi nhấp vào nút Tạo ở khu vực báo cáo lưới.
 
-At _Group By_ field pick one or two fields you want your report data be grouped by. It's possible to group by year, month, day for date fields. If you group by two fields your report will be considered as three-dimensional.
+Ở trường _Nhóm theo_ bạn chọn một hoặc hai trường mà bạn muốn dữ liệu báo cáo được nhóm theo. Có thể chọn nhóm theo năm, tháng, ngày cho những trường về ngày tháng. Nếu bạn nhóm theo hai trường thì báo cáo của bạn sẽ được xem như báo cáo ba chiều.
 
-At _Columns_ field select one or more aggregate functions like COUNT, SUM (summation), MIN, MAX, AVG (average).
+Ở trường _Cột_ có thể chọn một hoặc nhiều chức năng tổng hợp như COUNT, SUM(tính tổng), MIN, MAX, AVG (tính trung bình).
 
-_Order by_ field defines how report data will be sorted.
+Trường _Xếp theo_ xác định dữ liệu báo cáo sẽ được sắp xếp như thế nào.
 
-At _Filters_ section you can specify criteria that determines what records will be used in your report. You can use logical operators 'OR' and 'AND' here.
+Ở khu vực _Bộ lọc_ bạn có thể xác định tiêu chí định hình nên bản ghi sẽ được liệt kê trong báo cáo của bạn. Bạn có thể sử dụng toán tử luận lý như 'OR' hoặc 'AND' ở đây.
 
-_Runtime Filters_ allows you to specify different filters before you run the report.
+_Bộ lọc Runtime_ cho phép bạn xác định các bộ lọc khác nhau trước khi bạn chạy báo cáo.
 
-Grid report allows displaying results in a chart form. There are following _chart types_: Bar (Horizontal), Bar (Vertical), Pie, Line.
+Báo cáo lưới cho phép hiển thị kết quả ở dạng biểu đồ. Có _các loại biểu đồ_ sau : Cột (Ngang), Cột (Dọc), Tròn, đường.
 
-It's possible to __export__ grid report results to excel and csv formats.
+Bạn có thể __xuất__ kết quả của báo cáo danh sách thành định dạng excel và csv.
 
-## Filters
+## Bộ lọc
 
-### Field filter
+### Bộ lọc theo trường
 
-Simple to use type of filters. You can also pick fields of target entity as well as related entitites.
+Các loại bộ lọc có thể sử dụng một cách rất dễ dàng. Bạn cũng có thể chọn các trường cho thực thể cần cũng như các thực thể liên quan.
 
-![Field filter](../_static/images/user-guide/reports/filter-field.png)
+![Bộ lọc theo trường](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
-### OR group
+### Nhóm theo toán tử OR
 
-OR means that at least one condition under the group must be met.
+Toán tử OR hay toán tử hoặc nghĩa là các phần tử của nhóm phải thỏa mãn ít nhất một điều kiện.
 
-![OR group](../_static/images/user-guide/reports/filter-or.png)
+![Nhóm theo toán tử OR](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
-### AND group
+### Nhóm theo toán tử AND
 
-AND means that all conditions under the group must be met.
+Toán tử AND hay toán tử và nghĩa là các phần tử của nhóm phải thỏa mãn tất cả các điều kiệnt.
 
-### NOT group
+### Nhóm theo toán tử NOT
 
-Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
+Cung cấp khả năng lọc các bản ghi không phù hợp các tiêu chí nhất định. Ví dụ liệt kê danh sách các tài khoản không có tiềm năng nào có trạng thái Thành công đã đóng hoặc Mất đã đóng.
 
-![NOT group](../_static/images/user-guide/reports/filter-not.png)
+![Nhóm theo toán tử NOT](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
-### Complex Expression
+### Ngôn ngữ biểu hiện
 
-For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
+Đối với các nhu cầu sử dụng nâng cao. Bạn có thể áp dụng hàm cho các cột dữ liệu nhất định và so sánh nó với kết quả của [công thức](../administration/formula.md) hiển thị.
 
-Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
+Lưu ý: Nếu bạn cần so sánh chỉ với một giá trị chuỗi đơn giản thì bạn nên đặt nó vào ngoặc đơn `'chuỗi nào đó'`.
 
-Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
+Lưu ý: Các hàm có mục đích tương tác với bản ghi thực thể sẽ không thể chạy ở đây bởi vì hàm không được áp dụng với bản ghi nhất định.
 
-![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
+![Bộ lọc Ngôn ngữ biểu hiện](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
-## Displaying on dashboard
+## Hiển thị trên bảng điều khiển
 
-You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
+Bạn có thể hiển thị bất kì báo cáo nào trên bảng điều khiển. Để làm được điều này bạn cần thêm dashlet Báo cáo và chọn báo cáo cần hiển thị trong các lựa chọn của dashlet.
 
-## Email Sending
+## Gửi thư điện tử
 
-It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
+Bạn có thể thiết lập hệ thống gửi kết quả báo cáo tới các người dùng nhất định theo một lịch thường xuyên vào một khoảng thời gian nhất định. Thiết lập này phải được thực hiện với từng báo cáo một cách độc lập.
 
-## Syncing with Target Lists
+## Đồng bộ với các danh sách mục tiêu
 
-It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
+Bạn có thể có các danh sách mục tiêu được đồng bộ với các kết quả của danh sách báo cáo. Điều này tiện cho việc gửi thư điện tử hàng loạt khi bạn chỉ muốn gửi thư tới các liên hệ thỏa mãn vài tiêu chí tại thời điểm thư điện tử được gửi đi. Tính năng này có sẵn khi bạn xem chi tiết của bất kì danh sách mục tiêu nào tại thanh 'Đồng bộ với Báo cáo'. 
