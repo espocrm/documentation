@@ -1,44 +1,44 @@
-# Printing to PDF
+# In thành tập tin PDF
 
-Note: This feature is available since EspoCRM version 5.0.5.
+Lưu ý: Tính năng này chỉ khả dụng từ phiên bản EspoCRM 5.0.5.
 
-Printing to PDF provides an ability to generate PDF documents with a record data. The document content is defined by Template.
+Tính năng in thành tập tin PDF cho phép tạo ra tập tin PDF với dữ liệu của một bản ghi. Nội dung của tài liệu được định nghĩa bằng các mẫu có sẵn.
 
 
-1. You need to have at least one Template for the entity type of the record you want to print.
-2. 'Print to PDF' will be available on the detail view under the dropdown next to the 'Edit' button.
+1. Bạn cần có ít nhất một mẫu có sẵn cho loại thực thể của bản ghi mà bạn muốn in.
+2. 'In thành PDF' sẽ khả dụng khi xem chi tiết ở thanh xổ xuống gần nút 'Chỉnh sửa'.
 
-## Templates
+## Các mẫu có sẵn
 
-Templates tab is hidden by default. Administrator can add it at Administration > User Interface.
+Tab các mẫu có sẵn mặc định được ẩn đi. Quản trị viên có thể thêm nó trong Quản trị > Giao diện người dùng.
 
-For more precise editing it's recommended to use Code View mode.
+Để chỉnh sửa một cách chính xác nhất thì bạn được đề xuất sử dụng chế độ góc nhìn mã chương trình.
 
-You can print fields of the record as well as fields of related records by utilizing placeholders in your template.
+Bạn có thể in các trường chi tiết của bản ghi cũng như các trường của các bản ghi liên quan bằng cách tối ưu các kí hiệu giữ chỗ trong mẫu có sẵn.
 
-Examples: 
+Ví dụ: 
 
-* `{{name}}` – Name of the record;
-* `{{assignedUserName}}` – Assigned User;
-* `{{account.name}}` – Name of the related account.
+* `{{name}}` – Tên của bản ghi;
+* `{{assignedUserName}}` – Người dùng được chỉ định;
+* `{{account.name}}` – Tên của tài khoản liên quan.
 
-It's possible to print image fields:
+Bạn cũng có thể in trường hình ảnhIt's possible to print image fields:
 ```
 <img src="{{file imageId}}">
 ```
 
-where `imageId` – the name of custom image field, concatenated with the suffix `Id`.
+ở `imageId` – là tên của trường hình ảnh tùy biến, được nối với hậu tố `Id`.
 
-To display float numbers w/o fractional part (as integer) use the following expression:
+Để hiển thị số thực dấu phẩy động mà không có phần thập phân (như số nguyên) sử dụng cách biểu hiện sau:
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
-Custom formatting for currency values:
+Tùy chỉnh định dang cho các giá trị tiền tệ
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
 
-Value `10000.5` will be printer as `10 000,50`.
+Giá trị `10000.5` sẽ được in ra là `10 000,50`.
 
-To display text fileds (multiline) use triple braces: ```{{{description}}}```.
+Để hiện thị các trường văn bản (nhiều dòng) sử dungj dấu ngoặc ba lần liên tiếp: ```{{{description}}}```.
