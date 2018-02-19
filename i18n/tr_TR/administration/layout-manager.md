@@ -6,7 +6,7 @@ Düzen Yöneticisi, yönetim panelinde bulunmaktadır. Ayrıntılı görünümü
 
 Liste görünümünün ana düzenidir. Sütunları ve parametreleri tanımlanır.
 
-![Liste](../_static/images/administration/layout-manager/list.png)
+![Liste](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 Sütunlar için kullanılabilen parametreler aşağıda listelenmiştir.
 
@@ -32,7 +32,7 @@ Ayrıntılı görünüm ve düzenleme görünümü için ana düzenleme. Panelle
 
 Satır, satırın tam boyutunda genişletilmiş iki hücre veya bir hücre içerebilir. Genişletilmiş bir hücre ile satırı eklemek için, yeni satırı ekleyin ve herhangi bir hücrenin negatif işaretine tıklatmanız gerekmektedir.
 
-![Detay](../_static/images/administration/layout-manager/detail.png)
+![Detay](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## Liste (Küçük)
 

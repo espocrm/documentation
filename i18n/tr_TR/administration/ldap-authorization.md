@@ -16,7 +16,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 
 Ardından, Yönetici panelinde EspoCRM Kimlik Doğrulaması ayarlarına gidini<, `LDAP` yöntemini seçin ve LDAP ayrıntılarını giriniz:
 
-![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Host – LDAP IP veya ana makine adı.
 * Port – bağlantı noktası.
@@ -46,7 +46,7 @@ Ardından, Yönetici panelinde EspoCRM Kimlik Doğrulaması ayarlarına gidini<,
 
 Şimdi, giriş sayfasına gidin ve kullanıcı kimlik bilgilerinizi giriniz.
 
-![2](../_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
 
 Kullanıcı kimliği doğrulanmış ve otomatik olarak EspoCRM'de oluşturulmuştur.
 

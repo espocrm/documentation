@@ -25,7 +25,7 @@ Excel ve CSV formatlarının listelenmiş rapor sonuçlarını  __dışarıya ak
 Izgara raporları, belirtilen alanlarla gruplandırılmış, özetlenmiş değerleri verir. Bu raporlar bir grafik olarak görüntülenebilirler.
 
 
-![Grid reports](../_static/images/user-guide/reports/grid.png)
+![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 Yeni ızgara raporu oluşturmak için Raporlar sekmesine tıklayın ve ardından Rapor Oluştur butonuna tıklayınız. Gerekli Öğe Türü'nü seçin ve Izgara Raporu bölümünde Oluştur butonuna tıklayınız.
 
@@ -49,13 +49,13 @@ Excel ve CSV formatlarının listelenmiş rapor sonuçlarını  __dışarıya ak
 
 Basit filtre türlerini kullanınız. Ayrıca, hedef varlığın alanlarını ve ilgili varlıkları da seçebilirsiniz.
 
-![Alan filtresi](../_static/images/user-guide/reports/filter-field.png)
+![Alan filtresi](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
 ### VEYA grubu
 
 VEYA, gruptaki en az bir koşulun yerine getirilmesi gerektiği anlamına gelir.
 
-![VEYA grubu](../_static/images/user-guide/reports/filter-or.png)
+![VEYA grubu](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
 ### VE grubu
 
@@ -65,7 +65,7 @@ VE, gruptaki tüm koşulların yerine getirilmesi gerektiği anlamına gelir.
 
 Belirtilen kriterlere uymayan kayıtları filtreleme olanağı sağlar. Örneğin. Kapalı Kazanılan veya Kapatılı Kaybedilmiş Durumularıyla fırsat bulamayan hesapları listeleme.
 
-![DEĞİL grubu](../_static/images/user-guide/reports/filter-not.png)
+![DEĞİL grubu](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Karmaşık İfade
 
@@ -76,7 +76,7 @@ Not: Sadece basit bir dize değeri ile karşılaştırmanız gerekiyorsa ona, `'
 
 Not: Form kayıtları belirli kayıtlara uygulanmadığından varlık kaydı ile etkileşim kurmayı amaçlayan fonksiyonlar burada geçerli olmayacaktır.
 
-![Karmaşık İfade filtresi](../_static/images/user-guide/reports/filter-complex.png)
+![Karmaşık İfade filtresi](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
 ## Gösterge tablosunda gösteriliyor
 
