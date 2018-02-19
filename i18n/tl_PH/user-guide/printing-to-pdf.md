@@ -1,11 +1,11 @@
 # Pag-print bilang PDF
 
-Paalala: Ang tampok na ito ay ay magagamit hanggang  EspoCRM 5.0.5 na bersyon.
+Paalala: Ang tampok na ito ay magagamit hanggang sa EspoCRM 5.0.5 na bersyon.
 
-Ang pag-print bilang PDF ay nagbibigay ng abilidad na na makabuo ng mga dokumentong PDF na may talaan na datos. Ang nilalaman ng dokumento ay tinukoy ng Template.
+Ang pag-print bilang PDF ay nagbibigay ng abilidad na makabuo ng mga dokumentong PDF na may talaan na datos. Ang nilalaman ng dokumento ay tinukoy ng Template.
 
 
-1. Kailangan mong magkaroon ng hindi bababa sa isang Template para sa uri ng entidad ng rekord na gusto mong i-print.
+1. Kailangan ay mayroon ka na hindi bababa sa isang Template para sa uri ng entidad ng rekord na gusto mong i-print.
 2. 'Pag-print bilang PDF' ay magagamit sa view ng detalye sa ilalim ng dropdown sa tabi ng pindutang 'I-edit'.
 
 ## Mga Template
@@ -29,7 +29,7 @@ Posibleng mag-print ng mga patlang ng larawan:
 
 kung saan `imageId` – ang pangalan ng pasadyang imahe na patlang, na konektado sa suffix na `Id`.
 
-Upang mapakita ang mga numero ng float ng walang parte na fraksyonal (as integer)  ay gamitin ang mga sumusunod na ekspresyon:
+Upang maipakita ang mga numero ng float ng walang parte na praksyonal (as integer)  ay gamitin ang mga sumusunod na ekspresyon:
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
