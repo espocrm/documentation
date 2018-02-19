@@ -28,34 +28,34 @@ _Примечание: для FTP вам необходимо перед заг�
 
 Если вы видите этот экран, у вас есть ошибка «Разрешение отклонено». Таким образом, вам нужно выполнить отображаемую команду в терминале через SSH или установить правильное разрешение. Он должен быть 755 для каталогов, 644 для файлов и 775 для каталога `data`. Также убедитесь, что у вас есть правильные _owner_ и _group_.
 
-![1](../_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
 
 Если вы видите следующую картину, значит разрешение выбрано правильное разрешение, и вы можете начать установку EspoCRM.
 
-![2](../_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
 
 На этой странице вы можете прочитать и принять Лицензионное соглашение.
 
-![3](../_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
 
 Введите данные для вашей недавно созданной базы данных MySQL.
 
-![4](../_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
 
 Введите имя пользователя и пароль администратора EspoCRM.
 
-![5](../_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
 
 На этой странице вы можете установить настройки EspoCRM по умолчанию, такие как формат даты и времени, часовой пояс, валюта и другие.
 
-![6](../_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
 
 Введите SMTP-настройки для исходящих писем, если вы хотите иметь возможность отправлять электронные письма. Этот шаг можно пропустить, нажав кнопку _Next_. Все эти параметры могут быть добавлены/изменены в EspoCRM после установки.
 
-![7](../_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
 
 Поздравляю! Установка завершена. Последнее, что нужно настроить это запланированных задачи для вашей системы. Это можно сделать, запустив `crontab -e` в linux cli и в _Windows Tasks Scheduler_ в системах Windows.
 
-![8](../_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
 
 Надеемся, что вам понравится работать в EspoCRM.
