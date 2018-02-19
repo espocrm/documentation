@@ -21,7 +21,7 @@
 
 คลิก ปุ่ม  _Next_ เพื่อดำเนินการ _Step 2_ต่อไป
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
 
 ## ขั้นตอน ที่ 2
 
@@ -33,7 +33,7 @@
 
 คลิกที่ปุ่ม _Run Import_ เพื่อดำเนินการต่อ อาจใช้เวลาสักครู่หนึ่ง ก่อนที่ขั้นตอน การนำเข้าจะเสร็จสิ้น ถ้าคุณต้องการนำเข้าบันทึกเป็นจำนวนมาก (ขึ้นอยู่กับการกำหนดค่าเซิร์ฟเวอร์ของคุณ,ปกติถ้ามากกว่า 200 บันทึก) คุณต้องแน่ใจว่า php parameter `set_time_limit` นั้นมีพื้นที่มากพอ.
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
 ## วิธีการนำเข้าสู่รายการเป้าหมาย
 

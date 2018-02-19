@@ -20,7 +20,7 @@ Kung nakapili naka og csv nga file, pwede naka makakita kung unsaon ni pag parse
 
 I-click ang _Next_ nga pindutanan para musunod ngadto sa _Step 2_.
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
 
 ## Step 2
 
@@ -32,7 +32,7 @@ Pagkahuman sa pag-import, pwede na nimong i-revert ang mga nahimo nang mga rekor
 
 I-click ang _Run Import_ nga pindutanan para magpadayon. Mukaon kini og pila ka oras usa ang import kay mahuman. Kung gusto nimo nga muimport og dagko nga mga rekord (depende ni sa imohang server configuration, kasagaran kung dako pa sa 200 ka mga rekord), gikinahanglan nimo nga siguradohon nga ang php parameter nga `set_time_limit` nga sakto ra sa hidak-on.
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
 ## Unsaon pag-import ngadto sa Target List
 

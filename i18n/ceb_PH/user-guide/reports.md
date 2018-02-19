@@ -24,7 +24,7 @@ Pwede kang mu - __export__ sa list report results ngadto sa excel ug csv nga mga
 
 Ang grid reports result muhata ug sumaryo sa mga balor nga gigrupo pinaagi sa mga gitakda nga mga field. Ang kaning mga report kay pwede idisplay isip usa ka chart.
 
-![Mga grid report](../_static/images/user-guide/reports/grid.png)
+![Mga grid report](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 Para muhimo og bag-o nga grid report, i-click ang Reports nga tab ug dayon i-click ang Create Report nga pindutanan. Pilia ang gikinahanglan nga Entity Type dayon i-click ang Create nga pindutanan sa Grid Report.
 
@@ -47,13 +47,13 @@ Posible usab nga mu __export__ ug mga grid report nga resulta ngadto sa excel ug
 
 Sayon gamiton nga tipo sa mga filter. Pwede sad ka mupili og mga field sa gitarget nga entity ug usab mga naay kalabotan nga mga entity.
 
-![Field filter](../_static/images/user-guide/reports/filter-field.png)
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
 ### OR na grupo
 
 Ang OR nagpasabot nga dili mu menos usa ka kondisyon ubos sa grupo ang gikinahanglan nga maabot.
 
-![OR na grupo](../_static/images/user-guide/reports/filter-or.png)
+![OR na grupo](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
 ### AND na grupo
 
@@ -63,7 +63,7 @@ Ang AND nagpasabot nga ang tanan kondisyon ubos sa grupo gikinahanglang maabot.
 
 Naghatag og abilidad nga mufilter sa mga rekord nga wala nakaabot sa gitakda nga mga kriterya. E.g. paglista sa mga account nga walay opportunidad nga naay Closed Won o Closed Lost nga estado.
 
-![NOT nga grupo](../_static/images/user-guide/reports/filter-not.png)
+![NOT nga grupo](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Komplikado nga Ekspresyon
 
@@ -74,7 +74,7 @@ Timan-e: Kug gikinahanglan nimo mukompara og simple nga string nga balor, gikina
 Timan-e: Ang mga punsyon nga gitakda nga makig-istorya sa mga entity rekord kay dili mugana diri kay ang pormula wala giapply sa espisipiko nga rekord.
 
 ![Complex Expression filter]
-(../_static/images/user-guide/reports/filter-complex.png)
+(https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
 ### Having na grupo
 

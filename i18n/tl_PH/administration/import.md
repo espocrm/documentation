@@ -20,7 +20,7 @@ Kapag pumili ka ng isang csv file, maaari mong makita kung papaano mo ito mapa-p
 
 I-click ang _Next_ button para magpatauloy sa  _Step 2_.
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
 
 ## Pangalawang Hakbang
 
@@ -32,7 +32,7 @@ Pagkatapos mong gawing ang pag-import, maaari mong ibalik ang mga rekord na nali
 
 I-click ang _Run Import_ button upang mapgtauloy. Maaaring tumagal ng ilang oras bago matapos ang isang import process. Kung gusto mong mag-import ng isang malaking grupo ng mga rekord (depende sa iyong server configuration, kadalasan ay higit sa 200 na mga rekord), kailangan mong tiyakin na ang php parameter `set_time_limit` ay sapat ang kalakihan. 
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
 ## Paano Mag-import sa Target List
 

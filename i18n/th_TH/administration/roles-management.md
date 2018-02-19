@@ -10,7 +10,7 @@
 
 คุณสามารถดูว่ามีการใช้สิทธิ์กับผู้ใช้บางรายได้โดยคลิกที่ปุ่ม "เข้าถึง" ในมุมมองรายละเอียดของผู้ใช้
 
-![1](../_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
 
 ## ตัวอย่าง
 
@@ -102,4 +102,4 @@ stream - team
 
 ในการแก้ไขข้อมูลบที่ันทึกของบทบาท ในระดับเขตข้อมูลให้คลิกไอคอนบวก ถัดจากขอบเขตที่ระบุจากนั้นเลือกฟิลด์ที่ต้องการ จากนั้นคุณจะสามารถระบุระดับการเข้าถึงคำสั่ง `read` และ `edit` ได้ มีตัวเลือกให้เลือกคือ: `yes` และ `no`.
 
-![2](../_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)

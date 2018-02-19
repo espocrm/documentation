@@ -24,7 +24,7 @@ pwede mong i-export ang listahan ng mga reulta ng iyong ulat sa excel at csv na 
 
 ang reulta ng mga ulat na grid ay nagbubuod ng mga halaga na nakagrupo batay sa tukoy na larangan. Ang mga ulat na ito ay pwedeng i-displey bilang isang tsart .
 
-![Mga ulat na grid](../_static/images/user-guide/reports/grid.png)
+![Mga ulat na grid](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 Para gumawa ng bogaong ulat na grid ay i-klik ang tab ng mga ulat at pagkatapos ay i-iklik ang Gumawa ng bagong ulat na button. Piliin ang kakailanganing tukoy na entidad at pagkatapos ay i-klik ang Gumawa na button at seksyon ng ulat na grid.
 
@@ -48,13 +48,13 @@ Posibleng i-export ang mga resulta ng ulat na grid sa sa excel at csv na mga for
 
 Simpleng paggamit ng mga tipo ng mga pagsala. Maari mo din na piliin ang mga larangan na target na entidad pati na rin ang mga kaugnay na entitidades.
 
-![Field filter](../_static/images/user-guide/reports/filter-field.png)
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
 ### OR na grupo
 
 OR ay nangangahulugan na  hindi dapat bababa sa isang kalagayan sa ilalim ng grupo ang dapat matugunan.
 
-![OR group](../_static/images/user-guide/reports/filter-or.png)
+![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
 ### AND na grupo
 
@@ -64,7 +64,7 @@ AND ay nangangahulugan na lahat dapat na kalagayan sa ilalim ng grupo ang dapat 
 
 Nagbibigay ng kakayahan na isala mga talaan na di kayang matugunan ang mga tinukoy na pamantayan. E.g. Paglilista ng mga account na wala na anumang pagkakataon saradong panalo o saradong talo na katayuan.
 
-![NOT group](../_static/images/user-guide/reports/filter-not.png)
+![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Komplikadong Pagpapahayag
 
@@ -74,7 +74,7 @@ Paalala: Kung kailangan mong ikumpara lang sa isang simpleng string na halaga ay
 
 Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
 
-![Komplikadong pamamahayag ng pagsala](../_static/images/user-guide/reports/filter-complex.png)
+![Komplikadong pamamahayag ng pagsala](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
 ### Meron na grupo
 

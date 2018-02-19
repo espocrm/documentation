@@ -30,37 +30,37 @@ Zdaj odprite svoj brskalnik in pojdite na URL z EspoCRM datotekami (npr. `http:/
 Če vidite ta zaslon, je prišlo do napake "Nimate pravic".
 Torej morate zagnati prikazani ukaz v terminalu prek SSH oziroma nastaviti pravilne pravice (755 za direktorije, 644 za datoteke in 775 za direktorij `data`. Prav tako poskrbite, da bosta pravilno določena lastnik (_owner_) in skupina (_group_).
 
-![1](../_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
 
 Če vidite naslednji zaslon, so pravice pravilne in lahko začnete z namestitvijo EspoCRM.
 
-![2](../_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
 
 Na tej strani lahko preberete in sprejmete Licenčno pogodbo.
 
-![3](../_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
 
 Vnesite podrobnosti za svojo novo ustvarjeno MySQL podatkovno bazo.
 
-![4](../_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
 
 Vnesite uporabniško ime in geslo administratorja EspoCRM.
 
-![5](../_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
 
 Na tej strani lahko določite privzete nastavitve za EspoCRM, kot so format datuma in časa, časovni pas, valuto in drugo.
 
-![6](../_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
 
 Vnesite SMTP nastavitve za odhodno e-pošto, če želite imeti možnost pošiljanja e-pošte.
 Ta korak lahko preskočite s klikom na gumb _Naprej_.
 Vse te možnosti lahko dodate/uredite v EspoCRM po namestitvi.
 
-![7](../_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
 
 Čestitamo! Namestitev je končana.
 Kot zadnji korak je potrebno nastaviti funkcijo razporejanja opravil, da bo potekala na vašem sistemu. To lahko storite tako, da zaženete `crontab -e` v linux opravilni vrstici ter v _Windows Tasks Scheduler_ v operacijskem sistemu Windows.
 
-![8](../_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
 
 Upamo, da boste z veseljem delali v EspoCRM.

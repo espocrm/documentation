@@ -7,7 +7,7 @@ Omogoča vam, da prilagodite videz podrobnostnih, urejevalnih, seznamskih pogled
 
 Glavna postavitev za seznamski pogled. Določa stolpce in njihove parametre.
 
-![Seznam](../_static/images/administration/layout-manager/list.png)
+![Seznam](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 Razpoložljivi parametri za stolpce so navedeni spodaj.
 
@@ -33,7 +33,7 @@ Glavna postavitev za podrobnostni pogled in urejevalni pogled. Določa panele, v
 
 Vrstica lahko vsebuje dve celici ali eno celico, ki se razteza po celotni širini vrstice. Če želite dodati vrstico z razširjeno celico, morate dodati nov stolpec in klikniti na znak minus pri kateri koli celici.
 
-![Podrobnosti](../_static/images/administration/layout-manager/detail.png)
+![Podrobnosti](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## Seznam (majhen)
 

@@ -24,7 +24,7 @@ Anda dapat __mengexport__ daftar hasil laporan ke format excel dan csv.
 
 Laporan Grid menghasilkan nilai ringkas yang dikelompokkan menurut bidang yang ditentukan. Laporan ini bisa ditampilkan sebagai bagan.
 
-![Laporan Grid](../_static/images/user-guide/reports/grid.png)
+![Laporan Grid](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 Untuk membuat laporan grid baru klik pada tab Report kemudian klik tombol Buat Laporan. Pilih Tipe Entiti yang dibutuhkan lalu klik tombol Buat di bagian Laporan Grid.
 
@@ -48,13 +48,13 @@ Ini memungkinkan untuk __mengexport__ hasil laporan grid ke format excel dan csv
 
 Sangat mudah untuk menggunakan jenis penyaringan. Anda juga dapat memilih bidang entitas target dan juga entitites terkait.
 
-![Bagian penyaringan](../_static/images/user-guide/reports/filter-field.png)
+![Bagian penyaringan](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
 ### Grup OR
 
 OR berarti setidaknya satu kondisi di bawah kelompok harus dipenuhi.
 
-![Grup OR](../_static/images/user-guide/reports/filter-or.png)
+![Grup OR](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
 
 ### Grup AND
 
@@ -64,7 +64,7 @@ AND berarti bahwa semua kondisi di bawah kelompok harus dipenuhi.
 
 Menyediakan kemampuan untuk menyaring catatan yang tidak memenuhi kriteria yang ditentukan. Misalnya daftar akun yang tidak memiliki peluang dengan status Closed Won atau Closed Lost.
 
-![Grup NOT](../_static/images/user-guide/reports/filter-not.png)
+![Grup NOT](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Pernyataan Kompleks
 
@@ -74,7 +74,7 @@ Catatan: Jika Anda perlu membandingkan hanya dengan nilai string sederhana, Anda
 
 Catatan: Fungsi yang dimaksudkan untuk berinteraksi dengan catatan entitas tidak akan bekerja disini karena formula tidak diterapkan pada record tertentu.
 
-![Penyaringan Pernyataan Kompleks](../_static/images/user-guide/reports/filter-complex.png)
+![Penyaringan Pernyataan Kompleks](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 
 ## Menampilkan di Dasbor
 

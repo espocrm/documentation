@@ -6,7 +6,7 @@ Ang Layout Manager kay makita sa administration panel. Muhatag kini og abilidad 
 
 Ang main layout para sa list view. Mudefine kini sa mga column ug ilahang mga parameter.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 Ang mga pwedeng gamiton nga mga parameter para sa column kay gilista sa ubos.
 
@@ -32,7 +32,7 @@ Ang main layout para sa detail view ug sa edit view. Mu-define ug mga panel, mga
 
 Ang row kay pwede maglangkob og duha ka mga cell o usa ka cell nga gi-expand ngadto sa pinakadako nga hilapdon sa row. Para ipuno ang row nga naay gi-expand nga cell, gikinahanglan nimo nga mupuno og bag-o nga row ug mu-click ug minus nga sign nga naa sa bisan unsang cell.
 
-![Detail](../_static/images/administration/layout-manager/detail.png)
+![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## List (Small)
 

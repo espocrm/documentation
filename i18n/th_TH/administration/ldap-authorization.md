@@ -15,7 +15,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 
 หลังจากนั้น, ไปที่ EspoCRM  การตั้งค่าการตรวจสอบความถูกต้องในแผงผู้ดูแลระบบ, เลือก `LDAP` วิธีการและกรอกรายละเอียด LDAP:
 
-![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Host – LDAP IP หรือ ชื่อ host 
 * Port – การเชื่อมต่อ port.
@@ -46,7 +46,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 
 ตอนนี้, ไปที่หน้าเข้าสู่ระบบและระบุข้อมูลรับรองผู้ใช้
 
-![2](../_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
 
 ผู้ใช้ได้รับการตรวจสอบสิทธิ์และสร้างขึ้นโดยอัตโนมัติใน EspoCRM
 

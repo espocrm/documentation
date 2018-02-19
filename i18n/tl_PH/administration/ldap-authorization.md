@@ -15,7 +15,7 @@ Ngayon ay maaari na nating idagdag ang LDAP user para ma-acces ang EspoCRM. E.g.
 
 Pagkatapos ay pumunta sa mga EspoCRM  Authentication setting sa Administrator panel, i-select ang `LDAP` method at punan ang mga LDAP na detalye:
 
-![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Host – LDAP IP o pangalan ng host.
 * Port – port ng koneksyon.
@@ -45,7 +45,7 @@ Pagkatapos ay pumunta sa mga EspoCRM  Authentication setting sa Administrator pa
 
 Ngayon ay pumunta sa login page at i-enter ang mga user credential.
 
-![2](../_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
 
 Ang user ay na-authenticate na at awtomatiko ng nalikha sa EspoCRM.
 

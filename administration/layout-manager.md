@@ -6,7 +6,7 @@ Layout Manager is available in administration panel. Provides an ability to cust
 
 The main layout for the list view. Defines columns and their parameters.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 Available parameters for columns are listed below.
 
@@ -32,7 +32,7 @@ The main layout for the detail view and the edit view. Defines panels, rows and 
 
 The row can contain two cells or one cell that is expanded to the full width of the row. To add the row with an expanded cell you need to add the new row and click on a minus sign on any cell.
 
-![Detail](../_static/images/administration/layout-manager/detail.png)
+![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## List (Small)
 

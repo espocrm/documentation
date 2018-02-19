@@ -2,7 +2,7 @@
 
 การจัดการกระบวนการทางธุรกิจ (BPM) ให้ความสามารถ ในการจำลองและดำเนินการกระบวนการ ทางธุรกิจโดยอัตโนมัต ิใน EspoCRM  เป็นเครื่องมืออที่ดำเนิน การกระบวนการทางธุรกิจ ที่อธิบายไว้ ในมาตรฐาน BPMN 2.0  BPM เครื่องมือมีอยู่ใน [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) ส่วนขยาย.
 
-![BPM example](../_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
 
 ### ความแตกต่างจาก Workflows tool 
 
@@ -85,9 +85,9 @@ Gateways จะแสดง เป็นรูปข้าวหลามตั�
 
 ในกรณีของการบรรจบกันเพียงแค่นำ flow ไปยังองค์ประกอบที่ส่งออก จะไม่ได้รับการปิดกั้น แม้ว่าหลังจาก flow มา ดังนั้นกระแสคู่ขนานจะไม่ถูกผสานเข้ากับ flow 
 
-![exclusive gateway divergent](../_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](../_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Inclusive Gateway
 
@@ -96,7 +96,7 @@ Gateways จะแสดง เป็นรูปข้าวหลามตั�
 ในกรณีที่มีการแบ่งแยกออกไป มันสามารถนำไปสู่ flows คู่ขนานได้ (path) โดยขึ้นอยู่กับความสำเร็จของเกณฑ์ flows แต่ละครั้ง และ flows เริ่มต้น จะถูกเลือกหากไม่มีเงื่อนไขใด ๆ ที่ตรงตามเงื่อนไข กระแสเริ่มต้นถูกทำเครื่องหมายด้วยเครื่องหมายทับ
 
 
-![inclusive gateway](../_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 หมายเหตุ:gateways การแบ่งและการรวมกันต้องมีความสมดุล
 
@@ -110,7 +110,7 @@ Gateways จะแสดง เป็นรูปข้าวหลามตั�
 
 ในกรณีของการบรรจบกัน รอจนกว่ากระแสที่เข้ามาทั้งหมดจะมาถึงองค์ประกอบถัดไป
 
-![parallel gateway](../_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
 
 หมายเหตุ:  gateways การแบ่งและการรวมกันต้องมีความสมดุล 
 
@@ -123,7 +123,7 @@ Gateways จะแสดง เป็นรูปข้าวหลามตั�
 จะหยุด flow  จนกว่าเหตุการณ์ขาออกใด ๆ จะได้รับการกระตุ้น เหตุการณ์ที่ทริกเกอร์กำหนดให้มีการไหลเดี่ยว กิจกรรมขาออกอื่น ๆ ได้รับการปฏิเสธ เฉพาะเหตุการณ์ ระดับกลางเท่านั้น ที่สามารถอยู่ในส่วนอื่น ๆ ของกระแสลำดับที่ส่งออกได้
 
 
-![event based gateway](../_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
 
 ### กิจกรรม
 
@@ -195,12 +195,12 @@ UI มีความสามารถในการตรวจสอบเ�
 
 ### ตัวอย่างที่ 1
 
-![Example 1](../_static/images/administration/bpm/example-1.png)
+![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
 
 ### ตัวอย่างที่ 2
 
-![Example 2](../_static/images/administration/bpm/example-2.png)
+![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
 
 ### ตัวอย่างที่ 3
 
-![Example 3](../_static/images/administration/bpm/example-3.png)
+![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)

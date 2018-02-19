@@ -20,4 +20,4 @@ Bind Requires DN: ใช่
 คุณลักษณะ หมายเลขโทรศัพท์ของผู้ใช้ : เบอร์โทรศัพท์
 ```
 
-![1](../_static/images/administration/ldap-authorization/ldap-configuration-for-openldap.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration-for-openldap.png)

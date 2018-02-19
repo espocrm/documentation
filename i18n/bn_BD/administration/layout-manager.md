@@ -6,7 +6,7 @@
 
 তালিকা দেখুন জন্য প্রধান বিন্যাস। কলাম এবং তাদের পরামিতি নির্ধারণ করে।
 
-![তালিকা](../_static/images/administration/layout-manager/list.png)
+![তালিকা](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 কলামগুলর  জন্য উপলব্ধ প্যারামিটার নীচে তালিকাভুক্ত করা হয়।
 
@@ -32,7 +32,7 @@
 
 সারিটি দুটি কক্ষ বা একক কক্ষ ধারণ করতে পারে যা সারির পূর্ণ প্রস্থে সম্প্রসারিত হয়। আপনি একটি নতুন সারি যোগ করার প্রয়োজন একটি প্রসারিত সেল সঙ্গে সারি যোগ করুন এবং কোনো সেল নেভিগেশন একটি সাইন চিহ্ন ক্লিক করুন।
 
-![বিস্তারিত](../_static/images/administration/layout-manager/detail.png)
+![বিস্তারিত](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## তালিকা (ছোট)
 

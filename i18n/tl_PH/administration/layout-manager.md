@@ -6,7 +6,7 @@ Ang Layout Manager ay makikita sa administration panel. Nagbibigay kakayahang ma
 
 Ang pangunahing layout para sa list view. Tumutukoy sa mga column at mga parameter nito.
 
-![List](../_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
 Ang mga magagamit na mga parameter para sa mga column ay nakalista sa ibaba.
 
@@ -32,7 +32,7 @@ Ang pangunahing layout para sa detail view at ng edit view. Tumutukoy ng mga pan
 
 Ang row ay maaaring maglaman ng dalawang cell o isang cell na pinalawak hanggang sa buong lapad ng row. Upang i-add amg row na may pinalaking cell kailangan mong i-add ang bagong row at i-click ang minus sign sa kahit na anong cell.
 
-![Detalye](../_static/images/administration/layout-manager/detail.png)
+![Detalye](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
 ## Listahan (Maliit)
 

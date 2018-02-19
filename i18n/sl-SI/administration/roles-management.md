@@ -10,7 +10,7 @@ En uporabnik ima lahko več vlog. Te vloge so lahko izbrane za specifičnega upo
 
 To, katere pravice ima določeni uporabnik, lahko preverite tako, da kliknete na gumb 'Access' na podrobnem pogledu uporabnika.
 
-![1](../_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
 
 ## Primer
 
@@ -100,4 +100,4 @@ Privzete nastavitve so takšne, da lahko uporabnik bere vsa polja, če lahko ber
 
 V pogledu za urejanje zapisa vloge v razdelku Field Level kliknite na ikono poleg določenega območja in nato izberite ustrezno polje. Zatem boste lahko določili stopnjo dostopa za akcijo `read` (branje) in `edit` (urejanje). Obstajata dve možnosti: `yes` in `no`.
 
-![2](../_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
