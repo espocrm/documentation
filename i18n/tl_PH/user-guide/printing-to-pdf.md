@@ -1,11 +1,11 @@
 # Pag-print bilang PDF
 
-Paalala: Ang tampok na ito ay ay magagamit hanggang  EspoCRM 5.0.5 na bersyon.
+Paalala: Ang tampok na ito ay magagamit hanggang sa EspoCRM 5.0.5 na bersyon.
 
-Ang pag-print bilang PDF ay nagbibigay ng abilidad na na makabuo ng mga dokumentong PDF na may talaan na datos. Ang nilalaman ng dokumento ay tinukoy ng Template.
+Ang pag-print bilang PDF ay nagbibigay ng abilidad na makabuo ng mga dokumentong PDF na may talaan na datos. Ang nilalaman ng dokumento ay tinukoy ng Template.
 
 
-1. Kailangan mong magkaroon ng hindi bababa sa isang Template para sa uri ng entidad ng rekord na gusto mong i-print.
+1. Kailangan ay mayroon ka na hindi bababa sa isang Template para sa uri ng entidad ng rekord na gusto mong i-print.
 2. 'Pag-print bilang PDF' ay magagamit sa view ng detalye sa ilalim ng dropdown sa tabi ng pindutang 'I-edit'.
 
 ## Mga Template
@@ -18,18 +18,18 @@ Maaari kang mag-print ng mga patlang ng rekord pati na rin ang mga patlang ng mg
 
 Mga Halimbawa: 
 
-* `{{name}}` – Pangalan ng Rekord;
-* `{{assignedUserName}}` – Naka-assign na gumagamit;
-* `{{account.name}}` – Pangalan ng account na may kaugnayan.
+* `{{Pangalan}}` – Pangalan ng Rekord;
+* `{{assignednaPangan}}` – Naka-assign na gumagamit;
+* `{{account.pangalan}}` – Pangalan ng account na may kaugnayan.
 
 Posibleng mag-print ng mga patlang ng larawan:
 ```
-<img src="{{file imageId}}">
+<img src="{{file ImaheId}}">
 ```
 
-kung saan `imageId` – ang pangalan ng pasadyang imahe na patlang, na konektado sa suffix na `Id`.
+kung saan `ImaheId` – ang pangalan ng pasadyang imahe na patlang, na konektado sa suffix na `Id`.
 
-Upang mapakita ang mga numero ng float ng walang parte na fraksyonal (as integer)  ay gamitin ang mga sumusunod na ekspresyon:
+Upang maipakita ang mga numero ng float ng walang parte na praksyonal (as integer)  ay gamitin ang mga sumusunod na ekspresyon:
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
@@ -41,4 +41,4 @@ Pasadyang pag-format para sa mga halaga ng pera:
 
 Ang halagang `10000.5` ay i-print bilang `10 000,50`.
 
-Upang mapakita ang mga patlang ng teksto (multiline) ay gumamit ng tatlong tirante: ```{{{description}}}```.
+Upang mapakita ang mga patlang ng teksto (multiline) ay gumamit ng tatlong tirante: ```{{{Deskripsyon}}}```.
