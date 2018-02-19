@@ -18,16 +18,16 @@ Maaari kang mag-print ng mga patlang ng rekord pati na rin ang mga patlang ng mg
 
 Mga Halimbawa: 
 
-* `{{name}}` – Pangalan ng Rekord;
-* `{{assignedUserName}}` – Naka-assign na gumagamit;
-* `{{account.name}}` – Pangalan ng account na may kaugnayan.
+* `{{Pangalan}}` – Pangalan ng Rekord;
+* `{{assignednaPangan}}` – Naka-assign na gumagamit;
+* `{{account.pangalan}}` – Pangalan ng account na may kaugnayan.
 
 Posibleng mag-print ng mga patlang ng larawan:
 ```
-<img src="{{file imageId}}">
+<img src="{{file ImaheId}}">
 ```
 
-kung saan `imageId` – ang pangalan ng pasadyang imahe na patlang, na konektado sa suffix na `Id`.
+kung saan `ImaheId` – ang pangalan ng pasadyang imahe na patlang, na konektado sa suffix na `Id`.
 
 Upang maipakita ang mga numero ng float ng walang parte na praksyonal (as integer)  ay gamitin ang mga sumusunod na ekspresyon:
 ```
@@ -41,4 +41,4 @@ Pasadyang pag-format para sa mga halaga ng pera:
 
 Ang halagang `10000.5` ay i-print bilang `10 000,50`.
 
-Upang mapakita ang mga patlang ng teksto (multiline) ay gumamit ng tatlong tirante: ```{{{description}}}```.
+Upang mapakita ang mga patlang ng teksto (multiline) ay gumamit ng tatlong tirante: ```{{{Deskripsyon}}}```.
