@@ -1,7 +1,7 @@
-# Browser support
+# Suporta sa Browser
 
-We recommend using the latest versions of Google Chrome or Mozilla Firefox. EspoCRM works the best in these browsers. We regularly test all features in these browsers.
+Inirerekomenda naming na gamitin ang ponakabagong bersyon ng Google Chrome oh Mozilla Firefox. Gumagana ang EspoCRM mas mahusay sa mga browser na ito. Regular naming sinusubok ang lahat ng mga tampok sa mga browser na ito.
 
-Microsoft Edge and Safari are also supported, but there are less guarantees that everything will be working smoothly.
+Ang Microsoft at and Safari ay sinusuportahan din, ngunit mas mababa ang mga garantiya na lahat ng bagay ay gumagana nang maayos.
 
-We heighly do not recommend using Internet Explorer 11.
+Hindi namin nirerekomenda sa mataas na lebel ang paggamit ng Internet Explorer 11.

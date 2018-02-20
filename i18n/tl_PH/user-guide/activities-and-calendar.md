@@ -1,54 +1,54 @@
-# Activities and Calendar
+# Mga Aktibidad at kalendaryo
 
-There are three types of activities available in EspoCRM by default: 
+May tatlong uri ng mga aktibidad na magagamit sa EspoCRM bilang default: 
 
-* Meetings;
-* Calls;
-* Tasks.
+* Mga Pulong;
+* Mga tawag;
+* Mga Gawain.
 
-Administrator can create a custom entity of Event type. Then at Administration > Settings > Activities it's possible to set this entity type as an Activity and make it available in Calendar.
+Ang administrador ay makakalikha ng pasadyang entidad na uri ng pangyayari. Pagkatapos ay sa Administrasyon >Mga Setting > Mga aktibidad ay posible na itakda ang uri ng entidad na ito bilang isang Aktibidad at magagamit ito sa Kalendaryo.
 
-There is 'My Activities' dashlet showing actual and upcoming activity records related to the current user.
+Mayroong 'Ang aking mga Aktibidad' na dashlet na nagpapakita ng aktwal at paparating na mga talaan ng aktibidad na nauugnay sa kasalukuyang gumagamit.
 
-Accounts, Contacts, Leads, Opportunities, Cases have the Activities panel on the detail view. Custom entities of Base Plus type have the Activities panel as well.
+Mga Account, Mga Contact, Mga Lead,Mga Opportunity, at mga Kaso ay may panel ng aktibidad sa detalyadong view. Ang mga pasadyang entidad ng tipo ng Base plus ay mayroon ding panel ng mga aktibidad.
 
-## Meetings, Calls
+## Mga Pulong, Mga Tawag
 
-### Attendees
+### Mga Lumahok
 
-There are 3 types of attendees supported: Users, Contacts, Leads. For each attendee it's possible to specify acceptance status: Accepted, Tentative, Declined. There is an ability to send invitation emails to attendees by clicking the button in the top-right corner. Attendees will be able to set their acceptance status by clicking on a corresponding link in the email.
+May tatlong uri ng lumalahok na sinusuportahan: Mga User, Mga Contact, at Mga Lead. Sa bawat isang lumalahok ay posibleng tukuyin ang estado ng pagtanggap: Tinanggap, Pansamantala, at di tinanggap. Mayroong kaakayan na magpadala ng mga email na imbitasyon sa mga lumahok sa paraan ng pag-klik ng pindutan sa kanang taas na bahagi sa may bandang sulok. Ang mga lumahok ay may kakayahan din na i-set ang estado ng pagtanggap sa pamamagitan ng pag-klik ng susunon na link sa email.
 
-### Reminders
+### Mga Paalala
 
-There are two types of reminders: Popup (in-app message) and Email.
+May dalawang uri ng paalala: Popup (in-app na mensahe) at Email.
 
-### Default duration
+### Default na Tagal
 
-Default duration can be changed by administrator at Administration > Entity Manager > Meetings / Calls > Fields > Duration > Default. It must be specified in seconds.
+Ang default na tagal ay pwedeng baguhin ng administrador at Administrasyon > Tagapamahala ng Entidd > Mga Pulong / Mga tawag > Mga patlang > tagal > Default. Dapat tiyakin na ito ay sa segundo.
 
-## Tasks
+## Mga Gawain
 
-Date Start and Date Due fields are not required. Dates can be specified with or without time parts.
+Petsa ng Pagsisimula at Petsa ng Pagtatapos na mga patlang ay hindi kinakailangan. Ang mga petsa ay pwedeng tukuyin meron o wala mang mga parte ng oras.
 
-### Reminders
+### Mga paalala
 
-Reminders for the task record will be available only if Date Due is specified and it has time part.
+Ang mga Paalala sa rekord gawain ay magagamit lang kung ang petsa ng pagtatapos ay natukoy na at mayroong parte ng oras.
 
-## Calendar
+## Kalendaryo
 
-Calendar displays Meetings, Calls, Tasks. It's also possible to show custom entities of Event type.
+ Ang kalendaryo ay magpapakita ng Mga Pulong, Mga Tawag at Mga Gawain. Posible din na ipakita ang mga pasadyang entidad ng uri ng Pangyayari.
 
-Supported views:
+Mga sinusuportahang view:
 
-* Month;
-* Week;
-* Day;
+* Buwan;
+* Linggo;
+* Araw;
 * Timeline.
 
-Users can add Calendar on their dashboard.
+Ang mga gumagamit ay pwedeng magdagdag ng kelndaryo sa kanilang dashboard.
 
-It's possible to view calendar of another user (is you have an access determined by roles). Calendar button is available on the user's detail view.
+May posibilidad na pwedeng tingnan ang kalendaryo ng ibang gumagamit (kung ikaw ay binigyan ng pahintulot bata sa mga tungkulin). Ang pindutan ng kalendaryo ay mahahanap sa Detalyadong view ng gumagamit.
 
-### Shared Calendar
+### Ibinahaging Kalendaryo
 
-Shared calendar is available only in Timeline view. It allows to view events of multiple users.
+Ang mga Ibinahaging Kalendaryo ay makikita o mahahanap lang sa detalyadong view lamang. Pinapayagan nito na tingnan ang mga kaganapan ng maramihang mga gumagamit.
