@@ -1,8 +1,8 @@
-# Custom Views
+# Mga Kustom na View
 
-## Record Views
+## Mga Record View
 
-EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined it `clientDefs` category of metadata.
+Ang framework ng EspoCRM ay nagbibigay ng mga kakayahan na madaling iakma para matukoy ang mga kustom view para sa mga partikular na uri ng entity. Dapat silang tukuyin bilang `clientDefs` na kategorya ng metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
@@ -23,7 +23,7 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 
 `client/custom/src/views/your-entity-type/record/detail.js`
 
-Record/Detail view contains all panels with fields, relations and other data you can see on detail view. It doesn't contain header and buttons in the top-right corner.
+Ang rekord/detail view ay naglalaman ng lahat ng mga panel na may mga field, mga kaugnayan at ibang pang datos na makikita mo sa detail view. Hindi ito naglalaman ng header at mga buton sa tuktok na kanang sulok.
 
 ```javascript
 Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
@@ -68,33 +68,33 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
 
 ```
 
-You are able to create a custom template with the following path:
+Maaari kang lumikha ng isang kustom na template kasama ang sumusunod na path:
 `client/custom/res/templates/your-entity-type/record/detail.tpl`
 
 
 
 `client/custom/src/views/your-entity-type/detail.js`
 
-Detail view contains Record/Detail view and Header.
+Ang detail view ay naglalaman ng Rekord/Detail view at Header.
 
 
 `client/custom/src/views/your-entity-type/edit.js`
 `client/custom/src/views/your-entity-type/record/edit.js`
 
-The same as detail but is used when record is being created or edited not in inline-edit mode.
+Kagaya ng detail pero ito ay ginagamit kung ang rekord ay nililikha o ini-edit na hindi sa inline-edit na mode.
 
 
 `client/custom/src/views/your-entity-type/list.js`
 
-List view contains Record/List view, Header and Search Form View.
+Ang list view ay naglalaman ng Rekord/List view, Header at Search Form View.
 
 
 `client/custom/src/views/your-entity-type/record/list.js`
 
-List/Record view contains rows of records.
+Ang List/Rekord view ay naglalaman ng mga hanay ng rekord.
 
 
-It is worth being mentioned that you need to inherit your view class from specific class for your entity if one already exists.
+Karapat-dapat na banggitin na kailangan mong ma-inherit ang iyong klase ng view mula sa partikular na klase para sa iyong entity kung mayroon na nito.
 
 ```javascript
 Espo.define('custom:views/email/record/detail', 'views/email/record/detail', function (Dep) {
@@ -102,9 +102,9 @@ Espo.define('custom:views/email/record/detail', 'views/email/record/detail', fun
 });
 ```
 
-## Field Views
+## Mga Field View
 
-Custom views for specific fields should be specified in entityDefs section of metadata.
+Ang mga kustom view para sa mga partikular na field ay dapat na matukoy sa entityDefs na seksyon ng metadata.
 
 `custom/Espo/Custom/Resources/metadata/entityDefs/YourEntityType.json`
 

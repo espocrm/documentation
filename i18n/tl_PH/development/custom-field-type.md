@@ -1,24 +1,24 @@
-# Creating Custom Field Type
+# Pag-lika ng uri ng Kustom na Field
 
-### Field Definition
+### Depinisyon ng Field 
 
-Create a file `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` with needed parameters.
+Lumika ng isang file `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` na may mga kinakailangang parameter.
 ```
 {
    "view": "custom:views/fields/{field-type}"`
 }
 ```
 
-Use out-of-the-box field types as examples: `/application/Espo/Resources/metadata/fields`.
+Gamitin ang mga uri ng out-of-the-box field bilang mga halimbawa: `/application/Espo/Resources/metadata/fields`.
  
-### Translation
+### Pagsasalin
 
-The label is used in Entity Manager can be set in `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` in section `fieldTypes`.
-If you need to add translation to other language, use needed language [language code](https://en.wikipedia.org/wiki/ISO_639-1)_[country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) instead of `en_US`. In `data/config.php` in section `languageList` you can find the list of included languages.
+Ang label na ginagamit sa Entity Manager ay maaaring ma-set sa `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` sa seksyon ng `fieldTypes`.
+Kung kailangan mong magdagdag ng pagsasalin sa ibang lengguwahe, gamitin ang kinakailangang lengguwahe [code ng lengguwahe](https://en.wikipedia.org/wiki/ISO_639-1)_[country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) sa halip na `en_US`. Sa `data/config.php` sa seksyon ng `languageList` maaari mong makita ang listahan ng mga kasama na lengguwahe. 
 
-### View
+### Pag-view
 
-Create the view for the field `client/custom/src/views/fields/{field-type}.js` and define its templates
+Lumikha ng view para sa field `client/custom/src/views/fields/{field-type}.js` at tukuyin ang mga template nito.
 ```
 Espo.define('custom:views/fields/[field-type]', 'views/fields/base', function (Dep) {
     
@@ -28,8 +28,8 @@ Espo.define('custom:views/fields/[field-type]', 'views/fields/base', function (D
 });
 ```
 
-Use out-of-the-box field types as examples:
-- `/client/src/views/fields` - views;
-- `/client/res/templates/fields` - templates.
+Gamitin ang mga out-of-the-box na uri ng field bilang mga halimbawa:
+- `/client/src/views/fields` - mga view;
+- `/client/res/templates/fields` - mga template.
 
-Then you need to run rebuild at the administration panel.
+Pagkatapos ay kailangan mong patakbhuin ang rebuild sa administration panel.

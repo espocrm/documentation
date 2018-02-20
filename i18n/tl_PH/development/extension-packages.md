@@ -1,16 +1,16 @@
-# Extension Packages
+# Mga Pakete ng Ekstensiyon
 
-Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel under `Customization` section.
+Ang mga ekstensiyon ay nagbibigay ng karagdagang kakayahan para sa EspoCRM. Maaari itong ma-install sa pamamagitan ng Administration panel sa ilalim ng seksyon ng `Customization`.
 
-## How to create extension package
+## Kung Paano Gumawa ng Isang Pakete ng Ektensiyon
 
-A File structure of package:
+Isang Istraktura ng file ng pakete:
 
-* `/manifest.json` – a file that contains extension properties;
-* `/files` – a directory that contains the extension files;
-* `/scripts` – contains the extension scripts.
+* `/manifest.json` – isang file na naglalaman ng mga katangian ng ekstensiyon;
+* `/files` – isang direktoryo na naglalaman ng mga file ng ekstensiyon;
+* `/scripts` – naglalaman ng mga script ng ekstensiyon.
 
-### Manifest
+### Manipesto
 ```json
 {
  "name": "Extension Name",
@@ -25,23 +25,23 @@ A File structure of package:
 }
 ```
 
-* Syntax of `version` and `acceptableVersions` is described by the v2.0.0 specification found at http://semver.org.
-* `delete` - is the list of core files that need to be deleted. This parameter is not recommended to use. You can omit it.
+* Syntax ng `version` at `acceptableVersions` ay inilalarawan ng v2.0.0 espesipikasyon na makikita sa http://semver.org.
+* `delete` - ay ang listahan ng mga core file na kailangang tanggalin. Ang parameter na ito ay hindi inirerekomendang gamitin. Maaari mo itong laktawan.
 
-### Files
+### Mga File
 
-All extension files should be placed in `files` directory. They will be copied to EspoCRM core directory.
+Ang lahat ng file ng ekstensiyon ay dapat ilagay sa direktoryo ng mga `files`. Sila ay makokopya sa EspoCRM core na direktoryo.
 
-### Scripts
+### Mga Script
 
-For different purposes EspoCRM supports the following types of scripts. All of them should be  placed in `scripts` directory.
+Para sa iba't ibang mga layunin, ang EspoCRM ay sumusuporta sa mga sumusunod na uri ng mga script. Ang lahat ng mga ito ay dapat ilagay sa direktoryo ng mga `scripts`.
 
-* `BeforeInstall.php` – a script executed before an installation process;
-* `AfterInstall.php` – executed once the installation process is finished;
-* `BeforeUninstall.php` – executed before uninstallation process;
-* `AfterUninstall.php` – executed once the uninstallation process is finished.
+* `BeforeInstall.php` – isang script na dapat isinasagawa bago pa ang proseso ng pag-install;
+* `AfterInstall.php` – isinasagawa kapag ang proseso ng pag-install ay natapos na;
+* `BeforeUninstall.php` – isinasagawa bago pa ang proseso ng pag-uninstall;
+* `AfterUninstall.php` – isinasagawa kapag ang proseso ng pag-uninstall ay natapos na.
 
-Example:
+Halimbawa:
 
 ```php
 class AfterInstall
@@ -61,6 +61,6 @@ class AfterInstall
 }
 ```
 
-### Package
+### Packete
 
-At the end, we need to pack all these files into a .zip archive.
+Sa dulo, kailangan nating i-pack ang lahat ng mga file na ito sa archive ng .zip.
