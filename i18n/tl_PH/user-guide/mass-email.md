@@ -1,85 +1,85 @@
-# Mass Email
+# Maramihang Email
 
-## How to send mass email
+## Paano magpadala ng maramihang email
 
-You need to have at least one Target List with target records and Email Template in your crm.
+Kinakailangan na ikaw ay magkaroon ng kahit isang Target na listahan na may mga ulat ng target at Template ng Email sa iyong crm.
 
-1. Create new Campaign with a status `Email` or `Newsletter`. Select one or a few target lists in `Target Lists` field.
-2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure _Status_ set as `Pending`.
+1. Gumawa ng panibagong kampanya na may katayuan na `Email` o `Newsletter` . Pumili ng isa o ilang mga kaunting listahan ng target sa `Mga Listahan ng Target` na patlang.
+2. Pagkatapos gawin ang talaan ng kampanya ay gumawa ng maramihang email para sa kampanyang ito: I-klik ang  plus sa panel ng maramihang Email. Tukuyin ang _Date Start_ - kung ang mga email ay kailangan na ipadala, at piliin ang _Email Template_. Siguraduhin na ang _Status_ ay itinakda nilang `Nakabinbin`.
 
-If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
+Ang mga email ay maipapalabas kung ang lahat ng pagset-up ay tama. Kailangang maipadala kada oras na may mga bahagi (Pwede mong palitan ng kaki ng bahagi sa Administrastyon> Palabas na mga email). Pwede baguhin ito ng mga Administrador sa pamamagitan ng pag-update na `Scheduling` na patlang ng `Check Group Email Accounts` na naka-iskedyul na trabaho.
 
-You can check if emails are sent in Log panel.
+Maaari mong suriin kung ang mga email ay ipinadala sa log ng panel in.
 
-## Test what will be sent to recipients
+## Subukan kung ano ang mapapadala sa mga padadalhan
 
-Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
+I-klik ang right na dropdown sa hanay ng maramihang email sa _Mass Email_ na panel at pagkatapos ay i-klik ang _Send Test_.
 
 ## Log
 
-In log you can see:
-* Sent email;
-* Emails opened by recipient;
-* Links clicked by recipient;
-* Recipients who opted out;
-* Bounced emails (not delivered to recipient).
+Sa log ay iyong makikita ang mga sumusunod:
+* Mga email na pinadala;
+* Mga email na binuksan ng pinadalhan;
+* Mga link na na-klik ng pinadalhan;
+* Mga pinadalhan na nagpasyang sumali;
+* Mga email na bumalik (mga hindi napadala sa pinadalhan).
 
-## Opt-out link
+## Link para sa Pagsali
 
-By default the system will append opt-out to all sent emails. But you can use custom one in your Email Template.
+Bilang default ang sistema ay magsasama ng pagsali sa lahat ng mga pinadalang email. Ngunit pwede kang gumawa ng isang pinasadya sa iyong Templat na Email.
 
-Example:
+Halimbawa:
 ```html
-<a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
+<a href="{optOutUrl}">Hindi na sasali sa listahan na papadalhan ng email.</a>
 ```
 
-Administrator can disable mandatory opt-out link being added by system at Administration > Outbound Emails.
+Ang administrador ay kayanag di paganahin ang sapilitang ling ng pagsasali na dinagdag ng sistema sa Administrasyon > Palabas na mga Email.
 
-## Tracking URL
+## Pagsubaybay ng URL
 
-If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
- and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
+Kung may balak kang malaman kung ang pinadalhan mo ba ay binuksan ang link mula sa iyong email, kailangan mo gumawa ng URL ng pagsubaybay. Tumukoy ng kahit na anong  _Ngalan_
+ at _URL_ kung saan ang iyong link ay dapat humantong. Pagkatapos ay kailangan mong ipaste ang code na nalikha sa iyong Template ng email.
 
- Example:
+ Halimbawa:
  ```html
-<a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
+<a href="{trackingUrl:55f2c87b09a220a78}">Subukan ang aming demo</a>
  ```
  
-## Target Lists
+## Listahan ng mga Target
 
-Target Lists contains the lists of Accounts, Contacts, Leads and Users records. 
+Ang mga listahan ng target ay naglalaman ng mga listahan ng mga Accounts,mga Contacts, mga Leads at mga talaan ng gymagamit. 
 
-Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all result of search.
+Ang mga gumagamit ay kayang magparami ng mga listahan ng taget ng mano-mano gamit ang _Pumili_ na aksyon sa kaukulang panel sa detalyadong view ng listahan ng target. Mayroong abilidad para gumawa ng pagsasala at pagkatapos ay piliin ang lahat ng resulta ng paghahanap.
 
-## Populating target lists with Reports
+## Pagpaparami ng mga listahan ng target na may mga ulat
 
-[Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
+ Ang [ulat](reports.md#syncing-with-target-lists) na tampok ay nagbibigay ng abilidad na paramihin ang mga listahan ng target na may mga rekord na tumutugma sa isang tiyak na pamantayan.
 
-## Excluding Target Lists
+## Pagliban ng mga Listahan ng Target
 
-Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
+Tukuyin ang pagliban ng mga listahan ng target para maiwasan ang maramihang pagpapadala ng email sa mga piling padadalhan. Kung may isang rekord sa isang address ng email na tumutugma sa address ng email ng rekord ng mga hindi kasali, ang unang rekord ang hindi sasali kung gayon man.
 
-## Campaign Log
+## Log ng kampanya
 
-At Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+Sa log ng kampanya ay iyong makikita ang mga email na iyong ipinadala, mga nabuksang email, mga bumalik na email, mga sumali, at ang mga taong nag-klik ng link sa email. May posibilidad na magamit ang log na ito sa paraan ng paggawa ng Listahan ng Target(ang dropdown ay nasa bandang kanan sa itaas na sulok ng panel) na batay sa mga rekord na galing sa log. For example, you pick only contacts that clicked on the link (tracking url).
 
-## Troubleshooting
+## Pag-troubleshoot
 
-_For Administrators_
+_Para sa mga Administrador_
 
-#### What to do if emails are not sent out.
+#### Ano ang gagawin kung ang mga email ay hindi napadala
 
-1. Check if _Send Test_ works. If does't work, then check if system SMTP settings are correct.
-2. Check if you have setup cron for your system.
-3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
+1. Tingnan kung ang  _test ng pagpadala_ ay gumana. kung hindi gumagana, sa halip ay tingnan kung ang mga setting ng SMTP na sistemaay tama.
+2. Tingnan kung ikaw ay naka-setup ng cron para sa iyong sistema.
+3. Tingnan kung mayroon kang `Magpadala ng Maramihang Email` na naka-iskedyul na tarabaho at ito ay `Aktibo` (Administraston > Naka-iskedyul na Trabaho > Magpadala ng mga maramihang email). Tingnan kung mayroong kakaiba sa Log.
 
 
-#### What if Tracking URLs has wrong url that does not lead to your crm.
+#### Paano kung ang URL ng pagsubaybay ay may maling url na hindi pinahahantong sa iyong crm.
 
-Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of your EspoCRM accessible from the external world.
+Tingnan ang 'siteUrl' na parameter sa `data/config.php` na file. Iyon ay kailangang itakda bilang URL ng iyong EspoCRM na pwedeng pasukan ng mundong nasa labas.
 
-#### Bounced emails are not being logged
+#### Ang mga bumalik na email ay hindi na-log
 
-Bounced emails can be handled by group email account only. Make sure that you have a group email account that monitores the mailbox bounced emails are sent to.
+Ang mga bumalik na e-mail ay pwede lang hawakan ng account ng email na grupo. Tiyakin kong mayroon kang isang Eamail na account na panggrupo na sumusubaybay sa mailbox kung saan ang bumalik na email ay pinadala.
 
-Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
+Gayundin ang ilang mga tagabigay ng serber ng mail ay maaaring lumihis mula sa mga pamantayan, kaya ang mga bumalik na email ay hindi basta-bastang makikilala.
