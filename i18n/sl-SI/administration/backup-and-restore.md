@@ -43,7 +43,7 @@ bash ./backup.sh POT_DO_ESPOCRM POT_DO_VARNOSTNE_KOPIJE
 ```
 pri čemer je
  * `POT_DO_ESPOCRM` pot do direktorija, kjer je nameščen EspoCRM.
- * `POT_DO_VARNOSTNE_KOPIJE` pot do dirktorija, kjer se nahaja varnostna kopija.
+ * `POT_DO_VARNOSTNE_KOPIJE` pot do direktorija, kjer se nahaja varnostna kopija.
 
 Za Ubuntu strežnik je videti takole:
 
@@ -53,7 +53,7 @@ bash ./backup.sh /var/www/html /opt/backups
 
 Opomba: Če trenutni uporabnik MySQL nima potrebnih pravic za izvoz vaše podatkovne baze, boste pozvani, da vpišete uporabniško ime in geslo drugega MySQL uporabnika.
 
-Po uspešno ustvarjeni varnostni kopiji, boste prejeli pot do te varnostne kopije.
+Po uspešno ustvarjeni varnostni kopiji boste prejeli pot do te varnostne kopije.
 
 ## Obnovite EspoCRM iz varnostne kopije
 
@@ -97,4 +97,4 @@ pri čemer je:
 sudo crontab -l -u www-data
 ```
 
-Več podrobnosti glede konfiguriranja crontab za EspoCRM je opisanih tukaj [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+Več podrobnosti glede konfiguriranja crontab za EspoCRM najdete tukaj: [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).

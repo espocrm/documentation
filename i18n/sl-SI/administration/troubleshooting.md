@@ -74,7 +74,7 @@ kjer je `www-data` uporabnik za spletni strežnik.
 
 ## EspoCRM se po nadgradnji ne naloži
 
-To se lahko včasih zgodi na nekaterih deljenih gostovanjih.
+To se lahko včasih zgodi pri nekaterih deljenih gostovanjih.
 
 Preverite pravice datotek:
 /index.php
