@@ -1,233 +1,233 @@
-# Calculated Fields (Formula)
+# Izračunana polja (Formula)
 
-In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved. 
-It provides an ability to automatically set specific fields (attributes) with values derived from calculation.
+V Upravljalniku entitet je možno definirati skript (formulo) za določen tip entitete. Ta skript se bo izvršil vsakič, preden bo zapis shranjen.
+To omogoča, da se določenim poljem (atributom) samodejno nastavijo vrednosti, pridobljene iz izračuna.
 
-To edit formula follow Administration > Entity Manager > dropdown menu at the right on the row of needed entity > Formula.
+Za urejanje formule pojdite na Administracija > Upravljalnik entitet > padajoči meni na desni pri vrstici izbrane entitete > Formula.
 
-You also might need to set fields, that are supposed to be calculated, Read-only via Entity Manager.
+Prav tako bi bilo dobro, da poljem, ki bodo prejela izračunane vrednosti, nastavite atribut Samo branje v Upravljalniku entitet.
 
 
-## Syntax
+## Sintaksa
 
-EspoCRM formula is written in the simple language designed specifically for this feature.
+EspoCRM formula se piše v preprostem jeziku, oblikovanem posebej za ta namen.
 
-There are operators, functions attributes and values that can be used in formula. Separated expressions must be delimited by character `;`.
+V formuli lahko uporabite operatorje ter atribute in vrednosti funkcij. Ločene izraze morate ločiti z znakom `;`.
 
-### Operators
+### Operatorji
 
-* `=` - assignment.
-* `||` - logical OR,
-* `&&` - logical AND,
-* `!` - logical NOT,
-* `+`- numeric summation,
-* `-` - numeric subtraction,
-* `*` - numeric multiplication,
-* `/` - numeric division,
-* `%` - numeric modulo,
-* `==` - comparison equals,
-* `!=` - comparison not equals,
-* `>` - comparison greater than,
-* `<` - comparison less than,
-* `>=` - comparison greater than or equals,
-* `<=` - comparison less than or equals.
+* `=` - prireditev,
+* `||` - logični ALI,
+* `&&` - logični IN,
+* `!` - logični NE,
+* `+`- numerično seštevanje,
+* `-` - numerično odštevanje,
+* `*` - numerično množenje,
+* `/` - numerično deljenje,
+* `%` - numerični modul (preostanek po deljenju),
+* `==` - primerjava: je enako,
+* `!=` - primerjava: ni enako,
+* `>` - primerjava: večje kot,
+* `<` - primerjava: manjše kot,
+* `>=` - primerjava: večje ali enako,
+* `<=` - primerjava: manjše ali enako.
 
-Priority of operators:
+Prioriteta operatorjev:
 * `=`;
 * `||`, `&&`;
 * `==`, `!=`, `>`, `<`, `>=`, `<=`;
 * `+`, `-`;
 * `*`, `/`, `%`.
 
-### Attributes
+### Atributi
 
-Attributes represent field values of the target entity. You can insert available attributes by clicking on the plus button.
+Atributi predstavljajo vrednosti polj ciljne entitete. Atribute, ki so na voljo, lahko dodate s klikom na gumb plus.
 
-It's possible to access attributes of related entities with the following format `linkName.attributeName`.
+Do atributov povezanih entitet lahko dostopate z zapisom v naslednji obliki: `imePovezave.imeAtributa`.
 
 
-### Functions
+### Funkcije
 
-Format of function use: `groupName\functionName(argument1, argument2, ..., argumentN)`.
+Funkcije se uporablja v naslednji obliki: `imeSkupine\imeFunkcije(argument1, argument2, ..., argumentN)`.
 
-Out-of-the-box functions are listed below.
+V nadaljevanju so navedene privzete funkcije.
 
 #### ifThenElse
-`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met then do CONSEQUENT. If not -- then do ALTERNATIVE.
+`ifThenElse(POGOJ, POSLEDICA, ALTERNATIVA)` Če je POGOJ izpolnjen, potem naredi POSLEDICO. Če ni, potem naredi ALTERNATIVO.
 
 #### ifThen
-`ifThen(CONDITION, CONSEQUENT)` If CONDITION is met then do CONSEQUENT. If not -- do nothing.
+`ifThen(POGOJ, POSLEDICA)` Če je POGOJ izpolnjen, potem naredi POSLEDICO. Če ni, potem nič ne naredi nič.
 
 #### string\concatenate(
-`string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
+`string\concatenate(NIZ_1, NIZ_2)` Spoji oziroma združi dva ali več nizov.
 
 #### string\substring
-`string\substring(STRING, START, LENGTH)`  Extracts the characters from a STRING by START position and LENGTH.
+`string\substring(NIZ, ZAČETEK, DOLŽINA)` Izlušči znake iz NIZA od pozicije ZAČETEK in z določeno DOLŽINO.
 
-If LENGTH is omitted, the substring starting from START until the end of the STRING will be returned.
+Če je DOLŽINA izpuščena, potem bo rezultat funkcije podniz od pozicije ZAČETEK od konca NIZA.
 
-If LENGTH is negative, then that many characters will be omitted from the end of STRING.
+Če je DOLŽINA negativna, potem bo tolikšno število znakov izpuščenih od konca NIZA.
 
 #### string\\trim
-`string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
+`string\trim(NIZ)` Odstrani prazen prostor (znake za presledek) na začetku in na koncu NIZA.
 
 #### string\\lowerCase
-`string\lowerCase(STRING)` Converts letters to lower case. (since version 5.0.0)
+`string\lowerCase(NIZ)` Vse znake niza pretvori v male črke. (od verzije 5.0.0)
 
 #### string\\upperCase
-`string\upperCase(STRING)` Converts letters to upper case. (since version 5.0.0)
+`string\upperCase(NIZ)` Vse znake niza pretvori v velike črke. (od verzije 5.0.0)
 
 #### datetime\\today
-`datetime\today()` Returns today's date.
+`datetime\today()` Vrne današnji datum.
 
 #### datetime\now
-`datetime\now()` Returns current datetime.
+`datetime\now()` Vrne trenutni datum in čas.
 
 #### datetime\format
-`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
+`datetime\format(VREDNOST, [ČASOVNI PAS], [FORMAT])` Pretvori VREDNOST datum ali datum-čas v niz, formatiran glede na nastavitve aplikacije. Argumenta ČASOVNI PAS in FORMAT se lahko izpusti. Če je ČASOVNI PAS izpuščen, potem bo uporabljen privzeti časovni pas. Če je FORMAT izpuščen, potem bo uporabljen privzeti format.
 
 #### datetime\date
-`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\date(VREDNOST, [ČASOVNI PAS])` Vrne datum v mesecu (1-31).  Če VREDNOST ni določena, vrne `0`. Če je ČASOVNI PAS izpuščen, potem se uporabi sistemski časovni pas. (od verzije 4.7.0)
 
 #### datetime\month
-`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\month(VREDNOST, [ČASOVNI PAS])` Vrne mesec (1-12). Če VREDNOST ni določena, vrne `0`. Če je ČASOVNI PAS izpuščen, potem se uporabi sistemski časovni pas. (od verzije 4.7.0)
 
 #### datetime\year
-`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\year(VREDNOST, [ČASOVNI PAS])` Vrne leto. `0` Če VREDNOST ni določena, vrne `0`. Če je ČASOVNI PAS izpuščen, potem se uporabi sistemski časovni pas. (od verzije 4.7.0)
 
 #### datetime\hour
-`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\hour(VREDNOST, [ČASOVNI PAS])` Vrne uro (0-23). Če VREDNOST ni določena, vrne `-1`. Če je ČASOVNI PAS izpuščen, potem se uporabi sistemski časovni pas. (od verzije 4.7.0)
 
 #### datetime\minute
-`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\minute(VREDNOST, [ČASOVNI PAS])` Vrne minuto (0-59). Če VREDNOST ni določena, vrne `-1`. Če je ČASOVNI PAS izpuščen, potem se uporabi sistemski časovni pas. (od verzije 4.7.0)
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted then system timezone is used. (since version 4.7.3)
+`datetime\dayOfWeek(VREDNOST, [ČASOVNI PAS])` Vrne dan v tednu (0-6). Če VREDNOST ni določena, vrne `-1`. Za nedeljo vrne `0`. Če je ČASOVNI PAS izpuščen, potem se uporabi sistemski časovni pas. (od verzije 4.7.3)
 
 #### datetime\diff
-`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
+`datetime\diff(VREDNOST_1, VREDNOST_2, VRSTA INTERVALA)` Vrne razliko med dvema datumoma ali poljema datum-čas. VRSTA INTERVALA je lahko 'years', 'months', 'days', 'hours', 'minutes'. Če izračun ne uspe, vrne `null`. Če je VREDNOST_1 < VREDNOST_2, je rezultat negativen.
 
 #### datetime\addMinutes
-`datetime\addMinutes(VALUE, MINUTES)` Adds MINUTES to datetime VALUE. MINUTES can be negative.
+`datetime\addMinutes(VREDNOST, MINUTE)` Doda MINUTE k VREDNOSTI polja datum-čas. MINUTE so lahko negativne.
 
 #### datetime\addHours
-`datetime\addHours(VALUE, HOURS)` Adds HOURS to datetime VALUE. HOURS can be negative.
+`datetime\addHours(VREDNOST, URE)` Doda URE k VREDNOSTI polja datum-čas. URE so lahko negativne.
 
 #### datetime\addDays
-`datetime\addDays(VALUE, DAYS)` Adds DAYS to date or datetime VALUE. DAYS can be negative.
+`datetime\addDays(VREDNOST, DNEVI)` Doda DNEVE k VREDNOSTI polja datum-čas. DNEVI so lahko negativni.
 
 #### datetime\addWeeks
-`datetime\addWeeks(VALUE, WEEKS)` Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
+`datetime\addWeeks(VREDNOST, TEDNI)` Doda TEDNE k VREDNOSTI polja datum-čas. TEDNI so lahko negativni.
 
 #### datetime\addMonths
-`datetime\addMonths(VALUE, MONTHS)` Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
+`datetime\addMonths(VREDNOST, MESECI)` Doda MESECE k VREDNOSTI polja datum-čas. MESECI so lahko negativni.
 
 #### datetime\addYears
-`datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
+`datetime\addYears(VREDNOST, LETA)` Doda LETA k VREDNOSTI polja datum-čas. LETA so lahko negativna.
 
 #### datetime\closest
-`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 5.0.0)
+`datetime\closest(VREDNOST, VRSTA, CILJ, [V_PRETEKLOSTI], [ČASOVNI PAS])` Vrne datum ali datum-čas, ki je najbližje VREDNOSTI upoštevajoč posredovane argumente. (od verzije 5.0.0)
 
-TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted then default timezone is used.
+VRSTA je lahko ena od naslednjih vrednosti: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. CILJ je celo število ali niz. V_PRETEKLOSTI pomeni, da poišče najbližjo vrednost v preteklosti. Če je ČASOVNI PAS izpuščen, potem se uporabi privzeti časovni pas.
 
-Examples:
+Primeri:
 
-`datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
+`datetime\closest(datetime\now(), 'time', '20:00')` Vrne najbližjo vrednost datum-čas v prihodnosti s časom 20:00.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
+`datetime\closest('2017-11-20', 'date', 1, true)` Vrne `2017-11-01`, prvi dan v mesecu.
 
-`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
+`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Vrne naslednji ponedeljek (na začetku dneva).
 
 #### number\format
-`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR then system defaults are used.
+`number\format(VREDNOST, [DECIMALKE], [DECIMALNA VEJICA], [LOČEVANJE TISOČIC])` Pretvori numerično VREDNOST v niz, formatiran glede na navedeni format ali glede na privzete nastavitve aplikacije. Če je argument DECIMALKE, DECIMALNA VEJICA ali LOČEVANJE TISOČIC izpuščen, potem se uporabijo sistemske privzete nastavitve.
 
-Examples:
+Primeri:
 
-`number\format(2.666667, 2)` - results 2.67;
+`number\format(2.666667, 2)` - rezultat je 2.67;
 
-`number\format(1000, 2)` - results 1,000.00;
+`number\format(1000, 2)` - rezultat je 1,000.00;
 
-`number\format(10.1, 0)` - results 10.
+`number\format(10.1, 0)` - rezultat je 10.
 
 
 #### number\abs
-`number\abs(VALUE)` Absolute value. Returns null if VALUE is not numeric.
+`number\abs(VREDNOST)` Absolutna vrednost. Če VREDNOST ni numerična, vrne null.
 
 #### number\round
-`number\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
+`number\round(VREDNOST, NATANČNOST)` Vrne zaokroženo vrednost VREDNOSTI z navedeno NATANČNOSTJO (število decimalk). NATANČNOST je lahko tudi negativna ali enaka nič (privzeto).
 
 #### number\floor
-`number\floor(VALUE)` Returns the next lowest integer value by rounding down value if necessary. (since version 4.9.0)
+`number\floor(VREDNOST)` Vrne naslednje najnižje celo število, tako da zaokroži vrednost navzdol, če je potrebno. (od verzije 4.9.0)
 
 #### number\ceil
-`number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary. (since version 4.9.0)
+`number\ceil(VREDNOST)` Vrne naslednje najvišje celo število, tako da zaokroži vrednost navzgor, če je potrebno. (od verzije 4.9.0)
 
 #### entity\isNew
-`entity\isNew()` Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
+`entity\isNew()` Vrne TRUE, če je entiteta nova (je bila ustvarjena) in FALSE, če ni (je bila posodobljena).
 
 #### entity\\isAttributeChanged
-`entity\isAttributeChanged(ATTRIBUTE)` Returns TRUE if ATTRIBUTE of the entity was changed.
+`entity\isAttributeChanged(ATRIBUT)` Vrne TRUE, če se je ATRIBUT entitete spremenil.
 
-Example:
+Primer:
 
 `entity\isAttributeChanged('status')`
 
 #### entity\isAttributeNotChanged
-`entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was not changed.
+`entity\isAttributeNotChanged(ATRIBUT)` Vrne TRUE, če se ATRIBUT entitete ni spremenil.
 
 #### entity\attributeFetched
-`entity\attributeFetched(ATTRIBUTE)` Attribute that was set when target entity was fetched from database. Before it was modified.
+`entity\attributeFetched(ATRIBUT)` Atribut, ki je bil določen, ko je bila ciljna entiteta naložena iz baze podatkov. Preden je bil spremenjen.
 
-Example:
+Primer:
 
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field. 
+`entity\addLinkMultipleId(POVEZAVA, ID)` Doda ID polju Poveži več. Na primer, polju 'timi' doda 'nekiTimId'.
 
-`entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
+`entity\addLinkMultipleId(POVEZAVA, ID_SEZNAM)` Doda seznam id-jev. (od verzije 4.8.3)
 
 #### entity\hasLinkMultipleId
-`entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
+`entity\hasLinkMultipleId(POVEZAVA, ID)` Preveri, ali ima polje Poveži več določen ID.
 
 #### entity\removeLinkMultipleId
-`entity\removeLinkMultipleId(LINK, ID)` Removes a specific ID from the Link Multiple field.
+`entity\removeLinkMultipleId(POVEZAVA, ID)` Odstrani določen ID polju Poveži več.
 
 #### entity\isRelated
-`entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
+`entity\isRelated(POVEZAVA, ID)` Preveri, ali je ciljna entiteta povezana z drugo entiteto, predstavljeno s POVEZAVO in ID-jem.
 
 #### env\userAttribute
-`env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
+`env\userAttribute(ATRIBUT)` Vrne ATRIBUT trenutnega uporabnika.
 
 #### list
-`list(VALUE-1, ... VALUE-N)` Returns array. (since version 4.7.0)
+`list(VREDNOST-1, ... VREDNOST-N)` Vrne tabel. (od verzije 4.7.0)
 
 #### array\includes
-`array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
+`array\includes(SEZNAM, VREDNOST)` Vrne true, če SEZNAM vsebuje VREDNOST. Uporabi se lahko za polji Tabela in Multi-Enum. (od verzije 4.7.0)
 
 #### array\push
-`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 5.0.0)
+`array\push(SEZNAM, VREDNOST1 [, VREDNOST2 ...])` Doda en ali več elementov na konec tabele in vrne novo tabelo. (od verzije 5.0.0)
 
 #### array\length
-`array\length(LIST)` Returns count of elements in LIST. (since version 4.8.1)
+`array\length(SEZNAM)` Vrne število elementov v SEZNAMU. (od verzije 4.8.1)
 
 
-### Values
+### Vrednosti
 
-* Strings. E.g. 'some string';
-* Integer numbers. E.g. 1, 100, 40300.
-* Float numbers. E.g. 5.2.
+* Nizi. Na primer 'neki niz';
+* Cela števila. Na primer 1, 100, 40300.
+* Decimalna števila. Na primer 5.2.
 
-### Variables
+### Spremenljivke
 
-It's possible to define custom variables in formula.
+V formuli je možno definirati lastne spremenljivke.
 ```
-$someVariableName = 'Test';
-description = $test;
+$imeNekeSpremenljivke = 'Test';
+opis = $test;
 ```
 
 
-## Examples
+## Primeri
 
 ```
 ifThen(
@@ -242,12 +242,12 @@ ifThen(
 ```
 
 ```
-amount = product.listPrice - (product.listPriceConverted * discount / 100.0);
-amountCurrency = 'USD';
+znesek = produkt.navedenaCena - (produkt.navedenaCenaPretvorjena * popust / 100.0);
+valutaZneska = 'EUR';
 ```
 
 ```
-someField = string\concatenate(firstName, " '", middleName, "' ", lastName);
+nekoPolje = string\concatenate(ime, " '", srednjeIme, "' ", priimek);
 ```
 
 ```
@@ -262,6 +262,6 @@ ifThenElse(
 
 ```
 
-## Using formula in Workflows
+## Uporaba formule v Delovnih tokovih
 
-You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
+Formulo lahko uporabite v pogojih in akcijah Delovnih tokov. Za več informacij si poglejte [dokumentacijo za delovne tokove](workflows.md)
