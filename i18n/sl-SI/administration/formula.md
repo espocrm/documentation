@@ -56,15 +56,15 @@ V nadaljevanju so navedene privzete funkcije.
 `ifThenElse(POGOJ, POSLEDICA, ALTERNATIVA)` Če je POGOJ izpolnjen, potem naredi POSLEDICO. Če ni, potem naredi ALTERNATIVO.
 
 #### ifThen
-`ifThen(POGOJ, POSLEDICA)` Če je POGOJ izpolnjen, potem naredi POSLEDICO. Če ni, potem nič ne naredi nič.
+`ifThen(POGOJ, POSLEDICA)` Če je POGOJ izpolnjen, potem naredi POSLEDICO. Če ni, potem ne naredi nič.
 
-#### string\concatenate(
+#### string\concatenate
 `string\concatenate(NIZ_1, NIZ_2)` Spoji oziroma združi dva ali več nizov.
 
 #### string\substring
 `string\substring(NIZ, ZAČETEK, DOLŽINA)` Izlušči znake iz NIZA od pozicije ZAČETEK in z določeno DOLŽINO.
 
-Če je DOLŽINA izpuščena, potem bo rezultat funkcije podniz od pozicije ZAČETEK od konca NIZA.
+Če je DOLŽINA izpuščena, potem bo rezultat funkcije podniz od pozicije ZAČETEK do konca NIZA.
 
 Če je DOLŽINA negativna, potem bo tolikšno število znakov izpuščenih od konca NIZA.
 
@@ -264,4 +264,4 @@ ifThenElse(
 
 ## Uporaba formule v Delovnih tokovih
 
-Formulo lahko uporabite v pogojih in akcijah Delovnih tokov. Za več informacij si poglejte [dokumentacijo za delovne tokove](workflows.md)
+Formulo lahko uporabite v pogojih in akcijah Delovnih tokov. Za več informacij si poglejte [dokumentacijo za delovne tokove](workflows.md).
