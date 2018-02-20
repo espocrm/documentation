@@ -1,99 +1,100 @@
-# Backup and Restore
+# Varnostna kopija in obnovitev
 
-## How to backup EspoCRM manually
+## Kako ročno narediti varnostno kopijo EspoCRM
 
-EspoCRM consists of files and database data. All these data are needed in order to create a full backup of EspoCRM. Here are instructions on how to do it on Ubuntu server with MySQL.
+EspoCRM vsebuje datoteke in podatke, shranjene v podatkovni bazi. Vsi ti podatki so potrebni za ustvaritev polne varnostne kopije EspoCRM. Sledijo navodila, kako lahko to naredite na Ubuntu strežniku z MySQL.
 
-### Step 1. Backup files
+### Korak 1. Varnostna kopija datotek
 
-Create an archive of the directory content of installed EspoCRM. For Ubuntu the default path is `/var/www/html`. You may use this command:
+Ustvarite arhiv vsebine direktorija nameščenega EspoCRM. Za Ubuntu je privzeta pot `/var/www/html`. Uporabite lahko ta ukaz:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
 ```
 
-### Step 2. Backup database
+### Korak 2. Varnostna kopija podatkovne baze
 
-To backup all your data, you have to know the database name and access credentials. You can find the database name in the configuration file `/ESPOCRM_DIRECTORY/data/config.php` under section `database`. You can use this command to backup your database:
+Da bi lahko ustvarili varnostno kopijo svojih podatkov, morate vedeti ime podatkovne baze ter uporabniško ime in geslo za dostop. Ime podatkovne baze lahko najdete v konfiguracijski datoteki `/ESPOCRM_DIREKTORIJ/data/config.php` pod razdelkom `database`. Za ustvaritev varnostne kopije svoje podatkovne baze lahko uporabite ta ukaz:
 
 ```bash
-mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
+mysqldump --user=UPORABNIŠKO_IME --password=VAŠE_GESLO IME_PODATKOVNE_BAZE > "db.sql"
 ```
 
-### Step 3. Copy the backup
+### Korak 3. Kopirajte varnostno kopijo
 
-That's all. Now, you have to copy the created backup to a safe place.
+To je vse. Zdaj morate le še skopirati ustvarjeno varnostno kopijo na varno mesto.
 
 
-## How to backup EspoCRM with a script
+## Kako ustvariti varnostno kopijo EspoCRM s skripto
 
-You can use a script to backup all needed data. Login via SSH and run the commands (tested on Ubuntu server).
+Za to, da bi ustvarili varnostno kopijo vseh potrebnih podatkov, lahko uporabite skripto. Prijavite se prek SSH in zaženite ukaz (testirano na Ubuntu strežniku).
 
-### Download a script
+
+### Prenesite skripto
 
 ```bash
 wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scripts/backup.sh
 ```
 
-### Run the script
+### Zaženite skripto
 
 ```bash
-bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
+bash ./backup.sh POT_DO_ESPOCRM POT_DO_VARNOSTNE_KOPIJE
 ```
-where
- * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory.
- * `BACKUP_PATH` is a path to backup directory.
+pri čemer je
+ * `POT_DO_ESPOCRM` pot do direktorija, kjer je nameščen EspoCRM.
+ * `POT_DO_VARNOSTNE_KOPIJE` pot do dirktorija, kjer se nahaja varnostna kopija.
 
-For Ubuntu server it is:
+Za Ubuntu strežnik je videti takole:
 
 ```bash
 bash ./backup.sh /var/www/html /opt/backups
 ```
 
-Note: If your MySQL user doesn't have needed rights to dump your database, you will be promted to enter credentials of another MySQL user.
+Opomba: Če trenutni uporabnik MySQL nima potrebnih pravic za izvoz vaše podatkovne baze, boste pozvani, da vpišete uporabniško ime in geslo drugega MySQL uporabnika.
 
-After successful creation, you will get a path to the created backup.
+Po uspešno ustvarjeni varnostni kopiji, boste prejeli pot do te varnostne kopije.
 
-## Restore EspoCRM from a backup
+## Obnovite EspoCRM iz varnostne kopije
 
-You can restore EspoCRM from the backup created as described above.
+EspoCRM lahko obnovite iz varnostne kopije, ustvarjene po zgornjem postopku.
 
-### Step 1. Unarchive backup files
+### Korak 1. Odarhiviraje datoteke varnostne kopije
 
-To unarchive files, you can use Archive Manager or run the below command. Files need to be placed in the web-server directory.
+Za odarhiviranje datotek lahko uporabite Archive Manager ali zaženete spodnji ukaz. Datoteke morate kopirati v direktorij, ki ga bere spletni strežnik.
 
 ```bash
 tar -xzf "files.tar.gz" -C /var/www/html
 ```
-where:
- * `/var/www/html` is a web-server directory.
+pri čemer je:
+ * `/var/www/html` direktorij spletnega strežnika.
 
-### Step 2. Set required permissions
+### Korak 2. Nastavite zahtevane pravice
 
-The files should be owned by a web-server user and have correct permissions. Please set required permissions by following this instruction: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+Lastnik datotek bi moral biti uporabnik spletnega strežnika (web-server user) in bi moral imeti pravilne pravice. Prosimo, nastavite zahtevane pravice z upoštevanjem naslednjih navodil: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
 
-### Step 3. Import database dump
+### Korak 3. Uvozite izvoženo podatkovno bazo
 
-Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config.php`. To import your database from the dump, run the command below in a terminal:
-
-```bash
-mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
-```
-
-### Step 4. Check/configure crontab
-
-Check if your crontab is configured properly. Run the command below and check if a path to EspoCRM is correct:
+Izvoženo podatkovno bazo je treba uvoziti v isto podatkovno bazo z istim uporabniškim imenom in geslom, sicer je treba spremeniti konfiguracijsko datoteko `ESPOCRM_DIREKTORIJ/data/config.php`. Za uvoz vaše podatkovne baze iz izvožene datoteke zaženite spodnji ukaz v terminalu:
 
 ```bash
-sudo crontab -l -u www-data
+mysql --user=UPORABNIK_BAZE --password=GESLO_UPORABNIKA_BAZE IME_BAZE < db.sql
 ```
-where:
- * `www-data` is your web-server user.
 
-If you have to make any changes, use this command:
+### Korak 4. Preverite/skonfigurirajte crontab
+
+Preverite, ali je vaš crontab pravilno skonfiguriran. Zaženite spodnji ukaz in preverite, ali je pot do EspoCRM pravilna:
 
 ```bash
 sudo crontab -l -u www-data
 ```
+pri čemer je:
+ * `www-data` uporabnik spletnega strežnika (web-server user).
 
-More details about configuring crontab for EspoCRM is described here [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+Če morate narediti kakšno spremembno, uporabite ta ukaz:
+
+```bash
+sudo crontab -l -u www-data
+```
+
+Več podrobnosti glede konfiguriranja crontab za EspoCRM je opisanih tukaj [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
