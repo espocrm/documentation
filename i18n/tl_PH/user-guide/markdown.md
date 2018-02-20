@@ -1,86 +1,84 @@
-# Markdown syntax
+# Sintaks ng Markdown
 
-Text fields support markdown syntax.
+Ang mga patlang ng teksto ay sinusuportahan ng sinktaks ng markdown.
 
-## Code
+## Ang Code
 ```
-`some text`
-```
-
-`some text`
-
-## Multiline code
-
-```
-``` some text ``` 
+`ibang teksto`
 ```
 
-```
-some text
-```
+`ibang teksto`
 
-## Strong text
+## Multiline na code
 
 ```
-**some text**
+```ibang teksto``` 
 ```
 
-**some text**
+```ibang teksto```
 
-## Emphasized text
-
-```
-*some text*
-```
-
-*some text*
-
-## Deleted text
+## Malakas na teksto
 
 ```
-~~some text~~
+**ibang teksto**
 ```
 
-~~some text~~
+**ibang teksto**
+
+## May diin na teksto
+
+```
+*ibang teksto*
+```
+
+*ibang teksto*
+
+## Binurang teksto
+
+```
+~~ibang teksto~~
+```
+
+~~ibang teksto~~
 
 ## Blockquote
 
 ```
-> some
-> test
+> Ibang
+> Teksto
 ```
 
-> some
-> text
+> Ibang
+> teksto
 
 ## Link
 
 ```
-[link text](https://www.espocrm.com)
+[text ng link](https://www.espocrm.com)
 ```
-[link text](https://www.espocrm.com)
+[text ng link](https://www.espocrm.com)
 
-## Numbered list
-
-```
-1. Some item
-2. Another item
-```
-
-1. Some item
-2. Another item
-
-## Unnumbered list
+## Listahang naka-numero
 
 ```
-* Some item
-* Another item
+1. ibang teksto
+2. panibagong aytem
 ```
 
-* Some item
-* Another item
+1. ibang teksto
+2. panibagong aytem
 
-## Horizontal line
+## Listahang di naka-numero
+
+```
+* ibang teksto
+* panibagong aytem
+```
+
+* ibang teksto
+* panibagong item
+
+## Pahalang na linya
 
 ```
 ___
