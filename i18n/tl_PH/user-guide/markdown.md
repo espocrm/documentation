@@ -4,7 +4,7 @@ Ang mga patlang ng teksto ay sinusuportahan ng sinktaks ng markdown.
 
 ## Ang Code
 ```
-`ibang tekst`
+`ibang teksto`
 ```
 
 `ibang teksto`
@@ -12,12 +12,10 @@ Ang mga patlang ng teksto ay sinusuportahan ng sinktaks ng markdown.
 ## Multiline na code
 
 ```
-``` ibang teksto ``` 
+```ibang teksto``` 
 ```
 
-```
-ibang teksto
-```
+```ibang teksto```
 
 ## Malakas na teksto
 
