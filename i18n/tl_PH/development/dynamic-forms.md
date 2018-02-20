@@ -1,15 +1,15 @@
-# Dynamic Forms
+# Dynamic na mga form
 
-Note: Since version 4.3.0 it's possible to define dynamic form through admin's UI in Entity Manager.
+Tandaan: Mula sa bersyon na 4.3.0 posible ng tukuyin ang dynamic na form sa pamamagitan ng UI ng admin sa Entity Manager.
 
-There is an ability to define a form behavior in EspoCRM. 
+Mayroon itong kakayahan na tukuyin ang form behavior sa EspoCRM. 
 
-## Example
+## Halimbawa
 
-> Need to show _nextStep_ field on an Opportunity detail view only if stage is 'Closed Won'.
+> Kailangan ipakita ang _nextStep_ field sa isang Opportunity detail view lamang kung ang yugto ay 'Closed Won'.
 >
 
-Create file `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
+Pag-likha ng file `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
 ```json
 {
   "formDependency": {
@@ -33,8 +33,8 @@ Create file `custom/Espo/Custom/Resources/metadata/clientDefs/Opportunity.json`.
 }
 ```
 
-That means that _nextStep_ field will be hidden by default and shown if stage equals to 'Closed Won'.
+Ito ay nangangahulugang ang _nextStep_ na field ay itatago batay sa default at ipapakita kung ang yugto ay katumbas na ng 'Closed Won'.
 
-The list of available actions: `show`, `hide`, `setRequired`, `setNotRequired`.
+Ang listahan ng mga magagamit na mga aksyon: `show`, `hide`, `setRequired`, `setNotRequired`.
 
-There is also ability to hide/show panels. Specify panel names in `panels`, attribute the same way as `fields`.
+Mayroon itong kakayahan na itago/ipakita ang mga panel. Tukuyin ang pangalan ng mga panel sa `panels`, ipagpalagay ito sa parehong paraan ng `fields`.

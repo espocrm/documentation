@@ -1,62 +1,63 @@
-# REST API
+# Ang REST API
 
-EspoCRM is a single page application so a frontend uses REST API to connect with a backend. 
-All operations you perform using UI you can implement via API calls using your programing language. 
-You can learn how API works if you trace what's going in the network tab in your browser console.
+Ang EspoCRM ay isang solong page application kaya ang isang frontend ay gagamit ng REST API upang kumonekta sa isang backend.
 
-Most of api functions return JSON. POST, PATCH calls usually need some JSON data in payload.
+Lahat ng mga operasyon na iyong isasagawa gamit ang UI ay maaari mong gawin sa pamamagitan ng mga API call gamit ang iyong lengguwahe ng iyong programa. 
+Maaari mong matutunan kung paano gumagana ang API kung susubaybayan mo kung ano ang nangyayari sa network tab sa iyong browser console.
 
-Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: 
+Karamihan sa mga function ng API ay bumabalik bilang JSON. Ang mga POST, PATCH call ay kadalasang nangangailang ng ilang datos ng JSON sa payload.
+
+Ang base URL ng EspoCRM API ay: `api/v1/`. Kailangan mo itong i-prepend sa mga ekspresyon sa reference na ito. Halimbawa: 
 
 `GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
-## Authentication
+## Pagpapatunay
 
-EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
+Ang EspoCRM API ay gumagamit ng [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Ang username at password/token ay dumadaan sa `Authorization` header na naka-encode sa base64.
 
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's more better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+Mas mabuting gamitin ang auth token sa halip na password kapag nagtatrabaho ka sa api. Sa kasong ito, kailangan mong magbigay ng username at password/token sa `Espo-Authorization` header.
 ```
 "Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
 ```
 
-1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header.
-2. Use this token instead of password in `Espo-Authorization` header for all further request.
-3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
+1. Kumuha ng access token sa pamamagitan ng `GET App/user` request kasama ang username at password na dumadaan sa `Espo-Authorization` header.
+2. Gamitin ang token na ito sa halip na password sa `Espo-Authorization` header sa lahat ng mga karagdagang mga request.
+3. Kung ang request ay bumabalik bilang 403 error, ito ay nangangahulugang ang alinman sa username/password ay mali o ang token ay hindi na balido.
 
-#### Authentication Token / User Specific Data
+#### Ang Token ng Authentication / User Specific Data
 
 `GET App/user`
 
-Returns:
+Nababalik bilang:
 
-* `token` - access token to use;
-* `acl` - information about user access;
-* `preferences` - user preferences;
-* `user` - user record attributes.
+* `token` - access token na gagamitin;
+* `acl` - impormasyon tungkol sa acccess ng user;
+* `preferences` - mga kagustuhan ng user;
+* `user` - mga katangian ng user record.
 
 
-## CRUD Operations
+## Mga Operasyon ng CRUD
 
-#### List Entities
+#### Mga List Entity
 
 `GET {entityType}`
 
-GET parameters:
+Mga parameter ng GET:
 
 * `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `maxSize` - (int) maximum na sukat;
+* `where` - (array) mga filter;
+* `sortBy` - (string) ang field na pwedeng mag-sort ayon sa;
+* `asc` - (bool) direksyon ng sort.
 
-_Example_
+_Halimbawa_
 
 `GET Account?offset=0&maxSize=20`
 
-Returns:
+Nagbabalik bilang:
 ```
 {
   "list": [... array of records...],
@@ -64,25 +65,25 @@ Returns:
 }
 ```
 
-#### Read Entity
+#### Ang Read Entity
 
 `GET {entityType}/{id}`
 
-Returns attributes in JSON object.
+Nagbabalik ng mga katangian sa JSON object.
 
-_Example_
+_Halimbawa_
 
 `GET Account/5564764442a6d024c`
 
-#### Create Entity
+#### Paglikha ng Entity
 
 `POST {entityType}`
 
-Payload: Object of entity attributes.
+Payload: Ang object ng katangian ng mga entity.
 
-Returns entity attributes in JSON object.
+Nagbabalik ng mga katangian ng entity sa JSON object.
 
-_Example_
+_Halimbawa_
 
 `POST Account`
 
@@ -94,19 +95,19 @@ Payload:
 }
 ```
 
-#### Update Entity
+#### Ang Pag-update ng Entity
 
 `PATCH {entityType}/{id}`
 
-or
+o
 
 `PUT {entityType}/{id}`
 
-Payload: Object of entity attributes needed to be changed.
+Payload: Ang object ng mga katangian ng entity ay kailangang baguhin.
 
-Returns attributes in JSON object.
+Nagbabalik ng mga katangian sa JSON object.
 
-_Example_
+_Halimbawa_
 
 `PATCH Account/5564764442a6d024c`
 
@@ -117,32 +118,32 @@ Payload:
 }
 ```
 
-#### Delete Entity
+#### Ang Pag-tanggal ng Entity
 
 `DELETE {entityType}/{id}`
 
-_Example_
+_Halimbawa_
 
 `DELETE Account/5564764442a6d024c`
 
 
-## Related Entities
+## Mga Kaugnay na Entity
 
-#### List Related Entities
+#### Pag-lista nga mga Entity
 
 `GET {entityType}/{id}/{link}`
 
 * `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `maxSize` - (int) maximum na sukat;
+* `where` - (array) mga filter;
+* `sortBy` - (string) ang field na pwedeng mag-sort ayon sa;
+* `asc` - (bool) ang direksyon ng sort.
 
-_Example_
+_Halimbawa_
 
 `GET Account/5564764442a6d024c/opportunities`
 
-Returns:
+Nagbabalik bilang:
 ```
 {
   "list": [... array of records...],
@@ -150,17 +151,17 @@ Returns:
 }
 ```
 
-#### Link Entity
+#### Pag-link ng Entity
 
 `POST {entityType}/{id}/{link}`
 
-Payload:
+Ang Payload:
 
-1. `id` attribute.
-2. `ids` array attribute.
-3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criterias.
+1. `id` katangian.
+2. `ids` array na katangian.
+3. `"massRelate": true` at `"where": {...}` nag-uugnay ng mga maraming rekord ayon sa mga search criteria.
 
-_Example_
+_Halimbawa_
 
 `POST Account/5564764442a6d024c/opportunities`
 
@@ -171,51 +172,51 @@ Payload:
 }
 ```
 
-#### Unlink Entity
+#### Ang Pag-unlink ng Entity
 
 `DELETE {entityType}/{id}/{link}`
 
-Payload:
+Ang Payload:
 
-1. JSON with `id` attribute.
-2. JSON with `ids` array attribute.
+1. JSON na may `id` na katangian.
+2. JSON na may `ids` array na katangian.
 
-_Example_
+_Halimbawa_
 
 `DELETE Account/5564764442a6d024c/opportunities`
 
-Payload:
+Ang Payload:
 ```
 {
   "id": "55646fd85955c28c5"
 }
 ```
 
-## Stream
+## Pag-stream
 
-#### List stream entries for the current user
+#### Pag-lista nga mga entry ng stream para sa kasalukuyang user
 
 `GET Stream`
 
-Get parameters:
+Kumuha ng mga parameter:
 
 * `offset` - (int) offset;
-* `maxSize` - (int) max size;
+* `maxSize` - (int) maximum na sukat;
 
-#### List stream entries related to a specific record
+#### Pag-lista ng mga entry ng stream na may kaugnayan sa isang partickular na rekord
 
 `GET {entityType}/{id}/stream`
 
-Get parameters:
+Kumuha ng mga parameter:
 
 * `offset` - (int) offset;
-* `maxSize` - (int) max size;
+* `maxSize` - (int) maximum na sukat;
 
-#### Follow record
+#### Pag-follow ng rekord
 
 `PUT {entityType}/{id}/subscription`
 
-#### Unfollow record
+#### Pag-unfollow ng rekord
 
 `DELETE {entityType}/{id}/subscription`
 
