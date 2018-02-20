@@ -1,35 +1,35 @@
-# Case Management
+# Pamamahala ng Kaso
 
-Cases provide an issue tracking ability. It's a principal aspect of customer service in EspoCRM. Ticket term also can be used for Cases.
+Ang mga kaso ay nagbibigay ng kakayahan na tukuyan oh sundan ang anumang isyu.Ito ay isang pangunahing aspeto ng serbisyo sa mamimili ng EspoCRM. Ang terminong ginamit sa tiket ay maaari rin na gamitin para sa mga kaso.
 
-Case entity can be associated with one Account and/or with multiple Contacts.
+Ang entidad ng kaso ay pwedeng maugnay sa isang Account o kaya naman sa maraming Contacts.
 
-New cases are supposed to be created by the following scenarios:
+Ang mga bagong kaso ay dapat na nilikha ng mga sumusunod na sitwasyon:
 
-* Manually by CRM users;
-* Manually by users of the customer portal;
-* Through the API (e.g. through the web form);
-* Automatically when a new email came to a specific mailbox.
-* Automatically by a Workflow rule.
+* Mano-mano ng mga gumagamit ng CRM;
+* Mano-mano ng mga gumagamit ng portal ng mamimili;
+* Sa pamamagitan ng paggamit ng APO (e.g. sa paggamit ng web form);
+* Awtomatiko kapag may bagong email ang dumatin sa isang tukoy na mailbox.
+* Awtomatiko sa pamamagitan ng panuntunan ng workflow.
 
-Case record has a stream that can be utilized for a communication between customer and service. CRM users can also make internal posts that won't be visible in a customer portal. 
+Ang rekord ng case ay mayroong stream na pwedeng gamitin para sa isang komunikasyon sa pagitan ng customer at serbisyo. Ang mga gumagamit ng CRM ay maaari ring gumawa ng mga panloob na post na hindi makikita sa isang portal ng mamimili. 
 
-When the new case is created by a portal user it's not assigned to any user. By utilizing [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md) administrator can create rule that will notify certain users about a new case in the system. Workflows also provides an ability to apply assignment rule to new cases, i.e. Round-Robin and Least-Busy rules. For more complex business flows it's recommended to utilize [BPM tool](https://github.com/espocrm/documentation/blob/master/administration/bpm.md).
+Kapag ang isang bagong kaso ay ginawa ng gumagamit ng portal na hindi naka-assign sa kahit na kaninong gumagamit. Sa paggamit ng [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md) ay ang administrador ay makakalikha ng panuntunan na magbibigay alam sa ibang gumagamit tungkol sa panibagong kaso sa sistema. Ang mga workflow din ay nakakapagbigay ng abilidad na mag apply ng bagong panuntunan na asaynment sa mga bagong kaso, i.e. Round-Robin at Least-Busy na mga panuntunan. Para sa mga karagdagang komplikadong budiness na mgaa form ay inrerekomenda na gamiting ang [Kagamitang BPM](https://github.com/espocrm/documentation/blob/master/administration/bpm.md).
 
-To prevent overlooking of new cases users can add Case entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new case.
+Para maiwasan na makaligtaan ang mga bagong kaso ay ang gumagamit ay pwedeng dumagdaag ng tipo ng entidad na kaso sa Pangkalahatang listahn ng auto-follow at mga preperansiya. Awtomatiko nilang susundan ang mga panibagong kaso.
 
-Note: If there is no portal user accociated with a linked contact then the customer won't receive email notifications about updates in the Stream. You need to use emails for communication with the customer.
+Paalala : Kung walang gumagamit ng protal na konektado sa naka-link na contact bagkus ay ang customer ay hindi makakatanggap ng mga abiso sa email tungkol sa mga update sa Stream. Kailangan mong gumamit ng mga email para sa komunikasyon sa mga mamimili.
 
-### Email-to-Case
+### Email-sa-Kaso
 
-Administrator can set up Group Email Account that will create a new case on each new inbound email. For more information [see here](https://github.com/espocrm/documentation/blob/master/administration/emails.md).
+Ang Administrador ay kayang mag-setup ng Email Account na pang-grupo na sadyang lilikha ng mga bagong kaso sa bawat email na papasok. Para sa karagdagang impormasyon [Tingnan Dito](https://github.com/espocrm/documentation/blob/master/administration/emails.md).
 
-### Knowledge Base
+### Batayang Kaalaman
 
-Users can relate knowledge base articles to the case record.
+Ang mga gumagamit ay maaaring mag-uugnay sa mga base ng kaalaman sa mga artikulo sa talaan ng kaso.
 
-### Customer Portal
+### Portal ng mamimili
 
-Administrator can create a [portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md) where customers will be able to create cases.
+Ang mga Administrator ay makakalikha ng isang [portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md) kung saan ang mga mamimili ay may kakayahang makaliha ng mga kaso.
 
-Since portal users automatically follow their cases, they will receive email notifications about new messages in the Stream.
+Dahil awtomatikong sinusunod ng mga gumagamit ng portal ang kanilang mga kaso, makakatanggap sila ng mga abiso sa email tungkol sa mga bagong mensahe sa Stream.
