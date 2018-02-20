@@ -1,39 +1,37 @@
-# Import
+# Uvoz
 
-Import is accessible only for admin users. Administration > Import. You are able to import only from CSV files.
+Uvoz je dostopen samo uporabnikom z administratorskimi pravicami. Administracija > Uvoz. Podatke lahko uvažate samo iz CSV datotek.
 
-## Step 1
+## Korak 1
 
-Select what type of records you need to import (Entity Type field).
-Select a CSV file. A file should be formated with `UTF-8`.
-Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Update Only'.
+Izberite, katere vrste zapisov želite uvoziti (polje Tip entitete). Izberite CSV datoteko. Datoteka bi morala biti v formatu `UTF-8`.
+Izberite `Kaj naj naredim?`. Možnosti, ki so na voljo: 'Samo ustvari', 'Ustvari in posodobi', 'Samo posodobi'.
 
-* `Create Only` - select it if you want record be only created.
-* `Create & Update` - records will be created but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the _Step 2_.
-* `Update only` - only records with matching field values will be found it will be updated.
+* `Samo ustvari` - izberite to možnost, če želite, da je zapis samo ustvarjen.
+* `Ustvari in posodobi` - zapisi bodo ustvarjeni, toda če se bodo našli zapisi z ujemajočimi se vrednostmi polj, bodo tudi posodobljeni. To, katera polja naj bi se ujemala, boste lahko preverili eno po eno v _Koraku 2_.
+* `Samo posodobi` - posodobljeni bodo samo zapisi z ujemajočimi se vrednostmi polj.
 
-Once you select a csv file you will be able to see how it should be parsed in Preview panel. When you change properties the preview will be updated. 
+Potem ko izberete csv datoteko, boste lahko videli, kako bo ta razčlenjena, in sicer v panelu Predogled. Ko spremenite lastnosti, se predogled posodobi.
 
-* `Header Row` - whether CSV file has the first row with field names.
-* `Execute in idle` - recommended if you have a big bunch of records to be imported. Import will be processed via cron. Status will be set to 'Complete' when import process is finished.
-* `Skip searching for duplicates` - it will decrease import runtime. 
+* `Vrstica glave` - ali CSV datoteka vsebuje prvo vrstico z imeni polj.
+* `Zaženi v mirovanju` - priporočeno, če morate uvoziti zelo veliko število zapisov. Uvoz bo časovno koordiniran s cron-om. Ko bo uvoz dokončan, bo status nastavljen na 'Končano'.
+* `Ne išči podvojitev` - to bo skrajšalo čas uvoza.
 
-Click _Next_ button to preceed to the _Step 2_.
+Kliknite gumb _Naprej_ za nadaljevanje v _Korak 2_.
 
 ![1](../_static/images/administration/import/step-1.png)
 
-## Step 2
+## Korak 2
 
-Setup the field mapping: how fields correspond to columns of the csv file. You can skip not needed columns here.
-In cases of 'Create & Update' and 'Update only' you need to check fields by which records that should be updated will be found.
-Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
+Nastavite preslikavo polj: kako polja ustrezajo stolpcem v csv datoteki.
+Stolpcev, ki jih ne potrebujete, lahko izpustite tukaj. V primeru 'Ustvari in posodobi' ter 'Samo posodobi', morate preveriti polja, po katerih naj bi se posodobljeni zapisi našli. Dodajte privzete vrednosti za nove in posodobljene zapise. Na primer, lahko določite polji Dodeljeni uporabnik ali Timi.
 
-After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once. Note: Revert doesn't work with updated records.
+Potem ko bo uvoz podatkov končan, boste lahko razveljavili ustvarjene zapise, videli podvojitve ter posodobili zapise. Podvojitev pomeni, da je v sistemu že obstajal podoben zapis. Vse uvožene podvojitve lahko odstranite hkrati. Opomba: Razveljavitev ne deluje s posodobljenimi zapisi.
 
-Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
+Kliknite gumb _Prični z uvozom_ za nadaljevanje. Postopek uvoza lahko traja kar nekaj časa. Če želite uvoziti veliko število zapisov (odvisno od vaše konfiguracije strežnika, ponavadi če je več kot 200 zapisov), morate poskrbeti, da bo php parameter `set_time_limit` dovolj velik.
 
 ![2](../_static/images/administration/import/step-2.png)
 
-## How to import into Target List
+## Kako uvoziti v Ciljni seznam
 
-When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
+Ko uvažate Kontakte, Sledi ali Račune, jih lahko dodate na isti ciljni seznam. Pri koraku 2 morate dodati polje Ciljni seznam na panel `Privzete vrednosti` in izbrati potrebni zapis ciljnega seznama. Za to, da dodate obstoječe cilje na ciljni seznam, lahko uporabite tudi možnost uvoza `Samo posodobi` ali `Ustvari in posodobi`.
