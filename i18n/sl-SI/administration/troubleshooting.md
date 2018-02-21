@@ -1,20 +1,20 @@
-# Troubleshooting
+# Odpravljanje napak
 
-## Check logs
+## Preverite dnevnike (logs)
 
-To find out the problem, you have to check error log files.
+Da bi našli vzrok težave, morate preveriti datoteke z dnevniki napak.
 
-#### EspoCRM error logs
+#### EspoCRM dnevniki napak
 
-EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/logs/*.log` and contain some error information.
+EspoCRM dnevniki se nahajajo v `<ESPOCRM_DIREKTORIJ>/logs/*.log` in vsebujejo nekatere informacije o napakah.
 
-#### Apache error logs
+#### Apache dnevniki napak
 
-For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems. 
+Za Ubuntu strežnik se apache dnevnik napak nahaja v `/var/log/apache2/error.log` in vsebuje vse informacije o napakah. Lokacija dnevniških datotek se na drugih sistemih lahko razlikuje.
 
-## Enable debugging mode
+## Omogočite razhroščevalni način
 
-To enable debugging mode, go to installed EspoCRM directory, open the file `data/config.php` and change the value:
+Da bi omogočili razhroščevalni način, pojdite EspoCRM direktorij, ki je bil ustvarjen ob namestitvi, odprite datoteko `data/config.php` in spremenite vrednost:
 
 ```
 'logger' => [
@@ -23,7 +23,7 @@ To enable debugging mode, go to installed EspoCRM directory, open the file `data
     ...
 ]
 ```
-to
+na
 ```
 'logger' => [
     ...
@@ -32,57 +32,57 @@ to
 ]
 ```
 
-## Scheduled Jobs are not working
+## Razporejanje opravil ne deluje
 
-#### Problem #1: Your crontab is not configured
+#### Problem #1: Vaš crontab ni skonfiguriran
 
-1. Login via SSH to your server.
+1. Prijavite se na svoj strežnik prek SSH.
 
-2. Configure your crontab by following these steps: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Svoj crontab skonfigurirajte z upoštevanjem naslednjih korakov: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
 
-Note: Crontab should be configured under web-server user, e.g. `crontab -e -u www-data`.
+Opomba: Crontab bi moral biti nastavljen za delo z uporabnikom za spletni strežnik (web-server user), na primer `crontab -e -u www-data`.
 
-3. Wait for a while and check Scheduled Jobs to see if any jobs were executed (see a Log panel).
+3. Počakajte nekaj časa in preverite razdelek Razporejanje opravil, da bi videli, ali je bilo kakšno opravilo zagnano (poglejte panel Dnevnik).
 
-#### Problem #2. Crontab is configured, but Scheduled Jobs are not working
+#### Problem #2. Crontab je skonfiguriran, vendar Razporejanje opravil ne deluje
 
-To make sure there are no errors when cron is running, try to run the cron command in a terminal:
+Da med delovanjem crona ne bi prihajalo do napak, poskusite zagnati ukaz cron v terminalu:
 
-1. Login via SSH to your server.
+1. Prijavite se na svoj strežnik prek SSH.
 
-2. Go to the directory where EspoCRM is installed. E.g. for `/var/www/html/espocrm` directory the command is:
+2. Pojdite v direktorij, kjer je EspoCRM nameščen. Na primer, za direktorij `/var/www/html/espocrm` vnesite naslednji ukaz:
 
 ```bash
 cd /var/www/html/espocrm
 ```
 
-3. Run the crontab command:
+3. Zaženite ukaz crontab:
 
 ```bash
 php cron.php
 ```
 
-Note: It should be executed under web-server user. If you are logged in as root, the command should be (e.g for Ubuntu):
+Opomba: Zagnati bi ga morali z uporabnikom za spletni strežnik. Če ste prijavljeni kot root, je ukaz naslednji (na primer za Ubuntu):
 
 ```bash
 sudo -u www-data php cron.php
 ```
 
-where `www-data` is a web-server user.
+kjer je `www-data` uporabnik za spletni strežnik.
 
-4. If there are no errors, check Scheduled Jobs to see if any job was executed (see a Log panel).
+4. Če ni nobenih napak, preverite Razporejanje opravil, da bi videli, ali je bilo kakšno opravilo zagnano (poglejte panel Dnevnik).
 
-## EspoCRM is not loading after updgare
+## EspoCRM se po nadgradnji ne naloži
 
-This can happen sometimes on some shared hostings.
+To se lahko včasih zgodi pri nekaterih deljenih gostovanjih.
 
-Check permissions of the files:
+Preverite pravice datotek:
 /index.php
 /api/v1/index.php
 
-They must be 644. If any of those file has permission 664 you need to change it to 644. Use your hosting's control panel or chmod command.
+Biti morajo 644. Če ima katera od datotek pravico 664, jo morate spremeniti na 644. Uporabite nadzorno plošo gostitelja oziroma ukaz chmod.
 
 ```
-chmod 644 /path/to/file
+chmod 644 /pot/do/datoteke
 ```
-More information about file permissions: [here](server-configuration.md#required-permissions-for-unix-based-systems).
+Več o pravicah datotek najdete: [tukaj](server-configuration.md#required-permissions-for-unix-based-systems).
