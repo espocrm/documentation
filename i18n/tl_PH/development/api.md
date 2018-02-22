@@ -1,6 +1,6 @@
 # Ang REST API
 
-Ang EspoCRM ay isang solong page application kaya ang isang frontend ay gagamit ng REST API upang kumonekta sa isang backend.
+Ang EspoCRM ay isang solong page application kaya ang frontend ay gagamit ng REST API upang kumonekta sa isang backend.
 
 Lahat ng mga operasyon na iyong isasagawa gamit ang UI ay maaari mong gawin sa pamamagitan ng mga API call gamit ang iyong lengguwahe ng iyong programa. 
 Maaari mong matutunan kung paano gumagana ang API kung susubaybayan mo kung ano ang nangyayari sa network tab sa iyong browser console.
@@ -13,7 +13,7 @@ Ang base URL ng EspoCRM API ay: `api/v1/`. Kailangan mo itong i-prepend sa mga e
 
 ## Pagpapatunay
 
-Ang EspoCRM API ay gumagamit ng [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Ang username at password/token ay dumadaan sa `Authorization` header na naka-encode sa base64.
+Ang EspoCRM API ay gumagamit ng [Basic na Awtentikasyon](http://en.wikipedia.org/wiki/Basic_access_authentication). Ang username at password/token ay dumadaan sa `Authorization` na header na naka-encode sa base64.
 
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
@@ -36,10 +36,10 @@ Nababalik bilang:
 * `token` - access token na gagamitin;
 * `acl` - impormasyon tungkol sa acccess ng user;
 * `preferences` - mga kagustuhan ng user;
-* `user` - mga katangian ng user record.
+* `user` - mga katangian ng user na rekord.
 
 
-## Mga Operasyon ng CRUD
+## Mga Operasyon na CRUD
 
 #### Mga List Entity
 
@@ -57,7 +57,7 @@ _Halimbawa_
 
 `GET Account?offset=0&maxSize=20`
 
-Nagbabalik bilang:
+Nagbabalik ng:
 ```
 {
   "list": [... array of records...],
@@ -69,7 +69,7 @@ Nagbabalik bilang:
 
 `GET {entityType}/{id}`
 
-Nagbabalik ng mga katangian sa JSON object.
+Nagbabalik ng mga katangian bilang JSON object.
 
 _Halimbawa_
 
@@ -143,7 +143,7 @@ _Halimbawa_
 
 `GET Account/5564764442a6d024c/opportunities`
 
-Nagbabalik bilang:
+Nagbabalik ng:
 ```
 {
   "list": [... array of records...],
@@ -210,13 +210,13 @@ Kumuha ng mga parameter:
 Kumuha ng mga parameter:
 
 * `offset` - (int) offset;
-* `maxSize` - (int) maximum na sukat;
+* `maxSize` - (int) maximum na bilang;
 
-#### Pag-follow ng rekord
+#### Pag-follow na rekord
 
 `PUT {entityType}/{id}/subscription`
 
-#### Pag-unfollow ng rekord
+#### Pag-unfollow na rekord
 
 `DELETE {entityType}/{id}/subscription`
 
