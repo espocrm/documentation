@@ -1,20 +1,20 @@
-# Troubleshooting
+# Rozwiązywanie problemów
 
-## Check logs
+## Sprawdzanie logów
 
-To find out the problem, you have to check error log files.
+Aby odnaleźć problem, musisz sprawdzić plik z logami błędów.
 
-#### EspoCRM error logs
+#### Logi błędów EspoCRM
 
-EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/logs/*.log` and contain some error information.
+Logi błędów EspoCRM znajdują się w `<ESPOCRM_DIRECTORY>/logs/*.log` i zawierają pewne informację o błędach.
 
-#### Apache error logs
+#### Logi błędów serwera Apache
 
-For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems. 
+Logi błędów dla Ubuntu oraz serwera Apache znajdują się w `/var/log/apache2/error.log` i zawierają pewne informację o błędach. Lokalizacja logów może się różnić na innych systemach. 
 
-## Enable debugging mode
+## Włączenie tryby debugowania
 
-To enable debugging mode, go to installed EspoCRM directory, open the file `data/config.php` and change the value:
+Aby włączyć tryb debugowania, idź do katalogu z zainstalowanym EspoCRM, otwórz plik `data/config.php` i zmień wartość:
 
 ```
 'logger' => [
@@ -23,7 +23,7 @@ To enable debugging mode, go to installed EspoCRM directory, open the file `data
     ...
 ]
 ```
-to
+na
 ```
 'logger' => [
     ...
@@ -32,57 +32,57 @@ to
 ]
 ```
 
-## Scheduled Jobs are not working
+## Planowane Zadania nie działają
 
-#### Problem #1: Your crontab is not configured
+#### Problem #1: Twój crontab nie jest skonfigurowany
 
-1. Login via SSH to your server.
+1. Zaloguj się przez SSH na swój serwer.
 
-2. Configure your crontab by following these steps: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Skonfiguruj swój crontab podążając za tą instrukcją: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
 
-Note: Crontab should be configured under web-server user, e.g. `crontab -e -u www-data`.
+Uwaga: Crontab powinien być konfigurowany przez użytkownika web-servera, np. `crontab -e -u www-data`.
 
-3. Wait for a while and check Scheduled Jobs to see if any jobs were executed (see a Log panel).
+3. Poczekaj chwilę i sprawdź czy jakieś zaplanowane zadania zostały wykonane (zobacz w panelu logowania zdarzeń).
 
-#### Problem #2. Crontab is configured, but Scheduled Jobs are not working
+#### Problem #2. Crontab jest skonfigurowany, ale Planowane Zadanie nie działają
 
-To make sure there are no errors when cron is running, try to run the cron command in a terminal:
+Aby mieć pewność, że nie występują żadne błędy podczas działania crona, spróbuj uruchomić komendy crona z wiersza poleceń:
 
-1. Login via SSH to your server.
+1. Zaloguj się przez SSH na swój serwer.
 
-2. Go to the directory where EspoCRM is installed. E.g. for `/var/www/html/espocrm` directory the command is:
+2. Idźdo katalogu gdzie zainstalowany jest EspoCRM. Np. dla katalogu `/var/www/html/espocrm` komenda wygląda następująco:
 
 ```bash
 cd /var/www/html/espocrm
 ```
 
-3. Run the crontab command:
+3. Uruchom komendę crontab:
 
 ```bash
 php cron.php
 ```
 
-Note: It should be executed under web-server user. If you are logged in as root, the command should be (e.g for Ubuntu):
+Uwaga: Komenda powinna być wywoływana jako użytkownik web-server. Jeśli jesteś zalogowany jako root, komenda powinna wyglądać (np. dla Ubuntu):
 
 ```bash
 sudo -u www-data php cron.php
 ```
 
-where `www-data` is a web-server user.
+gdzie `www-data` jest użytkownikiem.
 
-4. If there are no errors, check Scheduled Jobs to see if any job was executed (see a Log panel).
+4. Jeśli nie występują tam błędy, sprawdź Planowane Zadania aby zobaczyć czy żadne zadanie się nie wywołało (zobacz w panelu logowania zdarzeń).
 
-## EspoCRM is not loading after updgare
+## EspoCRM nie ładuje się po aktualizacji
 
-This can happen sometimes on some shared hostings.
+Czasami się to zdaża przy współdzielonych hostingach.
 
-Check permissions of the files:
+Sprawdź uprawnienia dla pliku:
 /index.php
 /api/v1/index.php
 
-They must be 644. If any of those file has permission 664 you need to change it to 644. Use your hosting's control panel or chmod command.
+Muszą wynosić 644. Jeśli któryś z plików ma zezwolenie 664 musisz je zamienić na 644. Użyj do tego swojego panelu hostingowego lub komendy chmod.
 
 ```
 chmod 644 /path/to/file
 ```
-More information about file permissions: [here](server-configuration.md#required-permissions-for-unix-based-systems).
+Więcej informacji o zezwoleniach dla plików: [tutaj](server-configuration.md#required-permissions-for-unix-based-systems).

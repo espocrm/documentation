@@ -1,28 +1,28 @@
-# How to upgrade EspoCRM
+# Jak zaktualizować EspoCRM
 
-EspoCRM can be upgraded to the latest version by the following steps:
+EspoCRM można zaktualizować do najnowszej wersji w następujący sposób:
 
-### Step 1. Check your current version
+### Krok 1. Sprawdź swoją aktualną wersję
 
-To check your current version go to Administration > Upgrade page.
+Aby sprawdzić aktualną wersję idź do  Administracja > Aktualizacje.
 
-### Step 2. Download needed upgrade packages
+### Krok 2. Pobierz wymaganą aktualizację
 
-Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
+Idź do strony aktualizacyjnej https://www.espocrm.com/download/upgrades/ i bazując na twojej aktualnej wersji pobierz wymagane paczki.
 
-### Step 3. Create a backup (optional)
+### Krok 3. Stwórz kopię zastępczą (opcjonalne)
 
-Create a backup of your EspoCRM files and data before upgrading. Follow [these instructions](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) to get it done.
+Zanim zaktualizujesz EspoCRM stwórz kopię zapasową swoich plików oraz danych. Podążaj [za tą instrukcją](https://github.com/espocrm/documentation/blob/master/i18n/pl_PL/administration/backup-and-restore.md) aby to wykonać.
 
-### Step 4. Upgrade process
+### Krok 4. Aktualizacja
 
-Go to Administration > Upgrade. Upload and install one by one upgrade packages.
+Idź do Administracja > Aktualizuj. Wysyłaj i instaluj wszystkie pobrane paczki jedna po drugiej.
 
-You can check whether you have the latest version at Menu > About.
+Możesz sprawdzić, czy masz najnowszą wersję w Menu> O mnie.
 
-## Upgrade via CLI
+## Aktualizacja przez CLI
 
-You can also run upgrade via command line interface. You need to execute the following command from EspoCRM root directory:
+Możesz również uruchomić aktualizację za pomocą interfejsu wiersza poleceń. Musisz wykonać następujące polecenie z katalogu głównego EspoCRM:
 
 ```
 php upgrade.php /path/to/upgrade/package.zip
