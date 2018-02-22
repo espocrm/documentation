@@ -1,34 +1,34 @@
-# Stream
+# Strumień
 
-Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post to own stream and to stream of another users (since version 3.8.0). There are two kinds of stream in EspoCRM: record stream and user stream.
+Strumień w EspoCRM jest kanałem, gdzie możesz zobaczyć aktualizacje i nowo dodane rzeczy dla rekordów, które śledzisz. Możesz również tworzyć nowe posty zarówno w swoim strumieniu jak i innych użytkowników (od wersji 3.8.0). W EspoCRM są dwa rodzaje strumieni: strumień rekordów oraz strumień użytkownika.
 
-By default the following entities have a stream: Accounts, Contacts, Leads, Opportunities, Cases. Administrators can enable or disable stream for a certain entity in [Entity Manager](../administration/entity-manager.md).
+Domyślnie strumień posiadają takie podmioty jak: Konta, Kontakty, Tropy, Możliwości, Sprawy. Administratorzy mogą aktywować lub dezaktywować strumienie dla poszczególnych podmiotów w [Menadżer Podmiotów](../administration/entity-manager.md).
 
-## Record Stream
+## Strumień Rekordów
 
-Record Stream is shown in a Stream panel of a certain record on the detail view. Posts, updates and new additions related to the current record are displaed here.
+Strumień rekordów znajduje się w panelu Strumieni poszczególnych rekordów w widoku szczegółowym. Są tutaj wyświetlane posty, aktualizacje oraz nowo dodane rzeczy związane z aktualnym rekordem.
 
-## User Stream
+## Strumień Użytkownika
 
-Users can see their stream in Stream dashlet as well as under Stream tab. Users also can see stream of another users in the user's detail view, if they have an access that is controlled by `User Pemission` field of Roles.
+Użytkownicy mogą zobaczyć swój strumień w karcie Strumieni tak samo jak w zakładce Strumieni. Użytkownicy mogą również zobaczyć strumień innych użytkowników w widoku szczegółowym tego użytkownika, jeśli posiadają oni do tego dostęp, który ustala się za pomocą pola `Zezwolenie Użytkowników` w Rolach.
 
-In user stream you can see posts, updates and new additions related to records the user follows. You also can see posts addressed to the user. Those posts are not related to any record.
+W strumieniu użytkownika możesz zobaczyć posty, aktualizacje oraz nowo dodane rzeczy związane z rekordami, które ten użytkownik śledzi. Możesz również zobaczyć posty zaadresowane do tego użytkownika. Posty te nie są powiązane z żadnymi rekordami.
 
-## Notifications
+## Powiadomienia
 
-You will recieve notifications about new additions to your stream that were caused by another users.
+Otrzymasz powiadomienia o nowych rzeczach dodanych przez innych użytkowników do Twojego strumienia.
 
-## Posts
+## Posty
 
-You can create post related to a certain record. You also able to attach multiple files and images to your post. If you want to mention somebody in your post you need just type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it.
+Możesz tworzyć posty związane z konkretnymi rekordami. Możesz dołączyć do postu wiele plików i obrazków. Jeśli chcesz o kimś wspomnieć w swoim poście musisz przed jego nazwą użytkownika wpisać symbol `@`. Użytkownik o którym wspomniałeś w swoim poście zostanie o tym powiadomiony.
 
-## Posts to users
+## Posty do użytkowników
 
-_This feature is available since version 3.8.0._
+_Funkcja jest dostępna od wersji 3.8.0._
 
-Users can create post to certain users, to certain teams, to all users and to self. An access for this ability is controlled by `Assignment Permission` field of Roles.
+Użytkownicy mogą tworzyć posty skierowane do konkretnych użytkowników, do konkretnych zespołów, do wszystkich użytkowników i do siebie. Dostęp do tym funkcjonalności jest kontrolowany przez pole `Przypisywanie Uprawnień` w zakładce Role.
 
-## Filtering
+## Filtrowanie
 
-You can filter what to show in a stream: `All`, `Posts` or `Updates`.  
+Możesz filtrować to co chcesz zobaczyć w swoim strumieniu: `Wszystko`, `Posty` lub `Aktualizacje`.  
 

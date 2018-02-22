@@ -1,23 +1,23 @@
-# Server Configuration for EspoCRM
+# Konfiguracja serwera dla EspoCRM
 
-EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.6 or greater and MySQL version 5.1 or greater.
+EspoCRM może być zainstalowany na serwerze Apache ([instrukcje](apache-server-configuration.md)), Nginx ([instrukcje](nginx-server-configuration.md)), lub IIS ze wsparciem dla PHP 5.6 lub wyżej oraz MySQL wersja  5.1 lub wyżej.
 
-## Configuration Recommendations
+## Zalecana Konfiguracja
 
-### PHP Requirements
+### Wymagania PHP
 
-EspoCRM requires PHP 5.6 or greater, with the following extensions enabled:
+EspoCRM wymaga PHP 5.6 lub wyżej, z następującymi aktywnymi rozszerzeniami:
 
-* [PDO](http://php.net/manual/en/book.pdo.php) – to access MySQL in PHP;
-* [JSON](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
-* [GD](http://php.net/manual/en/book.image.php) – to manipulate images;
-* [OpenSSL](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
-* [Zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
-* [IMAP](http://php.net/manual/en/book.imap.php) – to monitore mailboxes in EspoCRM;
+* [PDO](http://php.net/manual/en/book.pdo.php) – do dostępu do bazy danych MySQL w PHP;
+* [JSON](http://php.net/manual/en/book.json.php) – zasoby korzystają z tego formatu (metadane, szablon, języki, i inne);
+* [GD](http://php.net/manual/en/book.image.php) – do zarządzania obrazkami;
+* [OpenSSL](http://php.net/manual/en/book.openssl.php) – aby zapewnić najlepszą ochronę;
+* [Zip](http://php.net/manual/en/book.zip.php) – aby można było zaktualizować EspoCRM i zainstalować rozszerzenia;
+* [IMAP](http://php.net/manual/en/book.imap.php) – aby monitorować skrzynkę pocztową w EspoCRM;
 * [mbstring](http://php.net/manual/en/book.mbstring.php);
 * [cURL](http://php.net/manual/en/book.curl.php).
 
-It's also recommended to have [mailparse](https://pecl.php.net/package/mailparse) pecl extension installed. It's needed for smooth working of email fetching feature.
+Zalecane jest również posiadanie [mailparse](https://pecl.php.net/package/mailparse) zainstalowanego rozszerzenia pecl. Jest wymagane dla sprawnego pobierania wiadomość email.
 
 php.ini settings:
 
@@ -30,18 +30,18 @@ upload_max_filesize = 50M
 ```
 
 
-### MySQL Requirements
+### Wymagania MySQL
 
-EspoCRM supports MySQL version 5.1 or greater.
-These are no special peculiarities. All default settings are good for EspoCRM.
+EspoCRM wspiera MySQL w wersji 5.1 lub wyższej.
+Nie ma specjalnych wymagań. Wszystkie domyśle ustawienia są odpowiednie.
 
 ## Required Permissions for Unix-based Systems
 
-The files and directories should have the following permissions:
+Pliki i katalogi powinny posiadać następujące zezwolenia:
 
 * `/data`, `/custom`, `/client/custom` – should be writable all files, directories and subdirectories (664 for files, 775 for directories, including all subdirectories and files);
 * `/application/Espo/Modules`, `/client/modules` – should be writable the current directory (775 for the current directory, 644 for files, 755 for directories and subdirectories);
-* All other files and directories should be readable (644 for files, 755 for directories).
+* Wszystkie pozostałe pliki i katalogi powinny być tylko do odczytu (644 dla plików, 755 dla katalogów).
 
 To set the permissions, execute these commands in the terminal:
 
@@ -51,11 +51,11 @@ find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
 find data custom -type d -exec chmod 775 {} + && find data custom -type f -exec chmod 664 {} +;
 ```
 
-All files should be owned and group-owned by the webserver process. It can be “www-data”, “daemon”, “apache”, “www”, etc.  
+Wszystkie pliki powinny należeć do grupy procesu serwera sieciowego. Może to być “www-data”, “daemon”, “apache”, “www”, itd.  
 Note: On Bitnami Stack, files should be owned and group-owned by “daemon” user.  
 Note: On shared hosts, files should be owned and group-owned by your user account.
 
-To set the owner and group-owner, execute these commands in the terminal:
+Aby ustawić właściciela o grupę właścicieli, uruchom w terminalu tę komendę :
 
 ```
 cd <PATH-TO-ESPOCRM-DIRECTORY>

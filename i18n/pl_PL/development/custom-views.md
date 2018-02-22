@@ -1,8 +1,8 @@
-# Custom Views
+# Spersonalizowane widoki
 
-## Record Views
+## Widoki rekordów
 
-EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined it `clientDefs` category of metadata.
+Framework EspoCRM dostarcza elastyczne możliwości definiowania spersonalizowanych widoków dla konkrentych rekordów. Muszą być zdefioniowane w kategorii matadanych `clientDefs`.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
@@ -23,16 +23,16 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 
 `client/custom/src/views/your-entity-type/record/detail.js`
 
-Record/Detail view contains all panels with fields, relations and other data you can see on detail view. It doesn't contain header and buttons in the top-right corner.
+Rekord/Szczegółowy widok zawiera wszystkie panele z polami, relacjami i innymi danymi, które możesz zobaczyćw widoku szczegółowym. Nie zawiera nagłówka i przycisków w górnym prawym narożniku.
 
 ```javascript
 Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
   
   return Dep.extend({
-    template: 'custom:views/your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
-    middleView: 'custom:views/your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
-    sideView: 'custom:views/your-entity-type/record/detail-side',     // Here is your custom view. Omit if you don't need it.
-    bottomView: 'custom:views/your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
+    template: 'custom:views/your-entity-type/record/detail', // Tu jest Twój spersonalizowany szablon. Omiń to jeśli go nie potrzebujesz.
+    middleView: 'custom:views/your-entity-type/record/detail-middle', // Tu jest Twój spersonalizowany widok. Omiń to jeśli go nie potrzebujesz.
+    sideView: 'custom:views/your-entity-type/record/detail-side',     // Tu jest Twój spersonalizowany widok. Omiń to jeśli go nie potrzebujesz.
+    bottomView: 'custom:views/your-entity-type/record/detail-bottom', // Tu jest Twój spersonalizowany widok. Omiń to jeśli go nie potrzebujesz.
     
     setup: function () {
       Dep.prototype.setup.call(this);
@@ -68,33 +68,33 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
 
 ```
 
-You are able to create a custom template with the following path:
+Spersonalizowany szablon możesz stworzyć pod tym linkiem:
 `client/custom/res/templates/your-entity-type/record/detail.tpl`
 
 
 
 `client/custom/src/views/your-entity-type/detail.js`
 
-Detail view contains Record/Detail view and Header.
+Widok szczegółowy zawiera widok rekordu/szczegółów i nagłówek.
 
 
 `client/custom/src/views/your-entity-type/edit.js`
 `client/custom/src/views/your-entity-type/record/edit.js`
 
-The same as detail but is used when record is being created or edited not in inline-edit mode.
+Tak samo jak w szczegółach ale jest wykorzystywane kiedy rekord został stworzony lub zedytowany nie w trybie edycji bezpośredniej.
 
 
 `client/custom/src/views/your-entity-type/list.js`
 
-List view contains Record/List view, Header and Search Form View.
+Widok list zawiera widok Rekordu/Listy, Nagłówek oraz widok Formularza Wyszukującego.
 
 
 `client/custom/src/views/your-entity-type/record/list.js`
 
-List/Record view contains rows of records.
+Widok Listy/Rekordu zawiera wiersze z rekordami.
 
 
-It is worth being mentioned that you need to inherit your view class from specific class for your entity if one already exists.
+Warto wspomnieć, że musisz dziedziczyć klasę widoku z klasy konkretnego podmiotu, jeśli już istnieje.
 
 ```javascript
 Espo.define('custom:views/email/record/detail', 'views/email/record/detail', function (Dep) {
@@ -102,9 +102,9 @@ Espo.define('custom:views/email/record/detail', 'views/email/record/detail', fun
 });
 ```
 
-## Field Views
+## Widoki Pól
 
-Custom views for specific fields should be specified in entityDefs section of metadata.
+Sperfonalizowane widoki pól powinny być zdefiniowane w sekcji matadanych entityDefs.
 
 `custom/Espo/Custom/Resources/metadata/entityDefs/YourEntityType.json`
 
