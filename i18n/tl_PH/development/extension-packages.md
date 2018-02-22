@@ -63,4 +63,4 @@ class AfterInstall
 
 ### Packete
 
-Sa dulo, kailangan nating i-pack ang lahat ng mga file na ito sa archive ng .zip.
+Sa dulo, kailangan nating i-pack ang lahat ng mga file na ito sa archive na .zip.
