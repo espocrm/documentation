@@ -1,8 +1,8 @@
-# Adding custom service action for Workflow
+# Pagpuno og custom nga service nga aksyon para sa Workflow
 
-Workflows allow to create custom service actions. This example will show how this can be done for a Call entity.
+Ang Workflows mutugot sa paghimo og mga custom service nga mga aksyon. Ang musunod nga example kay mupakita kung unsaon ni pagbuhat para sa Call nga entity.
 
-## Step 1. Create service class
+## Unang Lakang. Himo og service nga class
 
 ```php
 <?php
@@ -15,14 +15,14 @@ class TestService extends \Espo\Core\Services\Base
 {
     public function testServiceAction($workflowId, Entity $entity, $additionalParameters = null)
     {
-        // your code here
+        // imohang code diri
     }
 }
 ```
 
-## Step 2. Define the run service method in metadata
+## Ikaduhang Lakang. Himoa ang run service method sulod sa metadata
 
-Create/edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/Workflow.json`
+Himo/i-edit ang file nga `custom/Espo/Custom/Resources/metadata/entityDefs/Workflow.json`
 
 ```json
 {
@@ -36,53 +36,53 @@ Create/edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/Workflow.
     }
 }
 ```
-Note: You can also create metadata file Workflow.json file in your module directory.
+Timan-e: Pwede pud ka muhimo og metadata nga file nga Workflow.json file sa sulod sa imohang module nga direktoryo.
 
-## Step 3. Add a label
+## Ikatulong Lakang. Pagdungag og label
 
-Add or edit (if file exists) the file `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
+Idungag o i-edit (kung naa ang file) ang file`custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
 
 ```json
 {
     "serviceActions": {
-        "testServiceAction": "Label for TestServiceAction"
+        "testServiceAction": "Label para sa TestServiceAction"
     }
 }
 ```
-Or if you have the same method name for several entity types, you can define different translation for them.
+O kung naa kay parehas nga pangalan sa method para sa daghang mga entity type, pwede kang muhimo og nagkalainlaing mga translation para nila.
 
 ```json
 {
     "serviceActions": {
-        "CallTestServiceAction": "Label for Call TestServiceAction",
-        "TaskTestServiceAction": "Label for Task TestServiceAction"
+        "CallTestServiceAction": "Label para sa Call TestServiceAction",
+        "TaskTestServiceAction": "Label para sa Task TestServiceAction"
     }
 }
 ```
 Note: You can also create language file Workflow.json file in your module directory.
 
-## Step 4. Add usage tips (optional)
+## Ikaupat nga Lakang. Pagdungag og mga usage tip (opsyonal)
 
-Add or edit the file `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
-
-```json
-{
-    "serviceActionsHelp": {
-        "testServiceAction": "This is a description of testServiceAction action"
-    }
-}
-```
-Or if you have the same method name for several entity types, you can define different tips xts for them.
+Idungag o i-edit ang file `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
 
 ```json
 {
     "serviceActionsHelp": {
-        "CallTestServiceAction": "This is a description of TestServiceAction for Call entity",
-        "TaskTestServiceAction": "This is a description of TestServiceAction for Task entity"
+        "testServiceAction": "Usa ni ka deskripsyon sa testServiceAction nga  aksyon"
+    }
+}
+```
+O kung naa kay parehas nga pangalan sa method para sa daghang mga entity type, pwede kang muhimo og nagkalainlaing mga tip xts para nila.
+
+```json
+{
+    "serviceActionsHelp": {
+        "CallTestServiceAction": "Usa ni ka deskripsyon sa TestServiceAction para sa Call entity",
+        "TaskTestServiceAction": "Usa ni ka deskripsyon sa TestServiceAction para sa Task entity"
     }
 }
 ```
 
-## Step 5. Clear cache
+## Ikalimang Lakang. I-clear ang Cache
 
-Administration panel > Clear Cache. Now the service action is available for Workflows in the Run Service Action form.
+Administration panel > Clear Cache. Karon, magamit na ang service action para sa Workflows nga naa sa Run Service Action nga form.
