@@ -268,9 +268,9 @@ Actions available for task are almost the same as in Workflow feature. See more 
 Les actions disponibles pour la tâche sont presque les mêmes comme dans la fonctionnalité de flux de travail  Voir plus de détails sur [les actions de flux de travail] (workflows.md # actions).
 
 #### Send Message Task
-
+     Envoyer la tâche de message
 Sends email message to specific recipient.
-
+Envoie le message électronique au destinataire spécifique
 #### User Task
 
 Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
