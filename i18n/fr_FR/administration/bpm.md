@@ -7,7 +7,7 @@ extensions/advanced-pack/) extension.
 
 L'outil de gestion des processus métier (BPM) fournit la capacité de modéliser et d'automatiser les processus métier dans 
 EspoCRM. C'est un moteur exécutant des processus métier décrits dans la norme BPMN 2.0. L'outil BPM est disponible dans  
-[Advanced Pack] (https://www.espocrm.com/extensions/advanced-pack/) extension.
+[Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
 
 ![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
 
@@ -147,7 +147,7 @@ Cet événement arrête le flux et attend aussi longtemps que spécifié par les
 For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC 
 timezone). Once this time comes the flow will be proceeded to the next element.
 
-Pour les paramètres de minuterie plus complexe, vous pouvez utiliser [formula] (formula.md). Les scripts de formule doivent
+Pour les paramètres de minuterie plus complexe, vous pouvez utiliser [formula](formula.md). Les scripts de formule doivent
 renvoyer la valeur date-heure (dans le fuseau horaire UTC). Une fois ce temps venu, le flux sera dirigé vers l'élément suivant.
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the begin
@@ -200,11 +200,9 @@ parallel flows won't be merged into the single flow.
 En cas de convergence, il dirige simplement le flux vers l'élément sortant. Il ne se bloque pas après le flux, donc les flux 
 parallèles ne seront pas fusionnés dans le flux unique.
 
-![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/
-bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/
-bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Inclusive Gateway
      Passerelle inclusive
@@ -227,8 +225,7 @@ gateway. It will wait for all incoming flows and then continue to the outgoing e
 S'il est nécessaire de fusionner des flux parallèles produits par une passerelle inclusive divergente, vous devez utiliser une 
 passerelle inclusive convergente. Il attendra tous les flux entrants puis continuera vers l'élément sortant.
 
-![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-
-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -331,8 +328,7 @@ par le processus en fonction de la règle spécifique;
 trement créé par le processus
 * Exécuter l'action de service -exécute des actions de service personnalisées implémentées par les développeurs.
 
-Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.
-md#actions).
+Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
 
 Les actions disponibles pour la tâche sont presque les mêmes comme dans la fonctionnalité de flux de travail  Voir plus de 
 détails sur [les actions de flux de travail] (workflows.md # actions).
