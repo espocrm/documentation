@@ -253,8 +253,7 @@ In case of converging it waits until all incoming flows come and then continues 
 En cas de convergence, il attend jusqu'à ce que tous les flux entrants arrivent, puis il continue vers l'élément sortant suivant.
 
 
-![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-
-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -283,8 +282,7 @@ Only intermediate events can be on the other end of outgoing sequence flows.
 
 Seulementles événements intermédiaires peuvent se trouver à l'autre extrémité des flux de séquence sortants
 
-![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-
-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Activities
     Activités
