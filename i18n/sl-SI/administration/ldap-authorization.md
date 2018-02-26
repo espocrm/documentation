@@ -1,60 +1,56 @@
-# Ldap Authorization
+# LDAP avtorizacija
 
-In this guide, we will show how to configure LDAP authorization for EspoCRM. Let’s go.
+V tem razdelku bomo pokazali, kako skonfigurirati LDAP avtorizacijo za EspoCRM. Pa pričnimo!
 
-Go to your LDAP server and create a base DN for the EspoCRM users like
+Pojdite na vaš LDAP strežnik in ustvarite osnovni DN za uporabnike EspoCRM, na primer
 ```
 cn=espo-users,ou=users,dc=espo,dc=local
 ```
 
-We have to create a system user which will have access to the users DN (“cn=espo-users,ou=users,dc=espo,dc=local”). So, the full DN for this system user will be
+Ustvariti moramo sistemskega uporabnika, ki bo imel dostop do DN uporabnikov (“cn=espo-users,ou=users,dc=espo,dc=local”). Potemtakem bo polni DN za tega sistemskega uporabnika
 ```
 cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 ```
-Now, we can add LDAP user to access to EspoCRM. E.g. Espo Tester with the username “tester” inside the “cn=espo-users,ou=users,dc=espo,dc=local” DN. Please note: to be able to use this login format for EspoCRM, you have to specify the “Username Attribute” and “Base DN” options.
+Zdaj lahko dodamo LDAP uporabnika, da bo dostopal do EspoCRM. Na primer, Espo Tester z uporabniškim imenom “tester” znotraj “cn=espo-users,ou=users,dc=espo,dc=local” DN. Prosimo, upoštevajte: da boste lahko uporabljali to obliko prijave za EspoCRM, morate izbrati možnosti “Atribut uporabniško ime“ in “Osnovni DN“.
 
-Then, go to EspoCRM  Authentication settings in the Administrator panel, select `LDAP` method and fill in the LDAP details:
+Nato pojdite na nastavitve avtentikacije (overitve) EspoCRM v administracijskem panelu, izberite način `LDAP` in izpolnite podrobnosti glede LDAP:
 
 ![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
 
-* Host – LDAP IP or host name.
-* Port – connection port.
-* Auth – access credentials for the LDAP server:
- * Full User DN – the full system user DN which allows to search other users.
- * Password – the password to access the LDAP server.
-* Security – SSL or TSL protocol.
-* Username Attribute – the attribute to identify the user. For Active Directory it can be “userPrincipalName” or “sAMAccountName”.
-* Account Canonical Form – type of your account canonical form. There are 4 options:
- * Dn – the form in the format `CN=tester,CN=Espocrm,DC=company,DC=com`.
- * Username – the form `tester`.
- * Backslash – the form `COMPANY\tester`.
- * Principal – the form `tester@company.com`.
-* Bind Requires Dn – if need to format the username in the DN form.
-* Base Dn – the default base DN which is used for searching users.
-* User Login Filter – the filter which allows to restrict users who are able to use EspoCRM. E.g. `memberOf=cn=espoGroup,cn=espo-users,ou=users,dc=espo,dc=local`.
-* Account Domain Name – The domain which is used for authorization the LDAP server.
-* Account Domain Name Short – The short domain which is used for authorization the LDAP server.
-* Try Username Split – the option to split a username with the domain.
-* Opt Referrals – if referrals should be followed to the LDAP client.
-* Create User in EspoCRM – this option allows EspoCRM to create a user from the LDAP.
- * User First Name Attribute – LDAP attribute which is used to determine the user first name.
- * User Last Name Attribute – LDAP attribute which is used to determine the user last name.
- * User Title Attribute – LDAP attribute which is used to determine the user title.
- * User Email Address Attribute – LDAP attribute which is used to determine the user email address.
- * User Phone Number Attribute – LDAP attribute which is used to determine the user phone number.
+* Gostitelj – LDAP IP ali ime gostitelja.
+* Vrata – vrata povezave.
+* Auth – dostopne pravice za LDAP strežnik:
+ * Polni DN uporabnika – polni sistemski DN uporabnika, ki omogoča iskanje drugih uporabnikov.
+ * Geslo – geslo za dostop do LDAP strežnika.
+* Varnost – SSL ali TSL protokol.
+* Atribut uporabniško ime – atribut, ki določa uporabnika. Za Active Directory je lahko “userPrincipalName” ali “sAMAccountName”.
+* Pristna oblika računa – tip vaše pristne oblike računa. Obstajajo 4 možnosti:
+ * Dn – oblika `CN=tester,CN=Espocrm,DC=company,DC=com`.
+ * Uporabniško ime – oblika `tester`.
+ * Leva poševnica – oblika `COMPANY\tester`.
+ * Glavno ime – oblika `tester@company.com`.
+* Povezovanje zahteva DN – če je potrebno uporabniško ime predstaviti v DN obliki.
+* Osnovni DN – privzeti osnovni DN, ki se uporablja za iskanje uporabnikov.
+* Filter prijave uporabnikov – filter, s katerim se lahko omeji uporabnike, ki lahko uporabljajo EspoCRM. Na primer, `memberOf=cn=espoGroup,cn=espo-users,ou=users,dc=espo,dc=local`.
+* Domensko ime računa – Domena, ki se uporablja za avtorizacijo LDAP strežnika.
+* Kratko domensko ime računa – Kratko ime domene, ki se uporablja za avtorizacijo LDAP strežnika.
+* Poskusi razdeliti uporabniško ime – možnost razdelitve uporabniškega imena z domeno.
+* Možnost napotitve – ali so možne napotitve do LDAP odjemalca.
+* Ustvari uporabnika v EspoCRM – ta možnost omogoča ustvaritev EspoCRM uporabnika iz LDAP.
+ * Atribut ime uporabnika – LDAP atribut, ki se uporablja za določitev imena uporabnika.
+ * Atribut priimek uporabnika – LDAP atribut, ki se uporablja za določitev priimka uporabnika.
+ * Atribute naziv uporabnika – LDAP atribut, ki se uporablja za določitev naziva uporabnika.
+ * Atribut e-poštni naslov uporabnika – LDAP atribut, ki se uporablja za določitev e-poštnega naslova uporabnika.
+ * Atribut telefonska številka uporabnika – LDAP atribut, ki se uporablja za določitev telefonskega številke uporabnika.
 
-Now, go to the login page and enter user credentials.
+Zdaj pa pojdite na prijavno stran ter vpišite uporabniško ime in geslo.
 
 ![2](../_static/images/administration/ldap-authorization/ldap-login.png)
 
-User has been authenticated and automatically created in the EspoCRM.
+Uporabnik je bil avtenticiran (overjen) in samodejno ustvarjen v EspoCRM.
 
-##Configuration instructions based on your server:
-* [Active Directory server](ldap-authorization-for-ad.md)
-* [OpenLDAP server](ldap-authorization-for-openldap.md)
+##Navodila za konfiguracijo glede na vaš strežnik:
+* [Active Directory strežnik](ldap-authorization-for-ad.md)
+* [OpenLDAP strežnik](ldap-authorization-for-openldap.md)
 
-More information about configuring LDAP you can read on the [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/) page, as EspoCRM uses this library.
-
-
-
-
+Več informacij glede konfiguriranja LDAP lahko najdete na strani [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/), saj EspoCRM uporablja to knjižnico.
