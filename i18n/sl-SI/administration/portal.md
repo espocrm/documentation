@@ -1,63 +1,63 @@
 # Portal
 
-Portal provides an ability to access specific crm data and functions for your customers and partners. Administrator can create multiple portals. Each portal can have its own settings, dashlboard, user list, access control settings.
+Portal omogoča možnost, da dostopate do določenih crm podatkov in funkcij za vaše stranke in partnerje. Administrator lahko ustvari več portalov. Vsak portal ima lahko svoje nastavitve, nadzorno ploščo, seznam uporabnikov, nastavitve nadzora dostopa.
 
-To create portal follow Administration > Portals, click Create Portal button.
+Za ustvaritev portala pojdite na Administracija > Portali, kliknite gumb Ustvari portal.
 
-* `Is Active`. If not check portal won't be available for anybody.
-* `Is Default`. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
-* `Roles`. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
-* `Tab List`. Tabs which will be shown in navigation bar.
-* `Dashboard Layout`. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
-* `URL`. Read only field that displays the link you can access the portal with.
+* `Je aktiven`. Če ni označen, potem portal ne bo na voljo nikomur.
+* `Je privzet`. Pomeni, da bo portal na voljo po krajšem url-ju: http(s)://VAŠ_ESPO_URL/portal.
+* `Vloge`. Določite eno ali več vlog na portalu, ki bodo dodeljene uporabnikom, prijavljenim v portal. Več informacij glede vlog na portalu najdete spodaj.
+* `Seznam zavihkov`. Zavihki, ki bodo vidni v navigacijski vrstici.
+* `Postavitev nadzorne plošče`. Določite elemente, ki bodo prikazani na domači strani portala. Upoštevajte, da uporabniki portala ne morejo konfigurirati svoje nadzorne plošče.
+* `URL`. Samo bralno polje, ki vsebuje povezavo, s katero lahko dostopate do portala.
 
-## Portal Users
+## Uporabniki portala
 
-Administrators can create portal users.
+Administratorji lahko ustvarijo uporabnike portala.
 
-1. Administration > Users.
-2. Click right dropdown next to Create User.
-3. Click Create Portal User.
-4. Select Contact the portal user will be linked with.
-5. Fill the form and click save.
+1. Administracija > Uporabniki.
+2. Kliknite desni padajoči meni poleg Ustvari uporabnika.
+3. Kliknite na Ustvari uporabnika portala.
+4. Izberite Kontakt, s katerim bo uporabnik povezan.
+5. Izpolnite obrazen in kliknite Shrani.
 
-Portal user should be linked to Portal record to be able to access that portal.
+Uporabnik portala bi moral biti povezan z zapisom portala, da bi lahko dostopal do njega.
 
-## Portal Roles
+## Vloge na portalu
 
-Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
+Vloge na portalu so podobne običajnim vlogam v EspoCRM, toda z nekaj razlikami.
 
-* `not-set` level denies an access.
-* `own` level means that the record is created by the user. E.g. portal user cased some case and this case is owned by this user.
-* `account` level means that the record is related to the account the portal user is related to.
-* `contact` level means that the record is related to the contact the portal user is related to.
+* Stopnja `ni določen` onemogoča dostop.
+* Stopnja `lasten` pomeni, da je uporabnik tisti, ki ustvari zapis. Na primer, uporabnik portala je odprl nek primer in ta uporabnik je zdaj lastnik tega primera.
+* Stopnja `račun` pomeni, da je zapis povezan z računom, s katerim je uporabnik portala povezan.
+* Stopnja `kontakt` pomeni, da je zapis povezan z zapisom, s katerim je uporabnik portala povezan.
 
-Assigned User and Teams fields are read only for portal users.
+Polji Dodeljen uporabnik in Timi lahko uporabniki portala zgolj berejo.
 
-### Example
+### Primer
 
-`Portal users should be able to create cases, view cases related to their account; they should be able to view knowledge base.`
+`Uporabniki portala naj bi imeli možnost ustvarjati primere, videti primere, ki so povezani z njihovim računom; imeli naj bi tudi možnost videti bazo znanja.`
 
-1. Open Create Portal Role form (Administration > Portal Roles > Create Role).
-2. Enable access to Cases, set: `create - yes, read - account, edit - no, delete - no, stream - account`.
-3. Enable access to Knowledge Base, set `create - no, read - account, edit - no, delete - no`.
-4. Edit your portal record (Administration > Portals). Select your portal role in Roles field and then save.
+1. Odprite obrazec Ustvari vlogo na portalu (Administracija > Vloge na portalu > Ustvari vlogo).
+2. Omogočite dostop do Primerov, nastavite: `create - yes, read - account, edit - no, delete - no, stream - account`.
+3. Omogočite dostop do Baze podatkov, nastavite `create - no, read - account, edit - no, delete - no`.
+4. Uredite svoj zapis portala (Administracija > Portali). Izberite svojo vlogo na portalu v polju Vloge in nato shranite.
 
-## Access to Portal
+## Dostop do portala
 
-You can find the url for your portal in 'URL' field of the portal record. Also it's possible to use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
+Url za vaš portal lahko najdete v polju 'URL' v zapisu portala. Prav tako je možno uporabiti orodja za konfiguracijo strežnika (kot je mod_rewrite), da bi do portala lahko dostopali z drugačnim url-jem. Za ta primer morate izpolniti polje 'URL po meri'.
 
-### Access portal by Custom URL for Apache server
+### Dostop do portala z URL-jem po meri za Apache strežnik
 
-Custom URL: my-portal-host-name.com.
+URL po meri: ime-gostitelja-mojega-portala.com.
 
 #### crm.portal.conf
 ```
 <VirtualHost *:80>
-	DocumentRoot /path/to/espocrm/instance/
-	ServerName my-portal-host-name.com
+	DocumentRoot /pot/do/espocrm/
+	ServerName ime-gostitelja-mojega-portala.com
 
-    <Directory /path/to/espocrm/instance/>
+    <Directory /pot/do/espocrm/>
         Options Indexes FollowSymLinks
         AllowOverride All
         Order allow,deny
@@ -68,19 +68,19 @@ Custom URL: my-portal-host-name.com.
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-ServerAlias my-portal-host-name.com
+ServerAlias ime-gostitelja-mojega-portala.com
 
 ```
 
-#### Mod rewrite rules
+#### Mod rewrite pravila
 
-Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is avaialble in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
+Določite številko zapisa portala namesto `{PORTAL_ID}`. Številka zapisa portala je na voljo v naslovni vrstici vašega brskalnika, ko odprete podrobnostni pogled zapisa portala. Primer: https://moj-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 je številka zapisa portala.
 
 ```
-  RewriteCond %{HTTP_HOST} ^portal-host-name.com$
+  RewriteCond %{HTTP_HOST} ^ime-gostitelja-postala.com$
   RewriteRule ^client - [L]
 
-  RewriteCond %{HTTP_HOST} ^portal-host-name.com$
+  RewriteCond %{HTTP_HOST} ^ime-gostitelja-postala.com$
   RewriteCond %{REQUEST_URI} !^/portal/{PORTAL_ID}/.*$
   RewriteRule ^(.*)$ /portal/{PORTAL_ID}/$1 [L]
 ```
