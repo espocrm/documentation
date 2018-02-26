@@ -1,61 +1,65 @@
-# Moving EspoCRM to another server
+# Prenos EspoCRM na drug strežnik
 
-Follow these steps to move EspoCRM to another server:
+Za prenos EspoCRM na drug strežnik naredite naslednje korake:
 
-### Step 1. Backup files
+### Korak 1. Naredite varnostno kopijo datotek
 
-Open a file manager or login via SSH to archive all available files from the EspoCRM directory. More details: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
+Odprite upravitelja datotek ali pa se prijavite prek SSH ter arhivirajte vse razpoložljive datoteke, ki so v EspoCRM direktoriju. Več podrobnosti:
+https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
 
-### Step 2. Backup your database
+### Korak 2. Naredite varnostno kopijo podatkovne baze
 
-The data stored in database (MySQL, MariaDB) should be backed up. Please follow this recommendation: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
+Morali bi narediti varnostno kopijo podatkov, shranjenih v podatkovni bazi (MySQL, MariaDB). Prosimo, upoštevajte to priporočilo:
+https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
 
-### Step 3. Copy files and database backups to another server
+### Korak 3. Varnostni kopiji datotek in podatkovnih baz kopirajte na drug strežnik
 
-Copy backups of files and of your database to a new server.
+Kopirajte varnostni kopiji datotek in vaše podatkovne baze na nov strežnik.
 
-### Step 4. Unarchive backup files
+### Korak 4. Odarhiviraje datoteke varnostnih kopij
 
-To unarchive backup files, you can use Archive Manager or this instruction: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files. 
-Note: Files need to be placed in the web-server directory.
+Za odarhiviranje datotek varnostnih kopij lahko uporabite Archive Manager ali ta navodila:
+https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files.
+Opomba: Datoteke je treba kopirati v direktorij, ki ga bere spletni strežnik.
 
-### Step 5. Configure a server
+### Korak 5. Skonfigurirajte strežnik
 
-Configure a new server based on the recommendations here: https://www.espocrm.com/documentation/administration/server-configuration/.
+Skonfigurirajte novi strežnik v skladu z naslednjimi priporočili: https://www.espocrm.com/documentation/administration/server-configuration/.
 
-### Step 6. Correct permissions
+### Korak 6. Popravite pravice
 
-Set required permissions and files owner, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
+Določite potrebne pravice in lastnika datotek: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
 
-### Step 7. Import your database backup
+### Korak 7. Uvozite varnostno kopijo podatkovne baze
 
-First, you have to create a new database with a user in MySQL. To import your database from the backup, follow the instuction: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
+Najprej morate ustvariti novo podatkovno bazo z uporabnikom v MySQL. Za uvoz podatkovne baze iz varnostne kopije upoštevajte ta navodila:
+https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
 
-### Step 8. Correct EspoCRM configurations
+### Korak 8. Spremenite konfiguracijo EspoCRM
 
-After successfully importing and configuring the server, please correct EspoCRM configurations in the file `ESPOCRM_DIRECTORY/data/config.php`:
+Potem ko boste uspešno uvozili in skonfigurirali strežnik, prosimo, ustrezno spremenite konfiguracijo EspoCRM v datoteki `ESPOCRM_DIREKTORIJ/data/config.php`:
 
- * database connection settings:
-  
+ * nastavitve za povezave podatkovne baze:
+
   ```php
   'database' => [
         'driver' => 'pdo_mysql',
-        'dbname' => 'YOUR_DATABASE_NAME',
-        'user' => 'YOUR_USER',
-        'password' => 'YOUR_DATABASE_PASSWORD',
+        'dbname' => 'IME_PODATKOVNE_BAZE',
+        'user' => 'UPORABNIK_BAZE',
+        'password' => 'GESLO_UPORABNIKA_BAZE',
         'host' => 'localhost',
         'port' => ''
     ],
   ```
-   
-   * "siteUrl" - if your domain name (URL) is changed:
-  
+
+   * "siteUrl" - če se je vaše ime domene (URL) spremenilo:
+
   ```php
-  'siteUrl' => 'https://new-link.com',
+  'siteUrl' => 'https://nova-povezava.com',
   ```
-  
-  * default files owner (only if different):
-  
+
+  * privzeti lastnik datotek (samo, če se je spremenil):
+
   ```php
   'defaultPermissions' => [
         'user' => 'www-data',
@@ -63,11 +67,11 @@ After successfully importing and configuring the server, please correct EspoCRM 
     ]
   ```
 
-  where `www-data` is your web-server user.
+  kjer je `www-data` vaš uporabnik spletnega strežnika (web-server user).
 
-### Step 9. Setup a crontab
+### Korak 9. Nastavite crontab
 
-Setup a crontab, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
-Note: it should be configured under your web-server user.
+Nastavite crontab: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+Opomba: skonfiguriran mora biti pod uporabnikom spletnega strežnika.
 
-That's all. Now, your EspoCRM instance is running on a new server.
+To je vse. Od zdaj naprej je vaš EspoCRM na novem strežniku.
