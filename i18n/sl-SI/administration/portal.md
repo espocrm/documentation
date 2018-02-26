@@ -5,7 +5,7 @@ Portal omogoča možnost, da dostopate do določenih crm podatkov in funkcij za 
 Za ustvaritev portala pojdite na Administracija > Portali, kliknite gumb Ustvari portal.
 
 * `Je aktiven`. Če ni označen, potem portal ne bo na voljo nikomur.
-* `Je privzet`. Pomeni, da bo portal na voljo po krajšem url-ju: http(s)://VAŠ_ESPO_URL/portal.
+* `Je privzet`. Pomeni, da bo portal na voljo po krajšem url-ju: http(s)://VAS_ESPO_URL/portal.
 * `Vloge`. Določite eno ali več vlog na portalu, ki bodo dodeljene uporabnikom, prijavljenim v portal. Več informacij glede vlog na portalu najdete spodaj.
 * `Seznam zavihkov`. Zavihki, ki bodo vidni v navigacijski vrstici.
 * `Postavitev nadzorne plošče`. Določite elemente, ki bodo prikazani na domači strani portala. Upoštevajte, da uporabniki portala ne morejo konfigurirati svoje nadzorne plošče.
