@@ -64,42 +64,42 @@
 
 Наш пользователь сможет управлять всеми лидерами и возможностями из команды `Продажи`.
 
-## Special Permissions
+## Специальные разрешения
 
-### Assignment Permission
+### Разрешение назначения
 
-Set this parameter to restrict ability to re-assign records to another user and/or teams. If you set `team` - then it will be possible to assign only to users from own team(s). If `no` - users won't be able to re-assign at all.
+Установите этот параметр, чтобы ограничить возможность переназначения записей другому пользователю и/или команде. Если вы установите `команда`, тогда можно будет назначить только пользователей из собственной команды. Если `нет` - пользователи не смогут повторно назначать.
 
-It also defines whether user is able to post to stream of another users/teams.
+Он также определяет, может ли пользователь отправлять сообщения другим пользователям/командам.
 
-### User Permission
+### Разрешение для пользователя
 
-Allows to restrict an ability for users to view activities, calendar and stream of other users.
+Позволяет ограничить возможность просмотра пользователями активностей, календаря и новостей других пользователей.
 
-### Portal Permission
+### Разрешение для портала
 
-Defines an access to portal information, ability to post messages to portal users.
+Определяет доступ к информации портала, возможность отправлять сообщения пользователям портала.
 
-### Group Email Account Permission
+### Разрешение для групповых учетных записей электронной почты
 
-Defines an access to group email accounts, an ability to send emails from group SMTP.
+Определяет доступ к групповым учетным записям электронной почты, возможность отправлять электронные письма из SMTP группы.
 
-### Export Permission
+### Экспортное разрешение
 
-Defenies whether user have an ability to export records. (since version 4.9.0)
+Устанавливает, имеет ли пользователь возможность экспортировать записи. (начиная с версии 4.9.0)
 
-## Permissions by Default 
+## Разрешения по умолчанию
 
-By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
+По умолчанию (если они не применяются) пользователи могут читать и редактировать все записи. Но не могут удалять любые записи, кроме тех, которые они создали.
 
-There is an ability to restrict an access applied by default by enabling 'ACL Strict Mode' at Administration > Settings.
+Существует возможность ограничить доступ, применяемый по умолчанию, включив 'ACL Strict Mode' в Администрирование > Настройки.
 
-## Field Level Security
+## Безопасность на уровне полей
 
-Allows to control an access for a specific fields.
+Позволяет контролировать доступ для определенных полей.
 
-By default user can read all fields if one can read the record. User can edit any field if one can edit the record. You can restrict access to specific fields using Field Level Security.
+По умолчанию пользователь может читать все поля, если вы можете прочитать запись. Пользователь может редактировать любое поле, если вы можете редактировать запись. Вы можете ограничить доступ к определенным полям с помощью безопасности на уровне полей.
 
-In edit view  of a role record in Field Level section click plus icon next to the specific scope then select needed field. Then you will be able to specify the access level for `read` and `edit` actions. There are to options: `yes` and `no`.
+В режиме редактирования записи роли в разделе Уровень поля щелкните значок плюс рядом с определенной областью, затем выберите нужное поле. Тогда вы сможете увидеть ## Специальные разрешения. Укажите уровень доступа для действий `read` и` edit`. Есть варианты: `yes` и` no`.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
