@@ -1,21 +1,21 @@
-# How to create a dashlet
+# Paano Gumawa ng Dashlet
 
-Create a file `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.json` with your dashlet configuration.
+Lumikha ng isang file `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.json` gamit ang conpigyurasyon ng iyong dashlet.
 
-Here you need to define `"view"`, and you could set `"aclScope"`, `"entityType"`, and `"options"`.
+Dito ay kailangan mong tukuyin ang `"view"`, at maaari mong itakda ang `"aclScope"`, `"entityType"`, at `"options"`.
 
-If it's typical list dashlet, use `"view":"views/dashlets/abstract/record-list"`, if not, create own view (https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
+Kung ito ay karaniwang listahan ng dashlet, gamitin ang `"view":"views/dashlets/abstract/record-list"`, kung hindi, lumikha ng sariing view (https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
 
-## Options
-By default in dashlet options you can set _Title_ and _Auto-refresh Interval_.
+## Mga Opsyon
+Batay sa default sa mga opsyon ng dashlet,  maaari mong itakda ang _Title_ at _Auto-refresh Interval_.
 
-Additional option fields you can set in `"options"` > `"fields"`.
+Ang mga karagdagang opsyon ng mga field ay maaari mong itakda sa `"options"` > `"fields"`.
 
-To define fields position set the layout in in `"options"` > `"layout"` > `"rows"`
+Upang tukuyin ang posisyon ng ng mga field, itakda ang layout sa `"options"` > `"layout"` > `"rows"`
 
-Also you can define other options, if your view needs more data.
+Maaari mo ring tukuyin ang iba pang mga opsyon, kung ang iyong view ay nangangailangan pa ng mas maraming datos.
 
-## Example
+## Halimbawa
 
 `application/Espo/Modules/Crm/Resources/metadata/dashlets/Cases.json`
 
@@ -98,10 +98,10 @@ Also you can define other options, if your view needs more data.
     }
 }
 ```
-There you can see some examples `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
+May makikita kang ilang halimbawa dito `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
 
-## Translation
+## Ang Pagsasalin
 
-Translation to dashlet is in `Global` scope, in `"dashlets"` section.
+Ang pagsasalin sa dashlet ay nasa `Global` na scope, sa seksyon ng `"dashlets"`.
 
-__After all don't forget to Clear Cache in Administration.__
+__Pagkatapos ng lahat, huwag kalimutan na burahin ang Cache sa Administrasyon.__

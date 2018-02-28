@@ -1,12 +1,12 @@
-# Defining new funtions for Formula
+# Pagtukoy sa mga Bagong Function para sa Pormula
 
-EspoCRM provides the possibility to create custom functions that can be used in formula. 
+Ang EspoCRM nagbibigay ng posibilidad na lumikha ng mga kustom na function na maaaring magamit sa pormula. 
 
-If your function is related to the one of groups like String, Logic, Date, create a file in __{GroupName}Group__ folder, named __{FunctionName}Type.php__ with __{FunctionName}Type__ class declaration. You need to define the method __'process'__.
+Kung ang iyong function ay may kaugnayan sa isa sa mga grupo tulad ng String, Lohika, Petsa, lumikha ng isang file sa __{GroupName}Group__ na polder, na nagngagalan ng __{FunctionName}Type.php__ kasama ng __{FunctionName}Type__ deklarasyon ng klase. Kailangan mong tukuyin ang pamamaraan na __'process'__.
 
-For example, let's create a new string function for checking if a string (HAYSTACK) contains another string (NEEDLE) with a possible offset (OFFSET).
+Halimbawa, gumawa tayo ng bagong string na function para sa pagsusuri kung ang isang string (HAYSTACK) ay naglalaman ng isa pang string (NEEDLE) na may posibleng offset (OFFSET).
 
-Create a file `application/Espo/Core/Formula/Functions/StringGroup/ContainsType.php` with the code:
+Lumikha ng isang file na `application/Espo/Core/Formula/Functions/StringGroup/ContainsType.php` na may code na:
 
 ```
 namespace Espo\Core\Formula\Functions\StringGroup;
@@ -41,9 +41,9 @@ class ContainsType extends \Espo\Core\Formula\Functions\Base
     }
 }
 ```
-## Adding the function to the list
+## Pagdagdag ng function sa listahan
 
-In order to add the created function to the function list of formula, create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
+Upang idagdag ang nilikhang function sa listahan ng function ng pormula, lumikha ng isang file na `custom/Espo/Custom/Resources/metadata/app/formula.json` at idagdag ang code na:
 ```
 {
     "functionList": [
@@ -54,5 +54,5 @@ In order to add the created function to the function list of formula, create a f
 }
 ```
 
-__Clear cache__ and use this function in formula. You can type it `string\contains(HAYSTACK, NEEDLE, OFFSET)` or select from function list, if you add it.
+__Burahin ang cache__ at gamitin ang function na ito sa pormula. Maaari mo itong i-type `string\contains(HAYSTACK, NEEDLE, OFFSET)` o pumili mula sa listahan ng function, kung idagdag mo ito.
 

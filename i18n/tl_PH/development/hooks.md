@@ -1,14 +1,14 @@
-# Hooks
+# Mga Hook
 
-## Create a Hook
-To create a hook, you need to:
-- create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
-- declare hook type action;
-- clear Cache in Administration.
+## Gumawa ng Hook
+Upang lumikha ng hook, kailangan mo:
+- lumikha ng isang file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
+- ideklara ang hook type action;
+- burahin ang Cache sa Administrasyon.
 
-## Hook Types
+## Mga Uri ng Hook
 
-The main hook types are:
+Ang mga pangunahing uri ng hook ay:
 
 - beforeSave;
 - afterSave;
@@ -18,18 +18,18 @@ The main hook types are:
 - afterUnrelate;
 - afterMassRelate.
 
-### New Hook Type
-You can use your own hook type and trigger it with
+### Panibagong Uri ng Hook
+Maaari mong gamitin ang iyong sariling uri ng hook at simulan ito sa pamamagitan ng
 
 `$this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);`.
 
-## Hook Order
-If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property in an integer value.
+## Pagkakasunud-sunod ng Hook
+Kung mayroon kang ilang mga hook, na may kaugnayan sa isang Entity Type at at may parehong uri ng hook, at ang pagpapatakbo ng order ay mahalaga, maaari kang magtakda ng isang `public static $order` na katangian sa isang integer value.
 
-Ascending order - the hook with the smallest order number runs first.
+Pataas na order - ang hook na may pinakamaliit na numero ng order ang unang tatakbo.
 
-## Example
-This example sets Account Name for new Leads, if it is not set.
+## Halimbawa
+Ang halimbawa na ito ay nagtatakda ng pangalan ng Account para sa mga bagong Lead, kung hindi ito naka-set.
 
 `custom/Espo/Custom/Hooks/Lead/AccountName.php`
 
@@ -49,5 +49,5 @@ class AccountName extends \Espo\Core\Hooks\Base
 }
 ```
 
-## Global Hooks
-If you need to apply a hook for all entities, you can use common hooks. To do this, put your hook class in Common directory, e.g. `custom/Espo/Custom/Hooks/Common/{HookName}.php`.
+## Mga Global Hook
+Kung kailangan mong mag-apply ng hook para sa lahat nga mga entity, maaari mong gamitin ang karaniwang mga hook. Upang gawin ito, ilagay ang klase ng iyong hook sa Karaniwang direktoryo, e.g. `custom/Espo/Custom/Hooks/Common/{HookName}.php`.

@@ -1,13 +1,13 @@
-# Link Multiple field with Primary
+# Ang Pag-uugnay ng Maramihang field sa Primarya
 
-~For EspoCRM 3.6.0 and greater.~
+~Para sa EspoCRM 3.6.0 at higit pa.~
 
-Sometimes you have `hasMany` relationship and need to have an ability to select primary record among related ones. As example, `Contacts` field of Case entity.
+Minsan mayroong kang `hasMany` na kaugnayan at kailangan mong magkaroon ng kakayahan na pumili ng pangunahing rekord sa mga nauugnay. Bilang halimbawa, ang field ng `Contacts` Case entity.
 
->Need to create `contacts` linkMultiple field with a primary for our custom entity `Stock`. 
+>Kailangang gumawa ng `contacts` linkMultiple na field kasama ang isang primarya para sa ating custom entity na `Stock`. 
 >
 
-###Step 1
+###Unang Hakbang
 `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`
 ```json
 {
@@ -40,7 +40,7 @@ Sometimes you have `hasMany` relationship and need to have an ability to select 
 }
 ```
 
-###Step 2
+###Pangalawang Hakbang
 `custom/Espo/Custom/Resources/metadata/entityDefs/Contact.json`
 ```json
 {
@@ -62,7 +62,7 @@ Sometimes you have `hasMany` relationship and need to have an ability to select 
 }
 ```
 
-###Step 3
+###Pangatlong Hakbang
 `custom/Espo/Custom/Repositories/Stock.php`
 ```php
 <?php
@@ -106,7 +106,7 @@ class Stock extends \Espo\Core\ORM\Repositories\RDB
 }
 ```
 
-###Step 4
+###Pang-apat na Hakbang
 `client/custom/src/views/stock/fields/contacts.js`
 ```js
 Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
@@ -116,11 +116,11 @@ Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-wi
 });
 ```
 
-###Step 5
-Run Rebuild
+###Pang-limang Hakbang
+Patakbuhin ang Rebuild
 
-###Step 6
-Execute SQL query
+###Pang-anim na Hakbang
+Isagawa ang SQL na query
 ```sql
 UPDATE stock
 JOIN contact_stock

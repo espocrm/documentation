@@ -1,13 +1,13 @@
-# Metadata
+# Ang Metadata
 
-Metadata is intended for: storing system data such as entity's fields and relationships; specifying frontend controllers, views, panels; defining fields, dashlets; and other data needed for the application.
+Ang metadata ay para sa: pagtatago ng system data gaya ng mga field ng entity at mga kaugnayan; pagtukoy ng mga frontend controller, view, panel; pagtakda ng mga field, dashlet; at iba pang mga datos na kinakailangan para sa applikasyon.
 
 
-## How to access
+## Kung Paano Ma-access
 
 #### Backend
 
-Metadata object of `Espo\Core\Utils\Metadata` class can be access from Container. Path to a needed parameter is specified using dots `.`.
+Ang object ng metadata ng `Espo\Core\Utils\Metadata` na klase ay maaaring ma-access mula sa lalagyan. Ang path sa isang kinakailangang parametro ay tinutukoy gamit ang mga tuldok `.`.
 
 ```php
 $metadata->get('entityDefs.Account.fields.name.type')
@@ -21,22 +21,22 @@ will return an associative array of all fields.
 
 #### Frontend
 
-Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as backend's one.
+Ang object ng metadata ay naa-access mula sa lahat ng mga view object sa pamamagitan ng pamamaraan ng `#getMetadata`. Ito ay gumagana sa parehong paraan ng backend.
 
 ```JavaScript
 this.getMetadata().get('entityDefs.Account.fields.name.type')
 ```
 
 
-## How is it stored
+## Paano ito Tinatago
 
-Metadata is stored in JSON files that can be located in different places:
+Ang metadata ay tinatago sa mga file ng JSON na matatagpuan sa iba't ibang lugar:
 
 * application/Espo/Resources/metadata/
 * custom/Espo/Custom/Resources/metadata/
 * application/Espo/Modules/{MODULE_NAME}/Resources/metadata/
 
-When you access data by path `clientDefs.Account.views.edit` the first lexeme `clientDefs` corresponds to dir name, the second `Account` to file name `Account.json`. All following lexemes correspond to path in the JSON.
+Kapag na-access mo ang data sa pamamagitan ng path na `clientDefs.Account.views.edit` ang unang lexeme `clientDefs` ay tumutugon sa pangalan ng dir, ang pangalawa sa `Account` sa pangalan ng file na `Account.json`. Ang lahat ng sumusunod na mga lexeme ay tumutugon sa path sa JSON.
 ```json
 {
   "views": {
@@ -45,12 +45,12 @@ When you access data by path `clientDefs.Account.views.edit` the first lexeme `c
 }
 ```
 
-All JSON files from these directories get merged recursively into a single php array and stored in a cache file. 
+Ang lahat ng JSON file mula sa mga direktoryo na ito ay pinag-samasama sa rekursibong pamamaraan sa isang solong php array at nakatago sa isang cache file 
 
 
-## Extending
+## Pagpapalawig
 
-Since metadata is merged recursively you can easily redefine json objects and arrays in _custom_ and in your _module_. Also you can append to existing arrays by using `__APPEND__` (since version 2.6.0) as the first element of array.
+Pagkat ang metadata ay pinag-samasama sa rekursibong pamamaraan maaari mong madaling tukuyin muli ang mga json object at array sa _custom_ at sa iyong _module_. Gayundin maaari kang magdagdag sa mga kasalukuyang array sa pamamagitan ng paggamit ng `__APPEND__` (mula bersyon 2.6.0) bilang unang elemento ng array.
 
 `custom/Espo/Custom/Resources/Metadata/entityDefs/Account.json`
 
