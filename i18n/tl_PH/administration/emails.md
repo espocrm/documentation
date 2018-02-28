@@ -1,4 +1,4 @@
-# Mga EMail
+# Mga Email
 
 > Importante. Ang [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) ay dapat nakaconfigure sa iyong sistema para gumawa ng email fetching na task. Makikita mo impormasyon na ito sa iyong EspoCRM sa Administration > Scheduled Jobs.
 

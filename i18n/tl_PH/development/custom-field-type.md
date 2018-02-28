@@ -1,4 +1,4 @@
-# Pag-lika ng uri ng Kustom na Field
+# Pag-likha ng uri ng Kustom na Field
 
 ### Depinisyon ng Field 
 

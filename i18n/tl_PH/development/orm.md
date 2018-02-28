@@ -1,12 +1,12 @@
-# ORM, How to manage entities and perform queries
+# Ang ORM, Paano pamahalaan ang mga entity at magsagawa ng mga query
 
-EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object. EntityManager is available in record Services by method `#getEntityManager()`.
+Ang EspoCRM ay mayroong built-in na sariling ORM (Object-relational na pagmamapa). Napakadaling lumikha, mag-update, magbasa, magtanggal at maghanap ng mga entity. Ang lahat ng mga operasyong ito ay magagamit sa pamamagitan ng EntityManager object. Ang EntityManager ay makikita sa mga record Service sa pamamagitan ng pamamaraan ng `#getEntityManager()`.
 
 ```php
 $entityManager = $this->getEntityManager();
 ```
 
-#### Create new entity
+#### Paglikha ng Bagong Entity
 ```php
 $account = $entityManager->getEntity('Account')
 ```
@@ -15,7 +15,7 @@ or
 $account = $entityManager->getRepository('Account')->get();
 ```
 
-#### Fetch existing
+#### Pagkuha ng existing
 ```php
 $account = $entityManager->getEntity('Account', $accountId);
 ```
@@ -24,17 +24,17 @@ or
 $account = $entityManager->getRepository('Account')->get($accountId);
 ```
 
-#### Get value
+#### Pagkuha value
 ```php
 $fieldValue = $account->get('fieldName');
 ```
 
-#### Has value
+#### Mayroong value
 ```php
 $fieldNameIsSet = $account->has('fieldName'); // true or false
 ```
 
-#### Set value
+#### Pagtakda ng value
 ```php
 $account->set('fieldName', 'Test Account');
 ```
@@ -46,7 +46,7 @@ $account->set(array(
 ));
 ```
 
-#### Store
+#### Pag-istore
 ```php
 $entityManager->saveEntity($account);
 ```
@@ -55,7 +55,7 @@ or
 $entityManager->getRepository('Account')->save($account);
 ```
 
-#### Remove
+#### Pagtanggal
 ```php
 $entityManager->removeEntity($account);
 ```
@@ -64,7 +64,7 @@ or
 $entityManager->getRepository('Account')->remove($account);
 ```
 
-#### Find
+#### Paghanap
 ```php
 $accountList = $entityManager->getRepository('Account')->where([
     'type' => 'Customer'
@@ -87,19 +87,19 @@ or:
 $accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
 ```
 
-#### Find the first one
+#### Paghanap ng pinakauna
 ```php
 $account = $entityManager->getRepository('Account')->where([
     'type' => 'Customer',   
 ])->findOne();
 ```
 
-#### Find related
+#### Paghanap ng kaugnay
 ```php
 $opportunityList = $entityManager->getRepository('Account')->findRelated($account, 'opportunities');
 ```
 
-#### Relate entities
+#### Mga Kaugnay na Entity
 ```php
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunity);
 ```
@@ -108,7 +108,7 @@ or
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunityId);
 ```
 
-#### Unrelate entities
+#### Pag-unrelate ng mga entity
 ```php
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunity);
 ```
@@ -117,13 +117,13 @@ or
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
 ```
 
-### Select Query Paramaters
+### Pagpili ng mga parametro ng Query
 
-#### Where clause
+#### Kung Saan ang Clause ay
 
-##### Comparison operators
+##### Mga Operator ng Paghahambing
 
-Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
+Suportadong mga operator ng paghahambing: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
@@ -131,7 +131,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->find();
 ```
 
-##### IN and NOT IN operators
+##### IN at NOT IN na mga operator
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
@@ -145,9 +145,9 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->find();
 ```
 
-##### LIKE operators
+##### Mga LIKE na operator
 
-Supported  operators: 
+Suportadong mga operator: 
 * `*` - LIKE,
 * `!*` -- NOT LIKE.
 
@@ -157,7 +157,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->find();
 ```
 
-##### OR, AND operators
+##### OR, AND na mga operator
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
@@ -174,13 +174,13 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->findOne();
 ```
 
-#### Distinct
+#### Naiiba
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->distinct()->where(...)->find();
 ```
 
-#### Join
+#### Pagdudugtong-dugtong
 
 ```
 $contactList = $entityManager->getRepository('Contact')->distinct()->join('opportunities')->where([
@@ -202,7 +202,7 @@ $contactList = $entityManager->getRepository('Contact')
 ])->find();
 ```
 
-#### Group By
+#### Pag-grupogrupo
 
 ```
 $selectParams = [

@@ -1,6 +1,6 @@
-# Creating Scheduled Job
+# Paglikha ng Nakaiskedyul na Gawain
 
-To define a custom Scheduled Job create a file `custom/Espo/Custom/Jobs/{JOB_NAME}.php` with the content.
+Upang tukuyin ang kustom na Nakaiskedyul na Gawain lumikha ng isang file na `custom/Espo/Custom/Jobs/{JOB_NAME}.php` kasama ang nilalaman.
 
 ```
 namespace Espo\Custom\Jobs; 
@@ -15,7 +15,7 @@ class {JOB_NAME} extends \Espo\Core\Jobs\Base
 }
 ```
 
-Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/{language}/ScheduledJob.json`).
+Gayundin, maaari kang magtakda ng isang label para sa iyong gawain (`custom/Espo/Custom/Resources/i18n/{language}/ScheduledJob.json`).
 ```
 {
   "options": { 
@@ -26,4 +26,4 @@ Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/{lang
 }
 ```
 
-To implement the changes, go to Administration panel and Clear Cache.
+Upang ipatupad ang mga pagbabago, pumunta sa panel ng Administrasyon at I-burahin ang Cache.
