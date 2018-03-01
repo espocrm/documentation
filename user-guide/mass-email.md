@@ -1,85 +1,99 @@
-# Mass Email
+# Envoi d'Emails En Masse 
 
-## How to send mass email
+## Comment envoyer des emails en masse  
 
-You need to have at least one Target List with target records and Email Template in your crm.
+Vous avez besoin d'avoir au moins une liste cible avec des informations cibles et un message préconfiguré dans votre crm. 
 
-1. Create new Campaign with a status `Email` or `Newsletter`. Select one or a few target lists in `Target Lists` field.
-2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure _Status_ set as `Pending`.
+1. Créez une nouvelle Campagne avec le statut `Email` ou `Newsletter`. Sélectionnez une ou plusieurs listes cibles dans le champ de sélection `Target Lists`. 
 
-If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
+2. Apres la création des informations de la Campagne, créez Mass Email pour cette campagne: Cliquez plus dans le panneau de Configuration Mass Email. Spécifiez une date de début avec _Date Start_ - pour définir la date d'envoi des emails, sélectionnez _Email Template_. Vérifiez que _Status_ est marqué `Pending`. 
 
-You can check if emails are sent in Log panel.
+Si tout est mis en place correctement, les messages devraient être envoyés automatiquement. Ils devront être envoyés en portion et à chaque heure (vous pouvez changer la taille des portions dans Administration > Outbound Emails). L'administrateur peut le changer en mettant à jour le champ `Scheduling` à l'intérieur des taches paramétrées `Check Group Email Accounts`. 
 
-## Test what will be sent to recipients
+Vous pouvez vérifier l'envoi des emails à travers le panneau de configuration Log. 
 
-Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
+## Tester ce qui va être envoyer aux destinataires 
 
-## Log
+Cliquez sur le menu déroulant à la droite du panneau de configuration de la rangée pour l'envoi d'emails en masse _Mass Email_. Ensuite cliquez sur _Send Test_ . 
 
-In log you can see:
-* Sent email;
-* Emails opened by recipient;
-* Links clicked by recipient;
-* Recipients who opted out;
-* Bounced emails (not delivered to recipient).
+## Log 
 
-## Opt-out link
+Dans le log vous pouvez voir: 
 
-By default the system will append opt-out to all sent emails. But you can use custom one in your Email Template.
+* L'email envoyé; 
 
-Example:
-```html
-<a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
-```
+* Les emails ouverts par le destinataire; 
 
-Administrator can disable mandatory opt-out link being added by system at Administration > Outbound Emails.
+* Les lien cliqués par le destinataires; 
 
-## Tracking URL
+* Les destinataires qui se sont désinscrits; 
 
-If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
- and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
+* Les emails retournés (non délivrés au destinataire). 
 
- Example:
- ```html
-<a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
- ```
- 
-## Target Lists
+## Lien de désinscription (Opt-out) 
 
-Target Lists contains the lists of Accounts, Contacts, Leads and Users records. 
+De manière générale, la possibilité de se désinscrire sera inclue dans tous les emails envoyés. Mais vous pouvez formuler cette possibilité de se désinscrire à votre façon. 
 
-Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all result of search.
+Exemple: 
 
-## Populating target lists with Reports
+```html 
 
-[Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
+<a href="{optOutUrl}">Unsubscribe from the mailing list.</a> 
 
-## Excluding Target Lists
+``` 
 
-Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
+L'administrateur peut désactiver le lien de désinscription obligatoire ajouté au système avec Administration > Outbound Emails. 
 
-## Campaign Log
+## Lien de Traçage 
 
-At Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+Si vous voulez savoir si le destinataire de votre message a ouvert le lien placé à l'intérieur de votre message, vous devez créer un lien de traçage. Spécifiez tout nom *_Name_* et lien *_URL* vers lesquels votre lien pointe. Ensuite, vous devrez coller le code généré dans votre message préconfiguré. 
 
-## Troubleshooting
+Exemple: 
 
-_For Administrators_
+```html 
 
-#### What to do if emails are not sent out.
+<a href="{trackingUrl:55f2c87b09a220a78}">Testez notre démonstration</a> 
 
-1. Check if _Send Test_ works. If does't work, then check if system SMTP settings are correct.
-2. Check if you have setup cron for your system.
-3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
+``` 
 
+## Listes Cibles 
 
-#### What if Tracking URLs has wrong url that does not lead to your crm.
+Les listes cibles contiennent les listes de comptes, contacts, leads et de données d'utilisateurs. 
 
-Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of your EspoCRM accessible from the external world.
+Les utilisateurs peuvent insérer les listes cibles manuellement en utilisant _Select_ action dans le panneau de configuration correspondant à partir de la vue détaillée des listes cibles. Il est aussi possible de filtrer et de sélectionner ensuite tous les résultats d'une recherche. 
 
-#### Bounced emails are not being logged
+## Utiliser les Rapports pour insérer des listes cibles 
 
-Bounced emails can be handled by group email account only. Make sure that you have a group email account that monitores the mailbox bounced emails are sent to.
+L'option [Reports](reports.md#syncing-with-target-lists) permet d'insérer des données dans les listes cibles à partir de données qui correspondent à des critères spécifiques.  
 
-Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
+## Exclure les Listes Cibles 
+
+Afin d'éviter d'envoyer des emails en masse à certains destinataires, spécifiez des listes cibles à exclure. Si, il existe une donnée ayant l'adresse email d'une donnée à exclure, la première donnée sera elle aussi exclue. 
+
+## Log de Campagne 
+
+Le Log de campagne vous permet de voir les emails qui ont été envoyés, ouverts, retournés, desinscrits, ou ayant cliqués sur le lien inséré dans le message. Il est possible d'utiliser ce log pour créer des listes cibles (menu déroulant en haut à droite du panneau de configuration) en se basant sur les données présentées dans le Log. 
+
+Par exemple, vous pouvez choisir des contacts qui ont cliqués sur le lien (lien de traçage). 
+
+## Resolution d'Erreurs 
+
+_For Administrators_ 
+
+#### Que faire si les emails ne sont pas envoyés. 
+
+1. Vérifier que _Send Test_ fonctionne. Si il ne fonctionne pas, assurez-vous que les réglages du système SMTP sont correctes.  
+
+2. Vérifiez si le cron a été réglé pour votre system. 
+
+3. Assurez vous que la tache préconfigurée `Send Mass Emails` est marquée comme étant `Active` (Administration > Scheduled Jobs > Send Mass Emails). Vérifiez qu'il n'y pas pas d'erreur dans le Log. 
+
+#### Que se passe t'il si le Lien de Traçage contient une adresse incorrecte qui ne mène pas à votre crm. 
+
+Vérifiez le paramètre 'siteUrl' dans le fichier `data/config.php`. Il doit être établi comme URL de votre EspoCRM et être accessible au monde extérieur. 
+
+#### Les emails retournées ne sont pas enregistrés 
+
+Les emails retournées ne peuvent être gérés que par un compte email de groupe. Assurez vous que vous avez un compte email de groupe qui surveille les boites de réception auquel les emails retournés sont envoyés. 
+
+Certaines compagnies de gestion d'adresses emails peuvent dévier de la norme, du coup, les emails retournés ne peuvent être reconnus. 
