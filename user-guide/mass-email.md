@@ -30,7 +30,7 @@ Dans le log vous pouvez voir:
 
 * Les emails retournés (non délivrés au destinataire). 
 
-## Lien de désinscription (Opt-out) 
+## Lien de désinscription
 
 De manière générale, la possibilité de se désinscrire sera inclue dans tous les emails envoyés. Mais vous pouvez formuler cette possibilité de se désinscrire à votre façon. 
 
@@ -38,7 +38,7 @@ Exemple:
 
 ```html 
 
-<a href="{optOutUrl}">Unsubscribe from the mailing list.</a> 
+<a href="{optOutUrl}">Se desinscrire de cette liste d'emails.</a> 
 
 ``` 
 
