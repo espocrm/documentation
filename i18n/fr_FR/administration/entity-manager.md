@@ -11,7 +11,7 @@ Le Manageur d'Entité est disponible dans le panneau de configuration Administra
 * Configurer les relations : Ajouter de nouvelles relations, changer les dénominations des relations existantes.
 
  
-## Création de nouvelles entités
+## Création De Nouvelles Entités
 
 Cliquez sur le bouton 'Créer une Entité' ou `Create Entity` sur la page du Manageur d'Entité. Spécifiez le nom, les dénominations et le type. Si le type d'entité que vous choisissez est 'Personne' ou 'Person', votre entité aura des champs pour un Email, Téléphone, Prénom, Nom de Famille et Salutation. Cochez 'Courant' ou 'Stream' si vous voulez que votre entité ait un panneau de configuration courant et si vous voulez que les utilisateurs puissent suivre les entités de ce type.
 
