@@ -58,7 +58,7 @@ Le programme temporel est spécifié à partir d'une notation crontab.
 
 Utilisée rarement. Supposée être lancée par un autre workflow. Donne la possibilité d'établir une logique complexe.
 
-Remarque: pour les workflow sequenciel, il est recommandee d'utiliser l'outil BPM ou [BPM tool](bpm.md)plutot que l'option workflow.
+Remarque: pour les workflow sequenciel, il est recommandee d'utiliser l'outil BPM ou [BPM tool](bpm.md) plutôt que l'option workflow.
 
  
 ## Conditions
