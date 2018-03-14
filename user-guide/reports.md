@@ -98,3 +98,23 @@ It's possible to make system to send report results to certain users on regular 
 ## Syncing with Target Lists
 
 It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
+
+## Report Filters (list view filters based on reports)
+
+Compatible with EspoCRM 5.1.0 and greater.
+
+Administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have an access to the filter.
+
+## Report Panels (detail view panels showing report results)
+
+Compatible with EspoCRM 5.1.0 and greater.
+
+Administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have an access to the panel.
+
+Both Grid and List reports can be used.
+
+Order of side panels can be customized at Layout Manager > Side Panels (Detail).
+
+Order of bottom panels is specified in the Report Panel record. It's possible to place panel before Stream panel, before relationship panels or at the very bottom.
+
+The report panel shows results related to the record is viewed. The first found relationship is used. If the report has an appropriate runtime filter then it will be used to restrict results. The runtime filter must be a field of the link, link-multiple or link-parent type.
