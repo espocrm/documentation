@@ -87,11 +87,11 @@ Some use cases:
 
 Note: Compatible with EspoCRM versions 5.1.0 and greater.
 
-## Displaying on dashboard
+## Displaying on the dashboard
 
 You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
 
-## Email Sending
+## Email sending
 
 It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
 
