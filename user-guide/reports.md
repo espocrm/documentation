@@ -115,6 +115,6 @@ Both Grid and List reports can be used.
 
 Order of side panels can be customized at Layout Manager > Side Panels (Detail).
 
-Order of bottom panels is specified in the Report Panel record. It's possible to place panel before Stream panel, before relationship panels or at the very bottom.
+Order of bottom panels is specified in the Report Panel record. It's possible to place the panel before Stream panel, before relationship panels or at the very bottom.
 
-The report panel shows results related to the record is viewed. The first found relationship is used. If the report has an appropriate runtime filter then it will be used to restrict results. The runtime filter must be a field of the link, link-multiple or link-parent type.
+The report panel shows results related to the record is viewed. The first found relationship is used. If the report has an appropriate runtime filter then it will be used to restrict results. The runtime filter must be a field of link, link-multiple or link-parent type.
