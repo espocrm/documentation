@@ -91,6 +91,8 @@ Note: Compatible with EspoCRM versions 5.1.0 and greater.
 
 You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
 
+It's possible to display only a total amount on the dashlet.
+
 ## Email sending
 
 It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
@@ -112,6 +114,8 @@ Compatible with EspoCRM 5.1.0 and greater.
 Administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have an access to the panel.
 
 Both Grid and List reports can be used.
+
+It's possible to display only a total amount on the report panel.
 
 Order of side panels can be customized at Layout Manager > Side Panels (Detail).
 
