@@ -68,6 +68,12 @@ If LENGTH is omitted, the substring starting from START until the end of the STR
 
 If LENGTH is negative, then that many characters will be omitted from the end of STRING.
 
+#### string\contains
+`string\contains(STRING, NEEDLE)`  Whether STRING contains NEEDLE. (since version 5.1.2)
+
+#### string\length
+`string\length(STRING)` The length of STRING. (since version 5.1.2)
+
 #### string\\trim
 `string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
 
