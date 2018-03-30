@@ -49,7 +49,7 @@ There is the ability to **select template** of your email.
 
 You can setup **email signature** in Preferences.
 
-It's possible to use external email client (the default one on your computer or device). For this check 'Use an external email client' in Preferences.
+It's possible to use an **external email client** (the default one on your computer or device). For this check 'Use an external email client' in Preferences. (This option is available since the version 5.1.2.)
 
 ## Email Folders
 
