@@ -45,9 +45,11 @@ You can compose new email by a few ways:
 * clicking on an email address of some record;
 * *Compose Email* action of Activities panel.
 
-There is an ability to **select template** of your email.
+There is the ability to **select template** of your email.
 
 You can setup **email signature** in Preferences.
+
+It's possible to use external email client (the default one on your computer or device). For this check 'Use an external email client' in Preferences.
 
 ## Email Folders
 
