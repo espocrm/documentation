@@ -95,6 +95,7 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 Examples:
 
 `datetime\format(closeData, 'America/New_York', 'MM/DD/YYYY')`
+
 `datetime\format(closeData, 'Europe/Amsterdam', 'DD/MM/YYYY')`
 
 #### datetime\date
