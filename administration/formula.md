@@ -74,23 +74,28 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 #### string\length
 `string\length(STRING)` The length of STRING. (since version 5.1.2)
 
-#### string\\trim
+#### string\trim
 `string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
 
-#### string\\lowerCase
+#### string\lowerCase
 `string\lowerCase(STRING)` Converts letters to lower case. (since version 5.0.0)
 
-#### string\\upperCase
+#### string\upperCase
 `string\upperCase(STRING)` Converts letters to upper case. (since version 5.0.0)
 
-#### datetime\\today
+#### datetime\today
 `datetime\today()` Returns today's date.
 
 #### datetime\now
 `datetime\now()` Returns current datetime.
 
 #### datetime\format
-`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into string formatted according to application settings. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
+`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
+
+Examples:
+
+`datetime\format(closeData, 'America/New_York', 'MM/DD/YYYY')`
+`datetime\format(closeData, 'Europe/Amsterdam', 'DD/MM/YYYY')`
 
 #### datetime\date
 `datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
