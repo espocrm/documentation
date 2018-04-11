@@ -196,7 +196,7 @@ $contactList = $entityManager->getRepository('Contact')
 ```
 $contactList = $entityManager->getRepository('Contact')
 ->distinct()
-->join(['opportunities', 'aliasForJoinedTable'])
+->join([['opportunities', 'aliasForJoinedTable']])
 ->where([
   'aliasForJoinedTable.stage' => 'Closed Won'
 ])->find();
