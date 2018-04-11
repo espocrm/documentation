@@ -94,9 +94,11 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 
 Examples:
 
-`datetime\format(closeData, 'America/New_York', 'MM/DD/YYYY')`
+`datetime\format(closeDate, 'America/New_York', 'MM/DD/YYYY')`
 
-`datetime\format(closeData, 'Europe/Amsterdam', 'DD/MM/YYYY')`
+`datetime\format(dateStart, 'America/New_York', 'MM/DD/YYYY hh:mma')`
+
+`datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
 
 #### datetime\date
 `datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
