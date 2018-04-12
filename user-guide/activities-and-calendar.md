@@ -51,4 +51,10 @@ It's possible to view calendar of another user (is you have an access determined
 
 ### Shared Calendar
 
-Shared calendar is available only in Timeline view. It allows to view events of multiple users.
+Shared calendar is avalable since the version 5.2.0.
+
+Users can create custom shared views that will display events of specific teams.
+
+Note: User mast have proper 'User Permission' to be able to user shared calendars.
+
+Shared view is also available for Timeline. It allows to view events of multiple users.
