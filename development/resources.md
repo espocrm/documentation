@@ -48,13 +48,7 @@ Contains data, related with view only. More Information is here
 ### fields
 ### integrations
 ### scopes
-contains scope definition
-`{PATH}/Resources/metadata/scopes/{EntityName}.json`
-- `entity` (true|false),
-- `layouts` (true|false) - has layouts,
-- `tab` (true|false) - could be dispalayed,
-- `acl` (true|false),
-- `customizable` (true|false)
+More info
 
 ### themes
 ### templates
