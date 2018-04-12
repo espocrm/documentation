@@ -17,7 +17,7 @@ EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_acces
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's more better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+It's better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
 ```
 "Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
 ```
