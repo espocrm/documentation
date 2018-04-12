@@ -12,11 +12,11 @@ Specify what folders to monitor in Monitored Folders field. By default it's set 
 
 *Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
 
-There is an ability to specify *Folder* in Persnoal Email Account. Incoming emails will be put in that folder.
+There is an ability to specify *Folder* in Personal Email Account. Incoming emails will be put in that folder.
 
 ## SMTP accounts
 
-Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+Users can setup SMTP settings in Preferences as well as in their Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
 
 Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of *User* record.
 
@@ -53,7 +53,7 @@ It's possible to use an **external email client** (the default one on your compu
 
 ## Email Folders
 
-Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you wan't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails > dropdown in top-right corner > Folders. `Skip Notification` means that you won't be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
 
 ## Email Filters
 
@@ -67,7 +67,7 @@ There are two types of filters:
 
 ## Email Templates
 
-Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sendings and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
+Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sending and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
 
 It's possible to use placeholders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
 

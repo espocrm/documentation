@@ -69,7 +69,7 @@ _For Administrators_
 
 #### What to do if emails are not sent out.
 
-1. Check if _Send Test_ works. If does't work, then check if system SMTP settings are correct.
+1. Check if _Send Test_ works. If doesn't work, then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
 3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
 
@@ -80,6 +80,6 @@ Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of yo
 
 #### Bounced emails are not being logged
 
-Bounced emails can be handled by group email account only. Make sure that you have a group email account that monitores the mailbox bounced emails are sent to.
+Bounced emails can be handled by group email account only. Make sure that you have a group email account that monitors the mailbox bounced emails are sent to.
 
 Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.

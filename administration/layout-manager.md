@@ -48,7 +48,7 @@ The list of fields available in the list view to search by.
 
 ## Mass Update
 
-The list of fields availabe in the Mass Update form.
+The list of fields available in the Mass Update form.
 
 ## Relationship Panels
 

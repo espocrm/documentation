@@ -1,6 +1,6 @@
 # Portal
 
-Portal provides an ability to access specific crm data and functions for your customers and partners. Administrator can create multiple portals. Each portal can have its own settings, dashlboard, user list, access control settings.
+Portal provides an ability to access specific crm data and functions for your customers and partners. Administrators can create multiple portals. Each portal can have its own settings, dashboard, user list, access control settings.
 
 To create portal follow Administration > Portals, click Create Portal button.
 
@@ -74,7 +74,7 @@ ServerAlias my-portal-host-name.com
 
 #### Mod rewrite rules
 
-Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is avaialble in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
+Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is available in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
 
 ```
   RewriteCond %{HTTP_HOST} ^portal-host-name.com$

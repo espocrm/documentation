@@ -117,7 +117,7 @@ or
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
 ```
 
-### Select Query Paramaters
+### Select Query Parameters
 
 #### Where clause
 
@@ -214,7 +214,7 @@ $selectParams = [
   'orderBy' => 1 // ordering by the first column
 ];
 
-// applying left joins for currency convertion
+// applying left joins for currency conversion
 $this->getEntityManager()->getRepository('Opportunity')->handleSelectParams($selectParams);
 
 $pdo = $this->getEntityManager()->getPDO();

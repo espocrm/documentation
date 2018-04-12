@@ -72,7 +72,7 @@ where `www-data` is a web-server user.
 
 4. If there are no errors, check Scheduled Jobs to see if any job was executed (see a Log panel).
 
-## EspoCRM is not loading after updgare
+## EspoCRM is not loading after upgrade
 
 This can happen sometimes on some shared hostings.
 

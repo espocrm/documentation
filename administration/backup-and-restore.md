@@ -50,7 +50,7 @@ For Ubuntu server it is:
 bash ./backup.sh /var/www/html /opt/backups
 ```
 
-Note: If your MySQL user doesn't have needed rights to dump your database, you will be promted to enter credentials of another MySQL user.
+Note: If your MySQL user doesn't have needed rights to dump your database, you will be prompted to enter credentials of another MySQL user.
 
 After successful creation, you will get a path to the created backup.
 

@@ -29,7 +29,7 @@ Set required permissions and files owner, https://www.espocrm.com/documentation
 
 ### Step 7. Import your database backup
 
-First, you have to create a new database with a user in MySQL. To import your database from the backup, follow the instuction: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
+First, you have to create a new database with a user in MySQL. To import your database from the backup, follow these instructions: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
 
 ### Step 8. Correct EspoCRM configurations
 

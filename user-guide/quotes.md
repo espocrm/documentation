@@ -6,13 +6,13 @@ Quotes are specific group of products or services with their quantities and pric
 
 Quotes has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
 
-You can add Quotes panel to Accunt's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
+You can add Quotes panel to Account's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
 
 ## Quote Items
 
 Quote has a list of items. Each item can represent a certain product or a service with description, quantity, tax rate, list price and unit price fields. It's possible to sort items manually.
 
-There is an ability to add custon fields for Quote Item entity using Entity Manager.
+There is an ability to add custom fields for Quote Item entity using Entity Manager.
 
 ## Templates
 
@@ -77,7 +77,7 @@ Custom formatting for currency values (since version 4.8.3):
 ```
 Value `10000.5` will be printer as `10 000,50`. 
 
-To display text fileds (multiline) use triple braces: `{{{description}}}`.
+To display text fields (multiline) use triple braces: `{{{description}}}`.
 
 ## Print to PDF
 

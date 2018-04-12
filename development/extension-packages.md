@@ -46,9 +46,9 @@ Example:
 ```php
 class AfterInstall
 {
-  public function run($conatiner)
+  public function run($container)
   {
-    $config = $conatiner->get('config');
+    $config = $container->get('config');
  
     $tabList = $config->get('tabList');
     if (!in_array('My Custom Entity', $tabList)) {
