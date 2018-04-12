@@ -40,7 +40,7 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
       this.hideField('someField');
       this.showField('someField');
       
-      // Custom initalization logic here. Like binding listening to model changes.
+      // Custom initialization logic here. Like binding listening to model changes.
       this.listenTo(this.model, 'change:myField', function () {
         this.model.set('anotherField', this.model.get('myField') + ' Hello');
          
@@ -60,7 +60,7 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
     afterRender: function () {
       Dep.prototype.afterRender.call(this);
       
-      // Custom code to be invoked right after rendering, when DOM is avaiable.
+      // Custom code to be invoked right after rendering, when DOM is available.
       this.$el.find('label[data-name="myField"]').addClass('hidden');
     }
   });

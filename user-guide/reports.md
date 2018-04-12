@@ -46,7 +46,7 @@ It's possible to __export__ grid report results to excel and csv formats.
 
 ### Field filter
 
-Simple to use type of filters. You can also pick fields of target entity as well as related entitites.
+Simple to use type of filters. You can also pick fields of target entity as well as related entities.
 
 ![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
 
@@ -72,7 +72,7 @@ For more advanced use. You can apply function for certain database column and co
 
 Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
 
-Note: Functions intended to interact with entity record will not work here because formule is not applied to specific record.
+Note: Functions intended to interact with entity record will not work here because the formula is not applied to specific record.
 
 ![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
 

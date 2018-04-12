@@ -106,7 +106,7 @@ Unrelates the target entity from another specific entity. E.g. removes a specifi
 
 Assign the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
 
-* Round-Robin - users are choosen from the top to the bottom of a list (team) and then starting again.
+* Round-Robin - users are chosen from the top to the bottom of a list (team) and then starting again.
 * Least-Busy - user who has fewer assigned records will be chosen for assignment.
 
 _List Report_ - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
@@ -117,13 +117,13 @@ Notify specific users with the message. It's possible to use placeholders in mes
 
 ### Make Followed
 
-Forces specific users to follow the target entity or a specificied related entity.
+Forces specific users to follow the target entity or a specified related entity.
 
 ### Trigger Another Workflow
 
 Allows to make sequential workflows. It's possible to branch workflow by condition: you can setup the workflow to trigger two workflows with different conditions defined in that workflows.
 
-It's possible to delay executing of sequential workflow. In the sequential wokflow you can define the condition that checks whether specifiec fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
+It's possible to delay executing of sequential workflow. In the sequential workflow you can define the condition that checks whether specific fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
 
 Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
 

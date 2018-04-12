@@ -24,7 +24,7 @@ It's better to use auth token instead of password when you work with api. In thi
 
 1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header.
 2. Use this token instead of password in `Espo-Authorization` header for all further request.
-3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
+3. If request returns 403 error that means either username/password is wrong or token is not valid anymore.
 
 #### Authentication Token / User Specific Data
 

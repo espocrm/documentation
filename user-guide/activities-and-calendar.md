@@ -51,7 +51,7 @@ It's possible to view calendar of another user (is you have an access determined
 
 ### Shared Calendar
 
-Shared calendar is avalable since the version 5.2.0.
+Shared calendar is available since the version 5.2.0.
 
 Users can create custom shared views that will display events of specific teams.
 
