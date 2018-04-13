@@ -1,6 +1,6 @@
 # Scope Definition
 
-Сontains scope definition. All options are optional.
+Сontains scope definition. All options are optional. But this file is required, if you have any API call for this scope.
 
 `{PATH}/Resources/metadata/scopes/{EntityName}.json`
 
@@ -37,7 +37,7 @@
 
 ### stream
 
->_Description_: does entity has Stream panel;
+>_Description_: entity has Stream panel;
 >
 >_Type_: boolean;
 >
@@ -79,6 +79,16 @@
 >_Default_: false.
 
 
+### type
+
+>_Description_: type of entity;
+>
+>_Type_: string;
+>
+>_Available value_: one of ["Base", "BasePlus", "Person", "Company", "CategoryTree", "Event"];
+>
+>_Default_: "Base".
+
 ### acl
 
 >_Description_: ;
@@ -89,15 +99,6 @@
 >
 >_Default_: false.
 
-### type
-
->_Description_: ;
->
->_Type_: string;
->
->_Available value_: one of ["Base", "BasePlus", "Person", "Company", "CategoryTree", "Event"];
->
->_Default_: "Base".
 
 ### aclActionList
 
@@ -130,7 +131,7 @@
 >_Available value_: array of ['all', 'team', 'own', 'no'];
 >
 >_Default_: ['all', 'team', 'own', 'no'] if `acl` is `true`.
-
+```
       array (
         'edit' => 
         array (
@@ -138,23 +139,23 @@
           1 => 'no',
         ),
       ),
-      
+```      
       
 ### aclPortal
 
-` => 'recordAllAccountContactOwnNo',
+` => 'recordAllAccountContactOwnNo'`,
+
+>_Description_: ;
+>
+>_Type_: boolean | string;
+>
+>_Available value_: true | false | 'boolean';
+>
+>_Default_: false.
 
 ### aclPortalLevelList
 
-      array (
-         0 => 'all',
-        1 => 'account',
-        2 => 'contact',
-        3 => 'own',
-        4 => 'no',
-      ),
-      
->_Description_: list of available level for actions in Role configuration;
+>_Description_: list of available level for actions in Portal Role configuration;
 >
 >_Type_: array;
 >
@@ -165,7 +166,7 @@
 
  ### statusField
  
->_Description_: list of available level for actions in Role configuration;
+>_Description_: the main enum field, with is used as status. Has different view in Stream; 
 >
 >_Type_: string;
 >
@@ -177,13 +178,14 @@
  
 ### workflow
 
->_Description_: if Advanced Pack extension is installed, `"object"` is not set, but you need this entity in Target Entity list;
+>_Description_: if Advanced Pack extension is installed and `"object"` is not set, but you need this entity in Target Entity list in Workflow;
 >
 >_Type_: boolean;
 >
 >_Available value_: true | false;
 >
 >_Default_: false.
+
 
 ### disabled
 
@@ -195,9 +197,10 @@
 >
 >_Default_: false.
 
+
 ### customizable
 
->_Description_: could be safely customized;
+>_Description_: could entity be customized with Entity Manager;
 >
 >_Type_: boolean;
 >
@@ -208,7 +211,7 @@
 
 ### isCustom
 
->_Description_: scope is disabled and invisible in the system;
+>_Description_: scope is custom. In general this parameter is set, if the entity was created with Entity Manager;
 >
 >_Type_: boolean;
 >
@@ -219,7 +222,7 @@
 
 ### notifications
 
->_Description_: scope is disabled and invisible in the system;
+>_Description_: could be able for Notification;
 >
 >_Type_: boolean;
 >
@@ -250,28 +253,22 @@
 
 
 ### activityStatusList
-      array (
-        0 => 'Draft',
-      ),
->_Description_: scope is disabled and invisible in the system;
+
+>_Description_: filter by status values, which defines, that event is an activity;
 >
->_Type_: boolean;
+>_Type_: array;
 >
->_Available value_: true | false;
+>_Available value_: options of status field
 >
->_Default_: false.
+>_Default_: ['Planned'].
       
 ### historyStatusList
 
-      array (
-        0 => 'Archived',
-        1 => 'Sent',
-      ),
- >_Description_: scope is disabled and invisible in the system;
+>_Description_: filter by status values, which defines, that event is in history;
 >
->_Type_: boolean;
+>_Type_: array;
 >
->_Available value_: true | false;
+>_Available value_: options of status field
 >
->_Default_: false.
+>_Default_: ['Held', 'Not Held'].
 
