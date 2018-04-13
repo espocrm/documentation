@@ -91,7 +91,7 @@
 
 ### acl
 
->_Description_: ;
+>_Description_: could be set permissions in Role;
 >
 >_Type_: boolean | string;
 >
@@ -143,15 +143,14 @@
       
 ### aclPortal
 
-` => 'recordAllAccountContactOwnNo'`,
-
->_Description_: ;
+>_Description_: could be set permissions in Portal Role;
 >
->_Type_: boolean | string;
+>_Type_: boolean;
 >
->_Available value_: true | false | 'boolean';
+>_Available value_: true | false;
 >
 >_Default_: false.
+
 
 ### aclPortalLevelList
 
