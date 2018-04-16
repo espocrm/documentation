@@ -116,8 +116,11 @@ Naming is used for genefation a full name of additional fields. Field name + fie
 #### Example
 
 Field name - __billingAddress__
+
 One of address type field - __country__
+
 The result (with default _suffix_ naming) - __billingAddressCountry__
+
 
 _"suffix"_ | _"prefix"_ ("suffix" is default)
 
