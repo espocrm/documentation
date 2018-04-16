@@ -81,27 +81,55 @@ Also you can set here such definition as:
 
 ### translatedOptions
 
-(_true_ | _false_)
+_true_ | _false_
 
 Does field have options, which can be translated
 
 
 ### hookClassName
 
-If field value has to be set before saving, here you need to set a class name of hook
+If field value has to be set before saving, here you need to set a class name of hook. 
+
+Available methods:
+- onRead;
+- beforeSave;
+- afterSave;
+- beforeRemove;
+- afterRemove.
 
 #### Example
 
 ```
 "hookClassName": "\\Espo\\Core\\Utils\\FieldManager\\Hooks\\NumberType"
 ```
-
-### actualFields
-
-### notActualFields
+You can find this class in `application/Espo/Core/Utils/FieldManager/Hooks/NumberType.php` and read the code.
 
 ### fields
 
+The definition of all additional fields, which contain this field type.
+
+
 ### naming
 
+Naming is used for genefation a full name of additional fields. Field name + field from parameter fields.
+
+#### Example
+
+Field name - __billingAddress__
+One of address type field - __country__
+The result (with default _suffix_ naming) - __billingAddressCountry__
+
 _"suffix"_ | _"prefix"_ ("suffix" is default)
+
+
+### actualFields
+
+The list of actual fields.
+
+
+### notActualFields
+
+The list of not actual fields.
+
+>For example, for field type `link` in `actualFields` is `['id']`, in `notActualFields` is `['name']`.
+>Means, if you load record with link field, you have values in `{fieldName}Id` and `{fieldName}Name` (suffix naming). But you need set only `{fieldName}Id`, if you want to update this field
