@@ -58,6 +58,10 @@ The list of relationship panels displayed on the detail view at the bottom. Pane
 
 Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter.
 
+## Kanban
+
+Available for entity types with the enabled Kanban view. (available since EspoCRM 5.2.0)
+
 ## Additional Layouts
 
 Some entity types contain additional layouts: Convert Lead, List for Account.
