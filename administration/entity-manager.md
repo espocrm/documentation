@@ -28,7 +28,7 @@ If you click `Edit` link on a certain entity you will be able to change some par
 * Stream - whether Stream feature is enabled for this entity.
 * Disabled - check if you don't need this entity in your system.
 * Text Filter Fields - what fields to search in for the main text filter and global search.
-
+* Kanban view - available only if Status Field is specified. Enables Kanban view mode. (since EspoCRM 5.2.0) 
 
 ## Fields
 
