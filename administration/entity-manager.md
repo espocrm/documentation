@@ -19,7 +19,7 @@ Types:
 * Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
 * Company - Email, Phone, Billing Address, Shipping Address fields. Activities, History, Tasks panels.
 
-## Update existing entity
+## Entity type parameters
 
 If you click `Edit` link on a certain entity you will be able to change some parameters of that entity.
 
@@ -28,7 +28,9 @@ If you click `Edit` link on a certain entity you will be able to change some par
 * Stream - whether Stream feature is enabled for this entity.
 * Disabled - check if you don't need this entity in your system.
 * Text Filter Fields - what fields to search in for the main text filter and global search.
-* Kanban view - available only if Status Field is specified. Enables Kanban view mode. (since EspoCRM 5.2.0) 
+* Kanban view - available only if Status Field is specified. Enables Kanban view mode. (since EspoCRM 5.2.0)
+* Color - a specific color for a quick recognition. (since EspoCRM 5.2.0)
+* Icon - the picked icon is displayed in the side navbar in Vertical theme. (since EspoCRM 5.2.0)
 
 ## Fields
 
