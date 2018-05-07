@@ -87,6 +87,17 @@ or:
 $accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
 ```
 
+Complex order:
+```php
+$accountList = $entityManager->getRepository('Account')->order([['createdAt', 'ASC'], ['name', 'DESC']])->find();
+```
+
+Ordering by list:
+
+```php
+$accountList = $entityManager->getRepository('Opportunity')->order('LIST:stage:Prospectring,Qualification,Proposal')->find();
+```
+
 #### Find the first one
 ```php
 $account = $entityManager->getRepository('Account')->where([
