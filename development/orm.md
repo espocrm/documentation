@@ -95,7 +95,7 @@ $accountList = $entityManager->getRepository('Account')->order([['createdAt', 'A
 Ordering by list:
 
 ```php
-$accountList = $entityManager->getRepository('Opportunity')->order('LIST:stage:Prospectring,Qualification,Proposal')->find();
+$opportunityList = $entityManager->getRepository('Opportunity')->order('LIST:stage:Prospectring,Qualification,Proposal')->find();
 ```
 
 #### Find the first one
