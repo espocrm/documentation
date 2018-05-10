@@ -31,6 +31,12 @@ By default `'acl'`. Path `client/src/acl.js`.
 
 ## aclPortal
 
+
+Defines client scope acl for portals. Optional.
+
+By default `'acl-portal'`. Path `client/src/acl-portal.js`.
+
+
 ## createDisabled
 
 Allows to disable to create entity with user interface.
@@ -40,8 +46,12 @@ Allows to disable to create entity with user interface.
 
 Allows to hide a search panel on the list view.
 
+
 ## views
 
+- list - list view. By default - `"views/report-filter/list"`;
+- detail - detail view. By default - `"views/report-filter/list"`;
+- list - list view. By default - `"views/report-filter/list"`;
 
 
 (list|edit|detail)
