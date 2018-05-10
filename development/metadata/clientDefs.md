@@ -13,21 +13,36 @@ Contains data, related with view only.
 
 ## controller
 
+Defines client controller. Optional.
+
+
 ## collection
 
+Defines client record collection. Optional.
+
+By default `'collection'`. Path `client/src/collection.js`.
+
 ## acl
+
+Defines client scope acl. Optional.
+
+By default `'acl'`. Path `client/src/acl.js`.
+
 
 ## aclPortal
 
 ## createDisabled
 
+Allows to disable to create entity with user interface.
+
+
 ## searchPanelDisabled
 
-## acl
-
-## aclPortal
+Allows to hide a search panel on the list view.
 
 ## views
+
+
 
 (list|edit|detail)
 
@@ -241,3 +256,15 @@ contains a list of additional massActionList
 ```
 
 ## iconClass
+
+## color
+
+Entity color. (HEX)
+
+## kanbanViewMode
+
+The scope has kanban view mode on the list view
+
+"color": "#9c3030",
+    "kanbanViewMode": false,
+    "iconClass": "fas fa-chess-king"
