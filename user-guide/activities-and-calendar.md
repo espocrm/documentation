@@ -49,6 +49,10 @@ Users can add Calendar on their dashboard.
 
 It's possible to view calendar of another user (is you have an access determined by roles). Calendar button is available on the user's detail view.
 
+### Refreshing calendar
+
+To refresh calendar items you can click on the date range title at the top in the center.
+
 ### Shared Calendar
 
 Shared calendar is available since the version 5.2.0.
