@@ -28,6 +28,7 @@
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
   * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
   * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
+  * [Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
 
 
 ### User Guide
