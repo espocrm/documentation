@@ -6,14 +6,14 @@ In Entity Manager administrator can check certain fields as those that can conta
 
 By default the following fields are marked as those that can contain personal data.
 
-Contacts/Leads
+Contacts & Leads:
 
 * Name
 * Email
 * Phone
 * Address
 
-Account
+Account:
 
 * Email
 
