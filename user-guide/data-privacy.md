@@ -15,7 +15,7 @@ Contacts & Leads:
 * Phone
 * Address
 
-Account:
+Accounts:
 
 * Email
 
