@@ -8,3 +8,4 @@ For this you just need to create a many-to-many relationship between the needed 
 
 ![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/multiple-assigned-users/1.png)
 
+Make sure that you chose link names that do not already exist in the system.
