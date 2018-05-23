@@ -43,6 +43,7 @@
   * [Printing to PDF](https://github.com/espocrm/documentation/blob/master/user-guide/printing-to-pdf.md)
   * [Markdown syntax](https://github.com/espocrm/documentation/blob/master/user-guide/markdown.md)
   * [Browser support](https://github.com/espocrm/documentation/blob/master/user-guide/browser-support.md)
+  * [Data privacy](https://github.com/espocrm/documentation/blob/master/user-guide/data-privacy.md)
 
 ### Development
 * [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
