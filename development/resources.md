@@ -71,6 +71,8 @@ Contains data, related to entity definition like fields definition, links defini
 
 ### fields
 
+Field types definition.
+
 fields.md link
 
 
@@ -78,9 +80,9 @@ fields.md link
 
 Integration definition. Options:
  
-- `fields` - here you need to define fields, are available on Itegration configuration view;
+- `fields` - definition of the fields, which are available on Itegration configuration view;
 
-- `params` - here you can set parameters of your integrations, like `endpoint` and `scope`;
+- `params` - parameters of integrations, like `endpoint` and `scope`;
 
 - `clientClassName` - class name of Client of External Account, by defout is ;
 
