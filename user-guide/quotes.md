@@ -8,11 +8,21 @@ Quotes has a relationship with Opportunity. You can add Quotes panel to Opportun
 
 You can add Quotes panel to Account's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
 
+Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Quotes > Bottom Total.  Available since Advanced Pack 1.32.0 version.
+
 ## Quote Items
 
 Quote has a list of items. Each item can represent a certain product or a service with description, quantity, tax rate, list price and unit price fields. It's possible to sort items manually.
 
 There is an ability to add custom fields for Quote Item entity using Entity Manager.
+
+### Layout
+
+Layout of quote items can be modified at Administration > Layout Manager > Quote Items > List (Item). Available since Advanced Pack 1.32.0 version.
+
+### Discount Rate
+
+It's possible to specify a discount in percents. To have this ability, administrator should add 'Discount (%)' field to the List (Item) layout.
 
 ## Templates
 
@@ -83,7 +93,7 @@ To display text fields (multiline) use triple braces: `{{{description}}}`.
 
 Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template.
 
-## Email Quote
+## Sending quote in email
 
 Quote PDF can be send in email as an attachment. Open quote record, click dropdown next to Edit button and the click Email PDF.
 
