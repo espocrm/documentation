@@ -7,24 +7,24 @@ Metadata is intended for: storing system data such as entity's fields and relati
 
 #### Backend
 
-Metadata object of `Espo\Core\Utils\Metadata` class can be access from Container. Path to a needed parameter is specified using dots `.`.
+Metadata object of `Espo\Core\Utils\Metadata` class can be access from Container. Path to a needed parameter is specified with an array.
 
 ```php
-$metadata->get('entityDefs.Account.fields.name.type')
+$metadata->get(['entityDefs', 'Account', 'fields', 'name', 'type'])
 ```
 will return `'varchar'`.
 
 ```php
-$metadata->get('entityDefs.Account.fields')
+$metadata->get(['entityDefs', 'Account', 'fields'])
 ```
-will return an associative array of all fields.
+will return an associative array with definitions of all fields.
 
 #### Frontend
 
 Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as backend's one.
 
 ```JavaScript
-this.getMetadata().get('entityDefs.Account.fields.name.type')
+this.getMetadata().get(['entityDefs', 'Account', 'fields', 'name', 'type'])
 ```
 
 
