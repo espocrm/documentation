@@ -28,7 +28,7 @@ this.getMetadata().get(['entityDefs', 'Account', 'fields', 'name', 'type'])
 ```
 
 
-## How is it stored
+## How it's stored
 
 Metadata is stored in JSON files that can be located in different places:
 
