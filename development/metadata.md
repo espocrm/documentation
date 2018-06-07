@@ -61,7 +61,7 @@ Since metadata is merged recursively you can easily redefine json objects and ar
       "type": "int"
     },
     "type": {
-      "options": ["__APPEND__", "Drug dealer", "Lawyer"]
+      "options": ["__APPEND__", "Dealer", "Lawyer"]
     }
   }
 }
