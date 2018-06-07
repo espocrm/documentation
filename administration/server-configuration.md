@@ -37,7 +37,7 @@ These are no special peculiarities. All default settings are good for EspoCRM.
 
 ### MySQL 8 support
 
-MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. For MySQL 8 this authentication method should be changed to mysql_native_password. For a user it can be done with the query:
+MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. For MySQL 8 this it should be changed to mysql_native_password method. For a user it can be done with the query:
 
 ```
 CREATE USER username@localhost identified with mysql_native_password by 'password';
