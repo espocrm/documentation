@@ -1,6 +1,6 @@
 # Server Configuration for EspoCRM
 
-EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.6 or greater and MySQL version 5.1 or greater.
+EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.6 or greater and MySQL version 5.5.3 or greater.
 
 ## Configuration Recommendations
 
@@ -32,8 +32,18 @@ upload_max_filesize = 50M
 
 ### MySQL Requirements
 
-EspoCRM supports MySQL version 5.1 or greater.
+EspoCRM supports MySQL version 5.5.3 or greater.
 These are no special peculiarities. All default settings are good for EspoCRM.
+
+### MySQL 8 support
+
+MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. For MySQL 8 this authentication method should be changed to mysql_native_password. For a user it can be done with the query:
+
+```
+CREATE USER username@localhost identified with mysql_native_password by 'password';
+
+```
+where username is your MySQL user, password is your MySQL user password.
 
 ## Required Permissions for Unix-based Systems
 
