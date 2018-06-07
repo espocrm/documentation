@@ -41,7 +41,6 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 
 ```
 CREATE USER username@localhost identified with mysql_native_password by 'password';
-
 ```
 where username is your MySQL user, password is your MySQL user password.
 
