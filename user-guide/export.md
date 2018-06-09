@@ -26,7 +26,7 @@ You can select specific fields to be exported or check to export all available f
 
 After clicking Export button the export file will be downloaded.
 
-## Control access to export
+## Control of access to export
 
 Administrator can disable export function for all non-admin users at Administration > Settings > Disable Export.
 
