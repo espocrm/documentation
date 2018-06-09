@@ -7,3 +7,5 @@ Dynamic Logic allows to define conditions making certain fields visible, require
 For Enum, Array and Multi-Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met.
 
 Conditions are configured through user interface, no coding required.
+
+![Condition builder](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/dynamic-logic/1.png)
