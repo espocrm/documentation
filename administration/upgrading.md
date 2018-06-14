@@ -12,7 +12,7 @@ Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on y
 
 ### Step 3. Create a backup (optional)
 
-Create a backup of your EspoCRM files and data before upgrading. Follow [these instructions](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) to get it done.
+Create a backup of your EspoCRM files and data before upgrading. Follow [these instructions](backup-and-restore.md) to get it done.
 
 ### Step 4. Upgrade process
 
