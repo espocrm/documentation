@@ -37,7 +37,7 @@ For better work it's recommended to use MySQL 5.6 of greater.
 
 ### MySQL 8 Support
 
-MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. For MySQL 8 it should be changed to mysql_native_password method. For a user it can be done with the query:
+MySQL 8.0.4 has changed a default authentication method to caching_sha2_password which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to mysql_native_password method. For a user it can be done with the query:
 
 ```
 CREATE USER username@localhost identified with mysql_native_password by 'password';
