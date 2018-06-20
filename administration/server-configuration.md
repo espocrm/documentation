@@ -29,11 +29,11 @@ post_max_size = 50M
 upload_max_filesize = 50M
 ```
 
-
 ### MySQL Requirements
 
-EspoCRM supports MySQL version 5.5.3 or greater.
-These are no special peculiarities. All default settings are good for EspoCRM.
+EspoCRM supports MySQL version 5.5.3 or greater. These are no special peculiarities. All default settings are fine for EspoCRM.
+
+For better work it's recommended to use MySQL 5.6 of greater.
 
 ### MySQL 8 Support
 
