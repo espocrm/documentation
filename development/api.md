@@ -219,5 +219,9 @@ Get parameters:
 
 `DELETE {entityType}/{id}/subscription`
 
+## Client Implementation
+
+[Implementation for php](api-client-php.md).
+
 
 
