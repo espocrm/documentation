@@ -17,7 +17,7 @@
   * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
   * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
   * [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
-* [Data Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
+* [Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [LDAP authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
@@ -40,6 +40,7 @@
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
+* [Export](https://github.com/espocrm/documentation/blob/master/user-guide/export.md)
 * Misc
   * [Printing to PDF](https://github.com/espocrm/documentation/blob/master/user-guide/printing-to-pdf.md)
   * [Markdown syntax](https://github.com/espocrm/documentation/blob/master/user-guide/markdown.md)

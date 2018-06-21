@@ -34,6 +34,8 @@ The row can contain two cells or one cell that is expanded to the full width of 
 
 ![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
+For panels it's possible to specify a label, color (style) and conditions making a panel visible (since version 5.2.6).
+
 ## List (Small)
 
 The list layout for relationship panels. Also can be used in other places where it's reasonable to display lists in the narrow view.

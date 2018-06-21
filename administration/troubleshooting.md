@@ -86,3 +86,7 @@ They must be 644. If any of those file has permission 664 you need to change it 
 chmod 644 /path/to/file
 ```
 More information about file permissions: [here](server-configuration.md#required-permissions-for-unix-based-systems).
+
+## MySQL error: The server requested authentication method unknown to the client
+
+MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. This issue can be solved by this [solution](server-configuration.md#user-content-mysql-8-support).

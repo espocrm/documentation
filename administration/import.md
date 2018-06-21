@@ -34,6 +34,10 @@ Click _Run Import_ button to proceed. It may take some time before an import pro
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
+## Step 3
+
+Once you the records are imported and you are sure that imported data is fine you can 'Remove import log' (by clicking the button on the import results view) to preclude accidental reverting of the import. 
+
 ## How to import into Target List
 
 When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
