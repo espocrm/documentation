@@ -34,12 +34,16 @@ Examples:
 * `{{assignedUserName}}` – Assigned User;
 * `{{account.name}}` – Name of the related account.
 
+### Images
+
 It's possible to print image fields:
 ```
 <img src="{{file imageId}}">
 ```
 
 where `imageId` – the name of custom image field, concatenated with the suffix `Id`.
+
+### Number formatting
 
 To display float numbers w/o fractional part (as integer) use the following expression:
 ```
@@ -69,4 +73,15 @@ Example:
     </tr>
  <!-- {{/each}} --> 
  </table>
+```
+
+### Link-multiple fields
+
+Available since 5.3.0 version.
+
+Example, printing contact names of an opportinity:
+```
+{{#each contactsIds}}
+{{var this ../contactsNames}}
+{{/each}}
 ```
