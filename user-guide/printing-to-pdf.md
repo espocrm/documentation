@@ -4,9 +4,19 @@ Note: This feature is available since EspoCRM version 5.0.5.
 
 Printing to PDF provides an ability to generate PDF documents with a record data. The document content is defined by Template.
 
+You need to have at least one Template for the entity type of the record you want to print.
 
-1. You need to have at least one Template for the entity type of the record you want to print.
-2. 'Print to PDF' will be available on the detail view under the dropdown next to the 'Edit' button.
+'Print to PDF' will be available on the detail view under the dropdown next to the 'Edit' button.
+
+### Printing multiple records
+
+This feature is available since EspoCRM version 5.3.0.
+
+'Print to PDF' is available on the list view as a mass action. You need to select needed records and click Print to PDF from Actions menu. It will generate a single merged PDF file for multiple records.
+
+By default the max number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
+
+Note, that page numbering gets reset for each record. You need to use the placeholder `{pageAbsoluteNumber}` to print absolute page numbers in the footer.
 
 ## Templates
 
