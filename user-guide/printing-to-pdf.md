@@ -4,11 +4,11 @@ Note: This feature is available since EspoCRM version 5.0.5.
 
 Printing to PDF provides an ability to generate PDF documents with a record data. The document content is defined by Template.
 
-You need to have at least one Template for the entity type of the record you want to print.
+Note: You need to have at least one Template for the entity type of the record you want to print.
 
 ### Printing single record
 
-'Print to PDF' will be available on the detail view under the dropdown next to the 'Edit' button.
+'Print to PDF' is available on the detail view under the dropdown next to the 'Edit' button.
 
 ### Printing multiple records
 
