@@ -6,6 +6,8 @@ Printing to PDF provides an ability to generate PDF documents with a record data
 
 You need to have at least one Template for the entity type of the record you want to print.
 
+### Printing single record
+
 'Print to PDF' will be available on the detail view under the dropdown next to the 'Edit' button.
 
 ### Printing multiple records
