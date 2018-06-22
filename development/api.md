@@ -221,7 +221,7 @@ Get parameters:
 
 ## Client Implementation
 
-[Implementation in PHP](api-client-php.md).
+[Implementation in PHP](api-client-php.md)
 
 
 
