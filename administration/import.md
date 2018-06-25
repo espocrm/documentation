@@ -41,3 +41,54 @@ Once you the records are imported and you are sure that imported data is fine yo
 ## How to import into Target List
 
 When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
+
+## How to import 2 columns in 1 field
+
+You can not import 2 columns in one field directly. But, you can do it in the other way. Follow these steps:
+
+### Create 2 varchar fields
+
+Lets name the `column1` and `column2`.
+
+You can do it in 2 ways:
+
+- Entity Manager. In this case it's easy to create them, but data will be stored in the database in these columns as well;
+
+- manually with the option notStorable. You won't have these columns in the database.
+
+`custom/Espo/Custom/Resources/metadata/entityDefs/{YourEntity}.json`
+
+```
+{
+    "fields": {
+       "column1": {
+            "type": "varchar",
+            "notStorable": true,  
+            "isCustom": true
+        },
+        "column2": {
+            "type": "varchar",
+            "notStorable": true, 
+            "isCustom": true
+        }
+    }
+}
+```
+
+
+Administration > Rebuild > Refresh the page. 
+Also you can add labels for these fields in Entity Manager or in Label Manager.
+
+### Create a Formula
+
+For example we want to import the data from colunms to `description` field. In this case Formula will be:
+
+```
+ifThen(column1, description = string\concatenate(column1, " - ", column2));
+```
+
+[Here](https://www.espocrm.com/documentation/administration/formula/) you can find more information  about Formula.
+
+### Run import
+
+After this you can import your records. These new fields will be available on Field Mapping step.
