@@ -113,3 +113,7 @@ Available since EspoCRM 4.8.0.
 ## Invoices
 
 Quote can be treated as an invoice if its status became `Approved`. Then _Date Invoiced_, _Invoice Number_ fields show up. You can use different template for invoices for printing.
+
+## See also
+
+[Custom calculations for Quote totals](https://github.com/espocrm/documentation/blob/master/development/quote-custom-calculations.md)
