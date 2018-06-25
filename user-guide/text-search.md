@@ -8,6 +8,8 @@ The field list which is used in filtering can be configured at Administration > 
 
 It's possible to use the wildcard `*` (available since 5.3.0 version, for previoud versions use `%`).
 
+![TExt Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/1.png)
+
 ## Global Search
 
 Global Search performs a search in multiple entity types simultaneously.
@@ -15,6 +17,8 @@ Global Search performs a search in multiple entity types simultaneously.
 The list of entity types used in Global Search can be configured at Administration > Settings > Global Search Entity List.
 
 The field list which is used in filtering can be configured at Administration > Entity Manager > Edit specific entity type > Text Filter Fields.
+
+![Global Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/2.png)
 
 ## Full-text search
 
