@@ -1,7 +1,5 @@
 # Link Multiple field with Primary
 
-~For EspoCRM 3.6.0 and greater.~
-
 Sometimes you have `hasMany` relationship and need to have an ability to select primary record among related ones. As example, `Contacts` field of Case entity.
 
 >Need to create `contacts` linkMultiple field with a primary for our custom entity `Stock`. 
