@@ -20,6 +20,10 @@ By default the max number of records is limited to 50. The limit is defined by t
 
 Note, that page numbering gets reset for each record. You need to use the placeholder `{pageAbsoluteNumber}` to print absolute page numbers in the footer.
 
+### Access restriction to printing
+
+Can be achieved by restriction of access to Template entity type.
+
 ## Templates
 
 Templates tab is hidden by default. Administrator can add it at Administration > User Interface.
