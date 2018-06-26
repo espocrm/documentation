@@ -28,7 +28,7 @@ Provides an ability to perform a much faster and comprehensive text search.
 
 Full-text search can be enabled for a specified entity type at Administration > Entity Manager > Edit specific entity type > Full-text search.
 
-Note: Mysql 5.5 doesn't support full-text search for InnoDB tables. Later versions 5.6, 5.7 and 8 do support.
+Note: Mysql 5.5 doesn't support full-text search for InnoDB tables. 5.6.4 and later versions do support.
 
 Full-text search is always applied in Global Search (for entity types with enabled full-text search).
 
