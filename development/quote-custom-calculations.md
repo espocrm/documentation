@@ -66,4 +66,5 @@ Espo.define('custom:quote-calculation-handler', ['advanced:quote-calculation-han
 
 ```
 
-It's also possible to make certain product fields copied to a quote item on product selection. The logic is implemented in selectProduct method.
+It's also possible to make certain product fields copied to a quote item on product selection. The logic is determined in selectProduct method.
+
