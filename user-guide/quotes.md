@@ -116,4 +116,4 @@ Quote can be treated as an invoice if its status became `Approved`. Then _Date I
 
 ## See also
 
-[Custom calculations for Quote totals](https://github.com/espocrm/documentation/blob/master/development/quote-custom-calculations.md)
+[Custom calculations for Quote totals](../development/quote-custom-calculations.md)
