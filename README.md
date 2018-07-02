@@ -43,6 +43,7 @@
 * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
 * [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
 * [Knowledge Base](https://github.com/espocrm/documentation/blob/master/user-guide/knowledge-base.md)
+* [Documents](https://github.com/espocrm/documentation/blob/master/user-guide/documents.md)
 * [Export](https://github.com/espocrm/documentation/blob/master/user-guide/export.md)
 * [Text search](https://github.com/espocrm/documentation/blob/master/user-guide/text-search.md)
 * Misc
