@@ -16,4 +16,6 @@ Products can be added as line items to an Opportunity record. By default this fe
 
 Each Product record can belong to some Product Category. Product Categories are presented as a hierarchical tree structure. Each category can have sub-categories.
 
+Product Category is a separate entity type, hence an access can be controlled by ACL.
+
 To be able to search products in all sub-categories you need to switch to the expanded mode by clicking the small folder icon next to the root category.
