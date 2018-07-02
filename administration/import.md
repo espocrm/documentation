@@ -25,7 +25,10 @@ Click _Next_ button to preceed to the _Step 2_.
 ## Step 2
 
 Setup the field mapping: how fields correspond to columns of the csv file. You can skip not needed columns here.
-In cases of 'Create & Update' and 'Update only' you need to check fields by which records that should be updated will be found.
+In cases of 'Create & Update' and 'Update only' you need to check fields by which records that should be updated will be found. 
+
+E.g. if you check 'update by' Name field then records with matching name will be updated.
+
 Add default values you want new and updated records to set with. E.g. you can specify Assigned User or Teams fields.
 
 After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once. Note: Revert doesn't work with updated records.
