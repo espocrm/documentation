@@ -14,6 +14,6 @@ Knowledge Base articles can be related with Case records, providing a quick acce
 
 ## Categories
 
-Categories allow to group articles. One category can have multiple sub-categories. Each article can be related to one or multiple categories.
+Categories allow to group articles. One category can contain multiple sub-categories. Each article can be related to one or multiple categories.
 
 To be able to search articles in all sub-categories you need to switch to the expanded mode by clicking the small folder icon next to the root category.
