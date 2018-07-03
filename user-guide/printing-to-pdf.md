@@ -61,7 +61,9 @@ Custom formatting for currency values:
 
 Value `10000.5` will be printer as `10 000,50`.
 
-To display text fields (multiline) use triple braces: ```{{{description}}}```.
+### Text fields
+
+To display text fields (multi-line) use triple braces: ```{{{description}}}```.
 
 ### Each iterator
 
