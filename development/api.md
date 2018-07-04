@@ -222,6 +222,7 @@ Get parameters:
 ## Client Implementation
 
 [Implementation in PHP](api-client-php.md)
+[Implementation in Python](api-client-python.md)
 
 
 
