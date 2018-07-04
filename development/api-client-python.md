@@ -68,3 +68,38 @@ class EspoAPI:
 
         return headers['X-Status-Reason']
 ```
+
+## Usage
+
+```python
+from espo_api_client import EspoAPI
+
+data = {
+    'firstName': 'John',
+    'lastName': 'Does',
+    'phoneNumber': '+11111-22222-33333',
+    'emailAddress': '',
+
+    'source': 'Web Site',
+    'campaignId': '5b3afb264fddb0e65',
+    'assignedUserId': '1',
+
+    'opportunityAmount': '650',
+    'opportunityAmountCurrency': 'USD',
+    'industry': 'Legal',
+}
+
+client = EspoAPI('http://localhost/espocrm', 'bot2000', '****')
+
+# Change an item
+# print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
+
+# Create a lead
+# print(client.request('POST', 'Lead', data))
+
+# Get accounts
+# print(client.request('GET', 'Account'))
+
+# Delete an opportunity
+# print(client.request('DELETE', 'Opportunity/5b3b0b8c0b2b8bea5'))
+```
