@@ -71,6 +71,12 @@ More information about file permissions: [here](server-configuration.md#required
 
 MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. This issue can be solved by this [solution](server-configuration.md#user-content-mysql-8-support).
 
+## Emails are not fetched
+
+1. Check EspoCRM log (data/log) and server logs for errors.
+2. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
+3. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.
+
 ## Enabling debug mode
 
 To enable debug mode for log, edit the file `data/config.php` and change the value:
