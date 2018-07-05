@@ -12,26 +12,6 @@ EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/logs/*.log` and contain some er
 
 For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems. 
 
-## Enable debugging mode
-
-To enable debugging mode, go to installed EspoCRM directory, open the file `data/config.php` and change the value:
-
-```
-'logger' => [
-    ...
-    'level' => 'WARNING',
-    ...
-]
-```
-to
-```
-'logger' => [
-    ...
-    'level' => 'DEBUG',
-    ...
-]
-```
-
 ## Scheduled Jobs are not working
 
 #### Problem #1: Your crontab is not configured
@@ -90,3 +70,23 @@ More information about file permissions: [here](server-configuration.md#required
 ## MySQL error: The server requested authentication method unknown to the client
 
 MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. This issue can be solved by this [solution](server-configuration.md#user-content-mysql-8-support).
+
+## Enabling debug mode
+
+To enable debug mode, edit the file `data/config.php` and change the value:
+
+```
+'logger' => [
+    ...
+    'level' => 'WARNING',
+    ...
+]
+```
+to
+```
+'logger' => [
+    ...
+    'level' => 'DEBUG',
+    ...
+]
+```
