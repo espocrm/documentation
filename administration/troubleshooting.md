@@ -73,7 +73,7 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 
 ## Enabling debug mode
 
-To enable debug mode, edit the file `data/config.php` and change the value:
+To enable debug mode for log, edit the file `data/config.php` and change the value:
 
 ```
 'logger' => [
