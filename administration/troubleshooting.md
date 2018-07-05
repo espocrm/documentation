@@ -18,7 +18,7 @@ For Ubuntu server an apache error log is located at `/var/log/apache2/error.log`
 
 1. Login via SSH to your server.
 
-2. Configure your crontab by following these steps: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Configure your crontab by following these [steps](server-configuration.md#user-content-setup-a-crontab).
 
 Note: Crontab should be configured under web-server user, e.g. `crontab -e -u www-data`.
 
@@ -73,7 +73,7 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 
 ## Emails are not being fetched
 
-1. Make sure cron is running. You will see the error notification on the main administration page if cron is not running.
+1. Make sure [cron](server-configuration.md#user-content-setup-a-crontab) is running. You will see the error notification on the main administration page if cron is not running.
 2. Check EspoCRM log (data/logs) and server logs for errors.
 3. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
 4. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.
