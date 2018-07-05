@@ -73,7 +73,7 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 
 ## Emails are not fetched
 
-1. Check EspoCRM log (data/log) and server logs for errors.
+1. Check EspoCRM log (data/logs) and server logs for errors.
 2. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
 3. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.
 
