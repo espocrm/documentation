@@ -10,6 +10,8 @@ Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in 
 
 `GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
+It's recommended to create a separate user with restricted rights and use this user for API calls.
+
 ## Authentication
 
 EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
