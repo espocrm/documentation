@@ -10,7 +10,7 @@ EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/logs/*.log` and contain some er
 
 #### Apache error logs
 
-For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems. 
+For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
 
 ## Scheduled Jobs are not working
 
@@ -51,6 +51,15 @@ sudo -u www-data php cron.php
 where `www-data` is a web-server user.
 
 4. If there are no errors, check Scheduled Jobs to see if any job was executed (see a Log panel).
+
+## Running rebuild from CLI
+
+Sometimes you need to run rebuild from the command line interface when the application is not loading.
+
+`sudo -u www-data php rebuild.php`
+
+www-data is a web server user. 
+
 
 ## EspoCRM is not loading after upgrade
 
