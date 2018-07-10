@@ -26,9 +26,9 @@ To show details and parameters of a certain flowchart element you need to click 
 
 Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
 
-Process represents business process instance. When it's initiated it gets the status 'Started'. When process is finished it gets the status 'Ended'. The process can also be stopped manually by a user who has an access to edit the process. If it's stopped manually it gets status the 'Stopped'.
+Process represents business process instance. When it's initiated, it gets the status 'Started'. When process is finished, it gets the status 'Ended'. The process can also be stopped manually by a user who has an access to edit the process. If it's stopped manually, it gets status the 'Stopped'.
 
-The process is executed according the flowchart. Flowchart of process can't be changed after process is started.
+The process is executed according to the flowchart. Flowchart of process can't be changed after process is started.
 
 The process obligatorily is related to single target record.
 
@@ -58,7 +58,7 @@ This event stops the flow until specified criteria is met.
 
 #### Timer Intermediate Event
 
-This event stops the flow and waits as long as is specified by event's parameters.
+This event stops the flow and waits as long as it is specified by event's parameters.
 
 For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
 
@@ -80,7 +80,7 @@ Gateways are displayed as diamonds.
 
 Can diverge or converge flows.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
 
 In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
 
@@ -92,7 +92,7 @@ In case of converging it just directs the flow to the outgoing element. It doesn
 
 Can diverge or converge flows.
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no any met conditions. Default flow is marked with a slash sign.
+In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
 
@@ -100,7 +100,7 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 Note: Diverging and converging gateways must be balanced.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Note: If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
 
 #### Parallel Gateway
 
@@ -114,7 +114,7 @@ In case of converging it waits until all incoming flows come and then continues 
 
 Note: Diverging and converging gateways must be balanced.
 
-Note: If one of parallel flows has been ended for some reason then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Note: If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
 
 #### Event Based Gateway
 
