@@ -6,7 +6,7 @@ EspoCRM consists of files and database data. All these data are needed in order 
 
 ### Step 1. Backup files
 
-Create an archive of the directory content of installed EspoCRM. For Ubuntu the default path is `/var/www/html`. You may use this command:
+Create an archive of the directory content of installed EspoCRM. The default path for Ubuntu   is `/var/www/html`. You may use this command:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
@@ -96,4 +96,4 @@ If you have to make any changes, use this command:
 sudo crontab -l -u www-data
 ```
 
-More details about configuring crontab for EspoCRM is described here [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+More details about configuring crontab for EspoCRM are described here [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
