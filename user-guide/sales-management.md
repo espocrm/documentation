@@ -12,7 +12,7 @@ New leads are supposed to be created by the following scenarios:
 
 By utilizing [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md) administrator can set up the system to apply a specific assignment rule to new leads, i.e. Round-Robin and Least-Busy rules. For more complex business flows it's recommended to utilize [BPM tool](https://github.com/espocrm/documentation/blob/master/administration/bpm.md).
 
-To prevent overlooking of new leads users can add Lead entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new lead. 
+To prevent overlooking of new leads, users can add Lead entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new lead. 
 
 ## Opportunities
 
@@ -50,4 +50,4 @@ By utilizing [Reports tool](https://github.com/espocrm/documentation/blob/master
 
 This report will show revenue forecast based on probabilities of opportunities.
 
-Users who have an access to this report will be able to add it on their dashboards.
+Users, who have an access to this report, will be able to add it on their dashboards.
