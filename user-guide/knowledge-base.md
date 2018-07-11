@@ -4,7 +4,7 @@ Knowledge Base provides an ability to create articles. Articles are supposed to 
 
 To make an article available in the portal you need to set its status to 'Published' and select the portal in the Portals field. Make sure that the portal role allows an access to Knowledge Base and the navigation menu tab is added in the portal.
 
-If you specify Expiration Date then the article will be automatically hidden from the portal on that date.
+If you specify Expiration Date, then the article will be automatically hidden from the portal on that date.
 
 It's possible to specify a language for an article. The article will be shown only for those portal users which have that language set.
 
@@ -18,4 +18,4 @@ Categories allow to group articles. One category can contain multiple sub-catego
 
 Knowledge Base Category is a separate entity type, hence an access can be controlled by ACL.
 
-To be able to search articles in all sub-categories you need to switch to the expanded mode by clicking the small folder icon next to the root category.
+To be able to search articles in all sub-categories, you need to switch to the expanded mode by clicking the small folder icon next to the root category.
