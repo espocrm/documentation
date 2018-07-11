@@ -8,7 +8,7 @@ EspoCRM provides the ability to fetch emails from IMAP box. This makes possible 
 
 User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.
+Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails, you can add Sent folder to archive those emails.
 
 *Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
 
@@ -27,13 +27,13 @@ You can see all your emails at Emails tab. There are standard folders Inbox, Sen
 
 *Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
 
-When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized then user can link it manually by filling in *Parent* field.
+When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized, then user can link it manually by filling in *Parent* field.
 
-If an email came from a new potential client user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
+If an email came from a new potential client, user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
 
 It's also possible to **create Task or Case** from an email record.
 
-If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can **create contact** right from there.
+If email addresses (from, to, cc) in an email record are known to the system, it will show the person they are related to (Contact, Lead, User etc). If some email address is new, you can **create contact** right from there.
 
 All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
 
