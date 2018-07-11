@@ -60,7 +60,7 @@ All of these options can be added/changed in EspoCRM after installation.
 
 ![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
 
-Congratulation! Installation is complete. 
+Congratulations! Installation is complete. 
 The last thing to setup Scheduled Tasks to be run by your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems.
 
 ![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
