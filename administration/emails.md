@@ -8,6 +8,8 @@ EspoCRM has an ability to monitor IMAP mailboxes. Email can be archived in two w
 
 As an email is coming the system tries to link it with the appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not in To or CC.
 
+Note, that email records are not duplicated for different users. If you remove an email record from the crm it will be removed for all users. It's recommended to use moving to trash instead. Delete access if restricted for regular users by default.
+
 ## Group Email Accounts
 
 Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails. Sending emails from group accounts has been available since 4.9.0 version.
