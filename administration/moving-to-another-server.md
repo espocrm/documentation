@@ -21,11 +21,11 @@ Note: Files need to be placed in the web-server directory.
 
 ### Step 5. Configure a server
 
-Configure a new server based on the recommendations here: https://www.espocrm.com/documentation/administration/server-configuration/.
+Configure a new server based on the recommendations here: https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md.
 
 ### Step 6. Correct permissions
 
-Set required permissions and files owner, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
+Set required permissions and files owner, https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#required-permissions-for-unix-based-systems.
 
 ### Step 7. Import your database backup
 
@@ -67,7 +67,7 @@ After successfully importing and configuring the server, please correct EspoCRM 
 
 ### Step 9. Setup a crontab
 
-Setup a crontab, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+Setup a crontab, https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab.
 Note: it should be configured under your web-server user.
 
 That's all. Now, your EspoCRM instance is running on a new server.
