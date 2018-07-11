@@ -14,17 +14,17 @@ Workflows automate your business process an easy way. You can find it in the Adm
 
 ### After record created 
 
-Triggered only when a new record is created. If specified conditions are met then actions will be executed.
+Triggered only when a new record is created. If specified conditions are met, then actions will be executed.
 
 ### After record saved
 
-Triggered when a new record is created or an existing record is updated. If specified conditions are met then actions will be executed.
+Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
 
 For workflow rules with this type of trigger it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed then execute some actions.
 
 ### Scheduled
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. So you need also to create a list report.
+Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. So, you need also to create a list report.
 
 Scheduling is specified in a crontab notation.
 
@@ -76,7 +76,7 @@ System will send an email using a specified email template. A recipient’s emai
 
 ### Create Record
 
-System will create the new record of any entity type. If there is a relationship between the target record and creating record it's possible to relate records. 
+System will create the new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate records. 
 
 There is an ability to define formula to calculate fields.
 
@@ -88,7 +88,7 @@ System will create the record related to the target record. It's possible to def
 
 Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams) you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
+If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
 ### Update Related Record
 
