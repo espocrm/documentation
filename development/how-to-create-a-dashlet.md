@@ -104,4 +104,4 @@ There you can see some examples `application/Espo/Modules/Crm/Resources/metadata
 
 Translation to dashlet is in `Global` scope, in `"dashlets"` section.
 
-__After all don't forget to Clear Cache in Administration.__
+__After that don't forget to Clear Cache in Administration.__
