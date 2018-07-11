@@ -1,10 +1,10 @@
 # Layout Manager
 
-Layout Manager is available in administration panel. Provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+Layout Manager is available in administration panel. It provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
 
 ## List
 
-The main layout for the list view. Defines columns and their parameters.
+The main layout for the list view. It defines columns and their parameters.
 
 ![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
 
@@ -16,7 +16,7 @@ Width of column in percent, empty means auto-width.
 
 ### Link
 
-If checked then the field will be displayed as a link to the detail view of the record. Usually used for name fields.
+If checked, then the field will be displayed as a link to the detail view of the record. Usually, it is used for name fields.
 
 ### Not Sortable
 
@@ -28,7 +28,7 @@ Align the column to the left or to the right.
 
 ## Detail
 
-The main layout for the detail view and the edit view. Defines panels, rows and cells. Cells contain fields.
+The main layout for the detail view and the edit view. It defines panels, rows and cells. Cells contain fields.
 
 The row can contain two cells or one cell that is expanded to the full width of the row. To add the row with an expanded cell you need to add the new row and click on a minus sign on any cell.
 
@@ -38,7 +38,7 @@ For panels it's possible to specify a label, color (style) and conditions making
 
 ## List (Small)
 
-The list layout for relationship panels. Also can be used in other places where it's reasonable to display lists in the narrow view.
+The list layout for relationship panels. Also, it can be used in other places where it's reasonable to display lists in the narrow view.
 
 ## Detail (Small)
 
