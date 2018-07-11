@@ -20,7 +20,7 @@ You will receive notifications about new additions to your stream that were caus
 
 ## Posts
 
-You can create post related to a certain record. You also able to attach multiple files and images to your post. If you want to mention somebody in your post you need just type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it.
+You can create post related to a certain record. You are also able to attach multiple files and images to your post. If you want to mention somebody in your post, you need just type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it.
 
 ## Posts to users
 
