@@ -6,15 +6,15 @@ In order to restrict access for some users you need to use Roles. Administrator 
 
 One user can have multiple roles. Those roles can be selected for a specific user (‘Roles’ field in User entry) and/or be inherited from the teams that user belongs to.
 
-If a user has multiple roles then they will be merged so that permissive rule will have a higher priority. That allows administrator to manage access level control easily and flexibly.
+If a user has multiple roles, then they will be merged so that permissive rule will have a higher priority. That allows administrator to manage access level control easily and flexibly.
 
-It's possible to see what permissions is applied to a certain user by clicking 'Access' button on the user's detail view.
+It's possible to see what permissions are applied to a certain user by clicking 'Access' button on the user's detail view.
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
 
 ## Example
 
-For example, user belongs to team ‘Sales’. That team has single role ‘Salesman’. So all users from this team will obtain ‘Salesman’ role.
+For example, user belongs to team ‘Sales’. That team has single role ‘Salesman’. So, all users from this team will obtain ‘Salesman’ role.
 
 ‘Salesman’ role is defined the following way:
 
@@ -86,11 +86,11 @@ Defines an access to group email accounts, an ability to send emails from group 
 
 ### Export Permission
 
-Defenies whether user have an ability to export records. (since version 4.9.0)
+Defines whether user have an ability to export records. (since version 4.9.0)
 
 ## Permissions by Default 
 
-By default (if there are no any applied) users can read and edit all records. But can't delete any ones except those they have created and they are assigned to at the same time.
+By default (if there are no any applied) users can read and edit all records. But they can't delete any records except those they have created and they are assigned to at the same time.
 
 There is an ability to restrict an access applied by default by enabling 'ACL Strict Mode' at Administration > Settings.
 
