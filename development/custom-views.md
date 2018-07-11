@@ -81,7 +81,7 @@ Detail view contains Record/Detail view and Header.
 `client/custom/src/views/your-entity-type/edit.js`
 `client/custom/src/views/your-entity-type/record/edit.js`
 
-The same as detail but is used when record is being created or edited not in inline-edit mode.
+The same as detail but it is used when record is being created or edited not in inline-edit mode.
 
 
 `client/custom/src/views/your-entity-type/list.js`
