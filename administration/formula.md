@@ -5,7 +5,7 @@ It provides an ability to automatically set specific fields (attributes) with va
 
 To edit formula follow Administration > Entity Manager > dropdown menu at the right on the row of needed entity > Formula.
 
-You also might need to set fields, that are supposed to be calculated, Read-only via Entity Manager.
+You may also need to set fields, that are supposed to be calculated, Read-only via Entity Manager.
 
 
 ## Syntax
@@ -53,10 +53,10 @@ Format of function use: `groupName\functionName(argument1, argument2, ..., argum
 Out-of-the-box functions are listed below.
 
 #### ifThenElse
-`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met then do CONSEQUENT. If not -- then do ALTERNATIVE.
+`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met, then do CONSEQUENT. If not -- then do ALTERNATIVE.
 
 #### ifThen
-`ifThen(CONDITION, CONSEQUENT)` If CONDITION is met then do CONSEQUENT. If not -- do nothing.
+`ifThen(CONDITION, CONSEQUENT)` If CONDITION is met, then do CONSEQUENT. If not -- do nothing.
 
 #### string\concatenate(
 `string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
@@ -90,7 +90,7 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `datetime\now()` Returns current datetime.
 
 #### datetime\format
-`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted then default time zone will be used. If FORMAT is omitted then default format will be used.
+`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then default time zone will be used. If FORMAT is omitted, then default format will be used.
 
 Examples:
 
@@ -101,22 +101,22 @@ Examples:
 `datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
 
 #### datetime\date
-`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
 
 #### datetime\month
-`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
 
 #### datetime\year
-`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
 
 #### datetime\hour
-`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
 
 #### datetime\minute
-`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted then system timezone is used. (since version 4.7.0)
+`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted then system timezone is used. (since version 4.7.3)
+`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.3)
 
 #### datetime\diff
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
@@ -142,7 +142,7 @@ Examples:
 #### datetime\closest
 `datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 5.0.0)
 
-TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted then default timezone is used.
+TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted, then default timezone is used.
 
 Examples:
 
@@ -153,7 +153,7 @@ Examples:
 `datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
 
 #### number\format
-`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR then system defaults are used.
+`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR, then system defaults are used.
 
 Examples:
 
