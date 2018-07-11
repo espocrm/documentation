@@ -8,11 +8,11 @@ Open a file manager or login via SSH to archive all available files from the Esp
 
 ### Step 2. Backup your database
 
-The data stored in database (MySQL, MariaDB) should be backed up. Please follow this recommendation: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
+The data stored in database (MySQL, MariaDB) should be backed up. Please, follow this recommendation: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
 
 ### Step 3. Copy files and database backups to another server
 
-Copy backups of files and of your database to a new server.
+Copy backups of files and your database to a new server.
 
 ### Step 4. Unarchive backup files
 
