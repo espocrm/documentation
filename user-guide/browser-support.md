@@ -4,4 +4,4 @@ We recommend using the latest versions of Google Chrome or Mozilla Firefox. Espo
 
 Microsoft Edge and Safari are also supported, but there are less guarantees that everything will be working smoothly.
 
-We highly recommend not using Internet Explorer 11.
+We highly recommend not to use Internet Explorer 11.
