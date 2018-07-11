@@ -4,7 +4,7 @@ Portal provides an ability to access specific crm data and functions for your cu
 
 To create portal follow Administration > Portals, click Create Portal button.
 
-* `Is Active`. If not check portal won't be available for anybody.
+* `Is Active`. If not, check portal won't be available for anybody.
 * `Is Default`. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
 * `Roles`. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
 * `Tab List`. Tabs which will be shown in navigation bar.
@@ -45,7 +45,7 @@ Assigned User and Teams fields are read only for portal users.
 
 ## Access to Portal
 
-You can find the url for your portal in 'URL' field of the portal record. Also it's possible to use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
+You can find the url for your portal in 'URL' field of the portal record. It's also possible to use server configuration tools (such mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
 
 ### Access portal by Custom URL for Apache server
 
@@ -74,7 +74,7 @@ ServerAlias my-portal-host-name.com
 
 #### Mod rewrite rules
 
-Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can is available in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
+Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID is available in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
 
 ```
   RewriteCond %{HTTP_HOST} ^portal-host-name.com$
