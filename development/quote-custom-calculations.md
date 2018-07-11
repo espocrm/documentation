@@ -2,7 +2,7 @@
 
 ## Problem
 
-You have added custom fields to quote items or/and quote entity types. Want Total Amount field and other totals being calculated considering new custom fields.
+You have added custom fields to quote items or/and quote entity types. You want Total Amount field and other totals to be calculated considering new custom fields.
 
 ## Resolution
 
