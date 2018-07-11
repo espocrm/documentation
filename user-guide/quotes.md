@@ -2,7 +2,7 @@
 
 Quotes feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-Quotes are specific group of products or services with their quantities and prices that you quote to customers.
+Quotes is specific group of products or services with their quantities and prices that you quote to customers.
 
 Quotes has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
 
@@ -41,7 +41,7 @@ Examples:
 
 `{{assignedUser.lastName}}` – last name of the assigned user.
 
-If your line item is a product you can print product’s fields. 
+If your line item is a product, you can print product’s fields. 
 
 Examples:
 `{{product.length}}`, 
