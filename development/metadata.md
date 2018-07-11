@@ -7,7 +7,7 @@ Metadata is intended for: storing system data such as entity's fields and relati
 
 #### Backend
 
-Metadata object of `Espo\Core\Utils\Metadata` class can be access from Container. Path to a needed parameter is specified with an array.
+Metadata object of `Espo\Core\Utils\Metadata` class can be accessed from Container. Path to a needed parameter is specified with an array.
 
 ```php
 $metadata->get(['entityDefs', 'Account', 'fields', 'name', 'type'])
