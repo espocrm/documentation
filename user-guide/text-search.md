@@ -4,7 +4,7 @@
 
 On the record list view it's possible to perform text search.
 
-The field list which is used in filtering can be configured at Administration > Entity Manager > Edit specific entity type > Text Filter Fields.
+The field list, which is used in filtering, can be configured at Administration > Entity Manager > Edit specific entity type > Text Filter Fields.
 
 It's possible to use the wildcard `*` (available since 5.3.0 version, for previous versions use `%`).
 
@@ -32,7 +32,7 @@ Note: Mysql 5.5 doesn't support full-text search for InnoDB tables. 5.6.4 and la
 
 Full-text search is always applied in Global Search (for entity types with enabled full-text search).
 
-A text search on the record list view is only utilized for a better performance. Results are the same as they was w/o enabled full-text search. Yet, it's possible to force a full-text usage by prepending `ft:` to a search query.
+A text search on the record list view is only utilized for a better performance. Results are the same as they were w/o enabled full-text search. Yet, it's possible to force a full-text usage by prepending `ft:` to a search query.
 
 For InnoDB tables the following operators are available:
 
