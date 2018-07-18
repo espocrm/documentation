@@ -10,6 +10,8 @@ It's possible to use the wildcard `*` (available since 5.3.0 version, for previo
 
 ![TExt Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/1.png)
 
+There is an option to use 'contains' operator for varchar fields by default. Parameter is available at Administration > Settings. Note, that it can affect performance.
+
 ## Global Search
 
 Global Search performs a search in multiple entity types simultaneously.
@@ -41,3 +43,4 @@ For InnoDB tables the following operators are available:
 * (no operator) The word is optional, but the rows that contain it are rated higher.
 * `*` The truncation (or wildcard) operator. Appended to the word to be affected.
 * `"` A phrase enclosed within double quotes must be contained literally, as it was typed.
+
