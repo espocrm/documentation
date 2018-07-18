@@ -61,7 +61,9 @@ find data custom -type d -exec chmod 775 {} + && find data custom -type f -exec 
 ```
 
 All files should be owned and group-owned by the webserver process. It can be “www-data”, “daemon”, “apache”, “www”, etc.  
+
 Note: On Bitnami Stack, files should be owned and group-owned by “daemon” user.  
+
 Note: On shared hosts, files should be owned and group-owned by your user account.
 
 To set the owner and group-owner, execute these commands in the terminal:
