@@ -162,7 +162,7 @@ Provides a flexible ability of user interaction. It stops execution until the us
 * Accomplish type has two options: 'Completed' and 'Failed'.
 
 
-The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications.
+The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications for Process User Tasks at Administration > Notifications > Email Notifications.
 
 Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
 
