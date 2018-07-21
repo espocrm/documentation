@@ -6,6 +6,7 @@
   * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
 * [Installation](https://github.com/espocrm/documentation/blob/master/administration/installation.md)
 * [Upgrading](https://github.com/espocrm/documentation/blob/master/administration/upgrading.md)
+* [Troubleshooting](https://github.com/espocrm/documentation/blob/master/administration/troubleshooting.md)
 * [Roles management (access control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
 * [Emails](https://github.com/espocrm/documentation/blob/master/administration/emails.md)
 * Customization
@@ -22,7 +23,6 @@
 * [LDAP authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
   * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
-* [Troubleshooting](https://github.com/espocrm/documentation/blob/master/administration/troubleshooting.md)
 * Misc
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
