@@ -60,6 +60,8 @@ class EspoApiClient
      */
     public function request($method, $action, array $data = null)
     {
+        $method = strtoupper($method);
+
         $this->checkParams();
 
         $this->lastResponse = null;
@@ -70,8 +72,10 @@ class EspoApiClient
         $ch = curl_init($url);
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_USERPWD, $this->userName.':'.$this->password);
-        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        if ($this->userName) {
+            curl_setopt($ch, CURLOPT_USERPWD, $this->userName.':'.$this->password);
+            curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        }
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
@@ -130,11 +134,9 @@ class EspoApiClient
 
     protected function checkParams()
     {
-        $paramList = array(
-            'url',
-            'userName',
-            'password',
-        );
+        $paramList = [
+            'url'
+        ];
 
         foreach ($paramList as $name) {
             if (empty($this->$name)) {
@@ -156,10 +158,10 @@ class EspoApiClient
     {
         $headerSize = $this->getInfo(CURLINFO_HEADER_SIZE);
 
-        return array(
+        return [
             'header' => trim( substr($response, 0, $headerSize) ),
             'body' => substr($response, $headerSize),
-        );
+        ];
     }
 
     protected function normalizeHeader($header)
