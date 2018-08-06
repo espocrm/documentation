@@ -58,7 +58,7 @@ Out-of-the-box functions are listed below.
 #### ifThen
 `ifThen(CONDITION, CONSEQUENT)` If CONDITION is met, then do CONSEQUENT. If not -- do nothing.
 
-#### string\concatenate(
+#### string\concatenate
 `string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
 
 #### string\substring
