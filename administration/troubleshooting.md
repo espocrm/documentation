@@ -6,7 +6,7 @@ To find out the problem, you have to check error log files.
 
 #### EspoCRM error logs
 
-EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/logs/*.log` and contain some error information.
+EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/data/logs/*.log` and contain some error information.
 
 #### Apache error logs
 
