@@ -87,7 +87,7 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 3. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
 4. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.
 
-## Enabling debug mode
+## Enabling debug mode for a logger
 
 To enable debug mode for log, edit the file `data/config.php` and change the value:
 
