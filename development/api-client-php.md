@@ -83,12 +83,15 @@ class EspoApiClient
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
         curl_setopt($ch, CURLOPT_HEADER, true);
 
+        if ($method != 'GET') {
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
+        }
+
         if (isset($data)) {
             if ($method == 'GET') {
                 curl_setopt($ch, CURLOPT_URL, $url. '?' . http_build_query($data));
             } else {
                 $payload = json_encode($data);
-                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                     'Content-Type: application/json',
