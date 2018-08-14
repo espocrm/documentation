@@ -267,6 +267,9 @@ contains a list of additional massActionList
 
 ## iconClass
 
+Fant awesome class.
+Example: `"fas fa-chess-king"`
+
 ## color
 
 Entity color. (HEX)
@@ -274,7 +277,3 @@ Entity color. (HEX)
 ## kanbanViewMode
 
 The scope has kanban view mode on the list view
-
-"color": "#9c3030",
-    "kanbanViewMode": false,
-    "iconClass": "fas fa-chess-king"
