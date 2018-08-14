@@ -12,12 +12,12 @@ Metadata object of `Espo\Core\Utils\Metadata` class can be access from Container
 ```php
 $metadata->get('entityDefs.Account.fields.name.type')
 ```
-will return `'varchar'`.
+Returns `'varchar'`.
 
 ```php
 $metadata->get('entityDefs.Account.fields')
 ```
-will return an associative array of all fields.
+Returns an associative array of all fields.
 
 #### Frontend
 
