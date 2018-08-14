@@ -1,21 +1,22 @@
-#Server Configuration for EspoCRM
+# Server Configuration for EspoCRM
 
-EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.5 or greater and MySQL version 5.1 or greater.
+EspoCRM can be installed on the Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)), or IIS server with support PHP version 5.6 or greater and MySQL version 5.5.3 or greater.
 
-##Configuration Recommendations
+## Configuration Recommendations
 
-###PHP Requirements
+### PHP Requirements
 
-EspoCRM requires PHP 5.5 or greater, with the following extensions enabled:
+EspoCRM requires PHP 5.6 or greater, with the following extensions enabled:
 
-* [PDO](http://php.net/manual/en/book.pdo.php) – to access MySQL in PHP;
-* [JSON](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
-* [GD](http://php.net/manual/en/book.image.php) – to manipulate images;
-* [OpenSSL](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
-* [Zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
-* [IMAP](http://php.net/manual/en/book.imap.php) – to monitore mailboxes in EspoCRM;
+* [pdo](http://php.net/manual/en/book.pdo.php) – to access MySQL in PHP;
+* [json](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
+* [gd](http://php.net/manual/en/book.image.php) – to manipulate images;
+* [openssl](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
+* [zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
+* [imap](http://php.net/manual/en/book.imap.php) – to monitore mailboxes in EspoCRM;
 * [mbstring](http://php.net/manual/en/book.mbstring.php);
-* [cURL](http://php.net/manual/en/book.curl.php).
+* [curl](http://php.net/manual/en/book.curl.php) – for integrations;
+* [exif](http://php.net/manual/en/book.exif.php) – for a proper oriantion of uploaded images.
 
 It's also recommended to have [mailparse](https://pecl.php.net/package/mailparse) pecl extension installed. It's needed for smooth working of email fetching feature.
 
@@ -29,13 +30,22 @@ post_max_size = 50M
 upload_max_filesize = 50M
 ```
 
+### MySQL Requirements
 
-###MySQL Requirements
+EspoCRM supports MySQL version 5.5.3 or greater. These are no special peculiarities. All default settings are fine for EspoCRM.
 
-EspoCRM supports MySQL version 5.1 or greater.
-These are no special peculiarities. All default settings are good for EspoCRM.
+For better work it's recommended to use MySQL 5.6 of greater.
 
-##Required Permissions for Unix-based Systems
+### MySQL 8 Support
+
+MySQL 8.0.4 has changed a default authentication method to caching_sha2_password which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to mysql_native_password method. For a user it can be done with the query:
+
+```
+CREATE USER username@localhost identified with mysql_native_password by 'password';
+```
+where username is your MySQL user, password is your MySQL user password.
+
+## Required Permissions for Unix-based Systems
 
 The files and directories should have the following permissions:
 
@@ -51,7 +61,10 @@ find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
 find data custom -type d -exec chmod 775 {} + && find data custom -type f -exec chmod 664 {} +;
 ```
 
-All files should be owned and group-owned by the webserver process. It can be “www”, “www-data”, “apache”, etc.
+All files should be owned and group-owned by the webserver process. It can be “www-data”, “daemon”, “apache”, “www”, etc.  
+
+Note: On Bitnami Stack, files should be owned and group-owned by “daemon” user.  
+
 Note: On shared hosts, files should be owned and group-owned by your user account.
 
 To set the owner and group-owner, execute these commands in the terminal:
@@ -61,7 +74,7 @@ cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
 
-##Setup a crontab
+## Setup a crontab
 
 To setup a crontab on a UNIX system, take the following steps:
 
@@ -77,7 +90,7 @@ crontab -e -u WEBSERVER_USER
 WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
 * 4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
-##Configuration instructions based on your server:
+## Configuration instructions based on your server:
 
 * [Apache server configuration](apache-server-configuration.md).
 * [Nginx server configuration](nginx-server-configuration.md).

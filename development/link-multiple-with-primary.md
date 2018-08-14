@@ -1,13 +1,11 @@
 # Link Multiple field with Primary
 
-~For EspoCRM 3.6.0 and greater.~
-
 Sometimes you have `hasMany` relationship and need to have an ability to select primary record among related ones. As example, `Contacts` field of Case entity.
 
 >Need to create `contacts` linkMultiple field with a primary for our custom entity `Stock`. 
 >
 
-###Step 1
+### Step 1
 `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`
 ```json
 {
@@ -40,7 +38,7 @@ Sometimes you have `hasMany` relationship and need to have an ability to select 
 }
 ```
 
-###Step 2
+### Step 2
 `custom/Espo/Custom/Resources/metadata/entityDefs/Contact.json`
 ```json
 {
@@ -62,7 +60,7 @@ Sometimes you have `hasMany` relationship and need to have an ability to select 
 }
 ```
 
-###Step 3
+### Step 3
 `custom/Espo/Custom/Repositories/Stock.php`
 ```php
 <?php
@@ -106,7 +104,7 @@ class Stock extends \Espo\Core\ORM\Repositories\RDB
 }
 ```
 
-###Step 4
+### Step 4
 `client/custom/src/views/stock/fields/contacts.js`
 ```js
 Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
@@ -116,10 +114,10 @@ Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-wi
 });
 ```
 
-###Step 5
+### Step 5
 Run Rebuild
 
-###Step 6
+### Step 6
 Execute SQL query
 ```sql
 UPDATE stock

@@ -1,13 +1,13 @@
-#Ldap Authorization
+# Ldap Authorization
 
 In this guide, we will show how to configure LDAP authorization for EspoCRM. Let’s go.
 
-Go to your LDAP server and create a base DN for the EspoCRM users like
+Go to your LDAP server and create a base DN for the EspoCRM users like:
 ```
 cn=espo-users,ou=users,dc=espo,dc=local
 ```
 
-We have to create a system user which will have access to the users DN (“cn=espo-users,ou=users,dc=espo,dc=local”). So, the full DN for this system user will be
+We have to create a system user which will have access to the users DN (“cn=espo-users,ou=users,dc=espo,dc=local”). So, the full DN for this system user will be:
 ```
 cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 ```
@@ -15,7 +15,7 @@ Now, we can add LDAP user to access to EspoCRM. E.g. Espo Tester with the userna
 
 Then, go to EspoCRM  Authentication settings in the Administrator panel, select `LDAP` method and fill in the LDAP details:
 
-![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Host – LDAP IP or host name.
 * Port – connection port.
@@ -29,7 +29,7 @@ Then, go to EspoCRM  Authentication settings in the Administrator panel, select 
  * Username – the form `tester`.
  * Backslash – the form `COMPANY\tester`.
  * Principal – the form `tester@company.com`.
-* Bind Requires Dn – if need to format the username in the DN form.
+* Bind Requires Dn – if there is a need to format the username in the DN form.
 * Base Dn – the default base DN which is used for searching users.
 * User Login Filter – the filter which allows to restrict users who are able to use EspoCRM. E.g. `memberOf=cn=espoGroup,cn=espo-users,ou=users,dc=espo,dc=local`.
 * Account Domain Name – The domain which is used for authorization the LDAP server.
@@ -45,7 +45,7 @@ Then, go to EspoCRM  Authentication settings in the Administrator panel, select 
 
 Now, go to the login page and enter user credentials.
 
-![2](../_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
 
 User has been authenticated and automatically created in the EspoCRM.
 
@@ -53,7 +53,7 @@ User has been authenticated and automatically created in the EspoCRM.
 * [Active Directory server](ldap-authorization-for-ad.md)
 * [OpenLDAP server](ldap-authorization-for-openldap.md)
 
-More information about configuring LDAP you can read on the [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/) page, as EspoCRM uses this library.
+You can read more information about configuring LDAP on the [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/) page, as EspoCRM uses this library.
 
 
 

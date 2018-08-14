@@ -1,6 +1,8 @@
 # Custom Views
 
-EspoCRM framework provides flexible abilities to define custom views for certail entity types. They must be defined it `clientDefs` category of metadata.
+## Record Views
+
+EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined it `clientDefs` category of metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
@@ -25,17 +27,20 @@ Record/Detail view contains all panels with fields, relations and other data you
 
 ```javascript
 Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
-
-  template: 'custom:your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
   
   return Dep.extend({
+    template: 'custom:views/your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
+    middleView: 'custom:views/your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
+    sideView: 'custom:views/your-entity-type/record/detail-side',     // Here is your custom view. Omit if you don't need it.
+    bottomView: 'custom:views/your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
+    
     setup: function () {
       Dep.prototype.setup.call(this);
       
       this.hideField('someField');
       this.showField('someField');
       
-      // Custom initalization logic here. Like binding listening to model changes.
+      // Custom initialization logic here. Like binding listening to model changes.
       this.listenTo(this.model, 'change:myField', function () {
         this.model.set('anotherField', this.model.get('myField') + ' Hello');
          
@@ -55,13 +60,17 @@ Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail'
     afterRender: function () {
       Dep.prototype.afterRender.call(this);
       
-      // Custom code to be invoked right after rendering, when DOM is avaiable.
+      // Custom code to be invoked right after rendering, when DOM is available.
       this.$el.find('label[data-name="myField"]').addClass('hidden');
     }
   });
 });
 
 ```
+
+You are able to create a custom template with the following path:
+`client/custom/res/templates/your-entity-type/record/detail.tpl`
+
 
 
 `client/custom/src/views/your-entity-type/detail.js`
@@ -72,7 +81,7 @@ Detail view contains Record/Detail view and Header.
 `client/custom/src/views/your-entity-type/edit.js`
 `client/custom/src/views/your-entity-type/record/edit.js`
 
-The same as detail but is used when record is being created or edied not in inline-edit mode.
+The same as detail but it is used when record is being created or edited not in inline-edit mode.
 
 
 `client/custom/src/views/your-entity-type/list.js`
@@ -85,7 +94,7 @@ List view contains Record/List view, Header and Search Form View.
 List/Record view contains rows of records.
 
 
-It worths to mention that you need to inherit your view class from specific class for your entity if one already exists.
+It is worth being mentioned that you need to inherit your view class from specific class for your entity if one already exists.
 
 ```javascript
 Espo.define('custom:views/email/record/detail', 'views/email/record/detail', function (Dep) {
@@ -93,5 +102,21 @@ Espo.define('custom:views/email/record/detail', 'views/email/record/detail', fun
 });
 ```
 
+## Field Views
 
+Custom views for specific fields should be specified in entityDefs section of metadata.
+
+`custom/Espo/Custom/Resources/metadata/entityDefs/YourEntityType.json`
+
+
+
+```json
+{
+  "fields": {
+    "yourFieldName": {
+      "view": "custom:views/your-entity-type/fields/your-field-name"
+    }  
+  }
+}
+```
 

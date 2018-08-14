@@ -1,7 +1,7 @@
 # REST API
 
 EspoCRM is a single page application so a frontend uses REST API to connect with a backend. 
-All operations you perform using UI you can implement via API calls using your programing language. 
+All operations you perform using UI, you can implement via API calls using your programing language. 
 You can learn how API works if you trace what's going in the network tab in your browser console.
 
 Most of api functions return JSON. POST, PATCH calls usually need some JSON data in payload.
@@ -10,6 +10,8 @@ Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in 
 
 `GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
+It's recommended to create a separate user with restricted rights and use this user for API calls.
+
 ## Authentication
 
 EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
@@ -17,14 +19,14 @@ EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_acces
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's more better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+It's better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
 ```
 "Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
 ```
 
-1. Obtain access token by `GET App/user` request with username and password passed in `Espo-Authorization` header.
+1. Obtain an access token by `GET App/user` request with the username and password passed in `Espo-Authorization` header.
 2. Use this token instead of password in `Espo-Authorization` header for all further request.
-3. If request return 403 error that means erither username/password is wrong or token is not valid anymore.
+3. If the request returns 401 error that means either username/password is wrong or token is not valid anymore.
 
 #### Authentication Token / User Specific Data
 
@@ -218,6 +220,11 @@ Get parameters:
 #### Unfollow record
 
 `DELETE {entityType}/{id}/subscription`
+
+## Client Implementation
+
+- [Implementation in PHP](api-client-php.md)
+- [Implementation in Python](api-client-python.md)
 
 
 

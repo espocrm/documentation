@@ -37,4 +37,4 @@ That means that _nextStep_ field will be hidden by default and shown if stage eq
 
 The list of available actions: `show`, `hide`, `setRequired`, `setNotRequired`.
 
-There is also ability to hide/show panels. Specify panel names in `panels` attribute the same way as `fields`.
+There is also ability to hide/show panels. Specify panel names in `panels`, attribute the same way as `fields`.

@@ -16,13 +16,15 @@ Choose needed sorting at _List Order_ field.
 
 At _Filters_ section you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
 
-_Runtime Filters_ allows you to specify different filters before you run the report.
+_Runtime Filters_ allow you to specify different filters before you run the report.
 
-You can __export__ list report results in csv format. This format can be opened by various application like Excel, Calc.
+You can __export__ list report results to excel and csv formats.
 
 ## Grid Reports
 
 Grid reports result summarized values grouped by specified fields. These reports can be displayed as a chart.
+
+![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
 To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
 
@@ -38,14 +40,87 @@ _Runtime Filters_ allows you to specify different filters before you run the rep
 
 Grid report allows displaying results in a chart form. There are following _chart types_: Bar (Horizontal), Bar (Vertical), Pie, Line.
 
-## Displaying on dashboard
+It's possible to __export__ grid report results to excel and csv formats.
 
-You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet's options.
+## Filters
 
-## Email Sending
+### Field filter
+
+Simple to use type of filters. You can also pick fields of target entity as well as related entities.
+
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
+
+### OR group
+
+OR means that at least one condition under the group must be met.
+
+![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
+
+### AND group
+
+AND means that all conditions under the group must be met.
+
+### NOT group
+
+Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
+
+![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
+
+### Complex Expression
+
+For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
+
+Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
+
+Note: Functions intended to interact with entity record will not work here because the formula is not applied to specific record.
+
+![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
+
+### Having group
+
+Having group provides an ability to filter with using aggregate functions COUNT, SUM, MAX, MIN, AVG.
+
+Some use cases:
+
+* List accounts having more than one opportunities. `COUNT / opportunities.id / Grater Than / 1`.
+* Grid report showing accounts grouped by industry where revenue is more than 1,000. `SUM / opportunities.amount / Greater Than / 1000`.
+
+Note: Compatible with EspoCRM versions 5.1.0 and greater.
+
+## Displaying on the dashboard
+
+You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
+
+It's possible to display only a total amount on the dashlet.
+
+## Email sending
 
 It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
 
 ## Syncing with Target Lists
 
 It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
+
+## Report Filters (list view filters based on reports)
+
+Compatible with EspoCRM 5.1.0 and greater.
+
+Administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have an access to the filter.
+
+Note: The layout, that is specified in the report, is not applied to the list view when the filter is selected.
+
+## Report Panels (detail view panels showing report results)
+
+Compatible with EspoCRM 5.1.0 and greater.
+
+Administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have an access to the panel.
+
+Both Grid and List reports can be used.
+
+It's possible to display only a total amount on the report panel.
+
+Order of side panels can be customized at Layout Manager > Side Panels (Detail).
+
+Order of bottom panels is specified in the Report Panel record. It's possible to place the panel before Stream panel, before relationship panels or at the very bottom.
+
+The report panel shows results related to the record is viewed. The first found relationship is used. If the report has an appropriate runtime filter then it will be used to restrict results. The runtime filter must be a field of link, link-multiple or link-parent type.

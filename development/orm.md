@@ -1,4 +1,4 @@
-# ORM (How to Manage Entities)
+# ORM, How to manage entities and perform queries
 
 EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object. EntityManager is available in record Services by method `#getEntityManager()`.
 
@@ -66,19 +66,43 @@ $entityManager->getRepository('Account')->remove($account);
 
 #### Find
 ```php
-$accountList = $entityManager->getRepository('Account')->where(array(
-    'type' => 'Customer',    
-))->find();
+$accountList = $entityManager->getRepository('Account')->where([
+    'type' => 'Customer'
+])->find();
 ```
+
+Descending order:
+
+```php
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', true)->find();
+```
+
+Ascending order:
+```php
+$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt')->find();
+```
+
+or:
 ```php
 $accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
 ```
 
+Complex order:
+```php
+$accountList = $entityManager->getRepository('Account')->order([['createdAt', 'ASC'], ['name', 'DESC']])->find();
+```
+
+Ordering by list:
+
+```php
+$opportunityList = $entityManager->getRepository('Opportunity')->order('LIST:stage:Prospectring,Qualification,Proposal')->find();
+```
+
 #### Find the first one
 ```php
-$account = $entityManager->getRepository('Account')->where(array(
-    'type' => 'Customer',    
-))->findOne();
+$account = $entityManager->getRepository('Account')->where([
+    'type' => 'Customer',   
+])->findOne();
 ```
 
 #### Find related
@@ -104,3 +128,111 @@ or
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
 ```
 
+### Select Query Parameters
+
+#### Where clause
+
+##### Comparison operators
+
+Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'amount>=' => 100
+])->find();
+```
+
+##### IN and NOT IN operators
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'stage' => ['Closed Lost', 'Closed Won']
+ ])->find();
+```
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'stage!=' => ['Closed Lost', 'Closed Won']
+])->find();
+```
+
+##### LIKE operators
+
+Supported  operators: 
+* `*` - LIKE,
+* `!*` -- NOT LIKE.
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  'name*' => '%service%'
+])->find();
+```
+
+##### OR, AND operators
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->where([
+  [
+    'OR' => [
+      ['stage' => 'Closed Won'],
+      ['stage' => 'Closed Lost']
+    ],
+    'AND' => [
+      'amountConverted>' => 100,
+      'amountConverted<=' => 999
+    ]
+  ]
+])->findOne();
+```
+
+#### Distinct
+
+```
+$opportunityList = $entityManager->getRepository('Opportunity')->distinct()->where(...)->find();
+```
+
+#### Join
+
+```
+$contactList = $entityManager->getRepository('Contact')->distinct()->join('opportunities')->where([
+  'opportunities.stage' => 'Closed Won'
+])->find();
+```
+
+```
+$contactList = $entityManager->getRepository('Contact')
+->distinct()->leftJoin('opportunities')->where(...)->find();
+```
+
+```
+$contactList = $entityManager->getRepository('Contact')
+->distinct()
+->join([['opportunities', 'aliasForJoinedTable']])
+->where([
+  'aliasForJoinedTable.stage' => 'Closed Won'
+])->find();
+```
+
+#### Group By
+
+```
+$selectParams = [
+  'select' => ['MONTH:closeDate', 'SUM:amountConverted']
+  'groupBy' => ['MONTH:closeDate'],
+  'whereClause' => [
+    'stage' => 'Closed Won'
+  ],
+  'orderBy' => 1 // ordering by the first column
+];
+
+// applying left joins for currency conversion
+$this->getEntityManager()->getRepository('Opportunity')->handleSelectParams($selectParams);
+
+$pdo = $this->getEntityManager()->getPDO();
+$sql = $this->getEntityManager()->getQuery()->createSelectQuery('Opportunity', $selectParams);
+$sth = $pdo->prepare($sql);
+$sth->execute();
+
+// results
+$rowList = $sth->fetchAll(\PDO::FETCH_ASSOC); 
+```
