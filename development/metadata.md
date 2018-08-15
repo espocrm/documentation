@@ -19,6 +19,7 @@ $metadata->get(['entityDefs', 'Account', 'fields'])
 ```
 will return an associative array with definitions of all fields.
 
+
 #### Frontend
 
 Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as backend's one.
