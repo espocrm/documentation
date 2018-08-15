@@ -49,19 +49,45 @@ Allows to hide a search panel on the list view.
 
 ## views
 
-- list - list view. By default - `"views/report-filter/list"`;
-- detail - detail view. By default - `"views/report-filter/list"`;
-- list - list view. By default - `"views/report-filter/list"`;
+list, detail, edit view classes
 
+Example:
+```
+{
+    "list": "custom:views/test/list",
+    "detail": "custom:views/test/detail"
+}
 
-(list|edit|detail)
+```
+
 
 ## recordViews
 
+Record view classes. list, detail, edit, detailSmall, editSmall, kanban.
+
+Example:
+```
+{
+    "list": "custom:views/test/record/list"
+}
+
+```
+
 ## modalViews
 
+Modal view classes.
+
+Example:
+```
+{
+    "detail": "custom:views/test/modal/detail",
+    "select": "custom:views/test/modal/select-records"
+}
+```
+
 ## filterList
-Contains a list of filters
+
+Contains a list of primary (preset) filters.
 
 ## boolFilterList
 
