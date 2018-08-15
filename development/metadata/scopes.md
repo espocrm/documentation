@@ -1,8 +1,8 @@
-# Scope Definition
+# Scope definition
 
-Сontains scope definition. All options are optional. But this file is required, if you have any API call for this scope.
+Path: `/metadata/scopes/{ScopeName}.json`
 
-`{PATH}/Resources/metadata/scopes/{EntityName}.json`
+Сontains scope definition. Parameters are optional. Scope can define an entity type.
 
 ## List of options:
 
