@@ -1,6 +1,11 @@
 # Import
 
-Import is accessible only for admin users. Administration > Import. You are able to import only from CSV files.
+Provides the ability to import records from CSV files.
+
+Note: Before version 5.4.0 Import was available only for admin users.
+
+Administrator can access import at Administration > Import. By default regular users don't have an access. It can be granted with ACL roles. Administrator also can add the Import tab at Administration > User Interface > Tab List. 
+
 
 ## Step 1
 
