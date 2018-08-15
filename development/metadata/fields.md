@@ -1,6 +1,6 @@
 # Field-type definition
 
-Path: `metadata/fields/{field-type}.json`
+Path: `metadata/fields/{fieldType}.json`
 
 ### notMergeable
 
