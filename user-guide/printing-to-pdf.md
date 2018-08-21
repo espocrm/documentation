@@ -94,4 +94,4 @@ Example, printing contact names of an opportinity:
 
 ### Charset issues
 
-If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya font'. For central european languages try 'DejaVu Sans'. Available since 5.4.0 version. 
+If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font. For central european languages try 'DejaVu Sans'. Available since 5.4.0 version. 
