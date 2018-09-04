@@ -27,7 +27,11 @@ Following stages are available by default:
 * Closed Won;
 * Closed Lost.
 
-Administrator can define custom stages depending on business flow of the company. But it's not recommended to remove 'Closed Won' stage since it's used to calculate a revenue.
+Administrator can define custom stages depending on business flow of the company: Administration > Entity Manager > Opportunity > Fields > Stage. It's also possible to define custom probabilities for each stage.
+
+## Currency 
+
+Administrator can define available currencies and their rates at Administration > Currency. It's possible to convert currency of existing opportunities from the list view: select needed records and then click Convert Currency in the Actions dropdown.
 
 ## Sales analytics
 
@@ -51,3 +55,4 @@ By utilizing [Reports tool](https://github.com/espocrm/documentation/blob/master
 This report will show revenue forecast based on probabilities of opportunities.
 
 Users, who have an access to this report, will be able to add it on their dashboards.
+
