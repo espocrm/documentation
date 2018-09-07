@@ -2,7 +2,7 @@
 
 ## Lead Capture
 
-Note: Available for 5.4.0 version.
+Note: Available since 5.4.0 version.
 
 By utilizing Lead Capture feature administrator can create an entry point for capturing leads through API. Create an entry point at Administration > Lead Capture.
 
