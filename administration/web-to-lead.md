@@ -39,7 +39,7 @@ require_once('EspoApiClient.php');
 
 $client = new EspoApiClient('https://URL_OF_YOUR_CRM');
 
-$apiKey = 'f1b04885f28ee1a6d55dd203daed68f9';
+$apiKey = 'f1b04885f28ee1a6d55dd203daed68f9'; // specify your API key here
 
 $formData = [
     'firstName' => $_POST['firstName'],
