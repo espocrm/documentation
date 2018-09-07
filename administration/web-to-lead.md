@@ -54,3 +54,9 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 ### Python
 
 [API client in Python](../development/api-client-python.md)
+
+## Lead assignment distribution
+
+By utilizing [Workflows](workflows.md) or [BPM tool](bpm.md) you can create an assignment rule that will distribute leads among team users. There are Round-Robin and Least-Busy rules available.
+
+To apply the rule for only leads coming through the entry point you can use a condition checking Campaign field.
