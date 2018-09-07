@@ -6,20 +6,20 @@ By utilizing Lead Capture feature administrator can create an entry point for ca
 
 * Subscribe to Target List - Created lead will be added to a specified target list;
 * Subscribe Contact if exists - If a contact with the same email exists then contact will be added to the target list;
-* Target Team - A team to assign created lead to;
+* Target Team - A team to assign a created lead to;
 * Campaign - Statystics will be avilable in a campaign log;
 * Payload Fields - Select what fields need to be passsed.
 
 ### Double Opt-in (confirmed opt-in)
 
-If double opt-in is enabled then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. An email will be send automatically once data is received through API.
+If double opt-in is enabled then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. The email will be send automatically once data is received through API.
 
 Create Email Template that will be used for a double opt-in. You can use following placeholders in a template body:
 
 * `{optInUrl}` - confirmation URL;
 * `{optInLink}` - confirmation link.
 
-A confitmation link will be added automatically if you didn't insert a placeholder in the email template.
+A confirmation link will be added automatically if you didn't insert a placeholder in the email template.
 
 ## Posting API request
 
