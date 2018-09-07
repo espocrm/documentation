@@ -24,6 +24,7 @@
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
   * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
 * Misc
+  * [Web-to-Lead](https://github.com/espocrm/documentation/blob/master/administration/web-to-lead.md)
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
   * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
