@@ -27,6 +27,11 @@ A confirmation link will be added automatically if you didn't insert a placehold
 
 Your web site need to make a POST request to send form data to you CRM. A request doesn't require any authorization. You just need to use a specific URL with an API Key. Infomation about request is available in the side panel on Lead Capture detail view.
 
+Required headers:
+
+* Content-Type: application/json
+* Accept: application/json
+
 
 ### PHP
 
