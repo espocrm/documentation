@@ -35,7 +35,7 @@ Required headers:
 
 ### PHP
 
-[API client in PHP](../development/api-client-php.md)
+You can use [API client for PHP](../development/api-client-php.md).
 
 Example:
 
