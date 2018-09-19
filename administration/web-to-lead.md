@@ -62,7 +62,8 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 
 [API client in Python](../development/api-client-python.md)
 
-### Requests sent directly by a web browser
+### Directly by a web browser
+
 
 Expample:
 
@@ -119,6 +120,8 @@ Expample:
     });
 </script>
 ```
+
+'Access-Control-Allow-Origin' header can be set in data/config.php with the parameter `leadCaptureAllowOrigin`.
 
 ## Lead assignment distribution
 
