@@ -97,7 +97,7 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
             emailAddress: webToLeadFormElement.emailAddress.value
         };
 
-        var url = 'http://172.20.0.5/espo/api/v1/LeadCapture/75654b3f555a0f9f3bda4dc0f96bc242';
+        var url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url, true);
