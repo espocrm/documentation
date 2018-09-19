@@ -122,7 +122,7 @@ Expample:
 </script>
 ```
 
-'Access-Control-Allow-Origin' header can be set in data/config.php with the parameter `leadCaptureAllowOrigin`.
+'Access-Control-Allow-Origin' header can be set in data/config.php with the parameter `leadCaptureAllowOrigin`. By default `*` value is used.
 
 ## Lead assignment distribution
 
