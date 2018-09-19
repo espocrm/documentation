@@ -62,6 +62,62 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 
 [API client in Python](../development/api-client-python.md)
 
+### By a web browser
+
+```html
+<div id="web-to-lead-form-container">
+    <form id="web-to-lead-form">
+        <div>
+            <input type="text" name="firstName" placeholder="First Name">
+        </div>
+        <div>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+        </div>
+        <div>
+            <input type="email" name="emailAddress" placeholder="Email Address" required>
+        </div>
+        <div>
+            <button type="submit" name="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    var webToLeadFormElement = document.getElementById('web-to-lead-form');
+    var webToLeadFormIsSubmitted = false;
+
+    webToLeadFormElement.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (webToLeadFormIsSubmitted) return;
+        webToLeadFormIsSubmitted = true;
+        webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
+
+        var payloadData = {
+            firstName: webToLeadFormElement.firstName.value,
+            lastName: webToLeadFormElement.lastName.value,
+            emailAddress: webToLeadFormElement.emailAddress.value
+        };
+
+        var url = 'http://172.20.0.5/espo/api/v1/LeadCapture/75654b3f555a0f9f3bda4dc0f96bc242';
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.onreadystatechange = function() {
+            if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                var containerElement  = document.getElementById('web-to-lead-form-container');
+                containerElement.innerHTML = 'Sent';
+            }
+        }
+        xhr.onerror = function() {
+            webToLeadFormElement.submit.removeAttribute('disabled');
+            webToLeadFormIsSubmitted = false;
+        }
+        xhr.send(JSON.stringify(payloadData));
+    });
+</script>
+```
+
 ## Lead assignment distribution
 
 By utilizing [Workflows](workflows.md) or [BPM tool](bpm.md) you can create an assignment rule that will distribute leads among team users. There are Round-Robin and Least-Busy rules available.
