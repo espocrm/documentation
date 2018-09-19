@@ -109,7 +109,7 @@ Expample:
         xhr.setRequestHeader('Accept', 'application/json');
         xhr.onreadystatechange = function() {
             if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                var containerElement  = document.getElementById('web-to-lead-form-container');
+                var containerElement = document.getElementById('web-to-lead-form-container');
                 containerElement.innerHTML = 'Sent';
             }
         }
