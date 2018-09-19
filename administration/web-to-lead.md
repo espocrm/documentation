@@ -62,7 +62,9 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 
 [API client in Python](../development/api-client-python.md)
 
-### By a web browser
+### Requests sent directly by a web browser
+
+Expample:
 
 ```html
 <div id="web-to-lead-form-container">
