@@ -64,6 +64,7 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 
 ### Directly by a web browser
 
+Note: Works since version 5.4.4.
 
 Expample:
 
