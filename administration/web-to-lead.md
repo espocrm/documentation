@@ -101,7 +101,8 @@ Expample:
             emailAddress: webToLeadFormElement.emailAddress.value
         };
 
-        var url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
+        // Needed url can be found on Lead Capture detail view.
+        var url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY'; 
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url, true);
