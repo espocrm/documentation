@@ -227,6 +227,10 @@ Example:
 #### env\userAttribute
 `env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
 
+Example:
+
+`env\userAttribute('id')` - ID of the current user.
+
 #### list
 `list(VALUE-1, ... VALUE-N)` Returns array. (since version 4.7.0)
 
