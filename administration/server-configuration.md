@@ -58,7 +58,8 @@ To set the permissions, execute these commands in the terminal:
 ```
 cd <PATH-TO-ESPOCRM-DIRECTORY>
 find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
-find data custom -type d -exec chmod 775 {} + && find data custom -type f -exec chmod 664 {} +;
+find data custom client/custom -type d -exec chmod 775 {} + && find data custom client/custom -type f -exec chmod 664 {} +;
+chmod 775 application/Espo/Modules client/modules;
 ```
 
 All files should be owned and group-owned by the webserver process. It can be “www-data”, “daemon”, “apache”, “www”, etc.  
