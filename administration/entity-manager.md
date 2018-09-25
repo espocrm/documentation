@@ -37,7 +37,7 @@ If you click `Edit` link on a certain entity you will be able to change some par
 By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones. The following types of fields are available in Entity Manager:
 
 * Address - address with street, city, state, postal code and country;
-* Array - list of values, with the ability to select multiple values (not a good option if you need to search by this field); users can add their own values if options are not specified.
+* Array - list of values, with the ability to select multiple values; users can add their own values if options are not specified.
 * Attachment Multiple - multiple file attachments;
 * Auto-increment - read only generated number;
 * Boolean - checkbox, true or false;
@@ -51,7 +51,7 @@ By clicking `Fields` link you will be moved to a separate page. There you will b
 * Image - uploading image file with a preview;
 * Integer - whole number;
 * Number - auto-incrementing number of string type with a possible prefix and a specific length;
-* Multi-enum - list of values, with the ability to select multiple values (not a good option if you need to search by this field), similar to Array but nicer.
+* Multi-enum - list of values, with the ability to select multiple values, similar to Array but nicer. Users can add their own values if options are not specified.
 * Text - text area, for long multiline texts;
 * Url - for links;
 * Varchar - short text;
