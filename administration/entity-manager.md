@@ -36,26 +36,98 @@ If you click `Edit` link on a certain entity you will be able to change some par
 
 By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones. The following types of fields are available in Entity Manager:
 
-* Address - address with street, city, state, postal code and country;
-* Array - list of values, with the ability to select multiple values; users can add their own values if options are not specified.
-* Attachment Multiple - multiple file attachments;
-* Auto-increment - read only generated number;
-* Boolean - checkbox, true or false;
-* Currency - for currency values;
-* Date;
-* DateTime;
-* Enum - selectbox, with the ability to select only one value;
-* File - uploading one file;
-* Float - number with a decimal part;
-* Foreign - a field of related entity;
-* Image - uploading image file with a preview;
-* Integer - whole number;
-* Number - auto-incrementing number of string type with a possible prefix and a specific length;
-* Multi-enum - list of values, with the ability to select multiple values, similar to Array but nicer. Users can add their own values if options are not specified.
-* Text - text area, for long multiline texts;
-* Url - for links;
-* Varchar - short text;
-* Wysiwyg - similar to Text field, with the ability to format text.
+### Address
+
+Address with street, city, state, postal code and country.
+
+### Array
+
+List of values, with the ability to select multiple values; users can add their own values if options are not specified.
+
+### Attachment Multiple
+
+Multiple file attachments.
+
+
+### Auto-increment
+
+Read-only generated number.
+
+
+### Boolean
+
+Ccheckbox, true or false.
+
+
+### Currency
+
+For currency values.
+
+### Date
+
+Date w/o a time part.
+
+
+### DateTime.
+
+Date with a time part.
+
+### Enum
+
+Selectbox, with the ability to select only one value.
+
+
+### File
+
+Uploading one file.
+
+
+### Float 
+
+Number with a decimal part.
+
+
+### Foreign
+
+Displays a value of a specific field of a related record. It's possible to search by foreing fields. Read-only.
+
+
+### Image
+
+Uploading image file with a preview.
+
+
+### Integer
+
+A whole number.
+
+
+### Number
+
+An auto-incrementing number of string type with a possible prefix and a specific length.
+
+
+### Multi-enum
+
+A list of values, with the ability to select multiple values, similar to Array but nicer. Users can add their own values if options are not specified.
+
+
+### Text
+
+Text area, for long multiline texts.
+
+### Url
+
+For links.
+
+
+### Varchar
+
+A single-line text.
+
+### Wysiwyg
+
+Similar to Text field with the ability to format text.
 
 Parameters:
 * Required - whether filling in of the field is mandatory.
