@@ -99,9 +99,9 @@ Quote PDF can be send in email as an attachment. Open quote record, click dropdo
 
 ## Automatic numbering
 
-You can create a Number field via Entity Manager for Quote entity type. Administration > Entity Manager > Quote > Fields > Add Filed > Number. Then you need to place it in on detail view using Layout Manager.
+By default a number field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Quote > Fields > number. It's also possible to make the number field read-only.
 
-The value will be incremented by every new quote. There is an ability to specify the next number as well as prefix.
+The next number, a prefix can be configured at Administration > Entity Manager > Quote > Fields > numberA.
 
 ## Default tax
 
