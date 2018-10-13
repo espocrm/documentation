@@ -80,7 +80,7 @@ Gateways are displayed as diamonds.
 
 Can diverge or converge flows.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
+In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign. There must be at least two outgoing flows to be able to specify diverging criteria.
 
 In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
 
@@ -92,7 +92,7 @@ In case of converging it just directs the flow to the outgoing element. It doesn
 
 Can diverge or converge flows.
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
+In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign. There must be at least two outgoing flows to be able to specify diverging criteria.
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
 
