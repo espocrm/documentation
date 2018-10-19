@@ -20,11 +20,11 @@ By default (if there are no any roles applied or role has not-set permissions) u
 
 ## Actions
 
-* Create - The ability to create records.
-* Read - The ability to view records (on list views and detail view).
-* Edit - The ability to update records.
-* Delete - The ability to remove records.
-* Stream - The ability to see a record's stream.
+* Create – The ability to create records.
+* Read – The ability to view records (on list views and detail view).
+* Edit – The ability to update records.
+* Delete – The ability to remove records.
+* Stream – The ability to see a record's stream.
 
 ## Example
 
@@ -34,20 +34,20 @@ For example, user belongs to team ‘Sales’. That team has single role ‘Sale
 
 Lead:
 ```
-create - yes
+create – yes
 read – team
 edit – own
 delete – no
-stream - team
+stream – team
 ```
 
 Opportunity:
 ```
-create - yes
+create – yes
 read – team
 edit – own
 delete – no
-stream - team
+stream – team
 ```
 
 Users will be able to read only those leads and opportunities which belong to ‘Sales Department’ team (‘Teams’ field).
@@ -69,11 +69,11 @@ stream - team
 
 Opportunity:
 ```
-create - yes
+create – yes
 read – team
 edit – team
 delete – team
-stream - team
+stream – team
 ```
 
 Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
