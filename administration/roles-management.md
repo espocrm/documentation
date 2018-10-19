@@ -20,11 +20,11 @@ By default (if there are no any roles applied or role has not-set permissions) u
 
 ## Actions
 
-* Create – The ability to create records.
-* Read – The ability to view records (on list views and detail view).
-* Edit – The ability to update records.
-* Delete – The ability to remove records.
-* Stream – The ability to see a record's stream.
+* Create – the ability to create records;
+* Read – the ability to view records (on list views and detail view);
+* Edit – the ability to update records;
+* Delete – the ability to remove records;
+* Stream – the ability to see a record's stream.
 
 ## Example
 
