@@ -12,6 +12,20 @@ It's possible to see what permissions are applied to a certain user by clicking 
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
 
+By default users can delete self-assigned records that they have created during a specific period of time. There is an ability to disable this ability at Administration > Settings > Allow to remove created records.
+
+## Permissions by Default 
+
+By default (if there are no any roles applied or role has not-set permissions) users have a full access. There is an ability to restrict an access applied by default by enabling 'ACL Strict Mode' at Administration > Settings.
+
+## Actions
+
+* Create - The ability to create records.
+* Read - The ability to view records (on list views and detail view).
+* Edit - The ability to update records.
+* Delete - The ability to remove records.
+* Stream - The ability to see a record's stream.
+
 ## Example
 
 For example, user belongs to team ‘Sales’. That team has single role ‘Salesman’. So, all users from this team will obtain ‘Salesman’ role.
@@ -87,12 +101,6 @@ Defines an access to group email accounts, an ability to send emails from group 
 ### Export Permission
 
 Defines whether user have an ability to export records. (since version 4.9.0)
-
-## Permissions by Default 
-
-By default (if there are no any applied) users can read and edit all records. But they can't delete any records except those they have created and they are assigned to at the same time.
-
-There is an ability to restrict an access applied by default by enabling 'ACL Strict Mode' at Administration > Settings.
 
 ## Field Level Security
 
