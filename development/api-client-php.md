@@ -92,10 +92,9 @@ class EspoApiClient
             curl_setopt($ch, CURLOPT_USERPWD, $this->userName.':'.$this->password);
             curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
         } else if ($this->apiKey && $this->secretKey) {
-            if ($this->secretKey) {
-                $keyHash = hash_hmac('sha256', $this->apiKey, $this->secretKey);
-                $headerList[] = 'X-Api-Key: ' . $keyHash;
-            }
+            $authPart = base64_encode($this->apiKey . ':' . hash_hmac('sha256', '', $this->secretKey, true));
+            $authHeader = 'X-Hmac-Authorization: ' .  $authPart;
+            $headerList[] = $authHeader;
         }
 
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -205,7 +204,6 @@ class EspoApiClient
         return $headerArray;
     }
 }
-
 
 ```
 
