@@ -9,9 +9,9 @@ class EspoApiClient
 {
     private $url;
 
-    private $userName;
+    private $userName = null;
 
-    private $password;
+    private $password = null;
 
     protected $urlPath = '/api/v1/';
 
@@ -21,16 +21,18 @@ class EspoApiClient
 
     private $lastResponse;
 
+    private $apiKey = null;
+
+    private $secretKey = null;
+
     public function __construct($url = null, $userName = null, $password = null)
     {
         if (isset($url)) {
             $this->url = $url;
         }
-
         if (isset($userName)) {
             $this->userName = $userName;
         }
-
         if (isset($password)) {
             $this->password = $password;
         }
@@ -49,6 +51,16 @@ class EspoApiClient
     public function setPassword($password)
     {
         $this->password = $password;
+    }
+
+    public function setApiKey($apiKey)
+    {
+        $this->apiKey = $apiKey;
+    }
+
+    public function setSecretKey($secretKey)
+    {
+        $this->secretKey = $secretKey;
     }
 
     /**
@@ -73,11 +85,19 @@ class EspoApiClient
 
         $ch = curl_init($url);
 
+        $headerList = [];
+
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        if ($this->userName) {
+        if ($this->userName && $this->password) {
             curl_setopt($ch, CURLOPT_USERPWD, $this->userName.':'.$this->password);
             curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        } else if ($this->apiKey && $this->secretKey) {
+            if ($this->secretKey) {
+                $keyHash = hash_hmac('sha256', $this->apiKey, $this->secretKey);
+                $headerList[] = 'X-Api-Key: ' . $keyHash;
+            }
         }
+
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
@@ -93,11 +113,13 @@ class EspoApiClient
             } else {
                 $payload = json_encode($data);
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                    'Content-Type: application/json',
-                    'Content-Length: ' . strlen($payload))
-                );
+                $headerList[] = 'Content-Type: application/json';
+                $headerList[] = 'Content-Length: ' . strlen($payload);
             }
+        }
+
+        if (!empty($headerList)) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headerList);
         }
 
         $this->lastResponse = curl_exec($ch);
@@ -184,14 +206,24 @@ class EspoApiClient
     }
 }
 
+
 ```
 
 ## Usage
 
 ```php
 $client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
+
 $response = $client->request('POST', 'Lead', [
     'firstName' => 'Test',
     'lastName' => 'Hello'
 ]);
+```
+
+### Auth by API Key and Secret Key
+
+```php
+$client = new EspoApiClient('https://your-espocrm-site');
+$client->setApiKey('API_KEY');
+$client->setSecretKey('SECRET_KEY');
 ```
