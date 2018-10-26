@@ -96,6 +96,9 @@ class EspoApiClient
             $authPart = base64_encode($this->apiKey . ':' . hash_hmac('sha256', $string, $this->secretKey, true));
             $authHeader = 'X-Hmac-Authorization: ' .  $authPart;
             $headerList[] = $authHeader;
+        } else if ($this->apiKey) {
+            $authHeader = 'X-Api-Key: ' .  $this->apiKey;
+            $headerList[] = $authHeader;
         }
 
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -205,6 +208,7 @@ class EspoApiClient
         return $headerArray;
     }
 }
+
 
 ```
 
