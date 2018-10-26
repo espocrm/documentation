@@ -223,10 +223,23 @@ $response = $client->request('POST', 'Lead', [
 ]);
 ```
 
-### Auth by API Key and Secret Key
+### Api Key Auth
+
+```php
+$client = new EspoApiClient('https://your-espocrm-site');
+$client->setApiKey('API_KEY');
+```
+
+### HMAC Auth
 
 ```php
 $client = new EspoApiClient('https://your-espocrm-site');
 $client->setApiKey('API_KEY');
 $client->setSecretKey('SECRET_KEY');
+```
+
+### Auth with Username and Password
+
+```php
+$client = new EspoApiClient('https://your-espocrm-site', 'username', 'password');
 ```
