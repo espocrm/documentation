@@ -215,7 +215,7 @@ class EspoApiClient
 ## Usage
 
 ```php
-$client = new EspoApiClient('https://your-espocrm-site', 'username', 'password');
+$client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
 
 $response = $client->request('POST', 'Lead', [
     'firstName' => 'Test',
@@ -241,5 +241,5 @@ $client->setSecretKey('SECRET_KEY');
 ### Auth with Username and Password
 
 ```php
-$client = new EspoApiClient('https://your-espocrm-site', 'username', 'password');
+$client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
 ```
