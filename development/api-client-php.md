@@ -129,8 +129,9 @@ class EspoApiClient
         $this->lastCh = $ch;
 
         $parsedResponse = $this->parseResponce($this->lastResponse);
+        $responseCode = $this->getResponseHttpCode();
 
-        if ($this->getResponseHttpCode() == 200 && !empty($parsedResponse['body'])) {
+        if ($responseCode == 200 && !empty($parsedResponse['body'])) {
             curl_close($ch);
             return json_decode($parsedResponse['body'], true);
         }
@@ -139,7 +140,7 @@ class EspoApiClient
         $errorMessage = !empty($header['X-Status-Reason']) ? $header['X-Status-Reason'] : 'EspoClient: Unknown Error';
 
         curl_close($ch);
-        throw new \Exception($errorMessage, $this->getResponseHttpCode());
+        throw new \Exception($errorMessage, $responseCode);
     }
 
     public function getResponseContentType()
