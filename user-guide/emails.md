@@ -76,3 +76,13 @@ You can use additional reserved placeholders in template body: {optOutUrl} and {
 <a href="{optOutUrl}">Unsubscribe</a>
 ```
 This is unsubscribe link for mass email.
+
+### Placeholders
+
+* `{today}` - today's date (version >= 5.5.0),
+* `{now}` - current date & time (version >= 5.5.0),
+* `{optOutUrl}` - opt-out url (only for mass email),
+* `{optOutLink}` - opt-out link (only for mass email),
+* `{optInUrl}` - opt-in url (only for lead capture confirm opt-in),
+* `{optInLink}` - opt-in link (only for lead capture confirm opt-in).
+
