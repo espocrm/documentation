@@ -51,7 +51,7 @@ Multiple file attachments.
 
 ### Auto-increment
 
-Read-only generated number.
+Read-only generated integer number.
 
 
 ### Boolean
