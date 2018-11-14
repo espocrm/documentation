@@ -18,4 +18,4 @@ Each Product record can belong to some Product Category. Product Categories are 
 
 Product Category is a separate entity type, hence an access can be controlled by ACL.
 
-To be able to search products in all sub-categories you need to switch to the expanded mode by clicking the small folder icon next to the root category.
+To be able to search products in all sub-categories you need to switch to the expanded mode from the context menu next to the root category.
