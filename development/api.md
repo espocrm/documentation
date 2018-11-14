@@ -14,7 +14,37 @@ It's recommended to create a separate user with restricted rights and use this u
 
 ## Authentication
 
-EspoCRM API uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
+### Authentication by Api Key
+
+Available since 5.5.0 version.
+
+The easiest method of authentication. You need to create API User (Administration > API Users) with Api Key authentication method. Apply needed role to the user to restrict or grand an access.
+
+Authentication header:
+
+`X-Api-Key: API_KEY_COPIED_FROM_THE_USER_DETAIL_VIEW`
+
+
+### HMAC Authentication
+
+Available since 5.5.0 version.
+
+The most secure method. You need to create API User (Administration > API Users) with HMAC authentication method. Apply needed role to the user to restrict or grand an access.
+
+Authentication header:
+
+```
+"X-Hmac-Authorization: " + base64Encode(apiKey  + ':' + hashHmacSha256(method + ' /' + uri , secretKey))
+```
+where
+
+* `method` - GET, POST, PUT, DELETE;
+* `uri` - request path, e.g. `Lead/action/convert`.
+
+
+### Basic Authentication
+
+For refular users EspoCRM uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
 
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
