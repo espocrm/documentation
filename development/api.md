@@ -128,10 +128,6 @@ Payload:
 
 #### Update Entity
 
-`PATCH {entityType}/{id}`
-
-or
-
 `PUT {entityType}/{id}`
 
 Payload: Object of entity attributes needed to be changed.
@@ -140,7 +136,7 @@ Returns attributes in JSON object.
 
 _Example_
 
-`PATCH Account/5564764442a6d024c`
+`PUT Account/5564764442a6d024c`
 
 Payload:
 ```
