@@ -18,4 +18,4 @@ Categories allow to group articles. One category can contain multiple sub-catego
 
 Knowledge Base Category is a separate entity type, hence an access can be controlled by ACL.
 
-To be able to search articles in all sub-categories, you need to switch to the expanded mode from the context menu next to the root category.
+To be able to search articles in all sub-categories, you need to switch to the expanded mode from in context menu next to the root category.
