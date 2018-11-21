@@ -83,12 +83,22 @@ Example:
 
 ### Link-multiple fields
 
-Available since 5.3.0 version.
+Since 5.5.0 it's possible to loop through link multiple collection.
+
+Example, printing contact names and roles of an opportinity:
+
+```
+{{#each contacts}}
+    Name: {{name}}, Role: {{opportunityRole}}
+{{/each}}
+```
+
+The following way is available since 5.3.0 version.
 
 Example, printing contact names of an opportinity:
 ```
 {{#each contactsIds}}
-{{var this ../contactsNames}}
+    {{var this ../contactsNames}}
 {{/each}}
 ```
 
