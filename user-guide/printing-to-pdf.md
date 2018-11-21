@@ -89,7 +89,9 @@ Example, printing contact names and roles of an opportunity:
 
 ```
 {{#each contacts}}
-    Name: {{name}}, Role: {{opportunityRole}}
+    Name: {{name}},
+    Role: {{opportunityRole}},
+    Contact's Account Type: {{account.type}}
 {{/each}}
 ```
 
