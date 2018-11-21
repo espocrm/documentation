@@ -85,7 +85,7 @@ Example:
 
 Since 5.5.0 it's possible to loop through link multiple collection.
 
-Example, printing contact names and roles of an opportinity:
+Example, printing contact names and roles of an opportunity:
 
 ```
 {{#each contacts}}
@@ -95,7 +95,7 @@ Example, printing contact names and roles of an opportinity:
 
 The following way is available since 5.3.0 version.
 
-Example, printing contact names of an opportinity:
+Example, printing contact names of an opportunity:
 ```
 {{#each contactsIds}}
     {{var this ../contactsNames}}
