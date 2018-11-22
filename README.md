@@ -1,6 +1,7 @@
 # EspoCRM Documentation
 
 ### Administration
+
 * [Server configuration](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md)
   * [Apache](https://github.com/espocrm/documentation/blob/master/administration/apache-server-configuration.md)
   * [Nginx](https://github.com/espocrm/documentation/blob/master/administration/nginx-server-configuration.md)
@@ -33,6 +34,7 @@
 
 
 ### User Guide
+
 * [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
 * [Sales management](https://github.com/espocrm/documentation/blob/master/user-guide/sales-management.md)
@@ -53,16 +55,9 @@
   * [Browser support](https://github.com/espocrm/documentation/blob/master/user-guide/browser-support.md)
   * [Data privacy](https://github.com/espocrm/documentation/blob/master/user-guide/data-privacy.md)
 
-### Development
-* [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
-* [ORM: How to manage entities](https://github.com/espocrm/documentation/blob/master/development/orm.md)
-* [Metadata](https://github.com/espocrm/documentation/blob/master/development/metadata.md)
-* [Custom views](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
-* [Link Multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
-* [Extension packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
-* [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
-* [Creating custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
-* [Defining new funtions for Formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
-* [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
+
+See also:
+
+[Developer Documentation](https://www.espocrm.com/documentation/development/index.md)
 
 [Documentation on the website](https://www.espocrm.com/documentation/)
