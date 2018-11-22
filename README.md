@@ -32,6 +32,7 @@
   * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
   * [Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
 
+---
 
 ### User Guide
 
@@ -55,6 +56,7 @@
   * [Browser support](https://github.com/espocrm/documentation/blob/master/user-guide/browser-support.md)
   * [Data privacy](https://github.com/espocrm/documentation/blob/master/user-guide/data-privacy.md)
 
+---
 
 See also:
 
