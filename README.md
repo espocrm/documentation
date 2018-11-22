@@ -58,6 +58,6 @@
 
 See also:
 
-[Developer Documentation](https://www.espocrm.com/documentation/development/index.md)
+[Developer Documentation](https://github.com/espocrm/documentation/blob/master/index.md)
 
 [Documentation on the website](https://www.espocrm.com/documentation/)
