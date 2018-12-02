@@ -198,6 +198,7 @@ Example:
 
 #### entity\addLinkMultipleId
 `entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field.
+
 `entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
 
 Example:
