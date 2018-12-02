@@ -197,9 +197,14 @@ Example:
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field. For example, add 'someTeamId' to 'teams' field. 
-
+`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field.
 `entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
+
+Example:
+
+`entity\addLinkMultipleId('teams', 'someTeamId')` Add 'someTeamId' to 'teams' field. 
+
+
 
 #### entity\hasLinkMultipleId
 `entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
