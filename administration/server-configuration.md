@@ -89,7 +89,7 @@ crontab -e -u WEBSERVER_USER
 WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
 * 4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
-## Configuration instructions based on your server:
+## Configuration instructions based on your server
 
 * [Apache server configuration](apache-server-configuration.md).
 * [Nginx server configuration](nginx-server-configuration.md).
