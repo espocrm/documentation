@@ -16,9 +16,9 @@ There is an ability to specify *Folder* in Personal Email Account. Incoming emai
 
 ## SMTP accounts
 
-Users can setup SMTP settings in Preferences as well as in their Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).
+Users can setup SMTP settings in their Personal Email Accounts as well as in Preferences. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts. Administrator also can allow to use system SMTP (mark it as Shared).
 
-Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of *User* record.
+Users can have multiple SMTP accounts. But email addresses user can use to send emails from are defined by email addresses of a *User* record.
 
 ## Working with Emails
 
