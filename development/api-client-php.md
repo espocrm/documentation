@@ -240,7 +240,7 @@ $client->setApiKey('API_KEY');
 $client->setSecretKey('SECRET_KEY');
 ```
 
-### Auth with Username and Password
+### Auth with Username and Password (as regular user)
 
 ```php
 $client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
