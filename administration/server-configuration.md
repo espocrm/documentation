@@ -15,6 +15,7 @@ EspoCRM requires PHP 5.6 or greater, with the following extensions enabled:
 * [zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
 * [imap](http://php.net/manual/en/book.imap.php) – to monitore mailboxes in EspoCRM;
 * [mbstring](http://php.net/manual/en/book.mbstring.php);
+* [iconv](http://php.net/manual/en/book.iconv.php);
 * [curl](http://php.net/manual/en/book.curl.php) – for integrations;
 * [exif](http://php.net/manual/en/book.exif.php) – for a proper oriantion of uploaded images.
 
