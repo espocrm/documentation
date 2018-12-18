@@ -17,8 +17,8 @@ EspoCRM requires PHP 5.6 or greater, with the following extensions enabled:
 * [mbstring](http://php.net/manual/en/book.mbstring.php);
 * [iconv](http://php.net/manual/en/book.iconv.php);
 * [curl](http://php.net/manual/en/book.curl.php) – for integrations;
-* [xml](http://php.net/manual/en/book.xml.php) - for excel export;
-* [xmlwriter](http://php.net/manual/en/book.xmlwriter.php) - for excel export;
+* [xml](http://php.net/manual/en/book.xml.php) – for excel export;
+* [xmlwriter](http://php.net/manual/en/book.xmlwriter.php) – for excel export;
 * [exif](http://php.net/manual/en/book.exif.php) – for a proper oriantion of uploaded images.
 
 php.ini settings:
