@@ -12,6 +12,10 @@ EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/data/logs/*.log` and contain so
 
 For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
 
+## Check system requirements
+
+At Admiistration > System Requirements. It's important to have all required extensions are installed.
+
 ## Scheduled Jobs are not working
 
 #### Problem #1: Your crontab is not configured
