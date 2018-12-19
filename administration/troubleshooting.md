@@ -14,7 +14,7 @@ For Ubuntu server an apache error log is located at `/var/log/apache2/error.log`
 
 ## Check system requirements
 
-At Admiistration > System Requirements. It's important to have all required extensions are installed.
+At Admiistration > System Requirements. It's important to have all required extensions installed.
 
 ## Scheduled Jobs are not working
 
