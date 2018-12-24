@@ -42,22 +42,21 @@ Address with street, city, state, postal code and country.
 
 ### Array
 
-List of values, with the ability to select multiple values; users can add their own values if options are not specified.
+List of values, with the ability to select multiple values; users can add their own values if options are not specified. 
+
+Recommended to use Multi-Enum instead.
 
 ### Attachment Multiple
 
 Multiple file attachments.
 
-
 ### Auto-increment
 
 Read-only generated integer number.
 
-
 ### Boolean
 
 Ccheckbox, true or false.
-
 
 ### Currency
 
@@ -68,7 +67,7 @@ For currency values.
 Date w/o a time part.
 
 
-### DateTime.
+### Date-Time.
 
 Date with a time part.
 
@@ -107,9 +106,9 @@ A whole number.
 An auto-incrementing number of string type with a possible prefix and a specific length.
 
 
-### Multi-enum
+### Multi-Enum
 
-A list of values, with the ability to select multiple values, similar to Array but nicer. Users can add their own values if options are not specified.
+A list of values, with the ability to select multiple values, similar to Array but nicer. Users can add their own values if options are not specified or 'Allow Custom Options' is checked.
 
 
 ### Text
@@ -119,7 +118,6 @@ Text area, for long multiline texts.
 ### Url
 
 For links.
-
 
 ### Varchar
 
