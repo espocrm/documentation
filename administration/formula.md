@@ -71,6 +71,9 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 #### string\contains
 `string\contains(STRING, NEEDLE)`  Whether STRING contains NEEDLE. (since version 5.1.2)
 
+#### string\test
+`string\contains(STRING, REGULAR_EXPRESSION)`  Search a match between REGULAR_EXPRESSION and STRING. (since version 5.5.2)
+
 #### string\length
 `string\length(STRING)` The length of STRING. (since version 5.1.2)
 
