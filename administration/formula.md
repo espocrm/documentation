@@ -219,14 +219,14 @@ Example:
 #### entity\isRelated
 `entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
 
-### entity\sumRelated
+#### entity\sumRelated
 `entity\sumRelated(LINK, FIELD, [FILTER])` Sums related records by a specified FIELD with an optional FILTER. (since version 5.2.6)
 
 Example:
 
 `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
-### entity\countRelated
+#### entity\countRelated
 `entity\countRelated(LINK, [FILTER])` Returns a number of related records with an optional FILTER applied. (since version 5.2.6)
 
 Example:
