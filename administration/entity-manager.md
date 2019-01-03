@@ -42,9 +42,7 @@ Address with street, city, state, postal code and country.
 
 ### Array
 
-List of values, with the ability to select multiple values; users can add their own values if options are not specified. 
-
-Recommended to use Multi-Enum instead, since it's more handy than Array.
+List of values, with the ability to select multiple values. Users can add their own values if options are not specified. Similar to Mult-Enum field.
 
 ### Attachment Multiple
 
