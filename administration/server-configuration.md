@@ -78,7 +78,11 @@ chown -R <OWNER>:<GROUP-OWNER> .;
 
 ## Setup a crontab
 
-To setup a crontab on a UNIX system, take the following steps:
+*Information about jobs in EspoCRM is available [here](jobs.md).*
+
+### Unix-like systems
+
+To setup a crontab on a Unix-like system, take the following steps:
 
 1. Login as administrator into your EspoCRM instance.
 2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
@@ -92,9 +96,10 @@ crontab -e -u WEBSERVER_USER
 WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
 4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
+### Windows
+
 For Windows servers you can utilize Scheduled Tasks.
 
-More information about jobs in EspoCRM is available [here](jobs.md).
 
 ## Configuration instructions based on your server
 
