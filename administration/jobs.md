@@ -43,7 +43,7 @@ Note that command that runs cron differs depending on server environment.
 
 ### Daemon
 
-Command to run using nohup:
+Command to start daemon using nohup:
 
 ```
 nohup php /path/to/espocrm/daemon.php &
