@@ -20,7 +20,7 @@ If you want a job to be run as often as possible you need to set the scheduling 
 
 ## Setting up
 
-There are two ways of jobs running: crontab or daemon.
+There are two ways how jobs can be processed: with crontab or daemon.
 
 ### Cron
 
@@ -28,9 +28,9 @@ Cron is easy to configure. It's supported by most of hosting providers.
 
 See how to configure cron [here](server-configuration.md#setup-a-crontab).
 
-In Unix systems cron is supposed to be run not more often than once a minute. It's possible to overcome such a limitation with the following trick.
+In Unix systems cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick.
 
-Add multiple lines in crontab with delays (in seconds):
+Add multiple lines in crontab with delays in seconds:
 
 ```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
