@@ -82,7 +82,7 @@ chown -R <OWNER>:<GROUP-OWNER> .;
 
 ### Unix-like systems
 
-To setup a crontab on a Unix-like system, take the following steps:
+To setup crontab on Unix-like system, take the following steps:
 
 1. Login as administrator into your EspoCRM instance.
 2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
