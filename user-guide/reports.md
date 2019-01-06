@@ -82,7 +82,7 @@ Having group provides an ability to filter with using aggregate functions COUNT,
 
 Some use cases:
 
-* List accounts having more than one opportunities. `COUNT / opportunities.id / Grater Than / 1`.
+* List accounts having more than one opportunities. `COUNT / opportunities.id / Greater Than / 1`.
 * Grid report showing accounts grouped by industry where revenue is more than 1,000. `SUM / opportunities.amount / Greater Than / 1000`.
 
 Note: Compatible with EspoCRM versions 5.1.0 and greater.
