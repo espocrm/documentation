@@ -10,7 +10,7 @@ class {JOB_NAME} extends \Espo\Core\Jobs\Base
     
     public function run() 
     {	 
-	    //all the logic needs to be defined in the method run
+	// all the logic needs to be defined in the method run
     }	 
 }
 ```
@@ -18,12 +18,12 @@ class {JOB_NAME} extends \Espo\Core\Jobs\Base
 Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/{language}/ScheduledJob.json`).
 ```
 {
-  "options": { 
-    "job": { 
-      "{JOB_NAME}": "{JOB_NAME_TRANSLATION}"
-    }
-  }
+   "options": { 
+       "job": { 
+           "{JOB_NAME}": "{JOB_NAME_TRANSLATION}"
+       }
+   }
 }
 ```
 
-To implement the changes, go to Administration panel and Clear Cache.
+To make the changes applied, clear cache at Administration.
