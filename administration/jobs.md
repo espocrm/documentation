@@ -84,6 +84,6 @@ Requires pcntl and posix extensions, php 7.1 or later. Some server configuration
 
 Windows is not supported.
 
-## See Also
+## See also
 
 [Creating custom scheduled job](../development/scheduled-job.md)
