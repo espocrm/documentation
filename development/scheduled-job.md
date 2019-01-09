@@ -3,6 +3,8 @@
 To define a custom Scheduled Job create a file `custom/Espo/Custom/Jobs/YourJobName.php` with the content.
 
 ```php
+<?php
+
 namespace Espo\Custom\Jobs; 
 
 class YourJobName extends \Espo\Core\Jobs\Base 
