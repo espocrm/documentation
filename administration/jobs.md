@@ -83,3 +83,7 @@ Available since version 5.5.0.
 Requires pcntl and posix extensions, php 7.1 or later. Some server configurations may restrict the ability to run child processes.
 
 Windows is not supported.
+
+## See Also
+
+[Creating custom scheduled job](../development/scheduled-job.md)
