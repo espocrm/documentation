@@ -26,6 +26,6 @@ Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/en_US
 }
 ```
 
-Note: {YOUR_JOB_NAME} should be defined w/o braces`{}`. 
+Note: {YOUR_JOB_NAME} should be defined w/o braces `{` `}`. 
 
 To make the changes applied, clear cache at Administration.
