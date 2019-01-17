@@ -2,18 +2,14 @@
 
 EspoCRM provides the possibility to create custom functions that can be used in formula. 
 
-If your function is related to the one of groups like String, Logic, Date, create a file in __{GroupName}Group__ folder, named __{FunctionName}Type.php__ with __{FunctionName}Type__ class declaration. You need to define the method __'process'__.
-
-For example, let's create a new string function for checking if a string (HAYSTACK) contains another string (NEEDLE) with a possible offset (OFFSET).
-
-Create a file `application/Espo/Core/Formula/Functions/StringGroup/ContainsType.php` with the code:
+Create a file `custom/Espo/Custom/Core/Formula/Functions/StringGroup/MyContainsType.php` with the code:
 
 ```
-namespace Espo\Core\Formula\Functions\StringGroup;
+namespace Espo\Custom\Core\Formula\Functions\StringGroup;
 
 use \Espo\Core\Exceptions\Error;
 
-class ContainsType extends \Espo\Core\Formula\Functions\Base
+class MyContainsType extends \Espo\Core\Formula\Functions\Base
 {
     public function process(\StdClass $item)
     {
@@ -47,12 +43,16 @@ In order to add the created function to the function list of formula, create a f
 ```
 {
     "functionList": [
+        "__APPEND",
         {
-            "name": "string\\contains",
-            "insertText": "string\\contains(HAYSTACK, NEEDLE, OFFSET)"
+            "name": "string\\myContains",
+            "insertText": "string\\myContains(HAYSTACK, NEEDLE, OFFSET)"
         }
+    ],
+    "functionClassNameMap": {
+        "string\\myContains": "\\Espo\\Custom\\Core\\Formula\\Functions\\StringGroup\\MyContainsType"
+    }    
 }
 ```
 
-__Clear cache__ and use this function in formula. You can type it `string\contains(HAYSTACK, NEEDLE, OFFSET)` or select from function list, if you add it.
-
+Clear cache.
