@@ -43,7 +43,7 @@ In order to add the created function to the function list of formula, create a f
 ```json
 {
     "functionList": [
-        "__APPEND",
+        "__APPEND__",
         {
             "name": "string\\myContains",
             "insertText": "string\\myContains(HAYSTACK, NEEDLE, OFFSET)"
