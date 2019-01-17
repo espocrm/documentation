@@ -38,7 +38,6 @@ class MyContainsType extends \Espo\Core\Formula\Functions\Base
     }
 }
 ```
-## Adding the function to the list
 
 In order to add the created function to the function list of formula, create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
 ```json
