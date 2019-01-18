@@ -235,6 +235,26 @@ Example:
 
 `entity\countRelated('opportunities', 'open')`
 
+It's possible to apply a [list report](../user-guide/reports.md) as a filter the same say as for sumRelated function.
+
+#### record\exists
+
+`record\exists(ENTITY_TYPE, KEY1, VALUE2, [KEY2, VALUE2 ...])` Check whether a record with specified criteria exists. (since version 5.5.6)
+
+Example:
+
+`record\exists('Lead', 'emailAddress=', fromAddress)`
+
+#### record\count
+
+`record\count(ENTITY_TYPE, KEY1, VALUE2, [KEY2, VALUE2 ...])` Returns a count a records with specified criteria. (since version 5.5.6)
+
+Examples:
+
+`record\count('Opportunity', 'accountId=', id, 'stage=', 'Closed Won')`
+
+`record\count('Opportunity', 'amountConverted>', 1000)`
+
 #### env\userAttribute
 `env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
 
