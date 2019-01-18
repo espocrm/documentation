@@ -226,6 +226,8 @@ Example:
 
 `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
+It's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
+
 #### entity\countRelated
 `entity\countRelated(LINK, [FILTER])` Returns a number of related records with an optional FILTER applied. (since version 5.2.6)
 
