@@ -1,4 +1,4 @@
-# Adding custom service action for Workflow
+# Adding custom service action for Workflows
 
 Workflows allow to create custom service actions. This example will show how this can be done for a Call entity.
 
