@@ -247,11 +247,11 @@ Example:
 
 #### record\count
 
-`record\count(ENTITY_TYPE, KEY1, VALUE2, [KEY2, VALUE2 ...])` Returns a count a records with specified criteria. (since version 5.5.6)
+`record\count(ENTITY_TYPE, KEY1, VALUE2, [KEY2, VALUE2 ...])` Returns a count of records with specified criteria. (since version 5.5.6)
 
 or
 
-`record\count(ENTITY_TYPE, [FILTER])` Returns a count a records with an optional FILTER applied. (since version 5.5.7)
+`record\count(ENTITY_TYPE, [FILTER])` Returns a count of records with an optional FILTER applied. (since version 5.5.7)
 
 Examples:
 
