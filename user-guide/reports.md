@@ -64,6 +64,8 @@ AND means that all conditions under the group must be met.
 
 Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
 
+Note: It's recommended to avoid using NOT group if possible, using filters 'Not Equals', 'None of', etc. instead. NOT group can negatively effect on a report performance and memory usage.
+
 ![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
 
 ### Complex Expression
