@@ -4,7 +4,7 @@ Portal provides an ability to access specific crm data and functions for your cu
 
 To create portal follow Administration > Portals, click Create Portal button.
 
-* `Is Active`. If not, check portal won't be available for anybody.
+* `Is Active`. If not checked, portal won't be available for anybody.
 * `Is Default`. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
 * `Roles`. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
 * `Tab List`. Tabs which will be shown in navigation bar.
