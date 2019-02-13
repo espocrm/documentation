@@ -2,7 +2,7 @@
 
 Выполните следующие шаги, чтобы переместить EspoCRM на другой сервер:
 
-### Шаг 1. Резервные файлы
+### Шаг 1. Резервное копирование файлов
 
 Откройте файловый менеджер или войдите через SSH, чтобы архивировать все доступные файлы из каталога EspoCRM. Подробнее: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
 
@@ -10,11 +10,11 @@
 
 Данные, хранящиеся в базе данных (MySQL, MariaDB), должны быть скопированы. Следуйте этой рекомендации: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
 
-### Шаг 3. Скопируйте файлы и резервные копии баз данных на другой сервер
+### Шаг 3. Скопируйте резервные копии файлов и базы данных на другой сервер
 
 Скопируйте резервные копии файлов и вашей базы данных на новый сервер.
 
-### Шаг 4. Файлы для архивирования без сохранения файлов
+### Шаг 4. Разархивируйте файлы резервных копий
 
 Чтобы разархивировать файлы резервных копий, вы можете использовать Archive Manager или эту инструкцию: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files.
 Примечание. Файлы необходимо поместить в каталог веб-сервера.
@@ -30,7 +30,7 @@ https://www.espocrm.com/documentation/administration/server-configuration/.
 
 ### Шаг 7. Импортируйте резервную копию базы данных
 
-Во-первых, вам нужно создать новую базу данных с пользователем в MySQL. Чтобы импортировать свою базу данных из резервной копии, следуйте инструкциям: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
+Сначала вам нужно создать новую базу данных с пользователем в MySQL. Чтобы импортировать свою базу данных из резервной копии, следуйте инструкциям: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
 
 ### Шаг 8. Исправьте конфигурации EspoCRM
 
@@ -55,7 +55,7 @@ https://www.espocrm.com/documentation/administration/server-configuration/.
   'siteUrl' => 'https://new-link.com',
   ```
   
-  * владелец файлов по умолчанию (если разные):
+  * владелец файлов по умолчанию (только если разные):
   
   ```php
   'defaultPermissions' => [
