@@ -2,7 +2,7 @@
 
 Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-Workflows automate your business process an easy way. You can find it in the Administration panel. To create a workflow rule you need to define:
+Workflows automate your business process in an easy way. You can find it in the Administration panel. To create a workflow rule you need to define:
 
 * Target Entity - what entity type workflow is applied to;
 * Trigger Type - when workflow will be triggered;
