@@ -84,6 +84,22 @@ Requires pcntl and posix extensions, php 7.1 or later. Some server configuration
 
 Windows is not supported.
 
+## Running specific job manually in CLI
+
+Available since version 5.6.0.
+
+Command:
+```
+php command.php RunJob JobName
+```
+where JobName is an intrernal name of the job you want to run.
+
+Examples:
+```
+php command.php RunJob Cleanup
+php command.php RunJob ProcessMassEmail
+```
+
 ## See also
 
 [Creating custom scheduled job](../development/scheduled-job.md)
