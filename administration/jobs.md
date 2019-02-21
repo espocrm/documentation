@@ -72,7 +72,7 @@ WantedBy=default.target
 
 Requires pcntl and posix extensions, php 7.1 or later.
 
-Recommended to turn on processing jobs in parallel processes: Administration > Scheduled Jobs > Jobs (top-right corner) > Settings (top-right corner) > Jobs Run in Parallel.
+Recommended to turn on processing jobs in parallel processes: Administration > Scheduled Jobs > Jobs (top-right corner) > Settings (top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
 
 ## Running jobs in parallel processes
 
