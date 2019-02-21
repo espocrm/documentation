@@ -102,4 +102,4 @@ php command.php RunJob ProcessMassEmail
 
 ## See also
 
-[Creating custom scheduled job](../development/scheduled-job.md)
+[Creating custom job](../development/scheduled-job.md)
