@@ -70,7 +70,7 @@ StandardError=/path/to/espocrm/data/logs/daemon.log
 WantedBy=default.target
 ```
 
-Requires pcntl and posix extensions, php 7.1 or later. Windows is not supported.
+Requires pcntl and posix extensions, php 7.1 or later.
 
 Recommended to turn on processing jobs in parallel processes: Administration > Scheduled Jobs > Jobs (top-right corner) > Settings (top-right corner) > Jobs Run in Parallel.
 
