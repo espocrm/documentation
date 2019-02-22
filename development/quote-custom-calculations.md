@@ -19,7 +19,7 @@ Create a new file:
 
 namespace Espo\Custom\Repositories;
 
-class Quote extends \Espo\Modules\Advanced\Repositories\Quote
+class Quote extends \Espo\Modules\Sales\Repositories\Quote
 {
     protected function calculateItems(\Espo\ORM\Entity $entity, array $options = array())
     {
