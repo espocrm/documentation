@@ -54,12 +54,12 @@ Create a new file:
 `client/custom/src/quote-calculation-handler.js`
 
 ```js
-Espo.define('custom:quote-calculation-handler', ['advanced:quote-calculation-handler'], function (Dep) {
+Espo.define('custom:quote-calculation-handler', ['sales:quote-calculation-handler'], function (Dep) {
 
     return Dep.extend({
 	
         // Define custom calculations here.
-        // Use client/modules/advanced/quote-calculation-handler.js as an example.
+        // Use client/modules/sales/quote-calculation-handler.js as an example.
 
     });
 });
