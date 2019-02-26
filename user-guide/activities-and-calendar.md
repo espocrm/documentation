@@ -62,3 +62,9 @@ Users can create custom shared views that will display events of specific teams.
 Note: User must have a proper 'User Permission' to be able to use shared calendars.
 
 Shared view is also available for Timeline. It allows to view events of multiple users.
+
+### Custom entities on Calendar
+
+Administrator can create a custom entity of Event type. Then at Administration > Settings > Activities it's possible to set this entity type as an Activity and make it available in Calendar.
+
+By default Assigned User field determines a user who will the record on his/her Calendar. There is a possibility to have [multiple assigned users](../administration/multiple-assigned-users.md).
