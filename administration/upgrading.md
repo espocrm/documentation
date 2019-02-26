@@ -1,6 +1,20 @@
 # How to upgrade EspoCRM
 
-EspoCRM can be upgraded to the latest version by the following steps:
+## Upgrade from CLI
+
+Available from version 5.6.0.
+
+This is the most preferable way to upgrade.
+
+Command to run:
+
+```
+php command.php upgrade
+```
+
+This will check the next available version, download it and install. Once upgrade is complete it will prompt to run the command again, if a newer version is available.
+
+## Upgrade from UI
 
 ### Step 1. Check your current version
 
@@ -20,9 +34,9 @@ Go to Administration > Upgrade. Upload and install one by one upgrade packages.
 
 You can check whether you have the latest version at Menu > About.
 
-## Upgrade via CLI
+## Applying upgrade package from CLI 
 
-You can also run upgrade via command line interface. You need to execute the following command from EspoCRM root directory:
+Execute the following command from EspoCRM root directory:
 
 ```
 php upgrade.php /path/to/upgrade/package.zip
