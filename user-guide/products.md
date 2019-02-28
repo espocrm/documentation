@@ -1,6 +1,6 @@
 # Products
 
-Products feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Products feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
 Product items can be used with Opportunity and Quotes. They are also available for a customization in Entity Manager so you can create new relationships between products and other entities.
 
