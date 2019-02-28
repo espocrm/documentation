@@ -1,6 +1,6 @@
 # Quotes
 
-Quotes feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Quotes feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
 Quote is a specific group of products or services with their quantities and prices that you quote to customers.
 
