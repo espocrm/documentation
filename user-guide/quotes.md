@@ -8,7 +8,7 @@ Quote has a relationship with Opportunity. You can add Quotes panel to Opportuni
 
 You can add Quotes panel to Account's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
 
-Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Quotes > Bottom Total.  Available since Advanced Pack 1.32.0 version.
+Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Quotes > Bottom Total.
 
 ## Quote Items
 
@@ -18,7 +18,7 @@ There is an ability to add custom fields for Quote Item entity using Entity Mana
 
 ### Layout
 
-Layout of quote items can be modified at Administration > Layout Manager > Quote Items > List (Item). Available since Advanced Pack 1.32.0 version.
+Layout of quote items can be modified at Administration > Layout Manager > Quote Items > List (Item).
 
 ### Discount Rate
 
