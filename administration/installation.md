@@ -3,8 +3,8 @@
 ### Requirements
 EspoCRM runs on the most hosting providers. Requirements include the following:
 
-* PHP 5.6 or latest version of PHP with enabled pdo, json, GD library, mcrypt extensions (usually enabled by default);
-* MySQL 5.5.3 or higher.
+* PHP 7.1 or later,
+* MySQL 5.5.3 or later, or MariaDB.
 
 See [Server Configuration](server-configuration.md) article for more information.
 
