@@ -60,13 +60,23 @@ OR means that at least one condition under the group must be met.
 
 AND means that all conditions under the group must be met.
 
-### NOT group
+### NOT IN group
 
 Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
 
-Note: It's recommended to avoid using NOT group if possible, using filters 'Not Equals', 'None of', etc. instead. NOT group can negatively effect on a report performance.
+Note: It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively effect on a report performance in some cases.
 
-![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
+![NOT IN group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
+
+### IN group
+
+Note: Available in since EspoCRM 5.6.0 and Advanced Pack 2.1.0.
+
+Simlitar to AND group but utilizes a sub-query.
+
+Example of usage: Filtering accounts that have opportunities of both 'Closed Won' and 'Negotiation' stages.
+
+![IN group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-in.png)
 
 ### Complex Expression
 
