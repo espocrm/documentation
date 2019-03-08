@@ -191,7 +191,7 @@
 
 Также можно определить условия на языке [Espo-formula](formula.md).
 
-Условия в инструменте BPM те же, что и в функции Workflow. Подробнее об этом [функция Workflows](условия workflows.md #).
+Условия в BPM те же, что и в Workflow. Подробнее об этом в [условиях Workflows](workflows.md#conditions).
 
 ## Примеры
 
