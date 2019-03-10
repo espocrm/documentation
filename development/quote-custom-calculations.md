@@ -39,7 +39,7 @@ class Quote extends \Espo\Modules\Sales\Repositories\Quote
 
 ```
 
-Note: For Sales Orders use `SalesOrder` file and class names.
+Note: For Sales Orders use `SalesOrder` file and class names. For Invoices use `Invoice` file and class names. Extend from a corresponding classes: `\Espo\Modules\Sales\Repositories\SalesOrder` or `\Espo\Modules\Sales\Repositories\Invoice`.
 
 ### Client-side calculation
 
@@ -52,6 +52,8 @@ File: `custom/Espo/Custom/Resources/metadata/clientDefs/Quote.json`
     "calculationHandler": "custom:quote-calculation-handler"
 }
 ```
+
+Note: For Sales Orders use `SalesOrder.json` file names.  For Invoices use `Invoice.json` file names.
 
 Create a new file:
 
