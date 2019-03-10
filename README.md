@@ -17,9 +17,6 @@
   * [Dynamic forms](https://github.com/espocrm/documentation/blob/master/administration/dynamic-logic.md)
 * [Formula (Calculated Fields)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
 * [Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
-* Advanced Pack
-  * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
-  * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [LDAP authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
@@ -32,6 +29,9 @@
   * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
   * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
   * [Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
+* Advanced Pack
+  * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
+  * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
 
 ---
 
@@ -44,11 +44,6 @@
 * [Activities and Calendar](https://github.com/espocrm/documentation/blob/master/user-guide/activities-and-calendar.md)
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Mail Merge (mass mailing)](https://github.com/espocrm/documentation/blob/master/user-guide/mail-merge.md)
-* Advanced Pack
-  * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
-* Sales Pack
-  * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
-  * [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
 * [Knowledge Base](https://github.com/espocrm/documentation/blob/master/user-guide/knowledge-base.md)
 * [Documents](https://github.com/espocrm/documentation/blob/master/user-guide/documents.md)
 * [Export](https://github.com/espocrm/documentation/blob/master/user-guide/export.md)
@@ -58,6 +53,11 @@
   * [Markdown syntax](https://github.com/espocrm/documentation/blob/master/user-guide/markdown.md)
   * [Browser support](https://github.com/espocrm/documentation/blob/master/user-guide/browser-support.md)
   * [Data privacy](https://github.com/espocrm/documentation/blob/master/user-guide/data-privacy.md)
+* Advanced Pack
+  * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
+* Sales Pack
+  * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
+  * [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
 
 ---
 
