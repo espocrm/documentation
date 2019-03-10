@@ -15,11 +15,11 @@
   * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
   * [Extensions](https://github.com/espocrm/documentation/blob/master/administration/extensions.md)
   * [Dynamic forms](https://github.com/espocrm/documentation/blob/master/administration/dynamic-logic.md)
-* Automation
+* [Formula (Calculated Fields)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
+* [Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
+* Advanced Pack
   * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
   * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
-  * [Calculated Fields (Formula)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
-* [Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [LDAP authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
@@ -42,9 +42,10 @@
 * [Sales management](https://github.com/espocrm/documentation/blob/master/user-guide/sales-management.md)
 * [Case management](https://github.com/espocrm/documentation/blob/master/user-guide/case-management.md)
 * [Activities and Calendar](https://github.com/espocrm/documentation/blob/master/user-guide/activities-and-calendar.md)
-* [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Mail Merge (mass mailing)](https://github.com/espocrm/documentation/blob/master/user-guide/mail-merge.md)
+* Advanced Pack
+  * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * Sales Pack
   * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
   * [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
