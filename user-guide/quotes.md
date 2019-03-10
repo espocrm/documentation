@@ -32,9 +32,13 @@ Layout of quote items can be modified at Administration > Layout Manager > Quote
 
 It's possible to specify a discount in percents. To have this ability, administrator should add 'Discount (%)' field to the List (Item) layout.
 
-## Templates
+## Printing to PDF
 
-By default there are two available templates: Quote and Invoice. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
+Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template. More info about printing to PDF is available [printing-to-pdf.md](here).
+
+## Templates for printing to PDF
+
+By default, there is an example template available. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
 
 For more precise editing it's recommended to use Code View mode.
 
@@ -53,6 +57,7 @@ Examples:
 If your line item is a product, you can print product’s fields. 
 
 Examples:
+
 `{{product.length}}`, 
 
 `{{product.color}}`.
@@ -97,10 +102,6 @@ Custom formatting for currency values (since version 4.8.3):
 Value `10000.5` will be printer as `10 000,50`. 
 
 To display text fields (multiline) use triple braces: `{{{description}}}`.
-
-## Print to PDF
-
-Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template.
 
 ## Sending quote in email
 
