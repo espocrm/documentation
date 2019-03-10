@@ -41,6 +41,7 @@ For more precise editing it's recommended to use Code View mode.
 You can print fields of Quote record as well as fields of related records by utilizing placeholders in your template.
 
 Examples:
+
 `{{accountName}}` – Account name,
 
 `{{{billingAddressStreet}}}` – street,
