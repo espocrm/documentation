@@ -8,6 +8,13 @@ Quote has a relationship with Opportunity. You can add Quotes panel to Opportuni
 
 You can add Quotes panel to Account's detail view to be able to see related quotes. Administration > Layout Manager > Accounts > Relationships.
 
+## Converting from Opportunity
+
+Method 1. Create a new quote, on the form select Opportunity field. Data will be copied from the opportunity to the created quote.
+Method 2. Create a new quote from Quotes relationshio panel on the detail view of the opportunity.
+
+## Total Values Layout
+
 Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Quotes > Bottom Total.
 
 ## Quote Items
@@ -16,7 +23,7 @@ Quote has a list of items. Each item can represent a certain product or a servic
 
 There is an ability to add custom fields for Quote Item entity using Entity Manager.
 
-### Layout
+### Quote Items Layout
 
 Layout of quote items can be modified at Administration > Layout Manager > Quote Items > List (Item).
 
@@ -109,6 +116,12 @@ Available since EspoCRM 4.8.0.
 
 1. Specify default Tax record at Administration > Entity Manager > Quotes > fields > Tax > Default.
 2. Specify default tax rate at Administration > Entity Manager > Quotes > fields > Tax Rate > Default.
+
+## Copying values from product to quote item
+
+Field values can be transferred from a product to a quote item upon product selection. Field names you want to be copied should coincide in Product and Quote Item enities.
+
+You can select which fields you need to be copied at Administration > Entity Manager > Quote Item > Fields > Product > Fields to Copy.
 
 ## See also
 
