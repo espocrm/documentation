@@ -11,6 +11,7 @@ You can add Quotes panel to Account's detail view to be able to see related quot
 ## Converting from Opportunity
 
 Method 1. Create a new quote, on the form select Opportunity field. Data will be copied from the opportunity to the created quote.
+
 Method 2. Create a new quote from Quotes relationshio panel on the detail view of the opportunity.
 
 ## Total Values Layout
