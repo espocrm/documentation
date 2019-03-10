@@ -45,8 +45,9 @@
 * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Mail Merge (mass mailing)](https://github.com/espocrm/documentation/blob/master/user-guide/mail-merge.md)
-* [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
-* [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
+* Sales Pack
+  * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
+  * [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
 * [Knowledge Base](https://github.com/espocrm/documentation/blob/master/user-guide/knowledge-base.md)
 * [Documents](https://github.com/espocrm/documentation/blob/master/user-guide/documents.md)
 * [Export](https://github.com/espocrm/documentation/blob/master/user-guide/export.md)
