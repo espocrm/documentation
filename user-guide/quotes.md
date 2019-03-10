@@ -36,7 +36,7 @@ It's possible to specify a discount in percents. To have this ability, administr
 
 Quotes can be printed to PDF. This action is available in dropdown next to Edit button on the quote’s detail view. Then you will be prompted to select Template. More info about printing to PDF is available [here](printing-to-pdf.md).
 
-## Templates for printing to PDF
+### Templates
 
 By default, there is an example template available. You can create new templates (Quotes list view > top-right dropdown menu > Templates) as well as edit existing ones.
 
