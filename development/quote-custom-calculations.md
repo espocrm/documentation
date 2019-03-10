@@ -1,5 +1,7 @@
 # Custom calculations for Quote totals
 
+Note: The same mechanism is also available for Sales Orders and Invoices.
+
 ## Problem
 
 You have added custom fields to quote items or/and quote entity types. You want Total Amount field and other totals to be calculated considering new custom fields.
@@ -36,6 +38,8 @@ class Quote extends \Espo\Modules\Sales\Repositories\Quote
 }
 
 ```
+
+Note: For Sales Orders use `SalesOrder` file and class names.
 
 ### Client-side calculation
 
