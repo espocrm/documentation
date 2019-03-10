@@ -6,7 +6,7 @@ Quote is a specific group of products or services with their quantities and pric
 
 Quote has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
 
-You can add Quotes panel to Account's detail view to be able to see related quotes. You can do it at Administration > Layout Manager > Accounts > Relationships.
+You can add Quotes panel to Account's detail view to be able to see related quotes. Administration > Layout Manager > Accounts > Relationships.
 
 Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Quotes > Bottom Total.
 
