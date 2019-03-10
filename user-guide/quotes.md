@@ -110,10 +110,6 @@ Available since EspoCRM 4.8.0.
 1. Specify default Tax record at Administration > Entity Manager > Quotes > fields > Tax > Default.
 2. Specify default tax rate at Administration > Entity Manager > Quotes > fields > Tax Rate > Default.
 
-## Invoices
-
-Quote can be treated as an invoice if its status became `Approved`. Then _Date Invoiced_, _Invoice Number_ fields show up. You can use different template for invoices for printing.
-
 ## See also
 
 [Custom calculations for Quote totals](../development/quote-custom-calculations.md)
