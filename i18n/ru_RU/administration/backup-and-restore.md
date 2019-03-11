@@ -69,7 +69,7 @@ tar -xzf "files.tar.gz" -C /var/www/html
 
 ### Шаг 2. Установите необходимые разрешения
 
-Файлы должны принадлежать пользователю веб-сервера и иметь правильные разрешения. Установите необходимые разрешения, следуя этой инструкции: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+Файлы должны принадлежать пользователю веб-сервера и иметь правильные разрешения. Установите необходимые разрешения, следуя этой [инструкции] (server-configuration.md#user-content-требуемые-разрешения-для-систем-на-основе-unix).
 
 ### Шаг 3. Импортируйте дамп базы данных
 
@@ -95,4 +95,4 @@ sudo crontab -l -u www-data
 sudo crontab -l -u www-data
 ```
 
-Более подробная информация о настройке crontab для EspoCRM описана здесь [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+Более подробная информация о настройке crontab для EspoCRM описана [здесь](server-configuration.md#user-content-настройка-crontab).

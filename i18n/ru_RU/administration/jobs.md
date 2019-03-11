@@ -26,7 +26,7 @@
 
 Cron прост в настройке. Он поддерживается большинством хостинг-провайдеров. 
 
-Смотрите, как настроить cron [здесь](server-configuration.md#setup-a-crontab).
+Смотрите, как настроить cron [здесь](server-configuration.md#user-content-настройка-crontab).
 
 В системах Unix cron должен запускаться не чаще, чем раз в минуту. Это ограничение можно обойти с помощью следующего трюка.
 
@@ -86,4 +86,4 @@ Windows не поддерживается.
 
 ## Смотрите также
 
-[Creating custom scheduled job](../development/scheduled-job.md)
+[Creating custom scheduled job](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)

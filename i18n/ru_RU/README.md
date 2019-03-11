@@ -15,10 +15,7 @@
   * [Управление макетами](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/layout-manager.md)
   * [Расширения](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/extensions.md)
   * [Динамические формы](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/dynamic-logic.md)
-  * [Вычисляемые поля (формула)](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/formula.md)
-* Автоматизация
-  * [Управление Бизнес-Процессами](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/bpm.md)
-  * [Рабочие потоки](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/workflows.md)
+* [Вычисляемые поля (формула)](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/formula.md)
 * [Импорт](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/import.md)
 * [Портал](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/portal.md)
 * [LDAP Авторизация](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/ldap-authorization.md)
@@ -32,7 +29,9 @@
   * [Резервное копирование и восстановление](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/backup-and-restore.md)
   * [Перемещение на другой сервер](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/moving-to-another-server.md)
   * [Несколько ответственных пользователей](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/multiple-assigned-users.md)
-
+* Advanced Pack
+  * [Управление Бизнес-Процессами](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/bpm.md)
+  * [Рабочие потоки](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/workflows.md)
 ---
 
 ### Руководство пользователя

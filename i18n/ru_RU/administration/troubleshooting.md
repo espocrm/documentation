@@ -21,7 +21,7 @@
 
 1. Войдите в систему через SSH на свой сервер.
 
-2. Настройте свой crontab, выполнив следующие шаги: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Настройте свой crontab, выполнив следующие [шаги](server-configuration.md#user-content-настройка-crontab)
 
 Примечание. Crontab должен быть настроен под пользователем веб-сервера, например. `crontab -e -u www-data`.
 
@@ -76,15 +76,15 @@ sudo -u www-data php cron.php
 ```
 chmod 644 /path/to/file
 ```
-Дополнительная информация о файловых разрешениях: [здесь](server-configuration.md#required-permissions-for-unix-based-systems).
+Дополнительная информация о файловых разрешениях: [здесь](server-configuration.md#user-content-требуемые-разрешения-для-систем-на-основе-unix).
 
 ## Ошибка MySQL: сервер запросил метод аутентификации, неизвестный клиенту
 
-MySQL 8.0.4 изменил метод аутентификации по умолчанию на caching_sha2_password, который не поддерживается PHP. Эта проблема может быть решена с помощью этого [решения](server-configuration.md#user-content-mysql-8-support).
+MySQL 8.0.4 изменил метод аутентификации по умолчанию на caching_sha2_password, который не поддерживается PHP. Эта проблема может быть решена с помощью этого [решения](server-configuration.md#user-content-поддержка-mysql-8).
 
 ## Электронные письма не доставляются
 
-1. Убедитесь, что [cron](server-configuration.md#user-content-setup-a-crontab) работает. Вы увидите уведомление об ошибке на главной странице администрирования, если cron не запущен.
+1. Убедитесь, что [cron](server-configuration.md#user-content-настройка-crontab) работает. Вы увидите уведомление об ошибке на главной странице администрирования, если cron не запущен.
 2. Проверьте журнал EspoCRM (data/logs) и журналы сервера (server logs) на наличие ошибок.
 3. Проверьте журнал (log) в разделе Администрирование > Планировщик заданий > Проверьте Personal Email Accounts. Убедитесь, что нет записей с статусом failed.
 4. Проверьте журнал (log) в разделе Администрирование > Планировщик заданий > Проверьте Group Email Accounts. Убедитесь, что нет записей с статусом failed. 

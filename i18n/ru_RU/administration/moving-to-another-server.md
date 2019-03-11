@@ -4,11 +4,11 @@
 
 ### Шаг 1. Резервное копирование файлов
 
-Откройте файловый менеджер или войдите через SSH, чтобы архивировать все доступные файлы из каталога EspoCRM. Подробнее: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
+Откройте файловый менеджер или войдите через SSH, чтобы архивировать все доступные файлы из каталога EspoCRM. [Подробнее](backup-and-restore.md#user-content-шаг-1-резервное-копирование-файлов)
 
 ### Шаг 2. Резервное копирование базы данных
 
-Данные, хранящиеся в базе данных (MySQL, MariaDB), должны быть скопированы. Следуйте этой рекомендации: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
+Данные, хранящиеся в базе данных (MySQL, MariaDB), должны быть скопированы. Следуйте этой [рекомендации](backup-and-restore.md#user-content-шаг-2-резервное-копирование-базы-данных)
 
 ### Шаг 3. Скопируйте резервные копии файлов и базы данных на другой сервер
 
@@ -16,17 +16,16 @@
 
 ### Шаг 4. Разархивируйте файлы резервных копий
 
-Чтобы разархивировать файлы резервных копий, вы можете использовать Archive Manager или эту инструкцию: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files.
+Чтобы разархивировать файлы резервных копий, вы можете использовать Archive Manager или эту [инструкцию](backup-and-restore.md#user-content-шаг-1-разархивируйте-файлы-резервной-копии)
 Примечание. Файлы необходимо поместить в каталог веб-сервера.
 
 ### Шаг 5. Настройка сервера
 
-Настройте новый сервер на основе рекомендаций здесь:
-https://www.espocrm.com/documentation/administration/server-configuration/.
+Настройте новый сервер на основе рекомендаций [здесь](server-configuration.md)
 
 ### Шаг 6. Правильные разрешения
 
-Установите необходимые разрешения и владельца файлов, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
+Установите [необходимые разрешения и владельца файлов](server-configuration.md#user-content-требуемые-разрешения-для-систем-на-основе-unix)
 
 ### Шаг 7. Импортируйте резервную копию базы данных
 
@@ -68,7 +67,7 @@ https://www.espocrm.com/documentation/administration/server-configuration/.
 
 ### Шаг 9. Установите crontab
 
-Установите crontab, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+Установите [crontab](server-configuration.md#user-content-настройка-crontab)
 Примечание: он должен быть настроен под вашим пользователем веб-сервера.
 
 Это все. Теперь ваш EspoCRM работает на новом сервере.
