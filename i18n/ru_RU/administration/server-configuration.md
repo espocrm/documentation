@@ -1,6 +1,6 @@
 # Конфигурация сервера для EspoCRM
 
-EspoCRM может быть установлен на сервер Apache ([instructions](apache-server-configuration.md)), Nginx ([instructions](nginx-server-configuration.md)) или IIS с поддержкой PHP версии 5.6 или выше и MySQL версии 5.5.3 или выше.
+EspoCRM может быть установлен на сервер Apache ([инструкция](apache-server-configuration.md)), Nginx ([инструкция](nginx-server-configuration.md)) или IIS с поддержкой PHP версии 5.6 или выше и MySQL версии 5.5.3 или выше.
 
 
 ## Рекомендации по конфигурации
@@ -105,5 +105,5 @@ WEBSERVER_USER может быть одним из следующих «www», �
 
 ## Инструкции по конфигурации на основе вашего сервера
 
-* [Apache server configuration](apache-server-configuration.md).
-* [Nginx server configuration](nginx-server-configuration.md).
+* [Конфигурация сервера Apache](apache-server-configuration.md).
+* [Конфигурация сервера Nginx](nginx-server-configuration.md).
