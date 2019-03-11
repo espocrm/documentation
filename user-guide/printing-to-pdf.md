@@ -104,6 +104,16 @@ Example, printing contact names of an opportunity:
 {{/each}}
 ```
 
+### Multi-enum and Array fields
+
+Printing selected options:
+
+```
+{{#each fieldName}}
+   {{./this}}
+{{/each}}
+
+
 ### Charset issues
 
 If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font. Available since 5.4.0 version. 
