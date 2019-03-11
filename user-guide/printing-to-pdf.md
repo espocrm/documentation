@@ -106,13 +106,13 @@ Example, printing contact names of an opportunity:
 
 ### Multi-enum and Array fields
 
-Printing selected options:
+Printing selected items:
 
 ```
 {{#each fieldName}}
    {{./this}}
 {{/each}}
-
+```
 
 ### Charset issues
 
