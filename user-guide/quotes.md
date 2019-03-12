@@ -125,8 +125,8 @@ The next number, a prefix can be configured at Administration > Entity Manager >
 
 Available since EspoCRM 4.8.0.
 
-1. Specify default Tax record at Administration > Entity Manager > Quotes > fields > Tax > Default.
-2. Specify default tax rate at Administration > Entity Manager > Quotes > fields > Tax Rate > Default.
+1. Specify default Tax record at Administration > Entity Manager > Quote > fields > Tax > Default.
+2. Specify default tax rate at Administration > Entity Manager > Quote > fields > Tax Rate > Default.
 
 ## Copying values from product to quote item
 
