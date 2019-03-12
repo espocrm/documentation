@@ -58,5 +58,4 @@ Users, who have an access to this report, will be able to add it on their dashbo
 
 ## See also
 
-[https://www.espocrm.com/tips/lead-conversion/](https://www.espocrm.com/tips/lead-conversion/)
-
+[Who are leads? Lead conversion in 3 steps](https://www.espocrm.com/tips/lead-conversion/)
