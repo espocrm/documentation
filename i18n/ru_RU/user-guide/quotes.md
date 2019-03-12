@@ -1,6 +1,6 @@
 # Предложения
 
-Функция предложений доступна в [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+Функция предложений доступна в [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
 Предложения представляют собой определенную группу продуктов или услуг с их количеством и ценами, которые вы указываете клиентам.
 
