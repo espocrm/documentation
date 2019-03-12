@@ -10,7 +10,7 @@ You can add Quotes panel to Account's detail view to be able to see related quot
 
 ## Converting from Opportunity
 
-Method 1. Create a new quote, on the form specify needed Opportunity. Data will be copied from the opportunity to the created quote.
+Method 1. Create a new quote, on the form specify needed opportunity. Data will be copied from the opportunity to the created quote.
 
 Method 2. Create a new quote from Quotes relationship panel on the detail view of the opportunity.
 
@@ -18,7 +18,7 @@ Method 2. Create a new quote from Quotes relationship panel on the detail view o
 
 You are able to create Sales Order and Invoice from existing Quote.
 
-Method 1. Create a new sales order or invoice, on the form specify needed Quote. Data will be copied from the quote to the created sales order or invoice.
+Method 1. Create a new sales order or invoice, on the form specify needed quote. Data will be copied from the quote to the created sales order or invoice.
 
 Method 2. Create a new sales order or invoice from corresponding relationship panel on Quote detail view.
 
