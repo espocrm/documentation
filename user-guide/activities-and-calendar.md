@@ -68,3 +68,7 @@ Shared view is also available for Timeline. It allows to view events of multiple
 Administrator can create a custom entity of Event type. Then at Administration > Settings > Activities it's possible to set this entity type as an Activity and make it available in Calendar.
 
 For custom entities, by default, Assigned User field determines a user who will the record on his/her Calendar. There is a possibility to have [multiple assigned users](../administration/multiple-assigned-users.md).
+
+### See also
+
+[How to manage your calendar](https://www.espocrm.com/tips/calendar/)
