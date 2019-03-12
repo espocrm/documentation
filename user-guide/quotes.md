@@ -14,7 +14,7 @@ Method 1. Create a new quote, on the form specify needed Opportunity. Data will 
 
 Method 2. Create a new quote from Quotes relationship panel on the detail view of the opportunity.
 
-## Generating Sales Order and Invoice from Quote
+## Generating Sales Orders and Invoices from Quote
 
 You are able to create Sales Order and Invoice from existing Quote.
 
