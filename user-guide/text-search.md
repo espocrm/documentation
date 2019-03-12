@@ -44,3 +44,6 @@ For InnoDB tables the following operators are available:
 * `*` The truncation (or wildcard) operator. Appended to the word to be affected.
 * `"` A phrase enclosed within double quotes must be contained literally, as it was typed.
 
+## See also
+
+[Seach types in EspoCRM: What you should know](https://www.espocrm.com/tips/search-types/)
