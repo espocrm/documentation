@@ -121,7 +121,7 @@
 `datetime\dayOfWeek(VALUE, [TIMEZONE])` Возвращает день недели (0-6). `-1`, если значение (VALUE) пусто. `0` - на воскресенье. Если часовой пояс (TIMEZONE) не указан, то используется системный часовой пояс. (начиная с версии 4.7.3)
 
 #### datetime\diff
-`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Возвращает разницу между двумя датами или датами и временем. INTERVAL_TYPE может быть «годы», «месяцы», «дни», «часы», «минуты». Возвращает `null`, если ошибка. Результат будет отрицательным, если VALUE_1 <VALUE_2.
+`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Возвращает разницу между двумя датами или датами и временем. INTERVAL_TYPE может быть 'years', 'months', 'days', 'hours', 'minutes'. Возвращает `null`, если ошибка. Результат будет отрицательным, если VALUE_1 <VALUE_2.
 
 #### datetime\addMinutes
 `datetime\addMinutes(VALUE, MINUTES)` Добавляет минуты (MINUTES) к значению (VALUE) даты и времени. Минуты (MINUTES) могут быть отрицательными.
