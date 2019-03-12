@@ -56,8 +56,10 @@
 * Advanced Pack
   * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
 * Sales Pack
-  * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
   * [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
+  * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
+  * [Sales Orders](https://github.com/espocrm/documentation/blob/master/user-guide/sales-orders.md)
+  * [Invoices](https://github.com/espocrm/documentation/blob/master/user-guide/invoices.md)
 
 ---
 
