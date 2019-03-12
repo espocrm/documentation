@@ -34,7 +34,7 @@ There is an ability to add custom fields for Sales Order Item entity using Entit
 
 ### Sales Order Items Layout
 
-Layout of quote items can be modified at Administration > Layout Manager > Sales Order Items > List (Item).
+Layout of sales order items can be modified at Administration > Layout Manager > Sales Order Items > List (Item).
 
 ### Discount Rate
 
@@ -48,7 +48,7 @@ Sales Orders can be printed to PDF. This action is available in dropdown next to
 
 See documentation [for templates for quotes](quotes.md#templates).
 
-## Sending quote in email
+## Sending sales order in email
 
 Sales Order PDF can be send in email as an attachment. Open a sales order record, click dropdown next to Edit button and the click Email PDF.
 
