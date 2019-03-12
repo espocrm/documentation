@@ -60,8 +60,8 @@ The next number, a prefix can be configured at Administration > Entity Manager >
 
 ## Default tax
 
-1. Specify default Tax record at Administration > Entity Manager > Sales Orders > fields > Tax > Default.
-2. Specify default tax rate at Administration > Entity Manager >  Sales Orders > fields > Tax Rate > Default.
+1. Specify default Tax record at Administration > Entity Manager > Sales Order > fields > Tax > Default.
+2. Specify default tax rate at Administration > Entity Manager >  Sales Order > fields > Tax Rate > Default.
 
 ## Copying values from product to sales order item
 
