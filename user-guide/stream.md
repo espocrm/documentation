@@ -35,5 +35,5 @@ You can filter what to show in a stream: `All`, `Posts` or `Updates`.
 ## See also
 
 [Activity Stream – Keep up with changes](https://www.espocrm.com/tips/activity-stream/)
-[Following records in EspoCRM](https://www.espocrm.com/tips/follow-records/)
 
+[Following records in EspoCRM](https://www.espocrm.com/tips/follow-records/)
