@@ -30,8 +30,8 @@
   * [Перемещение на другой сервер](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/moving-to-another-server.md)
   * [Несколько ответственных пользователей](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/multiple-assigned-users.md)
 * Advanced Pack
-  * [Управление Бизнес-Процессами](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/bpm.md)
-  * [Рабочие потоки](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/workflows.md)
+  * [Управление Бизнес-Процессами](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/bpm.md)
+  * [Рабочие потоки](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/workflows.md)
 ---
 
 ### Руководство пользователя
