@@ -56,3 +56,7 @@ This report will show revenue forecast based on probabilities of opportunities.
 
 Users, who have an access to this report, will be able to add it on their dashboards.
 
+## See also
+
+[https://www.espocrm.com/tips/lead-conversion/](https://www.espocrm.com/tips/lead-conversion/)
+
