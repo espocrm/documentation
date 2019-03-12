@@ -49,3 +49,7 @@ Once the records are imported and you are sure that imported data is fine you ca
 ## How to import into Target List
 
 When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
+
+## See also
+
+[Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
