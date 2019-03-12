@@ -111,3 +111,7 @@ By default user can read all fields if one can read the record. User can edit an
 In edit view  of a role record in Field Level section click plus icon next to the specific scope then select needed field. Then you will be able to specify the access level for `read` and `edit` actions. There are to options: `yes` and `no`.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+
+## See also
+
+[Security Roles Management in EspoCRM](https://www.espocrm.com/tips/security-roles/)
