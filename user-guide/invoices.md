@@ -26,7 +26,7 @@ There is an ability to add custom fields for Invoice Item entity using Entity Ma
 
 ### Invoice Items Layout
 
-Layout of sales order items can be modified at Administration > Layout Manager > Invoice Items > List (Item).
+Layout of invoice items can be modified at Administration > Layout Manager > Invoice Items > List (Item).
 
 ### Discount Rate
 
@@ -55,7 +55,7 @@ The next number, a prefix can be configured at Administration > Entity Manager >
 1. Specify default Tax record at Administration > Entity Manager > Invoice > fields > Tax > Default.
 2. Specify default tax rate at Administration > Entity Manager > Invoice > fields > Tax Rate > Default.
 
-## Copying values from product to sales order item
+## Copying values from product to invoice item
 
 Field values can be transferred from a product to an invoice item upon product selection. Field names you want to be copied should coincide in Product and Invoice Item enities.
 
