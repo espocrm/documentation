@@ -49,7 +49,7 @@ There are following chart types:
 * Bar (Vertical)
 * Bar Grouped (Horizontal) (only for report with grouping by 2 columns)
 * Bar Grouped (Vertical) (only for report with grouping by 2 columns)
-* Pie
+* Pie (only for report with grouping by 1 column)
 * Line
 
 ### Export
