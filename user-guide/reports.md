@@ -43,7 +43,7 @@ _Runtime Filters_ allows you to specify different filters before you run the rep
 
 Grid report allows displaying results in a chart form. 
 
-There are following chart types: 
+There are following chart types available: 
 
 * Bar (Horizontal)
 * Bar (Vertical)
