@@ -38,9 +38,23 @@ At _Filters_ section you can specify criteria that determines what records will 
 
 _Runtime Filters_ allows you to specify different filters before you run the report.
 
-Grid report allows displaying results in a chart form. There are following _chart types_: Bar (Horizontal), Bar (Vertical), Pie, Line.
 
-It's possible to __export__ grid report results to excel and csv formats.
+### Charts
+
+Grid report allows displaying results in a chart form. 
+
+There are following chart types: 
+
+* Bar (Horizontal)
+* Bar (Vertical)
+* Bar Grouped (Horizontal) (only for report with grouping by 2 columns)
+* Bar Grouped (Vertical) (only for report with grouping by 2 columns)
+* Pie
+* Line
+
+### Export
+
+It's possible to export grid report results to Excel and CSV formats. Charts are exported to Excel.
 
 ## Filters
 
