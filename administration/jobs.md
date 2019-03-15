@@ -43,6 +43,10 @@ Note that command that runs cron differs depending on server environment.
 
 ### Daemon
 
+Requires pcntl and posix extensions.
+
+It's recommended to turn on processing jobs in parallel processes: Administration > Scheduled Jobs > Jobs (top-right corner) > Settings (top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
+
 Command to start daemon using nohup:
 
 ```
@@ -75,9 +79,18 @@ StandardError=/path/to/espocrm/data/logs/daemon.log
 WantedBy=default.target
 ```
 
-Requires pcntl and posix extensions.
+Command to get the service to start on boot:
 
-Recommended to turn on processing jobs in parallel processes: Administration > Scheduled Jobs > Jobs (top-right corner) > Settings (top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
+```
+systemctl enable espocrm-daemon.service
+```
+
+Command to start the service:
+
+```
+systemctl start espocrm-daemon.service
+```
+
 
 ## Running jobs in parallel processes
 
