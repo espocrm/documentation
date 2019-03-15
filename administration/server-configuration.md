@@ -6,7 +6,7 @@ EspoCRM can be installed on the Apache ([instructions](apache-server-configurati
 
 ### PHP Requirements
 
-EspoCRM requires PHP 7.1 or later, with the following extensions enabled:
+EspoCRM requires PHP 7.1 or later, with the following extensions:
 
 * [pdo](http://php.net/manual/en/book.pdo.php) – to access MySQL in PHP;
 * [json](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
@@ -30,6 +30,13 @@ memory_limit = 256M
 post_max_size = 50M
 upload_max_filesize = 50M
 ```
+
+Optional php extensions that may be needed:
+
+* [zmq](http://php.net/manual/en/book.zmq.php) – for websocket;
+* [pcntl](http://php.net/manual/en/book.pcntl.php) – for parallel job processing and daemon (Unix-like systems only);
+* [posix](http://php.net/manual/en/book.posix.php) – for parallel job processing and daemon (Unix-like systems only).
+
 
 ### Database Requirements
 
