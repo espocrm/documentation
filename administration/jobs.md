@@ -96,8 +96,8 @@ where JobName is an intrernal name of the job you want to run.
 
 Examples:
 ```
-php command.php RunJob Cleanup
-php command.php RunJob ProcessMassEmail
+php command.php run-job Cleanup
+php command.php run-job ProcessMassEmail
 ```
 
 ## See also
