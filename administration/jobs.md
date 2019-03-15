@@ -55,7 +55,7 @@ nohup php /path/to/espocrm/daemon.php &
 
 #### Using Systemd
 
-File: `/etc/systemd/system/espocrm-daemon.service`
+Service configuration file: `/etc/systemd/system/espocrm-daemon.service`
 
 
 Configuration (file content):
