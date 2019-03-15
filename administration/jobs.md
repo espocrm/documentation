@@ -72,7 +72,7 @@ Restart=always
 RestartSec=5
 StartLimitInterval=0
 User=www-data
-ExecStart=/usr/bin/php /path/to/espocrm/daemon.php
+ExecStart=php /path/to/espocrm/daemon.php
 StandardError=/path/to/espocrm/data/logs/daemon.log
 
 [Install]
