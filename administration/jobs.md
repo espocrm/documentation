@@ -90,7 +90,7 @@ Available since version 5.6.0.
 
 Command:
 ```
-php command.php RunJob JobName
+php command.php run-job JobName
 ```
 where JobName is an intrernal name of the job you want to run.
 
