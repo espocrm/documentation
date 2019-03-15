@@ -15,7 +15,7 @@
   * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
   * [Extensions](https://github.com/espocrm/documentation/blob/master/administration/extensions.md)
   * [Dynamic forms](https://github.com/espocrm/documentation/blob/master/administration/dynamic-logic.md)
-* [Formula (Calculated Fields)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
+* [Formula (calculated fields)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
 * [Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
 * [LDAP authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
