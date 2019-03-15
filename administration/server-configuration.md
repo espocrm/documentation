@@ -8,8 +8,8 @@ EspoCRM can be installed on the Apache ([instructions](apache-server-configurati
 
 EspoCRM requires PHP 7.1 or later, with the following extensions:
 
-* [pdo](http://php.net/manual/en/book.pdo.php) – to access MySQL in PHP;
-* [json](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, and others);
+* [pdo](http://php.net/manual/en/book.pdo.php) – for database access;
+* [json](http://php.net/manual/en/book.json.php) – resources use this format (metadata, layout, languages, etc.);
 * [gd](http://php.net/manual/en/book.image.php) – to manipulate images;
 * [openssl](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
 * [zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
