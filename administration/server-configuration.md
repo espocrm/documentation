@@ -35,7 +35,8 @@ Optional php extensions that may be needed:
 
 * [zmq](http://php.net/manual/en/book.zmq.php) – for websocket;
 * [pcntl](http://php.net/manual/en/book.pcntl.php) – for parallel job processing and daemon (Unix-like systems only);
-* [posix](http://php.net/manual/en/book.posix.php) – for parallel job processing and daemon (Unix-like systems only).
+* [posix](http://php.net/manual/en/book.posix.php) – for Unix-like systems;
+* [ldap](http://php.net/manual/en/book.ldap.php) - for LDAP authentication.
 
 
 ### Database Requirements
