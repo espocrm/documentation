@@ -24,6 +24,7 @@
 * Misc
   * [Web-to-Lead](https://github.com/espocrm/documentation/blob/master/administration/web-to-lead.md)
   * [Jobs](https://github.com/espocrm/documentation/blob/master/administration/jobs.md)
+  * [WebSocket](https://github.com/espocrm/documentation/blob/master/administration/websocket.md)
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
   * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
