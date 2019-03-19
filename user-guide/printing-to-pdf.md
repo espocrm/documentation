@@ -114,6 +114,14 @@ Printing selected items:
 {{/each}}
 ```
 
+### Page breaking
+
+To add an explicit page break you need to add the following code (in code view):
+
+```
+<br pagebreak="true">
+```
+
 ### Charset issues
 
 If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font. Available since 5.4.0 version. 
