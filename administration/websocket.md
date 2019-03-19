@@ -4,11 +4,11 @@ Available since version 5.6.0.
 
 Out-of-the-box WebSocket coverts the following features:
 
-* New in-app notifications,
-* New event reminders,
-* Updates in stream on the record detail view.
+* New in-app notifications
+* New event reminders
+* Updates in stream on the record detail view
 
-Enable 'Use WebSocket' param at Administation > Settings.
+Enable 'Use WebSocket' parameter at Administation > Settings.
 
 You need to have zmq php extension installed.
 
