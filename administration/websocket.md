@@ -16,7 +16,7 @@ You need to have zmq php extension installed.
 
 You need to run `websocket.php` as a daemon.
 
-### Systemd
+### Using systemd
 
 Create a file `/etc/systemd/system/espocrm-websocket.service`.
 
