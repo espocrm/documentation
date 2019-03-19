@@ -61,7 +61,7 @@ sudo a2enmod proxy
 sudo a2enmod proxy_wstunnel
 ```
 
-In your apache config inside VirtualHost section for SSL add the following:
+In your apache config inside VirtualHost section for SSL (`<VirtualHost _default_:443>`) add the following:
 
 ```
     <IfModule proxy_module>
