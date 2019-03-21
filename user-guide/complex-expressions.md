@@ -6,7 +6,7 @@ All functions should be in upper case. You need to append the trailing colon cha
 
 #### IF
 
-E.g. `IF:(a,'1','0')` – if a is true then return '1'; return '0' otherwise.
+E.g. `IF:(a,'1','0')` – if 'a' is true then return '1'; return '0' otherwise.
 
 ### Comparison
 
