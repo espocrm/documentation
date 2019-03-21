@@ -5,24 +5,24 @@ All functions should be in upper case. You need to append the trailing colon cha
 Examples:
 
 ```
-CONCAT:(firstName,' ',lastName)
+CONCAT:(firstName, ' ', lastName)
 ```
 
 ```
-IF:(EQUAL:(status,'Complete','Complete','Not Complete'))`
+IF:(EQUAL:(status, 'Complete', 'Complete', 'Not Complete'))`
 ```
 
 ### Flow Control
 
 #### IF
 
-E.g. `IF:(a,'1','0')` – if 'a' is true then return '1'; return '0' otherwise.
+E.g. `IF:(a, '1', '0')` – if 'a' is true then return '1'; return '0' otherwise.
 
 ### Comparison
 
 #### LIKE
 
-Pattern matching. E.g. `LIKE:(name,'Cloud%'`) will give true for 'name' equal to 'Cloud Basic' and 'Cloud Enterprise'.
+Pattern matching. E.g. `LIKE:(name, 'Cloud%'`) will give true for 'name' equal to 'Cloud Basic' and 'Cloud Enterprise'.
 
 #### NOT_LIKE
 
@@ -30,7 +30,7 @@ Negation of LIKE.
 
 #### EQUAL
 
-Check whether two arguments are equal. E.g. `EQUAL:(status,'Complete')` corresponds to SQL statement `status = 'Complete'`.
+Check whether two arguments are equal. E.g. `EQUAL:(status, 'Complete')` corresponds to SQL statement `status = 'Complete'`.
 
 #### NOT_EQUAL
 
@@ -62,7 +62,7 @@ Negation of IS_NULL.
 
 #### IN
 
-Check whether a value is within a set of values. E.g. `IN:(stage,'Closed Won','Closed Lost')` will give true is stage is 'Closed Won' or 'Closed Lost'.
+Check whether a value is within a set of values. E.g. `IN:(stage, 'Closed Won', 'Closed Lost')` will give true is stage is 'Closed Won' or 'Closed Lost'.
 
 #### NOT_IN
 
@@ -70,7 +70,7 @@ Negation of IN.
 
 #### COALESCE
 
-Returns the first non-NULL value in the list. E.g. `COALESCE:(dateStart,createdAt)` will return value of createdAt if dateStart is not set. 
+Returns the first non-NULL value in the list. E.g. `COALESCE:(dateStart, createdAt)` will return value of createdAt if dateStart is not set. 
 
 ### Date & time
 
@@ -132,13 +132,13 @@ Week number w/ year. Monday as a first day of week.
 
 #### TZ
 
-Time zone converion. E.g. `TZ:(createdAt,-10.5)` will apply -10:30 offset.
+Time zone converion. E.g. `TZ:(createdAt, -10.5)` will apply -10:30 offset.
 
 ### String
 
 #### CONCAT
 
-Concatenate. E.g. `CONCAT:(firstName,' ',lastName)`.
+Concatenate. E.g. `CONCAT:(firstName, ' ', lastName)`.
 
 #### LOWER
 
@@ -160,19 +160,19 @@ Number of characters in string.
 
 #### ADD
 
-Addition. E.g. `ADD:(2,2)` corresponds to `2 + 2`.
+Addition. E.g. `ADD:(2, 2)` corresponds to `2 + 2`.
 
 #### SUB
 
-Subtraction. E.g. `SUB:(2,1)` corresponds to `2 - 1`.
+Subtraction. E.g. `SUB:(2, 1)` corresponds to `2 - 1`.
 
 #### MUL
 
-Multiplication. E.g. `MUL:(2,2)` corresponds to `2 * 2`.
+Multiplication. E.g. `MUL:(2, 2)` corresponds to `2 * 2`.
 
 #### DIV
 
-Division. E.g. `DIV:(2,4)` corresponds to `2 / 4`.
+Division. E.g. `DIV:(2, 4)` corresponds to `2 / 4`.
 
 #### MOD
 
@@ -194,11 +194,11 @@ Round a number to a specified number of decimal places. E.g. `ROUND:(value,2)`.
 
 #### OR
 
-E.g. `OR:(a,b,c)` corresponds to SQL statement `a OR b OR c`.
+E.g. `OR:(a, b, c)` corresponds to SQL statement `a OR b OR c`.
 
 #### AND
 
-E.g. `AND:(a,b,c)` corresponds to SQL statement `a AND b AND c`.
+E.g. `AND:(a, b, c)` corresponds to SQL statement `a AND b AND c`.
 
 #### NOT
 
