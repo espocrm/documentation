@@ -1,6 +1,16 @@
 ## Functions
 
-All functions should be in upper case. You need to append the trailing colon character to a function name, e.g. `CONCAT:(firstName,' ',lastName)`, `IF:(EQUAL:(status,'Complete','Complete','Not Complete'))`.
+All functions should be in upper case. You need to append the trailing colon character to a function name.
+
+Examples:
+
+```
+CONCAT:(firstName,' ',lastName)
+```
+
+```
+IF:(EQUAL:(status,'Complete','Complete','Not Complete'))`
+```
 
 ### Flow Control
 
