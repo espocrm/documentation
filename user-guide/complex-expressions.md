@@ -54,7 +54,7 @@ Check whether a <= b.
 
 #### IS_NULL
 
-Check whether value is NULL. E.g. `IS_NULL:(sicCode)` -- checks whether Sic Code field is not set.
+Check whether value is NULL. E.g. `IS_NULL:(sicCode)` – checks whether Sic Code field is not set.
 
 #### IS_NOT_NULL
 
