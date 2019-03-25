@@ -130,6 +130,10 @@ Week number w/ year. E.g. `2018/4`. Sunday is a first day of week.
 
 Week number w/ year. Monday as a first day of week.
 
+#### NOW
+
+Current date and time.
+
 #### TZ
 
 Time zone converion. E.g. `TZ:(createdAt, -10.5)` will apply -10:30 offset.
