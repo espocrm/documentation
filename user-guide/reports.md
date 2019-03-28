@@ -28,13 +28,25 @@ Grid reports result summarized values grouped by specified fields. These reports
 
 To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
 
-At _Group By_ field pick one or two fields you want your report data be grouped by. It's possible to group by year, month, day for date fields. If you group by two fields your report will be considered as three-dimensional.
+### Group By
+
+At _Group By_ field pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, day for date fields. If you group by two fields your report will be considered as three-dimensional.
+
+There is the ability to specify a custom complex expression (with functions) for grouping. More info about complex expressions is available [here](complex-expressions.md).
+
+### Columns
 
 At _Columns_ field select one or more aggregate functions like COUNT, SUM (summation), MIN, MAX, AVG (average).
 
+### Order by
+
 _Order by_ field defines how report data will be sorted.
 
-At _Filters_ section you can specify criteria that determines what records will be used in your report. You can use logical operators 'OR' and 'AND' here.
+### Filters
+
+At _Filters_ section you can specify criteria that determines what records will be used in your report. You can use logical operators 'OR' and 'AND' here. More info is below.
+
+### Runtime Filters
 
 _Runtime Filters_ allows you to specify different filters before you run the report.
 
@@ -101,6 +113,8 @@ Note: If you need to compare just with a simple string value you should put it i
 Note: Functions intended to interact with entity record will not work here because the formula is not applied to specific record.
 
 ![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
+
+You have the ability to use custom complex expressions. More info about complex expressions is available [here](complex-expressions.md).
 
 ### Having group
 
