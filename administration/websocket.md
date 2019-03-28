@@ -2,7 +2,7 @@
 
 Available since version 5.6.0.
 
-Out-of-the-box WebSocket coverts the following features:
+Out-of-the-box WebSocket covers the following features:
 
 * New in-app notifications
 * New event reminders
