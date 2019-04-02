@@ -72,3 +72,29 @@ In your apache config inside VirtualHost section for SSL (`<VirtualHost _default
 	  </Location>
     </IfModule>
 ```
+
+### Ngnix
+
+Add to server.conf:
+
+```
+map $http_upgrade $connection_upgrade {
+  default upgrade;
+  '' close;
+}
+
+upstream websocket {
+  server 127.0.0.1:8080;
+}
+```
+
+Add to section `server`:
+
+```
+location /wss {
+    proxy_pass http://websocket;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $connection_upgrade;
+  }
+```
