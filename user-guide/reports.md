@@ -22,7 +22,7 @@ You can __export__ list report results to excel and csv formats.
 
 ## Grid Reports
 
-Grid reports result summarized values grouped by specified fields. These reports can be displayed as a chart.
+Grid reports result summarized values, can be grouped by one or two fields. and displayed as a chart.
 
 ![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
@@ -32,11 +32,23 @@ To create new grid report click on Reports tab and then click Create Report butt
 
 At _Group By_ field pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, day for date fields. If you group by two fields your report will be considered as three-dimensional.
 
+You can leave Group By field empty.
+
 There is the ability to specify a custom complex expression (with functions) for grouping. More info about complex expressions is available [here](complex-expressions.md).
 
 ### Columns
 
-At _Columns_ field select one or more aggregate functions like COUNT, SUM (summation), MIN, MAX, AVG (average).
+At _Columns_ field select one or more aggregate functions applied to a specific field.
+
+Functions:
+
+* COUNT – number of records;
+* SUM – summation, applied to Currency, Int and Float fields;
+* MIN – mimimal value;
+* MAX – maximal value;
+* AVG – average value.
+
+If the report is grouped by a link field then it's possible to add numeric fields from the linked record w/o aggregate functions. Example: The report for Opportunities, grouped by Campaign, with Campaign.Budget column.
 
 ### Order by
 
@@ -49,7 +61,6 @@ At _Filters_ section you can specify criteria that determines what records will 
 ### Runtime Filters
 
 _Runtime Filters_ allows you to specify different filters before you run the report.
-
 
 ### Charts
 
