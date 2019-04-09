@@ -79,6 +79,20 @@ There are following chart types available:
 
 It's possible to export grid report results to Excel and CSV formats. Charts are exported to Excel.
 
+### Joint Grid reports
+
+Available since Advanced Pack 2.2.0.
+
+Joint Grid reports combine multiple Grid reports of different entity types. Sub-reports must by grouped by 1 or 0 fields.
+
+Some usage examples:
+
+* Lead count / Contact count;
+* Revenue by month / Campaign Budget by month;
+* Revenu by user / Lead count by User.
+
+You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
+
 ## Filters
 
 ### Field filter
@@ -140,9 +154,11 @@ Note: Compatible with EspoCRM versions 5.1.0 and greater.
 
 ## Displaying on the dashboard
 
-You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
+You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options. 
 
-It's possible to display only a total amount on the dashlet.
+Grid reports can be displayed as a chart, chart with totals or only totals.
+
+List reports can be displayed as a list or a total number of records.
 
 ## Email sending
 
