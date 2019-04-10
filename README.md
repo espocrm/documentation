@@ -9,7 +9,7 @@
 * [Upgrading](https://github.com/espocrm/documentation/blob/master/administration/upgrading.md)
 * [Troubleshooting](https://github.com/espocrm/documentation/blob/master/administration/troubleshooting.md)
 * [Roles management (access control)](https://github.com/espocrm/documentation/blob/master/administration/roles-management.md)
-* [Emails](https://github.com/espocrm/documentation/blob/master/administration/emails.md)
+* [Emails Administration](https://github.com/espocrm/documentation/blob/master/administration/emails.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
   * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
