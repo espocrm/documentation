@@ -22,19 +22,19 @@ This will check the next available version, download it and install. Once upgrad
 
 ## Upgrade from UI
 
-### Step 1. Check your current version
+#### Step 1. Check your current version
 
 To check your current version go to Administration > Upgrade page.
 
-### Step 2. Download needed upgrade packages
+#### Step 2. Download needed upgrade packages
 
 Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
 
-### Step 3. Create a backup (optional)
+#### Step 3. Create a backup (optional)
 
 Create a backup of your EspoCRM files and data before upgrading. Follow [these instructions](backup-and-restore.md) to get it done.
 
-### Step 4. Upgrade process
+#### Step 4. Upgrade process
 
 Go to Administration > Upgrade. Upload and install one by one upgrade packages.
 
