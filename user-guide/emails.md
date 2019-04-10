@@ -22,7 +22,7 @@ Users can have multiple SMTP accounts. But email addresses user can use to send 
 
 ## Gmail accounts
 
-For connecting your GMail account (IMAP and SMTP) you have two options:
+For connecting your Gmail account (IMAP and SMTP) you have two options:
 
 1. Enable access for less secure appliction at your Google account settings.
 2. Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
