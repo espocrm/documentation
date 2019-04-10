@@ -17,8 +17,8 @@ This will check the next available version, download it and install. Once upgrad
 ## Recommendations
 
 1. Make a [backup](backup-and-restore.md) before upgrading.
-2. Disable cron at Administration > Settings before upgrading. Enable it back after upgrade is finished.
-3. Enable 'Maintenance Mode' at Administration > Settings before upgrading. Disable after upgrade is finished.
+2. Disable cron (at Administration > Settings) before upgrading. Enable it back after upgrade is finished.
+3. Enable 'Maintenance Mode' (at Administration > Settings) before upgrading. Disable after upgrade is finished.
 
 ## Upgrade from UI
 
