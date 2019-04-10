@@ -20,6 +20,13 @@ Users can setup SMTP settings in their Personal Email Accounts as well as in Pre
 
 Users can have multiple SMTP accounts. But email addresses user can use to send emails from are defined by email addresses of a *User* record.
 
+## Gmail accounts
+
+For connecting your GMail account (IMAP and SMTP) you have two options:
+
+1. Enable access for less secure appliction at your Google account settings.
+2. Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
+
 ## Working with Emails
 
 Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
