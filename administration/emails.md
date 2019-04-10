@@ -1,4 +1,4 @@
-# Emails
+# Email administration
 
 > Important. [Cron](server-configuration.md#setup-a-crontab) should be configured in your system to make email fetching work. You can find the information in your EspoCRM at Administration > Scheduled Jobs.
 
