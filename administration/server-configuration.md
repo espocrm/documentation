@@ -13,7 +13,6 @@ EspoCRM requires PHP 7.1 or later, with the following extensions:
 * [gd](http://php.net/manual/en/book.image.php) – to manipulate images;
 * [openssl](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
 * [zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
-* [imap](http://php.net/manual/en/book.imap.php) – to monitore mailboxes in EspoCRM;
 * [mbstring](http://php.net/manual/en/book.mbstring.php);
 * [iconv](http://php.net/manual/en/book.iconv.php);
 * [curl](http://php.net/manual/en/book.curl.php) – for integrations;
