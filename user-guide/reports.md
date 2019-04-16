@@ -48,7 +48,7 @@ Functions:
 * MAX – maximal value;
 * AVG – average value.
 
-If the report is grouped by a link field then it's possible to add numeric fields from the linked record w/o aggregate functions. Example: The report for Opportunities, grouped by Campaign, with Campaign.Budget column.
+If the report is grouped by a link field then it's possible to add fields from the linked record w/o aggregate functions. Example: The report for Opportunities, grouped by Campaign, with Campaign.Budget column.
 
 ### Order by
 
