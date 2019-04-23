@@ -1,4 +1,4 @@
-# Guidelines on Using Emails
+# Guidelines on using emails
 
 EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
 
