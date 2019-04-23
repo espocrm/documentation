@@ -27,7 +27,7 @@ For connecting your Gmail account (IMAP and SMTP) you have two options:
 1. Enable access for less secure application at your Google account settings.
 2. Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
 
-## Working with Emails
+## Working with emails
 
 Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
 You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
@@ -44,7 +44,7 @@ If email addresses (from, to, cc) in an email record are known to the system, it
 
 All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
 
-## Sending Emails
+## Sending emails
 
 You can compose new email by a few ways:
 * *Compose Email* button on Emails list view;
