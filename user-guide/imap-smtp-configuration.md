@@ -1,5 +1,9 @@
 # IMAP and SMTP configuration
 
+## Configuration instructions:
+* [Gmail account](#setup-for-gmail-account)
+* [Outlook account](#setup-for-outlook-account)
+
 ## IMAP configuration 
 *Note: You need to have cron properly configured in your system to have inbound emails working.*
 
@@ -33,7 +37,7 @@ To setup SMTP account, do the following:
  
 ![SMTP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/3.png)
 
-## Setup for Gmail Account.
+## Setup for Gmail Account
 
 1. Sign into your **Google Account**.
 2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/4.png) > Settings. 
