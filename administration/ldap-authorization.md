@@ -1,4 +1,4 @@
-# Ldap Authorization
+# LDAP Authorization
 
 In this guide, we will show how to configure LDAP authorization for EspoCRM. Let’s go.
 
@@ -49,7 +49,7 @@ Now, go to the login page and enter user credentials.
 
 User has been authenticated and automatically created in the EspoCRM.
 
-##Configuration instructions based on your server:
+## Configuration instructions based on your server:
 * [Active Directory server](ldap-authorization-for-ad.md)
 * [OpenLDAP server](ldap-authorization-for-openldap.md)
 
