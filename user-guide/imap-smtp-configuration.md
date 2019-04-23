@@ -41,10 +41,9 @@ To setup SMTP account, do the following:
 4. In the **IMAP access**, select **Enable IMAP**.
 5. Click on **Save Changes**.
 
-Note: For connecting your Gmail account (IMAP and SMTP) you have two options:
-
-* Enable access for less secure application at your Google account settings.
+Note: There are two ways in which you can setup IMAP and SMTP for Gmail account:
 * Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
+* Enable access for less secure application at your Google account settings.
 
 For more information, please follow the link: https://support.google.com/mail/answer/7126229?hl=en.
 
