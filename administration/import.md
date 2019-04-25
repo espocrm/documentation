@@ -38,7 +38,7 @@ Add default values you want new and updated records to set with. E.g. you can sp
 
 After the import is done you will be able to revert created records, see duplicates and updated records. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once. Note: Revert doesn't work with updated records.
 
-Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records), you need to make sure that php parameter `set_time_limit` is large enough.
+Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records, it's recommended to run import in idle.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
 
