@@ -3,6 +3,7 @@
 ## Configuration instructions:
 * [Gmail account](#setup-for-gmail-account)
 * [Outlook account](#setup-for-outlook-account)
+* [Yahoo account](#setup-for-yahoo-account)
 
 ## IMAP configuration 
 *Note: You need to have cron properly configured in your system to have inbound emails working.*
@@ -39,7 +40,7 @@ To setup SMTP account, do the following:
 
 ## Setup for Gmail Account
 
-1. Sign into your **Google Account**.
+1. Sign into your **Gmail Account**.
 2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/4.png) > Settings. 
 3. Click the **Forwarding and POP/IMAP** tab.
 4. In the **IMAP access**, select **Enable IMAP**.
@@ -60,6 +61,10 @@ For more information, please follow the link: https://support.google.com/mail/an
 5. Press **Save** button on the top of the page.
 
 ![Outlook configuration](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/5.png)
+
+## Setup for Yahoo Account
+
+IMAP and SMTP access are enabled by default. All you need is enable the "less secure" access. For more information, please follow these [instructions](#for-yahoo-accounts).
 
 ## Troubleshoot problems
 
