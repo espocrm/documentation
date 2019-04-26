@@ -66,6 +66,8 @@ For more information, please follow the link: https://support.google.com/mail/an
 
 IMAP and SMTP access are enabled by default. All you need is enable the "less secure" access. For more information, please follow these [instructions](#for-yahoo-accounts).
 
+Configuration details are available by the link: https://help.yahoo.com/kb/SLN4075.html.
+
 ## Troubleshoot problems
 
 ### Error: Cannot login, user or password wrong
@@ -92,7 +94,7 @@ Use [Google Integration](https://www.espocrm.com/extensions/google-integration/)
 2. On the navigation panel, select **Account Security**.
 3. At the bottom of the page, click **Allow apps that use less secure sign in**.
 
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/6-2.png)
+![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/6-1.png)
 
 #### For G Suite Accounts
 Personal Email Account configuration in EspoCRM should look like on the picture:
