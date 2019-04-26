@@ -1,6 +1,7 @@
 ﻿# IMAP and SMTP configuration
 
 ## Configuration instructions:
+* [G Suite account](#setup-for-g-suite-account)
 * [Gmail account](#setup-for-gmail-account)
 * [Outlook account](#setup-for-outlook-account)
 * [Yahoo account](#setup-for-yahoo-account)
@@ -37,6 +38,14 @@ To setup SMTP account, do the following:
 5. Click on **Send Test Email** to check whether everything was specified correctly. If the connection is successful, you will receive test email on the specified email address.
  
 ![SMTP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/3.png)
+
+## Setup for G Suite Account
+
+1. Sign into your **Google Admin console**.
+2. Navigate to **App > G Suite > Gmail > Advanced settings**.
+3. Select the organizational unit in the **Organizations section**.
+4. Under the POP and IMAP Access, uncheck the **Disable POP and IMAP access for all users box** checkbox.
+5. Each user has to enable IMAP access as descibed for [Gmail Account](#setup-for-gmail-account).
 
 ## Setup for Gmail Account
 
