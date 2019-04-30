@@ -11,7 +11,7 @@ CONCAT:(firstName, ' ', lastName)
 ```
 
 ```
-IF:(EQUAL:(status, 'Complete', 'Complete', 'Not Complete'))`
+IF:(EQUAL:(status, 'Complete'), 'Complete', 'Not Complete')`
 ```
 
 ### Flow Control
