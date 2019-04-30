@@ -80,7 +80,7 @@ Returns the first non-NULL value in the list. E.g. `COALESCE:(dateStart, created
 
 Month number. From 1 to 12.
 
-#### WEEK_NUMBER
+#### WEEK_NUMBER_0
 
 Week number. Sunday is a first day of week.
 
