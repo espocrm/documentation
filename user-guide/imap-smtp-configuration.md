@@ -103,4 +103,4 @@ Use [Google Integration](https://www.espocrm.com/extensions/google-integration/)
 2. On the navigation panel, select **Account Security**.
 3. At the bottom of the page, click **Allow apps that use less secure sign in**.
 
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/6-1.png)
+![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/7.png)
