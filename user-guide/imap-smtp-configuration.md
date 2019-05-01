@@ -104,31 +104,3 @@ Use [Google Integration](https://www.espocrm.com/extensions/google-integration/)
 3. At the bottom of the page, click **Allow apps that use less secure sign in**.
 
 ![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/6-1.png)
-
-#### For G Suite Accounts
-Personal Email Account configuration in EspoCRM should look like on the picture:
-
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/7.png)
-
-Then, you have to grant an “Access for less secure applications”:
-1. Go to your **Google account settings**
-
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/8.png)
-
-2. Go to the **“Security”** tab:
-
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/9.png)
-
-3. Go to the bottom of the site and find there **“Access for less secure applications”** block.
- 
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/10.png)
- 
-It should be enabled.
-
-4. Press the link **“Enable access (not recommended)”** and enable it.
-
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/imap-smtp-configuration/11.png)
-
-Now, go to EspoCRM and press **“Send Test Email”**. It should work.
- 
-For more information, please follow the link: https://support.google.com/a/answer/2956491?hl=en.
