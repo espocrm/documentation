@@ -197,7 +197,7 @@ Example:
 
 Example:
 
-`entity\isAttributeChanged('assignedUserId')`
+`entity\attributeFetched('assignedUserId')`
 
 #### entity\addLinkMultipleId
 `entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field.
