@@ -225,9 +225,7 @@ Example:
 
 `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
-FILTER is a name of a filter pre-defined in the system. It can be defined in Select Manager class.
-
-It's also possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
 
 #### entity\countRelated
 `entity\countRelated(LINK, [FILTER])` Returns a number of related records with an optional FILTER applied.
@@ -236,7 +234,7 @@ Example:
 
 `entity\countRelated('opportunities', 'open')`
 
-It's possible to apply a [list report](../user-guide/reports.md) as a filter the same say as for sumRelated function.
+It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
 
 #### record\exists
 
@@ -332,6 +330,34 @@ ifThenElse(
 
 ```
 
+## Arguments
+
+### LINK
+
+A name of the relationship. Available link names can be found at Administration > Entity Manager > ... > Relationships.
+
+### ATTRIBUTE
+
+Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields. 
+
+Attribute names must be wrapped in quotes. E.g. `'assignedUserId'`.
+
+Field types having multiple attributes: 
+* Link fields have two attributes: fieldId, fieldName.
+* Link-Multiple fields have two attributes: fieldIds, fieldNames.
+* Link-Parent fields have tree attributes: fieldId, fieldType, fieldName.
+
+### ENTITY_TYPE
+
+ENTITY_TYPE list is available at Administration > Entity Manager.
+
+### FILTER
+
+A name of a filter pre-defined in the system. Usually it is defined in Select Manager class. Developers can define own filters in a custom Select Manager class.
+
+For non-developers it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
+
 ## Using formula in Workflows
 
 You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
+
