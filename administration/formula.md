@@ -209,7 +209,6 @@ Example:
 `entity\addLinkMultipleId('teams', 'someTeamId')` Add 'someTeamId' to 'teams' field. 
 
 
-
 #### entity\hasLinkMultipleId
 `entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
 
@@ -220,16 +219,18 @@ Example:
 `entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
 
 #### entity\sumRelated
-`entity\sumRelated(LINK, FIELD, [FILTER])` Sums related records by a specified FIELD with an optional FILTER. (since version 5.2.6)
+`entity\sumRelated(LINK, FIELD, [FILTER])` Sums related records by a specified FIELD with an optional FILTER.
 
 Example:
 
 `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
-It's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
+FILTER is a name of a filter pre-defined in the system. It can be defined in Select Manager class.
+
+It's also possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
 
 #### entity\countRelated
-`entity\countRelated(LINK, [FILTER])` Returns a number of related records with an optional FILTER applied. (since version 5.2.6)
+`entity\countRelated(LINK, [FILTER])` Returns a number of related records with an optional FILTER applied.
 
 Example:
 
