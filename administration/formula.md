@@ -294,7 +294,7 @@ $someVariableName = 'Test';
 description = $test;
 ```
 
-## Arguments
+### Function arguments
 
 #### LINK
 
