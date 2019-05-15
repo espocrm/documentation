@@ -294,6 +294,32 @@ $someVariableName = 'Test';
 description = $test;
 ```
 
+## Arguments
+
+#### LINK
+
+A name of the relationship. Available link names can be found at Administration > Entity Manager > ... > Relationships.
+
+#### ATTRIBUTE
+
+Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields. 
+
+Attribute names must be wrapped in quotes. E.g. `'assignedUserId'`.
+
+Field types having multiple attributes: 
+* Link fields have two attributes: fieldId, fieldName.
+* Link-Multiple fields have two attributes: fieldIds, fieldNames.
+* Link-Parent fields have tree attributes: fieldId, fieldType, fieldName.
+
+#### ENTITY_TYPE
+
+ENTITY_TYPE list is available at Administration > Entity Manager.
+
+#### FILTER
+
+A name of a filter pre-defined in the system. Usually it is defined in Select Manager class. Developers can define own filters in a custom Select Manager class.
+
+For non-developers it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
 
 ## Examples
 
@@ -329,33 +355,6 @@ ifThenElse(
 );
 
 ```
-
-## Arguments
-
-### LINK
-
-A name of the relationship. Available link names can be found at Administration > Entity Manager > ... > Relationships.
-
-### ATTRIBUTE
-
-Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields. 
-
-Attribute names must be wrapped in quotes. E.g. `'assignedUserId'`.
-
-Field types having multiple attributes: 
-* Link fields have two attributes: fieldId, fieldName.
-* Link-Multiple fields have two attributes: fieldIds, fieldNames.
-* Link-Parent fields have tree attributes: fieldId, fieldType, fieldName.
-
-### ENTITY_TYPE
-
-ENTITY_TYPE list is available at Administration > Entity Manager.
-
-### FILTER
-
-A name of a filter pre-defined in the system. Usually it is defined in Select Manager class. Developers can define own filters in a custom Select Manager class.
-
-For non-developers it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
 
 ## Using formula in Workflows
 
