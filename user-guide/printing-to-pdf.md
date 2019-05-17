@@ -61,6 +61,15 @@ Custom formatting for currency values:
 
 Value `10000.5` will be printer as `10 000,50`.
 
+### Currency symbol
+
+Available since 5.6.3 version.
+
+```
+{{amountCurrencySymbol}}
+```
+where `amount` is a field name.
+
 ### Text fields
 
 To display text fields (multi-line) use triple braces: ```{{{description}}}```.
