@@ -1,12 +1,14 @@
 # Formula (Calculated Fields)
 
 In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved. 
+
 It provides an ability to automatically set specific fields (attributes) with values derived from calculation.
 
 To edit formula follow Administration > Entity Manager > dropdown menu at the right on the row of needed entity > Formula.
 
-You may also need to set fields, that are supposed to be calculated, Read-only via Entity Manager.
+You may also need to set fields, that are supposed to be calculated, read-only via Entity Manager.
 
+Admin can run 'Recalculate Formula' for specific records from the list view.
 
 ## Syntax
 
