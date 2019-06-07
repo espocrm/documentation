@@ -144,3 +144,11 @@ Example:
 ```
 name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
 ```
+
+## See also
+
+* [Birthday notifications in EspoCRM](https://www.espocrm.com/blog/birthday-notifications-in-espocrm/)
+* [Adding custom service action for Workflows](https://www.espocrm.com/documentation/development/workflow-service-actions/)
+* [Automated Email-to-Lead with Workflows](https://www.espocrm.com/blog/automated-email-to-lead-with-workflows/)
+* [Automatic posting to stream with Workflows](https://www.espocrm.com/blog/automatic-posting-to-stream-with-workflow/)
+```
