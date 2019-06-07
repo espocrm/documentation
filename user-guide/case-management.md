@@ -33,3 +33,7 @@ Users can relate knowledge base articles to the case record.
 Administrator can create a [portal](../administration/portal.md) where customers will be able to create cases.
 
 Since portal users automatically follow their cases, they will receive email notifications about new messages in the Stream.
+
+## See also
+
+* [Notifying contacts about new post in Case with Workflows](https://www.espocrm.com/blog/notifying-contacts-about-new-post-in-case-with-workflows/)
