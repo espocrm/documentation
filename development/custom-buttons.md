@@ -1,4 +1,4 @@
-# Custom buttons for Detail, List, Edit views
+# Custom buttons for detail, list, edit views
 
 An example for the detail view of Lead entity type.
 
