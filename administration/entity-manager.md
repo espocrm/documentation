@@ -54,7 +54,7 @@ Read-only generated integer number.
 
 ### Boolean
 
-Ccheckbox, true or false.
+Checkbox, true or false.
 
 ### Currency
 
