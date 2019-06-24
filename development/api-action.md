@@ -14,7 +14,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 {
     /**
       *  POST api/v1/Account/action/test
-     */
+      */
     public function postActionTest($params, $data, $request, $response)
     {
         // $data - payload
@@ -26,7 +26,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 
     /**
       *  GET api/v1/Account/action/test
-     */
+      */
     public function getActionTest($params, $data, $request)
     {
         $myUriParam = $request->get('myUriParam');
