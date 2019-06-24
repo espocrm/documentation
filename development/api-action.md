@@ -19,7 +19,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
     {
         // $data - payload
 
-        $response->setStatus(201); // this list is optional, example how to set custom response status code
+        $response->setStatus(201); // this is optional, example how to set custom response status code
         
         // $someData = $this->getContainer()->get('serviceFactory')->create('MyService')
         //    ->doSomething($data);
