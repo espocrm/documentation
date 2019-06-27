@@ -12,7 +12,7 @@ Available since the version 5.6.4.
 
 2. Create a file `client/custom/res/templates/campaign/unsubscribe.tpl`
 
-```json
+```
 <div class="container content">
     <div class="col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-2">
         <div class="panel panel-default">
