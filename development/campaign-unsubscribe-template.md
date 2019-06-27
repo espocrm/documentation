@@ -1,4 +1,4 @@
-# Custom Mass Mail Unsubscribe Template
+# Custom template for mass email unsubscribe page
 
 Available since the version 5.6.4.
 
