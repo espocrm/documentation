@@ -6,11 +6,12 @@
 * [Custom API action](https://github.com/espocrm/documentation/blob/master/development/api-action.md)
 * [Custom views](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
 * [Custom buttons for detail, list, edit views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
-* [Link Multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
 * [Extension packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
 * [Creating custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
-* [Defining new funtions for Formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
+* [Defining new funtions for formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
 * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
 * Campaigns
   * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
+* Misc
+  * [Link-multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
