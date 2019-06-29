@@ -222,7 +222,7 @@ $meetingList = $entityManager->getRepository('Meeting')->join([
         ]
     ]
 ])->where([
-  
+  'meetingUser.userId' => $user->id,
 ])->find();
 ```
 
