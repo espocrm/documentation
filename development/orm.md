@@ -222,11 +222,8 @@ $selectParams = [
   'whereClause' => [
     'stage' => 'Closed Won'
   ],
-  'orderBy' => 1 // ordering by the first column
+  'orderBy' => 1, // ordering by the first column
 ];
-
-// applying left joins for currency conversion
-$this->getEntityManager()->getRepository('Opportunity')->handleSelectParams($selectParams);
 
 $pdo = $this->getEntityManager()->getPDO();
 $sql = $this->getEntityManager()->getQuery()->createSelectQuery('Opportunity', $selectParams);
@@ -236,3 +233,7 @@ $sth->execute();
 // results
 $rowList = $sth->fetchAll(\PDO::FETCH_ASSOC); 
 ```
+
+#### Complex expressions
+
+`MONTH:closeDate` and `SUM:amountConverted` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
