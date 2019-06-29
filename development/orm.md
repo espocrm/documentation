@@ -136,7 +136,7 @@ $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $o
 
 Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 
-```
+```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   'amount>=' => 100
 ])->find();
@@ -144,7 +144,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 
 ##### IN and NOT IN operators
 
-```
+```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   'stage' => ['Closed Lost', 'Closed Won']
  ])->find();
@@ -162,7 +162,7 @@ Supported  operators:
 * `*` - LIKE,
 * `!*` -- NOT LIKE.
 
-```
+```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   'name*' => '%service%'
 ])->find();
@@ -170,7 +170,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 
 ##### OR, AND operators
 
-```
+```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
   [
     'OR' => [
@@ -193,18 +193,41 @@ $opportunityList = $entityManager->getRepository('Opportunity')->distinct()->whe
 
 #### Join
 
-```
+Join relationship:
+```php
 $contactList = $entityManager->getRepository('Contact')->distinct()->join('opportunities')->where([
   'opportunities.stage' => 'Closed Won'
 ])->find();
 ```
 
-```
+Left Join relationship:
+```php
 $contactList = $entityManager->getRepository('Contact')
 ->distinct()->leftJoin('opportunities')->where(...)->find();
 ```
 
+'opportunities' is a relationship name.
+
+Joining any table:
+
+```php
+$meetingList = $entityManager->getRepository('Meeting')->join([
+    [
+        'MeetingUser', // meeting_user table
+        'meetingUser', // it's an alias
+        [
+            'meetingUser.meetingId:' => 'meeting.id' // join condition;
+                                                     // colon indicates that the right part is not a value;
+                                                     // it translates to meetingUser.meeting_id = meeting.id
+        ]
+    ]
+])->where([
+  
+])->find();
 ```
+
+Join table alias:
+```php
 $contactList = $entityManager->getRepository('Contact')
 ->distinct()
 ->join([['opportunities', 'aliasForJoinedTable']])
@@ -215,7 +238,7 @@ $contactList = $entityManager->getRepository('Contact')
 
 #### Group By
 
-```
+```php
 $selectParams = [
   'select' => ['MONTH:closeDate', 'SUM:amountConverted']
   'groupBy' => ['MONTH:closeDate'],
