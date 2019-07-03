@@ -60,6 +60,8 @@ Out-of-the-box functions are listed below.
 #### ifThen
 `ifThen(CONDITION, CONSEQUENT)` If CONDITION is met, then do CONSEQUENT. If not -- do nothing.
 
+CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
+
 #### string\concatenate
 `string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
 
@@ -328,10 +330,10 @@ For non-developers it's possible to apply a [list report](../user-guide/reports.
 ```
 ifThen(
   entity\isNew() && assignedUserId == null,
-  assignedUserId = 'managerId'
+  assignedUserId = 'managerId'; status = 'Assigned'
 );
 
-ifThen(
+someDateField = ifThen(
   entity\isNew() && closeDate == null && stage == 'Closed Won',
   datetime\today()
 );
