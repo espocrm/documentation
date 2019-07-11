@@ -145,6 +145,7 @@ Task can execute following the actions:
 * Apply Assignment Rule - assigns the target record, the process record or any record created by the process according to the specific rule;
 * Create Notification - creates in-app notification for specific users;
 * Make Followed - makes specific users follow the target record, the process record or any record created by the process;
+* Trigger Another Workflow Rule - runs a workflow rule of the sequential type, target can be substituted with a related or created record (since version 2.3.14);
 * Run Service Action - runs custom service actions implemented by developers.
 
 Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
