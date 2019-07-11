@@ -125,7 +125,9 @@ Allows to make sequential workflows. It's possible to branch workflow by conditi
 
 It's possible to delay executing of sequential workflow. In the sequential workflow you can define the condition that checks whether specific fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+Target for a triggered workflow can be substitued with a related record.
+
+Note: For sequential workflows it's usually more reasonable to utilize [BPM tool](bpm.md).
 
 ### Run Service Action
 
