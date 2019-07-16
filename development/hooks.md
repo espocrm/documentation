@@ -93,7 +93,7 @@ class MyHook extends \Espo\Core\Hooks\Base
         $inviteeType = $data['inviteeType'];
         $inviteeId = $data['inviteeId'];
         
-        if ($status === 'Accepted') {
+        if ($status == 'Accepted') {
         
         }
     }
