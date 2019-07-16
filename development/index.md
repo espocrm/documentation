@@ -5,7 +5,7 @@
 * [Metadata](https://github.com/espocrm/documentation/blob/master/development/metadata.md)
 * [Custom API action](https://github.com/espocrm/documentation/blob/master/development/api-action.md)
 * [Custom views (for records and fields)](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
-* [Custom buttons for detail, list, edit views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
+* [Custom buttons for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
 * [Extension packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
 * [Creating custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
