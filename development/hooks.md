@@ -66,8 +66,7 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 #### Examples
 
 `custom/Espo/Custom/Hooks/TargetList/MyHook.php`
-
-```
+```php
 namespace Espo\Custom\Hooks\TargetList;
 
 class MyHook extends \Espo\Core\Hooks\Base
@@ -82,7 +81,7 @@ class MyHook extends \Espo\Core\Hooks\Base
 ```
 
 `custom/Espo/Custom/Hooks/Meeting/MyHook.php`
-```
+```php
 namespace Espo\Custom\Hooks\Meeting;
 
 class MyHook extends \Espo\Core\Hooks\Base
