@@ -11,7 +11,7 @@
 * [Custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
 * [Defining new funtions for formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
 * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
-* [Standard field customizing](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
+* [Standard field customization](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
 * [Select Manager](https://github.com/espocrm/documentation/blob/master/development/select-manager.md)
 * Campaigns
   * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
