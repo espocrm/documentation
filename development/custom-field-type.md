@@ -45,4 +45,4 @@ Use out-of-the-box field types as examples:
 - `/client/src/views/fields` - views;
 - `/client/res/templates/fields` - templates.
 
-Then you need to run rebuild at the administration panel.
+Then you need to clear cache at the administration panel.
