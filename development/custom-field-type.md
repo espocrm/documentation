@@ -19,10 +19,10 @@ define('custom:views/fields/{field-type}', 'views/fields/base', function (Dep) {
     
     return Dep.extend({
     
-        detailTemplate: 'custom/fields/{field-type}/detail',
-        listTemplate: 'custom/fields/{field-type}/list',
-        editTemplate: 'custom/fields/{field-type}/edit',
-        searchTemplate: 'custom/fields/{field-type}/search',
+        detailTemplate: 'custom:fields/{field-type}/detail',
+        listTemplate: 'custom:fields/{field-type}/list',
+        editTemplate: 'custom:fields/{field-type}/edit',
+        searchTemplate: 'custom:fields/{field-type}/search',
         
         setup: function () {
         
