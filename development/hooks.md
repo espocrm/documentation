@@ -40,7 +40,7 @@ use Espo\ORM\Entity;
 
 class AccountName extends \Espo\Core\Hooks\Base
 {    
-    public function beforeSave(Entity $entity, array $options = array())
+    public function beforeSave(Entity $entity, array $options = [])
     {
         if ($entity->isNew() && !$entity->get('accountName')) { 
             $entity->set('accountName', 'No Account');
@@ -54,7 +54,49 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 
 ## Additional default hooks
 
-Target List
+#### Target List
 
-* afterOptOut - when a target clicks an opt-out link, data passed in the 3rd argument
+* afterOptOut - when a target clicks an opt-out link, data passed in the 3rd $data argument
 * afterCancelOptOut - when a target subscribes again
+
+#### Meeting/Call
+
+* afterConfirmation - when an event attendee clicks on accept/decline/tentative link; details are passed in the 3rd $data argument
+
+#### Examples
+
+`custom/Espo/Custom/Hooks/TargetList/MyHook.php`
+
+```
+namespace Espo\Custom\Hooks\TargetList;
+
+class MyHook extends \Espo\Core\Hooks\Base
+{    
+    public function afterOptOut(\Espo\ORM\Entity $targetList, array $options, array $data)
+    {
+        $targetId = $data['targetId'];
+        $targetType = $data['targetType'];
+        $link = $data['link'];
+    }
+}
+```
+
+`custom/Espo/Custom/Hooks/Meeting/MyHook.php`
+```
+namespace Espo\Custom\Hooks\Meeting;
+
+class MyHook extends \Espo\Core\Hooks\Base
+{    
+    public function afterConfirmation(\Espo\ORM\Entity $meeting, array $options, array $data)
+    {
+        $status = $data['status'];
+        $inviteeType = $data['inviteeType'];
+        $inviteeId = $data['inviteeId'];
+        
+        if ($status === 'Accepted') {
+        
+        }
+    }
+}
+```
+
