@@ -126,18 +126,18 @@ Example for Address field of Account entity type.
 ```js
 define('custom:views/fields/address', 'views/fields/address', function (Dep) {
 
-  return Dep.extend({
+   return Dep.extend({
   
-      setup: function () {
-           Dep.prototype.setup.call(this);
-           // some initialization
-      },
+        setup: function () {
+            Dep.prototype.setup.call(this);
+            // some initialization
+        },
 
-      afterRender: function () {
-           Dep.prototype.afterRender.call(this);
-           // your customizations executed after the field is rendered
-      },
-  });
+        afterRender: function () {
+            Dep.prototype.afterRender.call(this);
+            // your customizations executed after the field is rendered
+        },
+    });
 });
 ```
 
