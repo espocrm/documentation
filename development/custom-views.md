@@ -1,4 +1,4 @@
-# Custom Views
+# Custom views
 
 ## Record views
 
