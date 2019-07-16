@@ -8,10 +8,10 @@
 * [Custom buttons for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
 * [Extension packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
-* [Creating custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
+* [Custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
 * [Defining new funtions for formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
 * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
-* [Customizing standard field](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
+* [Standard field customizing](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
 * [Select Manager](https://github.com/espocrm/documentation/blob/master/development/select-manager.md)
 * Campaigns
   * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
