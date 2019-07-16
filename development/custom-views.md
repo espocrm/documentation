@@ -26,7 +26,7 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 Record/Detail view contains all panels with fields, relations and other data you can see on detail view. It doesn't contain header and buttons in the top-right corner.
 
 ```javascript
-Espo.define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
+define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
   
   return Dep.extend({
     template: 'custom:views/your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
