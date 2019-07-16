@@ -121,7 +121,7 @@ Example for Address field of Account entity type.
 }
 ```
 
-`client/custom/src/views/account/fields/address.json`
+`client/custom/src/views/account/fields/address.js`
 
 ```js
 define('custom:views/fields/address', 'views/fields/address', function (Dep) {
