@@ -35,7 +35,7 @@ define('custom:views/fields/{field-type}', 'views/fields/base', function (Dep) {
 });
 ```
 
-Create detail/list/edit/search templates in `client/custom/res/templates/fields/{field-type}/` directory.
+Create detail/list/edit/search  templates (*.tpl extension) in `client/custom/res/templates/fields/{field-type}/` directory.
 
 Use out-of-the-box field types as examples:
 - `/client/src/views/fields/` - views
