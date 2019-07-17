@@ -1,10 +1,8 @@
 # Printing to PDF
 
-Note: This feature is available since EspoCRM version 5.0.5.
-
 Printing to PDF provides an ability to generate PDF documents with a record data. The document content is defined by Template.
 
-Note: You need to have at least one Template for the entity type of the record you want to print.
+Important: You need to have at least one Template for the entity type of the record you want to print.
 
 ### Printing single record
 
@@ -26,7 +24,7 @@ Can be achieved by restriction of access to Template entity type.
 
 ## Templates
 
-Templates tab is hidden by default. Administrator can add it at Administration > User Interface.
+Available at Administration > PDF Templates.
 
 For more precise editing it's recommended to use Code View mode.
 
@@ -134,3 +132,7 @@ To add an explicit page break you need to add the following code (in code view):
 ### Charset issues
 
 If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
+
+### Access to Templates
+
+Administrator can add Templates tab at Administration > User Interface, then it will be available for regular users. An access to templates can be defined in Roles.
