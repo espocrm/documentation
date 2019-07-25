@@ -52,6 +52,8 @@ To display float numbers w/o fractional part (as integer) use the following expr
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
+`quantity` is a field name.
+
 Custom formatting for currency values:
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
