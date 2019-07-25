@@ -12,7 +12,7 @@ By default in dashlet options you can set _Title_ and _Auto-refresh Interval_.
 
 Additional option fields you can set in `"options"` > `"fields"`.
 
-Also you can define other options, if your view needs more data.
+Also you can define other options, if your view needs more data. You will be able to access options data from a fiew with the method `getOption('optionName')`.
 
 ## Example
 
