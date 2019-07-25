@@ -24,3 +24,5 @@
   * [Custom buttons for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
   * [Link-multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
   * [Including custom CSS file](https://github.com/espocrm/documentation/blob/master/development/custom-css.md)
+  * [Custom dashlets](https://github.com/espocrm/documentation/blob/master/development/how-to-create-a-dashlet.md)
+  
