@@ -90,7 +90,7 @@ Example:
 
 ### Link-multiple fields
 
-Since 5.5.0 it's possible to loop through link multiple collection.
+It's possible to loop through link multiple collection (since 5.5.0).
 
 Example, printing contact names and roles of an opportunity:
 
@@ -102,9 +102,10 @@ Example, printing contact names and roles of an opportunity:
 {{/each}}
 ```
 
-The following way is available since 5.3.0 version.
+`contacts` is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
 
-Example, printing contact names of an opportunity:
+
+Example, printing contact names of an opportunity (available since 5.3.0):
 ```
 {{#each contactsIds}}
     {{var this ../contactsNames}}
