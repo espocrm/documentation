@@ -12,8 +12,6 @@ By default in dashlet options you can set _Title_ and _Auto-refresh Interval_.
 
 Additional option fields you can set in `"options"` > `"fields"`.
 
-To define fields position set the layout in in `"options"` > `"layout"` > `"rows"`
-
 Also you can define other options, if your view needs more data.
 
 ## Example
