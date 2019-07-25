@@ -90,6 +90,8 @@ Example:
  </table>
 ```
 
+`itemList` is an json array field (available in Quote, Sales Order, Invoices entity types).
+
 ### Link-multiple fields
 
 It's possible to loop through link multiple collection (since 5.5.0).
