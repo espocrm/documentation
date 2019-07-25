@@ -26,7 +26,7 @@ Can be achieved by restriction of access to Template entity type.
 
 Available at Administration > PDF Templates.
 
-For more precise editing it's recommended to use Code View mode.
+For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button `</>`.
 
 You can print fields of the record as well as fields of related records by utilizing placeholders in your template.
 
@@ -76,7 +76,7 @@ To display text fields (multi-line) use triple braces: ```{{{description}}}```.
 
 ### Each iterator
 
-Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag.
+Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
 
 Example:
 ```
