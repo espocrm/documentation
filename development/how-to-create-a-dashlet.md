@@ -2,11 +2,12 @@
 
 Create a file `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.json` with your dashlet configuration.
 
-Here you need to define `"view"`, and you could set `"aclScope"`, `"entityType"`, and `"options"`.
+Here you need to define `"view"`, and you could set 'aclScope', and 'options'.
 
 If it's typical list dashlet, use `"view":"views/dashlets/abstract/record-list"`, if not, create own view (https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
 
 ## Options
+
 By default in dashlet options you can set _Title_ and _Auto-refresh Interval_.
 
 Additional option fields you can set in `"options"` > `"fields"`.
@@ -21,76 +22,25 @@ Also you can define other options, if your view needs more data.
 
 ```
 {
-  "view":"views/dashlets/abstract/record-list",
-  "aclScope": "Case",
-  "entityType": "Case",
-  "options": {
-    "fields": {
-      "title": {
-        "type": "varchar",
-        "required": true
-      },
-      "autorefreshInterval": {
-        "type": "enumFloat",
-        "options": [0, 0.5, 1, 2, 5, 10]
-      },
-      "displayRecords": {
-        "type": "enumInt",
-        "options": [3,4,5,10,15]
-      },
-      "expandedLayout": {
-        "type": "base",
-        "view": "views/dashlets/fields/records/expanded-layout"
-      }
-    },
-    "defaults": {
-      "sortBy": "createdAt",
-      "asc": false,
-      "displayRecords": 5,
-      "expandedLayout": {
-        "rows": [
-          [
-            {
-              "name": "number"
+    "view": "custom:views/dashlets/my-dashlet",
+    "aclScope": "Account",
+    "options": {
+        "fields": {
+            "title": {
+                "type": "varchar",
+                "required": true
             },
-            {
-              "name": "name",
-              "link": true
-            },
-            {
-              "name": "type"
-            }
-          ],
-          [
-            {
-              "name": "status"
-            },
-            {
-              "name": "priority"
-            }
-          ]
-        ]
-      },
-            "searchData": {
-                "bool": {
-                    "onlyMy": true
-                },
-                "primary": "open"
+            "autorefreshInterval": {
+                "type": "enumFloat",
+                "options": [0, 0.5, 1, 2, 5, 10]
             }
         },
         "layout": [
             {
                 "rows": [
                     [
-                        {"name": "title"}
-                    ],
-                    [
-                        {"name": "displayRecords"},
+                        {"name": "title"},
                         {"name": "autorefreshInterval"}
-                    ],
-                    [
-                        {"name": "expandedLayout"},
-                        false
                     ]
                 ]
             }
@@ -98,7 +48,26 @@ Also you can define other options, if your view needs more data.
     }
 }
 ```
-There you can see some examples `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
+aclScope set to Account means that only users who have an access to Account scope will be able to add this dashlet.
+
+
+There you can find how default dashlets defined: `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
+
+Create a view file `client/custom/src/views/dashlets/my-dashlet.js`:
+
+```js
+define('custom:views/dashlets/my-dashlet', 'views/dashlets/abstract/base',  function (Dep) {
+    return Dep.extend({
+        name: 'MyDashlet',
+        template: 'custom:dashlets/my-dashlet',
+    })
+});
+```
+
+Create a template file `client/custom/res/templates/dashlets/my-dashlet.tpl`
+```
+   <iframe src=""></iframe>
+```
 
 ## Translation
 
