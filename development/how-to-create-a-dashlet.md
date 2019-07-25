@@ -16,7 +16,7 @@ Also you can define other options, if your view needs more data. You will be abl
 
 ## Example
 
-`application/Espo/Modules/Crm/Resources/metadata/dashlets/Cases.json`
+`application/Espo/Modules/Crm/Resources/metadata/dashlets/MyDashlet.json`
 
 ```
 {
