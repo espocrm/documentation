@@ -76,7 +76,7 @@ To display text fields (multi-line) use triple braces: ```{{{description}}}```.
 
 ### Each iterator
 
-Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`.
+Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag.
 
 Example:
 ```
