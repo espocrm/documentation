@@ -37,5 +37,48 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
         return $someData; // can be true, false, array or object.
     }
 }
-
 ```
+
+### Custom Controller
+
+#### In Custom folder
+
+Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
+
+```php
+<?php
+
+namespace Espo\Custom\Controllers;
+
+class MyController extends \Espo\Core\Controllers\Base
+{
+
+}
+```
+
+Clear Cache.
+
+#### In Module folder
+
+Create a file `custom/Espo/Modules/MyModule/Resources/metadata/scopes/MyController.json`.
+
+```json
+{
+    "module": "MyModule"
+}
+```
+
+Create a file `custom/Espo/Modules/MyModule/Controllers/MyController.php`.
+
+```php
+<?php
+
+namespace Espo\Modules\MyModule\Controllers;
+
+class MyController extends \Espo\Core\Controllers\Base
+{
+
+}
+```
+
+Clear Cache.
