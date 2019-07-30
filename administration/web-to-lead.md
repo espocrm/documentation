@@ -130,3 +130,8 @@ Expample:
 By utilizing [Workflows](workflows.md) or [BPM tool](bpm.md) you can create an assignment rule that will distribute leads among team users. There are Round-Robin and Least-Busy rules available.
 
 To apply the rule for only leads coming through the entry point you can use a condition checking Campaign field.
+
+
+## Hooks
+
+It's possible to catch a lead capture event with built-in [hook](../development/hooks.md#additional-default-hooks). Requires coding.
