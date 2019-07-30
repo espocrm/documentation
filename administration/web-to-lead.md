@@ -134,4 +134,4 @@ To apply the rule for only leads coming through the entry point you can use a co
 
 ## Hooks
 
-It's possible to catch a lead capture event with built-in [hook](../development/hooks.md#additional-default-hooks). Requires coding.
+It's possible to catch a lead capture event with built-in [hooks](../development/hooks.md#additional-default-hooks). Requires coding.
