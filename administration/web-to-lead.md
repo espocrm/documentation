@@ -19,7 +19,10 @@ If double opt-in is enabled then your subscribers will need to confirm their int
 Create Email Template that will be used for a double opt-in. You can use following placeholders in a template body:
 
 * `{optInUrl}` - confirmation URL;
-* `{optInLink}` - confirmation link.
+* `{optInLink}` - confirmation link;
+* `{optInDate}` - date when subscription request was submitted (since 5.6.10);
+* `{optInTime}` - time when subscription request was submitted (since 5.6.10);
+* `{optInDateTime}` - date and time when subscription request was submitted (since 5.6.10).
 
 A confirmation link will be added automatically if you didn't insert a placeholder in the email template.
 
