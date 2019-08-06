@@ -6,7 +6,7 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 $entityManager = $this->getEntityManager();
 ```
 
-#### Create new entity
+### Create new entity
 ```php
 $account = $entityManager->getEntity('Account')
 ```
@@ -15,7 +15,7 @@ or
 $account = $entityManager->getRepository('Account')->get();
 ```
 
-#### Fetch existing
+### Fetch existing
 ```php
 $account = $entityManager->getEntity('Account', $accountId);
 ```
@@ -24,17 +24,17 @@ or
 $account = $entityManager->getRepository('Account')->get($accountId);
 ```
 
-#### Get value
+### Get value
 ```php
 $fieldValue = $account->get('fieldName');
 ```
 
-#### Has value
+### Has value
 ```php
 $fieldNameIsSet = $account->has('fieldName'); // true or false
 ```
 
-#### Set value
+### Set value
 ```php
 $account->set('fieldName', 'Test Account');
 ```
@@ -46,7 +46,7 @@ $account->set(array(
 ));
 ```
 
-#### Store
+### Store
 ```php
 $entityManager->saveEntity($account);
 ```
@@ -55,7 +55,7 @@ or
 $entityManager->getRepository('Account')->save($account);
 ```
 
-#### Remove
+### Remove
 ```php
 $entityManager->removeEntity($account);
 ```
@@ -64,7 +64,7 @@ or
 $entityManager->getRepository('Account')->remove($account);
 ```
 
-#### Find
+### Find
 ```php
 $accountList = $entityManager->getRepository('Account')->where([
     'type' => 'Customer'
@@ -98,19 +98,19 @@ Ordering by list:
 $opportunityList = $entityManager->getRepository('Opportunity')->order('LIST:stage:Prospectring,Qualification,Proposal')->find();
 ```
 
-#### Find the first one
+### Find the first one
 ```php
 $account = $entityManager->getRepository('Account')->where([
     'type' => 'Customer',   
 ])->findOne();
 ```
 
-#### Find related
+### Find related
 ```php
 $opportunityList = $entityManager->getRepository('Account')->findRelated($account, 'opportunities');
 ```
 
-#### Relate entities
+### Relate entities
 ```php
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunity);
 ```
@@ -119,7 +119,7 @@ or
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunityId);
 ```
 
-#### Unrelate entities
+### Unrelate entities
 ```php
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunity);
 ```
@@ -130,9 +130,9 @@ $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $o
 
 ### Select Query Parameters
 
-#### Where clause
+### Where clause
 
-##### Comparison operators
+#### Comparison operators
 
 Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 
@@ -142,7 +142,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->find();
 ```
 
-##### IN and NOT IN operators
+#### IN and NOT IN operators
 
 ```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
@@ -156,7 +156,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->find();
 ```
 
-##### LIKE operators
+#### LIKE operators
 
 Supported  operators: 
 * `*` - LIKE,
@@ -168,7 +168,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->find();
 ```
 
-##### OR, AND operators
+#### OR, AND operators
 
 ```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
@@ -185,13 +185,13 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ])->findOne();
 ```
 
-#### Distinct
+### Distinct
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->distinct()->where(...)->find();
 ```
 
-#### Join
+### Join
 
 Join relationship:
 ```php
@@ -236,7 +236,7 @@ $contactList = $entityManager->getRepository('Contact')
 ])->find();
 ```
 
-#### Group By
+### Group By
 
 ```php
 $selectParams = [
@@ -257,6 +257,22 @@ $sth->execute();
 $rowList = $sth->fetchAll(\PDO::FETCH_ASSOC); 
 ```
 
-#### Complex expressions
+### Additional Params
+
+#### returnSthCollection
+
+Available since version 5.6.9.
+
+Can be used with `find` and `findRelated` methods. With this param provided, they will return a collection that doesn't allocate memory for all result data.
+
+```
+$collection = $entityManager->getRepository('Email')->limit(0, 10000)->find(['returnSthCollection' => true]);
+
+foreach ($collection as $entity) {
+    // memory is allocated for each item, when collection is iterated
+}
+```
+
+### Complex expressions
 
 `MONTH:closeDate` and `SUM:amountConverted` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
