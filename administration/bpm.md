@@ -36,6 +36,33 @@ Processes can be started automatically (upon specific conditions or by schedulin
 
 ## Flowchart Elements
 
+Events:
+* Start
+* * [Start](#user-content-start-event)
+* * Conditional Start
+* * Timer Start
+* Intermediate
+* * Conditional
+* * Timer
+* End
+* * End
+* * Terminate
+
+Gateways:
+* Exclusive
+* Inclusive
+* Parallel
+* Event Based
+
+Activities:
+* Task
+* Send Message Task
+* User Task
+* Script Task
+
+Flows:
+* Sequence
+
 ### Events
 
 Events are displayed on a flowchart as circles.
