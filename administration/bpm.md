@@ -38,15 +38,15 @@ Processes can be started automatically (upon specific conditions or by schedulin
 
 [Events](#user-content-events):
 * Start
-* * [Start](#user-content-start-event)
-* * [Conditional Start](#user-content-conditional-start-event)
-* * [Timer Start](#user-content-timer-start-event)
+  * [Start](#user-content-start-event)
+  * [Conditional Start](#user-content-conditional-start-event)
+  * [Timer Start](#user-content-timer-start-event)
 * Intermediate
-* * [Conditional](#user-content-conditional-intermediate-event)
-* * [Timer](#user-content-timer-intermediate-event)
+  * [Conditional](#user-content-conditional-intermediate-event)
+  * [Timer](#user-content-timer-intermediate-event)
 * End
-* * [End](#user-content-end-event)
-* * [Terminate](#user-content-terminate-end-event)
+  * [End](#user-content-end-event)
+  * [Terminate](#user-content-terminate-end-event)
 
 [Gateways](#user-content-gateways):
 * [Exclusive](#user-content-exclusive-gateway)
