@@ -38,8 +38,8 @@ Processes can be started automatically (upon specific conditions or by schedulin
 
 * Start Events:
   * [Start](#user-content-start-event)
-  * [Conditional Start](#user-content-conditional-start-event)
-  * [Timer Start](#user-content-timer-start-event)
+  * [Conditional](#user-content-conditional-start-event)
+  * [Timer](#user-content-timer-start-event)
 * Intermediate Events:
   * [Conditional](#user-content-conditional-intermediate-event)
   * [Timer](#user-content-timer-intermediate-event)
