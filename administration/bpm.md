@@ -36,7 +36,7 @@ Processes can be started automatically (upon specific conditions or by schedulin
 
 ## Flowchart Elements
 
-[Events](#user-content-events):
+Events:
 * Start
   * [Start](#user-content-start-event)
   * [Conditional Start](#user-content-conditional-start-event)
@@ -48,13 +48,13 @@ Processes can be started automatically (upon specific conditions or by schedulin
   * [End](#user-content-end-event)
   * [Terminate](#user-content-terminate-end-event)
 
-[Gateways](#user-content-gateways):
+Gateways:
 * [Exclusive](#user-content-exclusive-gateway)
 * [Inclusive](#user-content-inclusive-gateway)
 * [Parallel](#user-content-parallel-gateway)
 * [Event Based](#user-content-event-based-gateway)
 
-[Activities](#user-content-activities):
+Activities:
 * [Task](#user-content-task)
 * [Send Message Task](#user-content-send-message-task)
 * [User Task](#user-content-user-task)
