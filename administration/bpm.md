@@ -43,7 +43,7 @@ Processes can be started automatically (upon specific conditions or by schedulin
 * * [Timer Start](#user-content-timer-start-event)
 * Intermediate
 * * [Conditional](#user-content-conditional-intermediate-event)
-* * [Timer](#user-content-conditional-timer-event)
+* * [Timer](#user-content-timer-intermediate-event)
 * End
 * * [End](#user-content-end-event)
 * * [Terminate](#user-content-terminate-end-event)
