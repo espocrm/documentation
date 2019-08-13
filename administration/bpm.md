@@ -60,8 +60,8 @@ Processes can be started automatically (upon specific conditions or by schedulin
 * [User Task](#user-content-user-task)
 * [Script Task](#user-content-script-task)
 
-[Flows](#user-content-flows):
-* [Sequence]
+Flows:
+* [Sequence](#user-content-sequence-flow)
 
 ### Events
 
