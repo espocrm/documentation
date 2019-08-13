@@ -48,19 +48,19 @@ Processes can be started automatically (upon specific conditions or by schedulin
 * * [End](#user-content-end-event)
 * * [Terminate](#user-content-terminate-end-event)
 
-Gateways:
-* [Exclusive]
-* [Inclusive]
-* [Parallel]
-* ]Event Based]
+[Gateways](#user-content-gateways):
+* [Exclusive](#user-content-exclusive-gateway)
+* [Inclusive](#user-content-inclusive-gateway)
+* [Parallel](#user-content-parallel-gateway)
+* [Event Based](#user-content-event-based-gateway)
 
-Activities:
-* [Task]
-* [Send Message Task]
-* [User Task]
-* [Script Task]
+[Activities](#user-content-activities):
+* [Task](#user-content-task)
+* [Send Message Task](#user-content-send-message-task)
+* [User Task](#user-content-user-task)
+* [Script Task](#user-content-script-task)
 
-Flows:
+[Flows](#user-content-flows):
 * [Sequence]
 
 ### Events
