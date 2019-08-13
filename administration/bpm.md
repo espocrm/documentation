@@ -36,32 +36,32 @@ Processes can be started automatically (upon specific conditions or by schedulin
 
 ## Flowchart Elements
 
-Events:
+[Events](#user-content-events):
 * Start
 * * [Start](#user-content-start-event)
-* * Conditional Start
-* * Timer Start
+* * [Conditional Start](#user-content-conditional-start-event)
+* * [Timer Start](#user-content-timer-start-event)
 * Intermediate
-* * Conditional
-* * Timer
+* * [Conditional](#user-content-conditional-intermediate-event)
+* * [Timer](#user-content-conditional-timer-event)
 * End
-* * End
-* * Terminate
+* * [End](#user-content-end-event)
+* * [Terminate](#user-content-terminate-end-event)
 
 Gateways:
-* Exclusive
-* Inclusive
-* Parallel
-* Event Based
+* [Exclusive]
+* [Inclusive]
+* [Parallel]
+* ]Event Based]
 
 Activities:
-* Task
-* Send Message Task
-* User Task
-* Script Task
+* [Task]
+* [Send Message Task]
+* [User Task]
+* [Script Task]
 
 Flows:
-* Sequence
+* [Sequence]
 
 ### Events
 
