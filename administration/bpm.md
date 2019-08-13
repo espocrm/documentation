@@ -167,7 +167,16 @@ The user assigned to the created Process User Task record will receive in-app no
 
 Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
 
+##### Resolution
+
 It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
+
+##### Canceling
+
+Created User Task can be canceled by a process. There are two ways:
+
+1. Using 'Update Created Record' action (within Task activity), setting 'Is Canceled' field to 'true'. 
+2. Using interrupting boundary event (attached to User Task activity) (since advanced pack 2.4.0).
 
 #### Script Task
 
