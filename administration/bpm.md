@@ -36,32 +36,28 @@ Processes can be started automatically (upon specific conditions or by schedulin
 
 ## Flowchart Elements
 
-Events:
-* Start
+* Start Events:
   * [Start](#user-content-start-event)
   * [Conditional Start](#user-content-conditional-start-event)
   * [Timer Start](#user-content-timer-start-event)
-* Intermediate
+* Intermediate Events:
   * [Conditional](#user-content-conditional-intermediate-event)
   * [Timer](#user-content-timer-intermediate-event)
-* End
+* End Events
   * [End](#user-content-end-event)
   * [Terminate](#user-content-terminate-end-event)
-
-Gateways:
-* [Exclusive](#user-content-exclusive-gateway)
-* [Inclusive](#user-content-inclusive-gateway)
-* [Parallel](#user-content-parallel-gateway)
-* [Event Based](#user-content-event-based-gateway)
-
-Activities:
-* [Task](#user-content-task)
-* [Send Message Task](#user-content-send-message-task)
-* [User Task](#user-content-user-task)
-* [Script Task](#user-content-script-task)
-
-Flows:
-* [Sequence](#user-content-sequence-flow)
+* Gateways
+  * [Exclusive](#user-content-exclusive-gateway)
+  * [Inclusive](#user-content-inclusive-gateway)
+  * [Parallel](#user-content-parallel-gateway)
+  * [Event Based](#user-content-event-based-gateway)
+* Activities
+  * [Task](#user-content-task)
+  * [Send Message Task](#user-content-send-message-task)
+  * [User Task](#user-content-user-task)
+  * [Script Task](#user-content-script-task)
+* Flows
+  * [Sequence](#user-content-sequence-flow)
 
 ### Events
 
