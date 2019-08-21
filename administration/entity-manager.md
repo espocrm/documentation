@@ -14,8 +14,8 @@ Click `Create Entity` button on Entity Manager page. Specify name, labels and ty
 Types:
 
 * Base - empty entity only with basic fields like Name, Assigned User, Teams, Description.
-* Base Plus - like Base but with Activities, History, Tasks panels (available since 4.3.0).
-* Event - Date Start, Date End, Duration, Parent, Status fields. Available in Calendar and Activities panel (since 4.3.0, must be enabled at Administration > Settings).
+* Base Plus - like Base but with Activities, History, Tasks panels.
+* Event - Date Start, Date End, Duration, Parent, Status fields. Available in Calendar and Activities panel (must be enabled at Administration > Settings).
 * Person - Email, Phone, First Name, Last Name, Salutation, Address fields. Activities, History, Tasks panels.
 * Company - Email, Phone, Billing Address, Shipping Address fields. Activities, History, Tasks panels.
 
@@ -28,9 +28,9 @@ If you click `Edit` link on a certain entity you will be able to change some par
 * Stream - whether Stream feature is enabled for this entity.
 * Disabled - check if you don't need this entity in your system.
 * Text Filter Fields - what fields to search in for the main text filter and global search.
-* Kanban view - available only if Status Field is specified. Enables Kanban view mode. (since EspoCRM 5.2.0)
-* Color - a specific color for a quick recognition. (since EspoCRM 5.2.0)
-* Icon - the picked icon is displayed in the side navbar in Vertical theme. (since EspoCRM 5.2.0)
+* Kanban view - available only if Status Field is specified. Enables Kanban view mode.
+* Color - a specific color for a quick recognition.
+* Icon - the picked icon is displayed in the side navbar in Vertical theme.
 
 ## Fields
 
@@ -55,6 +55,10 @@ Read-only generated integer number.
 ### Boolean
 
 Checkbox, true or false.
+
+### Checklist
+
+A list of checkboxes. (since version 5.7.0)
 
 ### Currency
 
