@@ -4,7 +4,7 @@
 View is a most often used class in frontend. Every page is rendered by multiple view objects. Views can have child views. Childs views can have their own child views. And so on. When a parent view is rendered (by calling render() method), it generates HTML from all children and add it to DOM.
 
 
-View file `client/custom/src/views/test/my-custom-view`:
+View file `client/custom/src/views/test/my-custom-view.js`:
 
 ```js
 define('custom:views/test/my-custom-view', 'view', function (Dep) {
@@ -45,7 +45,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
 ```
 
-Template file `client/custom/res/templates/test/my-custom-view`:
+Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 
 ```
 <div class="some-test-container">{{{someKeyName}}}</div>
