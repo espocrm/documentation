@@ -9,40 +9,40 @@ View file `client/custom/src/views/test/my-custom-view.js`:
 ```js
 define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
-	return Dep.extend({
+    return Dep.extend({
 
-	    // template file, contents is printed below
-	    template: 'custom:test/my-custom-view',
+        // template file, contents is printed below
+        template: 'custom:test/my-custom-view',
 
-	    // optionaly template can be defined righ here
-	    //templateContent: '<div class="some-test-container">{{{someKeyName}}}</div>',
+        // optionaly template can be defined righ here
+        //templateContent: '<div class="some-test-container">{{{someKeyName}}}</div>',
 
-	    // custom initializing logic
-	    setup: function () {
-	        // calling parent setup method, you can omit it
-	        Dep.prototype.setup.call(this);
+        // custom initializing logic
+        setup: function () {
+            // calling parent setup method, you can omit it
+            Dep.prototype.setup.call(this);
 
-	        // when we create a child view in setup method, rendering of the view will be held off
-	        // until the child view is loaded (ready)
-	        this.createView('someKeyName', 'custom:test/my-custom-child-view', {
-	            el: this.getSelector() + ' .some-test-container',
-	            someParam: 'test',
-	        });
+            // when we create a child view in setup method, rendering of the view will be held off
+            // until the child view is loaded (ready)
+            this.createView('someKeyName', 'custom:test/my-custom-child-view', {
+                el: this.getSelector() + ' .some-test-container',
+                someParam: 'test',
+            });
 
-	        this.on('remove', function () {
-	            // is called when the view is removed
-	            // can be usefuly to destroy some event listeners inialized for the view
-	        }, this);
-	    },
+            this.on('remove', function () {
+                // is called when the view is removed
+                // can be usefuly to destroy some event listeners inialized for the view
+            }, this);
+        },
 
-	    // is called after contents is added to DOM
-	    afterRender: function () {
-	        console.log(this.$el); // view container DOM element
+        // is called after contents is added to DOM
+        afterRender: function () {
+            console.log(this.$el); // view container DOM element
 
-	        this.getView('someKeyName') // get child view
-	        this.clearView('someKeyName') // destroy child view
-	    },
-	});
+            this.getView('someKeyName') // get child view
+            this.clearView('someKeyName') // destroy child view
+        },
+    });
 });
 ```
 
