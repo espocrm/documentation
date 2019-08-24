@@ -9,7 +9,7 @@
 * [Select Manager](https://github.com/espocrm/documentation/blob/master/development/select-manager.md)
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
 * [Custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
-* [Custom ACL](https://github.com/espocrm/documentation/blob/master/development/acl.md)
+* [ACL customization](https://github.com/espocrm/documentation/blob/master/development/acl.md)
 * [Defining new funtions for formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
 * [Extension packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 
