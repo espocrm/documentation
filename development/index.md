@@ -14,7 +14,7 @@
 * [Extension packages](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 
 ### Frontend
-
+* [View](https://github.com/espocrm/documentation/blob/master/development/view.md)
 * [Custom views (for records and fields)](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
 * Fields
   * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
