@@ -177,12 +177,18 @@ class Task extends \Espo\Core\AclPortal\Base
     
     public function checkInAccount(User $user, Entity $entity)
     {
-    
+        return in_array($entity->get('accountId'), $user->getLinkMultipleIdList('accounts'));
     }
     
     public function checkIsOwnContact(User $user, Entity $entity)
     {
-         
+        if ($contactId = $user->get('contactId')) { 
+            $repository = $this->getEntityManager()->getRepository('Task');
+            if ($repository->isRelated($entity, 'contacts', $contactId)) {
+                return true;
+            }
+	}
+	return false;
     }
 }
 ```
