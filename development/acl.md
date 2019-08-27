@@ -60,7 +60,7 @@ class Task extends \Espo\Core\Acl\Base
         	// here we allow to delete records created by user, if the user has 'create' access and specific 'edit' access
             if ($data->create === 'yes' && $data->edit === 'all') {
                 if ($entity->get('createdById') == $user->id) {
-                	return true;
+                    return true;
                 }
             }
         }
@@ -210,15 +210,15 @@ class Task extends \Espo\Modules\Crm\SelectManagers\Task
     
     protected function accessPortalOnlyAccount(&$result)
     {
-        $this->addLeftJoin(['accounts', 'accountsAccess'], $result);
 	$result['whereClause'] = [
-	    'accountsAccess.id' => $this->getUser()->getLinkMultipleIdList('accounts'),
+	    'accountId' => $this->getUser()->getLinkMultipleIdList('accounts'),
 	];
     }
     
     protected function accessPortalOnlyContact(&$result)
     {
-        $this->addLeftJoin(['contacts', 'contactsAccess'], $result);
+        $this->setDistinct(true, $result);
+	$this->addLeftJoin(['contacts', 'contactsAccess'], $result);
 	$result['whereClause'] = [
 	    'contactsAccess.id' => $this->getUser()->get('contactId'),
 	];
