@@ -131,10 +131,22 @@ Note: For sequential workflows it's usually more reasonable to utilize [BPM tool
 
 ### Run Service Action
 
-Allows to run specific service scripts. By default there are following actions available:
+Allows to run specific service scripts. 
 
-* Send Invitations - for Meetings/Calls;
-* Add Quote Items - for Quotes.
+By default there are following actions available:
+
+Meetings/Calls:
+
+* Send Invitations
+
+Quotes/Sales Orders/Invoices:
+
+* Add Quote Items
+* Convery Currency (since version 5.7.0)
+
+Opportunities:
+
+* Convery Currency (since version 5.7.0)
 
 Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
 
