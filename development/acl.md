@@ -152,7 +152,7 @@ class Task extends \Espo\Modules\Crm\SelectManagers\Task
 
 ## Portal ACL
 
-You need to create a file `custom/Espo/Custom/AclPortal/Task.php`:
+1. Create a file `custom/Espo/Custom/AclPortal/Task.php`:
 
 ```php
 <?php
