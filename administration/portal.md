@@ -27,10 +27,10 @@ Portal user should be linked to Portal record to be able to access that portal.
 
 Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
 
-* `not-set` ‒ Denies an access.
-* `own` ‒ Records created by the user. E.g. portal user cased some case and this case is owned by this user.
-* `account` ‒ Records related to the account the portal user is related to. Relation (link) should be named `account` or `accounts`.
-* `contact` ‒ Records related to the contact the portal user is related to. Relation (link) should be named `contact` or `contacts`.
+* not-set ‒ Denies an access.
+* own ‒ Records created by the user. E.g. portal user cased some case and this case is owned by this user.
+* account ‒ Records related to the account the portal user is related to. Relation (link) should be named `account` or `accounts`.
+* contact ‒ Records related to the contact the portal user is related to. Relation (link) should be named `contact` or `contacts`.
 
 Assigned User and Teams fields are read only for portal users.
 
