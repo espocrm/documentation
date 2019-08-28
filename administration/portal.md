@@ -87,4 +87,4 @@ Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID is available
 
 ## See also
 
-[Portal ACL customization](../development/acl.md##portal-acl)
+[Portal ACL customization](../development/acl.md#portal-acl)
