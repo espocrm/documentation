@@ -162,6 +162,16 @@ Remove leading and trailing spaces.
 
 Number of characters in string.
 
+#### BINARY
+
+Converts a value to a binary string. 
+
+`EQUAL:('test', 'Test')` returns true.
+
+`EQUAL:(BINARY:('test'), 'Test')` returns false.
+
+Avalilable since 5.7.0.
+
 ### Math
 
 #### ADD
