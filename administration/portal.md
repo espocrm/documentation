@@ -27,10 +27,10 @@ Portal user should be linked to Portal record to be able to access that portal.
 
 Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
 
-* `not-set` level denies an access.
-* `own` level means that the record is created by the user. E.g. portal user cased some case and this case is owned by this user.
-* `account` level means that the record is related to the account the portal user is related to.
-* `contact` level means that the record is related to the contact the portal user is related to.
+* `not-set` ‒ Denies an access.
+* `own` ‒ Records created by the user. E.g. portal user cased some case and this case is owned by this user.
+* `account` ‒ Records related to the account the portal user is related to. Relation (link) should be named `account` or `accounts`.
+* `contact` ‒ Records related to the contact the portal user is related to. Relation (link) should be named `contact` or `contacts`.
 
 Assigned User and Teams fields are read only for portal users.
 
@@ -84,3 +84,7 @@ Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID is available
   RewriteCond %{REQUEST_URI} !^/portal/{PORTAL_ID}/.*$
   RewriteRule ^(.*)$ /portal/{PORTAL_ID}/$1 [L]
 ```
+
+## See also
+
+[Portal ACL customization](../development/acl.md##portal-acl)
