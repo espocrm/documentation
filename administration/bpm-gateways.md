@@ -2,6 +2,11 @@
 
 Gateways are displayed as diamonds.
 
+* [Exclusive](#user-content-exclusive-gateway)
+* [Inclusive](#user-content-inclusive-gateway)
+* [Parallel](#user-content-parallel-gateway)
+* [Event Based](#user-content-event-based-gateway)
+
 ----
 
 ## Exclusive Gateway
