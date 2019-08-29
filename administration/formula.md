@@ -266,6 +266,8 @@ Examples:
 
 `record\count('Opportunity', 'open')`
 
+`record\count('Lead', 'status=', list('Assigned', 'In Process'))`
+
 #### env\userAttribute
 `env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
 
