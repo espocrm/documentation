@@ -244,9 +244,11 @@ It's possible to apply a [list report](../user-guide/reports.md) as a filter. Mo
 
 `record\exists(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Check whether a record with specified criteria exists. (since version 5.5.6)
 
-Example:
+Examples:
 
 `record\exists('Lead', 'emailAddress=', fromAddress)`
+
+`record\exists('Lead', 'status=', list('Assigned', 'In Process'))`
 
 #### record\count
 
