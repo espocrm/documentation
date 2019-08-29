@@ -63,6 +63,8 @@ Processes can be started automatically (upon specific conditions or by schedulin
 
 Events are displayed on a flowchart as circles.
 
+### Start Events
+
 #### Start Event
 
 Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click  'Start Process' button on the list view of processes.
@@ -75,6 +77,8 @@ A starting point of the process. It's supposed to be triggered automatically whe
 
 A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
 
+### Intermediate Events
+
 #### Conditional Intermediate Event
 
 This event stops the flow until specified criteria is met.
@@ -86,6 +90,8 @@ This event stops the flow and waits as long as it is specified by event's parame
 For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.  
+
+### End Events
 
 #### End Event
 
