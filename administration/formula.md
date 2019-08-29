@@ -268,6 +268,8 @@ Examples:
 
 `record\count('Lead', 'status=', list('Assigned', 'In Process'))`
 
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+
 #### env\userAttribute
 `env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
 
