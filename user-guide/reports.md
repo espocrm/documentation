@@ -164,6 +164,8 @@ List reports can be displayed as a list or a total number of records.
 
 It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
 
+Max number of records that can be send in email by default is 1000. You can increase it by adding a parameter to data/config.php: `'reportSendingListMaxCount' => 5000`.
+
 ## Syncing with Target Lists
 
 It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
