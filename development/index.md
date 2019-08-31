@@ -4,6 +4,7 @@
 
 * [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
 * [Custom API action](https://github.com/espocrm/documentation/blob/master/development/api-action.md)
+* [Services](https://github.com/espocrm/documentation/blob/master/development/services.md)
 * [ORM: How to manage entities](https://github.com/espocrm/documentation/blob/master/development/orm.md)
 * [Metadata](https://github.com/espocrm/documentation/blob/master/development/metadata.md)
 * [Select Manager](https://github.com/espocrm/documentation/blob/master/development/select-manager.md)
