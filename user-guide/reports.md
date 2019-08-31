@@ -100,6 +100,10 @@ Bar Grouped:
 
 ![Bar grouped](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-bar-grouped.png)
 
+Line:
+
+![Line](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-line.png)
+
 Pie:
 
 ![Pie](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-pie.png)
