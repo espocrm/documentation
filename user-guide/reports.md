@@ -2,7 +2,8 @@
 
 Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-There are two types of reports: List and Grid.  
+There are two types of reports: List and Grid. 
+
 
 ## List Reports
 
@@ -20,9 +21,19 @@ _Runtime Filters_ allow you to specify different filters before you run the repo
 
 You can __export__ list report results to excel and csv formats.
 
-List report example:
+List report exampl, showing leads that doesn't have any Call related to them:
 
 ![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/list.png)
+
+Additional features where list reports can also be utilized:
+
+* Scheduled workflows - to do some scheduled actions over records that met criteria specified in list report.
+* Scheduled BPM processes - to start BPM processes for records that met some criteria.
+* Sync with target lists - automatic or manuall.
+* List view filters - more info below.
+* Panels on detail view - displaying related records that met some criteria.
+* Applying assignment rule (by workflow or BPM).
+
 
 ## Grid Reports
 
@@ -30,7 +41,7 @@ Grid reports result summarized values, can be grouped by one or two fields. and 
 
 To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
 
-Grid report example:
+Grid report example, showing revenue grouped by User:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
@@ -98,6 +109,7 @@ Some usage examples:
 * Revenu by user / Lead count by User.
 
 You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
+
 
 ## Filters
 
