@@ -39,9 +39,9 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 }
 ```
 
-### Custom Controller
+## Custom Controller
 
-#### In Custom folder
+### In Custom folder
 
 Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
 
@@ -58,7 +58,7 @@ class MyController extends \Espo\Core\Controllers\Base
 
 Clear Cache.
 
-#### In Module folder
+### In Module folder
 
 Create a file `custom/Espo/Modules/MyModule/Resources/metadata/scopes/MyController.json`.
 
@@ -82,3 +82,73 @@ class MyController extends \Espo\Core\Controllers\Base
 ```
 
 Clear Cache.
+
+## Routing
+
+You can define a specific route to access your api action.
+
+Default routes are defined here `application/Espo/Resources/routes.json`.
+
+Custom routes can be defined in following places:
+
+* `application/Espo/Modules/{moduleName}/Resources/routes.json`
+* `custom/Espo/Custom/Resources/routes.json`
+
+### Example
+
+`routes.json`
+
+```json
+[
+    {
+        "route": "/Hello/test/:id",
+        "method": "get",
+        "params": {
+            "controller": "MyController",
+            "action": "doSomething",
+            "id": ":id"
+        }
+    },
+    {
+        "route": "/HelloWorld/:name",
+        "method": "post",
+        "params": {
+            "controller": "MyController",
+            "action": "helloWorld",
+            "name": ":name"
+        }
+    }
+]
+```
+
+Controller:
+
+```php
+<?php
+
+namespace Espo\Custom\Controllers;
+
+class MyController extends \Espo\Core\Controllers\Base
+{
+    /**
+     *  GET api/v1/Hello/test/001
+     */
+    public function getActionDoSomething($params, $data, $request)
+    {
+        $id = $params['id']; // '001'
+        
+        // ...
+    }
+    
+    /**
+     *  POST api/v1/HelloWorld/someName
+     */
+    public function postActionHelloWrold($params, $data, $request)
+    {
+        $name = $params['name']; // 'someName'
+        
+        // ...
+    }
+}
+```
+
