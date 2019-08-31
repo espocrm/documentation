@@ -27,12 +27,12 @@ List report exampl, showing leads that doesn't have any Call related to them:
 
 Additional features where list reports can be utilized:
 
-* Scheduled workflows - to do some scheduled actions over records that met criteria specified in list report.
-* Scheduled BPM processes - to start BPM processes for records that met some criteria.
-* Sync with target lists - automatic or manuall.
-* List view filters - more info below.
-* Panels on detail view - displaying related records that met some criteria.
-* Applying assignment rule (by workflow or BPM).
+* Scheduled workflows – to do some scheduled actions over records that met criteria specified in list report.
+* Scheduled BPM processes – to start BPM processes for records that met some criteria.
+* Sync with target lists – automatic or manuall.
+* List view filters – more info below.
+* Panels on detail view – displaying related records that met some criteria.
+* Applying assignment rule – by workflow or BPM.
 
 
 ## Grid Reports
