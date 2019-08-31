@@ -20,6 +20,8 @@ _Runtime Filters_ allow you to specify different filters before you run the repo
 
 You can __export__ list report results to excel and csv formats.
 
+List report example:
+
 ![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/list.png)
 
 ## Grid Reports
@@ -27,6 +29,8 @@ You can __export__ list report results to excel and csv formats.
 Grid reports result summarized values, can be grouped by one or two fields. and displayed as a chart.
 
 To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
+
+Grid report example:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
 
