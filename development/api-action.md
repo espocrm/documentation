@@ -18,6 +18,8 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
     public function postActionTest($params, $data, $request, $response)
     {
         // $data - payload
+        
+        $someValue = $data->someKey ?? null;
 
         $response->setStatus(201); // this is optional, example how to set custom response status code
         
