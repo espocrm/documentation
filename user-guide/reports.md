@@ -92,6 +92,18 @@ There are following chart types available:
 * Pie (only for report with grouping by 1 column)
 * Line
 
+Bar:
+
+![Bar](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-bar.png)
+
+Bar Grouped:
+
+![Bar grouped](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-bar-grouped.png)
+
+Pie:
+
+![Pie](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-pie.png)
+
 ### Export
 
 It's possible to export grid report results to Excel and CSV formats. Charts are exported to Excel.
