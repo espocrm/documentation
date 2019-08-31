@@ -25,7 +25,7 @@ List report exampl, showing leads that doesn't have any Call related to them:
 
 ![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/list.png)
 
-Additional features where list reports can also be utilized:
+Additional features where list reports can be utilized:
 
 * Scheduled workflows - to do some scheduled actions over records that met criteria specified in list report.
 * Scheduled BPM processes - to start BPM processes for records that met some criteria.
