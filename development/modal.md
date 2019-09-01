@@ -13,10 +13,10 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
 
         className: 'dialog dialog-record',
 
-        // template contents can be defined right here or externally
+        // template content can be defined right here or externally
         templateContent: '<div class="record">{{{record}}}</div>',
 
-        // template contents can be defined in external file client/custom/res/templates/my-dialog.tpl 
+        // template content can be defined in external file client/custom/res/templates/my-dialog.tpl 
         // template: 'custom:modals/my-dialog',
 
         // if true, clicking on the backdrop will close the dialog
