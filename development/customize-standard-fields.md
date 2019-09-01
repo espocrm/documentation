@@ -1,4 +1,4 @@
-# Customizing standard field
+# Customizing standard field (type)
 
 Example for Account's Address field.
 
