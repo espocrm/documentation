@@ -1,6 +1,8 @@
-# Customizing standard field (type)
+# Customizing fields
 
-Example for Account's Address field.
+## Customizing field type
+
+Example for Address field type.
 
 Create a file `custom/Espo/Custom/Resources/metadata/fields/address.json`.
 
@@ -35,3 +37,58 @@ define('custom:views/fields/address', 'views/fields/address', function (Dep) {
 ```
 
 Create a template file (if needed) `client/custom/res/templates/fields/address/detail.tpl`.
+
+## Customizing specific field
+
+### Changing field type of existing field
+
+Example for meeting's Name field.
+
+Create (or edit if exists) a file `custom/Espo/Custom/Resources/metadata/entityDefs/Meeting.json`.
+
+```json
+{
+    "fields": {
+        "name": {
+            "type": "enum"
+        }
+    }
+}
+```
+
+### Custom view for specific field
+
+Example for meeting's Name field.
+
+Create (or edit if exists) a file `custom/Espo/Custom/Resources/metadata/entityDefs/Meeting.json`.
+
+```json
+{
+    "fields": {
+        "name": {
+            "view": "custom:views/meeting/fields/name.js"
+        }
+    }
+}
+```
+
+File `client/custom/src/views/meeting/fields/name.js`:
+
+```js
+define('custom:views/meeting/fields/name', 'views/fields/varchar', function (Dep) {
+
+   return Dep.extend({
+  
+        setup: function () {
+            Dep.prototype.setup.call(this);
+            // some initialization
+        },
+
+        afterRender: function () {
+            Dep.prototype.afterRender.call(this);
+            // your customizations executed after the field is rendered
+        },
+    });
+});
+```
+
