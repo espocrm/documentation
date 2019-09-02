@@ -19,7 +19,7 @@
 * [Custom views (for records and fields)](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
 * Fields
   * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
-  * [Customizing standard field](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
+  * [Customizing fields](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
 * Campaigns
   * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
 * Misc
