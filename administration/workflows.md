@@ -90,9 +90,13 @@ Allows changing of specific fields of the target record. It's possible to define
 
 If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
+There is the ability to delete the record with the following formula code: `deleted = 1`;
+
 ### Update Related Record
 
 Allows changing of specific fields of the related record or records. It's possible to define formula to calculate fields.
+
+There is the ability to delete the record with the following formula code: `deleted = 1`;
 
 ### Link with Another Record
 
