@@ -29,6 +29,8 @@ Task can execute following the actions:
 
 Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
 
+It's possible to delete records in Update actions with the following formula code: `deleted = 1`.
+
 ----
 
 ## Send Message Task
