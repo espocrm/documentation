@@ -77,3 +77,7 @@ Conditions in BPM tool are the same as in Workflow feature. See more details abo
 ### Example 3
 
 ![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)
+
+### Example 4
+
+![Example 4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-4.png)
