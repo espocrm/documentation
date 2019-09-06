@@ -64,6 +64,21 @@ It's also possible to define conditions in [Espo-formula](formula.md) language.
 
 Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
 
+## Additional formula functions
+
+Formula can be utilized in conditions, script tasks, various task actions. 
+
+Available since version 2.4.0.
+
+#### bpm\createdEntity\attribute
+
+`bpm\createdEntity\attribute(ALIAS_ID, ATTRIBUTE)` Fetches an attribute value of the record created within the process. ALIAS_ID can be obtained from the detail view of Task, that has an action creating a record.
+
+#### bpm\processEntity\attribute
+
+`bpm\processEntity\attribute(ATTRIBUTE)` Fetches an attribute value of the process record.
+
+
 ## Examples
 
 ### Example 1
