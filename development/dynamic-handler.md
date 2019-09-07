@@ -52,7 +52,6 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
                 this.recordView.hidePanel('activities');
             }
         },
-
     });
 });
 
