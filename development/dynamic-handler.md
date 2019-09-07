@@ -14,7 +14,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/clientDefs/Account.json`:
 }
 ```
 
-Create a file `custom/src/account-dynamic-handler.js`:
+Create a file `client/custom/src/account-dynamic-handler.js`:
 
 ```js
 
