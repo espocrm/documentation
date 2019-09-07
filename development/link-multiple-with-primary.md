@@ -107,9 +107,9 @@ class Stock extends \Espo\Core\ORM\Repositories\RDB
 ### Step 4
 `client/custom/src/views/stock/fields/contacts.js`
 ```js
-Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
+define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
     return Dep.extend({
-		primaryLink: 'contact'
+        primaryLink: 'contact'
     });
 });
 ```
