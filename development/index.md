@@ -1,5 +1,7 @@
 ## Developer Documentation
 
+* [How to get started](https://github.com/espocrm/documentation/blob/master/development/how-to-start.md)
+
 ### Backend
 
 * [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
