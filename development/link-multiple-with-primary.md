@@ -11,26 +11,26 @@ Create (or edit) `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`:
 
 ```json
 {
-    "fields":{
-        "contacts":{
-            "type":"linkMultiple",
-            "view":"custom:views/stock/fields/contacts"
+    "fields": {
+        "contacts": {
+            "type": "linkMultiple",
+            "view": "custom:views/stock/fields/contacts"
         },
-        "contact":{
-            "type":"link"
+        "contact": {
+            "type": "link"
         }
     },
     "links":{
-        "contact":{
-            "type":"belongsTo",
-            "entity":"Contact",
-            "foreign":"stocksPrimary"
+        "contact": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "stocksPrimary"
         },
-        "contacts":{
-            "type":"hasMany",
-            "entity":"Contact",
-            "foreign":"stocks",
-            "layoutRelationshipsDisabled":true
+        "contacts": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "stocks",
+            "layoutRelationshipsDisabled": true
         }
     }
 }
@@ -42,16 +42,16 @@ Create (or edit) `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`:
 ```json
 {
     "links":{
-        "stocksPrimary":{
-            "type":"hasMany",
-            "entity":"Stock",
-            "foreign":"contact",
-            "layoutRelationshipsDisabled":true
+        "stocksPrimary": {
+            "type": "hasMany",
+            "entity": "Stock",
+            "foreign": "contact",
+            "layoutRelationshipsDisabled": true
         },
-        "stocks":{
-            "type":"hasMany",
-            "entity":"Stock",
-            "foreign":"contacts"
+        "stocks": {
+            "type": "hasMany",
+            "entity": "Stock",
+            "foreign": "contacts"
         }
     }
 }
