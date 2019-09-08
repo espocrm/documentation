@@ -52,8 +52,8 @@ class AfterInstall
        $config = $container->get('config');
  
        $tabList = $config->get('tabList');
-       if (!in_array('My Custom Entity', $tabList)) {
-           $tabList[] = 'My Custom Entity';
+       if (!in_array('MyCustomEntity', $tabList)) {
+           $tabList[] = 'MyCustomEntity';
            $config->set('tabList', $tabList);
        }
  
