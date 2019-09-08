@@ -32,16 +32,16 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
 
     return Dep.extend({
 
-        // Here is your custom template. Omit if you don't need it.
+        // custom template, omit if you don't need it
         template: 'custom:views/your-entity-type/record/detail', 
         
-        // Here is your custom view. Omit if you don't need it.
+        // custom central view, omit if you don't need it
         middleView: 'custom:views/your-entity-type/record/detail-middle', 
         
-        // Here is your custom view. Omit if you don't need it.
+        // custom side column view, omit if you don't need it
         sideView: 'custom:views/your-entity-type/record/detail-side', 
         
-        // Here is your custom view. Omit if you don't need it.
+        // custom bottom view, omit if you don't need it
         bottomView: 'custom:views/your-entity-type/record/detail-bottom', 
 
         setup: function() {
@@ -50,7 +50,7 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
             this.hideField('someField');
             this.showField('someField');
 
-            // Custom initialization logic here. Like binding listening to model changes.
+            // custom initialization logic, like binding listening to model changes
             this.listenTo(this.model, 'change:myField', function () {
                 this.model.set('anotherField', this.model.get('myField') + ' Hello');
 
