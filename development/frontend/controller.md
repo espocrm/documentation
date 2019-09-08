@@ -40,8 +40,8 @@ Clear cache.
 
 If you open in the browser URL `your-espo-url#Account/hello` it will execute *actionHello* method.
 
-`#Account/hello` -- *options* variable value is an empty object
-`#Account/hello/p1=one&p2=two` -- *options* variable value is an object `{p1: 'one', p2: 'two'}`
+`#Account/hello` – *options* variable value is an empty object
+`#Account/hello/p1=one&p2=two` – *options* variable value is an object `{p1: 'one', p2: 'two'}`
 
 ## Custom route
 
