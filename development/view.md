@@ -102,15 +102,43 @@ Wait for model is fetched. Fetch returns a promise.
 
 ```
 
+Wait for multiple independent primises:
+
+```js
+    setup: function () {
+        this.wait(
+            this.model.fetch()
+        );
+        
+        this.wait(
+            Espo.Ajax.getRequest('SomeUrl')
+        );
+    },
+
+```
+
+```js
+    setup: function () {
+        this.wait(
+            Promise.all([
+                this.model.fetch(),
+                Espo.Ajax.getRequest('SomeUrl')
+            ])
+        );
+    },
+```
+
 A simple way to wait:
 
 ```js
     setup: function () {
         this.wait(true); // this holds off the rendering
 
-        Espo.Ajax.getRequest('Some/Request').then(function (response) {
-            this.wait(false); // this cancels waiting and proceeds to rendering
-        }.bind(this));
+        Espo.Ajax.getRequest('Some/Request').then(
+            function (response) {
+                this.wait(false); // this cancels waiting and proceeds to rendering
+            }.bind(this)
+        );
     },
 
 ```
