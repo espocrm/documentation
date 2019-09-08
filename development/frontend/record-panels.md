@@ -1,4 +1,4 @@
-# Custom panel for detail & edit views
+# Custom panel for record (detail & edit) view
 
 Example for *Account* entity type.
 
