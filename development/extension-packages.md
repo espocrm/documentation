@@ -1,8 +1,6 @@
-# Extension Packages
+# Making extension packages
 
 Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel under `Customization` section.
-
-## How to create extension package
 
 A File structure of package:
 
