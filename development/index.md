@@ -22,6 +22,7 @@
 * Fields
   * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
   * [Customizing fields](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
+* [Controller & routing](https://github.com/espocrm/documentation/blob/master/development/frontend/controller.md)
 * Campaigns
   * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
 * Misc
