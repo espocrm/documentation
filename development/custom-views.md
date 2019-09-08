@@ -32,10 +32,17 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
 
     return Dep.extend({
 
-        template: 'custom:views/your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
-        middleView: 'custom:views/your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
-        sideView: 'custom:views/your-entity-type/record/detail-side', // Here is your custom view. Omit if you don't need it.
-        bottomView: 'custom:views/your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
+        // Here is your custom template. Omit if you don't need it.
+        template: 'custom:views/your-entity-type/record/detail', 
+        
+        // Here is your custom view. Omit if you don't need it.
+        middleView: 'custom:views/your-entity-type/record/detail-middle', 
+        
+        // Here is your custom view. Omit if you don't need it.
+        sideView: 'custom:views/your-entity-type/record/detail-side', 
+        
+        // Here is your custom view. Omit if you don't need it.
+        bottomView: 'custom:views/your-entity-type/record/detail-bottom', 
 
         setup: function() {
             Dep.prototype.setup.call(this);
