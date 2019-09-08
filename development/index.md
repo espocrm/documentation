@@ -25,8 +25,6 @@
   * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
   * [Customizing existing fields](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
 * [Controller & routing](https://github.com/espocrm/documentation/blob/master/development/frontend/controller.md)
-* Campaigns
-  * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
 * Misc
   * [Custom buttons for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
   * [Modal dialogs](https://github.com/espocrm/documentation/blob/master/development/modal.md)
@@ -35,4 +33,7 @@
   * [Custom dashlets](https://github.com/espocrm/documentation/blob/master/development/how-to-create-a-dashlet.md)
   * [Dynamic forms with dynamic handler](https://github.com/espocrm/documentation/blob/master/development/dynamic-handler.md)
   * [Link-multiple field with a primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
+* Campaigns
+  * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
+  
   
