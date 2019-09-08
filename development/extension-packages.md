@@ -19,7 +19,7 @@ A File structure of package:
   "php": [
      ">=7.2.0"
   ],
-  "releaseDate": "2015-10-15",
+  "releaseDate": "2019-10-22",
   "author": "Your name",
   "description": "Description of your extension",
   "delete": []
