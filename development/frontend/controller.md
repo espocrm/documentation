@@ -108,6 +108,7 @@ define('custom:views/account/test', ['view'], function (Dep) {
                 )
             );
         },
+        
     });
 });
 
