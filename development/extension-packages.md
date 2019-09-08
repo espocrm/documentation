@@ -21,13 +21,11 @@ The file structure of the package:
   ],
   "releaseDate": "2019-10-22",
   "author": "Your name",
-  "description": "Description of your extension",
-  "delete": []
+  "description": "Description of your extension"
 }
 ```
 
-* Syntax of `version` and `acceptableVersions` is described by the v2.0.0 specification found at http://semver.org.
-* `delete` - is the list of core files that need to be deleted. This parameter is not recommended to use. You can omit it.
+Syntax of `version` and `acceptableVersions` is described by the v2.0.0 specification found at http://semver.org.
 
 ### Files
 
@@ -37,10 +35,10 @@ All extension files should be placed in `files` directory. They will be copied t
 
 For different purposes EspoCRM supports the following types of scripts. All of them should be  placed in `scripts` directory.
 
-* `BeforeInstall.php` – a script executed before an installation process;
-* `AfterInstall.php` – executed once the installation process is finished;
-* `BeforeUninstall.php` – executed before uninstallation process;
-* `AfterUninstall.php` – executed once the uninstallation process is finished.
+* `BeforeInstall.php` – a script executed before an installation process
+* `AfterInstall.php` – executed once the installation process is finished
+* `BeforeUninstall.php` – executed before uninstallation process
+* `AfterUninstall.php` – executed once the uninstallation process is finished
 
 Example:
 
