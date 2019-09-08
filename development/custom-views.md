@@ -8,16 +8,16 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 
 ```json
 {
-  "views": {
-    "list": "custom:views/your-entity-type/list",
-    "detail": "custom:views/your-entity-type/detail",
-    "edit": "custom:views/your-entity-type/edit"
-  },
-  "recordViews": {
-    "list": "custom:views/your-entity-type/record/list",
-    "detail": "custom:views/your-entity-type/record/detail",
-    "edit": "custom:views/your-entity-type/record/edit"
-  }
+    "views": {
+        "list": "custom:views/your-entity-type/list",
+        "detail": "custom:views/your-entity-type/detail",
+        "edit": "custom:views/your-entity-type/edit"
+    },
+    "recordViews": {
+        "list": "custom:views/your-entity-type/record/list",
+        "detail": "custom:views/your-entity-type/record/detail",
+        "edit": "custom:views/your-entity-type/record/edit"
+    }
 }
 ```
 
@@ -28,45 +28,45 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 The view 'views/record/detail' contains all panels with fields, relations and other data you can see on detail view. It doesn't contain header and buttons in the top-right corner.
 
 ```javascript
-define('custom:views/your-entity-type/record/detail', 'views/record/detail', function (Dep) {
-  
-  return Dep.extend({
+define('custom:views/your-entity-type/record/detail', ['views/record/detail'], function (Dep) {
 
-    template: 'custom:views/your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
-    middleView: 'custom:views/your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
-    sideView: 'custom:views/your-entity-type/record/detail-side',     // Here is your custom view. Omit if you don't need it.
-    bottomView: 'custom:views/your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
-    
-    setup: function () {
-      Dep.prototype.setup.call(this);
-      
-      this.hideField('someField');
-      this.showField('someField');
-      
-      // Custom initialization logic here. Like binding listening to model changes.
-      this.listenTo(this.model, 'change:myField', function () {
-        this.model.set('anotherField', this.model.get('myField') + ' Hello');
-         
-        this.hideField('someField');
-        this.showField('someField');
-        this.setFieldRequired('someField');
-        this.setFieldNotRequired('someField');
-        
-        this.setFieldReadOnly('someField');
-        this.setFieldNotReadOnly('someField');
-        
-        this.hidePanel('activities');
-        this.showPanel('history');
-      }, this);
-    },
-    
-    afterRender: function () {
-      Dep.prototype.afterRender.call(this);
-      
-      // Custom code to be invoked right after rendering, when DOM is available.
-      this.$el.find('label[data-name="myField"]').addClass('hidden');
-    }
-  });
+    return Dep.extend({
+
+        template: 'custom:views/your-entity-type/record/detail', // Here is your custom template. Omit if you don't need it.
+        middleView: 'custom:views/your-entity-type/record/detail-middle', // Here is your custom view. Omit if you don't need it.
+        sideView: 'custom:views/your-entity-type/record/detail-side', // Here is your custom view. Omit if you don't need it.
+        bottomView: 'custom:views/your-entity-type/record/detail-bottom', // Here is your custom view. Omit if you don't need it.
+
+        setup: function() {
+            Dep.prototype.setup.call(this);
+
+            this.hideField('someField');
+            this.showField('someField');
+
+            // Custom initialization logic here. Like binding listening to model changes.
+            this.listenTo(this.model, 'change:myField', function () {
+                this.model.set('anotherField', this.model.get('myField') + ' Hello');
+
+                this.hideField('someField');
+                this.showField('someField');
+                this.setFieldRequired('someField');
+                this.setFieldNotRequired('someField');
+
+                this.setFieldReadOnly('someField');
+                this.setFieldNotReadOnly('someField');
+
+                this.hidePanel('activities');
+                this.showPanel('history');
+            }, this);
+        },
+
+        afterRender: function() {
+            Dep.prototype.afterRender.call(this);
+
+            // Custom code to be invoked right after rendering, when DOM is available.
+            this.$el.find('label[data-name="myField"]').addClass('hidden');
+        }
+    });
 });
 
 ```
