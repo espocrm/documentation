@@ -32,10 +32,10 @@ That will force using a backend cache (metadata, langauge etc.).
 
 ### Option A. Custom dirs
 
-* `custom/Espo/Custom/` -- for metadata and all files pertaining to backend
-* `client/custom/` -- for client files
+* `custom/Espo/Custom/` – for metadata and all files pertaining to backend
+* `client/custom/` – for client files
 
 ### Option B. Module dirs
 
-* `application/Espo/Modules/{YourModuleName}/` -- for metadata and all files pertaining to backend
-* `client/modules/{your_module_name}/` -- for client files
+* `application/Espo/Modules/{YourModuleName}/` – for metadata and all files pertaining to backend
+* `client/modules/{your_module_name}/` – for client files
