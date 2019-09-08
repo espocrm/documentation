@@ -14,10 +14,13 @@ A File structure of package:
   "name": "Extension Name",
   "version": "1.0.0",
   "acceptableVersions": [
-     ">=3.7.2"
+     ">=5.6.0"
+  ],
+  "php": [
+     ">=7.2.0"
   ],
   "releaseDate": "2015-10-15",
-  "author": "Your Name",
+  "author": "Your name",
   "description": "Description of your extension",
   "delete": []
 }
