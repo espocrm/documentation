@@ -1,8 +1,8 @@
 # Making extension package
 
-Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel under `Customization` section.
+Extensions allow you to add extra functionality to EspoCRM. They can be installed at Administrator panel.
 
-A File structure of package:
+The file structure of the package:
 
 * `/manifest.json` – a file that contains extension properties;
 * `/files` – a directory that contains the extension files;
