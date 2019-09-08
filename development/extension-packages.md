@@ -11,15 +11,15 @@ A File structure of package:
 ### Manifest
 ```json
 {
- "name": "Extension Name",
- "version": "1.0.0",
- "acceptableVersions": [
-   ">=3.7.2"
- ],
- "releaseDate": "2015-10-15",
- "author": "Your Name",
- "description": "Description of your extension",
- "delete": []
+  "name": "Extension Name",
+  "version": "1.0.0",
+  "acceptableVersions": [
+     ">=3.7.2"
+  ],
+  "releaseDate": "2015-10-15",
+  "author": "Your Name",
+  "description": "Description of your extension",
+  "delete": []
 }
 ```
 
@@ -44,18 +44,18 @@ Example:
 ```php
 class AfterInstall
 {
-  public function run($container)
-  {
-    $config = $container->get('config');
+    public function run($container)
+    {
+       $config = $container->get('config');
  
-    $tabList = $config->get('tabList');
-    if (!in_array('My Custom Entity', $tabList)) {
-      $tabList[] = 'My Custom Entity';
-      $config->set('tabList', $tabList);
-    }
+       $tabList = $config->get('tabList');
+       if (!in_array('My Custom Entity', $tabList)) {
+           $tabList[] = 'My Custom Entity';
+           $config->set('tabList', $tabList);
+       }
  
-    $config->save();
-  }
+       $config->save();
+   }
 }
 ```
 
