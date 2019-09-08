@@ -30,7 +30,7 @@ define('custom:views/fields/{field-type}', 'views/fields/base', function (Dep) {
         
         afterRender: function () {
         
-        }
+        },
     });
 });
 ```
