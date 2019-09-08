@@ -1,4 +1,4 @@
-# Making extension packages
+# Making extension package
 
 Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel under `Customization` section.
 
