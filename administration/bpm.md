@@ -36,7 +36,7 @@ Processes can be started:
 
 * Automatically – Upon specific conditions, signal, or scheduling, described in flowchart; this is the main method.
 * Manually – To start process manually the user needs to click 'Start Process' button on the list view of processes.
-* With Workflow rule – 'Start BPM Process' action allows to select a related record as a target for the process.
+* With Workflow rule – 'Start BPM Process' action allows to pass a related record as a target for the process.
 
 ## Flowchart Elements
 
