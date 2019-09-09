@@ -32,7 +32,11 @@ The process is executed according to the flowchart. Flowchart of process can't b
 
 The process obligatorily is related to single target record.
 
-Processes can be started automatically (upon specific conditions or by scheduling) or manually (where there is at least one Start Event in the flowchart). To start process manually the user needs to click 'Start Process' button on the list view of processes.
+Processes can be started:
+
+* Automatically – Upon specific conditions, signal, or scheduling, described in flowchart; this is the main method.
+* Manually – To start process manually the user needs to click 'Start Process' button on the list view of processes.
+* With Workflow rule – 'Start BPM Process' action allows to select a related record as a target for the process.
 
 ## Flowchart Elements
 
