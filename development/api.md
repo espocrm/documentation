@@ -78,11 +78,12 @@ Returns:
 
 GET parameters:
 
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-* `where` - (array) filters;
-* `sortBy` - (string) field to sort by;
-* `asc` - (bool) sort direction.
+* `maxSize` - (int) max size
+* `offset` - (int) offset
+* `where` - (array) filters
+* `orderBy` - (string) field to sort by
+* `order` - (string: 'asc' | 'desc') sort direction
+* `select` (string) list of fields to be returned sepratated by comma; if not specified, then all fields will be returned
 
 _Example_
 
