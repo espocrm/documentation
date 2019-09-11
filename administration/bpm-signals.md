@@ -79,7 +79,7 @@ Contacts/Leads:
 * @cancelOptOut.TARGET_LIST_ID
 
 
-## Clarification
+## Naming clarification
 
 * ID – id of a record that you can obtain from the browser address bar
 * ENTITY_TYPE – entity type of the record (not translated), you can obtain it at Administration > Entity Manager
