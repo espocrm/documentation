@@ -83,4 +83,11 @@ Created User Task can be canceled by a process. There are two ways:
 
 ## Script Task
 
-Executes the script in [espo-formula](formula.md) language. All set variables (`$variableName`) will be stored and available within the process.
+Executes the script in [espo-formula](formula.md) language. 
+
+You can store some variables and use them further within the process. All set variables (`$variableName`) will be automatically stored.
+
+```
+$myVar1 = 'test';
+$myVar2 = id;
+```
