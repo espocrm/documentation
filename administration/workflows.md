@@ -16,6 +16,10 @@ Workflows automate your business process in an easy way. You can find it in the 
 
 Triggered only when a new record is created. If specified conditions are met, then actions will be executed.
 
+### After record updated 
+
+Triggered only when an existing record is updated. If specified conditions are met, then actions will be executed.
+
 ### After record saved
 
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
@@ -45,6 +49,12 @@ Used rarely. Supposed to be run by another workflow. Provides an ability to make
 
 Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
 
+### Signal
+
+Triggered when a specified signal is escalated in the system. Only object signals can be used. See [more info](bpm-signals.md) about signals.
+
+----
+
 ## Conditions
 
 You can specify conditions that must be met to trigger the workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
@@ -67,6 +77,8 @@ Some available condition types:
 Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
 
 Note: There should not be any `;` delimiter used in formula code when it determines a condition.
+
+----
 
 ## Actions
 
@@ -153,6 +165,10 @@ Opportunities:
 * Convery Currency (since version 5.7.0)
 
 Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
+
+### Run BPM Process
+
+Starts BPM process. You can specify which target will be used for a process.
 
 ## Using Formula in Actions
 
