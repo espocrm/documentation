@@ -45,7 +45,7 @@ Contacts/Leads:
 * eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID
 
 
-## Placeholders
+### Placeholders
 
 You can use placeholders when you define a signal name that will be broadcasted by the throwing event in the BPM process.
 
@@ -79,7 +79,7 @@ Contacts/Leads:
 * @cancelOptOut.TARGET_LIST_ID
 
 
-## Clarification for placeholders used above
+## Clarification
 
 * ID – id of a record that you can obtain from the browser address bar
 * ENTITY_TYPE – entity type of the record (not translated), you can obtain it at Administration > Entity Manager
