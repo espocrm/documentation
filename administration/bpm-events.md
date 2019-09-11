@@ -19,8 +19,15 @@ Events are displayed on a flowchart as circles.
 * End Events
   * [End](#user-content-end-event)
   * [Terminate](#user-content-terminate-end-event)
+  * [Error](#user-content-error-end-event)
+  * [Escalation](#user-content-escalation-end-event)
+  * [Signal](#user-content-signal-end-event)
 * Boundary Events:
-  
+  * [Error](#user-content-error-intermediate-event-boundary)
+  * [Conditional](#user-content-conditional-intermediate-event-boundary)
+  * [Timer](#user-content-timer-intermediate-event-boundary)
+  * [Escalation](#user-content-escalation-intermediate-event-boundary)
+  * [Signal](#user-content-signal-intermediate-event-boundary)
 ----
 
 ## Start Events
@@ -142,8 +149,6 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 ![Escalation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-escalation.png)
 
 
-
-
 ----
 
 ## End Events
@@ -152,6 +157,40 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 
 Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
 
+![End Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-end.png)
+
 ### Terminate End Event
 
 Ends all flows. Process is subsequently ended.
+
+![Terminate End Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-end-terminate.png)
+
+
+### Error End Event
+
+Terminates the process and triggers an error. Error Code can be specified. Error can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+
+![Error End Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-end-error.png)
+
+### Escalation End Event
+
+Ends the flow and triggers an escalation. Escalation Code can be specified. Escalation can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+
+![Escalation End Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-end-escalation.png)
+
+### Signal End Event
+
+Ends the flow and broadcasts a specified signal.
+
+Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
+
+If the first character of the signal name is `@` it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger workflow rule.
+
+----
+
+## Boundary Events
+
+
+
+
+
