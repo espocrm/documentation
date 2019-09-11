@@ -35,7 +35,22 @@ It's possible to delete records in Update actions with the following formula cod
 
 ## Send Message Task
 
-Sends email message to specific recipient.
+Sends email message to specific recipient. 
+
+An email can be sent to:
+
+* User assigned to process
+* Target record (if such has email address)
+* Related record
+* Specific email address
+* Specific users
+* Specific teams
+* Specific contacts
+* Followers of targer record
+
+You can specify which email address the email will sent from, and specify a reply-to address.
+
+Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitue field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}` (since advanced pack 2.4).
 
 ----
 
