@@ -41,7 +41,11 @@ Can be used to start an event sub-process.
 
 A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
 
+![Timer Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-timer-1.png)
+
 Can be used to start an event sub-process.
+
+![Timer Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-timer-2.png)
 
 ### Signal Start Event
 
@@ -51,11 +55,27 @@ When used to start a process, only object signals can be used.
 
 When used to start an event sub-process, it's possible to use placeholders in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id. Note, that signal can be triggered from anywhere in the system, not necessarily in the same process.
 
-![Signa Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-signal.png)
+![Signal Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-signal.png)
 
 See [more info](bpm-signals.md) about signals.
 
+### Error Start Event
 
+Can only be used to start an event sub-process. It's triggered once an error event is thrown within the same process.
+
+If Error Code is specified, it will be triggered only when an error with the same code occurs. If Error Code is empty, it will catch any error.
+
+It can't be non interrupting, because a process gets terminated once an error event is thrown.
+
+![Error Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-error.png)
+
+### Escalation Start Event
+
+Can only be used to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
+
+If Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If Escalation Code is empty, it will catch any escalation.
+
+![Escalation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-escalation.png)
 
 ----
 
