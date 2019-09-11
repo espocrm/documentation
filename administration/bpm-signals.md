@@ -75,5 +75,12 @@ Contacts/Leads:
 * @leadCapture.LEAD_CAPTURE_ID
 * @optOut – person opted-out
 * @optOut.TARGET_LIST_ID – person opted-out from specific target list
-* @cancelOptOut  – person opted-in again
+* @cancelOptOut – person opted-in again
 * @cancelOptOut.TARGET_LIST_ID
+
+
+## Clarification for placeholders used above
+
+* ID – id of a record that you can obtain from the browser address bar
+* ENTITY_TYPE – entity type of the record (not translated), you can obtain it at Administration > Entity Manager
+* LINK_NAME – relation name, you obtain it at Administration > Entity Manager
