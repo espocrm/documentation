@@ -88,6 +88,8 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 This event stops the flow until specified criteria is met.
 
+![Conditional Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-conditional.png)
+
 ### Timer Intermediate Event (Catching)
 
 This event stops the flow and waits as long as it is specified by event's parameters.
@@ -95,6 +97,45 @@ This event stops the flow and waits as long as it is specified by event's parame
 For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
+
+![Timer Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-timer.png)
+
+### Signal Intermediate Event (Catching)
+
+Stops the flow until a specific signal catched. Placeholders can be used in a signal name.
+
+See [more info](signal-signals.md) about signals.
+
+### Message Intermediate Event (Catching)
+
+Stops the flow until an email received.
+
+Only emails sent not by internal users can trigger the event.
+
+It's possible to utilize the event in pair with *Send Message* task. The event will wait until the sent email is replied. Specify that email in *Replied To* parameter.
+
+*Related To* parameter requires that email was related (via Parent field) to a specific record.
+
+There is the ability to specify formula condtions that the email should satisfy to trigger the event. You can utilize it to skip auto-response emails, or to catch emails containing the specific ID.
+
+![Message Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-message.png)
+
+### Escalation Intermediate Event (Throwing)
+
+Throws an escalation. Escalation Code can be specified. Escalation can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+
+![Escalation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-escalation.png)
+
+### Signal Intermediate Event (Throwing)
+
+Broadcasts a specified signal. Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
+
+If the first character of the signal name is `@` it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger workflow rule.
+
+![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-signal-throw.png)
+
+See [more info](bpm-signals.md) about signals.
+
 
 ----
 
