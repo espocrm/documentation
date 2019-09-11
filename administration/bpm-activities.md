@@ -68,7 +68,7 @@ The user assigned to the created Process User Task record will receive in-app no
 
 Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
 
-You can use placeholders in the *Name* of User Task:
+You can use placeholders in the *Name* of the user task:
 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – formula variable
