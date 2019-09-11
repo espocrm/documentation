@@ -28,6 +28,7 @@ Events are displayed on a flowchart as circles.
   * [Timer](#user-content-timer-intermediate-event-boundary)
   * [Escalation](#user-content-escalation-intermediate-event-boundary)
   * [Signal](#user-content-signal-intermediate-event-boundary)
+  * [Message](#user-content-message-intermediate-event-boundary)
 ----
 
 ## Start Events
