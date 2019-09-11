@@ -166,7 +166,7 @@ Opportunities:
 
 Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
 
-### Run BPM Process
+### Start BPM Process
 
 Starts BPM process. You can specify which target will be used for a process.
 
