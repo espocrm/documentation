@@ -85,6 +85,8 @@ Created User Task can be canceled by a process. There are two ways:
 1. Using 'Update Created Record' action (within Task activity), setting 'Is Canceled' field to 'true'. 
 2. Using interrupting boundary event (attached to User Task activity) (since advanced pack 2.4.0).
 
+![User Task](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/task-user.png)
+
 ----
 
 ## Script Task
