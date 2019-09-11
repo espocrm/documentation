@@ -27,7 +27,7 @@ Task can execute following the actions:
 * Trigger Another Workflow Rule - runs a workflow rule of the sequential type, target can be substituted with a related or created record (since version 2.3.14);
 * Run Service Action - runs a specific service action; the list of built-in actions is available [here](workflows.md#run-service-action); developers can create custom service actions.
 
-Actions available for a task are almost the same as in Workflow tool. See more details about [workflow's actions](workflows.md#actions).
+Actions available for a task are almost the same as in Workflows tool. See more details about [workflow actions](workflows.md#actions).
 
 It's possible to delete records in Update actions with the following formula code: `deleted = 1`.
 
