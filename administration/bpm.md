@@ -38,6 +38,15 @@ Processes can be started:
 * Manually – To start process manually the user needs to click 'Start Process' button on the list view of processes.
 * With Workflow rule – 'Start BPM Process' action allows to pass a related record as a target for the process.
 
+The execution of the process is visualized with colors highlighting flow nodes:
+
+* green – processed
+* yellow – pending
+* violet – in process
+* gray – failed
+
+![Process execution](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/process-execution.png)
+
 ## Flowchart Elements
 
 * [Events](bpm-events.md)
