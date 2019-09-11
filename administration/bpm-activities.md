@@ -105,3 +105,41 @@ Variables can be utilized in:
 * Email templates
 * Signal names
 * User Task names
+
+----
+
+## Sub-Process
+
+An isolated process that executes within the current process. The sub-process has it's own flowchart. It starts once the flow reaches its activity element.
+
+Sub-process should have one (and only one) regular Start Event.
+
+Sub-process can be interrupted by an interrupting boundary event. When the sub-process is successfully ended (not interrupted, not ended with an error), the flow of the parent process proceeds to the next element.
+
+It possible to pass a different target to the sub-process. After you placed a sub-process element on the flowchart, click it to edit, then specify a target.
+
+When a sub-process is initiated, all formula variables are copied from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter.
+
+![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/sub-process.png)
+
+----
+
+## Event Sub-Process
+
+Event Sub-Process doesn't have neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
+
+It possible to pass a different target to the event sub-process. The event sub-process can interrupts its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
+
+Non interrupting event sub-process can be executed multiple times.
+
+![Event Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-sub-process.png)
+
+----
+
+## Call Activity
+
+Executes a sub-process defined by a flowchart stored separately. Provides the ability to re-use the same flowchart in different processes.
+
+It possible to pass a different target to the sub-process.
+
+
