@@ -10,8 +10,12 @@ Events are displayed on a flowchart as circles.
   * [Error](#user-content-error-start-event)
   * [Escalation](#user-content-escalation-start-event)
 * Intermediate Events:
-  * [Conditional](#user-content-conditional-intermediate-event)
-  * [Timer](#user-content-timer-intermediate-event)
+  * [Conditional (catching)](#user-content-conditional-intermediate-event-catching)
+  * [Timer (catching)](#user-content-timer-intermediate-event-catching)
+  * [Signal (catching)](#user-content-signal-intermediate-event-catching)
+  * [Signal (throwing)](#user-content-signal-intermediate-event-throwing)
+  * [Message (catching)](#user-content-message-intermediate-event-catching)
+  * [Escalation (throwing)](#user-content-escalation-intermediate-event-throwing)
 * End Events
   * [End](#user-content-end-event)
   * [Terminate](#user-content-terminate-end-event)
