@@ -6,6 +6,9 @@ Events are displayed on a flowchart as circles.
   * [Start](#user-content-start-event)
   * [Conditional](#user-content-conditional-start-event)
   * [Timer](#user-content-timer-start-event)
+  * [Signal](#user-content-signal-start-event)
+  * [Error](#user-content-error-start-event)
+  * [Escalation](#user-content-escalation-start-event)
 * Intermediate Events:
   * [Conditional](#user-content-conditional-intermediate-event)
   * [Timer](#user-content-timer-intermediate-event)
