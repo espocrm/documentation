@@ -107,6 +107,16 @@ Stops the flow until a specific signal catched. Placeholders can be used in a si
 
 See [more info](signal-signals.md) about signals.
 
+### Signal Intermediate Event (Throwing)
+
+Broadcasts a specified signal. Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
+
+If the first character of the signal name is `@` it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger workflow rule.
+
+![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-signal-throw.png)
+
+See [more info](bpm-signals.md) about signals.
+
 ### Message Intermediate Event (Catching)
 
 Stops the flow until an email received.
@@ -127,15 +137,7 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 
 ![Escalation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-escalation.png)
 
-### Signal Intermediate Event (Throwing)
 
-Broadcasts a specified signal. Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
-
-If the first character of the signal name is `@` it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger workflow rule.
-
-![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-signal-throw.png)
-
-See [more info](bpm-signals.md) about signals.
 
 
 ----
