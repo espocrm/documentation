@@ -15,6 +15,7 @@ Events are displayed on a flowchart as circles.
 * End Events
   * [End](#user-content-end-event)
   * [Terminate](#user-content-terminate-end-event)
+* Boundary Events:
   
 ----
 
