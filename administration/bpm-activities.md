@@ -91,3 +91,11 @@ You can store some variables and use them further within the process. All set va
 $myVar1 = 'test';
 $myVar2 = id;
 ```
+
+Variables can be utilized in:
+
+* Condition checking
+* Tasks that create or update record
+* Email templates
+* Signal names
+* User Task names
