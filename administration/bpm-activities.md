@@ -52,6 +52,8 @@ You can specify which email address the email will sent from, and specify a repl
 
 Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitue field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}` (since advanced pack 2.4).
 
+You can catch a reply on the sent email with *Message Intermediate Event* further in the process.
+
 ----
 
 ## User Task
