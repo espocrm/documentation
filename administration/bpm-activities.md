@@ -68,6 +68,12 @@ The user assigned to the created Process User Task record will receive in-app no
 
 Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
 
+You can use placeholders in the *Name* of User Task:
+
+* `{$attribute}` – attribute of target record
+* `{$$variable}` – formula variable
+
+
 ### Resolution
 
 It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
