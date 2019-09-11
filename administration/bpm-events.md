@@ -190,7 +190,55 @@ If the first character of the signal name is `@` it will broadcast an object sig
 
 ## Boundary Events
 
+Boundary events can be attached to activities (usually sub-processes). Boundary event can interrupt an activity (if param *Is Interrupting* is checked). Non interrupting boundary event can be triggered multiple times.
 
+
+### Error Intermediate Event (Boundary)
+
+It's triggered once an error event is thrown withing the activity (sub-process) it's attached to.
+
+It can't be non interrupting, because the activity gets terminated once an error event is thrown.
+
+If Error Code is specified, it will be triggered only when an error with the same code occurs. If Error Code is empty, it will catch any error.
+
+![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-end-error.png)
+
+
+### Conditional Intermediate Event (Boundary)
+
+Triggered when specific conditions are met. Note, that non interrupting event can be triggered multiple times, when coditions get met, then get not met, and met again.
+
+![Conditional Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-conditional-boundary.png)
+
+
+### Timer Intermediate Event (Boundary)
+
+Triggered after a specific period of time. The timer starts once the activity starts.
+
+![Timer Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-timer-boundary.png)
+
+
+### Escalation Intermediate Event (Boundary)
+
+It's triggered once an escalation event is thrown within the activity (sub-process) it's attached to.
+
+If Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If Escalation Code is empty, it will catch any escalation.
+
+
+![Escalation Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-escalation.png)
+
+
+### Signal Intermediate Event (boundary)
+
+It's triggered once a specific signal is broadcasted. Note, that signal can be triggered from anywhere in the system, not necessarily in the same process.
+
+Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
+
+![Signal Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-signal-boundary.png)
+
+### Message Intermediate Event (Boundary)
+
+Triggered once an email received. It functions the same as *Message Intermediate Event (Catching)*.
 
 
 
