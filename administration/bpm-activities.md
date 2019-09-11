@@ -25,7 +25,7 @@ Task can execute following the actions:
 * Create Notification - creates in-app notification for specific users;
 * Make Followed - makes specific users follow the target record, the process record or any record created by the process;
 * Trigger Another Workflow Rule - runs a workflow rule of the sequential type, target can be substituted with a related or created record (since version 2.3.14);
-* Run Service Action - runs custom service actions implemented by developers.
+* Run Service Action - runs a specific service action; the list of built-in actions is available [here](workflows.md#run-service-action); developers can create custom service actions.
 
 Actions available for task are almost the same as in Workflow feature. See more details about [workflow's actions](workflows.md#actions).
 
