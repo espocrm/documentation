@@ -134,6 +134,14 @@ Field values can be transferred from a product to a quote item upon product sele
 
 You can select which fields you need to be copied at Administration > Entity Manager > Quote Item > Fields > Product > Fields to Copy.
 
+## Automation with Workflows
+
+The following service actions are available in Workflows tool:
+
+* Add Quote Items
+* Convery Currency
+* Send in Email
+
 ## See also
 
 [Custom calculations for Quote totals](../development/quote-custom-calculations.md)
