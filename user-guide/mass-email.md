@@ -18,11 +18,11 @@ Click right dropdown on the mass email row in _Mass Email_ panel and then click 
 ## Log
 
 In log you can see:
-* Sent email;
-* Emails opened by recipient;
-* Links clicked by recipient;
-* Recipients who opted out;
-* Bounced emails (not delivered to recipient).
+* Sent email
+* Links clicked by recipient
+* Recipients who opted out
+* Bounced emails (not delivered to recipient)
+* Emails opened by recipient (disabled by default)
 
 ## Opt-out link
 
