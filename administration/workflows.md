@@ -159,6 +159,7 @@ Quotes/Sales Orders/Invoices:
 
 * Add Quote Items
 * Convery Currency (since version 5.7.0)
+* Send in Email
 
 Opportunities:
 
