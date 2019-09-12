@@ -14,12 +14,12 @@ Default signals:
 * create.ENTITY_TYPE – record of ENTITY_TYPE created, e.g. `create.Lead`
 * update.ENTITY_TYPE.ID – record update, e.g. `update.Lead.007`
 * delete.ENTITY_TYPE.ID – record removed
-* relate.ENTITY_TYPE.ID.LINK_NAME – record related with another record
-* relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID – record related with another record, id of related recod is specified
-* unrelate.ENTITY_TYPE.ID.LINK_NAME
-* unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID
+* relate.ENTITY_TYPE.ID.LINK_NAME – record related with another record (only for *many-to-many*)
+* relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID – record related with another record, id of related recod is specified (only for *many-to-many*)
+* unrelate.ENTITY_TYPE.ID.LINK_NAME – record unrelated from another record (only for *many-to-many*)
+* unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID – (only for *many-to-many*)
 * createRelated.ENTITY_TYPE.ID.LINK_NAME – created celated record, one-to-many relationship, e.g. Opportunity created for Account
-* createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE - when created a record related through parent, e.g. Meeting created for Account
+* createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE – when created a record related through parent, e.g. Meeting created for Account
 * streamPost.ENTITY_TYPE.ID – when somebody posted in stream
 
 Contacts/Leads:
@@ -64,9 +64,9 @@ Default signals:
 * @create – record created
 * @update – record updated
 * @delete – record removed
-* @relate.LINK_NAME – record related with another record
-* @relate.LINK_NAME.FOREIGN_ID – record related with another record, id of related recod is specified
-* @unrelate.LINK_NAME
+* @relate.LINK_NAME – record related with another record (only for *many-to-many*)
+* @relate.LINK_NAME.FOREIGN_ID – record related with another record, id of related recod is specified (only for *many-to-many*)
+* @unrelate.LINK_NAME – record unrelated with another record (only for *many-to-many*)
 * @unrelate.LINK_NAME.FOREIGN_ID
 
 Contacts/Leads:
