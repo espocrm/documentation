@@ -97,7 +97,7 @@ $selectManager->addLeftJoin([
 
 How to extend an existing salect manager for a specific entity type.
 
-Example for *Account*. There is already extended class in `application/Espo/Modules/Crm/SelectManagers/Account.php`, so we need extend from it.
+Example for *Account*. There is already extended class in `application/Espo/Modules/Crm/SelectManagers/Account.php`, so we need to extend from it.
 
 Create a file `custom/Espo/Custom/SelectManager/Account.php`:
 
