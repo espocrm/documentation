@@ -61,9 +61,9 @@ Field values can be transferred from a product to an invoice item upon product s
 
 You can select which fields you need to be copied at Administration > Entity Manager > Invoice Item > Fields > Product > Fields to Copy.
 
-## Automation with Workflows
+## Automation with Workflows or BPM
 
-The following service actions are available in Workflows tool:
+The following service actions are available in Workflows and BPM tools:
 
 * Add Quote Items
 * Convery Currency
