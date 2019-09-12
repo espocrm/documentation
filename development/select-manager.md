@@ -92,3 +92,22 @@ $selectManager->addLeftJoin([
     'someAlias',
 ], $params);
 ```
+
+## Custom Select Manager
+
+How to extend an existing salect manager for a specific entity type.
+
+Example for *Account*. There is already extended class in `application/Espo/Modules/Crm/SelectManagers/Account.php`, so we need extend from it.
+
+Create a file `custom/Espo/Custom/SelectManager/Account.php`:
+
+```php
+namespace Espo\Custom\SelectManagers;
+
+class Account extend \Espo\Modules\Crm\SelectManagers\Account
+{
+
+}
+```
+
+If there's no select manager class for a specific entity type, you need to extend from `\Espo\Core\SelectManagers\Base`.
