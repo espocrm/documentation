@@ -69,6 +69,14 @@ Field values can be transferred from a product to a sales order item upon produc
 
 You can select which fields you need to be copied at Administration > Entity Manager > Sales Order Item > Fields > Product > Fields to Copy.
 
+## Automation with Workflows
+
+The following service actions are available in Workflows tool:
+
+* Add Quote Items
+* Convery Currency
+* Send in Email
+
 ## See also
 
 [Custom calculations for Quote totals](../development/quote-custom-calculations.md)
