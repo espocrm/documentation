@@ -26,7 +26,7 @@
   * [Customizing existing fields](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
 * [Controller & routing](https://github.com/espocrm/documentation/blob/master/development/frontend/controller.md)
 * Misc
-  * [Custom buttons and dropdown actions for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
+  * [Custom buttons & dropdown actions for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
   * [Modal dialogs](https://github.com/espocrm/documentation/blob/master/development/modal.md)
   * [Custom panels on record view](https://github.com/espocrm/documentation/blob/master/development/frontend/record-panels.md)
   * [Including custom CSS file](https://github.com/espocrm/documentation/blob/master/development/custom-css.md)
