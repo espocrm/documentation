@@ -68,7 +68,7 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 
 ## Dropdown action in detail view 
 
-Action item next to the edit button.
+An action item next to the edit button.
 
 Available since version 5.6.14.
 
