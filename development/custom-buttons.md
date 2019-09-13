@@ -6,7 +6,7 @@ How to add buttons (or dropdown actions) that will appear in the top-right corne
 
 An example for the detail view of Lead entity type.
 
-Create the file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json` with the following content:
+Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json` with the following content:
 
 ```json
 {
@@ -35,10 +35,9 @@ Create the file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/client
 
 In order to add dropdown action you need to use `dropdown` key instead of *buttons*.
 
-Create the file `client/custom/src/my-action-handler.js` with the follwing content:
+Create a file `client/custom/src/my-action-handler.js` with the follwing content:
 
 ```js
-
 define('custom:my-action-handler', ['action-handler'], function (Dep) {
 
    return Dep.extend({
@@ -61,6 +60,61 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
                 this.view.hideHeaderActionItem('someName');
             } else {
                 this.view.showHeaderActionItem('someName');
+            }
+        },
+   });
+});
+```
+
+## Dropdown action in detail view (next to edit button)
+
+Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json` with the following content:
+
+```json
+{
+    "detailActionList": [
+        "__APPEND__",
+        {
+            "label": "Test Action",
+            "name": "test",
+            "acl": "edit",
+            "data": {
+                "handler": "custom:my-action-handler"
+            },
+            "initFunction": "initTest"
+        }
+    ]
+}
+```
+
+Paremeter *acl* set to *edit' means that a user need *edit* access level to see the action.
+
+
+Create a file `client/custom/src/my-action-handler.js` with the follwing content:
+
+```js
+define('custom:my-action-handler', ['action-handler'], function (Dep) {
+
+   return Dep.extend({
+
+        actionTest: function (data, e) {
+            Espo.Ajax.getRequest('Lead/' + this.view.model.id).then(function (response) {
+                console.log(response);
+            });
+        },
+
+        initTest: function () {
+            this.controlActionVisibility();
+            this.view.listenTo(
+                this.view.model, 'change:status', this.controlActionVisibility.bind(this)
+            );
+        },
+
+        controlActionVisibility: function () {
+            if (~['Converted', 'Dead', 'Recycled'].indexOf(this.view.model.get('status'))) {
+                this.view.hideActionItem('test');
+            } else {
+                this.view.showActionItem('test');
             }
         },
    });
