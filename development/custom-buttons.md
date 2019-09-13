@@ -4,7 +4,7 @@
 
 How to add buttons (or dropdown actions) that will appear in the top-right corner.
 
-An example for the detail view of Lead entity type.
+An example for the detail view of *Lead* entity type.
 
 Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json` with the following content:
 
@@ -66,7 +66,13 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 });
 ```
 
-## Dropdown action in detail view (next to edit button)
+## Dropdown action in detail view 
+
+Action item next to the edit button.
+
+Available since version 5.6.14.
+
+Example for *Lead* entity type.
 
 Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json` with the following content:
 
