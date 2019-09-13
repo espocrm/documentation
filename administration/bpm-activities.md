@@ -72,13 +72,14 @@ Provides a flexible ability of user interaction. It stops execution until the us
 
 The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications for Process User Tasks at Administration > Notifications > Email Notifications.
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+It's possible to specify instructions text for a user (markdown is supported).
 
-You can use placeholders in the *Name* of the user task:
+You can use placeholders in *Name* and *Instrictions*:
 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – formula variable
 
+Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
 
 ### Resolution
 
