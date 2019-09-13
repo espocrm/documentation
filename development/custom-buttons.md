@@ -1,4 +1,6 @@
-# Custom buttons for detail, list, edit views
+# Custom buttons and dropdown actions for detail, list, edit views
+
+How to add buttons (or dropdown actions) that will appear in the top-left corner.
 
 An example for the detail view of Lead entity type.
 
@@ -28,6 +30,8 @@ Create the file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/client
 ```
 
 `acl` parameter defines that a user needs 'edit' access level to see the button. You can omit this parameter.
+
+In order to add dropdown action you need to use `dropdown` key instead of *buttons*.
 
 Create the file `client/custom/src/my-action-handler.js` with the follwing content:
 
