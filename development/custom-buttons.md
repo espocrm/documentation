@@ -1,5 +1,7 @@
 # Custom buttons & dropdown actions for detail, list, edit views
 
+## In top-right corner
+
 How to add buttons (or dropdown actions) that will appear in the top-left corner.
 
 An example for the detail view of Lead entity type.
