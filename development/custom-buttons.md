@@ -93,7 +93,7 @@ Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDe
 }
 ```
 
-Paremeter *acl* set to *edit' means that a user need *edit* access level to see the action.
+Paremeter *acl* set to *edit* means that a user need *edit* access level to see the action.
 
 
 Create a file `client/custom/src/my-action-handler.js` with the follwing content:
