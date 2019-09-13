@@ -77,7 +77,7 @@ It's possible to specify instructions text for a user (markdown is supported).
 You can use placeholders in *Name* and *Instrictions*:
 
 * `{$attribute}` – attribute of target record
-* `{$$variable}` – formula variable
+* `{$$variable}` – process variable (defined by Script Task)
 
 Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
 
