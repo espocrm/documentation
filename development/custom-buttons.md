@@ -1,4 +1,4 @@
-# Custom buttons and dropdown actions for detail, list, edit views
+# Custom buttons & dropdown actions for detail, list, edit views
 
 How to add buttons (or dropdown actions) that will appear in the top-left corner.
 
