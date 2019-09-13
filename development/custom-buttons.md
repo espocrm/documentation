@@ -56,7 +56,7 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
             } else {
                 this.view.showHeaderActionItem('someName');
             }
-        }
+        },
    });
 });
 ```
