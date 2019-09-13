@@ -2,7 +2,7 @@
 
 ## In top-right corner
 
-How to add buttons (or dropdown actions) that will appear in the top-left corner.
+How to add buttons (or dropdown actions) that will appear in the top-right corner.
 
 An example for the detail view of Lead entity type.
 
