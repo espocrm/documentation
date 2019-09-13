@@ -6,7 +6,7 @@ How to add buttons (or dropdown actions) that will appear in the top-right corne
 
 An example for the detail view of *Lead* entity type.
 
-Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json` with the following content:
+Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
 
 ```json
 {
@@ -35,7 +35,7 @@ Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDe
 
 In order to add dropdown action you need to use `dropdown` key instead of *buttons*.
 
-Create a file `client/custom/src/my-action-handler.js` with the follwing content:
+Create a file `client/custom/src/my-action-handler.js`:
 
 ```js
 define('custom:my-action-handler', ['action-handler'], function (Dep) {
@@ -74,7 +74,7 @@ Available since version 5.6.14.
 
 Example for *Lead* entity type.
 
-Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json` with the following content:
+Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
 
 ```json
 {
@@ -96,7 +96,7 @@ Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDe
 Paremeter *acl* set to *edit* means that a user need *edit* access level to see the action. You can omit it.
 
 
-Create a file `client/custom/src/my-action-handler.js` with the follwing content:
+Create a file `client/custom/src/my-action-handler.js`:
 
 ```js
 define('custom:my-action-handler', ['action-handler'], function (Dep) {
