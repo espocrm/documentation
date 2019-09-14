@@ -18,6 +18,7 @@
 * [Formula (calculated fields)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
 * [Import](https://github.com/espocrm/documentation/blob/master/administration/import.md)
 * [Portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md)
+* [Currency](https://github.com/espocrm/documentation/blob/master/administration/currency.md)
 * [LDAP authorization](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization.md)
   * [Active Directory](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-ad.md)
   * [OpenLDAP](https://github.com/espocrm/documentation/blob/master/administration/ldap-authorization-for-openldap.md)
