@@ -10,6 +10,6 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/client.json`.
 }
 ```
 
-Make sure the css file is readable by a webserver. It's recommended to put it in `client/custom/css/` or `client/modules{module_name}/css/` directoty. 
+Make sure the css file is readable by a webserver. It's recommended to put it in `client/custom/css/` or `client/modules{module_name}/css/` directory. 
 
 Then clear cache.
