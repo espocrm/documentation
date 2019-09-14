@@ -1,4 +1,4 @@
-# Mail Merge (mass mailing)
+# Mail Merge (mass snail mailing)
 
 This feature is available since 5.3.0 version.
 
