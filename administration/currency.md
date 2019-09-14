@@ -6,10 +6,10 @@ Administrator can configure currency related parameters and rates at Administrat
 
 You can specify which currencies will be available in the system in *Currency List* parameter.
 
-*Default Currency* -- which currency will be set be default when creating a new record. A currency to which all currency fields will be converted to when filtering, sorting, reporting.
+*Default Currency* – which currency will be set be default when creating a new record. A currency to which all currency fields will be converted to when filtering, sorting, reporting.
 
 
-*Base Currency* -- which currency to use as a base to specify rates.
+*Base Currency* – which currency to use as a base to specify rates.
 
 ### Default currency for specific field
 
