@@ -8,8 +8,9 @@ You can specify which currencies will be available in the system in *Currency Li
 
 *Default Currency* – which currency will be set be default when creating a new record. A currency to which all currency fields will be converted to when filtering, sorting, reporting.
 
-
 *Base Currency* – which currency to use as a base to specify rates.
+
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/currency-settings.png)
 
 ### Default currency for specific field
 
