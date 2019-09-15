@@ -5,25 +5,25 @@
 The list of field types available for creating:
 
 * [Varchar](#varchar) – a single-line text;
-* Enum – selectbox, only one value can be selected;
-* Text – a multiline text with markdown support;
-* Date – date w/o time;
-* Date-Time – date and time;
-* Currency – for currency values, a pair of number and currency;
-* Int – a whole number;
-* Float – a number with a decimal part;
-* Boolean – a checkbox;
-* Multi-Enum – a list of values, multiple values can be selected;
-* Checklist – a list of checkboxes;
-* Array – a list of values, similar to Multi-Enum field;
-* Address – an address with street, city, state, postal code and country;
-* Url – for storing links;
-* Wysiwyg – similar to Text field, but with HTML support;
-* File – for file uploading;
-* Image – for image uploading;
-* Attachment-Multiple – for multiple file uploading;
-* Number – an auto-incrementing number of string type with a possible prefix and specific length;
-* Auto-increment – a generated read-only auto-incrementing integer number.
+* [Enum](#enum) – selectbox, only one value can be selected;
+* [Text](#text) – a multiline text with markdown support;
+* [Date](#date) – date w/o time;
+* [Date-Time](#date-time) – date and time;
+* [Currency](#currency) – for currency values, a pair of number and currency;
+* [Int](#int) – a whole number;
+* [Float](#float) – a number with a decimal part;
+* [Boolean](#boolean) – a checkbox;
+* [Multi-Enum](#multi-enum) – a list of values, multiple values can be selected;
+* [Checklist](#checklist) – a list of checkboxes;
+* [Array](#array) – a list of values, similar to Multi-Enum field;
+* [Address](#address) – an address with street, city, state, postal code and country;
+* [Url](#url) – for storing links;
+* [Wysiwyg](#wysiwyg) – similar to Text field, but with HTML support;
+* [File](#file) – for file uploading;
+* [Image](#image) – for image uploading;
+* [Attachment-Multiple](#attachment-multiple) – for multiple file uploading;
+* [Number](#number) – an auto-incrementing number of string type with a possible prefix and specific length;
+* [Auto-increment](#auto-increment) – a generated read-only auto-incrementing integer number.
 
 ## Common field parameters
 
