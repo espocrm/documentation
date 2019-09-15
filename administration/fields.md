@@ -198,18 +198,19 @@ Parameters:
 
 A list of values, similar to Multi-Enum field.
 
-
-![Array](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/array.png)
-
 Parameters:
 
 * Options – a list of values (key => label pairs); if no options specified then it a user will be able to add any options;
 * Empty string value is not allowed – if not checked, a user can an empty string as a value;
 * Max Item Count – validation: how much items can be added.
 
+![Array](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/array.png)
+
 ## Address
 
 An address with street, city, state, postal code and country.
+
+![Address](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/address.png)
 
 ## Url
 
