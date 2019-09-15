@@ -37,6 +37,12 @@ The list of field types available for creating:
 
 ## Dynamic Logic
 
+Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
+
+For Enum, Array and Multi-Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met. See more [here](dynamic-logic.md).
+
+Available items:
+
 * Conditions making field visible
 * Conditions making field required
 * Conditions making field read-only
