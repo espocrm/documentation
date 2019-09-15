@@ -27,6 +27,8 @@ The list of field types available for creating:
 
 Field types not available for creating directly:
 
+* [Email](#email) – a set of email addresses;
+* [Phone](#phone) – a set of phone numbers;
 * [Link](#link) – a record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship;
 * [Link-Parent](#link-parent) – a record related through *Belongs-To-Parent* relationship; can be of different entity types;
 * [Link-Multiple](#link-multiple) – a set of records related through *Has-Many* relationship.
@@ -248,6 +250,18 @@ Parameters:
 
 A generated read-only auto-incrementing integer number.
 
+## Email
+
+A set of email addresses with their parameters: *Opted-out*, *Invalid*, *Primary*.
+
+## Phone
+
+A set of phone numbers with their parameters: *Type*, *Opted-out*, *Invalid*, *Primary*.
+
+Paremeters:
+
+* Type List – a list of types available for phone numbers (e.g. Home, Office).
+
 ## Link
 
 A record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship.
@@ -256,6 +270,9 @@ A record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationsh
 
 A record related through *Belongs-To-Parent* relationship. Can be of different entity types.
 
+Parameters:
+
+* Entity List – a list of entity types available to be related through the field.
 
 ## Link-Multiple
 
