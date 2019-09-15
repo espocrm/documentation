@@ -34,113 +34,11 @@ If you click `Edit` link on a certain entity you will be able to change some par
 
 ## Fields
 
-By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones. The following types of fields are available in Entity Manager:
+By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones.
 
-### Address
-
-Address with street, city, state, postal code and country.
-
-### Array
-
-List of values, with the ability to select multiple values. Users can add their own values if options are not specified. Similar to Mult-Enum field.
-
-### Attachment Multiple
-
-Multiple file attachments.
-
-### Auto-increment
-
-Read-only generated integer number.
-
-### Boolean
-
-Checkbox, true or false.
-
-### Checklist
-
-A list of checkboxes. (since version 5.7.0)
-
-### Currency
-
-For currency values.
-
-### Date
-
-Date w/o a time part.
-
-
-### Date-Time.
-
-Date with a time part.
-
-### Enum
-
-Selectbox, with the ability to select only one value.
-
-
-### File
-
-Uploading one file.
-
-
-### Float 
-
-Number with a decimal part.
-
-
-### Foreign
-
-Displays a value of a specific field of a related record. It's possible to search by foreing fields. Read-only.
-
-
-### Image
-
-Uploading image file with a preview.
-
-
-### Integer
-
-A whole number.
-
-
-### Number
-
-An auto-incrementing number of string type with a possible prefix and a specific length.
-
-
-### Multi-Enum
-
-A list of values, with the ability to select multiple values, similar to Array but nicer. Users can add their own values if options are not specified or 'Allow Custom Options' is checked.
-
-
-### Text
-
-Text area, for long multiline texts.
-
-### Url
-
-For links.
-
-### Varchar
-
-A single-line text.
-
-### Wysiwyg
-
-Similar to Text field with the ability to format text.
-
-Parameters:
-* Required - whether filling in of the field is mandatory.
-* Default Value - Value of the field set upon creating new record.
-* Audited - updates of the field will be logged in Stream.
+[Fields](#fields.md)
 
 **Note**: After you have added the new field you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
-
-### Dynamic Logic
-
-Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
-
-For Enum, Array and Multi-Enum fields it's possible to define different sets of options that will be available for the field depending on which condition is met. See more [here](dynamic-logic.md).
 
 
 ## Relationships
