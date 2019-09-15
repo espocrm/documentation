@@ -254,7 +254,7 @@ Parameters:
 
 ## Attachment-Multiple
 
-For multiple file uploading.
+Allows to upload multiple files.
 
 Parameters:
 
