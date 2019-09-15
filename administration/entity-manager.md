@@ -36,7 +36,7 @@ If you click `Edit` link on a certain entity you will be able to change some par
 
 By clicking `Fields` link you will be moved to a separate page. There you will be able to create new fields or update existing ones.
 
-[Fields](fields.md)
+[More detail](fields.md) abour fields.
 
 **Note**: After you have added the new field you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
 
