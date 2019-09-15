@@ -68,9 +68,15 @@ Parameters:
 * Trim – to trim whitespaces from text;
 * Options – a pre-defined list of values for an autocomplete.
 
+![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/varchar.png)
+
 ## Enum
 
 Selectbox, only one value can be selected.
+
+![Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum.png)
+![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum-detail.png)
+
 
 Parameters:
 
@@ -83,6 +89,9 @@ It's possible to define conditional options with Dynamic Logic.
 ## Text
 
 A multiline text with markdown support.
+
+![Text](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text.png)
+![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text-detail.png)
 
 Parameters:
 
@@ -102,6 +111,9 @@ Parameters:
 * Before (field) – a validation: a date value should be before a date value of a specified field;
 * Use Numeric Format – if not checked, then words 'today', 'yesterday', 'tomorrow' are in the detail view mode.
 
+![Date](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date.png)
+![Date detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-detail.png)
+
 ## Date-Time
 
 Date and time.
@@ -113,6 +125,9 @@ Parameters:
 * Use Numeric Format – if not checked, then words 'today', 'yesterday', 'tomorrow' are in the detail view mode;
 * Minutes Step – defines items displayed in the minutes dropdown (in the edit mode).
 
+![Date-Time](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-time.png)
+![Date-Time detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-time-detail.png)
+
 ## Currency
 
 A currency value, a pair of number and currency.
@@ -121,6 +136,9 @@ Parameters:
 
 * Min – a validation: min acceptable value; if empty, then no validation applied;
 * Max – a validation: max acceptable value; if empty, then no validation applied.
+
+![Currency](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency.png)
+![Currency detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency-detail.png)
 
 ## Int
 
@@ -147,9 +165,14 @@ Parameters:
 
 A checkbox. Two possible values: true and false.
 
+![Boolean](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/bool.png)
+
 ## Multi-Enum
 
 A list of values, multiple values can be selected. The list is ordered.
+
+![Multi-Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/multi-enum.png)
+![Multi-Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/multi-enum-detail.png)
 
 Parameters:
 
@@ -174,6 +197,9 @@ Parameters:
 ## Array
 
 A list of values, similar to Multi-Enum field.
+
+
+![Array](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/array.png)
 
 Parameters:
 
@@ -245,6 +271,8 @@ Parameters:
 * Prefex – a text that will be preprended to a number;
 * Next Number – a number that will be applied to the next created record;
 * Pad Length – a length of the numeric part; if less then will be padded with zero digits, e.g. `00001`.
+
+![Number](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/number.png)
 
 ## Auto-increment
 
