@@ -74,9 +74,6 @@ Parameters:
 
 Selectbox, only one value can be selected.
 
-![Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum.png)
-![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum-detail.png)
-
 
 Parameters:
 
@@ -86,12 +83,12 @@ Parameters:
 
 It's possible to define conditional options with Dynamic Logic.
 
+![Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum.png)
+![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum-detail.png)
+
 ## Text
 
 A multiline text with markdown support.
-
-![Text](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text.png)
-![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text-detail.png)
 
 Parameters:
 
@@ -100,6 +97,9 @@ Parameters:
 * Number of rows of textarea – if specified, then height of a textarea will be fixed, otherwise it's flexible (for edit view mode);
 * Cut Height (px) – a max height of a text, if lonher then it will be cut (for detail view mode);
 * Display raw text (no markdown) – to disable markdown support.
+
+![Text](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text.png)
+![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text-detail.png)
 
 ## Date
 
