@@ -4,7 +4,7 @@
 
 The list of field types available for creating:
 
-* Varchar – a single-line text;
+* [Varchar](#varchar) – a single-line text;
 * Enum – selectbox, only one value can be selected;
 * Text – a multiline text with markdown support;
 * Date – date w/o time;
