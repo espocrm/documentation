@@ -25,6 +25,12 @@ The list of field types available for creating:
 * [Number](#number) – an auto-incrementing number of string type with a possible prefix and specific length;
 * [Auto-increment](#auto-increment) – a generated read-only auto-incrementing integer number.
 
+Field types not available for creating directly:
+
+* [Link](#link) – a record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship;
+* [Link-Parent](#link-parent) – a record related through *Belongs-To-Parent* relationship; can be of different entity types;
+* [Link-Multiple](#link-multiple) – a set of records related through *Has-Many* relationship.
+
 ## Common field parameters
 
 * Label – a name of a field displayed on UI;
@@ -241,3 +247,16 @@ Parameters:
 ## Auto-increment
 
 A generated read-only auto-incrementing integer number.
+
+## Link
+
+A record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship.
+
+## Link-Parent
+
+A record related through *Belongs-To-Parent* relationship. Can be of different entity types.
+
+
+## Link-Multiple
+
+A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) relationship. Not all relatioships have their link-multiple fields. Only those do, where *Link-Multiple* parameter(s) is enabled.
