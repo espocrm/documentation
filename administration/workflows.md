@@ -153,21 +153,25 @@ The following actions are available out-of-the-box:
 
 Meetings/Calls:
 
-* Send Invitations
+* *Send Invitations* – sends invitations to event attendees
 
 Quotes/Sales Orders/Invoices:
 
-* Add Quote Items
-* Convery Currency (since version 5.7.0)
-* Send in Email
+* *Add Items*
+* *Convery Currency* – converts all currency values based on current rates (since version 5.7.0)
+* *Send in Email*
 
 Opportunities:
 
-* Convery Currency (since version 5.7.0)
+* *Convery Currency* (since version 5.7.0) 
 
 Contacts/Leads/Accounts:
 
-* Opt-out
+* *Opt-out* – unsubscribes from a specific target list or entirely
+
+Users:
+
+* *Generate Password* – generates a new password for a user and sends it to their email address (since version 5.7.0)
 
 Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
 
