@@ -315,7 +315,7 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 `record\attribute(ENTITY_TYPE, ID, ATTRIBUTE)`
 
-Returns an attribute value of a specific record.
+Returns an attribute value of a specific record. (since version 5.7.0)
 
 Examples:
 
