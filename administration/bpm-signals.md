@@ -44,7 +44,7 @@ Can be used within running processes.
 * *eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE* – person declined meeting/call invitation
 * *eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID*
 
-#### Contacts/Leads/Accounts
+#### Contacts/Leads/Accounts/Users
 
 * *clickUrl.ENTITY_TYPE.ID* – recipient opened a tracking url
 * *clickUrl.ENTITY_TYPE.ID.CAMPAIGN_TRACKING_URL_ID* – recipient opened a specfic tracking url
@@ -82,7 +82,7 @@ Broadcasted along with the entity (record). Prefixed with `@` character. Can be 
 * *@cancelOptOut* – person opted-in again
 * *@cancelOptOut.TARGET_LIST_ID*
 
-#### Contacts/Leads/Accounts
+#### Contacts/Leads/Accounts/Users
 
 * *@clickUrl* – recipient opened a tracking url
 * *@clickUrl.CAMPAIGN_TRACKING_URL_ID* – recipient opened a specfic tracking url
