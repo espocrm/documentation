@@ -9,7 +9,7 @@ Two types of signals:
 
 Can be used within running processes.
 
-Default signals:
+#### Default signals
 
 * *create.ENTITY_TYPE* – record of ENTITY_TYPE created, e.g. `create.Lead`
 * *update.ENTITY_TYPE.ID* – record update, e.g. `update.Lead.007`
@@ -22,7 +22,7 @@ Default signals:
 * *createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE* – when created a record related through parent, e.g. Meeting created for Account
 * *streamPost.ENTITY_TYPE.ID* – when somebody posted in stream
 
-Contacts/Leads:
+#### Contacts/Leads
 
 * *leadCapture.ENTITY_TYPE.ID* – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled)
 * *leadCapture.ENTITY_TYPE.ID.LEAD_CAPTURE_ID* – the same, but id of Lead Capture record is specified
@@ -44,6 +44,10 @@ Contacts/Leads:
 * *eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE* – person declined meeting/call invitation
 * *eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID*
 
+#### Contacts/Leads/Accounts
+
+* *clickUrl.ENTITY_TYPE.ID* – recipient opened a tracking url
+* *clickUrl.ENTITY_TYPE.ID.CAMPAIGN_TRACKING_URL_ID* – recipient opened a specfic tracking url
 
 ### Placeholders
 
@@ -59,7 +63,7 @@ E.g. `mySignal.{$status}.{$id}` – type and id are fields of the target record.
 
 Broadcasted along with the entity (record). Prefixed with `@` character. Can be used to start processes or workflows.
 
-Default signals:
+#### Default signals
 
 * *@create* – record created
 * *@update* – record updated
@@ -69,7 +73,7 @@ Default signals:
 * *@unrelate.LINK_NAME* – record unrelated with another record (only for *many-to-many*)
 * *@unrelate.LINK_NAME.FOREIGN_ID*
 
-Contacts/Leads:
+#### Contacts/Leads:
 
 * *@leadCapture* – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled)
 * *@leadCapture.LEAD_CAPTURE_ID*
@@ -77,6 +81,11 @@ Contacts/Leads:
 * *@optOut.TARGET_LIST_ID* – person opted-out from specific target list
 * *@cancelOptOut* – person opted-in again
 * *@cancelOptOut.TARGET_LIST_ID*
+
+#### Contacts/Leads/Accounts
+
+* *@clickUrl* – recipient opened a tracking url
+* *@clickUrl.CAMPAIGN_TRACKING_URL_ID* – recipient opened a specfic tracking url
 
 
 ## Naming clarification
