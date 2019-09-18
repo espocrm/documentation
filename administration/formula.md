@@ -269,8 +269,6 @@ Examples:
 
 `record\count(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Returns a count of records with specified criteria. (since version 5.5.6)
 
-or
-
 `record\count(ENTITY_TYPE, [FILTER])` Returns a count of records with an optional FILTER applied. (since version 5.5.7)
 
 Examples:
@@ -284,6 +282,48 @@ Examples:
 `record\count('Lead', 'status=', list('Assigned', 'In Process'))`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+
+#### record\findOne
+
+`record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a record that matches specific criteria. (since version 5.7.0)
+
+`record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a record with an optional FILTER applied. (since version 5.7.0)
+
+Examples:
+
+`record\findOne('Opportunity', 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
+
+`record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
+
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+
+#### record\findRelatedOne
+
+`record\findOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
+
+`record\findOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
+
+Examples:
+
+`record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'stage=', 'Closed Won')`
+
+`record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
+
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+
+#### record\attribute
+
+`record\attribute(ENTITY_TYPE, ID, ATTRIBUTE)`
+
+Returns an attribute value of a specific record.
+
+Examples:
+
+`record\attribute('Opportunity', $opportunityId, 'amountConverted')`
+
+`record\attribute('Opportunity', $opportunityId, 'teamsIds')`
+
+Combining thie function with *record\findOne* function, it's possible to fetch a values of any record in the system.
 
 ### Env
 
