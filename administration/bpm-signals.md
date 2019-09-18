@@ -24,8 +24,8 @@ Default signals:
 
 Contacts/Leads:
 
-* *leadCapture.ENTITY_TYPE.ID – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled)
-* *leadCapture.ENTITY_TYPE.ID.LEAD_CAPTURE_ID – the same, but id of Lead Capture record is specified
+* *leadCapture.ENTITY_TYPE.ID* – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled)
+* *leadCapture.ENTITY_TYPE.ID.LEAD_CAPTURE_ID* – the same, but id of Lead Capture record is specified
 
 * *optOut.ENTITY_TYPE.ID* – person opted-out
 * *optOut.ENTITY_TYPE.ID.TARGET_LIST_ID* – person opted-out from specific target list
