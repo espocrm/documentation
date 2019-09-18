@@ -79,7 +79,7 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 
 #### CampaignTrackingUrl
 
-* *click* - when a target (lead/contact/account) opened a tracking url in email (since 5.7.0)
+* *afterClick* - when a target (lead/contact/account) opened a tracking url in email (since 5.7.0)
 
 #### Examples
 
