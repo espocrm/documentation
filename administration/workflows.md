@@ -165,6 +165,10 @@ Opportunities:
 
 * Convery Currency (since version 5.7.0)
 
+Contacts/Leads/Accounts:
+
+* Opt-out
+
 Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
 
 ### Start BPM Process
