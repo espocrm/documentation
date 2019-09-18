@@ -149,7 +149,7 @@ Note: For sequential workflows it's usually more reasonable to utilize [BPM tool
 
 Allows to run specific service scripts. 
 
-Out-of-the-box the following actions are available:
+The following actions are available out-of-the-box:
 
 Meetings/Calls:
 
