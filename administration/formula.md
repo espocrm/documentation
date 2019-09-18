@@ -323,7 +323,7 @@ Examples:
 
 `record\attribute('Opportunity', $opportunityId, 'teamsIds')`
 
-Using this function with a combination of *record\findOne*, it's possible to fetch values of any record in the system.
+Using this function with a combination of *record\findOne*, it's possible to fetch attribute values of any record in the system.
 
 ### Env
 
