@@ -16,7 +16,7 @@ EspoCRM formula is written in the simple language designed specifically for this
 
 There are operators, functions attributes and values that can be used in formula. Separated expressions must be delimited by character `;`.
 
-### Operators
+## Operators
 
 * `=` - assignment.
 * `||` - logical OR,
@@ -41,18 +41,20 @@ Priority of operators:
 * `+`, `-`;
 * `*`, `/`, `%`.
 
-### Attributes
+## Attributes
 
 Attributes represent field values of the target entity. You can insert available attributes by clicking on the plus button.
 
 It's possible to access attributes of related entities with the following format `linkName.attributeName`.
 
 
-### Functions
+## Functions
 
 Format of function use: `groupName\functionName(argument1, argument2, ..., argumentN)`.
 
 Out-of-the-box functions are listed below.
+
+## General
 
 #### ifThenElse
 `ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met, then do CONSEQUENT. If not -- then do ALTERNATIVE.
@@ -61,6 +63,11 @@ Out-of-the-box functions are listed below.
 `ifThen(CONDITION, CONSEQUENT)` If CONDITION is met, then do CONSEQUENT. If not -- do nothing.
 
 CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
+
+#### list
+`list(VALUE-1, ... VALUE-N)` Returns array.
+
+### String
 
 #### string\concatenate
 `string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
@@ -73,22 +80,24 @@ If LENGTH is omitted, the substring starting from START until the end of the STR
 If LENGTH is negative, then that many characters will be omitted from the end of STRING.
 
 #### string\contains
-`string\contains(STRING, NEEDLE)`  Whether STRING contains NEEDLE. (since version 5.1.2)
+`string\contains(STRING, NEEDLE)`  Whether STRING contains NEEDLE.
 
 #### string\test
 `string\test(STRING, REGULAR_EXPRESSION)`  Search a match between REGULAR_EXPRESSION and STRING. (since version 5.5.2)
 
 #### string\length
-`string\length(STRING)` The length of STRING. (since version 5.1.2)
+`string\length(STRING)` The length of STRING.
 
 #### string\trim
 `string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
 
 #### string\lowerCase
-`string\lowerCase(STRING)` Converts letters to lower case. (since version 5.0.0)
+`string\lowerCase(STRING)` Converts letters to lower case.
 
 #### string\upperCase
-`string\upperCase(STRING)` Converts letters to upper case. (since version 5.0.0)
+`string\upperCase(STRING)` Converts letters to upper case.
+
+### Datetime
 
 #### datetime\today
 `datetime\today()` Returns today's date.
@@ -114,16 +123,16 @@ Examples:
 `datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
 
 #### datetime\year
-`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
+`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\hour
-`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
+`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\minute
-`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
+`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.3)
+`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\diff
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
@@ -147,7 +156,7 @@ Examples:
 `datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
 
 #### datetime\closest
-`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments. (since version 5.0.0)
+`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments.
 
 TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted, then default timezone is used.
 
@@ -158,6 +167,8 @@ Examples:
 `datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
 
 `datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
+
+### Number
 
 #### number\format
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR, then system defaults are used.
@@ -183,6 +194,8 @@ Examples:
 #### number\ceil
 `number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary. (since version 4.9.0)
 
+### Entity
+
 #### entity\isNew
 `entity\isNew()` Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
 
@@ -206,7 +219,7 @@ Example:
 #### entity\addLinkMultipleId
 `entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field.
 
-`entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids. (since version 4.8.3)
+`entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids.
 
 Example:
 
@@ -240,6 +253,8 @@ Example:
 
 It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
 
+### Record
+
 #### record\exists
 
 `record\exists(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Check whether a record with specified criteria exists. (since version 5.5.6)
@@ -270,6 +285,8 @@ Examples:
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
 
+### Env
+
 #### env\userAttribute
 `env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
 
@@ -277,8 +294,8 @@ Example:
 
 `env\userAttribute('id')` - ID of the current user.
 
-#### list
-`list(VALUE-1, ... VALUE-N)` Returns array. (since version 4.7.0)
+
+### Array
 
 #### array\includes
 `array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
@@ -287,16 +304,16 @@ Example:
 `array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 5.0.0)
 
 #### array\length
-`array\length(LIST)` Returns count of elements in LIST. (since version 4.8.1)
+`array\length(LIST)` Returns count of elements in LIST.
 
 
-### Values
+## Values
 
 * Strings. E.g. 'some string';
 * Integer numbers. E.g. 1, 100, 40300.
 * Float numbers. E.g. 5.2.
 
-### Variables
+## Variables
 
 It's possible to define custom variables in formula.
 ```
@@ -304,7 +321,7 @@ $someVariableName = 'Test';
 description = $test;
 ```
 
-### Function arguments
+## Function arguments
 
 #### LINK
 
