@@ -13,20 +13,20 @@ Activities are displayed as rounded rectangles.
 
 Task can execute following the actions:
 
-* Create Record - creates new record of any entity type;
-* Create Related Record - creates new record related to the target record;
+* Create Record – creates new record of any entity type;
+* Create Related Record – creates new record related to the target record;
 * Update Target Record;
-* Update Related Record - updates the record or records related to the target record;
-* Update Created Record - updates specific field of any record created in the current process;
-* Update Process Record - can be used to assign the process to specific user or team;
-* Link to Another Record - links the target record with a specified record;
-* Unlink from Another Record - unlinks the target record from the specified record;
-* Apply Assignment Rule - assigns the target record, the process record or any record created by the process according to the specific rule;
-* Create Notification - creates in-app notification for specific users;
-* Make Followed - makes specific users follow the target record, the process record or any record created by the process;
-* Trigger Another Workflow Rule - runs a workflow rule of the sequential type, target can be substituted with a related or created record (since version 2.3.14);
-* Run Service Action - runs a specific service action; the list of built-in actions is available [here](workflows.md#run-service-action); developers can create custom service actions;
-* Send HTTP Request - call external API.
+* Update Related Record – updates the record or records related to the target record;
+* Update Created Record – updates specific field of any record created in the current process;
+* Update Process Record – can be used to assign the process to specific user or team;
+* Link to Another Record – links the target record with a specified record;
+* Unlink from Another Record – unlinks the target record from the specified record;
+* Apply Assignment Rule – assigns the target record, the process record or any record created by the process according to the specific rule;
+* Create Notification – creates in-app notification for specific users;
+* Make Followed – makes specific users follow the target record, the process record or any record created by the process;
+* Trigger Another Workflow Rule - runs a workflow rule of the sequential type, target can be substituted with a related or created record;
+* Run Service Action – runs a specific service action; the list of built-in actions is available [here](workflows.md#run-service-action); developers can create custom service actions;
+* Send HTTP Request – calls external API (since version 2.4.0).
 
 Actions available for a task are almost the same as in Workflows tool. See more details about [workflow actions](workflows.md#actions).
 
