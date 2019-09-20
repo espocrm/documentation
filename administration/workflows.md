@@ -82,6 +82,8 @@ Note: There should not be any `;` delimiter used in formula code when it determi
 
 ## Actions
 
+* [Send Email(#send-email)
+
 ### Send Email
 
 System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
