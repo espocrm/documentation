@@ -82,7 +82,20 @@ Note: There should not be any `;` delimiter used in formula code when it determi
 
 ## Actions
 
-* [Send Email(#send-email)
+* [Send Email](#send-email)
+* [Create Record](#create-record)
+* [Create Related Record](#create-related-record)
+* [Update Target Record](#update-target-record)
+* [Update Related Record](#update-related-record)
+* [Link with another Record](#link-with-another-record)
+* [Unlink from another Record](#unlink-from-another-record)
+* [Apply Assignment Rule](#apply-assignment-rule)
+* [Create Notification](#create-notification)
+* [Make Followed](#make-followed)
+* [Trigger another Workflow](#trigger-another-workflow)
+* [Run Service Action](#run-service-action)
+* [Start BPM Process](#start-BPM-process)
+* [Send HTTP Request](#send-http-request)
 
 ### Send Email
 
@@ -112,11 +125,11 @@ Allows changing of specific fields of the related record or records. It's possib
 
 There is the ability to delete the record with the following formula code: `deleted = 1`;
 
-### Link with Another Record
+### Link with another Record
 
 Relates the target entity with another specific entity. E.g. adds specific team to the record.
 
-### Unlink with Another Record
+### Unlink from another Record
 
 Unrelates the target entity from another specific entity. E.g. removes a specific team from the record.
 
@@ -137,7 +150,7 @@ Notify specific users with the message. It's possible to use placeholders in mes
 
 Forces specific users to follow the target entity or a specified related entity.
 
-### Trigger Another Workflow
+### Trigger another Workflow
 
 Allows to make sequential workflows. It's possible to branch workflow by condition: you can setup the workflow to trigger two workflows with different conditions defined in that workflows.
 
@@ -181,7 +194,7 @@ Developers can write their own service actions. See [more detail](../development
 
 Starts BPM process. You can specify which target will be used for a process.
 
-### Sent HTTP Request
+### Send HTTP Request
 
 Provides the ability to call external API. POST and PUT requests are suppored.
 
