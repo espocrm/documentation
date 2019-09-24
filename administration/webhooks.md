@@ -107,7 +107,7 @@ $checkSignature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload,
 
 * *webhookId* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks
 * *secretKey* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks
-* *payload* is a request payload
+* *payload* is a payload of a request
 
 
 ## Config parameters
@@ -115,10 +115,18 @@ $checkSignature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload,
 Can be set manually in `data/config.php`
 
 *webhookMaxCountPerUse*r = 50
+
 *webhookQueueEventPortionSize* = 20
+
 *webhookQueuePortionSize* = 20
+
 *webhookBatchSize* = 50
+
 *webhookMaxAttemptNumber* = 4
+
 *webhookFailAttemptPeriod* = '10 minutes'
+
 *webhookConnectTimeout* = 5 (seconds)
+
 *webhookTimeout* = 10 (seconds)
+
