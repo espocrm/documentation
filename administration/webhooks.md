@@ -15,6 +15,7 @@ Webhooks can be created only by API Users (via API request) and Administrators. 
 
 Webhook ID (*id*), secret key (*secretKey*) will be sent back in a response.
 
+
 ### Deleting
 
 `DELETE api/v1/Webhook/WEBHOOK_ID`
@@ -26,6 +27,10 @@ Webhook ID (*id*), secret key (*secretKey*) will be sent back in a response.
 }
 ```
 
+### Administration
+
+Administrator can manage webhooks at Administration > Webhooks.
+
 
 ## Events
 
@@ -33,19 +38,19 @@ Webhook ID (*id*), secret key (*secretKey*) will be sent back in a response.
 
 Triggered when a record is created. All record attributes will be sent in payload.
 
-Example: `Account.create`.
+Example: `Account.create`
 
 ### ENTITY_TYPE.update
 
 Triggered when a record is updated. Only updated record attributes will be sent in payload.
 
-Example: `Account.update`.
+Example: `Account.update`
 
 ### ENTITY_TYPE.delete
 
 Triggered when a record is removed.
 
-Example: `Account.delete`.
+Example: `Account.delete`
 
 ### *ENTITY_TYPE.fieldUpdate.FIELD*
 
