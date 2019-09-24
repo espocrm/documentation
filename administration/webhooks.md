@@ -107,7 +107,7 @@ It's possible to check an authenticity of a webhook request by comparing a signa
 Example for PHP:
 
 ```php
-$checkSignature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey, true));
+$signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey, true));
 ```
 
 * *webhookId* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks
