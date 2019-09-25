@@ -16,7 +16,7 @@ Width of column in percent, empty means auto-width.
 
 ### Link
 
-If checked, then the field will be displayed as a link to the detail view of the record. Usually, it is used for name fields.
+If checked, then a field value will be displayed as a link pointing to the detail view of the record. Usually, it is used for name fields.
 
 ### Not Sortable
 
