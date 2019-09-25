@@ -30,7 +30,7 @@ Align the column to the left or to the right.
 
 The main layout for the detail view and the edit view. It defines panels, rows and cells. Cells contain fields.
 
-The row can contain two cells or one cell that is expanded to the full width of the row. To add the row with an expanded cell you need to add the new row and click on a minus sign on any cell.
+The row can contain 1, 2, 3 or 4 cells. To add a row with single cell, you need to add a new row and click on a minus sign on any cell.
 
 ![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
 
