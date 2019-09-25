@@ -62,7 +62,11 @@ Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an abilit
 
 ## Kanban
 
-Available for entity types with the enabled Kanban view. (available since EspoCRM 5.2.0)
+Available for entity types with the enabled Kanban view.
+
+## Side Panel Fields
+
+List of fields displayed in the top side panel. By default there are *Assinged User* and *Teams* fields.
 
 ## Additional Layouts
 
