@@ -14,11 +14,15 @@ It's possible to see what permissions are applied to a certain user by clicking 
 
 By default users can delete self-assigned records that they have created during a specific period of time. There is an ability to disable this ability at Administration > Settings > Allow to remove created records.
 
-## Permissions by Default
+## Permissions by default
 
 By default (since 5.6.10) users have a minimal access. You need to assign roles to grant users a specific access levels.
 
-There is an ability to grant users with full access applied by default by disabling 'ACL Strict Mode' at Administration > Settings.
+There is an ability to grant users with full access by default by disabling 'ACL Strict Mode' in `data/config.php`:
+
+```
+'aclStrictMode' => false,
+```
 
 ## Actions
 
