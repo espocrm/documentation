@@ -40,9 +40,9 @@ Optional php extensions that may be needed:
 
 ### Database Requirements
 
-EspoCRM supports MySQL version 5.5.3 or greater. MariaDB is supported as well. These are no special peculiarities. All default settings are fine for EspoCRM.
+EspoCRM supports MySQL version 5.6 or greater. MariaDB is supported as well, from 10.0 version. These are no special peculiarities. All default settings are fine for EspoCRM.
 
-For better work it's recommended to use MySQL 5.6 of greater.
+For better work it's recommended to use MySQL 5.7 or greater.
 
 ### MySQL 8 Support
 
