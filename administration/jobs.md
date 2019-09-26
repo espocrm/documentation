@@ -26,7 +26,7 @@ There are two ways how jobs can be processed: with crontab or daemon.
 
 Cron is easy to configure. It's supported by most of hosting providers. 
 
-See how to configure cron [here](server-configuration.md#setup-a-crontab).
+See how to configure cron [here](server-configuration.md#setup-crontab).
 
 In Unix systems cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick.
 
