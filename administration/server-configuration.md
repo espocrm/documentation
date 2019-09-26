@@ -8,7 +8,7 @@ EspoCRM can be installed on:
 
 ## Configuration Recommendations
 
-### PHP Requirements
+### PHP requirements
 
 EspoCRM requires PHP 7.1 or later, with the following extensions:
 
@@ -42,13 +42,13 @@ Optional php extensions that may be needed:
 * [ldap](http://php.net/manual/en/book.ldap.php) - for LDAP authentication.
 
 
-### Database Requirements
+### Database requirements
 
 EspoCRM supports MySQL version 5.6 or greater. MariaDB is supported as well, from 10.0 version. These are no special peculiarities. All default settings are fine for EspoCRM.
 
 For better work it's recommended to use MySQL 5.7 or greater.
 
-### MySQL 8 Support
+### MySQL 8 support
 
 MySQL 8.0.4 has changed a default authentication method to caching_sha2_password which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to mysql_native_password method. For a user it can be done with the query:
 
@@ -57,7 +57,7 @@ CREATE USER username@localhost identified with mysql_native_password by 'passwor
 ```
 where username is your MySQL user, password is your MySQL user password.
 
-## Required Permissions for Unix-based Systems
+## Required permissions for Unix-based systems
 
 The files and directories should have the following permissions:
 
