@@ -74,9 +74,9 @@ find data custom client/custom -type d -exec chmod 775 {} + && find data custom 
 chmod 775 application/Espo/Modules client/modules;
 ```
 
-All files should be owned and group-owned by the webserver process. It can be “www-data”, “daemon”, “apache”, “www”, etc.  
+All files should be owned and group-owned by the webserver process. It can be *www-data*, *daemon*, *apache*, *www*, etc.  
 
-Note: On Bitnami Stack, files should be owned and group-owned by “daemon” user.  
+Note: On Bitnami Stack, files should be owned and group-owned by *daemon* user.  
 
 Note: On shared hosts, files should be owned and group-owned by your user account.
 
