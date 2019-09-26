@@ -59,6 +59,10 @@ where username is your MySQL user, password is your MySQL user password.
 
 ## Required permissions for Unix-based systems
 
+**Note**: In most cases permissions are set properly after extracting EspoCRM instance from a zip package. You need only to set owneship.
+
+### Permissions
+
 The files and directories should have the following permissions:
 
 * `/data`, `/custom`, `/client/custom` – should be writable all files, directories and subdirectories (664 for files, 775 for directories, including all subdirectories and files);
@@ -74,6 +78,8 @@ find data custom client/custom -type d -exec chmod 775 {} + && find data custom 
 chmod 775 application/Espo/Modules client/modules;
 ```
 
+### Ownership
+
 All files should be owned and group-owned by the webserver process. It can be *www-data*, *daemon*, *apache*, *www*, etc.  
 
 Note: On Bitnami Stack, files should be owned and group-owned by *daemon* user.  
@@ -87,7 +93,7 @@ cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
 
-## Setup a crontab
+## Setup crontab
 
 *Information about jobs in EspoCRM is available [here](jobs.md).*
 
