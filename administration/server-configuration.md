@@ -120,5 +120,5 @@ For Windows servers you can utilize Scheduled Tasks.
 
 ## Configuration instructions based on your server
 
-* [Apache server configuration](apache-server-configuration.md).
-* [Nginx server configuration](nginx-server-configuration.md).
+* [Apache server configuration](apache-server-configuration.md)
+* [Nginx server configuration](nginx-server-configuration.md)
