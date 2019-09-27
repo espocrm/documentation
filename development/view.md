@@ -37,7 +37,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
             }, this);
             
-            // use listenTo & listenToOnce methods to listen to events of another object
+            // use listenTo & listenToOnce methods fore listening to events of another object
             // to prevent memory leakage
             this.listenTo(this.model, 'change', function () {
             
