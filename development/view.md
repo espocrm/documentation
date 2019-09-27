@@ -17,7 +17,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         // altertatively template can be defined right here
         //templateContent: '<div class="some-test-container">{{{someKeyName}}}</div>',
 
-        // custom initializing logic
+        // initializing logic
         setup: function () {
             // calling parent setup method, you can omit it
             Dep.prototype.setup.call(this);
@@ -47,7 +47,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         // called after contents is added to DOM
         afterRender: function () {
             console.log(this.$el); // view container DOM element
-
+            
             var childView = this.getView('someKeyName'); // get child view
             
             this.clearView('someKeyName'); // destroy child view, will also remove it from DOM
@@ -60,10 +60,22 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             };
         },
         
+        // DOM event handlers
+        events: {
+            'click a[data-action="test"': function (e) {
+                this.actionTest();
+            },
+        },
+        
         // called when the view is removed
         // useful for destroying some event listeners inialized for the view
         onRemove: function () {
             
+        },
+        
+        // custom method
+        actionTest: function () {
+        
         },
     });
 });
@@ -76,6 +88,9 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 
 <p>{{viewObject.someParam1}}</p>
 <p>{{someParam2}}</p>
+<p>
+    <a class="action" data-action="test">Test Action</a>
+</p>
 
 ```
 
