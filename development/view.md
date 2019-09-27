@@ -31,6 +31,8 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
                 someParam: 'test',
             });
             
+            console.log(this.options); // options passed from a parent view
+            
             // all event listeners are recommended to be initialized here
 
             this.on('remove', function () {
