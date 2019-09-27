@@ -126,3 +126,25 @@ Parent view calling our modal view:
 ...
 
 ```
+
+## Simple dialog w/o separate view
+
+Available since 5.7.0.
+
+```js
+
+        this.createView('dalog', 'views/modal', {
+            templateContent: '<p>{{complexText viewObject.options.message}}</p>',
+            headerText: 'Hello world',
+            backdrop: true,
+            message: 'Some *message*\n\nHello world!',
+            buttonList: [
+                {
+                    name: 'close',
+                    label: this.translate('Close'),
+                }
+            ],
+        }, function (view) {
+            view.render();
+        });
+```
