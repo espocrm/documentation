@@ -41,8 +41,8 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         afterRender: function () {
             console.log(this.$el); // view container DOM element
 
-            this.getView('someKeyName') // get child view
-            this.clearView('someKeyName') // destroy child view
+            var childView = this.getView('someKeyName'); // get child view
+            this.clearView('someKeyName'); // destroy child view, will also remove it from DOM
         },
         
         // data passed to template
