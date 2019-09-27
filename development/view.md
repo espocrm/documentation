@@ -84,7 +84,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
 Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 
-```
+```html
 <div class="some-test-container">{{{someKeyName}}}</div>
 
 <p>{{viewObject.someParam1}}</p>
