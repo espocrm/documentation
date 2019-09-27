@@ -99,6 +99,7 @@ Note: When you extend a view that already has its *events* and you want to add m
 ```js
     events: _.extend({
         'click a[data-action="test"]': function () {
+        
         },
     }, Dep.prototype.events),
 ```
