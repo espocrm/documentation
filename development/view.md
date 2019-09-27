@@ -62,7 +62,8 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         
         // DOM event handlers
         events: {
-            'click a[data-action="test"': function (e) {
+            'click a[data-action="test"]': function (e) {
+                console.log(e.currentTarget);
                 this.actionTest();
             },
         },
