@@ -30,10 +30,17 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
                 el: this.getSelector() + ' .some-test-container',
                 someParam: 'test',
             });
+            
+            // all event listeners recommended to init here
 
             this.on('remove', function () {
-                // is called when the view is removed
-                // can be usefuly to destroy some event listeners inialized for the view
+
+            }, this);
+            
+            // use listenTo & listenToOnce methods to listen to events of another object
+            // to prevent memory leakage
+            this.listenTo(this.model, 'change', function () {
+            
             }, this);
         },
 
@@ -42,6 +49,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             console.log(this.$el); // view container DOM element
 
             var childView = this.getView('someKeyName'); // get child view
+            
             this.clearView('someKeyName'); // destroy child view, will also remove it from DOM
         },
         
@@ -53,6 +61,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         },
         
         // called when the view is removed
+        // useful for destroying some event listeners inialized for the view
         onRemove: function () {
             
         },
