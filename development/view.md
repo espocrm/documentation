@@ -14,7 +14,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         // template file, contents is printed below
         template: 'custom:test/my-custom-view',
 
-        // optionaly template can be defined righ here
+        // altertatively template can be defined right here
         //templateContent: '<div class="some-test-container">{{{someKeyName}}}</div>',
 
         // custom initializing logic
@@ -37,7 +37,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             }, this);
         },
 
-        // is called after contents is added to DOM
+        // called after contents is added to DOM
         afterRender: function () {
             console.log(this.$el); // view container DOM element
 
@@ -50,6 +50,11 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             return {
                 someParam2: 'test 2',
             };
+        },
+        
+        // called when the view is removed
+        onRemove: function () {
+            
         },
     });
 });
