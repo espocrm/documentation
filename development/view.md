@@ -92,7 +92,15 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 <p>
     <a class="action" data-action="test">Test Action</a>
 </p>
+```
 
+Note: When you extend a view that already has its *events* and you want to add more events, do it the following way:
+
+```js
+    events: _.extend({
+        'click a[data-action="test"]': function () {
+        },
+    }, Dep.prototype.events),
 ```
 
 ## Waiting for some data loaded before rendering
