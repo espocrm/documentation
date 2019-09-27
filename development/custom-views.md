@@ -33,7 +33,7 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
     return Dep.extend({
 
         // custom template, omit if you don't need it
-        template: 'custom:views/your-entity-type/record/detail', 
+        template: 'custom:your-entity-type/record/detail', 
         
         // custom central view, omit if you don't need it
         middleView: 'custom:views/your-entity-type/record/detail-middle', 
@@ -72,7 +72,7 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
 
             // Custom code to be invoked right after rendering, when DOM is available.
             this.$el.find('label[data-name="myField"]').addClass('hidden');
-        }
+        },
     });
 });
 
@@ -122,11 +122,11 @@ Example for Address field of Account entity type.
 
 ```json
 {
-  "fields": {
-    "address": {
-      "view": "custom:views/account/fields/address"
-    }  
-  }
+    "fields": {
+        "address": {
+            "view": "custom:views/account/fields/address"
+        }  
+    }
 }
 ```
 
