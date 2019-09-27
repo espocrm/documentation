@@ -31,7 +31,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
                 someParam: 'test',
             });
             
-            // all event listeners recommended to init here
+            // all event listeners are recommended to be initialized here
 
             this.on('remove', function () {
 
