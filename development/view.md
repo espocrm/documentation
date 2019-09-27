@@ -21,6 +21,8 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         setup: function () {
             // calling parent setup method, you can omit it
             Dep.prototype.setup.call(this);
+            
+            this.someParam1 = 'test 1';
 
             // when we create a child view in setup method, rendering of the view will be held off
             // until the child view is loaded (ready)
@@ -42,6 +44,13 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             this.getView('someKeyName') // get child view
             this.clearView('someKeyName') // destroy child view
         },
+        
+        // data passed to template
+        data: function () {
+            return {
+                someParam2: 'test 2',
+            };
+        },
     });
 });
 ```
@@ -50,6 +59,9 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 
 ```
 <div class="some-test-container">{{{someKeyName}}}</div>
+
+<p>{{viewObject.someParam1}}</p>
+<p>{{someParam2}}</p>
 
 ```
 
