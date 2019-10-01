@@ -66,6 +66,8 @@ Email Template is used to generate the email. You can use regular placeholders (
 
 You can catch a reply on the sent email with *Message Intermediate Event* further in the process.
 
+It's possible to add opt-out link to an email body. Opting out can be catched withing a process with a catching signal event with the signal name `optOut.ENTITY_TYPE.{$id}`.
+
 ----
 
 ## User Task
