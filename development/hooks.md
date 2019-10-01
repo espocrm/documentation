@@ -1,14 +1,6 @@
 # Hooks
 
-## Create a hook
-To create a hook, you need to:
-- create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
-- declare hook type action;
-- clear Cache in Administration.
-
-## Hook types
-
-The main hook types are:
+Common hooks:
 
 - beforeSave
 - afterSave
@@ -120,4 +112,10 @@ class MyHook extends \Espo\Core\Hooks\Base
     }
 }
 ```
+
+## Creating custom hook
+
+* create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
+* declare hook type action;
+- clear Cache in Administration.
 
