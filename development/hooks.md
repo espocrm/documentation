@@ -10,13 +10,13 @@ To create a hook, you need to:
 
 The main hook types are:
 
-- beforeSave;
-- afterSave;
-- beforeRemove;
-- afterRemove;
-- afterRelate;
-- afterUnrelate;
-- afterMassRelate.
+- beforeSave
+- afterSave
+- beforeRemove
+- afterRemove
+- afterRelate
+- afterUnrelate
+- afterMassRelate
 
 ### New hook type
 You can use your own hook type and trigger it with
