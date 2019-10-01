@@ -68,10 +68,14 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 #### Contact
 
 * *afterLeadCapture* - when a contact (existing in crm) opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument (since 5.6.9)
+* *afterOptOut* (since 5.7.0)
+* *afterCancelOptOut* (since 5.7.0)
 
 #### Lead
 
 * *afterLeadCapture* - when a lead opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument (since 5.6.9)
+* *afterOptOut* (since 5.7.0)
+* *afterCancelOptOut* (since 5.7.0)
 
 #### LeadCapture
 
