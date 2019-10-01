@@ -10,10 +10,11 @@ Common hooks:
 - afterUnrelate
 - afterMassRelate
 
-### New hook type
-You can use your own hook type and trigger it with
+## Creating hook
 
-`$this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);`.
+* create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
+* declare hook type action;
+- clear Cache in Administration.
 
 ## Hook order
 If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property in an integer value.
@@ -113,9 +114,12 @@ class MyHook extends \Espo\Core\Hooks\Base
 }
 ```
 
-## Creating custom hook
 
-* create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
-* declare hook type action;
-- clear Cache in Administration.
+
+### Triggering hook
+
+```php
+$this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);
+```
+
 
