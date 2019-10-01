@@ -101,6 +101,8 @@ Note: There should not be any `;` delimiter used in formula code when it determi
 
 System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
 
+It's possible to add an opt-out link to an email body.
+
 ### Create Record
 
 System will create the new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate records. 
