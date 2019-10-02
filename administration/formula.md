@@ -334,6 +334,10 @@ Example:
 
 `env\userAttribute('id')` - ID of the current user.
 
+### Password
+
+Since version 5.7.0.
+
 #### password\generate
 
 `password\generate()`
