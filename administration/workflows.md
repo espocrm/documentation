@@ -202,6 +202,8 @@ Provides the ability to call external API. POST and PUT requests are suppored.
 
 Payload should be specified in JSON format (event if *Content type* is not *application/json*). It's possible to use placeholders in payload json.
 
+Additional headers can be specified. Placeholders can be used in headers.
+
 ## Using Formula in Actions
 
 It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
