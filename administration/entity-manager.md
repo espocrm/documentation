@@ -31,6 +31,7 @@ If you click `Edit` link on a certain entity you will be able to change some par
 * Kanban view - available only if Status Field is specified. Enables Kanban view mode.
 * Color - a specific color for a quick recognition.
 * Icon - the picked icon is displayed in the side navbar in Vertical theme.
+* Disable record count - total number won't be displayed on the list view; can decrease loading time when the DB table is big.
 
 ## Fields
 
