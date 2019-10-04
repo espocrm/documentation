@@ -55,7 +55,7 @@ Custom URL: my-portal-host-name.com.
 ```
 <VirtualHost *:80>
 	DocumentRoot /path/to/espocrm/instance/
-	ServerName my-portal-host-name.com
+	ServerName my-portal-host-name.com	
 
     <Directory /path/to/espocrm/instance/>
         Options Indexes FollowSymLinks
@@ -67,9 +67,6 @@ Custom URL: my-portal-host-name.com.
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-
-ServerAlias my-portal-host-name.com
-
 ```
 
 #### Mod rewrite rules
