@@ -49,20 +49,20 @@ You can find the url for your portal in 'URL' field of the portal record. It's a
 
 ### Access portal by Custom URL for Apache server
 
-Custom URL: my-portal-host-name.com.
+Custom URL: portal-host-name.com.
 
 #### crm.portal.conf
 ```
 <VirtualHost *:80>
 	DocumentRoot /path/to/espocrm/instance/
-	ServerName my-portal-host-name.com	
+	ServerName portal-host-name.com	
 
-    <Directory /path/to/espocrm/instance/>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Order allow,deny
-        allow from all
-    </Directory>
+        <Directory /path/to/espocrm/instance/>
+            Options Indexes FollowSymLinks
+            AllowOverride All
+            Order allow,deny
+            allow from all
+        </Directory>
 
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
