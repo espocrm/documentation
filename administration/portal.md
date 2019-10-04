@@ -77,10 +77,10 @@ ServerAlias my-portal-host-name.com
 Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID is available in address bar of your web browser when you open detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is a portal record id.
 
 ```
-  RewriteCond %{HTTP_HOST} ^portal-host-name.com$
+  RewriteCond %{HTTP_HOST} ^portal-host-name\.com$
   RewriteRule ^client - [L]
 
-  RewriteCond %{HTTP_HOST} ^portal-host-name.com$
+  RewriteCond %{HTTP_HOST} ^portal-host-name\.com$
   RewriteCond %{REQUEST_URI} !^/portal/{PORTAL_ID}/.*$
   RewriteRule ^(.*)$ /portal/{PORTAL_ID}/$1 [L]
 ```
