@@ -34,8 +34,9 @@
   * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
   * [Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
 * Advanced Pack
-  * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
   * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
+  * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
+  * [Drip Email Campaign with BPM](https://github.com/espocrm/documentation/blob/master/administration/bpm-drip-email-campaign.md)
 
 ---
 
