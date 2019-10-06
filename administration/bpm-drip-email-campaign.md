@@ -14,8 +14,6 @@ A process instance will be started once a lead submitted a form (and confirmed o
 
 You need to use *Signal Start Event* with a specific signal name. Put it on the flowchart layout and click it to edit. Specify the signal name with the value `@leadCapture.LEAD_CAPTURE_ID`, where *LEAD_CAPTURE_ID* is an ID of the lead capture record (can be obtained from its URL).
 
-[See more](bpm-signals.md) about signals.
-
 ### Starting once lead gets related with target list
 
 Can be useful if you don't utilize Lead Capture tool but use some other logic. You need to do the same steps as in the privious section but use the signal name `@relate.targetLists.TARGET_LIST_ID`, where *TARGET_LIST_ID* is an ID of the target list record (can be obtained from its URL).
