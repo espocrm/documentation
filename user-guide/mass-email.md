@@ -84,6 +84,7 @@ Bounced emails can be handled by group email account only. Make sure that you ha
 
 Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
 
-## See Also
+## See also
 
-[Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
+* [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
+* [Drip Email Campaign with BPM](https://github.com/espocrm/documentation/blob/master/administration/bpm-drip-email-campaign.md)
