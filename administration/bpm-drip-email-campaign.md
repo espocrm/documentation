@@ -38,4 +38,10 @@ Once a target clicked on the unsibscribe link we want the whole process be termi
 
 For this, you need to add *Event Sub-Process*. Put *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `@optOut`. You also need to check the parameter *Is Interuppting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.  
 
-Here, inside the sub-process, you can also add *Task* that will do some manilulations with the target record (*Lead*). 
+Here, inside the sub-process, you can also add *Task* that will do some manilulations with the target record (*Lead*).
+
+## Example
+
+![Example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/drip-email-campaign.png)
+
+
