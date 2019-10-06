@@ -117,4 +117,5 @@ Available since version 2.4.0.
 ## See also
 
 * [Signals](bpm-signals.md)
+* [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
 
