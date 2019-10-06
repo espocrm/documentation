@@ -113,3 +113,8 @@ Available since version 2.4.0.
 ### Example 4
 
 ![Example 4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-4.png)
+
+## See also
+
+* [Signals](bpm-signals.md)
+
