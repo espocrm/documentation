@@ -1,6 +1,6 @@
 # Drip Email Campaign with BPM
 
-[BPM tool](bpm.md) provides the ability to create drip email campaigns. It's is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+[BPM tool](bpm.md) provides the ability to create drip email campaigns. BPM is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
 
 ## Campaign starting 
 
