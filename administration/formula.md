@@ -253,6 +253,14 @@ Example:
 
 It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
 
+#### entity\getLinkColumn
+`entity\getLinkColumn(LINK, ID, COLUMN)` Fetches a relationship column value (since 5.7.1).
+
+Example:
+
+`entity\getLinkColumn('targetLists', 'TARGET_LIST_ID', 'optedOut')`
+
+
 ### Record
 
 #### record\exists
