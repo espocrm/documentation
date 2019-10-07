@@ -26,7 +26,7 @@ Every BPM process can be started manually (a user needs to have a corresponding 
 
 Use multiple *[Send Message Tasks](bpm-activities.md#user-content-send-message-task)*. Each item will automatically send a specific email. You need to check *Opt-out link* parameter for these tasks to provide recipients the ability to unsubscribe from the campaign.
 
-Between tasks you need to put *Timer Intermediate Events* and specify how much time should pass before the next email sending.
+Between tasks you need to put *Timer Intermediate Events* and specify how much time should pass before each next email sending.
 
 You also can use [Gateways](bpm-gateways.md) to diverge a flow upon certain conditions.
 
