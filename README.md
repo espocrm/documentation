@@ -42,12 +42,14 @@
 
 ### User Guide
 
-* [Emails](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
+* Emails
+  * [General guidelines](https://github.com/espocrm/documentation/blob/master/user-guide/emails.md)
+  * [IMAP & SMTP configuration](https://github.com/espocrm/documentation/blob/master/user-guide/imap-smtp-configuration.md)
+  * [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
 * [Sales management](https://github.com/espocrm/documentation/blob/master/user-guide/sales-management.md)
 * [Case management](https://github.com/espocrm/documentation/blob/master/user-guide/case-management.md)
 * [Activities and Calendar](https://github.com/espocrm/documentation/blob/master/user-guide/activities-and-calendar.md)
-* [Mass Email](https://github.com/espocrm/documentation/blob/master/user-guide/mass-email.md)
 * [Mail Merge (mass snail mailing)](https://github.com/espocrm/documentation/blob/master/user-guide/mail-merge.md)
 * [Knowledge Base](https://github.com/espocrm/documentation/blob/master/user-guide/knowledge-base.md)
 * [Documents](https://github.com/espocrm/documentation/blob/master/user-guide/documents.md)
