@@ -180,7 +180,8 @@ Parameters:
 * Is Sorted – to sort a list alphabetically;
 * Allow Custom Options – if checked, a user can add custom values (not defined by *Options* parameter) by typing text and pressing the enter key;
 * Max Item Count – validation: how much items can be added;
-* Display as Label – values will be displayed as a label with a color; a color for each option can be specified.
+* Display as Label – values will be displayed as a label with a color; a color for each option can be specified;
+* Display as List – values will be displayed each in new line.
 
 
 ## Checklist
