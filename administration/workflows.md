@@ -164,7 +164,7 @@ Note: For sequential workflows it's usually more reasonable to utilize [BPM tool
 
 ### Run Service Action
 
-Allows to run specific service scripts. 
+Allows to run specific service scripts.
 
 The following actions are available out-of-the-box:
 
