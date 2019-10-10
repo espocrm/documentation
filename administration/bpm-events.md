@@ -2,14 +2,14 @@
 
 Events are displayed on a flowchart as circles.
 
-* Start Events:
+* Start Events
   * [Start](#user-content-start-event)
   * [Conditional](#user-content-conditional-start-event)
   * [Timer](#user-content-timer-start-event)
   * [Signal](#user-content-signal-start-event)
   * [Error](#user-content-error-start-event)
   * [Escalation](#user-content-escalation-start-event)
-* Intermediate Events:
+* Intermediate Events
   * [Conditional (catching)](#user-content-conditional-intermediate-event-catching)
   * [Timer (catching)](#user-content-timer-intermediate-event-catching)
   * [Signal (catching)](#user-content-signal-intermediate-event-catching)
@@ -22,13 +22,14 @@ Events are displayed on a flowchart as circles.
   * [Error](#user-content-error-end-event)
   * [Escalation](#user-content-escalation-end-event)
   * [Signal](#user-content-signal-end-event)
-* Boundary Events:
+* Boundary Events
   * [Error](#user-content-error-intermediate-event-boundary)
   * [Conditional](#user-content-conditional-intermediate-event-boundary)
   * [Timer](#user-content-timer-intermediate-event-boundary)
   * [Escalation](#user-content-escalation-intermediate-event-boundary)
   * [Signal](#user-content-signal-intermediate-event-boundary)
   * [Message](#user-content-message-intermediate-event-boundary)
+  
 ----
 
 ## Start Events
