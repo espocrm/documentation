@@ -49,7 +49,7 @@ The execution of the process is visualized with colors highlighting flow nodes:
 
 ### Manipulating
 
-The process can also be stopped manually by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
+A process can be stopped manually by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
 
 It's possible to manaully reject or interrupt pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node.
 
