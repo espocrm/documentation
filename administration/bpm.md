@@ -26,7 +26,9 @@ To show details and parameters of a certain flowchart element you need to click 
 
 Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
 
-Process represents business process instance. When it's initiated, it gets the status 'Started'. When process is finished, it gets the status 'Ended'. The process can also be stopped manually by a user who has an access to edit the process. If it's stopped manually, it gets status the 'Stopped'.
+Process represents business process instance. When it's initiated, it gets the status 'Started'. When process is finished, it gets the status 'Ended'. 
+
+The process can also be stopped manually by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
 
 The process is executed according to the flowchart. Flowchart of process can't be changed after process is started.
 
