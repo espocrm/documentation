@@ -28,8 +28,6 @@ Processes are available from administration panel. The link also can be added as
 
 Process represents business process instance. When it's initiated, it gets the status 'Started'. When process is finished, it gets the status 'Ended'. 
 
-The process can also be stopped manually by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
-
 The process is executed according to the flowchart. Flowchart of process can't be changed after process is started.
 
 The process obligatorily is related to single target record.
@@ -48,6 +46,10 @@ The execution of the process is visualized with colors highlighting flow nodes:
 * gray – failed
 
 ![Process execution](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/process-execution.png)
+
+### Manipulating
+
+The process can also be stopped manually by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
 
 It's possible to manaully reject or interrupt pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node.
 
