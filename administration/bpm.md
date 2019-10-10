@@ -53,6 +53,8 @@ A process can be stopped manually by a user who has an 'edit' access to the proc
 
 It's possible to manaully reject or interrupt pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node.
 
+It's possible to manually start a flow from any element of an already started process. You need to click on a specific flowchart element on the process detail view and then click the button *Start flow from here*.
+
 ## Flowchart Elements
 
 * [Events](bpm-events.md)
