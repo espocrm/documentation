@@ -70,10 +70,8 @@
 
 ---
 
-See also:
+### See also
 
-[Developer Documentation](https://github.com/espocrm/documentation/blob/master/development/index.md)
-
-[Hints & Tips](https://www.espocrm.com/tips/)
-
-[Documentation on the website](https://www.espocrm.com/documentation/)
+* [Developer Documentation](https://github.com/espocrm/documentation/blob/master/development/index.md)
+* [Hints & Tips](https://www.espocrm.com/tips/)
+* [Documentation on the website](https://www.espocrm.com/documentation/)
