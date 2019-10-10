@@ -47,6 +47,8 @@ The execution of the process is visualized with colors highlighting flow nodes:
 
 ![Process execution](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/process-execution.png)
 
+It's possible to manaully reject or interrupt pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node.
+
 ## Flowchart Elements
 
 * [Events](bpm-events.md)
