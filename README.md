@@ -28,11 +28,11 @@
   * [Jobs](https://github.com/espocrm/documentation/blob/master/administration/jobs.md)
   * [WebSocket](https://github.com/espocrm/documentation/blob/master/administration/websocket.md)
   * [Webhooks](https://github.com/espocrm/documentation/blob/master/administration/webhooks.md)
+  * [2-factor authentication](https://github.com/espocrm/documentation/blob/master/administration/2fa.md)
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
   * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
   * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
-  * [2-factor authentication](https://github.com/espocrm/documentation/blob/master/administration/2fa.md)
   * [Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
 * Advanced Pack
   * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
