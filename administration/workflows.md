@@ -219,4 +219,5 @@ name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today())
 * [Adding custom service action for Workflows](../development/workflow-service-actions.md)
 * [Automated Email-to-Lead with Workflows](https://www.espocrm.com/blog/automated-email-to-lead-with-workflows/)
 * [Automatic posting to stream with Workflows](https://www.espocrm.com/blog/automatic-posting-to-stream-with-workflow/)
+* [Sending Telegram nessage with Workflows](https://www.espocrm.com/blog/sending-telegram-message-with-workflows/)
 
