@@ -132,17 +132,17 @@ Available since version 5.7.3.
 
 ```
 {{#ifInArray 'item1' fieldName}}
-<input type="checkbox" checked="checked" name="item1" readonly="true" value="item1">
+<input type="checkbox" checked="checked" name="1" readonly="true" value="1">
 {{else}}
-<input type="checkbox" name="item1" readonly="true" value="item1">
+<input type="checkbox" name="1" readonly="true" value="1">
 {{/ifInArray}}
 Item 1
 <br>
 
 {{#ifInArray 'item2' fieldName}}
-<input type="checkbox" checked="checked" name="item2" readonly="true" value="item2">
+<input type="checkbox" checked="checked" name="1" readonly="true" value="1">
 {{else}}
-<input type="checkbox" name="item2" readonly="true" value="item2">
+<input type="checkbox" name="1" readonly="true" value="1">
 {{/ifInArray}}
 Item 2
 <br>
