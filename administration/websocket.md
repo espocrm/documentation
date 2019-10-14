@@ -10,7 +10,7 @@ Out-of-the-box WebSocket covers the following features:
 
 Enable 'Use WebSocket' parameter at Administation > Settings.
 
-You need to have zmq php extension installed.
+You need to have *zmq* php extension installed.
 
 ## Daemon
 
