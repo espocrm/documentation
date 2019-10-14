@@ -84,6 +84,7 @@ Parameters:
 It's possible to define conditional options with Dynamic Logic.
 
 ![Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum.png)
+
 ![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum-detail.png)
 
 ## Text
@@ -99,6 +100,7 @@ Parameters:
 * Display raw text (no markdown) – to disable markdown support.
 
 ![Text](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text.png)
+
 ![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text-detail.png)
 
 ## Date
@@ -112,6 +114,7 @@ Parameters:
 * Use Numeric Format – if not checked, then words 'today', 'yesterday', 'tomorrow' are in the detail view mode.
 
 ![Date](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date.png)
+
 ![Date detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-detail.png)
 
 ## Date-Time
@@ -126,6 +129,7 @@ Parameters:
 * Minutes Step – defines items displayed in the minutes dropdown (in the edit mode).
 
 ![Date-Time](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-time.png)
+
 ![Date-Time detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-time-detail.png)
 
 ## Currency
@@ -138,6 +142,7 @@ Parameters:
 * Max – a validation: max acceptable value; if empty, then no validation applied.
 
 ![Currency](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency.png)
+
 ![Currency detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency-detail.png)
 
 ## Int
@@ -172,6 +177,7 @@ A checkbox. Two possible values: true and false.
 A list of values, multiple values can be selected. The list is ordered.
 
 ![Multi-Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/multi-enum.png)
+
 ![Multi-Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/multi-enum-detail.png)
 
 Parameters:
