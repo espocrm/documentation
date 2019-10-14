@@ -126,6 +126,28 @@ Printing selected items:
 {{/each}}
 ```
 
+### Checklist fields
+
+Available since version 5.7.3.
+
+```
+{{#ifInArray 'item1' fieldName}}
+<input type="checkbox" checked="checked" name="item1" readonly="true" value="item1">
+{{else}}
+<input type="checkbox" name="item1" readonly="true" value="item1">
+{{/ifInArray}}
+Item 1
+<br>
+
+{{#ifInArray 'item2' fieldName}}
+<input type="checkbox" checked="checked" name="item2" readonly="true" value="item2">
+{{else}}
+<input type="checkbox" name="item2" readonly="true" value="item2">
+{{/ifInArray}}
+Item 2
+<br>
+```
+
 ### Page breaking
 
 To add an explicit page break you need to add the following code (in code view):
