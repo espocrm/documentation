@@ -82,8 +82,11 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 #### string\contains
 `string\contains(STRING, NEEDLE)`  Whether STRING contains NEEDLE.
 
+#### string\pos
+`string\contains(STRING, NEEDLE)`  Returns possition of NEEDLE in STRING, *false* if not found. (since version 5.7.3)
+
 #### string\test
-`string\test(STRING, REGULAR_EXPRESSION)`  Search a match between REGULAR_EXPRESSION and STRING. (since version 5.5.2)
+`string\test(STRING, REGULAR_EXPRESSION)`  Search a match between REGULAR_EXPRESSION and STRING.
 
 #### string\length
 `string\length(STRING)` The length of STRING.
@@ -189,10 +192,10 @@ Examples:
 `number\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
 
 #### number\floor
-`number\floor(VALUE)` Returns the next lowest integer value by rounding down value if necessary. (since version 4.9.0)
+`number\floor(VALUE)` Returns the next lowest integer value by rounding down value if necessary.
 
 #### number\ceil
-`number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary. (since version 4.9.0)
+`number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary.
 
 ### Entity
 
@@ -265,7 +268,7 @@ Example:
 
 #### record\exists
 
-`record\exists(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Check whether a record with specified criteria exists. (since version 5.5.6)
+`record\exists(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Check whether a record with specified criteria exists.
 
 Examples:
 
@@ -275,9 +278,9 @@ Examples:
 
 #### record\count
 
-`record\count(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Returns a count of records with specified criteria. (since version 5.5.6)
+`record\count(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Returns a count of records with specified criteria.
 
-`record\count(ENTITY_TYPE, [FILTER])` Returns a count of records with an optional FILTER applied. (since version 5.5.7)
+`record\count(ENTITY_TYPE, [FILTER])` Returns a count of records with an optional FILTER applied.
 
 Examples:
 
@@ -369,10 +372,10 @@ $hash = password\hash($password);
 ### Array
 
 #### array\includes
-`array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields. (since version 4.7.0)
+`array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields.
 
 #### array\push
-`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array. (since version 5.0.0)
+`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array.
 
 #### array\length
 `array\length(LIST)` Returns count of elements in LIST.
