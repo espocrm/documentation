@@ -35,7 +35,7 @@ Actions available for a task are almost the same as in Workflows tool. See more 
 
 It's possible to delete records in Update actions with the following formula code: `deleted = 1`.
 
-When using formula in tasks that creates another record, you can access target record attributes with the function `targetEntity\attribute(ATTRIBUTE)`. 
+When using formula in tasks that create another record, you can access target record attributes with the function `targetEntity\attribute(ATTRIBUTE)`. 
 
 Example:
 
