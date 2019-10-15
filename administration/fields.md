@@ -94,9 +94,9 @@ A multiline text with markdown support.
 Parameters:
 
 * Max-length – a max acceptable length of a text;
-* Disable Text Cut – if not checked then long texts will be shortened and can be expanded (for detail view mode);
+* Disable Text Cut – if not checked, then long texts will be shortened and can be expanded (for detail view mode);
 * Number of rows of textarea – if specified, then height of a textarea will be fixed, otherwise it's flexible (for edit view mode);
-* Cut Height (px) – a max height of a text, if lonher then it will be cut (for detail view mode);
+* Cut Height (px) – a max height of a text, if longer, then it will be cut (for detail view mode);
 * Display raw text (no markdown) – to disable markdown support.
 
 ![Text](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text.png)
@@ -153,7 +153,7 @@ Parameters:
 
 * Min – a validation: min acceptable value; if empty, then no validation applied;
 * Max – a validation: max acceptable value; if empty, then no validation applied;
-* Disable Formatting – if not checked, then a valus is formatted with a thousand separator.
+* Disable Formatting – if not checked, then a value is formatted with a thousand separator.
 
 
 ## Float
@@ -207,8 +207,8 @@ A list of values, similar to Multi-Enum field.
 
 Parameters:
 
-* Options – a list of values (key => label pairs); if no options specified then it a user will be able to add any options;
-* Empty string value is not allowed – if not checked, a user can an empty string as a value;
+* Options – a list of values (key => label pairs); if no options specified, then a user will be able to add any options;
+* Empty string value is not allowed – if not checked, a user can create an empty string as a value;
 * Max Item Count – validation: how much items can be added.
 
 ![Array](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/array.png)
@@ -294,7 +294,7 @@ A set of email addresses with their parameters: *Opted-out*, *Invalid*, *Primary
 
 A set of phone numbers with their parameters: *Type*, *Opted-out*, *Invalid*, *Primary*.
 
-Paremeters:
+Parameters:
 
 * Type List – a list of types available for phone numbers (e.g. Home, Office).
 
