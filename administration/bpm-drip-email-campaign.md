@@ -10,7 +10,7 @@ You need to create *Process Flowchart* (at Administraition > Flowcharts) and cho
 
 ### Starting on lead subscription
 
-A process instance will be started once a lead submitted a form (and confirmed opt-in if required) and entered into CRM through [Lead Capture](web-to-lead.md). 
+A process instance will be started once a lead has submitted a form (and confirmed opt-in if required) and was entered into CRM through [Lead Capture](web-to-lead.md). 
 
 You need to use *Signal Start Event* with a specific signal name. Put it on the flowchart layout and click it to edit. Specify the signal name with the value `@leadCapture.LEAD_CAPTURE_ID`, where *LEAD_CAPTURE_ID* is an ID of the lead capture record (can be obtained from its URL).
 
@@ -26,17 +26,17 @@ Every BPM process can be started manually (a user needs to have a corresponding 
 
 Use multiple *[Send Message Tasks](bpm-activities.md#user-content-send-message-task)*. Each item will automatically send a specific email. You need to check *Opt-out link* parameter for these tasks to provide recipients the ability to unsubscribe from the campaign.
 
-Between tasks you need to put *Timer Intermediate Events* and specify how much time should pass before each next email sending.
+You need to put *Timer Intermediate Events* between tasks and specify how much time should pass before each next email sending.
 
 You also can use [Gateways](bpm-gateways.md) to diverge a flow upon certain conditions.
 
 ## Handling opting-out
 
-Once a target clicked on the unsibscribe link we want the whole process to be terminated.
+Once a target clicked on the unsibscribe link, we want the whole process to be terminated.
 
 For this, you need to add *Event Sub-Process*. Put *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `@optOut`. You also need to check the parameter *Is Interuppting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.  
 
-Here, inside the sub-process, you can also add *Task* that will do some manilulations with the target record (*Lead*).
+Here, inside the sub-process, you can also add *Task* that will do some manipulations with the target record (*Lead*).
 
 ## Example
 
