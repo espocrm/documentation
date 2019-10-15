@@ -20,7 +20,7 @@ Every flowchart has its specific entity type (Target Type field). The flowchart 
 
 If process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
 
-To show details and parameters of a certain flowchart element you need to click on it. In edit mode you will be able to edit parameters.
+To show details and parameters of a certain flowchart element you need to click on it. In the edit mode you will be able to edit parameters.
 
 ## Processes
 
@@ -28,13 +28,13 @@ Processes are available from administration panel. The link also can be added as
 
 Process represents business process instance. When it's initiated, it gets the status 'Started'. When process is finished, it gets the status 'Ended'. 
 
-The process is executed according to the flowchart. Flowchart of process can't be changed after process is started.
+The process is executed according to the flowchart. The flowchart of process can't be changed after a process is started.
 
-The process obligatorily is related to single target record.
+The process is obligatorily related to single target record.
 
 Processes can be started:
 
-* Automatically – Upon specific conditions, signal, or scheduling, described in flowchart; this is the main method.
+* Automatically – Upon specific conditions, signal, or scheduling, described in the flowchart; this is the main method.
 * Manually – To start process manually the user needs to click 'Start Process' button on the list view of processes.
 * With Workflow rule – 'Start BPM Process' action allows to pass a related record as a target for the process.
 
@@ -51,7 +51,7 @@ The execution of the process is visualized with colors highlighting flow nodes:
 
 A process can be stopped manually by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
 
-It's possible to manaully reject or interrupt pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node. Note, that after rejecting a flow node it's possible that the process will become suspended and won't ever end by itself. You will need either manally stop it or start a flow from any node to continue executing.
+It's possible to manually reject or interrupt pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node. Note, that after rejecting a flow node it's possible that the process will become suspended and won't ever end by itself. You will need either manually stop it or start a flow from any node to continue executing.
 
 It's possible to manually start a flow from any element of an already started process. You need to click on a specific flowchart element on the process detail view and then click the button *Start flow from here*.
 
@@ -68,7 +68,7 @@ It's possible to manually start a flow from any element of an already started pr
 
 #### Sequence Flow
 
-Represented as a solid arrow. Indicates the order in which process elements will be executed.
+Represented as a solid arrow. It indicates the order in which process elements will be executed.
 
 ## Conditions
 
