@@ -208,7 +208,7 @@ A list of values, similar to Multi-Enum field.
 Parameters:
 
 * Options – a list of values (key => label pairs); if no options specified, then a user will be able to add any options;
-* Empty string value is not allowed – if not checked, a user can create an empty string as a value;
+* Empty string value is not allowed – if not checked, a user can add an empty string as an item;
 * Max Item Count – validation: how much items can be added.
 
 ![Array](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/array.png)
