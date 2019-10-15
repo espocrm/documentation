@@ -36,7 +36,7 @@ Events are displayed on a flowchart as circles.
 
 ### Start Event
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click  'Start Process' button on the list view of processes.
+Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click 'Start Process' button on the list view of processes.
 
 ![Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-1.png)
 
@@ -46,7 +46,7 @@ Can be used as an entry point of a sub-process.
 
 ### Conditional Start Event
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of trigger: 'After record created', 'After record saved'.
+A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of triggers: 'After record created', 'After record saved'.
 
 ![Conditional Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-conditional-1.png)
 
@@ -68,9 +68,9 @@ Can be used to start an event sub-process.
 
 Can be used to start processes and event sub-processes.
 
-When used to start a process, only object signals can be used.
+When it is used to start a process, only object signals can be used.
 
-When used to start an event sub-process, it's possible to use placeholders in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id. Note, that signal can be triggered from anywhere in the system, not necessarily in the same process.
+When it is used to start an event sub-process, it's possible to use placeholders in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id. Note, that signal can be triggered from anywhere in the system, not necessarily in the same process.
 
 ![Signal Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-start-signal.png)
 
@@ -106,9 +106,9 @@ This event stops the flow until specified criteria is met.
 
 ### Timer Intermediate Event (Catching)
 
-This event stops the flow and waits as long as it is specified by event's parameters.
+This event stops the flow and waits as long as it is specified by the event's parameters.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes the flow will be proceeded to the next element.
+For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes, the flow will be proceeded to the next element.
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
 
@@ -124,7 +124,7 @@ See [more info](signal-signals.md) about signals.
 
 Broadcasts a specified signal. Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
 
-If the first character of the signal name is `@` it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger workflow rule.
+If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
 ![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-signal-throw.png)
 
@@ -132,7 +132,7 @@ See [more info](bpm-signals.md) about signals.
 
 ### Message Intermediate Event (Catching)
 
-Stops the flow until an email received.
+Stops the flow until an email is received.
 
 Only emails sent not by internal users can trigger the event.
 
@@ -140,7 +140,7 @@ It's possible to utilize the event in pair with *Send Message* task. The event w
 
 *Related To* parameter requires that email was related (via Parent field) to a specific record.
 
-There is the ability to specify formula condtions that the email should satisfy to trigger the event. You can utilize it to skip auto-response emails, or to catch emails containing the specific ID.
+There is the ability to specify formula conditions that the email should satisfy to trigger the event. You can utilize it to skip auto-response emails or to catch emails containing the specific ID.
 
 ![Message Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-message.png)
 
@@ -157,7 +157,7 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 
 ### End Event
 
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there is no anything running in parallel then process ends.
+Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there isn't anything running in parallel, then process ends.
 
 ![End Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-end.png)
 
@@ -186,7 +186,7 @@ Ends the flow and broadcasts a specified signal.
 
 Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
 
-If the first character of the signal name is `@` it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger workflow rule.
+If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
 ----
 
@@ -232,7 +232,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 ### Signal Intermediate Event (boundary)
 
-It's triggered once a specific signal is broadcasted. Note, that signal can be triggered from anywhere in the system, not necessarily in the same process.
+It's triggered once a specific signal is broadcasted. Note, that a signal can be triggered from anywhere in the system, not necessarily in the same process.
 
 Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
 
@@ -240,7 +240,7 @@ Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be repl
 
 ### Message Intermediate Event (Boundary)
 
-Triggered once an email received. It functions the same as *Message Intermediate Event (Catching)*.
+Triggered once an email is received. It functions the same as *Message Intermediate Event (Catching)*.
 
 
 
