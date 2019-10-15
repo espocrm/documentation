@@ -1,6 +1,6 @@
 # Webhooks
 
-Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have an access to all entity types which webhooks are planned to be created for. 
+Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have an access to all entity types for which webhooks are planned to be created. 
 
 ### Creating
 
@@ -63,7 +63,7 @@ Example: `Account.fieldUpdate.assignedUserId`
 
 Every webhook request (sent by EspoCRM to a specified URL) is of POST type. A content type is *application/json*.
 
-Events related to a same hook are sent in batches. Request payload is always an array (even if only one record is sent).
+Events related to the same hook are sent in batches. Request payload is always an array (even if only one record is sent).
 
 One event ocurred:
 
@@ -95,7 +95,7 @@ Request sending is processed by a scheduled job *Process Webhook Queue* (Adminis
 
 ## Error handling
 
-When EspoCRM is trying to send a webhook request and an error occurs, EspoCRM will process it the following ways:
+When EspoCRM is trying to send a webhook request and an error occurs, EspoCRM will process it in the following ways:
 
 * errors 400, 401, 403, 404, 405, 408, connection timed out, or connection failed -- will try to make another attempt;
 * error 410 -- hook will be removed immediately.
