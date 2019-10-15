@@ -35,7 +35,7 @@ Actions available for a task are almost the same as in Workflows tool. See more 
 
 It's possible to delete records in Update actions with the following formula code: `deleted = 1`.
 
-When using formula in tasks that creates another record, you can access target record attributes with the function `targetEntity\attribute(ATTRIBUTE)`. 
+When using formula in tasks that create another record, you can access target record attributes with the function `targetEntity\attribute(ATTRIBUTE)`. 
 
 Example:
 
@@ -47,7 +47,7 @@ name = targetEntity\attribute('name');
 
 ## Send Message Task
 
-Sends email message to specific recipient. 
+Sends an email message to a specific recipient. 
 
 An email can be sent to:
 
@@ -58,15 +58,15 @@ An email can be sent to:
 * Specific users
 * Specific teams
 * Specific contacts
-* Followers of targer record
+* Followers of target record
 
-You can specify which email address the email will sent from, and specify a reply-to address.
+You can specify from which email address the email will be sent, and specify a reply-to address.
 
 Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitue field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}` (since advanced pack 2.4).
 
 You can catch a reply on the sent email with *Message Intermediate Event* further in the process.
 
-It's possible to add opt-out link to an email body. Opting out can be catched withing a process with a catching signal event with the signal name `optOut.ENTITY_TYPE.{$id}`.
+It's possible to add opt-out link to an email body. Opting out can be caught within a process with a catching signal event with the signal name `optOut.ENTITY_TYPE.{$id}`.
 
 ----
 
@@ -74,7 +74,7 @@ It's possible to add opt-out link to an email body. Opting out can be catched wi
 
 Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
 
-* Approve type requires the user to chose between 'Approved' and 'Declined'.
+* Approve type requires the user to choose between 'Approved' and 'Declined'.
 * Review type gives only one option: 'Reviewed'.
 * Accomplish type has two options: 'Completed' and 'Failed'.
 
@@ -143,9 +143,9 @@ When a sub-process is initiated, all formula variables are copied from the paren
 
 ## Event Sub-Process
 
-Event Sub-Process doesn't have neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
+Event Sub-Process has neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
 
-It possible to pass a different target to the event sub-process. The event sub-process can interrupts its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
+It possible to pass a different target to the event sub-process. The event sub-process can interrupt its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
 
 Non interrupting event sub-process can be executed multiple times.
 
