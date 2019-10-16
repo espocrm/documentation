@@ -29,6 +29,7 @@
   * [WebSocket](https://github.com/espocrm/documentation/blob/master/administration/websocket.md)
   * [Webhooks](https://github.com/espocrm/documentation/blob/master/administration/webhooks.md)
   * [2-factor authentication](https://github.com/espocrm/documentation/blob/master/administration/2fa.md)
+  * [Dashboards](administration/dashboards.md)
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
   * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
