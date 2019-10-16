@@ -28,6 +28,7 @@
 * Misc
   * [Custom buttons & dropdown actions for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
   * [Modal dialogs](https://github.com/espocrm/documentation/blob/master/development/modal.md)
+  * [Confirmation dialogs](https://github.com/espocrm/documentation/blob/master/development/confirm-dialog.md)
   * [Custom panels on record view](https://github.com/espocrm/documentation/blob/master/development/frontend/record-panels.md)
   * [Including custom CSS file](https://github.com/espocrm/documentation/blob/master/development/custom-css.md)
   * [Custom dashlets](https://github.com/espocrm/documentation/blob/master/development/how-to-create-a-dashlet.md)
