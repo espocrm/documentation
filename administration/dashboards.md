@@ -20,3 +20,7 @@ Available for admin at Administration > Dashboard Templates. Dashboard templates
 On the edit view of portal record you can define its default dashboard layout. It will be applied for all portal users unless a user has a specific *Dashboard Template*.
 
 When editing *Portal User* you can specify a dashboard template for the user. This template will override the default template of the portal.
+
+## See also
+
+* [Creating custom dashlet](../development/how-to-create-a-dashlet.md)
