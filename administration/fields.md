@@ -24,6 +24,7 @@ The list of field types available for creating:
 * [Attachment-Multiple](#attachment-multiple) – for multiple file uploading;
 * [Number](#number) – an auto-incrementing number of string type with a possible prefix and specific length;
 * [Auto-increment](#auto-increment) – a generated read-only auto-incrementing integer number.
+* [Foreign](#foreign) – shows value of the related record. 
 
 Field types not available for creating directly:
 
@@ -70,6 +71,13 @@ Parameters:
 
 ![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/varchar.png)
 
+Field in JSON format:
+```
+{
+    "varchar": "test string"
+}
+```
+
 ## Enum
 
 Selectbox, only one value can be selected.
@@ -87,6 +95,13 @@ It's possible to define conditional options with Dynamic Logic.
 
 ![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum-detail.png)
 
+Field in JSON format:
+```
+{
+    "enum": "Test_1"
+}
+```
+
 ## Text
 
 A multiline text with markdown support.
@@ -103,6 +118,13 @@ Parameters:
 
 ![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text-detail.png)
 
+Field in JSON format:
+```
+{
+    "text": "Test text."
+}
+```
+
 ## Date
 
 Date w/o time.
@@ -116,6 +138,13 @@ Parameters:
 ![Date](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date.png)
 
 ![Date detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-detail.png)
+
+Field in JSON format:
+```
+{
+    "date": "2019-10-09"
+}
+```
 
 ## Date-Time
 
@@ -132,6 +161,13 @@ Parameters:
 
 ![Date-Time detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-time-detail.png)
 
+Field in JSON format:
+```
+{
+    "dateTime": "2019-10-09 09:00:00"
+}
+```
+
 ## Currency
 
 A currency value, a pair of number and currency.
@@ -145,6 +181,14 @@ Parameters:
 
 ![Currency detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency-detail.png)
 
+Field in JSON format:
+```
+{
+    "currency": 1000,
+    "currencyCurrency": "USD"
+}
+```
+
 ## Int
 
 A whole number.
@@ -155,6 +199,12 @@ Parameters:
 * Max – a validation: max acceptable value; if empty, then no validation applied;
 * Disable Formatting – if not checked, then a value is formatted with a thousand separator.
 
+Field in JSON format:
+```
+{
+    "integer": 9999
+}
+```
 
 ## Float
 
@@ -165,12 +215,25 @@ Parameters:
 * Min – a validation: min acceptable value; if empty, then no validation applied;
 * Max – a validation: max acceptable value; if empty, then no validation applied.
 
+Field in JSON format:
+```
+{
+    "float": 25.555
+}
+```
 
 ## Boolean
 
 A checkbox. Two possible values: true and false.
 
 ![Boolean](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/bool.png)
+
+Field in JSON format:
+```
+{
+    "boolean": true
+}
+```
 
 ## Multi-Enum
 
@@ -189,6 +252,12 @@ Parameters:
 * Display as Label – values will be displayed as a label with a color; a color for each option can be specified;
 * Display as List – values will be displayed each in new line.
 
+Field in JSON format:
+```
+{
+    "multiEnum": ["test_1", "test_2", "test_3"]
+}
+```
 
 ## Checklist
 
@@ -200,6 +269,12 @@ Parameters:
 * Is Sorted – to sort a list alphabetically;
 * Max Item Count – validation: how much items can be checked;
 
+Field in JSON format:
+```
+{
+    "checklist": ["test_1", "test_2"]
+}
+```
 
 ## Array
 
@@ -213,11 +288,36 @@ Parameters:
 
 ![Array](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/array.png)
 
+Field in JSON format:
+```
+{
+    "array": ["test_1", "test_2"]
+}
+```
 ## Address
 
 An address with street, city, state, postal code and country.
 
 ![Address](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/address.png)
+
+**Note:** with address field is automatically creating:
+
+* addressCity – a varchar type field.
+* addressCountry – a varchar type filed.
+* addressMap – a map type that integrates with Google maps (Administration → Integrations → Google Maps).
+* ddressPostalCode – a varchar type filed.
+* addressState – a varchar type filed.
+* addressStreet – a text type filed.
+
+Field in JSON format:
+```
+{
+    "addressStreet": "",
+    "addressCity": "",
+    "addressState": "",
+    "addressCountry": ""
+}
+```
 
 ## Url
 
@@ -228,6 +328,18 @@ Parameters:
 * Max-length – a max acceptable length of text;
 * Strip – if checked, then `http(s)://` if trailing `/` will be stripped.
 
+Field in JSON format:
+```
+{
+    "url": "https://google.com"
+}
+```
+if Strip is checked:
+```
+{
+    "url": "google.com"
+}
+```
 
 ## Wysiwyg
 
@@ -239,6 +351,13 @@ Parameters:
 * Min Height (px) – a min height of the field (in edit view mode);
 * Use Iframe – if checked, then HTML will be placed into IFRAME element.
 
+Field in JSON format:
+```
+{
+    "wysiwyg": "<p><b>Test wysiwyg text. </b><br></p>"
+}
+```
+
 ## File
 
 For file uploading.
@@ -249,6 +368,18 @@ Parameters:
 * Max File Size (Mb) – validation;
 * Accept – which file types cab be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types.
 
+Field in JSON format:
+```
+{
+    "name": "screenshot.png",
+    "type": "image/png",
+    "size": 49113,
+    "role": "Attachment",
+    "relatedType": "AAAFieldsDescriptionAAA",
+    "file": "data:image/png;base64,iVBORw0KGgoAAAANS...",
+    "field": "file"
+}
+```
 
 ## Image
 
@@ -258,6 +389,14 @@ Parameters:
 
 * Preview Size – defines a size of an image displayed on the detail/list view;
 * Max File Size (Mb) – validation.
+
+Field in JSON format:
+```
+{
+    "imageId": "5da70723e16fec761",
+    "imageName": "screenshot.png"
+}
+```
 
 ## Attachment-Multiple
 
@@ -270,6 +409,20 @@ Parameters:
 * Accept – which file types cab be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types;
 * Preview Size – defines a size of an image displayed on the detail/list view.
 
+Field in JSON format:
+```
+{
+    "attachmentMultipleIds": ["5da6e98cc409659f0", "5da6e991396ae2b3d"],
+    "attachmentMultipleNames": {
+        "5da6e98cc409659f0": "test_1",
+        "5da6e991396ae2b3d": "test_2"
+    },
+    "attachmentMultipleTypes": {
+        "5da6e98cc409659f0": "text/plain",
+        "5da6e991396ae2b3d": "text/plain"
+    }
+}
+```
 ## Number
 
 An auto-incrementing number of string type with a possible prefix and specific length.
@@ -282,13 +435,41 @@ Parameters:
 
 ![Number](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/number.png)
 
+Field in JSON format:
+```
+{
+    "numberAutoincrement": "Q-00002"
+}
+```
+
 ## Auto-increment
 
 A generated read-only auto-incrementing integer number.
 
+Field in JSON format:
+```
+{
+    "autoincrement": 1
+}
+```
+
 ## Email
 
 A set of email addresses with their parameters: *Opted-out*, *Invalid*, *Primary*.
+
+Field in JSON format:
+```
+{
+    "emailAddress": "test@testmail.com",
+    "emailAddressData": [{
+        "emailAddress": "test@testmail.com",
+        "primary": true,
+        "optOut": false,
+        "invalid": false,
+        "lower": "test@testmail.com"
+    }]
+}
+```
 
 ## Phone
 
@@ -298,9 +479,31 @@ Parameters:
 
 * Type List – a list of types available for phone numbers (e.g. Home, Office).
 
+Field in JSON format:
+```
+{
+    "phoneNumber": "454-788-153",
+    "phoneNumberData": [{
+        "phoneNumber": "454-788-153",
+        "primary": true,
+        "type": "Office",
+        "optOut": false,
+        "invalid": false
+    }]
+}
+```
+
 ## Link
 
 A record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship.
+
+Field in JSON format:
+```
+{
+    "accountId": "53203b94286d1",
+    "accountName": "Anakonda's Heel"
+}
+```
 
 ## Link-Parent
 
@@ -310,6 +513,51 @@ Parameters:
 
 * Entity List – a list of entity types available to be related through the field.
 
+Field in JSON format:
+```
+{
+    "parentName": "Anakonda's Heel",
+    "parentId": "53203b94286d1"
+}
+```
+
 ## Link-Multiple
 
 A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) relationship. Not all relatioships have their link-multiple fields. Only those do, where *Link-Multiple* parameter(s) is enabled.
+
+Field in JSON format:
+```
+{
+    "accountsIds": ["53203b9428628", "53203b942857f"],
+    "accountsNames": {
+        "53203b9428628": "Ladna Barka",
+        "53203b942857f": "Perfectico"
+    },
+    "accountsColumns": {
+        "53203b9428628": {
+            "role": "Manager",
+            "isInactive": false
+        },
+        "53203b942857f": {
+            "role": "Sales Manager",
+            "isInactive": false
+        }
+    }
+}
+```
+
+## Foreign
+
+A Forein field fetches data from the related record.
+
+Parameters:
+
+* Link – *Created By*, *Modified By*, *Assigned User*, *file*, *image* (can be set upon field creation).
+* Field – field that exsists in the related record (can be set upon field creation).
+
+Field in JSON format:
+```
+{
+    "accountType": "Investor"
+}
+```
