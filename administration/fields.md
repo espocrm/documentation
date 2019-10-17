@@ -24,7 +24,7 @@ The list of field types available for creating:
 * [Attachment-Multiple](#attachment-multiple) – for multiple file uploading;
 * [Number](#number) – an auto-incrementing number of string type with a possible prefix and specific length;
 * [Auto-increment](#auto-increment) – a generated read-only auto-incrementing integer number.
-* [Foreign](#foreign) – shows value of the related record. 
+* [Foreign](#foreign) – shows a value of the related record. 
 
 Field types not available for creating directly:
 
@@ -548,12 +548,12 @@ Field in JSON format:
 
 ## Foreign
 
-A Forein field fetches data from the related record.
+A field fetches data from the related record.
 
 Parameters:
 
 * Link – *Created By*, *Modified By*, *Assigned User*, *file*, *image* (can be set upon field creation).
-* Field – field that exsists in the related record (can be set upon field creation).
+* Field – a field that exsists in the related record (can be set upon field creation).
 
 Field in JSON format:
 ```
