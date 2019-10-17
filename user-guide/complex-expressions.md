@@ -140,6 +140,37 @@ Current date and time.
 
 Time zone converion. E.g. `TZ:(createdAt, -10.5)` will apply -10:30 offset.
 
+#### UNIX_TIMESTAMP
+
+UNIX timestamp of a date-time argument or a current timestamp if no argument passed.
+
+#### TIMESTAMPDIFF_YEAR
+
+Difference between two days in years. E.g. `TIMESTAMPDIFF_YEAR:(createdAt, modifiedAt)`.
+
+#### TIMESTAMPDIFF_MONTH
+
+Difference between two days in months.
+
+#### TIMESTAMPDIFF_WEEK
+
+
+Difference between two days in weeks.
+
+#### TIMESTAMPDIFF_DAY
+
+
+Difference between two days in days.
+
+#### TIMESTAMPDIFF_HOUR
+
+Difference between two days in hours.
+
+#### TIMESTAMPDIFF_MINUTE
+
+Difference between two days in minutes.
+
+
 ### String
 
 #### CONCAT
