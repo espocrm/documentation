@@ -49,12 +49,9 @@ Now, go to the login page and enter user credentials.
 
 User has been authenticated and automatically created in the EspoCRM.
 
-## Configuration instructions based on your server:
+## Configuration instructions based on your server
+
 * [Active Directory server](ldap-authorization-for-ad.md)
 * [OpenLDAP server](ldap-authorization-for-openldap.md)
 
 You can read more information about configuring LDAP on the [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/) page, as EspoCRM uses this library.
-
-
-
-
