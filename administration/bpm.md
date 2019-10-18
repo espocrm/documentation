@@ -61,7 +61,7 @@ It's possible to manually start a flow from any element of an already started pr
 * [Gateways](bpm-gateways.md)
 * [Activities](bpm-activities.md)
 * Flows
-  * [Sequence](#user-content-sequence-flow)
+* [Sequence](#user-content-sequence-flow)
 
 
 ### Flows
