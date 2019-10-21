@@ -782,6 +782,6 @@ Dynamic Logic parameters in JSON format:
         }
       }
     ]
-    },
+    }
 }
 ```
