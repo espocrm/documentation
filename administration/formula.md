@@ -395,6 +395,24 @@ $someVariableName = 'Test';
 description = $test;
 ```
 
+## Comments
+
+Available since version 5.7.6.
+
+Line comment:
+
+```
+// comment
+```
+
+Section comment:
+
+```
+/*
+    comment
+*/
+```
+
 ## Function arguments
 
 #### LINK
