@@ -42,7 +42,7 @@ Field types not available for creating directly:
 * [Link-Parent](#link-parent) – a record related through *Belongs-To-Parent* relationship; can be of different entity types;
 * [Link-Multiple](#link-multiple) – a set of records related through *Has-Many* relationship.
 
-If dinamic logic is set up:
+Defined dinamic logic in field:
 
 * [Dynamic logic](#dynamicLogic)
 
