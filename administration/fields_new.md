@@ -41,7 +41,7 @@ Field types not available for creating directly:
 * [Link](#link) – a record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship;
 * [Link-Parent](#link-parent) – a record related through *Belongs-To-Parent* relationship; can be of different entity types;
 * [Link-Multiple](#link-multiple) – a set of records related through *Has-Many* relationship.
-* [Reminder](#reminder) – allows to set time for getting reminder notification about event.
+* [Reminder](#reminder) – allows to set a time for getting a reminder notification about an event.
 
 Defined dinamic logic in field:
 
