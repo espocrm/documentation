@@ -41,6 +41,7 @@ Field types not available for creating directly:
 * [Link](#link) – a record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship;
 * [Link-Parent](#link-parent) – a record related through *Belongs-To-Parent* relationship; can be of different entity types;
 * [Link-Multiple](#link-multiple) – a set of records related through *Has-Many* relationship.
+* [Reminder](#reminder) – allows to set time for getting reminder notification about event.
 
 Defined dinamic logic in field:
 
@@ -736,6 +737,53 @@ Field parameters in JSON format:
     "view": "views/fields/foreign-bool",
     "isCustom": true,
     "label": "Foreign"
+}
+```
+## Reminder
+
+Field parameters in JSON format:
+```
+{
+  "type": "jsonArray",
+  "notStorable": true,
+  "view": "crm:views/meeting/fields/reminders",
+  "name": "reminders",
+  "dynamicLogicVisible": {
+    "conditionGroup": [
+      {
+        "type": "and",
+        "value": [
+          {
+            "type": "or",
+            "value": [
+              {
+                "type": "isNotEmpty",
+                "attribute": "dateEnd"
+              },
+              {
+                "type": "isNotEmpty",
+                "attribute": "dateEndDate"
+              }
+            ]
+          },
+          {
+            "type": "notEquals",
+            "attribute": "status",
+            "value": "Completed"
+          },
+          {
+            "type": "notEquals",
+            "attribute": "status",
+            "value": "Canceled"
+          }
+        ]
+      }
+    ]
+  },
+  "dynamicLogicReadOnly": null,
+  "inlineEditDisabled": false,
+  "tooltip": false,
+  "label": "Reminders"
 }
 ```
 
