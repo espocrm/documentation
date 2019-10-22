@@ -96,6 +96,8 @@ Example:
 
 It's possible to loop through a link collection (since 5.5.0, before 5.7.6 only link-multiple fields were supported).
 
+The max number of records is 100, can be changed with a config parameter *htmlizerLinkLimit*.
+
 Example, printing contact names and roles of an opportunity:
 
 ```
