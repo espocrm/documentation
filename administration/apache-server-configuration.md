@@ -17,7 +17,7 @@ sudo service apache2 restart
 
 Take only necessary steps. After each step check if the issue is solved.
 
-### 1. Enable *mod_rewrite* support in Apache
+### 1. Enable *mod_rewrite* support for Apache
 
 To enable *mod_rewrite*, run these commands in a terminal:
 
