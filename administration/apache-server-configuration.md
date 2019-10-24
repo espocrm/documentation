@@ -17,16 +17,16 @@ sudo service apache2 restart
 
 Take only necessary steps. After each step check if the issue is solved.
 
-### 1. Enable “mod_rewrite” support in Apache
+### 1. Enable *mod_rewrite* support in Apache
 
-To enable “mod_rewrite,” run these commands in a terminal:
+To enable *mod_rewrite*, run these commands in a terminal:
 
 ```
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
 
-### 2. Enable .htaccess support
+### 2. Enable *.htaccess* support
 
 To enable .htaccess support, add/edit the server configuration settings `/etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf` or `/etc/apache2/apache2.conf` (or `/etc/httpd/conf/httpd.conf`):
 
@@ -61,7 +61,7 @@ RewriteBase /REQUEST_URI/api/v1/
 where *REQUEST_URI* is a part of URL, e.g. for `https://example.com/espocrm/`, REQUEST_URI is *'espocrm'*.
 
 
-## Enable HTTP AUTHORIZATION support (only for FastCGI)
+## Enable *HTTP AUTHORIZATION* support (only for FastCGI)
 
 FastCGI does not support HTTP AUTHORIZATION by default. If you use FastCGI, you have to enable it in your VirtualHost or /etc/apache2/apache2.conf (httpd.conf) by adding the following code:
 
