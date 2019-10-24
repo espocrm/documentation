@@ -56,8 +56,7 @@ with
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where *REQUEST_URI* is a part of URL, e.g. for `https://example.com/espocrm/`, REQUEST_URI is *
-*'espocrm'*.
+where *REQUEST_URI* is a part of URL, e.g. for `https://example.com/espocrm/`, REQUEST_URI is *'espocrm'*.
 
 
 ## Enable HTTP AUTHORIZATION support (only for FastCGI).
