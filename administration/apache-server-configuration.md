@@ -28,7 +28,7 @@ sudo service apache2 restart
 
 ### 2. Enable .htaccess support
 
-To enable .htaccess support, add/edit the Server Configuration Settings /etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf or /etc/apache2/apache2.conf (/etc/httpd/conf/httpd.conf):
+To enable .htaccess support, add/edit the server configuration settings `/etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf` or `/etc/apache2/apache2.conf` (or `/etc/httpd/conf/httpd.conf`):
 
 ```
 <Directory /PATH_TO_ESPO/>
@@ -44,7 +44,7 @@ sudo service apache2 restart
 
 ### 3. Add RewriteBase path
 
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
+Open the file `/ESPOCRM_DIRECTORY/api/v1/.htaccess` and replace the following line:
 
 ```
 # RewriteBase /
@@ -56,7 +56,7 @@ with
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
-where REQUEST_URI is a part of URL, e.g. for “http://example.com/espocrm/”, REQUEST_URI is “espocrm”.
+where *REQUEST_URI* is a part of URL, e.g. for `http://example.com/espocrm/`, REQUEST_URI is *espocrm*.
 
 
 ## Enable HTTP AUTHORIZATION support (only for FastCGI).
