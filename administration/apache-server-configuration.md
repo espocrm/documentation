@@ -36,13 +36,15 @@ AllowOverride All
 </Directory>
 ```
 
-Afterward, run this command in a terminal:
+You need to change */PATH_TO_ESPO/* to the full path to your EspoCRM inctance, e.g. *'/var/www/html/'*.
+
+Afterward, restart apache:
 
 ```
 sudo service apache2 restart
 ```
 
-### 3. Add RewriteBase path
+### 3. Add RewriteBase path (not needed in most cases)
 
 Open the file `/ESPOCRM_DIRECTORY/api/v1/.htaccess` and replace the following line:
 
@@ -59,7 +61,7 @@ RewriteBase /REQUEST_URI/api/v1/
 where *REQUEST_URI* is a part of URL, e.g. for `https://example.com/espocrm/`, REQUEST_URI is *'espocrm'*.
 
 
-## Enable HTTP AUTHORIZATION support (only for FastCGI).
+## Enable HTTP AUTHORIZATION support (only for FastCGI)
 
 FastCGI does not support HTTP AUTHORIZATION by default. If you use FastCGI, you have to enable it in your VirtualHost or /etc/apache2/apache2.conf (httpd.conf) by adding the following code:
 
