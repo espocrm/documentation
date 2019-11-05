@@ -44,6 +44,8 @@ If email addresses (from, to, cc) in an email record are known to the system, it
 
 All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
 
+When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. Administrator may not grant *delete* access for users to prevent losing emails.
+
 ## Sending emails
 
 You can compose new email by a few ways:
@@ -56,7 +58,7 @@ There is the ability to **select template** of your email.
 
 You can setup **email signature** in Preferences.
 
-It's possible to use an **external email client** (the default one on your computer or device). For this check 'Use an external email client' in Preferences. (This option is available since the version 5.1.2.)
+It's possible to use an **external email client** (the default one on your computer or device). For this check 'Use an external email client' in Preferences.
 
 ## Email Folders
 
