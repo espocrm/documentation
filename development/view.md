@@ -136,8 +136,8 @@ Model factory returs a promise.
                 }.bind(this)
             )
             .then(
-                function (model) {
-                    console.log(model);
+                function (data) {
+                    console.log(data);
                 }
             )
         );
