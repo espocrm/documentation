@@ -23,7 +23,7 @@ The file configs:
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-* 172.20.0.6 - my computer/server LAN IP address
+* 172.20.0.6 - your computer/server LAN IP address
 * 80 - port that listen for the connection
 * http://localhost:8003/ - proxied to localhost on port 8003 that is bind to the Docker container.
 
@@ -62,7 +62,7 @@ server {
     
 }
 ```
-* 172.20.0.6 - my computer/server LAN IP address
+* 172.20.0.6 - your computer/server LAN IP address
 * 80 - port that listen for the connection
 * http://localhost:8003/ - proxied to localhost on port 8003 that is bind to the Docker container.
 
