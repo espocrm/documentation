@@ -1,6 +1,11 @@
-# Apache proxy_pass to Docker
+# Server proxy_pass to Docker
 
-### Creating 
+* [Apache server](#apache)
+* [Nginx server](#nginx)
+
+## Apache
+
+#### Creating 
 
 In /etc/apache2/sites-available create a config file (e.g. crm.com.conf).
 The file configs:
@@ -28,13 +33,13 @@ Run this command in the terminal to enable new configs:
 Restart a web server:
 `sudo service apache2 restart`
 
-### Adding configs to DNS
-Add the next row to the /etc/hosts file:
+#### Adding configs for DNS
+Add this row to the /etc/hosts file:
 `172.20.0.6 crm.com`
 
-# Nginx proxypass to docker
+## Nginx
 
-### Creating 
+#### Creating 
 
 In /etc/nginx/sites-available create a config file (e.g. crm.com.conf).
 The file configs:
@@ -61,7 +66,7 @@ Run this command in the terminal to enable new configs:
 Restart a web server:
 `sudo service nginx restart`
 
-### Adding configs to DNS
-Add the next row to the /etc/hosts file:
+#### Adding configs for DNS
+Add this row to the /etc/hosts file:
 `172.20.0.6 crm.com`
 
