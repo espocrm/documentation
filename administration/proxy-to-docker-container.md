@@ -1,4 +1,4 @@
-# Apache proxypass to docker
+# Apache proxy_pass to Docker
 
 ### Creating 
 
@@ -29,8 +29,8 @@ Restart a web server:
 `sudo service apache2 restart`
 
 ### Adding configs to DNS
-Run this command in the terminal
-`sudo echo "172.20.0.6 crm.com" > /etc/hosts`
+Add the next row to the /etc/hosts file:
+`172.20.0.6 crm.com`
 
 # Nginx proxypass to docker
 
@@ -62,6 +62,6 @@ Restart a web server:
 `sudo service nginx restart`
 
 ### Adding configs to DNS
-Run this command in the terminal
-`sudo echo "172.20.0.6 crm.com" > /etc/hosts`
+Add the next row to the /etc/hosts file:
+`172.20.0.6 crm.com`
 
