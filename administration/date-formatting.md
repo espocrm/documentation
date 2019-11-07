@@ -1,4 +1,4 @@
-# Date Formatting
+# Date & Time Formatting
 
 * `YYYY` – 4 digit year: `2020`
 * `YY` – 2 digit year: `20`
