@@ -13,3 +13,7 @@
 * `m mm` – minutes: `0..59`
 * `s ss` – seconds: `0..59`
 * `Z ZZ` – offset from UTC : `+0200 +02:00`
+
+## Default locale
+
+You can set [default locale](https://www.php.net/manual/en/intl.configuration.php#ini.intl.default-locale) in PHP config.
