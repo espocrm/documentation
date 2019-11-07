@@ -50,6 +50,8 @@ where `imageId` – the name of custom image field, concatenated with the suffix
 
 Available since version 5.8.0.
 
+See info about [date formatting](../administration/date-formatting.md).
+
 Format *Date-Time* field:
 ```
 {{dateFormat createdAt_RAW format='MMMM DD.YYYY' timezone='Europe/London'}}
