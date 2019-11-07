@@ -45,6 +45,32 @@ It's possible to print image fields:
 
 where `imageId` – the name of custom image field, concatenated with the suffix `Id`.
 
+
+### Date & Time formatting
+
+Available since version 5.8.0.
+
+Format *Date-Time* field:
+```
+{{dateFormat createdAt_RAW format='MMMM DD.YYYY' timezone='Europe/London'}}
+```
+
+Format *Date* field:
+```
+{{dateFormat closeDate_RAW format='YYYY MMMM DD'}}
+```
+
+Print formatted *now*:
+```
+{{dateFormat now_RAW format='MMMM DD,YYYY HH:mm'}}
+```
+
+Print formatted *today*:
+
+```
+{{dateFormat today_RAW format='MMMM DD,YYYY'}}
+```
+
 ### Number formatting
 
 To display float numbers w/o fractional part (as integer) use the following expression:
