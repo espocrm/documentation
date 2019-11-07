@@ -54,7 +54,7 @@ See info about [date formatting](../administration/date-formatting.md).
 
 Format *Date-Time* field:
 ```
-{{dateFormat createdAt_RAW format='MMMM DD.YYYY' timezone='Europe/London'}}
+{{dateFormat createdAt_RAW format='MMMM DD, YYYY' timezone='Europe/London'}}
 ```
 
 Format *Date* field:
@@ -64,13 +64,19 @@ Format *Date* field:
 
 Print formatted *now*:
 ```
-{{dateFormat now_RAW format='MMMM DD,YYYY HH:mm'}}
+{{dateFormat now_RAW format='MMMM DD, YYYY HH:mm'}}
 ```
 
 Print formatted *today*:
 
 ```
 {{dateFormat today_RAW format='MMMM DD,YYYY'}}
+```
+
+Specific language:
+
+```
+{{dateFormat createdAt_RAW format='MMMM DD' language='de_DE'}}
 ```
 
 ### Number formatting
