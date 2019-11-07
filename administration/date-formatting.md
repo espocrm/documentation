@@ -12,4 +12,5 @@
 * `a A` – post or ante meridiem: `am PM`
 * `m mm` – minutes: `0..59`
 * `s ss` – seconds: `0..59`
-* `Z ZZ` – offset from UTC : `+02:00 +0200`
+* `Z ZZ zz` – offset from UTC : `+02:00 +0200`
+* `zz` – timezone: `Europe/London`
