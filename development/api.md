@@ -4,7 +4,7 @@ EspoCRM is a single page application so a frontend uses REST API to connect with
 All operations you perform using UI, you can implement via API calls using your programing language. 
 You can learn how API works if you trace what's going in the network tab in your browser console.
 
-Most of api functions return JSON. POST, PATCH calls usually need some JSON data in payload.
+Most of API functions return JSON. POST, PATCH calls usually need some JSON data in payload.
 
 Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: 
 
@@ -18,7 +18,7 @@ It's recommended to create a separate user with restricted rights and use this u
 
 Available since 5.5.0 version.
 
-The easiest method of authentication. You need to create API User (Administration > API Users) with Api Key authentication method. Apply needed role to the user to restrict or grand an access.
+The easiest method of authentication. You need to create API User (Administration > API Users) with Api Key authentication method. Apply the needed role to the user to restrict or grant access.
 
 Authentication header:
 
@@ -29,7 +29,7 @@ Authentication header:
 
 Available since 5.5.0 version.
 
-The most secure method. You need to create API User (Administration > API Users) with HMAC authentication method. Apply needed role to the user to restrict or grand an access.
+The most secure method. You need to create API User (Administration > API Users) with HMAC authentication method. Apply needed role to the user to restrict or grant access.
 
 Authentication header:
 
@@ -49,7 +49,7 @@ For refular users EspoCRM uses [Basic Authentication](http://en.wikipedia.org/wi
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
 
-It's better to use auth token instead of password when you work with api. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+It's better to use auth token instead of password when you work with API. In this case you will need to provide username and password/token in `Espo-Authorization` header.
 ```
 "Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
 ```
@@ -187,7 +187,7 @@ Payload:
 
 1. `id` attribute.
 2. `ids` array attribute.
-3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criterias.
+3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criteria.
 
 _Example_
 
