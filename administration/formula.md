@@ -310,9 +310,9 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 #### record\findRelatedOne
 
-`record\findOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
+`record\findRelatedOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
 
-`record\findOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
+`record\findRelatedOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
 
 Examples:
 
