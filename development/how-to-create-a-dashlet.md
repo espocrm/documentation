@@ -2,7 +2,7 @@
 
 Create a file `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.json` with your dashlet configuration.
 
-Here you need to define `"view"`, and you could set 'aclScope', and 'options'.
+Here you need to define `"view"`, and you can set 'aclScope', and 'options'.
 
 If it's typical list dashlet, use `"view":"views/dashlets/abstract/record-list"`, if not, create own [view](https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
 
@@ -12,7 +12,7 @@ By default in dashlet options you can set _Title_ and _Auto-refresh Interval_.
 
 Additional option fields you can set in `"options"` > `"fields"`.
 
-Also you can define other options, if your view needs more data. You will be able to access options data from a fiew with the method `getOption('optionName')`.
+Also you can define other options, if your view needs more data. You will be able to access options data from a view with the method `getOption('optionName')`.
 
 ## Example
 
@@ -46,7 +46,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/dashlets/MyDashlet.json`:
     }
 }
 ```
-aclScope set to Account means that only users who have an access to Account scope will be able to add this dashlet.
+aclScope set to Account means that only users who have access to Account scope will be able to add this dashlet.
 
 
 There you can find how default dashlets defined: `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
