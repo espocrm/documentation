@@ -6,7 +6,7 @@ How to add buttons (or dropdown actions) that will appear in the top-right corne
 
 An example for the detail view of *Lead* entity type.
 
-Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
+Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
 
 ```json
 {
@@ -33,7 +33,7 @@ Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDe
 
 `acl` parameter defines that a user needs 'edit' access level to see the button. You can omit this parameter.
 
-In order to add dropdown action you need to use `dropdown` key instead of *buttons*.
+In order to add dropdown action, you need to use `dropdown` key instead of *buttons*.
 
 Create a file `client/custom/src/my-action-handler.js`:
 
@@ -72,9 +72,9 @@ An action item next to the edit button.
 
 Available since version 5.6.14.
 
-Example for *Lead* entity type.
+An example for *Lead* entity type.
 
-Create a file (if doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
+Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
 
 ```json
 {
