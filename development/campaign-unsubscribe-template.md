@@ -35,4 +35,4 @@ Available since the version 5.6.4.
 
 Original content can be copied from the file `client/modules/crm/res/templates/campaign/unsubscribe.tpl`.
 
-The same logic is available for Subsrive Again templae. Use `subscribeTemplate` parameter to define a custom template.
+The same logic is available for Subsrive Again template. Use `subscribeTemplate` parameter to define a custom template.
