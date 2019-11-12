@@ -2,7 +2,7 @@
 
 ## Record views
 
-EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined it `clientDefs` category of metadata.
+EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined in `clientDefs` category of metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
