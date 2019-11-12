@@ -1,6 +1,6 @@
 # Custom ACL (access control level) for entity type
 
-How to customize ACL rules for a specific entity type. In this example will will customize Task entity type.
+How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
 
 1. Create a file `custom/Espo/Custom/Acl/Task.php`:
 
