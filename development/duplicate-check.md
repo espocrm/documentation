@@ -4,7 +4,7 @@ Duplicate check is performed upon record creation. It's also possible to enable 
 
 You can customize (or enable if it's not by default) a duplicate checking for a specific entity type in the service class.
 
-Bellow example for Lead entity type.
+Bellow, there is an example for Lead entity type.
 
 Create a file `custom/Espo/Custom/Services/Lead.php`:
 
