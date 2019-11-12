@@ -4,7 +4,7 @@ Select Manager can be utilized for generating and managing select params which s
 
 Base class: https://github.com/espocrm/espocrm/blob/stable/application/Espo/Core/SelectManagers/Base.php
 
-Usege example:
+Usage example:
 
 ```php
 $selectManager = $selectManagerFactory->create('Opportunity');
