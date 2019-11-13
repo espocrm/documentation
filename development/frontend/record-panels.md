@@ -1,6 +1,6 @@
 # Custom panel on record (detail & edit) view
 
-Example for *Account* entity type.
+An example for *Account* entity type.
 
 Create a file `custom/Espo/Custom/Resources/metadata/clientDefs/Account.js`:
 
