@@ -336,6 +336,29 @@ Examples:
 
 By utilizing this function along with *record\findOne*, it's possible to fetch attribute values of any record in the system.
 
+#### record\relate
+
+`record\relate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
+
+Links two records. Available since version 5.7.8.
+
+
+Example:
+
+`record\relate('Account', $accountId, 'opportunities', $opportunityId)`
+
+Note: It won't work in *Before save script* when creating a new record, because the record doesn't exist yet when formula is processed.
+
+#### record\unrelate
+
+`record\unrelate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
+
+Unlinks two records. Available since version 5.7.8.
+
+Example:
+
+`record\unrelate('Account', $accountId, 'opportunities', $opportunityId)`
+
 ### Env
 
 #### env\userAttribute
