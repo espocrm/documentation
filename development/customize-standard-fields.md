@@ -2,7 +2,7 @@
 
 ## Customizing field type
 
-Example for *Address* field type.
+An example for *Address* field type.
 
 Create a file `custom/Espo/Custom/Resources/metadata/fields/address.json`.
 
@@ -42,7 +42,7 @@ Create a template file (if needed) `client/custom/res/templates/fields/address/d
 
 ### Changing field type of existing field
 
-Example for meeting's Name field.
+An example for meeting's Name field.
 
 Create (or edit if exists) a file `custom/Espo/Custom/Resources/metadata/entityDefs/Meeting.json`.
 
@@ -58,7 +58,7 @@ Create (or edit if exists) a file `custom/Espo/Custom/Resources/metadata/entityD
 
 ### Custom view for specific field
 
-Example for *Meeting*'s *Name* field.
+An example for *Meeting*'s *Name* field.
 
 Create (or edit if exists) a file `custom/Espo/Custom/Resources/metadata/entityDefs/Meeting.json`.
 
