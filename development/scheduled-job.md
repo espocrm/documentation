@@ -1,6 +1,6 @@
 # Creating custom Job (& Scheduled Job)
 
-To define a custom Scheduled Job create a file `custom/Espo/Custom/Jobs/YourJobName.php` with the content.
+To define a custom Scheduled Job, create a file `custom/Espo/Custom/Jobs/YourJobName.php` with the content.
 
 ```php
 <?php
@@ -30,4 +30,4 @@ Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/en_US
 
 To make the changes applied, clear cache at Administration.
 
-Now you can create a scheduled job at Administration > Scheduled Jobs.
+Now, you can create a scheduled job at Administration > Scheduled Jobs.
