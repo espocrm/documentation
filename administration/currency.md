@@ -77,4 +77,4 @@ Payload example:
 }
 ```
 
-Rates are related to *Base Currency* specified in Settings.
+Rate values are related to *Base Currency* specified in Settings.
