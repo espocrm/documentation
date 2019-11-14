@@ -58,3 +58,23 @@ It's possible to convert manually all currency fields of a record.
 
 *Convert Currency* service action is available for Opportunity, Quote, Sales Order, Invoice. E.g. you can setup a workflow that will update currencies for all closed opportunities each week.
 
+## Rates API
+
+Available since 5.8.0.
+
+API User needs to have *Currency* scope enabled in roles.
+
+Request to get all rates: `GET api/v1/CurrencyRates`.
+
+Request to update specific rates: `PUT api/v1/CurrencyRates`, with JSON payload.
+
+Payload example:
+
+```
+{
+    "EUR": 1.11,
+    "UAH": 0.037
+}
+```
+
+Rates are related to *Base Currency* specified in Settings.
