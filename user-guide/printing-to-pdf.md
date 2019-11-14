@@ -36,6 +36,24 @@ Examples:
 * `{{assignedUserName}}` – Assigned User;
 * `{{account.name}}` – Name of the related account.
 
+
+### Charset issues
+
+If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
+
+
+### Access to Templates
+
+Administrator can add Templates tab at Administration > User Interface, then it will be available for regular users. An access to templates can be defined in Roles.
+
+### Page breaking
+
+To add an explicit page break you need to add the following code (in code view):
+
+```
+<br pagebreak="true">
+```
+
 ### Images
 
 It's possible to print image fields:
@@ -104,7 +122,7 @@ Available since 5.6.3 version.
 ```
 where `amount` is a field name.
 
-### Text fields
+### Text field
 
 To display text fields (multi-line) use triple braces: ```{{{description}}}```.
 
@@ -152,7 +170,7 @@ Example, printing contact names of an opportunity (available since 5.3.0):
 {{/each}}
 ```
 
-### Multi-enum and Array fields
+### Multi-enum & Array fields
 
 Printing selected items:
 
@@ -162,7 +180,7 @@ Printing selected items:
 {{/each}}
 ```
 
-### Checklist fields
+### Checklist field
 
 Available since version 5.7.3.
 
@@ -184,18 +202,14 @@ Item 2
 <br>
 ```
 
-### Page breaking
+### Barcode field
 
-To add an explicit page break you need to add the following code (in code view):
+Available since version 5.8.0.
 
 ```
-<br pagebreak="true">
+{{barcodeImage barcodeField type='EAN8' width=60 height=30 fontsize=14 text=true padding=0}}
 ```
 
-### Charset issues
+`barcodeField` is a name of your field
 
-If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
-
-### Access to Templates
-
-Administrator can add Templates tab at Administration > User Interface, then it will be available for regular users. An access to templates can be defined in Roles.
+Available types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode.
