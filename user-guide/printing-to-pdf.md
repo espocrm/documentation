@@ -210,6 +210,6 @@ Available since version 5.8.0.
 {{barcodeImage barcodeField type='EAN8' width=60 height=30 fontsize=14 text=true padding=0}}
 ```
 
-`barcodeField` is a name of your field
+`barcodeField` is a name of your field.
 
 Available types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode.
