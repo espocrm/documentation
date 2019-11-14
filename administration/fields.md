@@ -23,7 +23,8 @@ The list of field types available for creating:
 * [Image](#image) – for image uploading;
 * [Attachment-Multiple](#attachment-multiple) – for multiple file uploading;
 * [Number](#number) – an auto-incrementing number of string type with a possible prefix and specific length;
-* [Auto-increment](#auto-increment) – a generated read-only auto-incrementing integer number.
+* [Auto-increment](#auto-increment) – a generated read-only auto-incrementing integer number;
+* [Barcode](#barcode) – a barcode, can be printed to PDF.
 
 Field types not available for creating directly:
 
@@ -286,6 +287,17 @@ Parameters:
 ## Auto-increment
 
 A generated read-only auto-incrementing integer number.
+
+## Barcode
+
+Since 5.8.0 version.
+
+A barcode. Can be printed to PDF.
+
+Parameters:
+
+* Code Type – a type of barcode; supported types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode;
+* Last Character – for EAN13 type, often is `>`.
 
 ## Email
 
