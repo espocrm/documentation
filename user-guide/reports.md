@@ -9,7 +9,7 @@ In this article:
 * [List reports](#list-reports)
 * [Grid reports](#grid-reports)
 * [Filters](#filters)
-* [Displaying-on-dashboard](#displaying-on-dashboard)
+* [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
 * [Syncing with Target Lists](#syncing-with-target-lists)
 * [List view filters based on reports](#report-filters)
