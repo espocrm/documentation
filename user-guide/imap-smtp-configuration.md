@@ -1,6 +1,9 @@
 ﻿# IMAP and SMTP configuration
 
-## Configuration instructions:
+In this article:
+
+* [IMAP configuration](#imap-configuration)
+* [SMTP configuration](#smtp-configuration)
 * [G Suite account](#setup-for-g-suite-account)
 * [Gmail account](#setup-for-gmail-account)
 * [Outlook account](#setup-for-outlook-account)
@@ -25,6 +28,7 @@ IMAP allows to retrieve your emails from an email client. To setup the IMAP acco
 7. Click on **Test Connection** to check whether everything was specified correctly.  If a connection is successful, click **Save** on the top of the page.
 
 ## SMTP configuration
+
 SMTP allows to send email messages out. Users can setup SMTP settings in Preferences as well as in their Personal Email Accounts. An administrator can also allow to use System SMTP (make it shared). 
 
 Users can have multiple SMTP accounts (since version 4.2.0). However, email addresses a user can use to send emails from are defined by email addresses of User record.
