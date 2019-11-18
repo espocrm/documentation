@@ -51,6 +51,8 @@ By utilizing [Reports tool](https://github.com/espocrm/documentation/blob/master
 
 ### Revenue Forecast
 
+Available with Reports from Adavanced Pack.
+
 1. Create a new grid report for Opportunity entity type.
 2. Add 'MONTH: Close Date' to Group By field. 
 3. Add 'SUM: Amount Weighted' to Columns field.
