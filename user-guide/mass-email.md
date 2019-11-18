@@ -1,5 +1,15 @@
 # Mass Email
 
+In this article:
+
+* [How to send mass email](#how-to-send-mass-email)
+* [Test sending](#test-what-will-be-sent-to-recipients)
+* [Opt-out-link](#opt-out-link)
+* [Tracking URL](#tracking-url)
+* [Target Lists](#target-lists)
+* [Campaign Log](#campaign-log)
+* [Troubleshooting](#troubleshooting)
+
 ## How to send mass email
 
 You need to have at least one Target List with target records and Email Template in your crm.
@@ -14,15 +24,6 @@ You can check if emails are sent in Log panel.
 ## Test what will be sent to recipients
 
 Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
-
-## Log
-
-In log you can see:
-* Sent email
-* Links clicked by recipient
-* Recipients who opted out
-* Bounced emails (not delivered to recipient)
-* Emails opened by recipient (disabled by default)
 
 ## Opt-out link
 
@@ -51,17 +52,25 @@ Target Lists contains the lists of Accounts, Contacts, Leads and Users records.
 
 Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all results of the search.
 
-## Populating target lists with Reports
+### Populating target lists with Reports
 
 [Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
 
-## Excluding Target Lists
+### Excluding Target Lists
 
 Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
 
 ## Campaign Log
 
-At Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+In Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. 
+
+* Sent email
+* Links clicked by recipient
+* Recipients who opted out
+* Bounced emails (not delivered to recipient)
+* Emails opened by recipient (disabled by default)
+
+It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
 
 ## Troubleshooting
 
