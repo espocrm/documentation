@@ -6,9 +6,15 @@ Workflows automate your business process in an easy way. You can find it in the 
 
 * Target Entity – what entity type workflow is applied to
 * Trigger Type – when workflow will be triggered
-* [Conditions](#conditions) – conditions need to be met to trigger workflow
-* [Actions](#actions) – what to do if workflow is triggered
+* Conditions – conditions need to be met to trigger workflow
+* Actions – what to do if workflow is triggered
 
+In this article:
+
+* [Trigger Types](#trigger-types)
+* [Conditions](#conditions)
+* [Actions](#actions)
+* [Using Formula in Actions](#using-formula-in-actions)
 
 ## Trigger Types
 
