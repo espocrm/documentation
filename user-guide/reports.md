@@ -2,8 +2,18 @@
 
 Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-There are two types of reports: List and Grid. 
+There are two types of reports: List and Grid.
 
+In this article:
+
+* [List reports](#list-reports)
+* [Grid reports](#grid-reports)
+* [Filters](#filters)
+* [Displaying-on-dashboard](#displaying-on-dashboard)
+* [Email sending](#email-sending)
+* [Syncing with Target Lists](#syncing-with-target-lists)
+* [List view filters based on reports](#report-filters)
+* [Reports panels](#report-panels)
 
 ## List Reports
 
@@ -186,7 +196,7 @@ Some use cases:
 
 Note: Compatible with EspoCRM versions 5.1.0 and greater.
 
-## Displaying on the dashboard
+## Displaying on dashboard
 
 You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options. 
 
@@ -204,17 +214,17 @@ Max number of records that can be send in email by default is 3000. You can incr
 
 It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
 
-## Report Filters (list view filters based on reports)
+## Report Filters
 
-Compatible with EspoCRM 5.1.0 and greater.
+List view filters based on reports.
 
 Administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have an access to the filter.
 
 Note: The layout, that is specified in the report, is not applied to the list view when the filter is selected.
 
-## Report Panels (detail view panels showing report results)
+## Report Panels 
 
-Compatible with EspoCRM 5.1.0 and greater.
+Detail view panels showing report results.
 
 Administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have an access to the panel.
 
