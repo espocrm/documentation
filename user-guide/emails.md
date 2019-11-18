@@ -2,6 +2,17 @@
 
 EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
 
+In this article:
+
+* [IMAP accounts](#imap-accounts)
+* [SMTP accounts](#smtp-accounts)
+* [Gmail accounts](#gmail-accounts)
+* [Working with emails](#working-with-emails)
+* [Sending emails](#sending-emails)
+* [Email folders](#email-folders)
+* [Email filters](#email-filters)
+* [Email templates](#email-templates)
+
 ## IMAP accounts
 
 *Note: You need to have [cron](../administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
