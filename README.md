@@ -51,7 +51,7 @@
 * [Stream](https://github.com/espocrm/documentation/blob/master/user-guide/stream.md)
 * [Sales management: Leads & Opportunities](https://github.com/espocrm/documentation/blob/master/user-guide/sales-management.md)
 * [Case management](https://github.com/espocrm/documentation/blob/master/user-guide/case-management.md)
-* [Activities and Calendar](https://github.com/espocrm/documentation/blob/master/user-guide/activities-and-calendar.md)
+* [Activities & Calendar](https://github.com/espocrm/documentation/blob/master/user-guide/activities-and-calendar.md)
 * [Mail Merge (mass snail mailing)](https://github.com/espocrm/documentation/blob/master/user-guide/mail-merge.md)
 * [Knowledge Base](https://github.com/espocrm/documentation/blob/master/user-guide/knowledge-base.md)
 * [Documents](https://github.com/espocrm/documentation/blob/master/user-guide/documents.md)
