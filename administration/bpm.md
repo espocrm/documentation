@@ -10,6 +10,15 @@ Workflows tool is intended for automation of simple business rules, w/o sequenti
 
 BPM tool is intended for more complex business flows, where there can be diverging and converging flows, execution delays, user interactions. A flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
 
+In this article:
+
+* [Process Flowcharts](#process-flowcharts)
+* [Processes](#processes)
+* [Flowchart Elements](#flowchart-elements)
+* [Conditions](#conditions)
+* [Additional formula functions](#additional-formula-functions)
+* [Examples](#examples)
+
 ## Process Flowcharts
 
 The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
@@ -62,7 +71,6 @@ It's possible to manually start a flow from any element of an already started pr
 * [Activities](bpm-activities.md)
 * Flows
   * [Sequence](#user-content-sequence-flow)
-
 
 ### Flows
 
