@@ -1,10 +1,10 @@
-# Activities and Calendar
+# Activities & Calendar
 
 There are three types of activities available in EspoCRM by default: 
 
-* Meetings;
-* Calls;
-* Tasks.
+* Meetings
+* Calls
+* Tasks
 
 Administrator can create a custom entity of Event type. Then at Administration > Settings > Activities it's possible to set this entity type as an Activity and make it available in Calendar.
 
@@ -40,10 +40,10 @@ Calendar displays Meetings, Calls, Tasks. It's also possible to show custom enti
 
 Supported views:
 
-* Month;
-* Week;
-* Day;
-* Timeline.
+* Month
+* Week
+* Day
+* Timeline
 
 Users can add Calendar on their dashboard.
 
@@ -54,8 +54,6 @@ It's possible to view calendar of another user (is you have an access determined
 To refresh calendar items you can click on the date range title at the top in the center.
 
 ### Shared Calendar
-
-Shared calendar is available since the version 5.2.0.
 
 Users can create custom shared views that will display events of specific teams.
 
