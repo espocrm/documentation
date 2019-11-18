@@ -31,7 +31,12 @@ Administrator can define custom stages depending on business flow of the company
 
 ## Currency 
 
-Administrator can define available currencies and their rates at Administration > Currency. It's possible to convert currency of existing opportunities from the list view: select needed records and then click Convert Currency in the Actions dropdown.
+Administrator can define available currencies and their rates at Administration > Currency. 
+
+It's possible to convert currency of existing opportunities:
+
+* from the list view: select needed records and then click *Convert Currency* in the *Actions* dropdown,
+* from the detail view: click the dropdown next to the *Edit* button, then *Convert Currency*.
 
 ## Sales analytics
 
