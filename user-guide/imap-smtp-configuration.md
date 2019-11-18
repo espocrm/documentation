@@ -8,6 +8,7 @@ In this article:
 * [Gmail account](#setup-for-gmail-account)
 * [Outlook account](#setup-for-outlook-account)
 * [Yahoo account](#setup-for-yahoo-account)
+* [Troubleshoot problems](#troubleshoot-problems)
 
 ## IMAP configuration 
 *Note: You need to have cron properly configured in your system to have inbound emails working.*
