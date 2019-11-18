@@ -7,7 +7,14 @@ Entity Manager is available in Administration panel. It provides an ability to h
 * Configure fields: add new, customize existing ones.
 * Configure relationships: add new, change labels of existing ones.
 
-## Creating new entity
+In this article:
+
+* [Creating new entity type](#creating-new-entity-type)
+* [Entity type parameters](#entity-type-parameters)
+* [Fields](#fields)
+* [Relationships](#relationships)
+
+## Creating new entity type
 
 Click `Create Entity` button on Entity Manager page. Specify name, labels and type. If you select `Person` type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check `Stream` if you want your entity to have stream panel and users to be able to Follow entities of this type.
 
@@ -49,6 +56,7 @@ You can create new relationships between both out-of-box and custom entities. Th
 * One-to-Many: after you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity;
 * Many-to-One: the same as One-to-Many but vice versa;
 * Many-to-Many: relationship panels on both sides.
+* One-to-One (Left & Right) (since 5.8.0).
 
 Parameter 'Link Multiple Field' implies that the field of `linkMultiple` type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of detail view screen.
 
