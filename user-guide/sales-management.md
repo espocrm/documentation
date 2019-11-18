@@ -35,8 +35,8 @@ Administrator can define available currencies and their rates at Administration 
 
 It's possible to convert currency of existing opportunities:
 
-* from the list view: select needed records and then click *Convert Currency* in the *Actions* dropdown,
-* from the detail view: click the dropdown next to the *Edit* button, then *Convert Currency*.
+* on the list view: select needed records and then click *Convert Currency* in the *Actions* dropdown,
+* on the detail view: click the dropdown next to the *Edit* button, then *Convert Currency*.
 
 ## Sales analytics
 
