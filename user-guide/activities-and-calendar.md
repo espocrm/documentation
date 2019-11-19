@@ -12,7 +12,13 @@ There is 'My Activities' dashlet showing actual and upcoming activity records re
 
 Accounts, Contacts, Leads, Opportunities, Cases have the Activities panel on the detail view. Custom entities of Base Plus type have the Activities panel as well.
 
-## Meetings, Calls
+In this article:
+
+* [Meetings & Calls](#meetings--calls)
+* [Tasks](#tasks)
+* [Calendar](calendar)
+
+## Meetings & Calls
 
 ### Attendees
 
