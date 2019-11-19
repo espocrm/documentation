@@ -10,6 +10,19 @@ You may also need to set fields, that are supposed to be calculated, read-only v
 
 Admin can run 'Recalculate Formula' for specific records from the list view.
 
+In this article:
+
+* [Syntax](#syntax)
+* [Operators](#operators)
+* [Attributes](#operators)
+* [Functions](#functions)
+* [Values](#values)
+* [Variables](#variables)
+* [Comments](#comments)
+* [Function arguments](#function-arguments)
+* [Examples](#examples)
+* [Using formula in Workflows](#using-formula-in-workflows)
+
 ## Syntax
 
 EspoCRM formula is written in the simple language designed specifically for this feature.
