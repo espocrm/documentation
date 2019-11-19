@@ -36,7 +36,27 @@ In this article:
 
 EspoCRM formula is written in the simple language designed specifically for this feature.
 
-There are operators, functions attributes and values that can be used in formula. Separated expressions must be delimited by character `;`.
+There are 4 element types that can be used in formula:
+
+* operators
+* functions
+* attributes
+* values
+
+Separated expressions must be delimited by character `;`.
+
+Example:
+
+```
+string\concatenate(name, ' + ', $test);
+```
+where:
+
+* `string\concatenate` – function
+* `name` – attribute (of a target entity, to which formula is applied)
+* `' + '` – value (of string type)
+* `$test` – variable (supposed to be declared somewhere above)
+
 
 ## Operators
 
