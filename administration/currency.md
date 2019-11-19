@@ -2,7 +2,7 @@
 
 In this article:
 
-* [Settings & rates](#settings-rates)
+* [Settings & rates](#settings--rates)
 * [Currency converion](#currency-converion)
 * [Currency rates API](#currency-rates-api)
 
