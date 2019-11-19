@@ -2,6 +2,13 @@
 
 Jobs are intended for executing of tasks in the background. They handle operations like sending notifications, mass mailing, syncing, cleanup, etc.
 
+In this article:
+
+* [Scheduled Jobs](#scheduled-jobs)
+* [Setting up (cron & daemon)](#setting-up)
+* [Running jobs in parallel processes](#running-jobs-in-parallel-processes)
+* [Running specific job manually in CLI](#running-specific-job-manually-in-cli)
+
 ## Scheduled Jobs
 
 Scheduled Jobs are intended for recurring job execution. Scheduling for a specific job can be configured by the administrator, using a crontab notation.
