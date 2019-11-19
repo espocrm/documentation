@@ -1,5 +1,11 @@
 # Currency
 
+In this article:
+
+* [Settings & rates](#settings-rates)
+* [Currency converion](#currency-converion)
+* [Currency rates API](#currency-rates-api)
+
 ## Settings & rates
 
 Administrator can configure currency related parameters and rates at Administration > Currency.
@@ -58,7 +64,7 @@ It's possible to convert manually all currency fields of a record.
 
 *Convert Currency* service action is available for Opportunity, Quote, Sales Order, Invoice. E.g. you can setup a workflow that will update currencies for all closed opportunities each week.
 
-## Rates API
+## Currency rates API
 
 Available since 5.8.0.
 
