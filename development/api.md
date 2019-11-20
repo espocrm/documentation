@@ -12,6 +12,14 @@ Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in 
 
 It's recommended to create a separate user with restricted rights and use this user for API calls.
 
+In this article:
+
+* [Authentication](#authentication)
+* [CRUD operations](#crud-operations)
+* [Relatioships](#relatioships)
+* [Stream](#stream)
+* [Client Implementation](#client-implementation)
+
 ## Authentication
 
 ### Authentication by Api Key
@@ -71,6 +79,8 @@ Returns:
 
 
 ## CRUD Operations
+
+Note: You can obtain the list of *entity types* at Administration > Entity Manager > the left column.
 
 #### List Entities
 
@@ -155,7 +165,9 @@ _Example_
 `DELETE Account/5564764442a6d024c`
 
 
-## Related Entities
+## Relatinships
+
+Note: You can obtain the list of *relationship* names at Administration > Entity Manager > click relationships of a specific entity type.
 
 #### List Related Entities
 
@@ -256,6 +268,5 @@ Get parameters:
 
 - [Implementation in PHP](api-client-php.md)
 - [Implementation in Python](api-client-python.md)
-
 
 
