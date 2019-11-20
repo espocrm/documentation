@@ -188,9 +188,10 @@ Returns:
 
 Payload:
 
-1. `id` attribute.
-2. `ids` array attribute.
-3. `"massRelate": true` and `"where": {...}` to relate multiple records by search criteria.
+* `id` attribute.
+* `ids` array attribute.
+* `massRelate` false or true, whether to use search criteria that will be used instead of specific ids
+* `where` optional search criteria
 
 _Example_
 
