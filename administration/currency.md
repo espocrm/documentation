@@ -70,9 +70,9 @@ Available since 5.8.0.
 
 API User needs to have *Currency* scope enabled in roles.
 
-Request to get all rates: `GET api/v1/CurrencyRates`.
+Request to get all rates: `GET api/v1/CurrencyRate`.
 
-Request to update specific rates: `PUT api/v1/CurrencyRates`, with JSON payload.
+Request to update specific rates: `PUT api/v1/CurrencyRate`, with JSON payload.
 
 Payload example:
 
