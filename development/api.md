@@ -172,7 +172,7 @@ _Example_
 
 ## Relationships
 
-Note: You can obtain the list of *relationship* names at Administration > Entity Manager > click relationships on a specific entity type > 4th column.
+Note: You can obtain the list of *link* names at Administration > Entity Manager > click relationships on a specific entity type > 4th column.
 
 #### List reated records
 
