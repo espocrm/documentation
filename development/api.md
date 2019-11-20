@@ -17,7 +17,7 @@ In this article:
 * [Authentication](#authentication)
 * [Client Implementations](#client-implementations)
 * [CRUD operations](#crud-operations)
-* [Relatioships](#relatioships)
+* [Relationships](#relationships)
 * [Stream](#stream)
 
 
@@ -170,7 +170,7 @@ _Example_
 `DELETE Account/5564764442a6d024c`
 
 
-## Relatinships
+## Relationships
 
 Note: You can obtain the list of *relationship* names at Administration > Entity Manager > click relationships of a specific entity type.
 
