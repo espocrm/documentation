@@ -15,10 +15,11 @@ It's recommended to create a separate user with restricted rights and use this u
 In this article:
 
 * [Authentication](#authentication)
+* [Client Implementations](#client-implementations)
 * [CRUD operations](#crud-operations)
 * [Relatioships](#relatioships)
 * [Stream](#stream)
-* [Client Implementation](#client-implementation)
+
 
 ## Authentication
 
@@ -77,6 +78,10 @@ Returns:
 * `preferences` - user preferences;
 * `user` - user record attributes.
 
+## Client Implementations
+
+* [Implementation in PHP](api-client-php.md)
+* [Implementation in Python](api-client-python.md)
 
 ## CRUD Operations
 
@@ -263,10 +268,5 @@ Get parameters:
 #### Unfollow record
 
 `DELETE {entityType}/{id}/subscription`
-
-## Client Implementation
-
-- [Implementation in PHP](api-client-php.md)
-- [Implementation in Python](api-client-python.md)
 
 
