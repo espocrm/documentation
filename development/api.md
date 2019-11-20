@@ -87,7 +87,7 @@ Returns:
 
 Note: You can obtain the list of *entity types* at Administration > Entity Manager > the left column.
 
-#### List Entities
+#### List
 
 `GET {entityType}`
 
@@ -112,7 +112,7 @@ Returns:
 }
 ```
 
-#### Read Entity
+#### Read
 
 `GET {entityType}/{id}`
 
@@ -122,7 +122,7 @@ _Example_
 
 `GET Account/5564764442a6d024c`
 
-#### Create Entity
+#### Create
 
 `POST {entityType}`
 
@@ -142,7 +142,7 @@ Payload:
 }
 ```
 
-#### Update Entity
+#### Update
 
 `PUT {entityType}/{id}`
 
@@ -161,7 +161,7 @@ Payload:
 }
 ```
 
-#### Delete Entity
+#### Delete
 
 `DELETE {entityType}/{id}`
 
@@ -174,7 +174,7 @@ _Example_
 
 Note: You can obtain the list of *relationship* names at Administration > Entity Manager > click relationships on a specific entity type > 4th column.
 
-#### List Related Entities
+#### List reated records
 
 `GET {entityType}/{id}/{link}`
 
@@ -199,7 +199,7 @@ Returns:
 }
 ```
 
-#### Link Entity
+#### Link
 
 `POST {entityType}/{id}/{link}`
 
@@ -221,7 +221,7 @@ Payload:
 }
 ```
 
-#### Unlink Entity
+#### Unlink
 
 `DELETE {entityType}/{id}/{link}`
 
@@ -243,7 +243,7 @@ Payload:
 
 ## Stream
 
-#### List stream entries for the current user
+#### List stream records for the current user
 
 `GET Stream`
 
@@ -252,7 +252,7 @@ Get parameters:
 * `offset` - (int) offset;
 * `maxSize` - (int) max size;
 
-#### List stream entries related to a specific record
+#### List stream notes of a specific record
 
 `GET {entityType}/{id}/stream`
 
