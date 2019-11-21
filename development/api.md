@@ -20,7 +20,7 @@ In this article:
 * [Relationships](#relationships)
 * [Stream](#stream)
 
-API functions in detail:
+API functions:
 
 * [CurrencyRate](api/currency-rate.md)
 * [Account](api/account.md)
