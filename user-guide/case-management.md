@@ -34,6 +34,8 @@ Note: If there is no portal user associated with a linked contact, then the cust
 
 Administrator can set up Group Email Account that will create a new case on each new inbound email. For more information [see here](../administration/emails.md).
 
+Users can create a case from an email manaully. On the email detail view click the dropdown in the top-right corner, then *Create Case*.
+
 ## Knowledge Base
 
 Users can relate knowledge base articles to the case record. See more info about knowledge base [here](knowledge-base.md). 
