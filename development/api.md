@@ -20,6 +20,12 @@ In this article:
 * [Relationships](#relationships)
 * [Stream](#stream)
 
+API functions in detail:
+
+* [CurrencyRate](api/currency-rate.md)
+* [Account](api/account.md)
+
+
 
 ## Authentication
 
