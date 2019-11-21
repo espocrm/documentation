@@ -8,7 +8,7 @@ Most of API functions return JSON. POST, PATCH calls usually need some JSON data
 
 Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference. Example: 
 
-`GET http://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
+`GET https://your_domain/api/v1/Contact/55643ca033f7ab4c5`.
 
 It's recommended to create a separate user with restricted rights and use this user for API calls.
 
