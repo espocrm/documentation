@@ -1,5 +1,12 @@
 # Sales Management
 
+In this article:
+
+* [Leads](#leads)
+* [Opportunities](#opportunities)
+* [Currency](#currency)
+* [Sales analytics](#sales-analytics)
+
 ## Leads
 
 Lead represents a person or an organization that currently is not a customer, but have a potential to be. Creating a lead record usually is a first step of the sale process. As more information about the Lead is gathered it's supposed that lead will be converted into a Account, Contact and Opportunity.
@@ -18,16 +25,22 @@ To prevent overlooking of new leads, users can add Lead entity type to the Globa
 
 Opportunity represents a potential or closed deal. Opportunity with 'Closed Won' stage are taken into account for a sales revenue calculation. 
 
-Following stages are available by default:
+### Stage
 
-* Prospecting;
-* Qualification;
-* Proposal;
-* Negotiation;
-* Closed Won;
-* Closed Lost.
+Following opportunity stages are available by default:
+
+* Prospecting
+* Qualification
+* Proposal
+* Negotiation
+* Closed Won
+* Closed Lost
 
 Administrator can define custom stages depending on business flow of the company: Administration > Entity Manager > Opportunity > Fields > Stage. It's also possible to define custom probabilities for each stage.
+
+### Probability
+
+Opportunity *probability* is an estimated percentage chance that the sale will be won. *Closed Won* status should have 100% probability, *Closed Lost* – zero. Other stages has their default probabilities. Probabilities can be utilized for a revenue forecasting.
 
 ## Currency 
 
@@ -42,14 +55,14 @@ It's possible to convert currency of existing opportunities:
 
 The following charts are available on the dashboard by default:
 
-* Sales by Month;
-* Opportunities by Lead Source;
-* Opportunities by Stage;
-* Sales Pipeline.
+* Sales by Month
+* Opportunities by Lead Source
+* Opportunities by Stage
+* Sales Pipeline
 
 By utilizing [Reports tool](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md) it's possible to view sales statistics based on specific criteria. Report charts can be displayed on the dashboard.
 
-### Revenue Forecast
+### Revenue forecast
 
 Available with Reports from Adavanced Pack.
 
