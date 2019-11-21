@@ -21,6 +21,12 @@ By utilizing [Workflows](https://github.com/espocrm/documentation/blob/master/ad
 
 To prevent overlooking of new leads, users can add Lead entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new lead. 
 
+### Converting
+
+To convert a lead, you need to click *Convert* button on the lead detail view. Then you can check to which record types you want to convert: Account, Contact, Opportunity.
+
+Converted lead won't be removed from the system. It will have status *Converted*, records it was converted to, will be available on *Converted To* panel on the right.
+
 ## Opportunities
 
 Opportunity represents a potential or closed deal. Opportunity with 'Closed Won' stage are taken into account for a sales revenue calculation. 
