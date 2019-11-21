@@ -1,5 +1,15 @@
 # Case Management
 
+In this article:
+
+* [Overview](#overview)
+* [Email-to-Case](#email-to-case)
+* [Knowledge Base](#knowledge-base)
+* [Customer Portal](#customer-portal)
+
+
+## Overview
+
 Cases provide an issue tracking ability. It's a principal aspect of customer service in EspoCRM. Ticket term also can be used for Cases.
 
 Case entity can be associated with one Account and/or with multiple Contacts.
@@ -20,15 +30,15 @@ To prevent overlooking of new cases, users can add Case entity type to the Globa
 
 Note: If there is no portal user associated with a linked contact, then the customer won't receive email notifications about updates in the Stream. You need to use emails for communication with the customer.
 
-### Email-to-Case
+## Email-to-Case
 
 Administrator can set up Group Email Account that will create a new case on each new inbound email. For more information [see here](../administration/emails.md).
 
-### Knowledge Base
+## Knowledge Base
 
-Users can relate knowledge base articles to the case record.
+Users can relate knowledge base articles to the case record. See more info about knowledge base [here](knowledge-base.md). 
 
-### Customer Portal
+## Customer Portal
 
 Administrator can create a [portal](../administration/portal.md) where customers will be able to create cases.
 
