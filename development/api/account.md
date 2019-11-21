@@ -6,7 +6,7 @@
 
 Returns a list of accounts and total number of records. It's possible to specify filters.
 
-GET parameters are available [here](../api.md#list-entities).
+GET parameters are available [here](../api.md#list).
 
 Requires *read* access to *Account* scope.
 
@@ -161,7 +161,7 @@ The list of links available out-of-the-box:
 
 Returns a list of related records linked through *link* relation and their total number of records. It's possible to specify filters.
 
-GET parameters are available [here](../api.md#list-related-entities).
+GET parameters are available [here](../api.md#list-reated-records).
 
 Requires *read* access to Account record and *read* access to the scope of the related entity type.
 
@@ -172,7 +172,7 @@ Relate an existing account with a specific record (or multiple records) throuh a
 
 Requires *edit* access to Account record and *edit* access to the scope of the related entity type.
 
-Payload parameters are available [here](../api.md#link-entity).
+Payload parameters are available [here](../api.md#link).
 
 
 ### DELETE Account/{id}/{link}
