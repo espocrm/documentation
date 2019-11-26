@@ -44,7 +44,7 @@ Users can relate knowledge base articles to the case record. See more info about
 
 Administrator can create a [portal](../administration/portal.md) where customers will be able to create cases.
 
-Since portal users automatically follow their cases, they will receive email notifications about new messages in the Stream.
+Since portal users automatically follow cases they created, they will receive email notifications about new messages in the case's stream.
 
 ## See also
 
