@@ -86,6 +86,12 @@ Available since the version 5.8.0.
 * *fieldName* is a name of image field
 * *width* and *height* can be omitted
 
+For related fields:
+
+```
+{{#with linkName}}{{imageTag field='fieldName'}}{{/with}}
+```
+
 Another way to print images. Add in code view:
 
 ```
@@ -176,6 +182,8 @@ Example:
 `itemList` is an json array field (available in Quote, Sales Order, Invoices entity types).
 
 ### Related records
+
+*Many-to-many and one-to-many.*
 
 It's possible to loop through a link collection (since 5.5.0, before 5.7.6 only link-multiple fields were supported).
 
