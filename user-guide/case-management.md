@@ -42,7 +42,7 @@ Users can relate knowledge base articles to the case record. See more info about
 
 ## Customer Portal
 
-Administrator can create a [portal](../administration/portal.md) where customers will be able to create cases.
+Administrator can create a [portal](../administration/portal.md) where customers will be able to create cases. Permission to create cases can be granted in a portal role.
 
 Since portal users automatically follow cases they created, they will receive email notifications about new messages in the case's stream.
 
