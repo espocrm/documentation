@@ -4,24 +4,27 @@ Portal provides an ability to access specific crm data and functions for your cu
 
 To create portal follow Administration > Portals, click Create Portal button.
 
-* `Is Active`. If not checked, portal won't be available for anybody.
-* `Is Default`. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
-* `Roles`. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
-* `Tab List`. Tabs which will be shown in navigation bar.
-* `Dashboard Layout`. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
-* `URL`. Read only field that displays the link you can access the portal with.
+* *Is Active*. If not checked, portal won't be available for anybody.
+* *Is Default*. Means that portal will be available by shorter url: http(s)://YOUR_ESPO_URL/portal.
+* *Roles*. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
+* *Tab List*. Tabs which will be shown in navigation bar.
+* *Dashboard Layout*. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
+* *URL*. Read only field that displays the link you can access the portal with.
 
 ## Portal Users
 
 Administrators can create portal users.
 
-1. Administration > Users.
-2. Click right dropdown next to Create User.
-3. Click Create Portal User.
-4. Select Contact the portal user will be linked with.
-5. Fill the form and click save.
+1. Administration > Portal Users.
+2. Click *Create Portal User* button .
+3. Select Contact the portal user will be linked with or *Proceed w/o Contact*
+4. Fill needed fields on the form and click *Save*.
 
 Portal user should be linked to Portal record to be able to access that portal.
+
+Portal users can have one or multiple additional *Portal Roles*. These roles will be merged with roles specified for a portal.
+
+Portal users can have a specific *Dashboard Layout*. It allows certain users to have a specific layout that differs from the default portal layout.
 
 ## Portal Roles
 
@@ -32,7 +35,12 @@ Portal roles are similar to regular roles in EspoCRM but with a few distinctions
 * account ‒ Records related to the account the portal user is related to. Relation (link) should be named `account` or `accounts`.
 * contact ‒ Records related to the contact the portal user is related to. Relation (link) should be named `contact` or `contacts`.
 
-Assigned User and Teams fields are read only for portal users.
+*Assigned User* and *Teams* fields are read-only for portal users.
+
+Portal roles can be applied to:
+
+* Portal ‒ all users of the portal will receive this role (multiple roles are merged)
+* Portal User ‒ to grant certain users with specific permissions
 
 ### Example
 
