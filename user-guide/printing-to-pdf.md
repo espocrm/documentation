@@ -69,6 +69,12 @@ To add an explicit page break you need to add the following code (in code view):
 <br pagebreak="true">
 ```
 
+Since the version 5.8.0 you can use:
+
+```
+{{pagebreak}}
+```
+
 ### Images
 
 Available since the version 5.8.0.
