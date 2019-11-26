@@ -213,4 +213,4 @@ Available since version 5.8.0.
 
 `barcodeField` is a name of your field.
 
-Available types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode.
+Available types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode, QRcode.
