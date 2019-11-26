@@ -296,7 +296,7 @@ A barcode. Can be printed to PDF.
 
 Parameters:
 
-* Code Type – a type of barcode; supported types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode;
+* Code Type – a type of barcode; supported types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode, QRcode;
 * Last Character – for EAN13 type, often is `>`.
 
 ## Email
