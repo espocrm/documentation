@@ -208,6 +208,8 @@ Printing selected items:
 
 Available since version 5.7.3.
 
+In code view:
+
 ```
 {{#ifInArray 'item1' fieldName}}
 <input type="checkbox" checked="checked" name="1" readonly="true" value="1">
