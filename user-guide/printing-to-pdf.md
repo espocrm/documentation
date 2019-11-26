@@ -24,6 +24,20 @@ Can be achieved by restriction of access to Template entity type.
 
 ## Templates
 
+* [Charset issues](#charset-issues)
+* [Access to templates](#access-to-templates)
+* [Page breaking](#page-breaking)
+* [Images](#images)
+* [Date & Time formattng](#date--time-formatting)
+* [Number formatting](#number-formatting)
+* [Currency symbol](#currency-symbol)
+* [Text field](#text-field)
+* [Each operator](#each-iterator)
+* [Related records](#related-records)
+* [Multi-enum & Array fields](#multi-enum--array-fields)
+* [Checklist field](#multi-enum--array-fields)
+* [Barcode field](#barcode-field)
+
 Available at Administration > PDF Templates.
 
 For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button `</>`.
@@ -42,7 +56,7 @@ Examples:
 If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
 
 
-### Access to Templates
+### Access to templates
 
 Administrator can add Templates tab at Administration > User Interface, then it will be available for regular users. An access to templates can be defined in Roles.
 
