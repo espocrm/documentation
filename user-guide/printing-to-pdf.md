@@ -56,7 +56,16 @@ To add an explicit page break you need to add the following code (in code view):
 
 ### Images
 
-It's possible to print image fields. Add in code view:
+Available since the version 5.8.0.
+
+```
+{{imageTag field='fieldName' width=50 height=50}}
+```
+
+* *fieldName* is a name of image field
+* *width* and *height* can be omitted
+
+Another way to print images. Add in code view:
 
 ```
 <img src="{{file imageId}}">
