@@ -56,7 +56,8 @@ To add an explicit page break you need to add the following code (in code view):
 
 ### Images
 
-It's possible to print image fields:
+It's possible to print image fields. Add in code view:
+
 ```
 <img src="{{file imageId}}">
 ```
