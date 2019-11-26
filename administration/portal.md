@@ -40,7 +40,7 @@ Portal roles are similar to regular roles in EspoCRM but with a few distinctions
 Portal roles can be applied to:
 
 * Portal ‒ all users of the portal will receive this role (multiple roles are merged)
-* Portal User ‒ to grant certain users with specific permissions
+* Portal User ‒ to grant certain users specific permissions
 
 ### Example
 
