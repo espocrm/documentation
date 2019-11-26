@@ -168,7 +168,7 @@ Example:
 
 `itemList` is an json array field (available in Quote, Sales Order, Invoices entity types).
 
-### Links
+### Related records
 
 It's possible to loop through a link collection (since 5.5.0, before 5.7.6 only link-multiple fields were supported).
 
