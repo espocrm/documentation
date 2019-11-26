@@ -257,7 +257,7 @@ Available types:
 
 ### Raw values
 
-To access a raw values of a specific attribute you need to add  `_RAW`.
+To access a raw values of a specific attribute you need to add  `_RAW` to an attribute name.
 
 Example:
 
