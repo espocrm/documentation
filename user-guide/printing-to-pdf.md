@@ -37,6 +37,7 @@ Can be achieved by restriction of access to Template entity type.
 * [Multi-enum & Array fields](#multi-enum--array-fields)
 * [Checklist field](#multi-enum--array-fields)
 * [Barcode field](#barcode-field)
+* [Raw values](#raw-values)
 
 Available at Administration > PDF Templates.
 
@@ -238,4 +239,30 @@ Available since version 5.8.0.
 
 `barcodeField` is a name of your field.
 
-Available types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode, QRcode.
+Available types:
+
+* CODE128
+* CODE128A
+* CODE128B
+* CODE128C
+* EAN13
+* EAN8
+* EAN5
+* EAN2
+* UPC
+* UPCE
+* ITF14
+* pharmacode
+* QRcode
+
+### Raw values
+
+To access a raw values of a specific attribute you need to add  `_RAW`.
+
+Example:
+
+```
+{{numberFormat quantity_RAW decimals=0}}
+```
+
+*quantity* is a field name.
