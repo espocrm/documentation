@@ -80,25 +80,19 @@ Since the version 5.8.0 you can use:
 Available since the version 5.8.0.
 
 ```
-{{imageTag field='fieldName' width=50 height=50}}
+{{imageTag imageFieldNameId width=50 height=50}}
 ```
 
-* *fieldName* is a name of image field
+* *imageFieldNameId* is a name of image field, concatenated with *Id*
 * *width* and *height* can be omitted
-
-For related fields:
-
-```
-{{#with linkName}}{{imageTag field='fieldName'}}{{/with}}
-```
 
 Another way to print images. Add in code view:
 
 ```
-<img src="{{file imageId}}">
+<img src="{{file imageFieldNameId}}">
 ```
 
-where `imageId` – the name of custom image field, concatenated with the suffix `Id`.
+where `imageFieldNameId` – the name of an image field, concatenated with the suffix *Id*.
 
 
 ### Date & Time formatting
