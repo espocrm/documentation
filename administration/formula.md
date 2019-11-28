@@ -142,6 +142,13 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 #### string\upperCase
 `string\upperCase(STRING)` Converts letters to upper case.
 
+#### string\pad
+`string\pad(STRING, LENGTH, [PAD_STRING], [PAD_TYPE])`  Pads STRING to a certain LENGTH with PAD_STRING.
+
+PAD_STRING by default is a whitespace string `' '`.
+
+PAD_TYPE can be *'right'*, *'left'*, *'both'*. By default it is *'right'*.
+
 ### Datetime
 
 #### datetime\today
