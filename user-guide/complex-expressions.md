@@ -14,7 +14,7 @@ CONCAT:(firstName, ' ', lastName)
 IF:(EQUAL:(status, 'Complete'), 'Complete', 'Not Complete')`
 ```
 
-* [Flow Control](#flow-control)
+* [Flow control](#flow-control)
 * [Comparison](#comparison)
 * [Date & time](#date--time)
 * [String](#string)
@@ -22,7 +22,7 @@ IF:(EQUAL:(status, 'Complete'), 'Complete', 'Not Complete')`
 * [Logical](#logical)
 
 
-### Flow Control
+### Flow control
 
 #### IF
 
