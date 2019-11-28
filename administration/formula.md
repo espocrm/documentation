@@ -255,26 +255,26 @@ Example:
 `entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the record was not changed.
 
 #### entity\attribute
-`entity\attribute(ATTRIBUTE)` An ATTRIBUTE value of a target record.
-
-
-Example:
-
-`entity\attribute('assignedUserId')`
+`entity\attribute(ATTRIBUTE)` An ATTRIBUTE value of a target record. It's also possibe to fetch an attribute of a related record.
 
 `$test = entity\attribute('name')` is equivalent to `$test = name`.
 
+Examples:
+
+`entity\attribute('assignedUserId')`
+
+`entity\attribute('account.name')`
 
 
 
 #### entity\setAttribute
 `entity\setAttribute(ATTRIBUTE, VALUE)` Set ATTRIBUTE with a VALUE.
 
+`entity\setAttribute('stage', 'Closed Won')` is equivalent to `stage = 'Closed Won'`.
+
 Example:
 
 `entity\setAttribute('stage', 'Closed Won')`
-
-`entity\setAttribute('stage', 'Closed Won')` is equivalent to `stage = 'Closed Won'`.
 
 
 #### entity\attributeFetched
