@@ -37,6 +37,7 @@ Can be achieved by restriction of access to Template entity type.
 * [Multi-enum & Array fields](#multi-enum--array-fields)
 * [Checklist field](#multi-enum--array-fields)
 * [Barcode field](#barcode-field)
+* [Tables](#tables)
 * [Raw values](#raw-values)
 
 Available at Administration > PDF Templates.
@@ -262,6 +263,27 @@ Available types:
 * ITF14
 * pharmacode
 * QRcode
+
+
+### Tables
+
+You can use a regular *table* tag or special *tableTag* helper (available since version 5.8.0). The second way is preferable when using *{{#each}}* helper inside a table.
+
+The following example prints all account's opportunities in a table format.
+
+In code view:
+
+```
+{{#tableTag width="80%" border="0.5pt" cellpadding="4"}}
+{{#each opportunities}}
+{{#trTag}}
+  {{#tdTag width="40%"}}{{name}}{{/tdTag}}
+  {{#tdTag width="30%"}}{{assignedUserName}}{{/tdTag}}
+  {{#tdTag width="30%" align="right"}}{{stage}}{{/tdTag}}
+{{/trTag}}
+{{/each}}
+{{/tableTag}}
+```
 
 ### Raw values
 
