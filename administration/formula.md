@@ -245,17 +245,40 @@ Examples:
 `entity\isNew()` Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
 
 #### entity\\isAttributeChanged
-`entity\isAttributeChanged(ATTRIBUTE)` Returns TRUE if ATTRIBUTE of the entity was changed.
+`entity\isAttributeChanged(ATTRIBUTE)` Returns TRUE if ATTRIBUTE of the record was changed.
 
 Example:
 
 `entity\isAttributeChanged('status')`
 
 #### entity\isAttributeNotChanged
-`entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the entity was not changed.
+`entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the record was not changed.
+
+#### entity\attribute
+`entity\attribute(ATTRIBUTE)` An ATTRIBUTE value of a target record.
+
+
+Example:
+
+`entity\attribute('assignedUserId')`
+
+`$test = entity\attribute('name')` is equivalent to `$test = name`.
+
+
+
+
+#### entity\setAttribute
+`entity\setAttribute(ATTRIBUTE, VALUE)` Set ATTRIBUTE with a VALUE.
+
+Example:
+
+`entity\setAttribute('stage', 'Closed Won')`
+
+`entity\setAttribute('stage', 'Closed Won')` is equivalent to `stage = 'Closed Won'`.
+
 
 #### entity\attributeFetched
-`entity\attributeFetched(ATTRIBUTE)` Attribute that was set when target entity was fetched from database. Before it was modified.
+`entity\attributeFetched(ATTRIBUTE)` An ATTRIBUTE value that was set when a target record was fetched from database. Before it was modified.
 
 Example:
 
