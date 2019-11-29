@@ -1,5 +1,7 @@
 # Custom Template Helpers
 
+Available since version 5.8.0.
+
 For PDF templates and system email templates.
 
 Create a file `custom/Espo/Resources/metadata/app/templateHelpers.json`:
