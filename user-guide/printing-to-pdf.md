@@ -216,6 +216,14 @@ Printing selected items:
 
 ### Checklist field
 
+Available since version 5.8.0.
+
+```
+Option 1: {{checkboxTag fieldName option='Option 1' color='blue'}}
+Option 2: {{checkboxTag fieldName option='Option 2' color='blue'}}
+Option 3: {{checkboxTag fieldName option='Option 3' color='blue'}}
+```
+
 Available since version 5.7.3.
 
 In code view:
