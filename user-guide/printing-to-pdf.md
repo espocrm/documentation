@@ -296,3 +296,8 @@ Example:
 ```
 
 *quantity* is a field name.
+
+
+## See also
+
+* [Custom helpers](https://github.com/espocrm/documentation/blob/master/development/template-custom-helper.md)
