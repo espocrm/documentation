@@ -431,6 +431,26 @@ Example:
 
 `record\unrelate('Account', $accountId, 'opportunities', $opportunityId)`
 
+#### record\relationColumn
+
+`record\relationColumn(ENTITY_TYPE, ID, LINK, FOREIGN_ID, COLUMN)`
+
+Returns a relation column. Available since version 5.8.0.
+
+Example:
+
+`record\relationColumn('Account', $accountId, 'contacts', $contactId, 'role')`
+
+#### record\updateRelationColumn
+
+`record\updateRelationColumn(ENTITY_TYPE, ID, LINK, FOREIGN_ID, COLUMN, VALUE)`
+
+Updates a relation column. Available since version 5.8.0.
+
+Example:
+
+`record\updateRelationColumn('Account', $accountId, 'contacts', $contactId, 'role', 'CEO')`
+
 ### Env
 
 #### env\userAttribute
