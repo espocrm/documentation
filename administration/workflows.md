@@ -210,6 +210,11 @@ Payload should be specified in JSON format (event if *Content type* is not *appl
 
 Additional headers can be specified. Placeholders can be used in headers.
 
+Available placeholders:
+
+* *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}`;
+* *{$$variable}* – a of a variable (only when used on BPM); e.g. `{$$mtVariableName}`.
+
 ## Using Formula in Actions
 
 It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
