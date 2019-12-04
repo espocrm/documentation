@@ -213,7 +213,7 @@ Additional headers can be specified. Placeholders can be used in headers.
 Available placeholders:
 
 * *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}`;
-* *{$$variable}* – a of a variable (only when used on BPM); e.g. `{$$mtVariableName}`.
+* *{$$variable}* – a of a variable (available only in BPM process); e.g. `{$$mtVariableName}`.
 
 ## Using Formula in Actions
 
