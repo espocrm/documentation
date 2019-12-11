@@ -104,7 +104,7 @@ Create a file `custom/Espo/Custom/SelectManager/Account.php`:
 ```php
 namespace Espo\Custom\SelectManagers;
 
-class Account extend \Espo\Modules\Crm\SelectManagers\Account
+class Account extends \Espo\Modules\Crm\SelectManagers\Account
 {
 
 }
