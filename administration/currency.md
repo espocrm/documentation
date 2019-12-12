@@ -5,6 +5,7 @@ In this article:
 * [Settings & rates](#settings--rates)
 * [Currency converion](#currency-converion)
 * [Currency rates API](#currency-rates-api)
+* [Adding missing currency](#adding-missing-currency)
 
 ## Settings & rates
 
@@ -84,3 +85,23 @@ Payload example:
 ```
 
 Rate values are related to *Base Currency* specified in Settings.
+
+## Adding missing currency
+
+If a currency that you need is missing, you can add it manaully.
+
+Create a file: `custom/Espo/Resources/metadata/app/currency.json`
+
+```json
+{
+    "list": [
+        "__APPEND__",
+        "COD"
+    ]
+}
+
+```
+
+where *COD* is a 3-letter currency code in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
+
+Clear cache at Administration.
