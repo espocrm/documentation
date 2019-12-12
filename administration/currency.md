@@ -3,7 +3,7 @@
 In this article:
 
 * [Settings & rates](#settings--rates)
-* [Currency converion](#currency-converion)
+* [Currency conversion](#currency-conversion)
 * [Currency rates API](#currency-rates-api)
 * [Adding missing currency](#adding-missing-currency)
 
@@ -25,7 +25,7 @@ It's possible to specify an exclusive default currency for a specific field.
 
 Example for *amount* field of *Opportunity*. Set *Default* value at Administration > Entity Manager > Opportunity > fields > amountCurrency.
 
-## Currency converion
+## Currency conversion
 
 ### Currency Converted field
 
