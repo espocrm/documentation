@@ -8,6 +8,7 @@ In this article:
 
 * [List reports](#list-reports)
 * [Grid reports](#grid-reports)
+* [Joint Grid reports](#joint-grid-reports)
 * [Filters](#filters)
 * [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
@@ -122,7 +123,7 @@ Pie:
 
 It's possible to export grid report results to Excel and CSV formats. Charts are exported to Excel.
 
-### Joint Grid reports
+## Joint Grid reports
 
 Available since Advanced Pack 2.2.0.
 
@@ -136,6 +137,7 @@ Some usage examples:
 
 You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
 
+Runtime filters are not supported in joint reports. Only regular filters (specified in every sub-reports) can be used.
 
 ## Filters
 
