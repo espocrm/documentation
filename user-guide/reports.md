@@ -131,13 +131,15 @@ Joint Grid reports combine multiple Grid reports of different entity types. Sub-
 
 Some usage examples:
 
-* Lead count / Contact count;
-* Revenue by month / Campaign Budget by month;
-* Revenu by user / Lead count by User.
+* Lead count / Contact count
+* Revenue by month / Campaign Budget by month
+* Revenu by user / Lead count by User
 
 You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
 
-Runtime filters are not supported in joint reports. Only regular filters (specified in every sub-reports) can be used.
+Runtime filters are not supported in joint reports. Only regular filters (specified in each sub-reports) can be used.
+
+For charts, colors of columns must be specified in sub-reports.
 
 ## Filters
 
