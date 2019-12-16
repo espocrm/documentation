@@ -60,7 +60,9 @@ An email can be sent to:
 * Specific contacts
 * Followers of target record
 
-You can specify which email address the email will sent from, and specify a reply-to address.
+You can specify which email address the email will sent from, and specify a reply-to address. 
+
+It's possible to use process variables to specify email address (recipient or sender) with *Specific email address* option, e.g. `{$$emailAddress}`, where *emailAddress* is a variable defined in the process before. Available since version 2.4.5.
 
 Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitue field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}` (since advanced pack 2.4).
 
