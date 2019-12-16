@@ -541,10 +541,13 @@ Attribute name usually is the same as a system field name. Fields are listed in 
 Attribute names must be wrapped in quotes. E.g. `'assignedUserId'`.
 
 Field types having multiple attributes: 
-* Link fields have two attributes: fieldId, fieldName.
-* Link-Multiple fields have two attributes: fieldIds, fieldNames.
-* Link-Parent fields have tree attributes: fieldId, fieldType, fieldName.
 
+* Link fields have two attributes: *fieldId*, *fieldName*.
+* Link-Multiple fields have two attributes: *fieldIds*, *fieldNames*.
+* Link-Parent fields have tree attributes: *fieldId*, *fieldType*, *fieldName*.
+
+Where *field* is the name of the field.
+ 
 #### ENTITY_TYPE
 
 ENTITY_TYPE list is available at Administration > Entity Manager.
