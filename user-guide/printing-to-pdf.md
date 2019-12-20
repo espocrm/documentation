@@ -26,6 +26,7 @@ Can be achieved by restriction of access to Template entity type.
 
 * [Charset issues](#charset-issues)
 * [Access to templates](#access-to-templates)
+* [Page numbering](#page-numbering)
 * [Page breaking](#page-breaking)
 * [Images](#images)
 * [Date & Time formattng](#date--time-formatting)
@@ -61,6 +62,14 @@ If some charecters are not displayed in generated PDF files, it usually can be s
 ### Access to templates
 
 Administrator can add Templates tab at Administration > User Interface, then it will be available for regular users. An access to templates can be defined in Roles.
+
+### Page numbering
+
+Placeholders are only available in footer.
+
+* `{pageNumber}` – the current number of the page
+* `{totalPageNumber}` – the total number of record (since 5.7.12)
+* `{pageAbsoluteNumber}` – the absolute number of the page, when printing multiple records
 
 ### Page breaking
 
