@@ -118,7 +118,7 @@ By utilizing datetime\closest formula function it's possible to set the timer to
 
 Stops the flow until a specific signal catched. Placeholders can be used in a signal name.
 
-See [more info](signal-signals.md) about signals.
+See [more info](bpm-signals.md) about signals.
 
 ### Signal Intermediate Event (Throwing)
 
