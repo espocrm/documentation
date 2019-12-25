@@ -61,7 +61,7 @@ If some charecters are not displayed in generated PDF files, it usually can be s
 
 ### Access to templates
 
-Administrator can add Templates tab at Administration > User Interface, then it will be available for regular users. An access to templates can be defined in Roles.
+Administrator can add Templates tab at Administration > User Interface. An access to templates must be defined in Roles (*Templates* scope).
 
 ### Page numbering
 
