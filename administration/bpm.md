@@ -23,6 +23,13 @@ In this article:
 * [Additional formula functions](#additional-formula-functions)
 * [Examples](#examples)
 
+## See also
+
+* [Signals](bpm-signals.md)
+* [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
+* [Tracking URLs with BPM](bpm-tracking-urls.md)
+  
+
 ## Process Flowcharts
 
 The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
@@ -115,11 +122,6 @@ Available since version 2.4.0.
 
 `bpm\processEntity\attribute(ATTRIBUTE)` Fetches an attribute value of a process record.
 
-## See also
-
-* [Signals](bpm-signals.md)
-* [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
-* [Tracking URLs with BPM](bpm-tracking-urls.md)
 
 ## Examples
 
