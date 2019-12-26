@@ -119,6 +119,7 @@ Available since version 2.4.0.
 
 * [Signals](bpm-signals.md)
 * [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
+* [Tracking URLs with BPM](bpm-tracking-urls.md)
 
 ## Examples
 
