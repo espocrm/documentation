@@ -1,4 +1,4 @@
-# BPM Tracking URLs
+# Tracking URLs with BPM
 
 *Available since since Advanced Pack 2.4.6 and EspoCRM 5.7.12.*
 
