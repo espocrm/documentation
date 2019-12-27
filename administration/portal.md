@@ -84,8 +84,7 @@ Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID is available
 
 ### Access portal by Custom URL for Nginx server
 
-Custom URL: portal-host-name.com.
-
+Custom URL: portal-host-name.com.  
 Portal ID: 5a8a9b9328e6a955b.
 
 #### crm.portal.conf
