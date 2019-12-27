@@ -82,6 +82,103 @@ Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID is available
   RewriteRule ^(.*)$ /portal/{PORTAL_ID}/$1 [L]
 ```
 
+### Access portal by Custom URL for Nginx server
+
+Custom URL: portal-host-name.com.
+Portal ID: 5a8a9b9328e6a955b.
+
+#### crm.portal.conf
+```
+server {
+    listen 80;
+    listen [::]:80;
+ 
+    server_name portal-host-name.com; # Replace espocrm.local to your domain name
+    root /var/www/html/espocrm; # Specify your EspoCRM document root
+ 
+    index index.php index.html index.htm;
+ 
+    # SSL configuration
+    #
+    # listen 443 ssl;
+    # listen [::]:443 ssl;
+    # include snippets/snakeoil.conf;    
+ 
+    # Specify your PHP (php-cgi or php-fpm) based on your configuration
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+ 
+        # With php7.3-cgi alone:
+        # fastcgi_pass 127.0.0.1:9000;
+ 
+        # With php7.3-fpm:
+        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+    }    
+ 
+    # Add rewrite rules
+    location /client {
+        rewrite ^/client/(.*) /client/$1 break;
+    }
+
+    location / {
+        proxy_pass http://asd.com:8080/portal/5a8a9b9328e6a955b/;
+    }
+ 
+    location /api/v1/ {
+        if (!-e $request_filename){
+            rewrite ^/api/v1/(.*)$ /api/v1/index.php last; break;
+        }
+    }
+
+    location /api/v1/portal-access {
+        if (!-e $request_filename){
+            rewrite ^/api/v1/(.*)$ /api/v1/portal-access/index.php last; break;
+        }
+    }
+
+    location /portal/ {
+        try_files $uri $uri/ /portal/index.php?$query_string;
+    }
+ 
+    location ~ /reset/?$ {
+        try_files /reset.html =404;
+    }
+ 
+    location ^~ (data|api)/ {
+        if (-e $request_filename){
+            return 403;
+        }
+    }
+    location ^~ /data/logs/ {
+        deny all;
+    }
+    location ^~ /data/\.backup/ {
+        deny all;
+    }
+    location ^~ /data/config.php {
+        deny all;
+    }
+    location ^~ /data/cache/ {
+        deny all;
+    }
+    location ^~ /data/upload/ {
+        deny all;
+    }
+    location ^~ /application/ {
+        deny all;
+    }
+    location ^~ /custom/ {
+        deny all;
+    }
+    location ^~ /vendor/ {
+        deny all;
+    }
+    location ~ /\.ht {
+        deny all;
+    }
+}
+```
+
 ## See also
 
 [Portal ACL customization](../development/acl.md#portal-acl)
