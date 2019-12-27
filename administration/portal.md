@@ -93,7 +93,7 @@ server {
     listen 80;
     listen [::]:80;
  
-    server_name portal-host-name.com; # Replace espocrm.local to your domain name
+    server_name portal-host-name.com; # Replace portal-host-name to your domain name
     root /var/www/html/espocrm; # Specify your EspoCRM document root
  
     index index.php index.html index.htm;
