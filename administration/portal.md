@@ -121,7 +121,7 @@ server {
     }
 
     location / {
-        proxy_pass http://asd.com/portal/5a8a9b9328e6a955b/;
+        proxy_pass http://portal-host-name.com/portal/5a8a9b9328e6a955b/;
     }
  
     location /api/v1/ {
