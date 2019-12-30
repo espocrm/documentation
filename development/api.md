@@ -125,6 +125,8 @@ Returns:
 }
 ```
 
+See [more info](api-search-params.md) about search parameters.
+
 #### Read
 
 `GET {entityType}/{id}`
@@ -211,6 +213,8 @@ Returns:
   "total": {totalCountOfRecords}
 }
 ```
+
+See [more info](api-search-params.md) about search parameters.
 
 #### Link
 
