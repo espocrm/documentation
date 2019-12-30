@@ -67,9 +67,9 @@ $response = $client->request('GET', $url);
 
 ```json
 {
-  "type": "equals",
-  "attribute": "status",
-  "value": "New"
+    "type": "equals",
+    "attribute": "status",
+    "value": "New"
 }
 ```
 
@@ -77,9 +77,9 @@ $response = $client->request('GET', $url);
 
 ```json
 {
-  "type": "greaterThan",
-  "attribute": "amountConverted",
-  "value": 1000.00
+    "type": "greaterThan",
+    "attribute": "amountConverted",
+    "value": 1000.00
 }
 ```
 
@@ -87,8 +87,8 @@ $response = $client->request('GET', $url);
 
 ```json
 {
-  "type": "isNull",
-  "attribute": "assignedUserId"
+    "type": "isNull",
+    "attribute": "assignedUserId"
 }
 ```
 
@@ -96,8 +96,8 @@ $response = $client->request('GET', $url);
 
 ```json
 {
-  "type": "isTrue",
-  "attribute": "someBoolField"
+    "type": "isTrue",
+    "attribute": "someBoolField"
 }
 ```
 
@@ -106,14 +106,12 @@ $response = $client->request('GET', $url);
 For link-multiple fields.
 
 ```json
-
-   {
-        "type": "linkedWith",
-        "attribute": "teams",
-        "value": ["someTeamId"]
-   }
+{
+    "type": "linkedWith",
+    "attribute": "teams",
+    "value": ["someTeamId"]
+}
 ```
-
 
 ### isLinked, isNotLinked
 
@@ -121,8 +119,57 @@ For link-multiple fields. Whether is linked or not linked with any record.
 
 ```json
 
-   {
-        "type": "isLinked",
-        "attribute": "teams"
-   }
+{
+    "type": "isLinked",
+    "attribute": "teams"
+}
+```
+
+### in, notIn
+
+```json
+{
+    "type": "in",
+    "attribute": "status",
+    "value": ["New", "Assigned"]
+}
+```
+
+### contains, notContains, startsWith, endsWith, like, notLike
+
+```json
+{
+    "type": "contains",
+    "attribute": "someTextOrVarcharField",
+    "value": "text"
+}
+```
+
+### or, and
+
+```json
+{
+    "type": "or",
+    "value": [
+        {
+            "type": "equals",
+            "attribute": "status",
+            "value": "New"
+        },
+        {
+            "type": "equals",
+            "attribute": "status",
+            "value": "Assigned"
+        }
+    ]
+}
+```
+
+### today, past, future, lastSevenDays, currentMonth, lastMonth, nextMonth, currentQuarter, lastQuarter, currentYear, lastYear, currentFiscalYear, lastFiscalYear, currentFiscalQuarter, lastFiscalQuarter
+
+```json
+{
+    "type": "today",
+    "attribute": "someDateField",
+}
 ```
