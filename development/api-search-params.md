@@ -42,7 +42,6 @@ $boolFilterList = [
 ];
 
 // the list of available primary filters can obtained in a select manager class
-
 $primaryFilter = 'primaryFilter';
 
 $params = [
@@ -64,17 +63,45 @@ $response = $client->request('GET', $url);
 
 ## where
 
-### equals
+### equals, notEquals
 
 ```json
-  {
-      "type": "equals",
-      "attribute": "status",
-      "value": "New"
-  }
+{
+  "type": "equals",
+  "attribute": "status",
+  "value": "New"
+}
 ```
 
-### linkedWith
+### greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals
+
+```json
+{
+  "type": "greaterThan",
+  "attribute": "amountConverted",
+  "value": 1000.00
+}
+```
+
+### isNull, isNotNull
+
+```json
+{
+  "type": "isNull",
+  "attribute": "assignedUserId"
+}
+```
+
+### isTrue, isFalse
+
+```json
+{
+  "type": "isTrue",
+  "attribute": "someBoolField"
+}
+```
+
+### linkedWith, notLinkedWith
 
 For link-multiple fields.
 
@@ -84,5 +111,18 @@ For link-multiple fields.
         "type": "linkedWith",
         "attribute": "teams",
         "value": ["someTeamId"]
+   }
+```
+
+
+### isLinked, isNotLinked
+
+For link-multiple fields. Whether is linked or not linked with any record.
+
+```json
+
+   {
+        "type": "isLinked",
+        "attribute": "teams"
    }
 ```
