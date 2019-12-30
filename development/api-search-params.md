@@ -170,6 +170,50 @@ For link-multiple fields. Whether is linked or not linked with any record.
 ```json
 {
     "type": "today",
-    "attribute": "someDateField",
+    "attribute": "someDateField"
 }
 ```
+
+### lastXDays, nextXDays, olderThanXDays, afterXDays, 
+
+```json
+{
+    "type": "lastXDays",
+    "attribute": "someDateField",
+    "value": 2
+}
+```
+
+### between
+
+```json
+{
+    "type": "between",
+    "attribute": "someNumberOrDateField",
+    "value": [100, 200]
+}
+```
+
+### arrayAnyOf, arrayNoneOf, arrayAllOf
+
+For array, multi-enum, checkbox fields.
+
+```json
+{
+    "type": "arrayAnyOf",
+    "attribute": "fieldName",
+    "value": ["Value 1", "Value 2"]
+}
+```
+### arrayIsEmpty, arrayIsNotEmpty
+
+For array, multi-enum, checkbox fields.
+
+```json
+{
+    "type": "arrayAnyOf",
+    "attribute": "fieldName",
+    "value": ["Value 1", "Value 2"]
+}
+```
+
