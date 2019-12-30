@@ -29,6 +29,9 @@ API functions:
 * [CurrencyRate](api/currency-rate.md)
 * [Account](api/account.md)
 
+See also:
+
+* [Search parameters](api-search-params.md)
 
 
 ## Authentication
