@@ -4,8 +4,7 @@ Filters and other search parameters can be used with API functions that returns 
 
 ## Example
 
-
-Example (in PHP):
+In PHP.
 
 
 ```php
