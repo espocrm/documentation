@@ -1,4 +1,4 @@
-## API search parameters
+# API search parameters
 
 Filters and other search parameters can be used with API functions that returns a list of records.
 
