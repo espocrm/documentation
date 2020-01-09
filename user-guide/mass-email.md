@@ -8,6 +8,7 @@ In this article:
 * [Tracking URL](#tracking-url)
 * [Target Lists](#target-lists)
 * [Campaign Log](#campaign-log)
+* [Settings](#settings)
 * [Troubleshooting](#troubleshooting)
 
 ## How to send mass email
@@ -71,6 +72,15 @@ In Campaign Log you can see emails that have been sent, opened emails, bounced e
 * Emails opened by recipient (disabled by default)
 
 It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+
+## Settings
+
+Mass Email system parameters available at Administration > Outbound Emails > Mass Email panel.
+
+* Max number of emails sent per hour
+* Disable mandatory opt-out link
+* Email Open Tracking
+* Use VERP
 
 ## Troubleshooting
 
