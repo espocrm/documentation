@@ -75,6 +75,8 @@ It's possible to utilize this log by creating Target List (dropdown in the top-r
 
 ## Settings
 
+_For administrators._
+
 Mass Email system parameters available at Administration > Outbound Emails > Mass Email panel.
 
 * Max number of emails sent per hour
@@ -84,7 +86,7 @@ Mass Email system parameters available at Administration > Outbound Emails > Mas
 
 ## Troubleshooting
 
-_For Administrators_
+_For administrators._
 
 #### What to do if emails are not sent out.
 
