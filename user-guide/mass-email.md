@@ -82,7 +82,7 @@ Mass Email system parameters available at Administration > Outbound Emails > Mas
 * Max number of emails sent per hour
 * Disable mandatory opt-out link
 * Email Open Tracking
-* Use VERP
+* Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path)
 
 ## Troubleshooting
 
