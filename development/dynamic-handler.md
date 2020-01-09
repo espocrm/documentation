@@ -58,3 +58,19 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
 ```
 
 Clear cache after all.
+
+
+## Multiple dynamic handlers
+
+Since version 5.8.0 it's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
+
+In metadata > clienDefs:
+
+```json
+{
+    "dynamicHandlerList": [
+        "__APPEND__",
+        "custom:my-dynamic-handler"
+    ]
+}
+```
