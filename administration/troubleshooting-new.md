@@ -143,7 +143,7 @@ To make sure that this issue applies to the cache stucking problem do:
 2. Open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced then ...
 3. Clearing cache with a web browser advanced settings.
 
-Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way of how to fix it. Please try to open this file in your web browser. For example:
+Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way to fix it. Please try to open this file in your web browser. For example:
 ```
 www.my-site.com/crm/client/src/views/user/fields/contact.js
 ``` 
