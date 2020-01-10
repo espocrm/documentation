@@ -128,22 +128,22 @@ If you made some code customization before you encountered the problem, it might
 
 #### Problem #2: Old requests cached
 
-Error 500, 400, etc. could appear if the browser cached your previous requests and use it for current requests with old parameters. The data set in these requests may be changed with time (fields, data, role, etc.). Obviously that request with a non-existed field in its body will cause an error. 
-To make sure that the problem applies to cache stucking problem you can open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then the problem is found. 
+Errors 500, 400, etc. could appear if a browser cached your previous requests and use it for current requests with old parameters. The data set in these requests may be changed with time (fields, data, role, etc.). Obviously that request with a non-existed field in its body will cause an error. 
+To make sure that the problem applies to the cache stucking problem you can open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then the problem is found. 
 You can fix it by clearing the cache with a web browser advanced settings. Note that Ctrl + F5 will not help.
 
 #### Problem #3: Endless loading process upon new record creation
 
-I this case please open a Developer tools panel in your web browser (F12 button) and press F5. Open the console tab and try to create a record again. Very often that you can face such statement as:
+I this case please open a Developer tools panel in your web browser (F12 button) and press F5. Open the console tab and try to create a record again. In the console tab you might be faced with such statement as:
 ```
 Error: Could not load file 'client/src/views/user/fields/contact.js?r=1578581862'
 ```
 To make sure that this issue applies to the cache stucking problem do:
-1. Open the client/src/views/user/fields directory and make sure that the contact.js exists. If so then... 
+1. Open the client/src/views/user/fields directory and make sure that the contact.js file exists. If so then... 
 2. Open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced then ...
 3. Clearing cache with a web browser advanced settings.
 
-Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way of how we can fix it. Please try to open this file in your web browser. For example:
+Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way of how to fix it. Please try to open this file in your web browser. For example:
 ```
 www.my-site.com/crm/client/src/views/user/fields/contact.js
 ``` 
