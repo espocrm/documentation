@@ -122,28 +122,28 @@ Sometimes you can start getting the errors something like Error 500 or endless l
 
 #### Problem #1: Bad code customization
 
-If you made some code customization before you encontered the problem, it might be the best solution to check up your code changes again. The things that could help you quickly find a bug is:
+If you made some code customization before you encountered the problem, it might be the best solution to check up your code changes again. The things that could help you quickly find a bug is:
 1. EspoCRM log file with enabled DEBUG mode as it explained above.
 2. Developer tools panel in your web browser (F12 button).
 
 #### Problem #2: Old requests cached
 
-Error 500, 400, etc. could appear if the browser cached your previous requests and use it for current requests with old parameters. The data set in this requests may be changed with time (fields, data, role, etc.). Obiviously that reques with non-existed field in its body will cause an error.
-To make sure that the roblem applies to cache ctucking problem you can open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then the problem is found.
-You can fix it by clearing cache with a web browser advanced settings. Note that Ctrl + F5 will not help.  
+Error 500, 400, etc. could appear if the browser cached your previous requests and use it for current requests with old parameters. The data set in these requests may be changed with time (fields, data, role, etc.). Obviously that request with a non-existed field in its body will cause an error. 
+To make sure that the problem applies to cache stucking problem you can open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then the problem is found. 
+You can fix it by clearing the cache with a web browser advanced settings. Note that Ctrl + F5 will not help.
 
 #### Problem #3: Endless loading process upon new record creation
 
-I this case please open a Developer tools panel in your web browser (F12 button) and press F5. Open the console tab and try to create a record again. Very often that you can faced with the statement as:
+I this case please open a Developer tools panel in your web browser (F12 button) and press F5. Open the console tab and try to create a record again. Very often that you can face such statement as:
 ```
 Error: Could not load file 'client/src/views/user/fields/contact.js?r=1578581862'
 ```
-To make sure that this issue is applies to the cache stucking problem do:
+To make sure that this issue applies to the cache stucking problem do:
 1. Open the client/src/views/user/fields directory and make sure that the contact.js exists. If so then... 
 2. Open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced then ...
 3. Clearing cache with a web browser advanced settings.
 
-Sometimes such issue could be even reproduced in the incognito mode window and doesn't dissapeared after the cache clearing. In this case there is one more way of how we can fix it. Please try to open this file in your web browser. For example:
+Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way of how we can fix it. Please try to open this file in your web browser. For example:
 ```
 www.my-site.com/crm/client/src/views/user/fields/contact.js
 ``` 
