@@ -16,6 +16,11 @@ In this article:
 * [List view filters based on reports](#report-filters)
 * [Reports panels](#report-panels)
 
+See also:
+
+* [Complex expressions](complex-expressions.md)
+
+
 ## List Reports
 
 List report results the list of records that meet the specified criteria.
