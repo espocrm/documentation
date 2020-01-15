@@ -120,21 +120,14 @@ to
 Sometimes you can start getting the errors something like Error 500 or endless loading process upon new record creation. 
 #### Possible causes and fixes
 
-#### Problem #1: Bad code customization
+#### Problem #1: Old request cached
 
-If you made some code customization before you encountered the problem, it might be the best solution to check up your code changes again. The things that could help you quickly find a bug is:
-1. EspoCRM log file with enabled DEBUG mode as it explained above.
-2. Developer tools panel in your web browser (F12 button).
+Errors 500, 400, etc. could appear if a browser cached your previous request's parameters (fields, data, role, etc.) and use them for the current request with depricated or non valid values. 
+Open your instance in the web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then clear the browser cache with its advanced settings. Note that Ctrl + F5 will not help.
 
-#### Problem #2: Old requests cached
+#### Problem #2: Endless loading process upon new record creation
 
-Errors 500, 400, etc. could appear if a browser cached your previous requests and use it for current requests with old parameters. The data set in these requests may be changed with time (fields, data, role, etc.). Obviously that request with a non-existed field in its body will cause an error. 
-To make sure that the problem applies to the cache stucking problem you can open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then the problem is found. 
-You can fix it by clearing the cache with a web browser advanced settings. Note that Ctrl + F5 will not help.
-
-#### Problem #3: Endless loading process upon new record creation
-
-I this case please open a Developer tools panel in your web browser (F12 button) and press F5. Open the console tab and try to create a record again. In the console tab you might be faced with such statement as:
+Open a Developer tools panel in your web browser (F12 button) and press F5. Open the console tab and try to create a record again. In the console tab you might be faced with such statement as:
 ```
 Error: Could not load file 'client/src/views/user/fields/contact.js?r=1578581862'
 ```
@@ -153,3 +146,26 @@ localhost/crm/client/src/views/user/fields/contact.js
 ``` 
 After this reload a web page and try reproduce the error again. 
 
+## Corrupted page element or JavaScript scenario doesn't work
+
+1. Open a Developer tools panel in your web browser (F12 button) and press F5. Check the console and network tabs for the file open errors.
+2. Check whether you don't have enabled browser plugin (e.g. Ad-Block) or anyone other software that can restrict executing the javascript files.
+
+## Blank page with error 404
+
+The possible problem is the connection to database is lost or corrupted.
+1. Open files ./data/config.php and check the database connection params:
+```
+'database' => [
+        'driver' => 'pdo_mysql',
+        'host' => 'localhost',
+        'port' => '',
+        'charset' => 'utf8mb4',
+        'dbname' => 'espocrm',
+        'user' => 'root',
+        'password' => '123GhjOe33h'
+    ],
+```
+2. If the params are correct, then check whether the mysql service runs. You can do it by:
+* Opening via database manager as phpMyAdmin etc.
+* Run this command in the terminal `service mysql status`.
