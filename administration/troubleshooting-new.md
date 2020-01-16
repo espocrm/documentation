@@ -1,5 +1,12 @@
 # Troubleshooting
 
+In this article:
+
+* [Trigger Types](#trigger-types)
+* [Conditions](#conditions)
+* [Actions](#actions)
+* [Using Formula in Actions](#using-formula-in-actions)
+
 ## Check logs
 
 To find out the problem, you have to check error log files.
@@ -157,14 +164,14 @@ The possible problem is the connection to database is lost or corrupted.
 1. Open files ./data/config.php and check the database connection params:
 ```
 'database' => [
-        'driver' => 'pdo_mysql',
-        'host' => 'localhost',
-        'port' => '',
-        'charset' => 'utf8mb4',
-        'dbname' => 'espocrm',
-        'user' => 'root',
-        'password' => '123GhjOe33h'
-    ],
+    'driver' => 'pdo_mysql',
+    'host' => 'localhost',
+    'port' => '',
+    'charset' => 'utf8mb4',
+    'dbname' => 'espocrm',
+    'user' => 'root',
+    'password' => '123GhjOe33h'
+],
 ```
 2. If the params are correct, then check whether the mysql service runs. You can do it by:
 * Opening via database manager as phpMyAdmin etc.
