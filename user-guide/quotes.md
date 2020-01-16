@@ -98,7 +98,7 @@ For product line item:
 <img src="{{file product.photoId}}">
 ```
 
-To display float numbers (like quantity, unitPrice etc.) w/o fractional part (as integer) use the following expression (since version 4.8.3):
+To display float numbers (like quantity, unitPrice etc.) w/o fractional part (as integer) use the following expression:
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
@@ -110,6 +110,25 @@ Custom formatting for currency values (since version 4.8.3):
 Value `10000.5` will be printer as `10 000,50`. 
 
 To display text fields (multiline) use triple braces: `{{{description}}}`.
+
+#### Quote Items attributes
+
+You can use these attributes in a template inside the loop `{{#each itemList}}`:
+
+* name
+* quantity
+* listPrice
+* unitPrice
+* discount
+* amount
+* unitWeight
+* weight
+* taxRate
+* order
+* description
+
+All fields can be found at Administration > Entity Manager > Quote Items > Fields.
+
 
 ## Sending quote in email
 
