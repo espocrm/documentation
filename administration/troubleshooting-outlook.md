@@ -6,7 +6,7 @@ In this article:
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Server side error 500: Could not get access token for Outlook](#server-side-error-500-could-not-get-access-token-for-outlook)
 * [Application is not configured as a multi-tenant application](#error-application-is-not-configured-as-a-multi-tenant-application)
-* [Non-admin user's issues](#non-admin-user-s-issues)
+* [Non-admin user's issues](#non-admin-users-issues)
 * [Max number of operations](#max-number-of-operations)
     
 ## Check logs
@@ -33,7 +33,7 @@ Sometimes your clien secret key may be corrupted or deprecated due to Outlook ch
 
 ## Error: Application is not configured as a multi-tenant application
 
-From the app's Overview page, select the Authentication section and change the value selected under Supported account types.
+In the Azure Active Directory admin center from the app's Overview page, select the Authentication section and change the value selected under Supported account types.
 
 ## Non-admin user's issues
 
