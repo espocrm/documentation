@@ -11,7 +11,7 @@ In this article:
 * [Emails are not being fetched](#Emails-are-not-being-fetched)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Web browser cache stucking](#web-browser-cache-stucking)
-* [Page elements are corrupted or JavaScript is not working](#page-elements-are-corrupted-or-javascript-is-not-working)
+* [Page elements are corrupted or JavaScript is not working](#Page-elements-are-corrupted-or-JavaScript-is-not-working)
 * [Blank page with Bad server responce error](#blank-page-with-bad-server-responce-error)
 
 ## Check logs
