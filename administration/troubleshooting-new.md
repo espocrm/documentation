@@ -3,13 +3,13 @@
 In this article:
 
 * [Check logs](#check-logs)
+* [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Check system requirements](#check-system-requirements)
 * [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
 * [Running rebuild or clear cache from CLI](#running-rebuild-or-clear-cache-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
 * [MySQL error: The server requested authentication method unknown to the client](#mysql-error-the-server-requested-authentication-method-unknown-to-the-client)
 * [Emails are not being fetched](#emails-are-not-being-fetched)
-* [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Web browser cache stucking](#web-browser-cache-stucking)
 * [Page elements are corrupted or JavaScript scenario doesn't work](#page-elements-are-corrupted-or-javascript-scenario-doesnt-work)
 * [Blank page with Bad server responce error](#blank-page-with-bad-server-responce-error)
@@ -25,6 +25,26 @@ EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/data/logs/*.log` and contain so
 #### Apache error logs
 
 For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
+
+## Enabling debug mode for a logger
+
+To enable debug mode for log, edit the file `data/config.php` and change the value:
+
+```
+'logger' => [
+    ...
+    'level' => 'WARNING',
+    ...
+]
+```
+to
+```
+'logger' => [
+    ...
+    'level' => 'DEBUG',
+    ...
+]
+```
 
 ## Check system requirements
 
@@ -109,26 +129,6 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 2. Check EspoCRM log (data/logs) and server logs for errors.
 3. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
 4. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.
-
-## Enabling debug mode for a logger
-
-To enable debug mode for log, edit the file `data/config.php` and change the value:
-
-```
-'logger' => [
-    ...
-    'level' => 'WARNING',
-    ...
-]
-```
-to
-```
-'logger' => [
-    ...
-    'level' => 'DEBUG',
-    ...
-]
-```
 
 ## Web browser cache stucking
 
