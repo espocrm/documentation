@@ -8,9 +8,9 @@ In this article:
 * [Running rebuild or clear cache from CLI](#running-rebuild-or-clear-cache-from-CLI)
 * [EspoCRM is not loading after upgrade](#espocRM-is-not-loading-after-upgrade)
 * [MySQL error: The server requested authentication method unknown to the client](#mysql-error-:-the-server-requested-authentication-method-unknown-to-the-client)
-* [Emails are not being fetched](#Eemails-are-not-being-fetched)
+* [Emails are not being fetched](#Emails-are-not-being-fetched)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
-* [Web browser cache stucks](#web-browser-cache-stucks)
+* [Web browser cache stucking](#web-browser-cache-stucking)
 * [Page elements are corrupted or JavaScript scenario doesn't work](#page-elements-are-corrupted-or-javascript-scenario-doesn't-work)
 * [Blank page with Bad server responce error](#blank-page-with-bad-server-responce-error)
 
@@ -130,7 +130,7 @@ to
 ]
 ```
 
-## Web browser cache stucks
+## Web browser cache stucking
 
 Sometimes you can start getting the errors something like Error 500 or endless loading process upon new record creation. 
 #### Possible causes and fixes
