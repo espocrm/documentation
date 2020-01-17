@@ -7,7 +7,7 @@ In this article:
 * [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
 * [Running rebuild or clear cache from CLI](#running-rebuild-or-clear-cache-from-CLI)
 * [EspoCRM is not loading after upgrade](#espocRM-is-not-loading-after-upgrade)
-* [MySQL error: The server requested authentication method unknown to the client](#mysql-error:-the-server-requested-authentication-method-unknown-to-the-client)
+* [MySQL error: The server requested authentication method unknown to the client](#mysql-error-:-the-server-requested-authentication-method-unknown-to-the-client)
 * [Emails are not being fetched](#Eemails-are-not-being-fetched)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Web browser cache stucks](#web-browser-cache-stucks)
@@ -78,8 +78,8 @@ where `www-data` is a web-server user.
 
 Sometimes you need to run rebuild or clear cache from the command line interface when the application is not loading.
 
-* For rebuild: `sudo -u www-data php rebuild.php`
-* For clear chache: `sudo -u www-data php clear_cache.php`
+* To rebuild: `sudo -u www-data php rebuild.php`
+* To clear chache: `sudo -u www-data php clear_cache.php`
 
 www-data is a web server user.
 
