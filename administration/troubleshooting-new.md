@@ -2,10 +2,17 @@
 
 In this article:
 
-* [Trigger Types](#trigger-types)
-* [Conditions](#conditions)
-* [Actions](#actions)
-* [Using Formula in Actions](#using-formula-in-actions)
+* [Check logs](#check-logs)
+* [Check system requirements](#check-system-requirements)
+* [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
+* [Running rebuild or clear cache from CLI](#running-rebuild-or-clear-cache-from-CLI)
+* [EspoCRM is not loading after upgrade](#espocRM-is-not-loading-after-upgrade)
+* [MySQL error: The server requested authentication method unknown to the client](#mysql-error:-the-server-requested-authentication-method-unknown-to-the-client)
+* [Emails are not being fetched](#Eemails-are-not-being-fetched)
+* [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
+* [Web browser cache stucks](#web-browser-cache-stucks)
+* [Page elements are corrupted or JavaScript scenario doesn't work](#page-elements-are-corrupted-or-javascript-scenario-doesn't-work)
+* [Blank page with Bad server responce error](#blank-page-with-bad-server-responce-error)
 
 ## Check logs
 
@@ -67,13 +74,14 @@ where `www-data` is a web-server user.
 
 4. If there are no errors, check Scheduled Jobs to see if any job was executed (see a Log panel).
 
-## Running rebuild from CLI
+## Running rebuild or clear cache from CLI
 
-Sometimes you need to run rebuild from the command line interface when the application is not loading.
+Sometimes you need to run rebuild or clear cache from the command line interface when the application is not loading.
 
-`sudo -u www-data php rebuild.php`
+* For rebuild: `sudo -u www-data php rebuild.php`
+* For clear chache: `sudo -u www-data php clear_cache.php`
 
-www-data is a web server user. 
+www-data is a web server user.
 
 
 ## EspoCRM is not loading after upgrade
@@ -153,15 +161,15 @@ localhost/crm/client/src/views/user/fields/contact.js
 ``` 
 After this reload a web page and try reproduce the error again. 
 
-## Corrupted page element or JavaScript scenario doesn't work
+## Page elements are corrupted or JavaScript scenario doesn't work
 
 1. Open a Developer tools panel in your web browser (F12 button) and press F5. Check the console and network tabs for the file open errors.
 2. Check whether you don't have enabled browser plugin (e.g. Ad-Block) or anyone other software that can restrict executing the javascript files.
 
-## Blank page with error 404
+## Blank page with Bad server responce error
 
 The possible problem is the connection to database is lost or corrupted.
-1. Open files ./data/config.php and check the database connection params:
+1. Open the ./data/config.php file and check the database connection params:
 ```
 'database' => [
     'driver' => 'pdo_mysql',
@@ -176,3 +184,5 @@ The possible problem is the connection to database is lost or corrupted.
 2. If the params are correct, then check whether the mysql service runs. You can do it by:
 * Opening via database manager as phpMyAdmin etc.
 * Run this command in the terminal `service mysql status`.
+
+After fix, you should press F5 to reload a web page. 
