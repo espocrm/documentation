@@ -4,10 +4,11 @@ In this article:
 
 * [Check logs](#check-logs)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
-* [Server side error 500: Could not get access token for Outlook](#server-side-error-500-could-not-get-access-token-for-Outlook.)
+* [Server side error 500: Could not get access token for Outlook](#server-side-error-500-could-not-get-access-token-for-outlook)
+* [Application is not configured as a multi-tenant application](#error-application-is-not-configured-as-a-multi-tenant-application)
 * [Non-admin user's issues](#non-admin-user-s-issues)
-
-
+* [Max number of operations](#max-number-of-operations)
+    
 ## Check logs
 
 To find out the problem, you have to check error log files located at `<ESPOCRM_DIRECTORY>/data/logs/*.log` and contain some error information.
@@ -15,7 +16,6 @@ To find out the problem, you have to check error log files located at `<ESPOCRM_
 ## Enabling debug mode for a logger
 
 To enable debug mode for log, edit the file `data/config.php` and change the value:
-
 ```
 'level' => 'WARNING',
 ```
@@ -40,14 +40,12 @@ From the app's Overview page, select the Authentication section and change the v
 #### A user doesn't have the 'External Accounts' button
 
 Set the next permission in a role:
-
 ```
 External Accounts -> Access 'enabled'
 ```
 #### No Outlook services available
 
 Set the next permissions in a role:
-
 ```
 Outlook Calendar -> Access 'enabled'
 Outlook Contacts -> Access 'enabled'
