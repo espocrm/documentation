@@ -8,7 +8,7 @@ Indexes are defined in metadata > entityDefs.
 
 ### Example
 
-`custom/Espo/Custom/Resources/metadata/Lead.json`:
+`custom/Espo/Custom/Resources/metadata/entityDefs/Lead.json`:
 
 
 ```json
