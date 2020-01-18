@@ -8,6 +8,8 @@ Indexes are defined in metadata > entityDefs.
 
 ### Example
 
+For *Lead* entity type.
+
 `custom/Espo/Custom/Resources/metadata/entityDefs/Lead.json`:
 
 
