@@ -18,6 +18,7 @@
   * [Defining new funtions for formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
   * [Custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
   * [Duplicate checking](https://github.com/espocrm/documentation/blob/master/development/duplicate-check.md)
+  * [Database indexes](https://github.com/espocrm/documentation/blob/master/development/db-indexes.md)
 
 ### Frontend
 * [View](https://github.com/espocrm/documentation/blob/master/development/view.md)
