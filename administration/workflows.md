@@ -51,9 +51,9 @@ Scheduling is specified in a crontab notation.
 
 ### Sequential
 
-Used rarely. Supposed to be run by another workflow. Provides an ability to make a complex logic. 
+Used rarely. Supposed to be run by another workflow. Provides the ability to make a complex logic. 
 
-Note: For sequential workflows it's recommended to utilize [BPM tool](bpm.md) rather than a Workflows feature.
+Note: It can be reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
 
 ### Signal
 
