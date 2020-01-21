@@ -97,7 +97,7 @@ where `www-data` is a web-server user.
 Sometimes you need to run rebuild or clear cache from the command line interface when the application is not loading.
 
 * To rebuild: `sudo -u www-data php rebuild.php`
-* To clear chache: `sudo -u www-data php clear_cache.php`
+* To clear cache: `sudo -u www-data php clear_cache.php`
 
 www-data is a web server user.
 
