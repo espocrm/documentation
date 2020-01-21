@@ -75,6 +75,10 @@ It's possible to manually reject or interrupt pending and active flow nodes. You
 
 It's possible to manually start a flow from any element of an already started process. You need to click on a specific flowchart element on the process detail view and then click the button *Start flow from here*.
 
+### Self-removal
+
+You can setup BPM process to remove itself. Add *Task* > *Update Process Record*. Add in formula: `deleted = 1;`.
+
 ## Flowchart Elements
 
 * [Events](bpm-events.md)
@@ -122,9 +126,6 @@ Available since version 2.4.0.
 
 `bpm\processEntity\attribute(ATTRIBUTE)` Fetches an attribute value of a process record.
 
-## Self-removal
-
-You can setup BPM process to remove itself. Add *Task* > *Update Process Record*. Add in formula: `deleted = 1;`.
 
 ## Examples
 
