@@ -58,7 +58,7 @@ Check in Administration -> Settings -> Disable Cron parameter.
 
 1. Login via SSH to your server.
 
-2. Configure your crontab by following these [steps](server-configuration.md#user-content-setup-a-crontab).
+2. Configure your crontab by following these [steps](server-configuration.md#setup-crontab).
 
 Note: Crontab should be configured under web-server user, e.g. `crontab -e -u www-data`.
 
