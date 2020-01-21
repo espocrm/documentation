@@ -130,7 +130,7 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 
 ## Web browser cache stucking
 
-Sometimes you can start getting the errors something like Error 500 or blank page upon new record creation. 
+Sometimes you can start getting the errors something like Error 500 or error page loading upon new record creation. 
 
 #### Possible causes and fixes
 
