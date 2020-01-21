@@ -1,7 +1,5 @@
 # Troubleshooting
 
-In this article:
-
 * [Check logs](#check-logs)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Check system requirements](#check-system-requirements)
@@ -132,26 +130,27 @@ MySQL 8.0.4 has changed default authentication method to caching_sha2_password w
 
 ## Web browser cache stucking
 
-Sometimes you can start getting the errors something like Error 500 or endless loading process upon new record creation. 
+Sometimes you can start getting the errors something like Error 500 or blank page upon new record creation. 
+
 #### Possible causes and fixes
 
 #### Problem #1: Old request cached
 
-Errors 500, 400, etc. could appear if a browser cached your previous request's parameters (fields, data, role, etc.) and use them for the current request with depricated or non valid values. 
+Errors 500, 400, etc. could appear if a browser cached your previous request's parameters (fields, data, role, etc.) and use them for the current request with deprecated or non valid values. 
 Open your instance in the web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then clear the browser cache with its advanced settings. Note that Ctrl + F5 will not help.
 
-#### Problem #2: Endless loading process upon new record creation
+#### Problem #2: Error page loading upon new record creation
 
-Open a Developer tools panel in your web browser (F12 button) and press F5. Open the console tab and try to create a record again. In the console tab you might be faced with such statement as:
+Open a Developer tools panel in your web browser (F12 button in Chrome) and press F5. Open the console tab and try to create a record again. In the console tab you might be faced with such statement as:
 ```
 Error: Could not load file 'client/src/views/user/fields/contact.js?r=1578581862'
 ```
 To make sure that this issue applies to the cache stucking problem do:
-1. Open the client/src/views/user/fields directory and make sure that the contact.js file exists. If so then... 
-2. Open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced then ...
+1. Open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced then ...
+2. Open the `client/src/views/user/fields` directory and make sure that the `contact.js` file exists. If so then... 
 3. Clearing cache with a web browser advanced settings.
 
-Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way to fix it. Please try to open this file in your web browser. For example:
+Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way to fix it. Please try to open this file in your web browser directly. For example:
 ```
 www.my-site.com/crm/client/src/views/user/fields/contact.js
 ``` 
@@ -163,8 +162,8 @@ After this reload a web page and try reproduce the error again.
 
 ## Page elements are corrupted or JavaScript scenario doesn't work
 
-1. Open a Developer tools panel in your web browser (F12 button) and press F5. Check the console and network tabs for the file open errors.
-2. Check whether you don't have enabled browser plugin (e.g. Ad-Block) or anyone other software that can restrict executing the javascript files.
+1. Open a Developer tools panel in your web browser (F12 button in Chrome) and press F5. Check the console and network tabs for any errors.
+2. Check whether you don't have enabled any browser plugins (e.g. Ad-Block) or installed any other software that can restrict executing the javascript code.
 
 ## Blank page with Bad server responce error
 
@@ -177,12 +176,12 @@ The possible problem is the connection to database is lost or corrupted.
     'port' => '',
     'charset' => 'utf8mb4',
     'dbname' => 'espocrm',
-    'user' => 'root',
+    'user' => 'espocrm',
     'password' => '123GhjOe33h'
 ],
 ```
-2. If the params are correct, then check whether the mysql service runs. You can do it by:
-* Opening via database manager as phpMyAdmin etc.
-* Run this command in the terminal `service mysql status`.
+2. If the params are correct, then check whether the mysql service runs. You can do it:
+* By any database manager like phpMyAdmin etc.
+* By terminal using this command `service mysql status`.
 
 After fix, you should press F5 to reload a web page. 
