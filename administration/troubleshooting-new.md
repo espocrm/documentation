@@ -148,7 +148,7 @@ Error: Could not load file 'client/src/views/user/fields/contact.js?r=1578581862
 To make sure that this issue applies to the cache stucking problem do:
 1. Open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced then ...
 2. Open the `client/src/views/user/fields` directory and make sure that the `contact.js` file exists. If so then... 
-3. Clearing cache with a web browser advanced settings.
+3. Clear cache with a web browser advanced settings.
 
 Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after the cache clearing. In this case there is one more way to fix it. Please try to open this file in your web browser directly. For example:
 ```
