@@ -122,6 +122,9 @@ Available since version 2.4.0.
 
 `bpm\processEntity\attribute(ATTRIBUTE)` Fetches an attribute value of a process record.
 
+## Self-removal
+
+You can setup BPM process to remove itself. Add *Task* > *Update Process Record*. Add in formula: `deleted = 1;`.
 
 ## Examples
 
