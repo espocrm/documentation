@@ -10,7 +10,7 @@ On the list view make a search with needed filters and *Select All Results*.
 
 ### Step 2
 
-Click the Actions dropdown, then click Export.
+Click the *Actions* dropdown, then click *Export*.
 
 ![Click Export action](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/export/export-2.png)
 
