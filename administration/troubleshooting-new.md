@@ -1,5 +1,7 @@
 # Troubleshooting
 
+In this article:
+
 * [Check logs](#check-logs)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Check system requirements](#check-system-requirements)
@@ -139,7 +141,7 @@ Sometimes you can start getting the errors something like Error 500 or blank pag
 Errors 500, 400, etc. could appear if a browser cached your previous request's parameters (fields, data, role, etc.) and use them for the current request with deprecated or non valid values. 
 Open your instance in the web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then clear the browser cache with its advanced settings. Note that Ctrl + F5 will not help.
 
-#### Problem #2: Error page loading upon new record creation
+#### Problem #2: Blank page upon new record creation
 
 Open a Developer tools panel in your web browser (F12 button in Chrome) and press F5. Open the console tab and try to create a record again. In the console tab you might be faced with such statement as:
 ```
