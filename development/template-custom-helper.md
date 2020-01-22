@@ -34,6 +34,7 @@ class MyHelper
         $dateTime = $context['data']['root']['__dateTime'];
         $metadata = $context['data']['root']['__metadata'];
         $entityManager = $context['data']['root']['__entityManager'];
+        $serviceFactory = $context['data']['root']['__serviceFactory'];
 
         $html = "<span style=\"color: {$color};\">" . $value . "</span>";
 
