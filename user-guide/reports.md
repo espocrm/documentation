@@ -12,6 +12,7 @@ In this article:
 * [Filters](#filters)
 * [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
+* [Printint to PDF](#printing-to-pdf)
 * [Syncing with Target Lists](#syncing-with-target-lists)
 * [List view filters based on reports](#report-filters)
 * [Reports panels](#report-panels)
@@ -218,6 +219,16 @@ List reports can be displayed as a list or a total number of records.
 It's possible to make system to send report results to certain users on regular basis according specified time. This must be configured for certain reports individually.
 
 Max number of records that can be send in email by default is 3000. You can increase it by adding a parameter to data/config.php: `'reportSendingListMaxCount' => 5000`.
+
+## Printing to PDF
+
+Available since Advanced Pack 2.5.0, compatible with EspoCRM 5.8.0 and later.
+
+Note: A user needs to have an access to *Template* scope (set in *Role*).
+
+On the report detail view on *Report* panel click *...* dropdown, then click *Print to PDF*. 
+
+Custom PDF templates can be created at Administration > PDF Templates. 
 
 ## Syncing with Target Lists
 
