@@ -14,7 +14,7 @@
 * [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
 * [ACL customization](https://github.com/espocrm/documentation/blob/master/development/acl.md)
 * Misc
-  * [Template custom helpers](template-custom-helper.md)
+  * [Template (PDF) custom helpers](template-custom-helper.md)
   * [Defining new funtions for formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
   * [Custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
   * [Duplicate checking](https://github.com/espocrm/documentation/blob/master/development/duplicate-check.md)
