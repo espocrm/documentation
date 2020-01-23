@@ -12,7 +12,7 @@ In this article:
 * [Filters](#filters)
 * [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
-* [Printint to PDF](#printing-to-pdf)
+* [Printing to PDF](#printing-to-pdf)
 * [Syncing with Target Lists](#syncing-with-target-lists)
 * [List view filters based on reports](#report-filters)
 * [Reports panels](#report-panels)
