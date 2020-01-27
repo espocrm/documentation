@@ -48,7 +48,7 @@ class MyParam extends \Espo\Core\Injectable
 
 Clear cache.
 
-In frontend in *view* you can access your parameter this way:
+In frontend in *view* you can access your parameter the following way:
 
 ```js
     this.getHelper().getAppParam('myParam');
