@@ -2,7 +2,7 @@
 
 Since EspoCRM 5.8.0.
 
-App params are returned by backend once a user logged in. Example: list of entity types available for printing to PDF.
+App params are returned by backend once a user logged in. You can use this params in frontend. Example: list of entity types available for printing to PDF.
 
 ## Custom app params
 
