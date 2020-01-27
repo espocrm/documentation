@@ -16,6 +16,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
                 "__APPEND__",
                 {
                     "label": "Some Label",
+                    "name": "someName",
                     "action": "someName",
                     "style": "default",
                     "acl": "edit",
