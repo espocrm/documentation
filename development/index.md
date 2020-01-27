@@ -19,6 +19,7 @@
   * [Custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
   * [Duplicate checking](https://github.com/espocrm/documentation/blob/master/development/duplicate-check.md)
   * [Database indexes](https://github.com/espocrm/documentation/blob/master/development/db-indexes.md)
+  * [App params](https://github.com/espocrm/documentation/blob/master/development/app-params.md)
 
 ### Frontend
 * [View](https://github.com/espocrm/documentation/blob/master/development/view.md)
