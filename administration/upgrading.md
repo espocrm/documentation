@@ -14,6 +14,18 @@ php command.php upgrade
 
 This will check the next available version, download it and install. Once upgrade is complete it will prompt to run the command again, if a newer version is available.
 
+#### Available Parameters
+
+- `-y` - disable confirmation.
+- `-s` - run an upgrade in a single process.
+- `--file="EspoCRM-upgrade.zip"` - specify a path to an upgrade package.
+
+Example of using parameters:
+
+```
+php command.php upgrade -y --file="EspoCRM-upgrade.zip"
+```
+
 ## Recommendations
 
 1. Make a [backup](backup-and-restore.md) before upgrading.
