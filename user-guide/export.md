@@ -4,7 +4,7 @@ EspoCRM has the ability to export records to XLSX (Excel) and CSV formats.
 
 ### Step 1
 
-On the list view make a search with needed filters and *Select All Results*.
+On the list view make a search with needed filters and then click *Select All Results* (from the dropdown, see the screenshot below).
 
 ![Select all results](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/export/export-1.png)
 
