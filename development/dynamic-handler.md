@@ -66,7 +66,7 @@ Clear cache after all.
 
 Since version 5.8.0 it's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
 
-In metadata > clienDefs:
+In metadata > clientDefs:
 
 ```json
 {
