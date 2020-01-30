@@ -3,6 +3,7 @@
 In this article:
 
 * [Overview](#overview)
+* [Stream](#stream)
 * [Email-to-Case](#email-to-case)
 * [Knowledge Base](#knowledge-base)
 * [Customer Portal](#customer-portal)
@@ -22,15 +23,17 @@ New cases are supposed to be created by the following scenarios:
 * Automatically when a new email came to a specific mailbox.
 * Automatically by a Workflow rule.
 
-Case record has a *stream* that can be utilized for a communication between customer and service. 
-
-CRM users can make *internal posts* that won't be visible in a customer portal. For this, you need to click the lock icon next to *Post* button.
-
 When the new case is created by a portal user it's not assigned to any user. By utilizing [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md) administrator can create rule that will notify certain users about a new case in the system. Workflows also provide an ability to apply assignment rule to new cases, i.e. Round-Robin and Least-Busy rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
 
 To prevent overlooking of new cases, users can add Case entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new case.
 
 Note: If there is no portal user associated with a linked contact, then the customer won't receive email notifications about updates in the Stream. You need to use emails for communication with the customer.
+
+## Stream
+
+Case record has a stream that can be utilized for a communication between customer and service.
+
+CRM users can make *internal posts* that won't be visible in a customer portal. For this, you need to click the lock icon next to *Post* button.
 
 ## Email-to-Case
 
