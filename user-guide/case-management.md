@@ -17,11 +17,11 @@ Case entity can be associated with one Account and/or with multiple Contacts.
 
 New cases are supposed to be created by the following scenarios:
 
-* Manually by CRM users;
-* Manually by users of the customer portal;
-* Through the API (e.g. through the web form);
-* Automatically when a new email came to a specific mailbox.
-* Automatically by a Workflow rule.
+* Manually by CRM users
+* Manually by users of the customer portal
+* Through the API (e.g. through the web form)
+* Automatically when a new email came to a specific mailbox
+* Automatically by a Workflow rule
 
 When the new case is created by a portal user it's not assigned to any user. By utilizing [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md) administrator can create rule that will notify certain users about a new case in the system. Workflows also provide an ability to apply assignment rule to new cases, i.e. Round-Robin and Least-Busy rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
 
