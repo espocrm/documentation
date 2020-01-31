@@ -545,6 +545,7 @@ Field types having multiple attributes:
 * Link fields have two attributes: *fieldId*, *fieldName*.
 * Link-Multiple fields have two attributes: *fieldIds*, *fieldNames*.
 * Link-Parent fields have tree attributes: *fieldId*, *fieldType*, *fieldName*.
+* Currency fields have two attributes: *field*, *fieldCurrency*.
 
 Where *field* is the name of the field.
 
