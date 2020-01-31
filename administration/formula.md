@@ -538,8 +538,6 @@ A name of the relationship. Available link names can be found at Administration 
 
 Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields. 
 
-Attribute names must be wrapped in quotes. E.g. `'assignedUserId'`.
-
 Field types having multiple attributes: 
 
 * Link fields have two attributes: *fieldId*, *fieldName*.
@@ -547,6 +545,8 @@ Field types having multiple attributes:
 * Link-Parent fields have tree attributes: *fieldId*, *fieldType*, *fieldName*.
 
 Where *field* is the name of the field.
+
+Attribute names must be wrapped in quotes when used as function arguments. E.g. `'assignedUserId'`.
  
 #### ENTITY_TYPE
 
