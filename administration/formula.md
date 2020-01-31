@@ -534,6 +534,8 @@ Section comment:
 
 A name of the relationship. Available link names can be found at Administration > Entity Manager > ... > Relationships.
 
+Link names must be wrapped in quotes when used as function arguments.
+
 #### ATTRIBUTE
 
 Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields. 
@@ -546,11 +548,13 @@ Field types having multiple attributes:
 
 Where *field* is the name of the field.
 
-Attribute names must be wrapped in quotes when used as function arguments. E.g. `'assignedUserId'`.
+Attribute names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
  
 #### ENTITY_TYPE
 
 ENTITY_TYPE list is available at Administration > Entity Manager.
+
+Entity type names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
 
 #### FILTER
 
