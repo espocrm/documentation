@@ -226,9 +226,9 @@ Available since Advanced Pack 2.5.0, compatible with EspoCRM 5.8.0 and later.
 
 Note: A user needs to have an access to *Template* scope (set in *Role*).
 
-Note: You need to have at least one PDF Template for Report entity type. A template can be created at Administration > PDF Templates.
+Note: You need to have at least one PDF Template for Report entity type. The template can be created at Administration > PDF Templates.
 
-On the report detail view on *Report* panel click *...* dropdown, then click *Print to PDF*. 
+On the report detail view on *Report* panel click '*...*' dropdown, then click *Print to PDF*. 
 
 ## Syncing with Target Lists
 
