@@ -10,6 +10,8 @@ You may also need to set fields, that are supposed to be calculated, read-only v
 
 Admin can run 'Recalculate Formula' for specific records from the list view.
 
+Formula can also be utilized in Workflows and BPM tool.
+
 In this article:
 
 * [Syntax](#syntax)
