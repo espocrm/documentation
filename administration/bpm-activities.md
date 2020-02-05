@@ -110,6 +110,8 @@ Created User Task can be canceled by a process. There are two ways:
 
 ![User Task](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/task-user.png)
 
+It's possible to display process task on the target entity detail view. You need to utilize *Report Panels* feature for this.
+
 ----
 
 ## Script Task
