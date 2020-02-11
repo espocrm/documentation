@@ -111,7 +111,7 @@ to
 ]
 ```
 
-## Admim password is lost, can't log in
+## Admin password is lost, can't log in
 
 Available since EspoCRM 5.8.3.
 
