@@ -1,5 +1,9 @@
 # Troubleshooting
 
+In this article:
+
+* [Check logs](#check-logs)
+
 ## Check logs
 
 To find out the problem, you have to check error log files.
