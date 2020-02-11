@@ -110,3 +110,15 @@ to
     ...
 ]
 ```
+
+## Admim password is lost, can't log in
+
+Available since EspoCRM 5.8.3.
+
+Run the following command in CLI:
+
+```
+php command.php SetPassword [username]
+```
+
+where `[username]` is a user name, e.g. `admin`.
