@@ -28,7 +28,13 @@ List report results the list of records that meet the specified criteria.
 
 To create new list report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at List Report section.
 
-At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column e.g. width and align.
+At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column: 
+
+* Width – width in percents;
+* Align – left or right;
+* Link – a value we be displayed as a link leading to the record detail view;
+* Export Only – column won't be displated in report results on UI, but available in export;
+* Not Sortable – column won't be able to be ordered by, some fields are not available for sorting.
 
 Choose needed sorting at _List Order_ field. 
 
@@ -38,7 +44,7 @@ _Runtime Filters_ allow you to specify different filters before you run the repo
 
 You can __export__ list report results to excel and csv formats.
 
-List report exampl, showing leads that doesn't have any Call related to them:
+List report example, showing leads that doesn't have any Call related to them:
 
 ![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/list.png)
 
