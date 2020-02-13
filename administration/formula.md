@@ -498,6 +498,9 @@ $hash = password\hash($password);
 #### array\length
 `array\length(LIST)` Returns count of elements in LIST.
 
+#### array\at
+`array\length(LIST, INDEX)` Returns value by INDEX. (since version 5.8.3)
+
 ### Ext
 
 #### ext\account\findByEmailAddressDomain
