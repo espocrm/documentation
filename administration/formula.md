@@ -27,6 +27,7 @@ In this article:
   * [Env](#env)
   * [Password](#password)
   * [Array](#array)
+  * [Ext](#ext)
 * [Values](#values)
 * [Variables](#variables)
 * [Comments](#comments)
@@ -496,6 +497,11 @@ $hash = password\hash($password);
 
 #### array\length
 `array\length(LIST)` Returns count of elements in LIST.
+
+### Ext
+
+#### ext\account\findByEmailAddressDomain
+`ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)` Finds account by email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
 
 
 ## Values
