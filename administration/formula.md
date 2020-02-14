@@ -131,7 +131,7 @@ If LENGTH is negative, then that many characters will be omitted from the end of
 `string\contains(STRING, NEEDLE)`  Returns possition of NEEDLE in STRING, *false* if not found. (since version 5.7.3)
 
 #### string\test
-`string\test(STRING, REGULAR_EXPRESSION)`  Search a match between REGULAR_EXPRESSION and STRING.
+`string\test(STRING, REGULAR_EXPRESSION)`  Search a match between REGULAR_EXPRESSION and STRING. Returns TRUE of FALSE.
 
 #### string\length
 `string\length(STRING)` The length of STRING.
