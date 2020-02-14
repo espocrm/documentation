@@ -152,6 +152,24 @@ PAD_STRING by default is a whitespace string `' '`.
 
 PAD_TYPE can be *'right'*, *'left'*, *'both'*. By default it is *'right'*.
 
+#### string\match
+`string\match(STRING, REGULAR_EXPRESSION, [OFFSET])`  Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
+
+Example:
+
+`string\match('string\\match('{token1} foo {token2} bar', '/{[^}]*}/')`
+
+will return `'{token1}'`.
+
+#### string\matchAll
+`string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`  Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
+
+Example:
+
+`string\matchAll('string\\match('{token1} foo {token2} bar', '/{[^}]*}/')`
+
+will return an array `['{token1}', '{token2}']`.
+
 ### Datetime
 
 #### datetime\today
