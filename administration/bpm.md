@@ -126,6 +126,14 @@ Available since version 2.4.0.
 
 `bpm\processEntity\attribute(ATTRIBUTE)` Fetches an attribute value of a process record.
 
+#### bpm\startProcess
+
+`bpm\startProcess(FLOWCHART_ID, TARGET_TYPE, TARGET_ID, [ELEMENT_ID])` Starts a process. Available since Advanced Pack 2.5.2.
+
+Example:
+
+`bpm\startProcess('flowchart-id', 'Account', 'account-id');`
+
 
 ## Examples
 
