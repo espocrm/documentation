@@ -236,6 +236,23 @@ Note: You need to have at least one PDF Template for Report entity type. The tem
 
 To print a report: on the report detail view on *Report* panel click '*...*' dropdown, then click *Print to PDF*. 
 
+In PDF table `{{reportTable}}` is used to print a report results table.
+
+Example: 
+
+```
+{{reportTable border=1 borderColor="#333" cellpadding=2 fontSize=9}}
+```
+
+Available attributes:
+
+* border – a border with
+* borderColor
+* cellpadding
+* fontSize
+* color – a text color
+* flip – to flip table, true or false
+
 ## Syncing with Target Lists
 
 It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
