@@ -11,6 +11,12 @@ There are two **types** of signals:
 * Regular signals
 * Object signals
 
+In this article:
+
+* [Regular signals](#regular-signals)
+* [Object signals](#object-signals)
+* [Naming clarification](#naming-clarification)
+
 ## Regular signals
 
 Can be used within running processes. Can NOT be used to start processes or workflows.
