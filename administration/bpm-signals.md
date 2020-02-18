@@ -2,7 +2,7 @@
 
 Signal event are events with a defined name. Signals are broadcasted globally, they are not limited by a process scope. It means that signal triggered in one process can be catched in another process.
 
-There are set of signals which are broadcasted upon specific events in application. These *default signals* are listed below.
+There are set of signals which are broadcasted upon specific events in application. These *built-in signals* are listed below.
 
 It's possible to broadcast custom signals in BPM process. 
 
