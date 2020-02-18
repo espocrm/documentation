@@ -32,7 +32,9 @@ You also can use [Gateways](bpm-gateways.md) to diverge a flow upon certain cond
 
 ## Handling opting-out
 
-Once a target clicked on the unsibscribe link, we want the whole process to be terminated.
+Once a target (recipient of an email) clicked on the unsibscribe link, the system broadcasts a signal `optOut.Lead.some-lead-id`, where *some-lead-id* is an actual ID of the lead record.
+
+We want the whole process to be terminated once lead is opted out.
 
 For this, you need to add *Event Sub-Process*. Put *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `optOut.Lead.{$id}`. You also need to check the parameter *Is Interuppting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.  
 
