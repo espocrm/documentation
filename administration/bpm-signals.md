@@ -6,7 +6,7 @@ There are set of signals which are broadcasted upon specific events in applicati
 
 It's possible to broadcast custom signals in BPM process. 
 
-There are two **types** of signals:
+There are two *types* of signals:
 
 * Regular signals
 * Object signals
