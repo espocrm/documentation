@@ -34,7 +34,7 @@ You also can use [Gateways](bpm-gateways.md) to diverge a flow upon certain cond
 
 Once a target clicked on the unsibscribe link, we want the whole process to be terminated.
 
-For this, you need to add *Event Sub-Process*. Put *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `@optOut`. You also need to check the parameter *Is Interuppting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.  
+For this, you need to add *Event Sub-Process*. Put *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `optOut.Lead.{$id}`. You also need to check the parameter *Is Interuppting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.  
 
 Here, inside the sub-process, you can also add *Task* that will do some manipulations with the target record (*Lead*).
 
