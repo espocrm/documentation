@@ -6,10 +6,6 @@ There are set of signals which are broadcasted upon specific events in applicati
 
 It's possible to broadcast custom signals in BPM process. 
 
-You can use placeholders when defining a signal name. E.g. `test-signal-{$id}`, *{$id}* will be replaced with ID of a target record.
-
-You can also use process variables as placeholders. E.g. `test-signal-{$$test}`, *{$$test}* will be replaced with a value of the process variable *{$test}*.
-
 There are two **types** of signals:
 
 * Regular signals
