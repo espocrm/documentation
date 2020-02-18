@@ -67,7 +67,11 @@ E.g. `mySignal.{$status}.{$id}` – type and id are fields of the target record.
 
 ## Object signals
 
-Broadcasted along with the entity (record). Prefixed with `@` character. Can be used to start processes or workflows.
+Broadcasted along with the entity (record). Prefixed with `@` character.
+
+This signal type can be used only to initiate a new process or trigger a workflow rule. Signal Intermediate Event (Catching) doesn't catch object signals. 
+
+Example: A process triggers signal *@approve*. A target record of *Lead* entity type is attached to the signal. You have another BPM flowchar for *Lead* entity type that starts with *@approve* signal. In this case, a new process will be started, and lead record from the first process will be passed as a target record of the second process. 
 
 #### Default signals
 
