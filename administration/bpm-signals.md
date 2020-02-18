@@ -21,7 +21,9 @@ In this article:
 
 Can be used within running processes. Can NOT be used to start processes or workflows.
 
-#### Default signals
+### Built-in signals
+
+#### Default
 
 * *create.ENTITY_TYPE* – record of ENTITY_TYPE created, e.g. `create.Lead`
 * *update.ENTITY_TYPE.ID* – record update, e.g. `update.Lead.007`
@@ -79,7 +81,9 @@ This signal type can be used only to initiate a new process or trigger a workflo
 
 Example: A process triggers signal *@approve*. A target record of *Lead* entity type is attached to the signal. You have another BPM flowchar for *Lead* entity type that starts with *@approve* signal. In this case, a new process will be started, and lead record from the first process will be passed as a target record of the second process. 
 
-#### Default signals
+### Built-in signals
+
+#### Default
 
 * *@create* – record created
 * *@update* – record updated
