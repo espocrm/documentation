@@ -23,6 +23,8 @@ Can be used within running processes. Can NOT be used to start processes or work
 
 ### Built-in signals
 
+Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) will/should be replaced by corresponding values.
+
 #### Default
 
 * *create.ENTITY_TYPE* – record of ENTITY_TYPE created, e.g. `create.Lead`
@@ -83,6 +85,8 @@ Example: A process triggers signal *@approve*. A target record of *Lead* entity 
 
 ### Built-in signals
 
+Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced by corresponding values.
+
 #### Default
 
 * *@create* – record created
@@ -113,3 +117,5 @@ Example: A process triggers signal *@approve*. A target record of *Lead* entity 
 * *ID* – id of a record that you can obtain from the browser address bar
 * *ENTITY_TYPE* – entity type of the record (not translated), you can obtain it at Administration > Entity Manager
 * *LINK_NAME* – relation name, you obtain it at Administration > Entity Manager
+* *FOREIGN_ID* – id of a related record
+
