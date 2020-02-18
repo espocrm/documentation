@@ -4,16 +4,20 @@ Signal event are events with a defined name. Signals are broadcasted globally, t
 
 There are set of signals which are broadcasted upon specific events in application. These *default signals* are listed below.
 
-It's possible to broadcast custom signals in BPM process. You can use placeholders when defining a signal name.
+It's possible to broadcast custom signals in BPM process. 
 
-Two types of signals:
+You can use placeholders when defining a signal name. E.g. `test-signal-{$id}`, *{$id}* will be replaced with ID of a target record.
+
+You can also use process variables as placeholders. E.g. `test-signal-{$$test}`, *{$$test}* will be replaced with a value of the process variable *{$test}*.
+
+There are two **types** of signals:
 
 * Regular signals
 * Object signals
 
 ## Regular signals
 
-Can be used within running processes.
+Can be used within running processes. Can NOT be used to start processes or workflows.
 
 #### Default signals
 
