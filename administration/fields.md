@@ -140,7 +140,8 @@ A currency value, a pair of number and currency.
 Parameters:
 
 * Min – a validation: min acceptable value; if empty, then no validation applied;
-* Max – a validation: max acceptable value; if empty, then no validation applied.
+* Max – a validation: max acceptable value; if empty, then no validation applied;
+* Only default currency – only one (default) currency will be available if enabled (since 5.9.0).
 
 ![Currency](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency.png)
 
