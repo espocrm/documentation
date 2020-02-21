@@ -11,7 +11,7 @@ $client->setApiKey('API_KEY');
 
 $response = $client->request('POST', 'Lead', [
     'firstName' => 'Test',
-    'lastName' => 'Hello'
+    'lastName' => 'Hello',
 ]);
 ```
 
