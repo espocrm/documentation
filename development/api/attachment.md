@@ -25,7 +25,7 @@ Payload fields:
     "role": "Attachment",
     "relatedType": "Document",
     "field": "file",
-    "file": "data:text/plain;base64,ENCODED_FILE_CONTENTS"
+    "file": "data:text/plain;base64,FILE_CONTENTS_ENCODED_WITH_BASE64"
 }
 ```
 
@@ -40,6 +40,7 @@ Returns attachment record attributes:
 
 Returned ID can be used in the following API call that creates or updated a record to which the attachment is supposed to be related to. In our example we create a record of *Document* entity type. You will need to fill *fileId* attribute with ID returned after *POST Attachment* request.
 
+
 #### Example (Attachment-Multiple type)
 
 
@@ -53,5 +54,5 @@ Payload example (*File* type):
     "parentType": "Note",
     "parentId": "id-of-note-record",
     "field": "attachments",
-    "file": "data:text/plain;base64,ENCODED_FILE_CONTENTS"
+    "file": "data:text/plain;base64,FILE_CONTENTS_ENCODED_WITH_BASE64"
 }
