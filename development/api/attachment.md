@@ -25,7 +25,7 @@ Payload fields:
     "role": "Attachment",
     "relatedType": "Document",
     "field": "file",
-    "file": "data:application/octet-stream;base64,ENCODED_FILE_CONTENTS"
+    "file": "data:text/plain;base64,ENCODED_FILE_CONTENTS"
 }
 ```
 
@@ -53,5 +53,5 @@ Payload example (*File* type):
     "parentType": "Note",
     "parentId": "id-of-note-record",
     "field": "attachments",
-    "file": "data:application/octet-stream;base64,ENCODED_FILE_CONTENTS"
+    "file": "data:text/plain;base64,ENCODED_FILE_CONTENTS"
 }
