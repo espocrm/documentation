@@ -1,5 +1,43 @@
 # API Client Implementation in PHP
 
+* [Usage](#usage)
+* [Class](#class)
+
+## Usage
+
+```php
+$client = new EspoApiClient('https://your-espocrm-site');
+$client->setApiKey('API_KEY');
+
+$response = $client->request('POST', 'Lead', [
+    'firstName' => 'Test',
+    'lastName' => 'Hello'
+]);
+```
+
+### Api Key Auth
+
+```php
+$client = new EspoApiClient('https://your-espocrm-site');
+$client->setApiKey('API_KEY');
+```
+
+### HMAC Auth
+
+```php
+$client = new EspoApiClient('https://your-espocrm-site');
+$client->setApiKey('API_KEY');
+$client->setSecretKey('SECRET_KEY');
+```
+
+### Auth with Username and Password (as regular user)
+
+```php
+$client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
+```
+
+
+
 ## Class
 
 ```php
@@ -211,37 +249,4 @@ class EspoApiClient
 }
 
 
-```
-
-## Usage
-
-```php
-$client = new EspoApiClient('https://your-espocrm-site');
-$client->setApiKey('API_KEY');
-
-$response = $client->request('POST', 'Lead', [
-    'firstName' => 'Test',
-    'lastName' => 'Hello'
-]);
-```
-
-### Api Key Auth
-
-```php
-$client = new EspoApiClient('https://your-espocrm-site');
-$client->setApiKey('API_KEY');
-```
-
-### HMAC Auth
-
-```php
-$client = new EspoApiClient('https://your-espocrm-site');
-$client->setApiKey('API_KEY');
-$client->setSecretKey('SECRET_KEY');
-```
-
-### Auth with Username and Password (as regular user)
-
-```php
-$client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
 ```
