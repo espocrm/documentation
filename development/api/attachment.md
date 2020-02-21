@@ -56,3 +56,14 @@ Payload example (*File* type):
     "field": "attachments",
     "file": "data:text/plain;base64,FILE_CONTENTS_ENCODED_WITH_BASE64"
 }
+```
+
+This request will upload attachment and will relate to existing Note (bacause *parentId* is specified).
+
+It's possible to upload attachment before Note creation. When create Note, you need to specify attachment ID in *attachmentsIds* attribute:
+
+```json
+{
+    "attachmnetsIds": ["id-of-attachment"]
+}
+```
