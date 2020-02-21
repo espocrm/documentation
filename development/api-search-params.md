@@ -210,9 +210,7 @@ For array, multi-enum, checkbox fields.
 
 ```json
 {
-    "type": "arrayAnyOf",
-    "attribute": "fieldName",
-    "value": ["Value 1", "Value 2"]
+    "type": "arrayIsEmpty",
+    "attribute": "fieldName"
 }
 ```
-
