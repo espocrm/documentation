@@ -58,7 +58,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
 
 Clear cache.
 
-If you open in the browser URL `your-espo-url#Account/test/myId` it will execute *actionTest* method. *options* will be have the value `{id: 'myId'}`
+If you open in the browser URL `your-espo-url#Account/test/myId` it will execute *actionTest* method. Argument *options* will be the object `{id: 'myId'}`
 
 ## Rendering view
 
