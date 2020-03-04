@@ -2,9 +2,17 @@
 
 Proper database indexes can drastically improve a performance of list view loading, reports, search operations etc.
 
+After changes you need to rebuild database. It's better to do from CLI to avoid timeout issue.
+
+Command to run rebuld:
+
+```
+php rebuild.php
+```
+
 ## Defining indexes
 
-Indexes are defined in metadata > entityDefs. 
+Indexes are defined in metadata > entityDefs.
 
 ### Example
 
