@@ -97,6 +97,18 @@ You can use placeholders in *Name* and *Instrictions*:
 
 Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
 
+### Dispaying on detail view
+
+It's possible to display process task on the target entity detail view.
+
+#### Using Report Panels
+
+You can utilize *Report Panels* feature for this. Create a list report, that shows all user tasks. Then create a report panel (from administration) for needed entity type with this list report selected.
+
+#### Using created relationship
+
+It's possible to create Children-to-Parent relationship between some entity type and User Task, then User Tasks will be available in *Relationships* layout of that entity type. Administration > Entity Manager > BpmnUserTask > Relatinships > edit Children-to-Parent > check your entity type at *Foreign Fields*.
+
 ### Resolution
 
 It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
@@ -110,7 +122,6 @@ Created User Task can be canceled by a process. There are two ways:
 
 ![User Task](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/task-user.png)
 
-It's possible to display process task on the target entity detail view. You need to utilize *Report Panels* feature for this.
 
 ----
 
