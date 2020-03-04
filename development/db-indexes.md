@@ -39,7 +39,7 @@ For *Lead* entity type.
 }
 ```
 
-You need to run rebuild: Administratin > Rebuild.
+You need to run rebuild after changes.
 
 ## Forcing index usage in ORM
 
