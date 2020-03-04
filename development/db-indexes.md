@@ -39,6 +39,8 @@ For *Lead* entity type.
 }
 ```
 
+Note: Column names should be in camel case.
+
 You need to run rebuild after changes.
 
 ## Forcing index usage in ORM
