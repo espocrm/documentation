@@ -1,5 +1,15 @@
 # Text Search
 
+In this article:
+
+* [List view text search](#list-view-text-search)
+* [Global search](#global-search)
+* [Full-text search](#full-text-search)
+
+See also:
+
+* [Seach types in EspoCRM: What you should know](https://www.espocrm.com/tips/search-types/)
+
 ## List view text search
 
 On the record list view it's possible to perform text search.
@@ -8,11 +18,11 @@ The field list, which is used in filtering, can be configured at Administration 
 
 It's possible to use the wildcard `*` (available since 5.3.0 version, for previous versions use `%`).
 
-![TExt Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/1.png)
+![Text Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/1.png)
 
 There is an option to use 'contains' operator for varchar fields by default. Parameter is available at Administration > Settings. Note, that it can affect performance.
 
-## Global Search
+## Global search
 
 Global Search performs a search in multiple entity types simultaneously.
 
@@ -46,6 +56,4 @@ Note: MySQL option *ft_min_word_len* defines min word length available for full-
 
 Note: MySQL has a blacklist of words that are not available for full-text search. E.g. *test*, *hello*.
 
-## See also
 
-[Seach types in EspoCRM: What you should know](https://www.espocrm.com/tips/search-types/)
