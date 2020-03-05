@@ -16,7 +16,7 @@ On the record list view it's possible to perform text search.
 
 The field list, which is used in filtering, can be configured at Administration > Entity Manager > Edit specific entity type > Text Filter Fields.
 
-It's possible to use the wildcard `*` (available since 5.3.0 version, for previous versions use `%`).
+It's possible to use the wildcard `*`.
 
 ![Text Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/1.png)
 
