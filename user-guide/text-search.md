@@ -36,9 +36,7 @@ The field list which is used in filtering can be configured at Administration > 
 
 Provides an ability to perform a much faster and comprehensive text search.
 
-Full-text search can be enabled for a specified entity type at Administration > Entity Manager > Edit specific entity type > Full-text search. Running rebuild is required.
-
-Note: MySQL 5.5 doesn't support full-text search for InnoDB tables. 5.6.4 and later versions do support.
+Full-text search can be enabled for a specified entity type at Administration > Entity Manager > Edit specific entity type > Full-text search. Running rebuild is required. Run from CLI: `php rebuild.php`.
 
 Full-text search is always applied in Global Search (for entity types with enabled full-text search).
 
@@ -55,5 +53,3 @@ For InnoDB tables the following operators are available:
 Note: MySQL option *ft_min_word_len* defines min word length available for full-text search. By default it's 4. If you change this paramater, you need also to set EspoCRM *fullTextSearchMinLength* parameter at data/config.php: `'fullTextSearchMinLength' => 3`.
 
 Note: MySQL has a blacklist of words that are not available for full-text search. E.g. *test*, *hello*.
-
-
