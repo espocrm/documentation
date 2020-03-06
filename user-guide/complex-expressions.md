@@ -104,7 +104,7 @@ E.g. `IFNULL:(name, '')` will return empty string if *name* is NULL.
 
 If the first argument equals the second, it returns NULL, otherwise it returns the 
 
-E.g. `NULLIF:(name, '')` will return NULL if *nams* is empty string.
+E.g. `NULLIF:(name, '')` will return NULL if *name* is empty string.
 
 ### Date & time
 
