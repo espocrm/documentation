@@ -24,8 +24,6 @@ You can create post related to a certain record. You are also able to attach mul
 
 ## Posts to users
 
-_This feature is available since version 3.8.0._
-
 Users can create post to certain users, to certain teams, to all users and to self. An access for this ability is controlled by `Assignment Permission` field of Roles.
 
 ## Filtering
@@ -34,6 +32,5 @@ You can filter what to show in a stream: `All`, `Posts` or `Updates`.
 
 ## See also
 
-[Activity Stream – Keep up with changes](https://www.espocrm.com/tips/activity-stream/)
-
-[Following records in EspoCRM](https://www.espocrm.com/tips/follow-records/)
+* [Activity Stream – Keep up with changes](https://www.espocrm.com/tips/activity-stream/)
+* [Following records in EspoCRM](https://www.espocrm.com/tips/follow-records/)
