@@ -1,5 +1,8 @@
 # Complex expressions
 
+* [Functions](#functions)
+* [Attribute names](#attribute-names)
+
 ## Functions
 
 All functions should be in upper case. You need to append the trailing colon character to a function name.
@@ -286,3 +289,16 @@ E.g. `AND:(a, b, c)` corresponds to SQL statement `a AND b AND c`.
 #### NOT
 
 E.g. `NOT:(a)` corresponds to SQL statement `NOT a`.
+
+
+## Attribute names
+
+Attribute names usually are same as a system field names. Fields are listed in Entity Manager > ... > Fields.
+
+Field types having attributes named differently: 
+
+* Link: *fieldId*, *fieldName*.
+* Link-Parent: *fieldId*, *fieldType*.
+* Currency: *field*, *fieldCurrency*.
+
+Where *field* is the name of the field.
