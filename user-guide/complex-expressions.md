@@ -5,7 +5,7 @@
 
 ## Functions
 
-All functions should be in upper case. You need to append the trailing colon character to a function name.
+Function names should be in UPPER_CASE. You need to append the trailing colon character to a function name. There should not be any whitespace between function name and parentheses.
 
 Examples:
 
@@ -16,6 +16,8 @@ CONCAT:(firstName, ' ', lastName)
 ```
 IF:(EQUAL:(status, 'Complete'), 'Complete', 'Not Complete')`
 ```
+
+Functions:
 
 * [Flow control](#flow-control)
 * [Comparison](#comparison)
@@ -294,6 +296,8 @@ E.g. `NOT:(a)` corresponds to SQL statement `NOT a`.
 ## Attribute names
 
 Attribute names usually are same as a system field names. Fields are listed in Entity Manager > ... > Fields.
+
+Attribute names should be in lowerCamelCase.
 
 Field types having attributes named differently: 
 
