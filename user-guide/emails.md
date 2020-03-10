@@ -31,7 +31,7 @@ Users can setup SMTP settings in their Personal Email Accounts as well as in Pre
 
 Users can have multiple SMTP accounts.
 
-Important: Email addresses user can use to send emails from must be defined in *Emails* field of *User* record.
+Important: Email addresses user can use to send emails from must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
 
 ## Gmail accounts
 
