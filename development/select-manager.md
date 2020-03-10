@@ -106,7 +106,12 @@ namespace Espo\Custom\SelectManagers;
 
 class Account extends \Espo\Modules\Crm\SelectManagers\Account
 {
-
+    protected function filterMyCustomFilter(&$result)
+    {
+        $result['whereClause'][] = [
+            'someAttribute' => 'Some Value',
+        ];
+    }
 }
 ```
 
