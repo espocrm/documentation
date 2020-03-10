@@ -159,7 +159,7 @@ Example:
 
 `string\match('string\\match('{token1} foo {token2} bar', '/{[^}]*}/')`
 
-will return `'{token1}'`.
+will return `{token1}`.
 
 #### string\matchAll
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`  Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
