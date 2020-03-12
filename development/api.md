@@ -95,6 +95,7 @@ Returns:
 ## Client Implementations
 
 * [Implementation in PHP](api-client-php.md)
+* [Implementation in Javascript (Nodejs)](api-client-js.md)
 * [Implementation in Python](api-client-python.md)
 
 ## CRUD Operations
@@ -286,5 +287,4 @@ Get parameters:
 #### Unfollow record
 
 `DELETE {entityType}/{id}/subscription`
-
 
