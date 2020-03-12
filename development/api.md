@@ -18,8 +18,8 @@ It's recommended to create a separate an API user with specific rights (roles) a
 
 In this article:
 
+* [Client implementations](#client-implementations)
 * [Authentication](#authentication)
-* [Client Implementations](#client-implementations)
 * [CRUD operations](#crud-operations)
 * [Relationships](#relationships)
 * [Stream](#stream)
@@ -33,6 +33,12 @@ API functions:
 See also:
 
 * [Search parameters](api-search-params.md)
+
+## Client implementations
+
+* [PHP](api-client-php.md)
+* [Javascript (Nodejs)](api-client-js.md)
+* [Python](api-client-python.md)
 
 
 ## Authentication
@@ -92,11 +98,6 @@ Returns:
 * `preferences` - user preferences;
 * `user` - user record attributes.
 
-## Client Implementations
-
-* [Implementation in PHP](api-client-php.md)
-* [Implementation in Javascript (Nodejs)](api-client-js.md)
-* [Implementation in Python](api-client-python.md)
 
 ## CRUD Operations
 
