@@ -54,9 +54,7 @@ $params = [
     'order' => 'desc',
 ];
 
-$url .= '?' . http_build_query($params);
-
-$response = $client->request('GET', $url);
+$response = $client->request('GET', $url, $params);
 
 ```
 
