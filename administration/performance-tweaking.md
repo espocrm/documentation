@@ -25,7 +25,7 @@ See article about [how to create indexes](../development/db-indexes.md).
 
 #### innodb_buffer_pool_size
 
-It's recommended to set value that is about 70% of your RAM.
+It's recommended to set a value that is about 70% of your RAM.
 
 #### sort_buffer_size
 
