@@ -32,7 +32,7 @@ client.request('POST', 'Account', {name: 'some name'})
 
 ## Module
 
-File `espocrm-api-client`:
+File `espocrm-api-client.js`:
 
 ```js
 
