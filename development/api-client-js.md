@@ -46,7 +46,7 @@ class Client {
         this.secretKey = secretKey;
 
         if (this.url.substr(-1) == '/') {
-            this.url = this.url.substr(0, -1);
+            this.url = this.url.substr(0, this.url.length -1);
         }
 
         this.urlPath = '/api/v1/';
@@ -78,8 +78,6 @@ class Client {
             let b1 = Buffer.from(this.apiKey + ':');
 
             let authPart = Buffer.concat([b1, b2]).toString('base64');
-
-            console.log(authPart);
 
             headers['X-Hmac-Authorization'] = authPart;
 
