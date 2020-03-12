@@ -68,6 +68,8 @@ class Client {
         if (this.apiKey && this.secretKey) {
             let string = method + ' /' + action;
 
+            const crypto = require('crypto');
+
             let b2 = crypto
                 .createHmac('sha256', this.secretKey)
                 .update(string)
