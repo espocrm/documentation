@@ -34,7 +34,6 @@ $where = [
     ],
 ];
 
-
 $boolFilterList = [
     // 'onlyMy',
     // 'followed',
@@ -55,7 +54,6 @@ $params = [
 ];
 
 $response = $client->request('GET', $url, $params);
-
 ```
 
 ## where
