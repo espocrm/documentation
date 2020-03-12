@@ -18,11 +18,13 @@ const client = new Client(
 client.request('POST', 'Account', {name: 'some name'})
     .then(
         (response) => {
+            // success
             console.log(response);
         }
     )
     .catch(
         (res) => {
+            // error
             console.log(res.statusCode, res.statusMessage);
         }
     );
