@@ -338,7 +338,7 @@ Example:
 
 `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filters).
 
 #### entity\countRelated
 `entity\countRelated(LINK, [FILTER])` Returns a number of related records with an optional FILTER applied.
@@ -347,7 +347,7 @@ Example:
 
 `entity\countRelated('opportunities', 'open')`
 
-It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info about filters [below](#filters).
 
 #### entity\getLinkColumn
 `entity\getLinkColumn(LINK, ID, COLUMN)` Fetches a relationship column value (since 5.7.1).
@@ -373,7 +373,7 @@ Examples:
 
 `record\count(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Returns a count of records with specified criteria.
 
-`record\count(ENTITY_TYPE, [FILTER])` Returns a count of records with an optional FILTER applied.
+`record\count(ENTITY_TYPE, [FILTER])` Returns a count of records with an optional FILTER applied. More info about filters [below](#filters).
 
 Examples:
 
@@ -385,7 +385,7 @@ Examples:
 
 `record\count('Lead', 'status=', list('Assigned', 'In Process'))`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filters).
 
 #### record\findOne
 
@@ -399,7 +399,7 @@ Examples:
 
 `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filters).
 
 #### record\findRelatedOne
 
@@ -413,7 +413,7 @@ Examples:
 
 `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info below.
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filters).
 
 #### record\attribute
 
