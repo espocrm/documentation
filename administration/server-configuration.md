@@ -91,9 +91,9 @@ cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
 
-## Setup crontab
+## Setting up crontab
 
-*Information about jobs in EspoCRM is available [here](jobs.md).*
+More information about jobs in EspoCRM is available [here](jobs.md).
 
 ### Unix-like systems
 
@@ -114,7 +114,6 @@ WEBSERVER_USER can be one of the following “www”, “www-data”, “apache�
 ### Windows
 
 For Windows servers you can utilize Scheduled Tasks.
-
 
 ## Configuration instructions based on your server
 
