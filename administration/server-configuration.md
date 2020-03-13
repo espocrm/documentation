@@ -6,7 +6,7 @@ EspoCRM can be installed on:
 * with PHP version 7.2 and later
 * MySQL 5.7 (and later), or MariaDB 10.1 (and later)
 
-## Configuration Recommendations
+## Configuration recommendations & requirements
 
 ### PHP requirements
 
