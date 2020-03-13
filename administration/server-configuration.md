@@ -123,5 +123,6 @@ For Windows servers you can utilize Scheduled Tasks.
 
 ## See also
 
-* [Performance tweaking](performance-tweaking.md)
+* [Jobs](jobs.md)
 * [WebSocket](websocket.md)
+* [Performance tweaking](performance-tweaking.md)
