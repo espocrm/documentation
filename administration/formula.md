@@ -112,6 +112,8 @@ CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the sem
 #### list
 `list(VALUE-1, ... VALUE-N)` Returns array.
 
+Useful to create an array for link-multiple IDs. Example: `teamsIds = list($teamId)`.
+
 ### String
 
 #### string\concatenate
