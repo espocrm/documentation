@@ -11,7 +11,7 @@ Out-of-the-box WebSocket covers the following features:
 * Updates in stream on the record detail view
 * Updates of detail view (since 5.9.0)
 
-Enable 'Use WebSocket' parameter at Administation > Settings.
+Enable *Use WebSocket* parameter at Administation > Settings.
 
 You need to have *zmq* php extension installed.
 
