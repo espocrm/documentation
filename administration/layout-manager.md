@@ -73,7 +73,7 @@ Available for entity types with the enabled Kanban view.
 
 List of fields displayed in the top side panel. By default there are *Assinged User* and *Teams* fields.
 
-## Additional Layouts
+### Additional Layouts
 
 Some entity types contain additional layouts: Convert Lead, List for Account and others.
 
