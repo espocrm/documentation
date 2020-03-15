@@ -3,7 +3,7 @@
 *Layout Manager* is available at administration panel. It provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
 
 * [Layouts](#layouts)
-* [Different layouts from teams & portals](#different-layouts-from-teams--portals)
+* [Different layouts for teams & portals](#different-layouts-for-teams--portals)
 
 ## Layouts
 
@@ -77,7 +77,7 @@ List of fields displayed in the top side panel. By default there are *Assinged U
 
 Some entity types contain additional layouts: Convert Lead, List for Account and others.
 
-## Different layouts from teams & portals
+## Different layouts for teams & portals
 
 Available since version 5.9.0.
 
