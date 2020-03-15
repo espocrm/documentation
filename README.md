@@ -13,7 +13,7 @@
 * Customization
   * [Entity Manager: entities, fields, relationships](https://github.com/espocrm/documentation/blob/master/administration/entity-manager.md)
   * [Fields](https://github.com/espocrm/documentation/blob/master/administration/fields.md)
-  * [Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
+  * [Layouts](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
   * [Extensions](https://github.com/espocrm/documentation/blob/master/administration/extensions.md)
   * [Dynamic forms](https://github.com/espocrm/documentation/blob/master/administration/dynamic-logic.md)
 * [Formula (calculated fields)](https://github.com/espocrm/documentation/blob/master/administration/formula.md)
