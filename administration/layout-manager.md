@@ -3,7 +3,7 @@
 *Layout Manager* is available at administration panel. It provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
 
 * [Layouts](#layouts)
-* [Different layouts from teams & portals](#layouts)
+* [Different layouts from teams & portals](#different-layouts-from-teams--portals)
 
 ## Layouts
 
