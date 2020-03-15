@@ -10,6 +10,7 @@ To create portal follow Administration > Portals, click Create Portal button.
 * *Tab List*. Tabs which will be shown in navigation bar.
 * *Dashboard Layout*. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
 * *URL*. Read only field that displays the link you can access the portal with.
+* *Layout Set*. Provides the ability to use different layouts from the porta. See more [info](layout-manager.md#different-layouts-from-teams--portals).
 
 ## Portal Users
 
@@ -93,4 +94,5 @@ Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID is available
 
 ## See also
 
-[Portal ACL customization](../development/acl.md#portal-acl)
+* [Portal ACL customization](../development/acl.md#portal-acl)
+
