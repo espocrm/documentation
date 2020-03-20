@@ -14,23 +14,17 @@ class MyContainsType extends \Espo\Core\Formula\Functions\Base
 {
     public function process(\StdClass $item)
     {
-        if (!property_exists($item, 'value')) {
-            throw new Error();
+        $args = $this->fetchArguments($item);
+        
+        if (count($args) < 2) {
+            throw new Error("MyContains: Too little argunents.");
         }
 
-        if (!is_array($item->value)) {
-            throw new Error();
-        }
+        $haystack = $args[0];
+        $needle = $args[1];
 
-        if (count($item->value) < 2) {
-            throw new Error();
-        }
-
-        $haystack = $this->evaluate($item->value[0]);
-        $needle = $this->evaluate($item->value[1]);
-
-        if (count($item->value) > 2) {
-            $offset = $this->evaluate($item->value[2]);
+        if (count($args) > 2) {
+            $offset = $args[2];
             return !(strpos($haystack, $needle, $offset) === false);
         } else {
             return !(strpos($haystack, $needle) === false);
