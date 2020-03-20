@@ -17,7 +17,7 @@ class MyContainsType extends \Espo\Core\Formula\Functions\Base
         $args = $this->fetchArguments($item);
         
         if (count($args) < 2) {
-            throw new Error("MyContains: Too little argunents.");
+            throw new Error("MyContains: Too few arguments.");
         }
 
         $haystack = $args[0];
