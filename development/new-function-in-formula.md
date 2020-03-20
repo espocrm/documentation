@@ -8,7 +8,7 @@ Create a file `custom/Espo/Custom/Core/Formula/Functions/StringGroup/MyContainsT
 <?php
 namespace Espo\Custom\Core\Formula\Functions\StringGroup;
 
-use \Espo\Core\Exceptions\Error;
+use Espo\Core\Exceptions\Error;
 
 class MyContainsType extends \Espo\Core\Formula\Functions\Base
 {
