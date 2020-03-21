@@ -38,7 +38,7 @@ Date Start and Date Due fields are not required. Dates can be specified with or 
 
 ### Reminders
 
-Reminders for the task record will be available only if Date Due is specified and it has time part.
+Reminders for the task record will be available only if Date Due is specified.
 
 ## Calendar
 
@@ -63,9 +63,11 @@ To refresh calendar items you can click on the date range title at the top in th
 
 Users can create custom shared views that will display events of specific teams.
 
-Note: User must have a proper 'User Permission' to be able to use shared calendars.
+Note: User must have a proper 'User Permission' set in [Roles](administration/roles-management.md) to be able to use shared calendars.
 
-Shared view is also available for Timeline. It allows to view events of multiple users.
+Note: Shared view displays events of users of the selected team. It doesn't necessary display events assigned to that team (e.g. event is assigned to the team, but doesn't assigned to any user of that team).
+
+Shared view is also available for *Timeline* view. It allows to view events of multiple users.
 
 ### Custom entities on Calendar
 
@@ -75,4 +77,4 @@ For custom entities, by default, Assigned User field determines a user who will 
 
 ### See also
 
-[How to manage your calendar](https://www.espocrm.com/tips/calendar/)
+* [How to manage your calendar](https://www.espocrm.com/tips/calendar/)
