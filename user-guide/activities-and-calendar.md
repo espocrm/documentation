@@ -59,7 +59,7 @@ It's possible to view calendar of another user (is you have an access determined
 
 To refresh calendar items you can click on the date range title at the top in the center.
 
-### Shared Calendar
+### Shared calendar
 
 Users can create custom shared views that will display events of specific teams.
 
@@ -69,12 +69,12 @@ Note: Shared view displays events of users of the selected team. It doesn't nece
 
 Shared view is also available for *Timeline* view. It allows to view events of multiple users.
 
-### Custom entities on Calendar
+### Custom entities on calendar
 
 Administrator can create a custom entity of Event type. Then at Administration > Settings > Activities it's possible to set this entity type as an Activity and make it available in Calendar.
 
 For custom entities, by default, Assigned User field determines a user who will the record on his/her Calendar. There is a possibility to have [multiple assigned users](../administration/multiple-assigned-users.md).
 
-### See also
+## See also
 
 * [How to manage your calendar](https://www.espocrm.com/tips/calendar/)
