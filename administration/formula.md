@@ -465,9 +465,9 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 #### record\findRelatedOne
 
-`record\findRelatedOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
+`record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
 
-`record\findRelatedOne(ENTITY_TYPE, ID, LINK, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
+`record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
 
 Examples:
 
@@ -476,6 +476,8 @@ Examples:
 `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
+
+Note: Before version 5.9.0 ORDER_BY and ORDER arguments were mandatory.
 
 #### record\attribute
 
