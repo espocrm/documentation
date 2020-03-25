@@ -276,6 +276,12 @@ Examples:
 
 ### Number
 
+* [number\format](#numberformat)
+* [number\abs](#numberabs)
+* [number\round](#numberround)
+* [number\floor](#numberfloor)
+* [number\ceil](#numberceil)
+
 #### number\format
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR, then system defaults are used.
 
