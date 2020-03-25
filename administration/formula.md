@@ -116,6 +116,19 @@ Useful to create an array for link-multiple IDs. Example: `teamsIds = list($team
 
 ### String
 
+* [string\concatenate](#stringconcatenate)
+* [string\substring](#stringsubstring)
+* [string\contains](#stringcontains)
+* [string\pos](#stringpos)
+* [string\test](#stringtest)
+* [string\length](#stringlength)
+* [string\trim](#stringtrim)
+* [string\lowerCase](#stringlowercase)
+* [string\upperCase](#stringuppercase)
+* [string\pad](#stringpad)
+* [string\match](#stringmatch)
+* [string\matchAll](#stringmatchall)
+
 #### string\concatenate
 `string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
 
@@ -174,6 +187,24 @@ will return an array `['{token1}', '{token2}']`.
 
 ### Datetime
 
+* [datetime\today](#datetimetoday)
+* [datetime\now](#datetimenow)
+* [datetime\format](#datetimeformat)
+* [datetime\date](#datetimedate)
+* [datetime\month](#datetimemonth)
+* [datetime\year](#datetimeyear)
+* [datetime\hour](#datetimehour)
+* [datetime\minute](#datetimeminute)
+* [datetime\dayOfWeek](#datetimedayofweek)
+* [datetime\diff](#datetimediff)
+* [datetime\addMinutes](#datetimeaddminutes)
+* [datetime\addHours](#datetimeaddhours)
+* [datetime\addDays](#datetimeadddays)
+* [datetime\addWeeks](#datetimeaddweeks)
+* [datetime\addMonths](#datetimeaddmonths)
+* [datetime\addYears](#datetimeaddyears)
+* [datetime\closest](#datetimeclosest)
+
 #### datetime\today
 `datetime\today()` Returns today's date.
 
@@ -192,10 +223,10 @@ Examples:
 `datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
 
 #### datetime\date
-`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
+`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\month
-`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used. (since version 4.7.0)
+`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\year
 `datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
@@ -279,7 +310,7 @@ Examples:
 * [entity\attributeFetched](#entityattributefetched)
 * [entity\addLinkMultipleId](#entityaddlinkmultipleid)
 * [entity\hasLinkMultipleId](#entityhaslinkmultipleid)
-* [entity\removeLinkMultipleId](#removeLinkMultipleId)
+* [entity\removeLinkMultipleId](#entityremovelinkmultipleid)
 * [entity\isRelated](#entityisrelated)
 * [entity\sumRelated](#entitysumrelated)
 * [entity\countRelated](#entitycountrelated)
