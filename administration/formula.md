@@ -271,10 +271,24 @@ Examples:
 
 ### Entity
 
+* [entity\isNew](#entityisnew)
+* [entity\isAttributeChanged](#entityisattributechanged)
+* [entity\isAttributeNotChanged](#entityisattributenotchanged)
+* [entity\attribute](#entityattribute)
+* [entity\setAttribute](#entitysetattribute)
+* [entity\attributeFetched](#entityattributefetched)
+* [entity\addLinkMultipleId](#entityaddlinkmultipleid)
+* [entity\hasLinkMultipleId](#entityhaslinkmultipleid)
+* [entity\removeLinkMultipleId](#removeLinkMultipleId)
+* [entity\isRelated](#entityisrelated)
+* [entity\sumRelated](#entitysumrelated)
+* [entity\countRelated](#entitycountrelated)
+* [entity\getLinkColumn](#entitygetlinkcolumn)
+
 #### entity\isNew
 `entity\isNew()` Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
 
-#### entity\\isAttributeChanged
+#### entity\isAttributeChanged
 `entity\isAttributeChanged(ATTRIBUTE)` Returns TRUE if ATTRIBUTE of the record was changed.
 
 Example:
@@ -294,7 +308,6 @@ Examples:
 `entity\attribute('assignedUserId')`
 
 `entity\attribute('account.name')`
-
 
 
 #### entity\setAttribute
@@ -360,6 +373,16 @@ Example:
 
 
 ### Record
+
+* [record\exists](#recordexists)
+* [record\count](#recordcount)
+* [record\findOne](#recordfindone)
+* [record\findRelatedOne](#recordfindrelatedone)
+* [record\attribute](#recordattribute)
+* [record\relate](#recordrelate)
+* [record\unrelate](#recordunrelate)
+* [record\relationColumn](#recordrelationcolumn)
+* [record\updateRelationColumn](#recordupdaterelationcolumn)
 
 #### record\exists
 
