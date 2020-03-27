@@ -42,8 +42,9 @@ Webhook ID (*id*), secret key (*secretKey*) will be sent back in a response.
 
 Administrator can manage webhooks at Administration > Webhooks. It's possible to remove, edit or create webhooks there.
 
-
 ## Events
+
+Note: The list of available entity types can be obtained at Administration > Entity Manager.
 
 ### ENTITY_TYPE.create
 
@@ -68,6 +69,8 @@ Example: `Account.delete`
 Triggered when a specific field is updated. New field attributes will be sent in payload.
 
 Example: `Account.fieldUpdate.assignedUserId`
+
+Note: The list of available fields can be obtained at Administration > Entity Manager > fields.
 
 
 ## Webhook requests
