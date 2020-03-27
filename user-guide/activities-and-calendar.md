@@ -44,7 +44,7 @@ Reminders for the task record will be available only if Date Due is specified.
 
 Available since version 5.9.0.
 
-Provides the ability to view free & busy time ranges for attendees (users) when scheduling an event. Availabled for Meeting, Calls and custom entities of Event type.
+Provides the ability to view free & busy time ranges for attendees (users) when scheduling an event. Available for Meetings, Calls and custom entities of Event type.
 
 Scheduler panel can be added or removed at Administration > Layout Manager > select needed entity type > Bottom Panels.
 
