@@ -48,6 +48,8 @@ Provides the ability to view free & busy time ranges for attendees (users) when 
 
 Scheduler panel can be added or removed at Administration > Layout Manager > select needed entity type > Bottom Panels.
 
+What entity types will be taken into account when showing busy time ranges can be configured at Administration > Settings > Free/Busy Entity List.
+
 ## Calendar
 
 Calendar displays Meetings, Calls, Tasks. It's also possible to show custom entities of Event type.
