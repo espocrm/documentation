@@ -1,8 +1,19 @@
 # Webhooks
 
-Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have an access to all entity types for which webhooks are planned to be created. 
+Webhooks allows other applications to subscribe to specific events happening in EspoCRM and receive data related to that events. Webhooks are supposed to be created via API by other applications. The webhook has a specific *Event* and *URL*. Every time the event occurs, the system will send POST request with some payload to the specified URL.
 
-### Creating
+Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have an access to all entity types for which webhooks are planned to be created.
+
+* [Subscription](#subscription)
+* [Events](#events)
+* [Webhook requests](#webhook-requests)
+* [Error handling](#error-handling)
+* [Signature checking](#signature-checking)
+* [Config parameters](#config-parameters)
+
+## Subscription
+
+### Creating request
 
 `POST api/v1/Webhook`
 
@@ -16,7 +27,7 @@ Webhooks can be created only by API Users (via API request) and Administrators. 
 Webhook ID (*id*), secret key (*secretKey*) will be sent back in a response.
 
 
-### Deleting
+### Deleting request
 
 `DELETE api/v1/Webhook/WEBHOOK_ID`
 
@@ -29,7 +40,7 @@ Webhook ID (*id*), secret key (*secretKey*) will be sent back in a response.
 
 ### Administration
 
-Administrator can manage webhooks at Administration > Webhooks.
+Administrator can manage webhooks at Administration > Webhooks. It's possible to remove, edit or create webhooks there.
 
 
 ## Events
