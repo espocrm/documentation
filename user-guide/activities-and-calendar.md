@@ -40,6 +40,14 @@ Date Start and Date Due fields are not required. Dates can be specified with or 
 
 Reminders for the task record will be available only if Date Due is specified.
 
+### Scheduler
+
+Available since version 5.9.0.
+
+Provides the ability to view free & busy time ranges for attendees (users) when scheduling an event. Availabled for Meeting, Calls and custom entities of Event type.
+
+Scheduler panel can be added or removed at Administration > Layout Manager > select needed entity type > Bottom Panels.
+
 ## Calendar
 
 Calendar displays Meetings, Calls, Tasks. It's also possible to show custom entities of Event type.
