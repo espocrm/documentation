@@ -1,6 +1,6 @@
 # Documents
 
-EspoCRM provides an ability to store documents.
+EspoCRM provides an ability to store documents. By default Document entity type has many-to-many relationships with Account, Opportunity, Contact, Lead. Administrator can create relationships with other entity types.
 
 ## Folders
 
