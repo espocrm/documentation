@@ -144,6 +144,8 @@ Variables can be utilized in:
 * Signal names
 * User Task names
 
+You can update the target record with Script Task, but the more proper way is to use Update Target Record action of the regular Task.
+
 ----
 
 ## Sub-Process
