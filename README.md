@@ -37,9 +37,7 @@
   * [Performance tweaking](administration/performance-tweaking.md)
   * [Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
 * Advanced Pack
-  * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
-  * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
-  * [Drip Email Campaign with BPM](https://github.com/espocrm/documentation/blob/master/administration/bpm-drip-email-campaign.md)
+
 
 ---
 
@@ -63,8 +61,16 @@
   * [Markdown syntax](https://github.com/espocrm/documentation/blob/master/user-guide/markdown.md)
   * [Browser support](https://github.com/espocrm/documentation/blob/master/user-guide/browser-support.md)
   * [Data privacy](https://github.com/espocrm/documentation/blob/master/user-guide/data-privacy.md)
+
+---
+
+### Extensions
+
 * Advanced Pack
   * [Reports](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md)
+  * [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md)
+  * [Business Process Management (BPM)](https://github.com/espocrm/documentation/blob/master/administration/bpm.md)
+  * [Drip Email Campaign with BPM](https://github.com/espocrm/documentation/blob/master/administration/bpm-drip-email-campaign.md)
 * Sales Pack
   * [Products](https://github.com/espocrm/documentation/blob/master/user-guide/products.md)
   * [Quotes](https://github.com/espocrm/documentation/blob/master/user-guide/quotes.md)
