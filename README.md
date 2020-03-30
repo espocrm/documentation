@@ -36,8 +36,6 @@
   * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
   * [Performance tweaking](administration/performance-tweaking.md)
   * [Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
-* Advanced Pack
-
 
 ---
 
