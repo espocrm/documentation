@@ -48,7 +48,9 @@ Example of using parameters:
 php command.php upgrade -y --file="EspoCRM-upgrade.zip"
 ```
 
-## Applying upgrade package from CLI 
+## Legacy way to upgrade
+
+Before 5.6.0 version.
 
 Execute the following command from EspoCRM root directory:
 
