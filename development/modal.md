@@ -133,7 +133,7 @@ Available since 5.7.0.
 
 ```js
 
-        this.createView('dalog', 'views/modal', {
+        this.createView('dialog', 'views/modal', {
             templateContent: '<p>{{complexText viewObject.options.message}}</p>',
             headerText: 'Hello world',
             backdrop: true,
