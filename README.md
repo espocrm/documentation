@@ -32,6 +32,7 @@
   * [Webhooks](https://github.com/espocrm/documentation/blob/master/administration/webhooks.md)
   * [Maps](https://github.com/espocrm/documentation/blob/master/administration/maps.md)
   * [B2C mode](https://github.com/espocrm/documentation/blob/master/administration/b2c.md)
+  * [Console commands](administration/commands.md)
   * [Backup and restore](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md)
   * [Moving to another server](https://github.com/espocrm/documentation/blob/master/administration/moving-to-another-server.md)
   * [Performance tweaking](administration/performance-tweaking.md)
