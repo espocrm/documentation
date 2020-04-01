@@ -20,20 +20,6 @@ This will check the next available version, download it and install. Once upgrad
 2. Disable cron (at Administration > Settings) before upgrading. Enable it back after upgrade is finished.
 3. Enable 'Maintenance Mode' (at Administration > Settings) before upgrading. Disable after upgrade is finished.
 
-## Upgrade from UI
-
-#### Step 1. Check your current version
-
-To check your current version go to Administration > Upgrade page.
-
-#### Step 2. Download needed upgrade packages
-
-Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
-
-#### Step 3. Run upgrade from Administration panel
-
-Go to Administration > Upgrade. Upload and install one by one upgrade packages.
-
 ## Additional parameters
 
 Available parameters (only for advanced users):
@@ -57,3 +43,19 @@ Execute the following command from EspoCRM root directory:
 ```
 php upgrade.php /path/to/upgrade/package.zip
 ```
+
+## Upgrade from UI
+
+This is **not recommended** way to upgrade. It may cause problems.
+
+#### Step 1. Check your current version
+
+To check your current version go to Administration > Upgrade page.
+
+#### Step 2. Download needed upgrade packages
+
+Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
+
+#### Step 3. Run upgrade from Administration panel
+
+Go to Administration > Upgrade. Upload and install one by one upgrade packages.
