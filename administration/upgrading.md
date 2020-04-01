@@ -19,6 +19,7 @@ This will check the next available version, download it and install. Once upgrad
 1. Make a [backup](backup-and-restore.md) before upgrading.
 2. Disable cron (at Administration > Settings) before upgrading. Enable it back after upgrade is finished.
 3. Enable *Maintenance Mode* (at Administration > Settings) before upgrading. Disable after upgrade is finished.
+4. Make sure you have extra disk space on the server.
 
 ## Additional parameters
 
