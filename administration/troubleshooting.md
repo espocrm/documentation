@@ -130,7 +130,7 @@ Available since EspoCRM 5.8.3.
 Run the following command in CLI:
 
 ```
-php command.php SetPassword [username]
+php command.php set-password [username]
 ```
 
 where `[username]` is a user name, e.g. `admin`.
