@@ -14,18 +14,6 @@ php command.php upgrade
 
 This will check the next available version, download it and install. Once upgrade is complete it will prompt to run the command again, if a newer version is available.
 
-Available parameters (only for advanced users):
-
-- `-y` − disable confirmation
-- `-s` − run an upgrade in a single process
-- `--file="EspoCRM-upgrade.zip"` − specify a path to an upgrade package
-
-Example of using parameters:
-
-```
-php command.php upgrade -y --file="EspoCRM-upgrade.zip"
-```
-
 ## Recommendations
 
 1. Make a [backup](backup-and-restore.md) before upgrading.
@@ -45,6 +33,20 @@ Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on y
 #### Step 3. Run upgrade from Administration panel
 
 Go to Administration > Upgrade. Upload and install one by one upgrade packages.
+
+## Additional parameters
+
+Available parameters (only for advanced users):
+
+- `-y` − disable confirmation
+- `-s` − run an upgrade in a single process
+- `--file="EspoCRM-upgrade.zip"` − specify a path to an upgrade package
+
+Example of using parameters:
+
+```
+php command.php upgrade -y --file="EspoCRM-upgrade.zip"
+```
 
 ## Applying upgrade package from CLI 
 
