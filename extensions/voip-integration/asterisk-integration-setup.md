@@ -22,7 +22,7 @@ VoIP Integration extension supports* the following Asterisk servers:
 
 **Step 1.** Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) -> VoIP » Asterisk AMI.
 
-![Asterisk integration config](https://github.com/Max18061989/documentation/extensions/voip-integration/asterisk_1.png)
+![Asterisk integration config](asterisk_1.png)
 
 * **Name** – name of your connection.
 * **Host** – IP or domain name of your Asterisk Server.
@@ -57,7 +57,7 @@ VoIP Integration extension supports* the following Asterisk servers:
 
 Each user who wants to use Asterisk integration, should setup his access in the User’s Profile, under “VoIP Settings”. Usually, it’s the SIP credentials. Also, the user can change some VoIP settings on this window.
 
-![VoIP settings](https://github.com/Max18061989/documentation/extensions/voip-integration/asterisk_2.png)
+![VoIP settings](asterisk_2.png)
 
 * **VoIP Server** – your current VoIP server.
 * **Your user extension** – your internal user extension (SIP user) of the Asterisk server.
@@ -72,7 +72,7 @@ Each user who wants to use Asterisk integration, should setup his access in the 
 Each user can add several additional phone numbers to handle incoming calls. They can be added in the User’s Profile.
 Note: Additional phone numbers are used for incoming calls only. Outgoing calls will use the internal user extension.
 
-![Phone numbers formats](https://github.com/Max18061989/documentation/extensions/voip-integration/asterisk_3.png)
+![Phone numbers formats](asterisk_3.png)
 
 * **Phone numbers formats:** +442031112233, 00442031112233, 02031112233.
 

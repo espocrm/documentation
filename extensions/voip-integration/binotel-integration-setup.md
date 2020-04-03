@@ -7,7 +7,7 @@ Binotel Integration is available as part of [VoIP Integration extension](http://
 
 1. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) -> VoIP » Binotel.
 
-![Binotel integration config](https://github.com/Max18061989/documentation/extensions/voip-integration/binotel_1.png)
+![Binotel integration config](binotel_1.png)
 
 * **Name** – name of your Binotel connector.
 * **Authorization Key** – authorization Key to the Binotel server.
@@ -32,7 +32,7 @@ E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031
 
 Each user who uses telephony should setup his user extension in User’s Profile, button “VoIP Settings”. Also, the user can disable a popup window for incoming/outgoing calls.
 
-![VoIP settings](https://github.com/Max18061989/documentation/extensions/voip-integration/binotel_2.png)
+![VoIP settings](binotel_2.png)
 
 * **VoIP Server** – VoIP server selection.
 * **Your user extension** – your Binotel user extension (e.g. “299”, “1001”).

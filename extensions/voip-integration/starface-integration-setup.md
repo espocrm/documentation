@@ -19,7 +19,7 @@ VoIP Integration extension supports* the following Starface servers:
 
 1. Fill in the connection details of your Starafce server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
 
-![Starface integration config](https://github.com/Max18061989/documentation/extensions/voip-integration/starface_1.png)
+![Starface integration config](starface_1.png)
 
 * **Name** – name of your connection.
 * **Host** – IP or domain name of your Starface Server.
@@ -43,7 +43,7 @@ VoIP Integration extension supports* the following Starface servers:
 
 Each user who wants to use Starface integration, should setup his access in the User’s Profile, under “VoIP Settings”. Please note that login and password should be to the Starface web interface, not to the SIP credentials. Also, the user can change some VoIP settings on this window.
 
-![VoIP settings](https://github.com/Max18061989/documentation/extensions/voip-integration/starface_2.png)
+![VoIP settings](starface_2.png)
 
 * **VoIP Server** – your current VoIP server.
 * **Your user extension** – your login ID for the Starface web interface.

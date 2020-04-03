@@ -1,4 +1,4 @@
-# Add access control in EspoCRM:
+# Add access control in EspoCRM
 
 By default regular users don’t have access to Message entity. Administrator needs to grant access to this entity:
 
@@ -7,9 +7,9 @@ By default regular users don’t have access to Message entity. Administrator ne
 3. Create / edit a Twilio role.
 4. Grant access to the Message entity.
 
-![Twilio role](https://github.com/Max18061989/documentation/extensions/voip-integration/twilio_role.png)
+![Twilio role](twilio_role.png)
 
 By default the Message entity tab should be addad into the tab list.
 
-![Message tab](https://github.com/Max18061989/documentation/extensions/voip-integration/message_tab.png)
+![Message tab](message_tab.png)
 
