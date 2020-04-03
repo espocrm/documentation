@@ -11,11 +11,12 @@ Since Advanced Pack version 2.4.0 it’s possible to send HTTP requests with Wor
 Create a workflow rule. specify needed conditions and then add action Send HTTP Request.
 
 Set:
+
 **Request Type:** POST
 
 **Content-type:** None
 
-**URL:** https://api.telegram.org/bot<TELEGRAM_BOT_AUTH_TOKEN>/sendMessage
+**URL:** <!https://api.telegram.org/bot<TELEGRAM_BOT_AUTH_TOKEN>/sendMessage>
 
 Example: `https://api.telegram.org/bot3457233623:AAGKRIhcGSJ7bKFFh6DJMRWhyRbVBSRS53c/sendMessage`
 
@@ -38,7 +39,7 @@ Example: `https://api.telegram.org/bot3457233623:AAGKRIhcGSJ7bKFFh6DJMRWhyRbVBSR
 	- Markdown text. 
 * "parse_mode" is optional parameter. Can send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
 
-You read more about bot request methods and payloads [here](https://core.telegram.org/bots/api).
+You can read more about bot request methods and payloads [here](https://core.telegram.org/bots/api).
 
 ### Telegram configuration
 
