@@ -15,7 +15,7 @@ There are two ways in which you can set up Twillio integration:
 4. Tick off Enabled box.
 5. Fill in the connection details of your Twilio account.
 
-![Twilio integration config](voip-integration/twilio_1.png)
+![Twilio integration config](twilio_1.png)
 
 * **Name** – name of your connection.
 * **Your Account SID** – your Twilio account SID. You can get it at https://www.twilio.com/user/account.
