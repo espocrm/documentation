@@ -12,7 +12,9 @@ Create a workflow rule. specify needed conditions and then add action Send HTTP 
 
 Set:
 **Request Type:** POST
+
 **Content-type:** None
+
 **URL:** https://api.telegram.org/bot<TELEGRAM_BOT_AUTH_TOKEN>/sendMessage
 
 Example: `https://api.telegram.org/bot3457233623:AAGKRIhcGSJ7bKFFh6DJMRWhyRbVBSRS53c/sendMessage`
@@ -42,5 +44,5 @@ You read more about bot request methods and payloads [here](https://core.telegra
 
 1. Create a new Telegram chanel.
 2. Create a new [Telegram bot](https://core.telegram.org/bots#3-how-do-i-create-a-bot).
-3. Add the bot to your Telegram chanel
-4. Add the bot to the chanel admins group
+3. Add the bot to your Telegram chanel.
+4. Add the bot to the chanel admins group.
