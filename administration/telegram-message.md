@@ -43,7 +43,7 @@ You can read more about bot request methods and payloads [here](https://core.tel
 
 ### Telegram configuration
 
-1. Create a new Telegram chanel.
+1. Create a new Telegram channel.
 2. Create a new [Telegram bot](https://core.telegram.org/bots#3-how-do-i-create-a-bot).
-3. Add the bot to your Telegram chanel.
-4. Add the bot to the chanel admins group.
+3. Add the bot to your Telegram channel.
+4. Add the bot to the channel admins group.
