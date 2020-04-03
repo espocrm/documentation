@@ -66,9 +66,9 @@ After you have successfully filled in the connection details, EspoCRM will impor
 ### How to configure Messages (SMS, MMS)
 
 1. Enable Twilio messaging geographic permissions:
-  1. Login to your Twilio account.
-  2. Navigate to the Programmable SMS > Settings > Geo Permissions or just click the link: https://www.twilio.com/console/sms/settings/geo-permissions.
-  3. Enable needed countries.
+    1. Login to your Twilio account.
+    2. Navigate to the Programmable SMS > Settings > Geo Permissions or just click the link: https://www.twilio.com/console/sms/settings/geo-permissions.
+    3. Enable needed countries.
 2. [Add access control in EspoCRM](https://github.com/Max18061989/documentation/blob/master/extensions/voip-integration/voip-access.md)
 
 ### How to setup Twilio Integration for users
