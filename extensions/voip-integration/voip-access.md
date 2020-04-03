@@ -11,5 +11,4 @@ By default regular users don’t have access to Message entity. Administrator ne
 
 By default the Message entity tab should be addad into the tab list.
 
-![Message tab](message_tab.png)
-
+![Message tab](message-tab.png)
