@@ -16,7 +16,7 @@ Set:
 
 **Content-type:** None
 
-**URL:** <!https://api.telegram.org/bot<TELEGRAM_BOT_AUTH_TOKEN>/sendMessage>
+**URL:** `https://api.telegram.org/bot<TELEGRAM_BOT_AUTH_TOKEN>/sendMessage`
 
 Example: `https://api.telegram.org/bot3457233623:AAGKRIhcGSJ7bKFFh6DJMRWhyRbVBSRS53c/sendMessage`
 
