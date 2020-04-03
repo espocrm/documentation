@@ -6,22 +6,22 @@ Note: Before version 5.4.0 Import was available only for admin users.
 
 Administrator can access import at Administration > Import. By default regular users don't have an access. It can be granted with ACL roles. Administrator also can add the Import tab at Administration > User Interface > Tab List. 
 
-
 ## Step 1
 
 Select what type of records you need to import (Entity Type field).
 Select a CSV file. A file should be formated with `UTF-8`.
 Select `What to do?`. Available options: 'Create Only', 'Create & Update', 'Update Only'.
 
-* `Create Only` - select it if you want record be only created.
-* `Create & Update` - records will be created, but if records with matching field values will be found it will be updated. You will be able to check what fields to match by on the _Step 2_.
-* `Update only` - only records with matching field values will be found, it will be updated.
+* *Create Only* − import will only create records;
+* *Create & Update* − records will be created, if records with matching field values will be found, they will be updated; you will be able to check what fields to match by on the _Step 2_.
+* *Update only* − only records with matching field values will be found, it will be updated.
 
 Once you select a csv file, you will be able to see how it should be parsed in Preview panel. When you change properties, the preview will be updated. 
 
-* `Header Row` - whether CSV file has the first row with field names.
-* `Execute in idle` - is recommended if you have a big bunch of records to be imported. Import will be processed via cron. Status will be set to 'Complete' when import process is finished.
-* `Skip searching for duplicates` - it will decrease import runtime. 
+* *Header Row* - whether CSV file has the first row with field names.
+* *Execute in idle* − is recommended if you have a big bunch of records to be imported; import will be processed via cro; status will be set to 'Complete' when import process is finished.
+* *Skip searching for duplicates* − will make import faster.
+* *Silent mode* − majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will make import faster.
 
 Click _Next_ button to preceed to the _Step 2_.
 
@@ -52,4 +52,4 @@ When you import Contacts, Leads or Accounts you can add them to some target list
 
 ## See also
 
-[Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
+* [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
