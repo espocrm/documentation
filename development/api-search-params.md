@@ -7,6 +7,7 @@ Filters and other search parameters can be used with API functions that returns 
   * [Javacript](#javascript-nodejs)
 * [Params](#params)
 * [Where items](#where-items)
+* [Attribute names](#attribute-names)
 
 ## Examples
 
@@ -89,7 +90,7 @@ client.request('GET', 'Case', params)
 
 *Integer*
 
-An offset for pagination..
+An offset for pagination.
 
 ### maxSize
 
@@ -119,7 +120,7 @@ A primiry filter. Primary filters are usualy defined in *Select Manager* class.
 
 *Array*
 
-Bool filters. E.g. *onlyMy*, *followed.
+Bool filters. E.g. *onlyMy*, *followed*.
 
 
 ### orderBy
@@ -289,3 +290,18 @@ For array, multi-enum, checkbox fields.
     "attribute": "fieldName"
 }
 ```
+
+## Attribute names
+
+Attribute names usually are same as a system field names. Fields are listed at Administration > Entity Manager > ... > Fields.
+
+Attribute names should be in lowerCamelCase.
+
+Field types having attributes named differently: 
+
+* Link: *fieldId*, *fieldName*.
+* Link-Parent: *fieldId*, *fieldType*.
+* Link-Multiple: *fieldIds*, *fieldNames*.
+* Currency: *field*, *fieldCurrency*.
+
+Where *field* is the name of the field.
