@@ -12,10 +12,8 @@ $url = 'Lead';
 
 $where = [
     [
-        [
-            'type' => 'isNotNull',
-            'attribute' => 'assignedUserId',
-        ],
+        'type' => 'isNotNull',
+        'attribute' => 'assignedUserId',
     ],
     [
         'type' => 'or',
