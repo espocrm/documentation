@@ -69,25 +69,19 @@ class Client {
         this.url = url;
         this.apiKey = apiKey;
         this.secretKey = secretKey;
-
         if (this.url.substr(-1) == '/') {
             this.url = this.url.substr(0, this.url.length -1);
         }
-
         this.urlPath = '/api/v1/';
-
         this.options = options || {};
-
         this.isHttps = url.toLowerCase().indexOf('https') === 0;
     }
 
     request (method, action, data) {
         method = method || 'GET';
-
         method = method.toUpperCase();
 
         let url = this._buildUrl(action);
-
         let headers = {};
 
         if (this.apiKey && this.secretKey) {
