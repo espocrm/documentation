@@ -3,6 +3,8 @@
 Filters and other search parameters can be used with API functions that returns a list of records.
 
 * [Examples](#examples)
+  * [PHP](#php)
+  * [Javacript]
 * [Params](#params)
 * [Where items](#where-items)
 
