@@ -4,7 +4,7 @@ Filters and other search parameters can be used with API functions that returns 
 
 * [Examples](#examples)
 * [Where item definitions](#where-item-definitions)
-* [Params] (#params)
+* [Params](#params)
 
 ## Examples
 
