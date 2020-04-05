@@ -295,7 +295,7 @@ E.g. `NOT:(a)` corresponds to SQL statement `NOT a`.
 
 ## Attribute names
 
-Attribute names usually are same as a system field names. Fields are listed in Entity Manager > ... > Fields.
+Attribute names usually are same as a system field names. Fields are listed at Administration > Entity Manager > ... > Fields.
 
 Attribute names should be in lowerCamelCase.
 
