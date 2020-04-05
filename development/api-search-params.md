@@ -2,10 +2,12 @@
 
 Filters and other search parameters can be used with API functions that returns a list of records.
 
-## Example
+* [Examples](#examples)
+* [where item definitions](#where-item-definitions)
 
-In PHP.
+## Examples
 
+### PHP
 
 ```php
 $url = 'Lead';
@@ -54,7 +56,32 @@ $params = [
 $response = $client->request('GET', $url, $params);
 ```
 
-## where
+### Javascript (Nodejs)
+
+```js
+var params = {
+    maxSize: 5,
+    primaryFilter: 'open',
+    where: [
+        {
+            type: 'equals',
+            attribute: 'priority',
+            value: 'Urgent',
+        }
+    ],
+    select: 'id,name,assignedUserId,assignedUserName',
+};
+
+client.request('GET', 'Case', params)
+    .then(
+        (response) => {
+            console.log(response);
+        }
+    )
+```
+
+
+## where item definitions
 
 ### equals, notEquals
 
