@@ -3,8 +3,8 @@
 Filters and other search parameters can be used with API functions that returns a list of records.
 
 * [Examples](#examples)
-* [Where item definitions](#where-item-definitions)
 * [Params](#params)
+* [Where items](#where-items)
 
 ## Examples
 
@@ -81,8 +81,59 @@ client.request('GET', 'Case', params)
     )
 ```
 
+## Params
 
-## Where item definitions
+### offset
+
+*Integer*
+
+An offset for pagination..
+
+### maxSize
+
+*Integer*
+
+How much records to return.
+
+### select
+
+*String*
+
+What record attributes to return. Separated by comma. Specify to improve performance.
+
+### where
+
+*Array*
+
+Search criteria. Can contain nested arrays and objects. See more [below](#where-items).
+
+### primaryFilter
+
+*String*
+
+A primiry filter. Primary filters are usualy defined in *Select Manager* class.
+
+### boolFilterList
+
+*Array*
+
+Bool filters. E.g. *onlyMy*, *followed.
+
+
+### orderBy
+
+*String*
+
+An attribute to order by.
+
+### order
+
+*String*
+
+A direction of order: 'desc' or 'asc'.
+
+
+## Where items
 
 ### equals, notEquals
 
@@ -236,54 +287,3 @@ For array, multi-enum, checkbox fields.
     "attribute": "fieldName"
 }
 ```
-
-## Params
-
-### offset
-
-*Integer*
-
-An offset for pagination..
-
-### maxSize
-
-*Integer*
-
-How much records to return.
-
-### select
-
-*String*
-
-What record attributes to return. Separated by comma. Specify to improve performance.
-
-### where
-
-*Array*
-
-Search criteria. Can contain nested arrays and objects.
-
-### primaryFilter
-
-*String*
-
-A primiry filter. Primary filters are usualy defined in *Select Manager* class.
-
-### boolFilterList
-
-*Array*
-
-Bool filters. E.g. *onlyMy*, *followed.
-
-
-### orderBy
-
-*String*
-
-An attribute to order by.
-
-### order
-
-*String*
-
-A direction of order: 'desc' or 'asc'.
