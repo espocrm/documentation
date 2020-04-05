@@ -169,7 +169,6 @@ class Client {
                     reject(e);
                 });
 
-
                 if (data && method != 'GET') {
                     req.write(postData);
                 }
