@@ -11,7 +11,7 @@ In PHP.
 $url = 'Lead';
 
 $where = [
-    'value' => [
+    [
         [
             'type' => 'isNotNull',
             'attribute' => 'assignedUserId',
