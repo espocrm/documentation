@@ -23,7 +23,7 @@ Branches:
 * *master* – develop branch; new features should be pushed to this branch;
 * *stable* – last stable release.
 
-### How to build
+### Building
 
 You need to have nodejs and Grunt CLI installed.
 
