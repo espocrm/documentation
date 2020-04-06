@@ -7,7 +7,35 @@
 3. Install [composer](https://getcomposer.org/doc/00-intro.md).
 4. Run `composer install` if composer is installed globally or `php composer.phar install` if locally.
 
-Use branch *stable* to get the latest stable version.
+Note: Some dependencies require php extensions that you might don't have installed (e.g. zmq, ldap) and don't need to use. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
+
+To compose a proper *config.php* and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in a browser.
+
+Then open `data/config.php` file and add:
+
+```php
+'isDeveloperMode' => true,
+```
+
+Branches:
+
+* *hotfix/** – upcoming maintenance release; fixes should be pushed to this branch;
+* *master* – develop branch; new features should be pushed to this branch;
+* *stable* – last stable release.
+
+### How to build
+
+You need to have nodejs and Grunt CLI installed.
+
+1. Change to the project's root directory.
+2. Install project dependencies with `npm install`.
+3. Run Grunt with `grunt`.
+
+The build will be created in the `build` directory.
+
+Note: By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
+
+Upgrade packages can be built with `grunt upgrade`.
 
 ## Option B. Using installed instance
 
