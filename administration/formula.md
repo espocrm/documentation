@@ -102,10 +102,16 @@ Out-of-the-box functions are listed below.
 ## General
 
 #### ifThenElse
-`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)` If CONDITION is met, then do CONSEQUENT. If not -- then do ALTERNATIVE.
+
+`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)`
+
+If CONDITION is met, then do CONSEQUENT. If not -- then do ALTERNATIVE.
 
 #### ifThen
-`ifThen(CONDITION, CONSEQUENT)` If CONDITION is met, then do CONSEQUENT. If not -- do nothing.
+
+`ifThen(CONDITION, CONSEQUENT)`
+
+If CONDITION is met, then do CONSEQUENT. If not -- do nothing.
 
 CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
 
@@ -130,45 +136,68 @@ Useful to create an array for link-multiple IDs. Example: `teamsIds = list($team
 * [string\matchAll](#stringmatchall)
 
 #### string\concatenate
-`string\concatenate(STRING_1, STRING_2)` Concatenates two or more strings.
+
+`string\concatenate(STRING_1, STRING_2)`
+
+Concatenates two or more strings.
 
 #### string\substring
-`string\substring(STRING, START, LENGTH)`  Extracts the characters from a STRING by START position and LENGTH.
+
+`string\substring(STRING, START, LENGTH)`
+
+Extracts the characters from a STRING by START position and LENGTH.
 
 If LENGTH is omitted, the substring starting from START until the end of the STRING will be returned.
 
 If LENGTH is negative, then that many characters will be omitted from the end of STRING.
 
 #### string\contains
-`string\contains(STRING, NEEDLE)`  Whether STRING contains NEEDLE.
+
+`string\contains(STRING, NEEDLE)`
+
+Whether STRING contains NEEDLE.
 
 #### string\pos
-`string\pos(STRING, NEEDLE)`  Returns possition of NEEDLE in STRING, *false* if not found. (since version 5.7.3)
+`string\pos(STRING, NEEDLE)`
+
+Returns possition of NEEDLE in STRING, *false* if not found. (since version 5.7.3)
 
 #### string\test
-`string\test(STRING, REGULAR_EXPRESSION)`  Search a match between REGULAR_EXPRESSION and STRING. Returns TRUE of FALSE.
+`string\test(STRING, REGULAR_EXPRESSION)`
+
+Search a match between REGULAR_EXPRESSION and STRING. Returns TRUE of FALSE.
 
 #### string\length
-`string\length(STRING)` The length of STRING.
+`string\length(STRING)`
+
+The length of STRING.
 
 #### string\trim
-`string\trim(STRING)` Strips whitespace from the beginning and end of STRING.
+`string\trim(STRING)`
+
+Strips whitespace from the beginning and end of STRING.
 
 #### string\lowerCase
 `string\lowerCase(STRING)` Converts letters to lower case.
 
 #### string\upperCase
-`string\upperCase(STRING)` Converts letters to upper case.
+`string\upperCase(STRING)`
+
+Converts letters to upper case.
 
 #### string\pad
-`string\pad(STRING, LENGTH, [PAD_STRING], [PAD_TYPE])`  Pads STRING to a certain LENGTH with PAD_STRING.
+`string\pad(STRING, LENGTH, [PAD_STRING], [PAD_TYPE])` 
+
+Pads STRING to a certain LENGTH with PAD_STRING.
 
 PAD_STRING by default is a whitespace string `' '`.
 
 PAD_TYPE can be *'right'*, *'left'*, *'both'*. By default it is *'right'*.
 
 #### string\match
-`string\match(STRING, REGULAR_EXPRESSION, [OFFSET])`  Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
+`string\match(STRING, REGULAR_EXPRESSION, [OFFSET])`
+
+Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
 
 Example:
 
@@ -177,7 +206,9 @@ Example:
 will return `{token1}`.
 
 #### string\matchAll
-`string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`  Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
+`string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
+
+Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
 
 Example:
 
@@ -206,13 +237,19 @@ will return an array `['{token1}', '{token2}']`.
 * [datetime\closest](#datetimeclosest)
 
 #### datetime\today
-`datetime\today()` Returns today's date.
+`datetime\today()`
+
+Returns today's date.
 
 #### datetime\now
-`datetime\now()` Returns current datetime.
+`datetime\now()`
+
+Returns current datetime.
 
 #### datetime\format
-`datetime\format(VALUE, [TIMEZONE], [FORMAT])` Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then default time zone will be used. If FORMAT is omitted, then default format will be used.
+`datetime\format(VALUE, [TIMEZONE], [FORMAT])`
+
+Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then default time zone will be used. If FORMAT is omitted, then default format will be used.
 
 Examples:
 
@@ -223,46 +260,74 @@ Examples:
 `datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
 
 #### datetime\date
-`datetime\date(VALUE, [TIMEZONE])` Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
+`datetime\date(VALUE, [TIMEZONE])`
+
+Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\month
-`datetime\month(VALUE, [TIMEZONE])` Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
+`datetime\month(VALUE, [TIMEZONE])`
+
+Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\year
-`datetime\year(VALUE, [TIMEZONE])` Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
+`datetime\year(VALUE, [TIMEZONE])`
+
+Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\hour
-`datetime\hour(VALUE, [TIMEZONE])` Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
+`datetime\hour(VALUE, [TIMEZONE])`
+
+Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\minute
-`datetime\minute(VALUE, [TIMEZONE])` Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
+`datetime\minute(VALUE, [TIMEZONE])`
+
+Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\dayOfWeek
-`datetime\dayOfWeek(VALUE, [TIMEZONE])` Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted, then system timezone is used.
+`datetime\dayOfWeek(VALUE, [TIMEZONE])`
+
+Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\diff
-`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
+`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)`
+
+Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
 
 #### datetime\addMinutes
-`datetime\addMinutes(VALUE, MINUTES)` Adds MINUTES to datetime VALUE. MINUTES can be negative.
+`datetime\addMinutes(VALUE, MINUTES)`
+
+Adds MINUTES to datetime VALUE. MINUTES can be negative.
 
 #### datetime\addHours
-`datetime\addHours(VALUE, HOURS)` Adds HOURS to datetime VALUE. HOURS can be negative.
+`datetime\addHours(VALUE, HOURS)`
+
+Adds HOURS to datetime VALUE. HOURS can be negative.
 
 #### datetime\addDays
-`datetime\addDays(VALUE, DAYS)` Adds DAYS to date or datetime VALUE. DAYS can be negative.
+`datetime\addDays(VALUE, DAYS)`
+
+Adds DAYS to date or datetime VALUE. DAYS can be negative.
 
 #### datetime\addWeeks
-`datetime\addWeeks(VALUE, WEEKS)` Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
+`datetime\addWeeks(VALUE, WEEKS)`
+
+Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
 
 #### datetime\addMonths
-`datetime\addMonths(VALUE, MONTHS)` Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
+`datetime\addMonths(VALUE, MONTHS)`
+
+Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
 
 #### datetime\addYears
-`datetime\addYears(VALUE, YEARS)` Adds YEARS to date or datetime VALUE. YEARS can be negative.
+`datetime\addYears(VALUE, YEARS)`
+
+Adds YEARS to date or datetime VALUE. YEARS can be negative.
 
 #### datetime\closest
-`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])` Returns closest date or datetime to VALUE based on passed arguments.
+`datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])`
+
+Returns closest date or datetime to VALUE based on passed arguments.
 
 TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted, then default timezone is used.
 
@@ -283,7 +348,9 @@ Examples:
 * [number\ceil](#numberceil)
 
 #### number\format
-`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR, then system defaults are used.
+`number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])`
+
+Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR, then system defaults are used.
 
 Examples:
 
@@ -295,16 +362,24 @@ Examples:
 
 
 #### number\abs
-`number\abs(VALUE)` Absolute value. Returns null if VALUE is not numeric.
+`number\abs(VALUE)`
+
+Absolute value. Returns null if VALUE is not numeric.
 
 #### number\round
-`number\round(VALUE, PRECISION)` Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
+`number\round(VALUE, PRECISION)`
+
+Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
 
 #### number\floor
-`number\floor(VALUE)` Returns the next lowest integer value by rounding down value if necessary.
+`number\floor(VALUE)`
+
+Returns the next lowest integer value by rounding down value if necessary.
 
 #### number\ceil
-`number\ceil(VALUE)` Returns the next highest integer value by rounding up value if necessary.
+`number\ceil(VALUE)`
+
+Returns the next highest integer value by rounding up value if necessary.
 
 ### Entity
 
@@ -348,7 +423,9 @@ Return TRUE if ATTRIBUTE of the record was not changed.
 
 #### entity\attribute
 
-`entity\attribute(ATTRIBUTE)` An ATTRIBUTE value of a target record. It's also possibe to fetch an attribute of a related record.
+`entity\attribute(ATTRIBUTE)`
+
+An ATTRIBUTE value of a target record. It's also possibe to fetch an attribute of a related record.
 
 `$test = entity\attribute('name')` is equivalent to `$test = name`.
 
@@ -360,7 +437,9 @@ Examples:
 
 #### entity\setAttribute
 
-`entity\setAttribute(ATTRIBUTE, VALUE)` Set ATTRIBUTE with a VALUE.
+`entity\setAttribute(ATTRIBUTE, VALUE)`
+
+Set ATTRIBUTE with a VALUE.
 
 `entity\setAttribute('stage', 'Closed Won')` is equivalent to `stage = 'Closed Won'`.
 
@@ -370,7 +449,9 @@ Example:
 
 
 #### entity\attributeFetched
-`entity\attributeFetched(ATTRIBUTE)` An ATTRIBUTE value that was set when a target record was fetched from database. Before it was modified.
+`entity\attributeFetched(ATTRIBUTE)`
+
+An ATTRIBUTE value that was set when a target record was fetched from database. Before it was modified.
 
 Example:
 
@@ -612,7 +693,9 @@ Example:
 ### Env
 
 #### env\userAttribute
-`env\userAttribute(ATTRIBUTE)` Returns ATTRIBUTE of the current user.
+`env\userAttribute(ATTRIBUTE)`
+
+Returns ATTRIBUTE of the current user.
 
 Example:
 
@@ -645,21 +728,31 @@ $hash = password\hash($password);
 ### Array
 
 #### array\includes
-`array\includes(LIST, VALUE)` Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields.
+`array\includes(LIST, VALUE)`
+
+Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields.
 
 #### array\push
-`array\push(LIST, VALUE1 [, VALUE2 ...])` Adds one or more elements to the end of an array and returns the new array.
+`array\push(LIST, VALUE1 [, VALUE2 ...])`
+
+Adds one or more elements to the end of an array and returns the new array.
 
 #### array\length
-`array\length(LIST)` Returns count of elements in LIST.
+`array\length(LIST)`
+
+Returns count of elements in LIST.
 
 #### array\at
-`array\at(LIST, INDEX)` Returns value by INDEX. (since version 5.8.3)
+`array\at(LIST, INDEX)`
+
+Returns value by INDEX. (since version 5.8.3)
 
 ### Ext
 
 #### ext\account\findByEmailAddressDomain
-`ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)` Finds account by email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
+`ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
+
+Finds account by email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
 
 
 ## Values
