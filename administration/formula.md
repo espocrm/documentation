@@ -627,12 +627,17 @@ By utilizing this function along with *record\findOne*, it's possible to fetch a
 
 `record\relate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
 
-Links two records. Available since version 5.7.8.
+Relates two records. Available since version 5.7.8.
 
+`record\relate(ENTITY_TYPE, ID, LINK, LIST_OF_IDS)`
 
-Example:
+Links a record with multiple records. Available since version 5.9.0.
+
+Examples:
 
 `record\relate('Account', $accountId, 'opportunities', $opportunityId)`
+
+`record\relate('Account', $accountId, 'tasks', list('id1', 'id2'))`
 
 Note: It won't work in *Before save script* when creating a new record, because the record doesn't exist yet when formula is processed.
 
