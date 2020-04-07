@@ -1,4 +1,4 @@
-# Running tests
+# Tests
 
 Before running tests, you need to build for testing:
 
