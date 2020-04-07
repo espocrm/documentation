@@ -308,6 +308,8 @@ Examples:
 
 ### Entity
 
+Functions of *Entity* group operates with a target record. There can be only one target record available in formula-script context. For *Before Update Script* the target record is the record that is currently updated. For Workflow's *Create Record* action, the target record is the record is being created. For Workflow's conditions, the target record is the target record of the workflow rule.
+
 * [entity\isNew](#entityisnew)
 * [entity\isAttributeChanged](#entityisattributechanged)
 * [entity\isAttributeNotChanged](#entityisattributenotchanged)
