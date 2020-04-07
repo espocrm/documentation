@@ -323,19 +323,29 @@ Examples:
 * [entity\getLinkColumn](#entitygetlinkcolumn)
 
 #### entity\isNew
-`entity\isNew()` Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
+
+`entity\isNew()`
+
+Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
 
 #### entity\isAttributeChanged
-`entity\isAttributeChanged(ATTRIBUTE)` Returns TRUE if ATTRIBUTE of the record was changed.
+
+`entity\isAttributeChanged(ATTRIBUTE)`
+
+Returns TRUE if ATTRIBUTE of the record was changed.
 
 Example:
 
 `entity\isAttributeChanged('status')`
 
 #### entity\isAttributeNotChanged
-`entity\isAttributeNotChanged(ATTRIBUTE)` Return TRUE if ATTRIBUTE of the record was not changed.
+
+`entity\isAttributeNotChanged(ATTRIBUTE)`
+
+Return TRUE if ATTRIBUTE of the record was not changed.
 
 #### entity\attribute
+
 `entity\attribute(ATTRIBUTE)` An ATTRIBUTE value of a target record. It's also possibe to fetch an attribute of a related record.
 
 `$test = entity\attribute('name')` is equivalent to `$test = name`.
@@ -346,8 +356,8 @@ Examples:
 
 `entity\attribute('account.name')`
 
-
 #### entity\setAttribute
+
 `entity\setAttribute(ATTRIBUTE, VALUE)` Set ATTRIBUTE with a VALUE.
 
 `entity\setAttribute('stage', 'Closed Won')` is equivalent to `stage = 'Closed Won'`.
@@ -365,26 +375,45 @@ Example:
 `entity\attributeFetched('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Adds ID to Link Multiple field.
 
-`entity\addLinkMultipleId(LINK, ID_LIST)` Adds the list of ids.
+`entity\addLinkMultipleId(LINK, ID)`
+
+Adds ID to Link Multiple field.
+
+`entity\addLinkMultipleId(LINK, ID_LIST)`
+
+Adds the list of ids.
 
 Example:
 
-`entity\addLinkMultipleId('teams', 'someTeamId')` Add 'someTeamId' to 'teams' field. 
+`entity\addLinkMultipleId('teams', 'someTeamId')`
+
+Add 'someTeamId' to 'teams' field. 
 
 
 #### entity\hasLinkMultipleId
-`entity\hasLinkMultipleId(LINK, ID)` Checks whether Link Multiple field has specific ID.
+
+`entity\hasLinkMultipleId(LINK, ID)`
+
+Checks whether Link Multiple field has specific ID.
 
 #### entity\removeLinkMultipleId
-`entity\removeLinkMultipleId(LINK, ID)` Removes a specific ID from the Link Multiple field.
+
+`entity\removeLinkMultipleId(LINK, ID)`
+
+Removes a specific ID from the Link Multiple field.
 
 #### entity\isRelated
-`entity\isRelated(LINK, ID)` Checks whether target entity is related with another entity represented by LINK and ID.
+
+`entity\isRelated(LINK, ID)`
+
+Checks whether target entity is related with another entity represented by LINK and ID.
 
 #### entity\sumRelated
-`entity\sumRelated(LINK, FIELD, [FILTER])` Sums related records by a specified FIELD with an optional FILTER.
+
+`entity\sumRelated(LINK, FIELD, [FILTER])`
+
+Sums related records by a specified FIELD with an optional FILTER.
 
 Example:
 
@@ -393,7 +422,10 @@ Example:
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
 
 #### entity\countRelated
-`entity\countRelated(LINK, [FILTER])` Returns a number of related records with an optional FILTER applied.
+
+`entity\countRelated(LINK, [FILTER])`
+
+Returns a number of related records with an optional FILTER applied.
 
 Example:
 
@@ -402,7 +434,10 @@ Example:
 It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info about filters [below](#filter).
 
 #### entity\getLinkColumn
-`entity\getLinkColumn(LINK, ID, COLUMN)` Fetches a relationship column value (since 5.7.1).
+
+`entity\getLinkColumn(LINK, ID, COLUMN)`
+
+Fetches a relationship column value (since 5.7.1).
 
 Example:
 
@@ -418,12 +453,16 @@ Example:
 * [record\attribute](#recordattribute)
 * [record\relate](#recordrelate)
 * [record\unrelate](#recordunrelate)
+* [record\create](#recordcreate)
+* [record\update](#recordupdate)
 * [record\relationColumn](#recordrelationcolumn)
 * [record\updateRelationColumn](#recordupdaterelationcolumn)
 
 #### record\exists
 
-`record\exists(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Check whether a record with specified criteria exists.
+`record\exists(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])`
+
+Check whether a record with specified criteria exists.
 
 Examples:
 
@@ -433,9 +472,13 @@ Examples:
 
 #### record\count
 
-`record\count(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])` Returns a count of records with specified criteria.
+`record\count(ENTITY_TYPE, KEY1, VALUE1, [KEY2, VALUE2 ...])`
 
-`record\count(ENTITY_TYPE, [FILTER])` Returns a count of records with an optional FILTER applied. More info about filters [below](#filter).
+Returns a count of records with specified criteria.
+
+`record\count(ENTITY_TYPE, [FILTER])`
+
+Returns a count of records with an optional FILTER applied. More info about filters [below](#filter).
 
 Examples:
 
@@ -451,7 +494,9 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 #### record\findOne
 
-`record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a record that matches specific criteria. (since version 5.7.0)
+`record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])`
+
+Returns a first found ID of a record that matches specific criteria. (since version 5.7.0)
 
 `record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a record with an optional FILTER applied. (since version 5.7.0)
 
@@ -465,7 +510,9 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 #### record\findRelatedOne
 
-`record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, KEY1, VALUE1, KEY2, VALUE2 ...])` Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
+`record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, KEY1, VALUE1, KEY2, VALUE2 ...])`
+
+Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
 
 `record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
 
@@ -515,6 +562,30 @@ Unlinks two records. Available since version 5.7.8.
 Example:
 
 `record\unrelate('Account', $accountId, 'opportunities', $opportunityId)`
+
+#### record\create
+
+`record\create(ENTITY_TYPE, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
+
+Creates a new record of entity type with attributes specified as key-value pairs. Returns id of the created record, or NULL if failure.
+
+Available since version 5.9.0.
+
+Examples:
+
+`$id = record\create('Meeting', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
+
+#### record\update
+
+`record\update(ENTITY_TYPE, ID, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
+
+Updates an existing record with attributes specified as key-value pairs. Returns TRUE if success, FALSE if failure.
+
+Available since version 5.9.0.
+
+Examples:
+
+`record\update('Meeting', 'SOME-MEETING-ID', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
 
 #### record\relationColumn
 
