@@ -52,7 +52,7 @@ The process is executed according to the flowchart. The flowchart of process can
 
 The process is obligatorily related to single target record.
 
-Processes can be started:
+Processes can be **started**:
 
 * Automatically – Upon specific conditions, signal, or scheduling, described in the flowchart; this is the main method.
 * Manually – To start process manually the user needs to click 'Start Process' button on the list view of processes.
@@ -69,11 +69,11 @@ The execution of the process is visualized with colors highlighting flow nodes:
 
 ### Manipulating
 
-A process can be stopped manually by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
+A process can be **stopped manually** by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
 
-It's possible to manually reject or interrupt pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node. Note, that after rejecting a flow node it's possible that the process will become suspended and won't ever end by itself. You will need either manually stop it or start a flow from any node to continue executing.
+It's possible to **manually reject or interrupt** pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node. Note, that after rejecting a flow node it's possible that the process will become suspended and won't ever end by itself. You will need either manually stop it or start a flow from any node to continue executing.
 
-It's possible to manually start a flow from any element of an already started process. You need to click on a specific flowchart element on the process detail view and then click the button *Start flow from here*.
+It's possible to **manually start a flow from any element** of an already started process. You need to click on a specific flowchart element on the process detail view and then click the button *Start flow from here*.
 
 ### Self-removal
 
