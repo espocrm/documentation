@@ -230,7 +230,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 ![Escalation Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-escalation.png)
 
 
-### Signal Intermediate Event (boundary)
+### Signal Intermediate Event (Boundary)
 
 It's triggered once a specific signal is broadcasted. Note, that a signal can be triggered from anywhere in the system, not necessarily in the same process.
 
@@ -241,6 +241,3 @@ Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be repl
 ### Message Intermediate Event (Boundary)
 
 Triggered once an email is received. It functions the same as *Message Intermediate Event (Catching)*.
-
-
-
