@@ -70,7 +70,7 @@ You can catch a reply on the sent email with *Message Intermediate Event* furthe
 
 ### Opting-out
 
-It's possible to add opt-out link to an email body. Opting out can be caught within a process with a catching signal event with the signal name `optOut.ENTITY_TYPE.{$id}`.
+It's possible to add opt-out link to an email body. Opting out can be caught within a process with Catching Signal Event with the signal name `optOut.ENTITY_TYPE.{$id}`, where *ENTITY_TYPE* should be replaced with entity type (e.g. Lead), *{$id}* is a placeholder standing for the target record ID. Signal name usage example: `optOut.Lead.{$id}`.
 
 ### Tracking URLs
 
