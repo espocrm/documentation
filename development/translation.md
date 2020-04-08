@@ -37,11 +37,11 @@ To add a new language create a file `custom/Espo/Custom/Resources/metadata/app/l
 {
     "list": [
         "__APPEND__",
-        "lg_LG"
+        "lg_CN"
     ]
 }
 ```
 
-Where *lg_LG* is the language code. 'lg' is the language code specified by ISO 639, 'LG' is a country code specified by 3166.
+Where *lg_LG* is the language code. 'lg' is the language code specified by ISO 639, 'CN' is a country code specified by 3166.
 
 Clear cache after that (Administration > Clear Cache). The language will be available at Administration > Settings and user's preferences.
