@@ -168,9 +168,9 @@ When a sub-process is initiated, all formula variables are copied from the paren
 
 Event Sub-Process has neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
 
-It possible to pass a different targe to the event sub-process. The event sub-process can interrupt its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
+It possible to **pass a different target** to the event sub-process. The event sub-process can *interrupt* its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
 
-Non interrupting event sub-process can be executed multiple times.
+Non-interrupting event sub-process can be executed multiple times. E.g. a condition occured multiple times.
 
 ![Event Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-sub-process.png)
 
