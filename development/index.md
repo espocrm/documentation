@@ -3,6 +3,7 @@
 * [How to get started](https://github.com/espocrm/documentation/blob/master/development/how-to-start.md)
 * [Making extension package](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
 * [Tests](tests.md)
+* [Translation](translation.md)
 
 ### Backend
 
