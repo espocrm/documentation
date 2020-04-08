@@ -90,7 +90,7 @@ The user assigned to the created Process User Task record will receive in-app no
 
 It's possible to specify instructions text for a user (markdown is supported).
 
-You can use placeholders in *Name* and *Instrictions*:
+You can use placeholders in *Name* and *Instructions*:
 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – process variable (defined by Script Task)
