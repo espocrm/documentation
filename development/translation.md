@@ -27,4 +27,21 @@ Json files will be created in `build` directory grouped by folders.
 
 You can test thranslation by copying files into your EspoCRM directory.
 
+## Adding new language
 
+The available language list is specified in metadata > app > language.
+
+To add a new language create a file `custom/Espo/Custom/Resources/metadata/app/language.json`:
+
+```json
+{
+    "list": [
+        "__APPEND__",
+        "lg_LG"
+    ]
+}
+```
+
+Where *lg_LG* is the language code. 'lg' is the language code specified by ISO 639, 'LG' is a country code specified by 3166.
+
+Clear cache after that (Administration > Clear Cache). The language will be available at Administration > Settings and user's preferences.
