@@ -111,7 +111,7 @@ It's possible to create Children-to-Parent relationship between some entity type
 
 ### Resolution
 
-It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow.
+It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow. User Task resolution is avaible in conditions of geteways and conditional events.
 
 ### Canceling
 
