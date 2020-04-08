@@ -114,8 +114,8 @@ Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced 
 
 ## Naming clarification
 
-* *ID* – id of a record that you can obtain from the browser address bar
+* *ID* – ID of a record that you can obtain from the browser address bar
 * *ENTITY_TYPE* – entity type of the record (not translated), you can obtain it at Administration > Entity Manager
-* *LINK_NAME* – relation name, you obtain it at Administration > Entity Manager
-* *FOREIGN_ID* – id of a related record
+* *LINK_NAME* – relation name, you can obtain it at Administration > Entity Manager
+* *FOREIGN_ID* – ID of a related record
 
