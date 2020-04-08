@@ -156,7 +156,7 @@ Sub-process should have one (and only one) regular Start Event.
 
 Sub-process can be interrupted by an interrupting boundary event. When the sub-process is successfully ended (not interrupted, not ended with an error), the flow of the parent process proceeds to the next element.
 
-It possible to pass a different target to the sub-process. After you placed a sub-process element on the flowchart, click it to edit, then specify a target.
+It possible to **pass a different target** to the sub-process. After you placed a sub-process element on the flowchart, click it to edit, then specify a target. It allows to easily access fields of created records or records related the target records. E.g. to send notification to the assigned user of the opportunity that was created within the process.
 
 When a sub-process is initiated, all formula variables are copied from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter.
 
@@ -168,7 +168,7 @@ When a sub-process is initiated, all formula variables are copied from the paren
 
 Event Sub-Process has neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
 
-It possible to pass a different target to the event sub-process. The event sub-process can interrupt its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
+It possible to pass a different targe to the event sub-process. The event sub-process can interrupt its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
 
 Non interrupting event sub-process can be executed multiple times.
 
