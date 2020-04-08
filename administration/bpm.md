@@ -55,8 +55,8 @@ The process is obligatorily related to single target record.
 Processes can be **started**:
 
 * Automatically – Upon specific conditions, signal, or scheduling, described in the flowchart; this is the main method.
-* Manually – To start process manually the user needs to click 'Start Process' button on the list view of processes.
-* With Workflow rule – 'Start BPM Process' action allows to pass a related record as a target for the process.
+* Manually – To start process manually the user needs to click *Start Process* button on the list view of processes or from the record detail view from the dropdown in the top-right corner.
+* With Workflow rule – *Start BPM Process* action allows to pass a related record as a target for the process.
 
 The execution of the process is visualized with colors highlighting flow nodes:
 
