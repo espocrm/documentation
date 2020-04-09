@@ -32,9 +32,9 @@ Administrator can disable export function for all non-admin users at Administrat
 
 Also it's possible to control an access to export function via ACL Roles with Export Permission parameter.
 
-## Delimiter
+## CSV delimiter
 
-Users can specify export delimiter at Preferences. By default `;` is set.
+Users can specify the delimiter for CSV export at Preferences. By default `;` is set.
 
 ## See also
 
