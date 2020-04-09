@@ -43,6 +43,8 @@ Also it's possible to control an access to export function via ACL Roles with Ex
 
 Users can specify the delimiter for CSV export at Preferences.
 
+The default delimiter value for the system can be changed manually in `data/config.php`, parameter `exportDelimiter`.
+
 ## See also
 
 * [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
