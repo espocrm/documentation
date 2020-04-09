@@ -140,7 +140,7 @@ It's possible to utilize the event in pair with *Send Message* task. The event w
 
 *Related To* parameter requires that email was related (via Parent field) to a specific record.
 
-There is the ability to specify formula conditions that the email should satisfy to trigger the event. You can utilize it to skip auto-response emails or to catch emails containing the specific ID.
+There is the ability to specify formula conditions that the email should satisfy to trigger the event. You can utilize it to skip auto-response emails or to catch emails containing a specific ID. Formula example: `string\contains(body, $id)`.
 
 ![Message Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-message.png)
 
