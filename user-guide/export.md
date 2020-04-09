@@ -32,6 +32,10 @@ Administrator can disable export function for all non-admin users at Administrat
 
 Also it's possible to control an access to export function via ACL Roles with Export Permission parameter.
 
+## Delimiter
+
+Users can specify export delimiter at Preferences. By default `;` is set.
+
 ## See also
 
-[Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
+* [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
