@@ -2,6 +2,13 @@
 
 EspoCRM has the ability to export records to XLSX (Excel) and CSV formats.
 
+* [How to export]()
+* [Access control]()
+* [CSV delimiter]()
+* [See also]()
+
+## How to export
+
 ### Step 1
 
 On the list view make a search with needed filters and then click *Select All Results* (from the dropdown, see the screenshot below).
@@ -26,7 +33,7 @@ You can select specific fields to be exported or check to export all available f
 
 After clicking Export button the export file will be downloaded.
 
-## Control of access to export
+## Access control
 
 Administrator can disable export function for all non-admin users at Administration > Settings > Disable Export.
 
