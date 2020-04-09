@@ -41,7 +41,7 @@ Also it's possible to control an access to export function via ACL Roles with Ex
 
 ## CSV delimiter
 
-Users can specify the delimiter for CSV export at Preferences. By default `;` is set.
+Users can specify the delimiter for CSV export at Preferences.
 
 ## See also
 
