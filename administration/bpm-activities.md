@@ -184,8 +184,6 @@ Non-interrupting event sub-process can be executed **multiple times**. E.g. a co
 
 ## Call Activity
 
-Executes a sub-process defined by a flowchart stored separately. Provides the ability to re-use the same flowchart in different processes.
+Executes a sub-process defined by a flowchart stored separately. Provides the ability to re-use the same flowchart in different processes. Call Activity sub-process works the same way as a regular sub-process.
 
 It possible to pass a different target to the sub-process.
-
-
