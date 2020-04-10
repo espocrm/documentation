@@ -160,7 +160,7 @@ It possible to **pass a different target** to the sub-process. After you placed 
 
 When a sub-process is initiated, all formula variables are copied from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter.
 
-When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passed information about created records to the parent process.
+When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes information about created records to the parent process.
 
 ![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/sub-process.png)
 
