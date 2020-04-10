@@ -160,6 +160,8 @@ It possible to **pass a different target** to the sub-process. After you placed 
 
 When a sub-process is initiated, all formula variables are copied from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter.
 
+When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passed information about created records to the parent process.
+
 ![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/sub-process.png)
 
 ----
@@ -170,7 +172,11 @@ Event Sub-Process has neither ingoing, nor outgoing flows. It is triggered by it
 
 It possible to **pass a different target** to the event sub-process. The event sub-process can *interrupt* its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
 
-Non-interrupting event sub-process can be executed multiple times. E.g. a condition occured multiple times.
+When an event sub-process is initiated, all formula variables are copied from the parent process to the sub-process.
+
+When an event sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. Records created by the event sub-process won't be accessible by the parent process.
+
+Non-interrupting event sub-process can be executed **multiple times**. E.g. a condition occured multiple times.
 
 ![Event Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-sub-process.png)
 
