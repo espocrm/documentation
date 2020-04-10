@@ -176,7 +176,7 @@ When an event sub-process is initiated, all formula variables are copied from th
 
 When an event sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. Records created by the event sub-process won't be accessible by the parent process.
 
-Non-interrupting event sub-process can be executed **multiple times**. E.g. a condition occured multiple times.
+Non-interrupting event sub-process can be executed **multiple times**. E.g. a condition occurred multiple times.
 
 ![Event Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-sub-process.png)
 
