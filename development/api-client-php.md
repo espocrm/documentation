@@ -38,7 +38,9 @@ $client->setApiKey('API_KEY');
 $client->setSecretKey('SECRET_KEY');
 ```
 
-### Authentication with username and password (not recommended)
+### Authentication with username and password
+
+Note: Not recommended.
 
 ```php
 $client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
