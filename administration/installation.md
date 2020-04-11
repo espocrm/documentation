@@ -1,6 +1,7 @@
 # Installation
 
 ### Requirements
+
 EspoCRM runs on the most hosting providers. Requirements include the following:
 
 * PHP 7.1 or later,
@@ -9,6 +10,7 @@ EspoCRM runs on the most hosting providers. Requirements include the following:
 See [Server Configuration](server-configuration.md) article for more information.
 
 ### 1. Download the EspoCRM installation package
+
 To get the latest version of EspoCRM follow [download page](http://www.espocrm.com/download/) link.
 
 ### 2. Upload the EspoCRM Files to Your Server
@@ -66,10 +68,4 @@ The last thing to setup Scheduled Tasks to be run by your system. It can be done
 ![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
 
 We hope you will enjoy working in EspoCRM.
-
-
-
-
-
-
 
