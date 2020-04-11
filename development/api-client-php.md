@@ -13,6 +13,14 @@ $response = $client->request('POST', 'Lead', [
     'firstName' => 'Test',
     'lastName' => 'Hello',
 ]);
+
+$response = $client->request('GET', 'Opportunity', [
+    'maxSize' => 10,
+    'select' => 'id,name,assignedUserId',
+    'orderBy' => 'createdAt',
+    'order' => 'desc',
+    'primaryFilter' => 'open',
+]);
 ```
 
 ### Api Key Auth
