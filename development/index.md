@@ -1,45 +1,45 @@
 ## Developer Documentation
 
-* [How to get started](https://github.com/espocrm/documentation/blob/master/development/how-to-start.md)
-* [Making extension package](https://github.com/espocrm/documentation/blob/master/development/extension-packages.md)
+* [How to get started](how-to-start.md)
+* [Making extension package](extension-packages.md)
 * [Tests](tests.md)
 * [Translation](translation.md)
 
 ### Backend
 
-* [API](https://github.com/espocrm/documentation/blob/master/development/api.md)
-* [Custom API action](https://github.com/espocrm/documentation/blob/master/development/api-action.md)
-* [Services](https://github.com/espocrm/documentation/blob/master/development/services.md)
-* [ORM: How to manage entities](https://github.com/espocrm/documentation/blob/master/development/orm.md)
-* [Metadata](https://github.com/espocrm/documentation/blob/master/development/metadata.md)
-* [Select Manager](https://github.com/espocrm/documentation/blob/master/development/select-manager.md)
-* [Hooks](https://github.com/espocrm/documentation/blob/master/development/hooks.md)
-* [ACL customization](https://github.com/espocrm/documentation/blob/master/development/acl.md)
+* [API](api.md)
+* [Custom API action](api-action.md)
+* [Services](services.md)
+* [ORM: How to manage entities](orm.md)
+* [Metadata](metadata.md)
+* [Select Manager](select-manager.md)
+* [Hooks](hooks.md)
+* [ACL customization](acl.md)
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
-  * [Defining new funtions for formula](https://github.com/espocrm/documentation/blob/master/development/new-function-in-formula.md)
-  * [Custom scheduled jobs](https://github.com/espocrm/documentation/blob/master/development/scheduled-job.md)
-  * [Duplicate checking](https://github.com/espocrm/documentation/blob/master/development/duplicate-check.md)
-  * [Database indexes](https://github.com/espocrm/documentation/blob/master/development/db-indexes.md)
-  * [App params](https://github.com/espocrm/documentation/blob/master/development/app-params.md)
+  * [Defining new funtions for formula](new-function-in-formula.md)
+  * [Custom scheduled jobs](scheduled-job.md)
+  * [Duplicate checking](duplicate-check.md)
+  * [Database indexes](db-indexes.md)
+  * [App params](app-params.md)
 
 ### Frontend
-* [View](https://github.com/espocrm/documentation/blob/master/development/view.md)
-* [Custom views (for records and fields)](https://github.com/espocrm/documentation/blob/master/development/custom-views.md)
+
+* [View](view.md)
+* [Custom views (for records and fields)](custom-views.md)
 * Fields
-  * [Custom field type](https://github.com/espocrm/documentation/blob/master/development/custom-field-type.md)
-  * [Customizing existing fields](https://github.com/espocrm/documentation/blob/master/development/customize-standard-fields.md)
-* [Controller & routing](https://github.com/espocrm/documentation/blob/master/development/frontend/controller.md)
+  * [Custom field type](custom-field-type.md)
+  * [Customizing existing fields](customize-standard-fields.md)
+* [Controller & routing](frontend/controller.md)
 * Misc
-  * [Custom buttons & dropdown actions for detail/edit/list views](https://github.com/espocrm/documentation/blob/master/development/custom-buttons.md)
-  * [Modal dialogs](https://github.com/espocrm/documentation/blob/master/development/modal.md)
-  * [Confirmation dialogs](https://github.com/espocrm/documentation/blob/master/development/confirm-dialog.md)
-  * [Custom panels on record view](https://github.com/espocrm/documentation/blob/master/development/frontend/record-panels.md)
-  * [Including custom CSS file](https://github.com/espocrm/documentation/blob/master/development/custom-css.md)
-  * [Custom dashlets](https://github.com/espocrm/documentation/blob/master/development/how-to-create-a-dashlet.md)
-  * [Dynamic forms with dynamic handler](https://github.com/espocrm/documentation/blob/master/development/dynamic-handler.md)
-  * [Link-multiple field with primary record](https://github.com/espocrm/documentation/blob/master/development/link-multiple-with-primary.md)
+  * [Custom buttons & dropdown actions for detail/edit/list views](custom-buttons.md)
+  * [Modal dialogs](modal.md)
+  * [Confirmation dialogs](confirm-dialog.md)
+  * [Custom panels on record view](frontend/record-panels.md)
+  * [Including custom CSS file](custom-css.md)
+  * [Custom dashlets](how-to-create-a-dashlet.md)
+  * [Dynamic forms with dynamic handler](dynamic-handler.md)
+  * [Link-multiple field with primary record](link-multiple-with-primary.md)
 * Campaigns
-  * [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
-  
+  * [Custom unsubscribe page](campaign-unsubscribe-template.md)
   
