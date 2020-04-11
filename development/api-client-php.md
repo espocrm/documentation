@@ -23,14 +23,14 @@ $response = $client->request('GET', 'Opportunity', [
 ]);
 ```
 
-### Api Key Auth
+### Api Key Authentication
 
 ```php
 $client = new EspoApiClient('https://your-espocrm-site');
 $client->setApiKey('API_KEY');
 ```
 
-### HMAC Auth
+### HMAC Authentication
 
 ```php
 $client = new EspoApiClient('https://your-espocrm-site');
@@ -38,12 +38,11 @@ $client->setApiKey('API_KEY');
 $client->setSecretKey('SECRET_KEY');
 ```
 
-### Auth with Username and Password (as regular user)
+### Authentication with username and password (not recommended)
 
 ```php
 $client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD');
 ```
-
 
 
 ## Class
