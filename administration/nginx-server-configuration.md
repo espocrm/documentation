@@ -1,6 +1,6 @@
 # Nginx server configuration for EspoCRM
 
-These instructions are supplementary to the [Server Configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
+These instructions are supplementary to the [server configuration](server-configuration.md) guideline. Please note that all configuration settings listed here are made on Ubuntu server.
 
 ## PHP requirements
 
