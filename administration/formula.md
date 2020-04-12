@@ -88,7 +88,7 @@ Priority of operators:
 
 ## Attributes
 
-Attributes represent field values of the target entity. You can insert available attributes by clicking on the plus button.
+[Attributes](terms-and-naming.md#attribute) represent field values of the target entity. You can insert available attributes by clicking on the plus button.
 
 It's possible to access attributes of related entities with the following format `linkName.attributeName`.
 
@@ -800,6 +800,8 @@ A name of the relationship. Available link names can be found at Administration 
 
 Link names must be wrapped in quotes when used as function arguments.
 
+More info about links [here](terms-and-naming.md#link).
+
 #### ATTRIBUTE
 
 Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields. 
@@ -814,12 +816,16 @@ Field types having multiple attributes:
 Where *field* is the name of the field.
 
 Attribute names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
- 
+
+More info about attributes [here](terms-and-naming.md#attribute).
+
 #### ENTITY_TYPE
 
 ENTITY_TYPE list is available at Administration > Entity Manager.
 
 Entity type names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
+
+More info about entity types [here](terms-and-naming.md#entity-type).
 
 #### FILTER
 
