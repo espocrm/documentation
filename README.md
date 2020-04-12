@@ -27,7 +27,6 @@
 * [2-factor authentication](administration/2fa.md)
 * Misc
   * [Web-to-Lead](administration/web-to-lead.md)
-  * [WebSocket](administration/websocket.md)
   * [Webhooks](administration/webhooks.md)
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
@@ -39,6 +38,7 @@
   * [Terms & naming](administration/terms-and-naming.md)
   * [Console commands](administration/commands.md)
   * [Jobs](administration/jobs.md)
+  * [WebSocket](administration/websocket.md)
 
 ---
 
