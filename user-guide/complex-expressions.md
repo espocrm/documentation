@@ -307,4 +307,4 @@ Field types having attributes named differently:
 
 Where *field* is the name of the field.
 
-More info about attributes [here](terms-and-naming.md#attribute).
+More info about attributes [here](../administration/terms-and-naming.md#attribute).
