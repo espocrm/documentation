@@ -306,3 +306,5 @@ Field types having attributes named differently:
 * Currency: *field*, *fieldCurrency*.
 
 Where *field* is the name of the field.
+
+More info about attributes [here](terms-and-naming.md#attribute).
