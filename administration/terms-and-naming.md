@@ -31,7 +31,7 @@ Attributes are named in lowerCamelCase (start with a lowercase letter).
 Field types having multiple attributes:
 
 * Link: *fieldId*, *fieldName*
-* Link-Multiple: *fieldIds*, *fieldNames* (ids -- array of ids, names -- object of id=>name pairs)
+* Link-Multiple: *fieldIds*, *fieldNames* (ids − array of ids, names − object of id=>name pairs)
 * Link-Parent: *fieldId*, *fieldType*, *fieldName* (type is entity type)
 * Currency: *field*, *fieldCurrency* (currency is currency code)
 * Person Name: *firstName*, *lastName*, *middleName*, *salutation*
