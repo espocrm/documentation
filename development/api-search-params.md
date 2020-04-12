@@ -102,7 +102,7 @@ How much records to return.
 
 *String*
 
-What record attributes to return. Separated by comma. Specify to improve performance.
+What record [attributes](../administration/terms-and-naming.md#attribute) to return. Separated by comma. Specify to improve performance.
 
 ### where
 
