@@ -30,6 +30,7 @@
   * [Jobs](administration/jobs.md)
   * [WebSocket](administration/websocket.md)
   * [Webhooks](administration/webhooks.md)
+  * [Terms & naming](administration/terms-and-naming.md)
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
   * [Console commands](administration/commands.md)
