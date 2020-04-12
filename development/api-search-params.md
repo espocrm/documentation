@@ -297,11 +297,4 @@ Attribute names usually are same as a system field names. Fields are listed at A
 
 Attribute names should be in lowerCamelCase.
 
-Field types having attributes named differently: 
-
-* Link: *fieldId*, *fieldName*.
-* Link-Parent: *fieldId*, *fieldType*.
-* Link-Multiple: *fieldIds*, *fieldNames*.
-* Currency: *field*, *fieldCurrency*.
-
-Where *field* is the name of the field.
+More info about attributes [here](../administration/terms-and-naming.md#attribute).
