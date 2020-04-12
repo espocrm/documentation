@@ -57,7 +57,7 @@ Link types:
 * belongsToParent
 * hasChildren
 
-Relationship type & link types correspondance:
+Relationship type & link types mapping:
 
 * One-to-Many: hasMany - belongsTo
 * Many-to-One: belongsTo - hasMany
