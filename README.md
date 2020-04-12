@@ -27,17 +27,18 @@
 * [2-factor authentication](administration/2fa.md)
 * Misc
   * [Web-to-Lead](administration/web-to-lead.md)
-  * [Jobs](administration/jobs.md)
   * [WebSocket](administration/websocket.md)
   * [Webhooks](administration/webhooks.md)
-  * [Terms & naming](administration/terms-and-naming.md)
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
-  * [Console commands](administration/commands.md)
   * [Backup and restore](administration/backup-and-restore.md)
   * [Moving to another server](administration/moving-to-another-server.md)
   * [Performance tweaking](administration/performance-tweaking.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
+* System
+  * [Terms & naming](administration/terms-and-naming.md)
+  * [Console commands](administration/commands.md)
+  * [Jobs](administration/jobs.md)
 
 ---
 
