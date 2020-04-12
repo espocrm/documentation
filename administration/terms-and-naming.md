@@ -59,9 +59,9 @@ Link types:
 
 Relationship type & link types mapping:
 
-* One-to-Many: hasMany - belongsTo
-* Many-to-One: belongsTo - hasMany
-* Many-toMany: hasMany - hasMany
-* One-to-One Right: belongsTo - hasOne
-* One-to-One Left: hasOne - belongsTo
-* Parent-to-Children: hasChildren - belongsToParent
+* One-to-Many: hasMany + belongsTo
+* Many-to-One: belongsTo + hasMany
+* Many-toMany: hasMany + hasMany
+* One-to-One Right: belongsTo + hasOne
+* One-to-One Left: hasOne + belongsTo
+* Parent-to-Children: hasChildren + belongsToParent
