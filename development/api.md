@@ -114,7 +114,7 @@ GET parameters:
 * `where` - (array) filters
 * `orderBy` - (string) field to sort by
 * `order` - (string: 'asc' | 'desc') sort direction
-* `select` - (string) list of attributes to be returned sepratated by comma; if not specified, then all attributes will be returned
+* `select` - (string) list of [attributes](../administration/terms-and-naming.md#attribute) to be returned sepratated by comma; if not specified, then all attributes will be returned
 
 _Example_
 
@@ -134,7 +134,7 @@ See [more info](api-search-params.md) about search parameters.
 
 `GET {entityType}/{id}`
 
-Returns attributes in JSON object.
+Returns [attributes](../administration/terms-and-naming.md#attribute) in JSON object.
 
 _Example_
 
@@ -146,7 +146,7 @@ _Example_
 
 Payload: Object of entity attributes.
 
-Returns entity attributes in JSON object.
+Returns entity [attributes](../administration/terms-and-naming.md#attribute) in JSON object.
 
 _Example_
 
@@ -166,7 +166,7 @@ Payload:
 
 Payload: Object of entity attributes needed to be changed.
 
-Returns attributes in JSON object.
+Returns [attributes](../administration/terms-and-naming.md#attribute) in JSON object.
 
 _Example_
 
@@ -190,7 +190,7 @@ _Example_
 
 ## Relationships
 
-Note: You can obtain the list of *link* names at Administration > Entity Manager > click relationships on a specific entity type > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
+Note: You can obtain the list of [link](../administration/terms-and-naming.md#link) names at Administration > Entity Manager > click relationships on a specific entity type > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
 
 #### List reated records
 
