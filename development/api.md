@@ -33,6 +33,7 @@ API functions:
 See also:
 
 * [Search parameters](api-search-params.md)
+* [Usage tutorial](api-tutorial.md)
 
 ## Client implementations
 
