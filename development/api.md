@@ -303,4 +303,4 @@ Usually occurs when you **don't have an access** to a specific record or action.
 
 ### 404 Not found
 
-Usually occurs when a requested record doesn't exist.
+Usually occurs when a requested **record doesn't exist**.
