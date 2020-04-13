@@ -158,7 +158,7 @@ Sub-process can be interrupted by an interrupting boundary event. When the sub-p
 
 It possible to **pass a different target** to the sub-process. After you placed a sub-process element on the flowchart, click it to edit, then specify a target. It allows to easily access fields of created records or records related to the target record. E.g. to send notification to the assigned user of the opportunity that was created within the process.
 
-When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter.
+When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter. Note: Variable names should be specified with out *$* character.
 
 When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes information about created records to the parent process.
 
