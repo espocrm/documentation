@@ -775,7 +775,8 @@ $id = record\create(
     'to', 'to-address@test.com',
     'subject', 'Test from formula',
     'body', 'Hi,\n\nThis is a test.',
-    'isHtml', false
+    'isHtml', false,
+    'status', 'Sending',
 );
 ext\email\send($id);
 ```
