@@ -23,7 +23,6 @@ $client = new EspoApiClient($url);
 $client->setApiKey($apiKey);
 
 // example to create a new lead
-
 $response = $client->request('POST', 'Lead', [
     'firstName' => 'Test',
     'lastName' => 'Hello',
