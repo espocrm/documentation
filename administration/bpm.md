@@ -147,6 +147,14 @@ You can download CSV file with examples and then import it into your EspoCRM ins
 
 Note: These flowcharts are not active, so they won't run until you set them active.
 
+Included examples: 
+
+* User task
+* Drip email campaign
+* Tracking URLs
+* Sub-process
+* Email reply catching
+
 ### Screenshot-only examples
 
 #### Example 1
