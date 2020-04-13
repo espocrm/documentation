@@ -23,9 +23,13 @@ $apiKey = 'copy key from API user here';
 $client = new EspoApiClient($url);
 $client->setApiKey($apiKey);
 
-// example to create a new lead
-$response = $client->request('POST', 'Lead', [
-    'firstName' => 'Test',
-    'lastName' => 'Hello',
-]);
+// example creating a new lead
+try {
+    $response = $client->request('POST', 'Lead', [
+        'firstName' => 'Test',
+        'lastName' => 'Hello',
+    ]);
+} catch (\Exception $e) {
+    $errorCode = $e->getCode();
+}
 ```
