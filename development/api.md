@@ -23,6 +23,7 @@ In this article:
 * [CRUD operations](#crud-operations)
 * [Relationships](#relationships)
 * [Stream](#stream)
+* [Error codes](#error-codes)
 
 API functions:
 
@@ -289,3 +290,18 @@ Get parameters:
 #### Unfollow record
 
 `DELETE {entityType}/{id}/subscription`
+
+## Error codes
+
+### 400 - Bad request
+
+When you create or update a recod, this error can mean that you didn't pass a **required field** or it has an empty value. Check the response message or see `data/log` for more details.
+
+### 403 Forbidden
+
+Usually occurs when you don't have an access to a specific record or action. See `data/log` for more details.
+
+### 404 Not found
+
+Usually occurs when a requested record doesn't exist.
+
