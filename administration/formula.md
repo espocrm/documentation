@@ -758,13 +758,13 @@ Returns value by INDEX. (since version 5.8.3)
 
 `ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
 
-Finds account by email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
+Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
 
 ### ext\email\send
 
 `ext\email\send(EMAIL_ID)`
 
-Sends email. EMAIL_ID is an ID of email record. Returns TRUE if sent, false if not sent. (Available since version 5.9.0)
+Sends an email. EMAIL_ID is an ID of the email record. Returns TRUE if sent, false if not sent. (Available since version 5.9.0)
 
 Example:
 
