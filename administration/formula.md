@@ -755,10 +755,30 @@ Returns value by INDEX. (since version 5.8.3)
 ### Ext
 
 #### ext\account\findByEmailAddressDomain
+
 `ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
 
 Finds account by email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
 
+### ext\email\send
+
+`ext\email\send(EMAIL_ID)`
+
+Sends email. EMAIL_ID is an ID of email record. Returns TRUE if sent, false if not sent. (Available since version 5.9.0)
+
+Example:
+
+```
+$id = record\create(
+    'Email',
+    'from', 'from-address@test.com',
+    'to', 'to-address@test.com',
+    'subject', 'Test from formula',
+    'body', 'Hi,\n\nThis is a test.',
+    'isHtml', false
+);
+ext\email\send($id);
+```
 
 ## Values
 
