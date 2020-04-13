@@ -10,7 +10,7 @@
 ### PHP
 
 1. Create a new PHP file: `EspoApiClient.php` with the code copied from [here](api-client-php.md#class).
-2. Include this file in the place where you want to call EspoCRM API and utilize it.
+2. Include this file in the place where you want to call EspoCRM API and use it. See the code below.
 
 ```php
 <?php
