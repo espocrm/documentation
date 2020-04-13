@@ -42,4 +42,6 @@ Here, inside the sub-process, you can also add *Task* that will do some manipula
 
 ## Example
 
+You can a downloadable example [here](bpm-examples.md#downloadable-examples).
+
 ![Example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/drip-email-campaign.png)
