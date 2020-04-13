@@ -754,13 +754,16 @@ Returns value by INDEX. (since version 5.8.3)
 
 ### Ext
 
+* [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
+* [ext\email\send](#extemailsend)
+
 #### ext\account\findByEmailAddressDomain
 
 `ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
 
 Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
 
-### ext\email\send
+#### ext\email\send
 
 `ext\email\send(EMAIL_ID)`
 
