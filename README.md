@@ -71,7 +71,7 @@
   * [Reports](user-guide/reports.md)
   * [Workflows](administration/workflows.md)
   * [Business Process Management (BPM)](administration/bpm.md)
-  * [Drip Email Campaign with BPM](administration/bpm-drip-email-campaign.md)
+    * [Drip Email Campaign with BPM](administration/bpm-drip-email-campaign.md)
 * Sales Pack
   * [Products](user-guide/products.md)
   * [Quotes](user-guide/quotes.md)
