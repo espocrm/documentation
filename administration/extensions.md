@@ -1,10 +1,10 @@
 # Manage extensions
 
-* [How to install an extension via UI](#send-email)
-* [How to upgrade an extension via UI](#send-email)
-* [How to install or upgrade an extension via CLI](#send-email)
-* [How to uninstall an extension](#send-email)
-* [How to delete an extension](#send-email)
+* [How to install an extension via UI](#extensions.md#how-to-install-an-extension-via-ui)
+* [How to upgrade an extension via UI](#how-to-upgrade-an-extension-via-ui)
+* [How to install or upgrade an extension via CLI](#how-to-install-or-upgrade-an-extension-via-cli)
+* [How to uninstall an extension](#how-to-uninstall-an-extension)
+* [How to delete an extension](#how-to-delete-an-extension)
 
 ## How to install an extension via UI
 
@@ -27,9 +27,7 @@ In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP int
 
 ## How to install or upgrade an extension via CLI
 
-In order to install or upgrade any EspoCRM extension you can utlize a CLI command.
-
-Run this command in the teminal:
+In order to install or upgrade any EspoCRM extension you can utlize the next CLI command:
 
 ```
 sudo -u <EspoCRM owner> php <path-to-EspoCRM-root-directory>/extension.php <path-to-the-zip-file>
