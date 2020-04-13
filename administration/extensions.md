@@ -1,6 +1,6 @@
 # Manage extensions
 
-* [How to install an extension via UI](#extensions.md#how-to-install-an-extension-via-ui)
+* [How to install an extension via UI](#how-to-install-an-extension-via-ui)
 * [How to upgrade an extension via UI](#how-to-upgrade-an-extension-via-ui)
 * [How to install or upgrade an extension via CLI](#how-to-install-or-upgrade-an-extension-via-cli)
 * [How to uninstall an extension](#how-to-uninstall-an-extension)
