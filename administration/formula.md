@@ -766,6 +766,8 @@ Finds an account by an email address. If no full match found, then tries to find
 
 Sends an email. EMAIL_ID is an ID of the email record. Returns TRUE if sent, false if not sent. (Available since version 5.9.0)
 
+If *from* address is not set in the email, then system email address will be used. If there's match between *from* address and the address of some group email account, then SMTP setting of the group email account will be used.
+
 Example:
 
 ```
