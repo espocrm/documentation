@@ -756,6 +756,7 @@ Returns value by INDEX. (since version 5.8.3)
 
 * [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
 * [ext\email\send](#extemailsend)
+* [ext\email\appyTemplate](#extemailapplytemplate)
 
 #### ext\account\findByEmailAddressDomain
 
@@ -784,6 +785,26 @@ $id = record\create(
     'status', 'Sending',
 );
 ext\email\send($id);
+```
+
+#### ext\email\applyTemplate
+
+`ext\email\send(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
+
+Applies an email template to an existng email record. Parent record can be passed optionally.(Available since version 5.9.0)
+
+Example: 
+
+```
+$emailId = record\create(
+    'Email',
+    'to', 'to-address@test.com',
+    'status', 'Draft',
+    'parentId', entity\attribute('id'),
+    'parentType', 'Case'
+);
+ext\email\applyTemplate($emailId, 'some-email-template-id');
+ext\email\send($emailId);
 ```
 
 ## Values
