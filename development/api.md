@@ -24,7 +24,6 @@ In this article:
 
 * [Client implementations](#client-implementations)
 * [Authentication](#authentication)
-* [Stream](#stream)
 * [Error codes](#error-codes)
 
 API functions:
