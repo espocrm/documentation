@@ -50,7 +50,7 @@ Creates an account. Returns its attributes.
 
 Requires *create* access to *Account* scope.
 
-Payload: Record attributes.
+Payload: Record [attributes](../administration/terms-and-naming.md#attribute).
 
 Example:
 
@@ -71,7 +71,7 @@ with payload:
 
 ### GET Account/{id}
 
-Returns attributes of a specific Account record.
+Returns [attributes](../administration/terms-and-naming.md#attribute) of a specific Account record.
 
 Requires *read* access to Account record.
 
@@ -101,7 +101,7 @@ with return:
 
 ### PUT Account/{id}
 
-Updates an existing Account. Returns its attributes.
+Updates an existing Account. Returns its [attributes](../administration/terms-and-naming.md#attribute).
 
 Requires *edit* access to Account record.
 
@@ -127,7 +127,10 @@ with payload:
 
 Removes an existing account.
 
+Returns TRUE if success.
+
 Requires *delete* access to Account record.
+
 
 Example:
 
@@ -147,7 +150,7 @@ Requires *stream* access to Account record.
 
 ## Relationships
 
-Note: *Link* names can be obtained at Administration > Enity Manager > click *relationsips* on *Account* row > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
+Note: [link](../administration/terms-and-naming.md#link) names can be obtained at Administration > Enity Manager > click *relationsips* on *Account* row > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
 
 The list of links available out-of-the-box:
 
