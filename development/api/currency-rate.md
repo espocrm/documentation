@@ -1,12 +1,16 @@
 # API :: CurrencyRate
 
-### GET CurrencyRate
+### Getting rates
+
+`GET CurrencyRate`
 
 Returns currency rates.
 
 Requires *read* access to *Currency* scope.
 
-### PUT CurrencyRate
+### Updating rates
+
+`PUT CurrencyRate`
 
 Updates currency rates. One or multiple currency rates should be specified in a payload.
 
