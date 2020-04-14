@@ -1,8 +1,8 @@
 # API :: Attachment
 
-## Uploading
+### Uploading attachment
 
-### POST Attachment
+`POST Attachment`
 
 * Method: *POST*
 * URL: `Attachment`
@@ -74,3 +74,14 @@ It's possible to upload attachment before Note creation. When create Note, you n
     "attachmnetsIds": ["id-of-attachment"]
 }
 ```
+
+### Downloading attachment
+
+Available since version 5.9.0.
+
+`GET Attachment/file/{id}`
+
+Where `{id}` is an ID of the attachment record.
+
+Returns attachment contents.
+
