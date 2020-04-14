@@ -2,7 +2,11 @@
 
 Note: You can obtain the list of [link](../administration/terms-and-naming.md#link) names at Administration > Entity Manager > click relationships on a specific entity type > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
 
-### List reated records
+* [List related records](#list-related-records)
+* [Link](#link)
+* [Unlink](#unlink)
+
+### List related records
 
 `GET {entityType}/{id}/{link}`
 
