@@ -49,7 +49,7 @@ $client = new EspoApiClient('https://your-espocrm-site', 'USERNAME', 'PASSWORD')
 
 ## Class
 
-Copy this class into separate PHP file and then include that file in your code.
+Copy this class into a separate PHP file and then include that file in your code.
 
 ```php
 <?php
