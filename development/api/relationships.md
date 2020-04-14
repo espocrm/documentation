@@ -44,10 +44,10 @@ Relates two records.
 
 Payload:
 
-* `id` ID of the record to relate with
-* `ids` array of IDs of the records to relate with
-* `massRelate` false or true, whether to use search criteria that will be used instead of specific ids
-* `where` optional [search criteria](../api-search-params.md#where)
+* `id` - ID of the record to relate with
+* `ids` - array of IDs of the records to relate with
+* `massRelate` - optional, false or true, whether to use search criteria that will be used instead of specific ids
+* `where` - optional [search criteria](../api-search-params.md#where)
 
 Example:
 
@@ -68,8 +68,8 @@ Unrelates two records.
 
 Payload fields:
 
-* `id` ID of related record to remove
-* `ids` array of IDs of related records to remove
+* `id` - ID of related record to remove
+* `ids` - array of IDs of related records to remove
 
 Example:
 
