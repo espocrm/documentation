@@ -22,7 +22,7 @@ Note: API client implementations (available below) do most of work for you: add 
 
 It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
 
-See in [tutorial](api-tutorial.md) how to get started.
+See in [tutorial](api-tutorial.md) **how to get started**.
 
 In this article:
 
