@@ -4,6 +4,10 @@
 
 ### POST Attachment
 
+* Method: *POST*
+* URL: `Attachment`
+* Headers: `Content-Type: application/json`
+
 Payload fields:
 
 * name — file name;
