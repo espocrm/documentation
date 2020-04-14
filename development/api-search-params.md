@@ -16,7 +16,6 @@ Filters and other search parameters can be used with API functions that returns 
 ```php
 $url = 'Lead';
 
-// every param is optional
 $where = [
     [
         'type' => 'isNotNull',
@@ -47,6 +46,7 @@ $boolFilterList = [
 // the list of available primary filters can obtained in a select manager class
 $primaryFilter = 'primaryFilter';
 
+// every param is optional
 $params = [
     'offset' => 0,
     'maxSize' => 20,
