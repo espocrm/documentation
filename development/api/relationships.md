@@ -36,6 +36,8 @@ See [more info](api-search-params.md) about search parameters.
 
 `POST {entityType}/{id}/{link}`
 
+Relates two records.
+
 Payload:
 
 * `id` ID of the record to relate with
@@ -57,6 +59,8 @@ Payload:
 ### Unlink
 
 `DELETE {entityType}/{id}/{link}`
+
+Unrelates two records.
 
 Payload fields:
 
