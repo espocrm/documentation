@@ -36,7 +36,7 @@ try {
 
 ### Javascript (Nodejs)
 
-1. Create a new JS file: `espocrm-api-client.js` with the code copied from [here](api-client-js.md#class).
+1. Create a new JS file: `espocrm-api-client.js` with the code copied from [here](api-client-js.md#module).
 2. Use `require` function to include the module in the place where you want to call EspoCRM API and use it. See the code below.
 
 ```js
