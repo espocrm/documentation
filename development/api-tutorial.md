@@ -18,7 +18,7 @@
 require_once('EspoApiClient.php');
 
 $url = 'https://address-of-your-espocrm';
-$apiKey = 'copy key from API user here';
+$apiKey = 'copy API key from API user here';
 
 $client = new EspoApiClient($url);
 $client->setApiKey($apiKey);
@@ -44,7 +44,7 @@ const Client = require('./espocrm-api-client');
 
 const client = new Client(
     'https://address-of-your-espocrm',
-    'copy key from API user here',
+    'copy API key from API user here'
 );
 
 // POST request example
