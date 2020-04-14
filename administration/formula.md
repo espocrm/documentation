@@ -810,7 +810,7 @@ ext\email\send($emailId);
 
 #### ext\pdf\generate
 
-`ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID`, [FILENAME])`
+`ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID, [FILENAME])`
 
 Generates PDF file and returns attachment id. If failed, then returns NULL. TEMPLATE_ID is an ID of pdf template. (Available since version 5.9.0)
 
