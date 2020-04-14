@@ -31,6 +31,7 @@ API functions:
 
 * [CRUD operations](api/crud.md)
 * [Related records](api/relationships.md)
+* [Stream](api/stream.md)
 * [CurrencyRate](api/currency-rate.md)
 * [Attachment](api/attachment.md)
 * [Account](api/account.md)
@@ -103,34 +104,6 @@ Returns:
 * `acl` - information about user access;
 * `preferences` - user preferences;
 * `user` - user record attributes.
-
-## Stream
-
-#### List stream records for the current user
-
-`GET Stream`
-
-Get parameters:
-
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-
-#### List stream notes of a specific record
-
-`GET {entityType}/{id}/stream`
-
-Get parameters:
-
-* `offset` - (int) offset;
-* `maxSize` - (int) max size;
-
-#### Follow record
-
-`PUT {entityType}/{id}/subscription`
-
-#### Unfollow record
-
-`DELETE {entityType}/{id}/subscription`
 
 ## Error codes
 
