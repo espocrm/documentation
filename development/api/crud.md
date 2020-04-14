@@ -2,7 +2,7 @@
 
 CRUD stands for create, read, update, delete.
 
-Note: You can obtain the list of [entity types](../administration/terms-and-naming.md#entity-type) at Administration > Entity Manager > the left column.
+Note: You can obtain the list of [entity types](../../administration/terms-and-naming.md#entity-type) at Administration > Entity Manager > the left column.
 
 * [List](#list)
 * [Read](#read)
@@ -24,7 +24,7 @@ GET parameters:
 * `where` - (array) filters
 * `orderBy` - (string) attribute to sort by
 * `order` - (string: 'asc' | 'desc') sort direction
-* `select` - (string) list of [attributes](../administration/terms-and-naming.md#attribute) to be returned, sepratated by comma; if not specified, then all attributes will be returned
+* `select` - (string) list of [attributes](../../administration/terms-and-naming.md#attribute) to be returned, sepratated by comma; if not specified, then all attributes will be returned
 
 Example:
 
@@ -44,7 +44,7 @@ See [more info](api-search-params.md) about search parameters.
 
 `GET {entityType}/{id}`
 
-Returns [attributes](../administration/terms-and-naming.md#attribute) of a specific record.
+Returns [attributes](../../administration/terms-and-naming.md#attribute) of a specific record.
 
 Example:
 
@@ -56,7 +56,7 @@ Example:
 
 Creates a new record of a specific entity type.
 
-Payload: Object of entity [attributes](../administration/terms-and-naming.md#attribute).
+Payload: Object of entity [attributes](../../administration/terms-and-naming.md#attribute).
 
 Returns attributes of the created record.
 
@@ -78,7 +78,7 @@ Payload:
 
 Updates an existing record.
 
-Payload: Object of entity [attributes](../administration/terms-and-naming.md#attribute) needed to be changed.
+Payload: Object of entity [attributes](../../administration/terms-and-naming.md#attribute) needed to be changed.
 
 Returns attributes of the updated record.
 
