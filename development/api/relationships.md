@@ -1,6 +1,6 @@
 # API :: Related records
 
-Note: You can obtain the list of [link](../administration/terms-and-naming.md#link) names at Administration > Entity Manager > click relationships on a specific entity type > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
+Note: You can obtain the list of [link](../../administration/terms-and-naming.md#link) names at Administration > Entity Manager > click relationships on a specific entity type > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
 
 * [List related records](#list-related-records)
 * [Link](#link)
@@ -19,7 +19,7 @@ GET parameters:
 * `order` - (string: 'asc' | 'desc') sort direction
 * `select` - (string) list of attributes to be returned, sepratated by comma; if not specified, then all fields will be returned
 
-You can find more info about search params [here](api-search-params.md).
+You can find more info about search params [here](../api-search-params.md).
 
 Example:
 
@@ -34,7 +34,7 @@ Returns:
 }
 ```
 
-See [more info](api-search-params.md) about search parameters.
+See [more info](../api-search-params.md) about search parameters.
 
 ### Link
 
@@ -47,7 +47,7 @@ Payload:
 * `id` ID of the record to relate with
 * `ids` array of IDs of the records to relate with
 * `massRelate` false or true, whether to use search criteria that will be used instead of specific ids
-* `where` optional [search criteria](api-search-params.md#where)
+* `where` optional [search criteria](../api-search-params.md#where)
 
 Example:
 
