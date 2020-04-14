@@ -4,21 +4,21 @@ EspoCRM is a single page application so a frontend uses REST API to connect with
 All operations you perform using UI, you can implement via API calls using your programing language. 
 You can learn how API works if you trace what's going in the network tab in your browser console > network tab.
 
-Most of API functions return JSON. *POST*, *PUT* calls usually need some JSON data passed in a payload.
+Most of API functions return JSON. *POST*, *PUT* requests usually need some JSON data passed in a payload.
 
 Requests needs to have header: `Content-Type: application/json`.
 
-Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference.
+The path to the API in EspoCRM is: `api/v1/`.
 
 Example of GET API request: 
 
 ```
-GET https://your_domain/api/v1/Contact/55643ca033f7ab4c5
+GET https://address_of_your_crm/api/v1/Contact/55643ca033f7ab4c5
 ```
 
-Note: API implementation classes (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
+Note: API client implementations (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
 
-It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
+It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls. See in [tutorial](api-tutorial.md).
 
 In this article:
 
