@@ -20,7 +20,9 @@ In this documentation we omit the URL of CRM and `api/v1/`path when we show exam
 
 Note: API client implementations (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
 
-It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls. See in [tutorial](api-tutorial.md).
+It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
+
+See in [tutorial](api-tutorial.md) how to get started.
 
 In this article:
 
