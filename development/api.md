@@ -24,13 +24,13 @@ In this article:
 
 * [Client implementations](#client-implementations)
 * [Authentication](#authentication)
-* [CRUD operations](#crud-operations)
-* [Relationships](#relationships)
 * [Stream](#stream)
 * [Error codes](#error-codes)
 
 API functions:
 
+* [CRUD operations](api/crud.md)
+* [Related records](api/relationships.md)
 * [CurrencyRate](api/currency-rate.md)
 * [Attachment](api/attachment.md)
 * [Account](api/account.md)
@@ -103,179 +103,6 @@ Returns:
 * `acl` - information about user access;
 * `preferences` - user preferences;
 * `user` - user record attributes.
-
-
-## CRUD Operations
-
-Note: You can obtain the list of *entity types* at Administration > Entity Manager > the left column.
-
-#### List
-
-`GET {entityType}`
-
-Returns a list of records of specific entity type.
-
-GET parameters:
-
-* `maxSize` - (int) max size
-* `offset` - (int) offset
-* `where` - (array) filters
-* `orderBy` - (string) attribute to sort by
-* `order` - (string: 'asc' | 'desc') sort direction
-* `select` - (string) list of [attributes](../administration/terms-and-naming.md#attribute) to be returned, sepratated by comma; if not specified, then all attributes will be returned
-
-_Example_
-
-`GET Account?offset=0&maxSize=20`
-
-Returns:
-```
-{
-  "list": [... array of records...],
-  "total": {totalCountOfRecords}
-}
-```
-
-See [more info](api-search-params.md) about search parameters.
-
-#### Read
-
-`GET {entityType}/{id}`
-
-Returns [attributes](../administration/terms-and-naming.md#attribute) of a specific record.
-
-_Example_
-
-`GET Account/5564764442a6d024c`
-
-#### Create
-
-`POST {entityType}`
-
-Creates a new record of a specific entity type.
-
-Payload: Object of entity [attributes](../administration/terms-and-naming.md#attribute).
-
-Returns attributes of the created record.
-
-_Example_
-
-`POST Account`
-
-Payload:
-```
-{
-  "name": "Test",
-  "assignedUserId": "1"
-}
-```
-
-#### Update
-
-`PUT {entityType}/{id}`
-
-Updates an existing record.
-
-Payload: Object of entity [attributes](../administration/terms-and-naming.md#attribute) needed to be changed.
-
-Returns attributes of the updated record.
-
-_Example_
-
-`PUT Account/5564764442a6d024c`
-
-Payload:
-```
-{
-  "assignedUserId": "1"
-}
-```
-
-#### Delete
-
-`DELETE {entityType}/{id}`
-
-Deletes an existing record.
-
-Returns TRUE if success.
-
-_Example_
-
-`DELETE Account/5564764442a6d024c`
-
-
-## Relationships
-
-Note: You can obtain the list of [link](../administration/terms-and-naming.md#link) names at Administration > Entity Manager > click relationships on a specific entity type > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
-
-#### List reated records
-
-`GET {entityType}/{id}/{link}`
-
-GET parameters:
-
-* `maxSize` - (int) max size
-* `offset` - (int) offset
-* `where` - (array) filters
-* `orderBy` - (string) attribute to sort by
-* `order` - (string: 'asc' | 'desc') sort direction
-* `select` - (string) list of attributes to be returned, sepratated by comma; if not specified, then all fields will be returned
-
-_Example_
-
-`GET Account/5564764442a6d024c/opportunities`
-
-Returns:
-```
-{
-  "list": [... array of records...],
-  "total": {totalCountOfRecords}
-}
-```
-
-See [more info](api-search-params.md) about search parameters.
-
-#### Link
-
-`POST {entityType}/{id}/{link}`
-
-Payload:
-
-* `id` attribute.
-* `ids` array attribute.
-* `massRelate` false or true, whether to use search criteria that will be used instead of specific ids
-* `where` optional search criteria
-
-_Example_
-
-`POST Account/5564764442a6d024c/opportunities`
-
-Payload:
-```
-{
-  "id": "55646fd85955c28c5"
-}
-```
-
-#### Unlink
-
-`DELETE {entityType}/{id}/{link}`
-
-Payload:
-
-1. JSON with `id` attribute.
-2. JSON with `ids` array attribute.
-
-_Example_
-
-`DELETE Account/5564764442a6d024c/opportunities`
-
-Payload:
-```
-{
-  "id": "55646fd85955c28c5"
-}
-```
 
 ## Stream
 
