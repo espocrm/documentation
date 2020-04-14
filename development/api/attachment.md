@@ -1,6 +1,9 @@
 # API :: Attachment
 
-### Uploading attachment
+* [Uploading](#uploading)
+* [Downloading](#downloading)
+
+### Uploading
 
 `POST Attachment`
 
@@ -75,7 +78,7 @@ It's possible to upload attachment before Note creation. When create Note, you n
 }
 ```
 
-### Downloading attachment
+### Downloading
 
 Available since version 5.9.0.
 
@@ -84,4 +87,3 @@ Available since version 5.9.0.
 Where `{id}` is an ID of the attachment record.
 
 Returns attachment contents.
-
