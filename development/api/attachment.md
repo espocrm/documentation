@@ -13,15 +13,15 @@
 
 Payload fields:
 
-* name — file name;
-* type — mime type;
-* role — specify value `Attachment`;
-* relatedType — entity type attachment is related to (only for fields of *File* type);
-* relatedId — record ID attachment is related to (only for fields of *File* type);
-* parentType — entity type attachment is related to (only for fields of *Attachment Multiple* type);
-* parentId — record ID attachment is related to (only for fields of *Attachment Multiple* type);
-* field — field name of related record attachment is related through;
-* file — file contents.
+* name - file name;
+* type - mime type;
+* role - specify value `Attachment`;
+* relatedType - entity type attachment is related to (only for fields of *File* type);
+* relatedId - record ID attachment is related to (only for fields of *File* type);
+* parentType - entity type attachment is related to (only for fields of *Attachment Multiple* type);
+* parentId - record ID attachment is related to (only for fields of *Attachment Multiple* type);
+* field - field name of related record attachment is related through;
+* file - file contents.
 
 #### Example (File type)
 
