@@ -4,17 +4,21 @@ EspoCRM is a single page application so a frontend uses REST API to connect with
 All operations you perform using UI, you can implement via API calls using your programing language. 
 You can learn how API works if you trace what's going in the network tab in your browser console > network tab.
 
-Most of API functions return JSON. POST, PUT calls usually need some JSON data in payload.
+Most of API functions return JSON. *POST*, *PUT* calls usually need some JSON data passed in a payload.
+
+Requests needs to have header: `Content-Type: application/json`.
 
 Base URL of EspoCRM API is: `api/v1/`. You need to prepend it to expressions in this reference.
 
-Example: 
+Example of GET API request: 
 
 ```
 GET https://your_domain/api/v1/Contact/55643ca033f7ab4c5
 ```
 
-It's recommended to create a separate an API user with specific rights (roles) and use this user for API calls.
+Note: API implementation classes (available below) do most of work for you: add needed headers, handle autentication.
+
+It's recommended to create a **separate an API user** with specific rights (roles) and use this user for API calls.
 
 In this article:
 
@@ -109,6 +113,8 @@ Note: You can obtain the list of *entity types* at Administration > Entity Manag
 
 `GET {entityType}`
 
+Returns a list of records of specific entity type.
+
 GET parameters:
 
 * `maxSize` - (int) max size
@@ -136,7 +142,7 @@ See [more info](api-search-params.md) about search parameters.
 
 `GET {entityType}/{id}`
 
-Returns [attributes](../administration/terms-and-naming.md#attribute) in JSON object.
+Returns [attributes](../administration/terms-and-naming.md#attribute) of a specific record.
 
 _Example_
 
@@ -146,9 +152,11 @@ _Example_
 
 `POST {entityType}`
 
-Payload: Object of entity attributes.
+Creates a new record of a specific entity type.
 
-Returns entity [attributes](../administration/terms-and-naming.md#attribute) in JSON object.
+Payload: Object of entity [attributes](../administration/terms-and-naming.md#attribute).
+
+Returns attributes of the created record.
 
 _Example_
 
@@ -166,9 +174,11 @@ Payload:
 
 `PUT {entityType}/{id}`
 
-Payload: Object of entity attributes needed to be changed.
+Updates an existing record.
 
-Returns [attributes](../administration/terms-and-naming.md#attribute) in JSON object.
+Payload: Object of entity [attributes](../administration/terms-and-naming.md#attribute) needed to be changed.
+
+Returns attributes of the updated record.
 
 _Example_
 
@@ -184,6 +194,10 @@ Payload:
 #### Delete
 
 `DELETE {entityType}/{id}`
+
+Deletes an existing record.
+
+Returns TRUE if success.
 
 _Example_
 
