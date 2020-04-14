@@ -16,7 +16,7 @@ Example of GET API request:
 GET https://your_domain/api/v1/Contact/55643ca033f7ab4c5
 ```
 
-Note: API implementation classes (available below) do most of work for you: add needed headers, handle autentication.
+Note: API implementation classes (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
 
 It's recommended to create a **separate an API user** with specific rights (roles) and use this user for API calls.
 
