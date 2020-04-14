@@ -76,10 +76,11 @@ where
 * `method` - GET, POST, PUT, DELETE;
 * `uri` - request path, e.g. `Lead/action/convert`.
 
-
 ### Basic Authentication
 
-For refular users EspoCRM uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password/token are passed through `Authorization` header encoded in base64.
+Note: This method is not recommended.
+
+For regular users EspoCRM uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password (or token) are passed through `Authorization` header encoded in base64.
 
 `"Authorization: Basic " + base64Encode(username  + ':' + password)`
 
@@ -96,6 +97,8 @@ It's better to use auth token instead of password when you work with API. In thi
 #### Authentication Token / User Specific Data
 
 `GET App/user`
+
+Make this request to retrieve an access token.
 
 Returns:
 
