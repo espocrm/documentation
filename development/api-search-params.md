@@ -16,6 +16,7 @@ Filters and other search parameters can be used with API functions that returns 
 ```php
 $url = 'Lead';
 
+// all params are optional
 $where = [
     [
         'type' => 'isNotNull',
@@ -63,6 +64,7 @@ $response = $client->request('GET', $url, $params);
 ### Javascript (Nodejs)
 
 ```js
+// all params are optional
 var params = {
     maxSize: 5,
     primaryFilter: 'open',
