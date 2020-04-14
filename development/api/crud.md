@@ -38,7 +38,7 @@ Returns:
 }
 ```
 
-See [more info](api-search-params.md) about search parameters.
+See [more info](../api-search-params.md) about search parameters.
 
 ### Read
 
