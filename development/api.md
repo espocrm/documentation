@@ -32,8 +32,8 @@ In this article:
 API functions:
 
 * [CurrencyRate](api/currency-rate.md)
-* [Account](api/account.md)
 * [Attachment](api/attachment.md)
+* [Account](api/account.md)
 
 See also:
 
