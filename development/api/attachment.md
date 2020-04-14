@@ -18,6 +18,8 @@ Payload fields:
 
 #### Example (File type)
 
+The attachment will be stored in the field of *File* type. 
+
 ```json
 {
     "name": "test.txt",
@@ -42,6 +44,8 @@ Returned ID can be used in the following API call that creates or updated a reco
 
 
 #### Example (Attachment-Multiple type)
+
+The attachment will be stored in the field of *Attachment-Multiple* type. 
 
 
 Payload example (*File* type):
