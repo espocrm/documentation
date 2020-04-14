@@ -4,6 +4,13 @@ CRUD stands for create, read, update, delete.
 
 Note: You can obtain the list of [entity types](../administration/terms-and-naming.md#entity-type) at Administration > Entity Manager > the left column.
 
+* [List](#list)
+* [Read](#read)
+* [Create](#create)
+* [Update](#update)
+* [Delete](#delete)
+
+
 ### List
 
 `GET {entityType}`
