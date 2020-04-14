@@ -33,3 +33,36 @@ try {
     $errorCode = $e->getCode();
 }
 ```
+
+#### Javascript (Nodejs)
+
+1. Create a new JS file: `espocrm-api-client.js` with the code copied from [here](api-client-js.md#class).
+2. Use `require` function to include the module in the place where you want to call EspoCRM API and use it. See the code below.
+
+```js
+const Client = require('./espocrm-api-client');
+
+const client = new Client(
+    'https://address-of-your-espocrm',
+    'copy key from API user here',
+);
+
+// POST request example
+var payload = {
+    name: 'some name',
+    type: 'Customer',
+};
+client.request('POST', 'Account', payload)
+    .then(
+        (response) => {
+            // success
+            console.log(response);
+        }
+    )
+    .catch(
+        (res) => {
+            // error
+            console.log(res.statusCode, res.statusMessage);
+        }
+    );
+```
