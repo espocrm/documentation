@@ -6,7 +6,7 @@ Note: You can obtain the list of [entity types](../administration/terms-and-nami
 
 `GET {entityType}`
 
-Returns a list of records of specific entity type.
+Returns a list of records of a specific entity type.
 
 GET parameters:
 
