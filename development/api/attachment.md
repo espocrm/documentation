@@ -22,7 +22,7 @@ Payload fields:
 
 #### Example (File type)
 
-The attachment will be stored in the field of *File* type. 
+The attachment to be stored in the field of *File* type. 
 
 Payload:
 ```json
@@ -50,7 +50,7 @@ Returned ID can be used in the following API call that creates or updated a reco
 
 #### Example (Attachment-Multiple type)
 
-The attachment will be stored in the field of *Attachment-Multiple* type. 
+The attachment to be stored in the field of *Attachment-Multiple* type. 
 
 Payload:
 ```json
@@ -65,7 +65,7 @@ Payload:
 }
 ```
 
-This request will upload attachment and will relate to existing Note (bacause *parentId* is specified).
+This request will upload attachment and will relate to existing Note (since *parentId* is specified).
 
 It's possible to upload attachment before Note creation. When create Note, you need to specify attachment ID in *attachmentsIds* attribute:
 
