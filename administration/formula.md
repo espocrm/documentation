@@ -757,6 +757,7 @@ Returns value by INDEX. (since version 5.8.3)
 * [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
 * [ext\email\send](#extemailsend)
 * [ext\email\appyTemplate](#extemailapplytemplate)
+* [ext\pdf\generate](#extpdfgenerate)
 
 #### ext\account\findByEmailAddressDomain
 
@@ -804,6 +805,27 @@ $emailId = record\create(
     'parentType', 'Case'
 );
 ext\email\applyTemplate($emailId, 'some-email-template-id');
+ext\email\send($emailId);
+```
+
+#### ext\pdf\generate
+
+`ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID`, [FILENAME])`
+
+Generates PDF file and returns attachment id. If failed, then returns NULL. TEMPLATE_ID is an ID of pdf template. (Available since version 5.9.0)
+
+Example:
+
+```
+$attachmentId = ext\pdf\generate(
+    'Lead', entity\attribute('id'), 'pdf-template-id', 'test.pdf'
+);
+$emailId = record\create('Email',
+    'subject', 'Test PDF',
+    'body', 'PDF is attached',
+    'to', entity\attribute('emailAddress'),
+    'attachmentsIds', list($attachmentId)
+);
 ext\email\send($emailId);
 ```
 
