@@ -53,7 +53,7 @@ See also:
 
 Available since 5.5.0 version.
 
-The easiest method of authentication. You need to create API User (Administration > API Users) with Api Key authentication method. Apply the needed role to the user to restrict or grant access.
+The easiest method of authentication. You need to create API User (Administration > API Users) with Api Key authentication method. Apply the needed role to the user to grant needed access.
 
 Authentication header:
 
@@ -64,7 +64,7 @@ Authentication header:
 
 Available since 5.5.0 version.
 
-The most secure method. You need to create API User (Administration > API Users) with HMAC authentication method. Apply needed role to the user to restrict or grant access.
+The most secure method. You need to create API User (Administration > API Users) with HMAC authentication method. Apply needed role to the user to grant needed access.
 
 Authentication header:
 
@@ -99,10 +99,10 @@ It's better to use auth token instead of password when you work with API. In thi
 
 Returns:
 
-* `token` - access token to use;
-* `acl` - information about user access;
-* `preferences` - user preferences;
-* `user` - user record attributes.
+* `token` - access token to use
+* `acl` - information about user access
+* `preferences` - user preferences
+* `user` - user record attributes
 
 ## Error codes
 
