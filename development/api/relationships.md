@@ -2,7 +2,7 @@
 
 Note: You can obtain the list of [link](../administration/terms-and-naming.md#link) names at Administration > Entity Manager > click relationships on a specific entity type > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
 
-#### List reated records
+### List reated records
 
 `GET {entityType}/{id}/{link}`
 
@@ -32,7 +32,7 @@ Returns:
 
 See [more info](api-search-params.md) about search parameters.
 
-#### Link
+### Link
 
 `POST {entityType}/{id}/{link}`
 
@@ -54,7 +54,7 @@ Payload:
 }
 ```
 
-#### Unlink
+### Unlink
 
 `DELETE {entityType}/{id}/{link}`
 
