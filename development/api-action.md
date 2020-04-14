@@ -1,7 +1,8 @@
 # Custom API action
 
-Example for Account scope.
+## Extending existing controller
 
+Example for Account scope.
 
 Create a file (or modify if it already exists) `custom/Espo/Custom/Controllers/Account.php`.
 
@@ -41,7 +42,9 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 }
 ```
 
-## Custom Controller
+Note: For Account entity type we extend `\Espo\Modules\Crm\Controllers\Account`. Some entity types might not have controllers in `\Espo\Modules\Crm\Controllers` namespace. They are defined in `\Espo\Controllers` namespace.
+
+## Custom controller
 
 ### In Custom folder
 
