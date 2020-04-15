@@ -64,8 +64,6 @@ class EspoApiClient
 
     protected $urlPath = '/api/v1/';
 
-    protected $userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36';
-
     private $lastCh;
 
     private $lastResponse;
@@ -152,7 +150,6 @@ class EspoApiClient
 
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
         curl_setopt($ch, CURLOPT_HEADER, true);
 
         if ($method != 'GET') {
