@@ -45,7 +45,7 @@ Available at Administration > PDF Templates.
 
 For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button `</>`.
 
-You can print fields of the record as well as fields of related records by utilizing placeholders in your template.
+You can print fields of the record as well as fields of related records by utilizing placeholders (Handlebars like) in your template.
 
 Examples: 
 
