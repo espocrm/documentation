@@ -220,7 +220,7 @@ will return an array `['{token1}', '{token2}']`.
 #### string\replace
 `string\replace(STRING, SEARCH, REPLACE)`
 
-Replaces all occurances of SEARCH with REPLACE in STRING. (available since version 5.9.0)
+Replaces all occurrences of SEARCH with REPLACE in STRING. (available since version 5.9.0)
 
 Example:
 
