@@ -112,6 +112,6 @@ The list of available additional placeholders:
 
 Available since version 5.9.0.
 
-Note: It's an expiremental feature.
+Note: This is an expiremental feature.
 
 Email templates also support handlebars. It's the same template system used for PDF templates with double-brace placeholders, like `{{name}}`.
