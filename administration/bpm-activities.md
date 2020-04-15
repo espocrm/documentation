@@ -148,8 +148,8 @@ You can update the target record with Script Task, though the more proper way is
 
 In Script Task you can define actions that are impossible to do with the regular Task. Examples:
 
-* Create a new user and send generated password
-* Send email with generated PDF in attachment
+* Create a new user and send generated password ([see](formula.md#password))
+* Send email with generated PDF in attachment ([see](formula.md#extpdfgenerate))
 
 ----
 
