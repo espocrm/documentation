@@ -103,5 +103,5 @@ location /wss {
 }
 ```
 
-Note: By default Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon.
+Note: By default Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example we set it to 14h.
 
