@@ -134,6 +134,7 @@ Useful to create an array for link-multiple IDs. Example: `teamsIds = list($team
 * [string\pad](#stringpad)
 * [string\match](#stringmatch)
 * [string\matchAll](#stringmatchall)
+* [string\replace](#stringreplace)
 
 #### string\concatenate
 
@@ -208,13 +209,24 @@ will return `{token1}`.
 #### string\matchAll
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
-Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
+Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3)
 
 Example:
 
 `string\matchAll('string\\match('{token1} foo {token2} bar', '/{[^}]*}/')`
 
 will return an array `['{token1}', '{token2}']`.
+
+#### string\replace
+`string\replace(STRING, SEARCH, REPLACE)`
+
+Replaces all occurances of SEARCH with REPLACE in STRING. (available since version 5.9.0)
+
+Example:
+
+`string\replace('Hello {test}, '{test}, 'world)`
+
+will return `'Hello world'`.
 
 ### Datetime
 
