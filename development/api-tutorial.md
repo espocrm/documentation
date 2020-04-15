@@ -34,7 +34,7 @@ try {
 }
 ```
 
-Check `data/logs` in your EspoCRM if something went wrong.
+Check `data/logs` in your EspoCRM if something went wrong. See [error codes](api.md#error-codes).
 
 ### Javascript (Nodejs)
 
@@ -70,4 +70,4 @@ client.request('POST', 'Account', payload)
 ```
 
 
-Check `data/logs` in your EspoCRM if something went wrong.
+Check `data/logs` in your EspoCRM if something went wrong. See [error codes](api.md#error-codes).
