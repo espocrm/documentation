@@ -114,4 +114,4 @@ Available since version 5.9.0.
 
 Note: It's an expiremental feature.
 
-Email templates also support handlebars. It's the same template system used for PDF templates with double-brace placeholders `{{name}}`.
+Email templates also support handlebars. It's the same template system used for PDF templates with double-brace placeholders, like `{{name}}`.
