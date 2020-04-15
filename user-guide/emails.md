@@ -108,3 +108,10 @@ The list of available additional placeholders:
 * `{optInUrl}` - opt-in url (only for lead capture confirm opt-in),
 * `{optInLink}` - opt-in link (only for lead capture confirm opt-in).
 
+### Handlebars support
+
+Available since version 5.9.0.
+
+Note: It's an expiremental feature.
+
+Email templates also support handlebars. It's the same template system used for PDF templates with double-brace placeholders `{{name}}`.
