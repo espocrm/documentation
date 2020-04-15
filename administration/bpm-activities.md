@@ -146,7 +146,7 @@ Variables can be utilized in:
 
 You can update the target record with Script Task, though the more proper way is to use Update Target Record action of the regular Task.
 
-In Script Task you can define actions that are impossible to do with actions of the regular Task.
+In Script Task you can define actions that are impossible to do with the regular Task.
 
 ----
 
