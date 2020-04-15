@@ -34,6 +34,8 @@ try {
 }
 ```
 
+Check `data/logs` in your EspoCRM if something went wrong.
+
 ### Javascript (Nodejs)
 
 1. Create a new JS file: `espocrm-api-client.js` with the code copied from [here](api-client-js.md#module).
@@ -66,3 +68,6 @@ client.request('POST', 'Account', payload)
         }
     );
 ```
+
+
+Check `data/logs` in your EspoCRM if something went wrong.
