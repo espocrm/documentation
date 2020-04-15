@@ -1,5 +1,7 @@
 # API Client Implementation in Python
 
+## Class
+
 ```python
 import requests
 
