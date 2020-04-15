@@ -804,7 +804,7 @@ ext\email\send($id);
 
 `ext\email\send(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
 
-Applies an email template to an existng email record. Parent record can be passed optionally.(Available since version 5.9.0)
+Applies an email template to an existng email record. Parent record can be passed optionally. (Available since version 5.9.0)
 
 Example: 
 
@@ -824,7 +824,7 @@ ext\email\send($emailId);
 
 `ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID, [FILENAME])`
 
-Generates PDF file and returns attachment id. If failed, then returns NULL. TEMPLATE_ID is an ID of pdf template. (Available since version 5.9.0)
+Generates PDF file and returns attachment ID. If failed, then returns NULL. TEMPLATE_ID is an ID of PDF template. (Available since version 5.9.0)
 
 Example:
 
