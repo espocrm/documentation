@@ -7,6 +7,9 @@
 
 ## In external application
 
+* [PHP](#php)
+* [Javascript (Nodejs)](#javascript-nodejs)
+
 ### PHP
 
 1. Create a new PHP file: `EspoApiClient.php` with the code copied from [here](api-client-php.md#class).
