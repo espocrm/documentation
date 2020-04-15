@@ -101,3 +101,6 @@ location /wss {
     proxy_set_header Connection $connection_upgrade;
 }
 ```
+
+Note: By default Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon.
+
