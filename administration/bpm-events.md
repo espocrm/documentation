@@ -128,6 +128,8 @@ If the first character of the signal name is `@`, it will broadcast an object si
 
 ![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-intermediate-signal-throw.png)
 
+Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
 See [more info](bpm-signals.md) about signals.
 
 ### Message Intermediate Event (Catching)
@@ -187,6 +189,10 @@ Ends the flow and broadcasts a specified signal.
 Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
 
 If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
+
+Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
+See [more info](bpm-signals.md) about signals.
 
 ----
 
