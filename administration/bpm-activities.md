@@ -66,7 +66,7 @@ Assigns the record to some user by a specific rule. Can be applied to the target
 
 Creates in-app notification for specific users.
 
-Process variables can be used in a message with a placeholder `{$$variable}` (since 2.5.8 version).
+Process variables can be used in a message with the placeholder `{$$variable}` (since 2.5.8 version).
 
 #### Make Followed
 
