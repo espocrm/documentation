@@ -1,10 +1,12 @@
 # Signals
 
-Signal event are events with a defined name. Signals are broadcasted globally, they are not limited by a process scope. It means that signal triggered in one process can be catched in another process.
+Signals are events with a specific name. Signals are broadcasted globally, they are not limited by a process scope. It means that signal triggered in one BPM process can be catched in another process.
 
-There are set of signals which are broadcasted upon specific events in application. These *built-in signals* are listed below.
+Signals feature is a part of Advanced Pack extension.
 
-It's possible to broadcast custom signals in BPM process. 
+There are set of standard signals which are broadcasted upon specific events in the application. These *built-in signals* are listed below.
+
+It's also possible to broadcast custom signals in BPM process or via code.
 
 There are two types of signals:
 
@@ -19,7 +21,10 @@ In this article:
 
 ## Regular signals
 
-Can be used within running processes. Can NOT be used to start processes or workflows.
+* Can be used within running processes.
+* Can NOT be used to start a process or workflow rule.
+
+Note: Signal Intermediate Events can catch and throw regular signals (in BPM process).
 
 ### Built-in signals
 
@@ -72,16 +77,18 @@ You can use placeholders when you define a signal name that will be broadcasted 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – formula variable
 
-E.g. `mySignal.{$status}.{$id}` – type and id are fields of the target record. Placeholders will be replaced with field values producing the signal name like `mySigal.New.someIdValue`.
+E.g. `mySignal.{$status}.{$id}` – *type* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySigal.New.someIdValue`.
 
 
 ## Object signals
 
-Broadcasted along with the entity (record). Prefixed with `@` character.
+* Broadcasted along with the entity (record). 
+* Prefixed with `@` character.
+* Can be used only to initiate a new process or workflow rule
 
-This signal type can be used only to initiate a new process or trigger a workflow rule. Signal Intermediate Event (Catching) doesn't catch object signals. 
+Note: Signal Intermediate Event (Catching) can't catch object signals. 
 
-Example: A process triggers signal *@approve*. A target record of *Lead* entity type is attached to the signal. You have another BPM flowchar for *Lead* entity type that starts with *@approve* signal. In this case, a new process will be started, and lead record from the first process will be passed as a target record of the second process. 
+Example: A process triggers signal *@approve*. A target record of *Lead* entity type is attached to the signal. You have another BPM flowchart for *Lead* entity type that starts with *@approve* signal. In this case, a new process will be started, and lead record from the first process will be passed as a target record of the second process. 
 
 ### Built-in signals
 
