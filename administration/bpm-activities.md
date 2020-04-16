@@ -107,7 +107,7 @@ You can utilize *Report Panels* feature for this. Create a list report, that sho
 
 #### Using created relationship
 
-It's possible to create Children-to-Parent relationship between some entity type and User Task, then User Tasks will be available in *Relationships* layout of that entity type. Administration > Entity Manager > BpmnUserTask > Relatinships > edit Children-to-Parent > check your entity type at *Foreign Fields*.
+It's possible to create Children-to-Parent relationship between some entity type and User Task, then User Tasks will be available in *Relationships* layout of that entity type. Go to Administration > Entity Manager > BpmnUserTask > Relatinships > edit Children-to-Parent, check your entity type at *Foreign Fields*.
 
 ### Resolution
 
