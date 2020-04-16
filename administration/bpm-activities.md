@@ -14,33 +14,96 @@ Activities are displayed as rounded rectangles.
 
 ## Task
 
-Task can execute following the actions:
+Task can execute different actions. Available actions are listed bellow.
 
-* Create Record – creates new record of any entity type;
-* Create Related Record – creates new record related to the target record;
-* Update Target Record;
-* Update Related Record – updates the record or records related to the target record;
-* Update Created Record – updates specific field of any record created in the current process;
-* Update Process Record – can be used to assign the process to specific user or team;
-* Link to Another Record – links the target record with a specified record;
-* Unlink from Another Record – unlinks the target record from the specified record;
-* Apply Assignment Rule – assigns the target record, the process record or any record created by the process according to the specific rule;
-* Create Notification – creates in-app notification for specific users;
-* Make Followed – makes specific users follow the target record, the process record or any record created by the process;
-* Trigger Another Workflow Rule - runs a workflow rule of the sequential type, target can be substituted with a related or created record;
-* Run Service Action – runs a specific service action; the list of built-in actions is available [here](workflows.md#run-service-action); developers can create custom service actions;
-* Send HTTP Request – calls external API (since version 2.4.0).
+The list of actions available for a task are almost the same as for Workflows tool. See more details about [workflow actions](workflows.md#actions).
 
-Actions available for a task are almost the same as in Workflows tool. See more details about [workflow actions](workflows.md#actions).
+### Actions
 
-It's possible to delete records in Update actions with the following formula code: `deleted = 1`.
+#### Create Record
 
-When using formula in tasks that create another record, you can access target record attributes with the function `targetEntity\attribute(ATTRIBUTE)`. 
+Creates a new record of any entity type.
+
+#### Create Related Record
+
+Creates a new record related to the target record.
+
+#### Update Target Record
+
+Updates the target record. You can utilize formula here.
+
+It's possible to delete the record with the formula expression: `deleted = 1`.
+
+#### Update Related Record
+
+Updates the record (or multiple records) related to the target record. You can utilize formula here.
+
+#### Update Created Record 
+
+Updates a record that was created within the current process.
+
+It's possible to delete the record with the formula expression: `deleted = 1`.
+
+#### Update Process Record
+
+Updates the process record. Can be used to assign the process to a specific user or team.
+
+It's possible to delete the process record with the formula expression: `deleted = 1`.
+
+ ####  Link to Another Record
+
+Relates the target record with another record.
+
+#### Unlink from Another Record 
+
+Unrelates the target record from another specified record.
+
+#### Apply Assignment Rule
+
+Assigns the record to some user by a specific rule. Can be applied to the target record, the process record or any record created by the process. 
+
+#### Create Notification
+
+Creates in-app notification for specific users.
+
+Process variables can be used in a message with a placeholder `{$$variable}` (since 2.5.8 version).
+
+#### Make Followed
+
+Makes specific users to follow the target record, the process record or any record created by the process.
+
+
+#### Trigger Another Workflow Rule
+
+Runs a workflow rule of the sequential type, target record can be switched a related or a record created by the process.
+
+
+#### Run Service Action
+
+Runs a specific service action. The list of built-in actions is available [here](workflows.md#run-service-action). Developers can create custom service actions.
+
+
+#### Send HTTP Request
+
+Calls external API (since version 2.4.0).
+
+
+### Formula usage
+
+
+When using formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`. 
 
 Example:
 
 ```
-name = targetEntity\attribute('name');
+// attribute of the target record
+$someVariable1 = targetEntity\attribute('name');
+
+// attribute of the record you are creating or updating
+$someVariable2 = name;
+
+// attribute of the record you are creating or updating
+$someVariable3 = entity\attribute('name');
 ```
 
 ----
