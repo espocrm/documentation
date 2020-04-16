@@ -20,4 +20,4 @@ Signal name, defined in catching event: `clickUrl.Lead.{$id}.5d8206aa9d76df4c8`,
 
 ## Example
 
-You can a downloadable example [here](bpm-examples.md#downloadable-examples).
+You can get a downloadable example [here](bpm-examples.md#downloadable-examples).
