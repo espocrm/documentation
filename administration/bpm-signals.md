@@ -21,8 +21,8 @@ In this article:
 
 ## Regular signals
 
-* Can be used within running processes.
-* Can NOT be used to start a process or workflow rule.
+* Can be broadcasted and caught within a running process.
+* Can't be used to start a process or workflow rule.
 
 Note: Signal Intermediate Events can catch and throw regular signals (in BPM process).
 
@@ -82,9 +82,11 @@ E.g. `mySignal.{$status}.{$id}` – *type* and *id* are attributes of the target
 
 ## Object signals
 
-* Broadcasted along with the entity (record). 
+* Broadcasted along with the entity (record).
 * Prefixed with `@` character.
-* Can be used only to initiate a new process or workflow rule
+* Can be used only to initiate a new process or workflow rule.
+* Can't by caught withing a running process.
+* Can be broadcasted by a running process. 
 
 Note: Signal Intermediate Event (Catching) can't catch object signals. 
 
