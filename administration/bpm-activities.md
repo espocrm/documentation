@@ -143,22 +143,22 @@ See a [separate article](bpm-tracking-urls.md).
 
 ## User Task
 
-Provides a flexible ability of user interaction. It stops execution until the user (specified explicitly or by assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
+It stops the flow until a user (specified explicitly or selected by an assignment rule) resolves the task. Process User Task record will be created in the system. By default there are three action types: Approve, Review, Accomplish.
 
-* Approve type requires the user to choose between 'Approved' and 'Declined'.
-* Review type gives only one option: 'Reviewed'.
-* Accomplish type has two options: 'Completed' and 'Failed'.
+* Approve – requires the user to choose between 'Approved' and 'Declined'.
+* Review – gives only one option: 'Reviewed'.
+* Accomplish – has two options: 'Completed' and 'Failed'.
 
 The user assigned to the created Process User Task record will receive in-app notification. Administrator can also enable email notifications for Process User Tasks at Administration > Notifications > Email Notifications.
 
-It's possible to specify instructions text for a user (markdown is supported).
+It's possible to specify text with instructions for the user (markdown is supported).
 
-You can use placeholders in *Name* and *Instructions*:
+You can use placeholders in *Name* and *Instructions* fields:
 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – process variable (defined by Script Task)
 
-Users can also add Process User Tasks dashlet on their dashboard to see their actual process user tasks.
+Users can also add Process User Tasks **dashlet** on their dashboard to see their actual process user tasks.
 
 ### Dispaying on detail view
 
@@ -166,7 +166,7 @@ It's possible to display process task on the target entity detail view.
 
 #### Using Report Panels
 
-You can utilize *Report Panels* feature for this. Create a list report, that shows all user tasks. Then create a report panel (from administration) for needed entity type with this list report selected.
+You can utilize *Report Panels* feature to display process tasks on the record detail view. Create a list report that shows all user tasks (no filters). Then create a report panel (from administration) for needed entity type with this list report selected.
 
 #### Using created relationship
 
@@ -174,14 +174,14 @@ It's possible to create Children-to-Parent relationship between some entity type
 
 ### Resolution
 
-It's possible to read the resolution of the passed user task within diverging gateways or conditional events, making ramification in the process flow. User Task resolution is avaible in conditions of geteways and conditional events.
+It's possible to check the resolution of the passed user task in diverging gateways or conditional events, making ramification in the process flow depending on the resolution. User Task resolution is avaible in conditions of geteways and conditional events.
 
 ### Canceling
 
 Created User Task can be canceled by a process. There are two ways:
 
 1. Using 'Update Created Record' action (within Task activity), setting 'Is Canceled' field to 'true'. 
-2. Using interrupting boundary event (attached to User Task activity) (since advanced pack 2.4.0).
+2. Using interrupting boundary event (attached to User Task activity).
 
 ![User Task](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/task-user.png)
 
