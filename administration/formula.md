@@ -611,6 +611,8 @@ Returns a first found ID of a related record that matches specific criteria. (si
 
 `record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
 
+If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
+
 Examples:
 
 `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'stage=', 'Closed Won')`
