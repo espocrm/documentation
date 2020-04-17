@@ -545,6 +545,7 @@ Example:
 * [record\count](#recordcount)
 * [record\findOne](#recordfindone)
 * [record\findRelatedOne](#recordfindrelatedone)
+* [record\findRelatedMany](#recordfindrelatedmany)
 * [record\attribute](#recordattribute)
 * [record\relate](#recordrelate)
 * [record\unrelate](#recordunrelate)
@@ -609,7 +610,9 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
 
-`record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, FILTER])` Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
+`record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, FILTER])`
+
+Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
@@ -622,6 +625,34 @@ Examples:
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
 
 Note: Before version 5.9.0 ORDER_BY and ORDER arguments were mandatory.
+
+#### record\findRelatedMany
+
+`record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, KEY1, VALUE1, KEY2, VALUE2 ...])`
+
+Returns an array of IDs of a related record that matches specific criteria. LIMIT is the max number of record. (since version 5.9.0)
+
+`record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, FILTER])` 
+
+Returns an array of IDs of a related record with an optional FILTER applied. (since version 5.9.0)
+
+If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
+
+Examples:
+
+`record\findRelatedMany('Account', accountId, 'oppotunities', 10, 'createdAt', 'desc', 'stage=', 'Closed Won')`
+
+`record\findRelatedOne('Account', accountId, 'oppotunities', 3, 'createdAt', 'desc', 'open')`
+
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
+
+This function can be utilized for copying related records from one record to another. Example:
+
+```
+// copy teams from account to email
+$ids = record\findRelatedMany('Account', $accountId, 'teams', 10);
+record\relate('Email', $emailId, 'teams', $ids);
+```
 
 #### record\attribute
 
