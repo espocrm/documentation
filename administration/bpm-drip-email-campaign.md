@@ -1,6 +1,6 @@
 # Drip Email Campaign with BPM
 
-[BPM tool](bpm.md) provides the ability to create drip email campaigns. BPM is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+With [BPM tool](bpm.md) it's possible to create drip email campaigns.
 
 ## Campaign starting 
 
@@ -10,7 +10,7 @@ You need to create *Process Flowchart* (at Administraition > Flowcharts) and cho
 
 ### Starting on lead subscription
 
-A process instance will be started once a lead has submitted a form (and confirmed opt-in if required) and was entered into CRM through [Lead Capture](web-to-lead.md). 
+A process instance will be started once a lead has submitted a form (and confirmed opt-in if required) and has been entered into CRM through [Lead Capture](web-to-lead.md). 
 
 You need to use *Signal Start Event* with a specific signal name. Put it on the flowchart layout and click it to edit. Specify the signal name with the value `@leadCapture.LEAD_CAPTURE_ID`, where *LEAD_CAPTURE_ID* is an ID of the lead capture record (can be obtained from its URL).
 
