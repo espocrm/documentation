@@ -801,7 +801,7 @@ Returns value by INDEX. (since version 5.8.3)
 
 * [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
 * [ext\email\send](#extemailsend)
-* [ext\email\appyTemplate](#extemailapplytemplate)
+* [ext\email\applyTemplate](#extemailapplytemplate)
 * [ext\pdf\generate](#extpdfgenerate)
 
 #### ext\account\findByEmailAddressDomain
