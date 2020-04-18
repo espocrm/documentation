@@ -9,6 +9,7 @@
 
 * [PHP](#php)
 * [Javascript (Nodejs)](#javascript-nodejs)
+* [Python](#python)
 
 ### PHP
 
@@ -74,3 +75,29 @@ client.request('POST', 'Account', payload)
 
 
 Check `data/logs` in your EspoCRM if something went wrong. See [error codes](api.md#error-codes).
+
+### Python
+
+1. Create a new file: `espocrm-api-client.py` with the code copied from [here](api-client-python.md#class).
+2. Install *requests* package with the command: `pip install requests`.
+3. Use the client. See below:
+
+```python
+from espo_api_client import EspoAPI
+
+client = EspoAPI('http://localhost/espocrm', 'paste_api_key_here')
+
+params = {
+    "select": "id,phoneNumber",
+    "where": [
+        {
+            "type": "equals",
+            "attribute": "emailAddress",
+            "value": 'some@email.com',
+        },
+    ],
+}
+
+result = client.request('GET', 'Lead', params)
+```
+```
