@@ -4,19 +4,41 @@
 
 ```python
 import requests
-
+import urllib
 
 class EspoAPIError(Exception):
     """An exception class for the client"""
 
+def http_build_query(data):
+    parents = list()
+    pairs = dict()
+
+    def renderKey(parents):
+        depth, outStr = 0, ''
+        for x in parents:
+            s = "[%s]" if depth > 0 or isinstance(x, int) else "%s"
+            outStr += s % str(x)
+            depth += 1
+        return outStr
+
+    def r_urlencode(data):
+        if isinstance(data, list) or isinstance(data, tuple):
+            for i in range(len(data)):
+                parents.append(i)
+                r_urlencode(data[i])
+                parents.pop()
+        elif isinstance(data, dict):
+            for key, value in data.items():
+                parents.append(key)
+                r_urlencode(value)
+                parents.pop()
+        else:
+            pairs[renderKey(parents)] = str(data)
+
+        return pairs
+    return urllib.parse.urlencode(r_urlencode(data))
 
 class EspoAPI:
-    """
-    A simple api client for EspoCRM (https://www.espocrm.com) written in Python. Adopted from the PHP api client.
-    It needs the requests library. You can install it by command: pip install requests
-
-    Author: Yehor Smoliakov (https://github.com/egorsmkv)
-    """
 
     url_path = '/api/v1/'
 
@@ -42,7 +64,7 @@ class EspoAPI:
         if method in ['POST', 'PATCH', 'PUT']:
             kwargs['json'] = params
         else:
-            kwargs['data'] = params
+            kwargs['url'] = kwargs['url'] + '?' + http_build_query(params)
 
         response = requests.request(method, **kwargs)
 
@@ -50,7 +72,7 @@ class EspoAPI:
 
         if self.status_code != 200:
             reason = self.parse_reason(response.headers)
-            raise EspoAPIError(f'Wrong request, status code is {response.status_code}, reason is {reason}')
+            raise EspoAPIError('Wrong request, status code is {response.status_code}, reason is {reason}')
 
         data = response.content
         if not data:
@@ -92,14 +114,27 @@ data = {
 client = EspoAPI('http://localhost/espocrm', 'bot2000', '****')
 
 # Change an item
-# print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
+print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
 
 # Create a lead
-# print(client.request('POST', 'Lead', data))
+print(client.request('POST', 'Lead', data))
 
 # Get accounts
-# print(client.request('GET', 'Account'))
+print(client.request('GET', 'Account'))
+
+# Get accounts with search params
+params = {
+    "select": "id,phoneNumber",
+    "where": [
+        {
+            "type": "equals",
+            "attribute": "phoneNumber",
+            "value": '+1',
+        },
+    ],
+}
+print(client.request('GET', 'Account', params))
 
 # Delete an opportunity
-# print(client.request('DELETE', 'Opportunity/5b3b0b8c0b2b8bea5'))
+print(client.request('DELETE', 'Opportunity/5b3b0b8c0b2b8bea5'))
 ```
