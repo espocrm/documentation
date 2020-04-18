@@ -100,7 +100,7 @@ class EspoAPI:
 ```python
 from espo_api_client import EspoAPI
 
-client = EspoAPI('http://localhost/espocrm', 'paste_api_key_here')
+client = EspoAPI('https://address-of-your-espocrm', 'paste_api_key_here')
 
 # Change an item
 print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
