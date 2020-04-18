@@ -85,7 +85,7 @@ Check `data/logs` in your EspoCRM if something went wrong. See [error codes](api
 ```python
 from espo_api_client import EspoAPI
 
-client = EspoAPI('http://localhost/espocrm', 'paste_api_key_here')
+client = EspoAPI('https://address-of-your-espocrm', 'paste_api_key_here')
 
 params = {
     "select": "id,phoneNumber",
