@@ -100,4 +100,3 @@ params = {
 
 result = client.request('GET', 'Lead', params)
 ```
-```
