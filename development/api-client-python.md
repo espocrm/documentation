@@ -1,5 +1,7 @@
 # API Client Implementation in Python
 
+Note: You need to have *requests* package installed with: `pip install requests`.
+
 ## Class
 
 ```python
@@ -100,18 +102,12 @@ data = {
     'firstName': 'John',
     'lastName': 'Does',
     'phoneNumber': '+11111-22222-33333',
-    'emailAddress': '',
-
     'source': 'Web Site',
-    'campaignId': '5b3afb264fddb0e65',
     'assignedUserId': '1',
-
-    'opportunityAmount': '650',
-    'opportunityAmountCurrency': 'USD',
     'industry': 'Legal',
 }
 
-client = EspoAPI('http://localhost/espocrm', 'bot2000', '****')
+client = EspoAPI('http://localhost/espocrm', 'user_name', 'password')
 
 # Change an item
 print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
