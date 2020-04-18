@@ -5,6 +5,7 @@ Filters and other search parameters can be used with API functions that returns 
 * [Examples](#examples)
   * [PHP](#php)
   * [Javacript](#javascript-nodejs)
+  * [Python](#python)
 * [Params](#params)
 * [Where items](#where-items)
 * [Attribute names](#attribute-names)
@@ -84,6 +85,22 @@ client.request('GET', 'Case', params)
             console.log(response);
         }
     )
+```
+
+### Python
+
+```python
+params = {
+    "select": "id,phoneNumber",
+    "where": [
+        {
+            "type": "equals",
+            "attribute": "phoneNumber",
+            "value": '+1',
+        },
+    ],
+}
+result = client.request('GET', 'Account', params)
 ```
 
 ## Params
