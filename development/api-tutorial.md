@@ -80,7 +80,7 @@ Check `data/logs` in your EspoCRM if something went wrong. See [error codes](api
 
 1. Create a new file: `espocrm-api-client.py` with the code copied from [here](api-client-python.md#class).
 2. Install *requests* package with the command: `pip install requests`.
-3. Use the client. See below:
+3. Use the client. See the code:
 
 ```python
 from espo_api_client import EspoAPI
