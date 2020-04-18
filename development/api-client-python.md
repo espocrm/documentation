@@ -46,10 +46,9 @@ class EspoAPI:
 
     url_path = '/api/v1/'
 
-    def __init__(self, url, username, password):
+    def __init__(self, url, api_key):
         self.url = url
-        self.username = username
-        self.password = password
+        self.api_key = api_key
         self.status_code = None
 
     def request(self, method, action, params=None):
@@ -59,9 +58,10 @@ class EspoAPI:
         headers = {
         }
 
+        headers['X-Api-Key'] = self.api_key
+
         kwargs = {
             'url': self.normalize_url(action),
-            'auth': (self.username, self.password),
             'headers': headers,
         }
 
@@ -100,6 +100,12 @@ class EspoAPI:
 ```python
 from espo_api_client import EspoAPI
 
+client = EspoAPI('http://localhost/espocrm', 'paste_api_key_here')
+
+# Change an item
+print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
+
+# Create a lead
 data = {
     'firstName': 'John',
     'lastName': 'Does',
@@ -108,13 +114,6 @@ data = {
     'assignedUserId': '1',
     'industry': 'Legal',
 }
-
-client = EspoAPI('http://localhost/espocrm', 'user_name', 'password')
-
-# Change an item
-print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
-
-# Create a lead
 print(client.request('POST', 'Lead', data))
 
 # Get accounts
