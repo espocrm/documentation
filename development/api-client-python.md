@@ -102,9 +102,6 @@ from espo_api_client import EspoAPI
 
 client = EspoAPI('https://address-of-your-espocrm', 'paste_api_key_here')
 
-# Change an item
-print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
-
 # Create a lead
 data = {
     'firstName': 'John',
@@ -115,6 +112,9 @@ data = {
     'industry': 'Legal',
 }
 print(client.request('POST', 'Lead', data))
+
+# Update
+print(client.request('PUT', 'Lead/5b3c37b74b19680f1', {'lastName': 'Alice'}))
 
 # Get accounts
 print(client.request('GET', 'Account'))
