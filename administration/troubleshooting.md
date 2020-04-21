@@ -58,7 +58,7 @@ cd /var/www/html/espocrm
 php cron.php
 ```
 
-Note: It should be executed under web-server user. If you are logged in as root, the command should be (e.g for Ubuntu):
+Note: It's better to execute under web-server user. If you are logged in as root, the command should be (e.g for Ubuntu):
 
 ```bash
 sudo -u www-data php cron.php
@@ -73,7 +73,7 @@ where `www-data` is a web-server user.
 Sometimes you need to run rebuild from the command line interface when the application is not loading.
 
 ```bash
-sudo rebuild.php
+php rebuild.php
 ```
 
 ## EspoCRM is not loading after upgrade
