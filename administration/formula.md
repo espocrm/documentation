@@ -790,12 +790,12 @@ Adds one or more elements to the end of an array and returns the new array.
 #### array\length
 `array\length(LIST)`
 
-Returns count of elements in LIST.
+Returns the number of elements in LIST.
 
 #### array\at
 `array\at(LIST, INDEX)`
 
-Returns value by INDEX. (since version 5.8.3)
+Returns a value by INDEX. (since version 5.8.3)
 
 ### Ext
 
