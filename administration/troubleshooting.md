@@ -72,10 +72,9 @@ where `www-data` is a web-server user.
 
 Sometimes you need to run rebuild from the command line interface when the application is not loading.
 
-`sudo -u www-data php rebuild.php`
-
-www-data is a web server user. 
-
+```bash
+sudo rebuild.php
+```
 
 ## EspoCRM is not loading after upgrade
 
