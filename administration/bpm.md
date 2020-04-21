@@ -64,7 +64,7 @@ The execution of the process is visualized with colors highlighting flow nodes:
 * violet – in process
 * gray – failed
 
-![Process execution](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/process-execution.png)
+![Process execution](../_static/images/administration/bpm/process-execution.png)
 
 ### Manipulating
 
@@ -139,5 +139,4 @@ Available since version 2.4.0.
 Example:
 
 `bpm\startProcess('flowchart-id', 'Account', 'account-id');`
-
 
