@@ -14,7 +14,7 @@
 
 Returns a list of accounts and total number of records. It's possible to specify filters.
 
-GET parameters are available [here](../api.md#list).
+GET parameters are available [here](crud.md#list).
 
 Requires *read* access to *Account* scope.
 
@@ -50,7 +50,7 @@ Creates an account. Returns its attributes.
 
 Requires *create* access to *Account* scope.
 
-Payload: Record [attributes](../administration/terms-and-naming.md#attribute).
+Payload: Record [attributes](../../administration/terms-and-naming.md#attribute).
 
 Example:
 
@@ -71,7 +71,7 @@ with payload:
 
 ### GET Account/{id}
 
-Returns [attributes](../administration/terms-and-naming.md#attribute) of a specific Account record.
+Returns [attributes](../../administration/terms-and-naming.md#attribute) of a specific Account record.
 
 Requires *read* access to Account record.
 
@@ -101,7 +101,7 @@ with return:
 
 ### PUT Account/{id}
 
-Updates an existing Account. Returns its [attributes](../administration/terms-and-naming.md#attribute).
+Updates an existing Account. Returns its [attributes](../../administration/terms-and-naming.md#attribute).
 
 Requires *edit* access to Account record.
 
@@ -150,7 +150,7 @@ Requires *stream* access to Account record.
 
 ## Relationships
 
-Note: [link](../administration/terms-and-naming.md#link) names can be obtained at Administration > Enity Manager > click *relationsips* on *Account* row > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
+Note: [link](../../administration/terms-and-naming.md#link) names can be obtained at Administration > Enity Manager > click *relationsips* on *Account* row > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
 
 The list of links available out-of-the-box:
 
@@ -172,7 +172,7 @@ The list of links available out-of-the-box:
 
 Returns a list of related records linked through *link* relation and their total number of records. It's possible to specify filters.
 
-GET parameters are available [here](../api.md#list-reated-records).
+GET parameters are available [here](relationships.md#list-related-records).
 
 Requires *read* access to Account record and *read* access to the scope of the related entity type.
 
@@ -183,7 +183,7 @@ Relate an existing account with a specific record (or multiple records) throuh a
 
 Requires *edit* access to Account record and *edit* access to the scope of the related entity type.
 
-Payload parameters are available [here](../api.md#link).
+Payload parameters are available [here](relationships.md#link).
 
 
 ### DELETE Account/{id}/{link}
