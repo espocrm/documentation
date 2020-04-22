@@ -159,8 +159,9 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 #### LIKE operators
 
 Supported  operators: 
-* `*` - LIKE,
-* `!*` -- NOT LIKE.
+
+* `*` - LIKE
+* `!*` -- NOT LIKE
 
 ```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
