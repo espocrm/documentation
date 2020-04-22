@@ -8,14 +8,14 @@ EspoCRM can be installed on:
 
 In this article:
 
-* [Recommendations & requirements](#recommendations-requirements)
+* [Recommendations and requirements](#recommendations-and-requirements)
 * [Required permissions for Unix-based systems](#required-permissions-for-unix-based-systems)
 * [Setting up crontab](#setting-up-crontab)
 * [Configuration instructions based on your server](#configuration-instructions-based-on-your-server)
 * [See also](#see-also)
 
 
-## Recommendations & requirements
+## Recommendations and requirements
 
 ### PHP requirements
 
