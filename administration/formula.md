@@ -99,7 +99,7 @@ Format of function use: `groupName\functionName(argument1, argument2, ..., argum
 
 Out-of-the-box functions are listed below.
 
-## General
+### General
 
 #### ifThenElse
 
