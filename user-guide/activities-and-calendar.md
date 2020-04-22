@@ -14,11 +14,11 @@ Accounts, Contacts, Leads, Opportunities, Cases have the Activities panel on the
 
 In this article:
 
-* [Meetings and Calls](#meetings-and-calls)
+* [Meetings & Calls](#meetings-calls)
 * [Tasks](#tasks)
 * [Calendar](#calendar)
 
-## Meetings and Calls
+## Meetings & Calls
 
 ### Attendees
 
