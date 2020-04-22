@@ -1,4 +1,4 @@
-## Developer Documentation
+# Developer Documentation
 
 * [How to get started](how-to-start.md)
 * [Making extension package](extension-packages.md)
