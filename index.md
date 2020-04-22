@@ -2,7 +2,8 @@
 
 ### Administration
 
-* [Server configuration](administration/server-configuration.md)
+* Server configuration
+  * [Configuration](administration/server-configuration.md)
   * [Apache](administration/apache-server-configuration.md)
   * [Nginx](administration/nginx-server-configuration.md)
 * [Installation](administration/installation.md)
@@ -21,7 +22,8 @@
 * [Portal](administration/portal.md)
 * [Currency](administration/currency.md)
 * [Dashboards](administration/dashboards.md)
-* [LDAP authorization](administration/ldap-authorization.md)
+* LDAP
+  * [Authorization](administration/ldap-authorization.md)
   * [Active Directory](administration/ldap-authorization-for-ad.md)
   * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
 * [2-factor authentication](administration/2fa.md)
