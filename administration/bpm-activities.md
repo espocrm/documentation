@@ -2,13 +2,13 @@
 
 Activities are displayed as rounded rectangles.
 
-* [Task](#user-content-task)
-* [Send Message Task](#user-content-send-message-task)
-* [User Task](#user-content-user-task)
-* [Script Task](#user-content-script-task)
-* [Sub-Process](#user-content-sub-process)
-* [Event Sub-Process](#user-content-event-sub-process)
-* [Call Activity](#user-content-call-activity)
+* [Task](#task)
+* [Send Message Task](#send-message-task)
+* [User Task](#user-task)
+* [Script Task](#script-task)
+* [Sub-Process](#sub-process)
+* [Event Sub-Process](#event-sub-process)
+* [Call Activity](#call-activity)
 
 ----
 
