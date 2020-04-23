@@ -121,7 +121,7 @@ How much records to return.
 
 *String*
 
-What record [attributes](../administration/terms-and-naming.md#attribute) to return. Separated by comma. Whitespaces are not allowed. Specify to improve performance.
+What record [attributes](../administration/terms-and-naming.md#attribute) to return. Separated by comma. Whitespaces are not allowed. Specify only attributes that you need, it can improve performance.
 
 Example: `id,name,status,assignedUserId`.
 
@@ -129,7 +129,7 @@ Example: `id,name,status,assignedUserId`.
 
 *Array*
 
-Search criteria. Can contain nested arrays and objects. See more [below](#where-items).
+Search criteria. Can contain nested arrays and objects. See more [below](#where-items) more detail.
 
 ### primaryFilter
 
@@ -142,7 +142,6 @@ A primiry filter. Primary filters are usualy defined in *Select Manager* class.
 *Array*
 
 Bool filters. E.g. *onlyMy*, *followed*.
-
 
 ### orderBy
 
