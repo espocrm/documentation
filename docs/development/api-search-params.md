@@ -121,7 +121,9 @@ How much records to return.
 
 *String*
 
-What record [attributes](../administration/terms-and-naming.md#attribute) to return. Separated by comma. Specify to improve performance.
+What record [attributes](../administration/terms-and-naming.md#attribute) to return. Separated by comma. Whitespaces are not allowed. Specify to improve performance.
+
+Example: `id,name,status,assignedUserId`.
 
 ### where
 
