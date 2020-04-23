@@ -158,6 +158,10 @@ A direction of order: 'desc' or 'asc'.
 
 ## Where items
 
+*Where* parameter is an array if items, that can contain nested items. The data should be URL-encoded. API clients provided in the documentation handle encoding.
+
+Examples below are given in JSON format for readability. 
+
 ### equals, notEquals
 
 ```json
