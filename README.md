@@ -9,6 +9,8 @@
 
 Assuming you have *python* and *pip* installed.
 
+Install the packages:
+
 1. `pip install mkdocs`
 2. `pip install mdx_truly_sane_lists`
 3. `pip install mkdocs-material`
