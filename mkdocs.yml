@@ -28,9 +28,16 @@ nav:
             - 'Configuration': 'administration/server-configuration.md'
             - 'Apache': 'administration/apache-server-configuration.md'
             - 'Nginx': 'administration/nginx-server-configuration.md'
-        - 'Installation': 'administration/installation.md'
-        - 'Upgrading': 'administration/upgrading.md'
-        - 'Troubleshooting': 'administration/troubleshooting.md'
+        - 'System':    
+            - 'Installation': 'administration/installation.md'
+            - 'Upgrading': 'administration/upgrading.md'
+            - 'Troubleshooting': 'administration/troubleshooting.md'
+            - 'Console commands': 'administration/commands.md'
+            - 'Jobs': 'administration/jobs.md'
+            - 'WebSocket': 'administration/websocket.md'
+            - 'Performance tweaking': 'administration/performance-tweaking.md'
+            - 'Backup and restore': 'administration/backup-and-restore.md'
+            - 'Moving to another server': 'administration/moving-to-another-server.md'            
         - 'Roles management (access control)': 'administration/roles-management.md'
         - 'Email Administration': 'administration/emails.md'
         - 'Customization':
@@ -44,25 +51,18 @@ nav:
         - 'Portal': 'administration/portal.md'
         - 'Currency': 'administration/currency.md'
         - 'Dashboards': 'administration/dashboards.md'
+        - '2-factor authentication': 'administration/2fa.md'
         - 'LDAP':
             - 'Authorization': 'administration/ldap-authorization.md'
             - 'Active Directory': 'administration/ldap-authorization-for-ad.md'
-            - 'OpenLDAP': 'administration/ldap-authorization-for-openldap.md'
-        - '2-factor authentication': 'administration/2fa.md'
+            - 'OpenLDAP': 'administration/ldap-authorization-for-openldap.md'        
         - 'Misc':
+            - 'Terms & naming': 'administration/terms-and-naming.md'
             - 'Web-to-Lead': 'administration/web-to-lead.md'
             - 'Webhooks': 'administration/webhooks.md'
             - 'Maps': 'administration/maps.md'
             - 'B2C mode': 'administration/b2c.md'
-            - 'Backup and restore': 'administration/backup-and-restore.md'
-            - 'Moving to another server': 'administration/moving-to-another-server.md'
-            - 'Performance tweaking': 'administration/performance-tweaking.md'
             - 'Multiple assigned users': 'administration/multiple-assigned-users.md'
-        - 'System':
-            - 'Terms & naming': 'administration/terms-and-naming.md'
-            - 'Console commands': 'administration/commands.md'
-            - 'Jobs': 'administration/jobs.md'
-            - 'WebSocket': 'administration/websocket.md'
     - 'User Guide':
         - 'Emails':
             - 'General guidelines': 'user-guide/emails.md'
