@@ -46,6 +46,10 @@
     margin-bottom: 0.3em;
 }
 
+.md-typeset h4 {
+    margin-top: 1.2rem;
+}
+
 .md-nav--primary .md-nav__title {
     display: none;
 }

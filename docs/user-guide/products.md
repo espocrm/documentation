@@ -6,7 +6,7 @@ Product items can be used with Opportunity and Quotes. They are also available f
 
 A product record has three price fields: Cost, List and Unit. There is an ability to automatically calculate Unit Price using different formulas according to a selected Pricing Type.
 
-![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/products/products.png)
+![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
 
 Products can be added as line items to a Quote record. Product fields can be printed in PDF. More detail [here](quotes.md#templates).
 

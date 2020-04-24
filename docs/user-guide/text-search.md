@@ -18,7 +18,7 @@ The field list, which is used in filtering, can be configured at Administration 
 
 It's possible to use the wildcard `*`.
 
-![Text Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/1.png)
+![Text Search](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/text-search/1.png)
 
 There is an option to use 'contains' operator for varchar fields by default. Parameter is available at Administration > Settings. Note, that it can affect performance.
 
@@ -30,7 +30,7 @@ The list of entity types used in Global Search can be configured at Administrati
 
 The field list which is used in filtering can be configured at Administration > Entity Manager > Edit specific entity type > Text Filter Fields.
 
-![Global Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/2.png)
+![Global Search](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/text-search/2.png)
 
 ## Full-text search
 

@@ -28,7 +28,7 @@ List report results the list of records that meet the specified criteria.
 
 To create new list report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at List Report section.
 
-At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column: 
+At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column:
 
 * Width – width in percents;
 * Align – left or right;
@@ -36,7 +36,7 @@ At _Columns_ field pick fields you would like to be displayed. Below you can spe
 * Export Only – column won't be displated in report results on UI, but available in export;
 * Not Sortable – column won't be able to be ordered by, some fields are not available for sorting.
 
-Choose needed sorting at _List Order_ field. 
+Choose needed sorting at _List Order_ field.
 
 At _Filters_ section you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
 
@@ -46,7 +46,7 @@ You can __export__ list report results to excel and csv formats.
 
 List report example, showing leads that doesn't have any Call related to them:
 
-![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/list.png)
+![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/list.png)
 
 Additional features where list reports can be utilized:
 
@@ -66,7 +66,7 @@ To create new grid report click on Reports tab and then click Create Report butt
 
 Grid report example, showing revenue grouped by User:
 
-![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
+![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
 ### Group By
 
@@ -104,9 +104,9 @@ _Runtime Filters_ allows you to specify different filters before you run the rep
 
 ### Charts
 
-Grid report allows displaying results in a chart form. 
+Grid report allows displaying results in a chart form.
 
-There are following chart types available: 
+There are following chart types available:
 
 * Bar (Horizontal)
 * Bar (Vertical)
@@ -117,19 +117,19 @@ There are following chart types available:
 
 Bar:
 
-![Bar](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-bar.png)
+![Bar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/chart-bar.png)
 
 Bar Grouped:
 
-![Bar grouped](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-bar-grouped.png)
+![Bar grouped](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/chart-bar-grouped.png)
 
 Line:
 
-![Line](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-line.png)
+![Line](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/chart-line.png)
 
 Pie:
 
-![Pie](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/chart-pie.png)
+![Pie](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/chart-pie.png)
 
 ### Export
 
@@ -159,13 +159,13 @@ For charts, colors of columns must be specified in sub-reports.
 
 Simple to use type of filters. You can also pick fields of target entity as well as related entities.
 
-![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-field.png)
 
 ### OR group
 
 OR means that at least one condition under the group must be met.
 
-![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
+![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-or.png)
 
 ### AND group
 
@@ -177,7 +177,7 @@ Provides an ability to filter records that don't meet specified criteria. E.g. l
 
 Note: It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively effect on a report performance in some cases.
 
-![NOT IN group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
+![NOT IN group](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-not.png)
 
 ### IN group
 
@@ -187,7 +187,7 @@ Simlitar to AND group but utilizes a sub-query.
 
 Example of usage: Filtering accounts that have opportunities of both 'Closed Won' and 'Negotiation' stages.
 
-![IN group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-in.png)
+![IN group](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-in.png)
 
 ### Complex Expression
 
@@ -197,7 +197,7 @@ Note: If you need to compare just with a simple string value you should put it i
 
 Note: Functions intended to interact with entity record will not work here because the formula is not applied to specific record.
 
-![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
+![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-complex.png)
 
 You have the ability to use custom complex expressions. More info about complex expressions is available [here](complex-expressions.md).
 
@@ -214,7 +214,7 @@ Note: Compatible with EspoCRM versions 5.1.0 and greater.
 
 ## Displaying on dashboard
 
-You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options. 
+You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
 
 Grid reports can be displayed as a chart, chart with totals or only totals.
 
@@ -234,11 +234,11 @@ Note: A user needs to have an access to *Template* scope (set in *Role*).
 
 Note: You need to have at least one PDF Template for Report entity type. The template can be created at Administration > PDF Templates.
 
-To print a report: on the report detail view on *Report* panel click '*...*' dropdown, then click *Print to PDF*. 
+To print a report: on the report detail view on *Report* panel click '*...*' dropdown, then click *Print to PDF*.
 
 In PDF table `{{reportTable}}` is used to print a report results table.
 
-Example: 
+Example:
 
 ```
 {{reportTable border=1 borderColor="#333" cellpadding=2 fontSize=9}}
@@ -265,7 +265,7 @@ Administrator can create custom list view filters based on specific reports. Ava
 
 Note: The layout, that is specified in the report, is not applied to the list view when the filter is selected.
 
-## Report Panels 
+## Report Panels
 
 Detail view panels showing report results.
 

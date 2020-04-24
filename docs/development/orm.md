@@ -101,7 +101,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->order('LIST:sta
 ### Find the first one
 ```php
 $account = $entityManager->getRepository('Account')->where([
-    'type' => 'Customer',   
+    'type' => 'Customer',
 ])->findOne();
 ```
 
@@ -158,10 +158,10 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 
 #### LIKE operators
 
-Supported  operators: 
+Supported  operators:
 
 * `*` - LIKE
-* `!*` -- NOT LIKE
+* `!*` - NOT LIKE
 
 ```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
@@ -255,7 +255,7 @@ $sth = $pdo->prepare($sql);
 $sth->execute();
 
 // results
-$rowList = $sth->fetchAll(\PDO::FETCH_ASSOC); 
+$rowList = $sth->fetchAll(\PDO::FETCH_ASSOC);
 ```
 
 ### Additional Params

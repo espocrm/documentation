@@ -6,13 +6,13 @@ It's possible to add links into email body and catch when the recipient clicked 
 
 Tracking URL can be created at Campaigns > top-right menu > Tracking URLs. Create URL and obtain a generated placeholder (example: `{trackingUrl:5d8206aa9d76df4c8}`). Use that placeholder as a URL of the link in your email template.
 
-Further in the process flow, you will be able to catch a URL click with *Signal Intermediate Event (Catching)*. 
+Further in the process flow, you will be able to catch a URL click with *Signal Intermediate Event (Catching)*.
 
 Signal that is broadcasted once the tracking URL with id 'TRACKING_URL_ID' is clicked by a person represented in the system as the entity of 'ENTITY_TYPE' with id 'ID' will be: `clickUrl.ENTITY_TYPE.ID.TRACKING_URL_ID`. See example below.
 
 Process flowchart example:
 
-![BPM Tracking URL](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/tracking-urls.png)
+![BPM Tracking URL](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/tracking-urls.png)
 
 In this example, target entity type is *Lead*.
 

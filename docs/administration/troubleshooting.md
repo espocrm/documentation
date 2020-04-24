@@ -34,7 +34,7 @@ At Admiistration > System Requirements. It's important to have all required exte
 
 1. Login via SSH to your server.
 
-2. Configure your crontab by following these [steps](server-configuration.md#user-content-setup-a-crontab).
+2. Configure your crontab by following these [steps](server-configuration.md#setup-a-crontab).
 
 Note: Crontab should be configured under web-server user, e.g. `crontab -e -u www-data`.
 
@@ -93,11 +93,11 @@ More information about file permissions: [here](server-configuration.md#required
 
 ## MySQL error: The server requested authentication method unknown to the client
 
-MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. This issue can be solved by this [solution](server-configuration.md#user-content-mysql-8-support).
+MySQL 8.0.4 has changed default authentication method to caching_sha2_password which is not supported by PHP. This issue can be solved by this [solution](server-configuration.md#mysql-8-support).
 
 ## Emails are not being fetched
 
-1. Make sure [cron](server-configuration.md#user-content-setup-a-crontab) is running. You will see the error notification on the main administration page if cron is not running.
+1. Make sure [cron](server-configuration.md#setup-a-crontab) is running. You will see the error notification on the main administration page if cron is not running.
 2. Check EspoCRM log (data/logs) and server logs for errors.
 3. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
 4. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.

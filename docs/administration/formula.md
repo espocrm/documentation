@@ -1,6 +1,6 @@
 # Formula (& calculated fields)
 
-In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved. 
+In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved.
 
 It provides an ability to automatically set specific fields (attributes) with values derived from calculation.
 
@@ -105,13 +105,13 @@ Out-of-the-box functions are listed below.
 
 `ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)`
 
-If CONDITION is met, then do CONSEQUENT. If not -- then do ALTERNATIVE.
+If CONDITION is met, then do CONSEQUENT. If not - then do ALTERNATIVE.
 
 #### ifThen
 
 `ifThen(CONDITION, CONSEQUENT)`
 
-If CONDITION is met, then do CONSEQUENT. If not -- do nothing.
+If CONDITION is met, then do CONSEQUENT. If not - do nothing.
 
 CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
 
@@ -187,7 +187,7 @@ Strips whitespace from the beginning and end of STRING.
 Converts letters to upper case.
 
 #### string\pad
-`string\pad(STRING, LENGTH, [PAD_STRING], [PAD_TYPE])` 
+`string\pad(STRING, LENGTH, [PAD_STRING], [PAD_TYPE])`
 
 Pads STRING to a certain LENGTH with PAD_STRING.
 
@@ -347,9 +347,9 @@ Examples:
 
 `datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month. 
+`datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month.
 
-`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day). 
+`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day).
 
 ### Number
 
@@ -483,7 +483,7 @@ Example:
 
 `entity\addLinkMultipleId('teams', 'someTeamId')`
 
-Add 'someTeamId' to 'teams' field. 
+Add 'someTeamId' to 'teams' field.
 
 
 #### entity\hasLinkMultipleId
@@ -632,7 +632,7 @@ Note: Before version 5.9.0 ORDER_BY and ORDER arguments were mandatory.
 
 Returns an array of IDs of a related record that matches specific criteria. LIMIT is the max number of record. (since version 5.9.0)
 
-`record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, FILTER])` 
+`record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, FILTER])`
 
 Returns an array of IDs of a related record with an optional FILTER applied. (since version 5.9.0)
 
@@ -839,7 +839,7 @@ ext\email\send($id);
 
 Applies an email template to an existng email record. Parent record can be passed optionally. (Available since version 5.9.0)
 
-Example: 
+Example:
 
 ```
 $emailId = record\create(
@@ -918,9 +918,9 @@ More info about links [here](terms-and-naming.md#link).
 
 #### ATTRIBUTE
 
-Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields. 
+Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields.
 
-Field types having multiple attributes: 
+Field types having multiple attributes:
 
 * Link: *fieldId*, *fieldName*.
 * Link-Multiple: *fieldIds*, *fieldNames*.

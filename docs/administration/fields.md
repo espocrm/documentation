@@ -69,7 +69,7 @@ Parameters:
 * Trim – to trim whitespaces from text;
 * Options – a pre-defined list of values for an autocomplete.
 
-![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/varchar.png)
+![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/varchar.png)
 
 ## Enum
 
@@ -84,9 +84,9 @@ Parameters:
 
 It's possible to define conditional options with Dynamic Logic.
 
-![Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum.png)
+![Enum](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/enum.png)
 
-![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/enum-detail.png)
+![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/enum-detail.png)
 
 ## Text
 
@@ -100,9 +100,9 @@ Parameters:
 * Cut Height (px) – a max height of a text, if longer, then it will be cut (for detail view mode);
 * Display raw text (no markdown) – to disable markdown support.
 
-![Text](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text.png)
+![Text](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/text.png)
 
-![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/text-detail.png)
+![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/text-detail.png)
 
 ## Date
 
@@ -114,9 +114,9 @@ Parameters:
 * Before (field) – a validation: a date value should be before a date value of a specified field;
 * Use Numeric Format – if not checked, then words 'today', 'yesterday', 'tomorrow' are in the detail view mode.
 
-![Date](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date.png)
+![Date](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date.png)
 
-![Date detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-detail.png)
+![Date detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date-detail.png)
 
 ## Date-Time
 
@@ -129,9 +129,9 @@ Parameters:
 * Use Numeric Format – if not checked, then words 'today', 'yesterday', 'tomorrow' are in the detail view mode;
 * Minutes Step – defines items displayed in the minutes dropdown (in the edit mode).
 
-![Date-Time](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-time.png)
+![Date-Time](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date-time.png)
 
-![Date-Time detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/date-time-detail.png)
+![Date-Time detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date-time-detail.png)
 
 ## Currency
 
@@ -143,9 +143,9 @@ Parameters:
 * Max – a validation: max acceptable value; if empty, then no validation applied;
 * Only default currency – only one (default) currency will be available if enabled (since 5.9.0).
 
-![Currency](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency.png)
+![Currency](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/currency.png)
 
-![Currency detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/currency-detail.png)
+![Currency detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/currency-detail.png)
 
 ## Int
 
@@ -172,15 +172,15 @@ Parameters:
 
 A checkbox. Two possible values: true and false.
 
-![Boolean](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/bool.png)
+![Boolean](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/bool.png)
 
 ## Multi-Enum
 
 A list of values, multiple values can be selected. The list is ordered.
 
-![Multi-Enum](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/multi-enum.png)
+![Multi-Enum](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/multi-enum.png)
 
-![Multi-Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/multi-enum-detail.png)
+![Multi-Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/multi-enum-detail.png)
 
 Parameters:
 
@@ -214,13 +214,13 @@ Parameters:
 * Max Item Count – validation: how much items can be added;
 * Display as List – values will be displayed each in new line.
 
-![Array](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/array.png)
+![Array](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/array.png)
 
 ## Address
 
 An address with street, city, state, postal code and country.
 
-![Address](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/address.png)
+![Address](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/address.png)
 
 ## Url
 
@@ -283,7 +283,7 @@ Parameters:
 * Next Number – a number that will be applied to the next created record;
 * Pad Length – a length of the numeric part; if less then will be padded with zero digits, e.g. `00001`.
 
-![Number](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/fields/number.png)
+![Number](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/number.png)
 
 ## Auto-increment
 

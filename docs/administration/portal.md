@@ -10,7 +10,7 @@ To create portal follow Administration > Portals, click Create Portal button.
 * *Tab List*. Tabs which will be shown in navigation bar.
 * *Dashboard Layout*. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
 * *URL*. Read only field that displays the link you can access the portal with.
-* *Layout Set*. Provides the ability to use different layouts from the porta. See more [info](layout-manager.md#different-layouts-for-teams--portals).
+* *Layout Set*. Provides the ability to use different layouts from the porta. See more [info](layout-manager.md#different-layouts-for-teams-portals).
 
 ## Portal Users
 
@@ -65,7 +65,7 @@ Custom URL: portal-host-name.com.
 ```
 <VirtualHost *:80>
     DocumentRoot /path/to/espocrm/instance/
-    ServerName portal-host-name.com	
+    ServerName portal-host-name.com
 
     <Directory /path/to/espocrm/instance/>
         Options Indexes FollowSymLinks

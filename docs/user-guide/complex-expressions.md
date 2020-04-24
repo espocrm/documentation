@@ -21,7 +21,7 @@ Functions:
 
 * [Flow control](#flow-control)
 * [Comparison](#comparison)
-* [Date & time](#date--time)
+* [Date & time](#date-time)
 * [String](#string)
 * [Math](#math)
 * [Logical](#logical)
@@ -97,7 +97,7 @@ Negation of IN.
 
 Returns the first non-NULL value in the list.
 
-E.g. `COALESCE:(dateStart, createdAt)` will return value of createdAt if *dateStart* is not set. 
+E.g. `COALESCE:(dateStart, createdAt)` will return value of createdAt if *dateStart* is not set.
 
 #### IFNULL
 
@@ -107,7 +107,7 @@ E.g. `IFNULL:(name, '')` will return empty string if *name* is NULL.
 
 #### NULLIF
 
-If the first argument equals the second, it returns NULL, otherwise it returns the 
+If the first argument equals the second, it returns NULL, otherwise it returns the
 
 E.g. `NULLIF:(name, '')` will return NULL if *name* is empty string.
 
@@ -236,7 +236,7 @@ Number of characters in string.
 
 #### BINARY
 
-Converts a value to a binary string. 
+Converts a value to a binary string.
 
 `EQUAL:('test', 'Test')` returns true.
 
@@ -299,7 +299,7 @@ Attribute names usually are same as a system field names. Fields are listed at A
 
 Attribute names should be in lowerCamelCase.
 
-Field types having attributes named differently: 
+Field types having attributes named differently:
 
 * Link: *fieldId*, *fieldName*.
 * Link-Parent: *fieldId*, *fieldType*.

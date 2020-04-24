@@ -3,7 +3,7 @@
 *Layout Manager* is available at administration panel. It provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
 
 * [Layouts](#layouts)
-* [Different layouts for teams & portals](#different-layouts-for-teams--portals)
+* [Different layouts for teams & portals](#different-layouts-for-teams-portals)
 
 ## Layouts
 
@@ -11,7 +11,7 @@
 
 The main layout for the list view. It defines columns and their parameters.
 
-![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/list.png)
 
 Available parameters for columns are listed below.
 
@@ -37,7 +37,7 @@ The main layout for the detail view and the edit view. It defines panels, rows a
 
 The row can contain 1, 2, 3 or 4 cells. To add a row with single cell, you need to add a new row and click on a minus sign on any cell.
 
-![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
+![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
 For panels it's possible to specify a label, color (style) and conditions making a panel visible (since version 5.2.6).
 
@@ -89,4 +89,4 @@ Admin can create Layout Set record, where they will define specific layouts that
 
 For internal users (regular & admin) Layout Set is applied through *Default Team*. User > Default Team > Layout Set. The team should have Layout Set specified. That team should be set as a deafult team for the user.
 
-For portal users Layout Set is applied through *Portal* record. 
+For portal users Layout Set is applied through *Portal* record.

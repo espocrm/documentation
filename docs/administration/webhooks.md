@@ -105,14 +105,14 @@ Multiple events ocurred:
 ]
 ```
 
-Request sending is processed by a scheduled job *Process Webhook Queue* (Administration > Scheduled Jobs). By default it runs every 5 minutes. You can change the scheduling. 
+Request sending is processed by a scheduled job *Process Webhook Queue* (Administration > Scheduled Jobs). By default it runs every 5 minutes. You can change the scheduling.
 
 ## Error handling
 
 When EspoCRM is trying to send a webhook request and an error occurs, EspoCRM will process it in the following ways:
 
-* errors 400, 401, 403, 404, 405, 408, connection timed out, or connection failed -- will try to make another attempt;
-* error 410 -- hook will be removed immediately.
+* errors 400, 401, 403, 404, 405, 408, connection timed out, or connection failed - will try to make another attempt;
+* error 410 - hook will be removed immediately.
 
 ## Signature checking
 

@@ -29,14 +29,14 @@ Can be achieved by restriction of access to Template entity type.
 * [Page numbering](#page-numbering)
 * [Page breaking](#page-breaking)
 * [Images](#images)
-* [Date & Time formattng](#date--time-formatting)
+* [Date & Time formattng](#date-time-formatting)
 * [Number formatting](#number-formatting)
 * [Currency symbol](#currency-symbol)
 * [Text field](#text-field)
 * [Each operator](#each-iterator)
 * [Related records](#related-records)
-* [Multi-enum & Array fields](#multi-enum--array-fields)
-* [Checklist field](#multi-enum--array-fields)
+* [Multi-enum & Array fields](#multi-enum-array-fields)
+* [Checklist field](#multi-enum-array-fields)
 * [Barcode field](#barcode-field)
 * [Tables](#tables)
 * [Raw values](#raw-values)
@@ -47,7 +47,7 @@ For more precise editing it's recommended to use Code View mode. To switch to Co
 
 You can print fields of the record as well as fields of related records by utilizing placeholders (Handlebars like) in your template.
 
-Examples: 
+Examples:
 
 * `{{name}}` – Name of the record;
 * `{{assignedUserName}}` – Assigned User;
@@ -179,7 +179,7 @@ Example:
       <td>{{name}}</td>
       </td>{{amount}}</td>
     </tr>
- <!-- {{/each}} --> 
+ <!-- {{/each}} -->
  </table>
 ```
 

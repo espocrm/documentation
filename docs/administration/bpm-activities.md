@@ -38,7 +38,7 @@ It's possible to delete the record with the formula expression: `deleted = 1`.
 
 Updates the record (or multiple records) related to the target record. You can utilize formula here.
 
-#### Update Created Record 
+#### Update Created Record
 
 Updates a record that was created within the current process.
 
@@ -50,17 +50,17 @@ Updates the process record. Can be used to assign the process to a specific user
 
 It's possible to delete the process record with the formula expression: `deleted = 1`.
 
- ####  Link to Another Record
+#### Link to Another Record
 
 Relates the target record with another record.
 
-#### Unlink from Another Record 
+#### Unlink from Another Record
 
 Unrelates the target record from another specified record.
 
 #### Apply Assignment Rule
 
-Assigns the record to some user by a specific rule. Can be applied to the target record, the process record or any record created by the process. 
+Assigns the record to some user by a specific rule. Can be applied to the target record, the process record or any record created by the process.
 
 #### Create Notification
 
@@ -91,7 +91,7 @@ Calls external API (since version 2.4.0).
 ### Formula usage
 
 
-When using formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`. 
+When using formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`.
 
 Example:
 
@@ -110,7 +110,7 @@ $someVariable3 = entity\attribute('name');
 
 ## Send Message Task
 
-Sends an email message to a specific recipient. 
+Sends an email message to a specific recipient.
 
 An email can be sent to:
 
@@ -123,7 +123,7 @@ An email can be sent to:
 * Specific contacts
 * Followers of target record
 
-You can specify which email address the email will sent from, and specify a reply-to address. 
+You can specify which email address the email will sent from, and specify a reply-to address.
 
 It's possible to use process variables to specify email address (recipient or sender) with *Specific email address* option, e.g. `{$$emailAddress}`, where *emailAddress* is a variable defined in the process before. Available since version 2.4.5.
 
@@ -180,17 +180,17 @@ It's possible to check the resolution of the passed user task in diverging gatew
 
 Created User Task can be canceled by a process. There are two ways:
 
-1. Using 'Update Created Record' action (within Task activity), setting 'Is Canceled' field to 'true'. 
+1. Using 'Update Created Record' action (within Task activity), setting 'Is Canceled' field to 'true'.
 2. Using interrupting boundary event (attached to User Task activity).
 
-![User Task](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/task-user.png)
+![User Task](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/task-user.png)
 
 
 ----
 
 ## Script Task
 
-Executes the script in [espo-formula](formula.md) language. 
+Executes the script in [espo-formula](formula.md) language.
 
 You can store some variables and use them further within the process. All set variables (`$variableName`) will be automatically stored.
 
@@ -230,7 +230,7 @@ When a sub-process is initiated, all formula **variables are copied** from the p
 
 When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes information about created records to the parent process.
 
-![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/sub-process.png)
+![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/sub-process.png)
 
 ----
 
@@ -246,7 +246,7 @@ When an event sub-process is initiated, it receives an information about all rec
 
 Non-interrupting event sub-process can be executed **multiple times**. E.g. a condition occurred multiple times.
 
-![Event Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/event-sub-process.png)
+![Event Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-sub-process.png)
 
 ----
 

@@ -2,10 +2,10 @@
 
 Gateways are displayed as diamonds.
 
-* [Exclusive](#user-content-exclusive-gateway)
-* [Inclusive](#user-content-inclusive-gateway)
-* [Parallel](#user-content-parallel-gateway)
-* [Event Based](#user-content-event-based-gateway)
+* [Exclusive](#exclusive-gateway)
+* [Inclusive](#inclusive-gateway)
+* [Parallel](#parallel-gateway)
+* [Event Based](#event-based-gateway)
 
 ----
 
@@ -17,9 +17,9 @@ In case of diverging it defines a single flow (path) that will be chosen accordi
 
 In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
 
-![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 ----
 
@@ -31,7 +31,7 @@ In case of diverging, it can direct to one or multiple parallel flows (paths), d
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
 
-![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -47,7 +47,7 @@ In case of diverging it splits flow into multiple parallel flows. There are no p
 
 In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
 
-![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -63,4 +63,4 @@ It stops the flow until any of outgoing events gets triggered. Triggered event d
 
 Only intermediate events can be on the other end of outgoing sequence flows.
 
-![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-event-based.png)

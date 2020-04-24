@@ -32,7 +32,7 @@ You can use a script to backup all needed data. Login via SSH and run the comman
 ### Download a script
 
 ```bash
-wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scripts/backup.sh
+wget https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/scripts/backup.sh
 ```
 
 ### Run the script
@@ -41,8 +41,9 @@ wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scri
 bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
 ```
 where
- * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory.
- * `BACKUP_PATH` is a path to backup directory.
+
+ * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory
+ * `BACKUP_PATH` is a path to backup directory
 
 For Ubuntu server it is:
 
@@ -65,12 +66,11 @@ To unarchive files, you can use Archive Manager or run the below command. Files 
 ```bash
 tar -xzf "files.tar.gz" -C /var/www/html
 ```
-where:
- * `/var/www/html` is a web-server directory.
+where `/var/www/html` is the web-server directory.
 
 ### Step 2. Set required permissions
 
-The files should be owned by a web-server user and have correct permissions. Please set required permissions by following this instruction: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+The files should be owned by a web-server user and have correct permissions. Please set required permissions by following this [instruction](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ### Step 3. Import database dump
 
@@ -87,8 +87,7 @@ Check if your crontab is configured properly. Run the command below and check if
 ```bash
 sudo crontab -l -u www-data
 ```
-where:
- * `www-data` is your web-server user.
+where `www-data` is your web-server user.
 
 If you have to make any changes, use this command:
 
@@ -96,4 +95,4 @@ If you have to make any changes, use this command:
 sudo crontab -l -u www-data
 ```
 
-More details about configuring crontab for EspoCRM are described here [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+More details about configuring crontab for EspoCRM are described [here](server-configuration.md#setting-up-crontab).

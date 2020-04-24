@@ -2,7 +2,7 @@
 
 In this article:
 
-* [Settings & rates](#settings--rates)
+* [Settings & rates](#settings-rates)
 * [Currency conversion](#currency-conversion)
 * [Currency rates API](#currency-rates-api)
 * [Adding missing currency](#adding-missing-currency)
@@ -17,7 +17,7 @@ You can specify which currencies will be available in the system in *Currency Li
 
 *Base Currency* – which currency to use as a base to specify rates.
 
-![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/currency-settings.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/currency-settings.png)
 
 ### Default currency for specific field
 
@@ -43,7 +43,7 @@ To store a converted value based on current rates you can:
 
 Lets assume that you have a currency field named *amount*, and default currency is *USD*.
 
-Create a new field of *Currency* type, name it *amountConvertedLocked*, make it read-only, 
+Create a new field of *Currency* type, name it *amountConvertedLocked*, make it read-only,
 
 Add a formula script to Before Save Script at Entity Manager. You can also use this formula in Workflow rule.
 
