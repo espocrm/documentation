@@ -6,9 +6,16 @@
   * [Configuration](administration/server-configuration.md)
   * [Apache](administration/apache-server-configuration.md)
   * [Nginx](administration/nginx-server-configuration.md)
-* [Installation](administration/installation.md)
-* [Upgrading](administration/upgrading.md)
-* [Troubleshooting](administration/troubleshooting.md)
+* System 
+  * [Installation](administration/installation.md)
+  * [Upgrading](administration/upgrading.md)
+  * [Troubleshooting](administration/troubleshooting.md)
+  * [Console commands](administration/commands.md)
+  * [Jobs](administration/jobs.md)
+  * [WebSocket](administration/websocket.md)
+  * [Performance tweaking](administration/performance-tweaking.md)  
+  * [Backup and restore](administration/backup-and-restore.md)
+  * [Moving to another server](administration/moving-to-another-server.md)
 * [Roles management (access control)](administration/roles-management.md)
 * [Email Administration](administration/emails.md)
 * Customization
@@ -34,13 +41,6 @@
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)  
   * [Multiple assigned users](administration/multiple-assigned-users.md)
-* System  
-  * [Console commands](administration/commands.md)
-  * [Jobs](administration/jobs.md)
-  * [WebSocket](administration/websocket.md)
-  * [Performance tweaking](administration/performance-tweaking.md)  
-  * [Backup and restore](administration/backup-and-restore.md)
-  * [Moving to another server](administration/moving-to-another-server.md)
 
 ---
 
