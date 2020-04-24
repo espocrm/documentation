@@ -6,40 +6,41 @@
   * [Configuration](administration/server-configuration.md)
   * [Apache](administration/apache-server-configuration.md)
   * [Nginx](administration/nginx-server-configuration.md)
-* System 
+* System
   * [Installation](administration/installation.md)
   * [Upgrading](administration/upgrading.md)
   * [Troubleshooting](administration/troubleshooting.md)
   * [Console commands](administration/commands.md)
   * [Jobs](administration/jobs.md)
   * [WebSocket](administration/websocket.md)
-  * [Performance tweaking](administration/performance-tweaking.md)  
+  * [Performance tweaking](administration/performance-tweaking.md)
   * [Backup and restore](administration/backup-and-restore.md)
   * [Moving to another server](administration/moving-to-another-server.md)
-* [Roles management (access control)](administration/roles-management.md)
-* [Email Administration](administration/emails.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](administration/entity-manager.md)
   * [Fields](administration/fields.md)
   * [Layouts](administration/layout-manager.md)
   * [Extensions](administration/extensions.md)
   * [Dynamic forms](administration/dynamic-logic.md)
+* [Roles management (access control)](administration/roles-management.md)
+* [Email Administration](administration/emails.md)
 * [Formula (calculated fields)](administration/formula.md)
 * [Import](administration/import.md)
 * [Portal](administration/portal.md)
 * [Currency](administration/currency.md)
 * [Dashboards](administration/dashboards.md)
-* LDAP
-  * [Authorization](administration/ldap-authorization.md)
-  * [Active Directory](administration/ldap-authorization-for-ad.md)
-  * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
-* [2-factor authentication](administration/2fa.md)
+* Authentication
+  * [2-factor authentication](administration/2fa.md)
+  * LDAP
+    * [Authorization](administration/ldap-authorization.md)
+    * [Active Directory](administration/ldap-authorization-for-ad.md)
+    * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
 * Misc
   * [Terms & naming](administration/terms-and-naming.md)
   * [Web-to-Lead](administration/web-to-lead.md)
   * [Webhooks](administration/webhooks.md)
   * [Maps](administration/maps.md)
-  * [B2C mode](administration/b2c.md)  
+  * [B2C mode](administration/b2c.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
 
 ---
