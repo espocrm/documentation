@@ -28,19 +28,19 @@
   * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
 * [2-factor authentication](administration/2fa.md)
 * Misc
+  * [Terms & naming](administration/terms-and-naming.md)
   * [Web-to-Lead](administration/web-to-lead.md)
   * [Webhooks](administration/webhooks.md)
   * [Maps](administration/maps.md)
-  * [B2C mode](administration/b2c.md)
-  * [Backup and restore](administration/backup-and-restore.md)
-  * [Moving to another server](administration/moving-to-another-server.md)
-  * [Performance tweaking](administration/performance-tweaking.md)
+  * [B2C mode](administration/b2c.md)  
   * [Multiple assigned users](administration/multiple-assigned-users.md)
-* System
-  * [Terms & naming](administration/terms-and-naming.md)
+* System  
   * [Console commands](administration/commands.md)
   * [Jobs](administration/jobs.md)
   * [WebSocket](administration/websocket.md)
+  * [Performance tweaking](administration/performance-tweaking.md)  
+  * [Backup and restore](administration/backup-and-restore.md)
+  * [Moving to another server](administration/moving-to-another-server.md)
 
 ---
 
