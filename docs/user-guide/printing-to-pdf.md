@@ -28,12 +28,13 @@ Can be achieved by restriction of access to Template entity type.
 * [Access to templates](#access-to-templates)
 * [Page numbering](#page-numbering)
 * [Page breaking](#page-breaking)
+* [Condition checking](#condition-checking)
+* [Each iterator](#each-iterator)
 * [Images](#images)
 * [Date & Time formattng](#date-time-formatting)
 * [Number formatting](#number-formatting)
 * [Currency symbol](#currency-symbol)
 * [Text field](#text-field)
-* [Each iterator](#each-iterator)
 * [Related records](#related-records)
 * [Multi-enum & Array fields](#multi-enum-array-fields)
 * [Checklist field](#multi-enum-array-fields)
@@ -84,6 +85,57 @@ Since the version 5.8.0 you can use:
 ```
 {{pagebreak}}
 ```
+
+### Condition checking
+
+### if
+
+```
+{{#if value}}
+    {{value}}
+{{/if}}
+
+{{#if value}}
+    {{value}}
+{{else}}
+    No value
+{{/if}}
+```
+
+### unless
+
+Opposite to *if*.
+
+```
+{{#unless value}}
+    No value
+{{/unless}}
+
+{{#unless value}}
+    No value
+{{else}}
+    {{value}}
+{{/unless}
+```
+
+### Each iterator
+
+Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
+
+Example:
+
+```
+ <table>
+ <!-- {{#each itemList}} -->
+    <tr>
+      <td>{{name}}</td>
+      </td>{{amount}}</td>
+    </tr>
+ <!-- {{/each}} -->
+ </table>
+```
+
+`itemList` is an json array field (available in Quote, Sales Order, Invoices entity types).
 
 ### Images
 
@@ -166,25 +218,6 @@ where `amount` is a field name.
 ### Text field
 
 To display text fields (multi-line) use triple braces: ```{{{description}}}```.
-
-### Each iterator
-
-Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
-
-Example:
-
-```
- <table>
- <!-- {{#each itemList}} -->
-    <tr>
-      <td>{{name}}</td>
-      </td>{{amount}}</td>
-    </tr>
- <!-- {{/each}} -->
- </table>
-```
-
-`itemList` is an json array field (available in Quote, Sales Order, Invoices entity types).
 
 ### Related records
 
