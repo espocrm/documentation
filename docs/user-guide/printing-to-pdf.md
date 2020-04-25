@@ -33,7 +33,7 @@ Can be achieved by restriction of access to Template entity type.
 * [Number formatting](#number-formatting)
 * [Currency symbol](#currency-symbol)
 * [Text field](#text-field)
-* [Each operator](#each-iterator)
+* [Each iterator](#each-iterator)
 * [Related records](#related-records)
 * [Multi-enum & Array fields](#multi-enum-array-fields)
 * [Checklist field](#multi-enum-array-fields)
@@ -172,6 +172,7 @@ To display text fields (multi-line) use triple braces: ```{{{description}}}```.
 Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
 
 Example:
+
 ```
  <table>
  <!-- {{#each itemList}} -->
@@ -304,16 +305,15 @@ In code view:
 
 ### Raw values
 
-To access a raw values of a specific attribute you need to add  `_RAW` to an attribute name.
+To access a raw value of a specific attribute you need to add  `_RAW` to the attribute name. The raw value is not formatted value, timezone is UTC for date-time fields.
 
-Example:
+Example (applying another format to the raw value):
 
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
 *quantity* is a field name.
-
 
 ## See also
 
