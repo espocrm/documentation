@@ -350,4 +350,4 @@ Example (applying another format to the raw value):
 
 ## See also
 
-* [Custom helpers](https://github.com/espocrm/documentation/blob/master/development/template-custom-helper.md)
+* [Custom helpers](../development/template-custom-helper.md)
