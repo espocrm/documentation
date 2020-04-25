@@ -37,6 +37,7 @@ API functions:
 * [Stream](api/stream.md)
 * [CurrencyRate](api/currency-rate.md)
 * [Attachment](api/attachment.md)
+* [I18n](api/i18n.md)
 * [Account](api/account.md)
 
 See also:
