@@ -46,10 +46,10 @@ If you want to know that your recipient opened the link from your email, you nee
  ```html
 <a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
  ```
- 
+
 ## Target Lists
 
-Target Lists contains the lists of Accounts, Contacts, Leads and Users records. 
+Target Lists contains the lists of Accounts, Contacts, Leads and Users records.
 
 Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all results of the search.
 
@@ -63,7 +63,7 @@ Specify Excluding Target Lists to avoid sending mass email to certain recipients
 
 ## Campaign Log
 
-In Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email. 
+In Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email.
 
 * Sent email
 * Links clicked by recipient
@@ -107,5 +107,5 @@ Also some mail server providers can deviate from standards, so bounced emails ca
 
 ## See also
 
-* [Custom unsubscribe page](https://github.com/espocrm/documentation/blob/master/development/campaign-unsubscribe-template.md)
-* [Drip Email Campaign with BPM](https://github.com/espocrm/documentation/blob/master/administration/bpm-drip-email-campaign.md)
+* [Custom unsubscribe page](../development/campaign-unsubscribe-template.md)
+* [Drip Email Campaign with BPM](../administration/bpm-drip-email-campaign.md)

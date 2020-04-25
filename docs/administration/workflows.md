@@ -18,11 +18,11 @@ In this article:
 
 ## Trigger Types
 
-### After record created 
+### After record created
 
 Triggered only when a new record is created. If specified conditions are met, then actions will be executed.
 
-### After record updated 
+### After record updated
 
 Triggered only when an existing record is updated. If specified conditions are met, then actions will be executed.
 
@@ -40,7 +40,7 @@ Scheduling is specified in a crontab notation.
 
 ```
 * * * * * *
-| | | | | | 
+| | | | | |
 | | | | | +-- Year              (range: 1900-3000)
 | | | | +---- Day of the Week   (range: 1-7, 1 standing for Monday)
 | | | +------ Month of the Year (range: 1-12)
@@ -51,7 +51,7 @@ Scheduling is specified in a crontab notation.
 
 ### Sequential
 
-Used rarely. Supposed to be run by another workflow. Provides the ability to make a complex logic. 
+Used rarely. Supposed to be run by another workflow. Provides the ability to make a complex logic.
 
 Note: It can be reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
 
@@ -80,7 +80,7 @@ Some available condition types:
 
 ### Formula conditions
 
-Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md). 
+Formula provides an ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md).
 
 Note: There should not be any `;` delimiter used in formula code when it determines a condition.
 
@@ -111,7 +111,7 @@ It's possible to add an opt-out link to an email body.
 
 ### Create Record
 
-System will create the new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate records. 
+System will create the new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate records.
 
 There is an ability to define formula to calculate fields.
 
@@ -121,7 +121,7 @@ System will create the record related to the target record. It's possible to def
 
 ### Update Target Record
 
-Allows changing of specific fields of the target record. It's possible to define formula to calculate fields. 
+Allows changing of specific fields of the target record. It's possible to define formula to calculate fields.
 
 If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function entity\addLinkMultipleId. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
@@ -186,7 +186,7 @@ Quotes/Sales Orders/Invoices:
 
 Opportunities:
 
-* *Convery Currency* (since version 5.7.0) 
+* *Convery Currency* (since version 5.7.0)
 
 Contacts/Leads/Accounts:
 
@@ -212,7 +212,7 @@ Additional headers can be specified. Placeholders can be used in headers.
 
 Available placeholders:
 
-* *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}` (see [info](https://github.com/espocrm/documentation/blob/master/administration/formula.md#attribute) about attributes);
+* *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}` (see [info](formula.md#attribute) about attributes);
 * *{$$variable}* – a value of a variable (available only in BPM process); e.g. `{$$myVariableName}`.
 
 ## Using Formula in Actions
@@ -231,4 +231,3 @@ name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today())
 * [Automated Email-to-Lead with Workflows](https://www.espocrm.com/blog/automated-email-to-lead-with-workflows/)
 * [Automatic posting to stream with Workflows](https://www.espocrm.com/blog/automatic-posting-to-stream-with-workflow/)
 * [Sending Telegram message with Workflows](https://www.espocrm.com/blog/sending-telegram-message-with-workflows/)
-

@@ -120,6 +120,5 @@ In edit view  of a role record in Field Level section click plus icon next to th
 
 ## See also
 
-[Security roles management in EspoCRM](https://www.espocrm.com/tips/security-roles/)
-
-[Multiple assigned users](https://github.com/espocrm/documentation/blob/master/administration/multiple-assigned-users.md)
+* [Security roles management in EspoCRM](https://www.espocrm.com/tips/security-roles/)
+* [Multiple assigned users](multiple-assigned-users.md)

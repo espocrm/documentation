@@ -1,13 +1,13 @@
 # Resources
 
->PATH is one of 
+>PATH is one of
 >1. CUSTOM_PATH - custom/Espo/Custom/Resources;
 >2. MODULE_PATH - application/Espo/Modules/{ModuleName}/Resources;
 >3. BASE_PATH - application/Espo/Resources
 
 In Resources folder you can find such items:
 
-## i18n 
+## i18n
 
 Translation.
 
@@ -22,7 +22,7 @@ Layouts of enities.
 
 `{PATH}/layouts/{EntityName}/{layoutName}.json`
 
-[Layout Manager](https://github.com/espocrm/documentation/blob/master/administration/layout-manager.md)
+[Layout Manager](../administration/layout-manager.md)
 
 
 ## metadata
@@ -47,21 +47,21 @@ There are could be such `.json` files:
 - `formula`
 - `jsLibs`
 
-        
-### clientDefs 
+
+### clientDefs
 
 `{PATH}/metadata/clientDefs/{EntityName}.json`
 
 Contains data, related with view only. More Information is here
 clientDefs.md
-    
+
 ### dashlets
 
 Dashlet definition.
 
 `{PATH}/metadata/dashlets/{DashletName}.json`
 
-[How to create a dashlet](https://github.com/espocrm/documentation/blob/master/development/how-to-create-a-dashlet.md)
+[How to create a dashlet](how-to-create-a-dashlet.md)
 
 
 ### entityDefs
@@ -79,7 +79,7 @@ fields.md link
 ### integrations
 
 Integration definition. Options:
- 
+
 - `fields` - definition of the fields, which are available on Itegration configuration view;
 
 - `params` - parameters of integrations, like `endpoint` and `scope`;
@@ -93,10 +93,10 @@ Integration definition. Options:
 - `allowUserAccounts` - could users configure own External Account of this integration,
 
 - `userView` - if `"allowUserAccounts": true"`, here you need to set a view of this configuring page.
- 
+
  You can also define own options, you will use in your integration.
 
- 
+
 `{PATH}/metadata/integrations/{IntegartionName}.json`
 
 
@@ -138,12 +138,12 @@ Theme definition.
 
 
 ## templates
-    
+
 Here contains templates, are using for emailing.
 
 `{PATH}/templates/{templateGroup}/{language_code}/{templateName}.tpl`
 
 
-## routes 
+## routes
 
 `{PATH}/routes.json`

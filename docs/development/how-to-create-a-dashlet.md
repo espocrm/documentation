@@ -4,7 +4,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.jso
 
 Here you need to define `"view"`, and you can set 'aclScope', and 'options'.
 
-If it's typical list dashlet, use `"view":"views/dashlets/abstract/record-list"`, if not, create own [view](https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
+If it's typical list dashlet, use `"view":"views/dashlets/abstract/record-list"`, if not, create own [view](custom-views.md).
 
 ## Options
 
