@@ -88,7 +88,7 @@ Since the version 5.8.0 you can use:
 
 ### Condition checking
 
-### if
+#### if
 
 ```
 {{#if value}}
@@ -102,7 +102,7 @@ Since the version 5.8.0 you can use:
 {{/if}}
 ```
 
-### unless
+#### unless
 
 Opposite to *if*.
 
