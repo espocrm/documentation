@@ -35,6 +35,8 @@ When users want to send a reply to the customer, they need to make sure that the
 
 Users can setup their own email accounts that need to be monitored. Emails > Top Right Dropdown Menu > Personal Email Accounts. Administrator also can manage users' email accounts.
 
+Important: By default regular users doesn't have an **access** to personal email accounts. Administrator needs to allow an access to *Personal Email Accounts* scope in Roles.
+
 ## Email Filters
 
 These allow the filtering of incoming emails according to specified criteria. E.g. if you don't want notification messages sent by some application to be imported to EspoCRM, you can create filter to make EspoCRM skip them.
