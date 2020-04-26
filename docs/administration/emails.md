@@ -22,14 +22,11 @@ There is an ability to make the system send an auto-reply for incoming emails.
 
 ## Email-to-Case
 
-There is an option to make the system create cases from incoming group emails. 
-This feature is intended for support teams. 
-Cases can be distributed to users from a specified team according to these ways: 
-`direct assignment`, `round-robin` and `less-busy`. 
-Only the first email in the thread creates a new case. 
-Every subsequent one will be linked to the existing case record and displayed in its Stream panel.
+There is an option to make the system create new case record from each email incoming to a specific group email account. Cases can be distributed to users of a specific team. There are three available distribuyion rules: *direct assignment*, *round-robin* and *less-busy*. 
 
-When users want to send a reply to the customer, they need to make sure that the case is selected as a parent of the email that is being sent. It will make the customer reply to the group email address rather than to the user’s own.
+Note: Only the first email in the thread creates a new case. Every subsequent email will be linked to the existing case record and note will be added to the Stream panel.
+
+When a user want to send a reply to the customer, they need to make sure that the case is selected as a **parent** of the email that is being sent. It will add the group email address to *Reply-To* field of the email. So the customer's reply will be sent to the group address rather than to the user’s.
 
 ## Personal Email Accounts
 
