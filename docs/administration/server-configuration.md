@@ -53,11 +53,11 @@ Optional php extensions that may be needed:
 
 ### Database requirements
 
-EspoCRM supports MySQL version 5.7 or greater. MariaDB is supported as well, from 10.1 version. These are no special peculiarities. All default settings are fine for EspoCRM.
+EspoCRM supports MySQL 5.7 or greater and MariaDB 10.1 or greater. These are no special peculiarities. All default settings are fine for EspoCRM.
 
 ### MySQL 8 support
 
-MySQL 8.0.4 has changed a default authentication method to caching_sha2_password which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to mysql_native_password method. For a user it can be done with the query:
+MySQL 8.0.4 has changed a default authentication method to `caching_sha2_password` which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to `mysql_native_password` method. For a user it can be done with the query:
 
 ```
 CREATE USER username@localhost identified with mysql_native_password by 'password';
@@ -66,7 +66,7 @@ where username is your MySQL user, password is your MySQL user password.
 
 ## Required permissions for Unix-based systems
 
-**Note**: In most cases permissions are set properly after extracting EspoCRM instance from a zip package. You need only to set owneship.
+**Note**: In most cases permissions are set properly after extracting EspoCRM instance from a zip package. You need only to set ownership.
 
 ### Permissions
 
@@ -74,7 +74,7 @@ The files and directories should have the following permissions:
 
 * `/data`, `/custom`, `/client/custom` – should be writable all files, directories and subdirectories (664 for files, 775 for directories, including all subdirectories and files);
 * `/application/Espo/Modules`, `/client/modules` – should be writable the current directory (775 for the current directory, 644 for files, 755 for directories and subdirectories);
-* All other files and directories should be readable (644 for files, 755 for directories).
+* all other files and directories should be readable (644 for files, 755 for directories).
 
 To set the permissions, execute these commands in the terminal:
 
@@ -102,22 +102,28 @@ chown -R <OWNER>:<GROUP-OWNER> .;
 
 ## Setting up crontab
 
-More information about jobs in EspoCRM is available [here](jobs.md).
+Note: More information about jobs in EspoCRM is available [here](jobs.md).
 
 ### Unix-like systems
 
 To setup crontab on Unix-like system, take the following steps:
 
 1. Login as administrator into your EspoCRM instance.
+
 2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
+
 ```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
+
 3. Open a terminal and run this command:
+
 ```
 crontab -e -u WEBSERVER_USER
 ```
+
 WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
+
 4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
 ### Windows
