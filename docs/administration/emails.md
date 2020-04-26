@@ -20,7 +20,7 @@ If the group email account has SMTP and it's checked as shared, then an access w
 
 There is an ability to make the system send an auto-reply for incoming emails.
 
-## Email-to-Case
+### Email-to-Case
 
 There is an option to make the system create new case record from each email incoming to a specific group email account. Cases can be distributed to users of a specific team. There are three available distribuyion rules: *direct assignment*, *round-robin* and *less-busy*. 
 
