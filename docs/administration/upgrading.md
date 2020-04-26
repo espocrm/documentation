@@ -4,7 +4,7 @@
 
 Available from version 5.6.0.
 
-This is the most preferable way to upgrade.
+This is **the most preferable** way to upgrade.
 
 Command to run:
 
@@ -13,6 +13,8 @@ php command.php upgrade
 ```
 
 This will check the next available version, download it and install. Once upgrade is complete it will prompt to run the command again, if a newer version is available.
+
+Note: Upgrading process may take a while. Do not close the terminal until it's finished.
 
 ## Recommendations
 
@@ -25,9 +27,9 @@ This will check the next available version, download it and install. Once upgrad
 
 Available parameters (only for advanced users):
 
-- `-y` − disable confirmation
+- `-y` − run w/o user confirmation
 - `-s` − run an upgrade in a single process
-- `--file="EspoCRM-upgrade.zip"` − specify a path to an upgrade package
+- `--file="EspoCRM-upgrade.zip"` − install a specific upgrade package (path to file)
 
 Example of using parameters:
 

@@ -1,6 +1,6 @@
 # Jobs
 
-Jobs are intended for executing of tasks in the background. They handle operations like sending notifications, mass mailing, syncing, cleanup, etc.
+Jobs are tasks executing in the background. They handle operations like sending notifications, mass mailing, syncing, cleanup, etc.
 
 In this article:
 
@@ -11,7 +11,7 @@ In this article:
 
 ## Scheduled Jobs
 
-Scheduled Jobs are intended for recurring job execution. Scheduling for a specific job can be configured by the administrator, using a crontab notation.
+Scheduled Jobs are intended for recurring job execution. The are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using a crontab notation.
 
 ```
 * * * * *
@@ -31,9 +31,9 @@ There are two ways how jobs can be processed: with crontab or daemon.
 
 ### Cron
 
-Cron is easy to configure. It's supported by most of hosting providers. 
+Cron is easy to configure. It's supported by most of hosting providers.
 
-See how to configure cron [here](server-configuration.md#setup-crontab).
+See how to configure cron [here](server-configuration.md#setting-up-crontab).
 
 In Unix systems cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick.
 
@@ -50,9 +50,9 @@ Note that command that runs cron differs depending on server environment.
 
 ### Daemon
 
-Requires pcntl and posix extensions.
+Requires *pcntl* and *posix* extensions.
 
-It's recommended to turn on processing jobs in parallel processes: Administration > Scheduled Jobs > Jobs (top-right corner) > Settings (top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
+It's recommended to turn on processing jobs in parallel processes: Administration > Jobs > Settings (in the top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
 
 Command to start daemon using nohup:
 
@@ -101,17 +101,14 @@ systemctl start espocrm-daemon.service
 
 ## Running jobs in parallel processes
 
-By default jobs are executed one by one that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Scheduled Jobs > Jobs in the top-right corner > Settings in the top right corner.
+By default jobs are executed one by one that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Jobs > Settings (in the top-right corner).
 
-Available since version 5.5.0.
-
-Requires pcntl and posix extensions. Some server configurations may restrict the ability to run child processes.
+Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes.
 
 Windows is not supported.
 
 ## Running specific job manually in CLI
 
-Available since version 5.6.0.
 
 Command:
 ```
