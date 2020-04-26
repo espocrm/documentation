@@ -6,7 +6,7 @@ EspoCRM consists of files and database data. All these data are needed in order 
 
 ### Step 1. Backup files
 
-Create an archive of the directory content of installed EspoCRM. The default path for Ubuntu is `/var/www/html`. You may use this command:
+Create an archive of the directory content of installed EspoCRM. The default path for Ubuntu is `/var/www/html`. You can use this command:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .

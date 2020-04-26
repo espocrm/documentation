@@ -1,9 +1,9 @@
 # Entity Manager
 
-Entity Manager is available in Administration panel. It provides an ability to highly customize your EspoCRM instance. You are able to do the following:
+Entity Manager is available in Administration panel. It provides the ability to highly customize your EspoCRM instance. You are able to do the following:
 
-* Add new types of entities.
-* Customize existing types of entities: change labels, default order in list view, enable or disable stream.
+* Add new entity types.
+* Customize existing entity types: change labels, default order in list view, etc.
 * Configure fields: add new, customize existing ones.
 * Configure relationships: add new, change labels of existing ones.
 
@@ -61,7 +61,7 @@ After you have created this relationship you can put a link field to the detail 
 
 The same as One-to-Many but vice versa.
 
-#### Many-to-Many 
+#### Many-to-Many
 
 Relationship panels on both sides.
 
