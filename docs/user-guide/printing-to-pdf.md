@@ -1,6 +1,6 @@
 # Printing to PDF
 
-Printing to PDF provides an ability to generate PDF documents with a record data. The document content is defined by Template.
+Printing to PDF provides the ability to generate PDF documents with a record data. The document content is defined by Template.
 
 Important: You need to have at least one Template for the entity type of the record you want to print.
 

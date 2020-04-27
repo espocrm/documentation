@@ -1,6 +1,6 @@
 # Activities & Calendar
 
-There are three types of activities available in EspoCRM by default: 
+There are three types of activities available in EspoCRM by default:
 
 * Meetings
 * Calls
@@ -73,7 +73,7 @@ To refresh calendar items you can click on the date range title at the top in th
 
 Users can create custom shared views that will display events of specific teams.
 
-Note: User must have a proper 'User Permission' set in [Roles](../administration/roles-management.md) to be able to use shared calendars.
+Note: User must have a proper *User Permission* set in [Roles](../administration/roles-management.md) to be able to use shared calendars.
 
 Note: Shared view displays events of users of the selected team. It doesn't necessary display events assigned to that team (e.g. event is assigned to the team, but doesn't assigned to any user of that team).
 

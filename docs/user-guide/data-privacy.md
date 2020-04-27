@@ -19,6 +19,6 @@ Accounts:
 
 * Email
 
-On the detail view of the record in the menu (next to the edit button) there is the item 'View Personal Data'. From there it's possible to erase certain fields (only if the user has 'edit' permission).
+On the detail view of the record in the menu (next to the edit button) there is the item *View Personal Data*. From there it's possible to erase certain fields (only if the user has 'edit' permission).
 
-Regular uses will have an ability to view/erase personal data only if they have 'Data Privacy Permission' (defined by roles).
+Regular uses will have an ability to view/erase personal data only if they have *Data Privacy Permission* (defined by roles).

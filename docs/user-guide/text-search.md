@@ -40,7 +40,7 @@ Full-text search can be enabled for a specified entity type at Administration > 
 
 Full-text search is always applied in Global Search (for entity types with enabled full-text search).
 
-A text search on the record list view is only utilized for a better performance. Results are the same as they were w/o enabled full-text search. Yet, it's possible to force a full-text usage by prepending `ft:` to a search query.
+Full-text search is also applied when you search in the list view. Though it can be skipped for some search queries. Yet, it's possible to force a full-text usage by prepending `ft:` to the search query.
 
 For InnoDB tables the following operators are available:
 

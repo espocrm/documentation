@@ -9,7 +9,7 @@ In this article:
 
 ## Leads
 
-Lead represents a person or an organization that currently is not a customer, but have a potential to be. Creating a lead record usually is a first step of the sale process. As more information about the Lead is gathered it's supposed that lead will be converted into a Account, Contact and Opportunity.
+A Lead represents a person or organization that currently is not a customer, but has a potential to be. Creating a new lead record usually is a first step of the sale process. As more information about the lead is gathered it's supposed that lead will be converted into a Account, Contact and Opportunity.
 
 New leads are supposed to be created by the following scenarios:
 
@@ -17,19 +17,19 @@ New leads are supposed to be created by the following scenarios:
 * Through the API (e.g. through the web form);
 * Automatically by a Workflow rule.
 
-By utilizing [Workflows](../administration/workflows.md) administrator can set up the system to apply a specific assignment rule to new leads, i.e. Round-Robin and Least-Busy rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
+By utilizing [Workflows](../administration/workflows.md) administrator can set up the system to apply a specific assignment rule to new leads, i.e. *Round-Robin* and *Least-Busy* rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
 
-To prevent overlooking of new leads, users can add Lead entity type to the Global Auto-follow list at Preferences. Then they will automatically follow every new lead.
+To prevent overlooking of new leads, users can add *Lead* entity type to the *Global Auto-follow* list at Preferences. Then they will automatically follow every new lead.
 
 ### Converting
 
-To convert a lead, you need to click *Convert* button on the lead detail view. Then you can check to which record types you want to convert: Account, Contact, Opportunity.
+To convert the lead, you need to click *Convert* button on the lead detail view. Then you can check to what record types you want to convert: Account, Contact, Opportunity.
 
 Converted lead won't be removed from the system. It will have status *Converted*, records it was converted to, will be available on *Converted To* panel on the right.
 
 ## Opportunities
 
-Opportunity represents a potential or closed deal. Opportunity with 'Closed Won' stage are taken into account for a sales revenue calculation.
+An opportunity represents a potential or closed deal. Opportunity with *Closed Won* stage are taken into account in sales revenue calculation (dashlets & reports).
 
 ### Stage
 
@@ -46,7 +46,7 @@ Administrator can define custom stages depending on business flow of the company
 
 ### Probability
 
-Opportunity *probability* is an estimated percentage chance that the sale will be won. *Closed Won* status should have 100% probability, *Closed Lost* – zero. Other stages has their default probabilities. Probabilities can be utilized for a revenue forecasting.
+Opportunity probability is an estimated percentage chance that the sale will be won. *Closed Won* status has 100% probability, *Closed Lost* – zero. Other stages has their default probabilities. Probabilities can be utilized in revenue forecasting.
 
 ## Currency
 
