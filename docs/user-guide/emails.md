@@ -15,7 +15,7 @@ In this article:
 
 ## IMAP accounts
 
-*Note: You need to have [cron](../administration/server-configuration.md#setup-a-crontab) properly configured in your system to have inbound emails working.*
+*Note: You need to have [cron](../administration/server-configuration.md#setting-up-crontab) properly configured in your system to have inbound emails working.*
 
 User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
