@@ -16,4 +16,4 @@ Next time, when you login to EspoCRM, you will need to enter your username & pas
 
 If you are not an administrator, you need to contact the administrator to ask them to disable 2FA for your user account.
 
-If you are an administrator, the only option is to disable 2FA globally by setting `'auth2FA' => false` at `data/config.php`.
+If you are an administrator, the only option is to disable 2FA globally by setting `'auth2FA' => false` in `data/config.php`.
