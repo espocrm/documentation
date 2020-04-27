@@ -15,10 +15,10 @@ In this article:
 
 You need to have at least one Target List with target records and Email Template in your crm.
 
-1. Create new Campaign with a type `Email` or `Newsletter`. Select one or a few target lists in `Target Lists` field.
-2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure _Status_ set as `Pending`.
+1. Create new Campaign with a type `Email` or `Newsletter`. Select one or a few target lists in *Target Lists* field.
+2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure *Status* is set as `Pending`.
 
-If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating `Scheduling` field of `Check Group Email Accounts` Scheduled Job.
+If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating *&Scheduling* field of 'Check Group Email Accounts' Scheduled Job.
 
 You can check if emails are sent in Log panel.
 
@@ -31,6 +31,7 @@ Click right dropdown on the mass email row in _Mass Email_ panel and then click 
 By default the system will append opt-out to all sent emails. But you can use custom one in your Email Template.
 
 Example:
+
 ```html
 <a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
 ```
@@ -43,9 +44,10 @@ If you want to know that your recipient opened the link from your email, you nee
  and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
 
  Example:
- ```html
+
+```html
 <a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
- ```
+```
 
 ## Target Lists
 
@@ -75,29 +77,29 @@ It's possible to utilize this log by creating Target List (dropdown in the top-r
 
 ## Settings
 
-_For administrators._
+Only for Administrator.
 
 Mass Email system parameters available at Administration > Outbound Emails > Mass Email panel.
 
-* Max number of emails sent per hour
-* Disable mandatory opt-out link
-* Email Open Tracking
-* Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path)
+* Max number of emails sent per hour;
+* Disable mandatory opt-out link − by default opt-out link is added even if it's absent in Email Template, you can disable this behaviour;
+* Email Open Tracking − whether to track email opening (not working with most of email providers);
+* Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path) − for more reliable bounced email precessing.
 
 ## Troubleshooting
 
-_For administrators._
+Only for Administrator.
 
 #### What to do if emails are not sent out.
 
 1. Check if _Send Test_ works. If doesn't work, then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
-3. Check if you have `Send Mass Emails` Scheduled Job and it's `Active` (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in Log.
+3. Check if you have 'Send Mass Emails' Scheduled Job and it's 'Active' (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in the log.
 
 
 #### What if Tracking URLs has wrong url that does not lead to your crm.
 
-Check 'siteUrl' parameter in `data/config.php` file. It must be set as URL of your EspoCRM accessible from the external world.
+Check *Site URL* parameter at Administrtion > Settings. The value must be the URL of your EspoCRM, this URL must be accessible externally.
 
 #### Bounced emails are not being logged
 

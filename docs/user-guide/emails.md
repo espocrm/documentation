@@ -27,11 +27,13 @@ There is an ability to specify *Folder* in Personal Email Account. Incoming emai
 
 ## SMTP accounts
 
-Users can setup SMTP settings in their Personal Email Accounts as well as in Preferences. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts. Administrator also can allow to use system SMTP (mark it as Shared).
+Users can setup SMTP settings in their Personal Email Accounts as well as in Preferences. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts.
+
+Administrator also can allow to use the mailn system SMTP account as well as Group Email Accounts (mark as Shared).
 
 Users can have multiple SMTP accounts.
 
-Important: Email addresses user can use to send emails from must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
+Important: Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
 
 ## Gmail accounts
 
@@ -42,10 +44,14 @@ For connecting your Gmail account (IMAP and SMTP) you have two options:
 
 ## Working with emails
 
-Emails are fetched by cron (in background) every few minutes (period can specified by Administrator).
+Emails are fetched by cron (in the background) every few minutes (period can specified by Administrator).
 You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
 
-*Status* field. `Sent` means it was sent from CRM, `Archived` – fetched from IMAP account or archived manually, `Draft` – means that email was created as a draft.
+*Status* field:
+
+* *Sent* - was sent via CRM
+* *Archived* – fetched from IMAP account or archived manually
+* *Draft* – email was created as a draft
 
 When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized, then user can link it manually by filling in *Parent* field.
 
@@ -53,7 +59,7 @@ If an email came from a new potential client, user can **convert it to Lead**. O
 
 It's also possible to **create Task or Case** from an email record.
 
-If email addresses (from, to, cc) in an email record are known to the system, it will show the person they are related to (Contact, Lead, User etc). If some email address is new, you can **create contact** right from there.
+If email addresses (from, to, cc) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User etc). If some email address is new, you can **create contact** right from there.
 
 All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
 
@@ -62,6 +68,7 @@ When **removing** an email it gets removed from the system entirely, so that it 
 ## Sending emails
 
 You can compose new email by a few ways:
+
 * *Compose Email* button on Emails list view;
 * replying on another email;
 * clicking on an email address of some record;
@@ -71,7 +78,7 @@ There is the ability to **select template** of your email.
 
 You can setup **email signature** in Preferences.
 
-It's possible to use an **external email client** (the default one on your computer or device). For this check 'Use an external email client' in Preferences.
+It's possible to use an **external email client** (the default one on your computer or device). For this check *Use an external email client* in Preferences.
 
 ## Email Folders
 
@@ -84,6 +91,7 @@ Administrator can create global email filters to skip not desirable emails. They
 Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
 
 There are two types of filters:
+
 * Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
 * Put in Folder - imported emails will be put into specified user's folder automatically.
 
@@ -93,7 +101,7 @@ Email templates are available at Emails > dropdown in top-right corner > Email T
 
 It's possible to use placeholders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.
 
-You can use additional reserved placeholders in template body: {optOutUrl} and {optOutLink}.
+You can use additional reserved placeholders in template body: `{optOutUrl}` and `{optOutLink}`.
 ```
 <a href="{optOutUrl}">Unsubscribe</a>
 ```
