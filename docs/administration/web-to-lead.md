@@ -28,7 +28,7 @@ A confirmation link will be added automatically if you didn't insert a placehold
 
 ## Posting API request
 
-Your web site need to make a POST request to send form data to you CRM. A request doesn't require any authorization. You just need to use a specific URL with an API Key. Infomation about request is available in the side panel on Lead Capture detail view.
+Your web site need to make a POST request to send form data to you CRM. A request **doesn't require any authorization**. You just need to use a specific URL with an API Key. Infomation about request is available in the side panel on Lead Capture detail view.
 
 Required headers:
 
@@ -67,8 +67,6 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 
 ### Directly by a web browser
 
-Note: Works since version 5.4.4.
-
 Expample:
 
 ```html
@@ -105,7 +103,7 @@ Expample:
         };
 
         // Needed url can be found on Lead Capture detail view.
-        var url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY'; 
+        var url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url, true);
@@ -126,7 +124,7 @@ Expample:
 </script>
 ```
 
-'Access-Control-Allow-Origin' header can be set in data/config.php with the parameter `leadCaptureAllowOrigin`. By default `*` value is used.
+'Access-Control-Allow-Origin' header can be set in `data/config.php` with the parameter `leadCaptureAllowOrigin`. By default `*` value is used.
 
 ## Lead assignment distribution
 

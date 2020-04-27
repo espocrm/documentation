@@ -1,6 +1,6 @@
 # Multiple Assigned Users
 
-Note: Flawless work and compatibility with other features are not guaranteed.
+Note: This is an experimental feature. Flawless work and compatibility with other features are not guaranteed.
 
 Out-of-the-box EspoCRM allows to assign only one user to a certain record. It's possible to add the ability to assign multiple users for a specific entity type.
 

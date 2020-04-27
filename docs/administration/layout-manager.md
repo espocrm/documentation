@@ -1,11 +1,23 @@
 # Layout Management
 
-*Layout Manager* is available at administration panel. It provides an ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+Layout Manager is available at Administration panel. It provides the ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
 
 * [Layouts](#layouts)
 * [Different layouts for teams & portals](#different-layouts-for-teams-portals)
 
 ## Layouts
+
+* [List](#list)
+* [Detail](#detail)
+* [List (small)](#list-small)
+* [Detail (small)](#detail-small)
+* [Bottom Panels](#bottom-panels)
+* [Search Filters](#search-filters)
+* [Mass Update](#mass-update)
+* [Side Panels](#side-panels)
+* [Kanban](#kanban)
+* [Side Panel Fields](#side-panel-fields)
+* [Additional layouts](#additional-layouts)
 
 ### List
 
@@ -49,6 +61,26 @@ The list layout for relationship panels. Also, it can be used in other places wh
 
 The detail view for quick create, quick view and quick edit forms.
 
+### Bottom Panels
+
+Since 5.9.0 version.
+
+Relationship panels and Stream panel displayed on the detail view at the bottom. Panels can be re-ordered.
+
+Parameters are listed below.
+
+#### Style
+
+The color of the panel.
+
+#### Sticked
+
+The panel will be sticked to the previoud panel w/o a gap.
+
+#### Conditions making panel visible
+
+Dynamic-logic conditions that determine whether the panel is visible.
+
 ### Search Filters
 
 The list of fields available in the list view to search by.
@@ -57,13 +89,24 @@ The list of fields available in the list view to search by.
 
 The list of fields available in the Mass Update form.
 
-### Relationship Panels
-
-The list of relationship panels displayed on the detail view at the bottom. Panels can be re-ordered. It's possible to define the color of panel with the Style parameter.
 
 ### Side Panels
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter.
+Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
+
+Parameters are listed below.
+
+#### Style
+
+The color of the panel.
+
+#### Sticked
+
+The panel will be sticked to the previoud panel w/o a gap.
+
+#### Conditions making panel visible
+
+Dynamic-logic conditions that determine whether the panel is visible.
 
 ### Kanban
 
@@ -71,9 +114,9 @@ Available for entity types with the enabled Kanban view.
 
 ### Side Panel Fields
 
-List of fields displayed in the top side panel. By default there are *Assinged User* and *Teams* fields.
+The list of fields displayed in the top side panel. By default there are *Assinged User* and *Teams* fields.
 
-### Additional Layouts
+### Additional layouts
 
 Some entity types contain additional layouts: Convert Lead, List for Account and others.
 

@@ -2,8 +2,6 @@
 
 Provides the ability to import records from CSV files.
 
-Note: Before version 5.4.0 Import was available only for admin users.
-
 Administrator can access import at Administration > Import. By default regular users don't have an access. It can be granted with ACL roles. Administrator also can add the Import tab at Administration > User Interface > Tab List.
 
 ## Step 1
@@ -46,9 +44,9 @@ Click _Run Import_ button to proceed. It may take some time before an import pro
 
 Once the records are imported and you are sure that imported data is fine you can 'Remove import log' (by clicking the button on the import results view) to preclude accidental reverting of the import.
 
-## How to import into Target List
+## Importing into Target List
 
-When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add Target List field on `Default Values` panel and select a needed target list record. You can also use `Update only` or `Create & Update` import to add existing targets to a target list.
+When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add *Target List* field on *Default Values* panel and select a needed target list record. You can also use 'Update only' or 'Create & Update' import to add existing targets to a target list.
 
 ## See also
 

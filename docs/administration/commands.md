@@ -31,6 +31,11 @@ php command.php upgrade
 
 Upgrades EspoCRM instance to the next available version. The upgrade package is downloaded automatically. It may take a few steps to upgrade to the latest version, so you will need to run the same command a few times.
 
+## Extension installing & upgrading
+
+```
+php extension.php path/to/extension/package.zip
+```
 
 ## Running job
 

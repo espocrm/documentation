@@ -1,6 +1,6 @@
 # Managing extensions
 
-## How to install an extension
+## Installing
 
 In order to install EspoCRM extension (e.g. Advanced Pack, VoIP Integration):
 
@@ -10,7 +10,7 @@ In order to install EspoCRM extension (e.g. Advanced Pack, VoIP Integration):
 4. Click Install button.
 
 
-## How to upgrade an extension
+## Upgrading
 
 In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP integration) to a newer version:
 
@@ -22,9 +22,9 @@ In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP int
 
 There's NO need to install intermediate versions. Install just the latest one.
 
-## How to uninstall an extension
+## Uninstalling
 
-Steps to uninstall an installed extension:
+Steps to uninstall an extension:
 
 1. Login as an administrator.
 2. Go to Administration > Extensions.
@@ -32,7 +32,7 @@ Steps to uninstall an installed extension:
 4. Click Uninstall button.
 
 
-## How to delete an extension
+## Deleting
 
 When an extension is uninstalled, it is still available in the system. It can be completely deleted. Steps to delete an extension:
 
@@ -40,3 +40,11 @@ When an extension is uninstalled, it is still available in the system. It can be
 2. Go to Administration > Extensions.
 3. Find the needed extension in the list of available extensions.
 4. Click Remove button.
+
+## CLI commands
+
+### Installing & upgrading
+
+```
+php extension.php path/to/extension/package.zip
+```
