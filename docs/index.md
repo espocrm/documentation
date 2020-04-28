@@ -9,7 +9,8 @@
 * System
   * [Installation](administration/installation.md)
   * [Upgrading](administration/upgrading.md)
-  * [Troubleshooting](administration/troubleshooting.md)
+  * [Extensions](administration/extensions.md)
+  * [Troubleshooting](administration/troubleshooting.md)  
   * [Console commands](administration/commands.md)
   * [Jobs](administration/jobs.md)
   * [WebSocket](administration/websocket.md)
@@ -20,7 +21,6 @@
   * [Entity Manager: entities, fields, relationships](administration/entity-manager.md)
   * [Fields](administration/fields.md)
   * [Layouts](administration/layout-manager.md)
-  * [Extensions](administration/extensions.md)
   * [Dynamic forms](administration/dynamic-logic.md)
 * [Roles management (access control)](administration/roles-management.md)
 * [Email Administration](administration/emails.md)
