@@ -34,6 +34,7 @@ Upgrades EspoCRM instance to the next available version. The upgrade package is 
 ## Extension
 
 Installing:
+
 ```
 php extension.php path/to/extension/package.zip
 ```
@@ -69,4 +70,14 @@ Examples:
 ```
 php command.php run-job Cleanup
 php command.php run-job ProcessMassEmail
+```
+
+## Version
+
+Since v5.9.0.
+
+Print the current version:
+
+```
+php command.php version
 ```
