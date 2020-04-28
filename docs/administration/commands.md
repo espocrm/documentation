@@ -33,8 +33,21 @@ Upgrades EspoCRM instance to the next available version. The upgrade package is 
 
 ## Extension installing & upgrading
 
+Installing:
 ```
 php extension.php path/to/extension/package.zip
+```
+
+Installing or upgrading (since v5.9.0):
+
+```
+php command.php extension --file="path/to/extension/package.zip"
+```
+
+Uninstalling (since v5.9.0):
+
+```
+php command.php extension -u --name="Extension Name"
 ```
 
 ## Running job
