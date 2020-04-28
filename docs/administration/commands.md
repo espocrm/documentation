@@ -50,6 +50,12 @@ Uninstalling (since v5.9.0):
 php command.php extension -u --name="Extension Name"
 ```
 
+Uninstalling by ID (since v5.9.0):
+
+```
+php command.php extension -u --id="extension-ID"
+```
+
 ## Running job
 
 ```
