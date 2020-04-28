@@ -31,6 +31,7 @@ nav:
         - 'System':
             - 'Installation': 'administration/installation.md'
             - 'Upgrading': 'administration/upgrading.md'
+            - 'Extensions': 'administration/extensions.md'
             - 'Troubleshooting': 'administration/troubleshooting.md'
             - 'Console commands': 'administration/commands.md'
             - 'Jobs': 'administration/jobs.md'
@@ -41,8 +42,7 @@ nav:
         - 'Customization':
             - 'Entity Manager': 'administration/entity-manager.md'
             - 'Fields': 'administration/fields.md'
-            - 'Layouts': 'administration/layout-manager.md'
-            - 'Extensions': 'administration/extensions.md'
+            - 'Layouts': 'administration/layout-manager.md'            
             - 'Dynamic forms': 'administration/dynamic-logic.md'
         - 'Roles management': 'administration/roles-management.md'
         - 'Email Administration': 'administration/emails.md'
