@@ -48,3 +48,5 @@ When an extension is uninstalled, it is still available in the system. It can be
 ```
 php extension.php path/to/extension/package.zip
 ```
+
+See more [commands](commands.md#extension).
