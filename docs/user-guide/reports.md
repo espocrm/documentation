@@ -26,9 +26,9 @@ See also:
 
 List report results the list of records that meet the specified criteria.
 
-To create new list report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at List Report section.
+To create a new list report click on *Reports* tab and then click *Create Report* button. Choose needed Entity Type then click *Create* button at *List Report* section.
 
-At _Columns_ field pick fields you would like to be displayed. Below you can specify display parameters for every column:
+At *Columns* field pick fields you would like to be displayed. Below you can specify display parameters for every column:
 
 * Width – width in percents;
 * Align – left or right;
@@ -36,49 +36,49 @@ At _Columns_ field pick fields you would like to be displayed. Below you can spe
 * Export Only – column won't be displated in report results on UI, but available in export;
 * Not Sortable – column won't be able to be ordered by, some fields are not available for sorting.
 
-Choose needed sorting at _List Order_ field.
+Choose needed sorting at *List Order* field.
 
 At _Filters_ section you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
 
-_Runtime Filters_ allow you to specify different filters before you run the report.
+*Runtime Filters* allow you to specify different filters before you run the report.
 
-You can __export__ list report results to excel and csv formats.
+You can **export** list report results to XLSX (Excel) and CSV formats.
 
-List report example, showing leads that doesn't have any Call related to them:
+List report results example:
 
 ![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/list.png)
 
 Additional features where list reports can be utilized:
 
-* Scheduled workflows – to do some scheduled actions over records that met criteria specified in list report.
+* Scheduled workflows – to do some scheduled actions over records that met criteria specified by a list report.
 * Scheduled BPM processes – to start BPM processes for records that met some criteria.
-* Sync with target lists – automatic or manuall.
-* List view filters – more info below.
-* Panels on detail view – displaying related records that met some criteria.
+* Sync with target lists – automatic or manuall, more [below](#syncing-with-target-lists).
+* List view filters – more info [below](#report-filters).
+* Panels on detail view – displaying related records that met some criteria, more info [below](#report-panels).
 * Applying assignment rule – by workflow or BPM.
 
 
 ## Grid Reports
 
-Grid reports result summarized values, can be grouped by one or two fields. and displayed as a chart.
+Grid reports result summarized values, can be grouped by one or two fields and displayed as a chart.
 
-To create new grid report click on Reports tab and then click Create Report button. Choose needed Entity Type then click Create button at Grid Report section.
+To create a new grid report click on *Reports* tab and then click *Create Report* button. Choose needed Entity Type then click *Create* button at *Grid Report* section.
 
-Grid report example, showing revenue grouped by User:
+Grid report results example, showing revenue grouped by User:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
 ### Group By
 
-At _Group By_ field pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, day for date fields. If you group by two fields your report will be considered as three-dimensional.
+At *Group By* field pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, day for date fields. If you group by two fields your report will be considered as three-dimensional.
 
-You can leave Group By field empty.
+You can leave *Group By* field empty.
 
 There is the ability to specify a custom complex expression (with functions) for grouping. More info about complex expressions is available [here](complex-expressions.md).
 
 ### Columns
 
-At _Columns_ field select one or more aggregate functions applied to a specific field.
+At *Columns* field select one or more aggregate functions applied to a specific field.
 
 Functions:
 
@@ -92,15 +92,17 @@ If the report is grouped by a link field then it's possible to add fields from t
 
 ### Order by
 
-_Order by_ field defines how report data will be sorted.
+*Order by* field defines how report data will be sorted.
 
 ### Filters
 
-At _Filters_ section you can specify criteria that determines what records will be used in your report. You can use logical operators 'OR' and 'AND' here. More info is below.
+At *Filters* section you can specify criteria to limit data displayed in report results. You can use logical operators 'OR' and 'AND' here. More info [below](#filters_1).
 
 ### Runtime Filters
 
-_Runtime Filters_ allows you to specify different filters before you run the report.
+*Runtime Filters* allows you to specify different filters before you run the report.
+
+Note: Specifying the runtime filter can be also useful for dashlets and report panels.
 
 ### Charts
 
@@ -133,13 +135,13 @@ Pie:
 
 ### Export
 
-It's possible to export grid report results to Excel and CSV formats. Charts are exported to Excel.
+It's possible to export grid report results to XLSX (Excel) and CSV formats. Charts are exported to XLSX.
 
 ## Joint Grid reports
 
-Available since Advanced Pack 2.2.0.
+Available since Advanced Pack v2.2.0.
 
-Joint Grid reports combine multiple Grid reports of different entity types. Sub-reports must by grouped by 1 or 0 fields.
+Joint Grid reports combine multiple grid reports of different entity types. Sub-reports must by grouped by 1 or 0 fields.
 
 Some usage examples:
 
@@ -173,7 +175,7 @@ AND means that all conditions under the group must be met.
 
 ### NOT IN group
 
-Provides an ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
+Provides the ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
 
 Note: It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively effect on a report performance in some cases.
 
@@ -181,7 +183,7 @@ Note: It's recommended to avoid using NOT IN group when possible, by using filte
 
 ### IN group
 
-Note: Available in since EspoCRM 5.6.0 and Advanced Pack 2.1.0.
+Note: Available in since EspoCRM v5.6.0 and Advanced Pack v2.1.0.
 
 Simlitar to AND group but utilizes a sub-query.
 
@@ -210,8 +212,6 @@ Some use cases:
 * List accounts having more than one opportunities. `COUNT / opportunities.id / Greater Than / 1`.
 * Grid report showing accounts grouped by industry where revenue is more than 1,000. `SUM / opportunities.amount / Greater Than / 1000`.
 
-Note: Compatible with EspoCRM versions 5.1.0 and greater.
-
 ## Displaying on dashboard
 
 You can display any report on dashboard. For this you need add Report dashlet and then pick needed report at dashlet options.
@@ -228,13 +228,13 @@ Max number of records that can be send in email by default is 3000. You can incr
 
 ## Printing to PDF
 
-Available since Advanced Pack 2.5.0, compatible with EspoCRM 5.8.0 and later.
+Available since Advanced Pack v2.5.0, compatible with EspoCRM v5.8.0 and later.
 
-Note: A user needs to have an access to *Template* scope (set in *Role*).
+Note: A user needs to have an access to *Template* scope (set in Roles).
 
 Note: You need to have at least one PDF Template for Report entity type. The template can be created at Administration > PDF Templates.
 
-To print a report: on the report detail view on *Report* panel click '*...*' dropdown, then click *Print to PDF*.
+To print a report: on the report detail view on *Report* panel, from the dropdown next to *Edit* button, click *Print to PDF*.
 
 In PDF table `{{reportTable}}` is used to print a report results table.
 
@@ -255,7 +255,7 @@ Available attributes:
 
 ## Syncing with Target Lists
 
-It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at 'Sync with Reports' panel.
+It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on detail view of any target list at *Sync with Reports* panel.
 
 ## Report Filters
 
@@ -277,11 +277,10 @@ It's possible to display only a total amount on the report panel.
 
 Order of side panels can be customized at Layout Manager > Side Panels (Detail).
 
-Order of bottom panels is specified in the Report Panel record. It's possible to place the panel before Stream panel, before relationship panels or at the very bottom.
+Order of side panels can be customized at Layout Manager > Bottom Panels (since v5.9.0).
 
 The report panel shows results related to the record is viewed. The first found relationship is used. If the report has an appropriate runtime filter then it will be used to restrict results. The runtime filter must be a field of link, link-multiple or link-parent type.
 
 ## See also
 
 * [Complex expressions](complex-expressions.md)
-
