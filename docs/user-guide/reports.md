@@ -74,7 +74,7 @@ At *Group By* field pick one or two fields you want your report data be grouped 
 
 You can leave *Group By* field empty.
 
-There is the ability to specify a custom complex expression (with functions) for grouping. More info about complex expressions is available [here](complex-expressions.md).
+There is the ability to specify a custom complex expression (with functions) for grouping. The complex expression is translated into SQL statement. More info about complex expressions is available [here](complex-expressions.md).
 
 ### Columns
 
@@ -199,9 +199,20 @@ Note: If you need to compare just with a simple string value you should put it i
 
 Note: Functions intended to interact with entity record will not work here because the formula is not applied to specific record.
 
-![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-complex.png)
+Applying function to attribute and comparing with result of formula:
 
-You have the ability to use custom complex expressions. More info about complex expressions is available [here](complex-expressions.md).
+![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
+
+Comparing result of custom complex expression & result of formula:
+
+![Complex Expression filter](../_static/images/user-guide/reports/filter-complex-expression.png)
+
+
+* Complex expression is translated into SQL statement and becomes a part of SQL query.
+* Formula is executed by PHP and the result value is substituted into SQL query.
+* Comparison operator is substituted into SQL query between complex expression statement and formula result value.
+
+More info about complex expressions is available [here](complex-expressions.md).
 
 ### Having group
 
