@@ -9,6 +9,7 @@ An example for Lead entity type.
 Create a file `custom/Espo/Custom/Services/Lead.php`:
 
 ```php
+<?php
 
 namespace Espo\Custom\Services;
 
