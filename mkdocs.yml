@@ -9,10 +9,12 @@ extra_css:
 
 markdown_extensions:
   - mdx_truly_sane_lists
-  - codehilite
+  - codehilite:
+      guess_lang: false
+      use_pygments: true
   - toc:
       permalink: true
-      toc_depth : 4
+      toc_depth: 4
 
 theme:
     name: material
@@ -42,7 +44,7 @@ nav:
         - 'Customization':
             - 'Entity Manager': 'administration/entity-manager.md'
             - 'Fields': 'administration/fields.md'
-            - 'Layouts': 'administration/layout-manager.md'            
+            - 'Layouts': 'administration/layout-manager.md'
             - 'Dynamic forms': 'administration/dynamic-logic.md'
         - 'Roles management': 'administration/roles-management.md'
         - 'Email Administration': 'administration/emails.md'
