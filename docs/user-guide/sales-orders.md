@@ -24,7 +24,7 @@ Method 2. Create a new invoice from Invoices relationship panel on the detail vi
 
 ## Total Values Layout
 
-Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Sales Orders > Bottom Total.
+Layout of total value fields (in the bottom on detail view) can be modified at Administration > Layout Manager > Sales Orders > Bottom Total.
 
 ## Sales Order Items
 
@@ -79,4 +79,4 @@ The following service actions are available in Workflows and BPM tools:
 
 ## See also
 
-[Custom calculations for Quote totals](../development/quote-custom-calculations.md)
+* [Custom calculations for Quote totals](../development/quote-custom-calculations.md)

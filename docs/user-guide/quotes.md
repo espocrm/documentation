@@ -6,7 +6,7 @@ Quote is a specific group of products or services with their quantities and pric
 
 Quote has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
 
-You can add Quotes panel to Account's detail view to be able to see related quotes. Administration > Layout Manager > Accounts > Relationships.
+You can add Quotes panel to Account's detail view to be able to see related quotes: Administration > Layout Manager > Accounts > Relationships.
 
 ## Converting from Opportunity
 
@@ -24,7 +24,7 @@ Method 2. Create a new sales order or invoice from corresponding relationship pa
 
 ## Total Values Layout
 
-Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Quotes > Bottom Total.
+Layout of total value fields (in the bottom on detail view) can be modified at Administration > Layout Manager > Quotes > Bottom Total.
 
 ## Quote Items
 
@@ -62,11 +62,11 @@ Examples:
 
 `{{assignedUser.lastName}}` – last name of the assigned user.
 
-If your line item is a product, you can print product’s fields. 
+If your line item is a product, you can print product’s fields.
 
 Examples:
 
-`{{product.length}}`, 
+`{{product.length}}`,
 
 `{{product.color}}`.
 
@@ -86,7 +86,7 @@ Looping through quote items:
 <!-- {{/each}} -->
 ```
 
-It's possible to print image fields: 
+It's possible to print image fields:
 
 ```
 <img src="{{file imageId}}">
@@ -107,7 +107,7 @@ Custom formatting for currency values (since version 4.8.3):
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
-Value `10000.5` will be printer as `10 000,50`. 
+Value `10000.5` will be printer as `10 000,50`.
 
 To display text fields (multiline) use triple braces: `{{{description}}}`.
 
@@ -161,4 +161,4 @@ The following service actions are available in Workflows and BPM tools:
 
 ## See also
 
-[Custom calculations for Quote totals](../development/quote-custom-calculations.md)
+* [Custom calculations for Quote totals](../development/quote-custom-calculations.md)

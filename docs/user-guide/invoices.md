@@ -8,7 +8,7 @@ You can add Invoices panel to Account detail view to be able to see related sale
 
 You can add Invoices panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
 
-## Converting from Opportunity, Quote or Sales Order 
+## Converting from Opportunity, Quote or Sales Order
 
 Method 1. Create a new invoice, on the form specify needed opportunity/quote/sales order. Data will be copied from the opportunity/quote/sales order to the created invoice.
 
@@ -16,7 +16,7 @@ Method 2. Create a new invoice from Invoices relationship panel on the detail vi
 
 ## Total Values Layout
 
-Layout of bottom fields (total values) can be modified at Administration > Layout Manager > Invoices > Bottom Total.
+Layout of total value fields (in the bottom on detail view) can be modified at Administration > Layout Manager > Invoices > Bottom Total.
 
 ## Invoice Items
 
