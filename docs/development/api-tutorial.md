@@ -2,7 +2,8 @@
 
 ## In EspoCRM
 
-1. Go to Admninistration > Roles and create a new role with permissions you want to grand for the API user.
+1. Go to Admninistration > Roles and create a **new role** with permissions you want to grand for the API user.
+    * Note: It's recommended to set *Assignment Permission* to `all`. If the permission set to `no` (by default), it won't allow to specify *Assigned User* other than the own user and won't allow to have empty assigned user. In the case when we use API user, it would be wrong to assign records to API user.
 2. Go to Administration > API Users and create a new API User. Select the created role. An **API Key** will be generated, you will need to use it in your API requests further.
 
 ## In external application
