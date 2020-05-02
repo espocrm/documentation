@@ -214,6 +214,12 @@ In Script Task you can define actions that are impossible to do with the regular
 * Create a new user and send generated password ([see](formula-scripts-examples.md#creating-new-user))
 * Send email with generated PDF in attachment ([see](formula-scripts-examples.md#sending-email-with-generated-pdf-in-attachment))
 
+Note: It's recommended to **clear temporary variables**, that won't be needed further in the process, in the end of the script.
+
+```
+$tmpVariable = null;
+```
+
 ----
 
 ## Sub-Process
