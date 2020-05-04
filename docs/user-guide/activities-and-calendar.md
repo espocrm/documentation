@@ -40,7 +40,7 @@ Date Start and Date Due fields are not required. Dates can be specified with or 
 
 ### Reminders
 
-Reminders for the task record will be available only if Date Due is specified.
+Reminders for the task record will be available only if *Date Due* is specified.
 
 ### Scheduler
 
