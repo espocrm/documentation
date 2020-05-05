@@ -4,11 +4,11 @@ In entity manager it's possible to define script (formula) for specific entity t
 
 It provides the ability to automatically set specific fields (attributes) with values derived from calculation.
 
-To edit formula follow Administration > Entity Manager > dropdown menu at the right on the row of needed entity > Formula.
+To edit formula for a specific entity type follow Administration > Entity Manager > dropdown menu on the right on the row of the entity type > Formula.
 
 You may also need to set fields, that are supposed to be calculated, read-only via Entity Manager.
 
-Admin can run *Recalculate Formula* for specific records from the list view.
+Admin can run **recalculate formula** for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
 Formula can also be utilized in Workflows and BPM tool.
 
