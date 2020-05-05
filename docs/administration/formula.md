@@ -2,7 +2,7 @@
 
 In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved.
 
-It provides the ability to automatically set specific fields (attributes) with values derived from calculation.
+It provides the ability to automatically set specific fields (attributes) with values derived from calculation. Some functions can also perform some actions.
 
 To edit formula for a specific entity type follow Administration > Entity Manager > dropdown menu on the right on the row of the entity type > Formula.
 
