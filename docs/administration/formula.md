@@ -8,7 +8,7 @@ To edit formula follow Administration > Entity Manager > dropdown menu at the ri
 
 You may also need to set fields, that are supposed to be calculated, read-only via Entity Manager.
 
-Admin can run 'Recalculate Formula' for specific records from the list view.
+Admin can run *Recalculate Formula* for specific records from the list view.
 
 Formula can also be utilized in Workflows and BPM tool.
 
