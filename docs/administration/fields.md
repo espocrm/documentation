@@ -135,7 +135,7 @@ Parameters:
 
 ## Currency
 
-A currency value, a pair of number and currency.
+A currency value. A float number with a currency code.
 
 Parameters:
 
