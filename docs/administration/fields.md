@@ -9,7 +9,7 @@ The list of field types available for creating:
 * [Text](#text) – a multiline text with markdown support;
 * [Date](#date) – date w/o time;
 * [Date-Time](#date-time) – date and time;
-* [Currency](#currency) – for currency values, a pair of number and currency;
+* [Currency](#currency) – for currency values, a float number and currency code;
 * [Int](#int) – a whole number;
 * [Float](#float) – a number with a decimal part;
 * [Boolean](#boolean) – a checkbox;
@@ -25,6 +25,7 @@ The list of field types available for creating:
 * [Number](#number) – an auto-incrementing number of string type with a possible prefix and specific length;
 * [Auto-increment](#auto-increment) – a generated read-only auto-incrementing integer number;
 * [Barcode](#barcode) – a barcode, can be printed to PDF.
+* [Foreign](#foreign) - a field of a related record. Read-only.
 
 Field types not available for creating directly:
 
@@ -299,6 +300,15 @@ Parameters:
 
 * Code Type – a type of barcode; supported types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode, QRcode;
 * Last Character – for EAN13 type, often is `>`.
+
+## Foreign
+
+A field of a related record. Read-only.
+
+Parameters:
+
+* Link – defines from where field will be taken.
+* Field – a field of a related record.
 
 ## Email
 
