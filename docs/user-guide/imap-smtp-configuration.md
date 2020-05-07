@@ -11,7 +11,8 @@ In this article:
 * [Troubleshoot problems](#troubleshoot-problems)
 
 ## IMAP configuration
-*Note: You need to have cron properly configured in your system to have inbound emails working.*
+
+Note: You need to have cron properly configured in your system to have inbound emails working.
 
 IMAP allows to retrieve your emails from an email client. To setup the IMAP account, do the following steps:
 1. Select **Emails Tab > top-right menu > Personal Email Accounts**.
@@ -61,10 +62,11 @@ To setup SMTP account, do the following:
 5. Click on **Save Changes**.
 
 Note: There are two ways in which you can setup IMAP and SMTP for Gmail account:
+
 * Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
 * Enable [access for less secure application](#for-gmail-accounts) at your Google account settings.
 
-For more information, please follow the link: https://support.google.com/mail/answer/7126229?hl=en.
+For more information, please follow the link: (https://support.google.com/mail/answer/7126229?hl=en).
 
 ## Setup for Outlook Account
 
@@ -80,7 +82,7 @@ For more information, please follow the link: https://support.google.com/mail/an
 
 IMAP and SMTP access are enabled by default. All you need is enable the "less secure" access. For more information, please follow these [instructions](#for-yahoo-accounts).
 
-Configuration details are available by the link: https://help.yahoo.com/kb/SLN4075.html.
+Configuration details are available by the link: (https://help.yahoo.com/kb/SLN4075.html).
 
 ## Troubleshoot problems
 
