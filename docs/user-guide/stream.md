@@ -32,7 +32,7 @@ Users can create post to certain users, to certain teams, to all users and to se
 
 ## Filtering
 
-You can filter what to show in a stream: *All*, *Posts* or *Updates*.
+You can filter what to show in a stream: *All*, *Posts* or *Updates*. Filters are availble in the dropdown in to top-right corner of the panel.
 
 ## See also
 
