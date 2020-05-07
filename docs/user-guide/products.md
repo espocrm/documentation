@@ -10,7 +10,9 @@ A product record has three price fields: Cost, List and Unit. There is the abili
 
 Products can be added as line items to a Quote record. Product fields can be printed in PDF. More detail [here](quotes.md#templates).
 
-Products can be added as line items to an Opportunity record. By default this feature is disabled. You need to add *Line Items* field to *Detail* layout of Opportunity in Layout Manager. Make the cell full-width wide using minus icon.
+## Opportunity line items
+
+Products can be added as line items to an Opportunity record. By default this feature is disabled. Administrator needs to add *Line Items* field to *Detail* layout of Opportunity in Layout Manager. Make the cell full-width wide using minus icon.
 
 ## Categories
 
