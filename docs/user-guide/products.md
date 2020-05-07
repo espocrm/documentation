@@ -12,7 +12,7 @@ Products can be added as line items to a Quote record. Product fields can be pri
 
 ## Opportunity line items
 
-Products can be added as line items to an Opportunity record. By default this feature is disabled. Administrator needs to add *Line Items* field to *Detail* layout of Opportunity in Layout Manager. Make the cell full-width wide using minus icon.
+Products can be added as line items to an Opportunity record. By default this feature is disabled. Administrator needs to add *Item List* field to *Detail* layout of Opportunity in Layout Manager. Make the cell full-width wide using minus icon.
 
 ## Categories
 
