@@ -4,7 +4,7 @@ Quotes feature is available in [Sales Pack](https://www.espocrm.com/extensions/s
 
 Quote is a specific group of products or services with their quantities and prices that you quote to customers.
 
-Quote has a relationship with Opportunity. You can add Quotes panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
+Quote has a relationship with Opportunity. You can add `Quotes` panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity it transfers opportunity items to the quote.
 
 You can add Quotes panel to Account's detail view to be able to see related quotes: Administration > Layout Manager > Accounts > Relationships.
 
@@ -12,7 +12,7 @@ You can add Quotes panel to Account's detail view to be able to see related quot
 
 Method 1. Create a new quote, on the form specify a needed opportunity. Data will be copied from the opportunity to the created quote.
 
-Method 2. Create a new quote from Quotes relationship panel on the detail view of the opportunity.
+Method 2. Create a new quote from Quotes relationship panel on the detail view of the opportunity. Note: Administrator needs to add the panel in layout maanger.
 
 ## Generating Sales Orders and Invoices from Quote
 
