@@ -35,7 +35,7 @@ The build will be created in the `build` directory.
 
 Note: By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
 
-Upgrade packages can be built with `grunt upgrade`.
+Upgrade packages can be built with `grunt upgrade`. Note: You need to fetch tags to your git repository.
 
 ## Option B. Using installed instance
 
