@@ -4,7 +4,9 @@ Products feature is available in [Sales Pack](https://www.espocrm.com/extensions
 
 Product items can be used with Opportunity and Quotes. They are also available for a customization in Entity Manager so you can create new relationships between products and other entities.
 
-A product record has three price fields: Cost, List and Unit. There is the ability to automatically calculate Unit Price using different formulas according to a selected Pricing Type.
+A product record has three price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate Unit Price using different formulas according to a selected *Pricing Type*.
+
+The product can be marked as *Tax-free*. It will prevent applying the tax rate upon adding the product to a quote, sales order or inbvoice.
 
 ![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
 
