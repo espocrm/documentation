@@ -54,9 +54,9 @@ The next number, a prefix can be configured at Administration > Entity Manager >
 
 You need to have a Tax record created in your CRM. Taxes can be accessed at Quotes list view > dropdown in the top-right corner > Taxes.
 
-Administrator can specify a default Tax record at Administration > Entity Manager > Sales Order > fields > Tax > Default.
+Administrator can specify a default Tax record at Administration > Entity Manager > Invoices > fields > Tax > Default.
 
-Note: For older versions of Sales Pack & EspoCRM you need also to specify the default tax rate value at Administration > Entity Manager > Sales Order > fields > Tax Rate > Default.
+Note: For older versions of Sales Pack & EspoCRM you need also to specify the default tax rate value at Administration > Entity Manager > Invoices > fields > Tax Rate > Default.
 
 ## Copying values from product to invoice item
 
