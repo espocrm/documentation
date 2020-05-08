@@ -16,7 +16,7 @@ In the article:
 * [Quote Items](#quote-items)
 * [Printing to PDF](#printing-to-pdf)
 * [Sending quote in email](#sending-quote-in-email)
-* [Automatic numbering](#sending-quote-in-email)
+* [Automatic numbering](#automatic-numbering)
 * [Default tax](#default-tax)
 * [Copying values from product to quote item](#copying-values-from-product-to-quote-item)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
