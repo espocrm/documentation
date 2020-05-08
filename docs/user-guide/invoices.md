@@ -8,6 +8,18 @@ You can add Invoices panel to Account detail view to be able to see related sale
 
 You can add Invoices panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
 
+In the article:
+
+* [Converting from Opportunity, Quote or Sales Order](#converting-from-opportunity-quote-or-sales-order)
+* [Total Values Layout](#total-values-layout)
+* [Invoice Items](#invoice-items)
+* [Printing to PDF](#printing-to-pdf)
+* [Sending invoice in email](#sending-invoice-in-email)
+* [Automatic numbering](#automatic-numbering)
+* [Default tax](#default-tax)
+* [Copying values from product to invoice item](#copying-values-from-product-to-invoice-item)
+* [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
+
 ## Converting from Opportunity, Quote or Sales Order
 
 Method 1. Create a new invoice, on the form specify needed opportunity/quote/sales order. Data will be copied from the opportunity/quote/sales order to the created invoice.
@@ -68,7 +80,7 @@ You can select which fields you need to be copied at Administration > Entity Man
 
 The following service actions are available in Workflows and BPM tools:
 
-* Add Quote Items
+* Add Invoice Items
 * Convery Currency
 * Send in Email
 
