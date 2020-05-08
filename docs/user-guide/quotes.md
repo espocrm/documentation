@@ -8,6 +8,19 @@ Quote has a relationship with Opportunity. You can add `Quotes` panel to Opportu
 
 You can add Quotes panel to Account's detail view to be able to see related quotes: Administration > Layout Manager > Accounts > Relationships.
 
+In the article:
+
+* [Converting from Opportunity](#converting-from-opportunity)
+* [Generating Sales Orders and Invoices from Quote](#generating-sales-orders-and-invoices-from-quote)
+* [Total Values Layout](#total-values-layout)
+* [Quote Items](#quote-items)
+* [Printing to PDF](#printing-to-pdf)
+* [Sending quote in email](#sending-quote-in-email)
+* [Automatic numbering](#sending-quote-in-email)
+* [Default tax](#default-tax)
+* [Copying values from product to quote item](#copying-values-from-product-to-quote-item)
+* [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
+
 ## Converting from Opportunity
 
 Method 1. Create a new quote, on the form specify a needed opportunity. Data will be copied from the opportunity to the created quote.
