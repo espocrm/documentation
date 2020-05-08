@@ -86,4 +86,4 @@ The following service actions are available in Workflows and BPM tools:
 
 ## See also
 
-[Custom calculations for Quote totals](../development/quote-custom-calculations.md)
+* [Custom calculations for Quote totals](../development/quote-custom-calculations.md)
