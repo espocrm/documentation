@@ -8,6 +8,19 @@ You can add Sales Orders panel to Account detail view to be able to see related 
 
 You can add Sales Orders panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
 
+In the article:
+
+* [Converting from Opportunity or Quote](#converting-from-opportunity-or-quote)
+* [Generating Invoices from Sales Order](#generating-invoices-from-sales-order)
+* [Total Values Layout](#total-values-layout)
+* [Sales Order Items](#sales-order-items)
+* [Printing to PDF](#printing-to-pdf)
+* [Sending sales order in email](#sending-sales-order-in-email)
+* [Automatic numbering](#automatic-numbering)
+* [Default tax](#default-tax)
+* [Copying values from product to sales order item](#copying-values-from-product-to-sales-order-item)
+* [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
+
 ## Converting from Opportunity or Quote
 
 Method 1. Create a new sales order, on the form specify needed opportunity or quote. Data will be copied from the opportunity/quote to the created sales order.
