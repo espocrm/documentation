@@ -57,7 +57,7 @@ How it works:
 
 Workflow rule will be running (in idle) according specified scheduling. On each run it will execute the report and take all records from the report result. Then it will apply the action (or multiple actions) for every record.
 
-Usage example: Send a notification email to customers who have their license expiring in 1 week.
+Usage example: Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day. 
 
 ### Sequential
 
