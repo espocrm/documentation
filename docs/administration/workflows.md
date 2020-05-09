@@ -49,6 +49,16 @@ Scheduling is specified in a crontab notation.
 +------------ Minute            (range: 0-59)
 ```
 
+How it works:
+
+1. You need to create a list report showing records that met specific criteria.
+2. Then create a workflow rule with *Scheduled* trigger type, select the report. Specify the scheduling.
+3. Specify one or multiple actions in the workflow.
+
+Workflow rule will be running (in idle) according specified scheduling. On each run it will execute report and take all records from the report result. And then it will apply the action (or multiple actions) for every record.
+
+Usage example: Send a notification email to customers who have their license expiring in 1 week.
+
 ### Sequential
 
 Supposed to be run by another workflow. Provides the ability to make a complex logic.
