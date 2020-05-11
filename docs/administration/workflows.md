@@ -51,7 +51,7 @@ Scheduling is specified in a crontab notation.
 
 How it works:
 
-1. You need to create a list report showing records that met specific criteria.
+1. You need to create a list report showing records that met specific criteria. You can specify any columns for the report, it doesn't matter.
 2. Then create a workflow rule with *Scheduled* trigger type, select the report. Specify the scheduling.
 3. Specify one or multiple actions in the workflow.
 
