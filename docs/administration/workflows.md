@@ -188,6 +188,8 @@ Target for a triggered workflow can be substitued with a related record.
 
 Note: For complex logic it can be more reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
 
+Note: It's possible to trigger only workflow rules of 'Sequential' type.
+
 ### Run Service Action
 
 Allows to run specific service scripts.
