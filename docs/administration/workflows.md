@@ -186,7 +186,7 @@ It's possible to delay executing of sequential workflow. In the sequential workf
 
 Target for a triggered workflow can be substitued with a related record.
 
-Note: For sequential workflows it's usually more reasonable to utilize [BPM tool](bpm.md).
+Note: For complex logic it can be more reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
 
 ### Run Service Action
 
