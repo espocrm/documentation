@@ -24,14 +24,15 @@ You will receive notifications about updates in your stream that were done by an
 
 ## Posts
 
-You can create post related to a certain record. You are also able to attach multiple files and images to your post. 
-
+You can create post related to a certain record. You are also able to attach multiple files and images to the post. Images can be pasted from the clipboard.
 
 ### Mentions
 
 If you want to mention somebody in your post, you need to type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it. 
 
 Note: The user who was mentioned in the post, needs to have an access to stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
+
+Note: The user needs to have a proper *Assignment Permission* (set in roles) to be able to mention a specific user. If the assignment permision is set to `no`, then the user won't be able to mention anybody. If set to `team`, then they will be able to mention only users of their team (or teams). If set to `all`, then will be able to mention anybody. 
 
 ## Posts to users
 
