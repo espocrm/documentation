@@ -32,7 +32,7 @@ If you want to mention somebody in your post, you need to type `@` symbol and st
 
 Note: The user who was mentioned in the post, needs to have an access to stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
 
-Note: The user needs to have a proper *Assignment Permission* (set in roles) to be able to mention a specific user. If the assignment permission is set to `no`, then the user won't be able to mention anybody. If set to `team`, then they will be able to mention only users of their team (or teams). If set to `all`, then will be able to mention anybody. 
+Note: The user needs to have a proper *Assignment Permission* (set in roles) to be able to mention a specific user. If the assignment permission is set to `no`, then the user won't be able to mention anybody. If set to `team`, then they will be able to mention only users of their team (or teams). If set to `all`, then will be able to mention everybody. 
 
 ## Posts to users
 
