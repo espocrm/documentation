@@ -24,7 +24,14 @@ You will receive notifications about updates in your stream that were done by an
 
 ## Posts
 
-You can create post related to a certain record. You are also able to attach multiple files and images to your post. If you want to **mention** somebody in your post, you need to type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it.
+You can create post related to a certain record. You are also able to attach multiple files and images to your post. 
+
+
+### Mentions
+
+If you want to mention somebody in your post, you need to type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it. 
+
+Note: The user who was mentioned in the post, needs to have an access to stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
 
 ## Posts to users
 
