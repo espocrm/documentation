@@ -97,7 +97,7 @@ Parameters:
 
 * Max-length – a max acceptable length of a text;
 * Disable Text Cut – if not checked, then long texts will be shortened and can be expanded (for detail view mode);
-* Number of rows of textarea – if specified, then height of a textarea will be fixed, otherwise it's flexible (for edit view mode);
+* Number of rows of textarea – max number of rows before scroll bar appears (for edit view mode);
 * Cut Height (px) – a max height of a text, if longer, then it will be cut (for detail view mode);
 * Display raw text (no markdown) – to disable markdown support.
 
