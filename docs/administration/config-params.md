@@ -22,6 +22,7 @@ Config params can be changed or added manaully in the file `data/config.php`.
 * maintenanceMode – `false` – only administrators will have access to the system;
 * disableCron – `false`;
 * useWebSocket – `false`;
+* ajaxTimeout – `60000` – timeout for ajax requests (in milliseconds);
 * language – system language;
 * timeZone – system timezone;
 * exportDelimiter – `','` – default export delimiter;
