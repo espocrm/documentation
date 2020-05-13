@@ -10,7 +10,7 @@
   * [Installation](administration/installation.md)
   * [Upgrading](administration/upgrading.md)
   * [Extensions](administration/extensions.md)
-  * [Troubleshooting](administration/troubleshooting.md)  
+  * [Troubleshooting](administration/troubleshooting.md)
   * [Console commands](administration/commands.md)
   * [Jobs](administration/jobs.md)
   * [WebSocket](administration/websocket.md)
@@ -41,6 +41,7 @@
   * [Webhooks](administration/webhooks.md)
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
+  * [Config params](administration/config-params.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
 
 ---
