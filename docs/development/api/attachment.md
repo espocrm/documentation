@@ -11,7 +11,7 @@
 * Action: `Attachment`
 * Headers: `Content-Type: application/json`
 
-Payload fields:
+Payload attributes:
 
 * name - file name;
 * type - mime type;
@@ -19,15 +19,17 @@ Payload fields:
 * relatedType - entity type attachment is related to (only for fields of *File* type);
 * relatedId - record ID attachment is related to (only for fields of *File* type);
 * parentType - entity type attachment is related to (only for fields of *Attachment Multiple* type);
-* parentId - record ID attachment is related to (only for fields of *Attachment Multiple* type);
 * field - field name of related record attachment is related through;
 * file - file contents.
 
-#### Example (File type)
+Note: *parentId* attribute is available when uploading and will be ignored.
+
+#### Example (File field)
 
 The attachment to be stored in the field of *File* type. 
 
-Payload:
+`POST Attachment`
+
 ```json
 {
     "name": "test.txt",
@@ -48,35 +50,48 @@ Returns attachment record attributes:
 }
 ```
 
-Returned ID can be used in the following API call that creates or updated a record to which the attachment is supposed to be related to. In our example we create a record of *Document* entity type. You will need to fill *fileId* attribute with ID returned after *POST Attachment* request.
+Then you need to send the 2nd request that updates the Document record. You will need to fill *fileId* attribute with ID returned after *POST Attachment* request.
+
+`PUT Document/someId`
+
+```json
+{
+    "fileId": "id-of-attachment"
+}
+```
 
 
-#### Example (Attachment-Multiple type)
+#### Example (Attachment-Multiple field)
 
 The attachment to be stored in the field of *Attachment-Multiple* type. 
 
-Payload:
+`POST Attachment`
+
 ```json
 {
     "name": "test.txt",
     "type": "text/plain",
     "role": "Attachment",
     "parentType": "Note",
-    "parentId": "id-of-note-record",
     "field": "attachments",
     "file": "data:text/plain;base64,FILE_CONTENTS_ENCODED_WITH_BASE64"
 }
 ```
 
-This request will upload attachment and will relate to existing Note (since *parentId* is specified).
+Then you need to send the 2nd request that updates the parent Note record. You need to specify *attachmentsIds* attribute with an array that contains ID returned after *POST Attachment* request.
 
-It's possible to upload attachment before Note creation. When create Note, you need to specify attachment ID in *attachmentsIds* attribute:
+
+`PUT Note/someId`
 
 ```json
 {
     "attachmnetsIds": ["id-of-attachment"]
 }
 ```
+
+Note: If you are attaching to an existing record, you need also to add current attachments, otherwise they will be unlinked from the record.
+
+
 
 ### Downloading
 
