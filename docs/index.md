@@ -17,6 +17,7 @@
   * [Performance tweaking](administration/performance-tweaking.md)
   * [Backup and restore](administration/backup-and-restore.md)
   * [Moving to another server](administration/moving-to-another-server.md)
+  * [Config parameters](administration/config-params.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](administration/entity-manager.md)
   * [Fields](administration/fields.md)
@@ -41,7 +42,6 @@
   * [Webhooks](administration/webhooks.md)
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
-  * [Config params](administration/config-params.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
 
 ---
