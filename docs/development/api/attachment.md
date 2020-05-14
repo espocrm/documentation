@@ -47,7 +47,7 @@ Returns attachment record attributes:
 
 ```json
 {
-    "id": "some-id",
+    "id": "{some-id}",
     "name": "test.txt"
 }
 ```
@@ -63,16 +63,16 @@ Create:
 ```json
 {
     "name": "document-name",
-    "fileId": "id-of-attachment"
+    "fileId": "{id-of-attachment}"
 }
 ```
 Update:
 
-`PUT Document/someId`
+`PUT Document/{document-id}`
 
 ```json
 {
-    "fileId": "id-of-attachment"
+    "fileId": "{id-of-attachment}"
 }
 ```
 
@@ -109,17 +109,17 @@ Create:
 {
     "post": "Some text",
     "type": "Post",
-    "attachmnetsIds": ["id-of-attachment"]
+    "attachmnetsIds": ["{id-of-attachment}"]
 }
 ```
 
 Update:
 
-`PUT Note/idOfNote`
+`PUT Note/{id-of-note-record}`
 
 ```json
 {
-    "attachmnetsIds": ["id-of-attachment"]
+    "attachmnetsIds": ["{id-of-attachment}"]
 }
 ```
 
