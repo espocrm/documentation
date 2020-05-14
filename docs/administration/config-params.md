@@ -1,8 +1,8 @@
-# Config params
+# Config parameters
 
-Config params can be changed or added manaully in the file `data/config.php`.
+Config parameters can be changed or added manaully in the file `data/config.php`.
 
-## List of params
+## List of parameters
 
 * [General](#general)
 * [Access control](#access-control)
