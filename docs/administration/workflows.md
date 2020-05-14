@@ -165,6 +165,10 @@ Assign the target record to user by distribution rule. There are two available r
 
 *List Report* - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
 
+*Target Team* - Users of the selected team will take part in the assignment process.
+
+*Target User Position* - Allows to restrict the user list who will be take part in the assignment process. Users that have the selected position (in team) will take part. If the field is set to *All*, then all team members will take part.
+
 ### Create Notification
 
 Notify specific users with the message.
