@@ -28,6 +28,8 @@ Note: *parentId* attribute is available when uploading and will be ignored.
 
 The attachment to be stored in the field of *File* type. 
 
+##### Step 1. Upload attachment
+
 `POST Attachment`
 
 ```json
@@ -50,7 +52,21 @@ Returns attachment record attributes:
 }
 ```
 
-Then you need to send the 2nd request that updates the Document record. You will need to fill *fileId* attribute with ID returned after *POST Attachment* request.
+##### Step 2. Set attachment ID in related record
+
+Then you need to send the 2nd request that creates (or updates) the Document record. You will need to fill *fileId* attribute with ID returned after *POST Attachment* request.
+
+Create:
+
+`POST Document`
+
+```json
+{
+    "name": "document-name",
+    "fileId": "id-of-attachment"
+}
+```
+Update:
 
 `PUT Document/someId`
 
@@ -62,6 +78,8 @@ Then you need to send the 2nd request that updates the Document record. You will
 
 
 #### Example (Attachment-Multiple field)
+
+##### Step 1. Upload attachment
 
 The attachment to be stored in the field of *Attachment-Multiple* type. 
 
@@ -78,10 +96,26 @@ The attachment to be stored in the field of *Attachment-Multiple* type.
 }
 ```
 
-Then you need to send the 2nd request that updates the parent Note record. You need to specify *attachmentsIds* attribute with an array that contains ID returned after *POST Attachment* request.
+##### Step 2. Set attachment ID in parent record
+
+Then you need to send the 2nd request that creates (or updates) the parent Note record. You need to specify *attachmentsIds* attribute with an array that contains ID returned after *POST Attachment* request.
+
+Create:
 
 
-`PUT Note/someId`
+`POST Note`
+
+```json
+{
+    "post": "Some text",
+    "type": "Post",
+    "attachmnetsIds": ["id-of-attachment"]
+}
+```
+
+Update:
+
+`PUT Note/idOfNote`
 
 ```json
 {
