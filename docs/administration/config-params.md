@@ -18,7 +18,7 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * siteUrl – URL of EspoCRM instance;
 * useCache – `true`;
 * isDeveloperMode – false – toggle developer mode;
-* useCacheInDeveloperMode – `false`;
+* useCacheInDeveloperMode – `false` – to use front-end cache in developer mode; front-end is not cached by default in developer mode;
 * maintenanceMode – `false` – only administrators will have access to the system;
 * disableCron – `false`;
 * useWebSocket – `false`;
