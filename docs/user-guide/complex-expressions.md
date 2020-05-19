@@ -1,6 +1,6 @@
 # Complex expressions
 
-Complex expressions are used to define SQL expressions.
+Complex expressions are used to define SQL expressions. Complex expressions are converted into SQL code in run-time.
 
 Where complex expressions can be utilized:
 
