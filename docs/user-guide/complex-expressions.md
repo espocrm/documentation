@@ -1,5 +1,14 @@
 # Complex expressions
 
+Complex expressions are used to define SQL expressions.
+
+Where complex expressions can be utilized:
+
+* in report filters;
+* when working with ORM to avoid writing bare SQL (for developers).
+
+In this article:
+
 * [Functions](#functions)
 * [Attribute names](#attribute-names)
 
