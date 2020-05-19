@@ -14,7 +14,7 @@ In this article:
 
 ## Functions
 
-Function names should be in UPPER_CASE. You need to append the **trailing colon** character to a function name. There should not be any whitespace between function name and parentheses.
+Function names should be in UPPER_CASE. You need to append the **trailing colon** character to a function name. There **should not be any whitespace** between function name and parentheses.
 
 Examples:
 
