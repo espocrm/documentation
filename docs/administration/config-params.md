@@ -96,4 +96,4 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 ### Mass Email
 
 * massEmailMaxAttemptCount – `3` – how much attempts to send email will be made (can be helpful when SMTP server is gone away);
-* massEmailSiteUrl – to override default site url (can be helpful if access to your CRM is restricted from the world, but you need to handle opting out & tracking urls; you will need to configure your server to handle requests to the specified URL);
+* massEmailSiteUrl – to override the default site url (can be helpful if access to your CRM is restricted from the world, but you need to handle opting out & tracking urls; you will need to configure your server to handle requests to the specified URL);
