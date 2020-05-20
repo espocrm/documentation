@@ -6,7 +6,7 @@ Locations of services:
 
 * `application/Espo/Services/`
 * `application/Espo/Modules/{moduleName}/Services/`
-* `custom/Espo/Services/`
+* `custom/Espo/Custom/Services/`
 
 Service object is created by the service factory. Usually services are created inside controllers or another services.
 
