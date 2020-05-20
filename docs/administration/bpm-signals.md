@@ -103,7 +103,7 @@ Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced 
 * *@delete* – record removed
 * *@relate.LINK_NAME* – record related with another record (only for *many-to-many*)
 * *@relate.LINK_NAME.FOREIGN_ID* – record related with another record, id of related recod is specified (only for *many-to-many*)
-* *@unrelate.LINK_NAME* – record unrelated with another record (only for *many-to-many*)
+* *@unrelate.LINK_NAME* – record unrelated from another record (only for *many-to-many*)
 * *@unrelate.LINK_NAME.FOREIGN_ID*
 
 #### Contacts/Leads:
