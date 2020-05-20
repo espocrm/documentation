@@ -107,7 +107,7 @@ Hook-methods:
 * beforeDeleteEntity
 * afterDeletEntity
 
-Service `custom/Espo/Services/Opportunity.php`:
+Service `custom/Espo/Custom/Services/Opportunity.php`:
 
 ```php
 <?php
