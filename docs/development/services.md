@@ -12,7 +12,7 @@ Service object is created by the service factory. Usually services are created i
 
 Note, that you need to clear cache after creating a service class (file).
 
-To **customize** an existing service you need to create a class in custom directory and extend it from the existing one.
+To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one.
 
 ## Example
 
