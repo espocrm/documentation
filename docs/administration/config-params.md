@@ -12,6 +12,7 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * [Clean-up](#clean-up)
 * [Passwords](#passwords)
 * [Jobs & Daemon](#jobs-daemon)
+* [Mass Email](#mass-email)
 
 ### General
 
@@ -91,3 +92,8 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * daemonMaxProcessNumber – `5` – max number of processes run simultaneously;
 * daemonInterval – `10` – interval between process runs (in seconds);
 * daemonProcessTimeout – `36000` – max lifetime of a process run (in seconds);
+
+### Mass Email
+
+* massEmailMaxAttemptCount – `3` – how much attempts to send email will be made (can be helpful when SMTP server is gone away);
+* massEmailSiteUrl – to override default site url (can be helpful if access to your CRM is restricted from the world, but you need to handle opting out & tracking urls; you will need to configure your server to handle requests to the specified URL);
