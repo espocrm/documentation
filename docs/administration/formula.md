@@ -397,7 +397,7 @@ Returns the next highest integer value by rounding up value if necessary.
 #### number\randomInt
 `number\randomInt([MIN, MAX])`
 
-Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used.
+Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used. (since v5.9.2)
 
 ### Entity
 
