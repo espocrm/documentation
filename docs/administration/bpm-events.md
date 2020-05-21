@@ -70,7 +70,11 @@ Can be used to start processes and event sub-processes.
 
 When it is used to start a process, only object signals can be used.
 
-When it is used to start an event sub-process, it's possible to use placeholders in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id. Note, that signal can be triggered from anywhere in the system, not necessarily in the same process.
+When it is used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id. 
+
+Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
+Note: Signal name can not be empty.
 
 ![Signal Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-signal.png)
 
@@ -118,17 +122,21 @@ By utilizing datetime\closest formula function it's possible to set the timer to
 
 Stops the flow until a specific signal catched. Placeholders can be used in a signal name.
 
+Note: Signal name can not be empty.
+
 See [more info](bpm-signals.md) about signals.
 
 ### Signal Intermediate Event (Throwing)
 
-Broadcasts a specified signal. Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
+Broadcasts a specified signal. Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id.
 
 If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
 ![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-signal-throw.png)
 
 Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
+Note: Signal name can not be empty.
 
 See [more info](bpm-signals.md) about signals.
 
@@ -186,11 +194,13 @@ Ends the flow and triggers an escalation. Escalation Code can be specified. Esca
 
 Ends the flow and broadcasts a specified signal.
 
-Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
+Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id.
 
 If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
 Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
+Note: Signal name can not be empty.
 
 See [more info](bpm-signals.md) about signals.
 
