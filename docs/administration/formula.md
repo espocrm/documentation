@@ -358,6 +358,7 @@ Examples:
 * [number\round](#numberround)
 * [number\floor](#numberfloor)
 * [number\ceil](#numberceil)
+* [number\randomInt](#numberrandomint)
 
 #### number\format
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])`
@@ -392,6 +393,11 @@ Returns the next lowest integer value by rounding down value if necessary.
 `number\ceil(VALUE)`
 
 Returns the next highest integer value by rounding up value if necessary.
+
+#### number\randomInt
+`number\randomInt([MIN, MAX])`
+
+Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used.
 
 ### Entity
 
