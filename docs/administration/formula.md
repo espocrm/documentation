@@ -101,6 +101,11 @@ Out-of-the-box functions are listed below.
 
 ### General
 
+* [ifThenElse](#ifthenelse)
+* [ifThen](#ifthen)
+* [list](#list)
+* [while](#while)
+
 #### ifThenElse
 
 `ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)`
@@ -116,9 +121,31 @@ If CONDITION is met, then do CONSEQUENT. If not - do nothing.
 CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
 
 #### list
+
 `list(VALUE-1, ... VALUE-N)` Returns array.
 
 Useful to create an array for link-multiple IDs. Example: `teamsIds = list($teamId)`.
+
+#### while
+
+`while(CONDITION, EXPRESSION)`
+
+Executes EXPRESSION while CONDITION is positive.
+
+Example:
+
+```
+$source = list(0, 1, 2);
+$target = list();
+$i = 0;
+while($i < array\\length($source),
+    $target = array\\push(
+        $target,
+        array\\at($source, $i)
+    );
+    $i = $i + 1;
+);
+```
 
 ### String
 
@@ -792,6 +819,14 @@ Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields
 `array\push(LIST, VALUE1 [, VALUE2 ...])`
 
 Adds one or more elements to the end of an array and returns the new array.
+
+Important: An array argument is not passed by reference. You need to re-assign the array to a function result.
+
+Example:
+
+```
+$list = array\push($list, 'test');
+```
 
 #### array\length
 `array\length(LIST)`
