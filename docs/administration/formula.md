@@ -128,9 +128,9 @@ Useful to create an array for link-multiple IDs. Example: `teamsIds = list($team
 
 #### while
 
-`while(CONDITION, EXPRESSION)`
+`while(CONDITION, STATEMENT)`
 
-Executes EXPRESSION while CONDITION is positive.
+Executes STATEMENT repeatedly as long CONDITION is true.
 
 Example:
 
