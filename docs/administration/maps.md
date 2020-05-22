@@ -33,7 +33,7 @@ Administration > Entity Manager > Click on needed entity type > Click on needed 
 
 ## Printing in PDF
 
-Available from v5.9.2.
+Available since v5.9.2.
 
 *_googleMapsImage* helper is availabe for printing Google Maps in PDF. Y
 
