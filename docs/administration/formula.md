@@ -138,10 +138,10 @@ Example:
 $source = list(0, 1, 2);
 $target = list();
 $i = 0;
-while($i < array\\length($source),
-    $target = array\\push(
+while($i < array\length($source),
+    $target = array\push(
         $target,
-        array\\at($source, $i)
+        array\at($source, $i)
     );
     $i = $i + 1;
 );
