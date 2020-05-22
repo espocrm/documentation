@@ -25,6 +25,8 @@ Scheduled Jobs are intended for recurring job execution. The are available at Ad
 
 If you want a job to be run as often as possible you need to set the scheduling to `* * * * *`.
 
+Important: Scheduling works in **UTC timezone**. It doesn't honor the server's timezone. You need to consider it when you want to run jobs at specific hours.
+
 ## Setting up
 
 There are two ways how jobs can be processed: with crontab or daemon.
