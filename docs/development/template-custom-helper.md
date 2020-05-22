@@ -25,16 +25,21 @@ class MyHelper
     {
         $args = func_get_args();
         $context = $args[count($args) - 1];
+        $hash = $context['hash'];
+        $data = $context['data']['root'];
 
         $value = $args[0] ?? null; // argument
 
-        $color = $context['hash']['color'] ?? '#EA1'; // option
+        $color = $hash['color'] ?? '#EA1'; // option color='VALUE'
 
         // these objects may be needed in your custom helper
-        $dateTime = $context['data']['root']['__dateTime'];
-        $metadata = $context['data']['root']['__metadata'];
-        $entityManager = $context['data']['root']['__entityManager'];
-        $serviceFactory = $context['data']['root']['__serviceFactory'];
+        $dateTime = $data['__dateTime'];
+        $metadata = $data['__metadata'];
+        $entityManager = $data['__entityManager'];
+        $serviceFactory = $data['__serviceFactory'];
+        $config = $data['__config'];
+
+        $entityType = $data['__entityType'];
 
         $html = "<span style=\"color: {$color};\">" . $value . "</span>";
 
