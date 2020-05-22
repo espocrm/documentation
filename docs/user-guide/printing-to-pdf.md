@@ -351,7 +351,7 @@ Example (applying another format to the raw value):
 
 ### Maps
 
-It's possible to print Google Maps image in PDF. See [here](../administration/maps.md).
+It's possible to print Google Maps image in PDF. See [here](../administration/maps.md#printing-in-pdf).
 
 ## See also
 
