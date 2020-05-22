@@ -41,6 +41,7 @@ Can be achieved by restriction of access to Template entity type.
 * [Barcode field](#barcode-field)
 * [Tables](#tables)
 * [Raw values](#raw-values)
+* [Maps](#maps)
 
 Available at Administration > PDF Templates.
 
@@ -347,6 +348,10 @@ Example (applying another format to the raw value):
 ```
 
 *quantity* is a field name.
+
+### Maps
+
+It's possible to print Google Maps image in PDF. See [here](../administration/maps.md).
 
 ## See also
 
