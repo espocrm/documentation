@@ -67,6 +67,8 @@ Available options:
 * postalCode
 * country
 
+Example:
+
 ```
 {{_googleMapsImage size='400x400'}}
 ```
