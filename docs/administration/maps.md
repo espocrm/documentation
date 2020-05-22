@@ -66,3 +66,7 @@ Available options:
 * state
 * postalCode
 * country
+
+```
+{{_googleMapsImage size='400x400'}}
+```
