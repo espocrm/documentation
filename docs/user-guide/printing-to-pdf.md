@@ -40,7 +40,6 @@ Can be achieved by restriction of access to Template entity type.
 * [Tables](#tables)
 * [Raw values](#raw-values)
 * [Maps](#maps)
-* [Condition checking](#condition-checking)
 * [Custom helpers](#custom-helpers)
 
 Available at Administration > PDF Templates.
