@@ -6,13 +6,11 @@ Important: You need to have at least one Template for the entity type of the rec
 
 ### Printing single record
 
-'Print to PDF' is available on the detail view under the dropdown next to the 'Edit' button.
+*Print to PDF* is available on the detail view under the dropdown next to the 'Edit' button.
 
 ### Printing multiple records
 
-This feature is available since EspoCRM version 5.3.0.
-
-'Print to PDF' is available on the list view as a mass action. You need to select needed records and click Print to PDF from Actions menu. It will generate a single merged PDF file for multiple records.
+*Print to PDF* is available on the list view as a mass action. You need to select needed records and click Print to PDF from Actions menu. It will generate a single merged PDF file for multiple records.
 
 By default the max number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
 
@@ -54,6 +52,8 @@ Examples:
 * `{{name}}` – Name of the record;
 * `{{assignedUserName}}` – Assigned User;
 * `{{account.name}}` – Name of the related account.
+
+Note: If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
 
 ### Charset issues
