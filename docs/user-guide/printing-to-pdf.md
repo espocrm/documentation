@@ -40,6 +40,8 @@ Can be achieved by restriction of access to Template entity type.
 * [Tables](#tables)
 * [Raw values](#raw-values)
 * [Maps](#maps)
+* [Condition checking](#condition-checking)
+* [Custom helpers](#custom-helpers)
 
 Available at Administration > PDF Templates.
 
@@ -353,6 +355,22 @@ Example (applying another format to the raw value):
 
 It's possible to print Google Maps image in PDF. See [here](../administration/maps.md#printing-in-pdf).
 
-## See also
+### Condition checking
 
-* [Custom helpers](../development/template-custom-helper.md)
+#### ifEqual
+
+```
+{{#ifEqual a b}}
+a is equal b
+{{else}}
+a is not equal b
+{{/ifEqual}}
+```
+
+#### ifNotEqual
+
+Opposite to *ifEqual*.
+
+### Custom helpers
+
+See [here](../development/template-custom-helper.md).
