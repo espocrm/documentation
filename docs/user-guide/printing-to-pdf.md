@@ -319,7 +319,7 @@ Available types:
 
 ### Tables
 
-You can use a regular *table* tag or special *tableTag* helper (available since version 5.8.0). The second way is preferable when using *{{#each}}* helper inside a table.
+You can use a regular *table* tag or special *tableTag* helper (available since version 5.8.0). The latter way is preferable when using *{{#each}}* helper inside a table.
 
 The following example prints all account's opportunities in a table format.
 
