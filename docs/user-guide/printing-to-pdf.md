@@ -136,9 +136,17 @@ Opposite to *ifEqual*.
 
 ### Each iterator
 
-Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
+Looping through a list of items.
 
 Example:
+
+```
+{{#each contacts}}
+    Contact name: {{name}}
+{{/each}}
+```
+
+Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
 
 ```
  <table>
@@ -152,6 +160,14 @@ Example:
 ```
 
 `itemList` is an json array field (available in Quote, Sales Order, Invoices entity types).
+
+Displaying certain number of items in one row (since v5.9.2):
+
+```
+{{#each contacts}}
+   {{#ifMultipleOf @key 3}}<br>{{/ifMultipleOf}}{{name}} 
+{{/each}}
+```
 
 ### Images
 
