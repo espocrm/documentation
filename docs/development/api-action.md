@@ -61,7 +61,7 @@ class MyController extends \Espo\Core\Controllers\Base
 }
 ```
 
-Clear Cache.
+Clear cache (Administration > Clear Cache).
 
 ### In Module folder
 
@@ -86,7 +86,7 @@ class MyController extends \Espo\Core\Controllers\Base
 }
 ```
 
-Clear Cache.
+Clear cache (Administration > Clear Cache).
 
 ## Routing
 
