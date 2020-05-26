@@ -35,24 +35,24 @@ Administration > Entity Manager > Click on needed entity type > Click on needed 
 
 Available since v5.9.2.
 
-*_googleMapsImage* helper is availabe for printing Google Maps in PDF. Y
+*googleMapsImage* helper is availabe for printing Google Maps in PDF.
 
 Usage (in PDF Template):
 
 ```
-{{_googleMapsImage}}
+{{googleMapsImage}}
 ```
 
 Printing specific address field:
 
 ```
-{{_googleMapsImage field='shippingAddress'}}
+{{googleMapsImage field='shippingAddress'}}
 ```
 
 Printing specific address:
 
 ```
-{{_googleMapsImage city='New York' country='United States'}}
+{{googleMapsImage city='New York' country='United States'}}
 ```
 
 Available options:
@@ -70,5 +70,5 @@ Available options:
 Example:
 
 ```
-{{_googleMapsImage size='400x400'}}
+{{googleMapsImage size='400x400'}}
 ```
