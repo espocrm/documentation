@@ -157,3 +157,4 @@ class MyController extends \Espo\Core\Controllers\Base
 }
 ```
 
+You need to clear cache after changes.
