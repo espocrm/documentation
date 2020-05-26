@@ -121,6 +121,20 @@ Opposite to *if*.
 {{/unless}
 ```
 
+#### ifEqual
+
+```
+{{#ifEqual a b}}
+a is equal b
+{{else}}
+a is not equal b
+{{/ifEqual}}
+```
+
+#### ifNotEqual
+
+Opposite to *ifEqual*.
+
 ### Each iterator
 
 Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
@@ -354,22 +368,6 @@ Example (applying another format to the raw value):
 ### Maps
 
 It's possible to print Google Maps image in PDF. See [here](../administration/maps.md#printing-in-pdf).
-
-### Condition checking
-
-#### ifEqual
-
-```
-{{#ifEqual a b}}
-a is equal b
-{{else}}
-a is not equal b
-{{/ifEqual}}
-```
-
-#### ifNotEqual
-
-Opposite to *ifEqual*.
 
 ### Custom helpers
 
