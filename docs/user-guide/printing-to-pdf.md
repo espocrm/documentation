@@ -124,9 +124,9 @@ Opposite to *if*.
 
 ```
 {{#ifEqual a b}}
-a is equal b
+    a is equal b
 {{else}}
-a is not equal b
+    a is not equal b
 {{/ifEqual}}
 ```
 
