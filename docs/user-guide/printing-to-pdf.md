@@ -159,7 +159,7 @@ Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`.
  </table>
 ```
 
-`itemList` is an json array field (available in Quote, Sales Order, Invoices entity types).
+`itemList` is an *jsonArray* field (available in Quote, Sales Order, Invoices entity types).
 
 Displaying certain number of items in one row (since v5.9.2):
 
