@@ -19,7 +19,9 @@ Note: You need to have [cron](../administration/server-configuration.md#setting-
 
 User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
-Specify what folders to monitor in Monitored Folders field. By default it's set to INBOX. If you use some external email client to send emails, you can add Sent folder to archive those emails.
+Specify what folders to monitor in *Monitored Folders* field. By default it's set to INBOX. 
+
+If you use an **external email client** for sending emails, you can add *Sent* folder to monitored ones. Emails sent from the external client will be imported to Espo. Note, that your external client needs to be configured to store sent emails on IMAP.
 
 *Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
 
