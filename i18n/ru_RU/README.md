@@ -1,4 +1,4 @@
-# Документация по EspoCRM 
+# Документация по EspoCRM
 
 ### Администрирование
 
@@ -12,9 +12,9 @@
 * [Элекронные письма](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/emails.md)
 * Настройка
   * [Управление объектами: объекты, поля, отношения](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/entity-manager.md)
-  * [Управление макетами](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/layout-manager.md)
-  * [Расширения](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/extensions.md)
-  * [Динамические формы](https://github.com/Max18061989/documentation/blob/master/i18n/ru_RU/administration/dynamic-logic.md)
+  * [Управление макетами](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/layout-manager.md)
+  * [Расширения](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/extensions.md)
+  * [Динамические формы](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/dynamic-logic.md)
 * [Вычисляемые поля (формула)](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/formula.md)
 * [Импорт](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/import.md)
 * [Портал](https://github.com/espocrm/documentation/blob/master/i18n/ru_RU/administration/portal.md)
