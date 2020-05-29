@@ -4,7 +4,7 @@ Paghimo og file nga `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAM
 
 Dinhi kinahanglan nimo ipasabut ang `"view"`, ug mahimo nimo nga itakda ang `"aclScope"`, `"entityType"`, ug `"options"`.
 
-Kung kini tipikal nga listahan dashlet, gamita ang `"view":"views/dashlets/abstract/record-list"`, kung dili, paghimo og kaugalingon nga view(https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
+Kung kini tipikal nga listahan dashlet, gamita ang `"view":"views/dashlets/abstract/record-list"`, kung dili, paghimo og kaugalingon nga [view](https://github.com/espocrm/documentation/blob/master/docs/development/custom-views.md).
 
 ## Mga Opsyon
 Pinaagi sa default sa mga opsyon sa dashlet mahimo nimong itakda ang  _Titulo_ ug _Auto-refresh Interval_.
