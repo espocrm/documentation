@@ -27,6 +27,7 @@ In this article:
 * [Signals](bpm-signals.md)
 * [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
 * [Tracking URLs with BPM](bpm-tracking-urls.md)
+* [BPM tips](bpm-tips.md)
   
 
 ## Process Flowcharts
