@@ -30,7 +30,7 @@ Ang scheduling kay gi-specify ngadto sa usa ka crontab nga notasyon.
 
 ```
 * * * * * *
-| | | | | | 
+| | | | | |
 | | | | | +-- Tuig              (naa sulod sa: 1900-3000)
 | | | | +---- Adlaw sa semana   (naa sulod sa: 1-7, 1 kay nagpasabot nga Lunes)
 | | | +------ Buwan sa tuig     (naa sulod sa: 1-12)
@@ -41,7 +41,7 @@ Ang scheduling kay gi-specify ngadto sa usa ka crontab nga notasyon.
 
 ### Sekwensyal
 
-Tagsa ra kani gamiton. Ipadagan unta kini sa laing workflow. Naghatag ug abilidad nga muhimo og mga komplikado nga lohiko. 
+Tagsa ra kani gamiton. Ipadagan unta kini sa laing workflow. Naghatag ug abilidad nga muhimo og mga komplikado nga lohiko.
 
 Timan-e: Para sa mga sequential nga mga workflow, girekomenda nga gamiton ang [BPM tool](bpm.md) kaysa sa Workflows nga feature.
 
@@ -64,11 +64,11 @@ Mga pwedeng gamiton nga mga tipo sa kondisyon:
 
 ### Mga kondisyon nga pormula
 
-Ang pormula kay muhatag og abilidad nga mudefine sa mga kondisyon sa bisan unsa nga pagkakomplikado. Para mubasa mahitungod sa pormula syntax sunda ni nga [artikulo](formula.md). 
+Ang pormula kay muhatag og abilidad nga mudefine sa mga kondisyon sa bisan unsa nga pagkakomplikado. Para mubasa mahitungod sa pormula syntax sunda ni nga [artikulo](formula.md).
 
 Timan-e: Gikinahanglan nga walay bisan unsang `;` nga delimeter ang gamiton sa code nga pormula kung idetermina ang kondisyon.
 
-## Mga Kondisyon
+## Mga Aksyon
 
 ### Pagpadala ug Email
 
