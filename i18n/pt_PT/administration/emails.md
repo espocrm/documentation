@@ -1,6 +1,6 @@
 # Emails
 
-Importante. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) deveria ser configurado no teu sistema para fazer com que as pesquisas de email funcione. Podes encontrar as informações no teu EspoCRM em Administration > Scheduled Jobs.
+Importante. [Cron](server-configuration.md#configure-um-crontab) deveria ser configurado no teu sistema para fazer com que as pesquisas de email funcione. Podes encontrar as informações no teu EspoCRM em Administration > Scheduled Jobs.
 
 ## Panorama
 

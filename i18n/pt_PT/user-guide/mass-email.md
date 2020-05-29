@@ -55,7 +55,7 @@ Os utilizadores podem preencher manualmente as listas de destinos usando a açã
 
 ## Preencher Listas de Destinos com Relatórios
 
-O recurso de [Relatórios](reports.md#syncing-with-target-lists) fornece a capacidade de preencher as listas de destino com registros que correspondem a critérios específicos.
+O recurso de [Relatórios](reports.md#sincronização-com-listas-de-destino) fornece a capacidade de preencher as listas de destino com registros que correspondem a critérios específicos.
 
 ## Excluir Listas de Destinos
 

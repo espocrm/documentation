@@ -19,7 +19,7 @@ Potem ko izberete csv datoteko, boste lahko videli, kako bo ta razčlenjena, in 
 
 Kliknite gumb _Naprej_ za nadaljevanje v _Korak 2_.
 
-![1](../_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-1.png)
 
 ## Korak 2
 
@@ -30,7 +30,7 @@ Potem ko bo uvoz podatkov končan, boste lahko razveljavili ustvarjene zapise, v
 
 Kliknite gumb _Prični z uvozom_ za nadaljevanje. Postopek uvoza lahko traja kar nekaj časa. Če želite uvoziti veliko število zapisov (odvisno od vaše konfiguracije strežnika, ponavadi če je več kot 200 zapisov), morate poskrbeti, da bo php parameter `set_time_limit` dovolj velik.
 
-![2](../_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
 
 ## Kako uvoziti v Ciljni seznam
 

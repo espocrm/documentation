@@ -2,7 +2,7 @@
 
 Инструмент управления бизнес-процессами (BPM) предоставляет возможность моделировать и автоматизировать бизнес-процессы в EspoCRM. Это определнного рода двигатель, выполняющий бизнес-процессы, описанные в стандарте BPMN 2.0. Инструмент BPM доступен в расширении [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/bpm-1.png)
 
 ### Основное отличие от инструмента Workflows
 
@@ -84,9 +84,9 @@
 
 В случае слияния он просто направляет поток в исходящий элемент. Он не блокируется после потока, но параллельные потоки не будут объединены в один поток.
 
-![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Включающий шлюз
 
@@ -110,7 +110,7 @@
 
 В случае слияния он ожидает, пока все входящие потоки придут, а затем перейдут к следующему исходящему элементу.
 
-![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
 Примечание. Расходящиеся и сходящиеся шлюзы должны быть сбалансированы.
 
@@ -124,7 +124,7 @@
 
 На другом конце потоков исходящей последовательности могут быть только промежуточные события.
 
-![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Действия
 
@@ -197,12 +197,12 @@
 
 ### Пример 1
 
-![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
+![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-1.png)
 
 ### Пример 2
 
-![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
+![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-2.png)
 
 ### Пример 3
 
-![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)
+![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-3.png)

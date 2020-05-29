@@ -2,7 +2,7 @@
 
 A transmissão no EspoCRM é um feed onde você pode verificar as suas atualizações e novas adições para os registros que você acompanha. Você também pode publicar para transmitir e transmitir através de outros usuários (desde a versão 3.8.0). Existe dois tipos de transmissão no EspoCRM: sequência de registros e sequência de usuários.
 
-Por defeito, as seguintes entidades possuem uma transmissão: Contas, Contatos, Leads, Oportunidades, Casos. Os administradores podem ativar ou desativar a transmissão de uma determinada entidade em [Entity Manager](.../administração/entity-manager.md).
+Por defeito, as seguintes entidades possuem uma transmissão: Contas, Contatos, Leads, Oportunidades, Casos. Os administradores podem ativar ou desativar a transmissão de uma determinada entidade em [Entity Manager](../administration/entity-manager.md).
 
 ## Registo de Transmissão
 

@@ -6,7 +6,7 @@
 
 เค้าโครงหลักสำหรับมุมมองรายการ กำหนดคอลัมน์และพารามิเตอร์
 
-![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/list.png)
 
 พารามิเตอร์ที่พร้อมใช้งาน สำหรับคอลัมน์แสดงอยู่ด้านล่าง
 
@@ -33,7 +33,7 @@
 
 แถวสามารถมีสองเซลล์หรือหนึ่งเซลล์ที่ขยายไปถึงความกว้างเต็มของแถว หากต้องการเพิ่มแถวที่มีเซลล์ที่ขยายแล้ว คุณต้องเพิ่มแถวใหม่และคลิกที่เครื่องหมายลบในเซลล์ใดก็ได้
 
-![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
+![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
 ## รายการ (ขนาดเล็ก)
 

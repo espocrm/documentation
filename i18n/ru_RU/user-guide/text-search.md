@@ -8,7 +8,7 @@
 
 Можно использовать специальный символ `*` (доступно начиная с версии 5.3.0, для предыдущих версий использовать `%`).
 
-![TExt Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/1.png)
+![Text Search](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/text-search/1.png)
 
 По умолчанию есть возможность использовать оператор "содержит" для полей varchar. Параметр доступен в Администрирование > Настройки. Обратите внимание, что это может повлиять на производительность.
 
@@ -20,7 +20,7 @@
 
 Список полей, который используется при фильтрации, можно настроить в разделе Администрирование > Управление объектами > Редактировать определенный тип  объекта > Поля текстовых фильтров.
 
-![Global Search](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/text-search/2.png)
+![Global Search](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/text-search/2.png)
 
 ## Полнотекстовый поиск
 

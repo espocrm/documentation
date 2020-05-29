@@ -32,38 +32,38 @@ Kaya kailangang mong i-execute ang nakadisplay na command sa terminal sa pamamag
 Dapat 755 para sa mga direktoryo, 644 para sa mga file, at 775 para sa `data` na direktoryo. 
 Tiyakin din na mayroon kang tamang _owner_ at _group_.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
 
 Kapag nakita mo ang screen na ito, ang permiso ay tama at maaari mo ng simulan na i-install ang EspoCRM.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/2.png)
 
 Sa pahinang ito, pwede mong basahin at tanggapin ang License Agreement.
 
-![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/3.png)
 
 Ilagay ang mga detalye ng iyong bagong nabuong MySQL database.
 
-![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/4.png)
 
 Ilagay ang pangalan ng user at password ng Administrator EspoCRM.
 
-![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/5.png)
 
 Sa page na ito ay maaari mong i-set ang mga default setting ng EspoCRM, tulad ng date at time format, timezone, currency at iba pa.
 
-![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/6.png)
 
 I-enter ang mga SMTP setting para sa mga outgoing email, kung gusto mong makapagpadala ng mga email. 
 Ang step na ito ay maaaring laktawan sa pamamagitan ng pag-click ng _Next_ pindutan. 
 Ang lahat ng mga opsyon na ito ay maaaring idagdag/baguhin sa EspoCRM pagkatapos ng instalasyon.
 
-![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
 Congratulation! Ang installation ay kumpleto na. 
 Ang huling bagay ay ang pag-setup ng mga Scheduled Task na patatakbuhin ng iyong sistema. Magagawa ito sa pamamagitan ng pagpapatakbo ng `crontab -e` sa linux cli at sa _Windows Tasks Scheduler_ sa mga Windows na sistema.
 
-![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/8.png)
 
 Umaasa kami na masisiyahan kang magtrabaho sa EspoCRM.
 

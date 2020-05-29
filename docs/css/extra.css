@@ -1,0 +1,63 @@
+:root {
+    --md-link-color: #537898;
+    --md-accent-fg-color: #af4d73;
+    --md-accent-fg-color-light: #cc95aa;
+}
+
+.md-typeset h1 {
+    font-weight: 400 !important;
+    color: var(--md-default-fg-color);
+    font-size: 1.62rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.14em;
+}
+.md-typeset h2 {
+    font-weight: 400 !important;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.09em;
+}
+
+.md-main .md-nav__item .md-nav__link--active {
+    color: var(--md-accent-fg-color-light);
+}
+
+.md-main a:focus,
+.md-main a:hover,
+.md-main a:visited,
+.md-main a {
+    color: var(--md-link-color);
+}
+
+.md-main a:focus,
+.md-main a:hover {
+    text-decoration: underline !important;
+    color: var(--md-link-color);
+}
+
+.md-nav--secondary a:focus,
+.md-nav--secondary a:hover,
+.md-nav--secondary a:visited,
+.md-nav--secondary a {
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset ul li,
+.md-typeset ol li {
+    margin-bottom: 0.3em;
+}
+
+.md-typeset h4 {
+    margin-top: 1.2rem;
+}
+
+.md-nav--primary .md-nav__title {
+    display: none;
+}
+
+.md-nav--primary a.md-nav__link--active {
+    pointer-events: none;
+}
+
+.md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav {
+    display: none;
+}

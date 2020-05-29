@@ -24,7 +24,7 @@ _Фильтры при воспроизведении_ позволяют вам
 
 В отчете по сетке суммируются значения, сгруппированные по указанным полям. Эти отчеты могут отображаться в виде диаграммы.
 
-![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
+![Grid reports](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
 Чтобы создать новый отчет-сетку, нажмите вкладку «Отчеты», а затем нажмите кнопку «Создать отчет». Выберите необходимый тип объекта, затем нажмите кнопку «Создать» в разделе «Отчет-сетка».
 
@@ -48,13 +48,13 @@ _Фильтры при воспроизведении_ позволяет вам
 
 Простой в использовании тип фильтров. Вы также можете выбрать поля целевого объекта, а также связанные с ним объекты.
 
-![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
+![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-field.png)
 
 ### Группа ИЛИ
 
 Или означает, что по крайней мере одно условие в группе должно быть выполнено.
 
-![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
+![OR group](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-or.png)
 
 ### Группа И 
 
@@ -64,7 +64,7 @@ _Фильтры при воспроизведении_ позволяет вам
 
 Обеспечивает возможность фильтрации записей, не соответствующих заданным критериям. Например: перечисление контрагентов, которые не имеют сделок с закрытым статусом «Закрыто-Успех» или «Закрыто-Провал».
 
-![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
+![NOT group](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-not.png)
 
 ### Комплексное выражение
 
@@ -74,7 +74,7 @@ _Фильтры при воспроизведении_ позволяет вам
 
 Примечание. Функции, предназначенные для взаимодействия с записью сущности, здесь не работают, потому что формальная форма не применяется к конкретной записи.
 
-![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
+![Complex Expression filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-complex.png)
 
  ## Группа Having 
 Группа Having беспечивает возможность фильтрации с использованием агрегатных функций COUNT, SUM, MAX, MIN, AVG.

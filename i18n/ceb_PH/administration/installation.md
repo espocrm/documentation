@@ -32,38 +32,38 @@ Busa, gikinahanglan nimo i-execute ang nadisplay nga command sa terminal gamit a
 Gikinihanglan nga 755 para sa mga directory, 644 para sa mga file, ug 775 para sa `data` nga directory. 
 Siguradoha usab nga sakto ang imohang _owner_ ug _group_.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
 
 Kung nakakita ka ani nga nga screen, ang permission kay sakto ug makasugod naka og install sa EspoCRM.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/2.png)
 
 Sa kani nga page, pwede nimong basahon ug dawaton ang License Agreement.
 
-![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/3.png)
 
 Ibutang ang mga detalye para sa imohang bag-ong nahimo nga MySQL database.
 
-![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/4.png)
 .
 Ibutang ang name sa user ug ang password sa Administrator EspoCRM.
 
-![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/5.png)
 
 Sa kani nga page, pwede nimong i-set ang default nga mga setting sa EspoCRM, parehas sa petsa, format sa time, timezone, currency, ug uban pa.
 
-![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/6.png)
 
 I-butang ang SMTP nga mga setting para sa mga gipadala na nga mga email, kung gusto ka mahatagan og abilidad nga mu send og mga email.
 Ang kani nga step kay pwede ra laktaran. I-click ra ang _Next_ nga pindutanan.
 Ang kaning tanang nga mga opsyon kay pwede idungag o iusab sa EspoCRM inig human og install.
 
-![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
 Congratulations! Ang pag-install kay natapos na.
 Ang pinaka-awahi nga butang nga imohang i-setup kay ang Scheduled Tasks nga ipadagan sa imohang sistema. Mahimo ni pinaagi sa pagpadagan sa `crontab -e` sa linux cli ug sa _Windows Tasks Scheduler_ sa Windows nga mga sistema.
 
-![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/8.png)
 
 Naglaum kami nga malingaw kamo og pagtrabaho sa EspoCRM.
 

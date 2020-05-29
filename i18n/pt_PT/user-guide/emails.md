@@ -4,7 +4,7 @@ O EspoCRM porporciona a capacidade de procurar correio eletrónico na caixa IMAP
 
 ## Contas IMAP
 
-*Nota: Deves ter o [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) configurado corretamente no teu sistema para que o correio eletrónico recebido funcione.*
+*Nota: Deves ter o [cron](../administration/server-configuration.md#configure-um-crontab) configurado corretamente no teu sistema para que o correio eletrónico recebido funcione.*
 
 O utilizador pode configurar a conta IMAP na página de contas de correio eletrónico pessoais (guia do correio eletrónico> menu superior direito> Contas de Correio Eletrónico Pessoais).
 

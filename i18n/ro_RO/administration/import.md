@@ -20,7 +20,7 @@ După ce ai selectat un fișier csv, vei putea să vezi cum ar trebuie să fie a
 
 Apasă _Next_ pentru a trece _Step 2_.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-1.png)
 
 ## Pasul 2
 
@@ -30,7 +30,7 @@ Adaugă valori implicite pentru noile înregistrări și cele actualizate să fi
 După ce importarea s-a terminat, vei putea inversa creearea înregistrărilor, să vezi înregistrările duplicate și actualizate. Duplicat înseamnă că a fost o înregistrare similară în sistem. Poți să elimini toate duplicatele în același timp. Rețineți: Inversarea nu funcționează cu înregistrările actualizate.
 Apasă butonul _Run Import_ pentru a merge mai departe. Ar putea să dureze un timp până ce procesul de importare să se termine. Dacă vrei să imporți o cantitate mare de înregistrări(depinde de configurările serverului, de obicei mai mult de 200 înregistrări) trebuie să te asiguri că parametrul php `set_time_limit` este suficient de mare.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
 
 ## Cum să imporți în Liste Ținte
 

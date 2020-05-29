@@ -24,7 +24,7 @@
 
 表格型报告生成按指定字段归组的汇总值。这种报告可以以图表的方式来显示。
 
-![表格型报告](https://github.com/espocrm/documentation/blob/master/_static/images/user-guide/reports/grid.png)
+![表格型报告](https://github.com/espocrm/documentation/blob/master/docs/_static/images/user-guide/reports/grid.png)
 
 新建表格型报告的操作步骤：点选“报告”选项卡，然后点击“创建报告”按钮。选择所需的“实体类型”，然后在“表格型报告”中点击“创建”按钮。
 
@@ -48,13 +48,13 @@ _排序方式_ 字段定义了报告数据的排序方式。
 
 这种筛选器易于使用。你可以挑选目标实体字段，也可以挑选相关实体的字段。
 
-![字段筛选器](https://github.com/espocrm/documentation/blob/master/_static/images/user-guide/reports/filter-field.png)
+![字段筛选器](https://github.com/espocrm/documentation/blob/master/docs/_static/images/user-guide/reports/filter-field.png)
 
 ### “或”组
 
 “或”表示此组中的条件至少要满足其中的一项。
 
-![“或”组](https://github.com/espocrm/documentation/blob/master/_static/images/user-guide/reports/filter-or.png)
+![“或”组](https://github.com/espocrm/documentation/blob/master/docs/_static/images/user-guide/reports/filter-or.png)
 
 ### “与”组
 
@@ -64,7 +64,7 @@ _排序方式_ 字段定义了报告数据的排序方式。
 
 它可以排除掉那些不符合指定标准的记录。例如，列出那些没有任何机会达到“谈成结束”（Closed Won）状态或“未成结束”（Closed Lost）状态的账户。
 
-![“非”组](https://github.com/espocrm/documentation/blob/master/_static/images/user-guide/reports/filter-not.png)
+![“非”组](https://github.com/espocrm/documentation/blob/master/docs/_static/images/user-guide/reports/filter-not.png)
 
 ### 复杂表达式
 
@@ -74,7 +74,7 @@ _排序方式_ 字段定义了报告数据的排序方式。
 
 注：在这里，因为公式不适用于指定的记录，所以与实体记录交互的函数无效。
 
-![复杂表达式筛选器](https://github.com/espocrm/documentation/blob/master/_static/images/user-guide/reports/filter-complex.png)
+![复杂表达式筛选器](https://github.com/espocrm/documentation/blob/master/docs/_static/images/user-guide/reports/filter-complex.png)
 
 ### 具有分组
 

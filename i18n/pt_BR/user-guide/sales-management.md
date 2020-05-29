@@ -10,8 +10,7 @@ Novas leads devem ser criadas pelos seguintes cenários:
 * Através da API (por exemplo, através do formulário web);
 * Automaticamente por uma regra do fluxo de trabalho.
 
-Ao utilizar [Fluxos de trabalho](https://github.com/espocrm/documentation/blob/master/administration/workflows.md), o administrador pode configurar no sistema para aplicar uma regra de atribuição específica aos novos leads, ou seja, Round-Robin e Least-Busy regras. Para fluxos de negócios mais complexos é recomendável utilizar [ferramenta BPM] (https://github.com/espocrm/documentation/blob/master/administration/bpm.md).
-
+Ao utilizar [Fluxos de trabalho](../administration/workflows.md), o administrador pode configurar no sistema para aplicar uma regra de atribuição específica aos novos leads, ou seja, Round-Robin e Least-Busy regras. Para fluxos de negócios mais complexos é recomendável utilizar [ferramenta BPM](../administration/bpm.md).
 Para evitar a negligência de novas leads, os usuários podem adicionar o tipo de entidade principal à lista de seguimento automático global em Preferências. Então, eles seguirão automaticamente todas as novas leads.
 
 ## Oportunidades
@@ -38,7 +37,7 @@ Os gráficos a seguir estão disponíveis no painel por padrão:
 * Oportunidades por fase;
 * Pipeline de vendas.
 
-Ao utilizar [Ferramenta Relatórios](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md), é possível visualizar estatísticas de vendas com base em critérios específicos. Os gráficos de relatório podem ser exibidos no painel.
+Ao utilizar [Ferramenta Relatórios](reports.md), é possível visualizar estatísticas de vendas com base em critérios específicos. Os gráficos de relatório podem ser exibidos no painel.
 
 ### Previsão de receita
 

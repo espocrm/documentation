@@ -10,7 +10,7 @@
 
 Условия настраиваются с помощью пользовательского интерфейса, без необходимости кодирования.
 
-![Condition builder](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/dynamic-logic/1.png)
+![Condition builder](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/dynamic-logic/1.png)
 
 ## Панели
 
