@@ -68,6 +68,7 @@ Human sa malampusong pag-import ug pag-konpigyur sa serber, palihug og usab para
 ### Ika-siyam nga lakang. Pag-setup sa usa ka crontab
 
 Pag-setup sa usa ka [crontab](server-configuration.md#pag-setup-og-crontab).
+
 Timan-e: gikinahanglan i-konpigyur kini gamit ang imohang web-serber nga user.
 
 Mao ra tong tanan. Karon, ang imohang EspoCRM instance kay nagdagan sa bag-o nga serber.
