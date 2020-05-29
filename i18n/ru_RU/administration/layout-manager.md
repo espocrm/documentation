@@ -6,7 +6,7 @@
 
 Основной макет представления списка. Определяет столбцы и их параметры.
 
-![List](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/list.png)
+![List](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/list.png)
 
 Доступные параметры для столбцов перечислены ниже.
 
@@ -32,7 +32,7 @@
 
 Строка может содержать две ячейки или одну ячейку, которая расширяется до полной ширины строки. Для добавления строки с развернутой ячейкой необходимо добавить новую строку и нажать на знак минус на любой ячейке.
 
-![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
+![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
 Для панелей можно указать название, цвет (стиль) и условия, делающие панель видимой (начиная с версии 5.2.6).
 

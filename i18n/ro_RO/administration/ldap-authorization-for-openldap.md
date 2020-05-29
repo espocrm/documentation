@@ -20,4 +20,4 @@ Atribut Adresă de Email Utilizator: mail
 Atribut Număr de Telefon Utilizator: telephoneNumber
 ```
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration-for-openldap.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration-for-openldap.png)

@@ -15,7 +15,7 @@ Zdaj lahko dodamo LDAP uporabnika, da bo dostopal do EspoCRM. Na primer, Espo Te
 
 Nato pojdite na nastavitve avtentikacije (overitve) EspoCRM v administracijskem panelu, izberite način `LDAP` in izpolnite podrobnosti glede LDAP:
 
-![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Gostitelj – LDAP IP ali ime gostitelja.
 * Vrata – vrata povezave.
@@ -45,11 +45,11 @@ Nato pojdite na nastavitve avtentikacije (overitve) EspoCRM v administracijskem 
 
 Zdaj pa pojdite na prijavno stran ter vpišite uporabniško ime in geslo.
 
-![2](../_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-login.png)
 
 Uporabnik je bil avtenticiran (overjen) in samodejno ustvarjen v EspoCRM.
 
-##Navodila za konfiguracijo glede na vaš strežnik:
+## Navodila za konfiguracijo glede na vaš strežnik:
 * [Active Directory strežnik](ldap-authorization-for-ad.md)
 * [OpenLDAP strežnik](ldap-authorization-for-openldap.md)
 

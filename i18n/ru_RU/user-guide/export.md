@@ -6,19 +6,19 @@ EspoCRM предоставляет возможность экспортиров
 
 Выполните поиск с необходимыми фильтрами в представлении списка и выберите все результаты.
 
-![Select all results](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/export/export-1.png)
+![Select all results](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/export/export-1.png)
 
 ### Шаг 2
 
 Нажмите на выпадающее меню *Действия*, затем нажмите *Экспортировать*.
 
-![Click Export action](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/export/export-2.png)
+![Click Export action](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/export/export-2.png)
 
 ### Шаг 3
 
 Появится модальное окно, в котором вы можете указать параметры для экспорта.
 
-![Click Export action](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/export/export-3.png)
+![Click Export action](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/export/export-3.png)
 
 Вы можете выбрать определенные поля для экспорта или установить флажок для экспорта всех доступных полей.
 

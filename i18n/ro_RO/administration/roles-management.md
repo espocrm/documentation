@@ -10,7 +10,7 @@ Dacă un utilizator are mai multe roluri, acestea vor fi îmbinate astfel încâ
 
 Este posibil să vezi ce permisiuni au fost aplicate pentru un anumit utilizator, prin apăsarea butonului 'Access', de pe vizualizarea detaliată a utilizatorului.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
 ## Example
 
@@ -102,4 +102,4 @@ Dacă se poate citi înregistrarea, în mod implicit, utilizatorul poate citi to
 
 În vizualizarea de editare a unei înregistrări de rol în secțiunea Nivel Câmp, apasă pe pictograma plus de lângă domeniul de aplicare specific, apoi selectează câmpul necesar. Acolo vei putea specifica accesul nivelui pentru acțiunile `citire` și `editare`. Există două opțiuni: `da` și `nu`.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)

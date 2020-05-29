@@ -15,7 +15,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 
 Затем перейдите к настройкам аутентификации EspoCRM в панели администрирования, выберите метод `LDAP` и введите данные LDAP:
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Сервер – LDAP IP или имя сервера.
 * Порт – порт подключения.
@@ -45,7 +45,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 
 Теперь перейдите на страницу входа и введите учетные данные пользователя.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-login.png)
 
 Пользователь был аутентифицирован и автоматически создан в EspoCRM.
 

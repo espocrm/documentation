@@ -10,7 +10,7 @@
 
 ব্যবহারকারীর বিস্তারিত ভিউতে 'অ্যাক্সেস' বোতামটি ক্লিক করার মাধ্যমে কোন নির্দিষ্ট ব্যবহারকারীকে অনুমতি দেওয়া হয় তা দেখতে পাওয়া সম্ভব।
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
 ## উদাহরন
 
@@ -102,4 +102,4 @@ Administration>Settings এ 'ACL কঠোর মোড' সক্ষম কর�
 
 ক্ষেত্রের স্তর অধ্যায় একটি ভূমিকা রেকর্ড দেখতে সম্পাদনা করুন নির্দিষ্ট বৈশিষ্ট্যের পাশে প্লাস আইকন তারপর প্রয়োজনীয় ক্ষেত্র নির্বাচন করুন। তারপর আপনি জন্য অ্যাক্সেসের স্তর নির্দিষ্ট করতে সক্ষম হবে `read` এবং `edit` কর্ম। বিকল্প আছে: `yes` and `no`।
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)

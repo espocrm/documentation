@@ -23,7 +23,7 @@
 
 Нажмите кнопку _Далее_, чтобы перейти к _Шагу 2_.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-1.png)
 
 ## Шаг 2
 
@@ -38,7 +38,7 @@
 
 Нажмите кнопку _Импортировать_, чтобы продолжить. Это может занять некоторое время, прежде чем процесс импорта будет завершен. Если вы хотите импортировать большую группу записей (в зависимости от конфигурации вашего сервера, обычно, если более 200 записей), вам нужно убедиться, что параметр php `set_time_limit` достаточно велик.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
 
 ## Шаг 3
 

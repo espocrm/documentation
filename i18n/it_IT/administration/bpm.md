@@ -1,8 +1,8 @@
 # Gestione dei processi aziendali
 
-Lo strumento Business Process Management (BPM) offre la possibilità di modellare e automatizzare i processi aziendali in EspoCRM. È un motore che esegue i processi aziendali descritti nello standard BPMN 2.0. Lo strumento BPM è disponibile nell'estensione [Advanced Pack] (https://www.espocrm.com/extensions/advanced-pack/).
+Lo strumento Business Process Management (BPM) offre la possibilità di modellare e automatizzare i processi aziendali in EspoCRM. È un motore che esegue i processi aziendali descritti nello standard BPMN 2.0. Lo strumento BPM è disponibile nell'estensione [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/bpm-1.png)
 
 ### Differenza dallo strumento Flussi di lavoro
 
@@ -60,7 +60,7 @@ Questo evento arresta il flusso finché non vengono soddisfatti i criteri specif
 
 Questo evento arresta il flusso e attende fino a quando viene specificato dai parametri dell'evento.
 
-Per impostazioni del timer più complesse puoi utilizzare [formula] (formula.md). Gli script di formula devono restituire il valore Date-Time (nel fuso orario UTC). Una volta giunto il momento, il flusso verrà trasferito all'elemento successivo.
+Per impostazioni del timer più complesse puoi utilizzare [formula](formula.md). Gli script di formula devono restituire il valore Date-Time (nel fuso orario UTC). Una volta giunto il momento, il flusso verrà trasferito all'elemento successivo.
 
 Utilizzando la funzione di formula data / ora più vicina è possibile impostare il timer in un momento specifico in futuro, ad es. l'inizio della prossima giornata lavorativa.
 
@@ -84,9 +84,9 @@ In caso di divergenza definisce un singolo flusso (percorso) che verrà scelto i
 
 In caso di convergenza dirige semplicemente il flusso verso l'elemento in uscita. Tuttavia, non viene bloccato dopo il flusso, quindi i flussi paralleli non verranno uniti nel flusso singolo.
 
-![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Gateway inclusivo
 
@@ -96,7 +96,7 @@ In caso di divergenza, può dirigere verso uno o più flussi paralleli (percorsi
 
 Se è necessario unire flussi paralleli prodotti da un gateway inclusivo divergente, è necessario utilizzare un gateway inclusivo convergente. Attenderà tutti i flussi in entrata e quindi continuerà con l'elemento in uscita.
 
-![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
 
 Nota: i gateway divergenti e convergenti devono essere bilanciati.
 
@@ -110,7 +110,7 @@ In caso di divergenza, divide il flusso in più flussi paralleli. Non ci sono pa
 
 In caso di convergenza, attende fino a quando tutti i flussi in arrivo arrivano e poi continua al prossimo elemento in uscita.
 
-![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
 Nota: i gateway divergenti e convergenti devono essere bilanciati.
 
@@ -124,7 +124,7 @@ Arresta il flusso fino a quando non viene attivato nessuno degli eventi in uscit
 
 Solo gli eventi intermedi possono essere dall'altra parte dei flussi di sequenza in uscita.
 
-![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-event-based.png)
 
 ### attività
 
@@ -190,17 +190,17 @@ Tramite l'interfaccia utente è possibile verificare le condizioni per i seguent
 
 È anche possibile definire le condizioni in [Espo-formula](formula.md) linguaggio.
 
-Le condizioni nello strumento BPM sono le stesse della funzione Flusso di lavoro. Vedi maggiori dettagli su [condizioni del flusso di lavoro] (condizioni workflow.md #).
+Le condizioni nello strumento BPM sono le stesse della funzione Flusso di lavoro. Vedi maggiori dettagli su [condizioni del flusso di lavoro](https://github.com/Max18061989/New-Documentation/blob/master/i18n/it_IT/administration/workflows.md#condizioni).
 ## Examples
 
 ### Example 1
 
-![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
+![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-1.png)
 
 ### Example 2
 
-![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
+![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-2.png)
 
 ### Example 3
 
-![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)
+![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-3.png)

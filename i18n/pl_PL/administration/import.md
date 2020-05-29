@@ -20,7 +20,7 @@ Once you select a csv file you will be able to see how it should be parsed in Pr
 
 Click _Next_ button to preceed to the _Step 2_.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-1.png)
 
 ## Step 2
 
@@ -32,7 +32,7 @@ After the import is done you will be able to revert created records, see duplica
 
 Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/import/step-2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
 
 ## How to import into Target List
 

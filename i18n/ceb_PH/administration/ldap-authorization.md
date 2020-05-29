@@ -16,7 +16,7 @@ Karon, mupuno kita og LDAP user para mu-access sa EspoCRM. E.g. Espo Tester nga 
 
 Dayon, adto sa EspoCRM Authentication nga mga setting sa Administrator nga panel, pilia ang `LDAP` nga method ug ibutang ang mga LDAP nga mga detalye:
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Host – ang LDAP IP o host name.
 * Port – ang connection port.
@@ -46,7 +46,7 @@ Dayon, adto sa EspoCRM Authentication nga mga setting sa Administrator nga panel
 
 Karon, adto sa login nga page ug i-enter ang mga user credential.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-login.png)
 
 Ang user kay na-authenticate na ug nahimo automatically didto sa EspoCRM.
 

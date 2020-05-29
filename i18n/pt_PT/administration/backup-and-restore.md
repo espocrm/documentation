@@ -70,7 +70,7 @@ onde:
 
 ### Passo 2. Definir permissões requeridas
 
-Os arquivos deveriam ser propriedade de um utilizador do servidor da web e ter as permissões corretas. Por favor, define as permissões necessárias através das instruções: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+Os arquivos deveriam ser propriedade de um utilizador do servidor da web e ter as permissões corretas. Por favor, define as permissões necessárias através das [instruções](server-configuration.md#permissões-requeridas-para-sistemas-baseados-em-unix).
 
 ### Passo 3. Importar o despejo da base de dados
 
@@ -96,4 +96,4 @@ Se tiveres que fazer quaisquer mudanças, usa este comando:
 sudo crontab -l -u www-data
 ```
 
-Mais detalhes sobre configurar crontab para EspoCRM está descrito aqui [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+Mais detalhes sobre configurar crontab para EspoCRM está descrito [aqui](server-configuration.md#configure-um-crontab).

@@ -6,7 +6,7 @@
 
 列表视图的基本布局如下图所示。在这里可以对栏及其参数进行设置。
 
-![列表](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
+![列表](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
 下面列出一些可用的与栏相关的参数。
 
@@ -32,7 +32,7 @@
 
 一行可以是两个单元格，也可以是占满整个行宽的单个单元格。添加充满单元格的行，先添加新行，再在任一单元格上点击“－”的标志。
 
-![细节](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/layout-manager/detail.png)
+![细节](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
 ## （小型）列表布局
 

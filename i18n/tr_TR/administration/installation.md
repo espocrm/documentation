@@ -32,38 +32,38 @@ Yani, SSH aracılığıyla terminaldeki görüntülenen komutu uygulamalısını
 Dizinler için 755, dosyalar için 644 ve `data` dizini için 775 olmalıdır.
 Ayrıca doğru _owner_ ve _group_'unuz olduğuna emin olun.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
 
 Aşağıdaki ekranı görüyorsanız, izin doğrudur ve EspoCRM kurulumunu başlatabilirsiniz.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/2.png)
 
 Bu sayfada, Lisans Anlaşması'nı okuyup kabul edebilirsiniz.
 
-![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/3.png)
 
 Yeni oluşturduğunuz MySQL veritabanı detaylarını girin. 
 
-![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/4.png)
 
 Yönetim EspoCRM'in kullanıcı adı ve şifresini girin.
 
-![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/5.png)
  
 Bu sayfada tarih ve zaman biçimi, zaman dilimi, para birimi ve diğerleri gibi EspoCRM'in varsayılan ayarlarını ayarlayabilirsiniz.
 
-![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/6.png)
 
 Emailler gönderebilmek istiyorsanız, giden emailler için SMTP ayarlarını girin.
 _Next_ butonuna tıklayarak bu adım geçilebilir. 
 Bu seçeneklerin tümü kurulumdan sonra EspoCRM'de eklenebilir/değiştirilebilir.
 
-![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
 Tebrikler! Kurulum tamamlandı. 
 Zamanlanmış Görevlerin sisteminiz tarafından çalışır olmasını kurmak için son şey. Linux cli'da ve Windows sistemlerde  _Windows Tasks Scheduler_'de `crontab -e` çalışarak yapılabilir.
 
-![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/8.png)
 
 EspoCRM'de çalışmaktan keyif alacağınızı umuyoruz.
 

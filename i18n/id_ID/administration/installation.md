@@ -32,38 +32,38 @@ Maka, Anda perlu menjalankan command tampilan di terminal melalui SSH, atau meng
 Harusnya 755 untuk direktori, 644 untuk file, dan 775 untuk direktori `data`.
 Pastikan juga bahwa Anda memiliki _owner_ dan _group_ yang benar.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
 
 Jika Anda melihat layar berikut, izin Anda benar dan Anda dapat memulai menginstal EspoCRM.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/2.png)
 
 Pada Halaman ini, Anda dapat membaca dan menyetujui Perjanjian Lisensi.
 
-![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/3.png)
 
 Masukkan rincian untuk database MySQL yang baru Anda buat.
 
-![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/4.png)
 
 Masukkan nama pengguna dan sandi Administrator EspoCRM.
 
-![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/5.png)
 
 Pada Halaman ini Anda dapat menetapkan pengaturan default EspoCRM, seperti format tanggal dan waktu, zona waktu, mata uang, dan lain-lain.
 
-![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/6.png)
 
 Masukkan Pengaturan SMTP untuk surel keluar, jika Anda menginginkan untuk mengirim surel.
 Langkah ini dapat dilewatkan dengan mengeklik tombol _Selanjutnya_.
 Semua pilihan ini dapat ditambahkan/berubah di EspoCRM setelah instalasi.
 
-![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
 Selamat! Instalasi sudah selesai.
 Hal terakhir adalah aturlah Tugas Terjadwal agar dapat dijalankan oleh sistem Anda. Hal ini dapat dilakukan dengan menjalankan `crontab -e` di linux cli dan _Windows Tasks Scheduler_ di sistem Windows.
 
-![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/8.png)
 
 Kami berharap Anda dapat menikmati pekerjaan Anda di EspoCRM.
 

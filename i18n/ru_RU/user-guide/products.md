@@ -6,7 +6,7 @@
 
 Запись "Продукт" имеет три ценовых поля: Себестоимость, Цена и Цена за единицу. Существует возможность автоматического расчета цены за единицу с использованием различных формул в соответствии с выбранным Ценовым типом.
 
-![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/products/products.png)
+![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
 
 Продукты могут быть добавлены в качестве списка пунктов в запись Предложения. Поля продукта можно распечатать в формате PDF. Более подробно [здесь](quotes.md#templates).
 

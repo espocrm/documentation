@@ -24,7 +24,7 @@ Bạn có thể __xuất__ kết quả của báo cáo danh sách thành định
 
 Kết quả của báo cáo lưới tóm tắt các giá trị được gộp thành nhóm dựa trên các trường xác định. Những báo cáo này có thể được hiển thị thành một biểu đồ.
 
-![Báo cáo lưới](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
+![Báo cáo lưới](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
 Để tạo báo cách danh sách mới thì nhấp chuột vào tab báo cáo rồi nhấp vào nút Tạo báo cáo. Chọn loại đối tượng cần thiết rồi nhấp vào nút Tạo ở khu vực báo cáo lưới.
 
@@ -48,13 +48,13 @@ Bạn có thể __xuất__ kết quả của báo cáo danh sách thành định
 
 Các loại bộ lọc có thể sử dụng một cách rất dễ dàng. Bạn cũng có thể chọn các trường cho thực thể cần cũng như các thực thể liên quan.
 
-![Bộ lọc theo trường](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
+![Bộ lọc theo trường](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-field.png)
 
 ### Nhóm theo toán tử OR
 
 Toán tử OR hay toán tử hoặc nghĩa là các phần tử của nhóm phải thỏa mãn ít nhất một điều kiện.
 
-![Nhóm theo toán tử OR](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
+![Nhóm theo toán tử OR](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-or.png)
 
 ### Nhóm theo toán tử AND
 
@@ -64,7 +64,7 @@ Toán tử AND hay toán tử và nghĩa là các phần tử của nhóm phải
 
 Cung cấp khả năng lọc các bản ghi không phù hợp các tiêu chí nhất định. Ví dụ liệt kê danh sách các tài khoản không có tiềm năng nào có trạng thái Thành công đã đóng hoặc Mất đã đóng.
 
-![Nhóm theo toán tử NOT](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
+![Nhóm theo toán tử NOT](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-not.png)
 
 ### Ngôn ngữ biểu hiện
 
@@ -74,7 +74,7 @@ Lưu ý: Nếu bạn cần so sánh chỉ với một giá trị chuỗi đơn g
 
 Lưu ý: Các hàm có mục đích tương tác với bản ghi thực thể sẽ không thể chạy ở đây bởi vì hàm không được áp dụng với bản ghi nhất định.
 
-![Bộ lọc Ngôn ngữ biểu hiện](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
+![Bộ lọc Ngôn ngữ biểu hiện](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-complex.png)
 
 ## Hiển thị trên bảng điều khiển
 

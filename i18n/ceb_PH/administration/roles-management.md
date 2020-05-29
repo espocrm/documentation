@@ -10,7 +10,7 @@ Kung ang user kay naay daghan nga mga role, i-merge sila para ang permissive rul
 
 Posible nga makita ang mga permission nga gi-aplay sa usa ka user pinaagi sa pag-click sa 'Access' nga pindutanan sa detail view sa user.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/iskop-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
 ## Example
 
@@ -102,4 +102,4 @@ Ang user kay makabasa sa tanan field kung kini kay makabasa sa rekord (by defaul
 
 Sa edit view sa usa ka role rekord sa Field Level seksiyon, i-click ang plus nga icon sunod sa ispisipiko nga iskop dayon pilia ang gikinahanglan nga field. Dayon, gikinihanglan nimo nga i-specify ang access level para sa `read` ug `usab` nga mga aksyon. Naay duha ka mga opsyon: `yes` ug `no`.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)
