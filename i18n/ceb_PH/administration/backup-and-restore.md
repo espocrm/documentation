@@ -70,7 +70,7 @@ kung asa:
 
 ### Step 2. Pag-set sa mga gikinahanglan nga pagtugod
 
-Ang mga file kay gikinahanglan gitag-iya sa usa ka web-server nga user and naay mga saktong pagtugot. Palihug e-set ang mga gikinahanglan nga mga permission gamit ang kaning mga pag-giya.[www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+Ang mga file kay gikinahanglan gitag-iya sa usa ka web-server nga user and naay mga saktong pagtugot. Palihug e-set ang mga gikinahanglan nga mga [permission](server-configuration.md#mga-gikinahanlang-permiso-para-sa-mga-unix-based-nga-mga-sistema) gamit ang kaning mga pag-giya.
 
 ### Step 3. Pag-import sa database dump
 
@@ -96,4 +96,4 @@ Kung naa kay mga pag-usab, gamita ni ang command sa ubos:
 sudo crontab -l -u www-data
 ```
 
-Ang uban pang mga detalye aron sa pagusab sa crontab kay makita sa [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+Ang uban pang mga detalye aron sa pagusab sa [crontab](server-configuration.md#pag-setup-og-crontab) kay makita sa.
