@@ -12,7 +12,7 @@ Adto sa [upgrade page](https://www.espocrm.com/download/upgrades/) ug i-download
 
 ### Step 3. Paghimo og backup (opsyonal)
 
-Paghimo og backup sa imohang EspoCRM nga mga file ug data usa mag-upgrade. Sunda ang [kani nga mga instruction](backup-and-restore.md) aron mabuhat nimo kini.
+Paghimo og backup sa imohang EspoCRM nga mga file ug data usa mag-upgrade. Sunda ang kani nga mga [instruction](backup-and-restore.md) aron mabuhat nimo kini.
 
 ### Step 4. Proseso sa pag-upgrade
 
