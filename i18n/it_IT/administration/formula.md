@@ -39,7 +39,7 @@ Priorità degli operatori:
 * ' ', '-';
 * '*', '/', '%'.
 
-###funzioni
+### funzioni
 
 Gli attributi gli attributi rappresentano i valori di campo delle entità bersaglio. È possibile inserire gli attributi disponibili facendo clic sul pulsante più (+).
 
@@ -227,7 +227,7 @@ descrizione = $prova;
 
 ## esempi
 
-'''
+```
 ifThen(
 entità\isNew() && assignedUserId == null,
 assignedUserId = 'managerId'
@@ -237,18 +237,18 @@ ifThen(
 entità\isNew() && closeDate == null && stage == 'Closed Won",
 datetime\oggi()
 );
-'''
+```
 
-'''
+```
 IMPORTO = prodotto.listPrice - (prodotto.listPriceConverted * Sconto / 100,0);
 amountCurrency = "USD";
-'''
+```
 
-'''
+```
 someField = stringa\CONCATENA(FirstName, "'", middleName, """, Cognome);
-'''
+```
 
-'''
+```
 ifThenElse(
 entità\isNew() && status == 'PIANIFICATO' && dateStart == null,
 dateStart = datetime\addDays(datetime\ADESSO(), 10),
@@ -258,8 +258,8 @@ dateStart = datetime\ADESSO()
 )
 );
 
-'''
+```
 
 ## usando la formula nei flussi di lavoro
 
-è possibile utilizzare la formula in condizioni di flusso di lavoro e le azioni. Vedere [i flussi di lavoro documentazione](i flussi di lavoro.md) per ulteriori informazioni.
+è possibile utilizzare la formula in condizioni di flusso di lavoro e le azioni. Vedere [i flussi di lavoro documentazione](workflows.md#usando-la-formula-nelle-azioni) per ulteriori informazioni.
