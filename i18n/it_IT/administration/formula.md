@@ -283,7 +283,7 @@ controlla se entità bersaglio è correlato con un altro soggetto rappresentato 
 Restituisce un attributo di utente corrente.
 
 #### Lista
-'elenco(valore-1, ... Il valore N)' restituisce array. (Sin dalla versione 4.7.0)
+`elenco(valore-1, ... Il valore N)` restituisce array. (Sin dalla versione 4.7.0)
 
 #### schiera\include
 `array\includes(LISTA, VALORE)`
@@ -298,10 +298,10 @@ Aggiunge uno o più elementi al fine di una matrice e restituisce il nuovo array
 #### Schiera\lunghezza
 `array\length(elenco)`
 
-restituisce il conteggio degli elementi nell'elenco. (Sin dalla versione 4.8.1)
+Restituisce il conteggio degli elementi nell'elenco. (Sin dalla versione 4.8.1)
 
 
-###
+### Valore
 
 * i valori delle stringhe. Ad esempio 'Some stringa';
 * numeri interi. Ad esempio 1, 100, 40300.
