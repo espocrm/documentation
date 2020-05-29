@@ -1,6 +1,6 @@
 # Mga Email
 
-> Importante. Ang [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) kay gikinahanglan gikonpigyur sa inyohang sistema para mugana ang pagkuha sa email. Makit-an ni nimo nga inpormasyon sa imohang EspoCRM sa Administration > Scheduled Jobs.
+> Importante. Ang [Cron](server-configuration.md#setup-a-crontab) kay gikinahanglan gikonpigyur sa inyohang sistema para mugana ang pagkuha sa email. Makit-an ni nimo nga inpormasyon sa imohang EspoCRM sa Administration > Scheduled Jobs.
 
 ## Kinatibuk-an
 
