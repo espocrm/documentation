@@ -40,7 +40,7 @@ Ang administrador kay maka-disable sa minando nga opt-out link nga gipuno sa sis
 
 Kung gusto nimong mahibaw-an kung niabli ang nakadawat sa email sa link nga gikan sa imohang email, gikinahanglan nimong muhimo og Tracking nga URL. I-specify ang bisan unsang _Name_
  ug _URL_ kung asa ang link padulong. Dayon, gikinahanglan nimong i-paste ang nahimo nga code ngadto sa imohang Email Template.
- 
+
 ## Mga Target nga Lista
 
 Ang mga Target List kay naglangkob sa mga lista sa Accounts, Contacts, Leads ug Users nga mga rekord.
@@ -49,7 +49,7 @@ Ang mga user kay maka puno og item sa mga listahan sa mga target gamit ang _Sele
 
 ## Pagpuno sa mga target list ug mga Report
 
-Ang [Reports](reports.md#syncing-with-target-lists) nga feature kay muhatag og abilidad para makapuno og target lists nga rekord nga mutukma sa espisipiko nga kriterya.
+Ang [Reports](reports.md#pagsyn-sa-mga-target-list) nga feature kay muhatag og abilidad para makapuno og target lists nga rekord nga mutukma sa espisipiko nga kriterya.
 
 ## Mga Excluding Target List
 
@@ -75,6 +75,6 @@ Tanawa ang 'siteUrl' nga parametro sa `data/config.php` nga file. Gikinahanglan 
 
 #### Ang mga niuntol nga email kay wala gipang-log
 
-Ang mga niuntol nga email kay pwede ra idumala gamit ang group email nga account. Dapat siguradohon nimo nga naa kay group email account nga nagmonitor sa mailbox diin ipadala ang mga niuntol nga mga email. 
+Ang mga niuntol nga email kay pwede ra idumala gamit ang group email nga account. Dapat siguradohon nimo nga naa kay group email account nga nagmonitor sa mailbox diin ipadala ang mga niuntol nga mga email.
 
 Naa puy ubang mga mail server provider nga dili musunod sa mga standard, busa ang mga niuntol nga mga email kay dili mailhan.
