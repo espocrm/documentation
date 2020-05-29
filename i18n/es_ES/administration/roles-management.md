@@ -10,7 +10,7 @@ Si un usuario tiene múltiples roles, se fusionarán para que la regla permisiva
 
 Es posible ver qué permisos se aplican a un determinado usuario haciendo clic en el botón "Acceso" en la vista de detalles del usuario.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
 
 ## Ejemplo
@@ -103,4 +103,4 @@ De manera predeterminada, el usuario puede leer todos los campos si puede leer e
 
 En la vista de edición de un registro de roles en la sección Nivel de campo, haga clic en el icono más junto al alcance específico, luego seleccione el campo necesario. Luego podrá especificar el nivel de acceso para las acciones `read` y `edit`. Hay para las opciones: `yes` y `no`.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)

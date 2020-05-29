@@ -10,7 +10,7 @@ Se um utilizador tem várias funções, elas serão unidas de forma que as regra
 
 É possível ver quais as permissões estão aplicadas a certos utilizadores ao clicar no botão 'Acesso' na vista detalhada do utilizador.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
 ## Exemplo
 
@@ -101,4 +101,4 @@ Por padrão, o utilizador pode ler todos os campos se ele puder ler o registro. 
 
 Na visualização da edição de um registro de função na sessão Nível do Campo, clica no ícone 'mais' próximo ao escopo específico, então seleciona o campo desejado. Então tu serás capaz de especificar o nível de acesso para as ações 'ler' e 'editar'. Há duas opções: 'sim' e 'não'.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)

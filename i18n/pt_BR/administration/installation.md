@@ -32,38 +32,38 @@ Logo, você precisa executar o comando mostrado no terminal através de SSH, ou 
 Deveria ser 755 para diretórios, 644 para arquivos, e 755 para o diretório 'dados'. 
 Além disso, tenha certeza que você tem o _proprietário_ e o _grupo_ corretos.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/1.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
 
 Se você ver a tela seguinte, o problema com a permissão foi resolvido e você pode começar a instalação do EspoCRM.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/2.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/2.png)
 
 Nessa página, você pode ler e aceitar os Termos de Uso.
 
-![3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/3.png)
+![3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/3.png)
 
 Digite os detalhes para seu recém-criado banco de dados MySQL.
 
-![4](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/4.png)
+![4](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/4.png)
 
 Digite o seu nome de usuário e senha de Administrador EspoCRM.
 
-![5](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/5.png)
+![5](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/5.png)
 
 Nessa página você pode definir as configurações padrões do EspoCRM, como formato de data e hora, fuso horário, moeda e outros.
 
-![6](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/6.png)
+![6](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/6.png)
 
 Digite as configurações SMTP para a saída de emails, se você deseja que seja possível o envio de emails. 
 Esse passo pode ser pulado ao clicar no botão _Próximo_. 
 Todas essas opções podem ser adicionadas/modificadas no EspoCRM após a instalação.
 
-![7](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/7.png)
+![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
 Parabéns! A instalação foi finalizada. 
 O último item é configurar as Tarefas Agendadas para serem executadas pelo seu sistema. Isso pode ser feito através da execução 'crontab -e' em linux cli e em _Agendador de Tarefas do Windows_ nos sistemas Windows.
 
-![8](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/installation/8.png)
+![8](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/8.png)
 
 Nós esperamos que você fique satisfeito ao trabalhar com o EspoCRM.
 

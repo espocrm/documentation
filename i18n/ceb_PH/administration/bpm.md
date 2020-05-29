@@ -2,7 +2,7 @@
 
 Ang Business Process Management (BPM) nga tool kay naghatag og abilidad nga mumodel og mu-awtomeyt sa mga proseso sa negosyo sa EspoCRM. Usa kini ka makina nga maoy mubuhat sa mga proseso sa negosyo nga gihulagway sa BPMN 2.0 nga standard. Ang BPM nga tool kay makita sa [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) nga ekstensyon.
 
-![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/bpm-1.png)
 
 ### Kalainan gikan sa Workflows nga tool
 
@@ -84,9 +84,9 @@ Sa kaso nga kini mag buwag, muhimo kini og usa ka nag-inusara nga flow (nga path
 
 Sa kaso nga magtipon, mu idirekta ra niini ang flow ngado sa outgoing nga elemento. Dili hinoon kini babagan pagkahuman sa pag-abot sa flow, mao ang mga parallel nga mga flow kay dili matipon ngadto sa usa ka nag-inusara nga flow.
 
-![eksklusibo nga gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![eksklusibo nga gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![eksklusibo nga gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![eksklusibo nga gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Inklusibo nga Gateway
 
@@ -96,7 +96,7 @@ Sa kaso nga mubuwag, pwede ni siya idirekta sa usa o mas daghan pa nga mga paral
 
 Kung gikinahanglan nga itipon ang mga parallel nga mga flow nga nahimo sa pag buwag sa mga inklusibo nga mga gateway, gikinahanglan nimo nga gamiton ang nagtipon nga inklusibo nga gateway. Maghuwat kinig para sa tanang mga padulong nga mga flow ug mupadayon sa mga mubiya nga mga elemento.
 
-![inklusibo nga gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
+![inklusibo nga gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
 
 Timan-e: Dapat ibalanse ang mga magbuwag o mga magtipon nga mga flow.
 
@@ -110,7 +110,7 @@ Kung pananglit magbuwag, iyang tungaon ang flow ngadto sa makadaghan nga paralle
 
 Sa kaso nga magtipon, maghuwat kini hangtod ang tanan padulong nga mga flow kay maabot ug dayon mupadayon kini ngadto sa sunod nga elemento.
 
-![parallel nga gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
+![parallel nga gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
 Timan-e: Ang magbuwag og magtipon nga mga gateway kay dapat balansehon.
 
@@ -126,7 +126,7 @@ Hunongon niini ang flow hangtod ang tanang nagpadayon nga mga event kay masugdan
 
 Ang mga intermediate ra nga event ang pwede nga naa sa pikas nga bahin sa mga nagpadayon nga mga sequence flow.
 
-![gateway nga gibase sa event](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
+![gateway nga gibase sa event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Mga Aktibidad
 
@@ -198,12 +198,12 @@ Ang mga kondisyon sa BPM too kay parehas ra sa Workflow nga feature. Tanawa ang 
 
 ### Example 1
 
-![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
+![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-1.png)
 
 ### Example 2
 
-![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
+![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-2.png)
 
 ### Example 3
 
-![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)
+![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-3.png)

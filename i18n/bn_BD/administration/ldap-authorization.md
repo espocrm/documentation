@@ -15,7 +15,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 
 তারপর, অ্যাডমিনিস্ট্রেটর প্যানেলে EspoCRM প্রমাণীকরণ সেটিংসে যান, নির্বাচন করুন `LDAP` পদ্ধতি এবং বিস্তারিত LDAP পূরণ করুন:
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Host – LDAP আইপি বা হোস্ট নাম।
 * Port – সংযোগ পোর্ট।
@@ -45,7 +45,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 
 এখন, লগইন পৃষ্ঠাতে যান এবং ব্যবহারকারীর শংসাপত্রগুলি প্রবেশ করুন।
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-login.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-login.png)
 
 ব্যবহারকারী প্রমাণিত হয়েছে এবং স্বয়ংক্রিয়ভাবে EspoCRM এ তৈরি করা হয়েছে।
 

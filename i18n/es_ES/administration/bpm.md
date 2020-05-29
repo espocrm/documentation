@@ -1,7 +1,7 @@
 # Business Process Management
 
 La herramienta Business Process Management (BPM) brinda la capacidad de modelar y automatizar procesos comerciales en EspoCRM. Es un motor que ejecuta procesos comerciales descritos en el estándar BPMN 2.0. La herramienta BPM está disponible en la extensión 
-![BPM example](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/bpm-1.png)
 
 ### Diferencia de la herramienta de flujos de trabajo
 
@@ -83,9 +83,9 @@ En caso de divergencia, define un único flujo (camino) que se elegirá según l
 
 En caso de convergencia, solo dirige el flujo hacia el elemento saliente. No se bloquea después del flujo, por lo que los flujos paralelos no se fusionarán en un solo flujo.
 
-![exclusive gateway divergent](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Puertas de enlace inclusivos
 
@@ -95,7 +95,7 @@ En caso de divergencia, puede dirigir a uno o múltiples flujos paralelos (rutas
 
 Si es necesario fusionar los flujos paralelos producidos por una puerta de enlace inclusiva divergente, debe utilizar una puerta de enlace inclusiva convergente. Esperará todos los flujos entrantes y luego continuará hacia el elemento saliente.
 
-![inclusive gateway](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
 
 Nota: Las pasarelas divergentes y convergentes deben estar equilibradas.
 
@@ -109,7 +109,7 @@ En caso de divergencia, el flujo se divide en múltiples flujos paralelos. No ha
 
 En caso de convergencia, espera hasta que lleguen todos los flujos entrantes y luego continúa hasta el siguiente elemento saliente.
 
-![parallel gateway](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
 Nota: Las pasarelas divergentes y convergentes deben estar equilibradas.
 
@@ -123,7 +123,7 @@ Detiene el flujo hasta que cualquiera de los eventos salientes se active. El eve
 
 Solo los eventos intermedios pueden estar en el otro extremo de los flujos de secuencia de salida.
 
-![event based gateway](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Actividades
 
@@ -196,12 +196,12 @@ Las condiciones en la herramienta BPM son las mismas que en la función de flujo
 
 ### Ejemplo 1
 
-![Example 1](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/example-1.png)
+![Example 1](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/example-1.png)
 
 ### Ejemplo 2
 
-![Example 2](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/example-2.png)
+![Example 2](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/example-2.png)
 
 ### Ejemplo 3
 
-![Example 3](https://github.com/espocrm/documentation/blob/master/_static/images/administration/bpm/example-3.png)
+![Example 3](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/bpm/example-3.png)

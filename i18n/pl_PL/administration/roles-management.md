@@ -10,7 +10,7 @@ If a user has multiple roles then they will be merged so that permissive rule wi
 
 It's possible to see what permissions is applied to a certain user by clicking 'Access' button on the user's detail view.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
 ## Example
 
@@ -102,4 +102,4 @@ By default user can read all fields if one can read the record. User can edit an
 
 In edit view  of a role record in Field Level section click plus icon next to the specific scope then select needed field. Then you will be able to specify the access level for `read` and `edit` actions. There are to options: `yes` and `no`.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)

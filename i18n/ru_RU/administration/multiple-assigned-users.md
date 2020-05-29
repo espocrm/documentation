@@ -5,6 +5,6 @@
 
 Для этого вам просто нужно создать отношение «многие ко многим» между нужным типом сущности и типом сущности «Пользователь» с именем «assignedUsers». Обязательно выберете параметр Link Multiple Field.
 
-![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/multiple-assigned-users/1.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/multiple-assigned-users/1.png)
 
 Убедитесь, что вы выбрали имена ссылок, которые еще не существуют в системе.

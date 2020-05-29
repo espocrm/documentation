@@ -23,4 +23,4 @@ User Email Address Attribute: mail
 User Phone Number Attribute: telephoneNumber
 ```
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/ldap-authorization/ldap-configuration-for-ad.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration-for-ad.png)

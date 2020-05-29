@@ -24,7 +24,7 @@ Puede __exportar__ los resultados del informe de lista a los formatos excel y cs
 
 La cuadrícula informa los valores resumidos agrupados por campos especificados. Estos informes se pueden mostrar como un gráfico.
 
-![Informes de cuadrícula](https://github.com/espocrm/documentation/raw/master/_static/images/user-guide/reports/grid.png)
+![Informes de cuadrícula](https://github.com/espocrm/documentation/raw/master/docs/_static/images/user-guide/reports/grid.png)
 
 Para crear un nuevo informe de cuadrícula, haga clic en la pestaña Informes y luego haga clic en el botón Crear Informe. Elija el Tipo de Entidad necesario y luego haga clic en el botón Crear en la sección Informe de Cuadrícula.
 
@@ -48,14 +48,14 @@ Es posible __exportar__ los resultados del informe de cuadrícula a los formatos
 
 Es simple usar tipos de filtros. También puede elegir los campos de la entidad objetivo, así como las entidades relacionadas.
 
-![Filtro de Campo](https://github.com/espocrm/documentation/raw/master/_static/images/user-guide/reports/filter-field.png)
+![Filtro de Campo](https://github.com/espocrm/documentation/raw/master/docs/_static/images/user-guide/reports/filter-field.png)
 
 
 ### Grupo OR
 
 OR significa que se debe cumplir al menos una condición del grupo.
 
-![Grupo OR](https://github.com/espocrm/documentation/raw/master/_static/images/user-guide/reports/filter-or.png)
+![Grupo OR](https://github.com/espocrm/documentation/raw/master/docs/_static/images/user-guide/reports/filter-or.png)
 
 ### Grupo AND
 
@@ -65,17 +65,17 @@ AND significa que se deben cumplir todas las condiciones del grupo.
 
 Ofrece la capacidad de filtrar registros que no cumplen los criterios especificados. P.ej. listar cuentas que no tienen ninguna oportunidad con los estados Cerrado Ganado o Cerrado Perdido.
 
-![Grupo NOT](https://github.com/espocrm/documentation/raw/master/_static/images/user-guide/reports/filter-not.png)
+![Grupo NOT](https://github.com/espocrm/documentation/raw/master/docs/_static/images/user-guide/reports/filter-not.png)
 
 ### Expresión Compleja
 
-Para un uso más avanzado. Puede aplicar la función para cierta columna de base de datos y compararla con el resultado de la expresión [fórmula](../ administration / formula.md).
+Para un uso más avanzado. Puede aplicar la función para cierta columna de base de datos y compararla con el resultado de la expresión [fórmula](../administration/formula.md).
 
 Nota: si necesita comparar solo con un valor de cadena simple, debe ponerlo entre comillas simples `'alguna cadena'`.
 
 Nota: Las funciones destinadas a interactuar con el registro de entidad no funcionarán aquí porque la fórmula no se aplica al registro específico.
 
-![Filtro Expresión Compleja](https://github.com/espocrm/documentation/raw/master/_static/images/user-guide/reports/filter-complex.png)
+![Filtro Expresión Compleja](https://github.com/espocrm/documentation/raw/master/docs/_static/images/user-guide/reports/filter-complex.png)
 
 ## Mostrando en el Tablero
 

@@ -10,7 +10,7 @@
 
 Можно увидеть, какие разрешения применяются к определенному пользователю, нажав кнопку «Доступ» на подробном представлении пользователя.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/scope-level.png)
+![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
 По умолчанию пользователи могут удалять самостоятельно назначенные записи, которые они создали в течение определенного периода времени. Существует возможность отключить эту возможность в разделе Администрирование > Настройки > Разрешить удаление созданных записей.
 
@@ -109,4 +109,4 @@
 
 В режиме редактирования записи роли в разделе Уровень поля (Field Level) щелкните значок плюс рядом с определенной областью, затем выберите нужное поле. Тогда вы сможете указать уровень доступа для действий `чтение` и` редактирование`. Есть варианты: `да` и` нет`.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)

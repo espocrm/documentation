@@ -264,4 +264,4 @@ ifThenElse(
 
 ## Usando fórmulas em Fluxos de Trabalho
 
-Podes utilizar fórmulas nas condições e ações dos fluxos de trabalhos. Vê [documentação dos fluxos de trabalho](workflows.md) para mais informações.
+Podes utilizar fórmulas nas condições e ações dos fluxos de trabalhos. Vê [documentação dos fluxos de trabalho](workflows.md#usando-fórmula-em-ações) para mais informações.

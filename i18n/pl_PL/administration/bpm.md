@@ -2,7 +2,7 @@
 
 Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
 
-![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/bpm-1.png)
+![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/bpm-1.png)
 
 ### Difference from Workflows tool
 
@@ -84,9 +84,9 @@ In case of diverging it defines a single flow (path) that will be chosen accordi
 
 In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
 
-![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Inclusive Gateway
 
@@ -96,7 +96,7 @@ In case of diverging, it can direct to one or multiple parallel flows (paths), d
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
 
-![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-inclusive.png)
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -110,7 +110,7 @@ In case of diverging it splits flow into multiple parallel flows. There are no p
 
 In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
 
-![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-parallel.png)
+![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
 Note: Diverging and converging gateways must be balanced.
 
@@ -124,7 +124,7 @@ It stops the flow until any of outgoing events gets triggered. Triggered event d
 
 Only intermediate events can be on the other end of outgoing sequence flows.
 
-![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/gateway-event-based.png)
+![event based gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Activities
 
@@ -197,12 +197,12 @@ Conditions in BPM tool are the same as in Workflow feature. See more details abo
 
 ### Example 1
 
-![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-1.png)
+![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-1.png)
 
 ### Example 2
 
-![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-2.png)
+![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-2.png)
 
 ### Example 3
 
-![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/administration/bpm/example-3.png)
+![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-3.png)

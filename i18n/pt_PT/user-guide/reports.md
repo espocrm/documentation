@@ -24,7 +24,7 @@ Podes __exportar__ a lista de reistro de resultados para o excel e em formato cs
 
 Os relatórios de grade resultam de valores resumidos e agrupados por campos especificados. Estes relatórios podem ser exibidos como um gráfico.
 
-![Registros de grade](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/grid.png)
+![Registros de grade](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
 Para criares um novo relatório de grade, clica na aba Relatórios e em seguida clica no botão Criar relatório. Escolhe o Tipo de Entidade necessário e clica em Criar botão na seção Relatório de Grade.
 
@@ -48,13 +48,13 @@ O relatório Grade permite exibir os resultados num gráfico. Existem os seguint
 
 Tipo de filtro simples de usar. Tu também podes escolher os campos da entidade alvo, bem como as entidades relacionadas.
 
-![Campo de filtro](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-field.png)
+![Campo de filtro](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-field.png)
 
 ### OU grupo
 
 OU significa que pelo menos uma condição do grupo deve ser cumprida.
 
-![OU grupo](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-or.png)
+![OU grupo](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-or.png)
 
 ### E grupo
 
@@ -64,7 +64,7 @@ E significa que todas as condições do grupo devem ser atendidas.
 
 Fornece uma capacidade de filtrar registros que não correspondem aos critérios especificados. Por exemplo. listar as contas que não têm qualquer oportunidade de status com os Ganhos Fechados ou Perdidos Fechados.
 
-![NÃO grupo](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-not.png)
+![NÃO grupo](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-not.png)
 
 ### Expressão Complexa
 
@@ -74,7 +74,7 @@ Nota: Se precisares de comparar apenas com um valor de cadeia simples, deves col
 
 Nota: Funções destinadas a interagir com registro de entidade não irão funcionar aqui porque a fórmula não é aplicada no registro específico.
 
-![Expressão Complexa do filtro](https://raw.githubusercontent.com/espocrm/documentation/master/_static/images/user-guide/reports/filter-complex.png)
+![Expressão Complexa do filtro](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-complex.png)
 
 ## Exibindo no painel
 

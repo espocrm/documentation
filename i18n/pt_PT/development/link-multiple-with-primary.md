@@ -1,7 +1,5 @@
 # Vincular campo múltiplo com primário
 
-~Para EspoCRM 3.6.0 e maior.~
-
 Às vezes, tu tens um relacionamento `hasMany` e precisas de ter a capacidade de selecionar o registro primário entre os relacionados. Como exemplo, campo `Contatos` da entidade Case.
 
 
@@ -9,7 +7,7 @@
 >Precisas criar um link de `contatos` múltiplo campo com um primário para a nossa entidade personalizada `Stock`.
 >
 
-###Passo 1
+### Passo 1
 `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`
 ```json
 {
@@ -42,7 +40,7 @@
 }
 ```
 
-###Passo 2
+### Passo 2
 `custom/Espo/Custom/Resources/metadata/entityDefs/Contact.json`
 ```json
 {
@@ -64,7 +62,7 @@
 }
 ```
 
-###Passo 3
+### Passo 3
 `custom/Espo/Custom/Repositories/Stock.php`
 ```php
 <?php
@@ -108,7 +106,7 @@ class Stock extends \Espo\Core\ORM\Repositories\RDB
 }
 ```
 
-###Passo 4
+### Passo 4
 `client/custom/src/views/stock/fields/contacts.js`
 ```js
 Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
@@ -118,10 +116,10 @@ Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-wi
 });
 ```
 
-###Passo 5
+### Passo 5
 Corre o reconstruir
 
-###Passo 6
+### Passo 6
 Executa SQL query
 ```sql
 ATUALIZA stock

@@ -14,7 +14,7 @@ Os novos casos devem ser criados pelos seguintes cenários:
 
 A gravação do caso tem um fluxo que pode ser utilizado para uma comunicação entre o cliente e o serviço. Os utilizadores de CRM também podem fazer postagens internas que não serão visíveis num portal de clientes.
 
-Quando o novo caso é criado por um usuário do portal, ele não é atribuído a nenhum usuário. Ao usuário [Fluxos de trabalho] (https://github.com/espocrm/documentation/blob/master/administration/workflows.md) o administrador pode criar uma regra que notificará certos usuários sobre um novo caso no sistema. Os fluxos de trabalho também fornecem uma capacidade para aplicar a regra de atribuição a novos casos, ou seja, regras Round-Robin e Least-Busy. Para fluxos de negócios mais complexos é recomendável utilizar [ferramenta BPM] (https://github.com/espocrm/documentation/blob/master/administration/bpm.md).
+Quando o novo caso é criado por um usuário do portal, ele não é atribuído a nenhum usuário. Ao usuário [Fluxos de trabalho](../administration/workflows.md) o administrador pode criar uma regra que notificará certos usuários sobre um novo caso no sistema. Os fluxos de trabalho também fornecem uma capacidade para aplicar a regra de atribuição a novos casos, ou seja, regras Round-Robin e Least-Busy. Para fluxos de negócios mais complexos é recomendável utilizar [ferramenta BPM](../administration/bpm.md).
 
 Para evitar a negligência de novos casos, os usuários podem adicionar o tipo de entidade de Caso à lista de Auto-seguimento Global em Preferências. Então, eles seguirão automaticamente cada novo caso.
 
@@ -22,7 +22,7 @@ Nota: Se não houver nenhum usuário do portal associado a um contato vinculado,
 
 ### Email-para-Caso
 
-O administrador pode configurar a conta de e-mail do grupo que criará um novo caso em cada novo e-mail de entrada. Para mais informações [veja aqui] (https://github.com/espocrm/documentation/blob/master/administration/emails.md).
+O administrador pode configurar a conta de e-mail do grupo que criará um novo caso em cada novo e-mail de entrada. Para mais informações [veja aqui](../administration/emails.md).
 
 ### Conhecimento Base
 
@@ -30,6 +30,6 @@ Os usuários podem relacionar artigos da base de conhecimento ao registro do cas
 
 ### Portal do cliente
 
-O administrador pode criar um [portal](https://github.com/espocrm/documentation/blob/master/administration/portal.md) onde os clientes poderão criar casos.
+O administrador pode criar um [portal](../administration/portal.md) onde os clientes poderão criar casos.
 
 Como os usuários do portal seguem automaticamente os seus casos, eles receberão notificações por e-mail sobre as novas mensagens no Stream.
