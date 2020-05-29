@@ -3,7 +3,7 @@
 ## Execution in idle
 
 When a process is initiated by a user interaction (e.g. after record created), it starts to execute in the web server
-process until the flow reaches an event or *send message task* that will switch execution to idle mode (process will continue
+process until the flow reaches a catching event, *send message task* or *user task*, that will switch execution to idle mode (process will continue
 to run by cron/daemon). 
 
 If you have script tasks that take some time to run it's reasonable to force to switch execution to idle mode.
