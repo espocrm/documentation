@@ -9,6 +9,7 @@ The file structure of the package:
 * `/scripts` – contains the extension scripts.
 
 ### Manifest
+
 ```json
 {
   "name": "Extension Name",
@@ -63,3 +64,7 @@ class AfterInstall
 ### Package
 
 At the end, we need to pack all these files into a .zip archive.
+
+## Repository
+
+You can use [this template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
