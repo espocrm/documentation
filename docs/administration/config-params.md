@@ -11,6 +11,7 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * [Stream](#stream)
 * [Clean-up](#clean-up)
 * [Passwords](#passwords)
+* [Auth](#auth)
 * [Jobs & Daemon](#jobs-daemon)
 * [Mass Email](#mass-email)
 
@@ -79,6 +80,11 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * passwordStrengthLetterCount – how much letter required for passwords;
 * passwordStrengthNumberCount – how much numbers required for passwords;
 * passwordStrengthBothCases – `false` – password must contain letters of both upper and lower case;
+
+### Auth
+
+* authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
+* authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
 
 ### Jobs & Daemon
 
