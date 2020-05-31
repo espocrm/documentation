@@ -80,6 +80,7 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * passwordStrengthLetterCount – how much letter required for passwords;
 * passwordStrengthNumberCount – how much numbers required for passwords;
 * passwordStrengthBothCases – `false` – password must contain letters of both upper and lower case;
+* passwordRecoveryRequestLifetime – `3 hours` – how long a password recovery link is valid;
 
 ### Auth
 
