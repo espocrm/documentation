@@ -86,4 +86,4 @@ devono essere 644. Se uno qualsiasi di questi file ha permesso 664 Hai bisogno d
 Chmod 644 /percorso/al/file
 ```
 
-ulteriori informazioni sulle autorizzazioni per i file: [qui](server-configuration.md#richieste autorizzazioni--per-unix-based-sistemi).
+ulteriori informazioni sulle autorizzazioni per i file: [qui](server-configuration.md#le-autorizzazioni-necessarie-per-i-sistemi-basati-su-unix).

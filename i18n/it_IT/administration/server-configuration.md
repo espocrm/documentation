@@ -80,5 +80,5 @@ serverweb_utente può essere di uno dei seguenti "www", "www-data", "Apache", et
 
 ## Istruzioni di configurazione basati sul tuo server:
 
-* [server Apache configuration](apache-server-configuration.md).
+* [Apache server configuration](apache-server-configuration.md).
 * [Nginx server configuration](nginx-server-configuration.md).
