@@ -80,7 +80,9 @@ Se la lunghezza è negativo, allora, che molti caratteri verranno omesse dalla f
 Strisce degli spazi dall'inizio e dalla fine della stringa.
 
 #### String\\minuscolo
-`string\lowerCase(STRING)` converte le lettere in minuscolo. (Sin dalla versione 5.0.0)
+`string\lowerCase(STRING)`
+
+Converte le lettere in minuscolo. (Sin dalla versione 5.0.0)
 
 #### string\\lettere maiuscole
 `string\upperCase(STRING)`
@@ -353,4 +355,4 @@ dateStart = datetime\ADESSO()
 
 ## usando la formula nei flussi di lavoro
 
-è possibile utilizzare la formula in condizioni di flusso di lavoro e le azioni. Vedere [i flussi di lavoro documentazione](workflows.md#usando-la-formula-nelle-azioni) per ulteriori informazioni.
+è possibile utilizzare la formula in condizioni di flusso di lavoro e le azioni. Vedere i flussi di lavoro [documentazione](workflows.md#usando-la-formula-nelle-azioni) per ulteriori informazioni.
