@@ -21,7 +21,7 @@ Nota: i file devono essere inseriti nel server web directory.
 
 ### Passo 5. Configurare un server di
 
-configurazione di un nuovo server basato sulle [raccomandazioni qui](https://www.espocrm.com/documentation/administration/server-configuration/).
+configurazione di un nuovo server basato sulle [raccomandazioni qui](../../../docs/administration/server-configuration.md).
 
 ### Passo 6. Correggere le autorizzazioni
 
