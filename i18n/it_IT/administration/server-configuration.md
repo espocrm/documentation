@@ -21,13 +21,13 @@ Si raccomanda inoltre di avere [mailparse](https://pecl.php.net/package/mailpars
 
 php.ini impostazioni:
 
-'''
+```
 max_execution_time = 180
 max_input_time = 180
 memory_limit = 256M
 post_max_size = 50M di
 upload_max_filesize = 50M
-'''
+```
 
 
 ### Requisiti MySQL
@@ -39,17 +39,17 @@ Queste sono senza particolari peculiarità. Tutte le impostazioni di default son
 
 i file e le directory devono disporre delle autorizzazioni seguenti:
 
-* '/data', '/custom', '/client/custom' - deve essere scrivibile tutti i file, directory e sottodirectory (664 per file, 775 per directory, incluse tutte le sottodirectory e file);
-* '/applicazione/Espo/modules', '/client/modules' - deve essere scrivibile la directory corrente (775 per la directory corrente, 644 per i file, 755 per le directory e sottodirectory);
+* `/data`, `/custom`, `/client/custom` - deve essere scrivibile tutti i file, directory e sottodirectory (664 per file, 775 per directory, incluse tutte le sottodirectory e file);
+* `/applicazione/Espo/modules`, `/client/modules` - deve essere scrivibile la directory corrente (775 per la directory corrente, 644 per i file, 755 per le directory e sottodirectory);
 * Tutti gli altri file e directory dovrebbe essere leggibile (644 per file, 755 per le directory).
 
 Per impostare le autorizzazioni, eseguire questi comandi in Terminale:
 
-'''
+```
 cd <percorso-verso-il-ESPOCRM DIRECTORY>
 Trova . -Type d -exec chmod 755 {} && find . -Tipo f -exec chmod 644 {} ;
 trovare dati personalizzata - tipo d -exec chmod 775 {} && trovare dati personalizzata - tipo f -exec chmod 664 {} ;
-'''
+```
 
 tutti i file devono essere di proprietà del gruppo e controllata dal webserver processo. Essa può essere "www-data", "daemon", "Apache", "www", ecc.
 Nota: su Bitnami Stack, i file devono essere di proprietà del gruppo e di proprietà di "daemon" utente.
@@ -57,10 +57,10 @@ Nota: su host condiviso, i file devono essere di proprietà del gruppo e control
 
 Per impostare il proprietario e il gruppo-proprietario, eseguire questi comandi in Terminale:
 
-'''
+```
 cd <percorso-verso-il-ESPOCRM DIRECTORY>
 chown -R <proprietario>:<GRUPPO-proprietario> .;
-'''
+```
 
 ## Setup di un crontab
 
@@ -75,7 +75,7 @@ per impostare un crontab su un sistema UNIX, segui i passaggi seguenti:
 ```
 crontab -e -u serverweb_utente
 ```
-serverweb_utente può essere di uno dei seguenti "www.", "www-data", "Apache", etc (dipende dal vostro webserver).
+serverweb_utente può essere di uno dei seguenti "www", "www-data", "Apache", etc (dipende dal vostro webserver).
 * 4. Incolla la stringa (dal passo 2) e salvare il file crontab (Ctrl O, quindi Ctrl X per l'editor nano).
 
 ## Istruzioni di configurazione basati sul tuo server:
