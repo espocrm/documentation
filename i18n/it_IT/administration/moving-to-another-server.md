@@ -21,11 +21,11 @@ Nota: i file devono essere inseriti nel server web directory.
 
 ### Passo 5. Configurare un server di
 
-configurazione di un nuovo server basato sulle [raccomandazioni qui](../../../docs/administration/server-configuration.md).
+configurazione di un nuovo server basato sulle [raccomandazioni qui](server-configuration.md).
 
 ### Passo 6. Correggere le autorizzazioni
 
-impostate le autorizzazioni necessarie e i file [proprietario](../../../docs/administration/server-configuration.md#permissions).
+impostate le autorizzazioni necessarie e i file [proprietario](server-configuration.md#le-autorizzazioni-necessarie-per-i-sistemi-basati-su-unix).
 
 ### Passo 7. Importare il backup del database
 
@@ -67,7 +67,7 @@ Dove 'www-dati' è il vostro web-server user.
 
 ### Passo 9. Impostazione di una
 
-configurazione di crontab di un [crontab](../../../docs/administration/server-configuration.md#setting-up-crontab).
+configurazione di crontab di un [crontab](server-configuration.md#setup-di-un-crontab).
 Nota: deve essere configurata sotto il vostro web-server user.
 
 Questo è tutto. Ora, la vostra EspoCRM istanza è in esecuzione su un nuovo server.
