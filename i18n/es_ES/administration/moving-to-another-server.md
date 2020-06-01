@@ -16,8 +16,7 @@ Copia copias de seguridad de archivos y de tu base de datos a un nuevo servidor.
 
 ### Paso 4. Desarchivar archivos de copia de seguridad
 
-Para desarchivar los archivos de copia de seguridad, puede usar Archive Manager o esta instrucción:
-administration/backup-and-restore.md#step-1-unarchive-backup-files.
+Para desarchivar los archivos de copia de seguridad, puede usar Archive Manager o esta [instrucción](backup-and-restore.md#paso-1-desarchivar-archivos-de-copia-de-seguridad).
 Nota: Los archivos deben colocarse en el directorio del servidor web.
 
 ### Paso 5. Configurar un servidor
@@ -30,7 +29,7 @@ Establecer los [permisos](server-configuration.md#permisos-requeridos-para-siste
 
 ### Paso 7. Importa tu copia de seguridad de la base de datos
 
-Primero, debe crear una nueva base de datos con un usuario en MySQL. Para importar su base de datos desde la copia de seguridad, siga la instucción: administration/backup-and-restore.md#step-3-import-database-dump.
+Primero, debe crear una nueva base de datos con un usuario en MySQL. Para importar su base de datos desde la copia de seguridad, siga la [instucción](backup-and-restore.md#paso-3-importar-el-volcado-de-la-base-de-datos).
 
 ### Paso 8. Corregir las configuraciones de EspoCRM
 
