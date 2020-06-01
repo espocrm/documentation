@@ -16,21 +16,21 @@ per Ubuntu server un registro errori Apache si trova in '/var/log/apache2/error.
 
 per attivare la modalità di debug, andare a installato EspoCRM directory, aprire il file 'data/config.php" e modificare il valore:
 
-'''
+```
 'logger' => [
 ...
 'Livello' => 'avviso',
 ...
 ]
-'''
+```
 A
-'''
+```
 'logger' => [
 ...
 'Livello' => 'ebug',
 ...
 ]
-'''
+```
 
 ## I processi pianificati non funzionano
 
@@ -52,21 +52,21 @@ al lavoro per accertarsi che non vi siano errori di cron è in esecuzione, prova
 
 2. Andare nella directory dove EspoCRM è installato. Ad esempio per '/var/www/html/espocrm' directory il comando è:
 
-'''bash
+```bash
 cd /var/www/html/espocrm
-'''
+```
 
 3. Eseguire il comando crontab:
 
-'''bash
+```bash
 php cron.php
-'''
+```
 
 Nota: deve essere eseguito sotto web-server user. Se si è effettuato il login come utente root, il comando deve essere (per esempio per Ubuntu):
 
-'''bash
+```bash
 sudo -u www-dati php cron.php
-'''
+```
 
 dove 'www-dati' è un web-server user.
 
@@ -82,7 +82,8 @@ Controllare le autorizzazioni del file:
 
 devono essere 644. Se uno qualsiasi di questi file ha permesso 664 Hai bisogno di cambiare di 644. Utilizzare il tuo hosting del pannello di controllo o comando chmod .
 
-'''
+```
 Chmod 644 /percorso/al/file
-'''
+```
+
 ulteriori informazioni sulle autorizzazioni per i file: [qui](server-configuration.md#richieste autorizzazioni--per-unix-based-sistemi).
