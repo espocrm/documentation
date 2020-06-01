@@ -4,10 +4,10 @@
 
 A veces tiene relaciones `hasMany` y necesitas tener la capacidad de seleccionar un historial primario entre los relaciones. Como ejemplo, el campo `Contacts` de entidad Caso.
 
->Necesita crear `contacts`, vincule Varios campos con un primario para nuestra entidad personalizada `Stock`. 
+>Necesita crear `contacts`, vincule Varios campos con un primario para nuestra entidad personalizada `Stock`.
 >
 
-###Paso 1
+### Paso 1
 `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`
 ```json
 {
@@ -40,7 +40,7 @@ A veces tiene relaciones `hasMany` y necesitas tener la capacidad de seleccionar
 }
 ```
 
-###Paso 2
+### Paso 2
 `custom/Espo/Custom/Resources/metadata/entityDefs/Contact.json`
 ```json
 {
@@ -62,7 +62,7 @@ A veces tiene relaciones `hasMany` y necesitas tener la capacidad de seleccionar
 }
 ```
 
-###Paso 3
+### Paso 3
 `custom/Espo/Custom/Repositories/Stock.php`
 ```php
 <?php
@@ -106,20 +106,20 @@ class Stock extends \Espo\Core\ORM\Repositories\RDB
 }
 ```
 
-###Paso 4
+### Paso 4
 `client/custom/src/views/stock/fields/contacts.js`
 ```js
-Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
+Espo.define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {
     return Dep.extend({
 		primaryLink: 'contact'
     });
 });
 ```
 
-###Paso 5
+### Paso 5
 Ejecutar Reconstrucción
 
-###Step 6
+### Paso 6
 Ejecute consulta SQR
 ```sql
 UPDATE stock
