@@ -1,6 +1,6 @@
 # Business Process Management
 
-La herramienta Business Process Management (BPM) brinda la capacidad de modelar y automatizar procesos comerciales en EspoCRM. Es un motor que ejecuta procesos comerciales descritos en el estándar BPMN 2.0. La herramienta BPM está disponible en la extensión 
+La herramienta Business Process Management (BPM) brinda la capacidad de modelar y automatizar procesos comerciales en EspoCRM. Es un motor que ejecuta procesos comerciales descritos en el estándar BPMN 2.0. La herramienta BPM está disponible en la extensión
 ![BPM example](../../../docs/_static/images/administration/bpm/bpm-1.png)
 
 ### Diferencia de la herramienta de flujos de trabajo
@@ -146,7 +146,7 @@ La tarea se puede ejecutar siguiendo las acciones:
 * Hacer seguimiento: hace que los usuarios específicos sigan el registro objetivo, el registro del proceso o cualquier registro creado por el proceso;
 * Ejecutar acción de servicio: ejecuta acciones de servicio personalizadas implementadas por los desarrolladores.
 
-Las acciones disponibles para la tarea son casi las mismas que en la función de flujo de trabajo. Ver más detalles sobre [acciones del flujo de trabajo](workflows.md#actions).
+Las acciones disponibles para la tarea son casi las mismas que en la función de flujo de trabajo. Ver más detalles sobre [acciones del flujo de trabajo](workflows.md#acciones).
 
 #### Enviar mensaje de Tarea
 
@@ -190,7 +190,7 @@ A través de la interfaz de usuario existe la posibilidad de verificar las condi
 
 También es posible definir condiciones en el lenguaje [Espo-formula](formula.md).
 
-Las condiciones en la herramienta BPM son las mismas que en la función de flujo de trabajo. Ver más detalles sobre [las condiciones del flujo de trabajo](workflows.md#conditions).
+Las condiciones en la herramienta BPM son las mismas que en la función de flujo de trabajo. Ver más detalles sobre [las condiciones del flujo de trabajo](workflows.md#condiciones).
 
 ## Ejemplos
 
