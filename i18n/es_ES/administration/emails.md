@@ -1,6 +1,6 @@
 # Emails
 
-> Importante. [Cron](server-configuration.md#setup-a-crontab) debe configurarse en su sistema para que funcione el correo electrónico. Puede encontrar la información en su EspoCRM en Administration > Scheduled Jobs.
+> Importante. [Cron](server-configuration.md#configurar-un-crontab) debe configurarse en su sistema para que funcione el correo electrónico. Puede encontrar la información en su EspoCRM en Administration > Scheduled Jobs.
 
 ## Vista General
 
