@@ -38,7 +38,7 @@ A
 
 1. Login via SSH al server.
 
-2. Configurare il proprio crontab seguendo questi passaggi: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Configurare il proprio crontab seguendo [questi passaggi](server-configuration.md#setup-di-un-crontab).
 
 Nota: il comando crontab dovrebbe essere configurata sotto web-server user, ad es. 'Crontab -e -u www-dati'.
 

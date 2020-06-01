@@ -68,13 +68,13 @@ per impostare un crontab su un sistema UNIX, segui i passaggi seguenti:
 
 * 1. Login come amministratore nel tuo EspoCRM istanza.
 * 2. Vai all'area Lavori pianificati sezione nel pannello amministratore (Menu > Amministrazione > Lavori pianificati) e copiare la stringa per il crontab. Sembra che questo: uno
-'''
+```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
-'''
+```
 * 3. Aprire un terminale ed eseguire questo comando:
-'''
+```
 crontab -e -u serverweb_utente
-'''
+```
 serverweb_utente può essere di uno dei seguenti "www.", "www-data", "Apache", etc (dipende dal vostro webserver).
 * 4. Incolla la stringa (dal passo 2) e salvare il file crontab (Ctrl O, quindi Ctrl X per l'editor nano).
 
