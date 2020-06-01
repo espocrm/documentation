@@ -147,7 +147,7 @@ L'attività può essere eseguita seguendo le azioni:
 * Make Followed: consente a utenti specifici di seguire il record di destinazione, il record del processo o qualsiasi record creato dal processo;
 * Esegui azione di servizio: esegue azioni di servizio personalizzate implementate dagli sviluppatori.
 
-Le azioni disponibili per l'attività sono quasi le stesse della funzione Flusso di lavoro. Vedi maggiori dettagli su [workflow's actions](workflows.md#actions).
+Le azioni disponibili per l'attività sono quasi le stesse della funzione Flusso di lavoro. Vedi maggiori dettagli su [workflow's actions](workflows.md#azioni).
 
 #### Invia attività messaggio
 
