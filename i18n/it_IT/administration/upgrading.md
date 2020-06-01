@@ -8,11 +8,11 @@ per controllare la vostra versione attuale andare a Amministrazione > pagina di 
 
 ### Passo 2. È necessario scaricare i pacchetti di aggiornamento
 
-vai alla pagina upgrade https://www.espocrm.com/download/upgrades/ e basato sulla vostra attuale versione download pacchetti richiesti.
+vai alla pagina [upgrade](https://www.espocrm.com/download/upgrades/) e basato sulla vostra attuale versione download pacchetti richiesti.
 
 ### Passo 3. Creare una copia di backup (opzionale)
 
-consente di creare un backup del vostro EspoCRM dei file e dei dati prima di eseguire l'aggiornamento. [Seguire queste istruzioni](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) per averlo fatto.
+consente di creare un backup del vostro EspoCRM dei file e dei dati prima di eseguire l'aggiornamento. [Seguire queste istruzioni](../../../docs/administration/backup-and-restore.md) per averlo fatto.
 
 ### Passo 4. Processo di aggiornamento
 
