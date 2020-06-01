@@ -137,9 +137,9 @@ Mga Example:
 
 `datetime\closest(datetime\now(), 'time', '20:00')` Muuli sa pinakaduol nga datetime value sa umaabot gamit ang 20:00 nga oras.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Muuli og `2017-11-01`, ang unang adlaw sa buwan. 
+`datetime\closest('2017-11-20', 'date', 1, true)` Muuli og `2017-11-01`, ang unang adlaw sa buwan.
 
-`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Muuli sa sunod nga lunes (ang sinugdanan sa adlaw). 
+`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Muuli sa sunod nga lunes (ang sinugdanan sa adlaw).
 
 #### number\format
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])` Muilis og numeric nga VALUE ngadto sa string formatted nga gibase sa episipiko nga format o default nga application setting. Kung DECIMALS, DECIMAL_MARK, o THOUSAND_SEPARATOR, ang mga default sa sistema ang gamiton.
@@ -186,7 +186,7 @@ Example:
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Mudugang ug ID ngadto sa Link Multiple field. Panaglitan, dungagan og 'someTeamId' ang 'teams' nga field. 
+`entity\addLinkMultipleId(LINK, ID)` Mudugang ug ID ngadto sa Link Multiple field. Panaglitan, dungagan og 'someTeamId' ang 'teams' nga field.
 
 `entity\addLinkMultipleId(LINK, ID_LIST)` Mudugang ug lista sa mga id. (ngadto pa sa version 4.8.3)
 
@@ -266,4 +266,4 @@ ifThenElse(
 
 ## Pag-gamit sa Formula sa Mga Workflow
 
-Pwede gamiton ang formula ngadto sa mga workflow kondisyon og aksyon. Tanawa ang [workflows nga dokumentasyon](workflows.md) para sa dugang pa nga impormasyon.
+Pwede gamiton ang formula ngadto sa mga workflow kondisyon og aksyon. Tanawa ang [workflows nga dokumentasyon](workflows.md#using-formula-in-actions) para sa dugang pa nga impormasyon.

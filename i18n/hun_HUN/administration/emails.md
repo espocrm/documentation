@@ -4,7 +4,7 @@ Az EspoCRM lehetővé teszi az e-mailek lekérését az IMAP-fiókból. Ez lehet
 
 ## IMAP-fiókok
 
-* Megjegyzés: Meg kell [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) megfelelően van konfigurálva a rendszerben, hogy a bejövő e-mailek működjenek.
+* Megjegyzés: Meg kell [cron](https://github.com/espocrm/documentation/blob/master/docs/administration/server-configuration.md#setting-up-crontab) megfelelően van konfigurálva a rendszerben, hogy a bejövő e-mailek működjenek.
 
 A felhasználó beállíthatja az IMAP-fiókot a Személyes e-mail fiókok oldalon (E-mailek lap > jobb felső menü > Személyes e-mail fiókok).
 

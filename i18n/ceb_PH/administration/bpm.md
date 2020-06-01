@@ -149,7 +149,7 @@ Ang tahas kay pwede muhimo aning mga aksyon:
 * Himoong Followed - himoon ang usa ka gitakda nga user nga musunod sa usa ka gitarget nga rekord, sa proseso nga rekord, o bisan unsa nga rekord nga ginama sa proseso;
 * Pagdagan sa Serbisyo nga Aksyon - mupadagan sa kustom nga serbisyo nga aksyon nga giimplementar sa mga debeloper.
 
-Ang mga aksyon nga pwede himoon sa usa ka tahas kay halos parehas ra sa Workflow nga feature. Tanawa ang uban pa nga mga detalye kabahin sa [aksyon sa workflow](workflows.md#actions).
+Ang mga aksyon nga pwede himoon sa usa ka tahas kay halos parehas ra sa Workflow nga feature. Tanawa ang uban pa nga mga detalye kabahin sa [aksyon sa workflow](workflows.md#mga-aksyon).
 
 #### Pagpadala og Mensahe nga Tahas
 
@@ -192,7 +192,7 @@ Sa UI, naay abilidad nga tanawon ang mga kondisyon sa mga musunod nga mga rekor:
 
 Posible usab nga muhimo og mga kondisyon sulod sa [Espo-formula](formula.md) nga pinulongan.
 
-Ang mga kondisyon sa BPM too kay parehas ra sa Workflow nga feature. Tanawa ang mga detalye bahin sa [mga kondisyon sa workflow](workflows.md#conditions).
+Ang mga kondisyon sa BPM too kay parehas ra sa Workflow nga feature. Tanawa ang mga detalye bahin sa [mga kondisyon sa workflow](workflows.md#mga-kondisyon).
 
 ## Mga Example
 
