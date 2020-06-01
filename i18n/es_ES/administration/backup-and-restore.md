@@ -69,7 +69,7 @@ donde:
 
 ### Paso 2. Establecer los permisos requeridos
 
-Los archivos deben ser propiedad de un usuario del servidor web y tener los permisos correctos. Por favor, configure los permisos requeridos siguiendo estas instrucciones: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems).
+Los archivos deben ser propiedad de un usuario del servidor web y tener los permisos correctos. Por favor, configure los permisos requeridos siguiendo estas [instrucciones](server-configuration.md/#user-content-required-permissions-for-unix-based-systems).
 
 ### Paso 3. Importar el volcado de la base de datos
 
@@ -94,4 +94,4 @@ Si tiene que hacer algún cambio, use este comando:
 sudo crontab -l -u www-data
 ```
 
-Aquí se describen más detalles sobre la configuración de crontab para EspoCRM [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab).
+Aquí se describen más detalles sobre la configuración de [crontab](server-configuration.md/#user-content-setup-a-crontab) para EspoCRM.

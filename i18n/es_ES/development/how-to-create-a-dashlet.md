@@ -4,7 +4,7 @@ Cree un archivo `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.j
 
 Aquí necesita definir `"view"`, y podría configurar `"aclScope"`, `"entityType"`, y `"options"`.
 
-Si es una lista de dashlet típica, utilice `"view":"views/dashlets/abstract/record-list"`, si no, cree su propia vista (https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
+Si es una lista de dashlet típica, utilice `"view":"views/dashlets/abstract/record-list"`, si no, cree su propia vista (../../../development/custom-views.md). 
 
 ## Opciones
 Por defecto, en las opciones de dashlet puede configurar _Title_ y _Auto-refresh Interval_.

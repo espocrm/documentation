@@ -12,7 +12,7 @@ Vaya a la página de actualización https://www.espocrm.com/download/upgrades/ y
 
 ### Paso 3. Crear una copia de seguridad (opcional)
 
-Cree una copia de seguridad de sus archivos y datos de EspoCRM antes de actualizar. Siga [estas instrucciones](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) para completarla.
+Cree una copia de seguridad de sus archivos y datos de EspoCRM antes de actualizar. Siga [estas instrucciones](../../../administration/backup-and-restore.md) para completarla.
 
 ### Paso 4. Proceso de actualización
 

@@ -17,7 +17,7 @@ Pagkopya og mga backup nga mga file ug ang imohang database ngadto sa bag-ong se
 
 ### Ika-upat nga lakang. I-unarchive ang mga backup file
 
-Para i-unarchive ang mga backup, pwede kang mugamit og Archive Manager o kani nga mga pagtudlo: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files. 
+Para i-unarchive ang mga backup, pwede kang mugamit og Archive Manager o kani nga mga pagtudlo: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files.
 Timan-e: Ang mga file nanginahanglan nga iplastar ngadto sa web-serber nga direktoryo.
 
 ### Ika-lima nga lakang. I-konpigyur ang usa ka serber
@@ -37,7 +37,7 @@ Una, gikinahanglan nimong muhimo og bag-o nga database gamit ang usa ka user sa 
 Human sa malampusong pag-import ug pag-konpigyur sa serber, palihug og usab para masakto ang EspoCRM nga mga configuration sa file nga `ESPOCRM_DIRECTORY/data/config.php`:
 
  * mga setting sa koneksyon sa database:
-  
+
   ```php
   'database' => [
         'driver' => 'pdo_mysql',
@@ -48,15 +48,15 @@ Human sa malampusong pag-import ug pag-konpigyur sa serber, palihug og usab para
         'port' => ''
     ],
   ```
-   
+
    * "siteUrl" - kung ang pangalan sa imohang domain (URL) kay nausab:
-  
+
   ```php
   'siteUrl' => 'https://new-link.com',
   ```
-  
+
   * tag-iya sa mga default file (kung lahi ra):
-  
+
   ```php
   'defaultPermissions' => [
         'user' => 'www-data',

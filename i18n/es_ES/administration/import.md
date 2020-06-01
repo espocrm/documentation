@@ -19,7 +19,7 @@ Once you select a csv file you will be able to see how it should be parsed in Pr
 
 Haga clic en el botón _Next_ para pasar al _Paso 2_ ..
 
-![1](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/import/step-1.png)
+![1](../../../docs/_static/images/administration/import/step-1.png)
 
 ## Paso 2
 
@@ -31,7 +31,7 @@ Una vez realizada la importación, podrá revertir los registros creados, ver du
 
 Click en el boton _Run Import_ para continuar. Puede tomar algún tiempo antes de que finalice un proceso de importación. Si desea importar un gran grupo de registros (depende de la configuración de su servidor, generalmente si hay más de 200 registros), debe asegurarse de que el parámetro php `set_time_limit` sea lo suficientemente grande.
 
-![2](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/import/step-2.png)
+![2](../../../docs/_static/images/administration/import/step-2.png)
 
 ## Cómo importar a la lista de objetivos
 
