@@ -17,6 +17,7 @@ Copia copias de seguridad de archivos y de tu base de datos a un nuevo servidor.
 ### Paso 4. Desarchivar archivos de copia de seguridad
 
 Para desarchivar los archivos de copia de seguridad, puede usar Archive Manager o esta [instrucción](backup-and-restore.md#paso-1-desarchivar-archivos-de-copia-de-seguridad).
+
 Nota: Los archivos deben colocarse en el directorio del servidor web.
 
 ### Paso 5. Configurar un servidor
@@ -68,6 +69,7 @@ Después de importar y configurar con éxito el servidor, corrija las configurac
 ### Paso 9. Configura un crontab
 
 Configura un [crontab](server-configuration.md#configurar-un-crontab).
+
 Nota: debe ser configurado bajo su usuario del servidor web.
 
 Eso es todo. Ahora, su instancia de EspoCRM se está ejecutando en un nuevo servidor.
