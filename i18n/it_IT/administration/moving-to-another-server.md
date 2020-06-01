@@ -25,7 +25,7 @@ configurazione di un nuovo server basato sulle [raccomandazioni qui](https://www
 
 ### Passo 6. Correggere le autorizzazioni
 
-impostate le autorizzazioni necessarie e i file proprietario, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
+impostate le autorizzazioni necessarie e i file [proprietario](https://github.com/espocrm/documentation/blob/master/docs/administration/server-configuration.md#permissions).
 
 ### Passo 7. Importare il backup del database
 
