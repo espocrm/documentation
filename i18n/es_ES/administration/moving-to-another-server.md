@@ -4,11 +4,11 @@ Siga estos pasos para mover EspoCRM a otro servidor:
 
 ### Paso 1. Copia de seguridad de archivos
 
-Abra un administrador de archivos o inicie sesión a través de SSH para archivar todos los archivos disponibles desde el directorio de EspoCRM. Más detalles: administration/backup-and-restore.md#step-1-backup-files.
+Abra un administrador de archivos o inicie sesión a través de SSH para archivar todos los archivos disponibles desde el directorio de EspoCRM. [Más detalles](backup-and-restore.md#paso-1-respaldar-archivos).
 
 ### Paso 2. Haz una copia de seguridad de tu base
 
-Los datos almacenados en la base de datos (MySQL, MariaDB) se deben respaldar. Por favor, siga esta recomendación: administration/backup-and-restore.md#step-2-backup-database.
+Los datos almacenados en la base de datos (MySQL, MariaDB) se deben respaldar. Por favor, siga esta [recomendación](backup-and-restore.md#paso-2-respaldar-base-de-datos).
 
 ### Paso 3. Copie los archivos y las copias de seguridad de la base de datos a otro servidor
 
@@ -26,7 +26,7 @@ Configure un nuevo servidor según las [recomendaciones aquí](server-configurat
 
 ### Paso 6. Corregir permisos
 
-Establecer los [permisos](server-configuration.md/#user-content-required-permissions-for-unix-based-systems) requeridos y el propietario de los archivos.
+Establecer los [permisos](server-configuration.md#permisos-requeridos-para-sistemas-basados-en-unix) requeridos y el propietario de los archivos.
 
 ### Paso 7. Importa tu copia de seguridad de la base de datos
 
@@ -68,7 +68,7 @@ Después de importar y configurar con éxito el servidor, corrija las configurac
 
 ### Paso 9. Configura un crontab
 
-Configura un [crontab](server-configuration.md/#user-content-setup-a-crontab).
+Configura un [crontab](server-configuration.md#configurar-un-crontab).
 Nota: debe ser configurado bajo su usuario del servidor web.
 
 Eso es todo. Ahora, su instancia de EspoCRM se está ejecutando en un nuevo servidor.
