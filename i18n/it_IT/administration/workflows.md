@@ -28,7 +28,7 @@ attivato secondo la pianificazione definita. È possibile impostare la funzione 
 
 La pianificazione è specificato in una notazione crontab.
 
-'''
+```
 * * * * * *
 | | | | | |
 | | | | | -- Anno (intervallo: 1900-3000)
@@ -37,7 +37,7 @@ La pianificazione è specificato in una notazione crontab.
 | | -------- giorno del mese (intervallo: 1-31)
 | ---------- Ora (intervallo: 0-23)
 ------------ minuto (intervallo: 0-59)
-'''
+```
 
 ### sequenziale
 
@@ -64,7 +64,7 @@ sono disponibili alcuni tipi di condizione:
 
 ### In condizioni di Formula
 
-Formula fornisce una capacità di definire le condizioni di qualsiasi complessità. Per saperne di più su la sintassi della formula seguire [questo articolo](Formula.md).
+Formula fornisce una capacità di definire le condizioni di qualsiasi complessità. Per saperne di più su la sintassi della formula seguire [questo articolo](formula.md).
 
 Nota: non ci deve essere alcun ';' delimitatore utilizzato nella formula del codice quando si determina una condizione.
 
@@ -133,14 +133,13 @@ consente di eseguire il servizio specifico di script. Per impostazione predefini
 * Invia gli inviti - per riunioni/chiamate;
 * aggiungere voci del preventivo - per citazioni.
 
-Gli sviluppatori possono scrivere i propri interventi di manutenzione. Vedere [dettaglio](../sviluppo/flusso di lavoro-service-azioni.md).
+Gli sviluppatori possono scrivere i propri interventi di manutenzione. Vedere [dettaglio](../../../docs/development/workflow-service-actions.md).
 
 ## Usando la formula nelle azioni
 
 è possibile definire la formula per calcolare i campi per creare record, aggiornare il record di destinazione, creare record correlati e aggiornare i record correlati. Per gli ultimi due, per accedere a attributi di entità di destinazione è necessario utilizzare la funzione 'targetEntity\attribute'. Per accedere a attributi di entità bersaglio che è stato impostato prima del flusso di lavoro è stato attivato la funzione uso 'targetEntity\attributeFetched'.
 
 Esempio:
-'''
+```
 nome = stringa\CONCATENA(targetEntity\attribute('nome'), ' ', datetime\oggi());
-'''
-
+```
