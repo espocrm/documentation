@@ -190,7 +190,7 @@ Tramite l'interfaccia utente è possibile verificare le condizioni per i seguent
 
 È anche possibile definire le condizioni in [Espo-formula](formula.md) linguaggio.
 
-Le condizioni nello strumento BPM sono le stesse della funzione Flusso di lavoro. Vedi maggiori dettagli su [condizioni del flusso di lavoro](https://github.com/espocrm/documentation/blob/master/i18n/it_IT/administration/workflows.md#condizioni).
+Le condizioni nello strumento BPM sono le stesse della funzione Flusso di lavoro. Vedi maggiori dettagli su [condizioni del flusso di lavoro](workflows.md#condizioni).
 ## Examples
 
 ### Example 1
