@@ -1,6 +1,6 @@
 # Envoi d'Emails En Masse
 
-## Comment envoyer des emails en masse 
+## Comment envoyer des emails en masse
 
 Vous avez besoin d'avoir au moins une liste cible avec des informations cibles et un message préconfiguré dans votre crm.
 
@@ -64,7 +64,7 @@ Les utilisateurs peuvent insérer les listes cibles manuellement en utilisant _S
 
 ## Utiliser les Rapports pour insérer des listes cibles
 
-L'option [Reports](reports.md#syncing-with-target-lists) permet d'insérer des données dans les listes cibles à partir de données qui correspondent à des critères spécifiques. 
+L'option [Reports](../../../docs/user-guide/reports.md#syncing-with-target-lists) permet d'insérer des données dans les listes cibles à partir de données qui correspondent à des critères spécifiques. 
 
 ## Exclure les Listes Cibles
 
@@ -82,7 +82,7 @@ _For Administrators_
 
 #### Que faire si les emails ne sont pas envoyés.
 
-1. Vérifier que _Send Test_ fonctionne. Si il ne fonctionne pas, assurez-vous que les réglages du système SMTP sont correctes. 
+1. Vérifier que _Send Test_ fonctionne. Si il ne fonctionne pas, assurez-vous que les réglages du système SMTP sont correctes.
 
 2. Vérifiez si le cron a été réglé pour votre system.
 
