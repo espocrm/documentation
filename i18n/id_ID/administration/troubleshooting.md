@@ -10,7 +10,7 @@ Log EspoCRM terletak di `<ESPOCRM_DIRECTORY>/logs/*.log` dan berisi beberapa inf
 
 #### Log kesalahan Apache
 
-Untuk server Ubuntu log kesalahan apache terletak di `/var/log/apache2/error.log` dan berisi semua informasi kesalahan. Lokasi file log bisa berbeda pada sistem lain. 
+Untuk server Ubuntu log kesalahan apache terletak di `/var/log/apache2/error.log` dan berisi semua informasi kesalahan. Lokasi file log bisa berbeda pada sistem lain.
 
 ## Aktifkan mode debugging
 
@@ -38,7 +38,7 @@ menjadi
 
 1. Login melalui SSH ke server anda.
 
-2. Konfigurasikan crontab Anda dengan mengikuti langkah-langkah berikut: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Konfigurasikan crontab Anda dengan mengikuti [langkah-langkah berikut](server-configuration.md#mengatur-crontab).
 
 Catatan: Crontab harus dikonfigurasi di bawah pengguna server web, misalnya `crontab -e -u www-data`
 
@@ -85,4 +85,4 @@ File tersebut harus 644. Jika salah satu dari file tersebut memiliki izin 664, A
 ```
 chmod 644 /path/to/file
 ```
-Informasi lebih lanjut tentang hak akses file: [disini](server-configuration.md#required-permissions-for-unix-based-systems).
+Informasi lebih lanjut tentang hak akses file: [disini](server-configuration.md#izin-yang-diperlukan-untuk-sistem-berbasis-unix).
