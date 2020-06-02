@@ -4,7 +4,7 @@ EspoCRM membolehkan untuk mengambil email dari kotak IMAP. Hal ini memungkinkan 
 
 ## Akun IMAP
 
-*Catatan: Anda harus mempunyai [cron](server-configuration.md#mengatur-crontab) yang dikonfigurasi dengan benar di sistem Anda agar email masuk bekerja.*
+*Catatan: Anda harus mempunyai [cron](../administration/server-configuration.md#mengatur-crontab) yang dikonfigurasi dengan benar di sistem Anda agar email masuk bekerja.*
 
 Pengguna dapat mengatur akun IMAP pada halaman Akun Email Pribadi (Tab email> menu kanan atas> Akun Email Pribadi).
 
