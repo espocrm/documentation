@@ -62,7 +62,7 @@ Acara ini menghentikan alur dan menunggu selama ditentukan oleh parameter periha
 
 Untuk pengaturan waktu yang lebih kompleks Anda bisa menggunakan [rumus](formula.md). Skrip rumus harus mengembalikan nilai Tanggal-Waktu (dalam zona waktu UTC). Setelah waktu ini tiba alur akan dilanjutkan ke elemen berikutnya.
 
-Dengan memanfaatkan fungsi rumus *datetime\closest*, Memungkinkan untuk menetapkan waktu ke waktu tertentu di masa mendatang, misalnya awal hari kerja berikutnya. 
+Dengan memanfaatkan fungsi rumus *datetime\closest*, Memungkinkan untuk menetapkan waktu ke waktu tertentu di masa mendatang, misalnya awal hari kerja berikutnya.
 
 #### Akhir Perihal
 
@@ -147,7 +147,7 @@ Tugas dapat melakukan tindakan berikut:
 * Buat Diikuti - membuat pengguna tertentu mengikuti rekaman target, rekaman proses atau rekaman yang dibuat oleh proses;
 * Jalankan Tindakan - menjalankan tindakan layanan kustom yang dilakukan oleh pengembang.
 
-Tindakan yang tersedia untuk tugas hampir sama seperti pada fitur Alur Kerja. Lihat rincian lebih lanjut tentang [tindakan alur kerja](workingflows.md#actions).
+Tindakan yang tersedia untuk tugas hampir sama seperti pada fitur Alur Kerja. Lihat rincian lebih lanjut tentang [tindakan alur kerja](workflows.md#tindakan).
 
 #### Mengirim Pesan Tugas
 
@@ -190,7 +190,7 @@ Melalui UI ada kemampuan untuk memeriksa kondisi untuk catatan berikut:
 
 Ini juga memungkinkan untuk mendefinisikan kondisi dalam bahasa [Rumus-espo](formula.md).
 
-Kondisi alat MPB sama seperti pada fitur Alur Kerja. Lihat rincian lebih lanjut tentang [kondisi alur kerja](workflows.md#conditions).
+Kondisi alat MPB sama seperti pada fitur Alur Kerja. Lihat rincian lebih lanjut tentang [kondisi alur kerja](workflows.md#kondisi).
 
 ## Contoh
 
