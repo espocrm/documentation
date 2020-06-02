@@ -20,20 +20,20 @@ Peran 'Penjual' didefinisikan sebagai berikut:
 
 Judul:
 ```
-buat - ya
+buat – ya
 baca – tim
 ubah – sendiri
 hapus – tidak
-siaran - tim
+siaran – tim
 ```
 
 Opportuniti:
 ```
-buat - ya
+buat – ya
 baca – tim
 ubah – sendiri
 hapus – tidak
-siaran - tim
+siaran – tim
 ```
 
 Pengguna hanya dapat membaca prospek dan peluang yang dimiliki tim 'Departemen Penjualan' (bidang 'Tim').
@@ -46,20 +46,20 @@ Peran 'Manajer Penjualan' didefinisikan sebagai berikut:
 
 Judul:
 ```
-buat - ya
+buat – ya
 baca – tim
 ubah – tim
 hapus – tim
-siaran - tim
+siaran – tim
 ```
 
 Opportunity:
 ```
-buat - ya
+buat – ya
 baca – tim
 ubah – tim
 hapus – tim
-siaran - tim
+siaran – tim
 ```
 
 Our user will be able to manager all leads and opportunities from the ‘Sales’ team.
@@ -88,7 +88,7 @@ Mendefinisikan akses ke akun surel grup, kemampuan untuk mengirim surel dari gru
 
 Mendefenisikan apakah pengguna memiliki kemampuan untuk mengekspor catatan. (sejak versi 4.9.0)
 
-## Izin secara Default 
+## Izin secara Default
 
 Secara default (jika tidak ada pengguna yang diterapkan), pengguna dapat membaca dan mengedit semua catatan. Tetapi tidak dapat menghapus yang manapun kecuali yang telah mereka buat dan mereka ditugaskan pada saat bersamaan.
 
