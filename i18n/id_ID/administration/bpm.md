@@ -2,7 +2,7 @@
 
 Alat Manajemen Proses Bisnis (MPB) menyediakan kemampuan untuk memodelkan dan mengotomatisasi proses bisnis di EspoCRM. Ini adalah proses bisnis pelaksana mesin yang dijelaskan dalam standar BPMN 2.0. Alat BPM tersedia di ekstensi [Paket Lanjutan](https://www.espocrm.com/extensions/advanced-pack/).
 
-![contoh MPB](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/bpm-1.png)
+![contoh MPB](../../../docs/_static/images/administration/bpm/bpm-1.png)
 
 ### Perbedaan alat Alur Kerja
 
@@ -84,9 +84,9 @@ Dalam kasus divergen mendefinisikan satu alur (jalur) yang akan dipilih sesuai k
 
 Jika konvergen hanya mengarahkan alur ke elemen keluar. Itu tidak tersumbat setelah arus datang, jadi alur sejajar tidak akan tergabung dalam alur tunggal.
 
-![gateway divergent eksklusif](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+![gateway divergent eksklusif](../../../docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
-![gateway convergent eksklusif](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
+![gateway convergent eksklusif](../../../docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
 #### Gateway Inklusif
 
@@ -96,7 +96,7 @@ Dalam kasus divergen, ia dapat mengarahkan ke satu atau beberapa alur sejajar (j
 
 Jika ada kebutuhan untuk menggabungkan alur yang dihasilkan oleh gateway inverging inklusif Anda perlu menggunakan gateway inklusif yang konvergen. Ini akan menunggu semua alur masuk dan kemudian melanjutkan ke elemen keluar.
 
-![gateway inklusif](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
+![gateway inklusif](../../../docs/_static/images/administration/bpm/gateway-inclusive.png)
 
 Catatan: Gateways diverging dan konvergen harus seimbang.
 
@@ -110,7 +110,7 @@ Dalam kasus divergen itu dibagi mengalir ke beberapa alur paralel. Tidak ada par
 
 Jika terjadi konvergen, menunggu sampai semua alur masuk kemudian berlanjut ke elemen keluar berikutnya.
 
-![gateway paralel](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
+![gateway paralel](../../../docs/_static/images/administration/bpm/gateway-parallel.png)
 
 Catatan: Gateways divergen dan konvergen harus seimbang.
 
@@ -124,7 +124,7 @@ Ini memberhentikan alur sampai ada kejadian keluar yang dipicu. Perihal yang dip
 
 Hanya Perihal mengengah yang bisa berada di ujung alur deras keluar lainnya.
 
-![gateway berdasarkan perihal](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-event-based.png)
+![gateway berdasarkan perihal](../../../docs/_static/images/administration/bpm/gateway-event-based.png)
 
 ### Aktivitas
 
@@ -196,12 +196,12 @@ Kondisi alat MPB sama seperti pada fitur Alur Kerja. Lihat rincian lebih lanjut 
 
 ### Contoh 1
 
-![Contoh 1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-1.png)
+![Contoh 1](../../../docs/_static/images/administration/bpm/example-1.png)
 
 ### Contoh 2
 
-![Contoh 2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-2.png)
+![Contoh 2](../../../docs/_static/images/administration/bpm/example-2.png)
 
 ### Contoh 3
 
-![Contoh 3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-3.png)
+![Contoh 3](../../../docs/_static/images/administration/bpm/example-3.png)

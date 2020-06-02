@@ -32,7 +32,7 @@ Anda bisa menggunakan script untuk membackup semua data yang dibutuhkan. Login v
 ### Unduh skrip
 
 ```bash
-wget https://raw.githubusercontent.com/espocrm/documentation/master/_static/scripts/backup.sh
+wget ../../../_static/scripts/backup.sh
 ```
 
 ### Jalankan skrip

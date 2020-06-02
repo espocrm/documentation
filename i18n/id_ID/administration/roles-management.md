@@ -10,7 +10,7 @@ Jika pengguna memiliki banyak peran maka mereka akan digabungkan sehingga aturan
 
 Anda dapat melihat izin apa yang diterapkan pada pengguna tertentu dengan mengeklik tombol 'Akses' pada tampilan detail pengguna.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
+![1](../../../docs/_static/images/administration/roles-management/scope-level.png)
 
 ## Contoh
 
@@ -102,4 +102,4 @@ Secara default user bisa membaca semua bidang jika seseorang bisa membaca rekama
 
 Pada tampilan mengubah catatan peran di kolom Level Bidang klik ikon plus disebelah scope spesifik lalu pilih bidang yang dibutuhkan. Kemudian Anda akan dapat menentukan tingkat akses untuk tindakan `baca` dan `edit`. Ada pilihan: `yes` dan` no`.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)
+![2](../../../docs/_static/images/administration/roles-management/field-level-secutiry.png)

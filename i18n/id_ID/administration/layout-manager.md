@@ -6,7 +6,7 @@ Manajer Layout tersedia di panel administrasi. Menyediakan kemampuan untuk menye
 
 Layout utama untuk daftar tampilan. Mendefinisikan kolom dan parameternya.
 
-![Daftar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/list.png)
+![Daftar](../../../docs/_static/images/administration/layout-manager/list.png)
 
 Parameter yang tersedia untuk kolom tercantum di bawah ini.
 
@@ -32,7 +32,7 @@ Layout utama untuk tampilan detail dan tampilan edit. Mendefinisikan panel, bari
 
 Baris bisa berisi dua sel atau satu sel yang diperluas hingga lebarnya memenuhi baris. Untuk menambahkan baris dengan sel yang diperluas Anda perlu menambahkan baris baru dan mengklik tanda minus pada sel apapun.
 
-![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
+![Detail](../../../docs/_static/images/administration/layout-manager/detail.png)
 
 ## Daftar (Kecil)
 

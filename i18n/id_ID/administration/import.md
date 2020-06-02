@@ -21,7 +21,7 @@ Setelah Anda memilih file csv Anda dapat melihat bagaimana file tersebut harus d
 
 Klik tombol _Berikutnya_ untuk memproses ke _Langkah 2_.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-1.png)
+![1](../../../docs/_static/images/administration/import/step-1.png)
 
 ## Langkah 2
 
@@ -34,7 +34,7 @@ Setelah impor dilakukan, Anda akan dapat kembali menciptakan rekaman, lihat dupl
 Click _Run Import_ button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records (depends on you server configuration, usually if more than 200 records) you need to make sure that php parameter `set_time_limit` is large enough.
 Klik tombol _Jalankan Impor_ untuk melanjutkan. Mungkin diperlukan beberapa waktu sebelum proses impor selesai. Jika Anda ingin mengimpor sebagian besar rekaman (tergantung pada konfigurasi server Anda, biasanya jika lebih dari 200 catatan) Anda perlu memastikan bahwa php parameter 'set_time_limit' cukup besar.
 
-![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
+![2](../../../docs/_static/images/administration/import/step-2.png)
 
 ## Bagaimana mengimpor ke Daftar Target
 
