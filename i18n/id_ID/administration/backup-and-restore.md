@@ -70,7 +70,7 @@ dimana:
 
 ### Langkah 2. Tetapkan izin yang diperlukan
 
-File harus dimiliki oleh pengguna web-server dan memiliki izin yang benar. Mohon tetapkan izin yang diperlukan dengan mengikuti instruksi ini: [www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems](server-configuration.md#izin-yang-diperlukan-untuk-sistem-berbasis-unix).
+File harus dimiliki oleh pengguna web-server dan memiliki izin yang benar. Mohon tetapkan izin yang diperlukan dengan mengikuti [instruksi ini](server-configuration.md#izin-yang-diperlukan-untuk-sistem-berbasis-unix).
 
 ### Langkah 3. Impor database dump
 
@@ -96,4 +96,4 @@ Jika Anda harus membuat perubahan, gunakan perintah ini:
 sudo crontab -l -u www-data
 ```
 
-Rincian lebih lanjut tentang mengonfigurasi crontab untuk EspoCRM dijelaskan di sini [www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab](server-configuration.md#mengatur-crontab).
+Rincian lebih lanjut tentang mengonfigurasi crontab untuk EspoCRM dijelaskan di [sini](server-configuration.md#mengatur-crontab).
