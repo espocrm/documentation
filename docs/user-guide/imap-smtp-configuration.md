@@ -66,7 +66,7 @@ Note: There are two ways in which you can setup IMAP and SMTP for Gmail account:
 * Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
 * Enable [access for less secure application](#for-gmail-accounts) at your Google account settings.
 
-For more information, please follow the link: (https://support.google.com/mail/answer/7126229?hl=en).
+For more information, please follow the [link](https://support.google.com/mail/answer/7126229?hl=en).
 
 ## Setup for Outlook account
 
