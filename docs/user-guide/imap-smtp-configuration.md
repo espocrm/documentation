@@ -45,7 +45,7 @@ To setup SMTP account, do the following:
 
 ![SMTP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/3.png)
 
-## Setup for G Suite Account
+## Setup for G Suite account
 
 1. Sign into your **Google Admin console**.
 2. Navigate to **App > G Suite > Gmail > Advanced settings**.
@@ -53,7 +53,7 @@ To setup SMTP account, do the following:
 4. Under the POP and IMAP Access, uncheck the **Disable POP and IMAP access for all users box** checkbox.
 5. Each user has to enable IMAP access as descibed for [Gmail Account](#setup-for-gmail-account).
 
-## Setup for Gmail Account
+## Setup for Gmail account
 
 1. Sign into your **Gmail Account**.
 2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png) > Settings.
@@ -68,7 +68,7 @@ Note: There are two ways in which you can setup IMAP and SMTP for Gmail account:
 
 For more information, please follow the link: (https://support.google.com/mail/answer/7126229?hl=en).
 
-## Setup for Outlook Account
+## Setup for Outlook account
 
 1. Go to your **Outlook Account**.
 2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png) > **View all Outlook settings**.
@@ -78,11 +78,13 @@ For more information, please follow the link: (https://support.google.com/mail/a
 
 ![Outlook configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/5.png)
 
-## Setup for Yahoo Account
+Note, you you have **2FA** enabled for your Microsoft account, you need to create app password and use it in Espo instead of your main password: https://support.microsoft.com/en-us/help/12409/microsoft-account-app-passwords-and-two-step-verification.
+
+## Setup for Yahoo account
 
 IMAP and SMTP access are enabled by default. All you need is enable the "less secure" access. For more information, please follow these [instructions](#for-yahoo-accounts).
 
-Configuration details are available by the link: (https://help.yahoo.com/kb/SLN4075.html).
+Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.html).
 
 ## Troubleshoot problems
 
@@ -96,7 +98,7 @@ If you cannot login, make sure you’ve provided the right username and password
 
 Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2, otherwise you have to change your settings to allow less  secure apps to access your account.
 
-#### For Gmail Accounts
+#### For Gmail accounts
 
 1. Go to your **Google Account**.
 2. Select **Security** on the navigation panel.
@@ -104,7 +106,7 @@ Use [Google Integration](https://www.espocrm.com/extensions/google-integration/)
 
 ![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/6.png)
 
-#### For Yahoo Accounts
+#### For Yahoo accounts
 
 1. Go to your **Yahoo Account**.
 2. On the navigation panel, select **Account Security**.
