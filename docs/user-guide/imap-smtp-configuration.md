@@ -15,51 +15,51 @@ In this article:
 Note: You need to have cron properly configured in your system to have inbound emails working.
 
 IMAP allows to retrieve your emails from an email client. To setup the IMAP account, do the following steps:
-1. Select **Emails Tab > top-right menu > Personal Email Accounts**.
-2. Click on **Create Personal Email Account**.
-3. In the **Main** section, specify your **Email Address**. The **Name** of personal email account is generated automatically, but you may change it. **Fetch since** allows to choose the date from which emails should be archived. In case you want to archive old emails, set it to some prior date to the day from which they should be fetched.
+1. Select *Emails Tab > top-right menu > Personal Email Accounts*.
+2. Click on *Create Personal Email Account*.
+3. In the *Main* section, specify your *Email Address*. The *Name* of personal email account is generated automatically, but you may change it. *Fetch since* allows to choose the date from which emails should be archived. In case you want to archive old emails, set it to some prior date to the day from which they should be fetched.
 
 ![Create personal email account](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/1.png)
 
-4. In the **IMAP** section, enter your **Host** name, your **Email Client Username** and **Email Client Password** in the fields shown. Tick of **SLL** for a secure connection. The IMAP **Port** will be generated automatically.
+4. In the *IMAP* section, enter your *Host* name, your *Email Client Username* and *Email Client Password* in the fields shown. Tick of *SLL* for a secure connection. The IMAP *Port* will be generated automatically.
 
 ![IMAP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/2.png)
 
-5. Specify what folders to monitor in **Monitored Folders** field. By default, it is set to INBOX. If you use some external email client to send emails, you can add Sent folder to archive those emails.
-6. **Put in Folder** field allows to specify the folder in which the incoming emails will be put.
-7. Click on **Test Connection** to check whether everything was specified correctly.  If a connection is successful, click **Save** on the top of the page.
+5. Specify what folders to monitor in *Monitored Folders* field. By default, it is set to INBOX. If you use some external email client to send emails, you can add Sent folder to archive those emails.
+6. *Put in Folder* field allows to specify the folder in which the incoming emails will be put.
+7. Click on *Test Connection* to check whether everything was specified correctly.  If a connection is successful, click *Save* on the top of the page.
 
 ## SMTP configuration
 
 SMTP allows to send email messages out. Users can setup SMTP settings in Preferences as well as in their Personal Email Accounts. An administrator can also allow to use System SMTP (make it shared).
 
-Users can have multiple SMTP accounts (since version 4.2.0). However, email addresses a user can use to send emails from are defined by email addresses of User record.
+Users can have multiple SMTP accounts. However, email addresses a user can use to send emails from are defined by email addresses of User record.
 
 To setup SMTP account, do the following:
 
-1. Navigate either to **Personal Email Accounts page (Emails Tab > top-right menu > Personal Email Accounts)** or to **Preferences > SMTP** settings.
-2. Tick off **Use SMTP** box.
-3. Enter your **SMTP Host** name, in SMTP security field select **TLS** for a secure connection. The **SMTP** Port will be generated automatically.
-4. Tick **SMTP Auth** box and enter your **Email Client Username** and **Email Client Password** in the fields shown.
-5. Click on **Send Test Email** to check whether everything was specified correctly. If the connection is successful, you will receive test email on the specified email address.
+1. Navigate either to *Personal Email Accounts page (Emails Tab > top-right menu > Personal Email Accounts)* or to *Preferences > SMTP* settings.
+2. Tick off *Use SMTP* box.
+3. Enter your *SMTP Host* name, in SMTP security field select *TLS* for a secure connection. A proper *SMTP Port* will be set automatically.
+4. Tick *SMTP Auth* box and enter your *Email Client Username* and *Email Client Password* in the fields shown.
+5. Click on *Send Test Email* to check whether everything was specified correctly. If the connection is successful, you will receive test email on the specified email address.
 
 ![SMTP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/3.png)
 
 ## Setup for G Suite account
 
-1. Sign into your **Google Admin console**.
-2. Navigate to **App > G Suite > Gmail > Advanced settings**.
-3. Select the organizational unit in the **Organizations section**.
-4. Under the POP and IMAP Access, uncheck the **Disable POP and IMAP access for all users box** checkbox.
+1. Sign into your *Google Admin console*.
+2. Navigate to *App > G Suite > Gmail > Advanced settings*.
+3. Select the organizational unit in the **rganizations section*.
+4. Under the POP and IMAP Access, uncheck the *Disable POP and IMAP access for all users box* checkbox.
 5. Each user has to enable IMAP access as descibed for [Gmail Account](#setup-for-gmail-account).
 
 ## Setup for Gmail account
 
-1. Sign into your **Gmail Account**.
+1. Sign into your *Gmail Account*.
 2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png) > Settings.
-3. Click the **Forwarding and POP/IMAP** tab.
-4. In the **IMAP access**, select **Enable IMAP**.
-5. Click on **Save Changes**.
+3. Click the *Forwarding and POP/IMAP* tab.
+4. In the *IMAP access*, select *Enable IMAP*.
+5. Click on *Save Changes*.
 
 Note: There are two ways in which you can setup IMAP and SMTP for Gmail account:
 
@@ -70,11 +70,11 @@ For more information, please follow the [link](https://support.google.com/mail/a
 
 ## Setup for Outlook account
 
-1. Go to your **Outlook Account**.
-2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png) > **View all Outlook settings**.
-3. On the navigation panel, select **Mail > Sync email**.
-4. Click **Yes** to enable POP and IMAP access.
-5. Press **Save** button on the top of the page.
+1. Go to your *Outlook Account*.
+2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png) > *View all Outlook settings*.
+3. On the navigation panel, select *Mail > Sync email*.
+4. Click *Yes* to enable POP and IMAP access.
+5. Press *Save* button on the top of the page.
 
 ![Outlook configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/5.png)
 
@@ -100,16 +100,16 @@ Use [Google Integration](https://www.espocrm.com/extensions/google-integration/)
 
 #### For Gmail accounts
 
-1. Go to your **Google Account**.
-2. Select **Security** on the navigation panel.
-3. In the **Less secure app access section**, click **Turn on access**.
+1. Go to your *Google Account*.
+2. Select *Security* on the navigation panel.
+3. In the *Less secure app access section*, click *Turn on access*.
 
 ![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/6.png)
 
 #### For Yahoo accounts
 
-1. Go to your **Yahoo Account**.
-2. On the navigation panel, select **Account Security**.
-3. At the bottom of the page, click **Allow apps that use less secure sign in**.
+1. Go to your *Yahoo Account*.
+2. On the navigation panel, select *Account Security*.
+3. At the bottom of the page, click *Allow apps that use less secure sign in*.
 
 ![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/7.png)
