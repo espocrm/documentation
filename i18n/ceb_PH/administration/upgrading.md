@@ -8,11 +8,11 @@ Para tan-awon ang imohang version, adto sa Administration > Upgrade nga page.
 
 ### Step 2. I-download ang mga gikinahanglan nga mga package
 
-Adto sa upgrade page https://www.espocrm.com/download/upgrades/ ug i-download ang mga gikinahanglan nga mga package basi sa sakto nga version.
+Adto sa [upgrade page](https://www.espocrm.com/download/upgrades/) ug i-download ang mga gikinahanglan nga mga package basi sa sakto nga version.
 
 ### Step 3. Paghimo og backup (opsyonal)
 
-Paghimo og backup sa imohang EspoCRM nga mga file ug data usa mag-upgrade. Sunda ang [kani nga mga instruction] (https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) aron mabuhat nimo kini.
+Paghimo og backup sa imohang EspoCRM nga mga file ug data usa mag-upgrade. Sunda ang kani nga mga [instruction](backup-and-restore.md) aron mabuhat nimo kini.
 
 ### Step 4. Proseso sa pag-upgrade
 

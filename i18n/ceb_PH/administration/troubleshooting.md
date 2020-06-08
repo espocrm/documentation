@@ -14,7 +14,7 @@ Para sa Ubuntu server, ang apache error log kay makit-an sa `/var/log/apache2/er
 
 ## I-enable ang debugging mode
 
-Para i-enable ang mode para maka debug, adto sa installed EspoCRM nga direktoryo, ablihi ang file `data/config.php` ug usba ang balor: 
+Para i-enable ang mode para maka debug, adto sa installed EspoCRM nga direktoryo, ablihi ang file `data/config.php` ug usba ang balor:
 
 ```
 'logger' => [
@@ -38,7 +38,7 @@ ngadto sa
 
 1. Pag-login gamit ang SSH ngadto sa imohang server.
 
-2. I-konpigyur ang imohang crontab gamit sa mga musunod nga mga lakang: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. I-konpigyur ang imohang [crontab](server-configuration.md#pag-setup-og-crontab) gamit sa mga musunod nga mga lakang.
 
 Timan-e: Ang crontab kay gikinahanglang i-konpigyura sa ubos sa web-server nga user, e.g. `crontab -e -u www-data`.
 
@@ -85,4 +85,4 @@ Gikinahanglan ni nga 644. Kung naay bisan usa ka file nga naay permiso nga 664, 
 ```
 chmod 644 /path/to/file
 ```
-Para sa dugang nga impormasyon bahin sa mga permiso sa file: [diri](server-configuration.md#required-permissions-for-unix-based-systems).
+Para sa dugang nga impormasyon bahin sa mga permiso sa file: [diri](server-configuration.md#mga-gikinahanlang-permiso-para-sa-mga-unix-based-nga-mga-sistema).

@@ -10,9 +10,9 @@ Ang mga bag-ong lead kinahanglan nga lihukon sa mosunod nga mga sitwasyon:
 * Pinaagi sa API (e.g. pinaagi sa web form);
 * Awtomatiko gumikan sa lagda sa Workflow.
 
-Pinaagi sa paggamit sa [Workflows](https://github.com/espocrm/documentation/blob/master/administration/workflows.md) ang administrador mamahimong maka-set up sa sistema para maka-apply ug espesipikong assignment rule sa mga bag.o nga lead, i.e. Round-Robin ug Least-Busy nga mga lagda. Alang sa mas komplikadong mga business flow, girekomendar kini nga gamiton [BPM tool](https://github.com/espocrm/documentation/blob/master/administration/bpm.md).
+Pinaagi sa paggamit sa [Workflows](../administration/workflows.md) ang administrador mamahimong maka-set up sa sistema para maka-apply ug espesipikong assignment rule sa mga bag.o nga lead, i.e. Round-Robin ug Least-Busy nga mga lagda. Alang sa mas komplikadong mga business flow, girekomendar kini nga gamiton [BPM tool](../administration/bpm.md).
 
-Aron mapugngan nga di masal-angan mga bag-ong lead, ang mga tiggamit makadugang ug klase sa Lead entity ngadto sa listahan sa Global Auto-follow sa Preferences. Dayon kini awtomatikong mosunod sa matag bag-ong kaso. 
+Aron mapugngan nga di masal-angan mga bag-ong lead, ang mga tiggamit makadugang ug klase sa Lead entity ngadto sa listahan sa Global Auto-follow sa Preferences. Dayon kini awtomatikong mosunod sa matag bag-ong kaso.
 
 ## Mga Oportunidad
 
@@ -38,12 +38,12 @@ Ang mosunod nga mga tsart anaa sa dashboard pinaagi sa default:
 * Mga Oportunidad gumikan sa yugto;
 * Sales Pipeline.
 
-Pinaagi sa paggamit sa [Reports tool](https://github.com/espocrm/documentation/blob/master/user-guide/reports.md) posible nga makita ang mga istatistika sa pagpamaligya nga gibase sa espesipiko nga criteria. Ang tsart sa mga report mahimong ipakita sa dashboard.
+Pinaagi sa paggamit sa [Reports tool](reports.md) posible nga makita ang mga istatistika sa pagpamaligya nga gibase sa espesipiko nga criteria. Ang tsart sa mga report mahimong ipakita sa dashboard.
 
 ### Forecast sa Kita
 
 1. Paghimo og bag-ong grid report alang sa Opportunity entity type.
-2. Idugang ang 'MONTH: Close Date' sa Group By field. 
+2. Idugang ang 'MONTH: Close Date' sa Group By field.
 3. Idugang ang 'SUM: Amount Weighted' sa Columns field.
 4. Idguang ang 'Close Date' sa Runtime Filters field.
 5. Pilia ang 'Bar (vertical)' nga matang sa tsart.

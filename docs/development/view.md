@@ -41,8 +41,13 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             
             // use listenTo & listenToOnce methods fore listening to events of another object
             // to prevent memory leakage
-            this.listenTo(this.model, 'change', function () {
+
+            this.listenTo(this.model, 'change', function () { // model changed
+                if (this.model.hasChanged('test')) { // whether specific attribute changed                
+                }
+            }, this);
             
+            this.listenTo(this.model, 'sync', function () { // model saved or fetched            
             }, this);
         },
 

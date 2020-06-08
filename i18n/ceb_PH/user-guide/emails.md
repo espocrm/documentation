@@ -4,7 +4,7 @@ Ang EspoCRM kay naghatag og abilidad nga mukuha ug email gikan sa IMAP nga box. 
 
 ## Mga IMAP account
 
-*Timan-e: Gikinahanglan ka nga naay [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) nga sakto pagkakonpigyura sa imohang sistema para naay mugana ang mga padulong nga mga email.*
+*Timan-e: Gikinahanglan ka nga naay [cron](../administration/server-configuration.md#pag-setup-og-crontab) nga sakto pagkakonpigyura sa imohang sistema para naay mugana ang mga padulong nga mga email.*
 
 Ang user kay maka-setup ug IMAP account sa Personal Email Accounts nga page (Emails tab > top-right menu > Personal Email Accounts).
 

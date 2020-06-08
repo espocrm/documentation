@@ -355,4 +355,8 @@ dateStart = datetime\ADESSO()
 
 ## usando la formula nei flussi di lavoro
 
+<<<<<<< HEAD
 è possibile utilizzare la formula in condizioni di flusso di lavoro e le azioni. Vedere i flussi di lavoro [documentazione](workflows.md#usando-la-formula-nelle-azioni) per ulteriori informazioni.
+=======
+è possibile utilizzare la formula in condizioni di flusso di lavoro e le azioni. Vedere [i flussi di lavoro documentazione](workflows.md#usando-la-formula-nelle-azioni) per ulteriori informazioni.
+>>>>>>> upstream/master

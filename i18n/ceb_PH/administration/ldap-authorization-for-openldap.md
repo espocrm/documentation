@@ -1,6 +1,6 @@
 # LDAP authorization para sa OpenLDAP
 
-Example sa configuration LDAP authorization para sa OpenLDAP nga server.  Ang tibuok guide sa configuration LDAP authorization kay makit-an [diri](ldap-authorization.md)..
+Example sa configuration LDAP authorization para sa OpenLDAP nga server.  Ang tibuok guide sa configuration LDAP authorization kay makit-an [diri](ldap-authorization.md).
 
 ```
 Host: espo.local
