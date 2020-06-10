@@ -80,6 +80,11 @@
   * [Quotes](user-guide/quotes.md)
   * [Sales Orders](user-guide/sales-orders.md)
   * [Invoices](user-guide/invoices.md)
+* Google Integration
+  * [Setting-up](extensions/google-integration/setting-up.md)
+  * [Calendar](extensions/google-integration/calendar.md)
+  * [Contacts](extensions/google-integration/contacts.md)
+  * [Gmail](extensions/google-integration/gmail.md)
 
 ---
 
