@@ -4,8 +4,8 @@
 
 Features:
 
-* Ability to push your EspoCRM contacts and leads to Google Contacts
-* Ability to choose Google Contacts groups
+* The ability to push your EspoCRM contacts and leads to Google Contacts
+* The ability to choose Google Contacts groups
 * Available fields: *Name*, *Description*, *Email Addresses*, *Phone Numbers*, and *Account Name*
 
 ## Setting-up for users
