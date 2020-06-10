@@ -85,6 +85,11 @@
   * [Calendar](extensions/google-integration/calendar.md)
   * [Contacts](extensions/google-integration/contacts.md)
   * [Gmail](extensions/google-integration/gmail.md)
+* Outlook Integration
+  * [Setting-up](extensions/outlook-integration/setting-up.md)
+  * [Calendar](extensions/outlook-integration/calendar.md)
+  * [Contacts](extensions/outlook-integration/contacts.md)
+  * [Email](extensions/outlook-integration/email.md)
 
 ---
 
