@@ -6,7 +6,7 @@ Az elrendezeskezelo az adminisztracios panelben erheto el. Kepes testreszabni a 
 
 A lista nezet fo elrendezese. Meghatarozza az oszlopokat es azok parametereit.
 
-![List](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/list.png)
+![List](../../../docs/_static/images/administration/layout-manager/list.png)
 
 Az oszlopokhoz rendelkezesre allo parameterek az alabbiak.
 
@@ -32,7 +32,7 @@ A reszletes nezet es a szerkesztesi nezet fo elrendezese. Meghatarozza a panelek
 
 A sor ket cellat vagy egy cellat tartalmazhat, amely a sor teljes szelessegere kiterjed. A sor bovitett cellahoz torteno hozzaadasahoz uj sorot kell hozzaadnia, es barmely minusz jelre kattintania.
 
-![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
+![Detail](../../../docs/_static/images/administration/layout-manager/detail.png)
 
 ## Lista (kis)
 

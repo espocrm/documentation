@@ -4,9 +4,9 @@ Fitur penawaran tersedia di [Paket Lanjutan](https://www.espocrm.com/extensions/
 
 Kutipan adalah kelompok produk atau layanan tertentu dengan jumlah dan harga yang Anda kutip kepada pelanggan.
 
-Kutipan memiliki hubungan dengan Opportuniti. Anda bisa menambahkan panel Kutipan ke detail Opportuniti lihat di Administrasi> Manajer Tata letak> Opportuniti> Hubungan. Saat membuat kutipan baru terkait dengan peluang, itu mengalihkan item peluang ke penawaran.
+Kutipan memiliki hubungan dengan Opportuniti. Anda bisa menambahkan panel Kutipan ke detail Opportuniti lihat di Administrasi > Manajer Tata letak > Opportuniti > Hubungan. Saat membuat kutipan baru terkait dengan peluang, itu mengalihkan item peluang ke penawaran.
 
-Anda dapat menambahkan panel Kutipan ke tampilan detail Akun untuk dapat melihat kutipan terkait. Anda dapat melakukannya di Administrasi> Manajer Tata letak> Akun> Hubungan.
+Anda dapat menambahkan panel Kutipan ke tampilan detail Akun untuk dapat melihat kutipan terkait. Anda dapat melakukannya di Administrasi > Manajer Tata letak > Akun > Hubungan.
 
 ## Item Kutipan
 
@@ -31,14 +31,14 @@ Contoh:
 
 `{{assignedUser.lastName}}` – nama belakang pengguna yang ditetapkan.
 
-Jika item baris Anda adalah produk Anda dapat mencetak bidang produk. 
+Jika item baris Anda adalah produk Anda dapat mencetak bidang produk.
 
 Contoh:
-`{{product.length}}`, 
+`{{product.length}}`,
 
 `{{product.color}}`.
 
-Panjang dan warna adalah bidang kustom entitas Produk dalam contoh. 
+Panjang dan warna adalah bidang kustom entitas Produk dalam contoh.
 
 Perulangan melalui item kutipan:
 
@@ -54,7 +54,7 @@ Perulangan melalui item kutipan:
 <!-- {{/each}} -->
 ```
 
-Memungkinan Anda untuk mencetak bidang gambar: 
+Memungkinan Anda untuk mencetak bidang gambar:
 
 ```
 <img src="{{file imageId}}">
@@ -75,7 +75,7 @@ Format khusus untuk nilai mata uang (sejak versi 4.8.3):
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
-Nilai `10000.5` akan dicetak sebagai `10 000,50`. 
+Nilai `10000.5` akan dicetak sebagai `10 000,50`.
 
 Untuk menampilkan teks fileds (multiline) gunakan tiga petik: `{{{description}}}`.
 

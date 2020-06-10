@@ -16,44 +16,44 @@ Sekarang buka file ini (/etc/nginx/sites-available/espocrm.conf) dan ubah kode b
 server {
     listen 80;
     listen [::]:80;
- 
+
     server_name espocrm.local; # Replace espocrm.local to your domain name
     root /var/www/html/espocrm; # Specify your EspoCRM document root
- 
+
     index index.php index.html index.htm;
- 
+
     # SSL configuration
     #
     # listen 443 ssl;
     # listen [::]:443 ssl;
-    # include snippets/snakeoil.conf;    
- 
+    # include snippets/snakeoil.conf;
+
     # Specify your PHP (php-cgi or php-fpm) based on your configuration
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
- 
+
         # With php7.0-cgi alone:
         # fastcgi_pass 127.0.0.1:9000;
- 
+
         # With php7.0-fpm:
         fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-    }    
- 
+    }
+
     # Add rewrite rules
     location / {
         try_files $uri $uri/ =404;
     }
- 
+
     location /api/v1/ {
         if (!-e $request_filename){
             rewrite ^/api/v1/(.*)$ /api/v1/index.php last; break;
         }
     }
- 
+
     location ~ /reset/?$ {
         try_files /reset.html =404;
     }
- 
+
     location ^~ (data|api)/ {
         if (-e $request_filename){
             return 403;
@@ -89,13 +89,13 @@ server {
 }
 ```
 
-##Aktifkan blok server ini
+## Aktifkan blok server ini
 
 Buat link symbolic:
 
 ```
 sudo ln -s /etc/nginx/sites-available/espocrm.conf /etc/nginx/sites-enabled/
-````
+```
 
 Jalankan command ini untuk memeriksa apakah semuanya berjalan lancar:
 
@@ -109,7 +109,7 @@ Dan restart server Nginx:
 sudo service nginx restart
 ```
 
-##Konfigurasi local hosts Anda (opsional, untuk domain lokal saja)
+## Konfigurasi local hosts Anda (opsional, untuk domain lokal saja)
 
 Jika Anda menambahkan domain lokal, Anda harus mengkonfigurasnya di komputer lokal Anda (bukan di server). Untuk Ubuntu, buka file /etc/hosts dan tambahkan baris:
 

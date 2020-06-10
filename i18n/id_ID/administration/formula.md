@@ -3,7 +3,7 @@
 Pada entity manager dimungkinkan untuk mendefinisikan script (rumus) untuk tipe entitas tertentu. Script ini akan dieksekusi setiap saat sebelum rekaman disimpan.
 Ini menyediakan kemampuan untuk secara otomatis mengatur bidang tertentu (atribut) dengan nilai yang berasal dari perhitungan.
 
-Untuk mengedit rumus ikuti menu Administrasi> Manajer Entitas> tarik-ulur di sebelah kanan pada deretan entitas yang dibutuhkan> Rumus.
+Untuk mengedit rumus ikuti menu Administrasi > Manajer Entitas > tarik-ulur di sebelah kanan pada deretan entitas yang dibutuhkan > Rumus.
 
 Anda juga mungkin perlu mengatur bidang, yang seharusnya dihitung, Read-only melalui Manajer Entitas.
 
@@ -134,7 +134,7 @@ Contoh:
 
 `datetime\closest(datetime\now(), 'time', '20:00')` Akan mengembalikan nilai datetime terdekat di masa depan dengan waktu 20:00.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Akan kembali ke`2017-11-01`, hari pertama setiap bulannya. 
+`datetime\closest('2017-11-20', 'date', 1, true)` Akan kembali ke`2017-11-01`, hari pertama setiap bulannya.
 
 `datetime\closest(datetime\now(), 'dayOfWeek', 1)` Akan kembali ke Senin depan (awal hari).
 
@@ -183,7 +183,7 @@ Contoh:
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Menambahkan ID ke bidang Tautan Multiple. Misalnya, tambahkan bidang 'someTeamId' ke 'tim'. 
+`entity\addLinkMultipleId(LINK, ID)` Menambahkan ID ke bidang Tautan Multiple. Misalnya, tambahkan bidang 'someTeamId' ke 'tim'.
 
 `entity\addLinkMultipleId(LINK, ID_LIST)` Menambahkan daftar id. (sejak versi 4.8.3)
 
@@ -264,4 +264,4 @@ ifThenElse(
 
 ## Menggunakan rumus dalam Alur Kerja
 
-Anda dapat memanfaatkan rumus dalam kondisi lur kerja dan tindakan. Lihat [dokumentasi alur kerja](workflows.md) untuk informasi lebih lanjut.
+Anda dapat memanfaatkan rumus dalam kondisi lur kerja dan tindakan. Lihat [dokumentasi alur kerja](workflows.md#menggunakan-rumus-dalam-tindakan) untuk informasi lebih lanjut.

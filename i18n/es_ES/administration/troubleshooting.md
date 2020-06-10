@@ -38,7 +38,7 @@ a
 
 1. Ingresa a través de SSH a tu servidor.
 
-2. Configure su crontab siguiendo estos pasos: https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+2. Configure su crontab siguiendo estos [pasos](server-configuration.md#configurar-un-crontab).
 
 Nota: Crontab debería configurarse bajo usuario del servidor web, P.ej. `crontab-e-uwww-data`.
 
@@ -85,4 +85,4 @@ Deben ser 644. Si alguno de esos archivos tiene permiso 664, debe cambiarlo a 64
 ```
 chmod 644 /path/to/file
 ```
-Más información sobre permisos de archivos: [aquí](server-configuration.md#required-permissions-for-unix-based-systems).
+Más información sobre permisos de archivos: [aquí](server-configuration.md#permisos-requeridos-para-sistemas-basados-en-unix).

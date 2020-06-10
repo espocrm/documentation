@@ -4,11 +4,11 @@ Seguire questi passi per spostare EspoCRM a un altro server:
 
 ### Passo 1. I file di backup
 
-consente di aprire un file manager o il login via SSH per archiviare tutti i file dalla directory EspoCRM. Maggiori dettagli: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-backup-files.
+consente di aprire un file manager o il login via SSH per archiviare tutti i file dalla directory EspoCRM. Maggiori [dettagli](../../../docs/administration/backup-and-restore.md#step-1-backup-files).
 
 ### Passo 2. Eseguire il backup del database
 
-i dati memorizzati nel database (MySQL, MariaDB) dovrebbe essere eseguito il backup. Si prega di seguire questa raccomandazione: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-2-backup-database.
+i dati memorizzati nel database (MySQL, MariaDB) dovrebbe essere eseguito il backup. Si prega di seguire questa [raccomandazione](../../../docs/administration/backup-and-restore.md#step-2-backup-database).
 
 ### Passo 3. Copia di file e backup di database a un altro server di
 
@@ -16,20 +16,20 @@ backup di copia dei file e dei database in un nuovo server.
 
 ### Passo 4. Unarchive file di backup
 
-per unarchive file di backup, è possibile utilizzare Archive Manager o questa istruzione: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-1-unarchive-backup-files.
+per unarchive file di backup, è possibile utilizzare Archive Manager o questa [istruzione](../../../docs/administration/backup-and-restore.md#step-1-unarchive-backup-files).
 Nota: i file devono essere inseriti nel server web directory.
 
 ### Passo 5. Configurare un server di
 
-configurazione di un nuovo server basato sulle raccomandazioni qui: https://www.espocrm.com/documentation/administration/server-configuration/.
+configurazione di un nuovo server basato sulle [raccomandazioni qui](server-configuration.md).
 
 ### Passo 6. Correggere le autorizzazioni
 
-impostate le autorizzazioni necessarie e i file proprietario, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-required-permissions-for-unix-based-systems.
+impostate le autorizzazioni necessarie e i file [proprietario](server-configuration.md#le-autorizzazioni-necessarie-per-i-sistemi-basati-su-unix).
 
 ### Passo 7. Importare il backup del database
 
-prima di tutto è necessario creare un nuovo database con un utente in MySQL. Per importare il database dal backup, seguire le instuction: https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md#step-3-import-database-dump.
+prima di tutto è necessario creare un nuovo database con un utente in MySQL. Per importare il database dal backup, seguire le [instuction](../../../docs/administration/backup-and-restore.md#step-3-import-database-dump).
 
 ### Passo 8. Correggere le configurazioni EspoCRM
 
@@ -67,7 +67,7 @@ Dove 'www-dati' è il vostro web-server user.
 
 ### Passo 9. Impostazione di una
 
-configurazione di crontab di un crontab, https://www.espocrm.com/documentation/administration/server-configuration/#user-content-setup-a-crontab.
+configurazione di crontab di un [crontab](server-configuration.md#setup-di-un-crontab).
 Nota: deve essere configurata sotto il vostro web-server user.
 
 Questo è tutto. Ora, la vostra EspoCRM istanza è in esecuzione su un nuovo server.

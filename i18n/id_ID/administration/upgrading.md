@@ -12,7 +12,7 @@ Buka halaman upgrade https://www.espocrm.com/download/upgrades/ dan pusatkan ver
 
 ### Langkah 3. Buatlah cadangan (opsional)
 
-Buatlah cadangan file dan data EspoCRM Anda sebelum melakukan upgrade. Ikuti  [petunjuk ini](https://github.com/espocrm/documentation/blob/master/administration/backup-and-restore.md) untuk menyelesaikannya.
+Buatlah cadangan file dan data EspoCRM Anda sebelum melakukan upgrade. Ikuti  [petunjuk ini](backup-and-restore.md) untuk menyelesaikannya.
 
 ### Step 4. Proses upgrade
 

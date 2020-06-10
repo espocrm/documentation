@@ -10,7 +10,7 @@ Si un usuario tiene múltiples roles, se fusionarán para que la regla permisiva
 
 Es posible ver qué permisos se aplican a un determinado usuario haciendo clic en el botón "Acceso" en la vista de detalles del usuario.
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
+![1](../../../docs/_static/images/administration/roles-management/scope-level.png)
 
 
 ## Ejemplo

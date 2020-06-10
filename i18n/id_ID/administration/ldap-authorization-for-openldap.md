@@ -20,4 +20,4 @@ User Email Address Attribute: mail
 User Phone Number Attribute: telephoneNumber
 ```
 
-![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration-for-openldap.png)
+![1](../../../docs/_static/images/administration/ldap-authorization/ldap-configuration-for-openldap.png)

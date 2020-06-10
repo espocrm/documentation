@@ -6,7 +6,7 @@ Layout Manager está disponible en el panel de administración. Ofrece la posibi
 
 El diseño principal de la vista de lista. Define columnas y sus parámetros.
 
-![List](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/layout-manager/list.png)
+![List](../../../docs/_static/images/administration/layout-manager/list.png)
 
 Los parámetros disponibles para las columnas se enumeran a continuación.
 
@@ -32,7 +32,7 @@ El diseño principal de la vista de detalles y la vista de edición. Define pane
 
 La fila puede contener dos celdas o una celda que se expande al ancho completo de la fila. Para agregar la fila con una celda expandida, debe agregar la nueva fila y hacer clic en un signo menos en cualquier celda.
 
-![Detail](https://github.com/espocrm/documentation/blob/master/docs/_static/images/administration/layout-manager/detail.png)
+![Detail](../../../docs/_static/images/administration/layout-manager/detail.png)
 
 ## Lista (pequeña)
 

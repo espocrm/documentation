@@ -4,7 +4,7 @@ EspoCRM proporciona la capacidad de buscar correos electrónicos desde el cuadro
 
 ## Cuentas IMAP
 
-*Nota: Debe tener [cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) configurado correctamente en su sistema para tener correos electrónicos entrantes trabajando.*
+*Nota: Debe tener [cron](../administration/server-configuration.md#configurar-un-crontab) configurado correctamente en su sistema para tener correos electrónicos entrantes trabajando.*
 
 El usuario puede configurar la cuenta IMAP en la página Cuentas de Correo Electrónico personales (pestaña de Correo Electrónico > menú superior derecho > Cuentas de Correo Electrónico Personales).
 
@@ -39,10 +39,10 @@ Todos los correos electrónicos relacionados con un registro específico se mues
 
 ## Mandando Correos Electrónicos
 
-Puede redactar un nuevo correo electrónico de varias maneras: 
-* Botón de *Escribir Correo Electrónico* en la vista de lista de Correos Electrónicos; 
-* respondiendo en otro correo electrónico; 
-* haciendo clic en una dirección de correo electrónico de algún registro; 
+Puede redactar un nuevo correo electrónico de varias maneras:
+* Botón de *Escribir Correo Electrónico* en la vista de lista de Correos Electrónicos;
+* respondiendo en otro correo electrónico;
+* haciendo clic en una dirección de correo electrónico de algún registro;
 * acción *Escribir Correo Electrónico* del panel de Actividades.
 
 Existe la posibilidad de **seleccionar la plantilla** de su correo electrónico.
@@ -59,8 +59,8 @@ El administrador puede crear filtros de correo electrónico globales para omitir
 
 El usuario habitual puede crear filtros de correo electrónico para sus Cuentas de Correo Electrónico Personales o para su bandeja de entrada completa. Están disponibles en Correos Electrónicos > menú desplegable en la esquina superior derecha > Filtros.
 
-Hay dos tipos de filtros: 
-* Omitir - el correo electrónico se colocará en *Papelera* o no se importará si el filtro está relacionado con la Cuenta de Correo Electrónico Personal; 
+Hay dos tipos de filtros:
+* Omitir - el correo electrónico se colocará en *Papelera* o no se importará si el filtro está relacionado con la Cuenta de Correo Electrónico Personal;
 * Poner en carpeta - los correos electrónicos importados se colocarán automáticamente en la carpeta de usuario especificada.
 
 ## Plantillas de Correo Electrónico
@@ -71,7 +71,6 @@ Es posible usar colocadores de carpeta en el cuerpo de la plantilla del correo e
 
 Puede utilizar colocadores de carpetas reservados adicionales en el cuerpo de la plantilla: {optOutUrl} y {optOutLink}.
 ```
-
 <a href="{optOutUrl}">Cancelar subscripción</a>
 ```
 

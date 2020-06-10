@@ -52,7 +52,7 @@ Los usuarios pueden completar manualmente las listas de objetivos usando la acci
 
 ## Poblar Listas de objetivos con Informes
 
-La función [Reportes](reports.md#syncing-with-target-lists) proporciona la capacidad de rellenar listas de objetivos con registros que coincidan con criterios específicos.
+La función [Reportes](reports.md#sincronización-con-listas-de-objetivos) proporciona la capacidad de rellenar listas de objetivos con registros que coincidan con criterios específicos.
 
 ## Excluir Listas de Objetivos
 

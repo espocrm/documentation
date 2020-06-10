@@ -1,6 +1,6 @@
 # Surel
 
-> Penting. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) harus dikonfigurasi di sistem Anda untuk melakukan pengambilan surel. Anda dapat menemukan informasi di EspoCRM Anda di Administrasi> Pekerjaan Terjadwal.
+> Penting. [Cron](server-configuration.md#mengatur-crontab) harus dikonfigurasi di sistem Anda untuk melakukan pengambilan surel. Anda dapat menemukan informasi di EspoCRM Anda di Administrasi> Pekerjaan Terjadwal.
 
 ## Ikhtisar
 
@@ -12,7 +12,7 @@ Sebagai surel yang masuk sistem mencoba menautkannya dengan catatan yang sesuai 
 
 Hanya administrator yang dapat mengatur Akun Surel Grup. Akun Surel Grup dapat digunakan untuk menerima dan mengirim surel. Mengirim surel dari akun grup telah tersedia sejak versi 4.9.0.
 
-Bidang tim menentukan tim surel masuk mana yang akan ditugaskan. 
+Bidang tim menentukan tim surel masuk mana yang akan ditugaskan.
 
 Jika akun surel grup memiliki SMTP dan dicentang sebagai bersama maka akses akan dikontrol oleh Peran melalui izin Akun Surel Grup. Tim lapangan akan digunakan jika level izin diatur ke 'tim'.
 

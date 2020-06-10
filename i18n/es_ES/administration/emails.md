@@ -1,6 +1,6 @@
 # Emails
 
-> Importante. [Cron](https://github.com/espocrm/documentation/blob/master/administration/server-configuration.md#setup-a-crontab) debe configurarse en su sistema para que funcione el correo electrónico. Puede encontrar la información en su EspoCRM en Administration > Scheduled Jobs.
+> Importante. [Cron](server-configuration.md#configurar-un-crontab) debe configurarse en su sistema para que funcione el correo electrónico. Puede encontrar la información en su EspoCRM en Administration > Scheduled Jobs.
 
 ## Vista General
 
@@ -12,7 +12,7 @@ A medida que se recibe un correo electrónico, el sistema intenta vincularlo con
 
 Solo el administrador puede configurar cuentas de correo electrónico grupales. Las cuentas de correo grupal se pueden usar para recibir y enviar correos electrónicos. El envío de correos electrónicos desde cuentas de grupo ha estado disponible desde la versión 4.9.0.
 
-El campo Equipos determina a qué equipos se asignarán los correos electrónicos entrantes. 
+El campo Equipos determina a qué equipos se asignarán los correos electrónicos entrantes.
 
 Si la cuenta de correo electrónico grupal tiene SMTP y se marca como compartida, un acceso será controlado por Roles a través del permiso de Cuenta de correo electrónico grupal. El campo Equipos se usará si el nivel de permiso se establece en 'equipo'.
 
@@ -21,9 +21,9 @@ Existe la posibilidad de que el sistema envíe una respuesta automática para lo
 ## Email-A-Case
 
 Existe una opción para que el sistema cree casos a partir de correos electrónicos de grupos entrantes.
-Esta función está destinada a los equipos de soporte. 
+Esta función está destinada a los equipos de soporte.
 Los casos se pueden distribuir a los usuarios de un equipo específico de acuerdo con estas formas:
-`direct assignment`, `round-robin` y `less-busy`. 
+`direct assignment`, `round-robin` y `less-busy`.
 Solo el primer correo electrónico en el hilo crea un nuevo caso.
 Cada uno posterior se vinculará con el registro de caso existente y se mostrará en su panel de Stream.
 

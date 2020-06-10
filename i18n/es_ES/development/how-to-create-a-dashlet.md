@@ -4,7 +4,7 @@ Cree un archivo `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.j
 
 Aquí necesita definir `"view"`, y podría configurar `"aclScope"`, `"entityType"`, y `"options"`.
 
-Si es una lista de dashlet típica, utilice `"view":"views/dashlets/abstract/record-list"`, si no, cree su propia vista (https://github.com/espocrm/documentation/blob/master/development/custom-views.md). 
+Si es una lista de dashlet típica, utilice `"view":"views/dashlets/abstract/record-list"`, si no, cree su propia [vista](custom-views.md). 
 
 ## Opciones
 Por defecto, en las opciones de dashlet puede configurar _Title_ y _Auto-refresh Interval_.
@@ -15,7 +15,7 @@ Para definir la posición de los campos, configure la disposición en `"options"
 
 También puede definir otras opciones, si su vista necesita más datos.
 
-## Ejemplo 
+## Ejemplo
 
 `application/Espo/Modules/Crm/Resources/metadata/dashlets/Cases.json`
 
@@ -101,7 +101,7 @@ También puede definir otras opciones, si su vista necesita más datos.
 
 Ahí puede ver algunos ejemplos `application/Espo/Modules/Crm/Resources/metadata/dashlets`.
 
-## Traducción 
+## Traducción
 
 La traducción a dashlet está en el rango `Global`, en la sección `"dashlets"`.
 

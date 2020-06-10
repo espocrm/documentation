@@ -105,7 +105,7 @@ Si LENGTH es negativo, se omitirán muchos caracteres al final de STRING.
 `datetime\dayOfWeek(VALUE, [TIMEZONE])` Devuelve el día de la semana (0-6). `-1` si VALUE está vacío. `0` - para el domingo. Si se omite TIMEZONE, se utiliza la zona horaria del sistema. (desde la versión 4.7.3)
 
 #### datetime\diff
-`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Devuelve la diferencia entre dos fechas o fechas. INTERVAL_TYPE puede ser 'años', 'meses', 'días', 'horas', 'minutos'. Devuelve `null` si falla. El resultado será negativo si VALUE_1 <VALOR_2.
+`datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)` Devuelve la diferencia entre dos fechas o fechas. INTERVAL_TYPE puede ser 'años', 'meses', 'días', 'horas', 'minutos'. Devuelve `null` si falla. El resultado será negativo si VALUE_1 < VALOR_2.
 
 #### datetime\addMinutes
 `datetime\addMinutes(VALUE, MINUTES)` Haga clic en el botón Eliminar. Agrega MINUTOS a datetime VALUE. MINUTOS puede ser negativo.
@@ -183,7 +183,7 @@ Ejemplo:
 `entity\isAttributeChanged('assignedUserId')`
 
 #### entity\addLinkMultipleId
-`entity\addLinkMultipleId(LINK, ID)` Agrega ID para vincular múltiples campos. Por ejemplo, agregue 'someTeamId' al campo 'equipos'. 
+`entity\addLinkMultipleId(LINK, ID)` Agrega ID para vincular múltiples campos. Por ejemplo, agregue 'someTeamId' al campo 'equipos'.
 
 `entity\addLinkMultipleId(LINK, ID_LIST)` Agrega la lista de identificadores. (desde la versión 4.8.3)
 
@@ -264,4 +264,4 @@ ifThenElse(
 
 ## Using formula in Workflows
 
-Puede utilizar la fórmula en condiciones y acciones de flujo de trabajo. Consulte [documentación de flujos de trabajo](workflows.md) para obtener más información.
+Puede utilizar la fórmula en condiciones y acciones de flujo de trabajo. Consulte [documentación de flujos de trabajo](workflows.md#usar-fórmula-en-acciones-1) para obtener más información.
