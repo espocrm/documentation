@@ -4,7 +4,7 @@ Oauth authentication is available in [Outlook Integration](https://www.espocrm.c
 
 Note: At the current moment (June 2020) Oauth for IMAP & SMTP is supported only for Office 365. It doesn't work for regular Outlook accounts.
 
-Note: Using in personal email accounts requires 5.9.2 version or later. Using in group email accounts requires 5.8.0 version or later.
+Note: Requires EspoCRM v5.9.3 or later.
 
 ## Setting-up email account
 
