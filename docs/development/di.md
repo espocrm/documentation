@@ -59,7 +59,7 @@ A class defines its dependencies by itself.
 
 Only container services can be used as dependencies.
 
-The following classes implements *Injectable* inteface:
+The following classes implement *Injectable* inteface:
 
 * Services (`\Espo\Core\Services\Base`)
 * Repositories (`\Espo\Core\ORM\Repositories\RDB`)
