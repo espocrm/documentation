@@ -47,7 +47,7 @@ Example of definition:
 
 Dependencies will be passed to the class constructor.
 
-##  Classes that implement *Injectable* interface
+##  Classes that implement Injectable interface
 
 Implements `\Espo\Core\Interfaces\Injectable` interface.
 
