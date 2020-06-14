@@ -1,4 +1,4 @@
-# Dependency Injection System
+# Dependency Injection
 
 There are two types of classes that utilizes DI:
 
