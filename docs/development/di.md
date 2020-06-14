@@ -30,10 +30,10 @@ $serviceFactory = $this->getContainer()->get('serviceFactory');
 
 If you need to define your custom container services, do it in metadata:
 
-* `custom/Espo/Resources/metadata/app/containserServices.json`
+* `custom/Espo/Resources/metadata/app/containserServices.json`;
 * or in your module folder.
 
-Example definition in metadata:
+Example of definition:
 
 ```json
 {
