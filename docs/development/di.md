@@ -17,7 +17,21 @@ Container services are defined in:
 * loader classes in `\Espo\Core\Loaders` namespace (can be customized in `\Espo\Custom\Core\Loaders`);
 * metadata (app > containerServices).
 
-If you need to define your custom container services, do it in metadata: `custom/Espo/Resources/metadata/app/containserServices.json` or in your module folder.
+
+Container is available in Controller classes.
+
+Usage in controller class:
+
+```php
+$serviceFactory = $this->getContainer()->get('serviceFactory');
+```
+
+### Defining in metadata
+
+If you need to define your custom container services, do it in metadata:
+
+* `custom/Espo/Resources/metadata/app/containserServices.json`
+* or in your module folder.
 
 Example definition in metadata:
 
@@ -31,14 +45,6 @@ Example definition in metadata:
 ```
 
 Dependencies will be passed to the class constructor.
-
-Container is available in Controller classes.
-
-Usage in controller class:
-
-```php
-$serviceFactory = $this->getContainer()->get('serviceFactory');
-```
 
 ## Non-container classes
 
