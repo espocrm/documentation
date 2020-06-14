@@ -55,7 +55,7 @@ Can be instantiated by *InjectableFactory* (*injectableFactory* instance can be 
 
 ### Injectable interface
 
-Class defines its dependencies by itself.
+A class defines its dependencies by itself.
 
 Only container services can be used as dependencies.
 
