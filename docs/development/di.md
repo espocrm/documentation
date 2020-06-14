@@ -17,8 +17,7 @@ Container services are defined in:
 * loader classes in `\Espo\Core\Loaders` namespace (can be customized in `\Espo\Custom\Core\Loaders`);
 * metadata (app > containerServices).
 
-
-Container is available in Controller classes.
+*Container* instance is available in Controller classes.
 
 Usage in controller class:
 
