@@ -1,8 +1,10 @@
 # Dependency Injection
 
-There are two types of classes that utilizes DI:
+There are two different DI frameworks in Espo. The first utilizes *container* object, the second – *injectableFactory*.
 
-* Container Services
+Two types of classes:
+
+* Container services
 * Classes that implement *Injectable* interface
 
 ## Container services
@@ -45,13 +47,13 @@ Example of definition:
 
 Dependencies will be passed to the class constructor.
 
-## Non-container classes
+##  Classes that implement *Injectable* interface
 
 Implements `\Espo\Core\Interfaces\Injectable` interface.
 
 Can be instantiated by *InjectableFactory* (*injectableFactory* instance can be obtained from *container*).
 
-## Injectable interface
+### Injectable interface
 
 Class defines its dependencies by itself.
 
