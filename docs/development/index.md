@@ -15,6 +15,7 @@
 * [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
 * [ACL customization](acl.md)
+* [Dependency injection](di.md)
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
   * [Defining new funtions for formula](new-function-in-formula.md)
