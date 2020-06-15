@@ -60,7 +60,7 @@ Options:
 
 ```
 $options = [
-    'skipHooks' => true, // skip all hooks, workflows, formula will be ignored
+    'skipHooks' => true, // skip all hooks; workflows, formula will be ignored
     'silent' => true, // workflows will be ignored, modified fields won't be changed
     'skipCreatedBy' => true, // createdBy won't be set with current user
     'skipModifiedBy' => true, // modifiedBy won't be set with current user
