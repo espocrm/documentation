@@ -47,12 +47,32 @@ $account->set(array(
 ```
 
 ### Store
+
 ```php
 $entityManager->saveEntity($account);
 ```
 or
 ```php
 $entityManager->getRepository('Account')->save($account);
+```
+
+Options:
+
+```
+$options = [
+    'skipHooks' => true, // skip all hooks, workflows, formula will be ignored
+    'silent' => true, // workflows will be ignored, modified fields won't be changed
+    'skipCreatedBy' => true, // createdBy won't be set with current user
+    'skipModifiedBy' => true, // modifiedBy won't be set with current user
+    'createdById' => true, // override createdBy
+    'modifiedById' => true, // override modifiedBy
+];
+
+
+$entityManager->saveEntity($account, $options);
+
+// or
+$entityManager->getRepository('Account')->save($account, $options);
 ```
 
 ### Remove
