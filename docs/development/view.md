@@ -126,7 +126,7 @@ Wait method can receive a promise:
             ])
         );
     },
-````
+```
 
 Model factory returs a promise.
 
