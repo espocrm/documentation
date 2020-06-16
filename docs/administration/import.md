@@ -18,10 +18,11 @@ Once you select a CSV file, you will be able to see how it will be parsed in *Pr
 
 Parameters:
 
-* *Header Row* - whether CSV file has the first row with field names.
+* *Header Row* − whether CSV file has the first row with field names.
 * *Execute in idle* − is recommended if you have a big bunch of records to be imported; import will be processed via cro; status will be set to 'Complete' when import process is finished.
 * *Skip searching for duplicates* − will make import faster.
 * *Silent mode* − majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will make import faster.
+* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import. (since v5.10.0)
 
 Click *Next* button to preceed to the _Step 2_.
 
@@ -43,9 +44,25 @@ Click *Run Import* button to proceed. It may take some time before an import pro
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
 
-## Step 3
+## Import results
 
-Once the records are imported and you are sure that imported data is fine you can 'Remove import log' (by clicking the button on the import results view) to preclude accidental reverting of the import.
+#### Remove import log
+
+Once the records are imported and you are sure that imported data is fine you can *Remove Import Log* (by clicking the button on the import results view) to preclude accidental reverting of the import.
+
+#### Revert import
+
+*Revert Import* will remove all imported records permanently. Updates caused by import won't be reverted.
+
+#### Remove duplicates
+
+This will permanently remove all imported records that were recognized as duplicates.
+
+#### New import with same params
+
+Since version 5.10.0.
+
+This will create a new import with the same parameters.
 
 ## Importing into Target List
 
