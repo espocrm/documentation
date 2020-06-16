@@ -23,6 +23,7 @@
   * [Duplicate checking](duplicate-check.md)
   * [Database indexes](db-indexes.md)
   * [App params](app-params.md)
+  * [Jobs](jobs.md)
 
 ### Frontend
 
