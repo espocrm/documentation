@@ -68,7 +68,7 @@ This will create a new import with the same parameters.
 
 When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add *Target List* field on *Default Values* panel and select a needed target list record. You can also use 'Update only' or 'Create & Update' import to add existing targets to a target list.
 
-## Console command
+## Console commands
 
 Since version 5.10.0.
 
