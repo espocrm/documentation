@@ -91,7 +91,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 
 ### Jobs & Daemon
 
-* jobMaxPortion – `15` – max number of jobs per one execution;
+* jobMaxPortion – `15` – max number of jobs per one execution; a portion of jobs that is run in a queue is counted as one job;
 * jobPeriod – `7800` – max execution time (in seconds) allocated for a sinle job; if exceeded then set to *Failed*;
 * jobPeriodForActiveProcess – `36000` – max execution time (in seconds) allocated for a sinle job with active process; if exceeded then set to *Failed*;
 * jobRerunAttemptNumber – `1` – number of attempts to re-run failed jobs;
