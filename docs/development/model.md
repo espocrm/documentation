@@ -95,6 +95,8 @@ define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model)
 
 ## Events
 
+Note: `listenTo` and `listenToOnce` are methods of *view*.
+
 Change:
 
 ```js
@@ -111,7 +113,6 @@ this.listenTo(model, 'change', function (model, options) {
 this.listenToOnce(model, 'change:someAttribute', function (model, value, options) {
     // someAttribute is changed
 }, this);
-
 ```
 
 Sync:
