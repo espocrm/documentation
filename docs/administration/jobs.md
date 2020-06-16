@@ -48,7 +48,7 @@ Add multiple lines in crontab with delays in seconds:
 * * * * * sleep 45; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
 
-Note that command that runs cron differs depending on server environment.
+Note that command that runs cron may differ depending on your server environment.
 
 ### Daemon
 
