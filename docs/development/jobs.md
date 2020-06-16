@@ -19,7 +19,7 @@ $entityManager->createEntity('Job', [
 
 ### Job implementation
 
-Create a service class file `custom/Espo/Custom/Resources/Services/MyJobService.php`:
+Create a service class file `custom/Espo/Custom/Services/MyJobService.php`:
 
 ```php
 <?php
