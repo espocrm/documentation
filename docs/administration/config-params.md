@@ -2,6 +2,8 @@
 
 Config parameters can be changed or added manaully in the file `data/config.php`.
 
+This is not a full list of params. Most of params available in admin UI are not listed here.
+
 ## List of parameters
 
 * [General](#general)
