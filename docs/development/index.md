@@ -32,6 +32,7 @@
   * [Custom field type](custom-field-type.md)
   * [Customizing existing fields](customize-standard-fields.md)
 * [Controller & routing](frontend/controller.md)
+* [Model](model.md)
 * Misc
   * [Custom buttons & dropdown actions for detail/edit/list views](custom-buttons.md)
   * [Modal dialogs](modal.md)
