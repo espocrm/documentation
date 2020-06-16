@@ -4,6 +4,15 @@ Provides the ability to import records from CSV files.
 
 Administrator can access import at Administration > Import. By default regular users don't have an access. It can be granted with ACL roles. Administrator also can add the Import tab at Administration > User Interface > Tab List.
 
+In this article:
+
+* [Step 1](#step-1)
+* [Step 2](#step-2)
+* [Import results](#import-results)
+* [Importing into Target List](#importing-into-target-list)
+* [Console commands](#console-commands)
+* [See also](#see-also)
+
 ## Step 1
 
 Select what type of records you need to import (*Entity Type* field).
