@@ -10,9 +10,9 @@ Locations of services:
 
 Service object is created by the service factory. Usually services are created inside controllers or another services.
 
-Note, that you need to clear cache after creating a service class (file).
+Note that you need to clear cache after creating a service class.
 
-To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one.
+To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one. It's also possible to customize within a module directory.
 
 Service classes implement *Injectable* interface. More info [here](di.md).
 
