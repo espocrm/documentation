@@ -2,7 +2,7 @@
 
 How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
 
-1. Create a file `custom/Espo/Custom/Acl/Task.php`:
+1\. Create a file `custom/Espo/Custom/Acl/Task.php`:
 
 ```php
 <?php
@@ -109,7 +109,7 @@ class Task extends \Espo\Core\Acl\Base
 ```
 
 
-2. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
+2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
 
 ```php
 <?php
@@ -152,7 +152,7 @@ class Task extends \Espo\Modules\Crm\SelectManagers\Task
 
 ## Portal ACL
 
-1. Create a file `custom/Espo/Custom/AclPortal/Task.php`:
+1\. Create a file `custom/Espo/Custom/AclPortal/Task.php`:
 
 ```php
 <?php
@@ -193,7 +193,7 @@ class Task extends \Espo\Core\AclPortal\Base
 }
 ```
 
-2. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
+2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
 
 ```php
 <?php
