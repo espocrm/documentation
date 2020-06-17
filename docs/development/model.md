@@ -68,7 +68,7 @@ define('custom:views/some-custom-view', 'view', function (Dep) {
                         var entityType = model.entityType; // entityType property is set by the factory
                         this.model = model;
                         model.id = this.options.id;
-                        return model.fetch(); // this will make API using an appropriate URL
+                        return model.fetch(); // this will make API call using an appropriate URL
                     }.bind(this)
                 )
                 .then(
