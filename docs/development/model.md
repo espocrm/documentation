@@ -88,7 +88,7 @@ define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model)
     return Dep.extend({
         setup: function () {
             var model = new Model;
-            model.urlRoot = 'MyModel'; // URL will be used by fetch and save methods
+            model.urlRoot = 'MyModel'; // URL will be used when fetch and save
             model.id = 'someId';            
             model.fetch(); // this will make GET MyModel/someId API call
         },
