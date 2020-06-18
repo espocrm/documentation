@@ -34,6 +34,20 @@ $level = $acl->check('Account', 'edit');
 $assignmentPermission = $aclManager->get($user, 'assignmentPermission');
 $assignmentPermission = $acl->get('assignmentPermission');
 
+// check user is owned of record (by assigned user)
+$isOwner =  $aclManager->checkIsOwner($user, $entity);
+$isOwner =  $acl->checkIsOwner($entity);
+
+// check user teams set intersects with record teams
+$inTeam =  $aclManager->checkInTeam($user, $entity);
+$inTeam =  $acl->inTeam($entity);
+
+// attributes user doesn't have access to
+$attributeList = $aclManager->getScopeForbiddenAttributeList($user, 'Account', 'read');
+$attributeList = $acl->getScopeForbiddenAttributeList('Account', 'edit');
+
+$fieldList = $acl->getScopeForbiddenFieldList('Account', 'read');
+$linkList = $acl->getScopeForbiddenLinkList('Account', 'read');
 ```
 
 ## Custom ACL for entity type
