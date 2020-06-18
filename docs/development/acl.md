@@ -7,7 +7,7 @@ There are two objects that allow to check access:
 * AclManager - `\Espo\Core\AclManager`
 * Acl - `\Espo\Core\Acl`
 
-With *AclManager* you can check access for any user. *Acl* is a wrapper for *AclManager* that applies only for a current user.
+With *AclManager* you can check access for any user. *Acl* is a wrapper for *AclManager* for a current user.
 
 You can obtain both objects form the *Container*.
 
