@@ -279,7 +279,7 @@ $entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', 
 $entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $id);
 ```
 
-### Select Query Parameters
+## Select Query Parameters
 
 ### Where clause
 
