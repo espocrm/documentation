@@ -93,7 +93,7 @@ Resume failed import (from the last processed row):
 php command.php import --id={import-id} -r
 ```
 
-Reverting import:
+Revert import:
 
 ```
 php command.php import --id={import-id} -u
