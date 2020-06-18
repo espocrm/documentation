@@ -93,6 +93,12 @@ Resume failed import (from the last processed row):
 php command.php import --id={import-id} -r
 ```
 
+Reverting import:
+
+```
+php command.php import --id={import-id} -u
+```
+
 ## See also
 
 * [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
