@@ -10,6 +10,8 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 
 **EntityCollection** is a collection of entities. It's returned by *find* operations.
 
+Obtaining the entity manager in the record service:
+
 ```php
 $entityManager = $this->getEntityManager();
 ```
