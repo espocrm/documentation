@@ -1,4 +1,6 @@
-# Custom ACL (access control level) for entity type
+# ACL (access control level)
+
+## Custom ACL for entity type
 
 How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
 
