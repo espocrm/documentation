@@ -1,5 +1,41 @@
 # ACL (access control level)
 
+## Checking access
+
+There are two objects that allow to check access:
+
+* AclManager - `\Espo\Core\AclManager`
+* Acl - `\Espo\Core\Acl`
+
+With *AclManager* you can check access for any user. *Acl* is a wrapper for *AclManager* that applies only for a current user.
+
+You can obtain both objects form the *Container*.
+
+```php
+// available actions: create, read, edit, delete, stream
+
+// check read access to entity for specific user
+$hasAccess = $aclManager->check($user, $entity, 'read');
+
+// check read access to entity for current user
+$hasAccess = $acl->check($entity, 'read');
+
+// check access to scope for specific user
+$hasAccess = $aclManager->check($user, 'Account');
+
+// check create access to scope for current user
+$hasAccess = $acl->check('Account', 'create');
+
+// get access level 
+$level = $aclManager->check($user, 'Account', 'edit');
+$level = $acl->check('Account', 'edit');
+
+// get permission (e.g. assignmentPermission, portalPermission)
+$assignmentPermission = $aclManager->get($user, 'assignmentPermission');
+$assignmentPermission = $acl->get('assignmentPermission');
+
+```
+
 ## Custom ACL for entity type
 
 How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
