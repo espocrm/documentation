@@ -14,7 +14,7 @@
 * [Metadata](metadata.md)
 * [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
-* [ACL customization](acl.md)
+* [ACL](acl.md)
 * [Dependency injection](di.md)
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
