@@ -99,6 +99,14 @@ Revert import:
 php command.php import --id={import-id} -u
 ```
 
+Import file:
+
+```
+php command.php import --file=path/to/csv --params-id={import-id}
+```
+
+*--params-id* is ID of a previously run import. Its parameters will be used for the import.
+
 ## See also
 
 * [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
