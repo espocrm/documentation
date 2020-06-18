@@ -8,6 +8,8 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 
 **Entity** represents a single record. Each entity type has it's own entity class. Base classes: `\Espo\ORM\Entity`, `\Espo\Core\ORM\Entity`.
 
+**EntityCollection** is a collection of entities. It's returned by *find* operations.
+
 ```php
 $entityManager = $this->getEntityManager();
 ```
@@ -57,6 +59,12 @@ $account->set([
   'name' => 'Test Account',
   'assignedUserId' => '1',
 ]);
+```
+
+### Get all values
+
+```php
+$account->getValueMap();
 ```
 
 ### Store
