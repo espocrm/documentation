@@ -75,11 +75,12 @@ $entity->clear('attributeName');
 
 It will unset the attribute. If you save the entity after that, it will not change the value to NULL in database.
 
-### Attribues
+### Reset
+
+Resets all attributes.
 
 ```php
-$hasAttribute = $entity->hasAttribute('attributeName');
-$attributeList = $entity->getAttributeList();
+$entity->reset();
 ```
 
 ### Fetched attributes
@@ -152,6 +153,56 @@ $entityManager->getRepository('Account')->deleteFromDb($id);
 
 This will delete a record permanently.
 
+### Attribues
+
+Each entity type has its own set of defined attributes. You cannot set an arbitrary attribute name.
+
+```php
+// whether attribute is defined for entity
+$hasAttribute = $entity->hasAttribute('attributeName');
+
+$attributeList = $entity->getAttributeList();
+
+$attributeType = $entity->getAttributeType('attributeName');
+
+$paramValue = $entity->getAttributeParam('attributeName', 'attributeParam');
+```
+
+Attribute types:
+
+* id
+* varchar
+* int
+* float
+* text
+* bool
+* foreign
+* foreignId
+* foreignType
+* date
+* datetime
+* jsonArray
+* jsonObject
+
+### Relations
+
+```php
+$relationList = $entity->getRelationList();
+
+$type = $entity->getRelationType('relationName'); 
+
+$paramValue = $entity->getRelationParam('relationName', 'paramName')
+```
+
+Relation types:
+
+* manyMany
+* hasMany
+* belongsTo
+* hasOne
+* belongsToParent
+* hasChildren
+
 ### Find
 
 ```php
@@ -188,6 +239,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->order('LIST:sta
 ```
 
 ### Find the first one
+
 ```php
 $account = $entityManager->getRepository('Account')->where([
     'type' => 'Customer',
@@ -195,26 +247,36 @@ $account = $entityManager->getRepository('Account')->where([
 ```
 
 ### Find related
+
 ```php
 $opportunityList = $entityManager->getRepository('Account')->findRelated($account, 'opportunities');
 ```
 
 ### Relate entities
+
 ```php
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunity);
-```
-or
-```php
+
+// or
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunityId);
 ```
 
 ### Unrelate entities
+
 ```php
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunity);
-```
-or
-```php
+
+// or
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
+```
+
+### Check related
+
+```php
+$entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $relatedEntity);
+
+// or
+$entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $id);
 ```
 
 ### Select Query Parameters
