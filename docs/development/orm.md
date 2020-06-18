@@ -16,22 +16,20 @@ $entityManager = $this->getEntityManager();
 
 ```php
 $account = $entityManager->getEntity('Account')
-```
-or
-```php
+
+// or
 $account = $entityManager->getRepository('Account')->get();
 ```
 
-Note: It creates a new instance but doesn't store it DB.
+Note: It creates a new instance but doesn't store it DB. The entity doesn't have ID yet.
 
 ### Fetch existing
 
 ```php
-$account = $entityManager->getEntity('Account', $accountId);
-```
-or
-```php
 $account = $entityManager->getRepository('Account')->get($accountId);
+
+// or from entity manager
+$account = $entityManager->getEntity('Account', $accountId);
 ```
 
 ### Get value
@@ -45,30 +43,34 @@ $fieldNameIsSet = $account->has('fieldName'); // true or false
 ```
 
 ### Set value
+
+One:
+
 ```php
 $account->set('fieldName', 'Test Account');
 ```
 
+Multiple:
+
 ```php
-$account->set(array(
+$account->set([
   'name' => 'Test Account',
-  'assignedUserId' => '1'
-));
+  'assignedUserId' => '1',
+]);
 ```
 
 ### Store
 
 ```php
 $entityManager->saveEntity($account);
-```
-or
-```php
+
+// or
 $entityManager->getRepository('Account')->save($account);
 ```
 
 Options:
 
-```
+```php
 $options = [
     'skipHooks' => true, // skip all hooks; workflows, formula will be ignored
     'silent' => true, // workflows will be ignored, modified fields won't be changed
@@ -78,26 +80,42 @@ $options = [
     'modifiedById' => true, // override modifiedBy
 ];
 
-
 $entityManager->saveEntity($account, $options);
 
 // or
 $entityManager->getRepository('Account')->save($account, $options);
 ```
 
+### Create and store
+
+```php
+$account = $entityManager->createEntity('Account', [
+    'name' => 'Test',
+]);
+```
+
 ### Remove
+
 ```php
 $entityManager->removeEntity($account);
-```
-or
-```php
+
+//or
 $entityManager->getRepository('Account')->remove($account);
 ```
 
+### Delete from DB
+
+```php
+$entityManager->getRepository('Account')->deleteFromDb($id);
+```
+
+This will delete a record permanently.
+
 ### Find
+
 ```php
 $accountList = $entityManager->getRepository('Account')->where([
-    'type' => 'Customer'
+    'type' => 'Customer',
 ])->find();
 ```
 
