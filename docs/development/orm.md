@@ -21,7 +21,7 @@ $account = $entityManager->getEntity('Account')
 $account = $entityManager->getRepository('Account')->get();
 ```
 
-Note: It creates a new instance but doesn't store it DB. The entity doesn't have ID yet.
+Note: It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
 
 ### Fetch existing
 
