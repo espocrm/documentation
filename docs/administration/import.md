@@ -90,13 +90,13 @@ php command.php import --id={import-id}
 Resume failed import (from the last processed row):
 
 ```
-php command.php import --id={import-id} -r
+php command.php import --id={import-id} --resume
 ```
 
 Revert import:
 
 ```
-php command.php import --id={import-id} -u
+php command.php import --id={import-id} --revert
 ```
 
 Import file:
