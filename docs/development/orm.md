@@ -141,7 +141,7 @@ $account = $entityManager->createEntity('Account', [
 ```php
 $entityManager->removeEntity($account);
 
-//or
+// or
 $entityManager->getRepository('Account')->remove($account);
 ```
 
