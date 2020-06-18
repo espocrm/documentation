@@ -37,11 +37,15 @@ $account = $entityManager->getEntity('Account', $accountId);
 ```
 
 ### Get value
+
 ```php
 $fieldValue = $account->get('fieldName');
 ```
 
 ### Has value
+
+Checks whether attribute is set. Note: If it's set to `NULL` it will return `true`.
+
 ```php
 $fieldNameIsSet = $account->has('fieldName'); // true or false
 ```
@@ -61,6 +65,33 @@ $account->set([
   'name' => 'Test Account',
   'assignedUserId' => '1',
 ]);
+```
+
+### Clear value
+
+```php
+$entity->clear('attributeName');
+```
+
+It will unset the attribute. If you save the entity after that, it will not change the value to NULL in database.
+
+### Attribues
+
+```php
+$hasAttribute = $entity->hasAttribute('attributeName');
+$attributeList = $entity->getAttributeList();
+```
+
+### Fetched attributes
+
+You can check whether an attribute was changed.
+
+```php
+// a value that was set once the record was fetched from DB
+$value = $entity->getFetched('attributeName')
+
+// check whether an attribute was changed since the last syncing with DB
+$entity->isChanged('attributeName');
 ```
 
 ### Get all values
