@@ -52,7 +52,7 @@ Example of definition:
 
 Dependencies will be passed to the class constructor.
 
-If *dependencyList* is not defined, then class constructor parameter names will be used to detect dependency. 
+If *dependencyList* is not defined, then class constructor parameter names will be used to detect dependencies. 
 
 For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
 
