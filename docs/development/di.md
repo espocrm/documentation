@@ -82,10 +82,10 @@ $injectableFactory->create($className);
 
 There are two types of classes that can be created by *injectableFactory*:
 
-* those that does not implement *Injectable* interface
+* those that do not implement *Injectable* interface
 * those that implement *Injectable* interface
 
-If class doesn't implement *Injectable* interface, then class constructor parameter names will be used to detect dependency. 
+If a class doesn't implement *Injectable* interface, then class constructor parameter names will be used to detect dependencies. 
 
 For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
 
