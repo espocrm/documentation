@@ -125,4 +125,4 @@ class MyHook extends \Espo\Core\Hooks\Base
 $this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);
 ```
 
-Note: Hook name can't start with `set`. It's reserved for a dependency injection.
+Note: A hook name can't start with `set`. It's reserved for a dependency injection.
