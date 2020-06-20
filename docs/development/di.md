@@ -163,5 +163,7 @@ The following classes are created by *injectableFactory*:
 
 And more others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
 
-Note: Using *Injectable* interface is deprecated.
+### Injectable interace
+
+Using *Injectable* interface is deprecated.
 
