@@ -101,7 +101,7 @@ define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model)
 
 Note: `listenTo` and `listenToOnce` are methods of *view*.
 
-Change:
+### change
 
 ```js
 this.listenTo(model, 'change', function (model, options) {
@@ -119,13 +119,31 @@ this.listenToOnce(model, 'change:someAttribute', function (model, value, options
 }, this);
 ```
 
-Sync:
+### sync
+
+Model synced with backend.
 
 ```js
 this.listenTo(model, 'sync', function () {
     // model is sync with backend (fired after fetch or save)
 }, this);
 ```
+
+### destroy
+
+Once model is removed (after *DELETE* request).
+
+## Additional events
+
+Available on detail/edit views.
+
+### after:relate
+
+Once relationship panel updated.
+
+### update-all
+
+This event is not fired. But you can fire it to update all relationship panels.
 
 
 ## Other
