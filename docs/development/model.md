@@ -127,7 +127,7 @@ Model synced with backend.
 
 ```js
 this.listenTo(model, 'sync', function () {
-    // model is sync with backend (fired after fetch or save)
+    // synced with backend (fired after fetch or save)
 }, this);
 ```
 
