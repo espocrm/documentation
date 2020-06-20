@@ -165,5 +165,5 @@ And more others. You can use `grep -R 'injectableFactory'` to find where it's us
 
 ### Injectable interace
 
-Using *Injectable* interface is deprecated.
+Using *Injectable* interface is deprecated. It's left for backward compatibility.
 
