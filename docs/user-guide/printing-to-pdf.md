@@ -169,6 +169,14 @@ Displaying certain number of items in one row (since v5.9.2):
 {{/each}}
 ```
 
+Access parent scope:
+
+```
+{{#each contacts}}
+    {{../name}}
+{{/each}}
+```
+
 ### Images
 
 Available since the version 5.8.0.
