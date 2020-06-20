@@ -70,6 +70,14 @@ class SomeClass
 }
 ```
 
+### List if built-in services
+
+* container
+* injectableFactory
+* serviceFactory
+
+TODO: Add all.
+
 ## Classes created by injectableFactory
 
 *injectableFactory* can be obtained from *Container*. It can be passed to the constructor if the object is created through DI mechanism.
