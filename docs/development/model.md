@@ -137,16 +137,15 @@ Once model is removed (after *DELETE* request).
 
 ## Additional events
 
-Available on detail/edit views.
+Defined in the application.
 
 ### after:relate
 
-Once relationship panel updated.
+Once relationship panel updated. Available on detail/edit views.
 
 ### update-all
 
-This event is not fired. But you can fire it to update all relationship panels.
-
+This event is not fired. But you can fire it to update all relationship panels. Available on detail/edit views.
 
 ## Other
 
