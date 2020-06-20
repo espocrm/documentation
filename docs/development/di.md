@@ -150,20 +150,19 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 
 The following classes are created by *injectableFactory*:
 
-* Services (`Espo\Services`)
-* Repositories (`Espo\Repositories`)
-* Hooks (`Espo\Hooks`)
-* Notificators (`Espo\Notificators`)
-* Acl (`Espo\Acl`)
-* Jobs (`Espo\Jobs`)
-* EntryPoints (`Espo\EntryPoints`)
+* Services - `Espo\Services`
+* Repositories - `Espo\Repositories`
+* Hooks - `Espo\Hooks`
+* Notificators - `Espo\Notificators`
+* Acl - `Espo\Acl`
+* Jobs - `Espo\Jobs`
+* EntryPoints - `Espo\EntryPoints`
 * Formula Functions
-* Cleanup (defined in metadata: app > cleanup)
-* AppParams (defined in metadata: app > appParams)
+* Cleanup - defined in metadata: app > cleanup
+* AppParams - defined in metadata: app > appParams
 
 And more others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
 
 ### Injectable interace
 
 Using *Injectable* interface is deprecated. It's left for backward compatibility.
-
