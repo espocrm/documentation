@@ -13,7 +13,9 @@ Two types of classes:
 
 Note: Don't confuse with *Service* classes.
 
-Contaner services are instantiated by *Container* object (instance of `\Espo\Core\Container`). Lazy initialization is used.
+Contaner services are instantiated by *Container* object (instance of `\Espo\Core\Container`).
+
+**Lazy initialization** is used.
 
 Container services are defined in:
 
@@ -59,11 +61,13 @@ For example, if the parameter name is `$entityManager`, then *entityMaanger* con
 ```php
 namespace Espo\Custom;
 
+use Espo\ORM\EntityManager;
+
 class SomeClass
 {
     protected $entityManager;
     
-    public function __construct(\Espo\ORM\EntityManager $entityManager)
+    public function __construct(EntityManager $entityManager)
     {
         $this->entityManager = $entityManager;
     }
@@ -72,7 +76,7 @@ class SomeClass
 
 ## Classes created by injectableFactory
 
-*injectableFactory* can be obtained from *Container*.
+*injectableFactory* can be obtained from *Container*. It can be passed to the constructor if the object is created through DI mechanism.
 
 Usage:
 
@@ -80,12 +84,7 @@ Usage:
 $injectableFactory->create($className);
 ```
 
-There are two types of classes that can be created by *injectableFactory*:
-
-* those that do not implement *Injectable* interface
-* those that implement *Injectable* interface
-
-If a class doesn't implement *Injectable* interface, then class constructor parameter names will be used to detect dependencies. 
+Constructor parameter names will be used to detect dependencies (if the class doesn't implement *Injectable* interface).
 
 For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
 
@@ -94,11 +93,13 @@ Class:
 ```php
 namespace Espo\Custom;
 
+use Espo\ORM\EntityManager;
+
 class SomeClass
 {
     protected $entityManager;
     
-    public function __construct(\Espo\ORM\EntityManager $entityManager)
+    public function __construct(EntityManager $entityManager)
     {
         $this->entityManager = $entityManager;
     }
@@ -110,56 +111,30 @@ Instantiating:
 ```php
 $injectableFactory->create('\\Espo\\Custom\\SomeClass');
 ```
-
 Only container services can be used for dependencies.
 
-### Injectable interface
-
-Interface: `\Espo\Core\Interfaces\Injectable`.
-
-A class defines its dependencies by itself.
-
-Only container services can be used as dependencies.
-
-The following classes implement *Injectable* inteface:
-
-* Services (`\Espo\Core\Services\Base`)
-* Repositories (`\Espo\Core\ORM\Repositories\RDB`)
-* Hooks (`\Espo\Core\Hooks\Base`)
-* Notificators (`\Espo\Core\Notificators\Base`)
-* Acl (`\Espo\Core\Acl\Base`)
-* Cleanup (see metadata: app > cleanup)
-* AppParams (see metadata: app > appParams)
-
-
-Example:
+You can specify constructor parameters. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
 
 ```php
-<?php
-namespace Espo\Core\Password;
-
-class Recovery implements \Espo\Core\Interfaces\Injectable
-{
-    use \Espo\Core\Traits\Injectable;
-
-    public function __construct()
-    {
-        $this->addDependencyList([
-            'entityManager',
-            'config',
-            'mailSender',
-            'htmlizerFactory',
-            'templateFileManager',
-        ]);
-    }
-
-    public function someMethod()
-    {
-        $entityManager = $this->getInjection('entityManager');
-    }
-}
+$injectableFactory->createWith($className, [
+    'parameterName1' => $value1,
+    'parameterName2' => $value2,
+]);
 ```
+The following classes are created by *injectableFactory*:
 
-```php
-$recovery = $injectableFactory->createByClassName('\\Espo\\Core\\Password\\Recovery');
-```
+* Services (`Espo\Services`)
+* Repositories (`Espo\Repositories`)
+* Hooks (`Espo\Hooks`)
+* Notificators (`Espo\Notificators`)
+* Acl (`Espo\Acl`)
+* Jobs (`Espo\Jobs`)
+* EntryPoints (`Espo\EntryPoints`)
+* Formula Functions
+* Cleanup (defined in metadata: app > cleanup)
+* AppParams (defined in metadata: app > appParams)
+
+And more others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
+
+Note: Using *Injectable* interface is deprecated.
+
