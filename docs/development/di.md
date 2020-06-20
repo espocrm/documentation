@@ -149,12 +149,13 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 The following classes are created by *injectableFactory*:
 
 * Services - `Espo\Services`
-* Repositories - `Espo\Repositories`
 * Hooks - `Espo\Hooks`
-* Notificators - `Espo\Notificators`
-* Acl - `Espo\Acl`
 * Jobs - `Espo\Jobs`
 * EntryPoints - `Espo\EntryPoints`
+* Repositories - `Espo\Repositories`
+* SelectManagers - `Espo\SelectManagers`
+* Notificators - `Espo\Notificators`
+* Acl - `Espo\Acl`
 * Formula Functions
 * Cleanup - defined in metadata: app > cleanup
 * AppParams - defined in metadata: app > appParams
