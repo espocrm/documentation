@@ -2,9 +2,7 @@
 
 Note: This article is actual for v5.10.0 and greater.
 
-There are two different DI frameworks in Espo. The first utilizes *container* object, the second – *injectableFactory*.
-
-Two types of classes:
+There are wo types of classes, that utilize dependency injection.
 
 * Container services
 * Classes created by *injectableFactory*
@@ -13,14 +11,12 @@ Two types of classes:
 
 Note: Don't confuse with *Service* classes.
 
-Contaner services are instantiated by *Container* object (instance of `\Espo\Core\Container`).
-
-**Lazy initialization** is used.
+Contaner services are instantiated by *Container* object (instance of `Espo\Core\Container`). **Lazy initialization** is used.
 
 Container services are defined in:
 
-* container class `\Espo\Core\Container` (most critical functinalities that are not supposed to be extended);
-* loader classes in `\Espo\Core\Loaders` namespace (can be customized in `\Espo\Custom\Core\Loaders`);
+* container class `Espo\Core\Container` (most critical functinalities that are not supposed to be extended);
+* loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
 * metadata (app > containerServices).
 
 *Container* instance is available in Controller classes.
@@ -93,6 +89,7 @@ For example, if the parameter name is `$entityManager`, then *entityMaanger* con
 Class:
 
 ```php
+<?php
 namespace Espo\Custom;
 
 use Espo\ORM\EntityManager;
@@ -129,6 +126,7 @@ $injectableFactory->createWith($className, [
 Can be used along with the constructor injection.
 
 ```php
+<?php
 namespace Espo\Custom;
 
 use Espo\Core\Di;
