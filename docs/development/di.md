@@ -70,7 +70,7 @@ class SomeClass
 }
 ```
 
-### List if built-in services
+### List of built-in services
 
 * container
 * injectableFactory
