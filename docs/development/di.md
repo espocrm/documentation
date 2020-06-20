@@ -84,6 +84,8 @@ Usage:
 $injectableFactory->create($className);
 ```
 
+### Constructor injection
+
 Constructor parameter names will be used to detect dependencies (if the class doesn't implement *Injectable* interface).
 
 For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
@@ -113,7 +115,7 @@ $injectableFactory->create('\\Espo\\Custom\\SomeClass');
 ```
 Only container services can be used for dependencies.
 
-You can specify constructor parameters. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
+You can specify constructor injections explicitly using *createdWith* method. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
 
 ```php
 $injectableFactory->createWith($className, [
@@ -121,6 +123,31 @@ $injectableFactory->createWith($className, [
     'parameterName2' => $value2,
 ]);
 ```
+
+### Setter method injection
+
+Can be used along with the constructor injection.
+
+```php
+namespace Espo\Custom;
+
+use Espo\Core\Di;
+
+class MyClass implements Di\EntityManagerAware, Di\MetadataAware
+{
+    use Di\EntityManagerSetter;
+    use Di\MetadataSetter;
+    
+    public function someMethod()
+    {
+        $entityManager = $this->entityManager;
+        $metadata = $this->metadata;
+    }
+}
+```
+
+### Classes using injectableFactory
+
 The following classes are created by *injectableFactory*:
 
 * Services (`Espo\Services`)
