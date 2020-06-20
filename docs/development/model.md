@@ -103,6 +103,8 @@ Note: `listenTo` and `listenToOnce` are methods of *view*.
 
 ### change
 
+When model attributes get changed (not necessarily synced with backend).
+
 ```js
 this.listenTo(model, 'change', function (model, options) {
     if (this.model.hasChanged('someAttribute')) {
