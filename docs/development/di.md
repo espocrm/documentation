@@ -78,7 +78,7 @@ class SomeClass
 
 TODO: Add all.
 
-## Classes created by injectableFactory
+## Injectable Factory
 
 *injectableFactory* can be obtained from *Container*. It can be passed to the constructor if the object is created through DI mechanism.
 
@@ -152,7 +152,7 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 }
 ```
 
-### Classes using injectableFactory
+### Classes craeted by injectableFactory
 
 The following classes are created by *injectableFactory*:
 
