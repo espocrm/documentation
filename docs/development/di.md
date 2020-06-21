@@ -118,7 +118,7 @@ Instantiating:
 ```php
 $injectableFactory->create('\\Espo\\Custom\\SomeClass');
 ```
-Only container services can be used for dependencies.
+Only container services can be used for dependencies at the moment.
 
 You can specify constructor injections explicitly using *createdWith* method. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
 
