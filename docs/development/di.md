@@ -156,6 +156,7 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 
 The following classes are created by *injectableFactory*:
 
+* Controllers - `Espo\Controllers`
 * Services - `Espo\Services`
 * Hooks - `Espo\Hooks`
 * Jobs - `Espo\Jobs`
