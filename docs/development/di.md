@@ -39,10 +39,10 @@ Example of definition:
 ```json
 {
     "notificatorFactory": {
-        "className": "\\Espo\\Core\\NotificatorFactory"
+        "className": "Espo\\Core\\NotificatorFactory"
     },
     "clientManager": {
-        "className": "\\Espo\\Core\\Utils\\ClientManager",
+        "className": "Espo\\Core\\Utils\\ClientManager",
         "dependencyList": ["config", "themeManager", "metadata"]
     }
 }
