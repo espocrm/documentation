@@ -1,6 +1,6 @@
 # Dependency Injection
 
-Note: This article is actual for v5.10.0 and greater.
+Note: This article is actual for v6.0.0 and greater.
 
 There are wo types of classes, that utilize dependency injection.
 
