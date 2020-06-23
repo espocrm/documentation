@@ -106,7 +106,7 @@ $someVariable2 = name;
 $someVariable3 = entity\attribute('name');
 ```
 
-In the context *update record* actions it's recommended to use formula only for setting attributes. Use *Script Task* for any other logic.
+In the context of *update record* actions it's recommended to use formula only for setting attributes. Use *Script Task* for any other logic.
 
 ----
 
