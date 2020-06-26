@@ -21,11 +21,7 @@ Container services are defined in:
 
 *Container* instance is available in Controller classes.
 
-Usage in controller class:
-
-```php
-$serviceFactory = $this->getContainer()->get('serviceFactory');
-```
+Note: The best practice is not to require *container* in your classes, and never use it directly.
 
 ### Defining in metadata
 
@@ -50,11 +46,12 @@ Example of definition:
 
 Dependencies will be passed to the class constructor.
 
-If *dependencyList* is not defined, then class constructor parameter names will be used to detect dependencies. 
+If *dependencyList* is not defined, then class constructor parameter names will be used to detect dependencies.
 
 For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
 
 ```php
+<?php
 namespace Espo\Custom;
 
 use Espo\ORM\EntityManager;
@@ -80,7 +77,7 @@ TODO: Add all.
 
 ## Injectable Factory
 
-*injectableFactory* can be obtained from *Container*. It can be passed to the constructor if the object is created through DI mechanism.
+*injectableFactory* creates an object by given class name resolving a dependency. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
 
 Usage:
 
@@ -116,7 +113,7 @@ class SomeClass
 Instantiating:
 
 ```php
-$injectableFactory->create('\\Espo\\Custom\\SomeClass');
+$injectableFactory->create('Espo\\Custom\\SomeClass');
 ```
 Only container services can be used for dependencies at the moment.
 
@@ -152,7 +149,7 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 }
 ```
 
-### Classes craeted by injectableFactory
+### Classes created by injectableFactory
 
 The following classes are created by *injectableFactory*:
 
@@ -169,7 +166,7 @@ The following classes are created by *injectableFactory*:
 * Cleanup - defined in metadata: app > cleanup
 * AppParams - defined in metadata: app > appParams
 
-And more others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
+And many others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
 
 ### Injectable interace
 
