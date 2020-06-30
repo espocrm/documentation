@@ -126,7 +126,9 @@ $injectableFactory->createWith($className, [
 
 ### Setter method injection
 
-Can be used along with the constructor injection.
+Can be used along with the constructor injection. If a class implements Aware interface, the factory will use a corresponding setter function to inject a dependency. Setter traits can be utilized for adding setter functions into your class.
+
+Example:
 
 ```php
 <?php
