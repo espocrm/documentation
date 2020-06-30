@@ -23,6 +23,12 @@ Container services are defined in:
 
 Note: The best practice is not to require *container* in your classes, and never use it directly.
 
+Condole command that prints all available container services with their implementing classes:
+
+```
+php command.php app-info --container
+```
+
 ### Defining in metadata
 
 If you need to define your custom container services, do it in metadata:
@@ -66,14 +72,6 @@ class SomeClass
     }
 }
 ```
-
-### List of built-in services
-
-* container
-* injectableFactory
-* serviceFactory
-
-TODO: Add all.
 
 ## Injectable Factory
 
