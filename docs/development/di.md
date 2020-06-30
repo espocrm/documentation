@@ -23,7 +23,7 @@ Container services are defined in:
 
 Note: The best practice is not to require *container* in your classes, and never use it directly.
 
-Condole command that prints all available container services with their implementing classes:
+Console command that prints all available container services with their implementing classes:
 
 ```
 php command.php app-info --container
