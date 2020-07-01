@@ -153,7 +153,7 @@ Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`.
  <!-- {{#each itemList}} -->
     <tr>
       <td>{{name}}</td>
-      </td>{{amount}}</td>
+      <td>{{amount}}</td>
     </tr>
  <!-- {{/each}} -->
  </table>
