@@ -87,7 +87,7 @@ $injectableFactory->create($className);
 
 Constructor parameter names will be used to detect dependencies.
 
-For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
+For example, if the parameter name is `$entityManager`, then *entityManager* container service will be passed.
 
 Class:
 
