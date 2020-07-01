@@ -113,7 +113,7 @@ Instantiating:
 ```php
 $injectableFactory->create('Espo\\Custom\\SomeClass');
 ```
-Only container services can be used for dependencies at the moment.
+Only container services can be used as dependencies at the moment.
 
 You can specify constructor injections explicitly using *createdWith* method. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
 
@@ -126,7 +126,7 @@ $injectableFactory->createWith($className, [
 
 ### Setter method injection
 
-Can be used along with the constructor injection. If a class implements Aware interface, the factory will use a corresponding setter function to inject a dependency. Setter traits can be utilized for adding setter functions into your class.
+Can be used along with the constructor injection. If a class implements *Aware* interface, the factory will use a corresponding setter function to inject a dependency. Setter traits can be utilized for adding setter functions into your class.
 
 Example:
 
