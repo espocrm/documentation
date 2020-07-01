@@ -2,7 +2,7 @@
 
 Note: This article is actual for v6.0.0 and greater.
 
-There are wo types of classes, that utilize dependency injection.
+There are two types of classes, that utilize dependency injection.
 
 * Container services
 * Classes created by *injectableFactory*
