@@ -101,6 +101,8 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 </p>
 ```
 
+[Handlebars](https://handlebarsjs.com/) library is used for templates rendering.
+
 Note: When you extend a view that already has its *events* and you want to add more events, do it the following way:
 
 ```js
