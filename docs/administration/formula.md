@@ -233,7 +233,7 @@ Example:
 
 will return `{token1}`.
 
-The slash sign `/` is define the start and the end of a REGULAR_EXPRESSION.
+The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 
 #### string\matchAll
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
