@@ -1,8 +1,8 @@
 # Binotel Integration Setup
 
-Binotel Integration is available as part of [VoIP Integration extension](http://www.espocrm.com/extensions/#asterisk-extension). It allows to integrate EspoCRM with Asterisk server through Asterisk Manager Interface (AMI), Starface and Binotel server, read more details [here](https://www.espocrm.com/features/binotel-integration/).
+Binotel Integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Asterisk server through Asterisk Manager Interface (AMI), Starface and Binotel server, read more details [here](https://www.espocrm.com/features/binotel-integration/).
 
- 
+
 ### How to setup Binotel Integration for an administrator
 
 1. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) -> VoIP » Binotel.
@@ -27,7 +27,7 @@ E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031
 2. Contact Binotel support to add an URL (see “Post URL” field) to handle incoming/outgoing calls (API CALL Settings and API PUSH):
 **http://espocrm.local/?entryPoint=Binotel&connector=Binotel&key=hh9v0zr529**
 
- 
+
 ### How to setup Binotel Integration for users
 
 Each user who uses telephony should setup his user extension in User’s Profile, button “VoIP Settings”. Also, the user can disable a popup window for incoming/outgoing calls.
@@ -40,5 +40,3 @@ Each user who uses telephony should setup his user extension in User’s Profile
 * **Display call notifications** – if you want to receive incoming/outgoing call notifications.
 * **Silent notifications** – mute notification sound.
 * **Use internal click-to-call** – switching internal click-to-call possibility. Internal click-to-call is a feature to originate an outgoing call. If the checkbox is unchecked, then will be used an external application to handle tel: links.
-
-
