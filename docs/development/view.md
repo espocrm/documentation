@@ -101,6 +101,8 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 </p>
 ```
 
+[Handlebars](https://handlebarsjs.com/) library is used for template rendering.
+
 Note: When you extend a view that already has its *events* and you want to add more events, do it the following way:
 
 ```js
@@ -126,9 +128,9 @@ Wait method can receive a promise:
             ])
         );
     },
-````
+```
 
-Model factory returs a promise.
+Model factory returns a promise.
 
 ```js
     setup: function () {

@@ -9,7 +9,7 @@ In this article:
 * [List reports](#list-reports)
 * [Grid reports](#grid-reports)
 * [Joint Grid reports](#joint-grid-reports)
-* [Filters](#filters)
+* [Filters](#filters_1)
 * [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
 * [Printing to PDF](#printing-to-pdf)
@@ -159,7 +159,7 @@ For charts, colors of columns must be specified in sub-reports.
 
 ### Field filter
 
-Simple to use type of filters. You can also pick fields of target entity as well as related entities.
+Field filters are simple to use. They allow to filter by specific fields of a target entity type as well as fields of related records. E.g. you can filter Opportunities by a field of Account entity type.
 
 ![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-field.png)
 
@@ -175,7 +175,7 @@ AND means that all conditions under the group must be met.
 
 ### NOT IN group
 
-Provides the ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with Closed Won or Closed Lost status.
+Provides the ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with 'Closed Won' or 'Closed Lost' status.
 
 Note: It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively effect on a report performance in some cases.
 

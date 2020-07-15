@@ -28,12 +28,12 @@ Create a file `/etc/systemd/system/espocrm-websocket.service`.
 Description=EspoCRM WebSocket Service
 Requires=mysql.service
 After=mysql.service
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
 Restart=always
 RestartSec=5
-StartLimitIntervalSec=0
 User=www-data
 ExecStart=/usr/bin/php /path/to/espocrm/websocket.php
 StandardError=/path/to/espocrm/data/logs/websocket.log

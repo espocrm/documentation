@@ -67,6 +67,8 @@ The execution of the process is visualized with colors highlighting flow nodes:
 
 ![Process execution](../_static/images/administration/bpm/process-execution.png)
 
+**Only one process** for the same target record and flowchart can be active **at the same time**. That means that if you have multiple start events, once one of them is triggered (the process is started), other start events will be ignored while the process is active. 
+
 ### Manipulating
 
 A process can be **stopped manually** by a user who has an 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.

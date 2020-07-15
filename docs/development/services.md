@@ -8,11 +8,15 @@ Locations of services:
 * `application/Espo/Modules/{moduleName}/Services/`
 * `custom/Espo/Custom/Services/`
 
-Service object is created by the service factory. Usually services are created inside controllers or another services.
+Service objects are created by the *serviceFactory*. Usually services are created inside controllers or another services.
 
-Note, that you need to clear cache after creating a service class (file).
+*serviceFactory* utilizes *injectableFactory* (since v5.10.0). More info [here](di.md).
 
-To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one.
+Note that you need to clear cache after creating a service class.
+
+To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one. It's also possible to customize within a module directory. Make sure that the *order* param of your module is higher than the value of the module of the extended service.
+
+Services can be placed in sub-directory: `SubDir\MyService`(since v5.10.0).
 
 ## Example
 
@@ -79,6 +83,8 @@ class HelloTest extends \Espo\Core\Services\Base
     }
 }
 ```
+
+Services are not necessary need to be extended from *Base* class. Dependencies can be detected from constructot param names by *serviceFactory*.  (available since v5.10.0)
 
 ## Record service
 

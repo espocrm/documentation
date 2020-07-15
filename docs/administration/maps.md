@@ -29,7 +29,7 @@ Available since v 5.8.0.
 
 Administration > Entity Manager > Click on needed entity type > Click on needed address field (e.g. *Billing Address*) > Check *View Map Button* and save.
 
-*View Map* button should appear under the address field on the detail view. Note, that the address should contain either a city or portal code.
+*View Map* button should appear under the address field on the detail view. Note, that the address should contain either a city or postal code.
 
 ## Printing in PDF
 

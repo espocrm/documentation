@@ -153,7 +153,7 @@ Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`.
  <!-- {{#each itemList}} -->
     <tr>
       <td>{{name}}</td>
-      </td>{{amount}}</td>
+      <td>{{amount}}</td>
     </tr>
  <!-- {{/each}} -->
  </table>
@@ -166,6 +166,14 @@ Displaying certain number of items in one row (since v5.9.2):
 ```
 {{#each contacts}}
    {{#ifMultipleOf @key 3}}<br>{{/ifMultipleOf}}{{name}} 
+{{/each}}
+```
+
+Access parent scope:
+
+```
+{{#each contacts}}
+    {{../name}}
 {{/each}}
 ```
 

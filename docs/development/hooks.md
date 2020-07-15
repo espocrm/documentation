@@ -27,6 +27,7 @@ This example sets Account Name for new Leads, if it is not set.
 `custom/Espo/Custom/Hooks/Lead/AccountName.php`
 
 ```php
+<?php
 namespace Espo\Custom\Hooks\Lead;
 
 use Espo\ORM\Entity;
@@ -82,6 +83,7 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 
 `custom/Espo/Custom/Hooks/TargetList/MyHook.php`
 ```php
+<?php
 namespace Espo\Custom\Hooks\TargetList;
 
 class MyHook extends \Espo\Core\Hooks\Base
@@ -97,6 +99,7 @@ class MyHook extends \Espo\Core\Hooks\Base
 
 `custom/Espo/Custom/Hooks/Meeting/MyHook.php`
 ```php
+<?php
 namespace Espo\Custom\Hooks\Meeting;
 
 class MyHook extends \Espo\Core\Hooks\Base
@@ -122,4 +125,4 @@ class MyHook extends \Espo\Core\Hooks\Base
 $this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);
 ```
 
-
+Note: A hook name can't start with `set`. It's reserved for a dependency injection.

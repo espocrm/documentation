@@ -2,6 +2,8 @@
 
 Config parameters can be changed or added manaully in the file `data/config.php`.
 
+This is not a full list of params. Most of params available in admin UI are not listed here.
+
 ## List of parameters
 
 * [General](#general)
@@ -89,7 +91,7 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 
 ### Jobs & Daemon
 
-* jobMaxPortion – `15` – max number of jobs per one execution;
+* jobMaxPortion – `15` – max number of jobs per one execution; a portion of jobs that is run in a queue is counted as one job;
 * jobPeriod – `7800` – max execution time (in seconds) allocated for a sinle job; if exceeded then set to *Failed*;
 * jobPeriodForActiveProcess – `36000` – max execution time (in seconds) allocated for a sinle job with active process; if exceeded then set to *Failed*;
 * jobRerunAttemptNumber – `1` – number of attempts to re-run failed jobs;
@@ -99,6 +101,9 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * daemonMaxProcessNumber – `5` – max number of processes run simultaneously;
 * daemonInterval – `10` – interval between process runs (in seconds);
 * daemonProcessTimeout – `36000` – max lifetime of a process run (in seconds);
+* jobE0MaxPortion – `100` – max portion of jobs executed in a single process for *e0* queue; this queue is intended for email sending; is run as often as possible;
+* jobQ0MaxPortion – `200` – *q0* is a queue for a general usage; is run as often as possible;
+* jobQ1MaxPortion – `500` – *q1* is a queue for a general usage; is run every minute;
 
 ### Mass Email
 
