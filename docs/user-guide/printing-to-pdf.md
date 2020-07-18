@@ -24,6 +24,7 @@ Can be achieved by restriction of access to Template entity type.
 
 Table of content: 
 
+* [Code view](#code-view)
 * [Charset issues](#charset-issues)
 * [Access to templates](#access-to-templates)
 * [Page numbering](#page-numbering)
@@ -58,6 +59,9 @@ Examples:
 
 Note: If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
+### Code view
+
+A code view mode can be enabled by clicking *</>* button. It allows to edit raw HTML and make sure a layout is not messed up.
 
 ### Charset issues
 
