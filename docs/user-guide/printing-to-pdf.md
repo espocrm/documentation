@@ -361,6 +361,8 @@ In code view:
 {{/tableTag}}
 ```
 
+where *trTag* is a table row, *tdTag* is a table cell.
+
 ### Raw values
 
 To access a raw value of a specific attribute you need to add  `_RAW` to the attribute name. The raw value is not formatted value, timezone is UTC for date-time fields.
