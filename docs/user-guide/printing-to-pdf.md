@@ -22,6 +22,9 @@ Can be achieved by restriction of access to Template entity type.
 
 ## Templates
 
+Table of content: 
+
+* [Code view](#code-view)
 * [Charset issues](#charset-issues)
 * [Access to templates](#access-to-templates)
 * [Page numbering](#page-numbering)
@@ -56,6 +59,9 @@ Examples:
 
 Note: If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
+### Code view
+
+A code view mode can be enabled by clicking *</>* button. It allows to edit raw HTML and make sure a layout is not messed up.
 
 ### Charset issues
 
@@ -68,7 +74,7 @@ Administrator can add Templates tab at Administration > User Interface. An acces
 
 ### Page numbering
 
-Placeholders are only available in footer.
+Placeholders are only available in footer (and header if it's set to be printed on each page).
 
 * `{pageNumber}` – the current number of the page
 * `{totalPageNumber}` – the total number of record (since 5.7.12)
@@ -76,16 +82,16 @@ Placeholders are only available in footer.
 
 ### Page breaking
 
-To add an explicit page break you need to add the following code (in code view):
-
-```
-<br pagebreak="true">
-```
-
-Since the version 5.8.0 you can use:
+To add an explicit page break you need to add (since v5.8.0):
 
 ```
 {{pagebreak}}
+```
+
+For older verseinos (in code view):
+
+```
+<br pagebreak="true">
 ```
 
 ### Condition checking
@@ -146,20 +152,23 @@ Example:
 {{/each}}
 ```
 
-Use Code View mode and put `each` helper inside an html comment tag `<!--  -->`. This is needed to avoid stripping by wysiwyg editor when you have `{{#each}}` inside a table tag. To switch to Code View click on the button `</>`.
+Printing tables:
 
 ```
- <table>
- <!-- {{#each itemList}} -->
-    <tr>
-      <td>{{name}}</td>
-      <td>{{amount}}</td>
-    </tr>
- <!-- {{/each}} -->
- </table>
+{{tableTag}}
+  {{#each contacts}}
+      {{trTag}}
+          {{tdTag}}{{name}}{{/tdTag}}
+          {{tdTag}}{{amount}}{{/tdTag}}
+        </tr>
+      {{/trTag}}
+  {{/each}}
+{{/tableTag}}
 ```
 
 `itemList` is an *jsonArray* field (available in Quote, Sales Order, Invoices entity types).
+
+Note: Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended, since it breaks a layout of a *contenteditable* element.
 
 Displaying certain number of items in one row (since v5.9.2):
 
@@ -179,7 +188,7 @@ Access parent scope:
 
 ### Images
 
-Available since the version 5.8.0.
+(this way is available since the version 5.8.0)
 
 ```
 {{imageTag imageFieldNameId width=50 height=50}}
@@ -188,7 +197,7 @@ Available since the version 5.8.0.
 * *imageFieldNameId* is a name of image field, concatenated with *Id*
 * *width* and *height* can be omitted
 
-Another way to print images. Add in code view:
+Another way to print images for older versions. Add in code view:
 
 ```
 <img src="{{file imageFieldNameId}}">
@@ -204,16 +213,19 @@ Available since version 5.8.0.
 See info about [date formatting](../administration/date-formatting.md).
 
 Format *Date-Time* field:
+
 ```
 {{dateFormat createdAt_RAW format='MMMM DD, YYYY' timezone='Europe/London'}}
 ```
 
 Format *Date* field:
+
 ```
 {{dateFormat closeDate_RAW format='YYYY MMMM DD'}}
 ```
 
 Print formatted *now*:
+
 ```
 {{dateFormat now_RAW format='MMMM DD, YYYY HH:mm'}}
 ```
@@ -248,12 +260,11 @@ Value `10000.5` will be printer as `10 000,50`.
 
 ### Currency symbol
 
-Available since 5.6.3 version.
-
 ```
 {{amountCurrencySymbol}}
 ```
-where `amount` is a field name.
+
+where `amount` is a field name (of *currency* type).
 
 ### Text field
 
@@ -263,9 +274,9 @@ To display text fields (multi-line) use triple braces: ```{{{description}}}```.
 
 *Many-to-many and one-to-many.*
 
-It's possible to loop through a link collection (since 5.5.0, before 5.7.6 only link-multiple fields were supported).
+It's possible to loop through a link collection.
 
-The max number of records is 100, can be changed with a config parameter *htmlizerLinkLimit*.
+The max number of records is 100. It can be changed with a config parameter *htmlizerLinkLimit*.
 
 Example, printing contact names and roles of an opportunity:
 
@@ -277,10 +288,10 @@ Example, printing contact names and roles of an opportunity:
 {{/each}}
 ```
 
-`contacts` is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
+where `contacts` is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
 
+Example, printing contact names of an opportunity:
 
-Example, printing contact names of an opportunity (available since 5.3.0):
 ```
 {{#each contactsIds}}
     {{var this ../contactsNames}}
@@ -305,28 +316,6 @@ Available since version 5.8.0.
 Option 1: {{checkboxTag fieldName option='Option 1' color='blue'}}
 Option 2: {{checkboxTag fieldName option='Option 2' color='blue'}}
 Option 3: {{checkboxTag fieldName option='Option 3' color='blue'}}
-```
-
-Available since version 5.7.3.
-
-In code view:
-
-```
-{{#ifInArray 'item1' fieldName}}
-<input type="checkbox" checked="checked" name="1" readonly="true" value="1">
-{{else}}
-<input type="checkbox" name="1" readonly="true" value="1">
-{{/ifInArray}}
-Item 1
-<br>
-
-{{#ifInArray 'item2' fieldName}}
-<input type="checkbox" checked="checked" name="1" readonly="true" value="1">
-{{else}}
-<input type="checkbox" name="1" readonly="true" value="1">
-{{/ifInArray}}
-Item 2
-<br>
 ```
 
 ### Barcode field
@@ -375,6 +364,8 @@ In code view:
 {{/each}}
 {{/tableTag}}
 ```
+
+where *trTag* is a table row, *tdTag* is a table cell.
 
 ### Raw values
 

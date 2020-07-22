@@ -229,7 +229,7 @@ Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Re
 
 Example:
 
-`string\match('string\\match('{token1} foo {token2} bar', '/{[^}]*}/')`
+`string\match('{token1} foo {token2} bar', '/{[^}]*}/')`
 
 will return `{token1}`.
 
@@ -242,11 +242,12 @@ Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns 
 
 Example:
 
-`string\matchAll('string\\match('{token1} foo {token2} bar', '/{[^}]*}/')`
+`string\matchAll('{token1} foo {token2} bar', '/{[^}]*}/')`
 
 will return an array `['{token1}', '{token2}']`.
 
 #### string\replace
+
 `string\replace(STRING, SEARCH, REPLACE)`
 
 Replaces all occurrences of SEARCH with REPLACE in STRING. (available since version 5.9.0)

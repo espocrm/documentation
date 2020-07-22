@@ -4,6 +4,7 @@
 * [Making extension package](extension-packages.md)
 * [Tests](tests.md)
 * [Translation](translation.md)
+* [Coding rules](coding-rules.md)
 
 ### Backend
 

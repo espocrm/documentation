@@ -15,10 +15,6 @@ In this article:
 * [Process Flowcharts](#process-flowcharts)
 * [Processes](#processes)
 * [Flowchart Elements](#flowchart-elements)
-  * [Events](bpm-events.md)
-  * [Gateways](bpm-gateways.md)
-  * [Activities](bpm-activities.md)
-  * [Flows](#flows)
 * [Conditions](#conditions)
 * [Additional formula functions](#additional-formula-functions)
 
