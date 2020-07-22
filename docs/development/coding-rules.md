@@ -1,5 +1,7 @@
 # Coding Rules
 
+This rules are for the backend.
+
 ### 1\. Never pass Container into class constructors. Pass all dependencies separately.
 
 ```php
@@ -23,7 +25,6 @@ class MyClass
     }
 }
 ```
-
 
 ### 2\. Never write RAW SQL query. Use ORM instead.
 
