@@ -27,6 +27,18 @@ class MyClass
 
 ### 2\. Never write RAW SQL query. Use ORM instead.
 
+```php
+<?php
+
+$account = $this->entityManager->getRepository('Account')
+    ->select(['id', 'name'])
+    ->where([
+        'type' => 'Customer',
+    ])
+    ->order('createdAt')
+    ->findOne();
+```
+
 ### 3\. Always specify type hinting for all method arguments.
 
 ```php
