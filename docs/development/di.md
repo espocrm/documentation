@@ -90,7 +90,7 @@ class SomeCreator
         $this->injectableFactory = $injectableFactory;
     }
     
-    public function createSomething()
+    public function createSomething() : Something
     {
         $this->injectableFactory->create(Something::class);
     }
