@@ -167,6 +167,7 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 
 The following classes are created by *injectableFactory*:
 
+* ApplicationRunners - `Espo\Core\ApplicationRunners`
 * Controllers - `Espo\Controllers`
 * Services - `Espo\Services`
 * Hooks - `Espo\Hooks`
