@@ -19,8 +19,6 @@ Container services are defined in:
 * loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
 * metadata (app > containerServices).
 
-*Container* instance is available in Controller classes.
-
 Note: The best practice is not to require *container* in your classes, and never use it directly.
 
 Console command that prints all available container services with their implementing classes:
@@ -33,10 +31,10 @@ php command.php app-info --container
 
 If you need to define your custom container services, do it in metadata:
 
-* `custom/Espo/Resources/metadata/app/containserServices.json`;
+* `custom/Espo/Custom/Resources/metadata/app/containserServices.json`;
 * or in your module folder.
 
-Example of definition:
+A definition example:
 
 ```json
 {
@@ -49,9 +47,9 @@ Example of definition:
 }
 ```
 
-Dependencies will be passed to the class constructor. Class constructor parameter names will be used to detect dependencies.
+Needed dependencies will be passed to a class constructor. Class constructor parameter names will be used to detect dependencies.
 
-For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
+For example, if a parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
 
 ```php
 <?php
