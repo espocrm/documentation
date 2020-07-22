@@ -44,15 +44,12 @@ Example of definition:
         "className": "Espo\\Core\\NotificatorFactory"
     },
     "clientManager": {
-        "className": "Espo\\Core\\Utils\\ClientManager",
-        "dependencyList": ["config", "themeManager", "metadata"]
+        "className": "Espo\\Core\\Utils\\ClientManager"
     }
 }
 ```
 
-Dependencies will be passed to the class constructor.
-
-If *dependencyList* is not defined, then class constructor parameter names will be used to detect dependencies.
+Dependencies will be passed to the class constructor. Class constructor parameter names will be used to detect dependencies.
 
 For example, if the parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
 
@@ -60,7 +57,7 @@ For example, if the parameter name is `$entityManager`, then *entityMaanger* con
 <?php
 namespace Espo\Custom;
 
-use Espo\ORM\EntityManager;
+use Espo\Core\ORM\EntityManager;
 
 class SomeClass
 {
@@ -75,12 +72,31 @@ class SomeClass
 
 ## Injectable Factory
 
-*injectableFactory* creates an object by given class name resolving a dependency. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
+*injectableFactory* creates an object by a given class name resolving a dependency. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
 
-Usage:
 
 ```php
-$injectableFactory->create($className);
+<?php
+namespace Espo\Modules\MyModule;
+
+use Espo\Core\InjectableFactory;
+
+use Espo\Modules\MyModule\Something;
+
+class SomeCreator
+{
+    protected $injectableFactory;
+    
+    public function __construct(InjectableFactory $injectableFactory)
+    {
+        $this->injectableFactory = $injectableFactory;
+    }
+    
+    public function createSomething()
+    {
+        $this->injectableFactory->create(Something::class);
+    }
+}
 ```
 
 ### Constructor injection
