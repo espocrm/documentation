@@ -6,7 +6,7 @@ In this article:
 * [Add custom entities to Quick Create Entities](#add-custom-entities-to-quick-create-entities)
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
 * [Format phone number](#format-phone-number)
-* [Call recording for Asterisk](#asterisk-call-recording)
+* [Call recording for Asterisk](#call-recording-for-asterisk)
 * [Custom call recording URL handler](#custom-call-recording-url-handler)
 * [Additional info](#additional-info)
 
