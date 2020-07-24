@@ -69,7 +69,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
     1. Login to your Twilio account.
     2. Navigate to the Programmable SMS > Settings > Geo Permissions or just click the link: https://www.twilio.com/console/sms/settings/geo-permissions.
     3. Enable needed countries.
-2. [Add access control in EspoCRM](voip-message-access.md)
+2. [Add access control in EspoCRM](voip-message-access.md#add-access-control-in-espocrm)
 
 ## How to setup Twilio Integration for users
 
