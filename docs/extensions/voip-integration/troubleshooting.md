@@ -1,4 +1,4 @@
-# VoIP Troubleshooting
+# Troubleshooting
 
 In this article:
 * [How to report](#how-to-report)

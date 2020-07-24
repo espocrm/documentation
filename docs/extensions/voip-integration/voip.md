@@ -2,14 +2,14 @@
 
 ## Supported servers and services
 
-* [Asterisk server](asterisk-integration-setup.md#asterisk-integration-setup)
-* [Binotel service](binotel-integration-setup.md#binotel-integration-setup)
-* [Starface service](starface-integration-setup.md#starface-integration-setup)
-* [Twilio service](twilio-integration-setup.md#twilio-integration-setup)
+* [Asterisk server](asterisk-integration-setup.md)
+* [Binotel service](binotel-integration-setup.md)
+* [Starface service](starface-integration-setup.md)
+* [Twilio service](twilio-integration-setup.md)
 
 
 
 ## Additional VoIP Information
 
-* [VoIP Customization](voip-customization.md#voip-customization)
-* [VoIP Troubleshooting](voip-troubleshot.md#voip-troubleshooting)
+* [VoIP Customization](customization.md)
+* [VoIP Troubleshooting](troubleshooting.md)

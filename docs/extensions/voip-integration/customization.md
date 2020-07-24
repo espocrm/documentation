@@ -1,4 +1,4 @@
-# VoIP Customization
+# Customization
 
 In this article:
 * [Displaying a call recording](#displaying-a-call-recording)
