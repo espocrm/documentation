@@ -91,12 +91,12 @@
   * [Contacts](extensions/outlook-integration/contacts.md)
   * [Email](extensions/outlook-integration/email.md)
 * VoIP integration
-  * [Asterisk server](extensions/voip-integration/asterisk-integration-setup.md#asterisk-integration-setup)
-  * [Binotel service](extensions/voip-integration/binotel-integration-setup.md#binotel-integration-setup)
-  * [Starface service](extensions/voip-integration/starface-integration-setup.md#starface-integration-setup)
-  * [Twilio service](extensions/voip-integration/twilio-integration-setup.md#twilio-integration-setup)
-  * [VoIP Customization](extensions/voip-integration/voip-customization.md#voip-customization)
-  * [VoIP Troubleshooting](extensions/voip-integration/voip-troubleshot.md#voip-troubleshooting)
+  * [Asterisk server](extensions/voip-integration/asterisk-integration-setup.md)
+  * [Binotel service](extensions/voip-integration/binotel-integration-setup.md)
+  * [Starface service](extensions/voip-integration/starface-integration-setup.md)
+  * [Twilio service](extensions/voip-integration/twilio-integration-setup.md)
+  * [VoIP Customization](extensions/voip-integration/voip-customization.md)
+  * [VoIP Troubleshooting](extensions/voip-integration/voip-troubleshot.md)
 
 ---
 
