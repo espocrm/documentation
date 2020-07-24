@@ -10,4 +10,4 @@
 ## Additional VoIP Information
 
 * [VoIP Customization](voip-customization.md)
-* [VoIP Troubleshooting](voip-troubleshooting.md)
+* [VoIP Troubleshooting](voip-troubleshot.md)
