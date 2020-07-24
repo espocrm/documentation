@@ -4,7 +4,7 @@ VoIP Integration extension allows EspoCRM to integrate with an Asterisk server t
 
 There are two ways in which you can set up Twillio integration:
 
-1. **Call forwarding**. An incoming call from a Twilio number is forwarded to the user’s primary phone number. For outgoing calls EspoCRM creates a connection between the user’s primary phone number and the number called through Twilio service. For more details about how you will be charged for these calls, click [here](https://support.twilio.com/hc/en-us/articles/223132367-How-Much-am-I-Charged-for-Call-Forwarding-with-Twilio-).
+1. **Call forwarding**. An incoming call from a Twilio number is forwarded to the user’s primary phone number. For outgoing calls EspoCRM creates a connection between the user’s primary phone number and the number called through Twilio service. For more details about how you will be charged for these calls, [click here](https://support.twilio.com/hc/en-us/articles/223132367-How-Much-am-I-Charged-for-Call-Forwarding-with-Twilio-).
 2. **Twillio SIP Trunk**. A SIP trunk is a virtual version of a phone line, that isn’t physically connected to a phone company and uses intranet and internal communication systems to access the outside phone lines. More detailed information about Twilio SIP Trunking can be found via the [link](https://www.twilio.com/docs/voice/api/sip-interface).
 
 ## How to configure Twilio Integration for an administrator
