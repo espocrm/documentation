@@ -15,7 +15,7 @@ There are two ways in which you can set up Twillio integration:
 4. Tick off Enabled box.
 5. Fill in the connection details of your Twilio account.
 
-![Twilio integration config](../../_static/images/extensions/voip-integration/twilio_1.png)
+![Twilio integration config](../../_static/images/extensions/voip-integration/twilio-admin-setup.png)
 
 * **Name** – name of your connection.
 * **Your Account SID** – your Twilio account SID. You can get it at https://www.twilio.com/user/account.
@@ -44,7 +44,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
 
     To configure Twilio phone number routing, please go to Administration > VoIP Routing and select the phone number.
 
-    ![Twilio Routers](../../_static/images/extensions/voip-integration/twilio_2.png)
+    ![Twilio Routers](../../_static/images/extensions/voip-integration/twilio-routing.png)
 
 * **Assigned Team** – a list of responsible users for the line.
 * **Status** – an option to enable/disable the phone number in EspoCRM (in Twilio it will stay active).
@@ -76,11 +76,11 @@ After you have successfully filled in the connection details, EspoCRM will impor
 Each user has to add his phone number which will be used to handle incoming calls. It can be added in the User’s Profile.
 **Note**: If you are using a Twilio SIP, then instead of the phone number, you have to specify the SIP number in the format: “user1@espo.sip.us1.twilio.com”.
 
-![Phone numbers formats](../../_static/images/extensions/voip-integration/twilio_3.png)
+![Phone numbers formats](../../_static/images/extensions/voip-integration/twilio-user-phone.png)
 
 All other configuration settings should be made by your administrator. The user can change some VoIP settings in his User’s Profile, under “VoIP Settings”.
 
-![VoIP settings](../../_static/images/extensions/voip-integration/twilio_4.png)
+![VoIP settings](../../_static/images/extensions/voip-integration/twilio-user-setup.png)
 
 * **VoIP Server** – your current VoIP server.
 * **Your user extension** – Twilio phone number configured by the administrator .

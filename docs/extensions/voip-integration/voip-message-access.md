@@ -7,8 +7,8 @@ By default regular users don’t have access to Message entity. Administrator ne
 3. Create / edit a Twilio role.
 4. Grant access to the Message entity.
 
-![Twilio role](../../_static/images/extensions/voip-integration/twilio_role.png)
+![Twilio role](../../_static/images/extensions/voip-integration/twilio-role.png)
 
-By default the Message entity tab should be addad into the tab list.
+By default the Message entity tab should be added into the tab list.
 
 ![Message tab](../../_static/images/extensions/voip-integration/message-tab.png)
