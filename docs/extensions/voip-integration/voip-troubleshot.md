@@ -5,7 +5,7 @@ In this article:
 * [VoIP error debug](#voip-error-debug)
 * [Asterisk: The popup window is not displayed](#asterisk-the-popup-window-is-not-displayed)
 
-### How to report
+## How to report
 
 1. Provide an EspoCRM log file with the [debug error information](#voip-error-debug).
 2. Provide an error description from the VoIP server side (if you have an access to a debugger or logger).
@@ -19,13 +19,13 @@ In this article:
     * Caller phone number;
     * Called phone number.
 
-### VoIP error debug
+## VoIP error debug
 
 1. Enable debug mode as described [here](https://docs.espocrm.com/administration/troubleshooting/#enabling-debug-mode-for-a-logger).
 2. Reproduce an error again.
 3. Get EspoCRM [log file](https://docs.espocrm.com/administration/troubleshooting/#check-logs) and send it to the support team.
 
-### Asterisk: The popup window is not displayed
+## Asterisk: The popup window is not displayed
 
 To be able to make / receive calls with the popup window, please follow these steps:
 
@@ -38,4 +38,3 @@ To be able to make / receive calls with the popup window, please follow these st
 4. Run your SIP client.
 
 Now, you can make calls from SIP client or from EspoCRM.
-

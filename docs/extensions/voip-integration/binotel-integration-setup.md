@@ -3,11 +3,11 @@
 Binotel Integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Asterisk server through Asterisk Manager Interface (AMI), Starface and Binotel server, read more details [here](https://www.espocrm.com/features/binotel-integration/).
 
 
-### How to setup Binotel Integration for an administrator
+## How to setup Binotel Integration for an administrator
 
 1. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) -> VoIP » Binotel.
 
-![Binotel integration config](binotel_1.png)
+![Binotel integration config](../../_static/images/extensions/voip-integration/binotel_1.png)
 
 * **Name** – name of your Binotel connector.
 * **Authorization Key** – authorization Key to the Binotel server.
@@ -28,11 +28,11 @@ E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031
 **http://espocrm.local/?entryPoint=Binotel&connector=Binotel&key=hh9v0zr529**
 
 
-### How to setup Binotel Integration for users
+## How to setup Binotel Integration for users
 
 Each user who uses telephony should setup his user extension in User’s Profile, button “VoIP Settings”. Also, the user can disable a popup window for incoming/outgoing calls.
 
-![VoIP settings](binotel_2.png)
+![VoIP settings](../../_static/images/extensions/voip-integration/binotel_2.png)
 
 * **VoIP Server** – VoIP server selection.
 * **Your user extension** – your Binotel user extension (e.g. “299”, “1001”).

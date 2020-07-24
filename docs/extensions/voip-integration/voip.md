@@ -1,6 +1,6 @@
 # VoIP Integration
 
-### Supported servers and services
+## Supported servers and services
 
 * [Asterisk server](asterisk-integration-setup.md)
 * [Twilio service](twilio-integration-setup.md)

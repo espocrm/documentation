@@ -2,7 +2,7 @@
 
 VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, please click [here](https://www.espocrm.com/features/voip-integration/).
 
-### Supported Asterisk servers
+## Supported Asterisk servers
 
 VoIP Integration extension supports* the following Asterisk servers:
 
@@ -18,11 +18,11 @@ VoIP Integration extension supports* the following Asterisk servers:
 
 \* these servers were tested with VoIP Integration extension.
 
-### How to setup Asterisk Integration for an administrator
+## How to setup Asterisk Integration for an administrator
 
 **Step 1.** Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) -> VoIP » Asterisk AMI.
 
-![Asterisk integration config](asterisk_1.png)
+![Asterisk integration config](../../_static/images/extensions/voip-integration/asterisk_1.png)
 
 * **Name** – name of your connection.
 * **Host** – IP or domain name of your Asterisk Server.
@@ -53,11 +53,11 @@ VoIP Integration extension supports* the following Asterisk servers:
 **Step 2.** Setup a cron job (scheduled task) to handle Asterisk events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right section of your Asterisk settings. For linux-based OS, it looks like:
 **\* \* \* \* \* /usr/bin/php -f /var/www/espocrm/voip.php Asterisk > /dev/null 2>&1**
 
-### How to setup Asterisk Integration for users
+## How to setup Asterisk Integration for users
 
 Each user who wants to use Asterisk integration, should setup his access in the User’s Profile, under “VoIP Settings”. Usually, it’s the SIP credentials. Also, the user can change some VoIP settings on this window.
 
-![VoIP settings](asterisk_2.png)
+![VoIP settings](../../_static/images/extensions/voip-integration/asterisk_2.png)
 
 * **VoIP Server** – your current VoIP server.
 * **Your user extension** – your internal user extension (SIP user) of the Asterisk server.
@@ -67,12 +67,11 @@ Each user who wants to use Asterisk integration, should setup his access in the 
 * **Use internal click-to-call** – an option to enable/disable the internal click-to-call feature. It is a feature to make outgoing calls through Asterisk server. If the checkbox is unchecked, then an external application will handle “tel:” links.
 * **User Dial Context** – Dial Context for a User. If it is empty, a Dial Context of a connector will be used.
 
-### Additional phone numbers for users
+## Additional phone numbers for users
 
 Each user can add several additional phone numbers to handle incoming calls. They can be added in the User’s Profile.
 Note: Additional phone numbers are used for incoming calls only. Outgoing calls will use the internal user extension.
 
-![Phone numbers formats](asterisk_3.png)
+![Phone numbers formats](../../_static/images/extensions/voip-integration/asterisk_3.png)
 
 * **Phone numbers formats:** +442031112233, 00442031112233, 02031112233.
-

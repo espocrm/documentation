@@ -2,7 +2,7 @@
 
 VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, please click [here](https://www.espocrm.com/features/voip-integration/).
 
-### Supported Starface servers
+## Supported Starface servers
 
 VoIP Integration extension supports* the following Starface servers:
 
@@ -15,11 +15,11 @@ VoIP Integration extension supports* the following Starface servers:
 
 \*these servers were tested with VoIP Integration extension.
 
-### How to setup Starface Integration for an administrator
+## How to setup Starface Integration for an administrator
 
 1. Fill in the connection details of your Starafce server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
 
-![Starface integration config](starface_1.png)
+![Starface integration config](../../_static/images/extensions/voip-integration/starface_1.png)
 
 * **Name** – name of your connection.
 * **Host** – IP or domain name of your Starface Server.
@@ -39,11 +39,11 @@ VoIP Integration extension supports* the following Starface servers:
 2. Setup a cron job (scheduled task) to handle Starface Events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right block. For linux-based OS, it is:
 **\* \* \* \* \* cd /var/www/html/espocrm; /usr/bin/php -f voip.php Starface > /dev/null 2>&1**
 
-### How to setup Starface Integration for users
+## How to setup Starface Integration for users
 
 Each user who wants to use Starface integration, should setup his access in the User’s Profile, under “VoIP Settings”. Please note that login and password should be to the Starface web interface, not to the SIP credentials. Also, the user can change some VoIP settings on this window.
 
-![VoIP settings](starface_2.png)
+![VoIP settings](../../_static/images/extensions/voip-integration/starface_2.png)
 
 * **VoIP Server** – your current VoIP server.
 * **Your user extension** – your login ID for the Starface web interface.

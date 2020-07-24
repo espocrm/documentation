@@ -7,7 +7,7 @@ There are two ways in which you can set up Twillio integration:
 1. **Call forwarding**. An incoming call from a Twilio number is forwarded to the user’s primary phone number. For outgoing calls EspoCRM creates a connection between the user’s primary phone number and the number called through Twilio service. For more details about how you will be charged for these calls, click here: https://support.twilio.com/…for-Call-Forwarding-with-Twilio.
 2. **Twillio SIP Trunk**. A SIP trunk is a virtual version of a phone line, that isn’t physically connected to a phone company and uses intranet and internal communication systems to access the outside phone lines. More detailed information about Twilio SIP Trunking can be found via the link: https://www.twilio.com/docs/voice/api/sip-interface.
 
-### How to configure Twilio Integration for an administrator
+## How to configure Twilio Integration for an administrator
 
 1. Login to your Twilio account. If you have never used Twilio before, then create the account and purchase a phone number if needed.
 2. Login as Administrator in EspoCRM.
@@ -15,7 +15,7 @@ There are two ways in which you can set up Twillio integration:
 4. Tick off Enabled box.
 5. Fill in the connection details of your Twilio account.
 
-![Twilio integration config](twilio_1.png)
+![Twilio integration config](../../_static/images/extensions/voip-integration/twilio_1.png)
 
 * **Name** – name of your connection.
 * **Your Account SID** – your Twilio account SID. You can get it at https://www.twilio.com/user/account.
@@ -36,7 +36,7 @@ There are two ways in which you can set up Twillio integration:
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
 
-### How to configure routing of Twilio phone numbers
+## How to configure routing of Twilio phone numbers
 
 After you have successfully filled in the connection details, EspoCRM will import all active Twilio phone numbers (please wait a few minutes the first time).
 
@@ -44,7 +44,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
 
     To configure Twilio phone number routing, please go to Administration > VoIP Routing and select the phone number.
 
-    ![Twilio Routers](twilio_2.png)
+    ![Twilio Routers](../../_static/images/extensions/voip-integration/twilio_2.png)
 
 * **Assigned Team** – a list of responsible users for the line.
 * **Status** – an option to enable/disable the phone number in EspoCRM (in Twilio it will stay active).
@@ -58,12 +58,12 @@ After you have successfully filled in the connection details, EspoCRM will impor
 * **Voicemail Notifications** – Types of notification for a new voicemail message.
 * **Farewell at the end of the call**
 * **Team Users** – a list of users to configure receiving incoming/outgoing calls, SMS and MMS.
-    
+
 2. **Grant access for Twilio Team members**
 
     Go to Administration > Roles, create a Role for a Team of Twilio members (defined above) and grant access to the following entities: Calls, Messages, Accounts, Contacts, Leads.
 
-### How to configure Messages (SMS, MMS)
+## How to configure Messages (SMS, MMS)
 
 1. Enable Twilio messaging geographic permissions:
     1. Login to your Twilio account.
@@ -71,16 +71,16 @@ After you have successfully filled in the connection details, EspoCRM will impor
     3. Enable needed countries.
 2. [Add access control in EspoCRM](https://github.com/Max18061989/documentation/blob/master/extensions/voip-integration/voip-access.md)
 
-### How to setup Twilio Integration for users
+## How to setup Twilio Integration for users
 
 Each user has to add his phone number which will be used to handle incoming calls. It can be added in the User’s Profile.
 **Note**: If you are using a Twilio SIP, then instead of the phone number, you have to specify the SIP number in the format: “user1@espo.sip.us1.twilio.com”.
 
-![Phone numbers formats](twilio_3.png)
+![Phone numbers formats](../../_static/images/extensions/voip-integration/twilio_3.png)
 
 All other configuration settings should be made by your administrator. The user can change some VoIP settings in his User’s Profile, under “VoIP Settings”.
 
-![VoIP settings](twilio_4.png)
+![VoIP settings](../../_static/images/extensions/voip-integration/twilio_4.png)
 
 * **VoIP Server** – your current VoIP server.
 * **Your user extension** – Twilio phone number configured by the administrator .
@@ -88,33 +88,33 @@ All other configuration settings should be made by your administrator. The user 
 * **Silent notifications** – mute notification sound.
 * **Use internal click-to-call** – an option to enable/disable the internal click-to-call feature. It is a feature to make outgoing calls through Twilio. If the checkbox is unchecked, then an external application will handle “tel:” links.
 
-### How to configure SIP Domains
+## How to configure SIP Domains
 
 1. Configure a SIP domain in Twillio:
 
     1. Login to your Twilio account.
     2. Go to Twilio SIP Domains by clicking in the menu on the left side and select “Programmable Voice” option or just click the link: https://www.twilio.com/console/voice/sip/endpoints.
 
-    ![Twilio SIP Domains](twilio-sip-domains.png)
+    ![Twilio SIP Domains](../../_static/images/extensions/voip-integration/twilio-sip-domains.png)
 
     3. The next thing to do is to create a SIP Domain. To do that, select Domains option in the menu on the left side and press “+” button.
 
-    ![Twilio add SIP domains](twilio-add-sip-domain.png)
+    ![Twilio add SIP domains](../../_static/images/extensions/voip-integration/twilio-add-sip-domain.png)
 
     4. In the next window, you have to set up the domain configuration. Set the domain name (Friendly name), create your custom SIP URL, create Credential list for Voice Authentication, enable SIP Registration (by default its disabled), select Credential lists (created for Voice Authentication) and click Save.
 
-    ![Twilio SIP configuration](twilio-sip-domain-configuration.png)
+    ![Twilio SIP configuration](../../_static/images/extensions/voip-integration/twilio-sip-domain-configuration.png)
 
 2. Enable this SIP Domain in EspoCRM connector:
 
     1. Login as Administrator in EspoCRM.
     2. Navigate to the Administration > VoIP Settings > VoIP » Twilio.
     3. Select your custom SIP URL from the “Enable SIP Domains” field.
-    
-    ![Twilio enable SIP domain](twilio-enable-sip-domain.png)
 
-### More Twilio settings for users
+    ![Twilio enable SIP domain](../../_static/images/extensions/voip-integration/twilio-enable-sip-domain.png)
+
+## More Twilio settings for users
 
 Each user can set “Do Not Disturb” mode for incoming lines. To do it, please go to the home page (click on a logo) and add a “VoIP Settings” dashlet (“+” button).
 
-![Twilio dashlet](twilio-dashlet.png)
+![Twilio dashlet](../../_static/images/extensions/voip-integration/twilio-dashlet.png)
