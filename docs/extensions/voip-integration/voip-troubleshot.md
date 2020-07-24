@@ -23,7 +23,7 @@ In this article:
 
 1. Enable debug mode as described [here](https://docs.espocrm.com/administration/troubleshooting/#enabling-debug-mode-for-a-logger).
 2. Reproduce an error again.
-3. Get EspoCRM [log file](https://docs.espocrm.com/administration/troubleshooting/#check-logs) and send it to the support team.
+3. Get an EspoCRM [log file](https://docs.espocrm.com/administration/troubleshooting/#check-logs) and send it to the support team.
 
 ## Asterisk: The popup window is not displayed
 
