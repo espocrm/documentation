@@ -40,7 +40,7 @@ $account = $this->entityManager->getRepository('Account')
     ->findOne();
 ```
 
-### 3\. Always specify type hinting for all method arguments.
+### 3\. Specify type hinting for method arguments.
 
 ```php
 <?php
@@ -52,7 +52,7 @@ class MyClass
 }
 ```
 
-### 4\. Always indicate a method return type unless it's supposed to be void.
+### 4\. Always specify a method return type unless it's supposed to be void.
 
 ```php
 <?php
@@ -65,7 +65,7 @@ class MyClass
 }
 ```
 
-### 5\. Never return TRUE or FALSE to indicate success or failure. Throw an exception if failure, return NULL for empty result.
+### 5\. Never return TRUE or FALSE to indicate a success or failure. Throw an exception if failure, return NULL for empty result.
 
 ```php
 <?php
