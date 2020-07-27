@@ -10,7 +10,7 @@ Note: Requires EspoCRM v5.9.3 or later.
 
 Assuming, that the administrator has already set up the integration.
 
-Create a personal or group email account. Specify IMAP and SMTP parameters for Office 365 (hosts: `outlook.office365.com` & `smtp.office365.com`). Leave *Password* fields empty. Then save the record.
+Create a personal or group email account. Specify IMAP and SMTP parameters for Office 365 (hosts: `outlook.office365.com` & `smtp.office365.com`). Leave *Password* fields empty. Then, save the record.
 
 After that, *Outlook* panel should appear on the right. You need to click *Connect* button. A popup will show up asking for a user consent.
 
