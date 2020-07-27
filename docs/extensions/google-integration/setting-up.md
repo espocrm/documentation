@@ -9,8 +9,8 @@ Note, that the integration requires curl, libxml and xml PHP extensions installe
 
 Go to the Administration > Integrations > Google. Check *Enabled* checkbox.
 
-* *Client ID* and *Client Secret* you will obtain in Google Developers Console.
-* *Redirect URI* you will need to copy to Google Developers Console.
+* You will obtain *Client ID* and *Client Secret* in Google Developers Console.
+* You will need to copy *Redirect URI*  to Google Developers Console.
 
 ![Integration](../../_static/images/extensions/google-integration/setting-up/1.png)
 
@@ -44,10 +44,10 @@ In Google Developers Console, click *Oauth consent screen* on the sidebar. Follo
 
 ## Access control
 
-**Important**: By default regular users don’t have access to Google Calendar and Contacts integrations. Administrator needs to enable access in Roles. The following scopes need to be enabled:
+**Important**: By default, regular users don’t have access to Google Calendar and Contacts integrations. Administrator needs to enable access in Roles. The following scopes need to be enabled:
 
-* External Accounts
-* Google Calendar
-* Google Contacts
+* External Accounts;
+* Google Calendar;
+* Google Contacts.
 
 ![Roles](../../_static/images/extensions/google-integration/setting-up/roles.png)
