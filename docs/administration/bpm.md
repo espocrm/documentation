@@ -56,10 +56,10 @@ Processes can be **started**:
 
 The execution of the process is visualized with colors highlighting flow nodes:
 
-* green – processed;
-* yellow – pending;
-* violet – in process;
-* gray – failed.
+* green – processed
+* yellow – pending
+* violet – in process
+* gray – failed
 
 ![Process execution](../_static/images/administration/bpm/process-execution.png)
 
