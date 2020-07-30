@@ -60,7 +60,7 @@ Invoice PDF can be send in email as an attachment. Open an invoice record, click
 
 By default, a number field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Invoice > Fields > number. It's also possible to make the number field read-only.
 
-The prefix of the next number can be configured at Administration > Entity Manager > Invoice > Fields > numberA.
+The prefix and the next number can be configured at Administration > Entity Manager > Invoice > Fields > numberA.
 
 ## Default tax
 
