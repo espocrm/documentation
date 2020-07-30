@@ -89,9 +89,9 @@ You can select which fields you need to be copied at Administration > Entity Man
 
 The following service actions are available in Workflows and BPM tools:
 
-* Add Sales Order Items;
-* Convery Currency;
-* Send in Email.
+* Add Sales Order Items
+* Convery Currency
+* Send in Email
 
 ## See also
 
