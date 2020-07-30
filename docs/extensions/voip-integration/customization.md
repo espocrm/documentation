@@ -1,6 +1,7 @@
 # VoIP Customization
 
 In this article:
+
 * [Displaying a call recording](#displaying-a-call-recording)
 * [Add click-to-call feature to a custom entity](#add-click-to-call-feature-to-a-custom-entity)
 * [Add custom entities to Quick Create Entities](#add-custom-entities-to-quick-create-entities)

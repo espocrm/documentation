@@ -8,8 +8,7 @@
 * [Twilio service](twilio-integration-setup.md#twilio-integration-setup)
 
 
+## Additional information
 
-## Additional VoIP Information
-
-* [VoIP Customization](voip-customization.md#voip-customization)
-* [VoIP Troubleshooting](voip-troubleshot.md#voip-troubleshooting)
+* [Customization](customization.md)
+* [Troubleshooting](troubleshooting.md)

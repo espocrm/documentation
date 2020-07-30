@@ -1,6 +1,7 @@
 # VoIP Troubleshooting
 
 In this article:
+
 * [How to report](#how-to-report)
 * [VoIP error debug](#voip-error-debug)
 * [Asterisk: The popup window is not displayed](#asterisk-the-popup-window-is-not-displayed)
@@ -11,13 +12,13 @@ In this article:
 2. Provide an error description from the VoIP server side (if you have an access to a debugger or logger).
 3. Provide steps to reproduce the error.
 4. Provide screenshots with:
-    * Administration > Integrations > VoIP integration configs;
-    * Administration > VoIP Routing > Your VoIP number;
-    * Defined phone numbers in the user profile (if a user can't make or recieve a call).
+  1. Administration > Integrations > VoIP integration configs;
+  2. Administration > VoIP Routing > Your VoIP number;
+  3. Defined phone numbers in the user profile (if a user can't make or recieve a call).
 5. Describe details of this call:
-    * Time of the call;
-    * Caller phone number;
-    * Called phone number.
+  1. Time of the call;
+  2. Caller phone number;
+  3. Called phone number.
 
 ## VoIP error debug
 

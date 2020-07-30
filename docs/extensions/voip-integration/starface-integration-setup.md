@@ -6,12 +6,12 @@ VoIP Integration extension allows EspoCRM to integrate with an Asterisk server t
 
 VoIP Integration extension supports* the following Starface servers:
 
-* Starface 6.2.
-* Starface 6.3.
-* Starface 6.4.
-* Starface 6.5.
-* Starface 6.6.
-* Starface 6.7.
+* Starface 6.2
+* Starface 6.3
+* Starface 6.4
+* Starface 6.5
+* Starface 6.6
+* Starface 6.7
 
 \*these servers were tested with VoIP Integration extension.
 
