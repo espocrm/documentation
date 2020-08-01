@@ -1,7 +1,5 @@
 # Coding Rules
 
-This rules are for the backend.
-
 ### 1\. Never pass Container into class constructors. Pass all dependencies separately.
 
 ```php
