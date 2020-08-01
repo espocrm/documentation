@@ -125,7 +125,7 @@ Bad:
 
 ```php
 // start sanitizing
-$string = filter_var($str, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+$string = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 // end sanitizing
 ```
 
