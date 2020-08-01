@@ -96,4 +96,40 @@ In addition:
 * Do not write *phpdoc* for non-public methods and properties. It's OK if you don't write *phpdoc* at all.
 * Do not comment out a code. Remove it. It will still be available in *git*. 
 
+Bad:
 
+```php
+    /**
+     * Sanitize input.
+     *
+     * @param string $input Input string.
+     * @return string Sanitized string.
+     */
+    protected function sanitizeInput(string $input) : string
+    {
+        // sanitize
+        return Util::sanitize($input);
+    }
+```
+
+Good:
+
+```php
+    protected function sanitizeInput(string $input) : string
+    {
+        return Util::sanitize($input);
+    }
+```
+
+Bad:
+
+```php
+// start sanitizing
+$string = filter_var($str, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+// end sanitizing
+```
+
+Good:
+```php
+$string = $this->sanitizeString($string);
+```
