@@ -88,3 +88,12 @@ class MyClass
     }
 }
 ```
+
+### 6\. Don't write comments, write self explanatory code.
+
+In addition:
+
+* Do not write phpdoc for non-public methods and properties.
+* Do not comment out a code. Remove it. It will still be available in *git*. 
+
+
