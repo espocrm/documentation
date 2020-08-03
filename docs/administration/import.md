@@ -2,7 +2,7 @@
 
 Provides the ability to import records from CSV files.
 
-Administrator can access import at Administration > Import. By default regular users don't have an access. It can be granted with ACL roles. Administrator also can add the Import tab at Administration > User Interface > Tab List.
+Administrator can access import at Administration > Import. By default, regular users don't have access. It can be granted with ACL roles. Administrator also can add the Import tab at Administration > User Interface > Tab List.
 
 In this article:
 
@@ -28,9 +28,9 @@ Once you select a CSV file, you will be able to see how it will be parsed in *Pr
 Parameters:
 
 * *Header Row* − whether CSV file has the first row with field names.
-* *Execute in idle* − is recommended if you have a big bunch of records to be imported; import will be processed via cro; status will be set to 'Complete' when import process is finished.
-* *Skip searching for duplicates* − will make import faster.
-* *Silent mode* − majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will make import faster.
+* *Execute in idle* − is recommended if you have a big bunch of records to be imported; import will be processed via cron; the status will be set to 'Complete' when the import process is finished.
+* *Skip searching for duplicates* − will make the import faster.
+* *Silent mode* − the majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will make the import faster.
 * *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import. (since v5.10.0)
 
 Click *Next* button to preceed to the _Step 2_.
@@ -41,15 +41,15 @@ Click *Next* button to preceed to the _Step 2_.
 
 Setup the field mapping: how fields correspond to columns of the CSV file. You can skip not needed columns here.
 
-In cases of 'Create & Update' and 'Update only' you need to check fields by which records that should be updated will be found. For example, if you check *update by* 'Name' field, then records with the matching name will be updated.
+In cases of 'Create & Update' and 'Update only', you need to check fields by which records that should be updated will be found. For example, if you check *update by* 'Name' field, then records with the matching name will be updated.
 
 Add *default values* you want new and updated records to set with. For example, you can specify 'Assigned User' and 'Teams' that will be applied by default.
 
-After the import is done you will be able to **revert** created records. You will be able to see which records were recognized as duplicate and which were updated. Duplicate means that there was the similar record in the system. You can remove all imported duplicates at once.
+After the import is done, you will be able to **revert** created records. You will be able to see which records were recognized as duplicate and which were updated. Duplicate means that there was a similar record in the system. You can remove all imported duplicates at once.
 
-Important: Revert doesn't work with updated records, you can't revert update.
+Important: Revert doesn't work with updated records, you can't revert the update.
 
-Click *Run Import* button to proceed. It may take some time before an import process gets finished. If you want to import a large bunch of records, it's recommended to run import in idle.
+Click *Run Import* button to proceed. It may take some time before the import process gets finished. If you want to import a large bunch of records, it's recommended to run import in idle.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
 
@@ -57,7 +57,7 @@ Click *Run Import* button to proceed. It may take some time before an import pro
 
 #### Remove import log
 
-Once the records are imported and you are sure that imported data is fine you can *Remove Import Log* (by clicking the button on the import results view) to preclude accidental reverting of the import.
+Once the records are imported and you are sure that imported data is fine, you can *Remove Import Log* (by clicking the button on the import results view) to preclude accidental reverting of the import.
 
 #### Revert import
 
@@ -75,7 +75,7 @@ This will create a new import with the same parameters.
 
 ## Importing into Target List
 
-When you import Contacts, Leads or Accounts you can add them to some target list. On the Step 2 you need to add *Target List* field on *Default Values* panel and select a needed target list record. You can also use 'Update only' or 'Create & Update' import to add existing targets to a target list.
+When you import Contacts, Leads or Accounts, you can add them to some target list. On the Step 2, you need to add *Target List* field on *Default Values* panel and select a needed target list record. You can also use 'Update only' or 'Create & Update' import to add existing targets to a target list.
 
 ## Console commands
 
