@@ -11,7 +11,7 @@ In this article:
 
 ## Scheduled Jobs
 
-Scheduled Jobs are intended for recurring job execution. The are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using a crontab notation.
+Scheduled Jobs are intended for recurring job execution. They are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using a crontab notation.
 
 ```
 * * * * *
@@ -23,9 +23,9 @@ Scheduled Jobs are intended for recurring job execution. The are available at Ad
 | +---------- Hour              (range: 0-23)
 ```
 
-If you want a job to be run as often as possible you need to set the scheduling to `* * * * *`.
+If you want a job to be run as often as possible, you need to set the scheduling to `* * * * *`.
 
-Important: Scheduling works in **UTC timezone**. It doesn't honor the server's timezone. You need to take it into account when you need the scheduling on specific hours.
+Important: Scheduling works in **UTC timezone**. It doesn't honor the server's timezone. You need to take it into account when you need the scheduling for specific hours.
 
 ## Setting up
 
@@ -33,11 +33,11 @@ There are two ways how jobs can be processed: with crontab or daemon.
 
 ### Cron
 
-Cron is easy to configure. It's supported by most of hosting providers.
+Cron is easy to configure. It's supported by most hosting providers.
 
 See how to configure cron [here](server-configuration.md#setting-up-crontab).
 
-In Unix systems cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick.
+In Unix systems, cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick.
 
 Add multiple lines in crontab with delays in seconds:
 
@@ -103,7 +103,7 @@ systemctl start espocrm-daemon.service
 
 ## Running jobs in parallel processes
 
-By default jobs are executed one by one that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Jobs > Settings (in the top-right corner).
+By default jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Jobs > Settings (in the top-right corner).
 
 Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes.
 
