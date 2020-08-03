@@ -1,14 +1,14 @@
 # Formula (& calculated fields)
 
-In entity manager it's possible to define script (formula) for specific entity type. This script will be executed every time before record is saved.
+In Entity Manager, it's possible to define script (formula) for a specific entity type. This script will be executed every time before the record is saved.
 
 It provides the ability to automatically set specific fields (attributes) with values derived from calculation. Some functions can also perform some actions.
 
-To edit formula for a specific entity type follow Administration > Entity Manager > dropdown menu on the right on the row of the entity type > Formula.
+To edit formula for a specific entity type, follow Administration > Entity Manager > dropdown menu on the right on the row of the entity type > Formula.
 
 You may also need to set fields, that are supposed to be calculated, read-only via Entity Manager.
 
-Admin can run **recalculate formula** for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
+The admin can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
 Formula can also be utilized in Workflows and BPM tool.
 
@@ -37,7 +37,7 @@ In this article:
 
 ## Syntax
 
-EspoCRM formula is written in the simple language designed specifically for this feature.
+EspoCRM formula is written in a simple language designed specifically for this feature.
 
 There are 4 element types that can be used in formula:
 
@@ -55,10 +55,10 @@ string\concatenate(name, ' + ', $test);
 ```
 where:
 
-* `string\concatenate` – function
-* `name` – attribute (of a target entity, to which formula is applied)
-* `' + '` – value (of string type)
-* `$test` – variable (supposed to be declared somewhere above)
+* `string\concatenate` – a function
+* `name` – an attribute (of a target entity, to which formula is applied)
+* `' + '` – a value (of string type)
+* `$test` – a variable (supposed to be declared somewhere above)
 
 
 ## Operators
@@ -79,7 +79,7 @@ where:
 * `>=` - comparison greater than or equals,
 * `<=` - comparison less than or equals.
 
-Priority of operators:
+The priority of operators:
 * `=`;
 * `||`, `&&`;
 * `==`, `!=`, `>`, `<`, `>=`, `<=`;
@@ -238,7 +238,7 @@ The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 #### string\matchAll
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
-Retrieves all result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3)
+Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3)
 
 Example:
 
@@ -334,7 +334,7 @@ Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIME
 #### datetime\diff
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)`
 
-Returns difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. Result will be negative if VALUE_1 < VALUE_2.
+Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. The result will be negative if VALUE_1 < VALUE_2.
 
 #### datetime\addMinutes
 `datetime\addMinutes(VALUE, MINUTES)`
@@ -369,9 +369,9 @@ Adds YEARS to date or datetime VALUE. YEARS can be negative.
 #### datetime\closest
 `datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])`
 
-Returns closest date or datetime to VALUE based on passed arguments.
+Returns the closest date or datetime to VALUE based on passed arguments.
 
-TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find closest in the past. If TIMEZONE is omitted, then default timezone is used.
+TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find the closest in the past. If TIMEZONE is omitted, then default timezone is used.
 
 Examples:
 
@@ -431,7 +431,7 @@ Generates a cryptographic random integer between specified MIN and MAX. If MIN i
 
 ### Entity
 
-Functions of *Entity* group operates with a target record. There can be only one target record available in formula-script context. For *Before Update Script* the target record is the record that is currently updated. For Workflow's *Create Record* action, the target record is the record is being created. For Workflow's conditions, the target record is the target record of the workflow rule.
+Functions of the *Entity* group operate with a target record. There can be only one target record available in formula-script context. For *Before Update Script*, the target record is the record that is currently updated. For Workflow's *Create Record* action, the target record is the record is being created. For Workflow's conditions, the target record is the target record of the workflow rule.
 
 * [entity\isNew](#entityisnew)
 * [entity\isAttributeChanged](#entityisattributechanged)
@@ -538,7 +538,7 @@ Removes a specific ID from the Link Multiple field.
 
 `entity\isRelated(LINK, ID)`
 
-Checks whether target entity is related with another entity represented by LINK and ID.
+Checks whether a target entity is related with another entity represented by LINK and ID.
 
 #### entity\sumRelated
 
@@ -987,9 +987,9 @@ More info about entity types [here](terms-and-naming.md#entity-type).
 
 #### FILTER
 
-A name of a filter pre-defined in the system. Usually it is defined in [SelectManager class](../development/select-manager.md). Developers can define own filters in a custom SelectManager class.
+A name of a filter pre-defined in the system. Usually, it is defined in [SelectManager class](../development/select-manager.md). Developers can define own filters in a custom SelectManager class.
 
-For non-developers it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from a URL.
+For non-developers, it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then, you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from the URL.
 
 ## Examples
 
