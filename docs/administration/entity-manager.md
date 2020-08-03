@@ -18,7 +18,7 @@ In this article:
 
 ## Creating new entity type
 
-Click *Create Entity* button on Entity Manager main page (Administration > Entity Manager). Specify name, labels and select type. If you select *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check *Stream* if you want to have a stream panel (users be able to follow records).
+Click *Create Entity* button on Entity Manager main page (Administration > Entity Manager). Specify name, labels and select type. If you select *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check *Stream* if you want to have a stream panel (users will be able to follow records).
 
 Types:
 
@@ -30,36 +30,36 @@ Types:
 
 ## Entity type parameters
 
-If you click *Edit* on a certain entity you will be able to change parameters of that entity.
+If you click *Edit* on a certain entity, you will be able to change parameters of that entity.
 
 * Labels - singular and plural names of the entity.
-* Default order records are sorted by in list views.
+* Default order in which records are sorted by in list views.
 * Stream - whether Stream feature is enabled for this entity.
 * Disabled - check if you don't need this entity in your system.
 * Text Filter Fields - what fields to search in for the main text filter and global search.
 * Status field - which field (of enum type) will be used for a record status; required for kanban view.
 * Kanban view - available only if Status Field is specified. Enables Kanban view mode.
 * Full-Text Search - see more [here](../user-guide/text-search.md#full-text-search).
-* Disable record count - total number won't be displayed on the list view; can decrease loading time when the DB table is big.
+* Disable record count - the total number won't be displayed on the list view; can decrease loading time when the DB table is big.
 * Color - a specific color for a quick recognition.
 * Icon - the picked icon will be displayed in the side navbar.
 
 ## Fields
 
-By clicking *Fields* link you will be moved to a separate page. There you will be able to create new fields or update existing ones.
+By clicking *Fields* link, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
 
-[More detail](fields.md) abour fields.
+[More detail](fields.md) about fields.
 
-**Note**: After you have added a new field you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
+**Note**: After you have added a new field, you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
 
 
 ## Relationships
 
-You can create new relationships between both out-of-box and custom entities. Relationship types are listed below.
+You can create new relationships between both out-of-the-box and custom entities. Relationship types are listed below.
 
 #### One-to-Many
 
-After you have created this relationship you can put a link field to the detail layout of the right entity and add relationship panel to the left entity.
+After you have created this relationship, you can put a link field to the detail layout of the right entity and add relationship panel to the left entity.
 
 #### Many-to-One
 
@@ -85,7 +85,7 @@ Linking with multiple entity types through *Link-Parent* field (since 5.8.0).
 
 #### Link Multiple Field
 
-The parameter *Link Multiple Field* implies that the field of *Link-Multiple* type will be created along with relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of detail view screen.
+The parameter *Link Multiple Field* implies that the field of *Link-Multiple* type will be created along with the relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of the detail view screen.
 
 Examples of link-multiple fields:
 
@@ -95,4 +95,4 @@ Examples of link-multiple fields:
 
 #### Audited
 
-If the parameter *Audited* is checked then updates of the relationship will be logged in Stream.
+If the parameter *Audited* is checked, then updates of the relationship will be logged in Stream.
