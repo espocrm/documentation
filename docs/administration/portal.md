@@ -4,13 +4,13 @@ Portal provides the ability to access specific CRM data and functions for your c
 
 To create portal follow Administration > Portals, click Create Portal button.
 
-* *Is Active*. If not checked, portal won't be available for anybody.
-* *Is Default*. Means that portal will be available by shorter url: `https://YOUR_ESPO_URL/portal`.
-* *Roles*. Specify one or multiple portal roles that will be applied to users logged into portal. More information about portal roles is below.
-* *Tab List*. Tabs which will be shown in navigation bar.
+* *Is Active*. If not checked, the portal won't be available for anybody.
+* *Is Default*. Means that the portal will be available by shorter url: `https://YOUR_ESPO_URL/portal`.
+* *Roles*. Specify one or multiple portal roles that will be applied to users logged into the portal. More information about the portal roles is below.
+* *Tab List*. Tabs which will be shown in the navigation bar.
 * *Dashboard Layout*. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
-* *URL*. Read only field that displays the link you can access the portal with.
-* *Layout Set*. Provides the ability to use different layouts from the porta. See more [info](layout-manager.md#different-layouts-for-teams-portals).
+* *URL*. Read-only field that displays the link you can access the portal with.
+* *Layout Set*. Provides the ability to use different layouts from the portal. See more [info](layout-manager.md#different-layouts-for-teams-portals).
 
 ## Portal Users
 
@@ -31,8 +31,8 @@ Portal users can have a specific *Dashboard Layout*. It allows certain users to 
 
 Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
 
-* not-set ‒ Denies an access.
-* own ‒ Records created by the user. E.g. portal user cased some case and this case is owned by this user.
+* not-set ‒ Denies access.
+* own ‒ Records created by the user. E.g. a portal user created some case and this case is owned by this user.
 * account ‒ Records related to the account the portal user is related to. Relation (link) should be named `account` or `accounts`.
 * contact ‒ Records related to the contact the portal user is related to. Relation (link) should be named `contact` or `contacts`.
 
@@ -40,8 +40,8 @@ Portal roles are similar to regular roles in EspoCRM but with a few distinctions
 
 Portal roles can be applied to:
 
-* Portal ‒ all users of the portal will receive this role (multiple roles are merged)
-* Portal User ‒ to grant certain users specific permissions
+* Portal ‒ all users of the portal will receive this role (multiple roles are merged);
+* Portal User ‒ to grant certain users specific permissions.
 
 ### Example
 
@@ -54,7 +54,7 @@ Portal roles can be applied to:
 
 ## Access to Portal
 
-You can find the URL for your portal in *URL* field of the portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access by different url. For this case you need to fill in 'Custom URL' field.
+You can find the URL for your portal in the *URL* field of the portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access by different url. For this case, you need to fill in 'Custom URL' field.
 
 ### Access portal by Custom URL for Apache server
 
@@ -81,7 +81,7 @@ Custom URL: 'portal-host-name.com'.
 
 #### Mod rewrite rules
 
-Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID cab be obtained from the address bar of your web browser when you open the detail view of the portal record. Like: `https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24`. *16b9hm41c069e6j24* is the portal record ID.
+Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can be obtained from the address bar of your web browser when you open the detail view of the portal record. Like: `https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24`. *16b9hm41c069e6j24* is the portal record ID.
 
 ```
   RewriteCond %{HTTP_HOST} ^portal-host-name\.com$
