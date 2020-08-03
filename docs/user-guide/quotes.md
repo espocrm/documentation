@@ -151,7 +151,7 @@ Quote PDF can be send in email as an attachment. Open a quote record, click the 
 
 By default, a number field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Quote > Fields > number. It's also possible to make the number field read-only.
 
-The prefix before the generated next number of the quote can be configured at Administration > Entity Manager > Quote > Fields > numberA.
+The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Quote > Fields > numberA.
 
 ## Default tax
 
