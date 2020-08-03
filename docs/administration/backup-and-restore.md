@@ -2,7 +2,7 @@
 
 ## How to backup EspoCRM manually
 
-EspoCRM consists of files and database data. All these data are needed in order to create a full backup of EspoCRM. Here are instructions on how to do it on Ubuntu server with MySQL.
+EspoCRM consists of files and database data. All these data are needed in order to create a full backup of EspoCRM. Here are the instructions on how to do it on Ubuntu server, with MySQL.
 
 ### Step 1. Backup files
 
