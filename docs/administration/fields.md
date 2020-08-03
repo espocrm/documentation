@@ -5,7 +5,7 @@
 The list of field types available for creating:
 
 * [Varchar](#varchar) – a single-line text;
-* [Enum](#enum) – selectbox, only one value can be selected;
+* [Enum](#enum) – a selectbox, only one value can be selected;
 * [Text](#text) – a multiline text with markdown support;
 * [Date](#date) – date w/o time;
 * [Date-Time](#date-time) – date and time;
@@ -49,14 +49,14 @@ Field types not available for creating directly:
 
 Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
 
-For *Enum*, *Array*, *Multi-Enum*, *Checklist* fields it's possible to define different sets of options that will be available for the field depending on which condition is met. See more [here](dynamic-logic.md).
+For *Enum*, *Array*, *Multi-Enum*, *Checklist* fields. it's possible to define different sets of options that will be available for the field depending on which condition is met. See more [here](dynamic-logic.md).
 
 Available items:
 
 * Conditions making field visible
 * Conditions making field required
 * Conditions making field read-only
-* Conditional options – for enum, multi-enum, checklist, array, varvhar fields
+* Conditional options – for enum, multi-enum, checklist, array, varchar fields
 
 ----
 
@@ -79,9 +79,9 @@ Selectbox, only one value can be selected.
 
 Parameters:
 
-* Options – a list of values (key => label pairs); color (style) for each value can be specified (applied when param *Dispaly as Label* is enabled);
+* Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
 * Is Sorted – to sort a list alphabetically;
-* Display as Label – a value will be displayed as a label with a color; a color for each option can be specified.
+* Display as Label – a value will be displayed as a label with color; a color for each option can be specified.
 
 It's possible to define conditional options with Dynamic Logic.
 
@@ -96,9 +96,9 @@ A multiline text with markdown support.
 Parameters:
 
 * Max-length – a max acceptable length of a text;
-* Disable Text Cut – if not checked, then long texts will be shortened and can be expanded (for detail view mode);
-* Number of rows of textarea – max number of rows before scroll bar appears (for edit view mode);
-* Cut Height (px) – a max height of a text, if longer, then it will be cut (for detail view mode);
+* Disable Text Cut – if not checked, then long texts will be shortened and can be expanded (for the detail view mode);
+* Number of rows of textarea – a max number of rows before scroll bar appears (for the edit view mode);
+* Cut Height (px) – a max height of a text, if longer, then it will be cut (for the detail view mode);
 * Display raw text (no markdown) – to disable markdown support.
 
 ![Text](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/text.png)
@@ -185,12 +185,12 @@ A list of values, multiple values can be selected. The list is ordered.
 
 Parameters:
 
-* Options – a list of values (key => label pairs); color (style) for each value can be specified (applied when param *Dispaly as Label* is enabled);
+* Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
 * Is Sorted – to sort a list alphabetically;
 * Allow Custom Options – if checked, a user can add custom values (not defined by *Options* parameter) by typing text and pressing the enter key;
-* Max Item Count – validation: how much items can be added;
-* Display as Label – values will be displayed as a label with a color; a color for each option can be specified;
-* Display as List – values will be displayed each in new line.
+* Max Item Count – a validation: how many items can be added;
+* Display as Label – values will be displayed as a label with color; a color for each option can be specified;
+* Display as List – each value will be displayed in a new line.
 
 
 ## Checklist
@@ -199,9 +199,9 @@ A list of checkboxes.
 
 Parameters:
 
-* Options – a list of values (key => label pairs); color (style) for each value can be specified (applied when param *Dispaly as Label* is enabled);
+* Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
 * Is Sorted – to sort a list alphabetically;
-* Max Item Count – validation: how much items can be checked;
+* Max Item Count – a validation: how many items can be checked;
 
 
 ## Array
@@ -212,8 +212,8 @@ Parameters:
 
 * Options – a list of values (key => label pairs); if no options specified, then a user will be able to add any options;
 * Empty string value is not allowed – if not checked, a user can add an empty string as an item;
-* Max Item Count – validation: how much items can be added;
-* Display as List – values will be displayed each in new line.
+* Max Item Count – a validation: how many items can be added;
+* Display as List – each value will be displayed in a new line.
 
 ![Array](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/array.png)
 
@@ -239,8 +239,8 @@ Similar to Text field, but with HTML support.
 
 Parameters:
 
-* Height (px) – a height of the field (in edit view mode); if empty – then  height is flexible;
-* Min Height (px) – a min height of the field (in edit view mode);
+* Height (px) – a height of the field (in the edit view mode); if empty – then  height is flexible;
+* Min Height (px) – a min height of the field (in the edit view mode);
 * Use Iframe – if checked, then HTML will be placed into IFRAME element.
 
 ## File
@@ -250,8 +250,8 @@ For file uploading.
 Parameters:
 
 * Source List – allows a user to get a file from another record (*Documents* source is available out-of-the-box);
-* Max File Size (Mb) – validation;
-* Accept – which file types cab be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types.
+* Max File Size (Mb) – a validation;
+* Accept – which file types can be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types.
 
 
 ## Image
@@ -261,7 +261,7 @@ For image uploading.
 Parameters:
 
 * Preview Size – defines a size of an image displayed on the detail/list view;
-* Max File Size (Mb) – validation.
+* Max File Size (Mb) – a validation.
 
 ## Attachment-Multiple
 
@@ -270,8 +270,8 @@ Allows to upload multiple files.
 Parameters:
 
 * Source List – allows a user to get a file from another record (*Documents* source is available out-of-the-box);
-* Max File Size (Mb) – validation;
-* Accept – which file types cab be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types;
+* Max File Size (Mb) – a validation;
+* Accept – which file types can be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types;
 * Preview Size – defines a size of an image displayed on the detail/list view.
 
 ## Number
@@ -282,7 +282,7 @@ Parameters:
 
 * Prefex – a text that will be preprended to a number;
 * Next Number – a number that will be applied to the next created record;
-* Pad Length – a length of the numeric part; if less then will be padded with zero digits, e.g. `00001`.
+* Pad Length – a length of the numeric part; if less, then will be padded with zero digits, e.g. `00001`.
 
 ![Number](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/number.png)
 
@@ -307,7 +307,7 @@ A field of a related record. Read-only.
 
 Parameters:
 
-* Link – defines from where field will be taken.
+* Link – defines where the field will be taken from.
 * Field – a field of a related record.
 
 ## Email
@@ -336,4 +336,4 @@ Parameters:
 
 ## Link-Multiple
 
-A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) relationship. Not all relatioships have their link-multiple fields. Only those do, where *Link-Multiple* parameter(s) is enabled.
+A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) relationship. Not all relationships have their link-multiple fields. Only those do, where *Link-Multiple* parameter(s) is enabled.
