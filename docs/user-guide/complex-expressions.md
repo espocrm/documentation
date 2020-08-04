@@ -122,6 +122,7 @@ E.g. `NULLIF:(name, '')` will return NULL if *name* is empty string.
 
 ### Date & time
 
+
 #### MONTH_NUMBER
 
 Month number. From 1 to 12.
@@ -220,6 +221,9 @@ Difference between two days in hours.
 
 Difference between two days in minutes.
 
+#### DATE
+
+Returns a date part of a date-time value. Available since v6.0.0.
 
 ### String
 
