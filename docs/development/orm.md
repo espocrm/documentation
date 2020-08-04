@@ -214,28 +214,44 @@ $accountList = $entityManager->getRepository('Account')->where([
 Descending order:
 
 ```php
-$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', true)->find();
+$accountList = $entityManager->getRepository('Account')
+    ->limit(0, 10)
+    ->order('createdAt', true)
+    ->find();
 ```
 
 Ascending order:
 ```php
-$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt')->find();
+$accountList = $entityManager->getRepository('Account')
+  ->limit(0, 10)
+  ->order('createdAt')
+  ->find();
 ```
 
 or:
 ```php
-$accountList = $entityManager->getRepository('Account')->limit(0, 10)->order('createdAt', 'DESC')->find();
+$accountList = $entityManager->getRepository('Account')
+  ->limit(0, 10)
+  ->order('createdAt', 'DESC')
+  ->find();
 ```
 
 Complex order:
 ```php
-$accountList = $entityManager->getRepository('Account')->order([['createdAt', 'ASC'], ['name', 'DESC']])->find();
+$accountList = $entityManager->getRepository('Account')
+  ->order([
+    ['createdAt', 'ASC'],
+    ['name', 'DESC'],
+  ])
+  ->find();
 ```
 
 Ordering by list:
 
 ```php
-$opportunityList = $entityManager->getRepository('Opportunity')->order('LIST:stage:Prospectring,Qualification,Proposal')->find();
+$opportunityList = $entityManager->getRepository('Opportunity')
+  ->order('LIST:stage:Prospectring,Qualification,Proposal')
+  ->find();
 ```
 
 ### Find the first one
@@ -340,22 +356,27 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ### Distinct
 
 ```
-$opportunityList = $entityManager->getRepository('Opportunity')->distinct()->where(...)->find();
+$opportunityList = $entityManager->getRepository('Opportunity')->distinct()->find();
 ```
 
 ### Join
 
 Join relationship:
 ```php
-$contactList = $entityManager->getRepository('Contact')->distinct()->join('opportunities')->where([
-  'opportunities.stage' => 'Closed Won'
-])->find();
+$contactList = $entityManager->getRepository('Contact')
+  ->distinct()
+  ->join('opportunities')
+  ->where([
+    'opportunities.stage' => 'Closed Won',
+  ])->find();
 ```
 
 Left Join relationship:
 ```php
 $contactList = $entityManager->getRepository('Contact')
-->distinct()->leftJoin('opportunities')->where(...)->find();
+  ->distinct()
+  ->leftJoin('opportunities')
+  ->find();
 ```
 
 'opportunities' is a relationship name.
@@ -363,29 +384,30 @@ $contactList = $entityManager->getRepository('Contact')
 Joining any table:
 
 ```php
-$meetingList = $entityManager->getRepository('Meeting')->join([
-    [
-        'MeetingUser', // meeting_user table
-        'meetingUser', // it's an alias
-        [
-            'meetingUser.meetingId:' => 'meeting.id' // join condition;
-                                                     // colon indicates that the right part is not a value;
-                                                     // it translates to meetingUser.meeting_id = meeting.id
-        ]
-    ]
-])->where([
-  'meetingUser.userId' => $user->id,
-])->find();
+$meetingList = $entityManager->getRepository('Meeting')
+  ->join([
+      [
+          'MeetingUser', // meeting_user table
+          'meetingUser', // it's an alias
+          [
+              'meetingUser.meetingId:' => 'meeting.id' // join condition;
+                                                       // colon indicates that the right part is not a value;
+                                                       // it translates to meetingUser.meeting_id = meeting.id
+          ]
+      ]
+  ])->where([
+    'meetingUser.userId' => $user->id,
+  ])->find();
 ```
 
 Join table alias:
 ```php
 $contactList = $entityManager->getRepository('Contact')
-->distinct()
-->join([['opportunities', 'aliasForJoinedTable']])
-->where([
-  'aliasForJoinedTable.stage' => 'Closed Won'
-])->find();
+    ->distinct()
+    ->join([['opportunities', 'aliasForJoinedTable']])
+    ->where([
+      'aliasForJoinedTable.stage' => 'Closed Won'
+    ])->find();
 ```
 
 ### Group By
@@ -411,14 +433,17 @@ $rowList = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
 ### Additional Params
 
-#### returnSthCollection
+#### Sth collection
 
 Available since version 5.6.9.
 
 Can be used with `find` and `findRelated` methods. With this param provided, they will return a collection that doesn't allocate memory for all result data.
 
 ```
-$collection = $entityManager->getRepository('Email')->limit(0, 10000)->find(['returnSthCollection' => true]);
+$collection = $entityManager->getRepository('Email')
+  ->limit(0, 10000)
+  ->sth()
+  ->find();
 
 foreach ($collection as $entity) {
     // memory is allocated for each item, when collection is iterated
