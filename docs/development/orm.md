@@ -433,9 +433,8 @@ $rowList = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
 ### Additional Params
 
-#### Sth collection
+#### STH collection
 
-Available since version 5.6.9.
 
 Can be used with `find` and `findRelated` methods. With this param provided, they will return a collection that doesn't allocate memory for all result data.
 
