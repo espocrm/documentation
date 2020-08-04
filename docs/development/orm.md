@@ -4,7 +4,7 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 
 **EntityManager** is available in [*Container*](di.md). It can be obtained in [record services](services.md#record-service) by method `#getEntityManager()`. It provides an access to repositories.
 
-**Repository** serves for fetching and storing records. Each entity type has its own repository. Base classes: `\Espo\ORM\Repositories\RDB`, `\Espo\Core\ORM\Repositories\RDB`. *RDB* stands for *relational database*.
+**Repository** serves for fetching and storing records. Each entity type has its own repository. Base classes: `Espo\ORM\Repositories\RDB`, `\Espo\Core\Repositories\Database`. *RDB* stands for *relational database*.
 
 **Entity** represents a single record. Each entity type has it's own entity class. Base classes: `\Espo\ORM\Entity`, `\Espo\Core\ORM\Entity`.
 
@@ -62,8 +62,8 @@ Multiple:
 
 ```php
 $account->set([
-  'name' => 'Test Account',
-  'assignedUserId' => '1',
+    'name' => 'Test Account',
+    'assignedUserId' => '1',
 ]);
 ```
 
@@ -223,27 +223,27 @@ $accountList = $entityManager->getRepository('Account')
 Ascending order:
 ```php
 $accountList = $entityManager->getRepository('Account')
-  ->limit(0, 10)
-  ->order('createdAt')
-  ->find();
+    ->limit(0, 10)
+    ->order('createdAt')
+    ->find();
 ```
 
 or:
 ```php
 $accountList = $entityManager->getRepository('Account')
-  ->limit(0, 10)
-  ->order('createdAt', 'DESC')
-  ->find();
+    ->limit(0, 10)
+    ->order('createdAt', 'DESC')
+    ->find();
 ```
 
 Complex order:
 ```php
 $accountList = $entityManager->getRepository('Account')
-  ->order([
-    ['createdAt', 'ASC'],
-    ['name', 'DESC'],
-  ])
-  ->find();
+    ->order([
+        ['createdAt', 'ASC'],
+        ['name', 'DESC'],
+    ])
+    ->find();
 ```
 
 Ordering by list:
@@ -319,7 +319,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 
 ```
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
-  'stage!=' => ['Closed Lost', 'Closed Won']
+    'stage!=' => ['Closed Lost', 'Closed Won']
 ])->find();
 ```
 
@@ -332,7 +332,7 @@ Supported  operators:
 
 ```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
-  'name*' => '%service%'
+    'name*' => '%service%',
 ])->find();
 ```
 
@@ -340,16 +340,16 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 
 ```php
 $opportunityList = $entityManager->getRepository('Opportunity')->where([
-  [
-    'OR' => [
-      ['stage' => 'Closed Won'],
-      ['stage' => 'Closed Lost']
-    ],
-    'AND' => [
-      'amountConverted>' => 100,
-      'amountConverted<=' => 999
+    [
+        'OR' => [
+            ['stage' => 'Closed Won'],
+            ['stage' => 'Closed Lost'],
+        ],
+        'AND' => [
+            'amountConverted>' => 100,
+            'amountConverted<=' => 999,
+        ]
     ]
-  ]
 ])->findOne();
 ```
 
@@ -362,21 +362,23 @@ $opportunityList = $entityManager->getRepository('Opportunity')->distinct()->fin
 ### Join
 
 Join relationship:
+
 ```php
 $contactList = $entityManager->getRepository('Contact')
-  ->distinct()
-  ->join('opportunities')
-  ->where([
-    'opportunities.stage' => 'Closed Won',
-  ])->find();
+    ->distinct()
+    ->join('opportunities')
+    ->where([
+        'opportunities.stage' => 'Closed Won',
+    ])->find();
 ```
 
 Left Join relationship:
+
 ```php
 $contactList = $entityManager->getRepository('Contact')
-  ->distinct()
-  ->leftJoin('opportunities')
-  ->find();
+    ->distinct()
+    ->leftJoin('opportunities')
+    ->find();
 ```
 
 'opportunities' is a relationship name.
@@ -401,6 +403,7 @@ $meetingList = $entityManager->getRepository('Meeting')
 ```
 
 Join table alias:
+
 ```php
 $contactList = $entityManager->getRepository('Contact')
     ->distinct()
@@ -434,7 +437,6 @@ $rowList = $sth->fetchAll(\PDO::FETCH_ASSOC);
 ### Additional Params
 
 #### STH collection
-
 
 Can be used with `find` and `findRelated` methods. With this param provided, they will return a collection that doesn't allocate memory for all result data.
 
