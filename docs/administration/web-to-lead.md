@@ -6,29 +6,29 @@ Note: Available since 5.4.0 version.
 
 By utilizing Lead Capture feature administrator can create an entry point for capturing leads through API. Create an entry point at Administration > Lead Capture.
 
-* Subscribe to Target List - Created lead will be added to a specified target list;
-* Subscribe Contact if exists - If a contact with the same email exists then contact will be added to the target list;
+* Subscribe to Target List - a created lead will be added to a specified target list;
+* Subscribe Contact if exists - If a contact with the same email exists, then the contact will be added to the target list;
 * Target Team - A team to assign a created lead to;
-* Campaign - Statystics will be avilable in a campaign log;
-* Payload Fields - Select what fields need to be passsed.
+* Campaign - Statistics will be available in a campaign log;
+* Payload Fields - Select what fields need to be passed.
 
 ### Double Opt-in (confirmed opt-in)
 
-If double opt-in is enabled then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. The email will be send automatically once data is received through API.
+If double opt-in is enabled, then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. The email will be sent automatically once data is received through API.
 
 Create Email Template that will be used for a double opt-in. You can use following placeholders in a template body:
 
 * `{optInUrl}` - confirmation URL;
 * `{optInLink}` - confirmation link;
-* `{optInDate}` - date when subscription request was submitted (since 5.6.10);
-* `{optInTime}` - time when subscription request was submitted (since 5.6.10);
-* `{optInDateTime}` - date and time when subscription request was submitted (since 5.6.10).
+* `{optInDate}` - date when a subscription request was submitted (since 5.6.10);
+* `{optInTime}` - time when a subscription request was submitted (since 5.6.10);
+* `{optInDateTime}` - date and time when a subscription request was submitted (since 5.6.10).
 
-A confirmation link will be added automatically if you didn't insert a placeholder in the email template.
+A confirmation link will be added automatically if you haven’t inserted a placeholder in the email template.
 
 ## Posting API request
 
-Your web site need to make a POST request to send form data to you CRM. A request **doesn't require any authorization**. You just need to use a specific URL with an API Key. Infomation about request is available in the side panel on Lead Capture detail view.
+Your web site needs to make a POST request to send the form data to your CRM. A request **doesn't require any authorization**. You just need to use a specific URL with an API Key. The information about the request is available in the side panel on Lead Capture detail view.
 
 Required headers:
 
@@ -67,7 +67,7 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 
 ### Directly by a web browser
 
-Expample:
+Example:
 
 ```html
 <div id="web-to-lead-form-container">
@@ -124,13 +124,13 @@ Expample:
 </script>
 ```
 
-'Access-Control-Allow-Origin' header can be set in `data/config.php` with the parameter `leadCaptureAllowOrigin`. By default `*` value is used.
+'Access-Control-Allow-Origin' header can be set in `data/config.php` with the parameter `leadCaptureAllowOrigin`. By default, `*` value is used.
 
 ## Lead assignment distribution
 
-By utilizing [Workflows](workflows.md) or [BPM tool](bpm.md) you can create an assignment rule that will distribute leads among team users. There are Round-Robin and Least-Busy rules available.
+By utilizing [Workflows](workflows.md) or [BPM tool](bpm.md), you can create an assignment rule that will distribute leads among team users. There are Round-Robin and Least-Busy rules available.
 
-To apply the rule for only leads coming through the entry point you can use a condition checking Campaign field.
+To apply the rule for only leads coming through the entry point, you can use a condition checking Campaign field.
 
 
 ## Hooks
