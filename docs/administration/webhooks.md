@@ -1,6 +1,6 @@
 # Webhooks
 
-Webhooks allows other applications to subscribe to specific events happening in EspoCRM and receive data related to that events. Webhooks are supposed to be created via API by other applications. The webhook has a specific *Event* and *URL*. Every time the event occurs, the system will send POST request with some payload to the specified URL.
+Webhooks allow other applications to subscribe to specific events happening in EspoCRM and receive data related to that events. Webhooks are supposed to be created via API by other applications. The webhook has a specific *Event* and *URL*. Every time the event occurs, the system will send POST request with some payload to the specified URL.
 
 Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have an access to all entity types for which webhooks are planned to be created.
 
