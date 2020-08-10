@@ -7,13 +7,13 @@ Go to your LDAP server and create a base DN for the EspoCRM users like:
 cn=espo-users,ou=users,dc=espo,dc=local
 ```
 
-We have to create a system user which will have access to the users DN (“cn=espo-users,ou=users,dc=espo,dc=local”). So, the full DN for this system user will be:
+We have to create a system user that will have access to the users DN (“cn=espo-users,ou=users,dc=espo,dc=local”). So, the full DN for this system user will be:
 ```
 cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 ```
-Now, we can add LDAP user to access to EspoCRM. E.g. Espo Tester with the username “tester” inside the “cn=espo-users,ou=users,dc=espo,dc=local” DN. Please note: to be able to use this login format for EspoCRM, you have to specify the “Username Attribute” and “Base DN” options.
+Now, we can add LDAP user to access EspoCRM. E.g. Espo Tester with the username “tester” inside the “cn=espo-users,ou=users,dc=espo,dc=local” DN. Please note: to be able to use this login format for EspoCRM, you have to specify the “Username Attribute” and “Base DN” options.
 
-Then, go to EspoCRM  Authentication settings in the Administrator panel, select `LDAP` method and fill in the LDAP details:
+Then, go to EspoCRM  Authentication settings in the Administrator panel, select the `LDAP` method and fill in the LDAP details:
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/ldap-authorization/ldap-configuration.png)
 
@@ -23,8 +23,8 @@ Then, go to EspoCRM  Authentication settings in the Administrator panel, select 
  * Full User DN – the full system user DN which allows to search other users.
  * Password – the password to access the LDAP server.
 * Security – SSL or TSL protocol.
-* Username Attribute – the attribute to identify the user. For Active Directory it can be “userPrincipalName” or “sAMAccountName”.
-* Account Canonical Form – type of your account canonical form. There are 4 options:
+* Username Attribute – the attribute to identify the user. For Active Directory, it can be “userPrincipalName” or “sAMAccountName”.
+* Account Canonical Form – the type of your account canonical form. There are 4 options:
  * Dn – the form in the format `CN=tester,CN=Espocrm,DC=company,DC=com`.
  * Username – the form `tester`.
  * Backslash – the form `COMPANY\tester`.
@@ -37,11 +37,11 @@ Then, go to EspoCRM  Authentication settings in the Administrator panel, select 
 * Try Username Split – the option to split a username with the domain.
 * Opt Referrals – if referrals should be followed to the LDAP client.
 * Create User in EspoCRM – this option allows EspoCRM to create a user from the LDAP.
- * User First Name Attribute – LDAP attribute which is used to determine the user first name.
- * User Last Name Attribute – LDAP attribute which is used to determine the user last name.
+ * User First Name Attribute – LDAP attribute which is used to determine the user’s  first name.
+ * User Last Name Attribute – LDAP attribute which is used to determine the user’s  last name.
  * User Title Attribute – LDAP attribute which is used to determine the user title.
- * User Email Address Attribute – LDAP attribute which is used to determine the user email address.
- * User Phone Number Attribute – LDAP attribute which is used to determine the user phone number.
+ * User Email Address Attribute – LDAP attribute which is used to determine the user’s email address.
+ * User Phone Number Attribute – LDAP attribute which is used to determine the user’s phone number.
 
 Now, go to the login page and enter user credentials.
 
