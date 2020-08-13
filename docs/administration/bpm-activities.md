@@ -90,7 +90,6 @@ Calls external API (since version 2.4.0).
 
 ### Formula usage
 
-
 When using formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`.
 
 Example:
@@ -125,7 +124,9 @@ An email can be sent to:
 * Specific contacts
 * Followers of target record
 
-You can specify which email address the email will sent from, and specify a reply-to address.
+You can specify which email address the email will sent from.
+
+If you specify a *Reply-to* address, a sent email will contain it in a *Reply-to* header. It will facilitate a recipient to reply to that address instead of the address specified in the *From* field.
 
 It's possible to use process variables to specify email address (recipient or sender) with *Specific email address* option, e.g. `{$$emailAddress}`, where *emailAddress* is a variable defined in the process before. Available since version 2.4.5.
 
