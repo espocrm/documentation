@@ -221,6 +221,10 @@ Difference between two days in hours.
 
 Difference between two days in minutes.
 
+#### TIMESTAMPDIFF_SECOND
+
+Difference between two days in seconds. Available since v6.0.0.
+
 #### DATE
 
 Returns a date part of a date-time value. Available since v6.0.0.
