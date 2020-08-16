@@ -259,7 +259,15 @@ Converts a value to a binary string.
 
 `EQUAL:(BINARY:('test'), 'Test')` returns false.
 
-Avalilable since 5.7.0.
+Avalilable since v5.7.0.
+
+#### REPLACE
+
+Replaces all the occurrences of a substring within a string.
+
+`REPLACE:('haystack', 'needle', 'replaceWith')`
+
+Available since v6.0.0.
 
 ### Math
 
