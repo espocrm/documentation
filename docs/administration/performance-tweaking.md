@@ -47,5 +47,5 @@ Since EspoCRM v6.0.0 you can use a [preloading](https://www.php.net/manual/en/op
 
 Important: Preloading must be disabled before upgrading and extension installation.
 
-Note: Using preloading is not likely to bring a significant performance boost. Database usualy is a bottleneck in applications like CRM.
+Note: Using preloading is not likely to bring a significant performance boost. The database usually is a bottleneck in applications like CRM.
 
