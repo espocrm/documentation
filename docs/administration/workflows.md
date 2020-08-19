@@ -4,10 +4,10 @@ Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extens
 
 Workflows automate your business process in an easy way. You can access workflows from Administration panel. To create a workflow rule you need to define:
 
-* Target Entity – what entity type workflow is applied to
-* Trigger Type – when workflow will be triggered
-* Conditions – conditions need to be met to trigger workflow
-* Actions – what to do if workflow is triggered
+* Target Entity – what entity type a workflow is applied to;
+* Trigger Type – when a workflow will be triggered;
+* Conditions – conditions need to be met to trigger a workflow;
+* Actions – what to do if a workflow is triggered.
 
 In this article:
 
@@ -30,7 +30,7 @@ Triggered only when an existing record is updated. If specified conditions are m
 
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
 
-For workflow rules with this trigger type it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed then execute some actions.
+For workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed, then execute some actions.
 
 ### Scheduled
 
@@ -55,9 +55,9 @@ How it works:
 2. Then create a workflow rule with *Scheduled* trigger type, select the report. Specify the scheduling.
 3. Specify one or multiple actions in the workflow.
 
-Workflow rule will be running (in idle) according specified scheduling. On each run it will execute the report and take all records from the report result. Then it will apply the action (or multiple actions) for every record.
+Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the report and take all records from the report result. Then, it will apply the action (or multiple actions) for every record.
 
-Usage example: Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day. 
+The usage example: Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day. 
 
 ### Sequential
 
@@ -93,7 +93,7 @@ Some available condition types:
 
 ### Formula conditions
 
-Formula provides the ability to define conditions of any complexity. To read about formula syntax follow [this article](formula.md).
+Formula provides the ability to define conditions of any complexity. To read about formula syntax, follow [this article](formula.md).
 
 Note: There should not be any `;` delimiter used in formula code when it determines a condition. It should be one expression that returns a value (TRUE of FALSE).
 
@@ -118,7 +118,7 @@ Note: There should not be any `;` delimiter used in formula code when it determi
 
 ### Send Email
 
-System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. Email can be sent immediately or delayed for a specific interval.
+System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. The email can be sent immediately or delayed for a specific interval.
 
 If you specify *From* address with the address of an existing Group Email Account, then SMTP parameters of that account will be used for sending.
 
@@ -126,7 +126,7 @@ It's possible to use the **opt-out** link in an email body.
 
 ### Create Record
 
-System will create the new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate the records.
+The system will create a new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate the records.
 
 There is an ability to define **formula** to calculate field values.
 
@@ -160,16 +160,16 @@ Unrelates the target record from another specific record. E.g. remove a specific
 
 ### Apply Assignment Rule
 
-Assign the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
+Assigns the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
 
 * Round-Robin - users are chosen from the top to the bottom of a list (team) and then starting again.
-* Least-Busy - user who has fewer assigned records will be chosen for assignment.
+* Least-Busy - the user who has fewer assigned records will be chosen for assignment.
 
-*List Report* - For Least-Busy distribution determines what records will be taken into account to calculate the number of assigned records. E.g. for Cases we need to take only records with active status.
+*List Report* - determines what records will be taken into account to calculate the number of assigned records for Least-Busy distribution. E.g. we need to take only records with active status for Cases.
 
 *Target Team* - Users of the selected team will take part in the assignment process.
 
-*Target User Position* - Allows to restrict the user list who will be take part in the assignment process. Users that have the selected position (in team) will take part. If the field is set to *All*, then all team members will take part.
+*Target User Position* - Allows to restrict the list of users that will take part in the assignment process. Users that have the selected position (in team) will take part. If the field is set to *All*, then all team members will take part.
 
 ### Create Notification
 
@@ -177,8 +177,8 @@ Notify specific users with the message.
 
 It's possible to use placeholders in the message template:
 
-* `{entity}` - target record
-* `{user}` - current user
+* `{entity}` - a target record;
+* `{user}` - a current user.
 
 ### Make Followed
 
@@ -186,13 +186,13 @@ Forces specific users to follow the target record or a specified related record.
 
 ### Trigger another Workflow
 
-Allows to make sequential workflows. It's possible to diverge workflows by condition: you can setup the workflow to trigger two workflows with different conditions defined in that workflows.
+Allows to make sequential workflows. It's possible to diverge workflows by condition: you can setup the workflow to trigger two workflows with different conditions defined in those workflows.
 
-It's possible to delay executing of sequential workflow. In the sequential workflow you can define the condition that checks whether specific fields were changed since the parent workflow were triggered by using _Changed_ and _Was Equal_ condition types.
+It's possible to delay executing of a sequential workflow. In the sequential workflow, you can define the condition that checks whether specific fields were changed since the parent workflow was triggered by using _Changed_ and _Was Equal_ condition types.
 
-Target for a triggered workflow can be substitued with a related record.
+Target for a triggered workflow can be substituted with a related record.
 
-Note: For complex logic it can be more reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
+Note: For complex logic, it can be more reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
 
 Note: It's possible to trigger only workflow rules of 'Sequential' type.
 
@@ -245,7 +245,7 @@ Available placeholders:
 
 ## Using formula in actions
 
-It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity you should use function `targetEntity\attribute`. To access attributes of target entity that was set before workflow was triggered use function `targetEntity\attributeFetched`.
+It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity, you should use function `targetEntity\attribute`. To access attributes of target entity that was set before the workflow was triggered, use function `targetEntity\attributeFetched`.
 
 Example:
 ```

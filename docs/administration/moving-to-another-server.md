@@ -8,15 +8,15 @@ Open a file manager or login via SSH to archive all available files from the Esp
 
 ### Step 2. Backup your database
 
-The data stored in database (MySQL, MariaDB) should be backed up. Please, follow this [recommendation](backup-and-restore.md#step-2-backup-database).
+The data stored in the database (MySQL, MariaDB) should be backed up. Please, follow this [recommendation](backup-and-restore.md#step-2-backup-database).
 
 ### Step 3. Copy files and database backups to another server
 
-Copy backups of files and your database to a new server.
+Copy the backups of files and your database to a new server.
 
 ### Step 4. Unarchive backup files
 
-To unarchive backup files, you can use Archive Manager or this [instruction](backup-and-restore.md#step-1-unarchive-backup-files).
+To unarchive the backup files, you can use Archive Manager or this [instruction](backup-and-restore.md#step-1-unarchive-backup-files).
 Note: Files need to be placed in the web-server directory.
 
 ### Step 5. Configure a server

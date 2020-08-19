@@ -14,7 +14,7 @@ In order to install EspoCRM extension (e.g. Advanced Pack, VoIP Integration):
 
 In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP integration) to a newer version:
 
-1. Download the new version of needed extension.
+1. Download the new version of the needed extension.
 2. Login as an administrator.
 3. Go to Administration > Extensions.
 4. Upload your new extension package (zip file) without uninstalling the already installed version.
@@ -28,7 +28,7 @@ Steps to uninstall an extension:
 
 1. Login as an administrator.
 2. Go to Administration > Extensions.
-3. Find needed extension on the list of available extensions.
+3. Find the needed extension on the list of available extensions.
 4. Click Uninstall button.
 
 

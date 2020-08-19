@@ -1,6 +1,6 @@
 # Layout Management
 
-Layout Manager is available at Administration panel. It provides the ability to customize appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+Layout Manager is available at Administration panel. It provides the ability to customize the appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
 
 * [Layouts](#layouts)
 * [Different layouts for teams & portals](#different-layouts-for-teams-portals)
@@ -29,7 +29,7 @@ Available parameters for columns are listed below.
 
 #### Width (%)
 
-Width of column in percent, empty means auto-width.
+Width of a column in percent, empty means auto-width.
 
 #### Link
 
@@ -51,7 +51,7 @@ The row can contain 1, 2, 3 or 4 cells. To add a row with single cell, you need 
 
 ![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
-For panels it's possible to specify a label, color (style) and conditions making a panel visible (since version 5.2.6).
+For panels, it's possible to specify a label, color (style) and conditions making a panel visible (since version 5.2.6).
 
 ### List (Small)
 
@@ -75,7 +75,7 @@ The color of the panel.
 
 #### Sticked
 
-The panel will be sticked to the previoud panel w/o a gap.
+The panel will be sticked to the previous panel w/o a gap.
 
 #### Conditions making panel visible
 
@@ -92,7 +92,7 @@ The list of fields available in the Mass Update form.
 
 ### Side Panels
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order panels list Activities, History, Tasks and others. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
+Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order the list of panels: Activities, History, Tasks and others. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
 
 Parameters are listed below.
 
@@ -102,7 +102,7 @@ The color of the panel.
 
 #### Sticked
 
-The panel will be sticked to the previoud panel w/o a gap.
+The panel will be sticked to the previous panel w/o a gap.
 
 #### Conditions making panel visible
 
@@ -114,7 +114,7 @@ Available for entity types with the enabled Kanban view.
 
 ### Side Panel Fields
 
-The list of fields displayed in the top side panel. By default there are *Assinged User* and *Teams* fields.
+The list of fields displayed in the top side panel. By default, there are *Assinged User* and *Teams* fields.
 
 ### Additional layouts
 
@@ -130,6 +130,6 @@ Admin can create Layout Set record, where they will define specific layouts that
 
 *Team* & *Portal* have *Layout Set* link fields.
 
-For internal users (regular & admin) Layout Set is applied through *Default Team*. User > Default Team > Layout Set. The team should have Layout Set specified. That team should be set as a deafult team for the user.
+For internal users (regular & admin), Layout Set is applied through *Default Team*. User > Default Team > Layout Set. The team should have Layout Set specified. That team should be set as a default team for the user.
 
-For portal users Layout Set is applied through *Portal* record.
+For portal users, Layout Set is applied through *Portal* record.

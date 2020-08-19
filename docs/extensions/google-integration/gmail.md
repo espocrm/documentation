@@ -8,7 +8,7 @@ Note: Using in personal email accounts requires 5.9.2 version or later. Using in
 
 Assuming, that the administrator has already set up the integration.
 
-Create a personal or group email account. Specify IMAP and SMTP parameters for Gmail (hosts: `imap.gmail.com` & `smtp.gmail.com`). Leave *Password* fields empty. Then save the record.
+Create a personal or group email account. Specify IMAP and SMTP parameters for Gmail (hosts: `imap.gmail.com` & `smtp.gmail.com`). Leave *Password* fields empty. Then, save the record.
 
 After that, *Gmail* panel should appear on the right. You need to click *Connect* button. A popup will show up asking for a user consent.
 

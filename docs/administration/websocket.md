@@ -2,14 +2,14 @@
 
 Available from version 5.6.0.
 
-WebSocket enables an interaction between a server and a client (browser) w/o the latter making polling requests. Example: When a new notification is received, the server sends the information to the browser in real-time.
+WebSocket enables interaction between a server and a client (browser) w/o the latter making polling requests. Example: When a new notification is received, the server sends the information to the browser in real time.
 
 Out-of-the-box WebSocket covers the following features:
 
-* New in-app notifications
-* New event reminders
-* Updates in stream on the record detail view
-* Updates of detail view (since 5.9.0)
+* New in-app notifications;
+* New event reminders;
+* Updates in stream on the record detail view;
+* Updates of the detail view (since 5.9.0).
 
 Enable *Use WebSocket* parameter at Administation > Settings.
 
@@ -28,12 +28,12 @@ Create a file `/etc/systemd/system/espocrm-websocket.service`.
 Description=EspoCRM WebSocket Service
 Requires=mysql.service
 After=mysql.service
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
 Restart=always
 RestartSec=5
-StartLimitIntervalSec=0
 User=www-data
 ExecStart=/usr/bin/php /path/to/espocrm/websocket.php
 StandardError=/path/to/espocrm/data/logs/websocket.log
@@ -103,5 +103,5 @@ location /wss {
 }
 ```
 
-Note: By default Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example we set it to 14h.
+Note: By default, Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example, we set it to 14h.
 

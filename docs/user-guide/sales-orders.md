@@ -29,7 +29,7 @@ Method 2. Create a new sales order from Sales Orders relationship panel on the d
 
 ## Generating Invoices from Sales Order
 
-You are able to create Invoices from existing Sales Order record.
+You are able to create Invoices from the existing Sales Order record.
 
 Method 1. Create a new invoice, on the form specify a needed sales order. Data will be copied from the sales order to the created invoice.
 
@@ -37,7 +37,7 @@ Method 2. Create a new invoice from Invoices relationship panel on the detail vi
 
 ## Total Values Layout
 
-Layout of total value fields (in the bottom on detail view) can be modified at Administration > Layout Manager > Sales Orders > Bottom Total.
+The layout of total value fields (in the bottom on detail view) can be modified at Administration > Layout Manager > Sales Orders > Bottom Total.
 
 ## Sales Order Items
 
@@ -47,7 +47,7 @@ There is an ability to add custom fields for Sales Order Item entity using Entit
 
 ### Sales Order Items Layout
 
-Layout of sales order items can be modified at Administration > Layout Manager > Sales Order Items > List (Item).
+The layout of sales order items can be modified at Administration > Layout Manager > Sales Order Items > List (Item).
 
 ### Discount Rate
 
@@ -55,21 +55,21 @@ It's possible to specify a discount in percents. To have this ability, administr
 
 ## Printing to PDF
 
-Sales Orders can be printed to PDF. This action is available in dropdown next to Edit button on the sales order’s detail view. Then you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
+Sales Orders can be printed to PDF. This action is available in the dropdown next to Edit button on the sales order’s detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
 
 ### Templates
 
-See documentation [for templates for quotes](quotes.md#templates).
+See the documentation [for quote templates](quotes.md#templates).
 
 ## Sending sales order in email
 
-Sales Order PDF can be send in email as an attachment. Open a sales order record, click dropdown next to Edit button and the click Email PDF.
+Sales Order PDF can be send in email as an attachment. Open a sales order record, click the dropdown next to Edit button and then click Email PDF.
 
 ## Automatic numbering
 
 By default a number field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Sales Order > Fields > number. It's also possible to make the number field read-only.
 
-The next number, a prefix can be configured at Administration > Entity Manager > Sales Order > Fields > numberA.
+The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Sales Order > Fields > numberA.
 
 ## Default tax
 
@@ -77,7 +77,7 @@ You need to have a Tax record created in your CRM. Taxes can be accessed at Quot
 
 Administrator can specify a default Tax record at Administration > Entity Manager > Sales Order > fields > Tax > Default.
 
-Note: For older versions of Sales Pack & EspoCRM you need also to specify the default tax rate value at Administration > Entity Manager > Sales Order > fields > Tax Rate > Default.
+Note: For older versions of Sales Pack & EspoCRM, you need also to specify the default tax rate value at Administration > Entity Manager > Sales Order > fields > Tax Rate > Default.
 
 ## Copying values from product to sales order item
 

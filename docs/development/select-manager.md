@@ -2,7 +2,7 @@
 
 Select Manager can be utilized for generating and managing select params which subsequently will be feed to ORM.
 
-Base class: https://github.com/espocrm/espocrm/blob/stable/application/Espo/Core/SelectManagers/Base.php
+Base class: [Base.php](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Core/SelectManagers/Base.php).
 
 Usage example:
 
@@ -102,6 +102,7 @@ Example for *Account*. There is already extended class in `application/Espo/Modu
 Create a file `custom/Espo/Custom/SelectManager/Account.php`:
 
 ```php
+<?php
 namespace Espo\Custom\SelectManagers;
 
 class Account extends \Espo\Modules\Crm\SelectManagers\Account

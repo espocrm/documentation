@@ -1,8 +1,60 @@
-# Custom ACL (access control level) for entity type
+# ACL (access control level)
+
+## Checking access
+
+There are two objects that allow to check access:
+
+* AclManager - `\Espo\Core\AclManager`
+* Acl - `\Espo\Core\Acl`
+
+With *AclManager* you can check access for any user. *Acl* is a wrapper for *AclManager* for a current user.
+
+You can obtain both objects form the *Container*.
+
+```php
+// available actions: create, read, edit, delete, stream
+
+// check read access to entity for specific user
+$hasAccess = $aclManager->check($user, $entity, 'read');
+
+// check read access to entity for current user
+$hasAccess = $acl->check($entity, 'read');
+
+// check access to scope for specific user
+$hasAccess = $aclManager->check($user, 'Account');
+
+// check create access to scope for current user
+$hasAccess = $acl->check('Account', 'create');
+
+// get access level 
+$level = $aclManager->check($user, 'Account', 'edit');
+$level = $acl->check('Account', 'edit');
+
+// get permission (e.g. assignmentPermission, portalPermission)
+$assignmentPermission = $aclManager->get($user, 'assignmentPermission');
+$assignmentPermission = $acl->get('assignmentPermission');
+
+// check user is owned of record (by assigned user)
+$isOwner =  $aclManager->checkIsOwner($user, $entity);
+$isOwner =  $acl->checkIsOwner($entity);
+
+// check user teams set intersects with record teams
+$inTeam =  $aclManager->checkInTeam($user, $entity);
+$inTeam =  $acl->inTeam($entity);
+
+// attributes user doesn't have access to
+$attributeList = $aclManager->getScopeForbiddenAttributeList($user, 'Account', 'read');
+$attributeList = $acl->getScopeForbiddenAttributeList('Account', 'edit');
+
+$fieldList = $acl->getScopeForbiddenFieldList('Account', 'read');
+$linkList = $acl->getScopeForbiddenLinkList('Account', 'read');
+```
+
+## Custom ACL for entity type
 
 How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
 
-1. Create a file `custom/Espo/Custom/Acl/Task.php`:
+1\. Create a file `custom/Espo/Custom/Acl/Task.php`:
 
 ```php
 <?php
@@ -109,7 +161,7 @@ class Task extends \Espo\Core\Acl\Base
 ```
 
 
-2. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
+2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
 
 ```php
 <?php
@@ -152,7 +204,7 @@ class Task extends \Espo\Modules\Crm\SelectManagers\Task
 
 ## Portal ACL
 
-1. Create a file `custom/Espo/Custom/AclPortal/Task.php`:
+1\. Create a file `custom/Espo/Custom/AclPortal/Task.php`:
 
 ```php
 <?php
@@ -193,7 +245,7 @@ class Task extends \Espo\Core\AclPortal\Base
 }
 ```
 
-2. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
+2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
 
 ```php
 <?php

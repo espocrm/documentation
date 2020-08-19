@@ -22,7 +22,7 @@ EspoCRM logs are located at `<ESPOCRM_DIRECTORY>/data/logs/*.log` and contain so
 
 #### Apache error logs
 
-For Ubuntu server an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
+For Ubuntu server, an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
 
 ## Check system requirements
 
@@ -78,18 +78,18 @@ php rebuild.php
 
 ## EspoCRM is not loading after upgrade
 
-This can happen sometimes on some shared hostings.
+Sometimes it can happen on some shared hostings.
 
 Check permissions of the files:
 /index.php
 /api/v1/index.php
 
-They must be 644. If any of those file has permission 664 you need to change it to 644. Use your hosting's control panel or chmod command.
+They must be 644. If any of those files have permission 664, you need to change it to 644. Use your hosting's control panel or chmod command.
 
 ```
 chmod 644 /path/to/file
 ```
-More information about file permissions: [here](server-configuration.md#required-permissions-for-unix-based-systems).
+More information about file permissions can be found [here](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ## MySQL error: The server requested authentication method unknown to the client
 

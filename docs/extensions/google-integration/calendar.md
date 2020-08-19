@@ -26,7 +26,7 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you succesfully connected, but *Google Calendar* checkbox didn't show up, that mean that the administrator did not grant you an access to *Google Calendar* scope.
+**Important**: If you connected successfully, but *Google Calendar* checkbox didn't show up, that means that the administrator did not grant you access to *Google Calendar* scope.
 
 Check *Google Calendar* checkbox and configure sync parameters.
 
@@ -40,9 +40,9 @@ After that, you need to click *Save*.
 
 * Sync since – events created or modified after a specified date will be synced.
 
-* Sync Entities and Identification Labels – types of entities you want to sync. For type recognizing, event name has to start from identification label. Label for default entity can be empty. Recommendation: Do not change identification labels after the sync has already happened.
+* Sync Entities and Identification Labels – types of entities you want to sync. For type recognizing, the event name has to start from the identification label. Label for default entity can be empty. Recommendation: Do not change identification labels after the sync has already happened.
 
-* Default Entity – by default events will be synced as entities of a selected type.
+* Default Entity – by default, events will be synced as entities of a selected type.
 
 * Remove Google Calendar Event upon removal in EspoCRM –  if you create an event in Google Calendar, you can not delete it from EspoCRM (if you delete it in CRM, this event won’t be deleted in Google Calendar). If you check this box, it will allow to delete Google event from EspoCRM as well.
 

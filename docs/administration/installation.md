@@ -2,26 +2,26 @@
 
 ### Requirements
 
-EspoCRM can run on the most hosting providers. Requirements are the following:
+EspoCRM can run on most hosting providers. Requirements are the following:
 
 * PHP 7.2 and later,
 * MySQL 5.7 (and later) or MariaDB 10.1 (and later).
 
 See [server configuration](server-configuration.md) article for more information.
 
-### 1. Download the EspoCRM installation package
+### 1. Download EspoCRM installation package
 
-To get the latest version of EspoCRM follow the [download page](http://www.espocrm.com/download/) link.
+To get the latest version of EspoCRM, follow the [download page](http://www.espocrm.com/download/) link.
 
-### 2. Upload the EspoCRM files to your Server
+### 2. Upload EspoCRM files to your Server
 
 Once the download is complete, upload the package to your web server.
-To upload it you can use SSH, FTP or the hosting administration panel.
+To upload it, you can use SSH, FTP or the hosting administration panel.
 Extract the archive to your public web server directory (e.g., `public_html`, `www`, etc.).
 
 _Note: If you have only FTP access, you need to extract the archive before uploading to your web server._
 
-### 3. Create a MySQL Database for EspoCRM to use
+### 3. Create MySQL Database for EspoCRM to use
 
 Go to your hosting administration panel, or to SSH, and create a new database and user for EspoCRM (e.g., `MySQL Databases` in cPanel).
 
@@ -32,7 +32,7 @@ Now, open your web browser, and go to the URL with EspoCRM files (e.g., `http://
 If you see this screen, you have a "Permission denied" error.
 You need to execute the displayed command in the terminal via SSH to set correct permissions.
 It should be 755 for directories, 644 for files, and 775 for `data` directory.
-Also make sure that you have the correct _owner_ and _group_. More info about permissions is available [here](server-configuration.md#required-permissions-for-unix-based-systems).
+Also, make sure that you have the correct _owner_ and _group_. More info about permissions is available [here](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
 
@@ -66,4 +66,4 @@ Installation is complete. The last thing is to setup cron (or daemon) in your sy
 
 ![8](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/8.png)
 
-We hope you will enjoy working in EspoCRM.
+We hope you will enjoy working with EspoCRM.

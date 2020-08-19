@@ -1,8 +1,8 @@
 # Webhooks
 
-Webhooks allows other applications to subscribe to specific events happening in EspoCRM and receive data related to that events. Webhooks are supposed to be created via API by other applications. The webhook has a specific *Event* and *URL*. Every time the event occurs, the system will send POST request with some payload to the specified URL.
+Webhooks allow other applications to subscribe to specific events happening in EspoCRM and receive data related to those events. Webhooks are supposed to be created via API by other applications. The webhook has a specific *Event* and *URL*. Every time the event occurs, the system will send POST request with some payload to the specified URL.
 
-Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have an access to all entity types for which webhooks are planned to be created.
+Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have access to all entity types for which webhooks are planned to be created.
 
 * [Subscription](#subscription)
 * [Events](#events)
@@ -79,7 +79,7 @@ Every webhook request (sent by EspoCRM to a specified URL) is of POST type. A co
 
 Events related to the same hook are sent in batches. Request payload is always an array (even if only one record is sent).
 
-One event ocurred:
+One event occurred:
 
 ```json
 [
@@ -90,7 +90,7 @@ One event ocurred:
 ]
 ```
 
-Multiple events ocurred:
+Multiple events occurred:
 
 ```json
 [
@@ -105,7 +105,7 @@ Multiple events ocurred:
 ]
 ```
 
-Request sending is processed by a scheduled job *Process Webhook Queue* (Administration > Scheduled Jobs). By default it runs every 5 minutes. You can change the scheduling.
+Request sending is processed by a scheduled job *Process Webhook Queue* (Administration > Scheduled Jobs). By default, it runs every 5 minutes. You can change the scheduling.
 
 ## Error handling
 
@@ -116,7 +116,7 @@ When EspoCRM is trying to send a webhook request and an error occurs, EspoCRM wi
 
 ## Signature checking
 
-It's possible to check an authenticity of a webhook request by comparing a signature passed in *X-Signature* header with a value calculated on a server that receives the request.
+It's possible to check the authenticity of a webhook request by comparing a signature passed in *X-Signature* header with a value calculated on a server that receives the request.
 
 Example for PHP:
 
@@ -124,8 +124,8 @@ Example for PHP:
 $signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey, true));
 ```
 
-* *webhookId* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks
-* *secretKey* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks
+* *webhookId* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks;
+* *secretKey* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks;
 * *payload* is a payload of a request
 
 

@@ -4,6 +4,7 @@
 * [Making extension package](extension-packages.md)
 * [Tests](tests.md)
 * [Translation](translation.md)
+* [Coding rules](coding-rules.md)
 
 ### Backend
 
@@ -14,7 +15,8 @@
 * [Metadata](metadata.md)
 * [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
-* [ACL customization](acl.md)
+* [ACL](acl.md)
+* [Dependency injection](di.md)
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
   * [Defining new funtions for formula](new-function-in-formula.md)
@@ -22,6 +24,7 @@
   * [Duplicate checking](duplicate-check.md)
   * [Database indexes](db-indexes.md)
   * [App params](app-params.md)
+  * [Jobs](jobs.md)
 
 ### Frontend
 
@@ -31,6 +34,7 @@
   * [Custom field type](custom-field-type.md)
   * [Customizing existing fields](customize-standard-fields.md)
 * [Controller & routing](frontend/controller.md)
+* [Model](model.md)
 * Misc
   * [Custom buttons & dropdown actions for detail/edit/list views](custom-buttons.md)
   * [Modal dialogs](modal.md)

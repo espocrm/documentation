@@ -2,19 +2,19 @@
 
 ## Disabling total count on list view
 
-Actual if there are a lot of records of a specific entity type in database. In this case it's reasonable to disable displaying count on the list view of that entity type, since COUNT is a very slow operation in MySQL.
+It is relevant if there are a lot of records of a specific entity type in the database. In this case, it's reasonable to disable displaying count on the list view of that entity type, since COUNT is a very slow operation in MySQL.
 
 To disable: Administration > Entity Manager > edit specific entity type > check *Disable record count*.
 
 ## Recommendations
 
-* SSD is preferred over HHD
-* Dedicated server is preferred over shared
-* More RAM can be helpful if your database grows
+* SSD is preferred over HHD.
+* Dedicated server is preferred over shared.
+* More RAM can be helpful if your database grows.
 
 ## Database indexes
 
-By default EspoCRM has some pre-defined indexes. As your database gets bigger it's reasonable to create new indexes. What exactly indexes are needed depends on how you use CRM and how you customized it: what custom fields are created, default record orders are set, reports are often run, searches are usually performed, etc.
+By default, EspoCRM has some pre-defined indexes. As your database gets bigger, it's reasonable to create new indexes. What exactly indexes are needed depends on how you use CRM and how you customized it: what custom fields are created, default record orders are set, reports are often run, searches are usually performed, etc.
 
 * You need indexes for fields that are used for a default order.
 * You need indexes for fields that are often used in filters (reports & regular searches).
@@ -38,4 +38,14 @@ Should be large enough. [See more](https://dev.mysql.com/doc/refman/8.0/en/innod
 #### innodb_flush_log_at_trx_commit
 
 We recommend to set it to `2`.
+
+## PHP configuration
+
+### Preloading
+
+Since EspoCRM v6.0.0 you can use a [preloading](https://www.php.net/manual/en/opcache.preloading.php). The file `preload.php` is available at the root directory.
+
+Important: Preloading must be disabled before upgrading and extension installation.
+
+Note: Using preloading is not likely to bring a significant performance boost. The database usually is a bottleneck in applications like CRM.
 

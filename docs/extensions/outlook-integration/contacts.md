@@ -11,7 +11,7 @@ Provides the ability to push EspoCRM contacts and leads to Outlook Contacts (Peo
 
 Assuming, that the administrator has already set up the integration.
 
-Go to your user detail view (the menu on the very top-right corner > click on your user name). Then click *External Account* button.
+Go to your user detail view (the menu on the very top-right corner > click on your user name). Then, click *External Account* button.
 
 ![External account button](../../_static/images/extensions/outlook-integration/external-account-button.png)
 
@@ -23,7 +23,7 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you succesfully connected, but *Outlook Contacts* checkbox didn't show up, that mean that the administrator did not grant you an access to *Outlook Contacts* scope.
+**Important**: If you connected successfully, but *Outlook Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Outlook Contacts* scope.
 
 Check *Outlook Contacts* checkbox and configure parameters and then click *Save*.
 

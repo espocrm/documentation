@@ -1,6 +1,8 @@
 # Config parameters
 
-Config parameters can be changed or added manaully in the file `data/config.php`.
+Config parameters can be changed or added manually in the file `data/config.php`.
+
+This is not a full list of params. Most of params available in admin UI are not listed here.
 
 ## List of parameters
 
@@ -41,7 +43,7 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 ### Access control
 
 * aclStrictMode – `true` – see [here](roles-management.md#permissions-by-default);
-* aclAllowDeleteCreated – `true` – whether to allow for regular users to delete record they created, even they don't have *delete* access;
+* aclAllowDeleteCreated – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access;
 * aclAllowDeleteCreatedThresholdPeriod – `24 hours` – time window available for deletion of created records;
 
 ### Notifications
@@ -52,14 +54,14 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 
 ### Emails
 
-* emailKeepParentTeamsEntityList – `['Case']` – when related email is fetched, teams of the parent record will be copied to the email; by default it's available only for cases;
-* emailForceUseExternalClient – `false` – when composing email all users will be forced to use external client;
+* emailKeepParentTeamsEntityList – `['Case']` – when a related email is fetched, teams of the parent record will be copied to the email; by default, it's available only for cases;
+* emailForceUseExternalClient – `false` – when composing an email, all users will be forced to use external client;
 
 ### Stream
 
 * noteEditThresholdPeriod – `'7 days'` – how much time is available for editing steam posts;
 * noteDeleteThresholdPeriod – `'1 month'` – how much time is available for deleting steam posts;
-* streamEmailWithContentEntityTypeList – `['Case']` – to display content of email in stream; by default it's available only for cases;
+* streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
 
 ### Clean-up
 
@@ -77,8 +79,8 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 ### Passwords
 
 * passwordStrengthLength – min password length;
-* passwordStrengthLetterCount – how much letter required for passwords;
-* passwordStrengthNumberCount – how much numbers required for passwords;
+* passwordStrengthLetterCount – how many letters are required for passwords;
+* passwordStrengthNumberCount – how many numbers are required for passwords;
 * passwordStrengthBothCases – `false` – password must contain letters of both upper and lower case;
 * passwordRecoveryRequestLifetime – `3 hours` – how long a password recovery link is valid;
 
@@ -89,9 +91,9 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 
 ### Jobs & Daemon
 
-* jobMaxPortion – `15` – max number of jobs per one execution;
-* jobPeriod – `7800` – max execution time (in seconds) allocated for a sinle job; if exceeded then set to *Failed*;
-* jobPeriodForActiveProcess – `36000` – max execution time (in seconds) allocated for a sinle job with active process; if exceeded then set to *Failed*;
+* jobMaxPortion – `15` – max number of jobs per one execution; a portion of jobs that is run in a queue is counted as one job;
+* jobPeriod – `7800` – max execution time (in seconds) allocated for a single job; if exceeded then set to *Failed*;
+* jobPeriodForActiveProcess – `36000` – max execution time (in seconds) allocated for a single job with active process; if exceeded then set to *Failed*;
 * jobRerunAttemptNumber – `1` – number of attempts to re-run failed jobs;
 * jobRunInParallel – `false` – jobs will be executed in parallel processes;
 * jobPoolConcurrencyNumber – `8` – max number of processes run simultaneously;
@@ -99,8 +101,11 @@ Config parameters can be changed or added manaully in the file `data/config.php`
 * daemonMaxProcessNumber – `5` – max number of processes run simultaneously;
 * daemonInterval – `10` – interval between process runs (in seconds);
 * daemonProcessTimeout – `36000` – max lifetime of a process run (in seconds);
+* jobE0MaxPortion – `100` – max portion of jobs executed in a single process for *e0* queue; this queue is intended for email sending; is run as often as possible;
+* jobQ0MaxPortion – `200` – *q0* is a queue for a general usage; is run as often as possible;
+* jobQ1MaxPortion – `500` – *q1* is a queue for a general usage; is run every minute;
 
 ### Mass Email
 
-* massEmailMaxAttemptCount – `3` – how much attempts to send email will be made (can be helpful when SMTP server is gone away);
+* massEmailMaxAttemptCount – `3` – how many attempts to send an email will be made (can be helpful when SMTP server is gone away);
 * massEmailSiteUrl – to override the default site url (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking urls; you will need to configure your server to handle requests to the specified URL);

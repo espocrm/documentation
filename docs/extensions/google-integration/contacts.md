@@ -4,15 +4,15 @@
 
 Features:
 
-* The ability to push your EspoCRM contacts and leads to Google Contacts
-* The ability to choose Google Contacts groups
-* Available fields: *Name*, *Description*, *Email Addresses*, *Phone Numbers*, and *Account Name*
+* The ability to push your EspoCRM contacts and leads to Google Contacts;
+* The ability to choose Google Contacts groups;
+* Available fields: *Name*, *Description*, *Email Addresses*, *Phone Numbers*, and *Account Name*.
 
 ## Setting-up for users
 
 Assuming, that the administrator has already set up the integration.
 
-Go to your user detail view (the menu on the very top-right corner > click on your user name). Then click *External Account* button.
+Go to your user detail view (the menu on the very top-right corner > click on your user name). Then, click *External Account* button.
 
 ![External account button](../../_static/images/extensions/google-integration/external-account-button.png)
 
@@ -24,7 +24,7 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you succesfully connected, but *Google Contacts* checkbox didn't show up, that mean that the administrator did not grant you an access to *Google Contacts* scope.
+**Important**: If you connected succesfully, but *Google Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Google Contacts* scope.
 
 Check *Google Calendar* checkbox. You can select *Google Contacts Groups*, to which EspoCRM records will be pushed.
 
@@ -38,4 +38,4 @@ A single portion can contain up to 10 records. The rest will be pushed in idle m
 
 ![Push to Google](../../_static/images/extensions/google-integration/push-to-google.png)
 
-After that you can find your contacts in Google.
+After that, you can find your contacts in Google.

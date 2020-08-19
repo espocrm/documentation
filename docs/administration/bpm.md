@@ -15,10 +15,6 @@ In this article:
 * [Process Flowcharts](#process-flowcharts)
 * [Processes](#processes)
 * [Flowchart Elements](#flowchart-elements)
-  * [Events](bpm-events.md)
-  * [Gateways](bpm-gateways.md)
-  * [Activities](bpm-activities.md)
-  * [Flows](#flows)
 * [Conditions](#conditions)
 * [Additional formula functions](#additional-formula-functions)
 
@@ -38,36 +34,36 @@ Flowcharts are intended for business processes modeling. Administrator can creat
 
 Every flowchart has its specific entity type (Target Type field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
 
-If process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
+If the process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
 
 To show details and parameters of a certain flowchart element you need to click on it. In the edit mode you will be able to edit parameters.
 
 ## Processes
 
-Processes are available from administration panel. The link also can be added as a tab on the navigation panel.
+Processes are available at administration panel. The link also can be added as a tab on the navigation panel.
 
-Process represents business process instance. When it's initiated, it gets the status 'Started'. When process is finished, it gets the status 'Ended'. 
+The process represents a business process instance. When it's initiated, it gets the status 'Started'. When the process is finished, it gets the status 'Ended'. 
 
-The process is executed according to the flowchart. The flowchart of process can't be changed after a process is started.
+The process is executed according to the flowchart. The flowchart of the process can't be changed after the process is started.
 
-The process is obligatorily related to single target record.
+The process is obligatorily related to a single target record.
 
 Processes can be **started**:
 
 * Automatically – Upon specific conditions, signal, or scheduling, described in the flowchart; this is the main method.
-* Manually – To start process manually the user needs to click *Start Process* button on the list view of processes or from the record detail view from the dropdown in the top-right corner.
-* With Workflow rule – *Start BPM Process* action; It allows to pass a related record as a target for the process.
+* Manually – To start process manually, the user needs to click *Start Process* button on the list view of processes, or on the record detail view from the dropdown in the top-right corner.
+* With Workflow rule – *Start BPM Process* action, it allows to pass a related record as a target for the process.
 
 The execution of the process is visualized with colors highlighting flow nodes:
 
-* green – processed
-* yellow – pending
-* violet – in process
-* gray – failed
+* green – processed;
+* yellow – pending;
+* violet – in process;
+* gray – failed.
 
 ![Process execution](../_static/images/administration/bpm/process-execution.png)
 
-**Only one process** for the same target record and flowchart can be active **at the same time**. That means that if you have multiple start events, once one of them is triggered (the process is started), other start events will be ignored while the process is active. 
+**Only one process** for the same target record and flowchart can be active **at the same time**. It means that if you have multiple start events, once one of them is triggered (the process is started), other start events will be ignored while the process is active. 
 
 ### Manipulating
 

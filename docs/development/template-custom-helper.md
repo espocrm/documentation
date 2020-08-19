@@ -8,7 +8,7 @@ Create a file `custom/Espo/Resources/metadata/app/templateHelpers.json`:
 
 ```json
 {
-    "myHelper": "\\Espo\\Custom\\TemplateHelpers\\MyHelper::myHelper"
+    "myHelper": "Espo\\Custom\\TemplateHelpers\\MyHelper::myHelper"
 }
 ```
 

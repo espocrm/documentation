@@ -122,6 +122,7 @@ E.g. `NULLIF:(name, '')` will return NULL if *name* is empty string.
 
 ### Date & time
 
+
 #### MONTH_NUMBER
 
 Month number. From 1 to 12.
@@ -220,6 +221,13 @@ Difference between two days in hours.
 
 Difference between two days in minutes.
 
+#### TIMESTAMPDIFF_SECOND
+
+Difference between two days in seconds. Available since v6.0.0.
+
+#### DATE
+
+Returns a date part of a date-time value. Available since v6.0.0.
 
 ### String
 
@@ -251,7 +259,15 @@ Converts a value to a binary string.
 
 `EQUAL:(BINARY:('test'), 'Test')` returns false.
 
-Avalilable since 5.7.0.
+Avalilable since v5.7.0.
+
+#### REPLACE
+
+Replaces all the occurrences of a substring within a string.
+
+`REPLACE:('haystack', 'needle', 'replaceWith')`
+
+Available since v6.0.0.
 
 ### Math
 

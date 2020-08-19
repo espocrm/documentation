@@ -8,7 +8,7 @@ Administrator needs to enable 2FA at Administration > Authentication. Then users
 
 You need to have an authenticator application installed on your mobile phone (e.g. Google Authenticator).
 
-Go to your user profile (from menu at the top-right corner) and then click *Security* button. Then enable 2FA, enter your current password and then scan QR-code with your mobile application.
+Go to your user profile (from the menu at the top-right corner) and then click *Security* button. Then, enable 2FA, enter your current password and after that scan QR-code with your mobile application.
 
 Next time, when you login to EspoCRM, you will need to enter your username & password, then enter a code from your mobile application.
 
