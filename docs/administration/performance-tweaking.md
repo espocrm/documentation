@@ -39,3 +39,13 @@ Should be large enough. [See more](https://dev.mysql.com/doc/refman/8.0/en/innod
 
 We recommend to set it to `2`.
 
+## PHP configuration
+
+### Preloading
+
+Since EspoCRM v6.0.0 you can use a [preloading](https://www.php.net/manual/en/opcache.preloading.php). The file `preload.php` is available at the root directory.
+
+Important: Preloading must be disabled before upgrading and extension installation.
+
+Note: Using preloading is not likely to bring a significant performance boost. Database usualy is a bottleneck in applications like CRM.
+
