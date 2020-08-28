@@ -19,6 +19,8 @@ Create a file `custom/Espo/Custom/TemplateHelpers/MyHelper.php`:
 
 namespace Espo\Custom\TemplateHelpers;
 
+use LightnCandy\LightnCandy as LightnCandy;
+
 class MyHelper
 {
     public static function myHelper()
