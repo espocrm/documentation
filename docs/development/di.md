@@ -140,8 +140,8 @@ class SomeClass
 {
     protected $something;
     
-    // There's no service with the name 'something', and type hint is a class.
-    // So an instance of SomeClass is created and passed to the constructor.
+    // There's no service with the name 'something' and type hint is a class.
+    // Hence an instance of SomeClass is created and passed to the constructor.
     public function __construct(SomeClass $something)
     {
         $this->something = $something;
