@@ -177,12 +177,17 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 ### Manual instantiating
 
 ```php
-$injectableFactory->create('Espo\\Custom\\SomeClass');
+<?php
+use Espo\Custom\SomeClass;
+
+$injectableFactory->create(SomeClass::class);
 ```
 
 You can specify constructor injections explicitly using *createdWith* method. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
 
 ```php
+<?php
+
 $injectableFactory->createWith($className, [
     'parameterName1' => $value1,
     'parameterName2' => $value2,
@@ -208,7 +213,3 @@ The following classes are created by *injectableFactory*:
 * AppParams - defined in metadata: app > appParams
 
 And many others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
-
-### Injectable interace
-
-Using *Injectable* interface is deprecated. It's left for backward compatibility.
