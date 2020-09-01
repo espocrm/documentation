@@ -99,7 +99,9 @@ class SomeCreator
 
 ### Constructor injection
 
-Constructor parameter names will be used to detect dependencies.
+#### Service dependencies
+
+Constructor parameter names are used to detect dependencies on services.
 
 For example, if the parameter name is `$entityManager`, then *entityManager* service will be passed.
 
@@ -115,6 +117,7 @@ class SomeClass
 {
     protected $entityManager;
     
+    // There's a service with the name 'entityManager'. 
     public function __construct(EntityManager $entityManager)
     {
         $this->entityManager = $entityManager;
@@ -122,7 +125,9 @@ class SomeClass
 }
 ```
 
-If there's no service in the system with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
+#### Non-service dependencies
+
+If there's no service with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
 
 ```php
 <?php
@@ -141,22 +146,6 @@ class SomeClass
         $this->something = $something;
     }
 }
-```
-
-Instantiating:
-
-```php
-$injectableFactory->create('Espo\\Custom\\SomeClass');
-```
-Only container services can be used as dependencies at the moment.
-
-You can specify constructor injections explicitly using *createdWith* method. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
-
-```php
-$injectableFactory->createWith($className, [
-    'parameterName1' => $value1,
-    'parameterName2' => $value2,
-]);
 ```
 
 ### Setter method injection
@@ -182,6 +171,21 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
         $metadata = $this->metadata;
     }
 }
+```
+
+### Manual instantiating
+
+```php
+$injectableFactory->create('Espo\\Custom\\SomeClass');
+```
+
+You can specify constructor injections explicitly using *createdWith* method. Those that are not specified, will be tried to be resolved using *ReflectionClass*.
+
+```php
+$injectableFactory->createWith($className, [
+    'parameterName1' => $value1,
+    'parameterName2' => $value2,
+]);
 ```
 
 ### Classes created by injectableFactory
