@@ -1,11 +1,11 @@
 # Dependency Injection
 
-Note: This article is actual for v6.0.0 and greater.
+Note: This article is actual as of v6.0.0.
 
-There are two types of classes, that utilize dependency injection.
+There are two types of classes, that utilize dependency injection:
 
-* Container services
-* Classes created by *injectableFactory*
+* Container services;
+* Classes created by *injectableFactory*.
 
 ## Container services
 
@@ -68,7 +68,7 @@ class SomeClass
 }
 ```
 
-## Injectable Factory
+## Injectable factory
 
 Injectable Factory creates objects by a given class names resolving dependencies. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
 
