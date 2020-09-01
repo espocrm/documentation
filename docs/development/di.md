@@ -122,6 +122,27 @@ class SomeClass
 }
 ```
 
+If there's no service in the system with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
+
+```php
+<?php
+namespace Espo\Custom;
+
+use Espo\Modules\MyModule\SomeClass;
+
+class SomeClass
+{
+    protected $something;
+    
+    // There's no service with the name 'something', and type hint is a class.
+    // So an instance of SomeClass is created and passed to the constructor.
+    public function __construct(SomeClass $something)
+    {
+        $this->something = $something;
+    }
+}
+```
+
 Instantiating:
 
 ```php
