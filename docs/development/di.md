@@ -174,6 +174,8 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 }
 ```
 
+Only services can be injected via setters.
+
 ### Manual instantiating
 
 ```php
