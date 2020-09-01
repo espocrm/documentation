@@ -70,8 +70,9 @@ class SomeClass
 
 ## Injectable Factory
 
-*injectableFactory* creates an object by a given class name resolving a dependency. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
+Injectable Factory creates objects by a given class names resolving dependencies. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
 
+Requiring *injectableFactory* as a dependency:
 
 ```php
 <?php
