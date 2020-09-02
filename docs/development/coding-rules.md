@@ -171,12 +171,10 @@ class SomeClass
 {
     public function process()
     {
-        $object1 = new Something;
-        $object2 = new AnotherThing;
+        $object1 = new Something();
+        $object2 = new AnotherThing();
         // ...        
         throw new RuntimeException();
     }
 }
-
-
-
+```
