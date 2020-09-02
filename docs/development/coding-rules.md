@@ -133,3 +133,50 @@ Good:
 ```php
 $string = $this->sanitizeString($string);
 ```
+
+### 6\. Import classes in the beginning of the file.
+
+Bad:
+
+```php
+<?php
+namespace Espo\Some;
+
+class SomeClass
+{
+    public function process()
+    {
+        $object1 = new \Espo\Modules\MyModule\Something();
+        $object2 = new \Espo\Modules\MyModule\AnotherThing();
+        // ...        
+        throw new \RuntimeException();
+    }
+}
+```
+
+Good:
+```php
+
+<?php
+namespace Espo\Some;
+
+use Espo\Modules\MyModule\{
+    Something,
+    AnotherThing,
+};
+
+use RuntimeException;
+
+class SomeClass
+{
+    public function process()
+    {
+        $object1 = new Something;
+        $object2 = new AnotherThing;
+        // ...        
+        throw new RuntimeException();
+    }
+}
+
+
+
