@@ -158,3 +158,39 @@ class MyController extends \Espo\Core\Controllers\Base
 ```
 
 You need to clear cache after changes.
+
+## CRUD actions
+
+```php
+<?php
+namespace Espo\Custom\Controllers;
+
+use Espo\Core\{
+    Api\Request,
+    Api\Response,
+};
+
+class MyController
+{
+    // Creates a record.
+    public function postActionCreate(Request $request, Response $response)
+    {    
+    }
+
+    // Reads a record.
+    public function getActionRead(Request $request, Response $response)
+    {    
+    }
+    
+    // Updates a record.
+    public function putActionUpdate(Request $request, Response $response)
+    {    
+    }
+    
+    // Deletes a record.
+    public function deleteActionDelete(Request $request, Response $response)
+    {    
+    }
+}
+```
+
