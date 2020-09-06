@@ -86,15 +86,22 @@ class HelloTest
     
     public function doSomething(StdClass $data) : StdClass
     {
-        if (!isset($data->id)) throw new BadRequest();
+        if (!isset($data->id)) {
+            throw new BadRequest();
+        }
 
         $em = $this->entityManager');
         $acl = $this->'acl;
 
         $opportunity = $em->getEntity('Opportunity', $data->id);
 
-        if (!$opportunity) throw new NotFound();        
-        if (!$acl->check($opportunity, 'edit')) throw new Forbidden();
+        if (!$opportunity) {
+            throw new NotFound();
+        }
+        
+        if (!$acl->check($opportunity, 'edit')) {
+            throw new Forbidden();
+        }
 
         $opportunity->set('stage', 'Closed Won');
         $opportunity->set('probability', 100);
