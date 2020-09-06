@@ -41,7 +41,7 @@ class SomeController
     
     public function __construct(ServiceFactory $serviceFactory)
     {
-        $this->serviceFactory = $this->serviceFactory;       
+        $this->serviceFactory = $serviceFactory;       
     }
     
     public function postActionHello(Request $request)
@@ -80,7 +80,7 @@ class HelloTest
     
     public function __construct(Acl $acl, EntityManager $entityManager)
     {
-        $this->acl = $this->acl;
+        $this->acl = $acl;
         $this->entityManager = $entityManager;        
     }
     
