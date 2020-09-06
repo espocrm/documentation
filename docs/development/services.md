@@ -23,7 +23,7 @@ To **customize** an existing service you need to create a class in the custom di
 
 Actual as of v6.0.
 
-Controller `custom/Espo/Controllers/Opportunity.php`:
+Controller `custom/Espo/Custom/Controllers/Opportunity.php`:
 
 ```php
 <?php
@@ -56,7 +56,7 @@ class SomeController
 
 ```
 
-Service `custom/Espo/Services/HelloTest.php`:
+Service `custom/Espo/Custom/Services/HelloTest.php`:
 
 ```php
 <?php
