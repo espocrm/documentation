@@ -176,3 +176,5 @@ class Opportunity extends BaseOpportunity
     }
 }
 ```
+
+You can also extend a service in the *Module* directory. The *order* of your module needs to be greated than the order of the module your are extending from.
