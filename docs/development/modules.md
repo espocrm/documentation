@@ -43,7 +43,7 @@ Example: `application/Espo/Modules/{YourModule}/Entities/MyCustomEntity.php`.
 
 Note that you need to clear cache after creating new classes.
 
-You can also create any classes for your logic. It's up to you in what directory to place them and how to name them.
+You can also create any classes for your logic. In what directories to place and how to name them is at your discretion.
 
 ## Frontend files
 
