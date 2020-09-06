@@ -17,7 +17,6 @@
 * [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
 * [ACL](acl.md)
-
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
   * [Defining new funtions for formula](new-function-in-formula.md)
