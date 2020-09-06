@@ -8,7 +8,7 @@ Modules are available at `application/Espo/Modules/`. You can create a new direc
 
 Every module has its *order* property. The order is used by the system to define which module to load firts. For example, if two modules have some metadata with the same key, the metadata of the module that has a higher order will be used. If two modules have the controller classes with the same name, then the class of the module that has a higher order will be used.
 
-The *order* property is defined in `application/Espo/Modules/{YourModule}/Resources/modules.json`:
+The *order* property is defined in `application/Espo/Modules/{YourModule}/Resources/module.json`:
 
 ```json
 {
