@@ -2,6 +2,7 @@
 
 * [How to get started](how-to-start.md)
 * [Making extension package](extension-packages.md)
+* [Modules](modules.md)
 * [Tests](tests.md)
 * [Translation](translation.md)
 * [Coding rules](coding-rules.md)
