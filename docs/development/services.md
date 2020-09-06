@@ -145,6 +145,8 @@ Hook-methods:
 * beforeDeleteEntity
 * afterDeletEntity
 
+### Extending existing Record service
+
 Service `custom/Espo/Custom/Services/Opportunity.php`:
 
 ```php
@@ -154,7 +156,9 @@ namespace Espo\Custom\Services;
 
 use Espo\ORM\Entity;
 
-class Opportunity extends \Espo\Modules\Crm\Services\Opportunity
+use Espo\Modules\Crm\Services\Opportunity as BaseOpportunity
+
+class Opportunity extends BaseOpportunity
 {
     // load additional fields for detail view
     public function loadAdditionalFields(Entity $entity)
