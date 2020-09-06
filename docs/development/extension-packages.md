@@ -4,9 +4,9 @@ Extensions allow you to add extra functionality to EspoCRM. They can be installe
 
 The file structure of the package:
 
-* `/manifest.json` – a file that contains extension properties;
-* `/files` – a directory that contains the extension files;
-* `/scripts` – contains the extension scripts.
+* `manifest.json` – a file that contains extension properties;
+* `files/` – a directory that contains extension files;
+* `scripts/` – a directory that contains extension scripts.
 
 ### Manifest
 
@@ -65,6 +65,6 @@ class AfterInstall
 
 At the end, we need to pack all these files into a .zip archive.
 
-## Repository
+## Template repository
 
 You can use [this template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
