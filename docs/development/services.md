@@ -30,6 +30,7 @@ Controller `custom/Espo/Controllers/Opportunity.php`:
 
 use Espo\Core\{
     ServiceFactory,
+    Api\Request
 };
 
 namespace Espo\Custom\Controllers;
@@ -43,9 +44,11 @@ class SomeController
         $this->serviceFactory = $this->serviceFactory;       
     }
     
-    public function postActionHello($params, $data, $request)
+    public function postActionHello(Request $request)
     {
         $service = $this->serviceFactory->create('HelloTest');
+        
+        $data = $request->getParsedBody();
 
         return $service->doSomething($data);
     }
