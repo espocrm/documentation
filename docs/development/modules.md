@@ -47,4 +47,4 @@ You can also create any classes for your logic. It's up to you in what directory
 
 ## Frontend files
 
-Frontend files should be placed in a separate directory: `client/modules/{module-name}`. Note that the folder name should be in hyphen.
+Frontend files should be placed in a separate directory: `client/modules/{module-name}/`. Note that the folder name should be in hyphen.
