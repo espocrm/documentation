@@ -2,7 +2,7 @@
 
 The best practice is to place all customizations in a specific module directory.
 
-Modules are available at `application/Espo/Modules`. You can create a new directory with a name in CamelCase. That will be your module.
+Modules are available at `application/Espo/Modules/`. You can create a new directory with a name in CamelCase. That will be your module.
 
 ## Order
 
