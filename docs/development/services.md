@@ -1,6 +1,10 @@
 # Service classes
 
-It's supposed to write business logic in services.
+Services are entry points for business logic. You can write business logic right in a service class or delegate it to another classes.
+
+Controllers are supposed to have little code. Usually a controller action calls some service method. 
+
+The **main feature** of service classes that they can be re-defined in `Modules` or `Custom` directories.
 
 Locations of services:
 
@@ -8,30 +12,40 @@ Locations of services:
 * `application/Espo/Modules/{moduleName}/Services/`
 * `custom/Espo/Custom/Services/`
 
-Service objects are created by the *serviceFactory*. Usually services are created inside controllers or another services.
-
-*serviceFactory* utilizes *injectableFactory* (since v5.10.0). More info [here](di.md).
+Service objects are created by the *serviceFactory*. [Dependencies](di.md) can be defined in a constructor or with *Aware* interfaces.
 
 Note that you need to clear cache after creating a service class.
 
 To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one. It's also possible to customize within a module directory. Make sure that the *order* param of your module is higher than the value of the module of the extended service.
 
-Services can be placed in sub-directory: `SubDir\MyService`(since v5.10.0).
 
 ## Example
+
+Actual as of v6.0.
 
 Controller `custom/Espo/Controllers/Opportunity.php`:
 
 ```php
 <?php
 
+use Espo\Core\{
+    ServiceFactory,
+};
+
 namespace Espo\Custom\Controllers;
 
-class Opportunity extends \Espo\Modules\Crm\Controllers\Opportunity
+class SomeController
 {
+    protected $serviceFactory;
+    
+    public function __construct(ServiceFactory $serviceFactory)
+    {
+        $this->serviceFactory = $this->serviceFactory;       
+    }
+    
     public function postActionHello($params, $data, $request)
     {
-        $service = $this->getContainer()->get('serviceFactory')->create('HelloTest');
+        $service = $this->serviceFactory->create('HelloTest');
 
         return $service->doSomething($data);
     }
@@ -46,28 +60,33 @@ Service `custom/Espo/Services/HelloTest.php`:
 
 namespace Espo\Custom\Services;
 
-use Espo\Core\Exceptions\BadRequest;
-use Espo\Core\Exceptions\Forbidden;
-use Espo\Core\Exceptions\NotFound;
+use Espo\Core\{
+    Exceptions\BadRequest,
+    Exceptions\Forbidden,
+    Exceptions\NotFound,
+    Acl,
+    ORM\EntityManager,
+};
 
-class HelloTest extends \Espo\Core\Services\Base
+use StdClass;
+
+class HelloTest
 {
-    // What will be injected on service creation
-    //
-    // List of available injections you can find here:  
-    // * application/Espo/Core/Container.php
-    // * application/Espo/Core/Loaders
-    protected $dependencyList = [
-        'entityManager',
-        'acl',
-    ];
-
-    public function doSomething($data)
+    protected $acl;
+    protected $entityManager;
+    
+    public function __construct(Acl $acl, EntityManager $entityManager)
+    {
+        $this->acl = $this->acl;
+        $this->entityManager = $entityManager;        
+    }
+    
+    public function doSomething(StdClass $data) : StdClass
     {
         if (!isset($data->id)) throw new BadRequest();
 
-        $em = $this->getInjection('entityManager');
-        $acl = $this->getInjection('acl');
+        $em = $this->entityManager');
+        $acl = $this->'acl;
 
         $opportunity = $em->getEntity('Opportunity', $data->id);
 
@@ -83,8 +102,6 @@ class HelloTest extends \Espo\Core\Services\Base
     }
 }
 ```
-
-Services are not necessary need to be extended from *Base* class. Dependencies can be detected from constructot param names by *serviceFactory*.  (available since v5.10.0)
 
 ## Record service
 
