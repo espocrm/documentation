@@ -9,6 +9,7 @@
 ### Backend
 
 * [API](api.md)
+* [Dependency injection](di.md)
 * [Custom API action](api-action.md)
 * [Services](services.md)
 * [ORM: How to manage entities](orm.md)
@@ -16,7 +17,7 @@
 * [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
 * [ACL](acl.md)
-* [Dependency injection](di.md)
+
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
   * [Defining new funtions for formula](new-function-in-formula.md)
