@@ -9,7 +9,7 @@ There are two types of classes, that utilize dependency injection:
 
 ## Container services
 
-Note: Don't confuse with *Service* classes.
+Note: Not to be confused with *Service* classes.
 
 Contaner services are instantiated by *Container* object (instance of `Espo\Core\Container`). **Lazy initialization** is used.
 
