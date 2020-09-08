@@ -2,24 +2,25 @@
 
 Note: This article is actual as of v6.0.0.
 
-There are two types of classes, that utilize dependency injection:
+There are two classes repsonsibe for the dependency injection in EspoCRM:
 
-* Container services;
-* Classes created by *injectableFactory*.
+* [Container](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/Container.php)
+* [InjectableFactory](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/InjectableFactory.php)
 
 ## Container services
 
 Note: Not to be confused with *Service* classes.
 
-Contaner services are instantiated by *Container* object (instance of `Espo\Core\Container`). **Lazy initialization** is used.
+The Contanier contains services. These services are supposed to be used in multiple places throughout the system.  
+
+**Lazy initialization** is used, meaning that a service is not loaded until it asked (as a dependency or implicitly).
 
 Container services are defined in:
 
-* container class `Espo\Core\Container` (most critical functinalities that are not supposed to be extended);
 * loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
 * metadata (app > containerServices).
 
-Note: The best practice is not to require *container* in your classes, and never use it directly.
+Note: The best practice is not to require *container* in your classes, and never use it directly. A specific service can be required in a constructor or wuth Aware interface.
 
 Console command that prints all available container services with their implementing classes:
 
@@ -47,7 +48,7 @@ A definition example:
 }
 ```
 
-Needed dependencies will be passed to a class constructor. Class constructor parameter names will be used to detect dependencies.
+Needed dependencies will be passed to a class constructor. Class constructor parameter names and type hinting will be used to detect dependencies.
 
 For example, if a parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
 
@@ -67,6 +68,8 @@ class SomeClass
     }
 }
 ```
+
+If there's no service with a matching name then but type hint for the parameter is a class, then a new instance of that class will be instantiated (by Injectable Factory).
 
 ## Injectable factory
 
