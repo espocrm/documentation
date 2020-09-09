@@ -51,3 +51,5 @@ After that, you need to click *Save*.
 * Main Calendar – all new events from EspoCRM will be created in this calendar (actual for *One-way: EspoCRM to Google* or *Two-way*).
 
 * Other Calendars – other calendars to monitor.
+
+* Assign User's Default Team - a user default team will be auto-assigned to an event synced from Google Calendar to EspoCRM (see the `Default Team` parameter in a user's profile).
