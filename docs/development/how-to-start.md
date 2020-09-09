@@ -52,7 +52,7 @@ Edit the config file `data/config.php`, add the parameter:
 You can also add the parameter:
 
 ```php
-'useCacheInDeveloperMode' => true`,
+'useCacheInDeveloperMode' => true,
 ```
 That will force using a backend cache (metadata, langauge etc.).
 
