@@ -52,4 +52,4 @@ After that, you need to click *Save*.
 
 * Other Calendars – other calendars to monitor.
 
-* Assign User's Default Team - a user default team will be auto-assigned to an event migrated from Google Calendar to EspoCRM (see the `Default Team` parameter in a user's profile).
+* Assign User's Default Team - a user default team will be auto-assigned to an event synced from Google Calendar to EspoCRM (see the `Default Team` parameter in a user's profile).
