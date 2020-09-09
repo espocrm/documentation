@@ -29,7 +29,8 @@ class MyClass
 ```php
 <?php
 
-$account = $this->entityManager->getRepository('Account')
+$account = $this->entityManager
+    ->getRepository('Account')
     ->select(['id', 'name'])
     ->where([
         'type' => 'Customer',
