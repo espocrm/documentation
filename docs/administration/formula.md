@@ -27,6 +27,7 @@ In this article:
   * [Env](#env)
   * [Password](#password)
   * [Array](#array)
+  * [Language](#language)
   * [Ext](#ext)
 * [Values](#values)
 * [Variables](#variables)
@@ -840,6 +841,32 @@ Returns the number of elements in LIST.
 `array\at(LIST, INDEX)`
 
 Returns a value by INDEX. (since version 5.8.3)
+
+### Language
+
+#### language\translate
+
+`language\translate(LABEL, [CATEGORY, SCOPE])`
+
+Translates a label to the language set as default.
+
+Example:
+
+`language\translate('passwordWillBeSent', 'messages', 'User')`
+
+Available since v6.0.0.
+
+#### language\translateOption
+
+`language\translateOption(OPTION, FIELD, [SCOPE])`
+
+Translates an option of a specific field to the language set as default. The field can be of the following types: Enum, Multi-enum, Checklist, Array, Varchar.
+
+Example:
+
+`language\translateOption('Customer', 'type', 'Account')`
+
+Available since v6.0.0.
 
 ### Ext
 
