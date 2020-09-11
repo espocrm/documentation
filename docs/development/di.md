@@ -30,10 +30,10 @@ php command.php app-info --container
 
 ### Defining in metadata
 
-If you need to define your custom container services, do it in metadata:
+If you need to define your custom container services, do it in metadata. In your module or in the custom folder:
 
-* `custom/Espo/Custom/Resources/metadata/app/containserServices.json`;
-* or in your module folder.
+* `application/Espo/Modules/{YourModule}/Resources/metadata/app/containserServices.json`;
+* `custom/Espo/Custom/Resources/metadata/app/containserServices.json`.
 
 A definition example:
 
