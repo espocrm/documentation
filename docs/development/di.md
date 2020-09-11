@@ -82,10 +82,9 @@ Requiring *injectableFactory* as a dependency:
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\InjectableFactory;
-
 use Espo\Modules\MyModule\Something;
 
-class SomeCreator
+class SomeFactory
 {
     protected $injectableFactory;
     
@@ -94,12 +93,13 @@ class SomeCreator
         $this->injectableFactory = $injectableFactory;
     }
     
-    public function createSomething() : Something
+    public function create() : Something
     {
-        $this->injectableFactory->create(Something::class);
+        return $this->injectableFactory->create(Something::class);
     }
 }
 ```
+
 
 ### Constructor injection
 
