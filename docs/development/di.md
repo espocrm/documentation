@@ -13,12 +13,12 @@ Note: Not to be confused with *Service* classes.
 
 The Contanier contains services. These services are supposed to be used in multiple places throughout the system.  
 
-**Lazy initialization** is used, meaning that a service is not loaded until it asked (as a dependency or implicitly).
+**Lazy initialization** is used, meaning that a service is not loaded until it's asked (as a dependency or implicitly).
 
-Container services are defined in:
+Container services are defined:
 
-* loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
-* metadata (app > containerServices).
+* by loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
+* in metadata (app > containerServices).
 
 Note: The best practice is not to require *container* in your classes, and never use it directly. A specific service can be required in a constructor or wuth Aware interface.
 
