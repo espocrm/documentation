@@ -51,11 +51,11 @@ For example, if a parameter name is `$entityManager`, then *entityMaanger* conta
 
 ```php
 <?php
-namespace Espo\Custom;
+namespace Espo\Modules\MyModule;
 
 use Espo\Core\ORM\EntityManager;
 
-class SomeClass
+class MyService
 {
     protected $entityManager;
     
