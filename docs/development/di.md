@@ -177,7 +177,9 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 }
 ```
 
-Only services can be injected via setters.
+Using setter injections may be reasonable when you are extending from an existing class and want to add additional dependencies.
+
+Important: Only services can be injected via setters.
 
 ### Manual instantiating
 
