@@ -129,6 +129,8 @@ class SomeClass
 }
 ```
 
+Note: A type hint for a parameter should match a class of a service or be a parent class or interface. Otherwise the service won't be passed but a new instance will be created and passed into the constructor.
+
 #### Non-service dependencies
 
 If there's no service with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
