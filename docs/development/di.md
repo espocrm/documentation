@@ -39,11 +39,8 @@ A definition example:
 
 ```json
 {
-    "notificatorFactory": {
-        "className": "Espo\\Core\\NotificatorFactory"
-    },
-    "clientManager": {
-        "className": "Espo\\Core\\Utils\\ClientManager"
+    "myService": {
+        "className": "Espo\\Modules\\MyModule\\MyService"
     }
 }
 ```
