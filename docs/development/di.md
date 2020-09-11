@@ -115,7 +115,7 @@ Class:
 <?php
 namespace Espo\Custom;
 
-use Espo\ORM\EntityManager;
+use Espo\Core\ORM\EntityManager;
 
 class SomeClass
 {
