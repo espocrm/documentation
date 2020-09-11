@@ -81,6 +81,10 @@ namespace Espo\Modules\MyModule;
 use Espo\Core\InjectableFactory;
 use Espo\Modules\MyModule\Something;
 
+/**
+ * It's a good practice to use factory classes for creating instances of specific types.
+ * Your class will require the factory rather than `injectableFactory` service.
+ */
 class SomeFactory
 {
     protected $injectableFactory;
@@ -96,7 +100,6 @@ class SomeFactory
     }
 }
 ```
-
 
 ### Constructor injection
 
