@@ -20,7 +20,7 @@ Container services are defined:
 * by loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
 * in metadata (app > containerServices).
 
-Note: The best practice is not to require *container* in your classes, and never use it directly. A specific service can be required in a constructor or wuth Aware interface.
+Note: The best practice is not to require the *container* in your classes, and never use it directly. A specific service can be required in a constructor or with Aware interface.
 
 Console command that prints all available container services with their implementing classes:
 
