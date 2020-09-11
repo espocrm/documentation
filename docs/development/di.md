@@ -4,8 +4,8 @@ Note: This article is actual as of v6.0.0.
 
 There are two classes repsonsibe for the dependency injection in EspoCRM:
 
-* [Container](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/Container.php)
-* [InjectableFactory](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/InjectableFactory.php)
+* Containe – [class](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/Container.php)
+* InjectableFactory – [class](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/InjectableFactory.php)
 
 ## Container services
 
