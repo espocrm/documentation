@@ -39,7 +39,7 @@ php command.php upgrade -y --file="EspoCRM-upgrade.zip"
 
 ## Legacy way to upgrade
 
-Before 5.6.0 version.
+Before 5.6.0 version. **Not recommended** for versions since 5.6.0.
 
 Execute the following command from EspoCRM root directory:
 
