@@ -39,25 +39,31 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
             }, this);
             
-            // use listenTo & listenToOnce methods fore listening to events of another object
+            // use listenTo & listenToOnce methods for listening to events of another object
             // to prevent memory leakage
 
-            this.listenTo(this.model, 'change', function () { // model changed
-                if (this.model.hasChanged('test')) { // whether specific attribute changed                
+            // model changed
+            this.listenTo(this.model, 'change', function () {
+                // whether specific attribute changed        
+                if (this.model.hasChanged('test')) {        
                 }
             }, this);
             
-            this.listenTo(this.model, 'sync', function () { // model saved or fetched            
+            // model saved or fetched         
+            this.listenTo(this.model, 'sync', function () {   
             }, this);
         },
 
         // called after contents is added to DOM
         afterRender: function () {
-            console.log(this.$el); // view container DOM element
+            // view container DOM element
+            console.log(this.$el); 
             
-            var childView = this.getView('someKeyName'); // get child view
+            // get child view
+            var childView = this.getView('someKeyName'); 
             
-            this.clearView('someKeyName'); // destroy child view, will also remove it from DOM
+            // destroy child view, will also remove it from DOM
+            this.clearView('someKeyName');
         },
         
         // data passed to template
@@ -192,11 +198,13 @@ A simple way to wait:
 
 ```js
     setup: function () {
-        this.wait(true); // this holds off the rendering
+        // this holds off the rendering
+        this.wait(true);
 
         Espo.Ajax.getRequest('Some/Request').then(
             function (response) {
-                this.wait(false); // this cancels waiting and proceeds to rendering
+                // this cancels waiting and proceeds to rendering
+                this.wait(false);
             }.bind(this)
         );
     },
