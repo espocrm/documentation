@@ -147,6 +147,8 @@ Good:
     }
 ```
 
+Exception: Adding comments may be reasonable in some rare cases.
+
 Bad:
 
 ```php
