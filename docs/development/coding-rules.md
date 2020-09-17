@@ -250,3 +250,38 @@ Good:
         }
     }
 ```
+
+### 8\. Use early returns.
+
+Bad:
+
+```php
+<?php
+    public function getData() : ?Data
+    {
+        if (!$this->isEmpty()) {
+            $this->loadData();
+            
+            return $this->data;
+        }
+        
+        return null;
+    }
+```
+
+Good:
+
+```php
+<?php
+    public function getData() : ?Data
+    {
+        if ($this->isEmpty()) {
+            return null;
+        }
+        
+        $this->loadData();
+        
+        return $this->data;
+    }
+```
+
