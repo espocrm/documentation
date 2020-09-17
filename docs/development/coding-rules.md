@@ -186,7 +186,7 @@ Bad:
 ```php
     public function process()
     {
-        if (!$this->isCached()) {
+        if (! $this->isCached()) {
             foreach ($this->itemList as $item) {
                 if (! $this->hasItem($item)) {
                     $this->loadItem($item);
@@ -200,7 +200,7 @@ Better:
 ```php
     public function process()
     {
-        if (!$this->isCached()) {
+        if (! $this->isCached()) {
             foreach ($this->itemList as $item) {
                 $this->processLoadItem($item);
             }
@@ -212,7 +212,7 @@ Good:
 ```php
     public function process()
     {
-        if (!$this->isCached()) {
+        if (! $this->isCached()) {
             $this->processLoadItems();
         }
     }
