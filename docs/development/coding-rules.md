@@ -2,6 +2,29 @@
 
 ### 1\. Never pass Container into class constructors. Pass all dependencies separately.
 
+Bad:
+```php
+<?php
+namespace Espo\Modules\MyModule;
+
+use Espo\Core\{
+    Container,
+};
+
+class MyClass
+{
+    protected $container;    
+
+    public function __constructor(Container $container)
+    {
+        $this->container = $container;
+    }
+}
+
+```
+
+Good:
+
 ```php
 <?php
 namespace Espo\Modules\MyModule;
@@ -186,6 +209,8 @@ class SomeClass
 
 Bad:
 ```php
+<?php
+// ...
     public function process()
     {
         if (! $this->isCached()) {
@@ -200,6 +225,8 @@ Bad:
 
 Better:
 ```php
+<?php
+// ...
     public function process()
     {
         if (! $this->isCached()) {
@@ -212,6 +239,8 @@ Better:
 
 Good:
 ```php
+<?php
+// ...
     public function process()
     {
         if (! $this->isCached()) {
