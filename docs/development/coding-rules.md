@@ -257,6 +257,7 @@ Bad:
 
 ```php
 <?php
+// ...
     public function getData() : ?Data
     {
         if (!$this->isEmpty()) {
@@ -273,6 +274,7 @@ Good:
 
 ```php
 <?php
+// ...
     public function getData() : ?Data
     {
         if ($this->isEmpty()) {
