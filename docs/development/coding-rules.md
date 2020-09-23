@@ -287,3 +287,50 @@ Good:
     }
 ```
 
+### 8\. Avoid too many parameters in functions.
+
+Less is better. Four is too much.
+
+Bad:
+```php
+<?php
+// ...
+    public function process(string $city, string $country, string $postalCode)
+    {
+    }
+```
+
+Good:
+
+Bad:
+```php
+<?php
+// ...
+    public function process(Address $address)
+    {
+    }
+```
+
+
+Bad:
+
+```php
+<?php
+// ...
+    public function find(array $where, int $offset = 0, ?int $limit = null, bool $applyAcl = false)
+    {    
+    }
+```
+
+Good:
+
+```php
+<?php
+// Using builder.
+$collection = $finder->getBuilder()
+    ->where($where)
+    ->offset($offset)
+    ->limit($limit)
+    ->withAclApplied()
+    ->find();
+```
