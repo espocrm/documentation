@@ -66,7 +66,7 @@ class MyService
 }
 ```
 
-If there's no service with a matching name then but type hint for the parameter is a class, then a new instance of that class will be instantiated (by Injectable Factory).
+If there's no service with a matching name but a type hint for the parameter is a class, then a new instance of that class will be instantiated (by Injectable Factory).
 
 ## Injectable factory
 
