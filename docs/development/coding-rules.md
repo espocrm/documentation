@@ -301,8 +301,6 @@ Bad:
 ```
 
 Good:
-
-Bad:
 ```php
 <?php
 // ...
@@ -313,7 +311,6 @@ Bad:
 
 
 Bad:
-
 ```php
 <?php
 // ...
@@ -323,7 +320,6 @@ Bad:
 ```
 
 Good:
-
 ```php
 <?php
 // Using builder.
