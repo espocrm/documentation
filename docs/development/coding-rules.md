@@ -51,6 +51,8 @@ Exception: Passing the Container may be acceptable for proxy classes.
 
 ### 2\. Never write RAW SQL query. Use ORM instead.
 
+Good:
+
 ```php
 <?php
 
