@@ -124,6 +124,8 @@ In addition:
 * Do not write *phpdoc* for non-public methods and properties. It's OK if you don't write *phpdoc* at all.
 * Do not comment out a code. Remove it. It will still be available in *git*. 
 
+Exception: Adding comments may be reasonable in some rare cases.
+
 Bad:
 
 ```php
@@ -148,8 +150,6 @@ Good:
         return Util::sanitize($input);
     }
 ```
-
-Exception: Adding comments may be reasonable in some rare cases.
 
 Bad:
 
