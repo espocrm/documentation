@@ -42,7 +42,7 @@ You need to fetch tags to your git repository. You need to checkout to a needed 
 Upgrade packages can be built with the command:
 
 ```
-node diff {version_from}`
+node diff {version_from}
 ```
 
 The package will be created in `build` directory.
