@@ -35,7 +35,7 @@ The build will be created in the `build` directory.
 
 Note: By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
 
-Upgrade packages can be built with `grunt upgrade`. Note: You need to fetch tags to your git repository.
+**Upgrade packages** can be built with `node diff {version_from}`. Note: You need to fetch tags to your git repository and checkout to a needed version tag.
 
 ## Option B. Using installed instance
 
