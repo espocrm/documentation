@@ -35,7 +35,17 @@ The build will be created in the `build` directory.
 
 Note: By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
 
-**Upgrade packages** can be built with `node diff {version_from}`. Note: You need to fetch tags to your git repository and checkout to a needed version tag.
+### Upgrade packages
+
+You need to fetch tags to your git repository. You need to checkout to a needed version tag and build EspoCRM (see above how to build).
+
+Upgrade packages can be built with the command:
+
+```
+node diff {version_from}`
+```
+
+The package will be created in `build` directory.
 
 ## Option B. Using installed instance
 
