@@ -236,7 +236,13 @@ Provides the ability to call external API. POST and PUT requests are suppored.
 
 Payload should be specified in JSON format (event if *Content type* is not *application/json*). It's possible to use placeholders in payload json.
 
-Additional headers can be specified. Placeholders can be used in headers.
+Additional headers can be specified.
+
+Placeholders can be used in:
+
+* Headers
+* Request URL
+* Payload
 
 Available placeholders:
 
