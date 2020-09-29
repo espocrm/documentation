@@ -115,6 +115,7 @@ Note: There should not be any `;` delimiter used in formula code when it determi
 * [Run Service Action](#run-service-action)
 * [Start BPM Process](#start-BPM-process)
 * [Send HTTP Request](#send-http-request)
+* [Execute Formula Script](#execute-formula-script)
 
 ### Send Email
 
@@ -270,11 +271,26 @@ $id = json\retrieve($_lastHttpResponseBody, 'id');
 entity\setAttribute('someIdField', $id);
 ```
 
+### Execute Formula Script
+
+Available since Advanced Pack v2.6.0.
+
+Executes a (formula.md) script.
+
 ## Using formula in actions
 
-It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity, you should use function `targetEntity\attribute`. To access attributes of target entity that was set before the workflow was triggered, use function `targetEntity\attributeFetched`.
+It's possible to define formula to calculate fields in the following actions:
+
+* Execute Formula Script,
+* Create Record,
+* Update Target Record,
+* Create Related Record,
+* Update Related Record.
+
+For the last two, to access attributes of target entity, you should use function `targetEntity\attribute`. To access attributes of target entity that was set before the workflow was triggered, use function `targetEntity\attributeFetched`.
 
 Example:
+
 ```
 name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
 ```
