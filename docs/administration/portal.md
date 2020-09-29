@@ -56,7 +56,7 @@ Portal roles can be applied to:
 
 You can find the URL for your portal in the *URL* field of the portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access by different url. For this case, you need to fill in 'Custom URL' field.
 
-### Access portal by Custom URL for Apache server
+### Access by Custom URL for Apache server
 
 Custom URL: 'portal-host-name.com'.
 
