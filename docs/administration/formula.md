@@ -28,6 +28,7 @@ In this article:
   * [Password](#password)
   * [Array](#array)
   * [Language](#language)
+  * [Json](#json)
   * [Ext](#ext)
 * [Values](#values)
 * [Variables](#variables)
@@ -865,6 +866,27 @@ Translates an option of a specific field to the language set as default. The fie
 Example:
 
 `language\translateOption('Customer', 'type', 'Account')`
+
+Available since v6.0.0.
+
+### Json
+
+#### json\retrieve
+
+`json\retrieve(JSON, PATH)`
+
+Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots.
+
+Example, retrieving *id* from `{"id": "SOME_ID"}`:
+
+```
+$value = json\retrieve($someJsonString, 'id');`
+```
+
+Example, retrieving *id* from `[{"id": "SOME_ID"}]`:
+```
+$value = json\retrieve($someJsonString, '0.id');`
+```
 
 Available since v6.0.0.
 
