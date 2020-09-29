@@ -232,7 +232,15 @@ Starts BPM process. You can specify which target will be used for a process.
 
 ### Send HTTP Request
 
-Provides the ability to call external API. POST and PUT requests are suppored.
+Provides the ability to call an external API. 
+
+Supported request methods:
+
+* POST
+* PUT
+* PATCH
+* DELETE
+* GET
 
 Payload should be specified in JSON format (event if *Content type* is not *application/json*). It's possible to use placeholders in payload json.
 
@@ -248,6 +256,19 @@ Available placeholders:
 
 * *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}` (see [info](formula.md#attribute) about attributes);
 * *{$$variable}* – a value of a variable (available only in BPM process); e.g. `{$$myVariableName}`.
+
+#### Handling HTTP response
+
+Available since Advanced Pack v2.6.0.
+
+A response body of a sent HTTP request will be stored in the formula variable `_lastHttpResponseBody`. This variable can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
+
+Example: A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same workflow rule and specify a formula script:
+
+```
+$id = json\retrieve($_lastHttpResponseBody, 'id');
+entity\setAttribute('someIdField', $id);
+```
 
 ## Using formula in actions
 
