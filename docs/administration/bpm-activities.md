@@ -87,6 +87,10 @@ Runs a specific service action. The list of built-in actions is available [here]
 
 Calls external API (since version 2.4.0).
 
+#### Execute Formula Script
+
+Executes a specific formula script.
+
 
 ### Formula usage
 
