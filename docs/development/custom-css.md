@@ -5,6 +5,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/client.json`.
 ```json
 {
     "cssList": [
+        "__APPEND__",
         "path/to/your/file.css"
     ]
 }
