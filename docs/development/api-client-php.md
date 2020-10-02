@@ -21,6 +21,8 @@ $response = $client->request('GET', 'Opportunity', [
     'order' => 'desc',
     'primaryFilter' => 'open',
 ]);
+
+$fileContentsResponse = $client->request('GET', "Attachment/file/$attachmentId");
 ```
 
 ### Api Key Authentication
@@ -177,10 +179,16 @@ class EspoApiClient
         $parsedResponse = $this->parseResponce($this->lastResponse);
         $responseCode = $this->getResponseHttpCode();
 
-        if ($responseCode == 200 && !empty($parsedResponse['body'])) {
-            curl_close($ch);
-            return json_decode($parsedResponse['body'], true);
-        }
+         if ($responseCode == 200 && !empty($parsedResponse['body'])) {
+             curl_close($ch);
+ 
+             $body = json_decode($parsedResponse['body'], true);
+             if ($parsedResponse['body'] && !$body) {
+                 return $parsedResponse['body'];
+             }
+ 
+             return $body;
+         }
 
         $header = $this->normalizeHeader($parsedResponse['header']);
         $errorMessage = !empty($header['X-Status-Reason']) ? $header['X-Status-Reason'] : 'EspoClient: Unknown Error';
