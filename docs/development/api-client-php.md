@@ -22,7 +22,7 @@ $response = $client->request('GET', 'Opportunity', [
     'primaryFilter' => 'open',
 ]);
 
-$fileContentsResponse = $client->request('GET', "Attachment/file/$attachmentId");
+$fileContentsResponse = $client->request('GET', "Attachment/file/{$attachmentId}");
 ```
 
 ### Api Key Authentication
@@ -263,6 +263,5 @@ class EspoApiClient
         return $headerArray;
     }
 }
-
 
 ```
