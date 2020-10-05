@@ -271,6 +271,8 @@ $id = json\retrieve($_lastHttpResponseBody, 'id');
 entity\setAttribute('someIdField', $id);
 ```
 
+Note: Within a BPM process *$_lastHttpResponseBody* variable is available only within a task that contains Send HTTP Request action. The variable won't be passed further along a process flow.
+
 ### Execute Formula Script
 
 Available since Advanced Pack v2.6.0.
