@@ -818,13 +818,15 @@ $tm->commit();
 Running a function in a transaction:
 
 ```php
-$entityManager->getTransactionManager()->run(
-    function () {
-        // transaction started implicitly
-        // do something
-        // transaction committed implicitly or rolled back if an exception occurred
-    }
-);
+$entityManager
+    ->getTransactionManager()
+    ->run(
+        function () {
+            // transaction started implicitly
+            // do something
+            // transaction committed implicitly or rolled back if an exception occurred
+        }
+    );
 ```
 
 Locking:
@@ -832,7 +834,8 @@ Locking:
 ```php
 $entityManager->getTransactionManager()->start();
 
-$entity = $entityManager->getRepository('SomeTable')
+$entity = $entityManager
+    ->getRepository('SomeTable')
     ->where(['id' => $id])
     ->forUpdate() // this will lock selected rows until the transaction is finished
     ->findOne();
@@ -855,4 +858,3 @@ $entityManager->getLocker()->lockExclusive('SomeEntityType');
 // this will unlock all locked tables
 $entityManager->getLocker()->commit();
 ```
-
