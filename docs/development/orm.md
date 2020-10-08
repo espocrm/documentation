@@ -605,45 +605,60 @@ foreach ($collection as $entity) {
 Delete:
 
 ```php
-$select = $entityManager->getQueryBuilder()
+$select = $entityManager
+    ->getQueryBuilder()
     ->select()
     ->from('SomeTable')
     ->where([
         'someColumn' => 'someValue',
     ])
     ->build();
-$entityManager->getQueryExecutor()->execute($select);
+    
+$entityManager
+    ->getQueryExecutor()
+    ->execute($select);
 ```
 
 Select:
 
 ```php
-$select = $entityManager->getQueryBuilder()
+$select = $entityManager
+    ->getQueryBuilder()
     ->select()
     ->from('SomeTable')
     ->select(['column1', 'column2', 'someExpression'])
     ->order('column1', 'DESC')
     ->limit(0, 10)
     ->build();
-$pdoStatement = $entityManager->getQueryExecutor()->execute($select);
+    
+$pdoStatement = $entityManager
+    ->getQueryExecutor()
+    ->execute($select);
 ```
 
 ```php
-$select = $entityManager->getQueryBuilder()
+$select = $entityManager
+    ->getQueryBuilder()
     ->select()
     ->from('SomeTable')
     ->select('SUM:(someColumn)', 'value')
     ->select('anotherColumn')
     ->groupBy('anotherColumn')
     ->build();
-$row = $entityManager->getQueryExecutor()->execute($select)->fetch();
+    
+$row = $entityManager
+    ->getQueryExecutor()
+    ->execute($select)
+    ->fetch();
+
 $sum = $row['value'];
 ```
 
 Update:
 
 ```php
-$update = $entityManager->getQueryBuilder()
+$update = $entityManager
+    ->getQueryBuilder()
     ->update()
     ->in('SomeTable')
     ->set(['status' => 'Expired'])
@@ -652,13 +667,15 @@ $update = $entityManager->getQueryBuilder()
         'expiresAt' => $dateTimeString,
     ])
     ->build();
+    
 $entityManager->getQueryExecutor()->execute($update);
 ```
 
 Update with join:
 
 ```php
-$update = $entityManager->getQueryBuilder()
+$update = $entityManager
+    ->getQueryBuilder()
     ->update()
     ->in('SomeTable')
     ->set(['column:' => 'joinAlias.foreignColumn'])    
@@ -667,13 +684,17 @@ $update = $entityManager->getQueryBuilder()
         'someColumn' => 'someValue',
     ])
     ->build();
-$entityManager->getQueryExecutor()->execute($update);
+    
+$entityManager
+    ->getQueryExecutor()
+    ->execute($update);
 ```
 
 Insert:
 
 ```php
-$insert = $entityManager->getQueryBuilder()
+$insert = $entityManager
+    ->getQueryBuilder()
     ->insert()
     ->into('SomeTable')
     ->columns(['column1', 'column2'])
@@ -682,13 +703,15 @@ $insert = $entityManager->getQueryBuilder()
         'column2' => 'value2',
     ])
     ->build();
+    
 $entityManager->getQueryExecutor()->execute($insert);
 ```
 
 Mass insert:
 
 ```php
-$insert = $entityManager->getQueryBuilder()
+$insert = $entityManager
+    ->getQueryBuilder()
     ->insert()
     ->into('SomeTable')
     ->columns(['column'])
@@ -697,25 +720,33 @@ $insert = $entityManager->getQueryBuilder()
         ['column2' => 'value2'],
     ])
     ->build();
-$entityManager->getQueryExecutor()->execute($insert);
+    
+$entityManager
+    ->getQueryExecutor()
+    ->execute($insert);
 ```
 
 Mass insert by populating with a select sub-query:
 
 ```php
-$insert = $entityManager->getQueryBuilder()
+$insert = $entityManager
+    ->getQueryBuilder()
     ->insert()
     ->into('SomeTable')
     ->columns(['column'])
     ->valuesQuery($subQuery)
     ->build();
-$entityManager->getQueryExecutor()->execute($insert);
+    
+$entityManager
+    ->getQueryExecutor()
+    ->execute($insert);
 ```
 
 Union:
 
 ```php
-$union = $entityManager->getQueryBuilder()
+$union = $entityManager
+    ->getQueryBuilder()
     ->union()
     ->all()
     ->query($subQuery1)
@@ -723,13 +754,17 @@ $union = $entityManager->getQueryBuilder()
     ->order(1, 'DESC')
     ->limit(0, 5)
     ->build();
-$sth = $entityManager->getQueryExecutor()->execute($union);
+    
+$sth = $entityManager
+    ->getQueryExecutor()
+    ->execute($union);
 ```
 
 Cloning and modifying an existing query:
 
 ```php
-$clonedQuery = $entityManager->getQueryBuilder()
+$clonedQuery = $entityManager
+    ->getQueryBuilder()
     ->clone($query)
     ->limit(0, 10)
     ->build();
@@ -746,13 +781,16 @@ $entityManager->getMapper()->massInsert($collection);
 ### Transaction manager
 
 Transaction:
+
 ```php
 $tm = $entityManager->getTransactionManager();
 $tm->start();
+
 try {
     // do something
     $tm->commit();
-} catch (Throwable $e) {
+}
+catch (Throwable $e) {
     $tm->rollback(); // this will roll back everything done within the transaction
 }
 ```
