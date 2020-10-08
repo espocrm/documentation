@@ -155,7 +155,7 @@ $entityManager->getRepository('Account')->deleteFromDb($id);
 
 This will delete a record permanently.
 
-### Attribues
+### Attributes
 
 Each entity type has its own set of defined attributes. You cannot set an arbitrary attribute name.
 
@@ -255,9 +255,18 @@ Ordering by a value list:
 
 ```php
 $collection = $entityManager
-  ->getRepository('Opportunity')
-  ->order('LIST:stage:Prospectring,Qualification,Proposal')
-  ->find();
+    ->getRepository('Opportunity')
+    ->order('LIST:stage:Prospectring,Qualification,Proposal')
+    ->find();
+```
+
+Feeding a query to a repository:
+
+```php
+$collection = $entityManager->getRepository('SomeEntityType')
+    ->clone($query)
+    ->limit(0, 10)
+    ->find();
 ```
 
 ### Find the first one
@@ -298,6 +307,19 @@ $opportunity = $entityManager
     ->findOne();
 ```
 
+Filtering by a relation column:
+
+```php
+ $leads = $entityManager
+    ->getRepository('TargetList')
+    ->getRelation($targetList, 'leads')
+    ->where([
+        '@relation.optedOut' => false,
+    ])
+    ->find();
+```
+
+
 ### Relate entities
 
 Before v6.0:
@@ -321,7 +343,13 @@ $entityManager
     ->getRepository('Account')
     ->getRelation($account, 'opportunities')
     ->relateById($opportunityId);
-
+    
+$entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'contacts')
+    ->relate($contact, [
+        'role' => 'CEO', // relationship column
+    ]);
 ```
 
 ### Unrelate entities
@@ -335,6 +363,8 @@ $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $o
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
 ```
 
+Since v6.0:
+
 ```php
 $entityManager
     ->getRepository('Account')
@@ -345,17 +375,48 @@ $entityManager
     ->getRepository('Account')
     ->getRelation($account, 'opportunities')
     ->unrelateById($opportunityId);
-
 ```
+
+### Update columns
+
+Since v6.0:
+
+```php
+$entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'contacts')
+    ->updateColumns($contact, [
+        'role' => 'CEO', // relationship column
+    ]);
+    
+$entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'contacts')
+    ->updateColumnsById($contactId, [
+        'role' => 'CEO', // relationship column
+    ]);
+```
+
 
 ### Check related
 
+Before v6.0:
 
 ```php
 $entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $relatedEntity);
 
 // or
 $entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $id);
+```
+
+
+Since v6.0:
+
+```php
+$isRelated = $entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'opportunities')
+    ->isRelated($opportunity);    
 ```
 
 ## Select Query Parameters
@@ -423,7 +484,7 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
         'AND' => [
             'amountConverted>' => 100,
             'amountConverted<=' => 999,
-        ]
+        ],
     ]
 ])->findOne();
 ```
@@ -431,7 +492,10 @@ $opportunityList = $entityManager->getRepository('Opportunity')->where([
 ### Distinct
 
 ```
-$opportunityList = $entityManager->getRepository('Opportunity')->distinct()->find();
+$opportunityList = $entityManager
+    ->getRepository('Opportunity')
+    ->distinct()
+    ->find();
 ```
 
 ### Join
@@ -534,3 +598,216 @@ foreach ($collection as $entity) {
 ### Complex expressions
 
 `MONTH:(closeDate)` and `SUM:(amountConverted)` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
+
+
+### Query builder
+
+Delete:
+
+```php
+$select = $entityManager->getQueryBuilder()
+    ->select()
+    ->from('SomeTable')
+    ->where([
+        'someColumn' => 'someValue',
+    ])
+    ->build();
+$entityManager->getQueryExecutor()->execute($select);
+```
+
+Select:
+
+```php
+$select = $entityManager->getQueryBuilder()
+    ->select()
+    ->from('SomeTable')
+    ->select(['column1', 'column2', 'someExpression'])
+    ->order('column1', 'DESC')
+    ->limit(0, 10)
+    ->build();
+$pdoStatement = $entityManager->getQueryExecutor()->execute($select);
+```
+
+```php
+$select = $entityManager->getQueryBuilder()
+    ->select()
+    ->from('SomeTable')
+    ->select('SUM:(someColumn)', 'value')
+    ->select('anotherColumn')
+    ->groupBy('anotherColumn')
+    ->build();
+$row = $entityManager->getQueryExecutor()->execute($select)->fetch();
+$sum = $row['value'];
+```
+
+Update:
+
+```php
+$update = $entityManager->getQueryBuilder()
+    ->update()
+    ->in('SomeTable')
+    ->set(['status' => 'Expired'])
+    ->where([
+        'status' => 'Pending',
+        'expiresAt' => $dateTimeString,
+    ])
+    ->build();
+$entityManager->getQueryExecutor()->execute($update);
+```
+
+Update with join:
+
+```php
+$update = $entityManager->getQueryBuilder()
+    ->update()
+    ->in('SomeTable')
+    ->set(['column:' => 'joinAlias.foreignColumn'])    
+    ->join('AnotherTable', 'joinAlias', ['joinAlias.foreignId:' => 'id'])
+    ->where([
+        'someColumn' => 'someValue',
+    ])
+    ->build();
+$entityManager->getQueryExecutor()->execute($update);
+```
+
+Insert:
+
+```php
+$insert = $entityManager->getQueryBuilder()
+    ->insert()
+    ->into('SomeTable')
+    ->columns(['column1', 'column2'])
+    ->values([
+        'column1' => 'value1',
+        'column2' => 'value2',
+    ])
+    ->build();
+$entityManager->getQueryExecutor()->execute($insert);
+```
+
+Mass insert:
+
+```php
+$insert = $entityManager->getQueryBuilder()
+    ->insert()
+    ->into('SomeTable')
+    ->columns(['column'])
+    ->values([
+        ['column1' => 'value1'],
+        ['column2' => 'value2'],
+    ])
+    ->build();
+$entityManager->getQueryExecutor()->execute($insert);
+```
+
+Mass insert by populating with a select sub-query:
+
+```php
+$insert = $entityManager->getQueryBuilder()
+    ->insert()
+    ->into('SomeTable')
+    ->columns(['column'])
+    ->valuesQuery($subQuery)
+    ->build();
+$entityManager->getQueryExecutor()->execute($insert);
+```
+
+Union:
+
+```php
+$union = $entityManager->getQueryBuilder()
+    ->union()
+    ->all()
+    ->query($subQuery1)
+    ->query($subQuery2)
+    ->order(1, 'DESC')
+    ->limit(0, 5)
+    ->build();
+$sth = $entityManager->getQueryExecutor()->execute($union);
+```
+
+Cloning and modifying an existing query:
+
+```php
+$clonedQuery = $entityManager->getQueryBuilder()
+    ->clone($query)
+    ->limit(0, 10)
+    ->build();
+```
+
+### Mass insert
+
+Mass insert with Mapper:
+
+```php
+$entityManager->getMapper()->massInsert($collection);
+```
+
+### Transaction manager
+
+Transaction:
+```php
+$tm = $entityManager->getTransactionManager();
+$tm->start();
+try {
+    // do something
+    $tm->commit();
+} catch (Throwable $e) {
+    $tm->rollback(); // this will roll back everything done within the transaction
+}
+```
+
+Nested transactions:
+
+```php
+$tm = $entityManager->getTransactionManager();
+$tm->start();
+// do something
+$tm->start();
+// do something
+$tm->commit();
+// do something
+$tm->commit();
+```
+
+Running a function in a transaction:
+
+```php
+$entityManager->getTransactionManager()->run(
+    function () {
+        // transaction started implicitly
+        // do something
+        // transaction committed implicitly or rolled back if an exception occurred
+    }
+);
+```
+
+Locking:
+
+```php
+$entityManager->getTransactionManager()->start();
+
+$entity = $entityManager->getRepository('SomeTable')
+    ->where(['id' => $id])
+    ->forUpdate() // this will lock selected rows until the transaction is finished
+    ->findOne();
+
+// do something with entity
+
+$entityManager->saveEntity($entity);
+
+$entityManager->getTransactionManager()->commit();
+```
+
+### Locker
+
+```php
+// this will start a transaction implicitly and lock a table
+$entityManager->getLocker()->lockExclusive('SomeEntityType'); 
+
+// do something
+
+// this will unlock all locked tables
+$entityManager->getLocker()->commit();
+```
+
