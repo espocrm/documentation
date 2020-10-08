@@ -517,9 +517,9 @@ Can be used with `find` and `findRelated` methods. With this param provided, the
 
 ```
 $collection = $entityManager->getRepository('Email')
-  ->limit(0, 10000)
-  ->sth()
-  ->find();
+    ->limit(0, 10000)
+    ->sth()
+    ->find();
 
 foreach ($collection as $entity) {
     // memory is allocated for each item, when collection is iterated
