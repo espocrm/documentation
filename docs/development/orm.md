@@ -803,12 +803,15 @@ $tm = $entityManager->getTransactionManager();
 $tm->start();
 
 // do something
+
 $tm->start();
 
 // do something
+
 $tm->commit();
 
 // do something
+
 $tm->commit();
 ```
 
