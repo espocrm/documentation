@@ -508,7 +508,7 @@ $query = $entityManager
     
 $pdoStatement = $entityManager
     ->getQueryExecutor()
-    ->execute($select);
+    ->execute($query);
 
 $rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
 
@@ -533,4 +533,4 @@ foreach ($collection as $entity) {
 
 ### Complex expressions
 
-`MONTH:closeDate` and `SUM:amountConverted` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
+`MONTH:(closeDate)` and `SUM:(amountConverted)` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
