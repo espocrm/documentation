@@ -4,11 +4,13 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 
 **EntityManager** is available in [*Container*](di.md). It can be obtained in [record services](services.md#record-service) by method `#getEntityManager()`. It provides an access to repositories.
 
-**Repository** serves for fetching and storing records. Each entity type has its own repository. Base classes: `Espo\ORM\Repositories\RDB`, `\Espo\Core\Repositories\Database`. *RDB* stands for *relational database*.
+**Repository** serves for fetching and storing records. Each entity type has its own repository. Base classes: `Espo\ORM\Repositories\RDB`, `Espo\Core\Repositories\Database`. *RDB* stands for *relational database*.
 
-**Entity** represents a single record. Each entity type has it's own entity class. Base classes: `\Espo\ORM\Entity`, `\Espo\Core\ORM\Entity`.
+**Entity** represents a single record. Each entity type has it's own entity class. Base classes: `Espo\ORM\Entity`, `Espo\Core\ORM\Entity`.
 
 **EntityCollection** is a collection of entities. It's returned by *find* operations.
+
+**SthCollection** is a collection of entities, consuming much less memory than EntityCollection.
 
 Obtaining the entity manager in the record service:
 
@@ -265,7 +267,8 @@ $account = $entityManager
     ->getRepository('Account')
     ->where([
         'type' => 'Customer',
-    ])->findOne();
+    ])
+    ->findOne();
 ```
 
 ### Find related
@@ -491,22 +494,24 @@ $contactList = $entityManager
 ### Group By
 
 ```php
-$selectParams = [
-    'select' => ['MONTH:closeDate', 'SUM:amountConverted']
-    'groupBy' => ['MONTH:closeDate'],
-    'whereClause' => [
-        'stage' => 'Closed Won'
-    ],
-    'orderBy' => 1, // ordering by the first column
-];
 
-$pdo = $this->getEntityManager()->getPDO();
-$sql = $this->getEntityManager()->getQuery()->createSelectQuery('Opportunity', $selectParams);
-$sth = $pdo->prepare($sql);
-$sth->execute();
+$query = $entityManager
+    ->getQueryBuilder()
+    ->select() // indicates that we build a SELECT query
+    ->select(['MONTH:(closeDate)', 'SUM:(amountConverted)']) // complex expressions
+    ->groupBy('MONTH:(closeDate)') // complex expression
+    ->whereClause([
+        'stage' => 'Closed Won',
+    ])
+    ->order(1) // ordering by the first column
+    ->build();
+    
+$pdoStatement = $entityManager
+    ->getQueryExecutor()
+    ->execute($select);
 
-// results
-$rowList = $sth->fetchAll(\PDO::FETCH_ASSOC);
+$rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
+
 ```
 
 ### Additional Params
