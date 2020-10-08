@@ -13,7 +13,7 @@
 * [Dependency injection](di.md)
 * [Custom API action](api-action.md)
 * [Services](services.md)
-* [ORM: How to manage entities](orm.md)
+* [ORM](orm.md)
 * [Metadata](metadata.md)
 * [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
