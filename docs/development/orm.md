@@ -242,6 +242,7 @@ $collection = $entityManager->getRepository('Account')
 ```
 
 Complex order:
+
 ```php
 $collection = $entityManager->getRepository('Account')
     ->order([
@@ -562,6 +563,7 @@ $contactList = $entityManager
 $query = $entityManager
     ->getQueryBuilder()
     ->select() // indicates that we build a SELECT query
+    ->from('Opportunity') // entity type
     ->select(['MONTH:(closeDate)', 'SUM:(amountConverted)']) // complex expressions
     ->groupBy('MONTH:(closeDate)') // complex expression
     ->whereClause([
