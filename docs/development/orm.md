@@ -39,7 +39,7 @@ $account = $entityManager->getEntity('Account', $accountId);
 ### Get value
 
 ```php
-$fieldValue = $account->get('fieldName');
+$fieldValue = $account->get('attributeName');
 ```
 
 ### Has value
@@ -55,7 +55,7 @@ $fieldNameIsSet = $account->has('fieldName'); // true or false
 One:
 
 ```php
-$account->set('fieldName', 'Test Account');
+$account->set('attributeName', 'Test Account');
 ```
 
 Multiple:
@@ -92,13 +92,13 @@ You can check whether an attribute was changed.
 $value = $entity->getFetched('attributeName')
 
 // check whether an attribute was changed since the last syncing with DB
-$entity->isChanged('attributeName');
+$isChanged = $entity->isChanged('attributeName');
 ```
 
 ### Get all values
 
 ```php
-$account->getValueMap();
+$valueMap = $account->getValueMap(); // StdClass
 ```
 
 ### Store
@@ -206,23 +206,26 @@ Relation types:
 ### Find
 
 ```php
-$accountList = $entityManager->getRepository('Account')->where([
-    'type' => 'Customer',
-])->find();
+$collection = $entityManager
+    ->getRepository('Account')
+    ->where([
+        'type' => 'Customer',
+    ])->find();
 ```
 
 Descending order:
 
 ```php
-$accountList = $entityManager->getRepository('Account')
+$collection = $entityManager->getRepository('Account')
     ->limit(0, 10)
     ->order('createdAt', true)
     ->find();
 ```
 
 Ascending order:
+
 ```php
-$accountList = $entityManager->getRepository('Account')
+$collection = $entityManager->getRepository('Account')
     ->limit(0, 10)
     ->order('createdAt')
     ->find();
@@ -230,7 +233,7 @@ $accountList = $entityManager->getRepository('Account')
 
 or:
 ```php
-$accountList = $entityManager->getRepository('Account')
+$collection = $entityManager->getRepository('Account')
     ->limit(0, 10)
     ->order('createdAt', 'DESC')
     ->find();
@@ -238,7 +241,7 @@ $accountList = $entityManager->getRepository('Account')
 
 Complex order:
 ```php
-$accountList = $entityManager->getRepository('Account')
+$collection = $entityManager->getRepository('Account')
     ->order([
         ['createdAt', 'ASC'],
         ['name', 'DESC'],
@@ -246,10 +249,11 @@ $accountList = $entityManager->getRepository('Account')
     ->find();
 ```
 
-Ordering by list:
+Ordering by a value list:
 
 ```php
-$opportunityList = $entityManager->getRepository('Opportunity')
+$collection = $entityManager
+  ->getRepository('Opportunity')
   ->order('LIST:stage:Prospectring,Qualification,Proposal')
   ->find();
 ```
@@ -257,18 +261,43 @@ $opportunityList = $entityManager->getRepository('Opportunity')
 ### Find the first one
 
 ```php
-$account = $entityManager->getRepository('Account')->where([
-    'type' => 'Customer',
-])->findOne();
+$account = $entityManager
+    ->getRepository('Account')
+    ->where([
+        'type' => 'Customer',
+    ])->findOne();
 ```
 
 ### Find related
 
+Before v6.0:
+
 ```php
-$opportunityList = $entityManager->getRepository('Account')->findRelated($account, 'opportunities');
+$opportunityCollection = $entityManager
+    ->getRepository('Account')
+    ->findRelated($account, 'opportunities');
+```
+
+Since v6.0:
+
+```php
+$opportunityCollection = $entityManager
+    ->getRepository('Account')
+    ->getRelation($acocunt, 'opportunities')
+    ->limit(0, 10)
+    ->where($whereClause)
+    ->find();
+    
+$opportunity = $entityManager
+    ->getRepository('Account')
+    ->getRelation($acocunt, 'opportunities')
+    ->order('createdAt', 'DESC')
+    ->findOne();
 ```
 
 ### Relate entities
+
+Before v6.0:
 
 ```php
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunity);
@@ -277,7 +306,24 @@ $entityManager->getRepository('Account')->relate($account, 'opportunities', $opp
 $entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunityId);
 ```
 
+Since v6.0:
+
+```php
+$entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'opportunities')
+    ->relate($opportunity);
+    
+$entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'opportunities')
+    ->relateById($opportunityId);
+
+```
+
 ### Unrelate entities
+
+Before v6.0:
 
 ```php
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunity);
@@ -286,7 +332,21 @@ $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $o
 $entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
 ```
 
+```php
+$entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'opportunities')
+    ->unrelate($opportunity);
+    
+$entityManager
+    ->getRepository('Account')
+    ->getRelation($account, 'opportunities')
+    ->unrelateById($opportunityId);
+
+```
+
 ### Check related
+
 
 ```php
 $entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $relatedEntity);
@@ -304,23 +364,32 @@ $entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', 
 Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 
 ```php
-$opportunityList = $entityManager->getRepository('Opportunity')->where([
-  'amount>=' => 100
-])->find();
+$opportunityList = $entityManager
+    ->getRepository('Opportunity')
+    ->where([
+      'amount>=' => 100
+    ])
+    ->find();
 ```
 
 #### IN and NOT IN operators
 
 ```php
-$opportunityList = $entityManager->getRepository('Opportunity')->where([
-  'stage' => ['Closed Lost', 'Closed Won']
- ])->find();
+$opportunityList = $entityManager
+    ->getRepository('Opportunity')
+    ->where([
+      'stage' => ['Closed Lost', 'Closed Won']
+    ])
+    ->find();
 ```
 
 ```
-$opportunityList = $entityManager->getRepository('Opportunity')->where([
-    'stage!=' => ['Closed Lost', 'Closed Won']
-])->find();
+$opportunityList = $entityManager
+    ->getRepository('Opportunity')
+    ->where([
+        'stage!=' => ['Closed Lost', 'Closed Won']
+    ])
+    ->find();
 ```
 
 #### LIKE operators
@@ -331,9 +400,12 @@ Supported  operators:
 * `!*` - NOT LIKE
 
 ```php
-$opportunityList = $entityManager->getRepository('Opportunity')->where([
-    'name*' => '%service%',
-])->find();
+$opportunityList = $entityManager
+    ->getRepository('Opportunity')
+    ->where([
+        'name*' => '%service%',
+    ])
+    ->find();
 ```
 
 #### OR, AND operators
@@ -386,43 +458,46 @@ $contactList = $entityManager->getRepository('Contact')
 Joining any table:
 
 ```php
-$meetingList = $entityManager->getRepository('Meeting')
-  ->join([
-      [
-          'MeetingUser', // meeting_user table
-          'meetingUser', // it's an alias
-          [
-              'meetingUser.meetingId:' => 'meeting.id' // join condition;
-                                                       // colon indicates that the right part is not a value;
-                                                       // it translates to meetingUser.meeting_id = meeting.id
-          ]
-      ]
-  ])->where([
-    'meetingUser.userId' => $user->id,
-  ])->find();
+$meetingList = $entityManager
+    ->getRepository('Meeting')
+    ->join(
+        'MeetingUser', // meeting_user table
+        'meetingUser', // it's an alias
+        [
+          'meetingUser.meetingId:' => 'meeting.id', // join condition;
+                                                   // colon indicates that the right part is not a value;
+                                                   // it translates to meetingUser.meeting_id = meeting.id
+        ],
+    )
+    ->where([
+        'meetingUser.userId' => $user->id,
+    ])
+    ->find();
 ```
 
 Join table alias:
 
 ```php
-$contactList = $entityManager->getRepository('Contact')
+$contactList = $entityManager
+    ->getRepository('Contact')
     ->distinct()
-    ->join([['opportunities', 'aliasForJoinedTable']])
+    ->join('opportunities', 'aliasForJoinedTable')
     ->where([
       'aliasForJoinedTable.stage' => 'Closed Won'
-    ])->find();
+    ])
+    ->find();
 ```
 
 ### Group By
 
 ```php
 $selectParams = [
-  'select' => ['MONTH:closeDate', 'SUM:amountConverted']
-  'groupBy' => ['MONTH:closeDate'],
-  'whereClause' => [
-    'stage' => 'Closed Won'
-  ],
-  'orderBy' => 1, // ordering by the first column
+    'select' => ['MONTH:closeDate', 'SUM:amountConverted']
+    'groupBy' => ['MONTH:closeDate'],
+    'whereClause' => [
+        'stage' => 'Closed Won'
+    ],
+    'orderBy' => 1, // ordering by the first column
 ];
 
 $pdo = $this->getEntityManager()->getPDO();
