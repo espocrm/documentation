@@ -25,8 +25,8 @@ E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031
 * **Quick Create Entities** – entities which can be created through a call popup.
 
 2. Contact Binotel support to add an URL (see “Post URL” field) to handle incoming/outgoing calls (API CALL Settings and API PUSH):
-**http://espocrm.local/?entryPoint=Binotel&connector=Binotel&key=hh9v0zr529**
-
+- `http://espocrm.local/api/v1/Voip/webhook/Binotel/hh9v0zr529` for VoIP Integration extension 1.15.0+
+- `http://espocrm.local/?entryPoint=Binotel&connector=Binotel&key=hh9v0zr529` for VoIP Integration extension 1.14.2 and lower.
 
 ## How to setup Binotel Integration for users
 
