@@ -37,7 +37,8 @@ VoIP Integration extension supports* the following Starface servers:
 * **Quick Create Entities** – entities which can be created through the call popup window.
 
 2. Setup a cron job (scheduled task) to handle Starface Events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right block. For linux-based OS, it is:
-**\* \* \* \* \* cd /var/www/html/espocrm; /usr/bin/php -f voip.php Starface > /dev/null 2>&1**
+- `* * * * * cd /var/www/html/espocrm; /usr/bin/php -f php command.php voip Starface > /dev/null 2>&1` for VoIP Integration extension 1.15.0+
+- `* * * * * cd /var/www/html/espocrm; /usr/bin/php -f php voip.php Starface > /dev/null 2>&1` for VoIP Integration extension 1.14.2 and lower.
 
 ## How to setup Starface Integration for users
 
