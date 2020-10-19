@@ -51,7 +51,8 @@ VoIP Integration extension supports* the following Asterisk servers:
 * **Active Queue Numbers** – a list of queue phone numbers which should be determined by EspoCRM.
 
 **Step 2.** Setup a cron job (scheduled task) to handle Asterisk events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right section of your Asterisk settings. For linux-based OS, it looks like:
-**\* \* \* \* \* /usr/bin/php -f /var/www/espocrm/voip.php Asterisk > /dev/null 2>&1**
+- `* * * * * cd /var/www/html/espocrm; /usr/bin/php -f php command.php voip Asterisk > /dev/null 2>&1` for VoIP Integration extension 1.15.0+
+- `* * * * * cd /var/www/html/espocrm; /usr/bin/php -f php voip.php Asterisk > /dev/null 2>&1` for VoIP Integration extension 1.14.2 and lower.
 
 ## How to setup Asterisk Integration for users
 
