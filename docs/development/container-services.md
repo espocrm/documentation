@@ -72,7 +72,7 @@ For creation of [service](services.md) instances .
 
 Class: `Espo\Core\Select\SelectManagerFactory`
 
-For creation of [select manager](select-managers.md) instances.
+For creation of [select manager](select-manager.md) instances.
 
 ## fieldUtil
 
