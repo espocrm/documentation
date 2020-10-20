@@ -104,10 +104,10 @@ Language util of a current user.
 
 Class: `Espo\Core\Utils\Language`
 
-Util for a default language of the system.
+A util for a default language of the system.
 
 ## baseLanguage
 
 Class: `Espo\Core\Utils\Language`
 
-Util for *en_US* language.
+A util for *en_US* language.
