@@ -2,12 +2,13 @@
 
 Select Manager can be utilized for generating and managing select params which subsequently will be feed to ORM.
 
-Base class: [Base.php](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Core/SelectManagers/Base.php).
+Base class: [SelectManager.php](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Core/Select/SelectManager.php).
 
 Usage example:
 
 ```php
 $selectManager = $selectManagerFactory->create('Opportunity');
+
 $params = $selectManager->getEmptySelectParams();
 
 $selectManager->applyAccess($params); // add ACL $params
