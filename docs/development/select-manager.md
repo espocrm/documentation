@@ -4,6 +4,15 @@ Select Manager can be utilized for generating and managing select params which s
 
 Base class: [SelectManager.php](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Core/Select/SelectManager.php).
 
+Note: Using of the following functions is deprecated since v6.0.0. It's better to use [ORM](orm.md) QueryBuilder instead. The list of deprecated functions:
+
+* applyOrder
+* applyLimit
+* addJoin
+* addLeftJoin
+* setDistinct
+
+
 Usage example:
 
 ```php
