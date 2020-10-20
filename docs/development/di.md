@@ -28,6 +28,8 @@ Console command that prints all available container services with their implemen
 php command.php app-info --container
 ```
 
+Most used available container services are listed [here](container-services.md).
+
 ### Defining in metadata
 
 If you need to define your custom container services, do it in metadata. In your module or in the custom folder:
@@ -222,3 +224,7 @@ The following classes are created by *injectableFactory*:
 * AppParams - defined in metadata: app > appParams
 
 And many others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
+
+## See also
+
+* [Container services](container-services.md)
