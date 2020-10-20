@@ -28,7 +28,7 @@ Console command that prints all available container services with their implemen
 php command.php app-info --container
 ```
 
-Most used available container services are listed [here](container-services.md).
+Most used container services are listed [here](container-services.md).
 
 ### Defining in metadata
 
