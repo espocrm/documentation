@@ -57,7 +57,7 @@ How it works:
 
 Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the report and take all records from the report result. Then, it will apply the action (or multiple actions) for every record.
 
-The usage example: Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day. 
+The usage example: Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day.
 
 ### Sequential
 
@@ -115,6 +115,7 @@ Note: There should not be any `;` delimiter used in formula code when it determi
 * [Run Service Action](#run-service-action)
 * [Start BPM Process](#start-BPM-process)
 * [Send HTTP Request](#send-http-request)
+* [Execute Formula Script](#execute-formula-script)
 
 ### Send Email
 
@@ -136,7 +137,7 @@ System will create the record related to the target record. It's possible to def
 
 ### Update Target Record
 
-Allows changing of specific fields of the target record. 
+Allows changing of specific fields of the target record.
 
 It's possible to define **formula** to calculate field values. You can utilize *Update Target Record* action for executing formula script without actually updating any fields.
 
@@ -232,22 +233,66 @@ Starts BPM process. You can specify which target will be used for a process.
 
 ### Send HTTP Request
 
-Provides the ability to call external API. POST and PUT requests are suppored.
+Provides the ability to call an external API.
+
+Supported request methods:
+
+* POST
+* PUT
+* PATCH
+* DELETE
+* GET
 
 Payload should be specified in JSON format (event if *Content type* is not *application/json*). It's possible to use placeholders in payload json.
 
-Additional headers can be specified. Placeholders can be used in headers.
+Additional headers can be specified.
+
+Placeholders can be used in:
+
+* Headers
+* Request URL
+* Payload
 
 Available placeholders:
 
 * *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}` (see [info](formula.md#attribute) about attributes);
 * *{$$variable}* – a value of a variable (available only in BPM process); e.g. `{$$myVariableName}`.
 
+#### Handling HTTP response
+
+Available since Advanced Pack v2.6.0.
+
+A response body of a sent HTTP request will be stored in the formula variable `_lastHttpResponseBody`. This variable can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
+
+Example: A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same workflow rule and specify a formula script:
+
+```
+$id = json\retrieve($_lastHttpResponseBody, 'id');
+entity\setAttribute('someIdField', $id);
+```
+
+Note: Within a BPM process *$_lastHttpResponseBody* variable is available only within a task that contains Send HTTP Request action. The variable won't be passed further along a process flow.
+
+### Execute Formula Script
+
+Available since Advanced Pack v2.6.0.
+
+Executes a (formula.md) script.
+
 ## Using formula in actions
 
-It's possible to define formula to calculate fields for Create Record, Update Target Record, Create Related Record, Update Related Record. For the last two, to access attributes of target entity, you should use function `targetEntity\attribute`. To access attributes of target entity that was set before the workflow was triggered, use function `targetEntity\attributeFetched`.
+It's possible to define formula to calculate fields in the following actions:
+
+* Execute Formula Script,
+* Create Record,
+* Update Target Record,
+* Create Related Record,
+* Update Related Record.
+
+For the last two, to access attributes of target entity, you should use function `targetEntity\attribute`. To access attributes of target entity that was set before the workflow was triggered, use function `targetEntity\attributeFetched`.
 
 Example:
+
 ```
 name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
 ```

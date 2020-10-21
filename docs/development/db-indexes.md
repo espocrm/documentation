@@ -48,15 +48,14 @@ You need to run rebuild after changes.
 You need to specify an index name in *useIndex* param.
 
 ```php
-$repository->where($whereClause)->find([
-    'useIndex' => 'myIndexNameOne',
-]);
-
+$query = $entityManager->getQueryBuilder()
+    ->select()
+    ->from($entityType)    
+    ->where($whereClause)
+    ->useIndex('myIndexNameOne')
+    ->build();
+    
+$collection = $entityManager->getRepository($entityType)
+    ->clone($query)
+    ->find();
 ```
-
-Multiple indexes:
-
-```php
-$repository->where($whereClause)->find([
-    'useIndex' => ['myIndexNameOne', 'myIndexNameTwo'],
-]);

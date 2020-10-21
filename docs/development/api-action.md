@@ -158,3 +158,79 @@ class MyController extends \Espo\Core\Controllers\Base
 ```
 
 You need to clear cache after changes.
+
+## CRUD actions
+
+```php
+<?php
+namespace Espo\Custom\Controllers;
+
+use Espo\Core\{
+    Api\Request,
+    Api\Response,
+};
+
+class MyController
+{
+    // Creates a record.
+    public function postActionCreate(Request $request, Response $response)
+    {    
+    }
+
+    // Reads a record.
+    public function getActionRead(Request $request, Response $response)
+    {    
+    }
+    
+    // Updates a record.
+    public function putActionUpdate(Request $request, Response $response)
+    {    
+    }
+    
+    // Deletes a record.
+    public function deleteActionDelete(Request $request, Response $response)
+    {    
+    }
+}
+```
+
+## New action method signature in 6.0
+
+Only two parameters: Request and Response.
+
+Example:
+
+```php
+<?php
+namespace Espo\Custom\Controllers;
+
+use Espo\Core\{
+    Api\Request,
+    Api\Response,
+};
+
+use SomeDependency;
+
+class MyController
+{
+    protected $someDependency;
+
+    public function __construct(SomeDependency $someDependency)
+    {
+        $this->someDependency = $someDependency;
+    }
+
+    public function putActionUpdate(Request $request, Response $response)
+    {
+        $id = $request->getRouteParam('id');
+        $data = $request->getParsedBody();
+
+        $this->someDependency->doSomething($id, $data);
+
+        return $someData;
+    }   
+}
+```
+
+The previous signature is supported as well.
+

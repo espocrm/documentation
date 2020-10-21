@@ -1,6 +1,6 @@
 # ORM, How to manage entities and perform queries
 
-EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object. 
+EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object.
 
 **EntityManager** is available in [*Container*](di.md). It can be obtained in [record services](services.md#record-service) by method `#getEntityManager()`. It provides an access to repositories.
 
@@ -189,7 +189,7 @@ Attribute types:
 ```php
 $relationList = $entity->getRelationList();
 
-$type = $entity->getRelationType('relationName'); 
+$type = $entity->getRelationType('relationName');
 
 $paramValue = $entity->getRelationParam('relationName', 'paramName')
 ```

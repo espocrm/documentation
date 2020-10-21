@@ -90,7 +90,7 @@ Rate values are related to *Base Currency* specified in Settings.
 
 If a currency that you need is missing, you can add it manaully.
 
-Create a file: `custom/Espo/Resources/metadata/app/currency.json`
+Create a file: `custom/Espo/Custom/Resources/metadata/app/currency.json`
 
 ```json
 {

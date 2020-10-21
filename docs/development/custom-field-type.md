@@ -47,3 +47,7 @@ The label is used in Entity Manager can be set in `custom/Espo/Custom/Resources/
 If you need to add translation to other language, use needed language [language code](https://en.wikipedia.org/wiki/ISO_639-1)_[country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) instead of `en_US`. In `data/config.php` in section `languageList` you can find the list of included languages.
 
 Then you need to clear cache at the administration panel.
+
+### Backend validator
+
+You can define a validator class in a field metadata file in `validatorClassName` parameter. See the [barcode field](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Resources/metadata/fields/barcode.json) as an expamle.

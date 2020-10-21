@@ -4,7 +4,7 @@ Available since version 5.8.0.
 
 For PDF templates and system email templates.
 
-Create a file `custom/Espo/Resources/metadata/app/templateHelpers.json`:
+Create a file `custom/Espo/Custom/Resources/metadata/app/templateHelpers.json`:
 
 ```json
 {
@@ -18,6 +18,8 @@ Create a file `custom/Espo/Custom/TemplateHelpers/MyHelper.php`:
 <?php
 
 namespace Espo\Custom\TemplateHelpers;
+
+use LightnCandy\LightnCandy as LightnCandy;
 
 class MyHelper
 {

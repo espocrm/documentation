@@ -2,6 +2,7 @@
 
 * [How to get started](how-to-start.md)
 * [Making extension package](extension-packages.md)
+* [Modules](modules.md)
 * [Tests](tests.md)
 * [Translation](translation.md)
 * [Coding rules](coding-rules.md)
@@ -9,14 +10,14 @@
 ### Backend
 
 * [API](api.md)
+* [Dependency injection](di.md)
+* [ORM](orm.md)
+* [Metadata](metadata.md)
 * [Custom API action](api-action.md)
 * [Services](services.md)
-* [ORM: How to manage entities](orm.md)
-* [Metadata](metadata.md)
 * [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
 * [ACL](acl.md)
-* [Dependency injection](di.md)
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
   * [Defining new funtions for formula](new-function-in-formula.md)
@@ -46,4 +47,4 @@
   * [Link-multiple field with primary record](link-multiple-with-primary.md)
 * Campaigns
   * [Custom unsubscribe page](campaign-unsubscribe-template.md)
-  
+

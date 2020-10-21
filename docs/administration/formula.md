@@ -27,6 +27,8 @@ In this article:
   * [Env](#env)
   * [Password](#password)
   * [Array](#array)
+  * [Language](#language)
+  * [Json](#json)
   * [Ext](#ext)
 * [Values](#values)
 * [Variables](#variables)
@@ -841,6 +843,53 @@ Returns the number of elements in LIST.
 
 Returns a value by INDEX. (since version 5.8.3)
 
+### Language
+
+#### language\translate
+
+`language\translate(LABEL, [CATEGORY, SCOPE])`
+
+Translates a label to the language set as default.
+
+Example:
+
+`language\translate('passwordWillBeSent', 'messages', 'User')`
+
+Available since v6.0.0.
+
+#### language\translateOption
+
+`language\translateOption(OPTION, FIELD, [SCOPE])`
+
+Translates an option of a specific field to the language set as default. The field can be of the following types: Enum, Multi-enum, Checklist, Array, Varchar.
+
+Example:
+
+`language\translateOption('Customer', 'type', 'Account')`
+
+Available since v6.0.0.
+
+### Json
+
+#### json\retrieve
+
+`json\retrieve(JSON, PATH)`
+
+Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots.
+
+Example, retrieving *id* from `{"id": "SOME_ID"}`:
+
+```
+$value = json\retrieve($someJsonString, 'id');`
+```
+
+Example, retrieving *id* from `[{"id": "SOME_ID"}]`:
+```
+$value = json\retrieve($someJsonString, '0.id');`
+```
+
+Available since v6.0.0.
+
 ### Ext
 
 * [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
@@ -872,7 +921,7 @@ $id = record\create(
     'subject', 'Test from formula',
     'body', 'Hi,\n\nThis is a test.',
     'isHtml', false,
-    'status', 'Sending',
+    'status', 'Sending'
 );
 ext\email\send($id);
 ```
