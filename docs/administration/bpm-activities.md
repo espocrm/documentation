@@ -92,11 +92,8 @@ Calls external API (since version 2.4.0).
 Executes a specific formula script.
 
 
-<<<<<<< HEAD
-=======
 ### Formula usage
 
->>>>>>> master
 When using formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`.
 
 Example:
