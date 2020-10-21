@@ -92,7 +92,7 @@ class HelloTest
             throw new BadRequest();
         }
 
-        $em = $this->entityManager');
+        $em = $this->entityManager;
         $acl = $this->'acl;
 
         $opportunity = $em->getEntity('Opportunity', $data->id);
