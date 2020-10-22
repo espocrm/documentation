@@ -18,6 +18,10 @@ Obtaining the entity manager in the record service:
 $entityManager = $this->getEntityManager();
 ```
 
+## See Also
+
+* [Complex expressions](../user-guide/complex-expressions.md)
+
 ### Create new entity
 
 ```php
