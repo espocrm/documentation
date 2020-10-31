@@ -16,6 +16,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 * [Auth](#auth)
 * [Jobs & Daemon](#jobs-daemon)
 * [Mass Email](#mass-email)
+* [Kanban](#kanban)
 
 ### General
 
@@ -109,3 +110,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 
 * massEmailMaxAttemptCount – `3` – how many attempts to send an email will be made (can be helpful when SMTP server is gone away);
 * massEmailSiteUrl – to override the default site url (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking urls; you will need to configure your server to handle requests to the specified URL);
+
+### Kanban
+
+*kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; since v6.1.0;
