@@ -113,4 +113,4 @@ This is not a full list of params. Most of params available in admin UI are not 
 
 ### Kanban
 
-*kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; since v6.1.0;
+* kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; since v6.1.0;
