@@ -244,6 +244,8 @@ CLI command to print all bindings:
 php command.php app-info --binding
 ```
 
+Default binding is processed in `Espo\Core\Binding\DefaultBinding`.
+
 ### Example
 
 File `application/Espo/Modules/MyModule/Binding.php`:
