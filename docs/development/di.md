@@ -225,6 +225,70 @@ The following classes are created by *injectableFactory*:
 
 And many others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
 
+## Binding
+
+Available as of v6.1.0.
+
+There is the ability to bind interfaces to implementations and bind parameter names to specific values. Binding is used for resolving dependencies passed through a constructor.
+
+Binding can be processed in the `Binding` classes in every module and in *Custom* namespace:
+
+* `Espo\Modules\{ModuleName}\Binding`
+* `Espo\Custom\Binding`
+
+Note: A module order parameter is used when binding is processed. Meaning that modules with a lower order value will be processed first.
+
+CLI command to print all bindings:
+
+```
+php command.php app-info --binding
+```
+
+### Example
+
+File `application/Espo/Modules/MyModule/Binding.php`:
+
+```php
+<?php
+namespace Espo\Modules\MyModule;
+
+use Espo\Core\Binding\Binder;
+
+class Binding
+{
+    public function process(Binder $binder)
+    {
+        $binder
+            ->bindService('Espo\\SomeServiceName', 'someServiceName')
+            ->bindImplementation('Espo\\SomeInterface', 'Espo\\SomeImplementation');
+
+        $binder
+            ->bindService('Espo\\SomeServiceName $name', 'anotherServiceName');
+       
+        $binder
+            ->for('Espo\\SomeClass')
+            ->bindImplementation('Espo\\SomeInterface', 'Espo\\SomeImplementation')
+            ->bindValue('$paramName', 'Some Value')
+            ->bindCallback(
+                 '$anotherParamName', 
+                 // callback arguments are resolved automatically
+                 function (SomeDependency $dependency) {                     
+                     return $dependency->getSomething();
+                 }
+             );
+    }
+}
+```
+
+Explanation:
+* If any class requires `Espo\SomeServiceName`, give the container service `someServiceName`.
+* If any class requires `Espo\SomeInterface`, give an instance of `Espo\SomeImplementation`.
+* If any class requires `Espo\SomeServiceName ` and a parameter name is `$name`, then give `anotherServiceName` service.
+* When `Espo\SomeClass` requires `Espo\SomeInterface`, give an instance of `Espo\SomeImplementation`.
+* When `Espo\SomeClass` is instantiated, pass the value 'Same Value' for the parameter `$paramName`.
+* When `Espo\SomeClass` is instantiated, use the callback to resolve a value of the parameter `$anotherParamName`.
+
+
 ## See also
 
 * [Container services](container-services.md)
