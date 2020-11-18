@@ -18,8 +18,8 @@ There are two ways in which you can set up Twillio integration:
 ![Twilio integration config](../../_static/images/extensions/voip-integration/twilio-admin-setup.png)
 
 * **Name** – name of your connection.
-* **Your Account SID** – your Twilio account SID. You can get it at https://www.twilio.com/user/account.
-* **Your Auth Token** – your Twilio Auth Token. You can get it at https://www.twilio.com/user/account.
+* **Your Account SID** – your Twilio account SID. You can get it at https://www.twilio.com/console.
+* **Your Auth Token** – your Twilio Auth Token. You can get it at https://www.twilio.com/console.
 * **Record Calls** – an option to enable/disable recording of incoming/outgoing calls.
 * **Dial Timeout** – the number of seconds that Twilio will allow the phone to ring before assuming there is no answer.
 * **Agent Ringing Timeout** – the waiting limit in seconds to answer the call by the agent, e.g. for an incoming call each agent will get a ringing duration of 20 seconds.
