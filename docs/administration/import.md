@@ -79,7 +79,7 @@ When you import Contacts, Leads or Accounts, you can add them to some target lis
 
 ## Console commands
 
-Since version 5.10.0.
+Since version 6.0.0.
 
 Run import:
 
