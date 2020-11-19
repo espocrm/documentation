@@ -277,7 +277,7 @@ Note: Within a BPM process *$_lastHttpResponseBody* variable is available only w
 
 Available since Advanced Pack v2.6.0.
 
-Executes a (formula.md) script.
+Executes a [formula](formula.md) script.
 
 ## Using formula in actions
 
