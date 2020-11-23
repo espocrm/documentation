@@ -59,5 +59,7 @@ cd C:\xampp\htdocs\espo\ && C:\xampp\php\php.exe -f command.php voip Asterisk
 
 *Batch file commands explenation:*
 - `@ECHO OFF` - disable command prompt;
-- `cd C:\xampp\htdocs\espo\` - path to the EspoCRM directory;
-- `C:\xampp\php\php.exe` - path to the PHP run file.
+- `cd C:\xampp\htdocs\espo\` - switch to the EspoCRM root directory;
+- `C:\xampp\php\php.exe` - run PHP CLI from the `C:\xampp\php\` directory.
+
+**Note.** The example above provided for the XAMPP environment. Path to the EspoCRM instance and PHP execution file may be different in the other environments.
