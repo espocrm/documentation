@@ -5,6 +5,7 @@ In this article:
 * [How to report](#how-to-report)
 * [VoIP error debug](#voip-error-debug)
 * [Asterisk: The popup window is not displayed](#asterisk-the-popup-window-is-not-displayed)
+* [Configure Starface/Asterisk CRON on Windows](#configure-cron-on-windows)
 
 ## How to report
 
@@ -39,3 +40,18 @@ To be able to make / receive calls with the popup window, please follow these st
 4. Run your SIP client.
 
 Now, you can make calls from SIP client or from EspoCRM.
+
+## Configure Starface/Asterisk CRON on Windows
+
+1. Create a Batch file (e.g. starface.bat, asterisk.bat, etc.). This file should include this code:
+**For Starface:**
+```
+@ECHO OFF
+cd C:\xampp\htdocs\espo\ && C:\xampp\php\php.exe -f command.php voip Starface
+```
+**For Asterisk**:
+```
+@ECHO OFF
+cd C:\xampp\htdocs\espo\ && C:\xampp\php\php.exe -f command.php voip Asterisk
+```
+2. Add this Batch file to a Windows Task Scheduler. Set schedule to execute script every minute.
