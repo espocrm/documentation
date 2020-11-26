@@ -40,6 +40,7 @@ class MyHelper
         $entityManager = $data['__entityManager'];
         $serviceFactory = $data['__serviceFactory'];
         $config = $data['__config'];
+        $injectableFactory = $data['__injectableFactory'];
 
         $entityType = $data['__entityType'];
 
