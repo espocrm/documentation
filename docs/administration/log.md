@@ -10,7 +10,7 @@ Actual as of v6.1.
 
 EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
 The library is shipped with the set of handlers.
-There is the ability to specify which handlers should be used in Espo.
+There is the ability to specify which handlers to use in Espo.
 
 In config:
 
