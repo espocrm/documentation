@@ -18,7 +18,7 @@ To find out the problem, you have to check error log files.
 
 #### EspoCRM error logs
 
-Espo logs are located at `{ESPO_ROOT}/data/logs/` directory. Most of errors are logger there.
+Espo logs are located in `{ESPO_ROOT}/data/logs/` directory. Most of errors are logger there.
 
 #### Apache error logs
 
