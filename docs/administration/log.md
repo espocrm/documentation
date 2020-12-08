@@ -10,7 +10,7 @@ In `data/config.php`:
 
 ```
   'logger' => [
-    'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR,
+    'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR
     'maxFileNumber' => 30,
   ],
 ```
