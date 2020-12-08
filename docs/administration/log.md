@@ -4,6 +4,17 @@
 
 By default log files are created in `{ESPO_ROOT}/data/logs/` directory.
 
+## Parameters
+
+In `data/config.php`:
+
+```
+  'logger' => [
+    'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR,
+    'maxFileNumber' => 30,
+  ],
+```
+
 ## Handlers
 
 Actual as of v6.1.
@@ -12,7 +23,7 @@ EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
 The library is shipped with the set of handlers.
 There is the ability to specify which handlers to use in Espo.
 
-In config:
+In `data/config.php`:
 
 ```
   'logger' => [
