@@ -42,8 +42,9 @@ In config:
   ],
 ```
 
-A loader class can be used for instantiating a handler class. 
-This allows to initialize constructor parameters for a handler.
+It's possible to specify either a handler class name or loader class name.
+A loader class instantiates a handler class. 
+This allows to initialize constructor parameters for a handler. It can be helpful if you need to pass some object to the handler constructor.
 It's possible to pass dependencies to a loader class.
 
 Note: By specifying `handlerList` in the config, the default handler stops from being used.
