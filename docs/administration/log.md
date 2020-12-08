@@ -1,0 +1,47 @@
+# Log
+
+## Default Espo log
+
+By default log files are created in `{ESPO_ROOT}/data/logs/` directory.
+
+## Handlers
+
+Actual as of v6.1.
+
+EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
+The library is shipped with the set of handlers.
+There is the ability to specify which handlers should be used in Espo.
+
+In config:
+
+```
+  'logger' => [
+    'level' => 'NOTICE',
+    'handlerList' => [
+      [
+        'className' => 'Espo\\Core\\Log\\Handler\\EspoRotatingFileHandler',
+        'params' => [
+          'filename' => 'data/logs/espo.log',
+        ],
+        'level' => 'NOTICE',
+        'formatter' => [
+          'className' => 'Monolog\\Formatter\\LineFormatter',
+          'params' => [
+            'dateFormat' => 'Y-m-d H:i:s',
+          ],
+        ],
+      ],
+      [
+        'loaderClassName' => 'Espo\\Core\\Log\\EspoRotatingFileHandlerLoader',
+        'params' => [
+          'filename' => 'data/logs/test-warning.log',
+        ],
+        'level' => 'WARNING',
+      ],
+    ],
+  ],
+```
+
+A loader class can be used for instantiating a handler class. 
+This allows to initialize constructor parameters for a handler.
+It's possible to pass dependencies to a loader class.
