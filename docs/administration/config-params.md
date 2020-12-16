@@ -124,4 +124,4 @@ This is not a full list of params. Most of params available in admin UI are not 
 
 ### PDF
 
-* pdfEngine – `Tcpdf` – which PDF engine to use; since v6.1.0.
+* pdfEngine – `Tcpdf` – what PDF engine to use; since v6.1.0.
