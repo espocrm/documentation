@@ -18,6 +18,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 * [Mass Email](#mass-email)
 * [Kanban](#kanban)
 * [Text search](#text-search)
+* [PDF](#pdf)
 
 ### General
 
@@ -119,3 +120,8 @@ This is not a full list of params. Most of params available in admin UI are not 
 ### Text search
 
 * textFilterContainsMinLength  – `4` – actual if *Use 'contains' operator when filtering varchar fields* parameter is enabled;
+
+
+### PDF
+
+* pdfEngine – `Tcpdf` – which PDF engine to use; since v6.1.0.
