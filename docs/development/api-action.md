@@ -42,7 +42,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 }
 ```
 
-Note: For Account entity type we extend `\Espo\Modules\Crm\Controllers\Account`. Some entity types might not have controllers in `\Espo\Modules\Crm\Controllers` namespace. They are defined in `\Espo\Controllers` namespace.
+Note: For Account entity type we extend `Espo\Modules\Crm\Controllers\Account`. Some entity types might not have controllers in `Espo\Modules\Crm\Controllers` namespace. They are defined in `Espo\Controllers` namespace.
 
 ## Custom controller
 
@@ -82,7 +82,7 @@ namespace Espo\Modules\MyModule\Controllers;
 
 class MyController
 {
-
+    // Dependencies are passed to the constructor.
 }
 ```
 
@@ -182,6 +182,7 @@ You need to clear cache after changes.
 
 ```php
 <?php
+
 namespace Espo\Custom\Controllers;
 
 use Espo\Core\{
@@ -222,6 +223,7 @@ Example:
 
 ```php
 <?php
+
 namespace Espo\Custom\Controllers;
 
 use Espo\Core\{
