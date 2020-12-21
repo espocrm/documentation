@@ -13,7 +13,7 @@ This will build an inctance for integration tests and install phpunit (from requ
 Command to run:
 
 ```
-vendor/bin/phpunit --bootstrap=./vendor/autoload.php tests/unit
+vendor/bin/phpunit tests/unit
 ```
 
 ## Integration tests
@@ -41,5 +41,5 @@ This config will be used for test instances that are built for each test.
 
 Command to run:
 ```
-vendor/bin/phpunit --bootstrap=./vendor/autoload.php tests/integration
+vendor/bin/phpunit tests/integration
 ```
