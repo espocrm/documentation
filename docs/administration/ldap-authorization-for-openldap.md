@@ -20,4 +20,4 @@ User Email Address Attribute: mail
 User Phone Number Attribute: telephoneNumber
 ```
 
-![1](../docs/_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)

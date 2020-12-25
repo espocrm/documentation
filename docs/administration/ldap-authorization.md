@@ -15,21 +15,21 @@ Now, we can add LDAP user to access EspoCRM. E.g. Espo Tester with the username 
 
 Then, go to EspoCRM Authentication settings in the Administrator panel select the `LDAP` method and fill in the LDAP details:
 
-![1](../docs/_static/images/administration/ldap-authorization/ldap-configuration.png)
+![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
 
 * Host – LDAP IP or host name.
 * Port – connection port.
 * Auth – access credentials for the LDAP server:
-    * Full User DN – the full system user DN which allows to search other users.
+* Full User DN – the full system user DN which allows to search other users.
     * Password – the password to access the LDAP server.
-* Security – SSL or TSL protocol.
+    * Security – SSL or TSL protocol.
 * Username Attribute – The attribute to identify the user.
 E.g. for Active Directory: "userPrincipalName" or "sAMAccountName",for OpenLDAP: "uid" .
 * Account Canonical Form – the type of your account canonical form. There are 4 options:
-    * Dn – the form in the format `CN=tester,CN=Espocrm,DC=company,DC=com`.
-    * Username – the form `tester`.
-    * Backslash – the form `COMPANY\tester`.
-    * Principal – the form `tester@company.com`.
+    * `Dn` – the form in the format `CN=tester,CN=Espocrm,DC=company,DC=com`.
+    * `Username` – the form `tester`.
+    * `Backslash` – the form `COMPANY\tester`.
+    * `Principal` – the form `tester@company.com`.
 * User ObjectClass – ObjectClass attribute for searching users. E.g. for Active Directory: "person", for OpenLDAP: "inetOrgPerson".
 * Bind Requires Dn – if there is a need to format the username in the DN form.
 * Base Dn – the default base DN which is used for searching users.
@@ -52,7 +52,7 @@ E.g. for Active Directory: "userPrincipalName" or "sAMAccountName",for OpenLDAP:
 
 Now, go to the login page and enter user credentials.
 
-![2](../docs/_static/images/administration/ldap-authorization/ldap-login.png)
+![2](../_static/images/administration/ldap-authorization/ldap-login.png)
 
 User has been authenticated and automatically created in the EspoCRM.
 
