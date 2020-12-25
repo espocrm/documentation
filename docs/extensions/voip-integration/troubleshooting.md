@@ -56,8 +56,3 @@ cd C:\xampp\htdocs\espo\ && C:\xampp\php\php.exe -f command.php voip Starface
 cd C:\xampp\htdocs\espo\ && C:\xampp\php\php.exe -f command.php voip Asterisk
 ```
 2. Add this Batch file to a Windows Task Scheduler. Set schedule to execute script every minute.
-
-*Batch file commands explenation:*
-- `@ECHO OFF` - disable command prompt;
-- `cd C:\xampp\htdocs\espo\` - path to the EspoCRM directory;
-- `C:\xampp\php\php.exe` - path to the PHP run file.
