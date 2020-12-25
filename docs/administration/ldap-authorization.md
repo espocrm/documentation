@@ -13,7 +13,7 @@ cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 ```
 Now, we can add LDAP user to access EspoCRM. E.g. Espo Tester with the username “tester” inside the “cn=espo-users,ou=users,dc=espo,dc=local” DN. Please note: to be able to use this login format for EspoCRM, you have to specify the “Username Attribute” and “Base DN” options.
 
-Then, go to EspoCRM Authentication settings in the Administrator panel select the `LDAP` method and fill in the LDAP details:
+Then, go to EspoCRM Authentication settings in the Administrator panel, select the `LDAP` method and fill in the LDAP details:
 
 ![1](../_static/images/administration/ldap-authorization/ldap-configuration.png)
 
