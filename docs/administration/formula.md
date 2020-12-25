@@ -928,7 +928,7 @@ ext\email\send($id);
 
 #### ext\email\applyTemplate
 
-`ext\email\send(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
+`ext\email\applyTemplate(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
 
 Applies an email template to an existng email record. Parent record can be passed optionally. (Available since version 5.9.0)
 

@@ -1,5 +1,11 @@
 # Container Services
 
+Console command that prints all available container services with their implementing classes:
+
+```
+php command.php app-info --container
+```
+
 Most often used services are listed below.
 
 ## entityManager

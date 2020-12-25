@@ -42,7 +42,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 }
 ```
 
-Note: For Account entity type we extend `\Espo\Modules\Crm\Controllers\Account`. Some entity types might not have controllers in `\Espo\Modules\Crm\Controllers` namespace. They are defined in `\Espo\Controllers` namespace.
+Note: For Account entity type we extend `Espo\Modules\Crm\Controllers\Account`. Some entity types might not have controllers in `Espo\Modules\Crm\Controllers` namespace. They are defined in `Espo\Controllers` namespace.
 
 ## Custom controller
 
@@ -55,7 +55,7 @@ Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
 
 namespace Espo\Custom\Controllers;
 
-class MyController extends \Espo\Core\Controllers\Base
+class MyController
 {
 
 }
@@ -80,9 +80,9 @@ Create a file `custom/Espo/Modules/MyModule/Controllers/MyController.php`.
 
 namespace Espo\Modules\MyModule\Controllers;
 
-class MyController extends \Espo\Core\Controllers\Base
+class MyController
 {
-
+    // Dependencies are passed to the constructor.
 }
 ```
 
@@ -122,9 +122,20 @@ Custom routes can be defined in following places:
             "action": "helloWorld",
             "name": ":name"
         }
+    },
+    {
+        "route": "/TestNoAuth",
+        "method": "get",
+        "params": {
+            "controller": "Test",
+            "action": "test"
+        },
+        "noAuth": true
     }
 ]
 ```
+
+The parameter `noAuth` allows making requests w/o authentication.
 
 Controller:
 
@@ -133,26 +144,34 @@ Controller:
 
 namespace Espo\Custom\Controllers;
 
-class MyController extends \Espo\Core\Controllers\Base
+use Espo\Core\{
+    Api\Request,
+    Api\Response,
+};
+
+class MyController
 {
-    /**
-     *  GET api/v1/Hello/test/001
-     */
-    public function getActionDoSomething($params, $data, $request)
+    protected $someDependency;
+
+    public function __construct(SomeDependency $someDependency)
     {
-        $id = $params['id']; // '001'
-        
-        // ...
+        $this->someDependency = $someDependency;
     }
     
-    /**
-     *  POST api/v1/HelloWorld/someName
-     */
-    public function postActionHelloWrold($params, $data, $request)
+    public function getActionDoSomething(Request $request, Response $response)
     {
-        $name = $params['name']; // 'someName'
+        $id = $request->getRouteParam('id'); // '001'
         
-        // ...
+        // Assuming the request POST api/v1/HelloWorld/someName has been sent,
+        // a route parameter 'id' will equal '001'.
+    }
+    
+    public function postActionHelloWrold(Request $request, Response $response)
+    {
+        $name = $request->getRouteParam('name'); 
+         
+        // Assuming the request GET api/v1/Hello/test/001 has been sent,
+        // a route parameter 'name' will equal 'someName'.
     }
 }
 ```
@@ -163,6 +182,7 @@ You need to clear cache after changes.
 
 ```php
 <?php
+
 namespace Espo\Custom\Controllers;
 
 use Espo\Core\{
@@ -172,6 +192,7 @@ use Espo\Core\{
 
 class MyController
 {
+   
     // Creates a record.
     public function postActionCreate(Request $request, Response $response)
     {    
@@ -202,6 +223,7 @@ Example:
 
 ```php
 <?php
+
 namespace Espo\Custom\Controllers;
 
 use Espo\Core\{

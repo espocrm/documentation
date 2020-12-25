@@ -18,6 +18,7 @@
   * [Backup and restore](administration/backup-and-restore.md)
   * [Moving to another server](administration/moving-to-another-server.md)
   * [Config parameters](administration/config-params.md)
+  * [Log](administration/log.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](administration/entity-manager.md)
   * [Fields](administration/fields.md)

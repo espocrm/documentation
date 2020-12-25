@@ -17,6 +17,8 @@ This is not a full list of params. Most of params available in admin UI are not 
 * [Jobs & Daemon](#jobs-daemon)
 * [Mass Email](#mass-email)
 * [Kanban](#kanban)
+* [Text search](#text-search)
+* [PDF](#pdf)
 
 ### General
 
@@ -114,3 +116,12 @@ This is not a full list of params. Most of params available in admin UI are not 
 ### Kanban
 
 * kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; since v6.1.0;
+
+### Text search
+
+* textFilterContainsMinLength  – `4` – actual if *Use 'contains' operator when filtering varchar fields* parameter is enabled;
+
+
+### PDF
+
+* pdfEngine – `Tcpdf` – what PDF engine to use; since v6.1.0.
