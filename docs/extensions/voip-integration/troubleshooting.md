@@ -5,7 +5,7 @@ In this article:
 * [How to report](#how-to-report)
 * [VoIP error debug](#voip-error-debug)
 * [Asterisk: The popup window is not displayed](#asterisk-the-popup-window-is-not-displayed)
-* [Configure Starface/Asterisk CRON on Windows](#configure-starfaceasterisk-cron-on-windows)
+* [Configure Starface/Asterisk CRON on Windows](#configure-cron-on-windows)
 
 ## How to report
 
@@ -43,8 +43,7 @@ Now, you can make calls from SIP client or from EspoCRM.
 
 ## Configure Starface/Asterisk CRON on Windows
 
-1. Create a Batch file (e.g. starface.bat, asterisk.bat, etc.). Add this commands to the file:
-
+1. Create a Batch file (e.g. starface.bat, asterisk.bat, etc.). This file should include this code:
 **For Starface:**
 ```
 @ECHO OFF
