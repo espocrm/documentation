@@ -1,6 +1,6 @@
 # Tracking URLs with BPM
 
-*Available since since Advanced Pack 2.4.6 and EspoCRM 5.7.12.*
+*Available as of Advanced Pack 2.4.6 and EspoCRM 5.7.12.*
 
 It's possible to add links into email body and catch when the recipient clicked on it. It provides the ability to automate an interraction with customers.
 
