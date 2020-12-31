@@ -155,12 +155,11 @@ Example:
 Printing tables:
 
 ```
-{{tableTag}}
+{{#tableTag}}
   {{#each contacts}}
-      {{trTag}}
-          {{tdTag}}{{name}}{{/tdTag}}
-          {{tdTag}}{{amount}}{{/tdTag}}
-        </tr>
+      {{#trTag}}
+          {{#tdTag}}{{name}}{{/tdTag}}
+          {{#tdTag}}{{amount}}{{/tdTag}}
       {{/trTag}}
   {{/each}}
 {{/tableTag}}
