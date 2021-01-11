@@ -61,3 +61,5 @@ This allows to initialize constructor parameters for a handler. It can be helpfu
 A loader class must implement `Espo\Core\Log\HandlerLoader` interface. It's possible to pass dependencies (via DI mechanism) to a loader class.
 
 Note: By specifying `handlerList` in the config, the default handler stops from being used.
+
+You can find the list of handlers supported by Monolog [here](https://github.com/Seldaek/monolog/tree/main/src/Monolog/Handler).
