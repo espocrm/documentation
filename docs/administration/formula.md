@@ -256,7 +256,7 @@ Replaces all occurrences of SEARCH with REPLACE in STRING. (available since vers
 
 Example:
 
-`string\replace('Hello {test}, '{test}, 'world)`
+`string\replace('Hello {test}', '{test}', 'world')`
 
 will return `'Hello world'`.
 
