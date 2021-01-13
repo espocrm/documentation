@@ -235,6 +235,10 @@ Returns a date part of a date-time value. Available since v6.0.0.
 
 Concatenate. E.g. `CONCAT:(firstName, ' ', lastName)`.
 
+#### LEFT
+
+Returns a specified number of characters from the left of the string. E.g. `LEFT:(someTextColumn, 1000)`. As of v6.1.0.
+
 #### LOWER
 
 Convert to lower case.
