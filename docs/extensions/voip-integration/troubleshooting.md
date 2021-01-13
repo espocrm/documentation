@@ -29,15 +29,12 @@ In this article:
 
 ## Asterisk: The popup window is not displayed
 
-To be able to make / receive calls with the popup window, please follow these steps:
+To be able to make / receive calls with the popup window, please check these items:
 
-1. Configure Asterisk [server](https://www.espocrm.com/features/asterisk-integration-setup/#setup).
-
-2. Setup a connector [cron job](https://www.espocrm.com/features/asterisk-integration-setup/#cron).
-
-3. Configure [user internal number](https://www.espocrm.com/features/asterisk-integration-setup/#user-setup). In some cases, Asterisk server doesn't provide internal number, but you can add other user numbers in his [profile](https://www.espocrm.com/features/asterisk-integration-setup/#additional-phone-numbers).
-
-4. Run your SIP client.
+1. If Asterisk server is properly [configured](asterisk-integration-setup.md#step-1).
+2. If cron job is [configured](asterisk-integration-setup.md#step-2).
+3. If internal users are [configured](asterisk-integration-setup.md#how-to-setup-asterisk-integration-for-users). In some cases, Asterisk server doesn't provide internal number, but you can add other user numbers in his [profile](asterisk-integration-setup.md#additional-phone-numbers-for-users).
+4. If your SIP client are running.
 
 Now, you can make calls from SIP client or from EspoCRM.
 
@@ -46,11 +43,8 @@ Now, you can make calls from SIP client or from EspoCRM.
 Check the following items to find the cause of the issue:
 
 1. If Starface integration is properly [configured](starface-integration-setup.md#step-1).
-
 2. If cron job is [configured](starface-integration-setup.md#step-2).
-
 3. If internal users are [configured](starface-integration-setup.md#how-to-setup-starface-integration-for-users).
-
-4. If your EspoCRM instance is available for the Starface server. This is required, because Starface server should send notifications about call events to EspoCRM.
-
-5. If your `Site URL` (Administration > Settings) corresponds to the real one.
+4. If your SIP client are running.
+5. If your EspoCRM server is available for the Starface server. This is required, because Starface server should send notifications about call events to EspoCRM server.
+6. If your `Site URL` (Administration > Settings) corresponds to the real one.
