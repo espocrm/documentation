@@ -300,14 +300,14 @@ Since v6.0:
 ```php
 $opportunityCollection = $entityManager
     ->getRepository('Account')
-    ->getRelation($acocunt, 'opportunities')
+    ->getRelation($account, 'opportunities')
     ->limit(0, 10)
     ->where($whereClause)
     ->find();
 
 $opportunity = $entityManager
     ->getRepository('Account')
-    ->getRelation($acocunt, 'opportunities')
+    ->getRelation($account, 'opportunities')
     ->order('createdAt', 'DESC')
     ->findOne();
 ```
