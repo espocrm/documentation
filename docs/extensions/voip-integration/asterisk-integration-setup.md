@@ -20,7 +20,8 @@ VoIP Integration extension supports* the following Asterisk servers:
 
 ## How to setup Asterisk Integration for an administrator
 
-**Step 1.** Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) -> VoIP » Asterisk AMI.
+#### Step 1:
+Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) > VoIP » Asterisk AMI.
 
 ![Asterisk integration config](../../_static/images/extensions/voip-integration/asterisk-admin-setup.png)
 
@@ -50,7 +51,8 @@ VoIP Integration extension supports* the following Asterisk servers:
 * **Quick Create Entities** – entities which can be created through the call popup window.
 * **Active Queue Numbers** – a list of queue phone numbers which should be determined by EspoCRM.
 
-**Step 2.** Setup a cron job (scheduled task) to handle Asterisk events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right section of your Asterisk settings. For linux-based OS, it looks like:
+#### Step 2:
+Setup a cron job (scheduled task) to handle Asterisk events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right section of your Asterisk settings. For linux-based OS, it looks like:
 
 ```
 * * * * * cd /var/www/html/espocrm; /usr/bin/php -f command.php voip Asterisk > /dev/null 2>&1
