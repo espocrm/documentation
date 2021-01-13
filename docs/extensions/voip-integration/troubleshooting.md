@@ -5,6 +5,7 @@ In this article:
 * [How to report](#how-to-report)
 * [VoIP error debug](#voip-error-debug)
 * [Asterisk: The popup window is not displayed](#asterisk-the-popup-window-is-not-displayed)
+* [Starface: The popup window is not displayed](#starface-the-popup-window-is-not-displayed)
 
 ## How to report
 
@@ -39,3 +40,17 @@ To be able to make / receive calls with the popup window, please follow these st
 4. Run your SIP client.
 
 Now, you can make calls from SIP client or from EspoCRM.
+
+## Starface: The popup window is not displayed
+
+Check the following items to find the cause of the issue:
+
+1. If Starface integration is properly [configured](starface-integration-setup.md#step-1).
+
+2. If cron job is [configured](starface-integration-setup.md#step-2).
+
+3. If internal users are [configured](starface-integration-setup.md#how-to-setup-starface-integration-for-users).
+
+4. If your EspoCRM instance is available for the Starface server. This is required, because Starface server should send notifications about call events to EspoCRM.
+
+5. If your `Site URL` (Administration > Settings) corresponds to the real one.
