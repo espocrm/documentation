@@ -17,7 +17,9 @@ VoIP Integration extension supports* the following Starface servers:
 
 ## How to setup Starface Integration for an administrator
 
-1. Fill in the connection details of your Starafce server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
+#### Step 1:
+
+Fill in the connection details of your Starafce server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
 
 ![Starface integration config](../../_static/images/extensions/voip-integration/starface-admin-setup.png)
 
@@ -36,11 +38,13 @@ VoIP Integration extension supports* the following Starface servers:
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
 
-2. Setup a cron job (scheduled task) to handle Starface Events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right block. For linux-based OS, it is:
+#### Step 2:
 
-  ```
-  * * * * * cd /var/www/html/espocrm; /usr/bin/php -f command.php voip Starface > /dev/null 2>&1
-  ```
+Setup a cron job (scheduled task) to handle Starface Events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right block. For linux-based OS, it is:
+
+```
+* * * * * cd /var/www/html/espocrm; /usr/bin/php -f command.php voip Starface > /dev/null 2>&1
+```
 
 ## How to setup Starface Integration for users
 
