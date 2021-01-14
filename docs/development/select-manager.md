@@ -1,5 +1,7 @@
 # Select Manager
 
+Deprecated as of v6.1.0. Use Select Builder instead.
+
 Select Manager can be utilized for generating and managing select params which subsequently will be feed to ORM.
 
 Base class: [Base.php](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Core/SelectManagers/Base.php).
