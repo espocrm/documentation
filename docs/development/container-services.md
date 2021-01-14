@@ -72,9 +72,17 @@ Provides access checking functions for a current user. A wrapper for *aclManager
 
 Class: `Espo\Core\ServiceFactory`
 
-For creation of [service](services.md) instances .
+For creation of [service](services.md) instances.
+
+## selectBuilderFactory
+
+Available as of v6.1.0.
+
+Class: `Espo\Core\Select\SelectBuilderFactory`
 
 ## selectManagerFactory
+
+Deprecated as of v6.1.0.
 
 Class: `Espo\Core\Select\SelectManagerFactory`
 
