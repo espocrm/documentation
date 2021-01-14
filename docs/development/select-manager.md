@@ -1,6 +1,6 @@
 # Select Manager
 
-Deprecated as of v6.1.0. Use Select Builder instead.
+Important: Deprecated as of v6.1.0. Use Select Builder instead.
 
 Select Manager can be utilized for generating and managing select params which subsequently will be feed to ORM.
 
