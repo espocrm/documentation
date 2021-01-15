@@ -15,6 +15,7 @@ In this article:
 * [Entity type parameters](#entity-type-parameters)
 * [Fields](#fields)
 * [Relationships](#relationships)
+* [Copying to another instance](#copying-to-another-instance)
 
 ## Creating new entity type
 
@@ -96,3 +97,7 @@ Examples of link-multiple fields:
 #### Audited
 
 If the parameter *Audited* is checked, then updates of the relationship will be logged in Stream.
+
+## Copying to another instance
+
+All customizations made through Entity Manager are stored in the 'custom' folder. You need to copy contents of that folder to another instance and then run rebuild (CLI command `php rebuild.php`).
