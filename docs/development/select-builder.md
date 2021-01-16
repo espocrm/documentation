@@ -2,7 +2,9 @@
 
 Available as of v6.2.0.
 
-Select builder builds select queries for ORM. Applies search parameters (passed from frontend), ACL restrictions, filters, etc.
+The Select Builder builds select queries for ORM. Applies search parameters (passed from frontend), ACL restrictions, filters, etc.
+
+See all available methods in the class `Espo\Core\Select\SelectBuilder`.
 
 Usage example (building a query):
 
