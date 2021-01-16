@@ -12,10 +12,10 @@
 * [API](api.md)
 * [Dependency injection](di.md)
 * [ORM](orm.md)
+* [Select Builder](select-manager.md)
 * [Metadata](metadata.md)
 * [Custom API action](api-action.md)
 * [Services](services.md)
-* [Select Manager](select-manager.md)
 * [Hooks](hooks.md)
 * [ACL](acl.md)
 * Misc
