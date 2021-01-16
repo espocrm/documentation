@@ -4,10 +4,10 @@ Available as of v6.2.0.
 
 Select builder builds select queries for ORM. Applies search parameters (passed from frontend), ACL restrictions, filters, etc.
 
+Usage example (building a query):
+
 ```php
 $selectBuilder = $selectBuilderFactory->create();
-
-Usage example (building a query):
 
 $query = $selectBuilder
     ->from($entityType)
