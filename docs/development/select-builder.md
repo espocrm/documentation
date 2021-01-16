@@ -31,3 +31,17 @@ $query = $selectBuilder
 ```
 
 In your class you need to require `Espo\Core\Select\SelectBuilderFactory` as a dependency.
+
+Once you build a query you can pass it to a repository:
+
+```php
+$collection = $entityManager->getRepository($entityType)
+    ->clone($query)
+    ->find();
+```
+
+Or you can pass it to the QueryExecutor:
+
+```php
+$sth = $entityManager->getQueryExecutor()->execute($query);
+```
