@@ -7,6 +7,8 @@ Select builder builds select queries for ORM. Applies search parameters (passed 
 ```php
 $selectBuilder = $selectBuilderFactory->create();
 
+Usage example (building a query):
+
 $query = $selectBuilder
     ->from($entityType)
     ->withStrictAccessControl() // applies ACL
@@ -18,6 +20,8 @@ $collection = $this->entityManager
     ->clone($query)
     ->find();
 ```
+
+Usage example (building a query builder):
 
 ```php
 $query = $selectBuilder
@@ -31,6 +35,23 @@ $query = $selectBuilder
 ```
 
 In your class you need to require `Espo\Core\Select\SelectBuilderFactory` as a dependency.
+
+```php
+<?php
+namespace Espo\Custom\SomeNamespace;
+
+use Espo\Core\Select\SelectBuilderFactory;
+
+class SomeClass
+{
+    protected $selectBuilderFactory;
+    
+    public function __construct(SelectBuilderFactory $selectBuilderFactory)
+    {
+        $this->selectBuilderFactory = $selectBuilderFactory
+    }
+}
+```
 
 Once you build a query you can pass it to a repository:
 
