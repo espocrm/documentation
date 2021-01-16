@@ -41,7 +41,7 @@ Usage example (another user):
 ```php
 $query = $selectBuilder
     ->from($entityType)
-    ->for($user) // to apply access control for another user
+    ->forUser($user) // to apply access control for another user
     ->withStrictAccessControl()
     ->build();
 ```
