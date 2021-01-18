@@ -34,6 +34,7 @@ In this article:
 * [Variables](#variables)
 * [Comments](#comments)
 * [Function arguments](#function-arguments)
+* [Comparison](#comparison)
 * [Examples](#examples)
 * [Using formula in Workflows](#using-formula-in-workflows)
 
@@ -87,8 +88,6 @@ The priority of operators:
 * `==`, `!=`, `>`, `<`, `>=`, `<=`;
 * `+`, `-`;
 * `*`, `/`, `%`.
-
-Note: Strict comparison is used. If you compare int `1` and float `1.0` they are treated as not equal. You need to compare values of same types.
 
 ## Attributes
 
@@ -1042,6 +1041,20 @@ A name of a filter pre-defined in the system. Usually, it is defined in [SelectM
 
 For non-developers, it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then, you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from the URL.
 
+## Comparison
+
+The following comparison operators are available:
+
+* `==` - equals,
+* `!=` - not equals,
+* `>` - greater than,
+* `<` - less than,
+* `>=` - greater than or equals,
+* `<=` - less than or equals.
+
+Important: Strict comparison is used. If you compare int `1` and float `1.0` they are treated as not equal. You need to compare values of same types or check whether a value falls in range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
+
+
 ## Examples
 
 ```
@@ -1082,4 +1095,5 @@ See also [formula scripts examples](formula-scripts-examples.md).
 ## Using formula in Workflows
 
 You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
+
 
