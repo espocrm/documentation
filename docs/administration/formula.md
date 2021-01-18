@@ -88,6 +88,8 @@ The priority of operators:
 * `+`, `-`;
 * `*`, `/`, `%`.
 
+Note: Strict comparison is used. If you compare int `1` and float `1.0` they are treated as not equal. You need to compare values of same types.
+
 ## Attributes
 
 [Attributes](terms-and-naming.md#attribute) represent field values of the target entity. You can insert available attributes by clicking on the plus button.
