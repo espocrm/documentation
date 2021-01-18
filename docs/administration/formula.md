@@ -1052,7 +1052,7 @@ The following comparison operators are available:
 * `>=` - greater than or equals,
 * `<=` - less than or equals.
 
-Important: Strict comparison is used. If you compare int `1` and float `1.0` they are treated as not equal. You need to compare values of same types or check whether a value falls in range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
+Important: Strict comparison is used. If you compare int `1` to float `1.0` with `==` operator they are treated as not equal. You need to compare values of same types or check whether a value falls in range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
 
 
 ## Examples
