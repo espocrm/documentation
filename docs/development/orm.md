@@ -890,7 +890,7 @@ $entityManager->getLocker()->commit();
 Available as of v6.2.0.
 
 ```php
-$defs = $entityManager->getMetadata->getDefs();
+$defs = $entityManager->getMetadata()->getDefs();
 ```
 
 ORM Defs can also be required as a dependency so that it will be injected into your class. Use the type hint `Espo\ORM\Defs\Defs`.
