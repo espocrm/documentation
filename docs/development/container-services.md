@@ -82,13 +82,13 @@ For creation of [service](services.md) instances.
 
 ## selectBuilderFactory
 
-Available as of v6.1.0.
+Available as of v6.2.0.
 
 Class: `Espo\Core\Select\SelectBuilderFactory`
 
 ## selectManagerFactory
 
-Deprecated as of v6.1.0.
+Deprecated as of v6.2.0.
 
 Class: `Espo\Core\Select\SelectManagerFactory`
 
