@@ -26,6 +26,12 @@ Class: `Espo\Core\Utils\Config`
 
 A main application config.
 
+## ormDefs
+
+Class: `Espo\ORM\Defs\Defs`
+
+Entity definitions. Available as of v6.2.0. 
+
 ## fileManager
 
 Class: `Espo\Core\Utils\File\Manager`
