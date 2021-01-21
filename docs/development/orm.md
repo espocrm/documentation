@@ -2,7 +2,7 @@
 
 EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object.
 
-**EntityManager** is available in [*Container*](di.md). It can be obtained in [record services](services.md#record-service) by method `#getEntityManager()`. It provides an access to repositories.
+**EntityManager** is available in [*Container*](di.md). It's a central access point for ORM functionalities.
 
 **Repository** serves for fetching and storing records. Each entity type has its own repository. Base classes: `Espo\ORM\Repositories\RDB`, `Espo\Core\Repositories\Database`. *RDB* stands for *relational database*.
 
@@ -12,15 +12,35 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 
 **SthCollection** is a collection of entities, consuming much less memory than EntityCollection.
 
-Obtaining the entity manager in the record service:
-
-```php
-$entityManager = $this->getEntityManager();
-```
-
 ## See Also
 
 * [Complex expressions](../user-guide/complex-expressions.md)
+
+## Injecting Entity Manager
+
+Entity Manager is available as a [*Container*](di.md) service.
+
+A class with the `entityManager` dependency:
+
+```php
+<?php
+namespace Espo\SomeNamespace;
+
+use Espo\ORM\EntityManager;
+
+class SomeClass
+{
+    protected $entityManager;
+    
+    public function __construct(EntityManager $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+}
+
+```
+
+## Entity Manager usage
 
 ### Create new entity
 
@@ -606,7 +626,7 @@ foreach ($collection as $entity) {
 `MONTH:(closeDate)` and `SUM:(amountConverted)` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
 
 
-### Query builder
+## Query builder
 
 Delete:
 
@@ -776,7 +796,7 @@ $clonedQuery = $entityManager
     ->build();
 ```
 
-### Mass insert
+## Mass insert
 
 Mass insert with Mapper:
 
@@ -784,7 +804,7 @@ Mass insert with Mapper:
 $entityManager->getMapper()->massInsert($collection);
 ```
 
-### Transaction manager
+## Transaction manager
 
 Transaction:
 
@@ -853,7 +873,7 @@ $entityManager->saveEntity($entity);
 $entityManager->getTransactionManager()->commit();
 ```
 
-### Locker
+## Locker
 
 ```php
 // this will start a transaction implicitly and lock a table
@@ -864,3 +884,52 @@ $entityManager->getLocker()->lockExclusive('SomeEntityType');
 // this will unlock all locked tables
 $entityManager->getLocker()->commit();
 ```
+
+## Defs
+
+Available as of v6.2.0.
+
+```php
+$defs = $entityManager->getMetadata->getDefs();
+```
+
+ORM Defs can also be required as a dependency so that it will be injected into your class. Use the type hint `Espo\ORM\Defs\Defs`.
+
+Check entity existance:
+
+```php
+$entityExists = $defs->hasEntity($entityType);
+```
+
+Entity defs:
+
+```php
+$entityDefs = $defs->getEntity($entityType);
+```
+
+An attribute list:
+
+```php
+$attributeList = $entityDefs->getAttributeNameList();
+```
+
+Attribute defs:
+
+```php
+$attributeDefs = $entityDefs->getAttribute($attributeName);
+```
+
+A relation list:
+
+```php
+$relationList = $entityDefs->getRelationNameList();
+```
+
+Relation defs:
+
+```php
+$relationDefs = $entityDefs->getRelation($relationName);
+```
+
+See all available methods in `Espo\ORM\Defs\AttributeDefs` and `Espo\ORM\Defs\RelationDefs`.
+
