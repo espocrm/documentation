@@ -286,7 +286,7 @@ Good:
     }
 ```
 
-### 8\. Avoid too many parameters in functions.
+### 8\. Avoid too many parameters in methods.
 
 Less is better. Four is too much.
 
@@ -328,4 +328,40 @@ $collection = $finder->getBuilder()
     ->limit($limit)
     ->withAclApplied()
     ->find();
+```
+
+### 9\. Methods that return values should not change state
+
+Not a strict rule but in most cases should be followed.
+
+Bad:
+
+```php
+class SomeProcessor
+{
+    private $isProcessed = false;
+    
+    public function process() : Result
+    {
+        $this->isProcessed = true;
+        
+        // do something
+        
+        return true;
+    }
+}
+```
+
+Good:
+
+```php
+class SomeProcessor
+{
+    public function process() : Result
+    {
+        // do something
+        
+        return Reslut::success();
+    }
+}
 ```
