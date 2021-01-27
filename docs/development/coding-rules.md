@@ -366,6 +366,10 @@ class SomeProcessor
 }
 ```
 
-### 10\. Prefer composition over inheritance.
+### 10\. Avoid mixed type hinting
+
+Try to use *mixed* type hinting only when it's really reasonable.
+
+### 11\. Prefer composition over inheritance.
 
 Try to use inheritance only when it's really reasonable.
