@@ -324,7 +324,7 @@ Good:
 ```php
 <?php
 // Using builder.
-$collection = $finder->getBuilder()
+$collection = $finder->createBuilder()
     ->where($where)
     ->offset($offset)
     ->limit($limit)
