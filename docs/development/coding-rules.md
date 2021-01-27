@@ -365,3 +365,7 @@ class SomeProcessor
     }
 }
 ```
+
+### 10\. Prefer composition over inheritance.
+
+Try to use inheritance only when it's really reasonable.
