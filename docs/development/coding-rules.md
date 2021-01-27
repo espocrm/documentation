@@ -330,7 +330,7 @@ $collection = $finder->getBuilder()
     ->find();
 ```
 
-### 9\. Methods that return values should not change state
+### 9\. Methods that return values should not change state.
 
 Not a strict rule but in most cases should be followed.
 
