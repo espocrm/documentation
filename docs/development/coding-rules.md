@@ -117,6 +117,8 @@ class MyClass
 }
 ```
 
+Also avoid mixed type hinting. Try to use *mixed* type hinting only when they are really reasonable.
+
 ### 5\. Don't write comments, write self explanatory code.
 
 In addition: Do not write *phpdoc* for non-public methods and properties. It's OK if you don't write *phpdoc* at all.
@@ -366,10 +368,6 @@ class SomeProcessor
 }
 ```
 
-### 10\. Avoid mixed type hinting.
-
-Try to use *mixed* type hinting only when it's really reasonable.
-
-### 11\. Prefer composition over inheritance.
+### 10\. Prefer composition over inheritance.
 
 Try to use inheritance only when it's really reasonable.
