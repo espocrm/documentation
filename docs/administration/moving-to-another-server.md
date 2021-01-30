@@ -25,7 +25,9 @@ Configure a new server based on the recommendations [here](server-configuration.
 
 ### Step 6. Correct permissions
 
-Set required permissions and files owner, see [here](server-configuration.md#required-permissions-for-unix-based-systems).
+Set proper permissions and file ownership, see [here](server-configuration.md#required-permissions-for-unix-based-systems).
+
+You may also need to change the a user and group in `data/config.php` > *defaultPermissions* if your new web server has a different user/group. 
 
 ### Step 7. Import your database backup
 
