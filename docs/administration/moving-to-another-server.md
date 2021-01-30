@@ -27,8 +27,6 @@ Configure a new server based on the recommendations [here](server-configuration.
 
 Set proper permissions and file ownership, see [here](server-configuration.md#required-permissions-for-unix-based-systems).
 
-You may also need to change the a user and group in `data/config.php` > *defaultPermissions* if your new web server has a different user/group. 
-
 ### Step 7. Import your database backup
 
 First, you have to create a new database with a user in MySQL. To import your database from the backup, follow these [instructions](backup-and-restore.md#step-3-import-database-dump).
@@ -56,7 +54,7 @@ database connection settings:
 'siteUrl' => 'https://new-link.com',
 ```
 
-default files owner (only if different):
+default file owner (only if the new web server has a different user/group):
 
 ```php
 'defaultPermissions' => [
