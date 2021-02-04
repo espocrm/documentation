@@ -3,9 +3,9 @@
 
 Important: Only for exprerienced users. It's **not recommended** way to upgrade. We do not guarantee any success if you decide to upgrade this way.
 
-If your environment is configured properly, the regular upgrade process via CLI should work fine. But sometimes you upgrade due some mysterious reason and you don't want to sort it out. Then you can try a manual way of upgrading. We really do not recommend it.
+If your environment is configured properly, the regular upgrade process via CLI should work fine. But sometimes upgrade fails due some mysterious reason and you don't want to sort it out. Then you can try a manual way of upgrading. We really do not recommend it.
 
-In some cases it can be more reasonable to install the fresh instance, then copy your `custom` directory, install all needed extensions.
+In some cases it can be more reasonable to install a fresh instance, then copy your `custom` directory, install all needed extensions.
 
 The following actions are the same as those that the automatic upgrade script performs when you run *upgrade* command.
 
