@@ -59,7 +59,7 @@ Remove created files.
 ## 5. Apply vendor files.
 
 1. Check whether `vendorFiles` directory exists in the package. If it does not exist, then skip this step.
-2. Replace an existing `vendor/autoload.php` file (in your instance) with `vendorFiles/autoload.php` (from the package).
+2. Replace the existing `vendor/autoload.php` file (in your instance) with `vendorFiles/autoload.php` (from the package).
 3. Remove folders `vendor/*` (in your instance) that are precented in the upgrade packages in `vendorFiles` directory.
 4. Copy all folders from `vendorFiles` directory (upgrade package) to `vendor` directory of your instance.
 
