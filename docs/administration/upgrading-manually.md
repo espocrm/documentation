@@ -89,7 +89,7 @@ Copy all files from `files` directory (upgrade package) to your the root directo
 
 Check whether the file `scripts/AfterUpgrade.php` exists in the package. If it does not exit, then skip this step.
 
-To the same actions as with *before-upgrade*.
+To the same actions as for *before-upgrade*.
 
 ## 11. Change version in the config.
 
