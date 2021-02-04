@@ -39,7 +39,7 @@ Create a file `BeforeUpgradeRunner.php` in the root directory of your instance:
 <?php
 include "bootstrap.php";
 
-require_once "BeforeUpgrade.php".
+require_once "BeforeUpgrade.php";
 
 use Espo\Core\Application;
 use BeforeUpgrade;
