@@ -97,3 +97,5 @@ To the same actions as for *before-upgrade*.
 2. Find the `version` parameter and change its value to the value of the version you upgraded to.
 
 You can download the fresh instance and compare files using some tool. To make sure files are the same (except *custom* directory and installed extensions).
+
+Make sure that file permissions are correct.
