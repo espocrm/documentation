@@ -95,3 +95,5 @@ To the same actions as with *before-upgrade*.
 
 1. Open the file `data/config.php`.
 2. Find the `version` parameter and change its value to the value of the version you upgraded to.
+
+You can download the fresh instance and compare files using some tool. To make sure files are the same (except *custom* directory and installed extensions).
