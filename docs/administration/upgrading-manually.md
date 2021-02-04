@@ -38,15 +38,11 @@ Create a file `BeforeUpgradeRunner.php` in the root directory of your instance:
 ```php
 <?php
 include "bootstrap.php";
-
 require_once "BeforeUpgrade.php";
 
-use Espo\Core\Application;
-use BeforeUpgrade;
+$app = new \Espo\Core\Application();
 
-$app = new Application();
-
-(new BeforeUpgrade())->run(
+(new \BeforeUpgrade())->run(
     $app->getContainer()
 );
 
