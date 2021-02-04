@@ -9,6 +9,10 @@ In some cases it can be more reasonable to install a fresh instance, then copy y
 
 The following actions are the same as those that the automatic upgrade script performs when you run *upgrade* command.
 
+## 0. Check system requirements of the new version.
+
+Whether your system suit for the new version. Sometimes we drop support of old PHP and MySQL versions.
+
 ## 1. Run rebuild.
 
 Make sure no error occured. If any error occured it means your Espo instance is faulty and need to be fixed before upgrade.
