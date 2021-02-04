@@ -62,3 +62,8 @@ Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on y
 #### Step 3. Run upgrade from Administration panel
 
 Go to Administration > Upgrade. Upload and install upgrade packages one by one.
+
+## See also
+
+* [Upgrading manually](upgrading-manually.md)
+
