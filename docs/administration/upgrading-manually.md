@@ -29,7 +29,6 @@ Maybe the needed file exists but not listed on the page. Note that there are no 
 
 Check whether the file `scripts/BeforeUpgrade.php` exists in the package. If it does not exist, then skip this step.
 
-...
 Create a file `BeforeUpgradeRunner.php` in the root directory of your instance:
 
 ```php
