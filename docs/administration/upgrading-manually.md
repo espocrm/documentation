@@ -11,7 +11,7 @@ The following actions are the same as those that the automatic upgrade script pe
 
 ## 0. Check system requirements of the new version.
 
-Whether your system suit for the new version. Sometimes we drop support of old PHP and MySQL versions.
+Whether your system suits for the new version. Sometimes we drop support of old PHP and MySQL versions.
 
 ## 1. Run rebuild.
 
