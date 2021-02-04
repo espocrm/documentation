@@ -94,4 +94,4 @@ To the same actions as with *before-upgrade*.
 ## 11. Change version in the config.
 
 1. Open the file `data/config.php`.
-2. Find the version parameter and change its value to the value of the version you upgraded to.
+2. Find the `version` parameter and change its value to the value of the version you upgraded to.
