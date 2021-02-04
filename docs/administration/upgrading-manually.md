@@ -1,7 +1,7 @@
 
 # Upgrading Manually
 
-Important: Only for exprerienced users. It's not recommended way to upgrade. We do not guarantee any success if you decide to upgrade this way.
+Important: Only for exprerienced users. It's **not recommended** way to upgrade. We do not guarantee any success if you decide to upgrade this way.
 
 If your environment is configured properly, the regular upgrade process via CLI should work fine. But sometimes you upgrade due some mysterious reason and you don't want to sort it out. Then you can try a manual way of upgrading. We really do not recommend it.
 
