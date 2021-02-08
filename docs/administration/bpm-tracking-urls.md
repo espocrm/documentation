@@ -30,8 +30,8 @@ You can get a downloadable example [here](bpm-examples.md#downloadable-examples)
 
 Useful when an URL must be unique for a specific process. E.g. send an email for a feedback on provided customer support, the email contains unique links to rate quality of support.
 
-Signal broadcasted when URL is opened: `clickUniqueUrl.TRACKING_URL_ID.UNIQUE_ID`, where *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar), *UNIQUE_ID* is an ID generated within the process (using formula).
+Signal broadcasted when URL is opened: `clickUniqueUrl.UNIQUE_ID`, where *UNIQUE_ID* is an ID generated within the process (using formula).
 
-Code to be used in an email template instead of the URL: `{trackingUrl:TRACKING_URL_ID.{$$variableName}}`, where *variableName* is a name of the variable when generated ID is stored. This code will be automaticaly substituted with a proper URL.
+Code to be used in an email template instead of the URL: `{trackingUrl:TRACKING_URL_ID.{$$variableName}}`, where *variableName* is a name of the variable when generated ID is stored, *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar). The code will be automaticaly substituted with a proper URL, 
 
 
