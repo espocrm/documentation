@@ -1,5 +1,7 @@
 # Tracking URLs with BPM
 
+## Non-unique URL
+
 *Available as of Advanced Pack 2.4.6 and EspoCRM 5.7.12.*
 
 It's possible to add links into email body and catch when a recipient clicked on it. It provides the ability to automate an interaction with customers.
@@ -18,6 +20,18 @@ In this example, target entity type is *Lead*.
 
 Signal name, defined in catching event: `clickUrl.Lead.{$id}.5d8206aa9d76df4c8`, where `5d8206aa9d76df4c8` is an ID of *Tracking URL* (can be obtained from the address bar). You need to replace *5d8206aa9d76df4c8* with your ID. `{$id}` is a placeholder that will be automatically replaced with ID of the Lead.
 
-## Example
+### Example
 
 You can get a downloadable example [here](bpm-examples.md#downloadable-examples).
+
+## Unique URL
+
+*Available as of Advanced Pack 2.7.0 and EspoCRM 6.1.3.*
+
+Useful when an URL must be unique for a specific process. E.g. send an email for a feedback on provided customer support, the email contains unique links to rate quality of support.
+
+Signal broadcasted when URL is opened: `clickUniqueUrl.TRACKING_URL_ID.UNIQUE_ID`, where *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar), *UNIQUE_ID* is an ID generated within the process (using formula).
+
+Code to be used in an email template as an URL: `{trackingUrl:5e58dae11d1e62179.{$$variableName}}`, where *variableName* is a name of the variable when generated ID is stored. This code will be automaticaly substituted with a proper URL.
+
+
