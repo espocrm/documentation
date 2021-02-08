@@ -67,8 +67,12 @@ Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) will/should be repl
 
 #### Contacts/Leads/Accounts/Users
 
-* *clickUrl.ENTITY_TYPE.ID* – recipient opened a tracking url
+* *clickUrl.ENTITY_TYPE.ID* – recipient opened a tracking url , see [here](bpm-tracking-urls.md)
 * *clickUrl.ENTITY_TYPE.ID.CAMPAIGN_TRACKING_URL_ID* – recipient opened a specfic tracking url
+
+#### Other
+
+* *clickUniqueUrl.TARGET_LIST_ID.UNIQUE_ID* – recipient opened a tracking url with unique ID, see [here](bpm-tracking-urls.md)
 
 ### Placeholders
 
