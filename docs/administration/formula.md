@@ -975,13 +975,13 @@ ext\email\send($emailId);
 
 #### util\generateId
 
-Generates a unique ID. Returns a string. Sinc v6.1.3.
+Generates a unique ID. Returns a string. Since v6.1.3.
 
 Example:
 
 ```
 $uniqueId = util\generateId();
-``
+```
 
 ## Values
 
