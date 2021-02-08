@@ -66,7 +66,7 @@ $account = $this->entityManager
     ->findOne();
 ```
 
-### 3\. Specify type hinting for method parameters. Also specify a method return type unless it's supposed to be void.
+### 3\. Specify type hinting for method parameters. Also specify a method return type.
 
 Parameter types:
 
@@ -74,7 +74,7 @@ Parameter types:
 <?php
 class MyClass
 {
-    public function myMethod(Request $request, string $text)
+    public function myMethod(Request $request, string $text) : void
     {
     }
 }
