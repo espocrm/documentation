@@ -30,6 +30,7 @@ In this article:
   * [Language](#language)
   * [Json](#json)
   * [Ext](#ext)
+  * [Util](#ext)
 * [Values](#values)
 * [Variables](#variables)
 * [Comments](#comments)
@@ -967,6 +968,20 @@ $emailId = record\create('Email',
 );
 ext\email\send($emailId);
 ```
+
+### Util
+
+* [util\generateId](#utilgenerateid)
+
+#### util\generateId
+
+Generates a unique ID. Returns a string. Sinc v6.1.3.
+
+Example:
+
+```
+$uniqueId = util\generateId();
+``
 
 ## Values
 
