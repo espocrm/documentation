@@ -72,7 +72,7 @@ Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) will/should be repl
 
 #### Other
 
-* *clickUniqueUrl.TARGET_LIST_ID.UNIQUE_ID* – recipient opened a tracking url with unique ID, see [here](bpm-tracking-urls.md)
+* *clickUniqueUrl.UNIQUE_ID* – recipient opened a tracking url with unique ID, see [here](bpm-tracking-urls.md)
 
 ### Placeholders
 
