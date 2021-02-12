@@ -130,12 +130,18 @@ CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the sem
 
 Returns array. Values are passed as arguments to the function.
 
-Useful to create an array for link-multiple IDs. Example: `teamsIds = list($teamId)`.
-
 Example:
 
 ```
 $list = list(0, 1, 2); // will return array [0, 1, 2];
+```
+
+Useful to create an array for link-multiple IDs.
+
+Example: 
+
+```
+teamsIds = list($teamId) // ['team-id']
 ```
 
 #### while
