@@ -831,6 +831,12 @@ $hash = password\hash($password);
 
 ### Array
 
+* [array\includes](#arrayincludes)
+* [array\push](#arraypush)
+* [array\length](#arraylength)
+* [array\at](#arrayat)
+* [array\join](#arrayjoin)
+
 #### array\includes
 `array\includes(LIST, VALUE)`
 
@@ -857,7 +863,19 @@ Returns the number of elements in LIST.
 #### array\at
 `array\at(LIST, INDEX)`
 
-Returns a value by INDEX. (since version 5.8.3)
+Returns a value by INDEX. (since v5.8.3)
+
+#### array\join
+
+`array\join(LIST, SEPARATOR)`
+
+Joins array elements with a string separator. Returns a string. (since v6.1.3)
+
+Example:
+
+```
+$string = array\join($array, $separator);
+```
 
 ### Language
 
