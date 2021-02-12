@@ -67,7 +67,7 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 });
 ```
 
-## Dropdown action in detail view 
+## Dropdown action in detail view
 
 An action item next to the edit button.
 
@@ -127,3 +127,80 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
    });
 });
 ```
+
+## Mass action in list view
+
+An action will available in the *Actions* dropdown when you select records on the list view.
+
+Available since version 6.2.0.
+
+An example for *Meeting* entity type.
+
+Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Meeting.json`:
+
+```json
+{
+    "massActionList": [
+        "__APPEND__",
+        "test"
+    ],
+    "checkAllResultMassActionList": [
+        "__APPEND__",
+        "test"
+    ],
+    "massActionDefs": {
+        "test": {
+            "handler": "custom:test-handler",
+            "initFunction": "initTest"
+        }
+    }
+}
+```
+
+Create a handler `client/custom/src/test-handler.js`:
+
+```js
+define('custom:test-handler', [], function () {
+
+    var TestHandler = function (view) {
+        this.view = view;
+    };
+
+    _.extend(TestHandler.prototype, {
+
+        initTest: function () {
+            console.log('init', this.view);
+
+            // here you can remove the action on a specific condition
+            // this.view.removeMassAction('test');
+        },
+
+        actionTest: function (data) {
+            console.log(data); // data to be sent to the back-end
+            
+            // here you can show a modal or send ajax request
+            // this.view.createView( ... )
+            // Espo.Ajax.postReqest( ...)
+        },
+
+    });
+
+    return TestHandler;
+});
+
+```
+
+Create a language file `custom/Espo/Custom/Resources/i18n/en_US/Meeting.json`:
+
+```json
+{
+    "massActions": {
+        "test": "Test"
+    }
+}
+```
+
+Clear cache.
+
+You can use *Mass Action* framework to handle mass actions in the back-end. Available since v6.2.0. Send a POST request to `MassAction` URL with data passed into the action method.
+
