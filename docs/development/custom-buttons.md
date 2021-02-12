@@ -169,7 +169,7 @@ define('custom:test-handler', [], function () {
     _.extend(TestHandler.prototype, {
 
         initTest: function () {
-            console.log('init', this.view);
+            // fired when the list view is loaded
 
             // here you can remove the action on a specific condition
             // this.view.removeMassAction('test');
