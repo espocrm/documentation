@@ -26,10 +26,10 @@ class MyContainsType extends \Espo\Core\Formula\Functions\Base
         if (count($args) > 2) {
             $offset = $args[2];
             
-            return !(strpos($haystack, $needle, $offset) === false);
+            return strpos($haystack, $needle, $offset) !== false;
         }
         else {
-            return !(strpos($haystack, $needle) === false);
+            return strpos($haystack, $needle) !== false;
         }
     }
 }
