@@ -178,7 +178,7 @@ define('custom:test-handler', [], function () {
             // var currentUser = this.view.getUser();
         },
 
-        actionTest: function (data) {
+        actionTest: function (data) {           
             console.log(data); // data to be sent to the back-end
             
             // here you can show a modal or send ajax request
