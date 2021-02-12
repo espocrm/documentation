@@ -173,6 +173,9 @@ define('custom:test-handler', [], function () {
 
             // here you can remove the action on a specific condition
             // this.view.removeMassAction('test');
+            
+            // var acl = this.view.getAcl();
+            // var currentUser = this.view.getUser();
         },
 
         actionTest: function (data) {
