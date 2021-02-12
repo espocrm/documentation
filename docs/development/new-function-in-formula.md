@@ -28,9 +28,8 @@ class MyContainsType extends \Espo\Core\Formula\Functions\Base
             
             return strpos($haystack, $needle, $offset) !== false;
         }
-        else {
-            return strpos($haystack, $needle) !== false;
-        }
+
+        return strpos($haystack, $needle) !== false;
     }
 }
 ```
