@@ -45,7 +45,7 @@ In order to add the created function to the function list of formula, create a f
         }
     ],
     "functionClassNameMap": {
-        "string\\myContains": "\\Espo\\Custom\\Core\\Formula\\Functions\\StringGroup\\MyContainsType"
+        "string\\myContains": "Espo\\Custom\\Core\\Formula\\Functions\\StringGroup\\MyContainsType"
     }
 }
 ```
