@@ -68,7 +68,8 @@ class SomeClass
 Once you built a query you can pass it to a repository:
 
 ```php
-$collection = $entityManager->getRepository($entityType)
+$collection = $entityManager
+    ->getRDBRepository($entityType)
     ->clone($query)
     ->find();
 ```
