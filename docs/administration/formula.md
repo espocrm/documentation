@@ -133,7 +133,7 @@ Returns array. Values are passed as arguments to the function.
 Example:
 
 ```
-$list = list(0, 1, 2); // will return array [0, 1, 2];
+$list = list(0, 1, 2); // will return array [0, 1, 2]
 ```
 
 Useful to create an array for link-multiple IDs.
