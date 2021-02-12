@@ -1119,7 +1119,10 @@ ifThenElse(
 
 ```
 
-See also [formula scripts examples](formula-scripts-examples.md).
+## See also
+
+* [Formula scripts examples](formula-scripts-examples.md)
+* [Custom functions](../development/new-function-in-formula.md)
 
 ## Using formula in Workflows
 
