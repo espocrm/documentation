@@ -62,21 +62,21 @@ $account = $entityManager->getRepository('Account')->get($accountId);
 $account = $entityManager->getEntity('Account', $accountId);
 ```
 
-### Get value
+### Get attribute value
 
 ```php
 $fieldValue = $account->get('attributeName');
 ```
 
-### Has value
+### Has attribute value
 
-Checks whether attribute is set. Note: If it's set to `NULL` it will return `true`.
+Checks whether an attribute is set. Note: If it's set to `NULL` it will return `true`.
 
 ```php
 $fieldNameIsSet = $account->has('fieldName'); // true or false
 ```
 
-### Set value
+### Set attribute value
 
 One:
 
@@ -121,7 +121,7 @@ $value = $entity->getFetched('attributeName')
 $isChanged = $entity->isChanged('attributeName');
 ```
 
-### Get all values
+### Get all attribute values
 
 ```php
 $valueMap = $account->getValueMap(); // StdClass
@@ -181,6 +181,8 @@ This will delete a record permanently.
 
 ### Attributes
 
+Note: As of v6.2.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
+
 Each entity type has its own set of defined attributes. You cannot set an arbitrary attribute name.
 
 ```php
@@ -212,6 +214,8 @@ Attribute types:
 
 ### Relations
 
+Note: As of v6.2.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
+
 ```php
 $relationList = $entity->getRelationList();
 
@@ -236,13 +240,15 @@ $collection = $entityManager
     ->getRepository('Account')
     ->where([
         'type' => 'Customer',
-    ])->find();
+    ])
+    ->find();
 ```
 
 Descending order:
 
 ```php
-$collection = $entityManager->getRepository('Account')
+$collection = $entityManager
+    ->getRepository('Account')
     ->limit(0, 10)
     ->order('createdAt', true)
     ->find();
@@ -251,15 +257,17 @@ $collection = $entityManager->getRepository('Account')
 Ascending order:
 
 ```php
-$collection = $entityManager->getRepository('Account')
+$collection = $entityManager
+    ->getRepository('Account')
     ->limit(0, 10)
     ->order('createdAt')
     ->find();
 ```
 
-or:
+Descending order:
 ```php
-$collection = $entityManager->getRepository('Account')
+$collection = $entityManager
+    ->getRepository('Account')
     ->limit(0, 10)
     ->order('createdAt', 'DESC')
     ->find();
@@ -268,11 +276,22 @@ $collection = $entityManager->getRepository('Account')
 Complex order:
 
 ```php
-$collection = $entityManager->getRepository('Account')
+$collection = $entityManager
+    ->getRepository('Account')
     ->order([
         ['createdAt', 'ASC'],
         ['name', 'DESC'],
     ])
+    ->find();
+```
+
+Or:
+
+```php
+$collection = $entityManager
+    ->getRepository('Account')
+    ->order('createdAt', 'ASC')
+    ->order('name', 'DESC')
     ->find();
 ```
 
@@ -288,7 +307,8 @@ $collection = $entityManager
 Feeding a query to a repository:
 
 ```php
-$collection = $entityManager->getRepository('SomeEntityType')
+$collection = $entityManager
+    ->getRepository('SomeEntityType')
     ->clone($query)
     ->limit(0, 10)
     ->find();
@@ -500,18 +520,35 @@ $opportunityList = $entityManager
 #### OR, AND operators
 
 ```php
-$opportunityList = $entityManager->getRepository('Opportunity')->where([
-    [
-        'OR' => [
-            ['stage' => 'Closed Won'],
-            ['stage' => 'Closed Lost'],
-        ],
-        'AND' => [
-            'amountConverted>' => 100,
-            'amountConverted<=' => 999,
-        ],
-    ]
-])->findOne();
+$opportunityList = $entityManager
+    ->getRepository('Opportunity')
+    ->where([
+        [
+            'OR' => [
+                ['stage' => 'Closed Won'],
+                ['stage' => 'Closed Lost'],
+            ],
+            'AND' => [
+                'amountConverted>' => 100,
+                'amountConverted<=' => 999,
+            ],
+        ]
+    ])
+    ->findOne();
+```
+
+#### Sub-query operator
+
+```php
+// $query is the instance of Espo\ORM\QueryParams\Select
+
+$collection = $entityManager
+    ->getRepository('EntityType')
+    ->where([
+        'id=s' => $query->getRaw(),
+    ])
+    ->find();
+
 ```
 
 ### Distinct
@@ -528,18 +565,21 @@ $opportunityList = $entityManager
 Join relationship:
 
 ```php
-$contactList = $entityManager->getRepository('Contact')
+$contactList = $entityManager
+    ->getRepository('Contact')
     ->distinct()
     ->join('opportunities')
     ->where([
         'opportunities.stage' => 'Closed Won',
-    ])->find();
+    ])
+    ->find();
 ```
 
 Left Join relationship:
 
 ```php
-$contactList = $entityManager->getRepository('Contact')
+$contactList = $entityManager
+    ->getRepository('Contact')
     ->distinct()
     ->leftJoin('opportunities')
     ->find();
