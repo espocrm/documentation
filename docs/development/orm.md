@@ -553,7 +553,7 @@ $collection = $entityManager
 
 ### Distinct
 
-```
+```php
 $opportunityList = $entityManager
     ->getRepository('Opportunity')
     ->distinct()
