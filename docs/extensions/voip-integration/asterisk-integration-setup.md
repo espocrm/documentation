@@ -6,6 +6,7 @@ VoIP Integration extension allows EspoCRM to integrate with an Asterisk server t
 
 VoIP Integration extension supports* the following Asterisk servers:
 
+* Asterisk 18
 * Asterisk 17
 * Asterisk 16
 * Asterisk 15
