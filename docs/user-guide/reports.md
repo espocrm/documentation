@@ -78,7 +78,7 @@ There is the ability to specify a custom complex expression (with functions) for
 
 ### Columns
 
-At *Columns* field, select one or more aggregate functions applied to a specific field.
+At *Columns* field, select one or more **aggregate** functions applied to a specific field.
 
 Functions:
 
@@ -89,6 +89,16 @@ Functions:
 * AVG – average value.
 
 If the report is grouped by a link field then it's possible to add fields from the linked record w/o aggregate functions. The example is the report for Opportunities grouped by Campaign with Campaign.Budget column.
+
+It's possible to add **non-aggregated columns** (as of Advanced Pack v2.7.0). In this case records will be displayed for each group. Note that if your report deals with a big number of records, it can run much slower.
+
+Non-grouping grid report with non-aggregated columns:
+
+![Grid list non-grouping](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid-list-0.png)
+
+Grouping grid report with non-aggregated columns:
+
+![Grid list grouped](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid-list-1.png)
 
 ### Order by
 
