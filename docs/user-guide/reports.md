@@ -145,7 +145,9 @@ Pie:
 
 ### Export
 
-It's possible to export grid report results to XLSX (Excel) and CSV formats. Charts are exported to XLSX.
+It's possible to export grid report results to XLSX (Excel) and CSV formats. Both a results table and chart are exported to XLSX.
+
+Note that non-aggregared columns (in grid reports) are not exported to XLSX.
 
 ## Joint Grid reports
 
@@ -239,6 +241,18 @@ You can display any report on dashboard. In order to do it, you need to add Repo
 
 Grid reports can be displayed as a chart, a chart with totals or only totals.
 
+For grid reports it's possible to display:
+
+* Chart
+* Chart & Total
+* Total
+* Table (as of v2.7.0)
+
+For list reports it's possible to display:
+
+* List
+* Total (number or records)
+
 List reports can be displayed as a list or a total number of records.
 
 ## Email sending
@@ -294,7 +308,17 @@ Administrator can create custom side and bottom panels for the detail view of th
 
 Both Grid and List reports can be used.
 
-It's possible to display only total amount on the report panel.
+For grid reports it's possible to display:
+
+* Chart
+* Chart & Total
+* Total
+* Table (as of v2.7.0)
+
+For list reports it's possible to display:
+
+* List
+* Total (number or records)
 
 The order of side panels can be customized at Layout Manager > Side Panels (Detail).
 
