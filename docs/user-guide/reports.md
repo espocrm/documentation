@@ -255,6 +255,10 @@ For list reports it's possible to display:
 
 List reports can be displayed as a list or a total number of records.
 
+Dashlet with only totals displayed:
+
+![Dashlet with totals](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/dashlet-totals.png)
+
 ## Email sending
 
 It's possible to make the system send report results to certain users on a regular basis according to specified time. This must be configured for certain reports individually.
