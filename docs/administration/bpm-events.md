@@ -46,7 +46,7 @@ Can be used as an entry point of a sub-process.
 
 ### Conditional Start Event
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are two types of triggers: 'After record created', 'After record saved'.
+A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', 'After record saved'. Conditions are defined in the same way as in Worfklow tool. See [here](workflows.md#conditions).
 
 ![Conditional Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-1.png)
 
@@ -104,7 +104,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 ### Conditional Intermediate Event (Catching)
 
-This event stops the flow until specified criteria is met.
+This event stops the flow until specified criteria is met. Conditions are defined in the same way as in Worfklow tool. See [here](workflows.md#conditions). Note that BPM tool intruduces [additonal functions](bpm.md#additional-formula-functions) that can be used in formula.
 
 ![Conditional Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional.png)
 
