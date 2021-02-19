@@ -38,6 +38,7 @@ use Espo\Core\{
 class MyClass
 {
     protected $entityManager;
+    
     protected $metadata;
 
     public function __constructor(EntityManager $entityManager, Metadata $metadata)
