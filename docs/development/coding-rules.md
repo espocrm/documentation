@@ -2,7 +2,8 @@
 
 ### 1\. Never pass Container into class constructors. Pass all dependencies separately.
 
-Bad:
+❗ Bad:
+
 ```php
 <?php
 namespace Espo\Modules\MyModule;
@@ -23,7 +24,7 @@ class MyClass
 
 ```
 
-Good:
+✔️ Good:
 
 ```php
 <?php
@@ -51,7 +52,7 @@ Exception: Passing the Container may be acceptable for proxy classes.
 
 ### 2\. Never write RAW SQL query. Use ORM instead.
 
-Good:
+✔️ Good:
 
 ```php
 <?php
@@ -125,7 +126,7 @@ In addition: Do not write *phpdoc* for non-public methods and properties. It's O
 
 Exception: Adding comments may be reasonable in some rare cases.
 
-Bad:
+❗ Bad:
 
 ```php
     /**
@@ -141,7 +142,7 @@ Bad:
     }
 ```
 
-Good:
+✔️ Good:
 
 ```php
     protected function sanitizeInput(string $input) : string
@@ -150,7 +151,7 @@ Good:
     }
 ```
 
-Bad:
+❗ Bad:
 
 ```php
 // start sanitizing
@@ -158,14 +159,14 @@ $string = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 // end sanitizing
 ```
 
-Good:
+✔️ Good:
 ```php
 $string = $this->sanitizeString($string);
 ```
 
 ### 6\. Import classes in the beginning of the file.
 
-Bad:
+❗ Bad:
 
 ```php
 <?php
@@ -183,7 +184,8 @@ class SomeClass
 }
 ```
 
-Good:
+✔️ Good:
+
 ```php
 
 <?php
@@ -210,13 +212,13 @@ class SomeClass
 
 ### 7\. Not more that 2 levels of indentation per method.
 
-Bad:
+❗ Bad:
 ```php
 <?php
 // ...
     public function process()
     {
-        if (! $this->isCached()) {
+        if (!$this->isCached()) {
             foreach ($this->itemList as $item) {
                 if (! $this->hasItem($item)) {
                     $this->loadItem($item);
@@ -226,13 +228,14 @@ Bad:
     }
 ```
 
-Better:
+✔️ Better:
+
 ```php
 <?php
 // ...
     public function process()
     {
-        if (! $this->isCached()) {
+        if (!$this->isCached()) {
             foreach ($this->itemList as $item) {
                 $this->processLoadItem($item);
             }
@@ -240,13 +243,14 @@ Better:
     }
 ```
 
-Good:
+✔️ Good:
+
 ```php
 <?php
 // ...
     public function process()
     {
-        if (! $this->isCached()) {
+        if (!$this->isCached()) {
             $this->processLoadItems();
         }
     }
@@ -254,7 +258,7 @@ Good:
 
 ### 8\. Use early returns.
 
-Bad:
+❗ Bad:
 
 ```php
 <?php
@@ -271,7 +275,7 @@ Bad:
     }
 ```
 
-Good:
+✔️ Good:
 
 ```php
 <?php
@@ -292,7 +296,8 @@ Good:
 
 Less is better. Four is too much.
 
-Bad:
+❗ Bad:
+
 ```php
 <?php
 // ...
@@ -301,7 +306,8 @@ Bad:
     }
 ```
 
-Good:
+✔️ Good:
+
 ```php
 <?php
 // ...
@@ -311,7 +317,8 @@ Good:
 ```
 
 
-Bad:
+❗ Bad:
+
 ```php
 <?php
 // ...
@@ -320,7 +327,8 @@ Bad:
     }
 ```
 
-Good:
+✔️ Good:
+
 ```php
 <?php
 // Using builder.
@@ -336,7 +344,7 @@ $collection = $finder->createBuilder()
 
 Not a strict rule but in most cases should be followed.
 
-Bad:
+❗ Bad:
 
 ```php
 class SomeProcessor
@@ -354,7 +362,7 @@ class SomeProcessor
 }
 ```
 
-Good:
+✔️ Good:
 
 ```php
 class SomeProcessor
