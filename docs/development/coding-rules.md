@@ -371,7 +371,7 @@ class SomeProcessor
     {
         // do something
         
-        return Reslut::success();
+        return Result::success();
     }
 }
 ```
