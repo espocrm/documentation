@@ -20,7 +20,6 @@ Note that you need to **clear cache** after creating a new service class.
 
 To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one. It's also possible to customize within a module directory. Make sure that the *order* param of your module is higher than the value of the module of the extended service.
 
-
 ## Creating new service class (example)
 
 Actual as of v6.0.
@@ -130,8 +129,6 @@ Main methods of the Record service class:
 * delete - delete an entity
 * find - get a list of entities, used by list view
 * findLinked - get a list of related entities, used by relationship panels
-* massUpdate
-* massDelete
 * findDuplicates
 * loadAdditionalFields - to load additional fields for an entity before returning it, for detail view
 * loadAdditionalFieldsForList - to load additiona fields, for list view
