@@ -93,7 +93,7 @@ class HelloTest
         }
 
         $em = $this->entityManager;
-        $acl = $this->'acl;
+        $acl = $this->acl;
 
         $opportunity = $em->getEntity('Opportunity', $data->id);
 
