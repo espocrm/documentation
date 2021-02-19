@@ -351,7 +351,7 @@ class SomeProcessor
 {
     private $isProcessed = false;
     
-    public function process() : Result
+    public function process() : bool
     {
         $this->isProcessed = true;
         
