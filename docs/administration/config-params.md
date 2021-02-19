@@ -19,6 +19,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 * [Kanban](#kanban)
 * [Text search](#text-search)
 * [PDF](#pdf)
+* [Events](#events)
 
 ### General
 
@@ -124,4 +125,8 @@ This is not a full list of params. Most of params available in admin UI are not 
 
 ### PDF
 
-* pdfEngine – `Tcpdf` – what PDF engine to use; since v6.1.0.
+* pdfEngine – `Tcpdf` – what PDF engine to use; since v6.1.0;
+
+### Events
+
+* eventAssignedUserIsAttendeeDisabled – `false` – If set *true*, then assigned user won't be automatically added to an attendee list (for meetings and calls);
