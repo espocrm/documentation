@@ -200,7 +200,7 @@ use RuntimeException;
 
 class SomeClass
 {
-    public function process()
+    public function process() : void
     {
         $object1 = new Something();
         $object2 = new AnotherThing();
@@ -216,7 +216,7 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function process()
+    public function process() : void
     {
         if (!$this->isCached()) {
             foreach ($this->itemList as $item) {
@@ -233,7 +233,7 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function process()
+    public function process() : void
     {
         if (!$this->isCached()) {
             foreach ($this->itemList as $item) {
@@ -248,7 +248,7 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function process()
+    public function process() : void
     {
         if (!$this->isCached()) {
             $this->processLoadItems();
@@ -301,7 +301,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-    public function process(string $city, string $country, string $postalCode)
+    public function process(string $city, string $country, string $postalCode) : void
     {
     }
 ```
@@ -311,7 +311,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-    public function process(Address $address)
+    public function process(Address $address) : void
     {
     }
 ```
