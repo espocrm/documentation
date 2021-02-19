@@ -283,6 +283,7 @@ class Binding
 ```
 
 Explanation:
+
 * If any class requires `Espo\SomeServiceName`, give the container service `someServiceName`.
 * If any class requires `Espo\SomeInterface`, give an instance of `Espo\SomeImplementation`.
 * If any class requires `Espo\SomeServiceName ` and a parameter name is `$name`, then give `anotherServiceName` service.
