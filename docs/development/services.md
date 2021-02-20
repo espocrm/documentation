@@ -87,7 +87,7 @@ You can also extend a service in the *Module* directory. The *order* of your mod
 
 ## Creating new service class (example)
 
-Note: Deprecated since v6.0.
+Note: Not recommended since v6.0.
 
 Controller `custom/Espo/Custom/Controllers/Opportunity.php`:
 
