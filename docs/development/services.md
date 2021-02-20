@@ -22,6 +22,69 @@ To **customize** an existing service you need to create a class in the custom di
 
 **Important**: Since v6.0 it's not recomended to create custom service classes for your business logic. Create a class in any namespace you like (inside your module). Use the dependency injection to require this class in your custom controller (your class will be passed to the constructor of your controller).
 
+
+## Record service
+
+Operations (CRUD and others) over entities (records) are handled by Record service class `Espo\Services\Record`.
+
+If there's a service class with a name that matches the name of the entity type, then that service class will be used as a record service class. It's supposed that that class extends base `Espo\Services\Record` class. Example: `Espo\Services\User` is treated as a Record service for the *User* entity type.
+
+
+Main methods of the Record service class:
+
+* read - get an entity
+* create - create an entity
+* update - update an entity
+* delete - delete an entity
+* find - get a list of entities, used by list view
+* findLinked - get a list of related entities, used by relationship panels
+* findDuplicates
+* loadAdditionalFields - to load additional fields for an entity before returning it, for detail view
+* loadAdditionalFieldsForList - to load additiona fields, for list view
+
+Hook-methods:
+
+* beforeCreateEntity
+* afterCreateEntity
+* beforeUpdateEntity
+* afterUpdateEntity
+* beforeDeleteEntity
+* afterDeletEntity
+
+### Extending existing Record service
+
+Service `custom/Espo/Custom/Services/Opportunity.php`:
+
+```php
+<?php
+
+namespace Espo\Custom\Services;
+
+use Espo\ORM\Entity;
+
+use Espo\Modules\Crm\Services\Opportunity as BaseOpportunity
+
+class Opportunity extends BaseOpportunity
+{
+    // load additional fields for detail view
+    public function loadAdditionalFields(Entity $entity)
+    {
+        parent::loadAdditionalFields($entity);
+
+        // here do some fetching
+
+        $entity->set('myNotStorableField', $someValue);
+    }
+
+    protected function afterDeleteEntity(Entity $entity, $data)
+    {
+        // do something after entity is deleted
+    }
+}
+```
+
+You can also extend a service in the *Module* directory. The *order* of your module needs to be greated than the order of the module your are extending from.
+
 ## Creating new service class (example)
 
 Note: Deprecated since v6.0.
@@ -115,65 +178,3 @@ class HelloTest
     }
 }
 ```
-
-## Record service
-
-Operations (CRUD and others) over entities (records) are handled by Record service class `Espo\Services\Record`.
-
-If there's a service class with a name that matches the name of the entity type, then that service class will be used as a record service class. It's supposed that that class extends base `Espo\Services\Record` class. Example: `Espo\Services\User` is treated as a Record service for the *User* entity type.
-
-
-Main methods of the Record service class:
-
-* read - get an entity
-* create - create an entity
-* update - update an entity
-* delete - delete an entity
-* find - get a list of entities, used by list view
-* findLinked - get a list of related entities, used by relationship panels
-* findDuplicates
-* loadAdditionalFields - to load additional fields for an entity before returning it, for detail view
-* loadAdditionalFieldsForList - to load additiona fields, for list view
-
-Hook-methods:
-
-* beforeCreateEntity
-* afterCreateEntity
-* beforeUpdateEntity
-* afterUpdateEntity
-* beforeDeleteEntity
-* afterDeletEntity
-
-### Extending existing Record service
-
-Service `custom/Espo/Custom/Services/Opportunity.php`:
-
-```php
-<?php
-
-namespace Espo\Custom\Services;
-
-use Espo\ORM\Entity;
-
-use Espo\Modules\Crm\Services\Opportunity as BaseOpportunity
-
-class Opportunity extends BaseOpportunity
-{
-    // load additional fields for detail view
-    public function loadAdditionalFields(Entity $entity)
-    {
-        parent::loadAdditionalFields($entity);
-
-        // here do some fetching
-
-        $entity->set('myNotStorableField', $someValue);
-    }
-
-    protected function afterDeleteEntity(Entity $entity, $data)
-    {
-        // do something after entity is deleted
-    }
-}
-```
-
-You can also extend a service in the *Module* directory. The *order* of your module needs to be greated than the order of the module your are extending from.
