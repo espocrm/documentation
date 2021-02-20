@@ -20,9 +20,11 @@ Note that you need to **clear cache** after creating a new service class.
 
 To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one. It's also possible to customize within a module directory. Make sure that the *order* param of your module is higher than the value of the module of the extended service.
 
+**Important**: Since v6.0 it's not recomended to create custom service classes for your business logic. Create a class in any namespace you like (inside your module). Use a dependency injection to require this class in your custom controller (your class will be passed to the constructor of your controller).
+
 ## Creating new service class (example)
 
-Actual as of v6.0.
+Note: Deprecated since v6.0.
 
 Controller `custom/Espo/Custom/Controllers/Opportunity.php`:
 
