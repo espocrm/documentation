@@ -96,6 +96,7 @@
   * [Binotel service](extensions/voip-integration/binotel-integration-setup.md)
   * [Starface service](extensions/voip-integration/starface-integration-setup.md)
   * [Twilio service](extensions/voip-integration/twilio-integration-setup.md)
+  * [IexPBX service](extensions/voip-integration/iexpbx-integration-setup.md)
   * [Customization](extensions/voip-integration/customization.md)
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
 
