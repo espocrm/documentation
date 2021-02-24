@@ -59,6 +59,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
 * **Farewell at the end of the call**
 * **Team Users** – a list of users to configure receiving incoming/outgoing calls, SMS and MMS.
 
+
 2. **Grant access for Twilio Team members**
 
     Go to Administration > Roles, create a Role for a Team of Twilio members (defined above) and grant access to the following entities: Calls, Messages, Accounts, Contacts, Leads.
@@ -69,7 +70,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
     1. Login to your Twilio account.
     2. Navigate to the Programmable SMS > Settings > Geo Permissions or just click the link: https://www.twilio.com/console/sms/settings/geo-permissions.
     3. Enable needed countries.
-2. [Add access control in EspoCRM](voip-message-access.md#add-access-control-in-espocrm)
+2. [Grant access to Messages](customization.md#grant-access-to-messages)
 
 ## How to setup Twilio Integration for users
 

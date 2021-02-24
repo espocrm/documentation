@@ -3,6 +3,7 @@
 In this article:
 
 * [Displaying a call recording](#displaying-a-call-recording)
+* [Grant access to Messages](#grant-access-to-messages)
 * [Add click-to-call feature to a custom entity](#add-click-to-call-feature-to-a-custom-entity)
 * [Add custom entities to Quick Create Entities](#add-custom-entities-to-quick-create-entities)
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
@@ -20,6 +21,21 @@ For displaying call recordings in EspoCRM, go to Administration > Layout Manager
 
 After that, clear a local cache (Menu > Clear Local Cache).
 
+
+## Grant access to Messages
+
+By default regular users don’t have access to Message entity. Administrator needs to grant access to this entity:
+
+1. Login as Administrator in EspoCRM.
+2. Navigate to the Administration > Roles.
+3. Create / edit a Twilio role.
+4. Grant access to the Message entity.
+
+![Twilio role](../../_static/images/extensions/voip-integration/twilio-role.png)
+
+By default the Message entity tab should be added into the tab list.
+
+![Message tab](../../_static/images/extensions/voip-integration/message-tab.png)
 
 ## Add click-to-call feature to a custom entity
 
