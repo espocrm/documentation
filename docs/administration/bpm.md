@@ -141,6 +141,6 @@ Example:
 
 #### bpm\broadcastSignal
 
-`bpm\broadcastSignal(SIGNAL_NAME). Broadcasts a custom signal. Available since Advanced Pack v2.7.1.
+`bpm\broadcastSignal(SIGNAL_NAME)` Broadcasts a custom signal. Available since Advanced Pack v2.7.1.
 
 It can be useful to broadcast a custom signal from a worfklow rule and then catch it inside a running process. A workflow rule will perform some condition checking and only after than will broadcast a signal.
