@@ -8,6 +8,8 @@ There are set of standard signals which are broadcasted upon specific events in 
 
 It's also possible to broadcast custom signals in BPM process or via code.
 
+Since v2.7.1 it's possible to broadcast custom signals using the formula function `bpm\broadcastSignal(SIGNAL_NAME)`.
+
 There are two types of signals:
 
 * Regular signals
