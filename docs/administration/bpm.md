@@ -155,3 +155,5 @@ $signalName = string\concatenate(
 
 bpm\broadcastSignal($signalName);
 ```
+
+Then it will be possible to catch the signal in a BPM process by listening to the signal `notePostedInCaseBySupportManager.{$id}`.
