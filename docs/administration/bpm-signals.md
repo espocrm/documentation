@@ -4,11 +4,10 @@ Signals are events with a specific name. Signals are broadcasted globally, they 
 
 Signals feature is a part of Advanced Pack extension and can be utilized in BPM and Workflows tools.
 
-There are set of standard signals which are broadcasted upon specific events in the application. These *built-in signals* are listed below in the article.
-
-It's also possible to broadcast custom signals in BPM process or via code.
-
-Since v2.7.1 it's possible to broadcast custom signals using the formula function `bpm\broadcastSignal(SIGNAL_NAME)`.
+* There are set of standard signals which are broadcasted upon specific events in the application. These *built-in signals* are listed below in the article.
+* It's possible to broadcast custom signals in BPM process.
+* It's possible to broadcast custom signals using the formula function `bpm\broadcastSignal(SIGNAL_NAME)` (since v2.7.1 i).
+* It's possible to broadcast custom signals via PHP code.
 
 There are two types of signals:
 
