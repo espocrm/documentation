@@ -778,11 +778,16 @@ Examples:
 
 `record\relationColumn(ENTITY_TYPE, ID, LINK, FOREIGN_ID, COLUMN)`
 
-Returns a relation column. Available since version 5.8.0.
+Returns a relation column. Available since v5.8.0.
 
 Example:
 
 `record\relationColumn('Account', $accountId, 'contacts', $contactId, 'role')`
+
+Example (condition checking position in team):
+
+`record\relationColumn('User', $someUserId, 'teams', 'some-team-id, 'role') == 'Support Manager'`
+
 
 #### record\updateRelationColumn
 
