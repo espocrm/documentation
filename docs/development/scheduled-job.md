@@ -18,7 +18,7 @@ class YourJobName implements Job
     
     public function run() : void 
     {	 
-	// all the logic needs to be defined in the method run
+	// Write your logic here.
     }	 
 }
 ```
