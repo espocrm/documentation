@@ -103,6 +103,8 @@ systemctl start espocrm-daemon.service
 
 ## Running jobs in parallel processes
 
+It's recommended to enable running jobs in parallel processes on a production.
+
 By default jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Jobs > Settings (in the top-right corner).
 
 Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes.
