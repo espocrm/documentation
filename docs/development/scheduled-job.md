@@ -5,12 +5,20 @@ To define a custom Scheduled Job, create a file `custom/Espo/Custom/Jobs/YourJob
 ```php
 <?php
 
-namespace Espo\Custom\Jobs; 
+namespace Espo\Custom\Jobs;
 
-class YourJobName extends \Espo\Core\Jobs\Base 
+use Espo\Core\{
+    Jobs\Job,
+};
+
+class YourJobName implements Job
 {
+    // Pass dependencies through the constructor using DI.
+    public function __construct()
+    {
+    }
     
-    public function run() 
+    public function run() : void 
     {	 
 	// all the logic needs to be defined in the method run
     }	 
