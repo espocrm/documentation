@@ -126,6 +126,18 @@ php command.php run-job Cleanup
 php command.php run-job ProcessMassEmail
 ```
 
+Jobs available out-of-the-box:
+
+* CheckEmailAccounts – checks personal email accounts
+* CheckInboundEmails – checks group email accounts
+* Cleanup
+* ProcessWebhookQueue
+* SendEmailNotifications
+* ControlKnowledgeBaseArticleStatus
+* ProcessMassEmail
+* SendEmailReminders
+* SubmitPopupReminders
+
 ## See also
 
 * [Creating custom job](../development/scheduled-job.md)
