@@ -43,6 +43,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 * defaultCurrency – currency applied by default;
 * baseCurrency – which currency to use as base when defining rates;
 * currencyList – array of available currencies;
+* thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (since v6.2.0);
 
 ### Access control
 
