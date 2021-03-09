@@ -296,6 +296,8 @@ will return `'Hello world'`.
 * [datetime\addYears](#datetimeaddyears)
 * [datetime\closest](#datetimeclosest)
 
+Date and date-time values are represented as strings. E.g. `'2021-01-01'`, `'2021-01-01 10:00'`.
+
 #### datetime\today
 `datetime\today()`
 
@@ -355,14 +357,20 @@ Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIME
 Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. The result will be negative if VALUE_1 < VALUE_2.
 
 #### datetime\addMinutes
+
 `datetime\addMinutes(VALUE, MINUTES)`
 
-Adds MINUTES to datetime VALUE. MINUTES can be negative.
+Adds MINUTES to datetime VALUE. MINUTES can be negative. Returns a modified STRING value.
+
+Example:
+
+`$modifiedValue = datetime\addMinutes('2021-01-01 00:00', 10)`
 
 #### datetime\addHours
+
 `datetime\addHours(VALUE, HOURS)`
 
-Adds HOURS to datetime VALUE. HOURS can be negative.
+Adds HOURS to datetime VALUE. HOURS can be negative. Returns a modified STRING value.
 
 #### datetime\addDays
 `datetime\addDays(VALUE, DAYS)`
@@ -370,21 +378,25 @@ Adds HOURS to datetime VALUE. HOURS can be negative.
 Adds DAYS to date or datetime VALUE. DAYS can be negative.
 
 #### datetime\addWeeks
+
 `datetime\addWeeks(VALUE, WEEKS)`
 
-Adds WEEKS to date or datetime VALUE. WEEKS can be negative.
+Adds WEEKS to date or datetime VALUE. WEEKS can be negative. Returns a modified STRING value.
 
 #### datetime\addMonths
+
 `datetime\addMonths(VALUE, MONTHS)`
 
-Adds MONTHS to date or datetime VALUE. MONTHS can be negative.
+Adds MONTHS to date or datetime VALUE. MONTHS can be negative. Returns a modified STRING value.
 
 #### datetime\addYears
+
 `datetime\addYears(VALUE, YEARS)`
 
-Adds YEARS to date or datetime VALUE. YEARS can be negative.
+Adds YEARS to date or datetime VALUE. YEARS can be negative. Returns a modified STRING value.
 
 #### datetime\closest
+
 `datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])`
 
 Returns the closest date or datetime to VALUE based on passed arguments.
@@ -409,6 +421,7 @@ Examples:
 * [number\randomInt](#numberrandomint)
 
 #### number\format
+
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])`
 
 Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK OR THOUSAND_SEPARATOR, then system defaults are used.
@@ -423,26 +436,31 @@ Examples:
 
 
 #### number\abs
+
 `number\abs(VALUE)`
 
 Absolute value. Returns null if VALUE is not numeric.
 
 #### number\round
+
 `number\round(VALUE, PRECISION)`
 
 Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
 
 #### number\floor
+
 `number\floor(VALUE)`
 
 Returns the next lowest integer value by rounding down value if necessary.
 
 #### number\ceil
+
 `number\ceil(VALUE)`
 
 Returns the next highest integer value by rounding up value if necessary.
 
 #### number\randomInt
+
 `number\randomInt([MIN, MAX])`
 
 Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used. (since v5.9.2)
@@ -843,11 +861,13 @@ $hash = password\hash($password);
 * [array\join](#arrayjoin)
 
 #### array\includes
+
 `array\includes(LIST, VALUE)`
 
 Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields.
 
 #### array\push
+
 `array\push(LIST, VALUE1 [, VALUE2 ...])`
 
 Adds one or more elements to the end of an array and returns the new array.
@@ -861,11 +881,13 @@ $list = array\push($list, 'test');
 ```
 
 #### array\length
+
 `array\length(LIST)`
 
 Returns the number of elements in LIST.
 
 #### array\at
+
 `array\at(LIST, INDEX)`
 
 Returns a value by INDEX. (since v5.8.3)
