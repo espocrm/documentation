@@ -257,6 +257,8 @@ Custom formatting for currency values:
 
 Value `10000.5` will be printer as `10 000,50`.
 
+Note that `_RAW` part is appended to a field name.
+
 ### Currency symbol
 
 ```
