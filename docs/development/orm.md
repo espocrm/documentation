@@ -971,5 +971,22 @@ Relation defs:
 $relationDefs = $entityDefs->getRelation($relationName);
 ```
 
-See all available methods in `Espo\ORM\Defs\AttributeDefs` and `Espo\ORM\Defs\RelationDefs`.
+A field list:
 
+```php
+$fieldList = $entityDefs->getFieldNameList();
+```
+
+Field defs:
+
+```php
+$fieldDefs = $entityDefs->getField($field);
+```
+
+See all available methods in:
+
+* `Espo\ORM\Defs\EntityDefs`
+* `Espo\ORM\Defs\AttributeDefs`
+* `Espo\ORM\Defs\RelationDefs`
+* `Espo\ORM\Defs\FieldDefs`
+* `Espo\ORM\Defs\IndexDefs`
