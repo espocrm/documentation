@@ -116,6 +116,16 @@ Out-of-the-box functions are listed below.
 
 If CONDITION is met, then do CONSEQUENT. If not - then do ALTERNATIVE.
 
+Example:
+
+```
+ifThenElse(
+    $someVariable == 'someValue', // if condition is true
+    $anotherVariable = 1, // do this
+    $anotherVariable = 2 // otherwise do this
+)
+```
+
 #### ifThen
 
 `ifThen(CONDITION, CONSEQUENT)`
@@ -141,7 +151,7 @@ Useful to create an array for link-multiple IDs.
 Example: 
 
 ```
-teamsIds = list($teamId) // ['team-id']
+teamsIds = list($teamId) // `['team-id']`
 ```
 
 #### while
@@ -155,7 +165,9 @@ Example:
 ```
 $source = list(0, 1, 2);
 $target = list();
+
 $i = 0;
+
 while($i < array\length($source),
     $target = array\push(
         $target,
@@ -187,6 +199,12 @@ while($i < array\length($source),
 
 Concatenates two or more strings.
 
+Example:
+
+```
+$someVariable = string\concatenate('ab', 'cd'); // will return 'abcd'
+```
+
 #### string\substring
 
 `string\substring(STRING, START, LENGTH)`
@@ -197,41 +215,100 @@ If LENGTH is omitted, the substring starting from START until the end of the STR
 
 If LENGTH is negative, then that many characters will be omitted from the end of STRING.
 
+Examples:
+
+```
+$someVariable = string\substring('abcde', 1, 2); // will return 'bc'
+
+$someVariable = string\substring('abcde', 1, -1); // will return 'bcd'
+```
+
 #### string\contains
 
 `string\contains(STRING, NEEDLE)`
 
 Whether STRING contains NEEDLE.
 
+Example:
+
+```
+string\contains('hello world', 'world') // will return true
+```
+
 #### string\pos
+
 `string\pos(STRING, NEEDLE)`
 
-Returns possition of NEEDLE in STRING, *false* if not found. (since version 5.7.3)
+Returns possition of NEEDLE in STRING, *false* if not found. (since v5.7.3)
+
+Example:
+
+```
+string\pos('hello world', 'world') // will return `6`
+```
 
 #### string\test
+
 `string\test(STRING, REGULAR_EXPRESSION)`
 
 Search a match between REGULAR_EXPRESSION and STRING. Returns TRUE of FALSE.
 
+Example:
+
+```
+string\test('hello world', '/hello/i') // will return TRUE
+```
+
 #### string\length
+
 `string\length(STRING)`
 
 The length of STRING.
 
+Example:
+
+```
+string\length('hello world') // will return `11`
+```
+
 #### string\trim
+
 `string\trim(STRING)`
 
 Strips whitespace from the beginning and end of STRING.
 
+Example:
+
+```
+string\length(' hello world ') // will return `hello world`
+```
+
 #### string\lowerCase
-`string\lowerCase(STRING)` Converts letters to lower case.
+
+`string\lowerCase(STRING)`
+
+Converts letters to lower case.
+
+Example:
+
+```
+string\lowerCase('HELLO world') // will return `hello world`
+```
 
 #### string\upperCase
+
 `string\upperCase(STRING)`
 
 Converts letters to upper case.
 
+Example:
+
+```
+string\upperCase('HELLO world') // will return `HELLO WROLD`
+```
+
 #### string\pad
+
 `string\pad(STRING, LENGTH, [PAD_STRING], [PAD_TYPE])`
 
 Pads STRING to a certain LENGTH with PAD_STRING.
@@ -240,7 +317,14 @@ PAD_STRING by default is a whitespace string `' '`.
 
 PAD_TYPE can be *'right'*, *'left'*, *'both'*. By default it is *'right'*.
 
+Example:
+
+```
+string\pad('100', 5, '*', 'right') // will return `100**`
+```
+
 #### string\match
+
 `string\match(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
 Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
@@ -254,6 +338,7 @@ will return `{token1}`.
 The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 
 #### string\matchAll
+
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
 Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3)
@@ -299,16 +384,19 @@ will return `'Hello world'`.
 Date and date-time values are represented as strings. E.g. `'2021-01-01'`, `'2021-01-01 10:00'`.
 
 #### datetime\today
+
 `datetime\today()`
 
-Returns today's date.
+Returns today's date (w/o time).
 
 #### datetime\now
+
 `datetime\now()`
 
 Returns current datetime.
 
 #### datetime\format
+
 `datetime\format(VALUE, [TIMEZONE], [FORMAT])`
 
 Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then default time zone will be used. If FORMAT is omitted, then default format will be used.
@@ -322,36 +410,43 @@ Examples:
 `datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
 
 #### datetime\date
+
 `datetime\date(VALUE, [TIMEZONE])`
 
 Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\month
+
 `datetime\month(VALUE, [TIMEZONE])`
 
 Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\year
+
 `datetime\year(VALUE, [TIMEZONE])`
 
 Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\hour
+
 `datetime\hour(VALUE, [TIMEZONE])`
 
 Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\minute
+
 `datetime\minute(VALUE, [TIMEZONE])`
 
 Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\dayOfWeek
+
 `datetime\dayOfWeek(VALUE, [TIMEZONE])`
 
 Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted, then system timezone is used.
 
 #### datetime\diff
+
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)`
 
 Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. The result will be negative if VALUE_1 < VALUE_2.
@@ -373,6 +468,7 @@ Example:
 Adds HOURS to datetime VALUE. HOURS can be negative. Returns a modified STRING value.
 
 #### datetime\addDays
+
 `datetime\addDays(VALUE, DAYS)`
 
 Adds DAYS to date or datetime VALUE. DAYS can be negative.
@@ -533,6 +629,7 @@ Example:
 
 
 #### entity\attributeFetched
+
 `entity\attributeFetched(ATTRIBUTE)`
 
 An ATTRIBUTE value that was set when a target record was fetched from database. Before it was modified.
