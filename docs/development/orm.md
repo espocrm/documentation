@@ -12,9 +12,10 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 
 **SthCollection** is a collection of entities, consuming much less memory than EntityCollection.
 
-## See Also
+## See also
 
 * [Complex expressions](../user-guide/complex-expressions.md)
+* [Value objects](orm-value-objects.md)
 
 ## Injecting Entity Manager
 
