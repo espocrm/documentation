@@ -16,6 +16,8 @@ $entity->setValueObject($field, $valueObject);
 $entity->setValueObject($field, null); // null can be set
 ```
 
+## Supported field types
+
 ### Address
 
 ```php
@@ -104,3 +106,16 @@ $entity->setContacts(
     LinkMultiple::fromList([$contact]);
 );
 ```
+
+## Defining
+
+For a field type you need to define 2 parameters in metadata > fields > {fieldType}:
+
+* `valueFactoryClassName` – implementation of `Espo\ORM\Value\ValueFactory` interface;
+* `attributeExtractorClassName` – implementation of `Espo\ORM\Value\AttributeExtractor` interface.
+
+It's also possible to define a value object for a specific field in metadata > entityDefs > {entityType} > fields > {fieldName}:
+
+* `valueFactoryClassName`;
+* `attributeExtractorClassName`.
+
