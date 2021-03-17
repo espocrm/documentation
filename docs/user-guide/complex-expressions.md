@@ -5,7 +5,7 @@ Complex expressions are used to define SQL expressions. Complex expressions are 
 Where complex expressions can be utilized:
 
 * in report filters;
-* when working with ORM to avoid writing bare SQL (for developers).
+* when working with ORM to avoid writing raw SQL (for developers).
 
 In this article:
 
