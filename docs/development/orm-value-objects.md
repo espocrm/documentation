@@ -1,5 +1,7 @@
 # Value Objects
 
+Actual as of v6.2.0.
+
 * Value objects are immutable.
 * Value objects are available in `Espo\Core\Fields\`.
 * It's possible to define custom value object for a field type or for a specific field.
