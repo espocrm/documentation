@@ -100,7 +100,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 * jobPeriod – `7800` – max execution time (in seconds) allocated for a single job; if exceeded then set to *Failed*;
 * jobPeriodForActiveProcess – `36000` – max execution time (in seconds) allocated for a single job with active process; if exceeded then set to *Failed*;
 * jobRerunAttemptNumber – `1` – number of attempts to re-run failed jobs;
-* jobRunInParallel – `false` – jobs will be executed in parallel processes;
+* jobRunInParallel – `false` – jobs will be executed in parallel processes (see [here](jobs.md#running-jobs-in-parallel-processes));
 * jobPoolConcurrencyNumber – `8` – max number of processes run simultaneously;
 * cronMinInterval – `2` – min interval (in seconds) between two cron runs;
 * daemonMaxProcessNumber – `5` – max number of processes run simultaneously;
