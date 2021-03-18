@@ -62,7 +62,7 @@ All of these options can be added/changed in EspoCRM after installation.
 
 ![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
-Installation is complete. The last thing is to setup cron (or daemon) in your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems. More info about jobs is [here](#jobs).
+Installation is complete. The last thing is to setup cron (or daemon) in your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems. More info about jobs is available [here](jobs.md).
 
 ![8](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/8.png)
 
