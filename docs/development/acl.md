@@ -4,8 +4,8 @@
 
 There are two objects that allow to check access:
 
-* AclManager - `\Espo\Core\AclManager`
-* Acl - `\Espo\Core\Acl`
+* AclManager - `Espo\Core\AclManager`
+* Acl - `Espo\Core\Acl`
 
 With *AclManager* you can check access for any user. *Acl* is a wrapper for *AclManager* for a current user.
 
@@ -82,18 +82,23 @@ class Task extends \Espo\Core\Acl\Base
     {
         // it's a copy of the original method
         $userTeamIdList = $user->getLinkMultipleIdList('teams');
+	
         if (!$entity->hasRelation('teams') || !$entity->hasAttribute('teamsIds')) {
             return false;
         }
+	
         $entityTeamIdList = $entity->getLinkMultipleIdList('teams');
+	
         if (empty($entityTeamIdList)) {
             return false;
         }
+	
         foreach ($userTeamIdList as $id) {
             if (in_array($id, $entityTeamIdList)) {
                 return true;
             }
         }
+	
         return false;
     }
 
@@ -101,8 +106,9 @@ class Task extends \Espo\Core\Acl\Base
     // omit if you don't need a custom logic for this
     public function checkEntityDelete(User $user, Entity $entity, $data)
     {
-        if ($user->isAdmin()) 
+        if ($user->isAdmin()) {
             return true;
+	}
 
         // here we call a default logic checking 'delete' access
         if ($this->checkEntity($user, $entity, $data, 'delete'))
@@ -152,8 +158,9 @@ class Task extends \Espo\Core\Acl\Base
     {
         // custom logic here
 
-        if ($this->checkEntity($user, $entity, $data, 'create'))
+        if ($this->checkEntity($user, $entity, $data, 'create')) {
             return true;
+    	}
 
         // custom logic here
     }
@@ -224,6 +231,7 @@ class Task extends \Espo\Core\AclPortal\Base
                 }
             }
         }
+	
         return false;
     }
     
@@ -236,10 +244,12 @@ class Task extends \Espo\Core\AclPortal\Base
     {
         if ($contactId = $user->get('contactId')) { 
             $repository = $this->getEntityManager()->getRepository('Task');
+	    
             if ($repository->isRelated($entity, 'contacts', $contactId)) {
                 return true;
             }
 	}
+	
 	return false;
     }
 }
@@ -276,7 +286,9 @@ class Task extends \Espo\Modules\Crm\SelectManagers\Task
     protected function accessPortalOnlyContact(&$result)
     {
         $this->setDistinct(true, $result);
+	
 	$this->addLeftJoin(['contacts', 'contactsAccess'], $result);
+	
 	$result['whereClause'] = [
 	    'contactsAccess.id' => $this->getUser()->get('contactId'),
 	];
