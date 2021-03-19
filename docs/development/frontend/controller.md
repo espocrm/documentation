@@ -67,7 +67,9 @@ If you open in the browser URL `your-espo-url#Account/test/myId` it will execute
 In controller:
 ```js
         actionTest: function (options) {
-            if (!options.id) throw new Espo.Exceptions.NotFound();
+            if (!options.id) {
+                throw new Espo.Exceptions.NotFound();
+            }
 
             var id = options.id;
 
