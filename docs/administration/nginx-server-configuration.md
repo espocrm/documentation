@@ -21,7 +21,7 @@ To fix it, try the following steps **one by one**. After each step check if the 
 
 ### 1. Enable rewrite rules in Nginx server
 
-Add this code to your Nginx server block config file (`/etc/nginx/sites-available/YOUR_SITE`) inside **server** block:
+Add this code to your Nginx server config file `/etc/nginx/sites-available/YOUR_SITE` inside **server** block:
 
 ```
 server {
@@ -58,6 +58,7 @@ server {
             return 403;
         }
     }
+    
     location ^~ /data/ {
         deny all;
     }
