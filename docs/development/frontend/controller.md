@@ -48,12 +48,14 @@ If you open in the browser URL `your-espo-url#Account/hello` it will execute *ac
 Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
 
 ```json
+{
     "Account/test/:id": {
         "params": {
             "controller": "Account",
             "action": "test"
         }
     }
+}
 ```
 
 Clear cache.
