@@ -58,19 +58,7 @@ server {
             return 403;
         }
     }
-    location ^~ /data/logs/ {
-        deny all;
-    }
-    location ^~ /data/\.backup/ {
-        deny all;
-    }
-    location ^~ /data/config.php {
-        deny all;
-    }
-    location ^~ /data/cache/ {
-        deny all;
-    }
-    location ^~ /data/upload/ {
+    location ^~ /data/ {
         deny all;
     }
     location ^~ /application/ {
