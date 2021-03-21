@@ -56,6 +56,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 * adminNotifications – `true` – notifications in admin panel;
 * adminNotificationsNewVersion – `true` – notifications about new versions in admin panel;
 * adminNotificationsNewExtensionVersion – `true` – notifications about new extension versions in admin panel;
+* emailReminderPortionSize – `10` – how much email reminders can be sent at once (since v6.2.0);
 
 ### Emails
 
