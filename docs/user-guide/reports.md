@@ -304,6 +304,8 @@ Administrator can create custom list view filters based on specific reports. Ava
 
 Note: The layout, that is specified in the report, is not applied to the list view when the filter is selected.
 
+![Report filter](../_static/images/user-guide/reports/report-filter.png)
+
 ## Report Panels
 
 Report Panels are the detail view panels showing report results. 
