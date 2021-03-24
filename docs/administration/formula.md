@@ -47,8 +47,8 @@ There are 4 element types that can be used in formula:
 
 * operators
 * functions
+* values (scalars and NULL value)
 * attributes
-* values
 
 Separated expressions must be delimited by character `;`.
 
@@ -64,6 +64,12 @@ where:
 * `' + '` – a value (of string type)
 * `$test` – a variable (supposed to be declared somewhere above)
 
+Available scalar types:
+
+* string – `'string'`
+* int – `1000`
+* float – `1000.5`
+* boolean – `true` or `false`
 
 ## Operators
 
@@ -888,6 +894,8 @@ Available since version 5.9.0.
 Examples:
 
 `record\update('Meeting', 'SOME-MEETING-ID', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
+
+It will update the meeting with ID `SOME-MEETING-ID`, and will set `emailAddress = 'SOME@ADDRESS.com'`, `assignedUserId = 'SOME-USER-ID'`.
 
 #### record\relationColumn
 
