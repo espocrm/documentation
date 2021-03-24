@@ -37,13 +37,14 @@ In this article:
 * [Function arguments](#function-arguments)
 * [Comparison](#comparison)
 * [Examples](#examples)
+* [Explanation](#explanation)
 * [Using formula in Workflows](#using-formula-in-workflows)
 
 ## Syntax
 
 EspoCRM formula is written in a simple language designed specifically for this feature.
 
-There are 4 element types that can be used in formula:
+There are 4 element types (lexemes) that can be used in formula:
 
 * operators
 * functions
@@ -102,6 +103,17 @@ The priority of operators:
 
 It's possible to access attributes of related entities with the following format `linkName.attributeName`.
 
+The attribute lexeme was introduced to be able to write simple like this:
+
+```
+descrption = 'test';
+```
+
+If we didn't have attributes we would need to write more verbose:
+
+```
+entity\setAttribute('descrption', 'test');
+```
 
 ## Functions
 
@@ -1269,6 +1281,75 @@ ifThenElse(
 
 ```
 
+## Explanation
+
+Functions accept expressions as arguments. 
+
+```
+someFunction(EXPRESSION1, EXPRESSION2);
+```
+
+EXPRESSION1 can be:
+
+* scalar value
+* variable
+* attribute
+* combination of all those forming an expression
+
+Scalar STRING as an argument:
+
+```
+someFunction('some string');
+```
+
+Scalar INT as an argument:
+
+```
+someFunction(10);
+```
+
+Scalar FLOAT as an argument:
+
+```
+someFunction(10.5);
+```
+
+Scalar BOOLEAN as an argument:
+
+```
+someFunction(true);
+```
+
+NULL value as an argument:
+
+```
+someFunction(null);
+```
+
+Expression as an argument:
+
+```
+someFunction(2 + 2);
+```
+
+Expression as an argument:
+
+```
+someFunction(anotherFunction());
+```
+
+Variable as an argument:
+
+```
+someFunction($someVariable);
+```
+
+Attribute as an argument:
+
+```
+someFunction(attributeName);
+```
+
 ## See also
 
 * [Formula scripts examples](formula-scripts-examples.md)
@@ -1277,5 +1358,4 @@ ifThenElse(
 ## Using formula in Workflows
 
 You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
-
 
