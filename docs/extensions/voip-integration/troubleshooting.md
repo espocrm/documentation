@@ -5,6 +5,7 @@ In this article:
 * [How to report](#how-to-report)
 * [VoIP error debug](#voip-error-debug)
 * [Asterisk: The popup window is not displayed](#asterisk-the-popup-window-is-not-displayed)
+* [Asterisk: Click to call is not working](#asterisk-click-to-call-is-not-working)
 * [Starface: The popup window is not displayed](#starface-the-popup-window-is-not-displayed)
 
 ## How to report
