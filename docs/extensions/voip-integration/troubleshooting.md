@@ -38,6 +38,22 @@ To be able to make / receive calls with the popup window, please check these ite
 
 Now, you can make calls from SIP client or from EspoCRM.
 
+## Asterisk: Click to call is not working
+
+VoIP Integration extension is sending a request to Asterisk server when you click on a phone number.
+Please make sure the following parameters are correct (Administration > VoIP Settings > VoIP » Asterisk AMI):
+1. `Dialout Channel` - it determines the channel for outgoing calls. It can be "PJSIP/###" (Asterisk 13+) or "SIP/###", where ### is a user’s extension (internal number). The extension "###" will be substituted automatically depending on the user.
+
+  ![Dialout Channel](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-1.png)
+
+2. `Dial Context` - context of your outgoing calls. The default value of Asterisk server is `from-internal`. If you use some custom extension in your Asterisk server, you have to define it in EspoCRM.
+
+  ![Dialout Channel](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-2.png)
+
+3. `User Dial Context` - each user can define his own Dial Context in his user's profile. Please make sure this option is empty or defined correctly.
+
+  ![Dialout Channel](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-3.png)
+
 ## Starface: The popup window is not displayed
 
 Check the following items to find the cause of the issue:
