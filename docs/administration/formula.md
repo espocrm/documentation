@@ -98,7 +98,7 @@ The priority of operators:
 
 ## Attributes
 
-[Attributes](terms-and-naming.md#attribute) represent field values of the target entity. You can insert available attributes by clicking on the plus button.
+[Attributes](terms-and-naming.md#attribute) represent field values of a target entity. You can insert available attributes by clicking on the plus button.
 
 It's possible to access attributes of related entities with the following format `linkName.attributeName`.
 
