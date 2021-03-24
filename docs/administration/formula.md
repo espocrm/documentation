@@ -106,13 +106,13 @@ It's possible to access attributes of related entities with the following format
 The attribute lexeme was introduced to be able to write simple like this:
 
 ```
-descrption = 'test';
+description = 'test';
 ```
 
 If we didn't have attributes we would need to write more verbose:
 
 ```
-entity\setAttribute('descrption', 'test');
+entity\setAttribute('description', 'test');
 ```
 
 ## Functions
