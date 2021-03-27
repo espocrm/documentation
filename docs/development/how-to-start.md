@@ -9,7 +9,7 @@
 
 Note: Some dependencies require php extensions that you might don't have installed (e.g. zmq, ldap) and don't need to use. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
-To compose a proper *config.php* and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in a browser.
+To compose a proper *config.php* and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in the browser.
 
 Then open `data/config.php` file and add:
 
