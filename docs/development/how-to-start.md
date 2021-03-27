@@ -4,8 +4,8 @@
 
 1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository to your local computer.
 2. Change to the project's root directory: `cd path/to/espocrm`.
-3. Install [composer](https://getcomposer.org/doc/00-intro.md).
-4. Run `composer install` if composer is installed globally or `php composer.phar install` if locally.
+3. Install [Composer](https://getcomposer.org/doc/00-intro.md).
+4. Run `composer install` if Composer is installed globally (or `php composer.phar install`).
 
 Note: Some dependencies require php extensions that you might don't have installed (e.g. zmq, ldap) and don't need to use. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
