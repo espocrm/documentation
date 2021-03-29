@@ -1,5 +1,7 @@
 # Google Integration. Gmail
 
+**Note**: Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
+
 Gmail Secure Authentication is available in [Google Integration](https://www.espocrm.com/extensions/google-integration) extension. It provides a secure authentication for Gmail accounts via OAuth2. With this extension, you won’t need to store your Gmail password in EspoCRM and enable access for less secure applications in your Google Account settings.
 
 Note: Using in personal email accounts requires 5.9.2 version or later. Using in group email accounts requires 5.8.0 version or later.
