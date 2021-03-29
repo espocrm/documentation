@@ -1,5 +1,7 @@
 # Outlook Integration. Contacts
 
+**Note**: Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
+
 Outlook Contacts Integration  is available in the [extension](https://www.espocrm.com/extensions/outlook-integration/). Compatible with EspoCRM 5.6.3 and higher.
 
 Provides the ability to push EspoCRM contacts and leads to Outlook Contacts (People) into a specific folder. Fields being pushed: First Name, Last Name, Email Address, Phone Number, and Account Name.
