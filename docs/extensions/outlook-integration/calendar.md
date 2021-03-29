@@ -1,5 +1,7 @@
 # Outlook Integration. Calendar
 
+**Note**: Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
+
 Outlook Calendar Sync is available in the [extension](https://www.espocrm.com/extensions/outlook-integration/). Compatible with EspoCRM 5.6.3 and higher.
 
 Features:
