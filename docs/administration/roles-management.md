@@ -118,6 +118,10 @@ Defines whether users have the ability to mass-update records.
 
 Allows to erase personal data.
 
+### Follower Management Permission
+
+Allows to manage followers of specific records. Users will be able to add and remove followers. Can be restricted to users of own teams. (since v6.2.0)
+
 ## Field Level Security
 
 Allows to control access for specific fields.
