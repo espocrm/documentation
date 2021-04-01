@@ -100,13 +100,15 @@ Allows to restrict the ability for users to view activities, calendar and stream
 
 Defines access to portal information, the ability to post messages to portal users.
 
+Users with the Portal Permission can manage followers of a specific record (since v6.2.0). Only portal users can be managed.
+
 ### Group Email Account Permission
 
 Defines access to group email accounts, the ability to send emails from group SMTP.
 
 ### Export Permission
 
-Defines whether user have the ability to export records. (since version 4.9.0)
+Defines whether user have the ability to export records.
 
 ## Field Level Security
 
