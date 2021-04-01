@@ -110,6 +110,14 @@ Defines access to group email accounts, the ability to send emails from group SM
 
 Defines whether user have the ability to export records.
 
+### Mass Update Permission
+
+Defines whether users have the ability to mass-update records.
+
+### Data Privacy Permission
+
+Allows to erase personal data.
+
 ## Field Level Security
 
 Allows to control access for specific fields.
