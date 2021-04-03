@@ -403,11 +403,15 @@ class AccountChecker extends BaseChecker
 ```php
 class AccountChecker implements Checker
 {
-     private $baseChecker;
+    private $baseChecker;
+    
+    private $someDependency
      
-    public function __construct(BaseChecker $baseChecker)
+    // Here we can inject additional dependencies that would problematic if we extended the base class.
+    public function __construct(BaseChecker $baseChecker, SomeDependency $someDependency)
     {
         $this->baseChecker = $baseChecker;
+        $this->someDependency = $someDependency;
     }
 
     public function check(Entity $entity): bool
