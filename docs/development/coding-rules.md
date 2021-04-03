@@ -70,7 +70,7 @@ $account = $this->entityManager
 
 ### 3\. Specify type hinting for method parameters. Also specify a method return type.
 
-Parameter types:
+✔️ Parameter types:
 
 ```php
 <?php
@@ -82,7 +82,7 @@ class MyClass
 }
 ```
 
-Return type:
+✔️ Return type:
 
 ```php
 <?php
@@ -96,6 +96,8 @@ class MyClass
 ```
 
 ### 4\. Never return TRUE or FALSE to indicate a success or failure. Throw an exception if failure, return NULL for empty result.
+
+✔️ Good:
 
 ```php
 <?php
