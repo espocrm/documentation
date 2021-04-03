@@ -76,7 +76,7 @@ Parameter types:
 <?php
 class MyClass
 {
-    public function myMethod(Request $request, string $text) : void
+    public function myMethod(Request $request, string $text): void
     {
     }
 }
@@ -88,7 +88,7 @@ Return type:
 <?php
 class MyClass
 {
-    public function getAsString() : ?string
+    public function getAsString(): ?string
     {
         // ...
     }
@@ -104,7 +104,7 @@ use Espo\Core\Exceptions\Error;
 
 class MyClass
 {
-    public function getAsString() : ?string
+    public function getAsString(): ?string
     {
         if ($this->isSomethingWrong()) {
             throw new Error("Something is wrong.");
@@ -136,7 +136,7 @@ Exception: Adding comments may be reasonable in some rare cases.
      * @param string $input Input string.
      * @return string Sanitized string.
      */
-    protected function sanitizeInput(string $input) : string
+    protected function sanitizeInput(string $input): string
     {
         // sanitize
         return Util::sanitize($input);
@@ -146,7 +146,7 @@ Exception: Adding comments may be reasonable in some rare cases.
 ✔️ Good:
 
 ```php
-    protected function sanitizeInput(string $input) : string
+    protected function sanitizeInput(string $input): string
     {
         return Util::sanitize($input);
     }
@@ -217,11 +217,11 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function process() : void
+    public function process(): void
     {
         if (!$this->isCached()) {
             foreach ($this->itemList as $item) {
-                if (! $this->hasItem($item)) {
+                if (!$this->hasItem($item)) {
                     $this->loadItem($item);
                 }
             }
@@ -234,7 +234,7 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function process() : void
+    public function process(): void
     {
         if (!$this->isCached()) {
             foreach ($this->itemList as $item) {
@@ -249,7 +249,7 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function process() : void
+    public function process(): void
     {
         if (!$this->isCached()) {
             $this->processLoadItems();
@@ -264,7 +264,7 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function getData() : ?Data
+    public function getData(): ?Data
     {
         if (! $this->isEmpty()) {
             $this->loadData();
@@ -281,7 +281,7 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function getData() : ?Data
+    public function getData(): ?Data
     {
         if ($this->isEmpty()) {
             return null;
@@ -302,7 +302,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-    public function process(string $city, string $country, string $postalCode) : void
+    public function process(string $city, string $country, string $postalCode): void
     {
     }
 ```
@@ -312,7 +312,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-    public function process(Address $address) : void
+    public function process(Address $address): void
     {
     }
 ```
@@ -323,7 +323,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-    public function find(array $where, int $offset = 0, ?int $limit = null, bool $applyAcl = false)
+    public function find(array $where, int $offset = 0, ?int $limit = null, bool $applyAcl = false): Collection
     {
     }
 ```
@@ -333,7 +333,8 @@ Less is better. Four is too much.
 ```php
 <?php
 // Using builder.
-$collection = $finder->createBuilder()
+$collection = $finder
+    ->createBuilder()
     ->where($where)
     ->offset($offset)
     ->limit($limit)
@@ -352,7 +353,7 @@ class SomeProcessor
 {
     private $isProcessed = false;
     
-    public function process() : bool
+    public function process(): bool
     {
         $this->isProcessed = true;
         
@@ -368,7 +369,7 @@ class SomeProcessor
 ```php
 class SomeProcessor
 {
-    public function process() : Result
+    public function process(): Result
     {
         // do something
         
