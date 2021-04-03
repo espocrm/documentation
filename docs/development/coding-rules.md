@@ -14,7 +14,7 @@ use Espo\Core\{
 
 class MyClass
 {
-    protected $container;
+    private $container;
 
     public function __constructor(Container $container)
     {
