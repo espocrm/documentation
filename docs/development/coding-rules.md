@@ -332,7 +332,7 @@ Less is better. Four is too much.
 
 ```php
 <?php
-// Using builder.
+// Using a builder.
 $collection = $finder
     ->createBuilder()
     ->where($where)
