@@ -280,7 +280,7 @@ class SomeClass
 // ...
     public function getData(): ?Data
     {
-        if (! $this->isEmpty()) {
+        if (!$this->isEmpty()) {
             $this->loadData();
 
             return $this->data;
