@@ -129,7 +129,7 @@ In addition: Do not write *phpdoc* for non-public methods and properties. It's O
 
 Exception: Adding comments may be reasonable in some rare cases.
 
-❗ Bad:
+❗ Bad (excessive documenting and commenting):
 
 ```php
     /**
@@ -138,7 +138,7 @@ Exception: Adding comments may be reasonable in some rare cases.
      * @param string $input Input string.
      * @return string Sanitized string.
      */
-    protected function sanitizeInput(string $input): string
+    private function sanitizeInput(string $input): string
     {
         // sanitize
         return Util::sanitize($input);
@@ -148,9 +148,21 @@ Exception: Adding comments may be reasonable in some rare cases.
 ✔️ Good:
 
 ```php
-    protected function sanitizeInput(string $input): string
+    private function sanitizeInput(string $input): string
     {
         return Util::sanitize($input);
+    }
+```
+
+✔️ Good (documenting public methods is OK):
+
+```php
+    /**
+     * Run a command.
+     */
+    public function run(Params $params): void
+    {
+        // some logic
     }
 ```
 
