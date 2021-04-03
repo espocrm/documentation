@@ -405,7 +405,7 @@ class AccountChecker implements Checker
 {
     private $baseChecker;
     
-    private $someDependency
+    private $someDependency;
      
     // Here we can inject additional dependencies that would problematic if we extended the base class.
     public function __construct(BaseChecker $baseChecker, SomeDependency $someDependency)
