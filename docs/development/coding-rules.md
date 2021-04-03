@@ -407,7 +407,8 @@ class AccountChecker implements Checker
     
     private $someDependency;
      
-    // Here we can inject additional dependencies that would problematic if we extended the base class.
+    // Here we can inject additional dependencies that would be problematic
+    // if we extended the base class.
     public function __construct(BaseChecker $baseChecker, SomeDependency $someDependency)
     {
         $this->baseChecker = $baseChecker;
