@@ -201,7 +201,7 @@ use RuntimeException;
 
 class SomeClass
 {
-    public function process() : void
+    public function process(): void
     {
         $object1 = new Something();
         $object2 = new AnotherThing();
