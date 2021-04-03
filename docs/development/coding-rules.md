@@ -381,3 +381,42 @@ class SomeProcessor
 ### 10\. Prefer composition over inheritance.
 
 Try to use inheritance only when it's really reasonable.
+
+❗ Bad:
+
+```php
+class AccountChecker extends BaseChecker
+{
+    public function check(Entity $entity): bool
+    {
+        $result = parent::check($entity);
+
+        // some additional logic
+
+        return $result;
+    }
+}
+```
+
+✔️ Good:
+
+```php
+class AccountChecker implements Checker
+{
+     private $baseChecker;
+     
+    public function __construct(BaseChecker $baseChecker)
+    {
+        $this->baseChecker = $baseChecker;
+    }
+
+    public function check(Entity $entity): bool
+    {
+        $result = $this->baseChecker->check($entity);
+
+        // some additional logic
+
+        return $result;
+     }
+}
+```
