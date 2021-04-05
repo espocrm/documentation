@@ -86,6 +86,8 @@ Available as of v6.2.0.
 
 Class: `Espo\Core\Select\SelectBuilderFactory`
 
+The layer over ORM. Provides the ability to apply filters, access control. Converts search parameters recived from the front-end to ORM query.
+
 ## selectManagerFactory
 
 Deprecated as of v6.2.0.
@@ -113,6 +115,8 @@ Number functions.
 ## fileStorageManager
 
 Class: `Espo\Core\FileStorage\Manager`
+
+Stores and reads attachment entities.
 
 ## language
 
