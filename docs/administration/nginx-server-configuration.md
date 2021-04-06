@@ -49,10 +49,6 @@ server {
         }
     }
 
-    location ~ /reset/?$ {
-        try_files /reset.html =404;
-    }
-
     location ^~ (data|api)/ {
         if (-e $request_filename){
             return 403;
