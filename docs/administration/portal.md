@@ -58,8 +58,8 @@ You can find the URL for your portal in the *URL* field of the portal record. It
 
 ### Access by Custom URL for Apache server
 
-Custom URL: `portal-host-name.com`.
-Portal ID: `16b9hm41c069e6j24`.
+* Custom URL: `portal-host-name.com`
+* Portal ID: `16b9hm41c069e6j24`
 
 #### crm.portal.conf
 
@@ -95,8 +95,8 @@ Specify portal record ID instead of `{PORTAL_ID}`. Portal record ID can be obtai
 
 ### Access portal by Custom URL for Nginx server
 
-Custom URL: `portal-host-name.com`.
-Portal ID: `5a8a9b9328e6a955b`.
+* Custom URL: `portal-host-name.com`
+* Portal ID: `5a8a9b9328e6a955b`
 
 #### crm.portal.conf
 ```
