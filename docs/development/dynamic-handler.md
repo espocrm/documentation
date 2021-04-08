@@ -22,6 +22,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
 
     return Dep.extend({
 
+        // called on initialization
         init: function () {
             this.controlFields();
 
@@ -31,9 +32,10 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             );
         },
 
-        controlFields: function () {            
+        controlFields: function () {     
+            // if assigned user is not empty
             if (this.model.get('assignedUserId')) {
-                // if assigned user is not empty
+                
                 this.recordView.showField('sicCode');
 
                 this.recordView.setFieldRequired('type');
