@@ -31,18 +31,18 @@ define('custom:my-dynamic-handler', ['dynamic-handler'], function (Dep) {
         },
 
         controlFields: function () {
-            var selectedContinentList = this.recordView.model.get('continents') || [];
+            let selectedContinentList = this.recordView.model.get('continents') || [];
 
-            var continentList = ['Africa', 'Asia'];
+            let continentList = ['Africa', 'Asia'];
 
-            var countryMap = {
+            let countryMap = {
                 'Africa': ['Nigeria', 'Ethiopia'],
                 'Asia': ['India', 'Pakistan'],
                 'Europe': ['United Kingdom', 'France'],
                 'America': ['United States', 'Canada', 'Brazil'],
             };
 
-            var countryList = [];
+            let countryList = [];
 
             for (let continent of selectedContinentList) {
                 countryList = countryList.concat(
