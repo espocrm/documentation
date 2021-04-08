@@ -31,9 +31,11 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             );
         },
 
-        controlFields: function () {
+        controlFields: function () {            
             if (this.model.get('assignedUserId')) {
+                // if assigned user is not empty
                 this.recordView.showField('sicCode');
+
                 this.recordView.setFieldRequired('type');
                 this.recordView.setFieldReadOnly('teams');
 
@@ -44,13 +46,16 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
                 ]);
 
                 this.recordView.showPanel('activities');
-            } else {
+            }
+            else {
                 this.recordView.hideField('sicCode');
+
                 this.recordView.setFieldNotRequired('type');
                 this.recordView.setFieldNotReadOnly('teams');
                 this.recordView.setFieldOptionList('type', [
                     'Test',
                 ]);
+
                 this.recordView.hidePanel('activities');
             }
         },
@@ -64,9 +69,9 @@ Clear cache after all.
 
 ## Multiple dynamic handlers
 
-Since version 5.8.0 it's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
+Since v5.8.0 it's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
 
-In metadata > clientDefs:
+In metadata > YourEntityType > clientDefs:
 
 ```json
 {
