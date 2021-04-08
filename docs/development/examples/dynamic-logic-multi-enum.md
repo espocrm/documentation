@@ -33,7 +33,7 @@ define('custom:my-dynamic-handler', ['dynamic-handler'], function (Dep) {
         controlFields: function () {
             let selectedContinentList = this.recordView.model.get('continents') || [];
 
-            let continentList = ['Africa', 'Asia'];
+            let continentList = ['Africa', 'Asia', 'Europe', 'America'];
 
             let countryMap = {
                 'Africa': ['Nigeria', 'Ethiopia'],
