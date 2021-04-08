@@ -76,3 +76,6 @@ In metadata > clientDefs:
     ]
 }
 ```
+## See also
+
+* [Multi-enum field Dynamic Handler](multi-enum-dynamic-handler.md)
