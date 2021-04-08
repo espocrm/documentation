@@ -1,4 +1,4 @@
-# Dynamic handler handling multi-enum fields
+# Example: Dynamic handler for multi-enum fields
 
 See [dynamic handler documentation](../dynamic-handler.md).
 
