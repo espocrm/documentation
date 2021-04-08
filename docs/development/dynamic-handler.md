@@ -83,3 +83,7 @@ In metadata > YourEntityType > clientDefs:
     ]
 }
 ```
+
+## See also
+
+* [Example for multi-enum fields](examples/dynamic-logic-multi-enum.md)
