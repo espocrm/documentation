@@ -2,8 +2,7 @@
 
 See [the dynamic handler documentation](../dynamic-handler.md).
 
-In this example we have two multi-enum fields `continents` and `countries`. We will make that depending on selected continents we will have different counties
-available as options.
+In this example we have two multi-enum fields `continents` and `countries`. We will make the logic that depending on selected continents only countries of those continents will be available for selection.
 
 1\. Create (or open if exists) a file `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json` (`YourEntityType` is the name of your entity type):
 
