@@ -38,6 +38,8 @@ define('custom:my-dynamic-handler', ['dynamic-handler'], function (Dep) {
             var countryMap = {
                 'Africa': ['Nigeria', 'Ethiopia'],
                 'Asia': ['India', 'Pakistan'],
+                'Europe': ['United Kingdom', 'France'],
+                'America': ['United States', 'Canada', 'Brazil'],
             };
 
             var countryList = [];
