@@ -1,6 +1,6 @@
 # Example: Dynamic handler for multi-enum fields
 
-See [dynamic handler documentation](../dynamic-handler.md).
+See [the dynamic handler documentation](../dynamic-handler.md).
 
 In this example we have two multi-enum fields *continents*` and *countries*. We will make that depending on selected continents we will have different counties
 available as options.
