@@ -103,7 +103,7 @@ class SomeFactory
         $this->injectableFactory = $injectableFactory;
     }
 
-    public function create() : Something
+    public function create(): Something
     {
         return $this->injectableFactory->create(Something::class);
     }
@@ -180,7 +180,7 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
     use Di\EntityManagerSetter;
     use Di\MetadataSetter;
 
-    public function someMethod()
+    public function someMethod(): void
     {
         $entityManager = $this->entityManager;
         $metadata = $this->metadata;
@@ -265,7 +265,7 @@ use Espo\Core\Binding\Binder;
 
 class Binding
 {
-    public function process(Binder $binder)
+    public function process(Binder $binder): void
     {
         $binder
             ->bindService('Espo\\SomeServiceName', 'someServiceName')
