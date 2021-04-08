@@ -54,6 +54,6 @@ define('custom:my-dynamic-handler', ['dynamic-handler'], function (Dep) {
 });
 ```
 
-3\. Administration > Clear Cache.
+3\. Clear cache at Administration > Clear Cache.
 
 4\. You need to refresh the page in your browser.
