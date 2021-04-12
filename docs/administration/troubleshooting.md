@@ -8,7 +8,7 @@ In this article:
 * [Running rebuild or clear cache from CLI](#running-rebuild-or-clear-cache-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
 * [MySQL error: The server requested authentication method unknown to the client](#mysql-error-the-server-requested-authentication-method-unknown-to-the-client)
-* [Web browser cache stucking](#web-browser-cache-issue)
+* [Web browser cache issue](#web-browser-cache-issue)
 * [Page elements are corrupted or JavaScript scenario doesn't work](#page-elements-are-corrupted-or-javascript-scenario-doesnt-work)
 * [Blank page with Bad server responce error](#blank-page-with-bad-server-responce-error)
 * [Emails are not being fetched](#emails-are-not-being-fetched)
@@ -29,7 +29,7 @@ For Ubuntu server, an apache error log is located at `/var/log/apache2/error.log
 
 ## Check system requirements
 
-At Admiistration > System Requirements. It's important to have all required extensions installed.
+At Administration > System Requirements. It's important to have all required extensions installed.
 
 ## Scheduled Jobs are not working
 
