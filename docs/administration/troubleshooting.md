@@ -7,12 +7,9 @@ In this article:
 * [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
 * [Running rebuild from CLI](#running-rebuild-from-cli)
 * [Running clear cache from CLI](#running-clear-cache-from-cli)
-* [EspoCRM is not loading after upgrade](
-#running-clear-cache-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
 * [MySQL error: The server requested authentication method unknown to the client](#mysql-error-the-server-requested-authentication-method-unknown-to-the-client)
 * [Web browser cache issue](#web-browser-cache-issue)
-(#page-elements-are-corrupted-or-javascript-scenario-doesnt-work)
 * [Emails are not being fetched](#emails-are-not-being-fetched)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Admin password is lost, can't log in](#admin-password-is-lost-cant-log-in)
@@ -31,7 +28,7 @@ For Ubuntu server, an apache error log is located at `/var/log/apache2/error.log
 
 ## Check system requirements
 
-At Administration > System Requirements. It's important to have all required extensions installed.
+At Administration -> System Requirements. It's important to have all required extensions installed.
 
 ## Scheduled Jobs are not working
 
@@ -85,7 +82,8 @@ Sometimes you need to run rebuild from the command line interface when the appli
 ```bash
 php rebuild.php
 ```
-## Running rebuild from CLI
+
+## Running clear cache from CLI
 
 Sometimes you need to run clear cache from the command line interface when the application is not loading.
 
