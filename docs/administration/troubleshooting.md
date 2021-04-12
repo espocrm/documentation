@@ -79,7 +79,7 @@ Check in Administration -> Settings -> Disable Cron parameter.
 
 ## Running rebuild from CLI
 
-Sometimes you need to run rebuild or clear cache from the command line interface when the application is not loading.
+Sometimes you need to run rebuild from the command line interface when the application is not loading.
 
 * To rebuild:
 ```bash
@@ -115,13 +115,12 @@ MySQL 8.0.4 has changed default authentication method to `caching_sha2_password`
 
 ## Web browser cache issue
 
-1\. Press Ctrl + F5 > try to check again;
+1. Press Ctrl + F5 -> check again;
 
-2\. Clear a browser's cache with its advanced settings > try to check again;
+2. Clear a browser's cache with its advanced settings -> check again;
 
-3\. Open a developer tools panel (F12 key in Firefox/Chrome) >  
-refresh a web page > investigate the `Console` and the `Network` tabs.
-4\. If some page elements are corrupted or JavaScript scenario doesn't work, then make sure you don't have enabled any browser plugins (e.g. Ad-Block) or installed any other software that can restrict executing the javascript code.
+3. Open a developer tools panel (F12 key in Firefox/Chrome) -> refresh a web page -> investigate the `Console` and the `Network` tabs.
+4. If some page elements are corrupted or JavaScript scenario doesn't work, then make sure you don't have enabled any browser plugins (e.g. Ad-Block) or installed any other software that can restrict executing the javascript code.
 
 ## Emails are not being fetched
 
