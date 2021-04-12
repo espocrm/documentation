@@ -5,9 +5,12 @@ In this article:
 * [Check logs](#check-logs)
 * [Check system requirements](#check-system-requirements)
 * [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
-* [Running rebuild from CLI](#running-rebuild-from-cli)
+* [Running rebuild or clear cache from CLI](#running-rebuild-or-clear-cache-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
 * [MySQL error: The server requested authentication method unknown to the client](#mysql-error-the-server-requested-authentication-method-unknown-to-the-client)
+* [Web browser cache stucking](#web-browser-cache-issue)
+* [Page elements are corrupted or JavaScript scenario doesn't work](#page-elements-are-corrupted-or-javascript-scenario-doesnt-work)
+* [Blank page with Bad server responce error](#blank-page-with-bad-server-responce-error)
 * [Emails are not being fetched](#emails-are-not-being-fetched)
 * [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Admin password is lost, can't log in](#admin-password-is-lost-cant-log-in)
@@ -68,12 +71,21 @@ where `www-data` is a web-server user.
 
 4\. If there are no errors, check Scheduled Jobs to see if any job was executed (see a Log panel).
 
-## Running rebuild from CLI
+#### Problem #3: Cron is disabled
 
-Sometimes you need to run rebuild from the command line interface when the application is not loading.
+Check in Administration -> Settings -> Disable Cron parameter.
 
+## Running rebuild or clear cache from CLI
+
+Sometimes you need to run rebuild or clear cache from the command line interface when the application is not loading.
+
+* To rebuild:
 ```bash
 php rebuild.php
+```
+* To clear cache:
+```bash
+php clear_cache.php
 ```
 
 ## EspoCRM is not loading after upgrade
@@ -94,6 +106,64 @@ More information about file permissions can be found [here](server-configuration
 ## MySQL error: The server requested authentication method unknown to the client
 
 MySQL 8.0.4 has changed default authentication method to `caching_sha2_password` which is not supported by PHP. This issue can be solved by this [solution](server-configuration.md#mysql-8-support).
+
+## Web browser cache issue
+
+Sometimes you can start getting the errors something like Error 500 or error page loading upon new record creation. 
+
+#### Possible causes and fixes
+
+#### Problem #1: Old request cached
+
+Errors 500, 400, etc. could appear if a browser cached your previous request's parameters (fields, data, role, etc.) and use them for the current request with the deprecated or non valid values. 
+Open your instance in a web browser incognito mode window and try to reproduce the error. If it won't be reproduced, then clear the browser cache with its advanced settings. Note that Ctrl + F5 will not help.
+
+#### Problem #2: Page loading issue upon new record creation
+
+Open a Developer tools panel in your web browser (F12 button in Chrome) and press F5. Open the console tab and try to create a record again. In the console tab you might be faced with such statement as:
+```
+Error: Could not load file 'client/src/views/user/fields/contact.js?r=1578581862'
+```
+To make sure that this issue applies to the cache stucking problem do:
+1. Open a web browser incognito mode window and try to reproduce the error. If it won't be reproduced then ...
+2. Open the `client/src/views/user/fields` directory and make sure that the `contact.js` file exists. If so then... 
+3. Clear cache with a web browser advanced settings.
+
+Sometimes such an issue could be even reproduced in the incognito mode window and doesn't disappeared after you clear a cache. In this case there is one more way to fix it. Please try to open this file in your web browser directly. For example:
+```
+www.my-site.com/crm/client/src/views/user/fields/contact.js
+``` 
+or
+```
+localhost/crm/client/src/views/user/fields/contact.js
+``` 
+After this reload a web page and try reproduce the error again.
+
+## Page elements are corrupted or JavaScript scenario doesn't work
+
+1. Open a Developer tools panel in your web browser (F12 button in Chrome) and press F5. Check the console and network tabs for any errors.
+2. Check whether you don't have enabled any browser plugins (e.g. Ad-Block) or installed any other software that can restrict executing the javascript code.
+
+## Blank page with Bad server responce error
+
+The possible problem is the connection to database is lost or corrupted.
+1. Open the ./data/config.php file and check the database connection params:
+```
+'database' => [
+    'driver' => 'pdo_mysql',
+    'host' => 'localhost',
+    'port' => '',
+    'charset' => 'utf8mb4',
+    'dbname' => 'espocrm',
+    'user' => 'espocrm',
+    'password' => '123GhjOe33h'
+],
+```
+2. If the params are correct, then check whether the mysql service runs. You can do it:
+* By any database manager like phpMyAdmin etc.
+* By terminal using this command `service mysql status`.
+
+After fix, you should press F5 to reload a web page. 
 
 ## Emails are not being fetched
 
