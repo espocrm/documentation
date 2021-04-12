@@ -2,18 +2,16 @@
 
 In this article:
 
-* [Check logs](#check-scheduled-jobs)
+* [Check scheduled jobs](#check-scheduled-jobs)
 * [Check logs](#check-logs)
 * [Server side error 500: Could not get access token for Outlook](#server-side-error-500-could-not-get-access-token-for-outlook)
 * [Application is not configured as a multi-tenant application](#error-application-is-not-configured-as-a-multi-tenant-application)
-* [Non-admin user's issues](#regular-users-issues)
+* [Regular user's issues](#regular-users-issues)
 * [Max number of operations](#max-number-of-operations)
-    
+
 ## Check Scheduled Jobs
 
-Check whether the scheduled job is running Administration > Scheduled Jobs > Outlook Calendar Sync > Log.
-
-Check EspoCRM log at `data/logs` directory. You can also set the [log mode](../../administration/troubleshooting.md#enabling-debug-mode-for-a-logger) to `DEBUG` level to obtain more info from the log.
+Check whether the scheduled job is running in Administration -> Scheduled Jobs -> Outlook Calendar Sync -> Log
 
 ## Check logs
 

@@ -91,6 +91,7 @@
   * [Calendar](extensions/outlook-integration/calendar.md)
   * [Contacts](extensions/outlook-integration/contacts.md)
   * [Email](extensions/outlook-integration/email.md)
+  * [Troubleshooting](extensions/outlook-integration/troubleshooting.md)
 * VoIP integration
   * [Asterisk server](extensions/voip-integration/asterisk-integration-setup.md)
   * [Binotel service](extensions/voip-integration/binotel-integration-setup.md)
