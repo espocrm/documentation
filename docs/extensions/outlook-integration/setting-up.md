@@ -3,7 +3,7 @@
 * [Integration](#integration)
 * [Access control](#access-control)
 * [Sync scheduling](#sync-scheduling)
-* [Troubleshooting](#troubleshooting)
+* [Troubleshooting](troubleshooting.md)
 
 ## Integration
 
@@ -77,9 +77,3 @@ Permissions that need to be enabled:
 ## Sync scheduling
 
 Sync is run by the scheduled job *Outlook Calendar Sync*. By default, it is executed every 10 minutes. You can change scheduling at Administration > Scheduled Jobs > Outlook Calendar Sync.
-
-## Troubleshooting
-
-Check whether the scheduled job is running Administration > Scheduled Jobs > Outlook Calendar Sync > Log.
-
-Check EspoCRM log at `data/logs` directory. You can also set the [log mode](../../administration/troubleshooting.md#enabling-debug-mode-for-a-logger) to `DEBUG` level to obtain more info from the log.
