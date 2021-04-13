@@ -68,9 +68,21 @@ $account = $this->entityManager
     ->findOne();
 ```
 
-### 3\. Specify type hinting for method parameters. Also specify a method return type.
+### 3\. Specify types for method parameters. Also specify a method return type.
 
-✔️ Parameter types:
+❗ Bad:
+
+```php
+<?php
+class MyClass
+{
+    public function myMethod($request, $text)
+    {
+    }
+}
+```
+
+✔️ Good:
 
 ```php
 <?php
@@ -82,7 +94,7 @@ class MyClass
 }
 ```
 
-✔️ Return type:
+✔️ Good:
 
 ```php
 <?php
