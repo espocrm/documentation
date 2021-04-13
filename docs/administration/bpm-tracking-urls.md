@@ -32,5 +32,5 @@ Useful when an URL must be unique for a specific process. E.g. send an email for
 
 Signal broadcasted when URL is opened: `clickUniqueUrl.UNIQUE_ID`, where *UNIQUE_ID* is an ID generated within the process (using formula).
 
-Code to be used in an email template instead of the URL: `{trackingUrl:TRACKING_URL_ID.{$$variableName}}`, where *variableName* is a name of the variable when generated ID is stored, *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar). The code will be automaticaly substituted with a proper URL when email is sent.
+Code to be used in an email template instead of the URL: `{trackingUrl:TRACKING_URL_ID.{$$variableName}}`, where *variableName* is a name of the variable where generated ID is stored, *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar). The code will be automaticaly substituted with a proper URL when email is sent.
 
