@@ -30,7 +30,16 @@ You can get a downloadable example [here](bpm-examples.md#downloadable-examples)
 
 Useful when an URL must be unique for a specific process. E.g. send an email for a feedback on provided customer support, the email contains unique links to rate quality of support.
 
-Signal broadcasted when URL is opened: `clickUniqueUrl.UNIQUE_ID`, where *UNIQUE_ID* is an ID generated within the process (using formula).
+Signal broadcasted when URL is opened: `clickUniqueUrl.UNIQUE_ID`, where *UNIQUE_ID* is an ID generated within the process (using formula function `util\generateId()`).
 
 Code to be used in an email template instead of the URL: `{trackingUrl:TRACKING_URL_ID.{$$variableName}}`, where *variableName* is a name of the variable where generated ID is stored, *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar). The code will be automaticaly substituted with a proper URL when email is sent.
+
+1. Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it to a variable:
+
+```
+$uniqueId = util\generateId();
+```
+
+2. Add a *Send Message* task. Use an email template with a link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. This link is supposed to be clicked by a recipient.
+3. Use a *Signlat Catching* event with the signal `clickUniqueUrl.{$uniqueId}`.
 
