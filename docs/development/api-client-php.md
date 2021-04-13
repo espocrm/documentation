@@ -251,7 +251,7 @@ class EspoApiClient
 
     protected function normalizeHeader($header)
     {
-        preg_match_all('/(.*): (.*)\r\n/', $header, $matches);
+        preg_match_all('/(.*?): (.*)\r\n/', $header, $matches);
 
         $headerArray = array();
         foreach ($matches[1] as $index => $name) {
