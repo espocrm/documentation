@@ -62,8 +62,9 @@ The easiest method of authentication. You need to create API User (Administratio
 
 Authentication header:
 
-`X-Api-Key: API_KEY_COPIED_FROM_THE_USER_DETAIL_VIEW`
-
+```
+X-Api-Key: API_KEY_COPIED_FROM_THE_USER_DETAIL_VIEW
+```
 
 ### HMAC Authentication
 
@@ -87,8 +88,9 @@ Note: This method is not recommended.
 
 For regular users EspoCRM uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password (or token) are passed through `Authorization` header encoded in base64.
 
-`"Authorization: Basic " + base64Encode(username  + ':' + password)`
-
+```
+"Authorization: Basic " + base64Encode(username  + ':' + password)
+```
 
 It's better to use auth token instead of password when you work with API. In this case you will need to provide username and password/token in `Espo-Authorization` header.
 ```
