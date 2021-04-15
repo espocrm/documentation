@@ -59,7 +59,9 @@ var payload = {
     name: 'some name',
     type: 'Customer',
 };
-client.request('POST', 'Account', payload)
+
+client
+    .request('POST', 'Account', payload)
     .then(
         (response) => {
             // success
