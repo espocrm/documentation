@@ -79,9 +79,11 @@ class EspoApiClient
         if (isset($url)) {
             $this->url = $url;
         }
+
         if (isset($userName)) {
             $this->userName = $userName;
         }
+
         if (isset($password)) {
             $this->password = $password;
         }
@@ -113,13 +115,13 @@ class EspoApiClient
     }
 
     /**
-     * Send request to EspoCRM
+     * Send request to EspoCRM.
      *
      * @param string $method
      * @param string $action
      * @param array|null $data
-     *
-     * @return array | \Exception
+     * @return array
+     * @throws \Exception
      */
     public function request($method, $action, array $data = null)
     {
@@ -137,16 +139,21 @@ class EspoApiClient
         $headerList = [];
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
         if ($this->userName && $this->password) {
             curl_setopt($ch, CURLOPT_USERPWD, $this->userName.':'.$this->password);
             curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-        } else if ($this->apiKey && $this->secretKey) {
+        }
+        else if ($this->apiKey && $this->secretKey) {
             $string = $method . ' /' . $action;
             $authPart = base64_encode($this->apiKey . ':' . hash_hmac('sha256', $string, $this->secretKey, true));
             $authHeader = 'X-Hmac-Authorization: ' .  $authPart;
+
             $headerList[] = $authHeader;
-        } else if ($this->apiKey) {
+        }
+        else if ($this->apiKey) {
             $authHeader = 'X-Api-Key: ' .  $this->apiKey;
+
             $headerList[] = $authHeader;
         }
 
@@ -161,9 +168,12 @@ class EspoApiClient
         if (isset($data)) {
             if ($method == 'GET') {
                 curl_setopt($ch, CURLOPT_URL, $url. '?' . http_build_query($data));
-            } else {
+            }
+            else {
                 $payload = json_encode($data);
+
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
                 $headerList[] = 'Content-Type: application/json';
                 $headerList[] = 'Content-Length: ' . strlen($payload);
             }
@@ -191,9 +201,13 @@ class EspoApiClient
         }
 
         $header = $this->normalizeHeader($parsedResponse['header']);
-        $errorMessage = !empty($header['X-Status-Reason']) ? $header['X-Status-Reason'] : 'EspoClient: Unknown Error';
+
+        $errorMessage = !empty($header['X-Status-Reason']) ?
+            $header['X-Status-Reason'] :
+            'EspoClient: Unknown Error';
 
         curl_close($ch);
+
         throw new \Exception($errorMessage, $responseCode);
     }
 
@@ -220,12 +234,12 @@ class EspoApiClient
     protected function checkParams()
     {
         $paramList = [
-            'url'
+            'url',
         ];
 
         foreach ($paramList as $name) {
             if (empty($this->$name)) {
-                throw new \Exception('EspoClient: Parameter "'.$name.'" is not defined.');
+                throw new \Exception('EspoClient: Parameter "' . $name . '" is not defined.');
             }
         }
 
@@ -253,7 +267,8 @@ class EspoApiClient
     {
         preg_match_all('/(.*?): (.*)\r\n/', $header, $matches);
 
-        $headerArray = array();
+        $headerArray = [];
+
         foreach ($matches[1] as $index => $name) {
             if (isset($matches[2][$index])) {
                 $headerArray[$name] = trim($matches[2][$index]);
