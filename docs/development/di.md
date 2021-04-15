@@ -323,12 +323,7 @@ $bindingData = new BindingData();
 
 $binder = new Binder($bindingData);
 
-$binder->bindCallback(
-    SomeInterface::class,
-    function () use ($someInstance): SomeInterface {
-        return $someInstance;
-    }
-);
+$binder->bindInstance(SomeInterface::class, $someInstance);
 
 $bindingContainer = new BindingContainer($bindingData);
 ```
