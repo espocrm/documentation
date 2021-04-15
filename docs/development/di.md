@@ -298,6 +298,42 @@ Explanation:
 * When `Espo\SomeClass` is instantiated, pass the value 'Same Value' for the parameter `$paramName`.
 * When `Espo\SomeClass` is instantiated, use the callback to resolve a value of the parameter `$anotherParamName`.
 
+### Using with Injectable Factory
+
+Available as of v6.2.0.
+
+It's possible to override default binding when creating instances with the injectable factory (usually this will be processed in your factory classes).
+
+```php
+$instance = $injectableFactory->createWithBinding(SomeClass::class, $bindingContainer);
+```
+
+The binding will be applied to all dependencies of the class, including dependencies of dependencies and so on.
+
+Building a binding container:
+
+```php
+use Espo\Core\{
+    Binding\BindingData,
+    Binding\Binder,
+    Binding\BindingContainer,
+};
+
+$bindingData = new BindingData();
+
+$binder = new Binder($bindingData);
+
+$binder->bindCallback(
+    SomeInterface::class,
+    function () use ($someInstance): SomeInterface {
+        return $someInstance;
+    }
+);
+
+$bindingContainer = new BindingContainer($bindingData);
+```
+
+The passed binding has a higher priority than the default binding (the default binding is applied globally too all objects resolved via DI).
 
 ## See also
 
