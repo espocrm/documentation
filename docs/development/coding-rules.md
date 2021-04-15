@@ -6,6 +6,7 @@
 
 ```php
 <?php
+
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\{
@@ -28,6 +29,7 @@ class MyClass
 
 ```php
 <?php
+
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\{
@@ -74,6 +76,7 @@ $account = $this->entityManager
 
 ```php
 <?php
+
 class MyClass
 {
     public function myMethod($request, $text)
@@ -86,6 +89,7 @@ class MyClass
 
 ```php
 <?php
+
 class MyClass
 {
     public function myMethod(Request $request, string $text): void
@@ -98,6 +102,7 @@ class MyClass
 
 ```php
 <?php
+
 class MyClass
 {
     public function getAsString(): ?string
