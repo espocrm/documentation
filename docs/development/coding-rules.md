@@ -290,15 +290,21 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function getData(): ?Data
+    private function sizeExceedsLimit(Storage $storage, string $id): bool
     {
-        if (!$this->isEmpty()) {
-            $this->loadData();
+        $fetchOnlyHeader = false;
 
-            return $this->data;
+        $maxSize = $this->config->get('emailMessageMaxSize');
+
+        if ($maxSize) {
+            $size = $storage->getSize($id);
+
+            if ($size > $maxSize) {
+                $fetchOnlyHeader = true;
+            }
         }
 
-        return null;
+        return $fetchOnlyHeader;
     }
 ```
 
@@ -307,15 +313,21 @@ class SomeClass
 ```php
 <?php
 // ...
-    public function getData(): ?Data
+    private function sizeExceedsLimit(Storage $storage, string $id): bool
     {
-        if ($this->isEmpty()) {
-            return null;
+        $maxSize = $this->config->get('emailMessageMaxSize');
+
+        if (!$maxSize) {
+            return false;
+        }
+            
+        $size = $storage->getSize($id);
+
+        if ($size > $maxSize) {
+            return true;
         }
 
-        $this->loadData();
-
-        return $this->data;
+        return false;
     }
 ```
 
