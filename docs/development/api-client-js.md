@@ -69,11 +69,15 @@ class Client {
         this.url = url;
         this.apiKey = apiKey;
         this.secretKey = secretKey;
+
         if (this.url.substr(-1) == '/') {
             this.url = this.url.substr(0, this.url.length -1);
         }
+
         this.urlPath = '/api/v1/';
+
         this.options = options || {};
+
         this.isHttps = url.toLowerCase().indexOf('https') === 0;
     }
 
@@ -82,6 +86,7 @@ class Client {
         method = method.toUpperCase();
 
         let url = this._buildUrl(action);
+
         let headers = {};
 
         if (this.apiKey && this.secretKey) {
@@ -111,9 +116,11 @@ class Client {
         if (data) {
             if (method == 'GET') {
                 const querystring = require('querystring');
+
                 url += '?' + querystring.stringify(data);
             } else {
                 postData = JSON.stringify(data);
+
                 headers['Content-Type'] = 'application/json';
                 headers['Content-Length'] = Buffer.byteLength(postData);
             }
@@ -126,10 +133,16 @@ class Client {
                     method: method,
                 };
 
-                if (this.options.port) o.port = this.options.port;
-                if (this.options.timeout) o.timeout = this.options.timeout;
+                if (this.options.port) {
+                    o.port = this.options.port;
+                }
+
+                if (this.options.timeout) {
+                    o.timeout = this.options.timeout;
+                }
 
                 let h;
+
                 if (this.isHttps) {
                     h = require('https');
                 } else {
@@ -138,22 +151,28 @@ class Client {
 
                 const req = h.request(url, o, (res) => {
                     let data = '';
+
                     res.on('data', (chunk) => {
                         data += chunk;
                     });
+
                     res.on('end', () => {
                         if (res.statusCode < 200 || res.statusCode > 299) {
                             reject(res);
+
                             return;
                         }
+
                         try {
                             data = JSON.parse(data);
                         } catch (e) {
                             console.error(`Error: Could not parse response`);
 
                             reject({});
+
                             return;
                         }
+
                         resolve(data, res);
                     });
                 });
@@ -166,6 +185,7 @@ class Client {
                 if (data && method != 'GET') {
                     req.write(postData);
                 }
+
                 req.end();
 
             }.bind(this)
@@ -177,6 +197,8 @@ class Client {
     }
 }
 
-if (module && module.exports) module.exports = Client;
+if (module && module.exports) {
+    module.exports = Client;
+}
 
 ```
