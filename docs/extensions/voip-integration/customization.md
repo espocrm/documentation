@@ -185,3 +185,20 @@ After saving, clear a local cache (Administration > Clear Cache).
 **Dialout Channel** – channel format for outgoing calls.
 
 It can be “SIP/###” or “PJSIP/###”, where ### is a user’s extension (internal number). The extension “###” will be substituted automatically depending on the user.
+
+## Custom EventListener
+
+There is a possibility to create a custom `EventListener`. For this, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/YOUR_PROVIDER/EventListener.php` with the code:
+
+```
+<?php
+
+namespace Espo\Custom\Modules\Voip\Providers\YOUR_PROVIDER;
+
+class EventListener extends \Espo\Modules\Voip\Providers\YOUR_PROVIDER\EventListener
+{
+    // YOUR CUSTOM CODE
+}
+```
+
+After saving, clear a local cache (Administration > Clear Cache).
