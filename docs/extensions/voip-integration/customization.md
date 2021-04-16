@@ -9,11 +9,11 @@ In this article:
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
 * [Format phone number](#format-phone-number)
 * [Call recording for Asterisk](#call-recording-for-asterisk)
-* [Custom call recording URL handler](#custom-call-recording-url-handler)
-* [Custom ApiClient](#custom-apiclient)
-* [Custom EventListener](#custom-eventlistener)
-* [Custom WebhookHandler](#custom-webhookhandler)
-* [Custom CidManager](#custom-cidmanager)
+* [Adding a custom call recording URL handler](#custom-call-recording-url-handler)
+* [Adding a custom ApiClient](#custom-apiclient)
+* [Adding a custom EventListener](#custom-eventlistener)
+* [Adding a custom WebhookHandler](#custom-webhookhandler)
+* [Adding a custom CidManager](#custom-cidmanager)
 * [Additional info](#additional-info)
 
 
