@@ -10,6 +10,7 @@ In this article:
 * [Format phone number](#format-phone-number)
 * [Call recording for Asterisk](#call-recording-for-asterisk)
 * [Custom call recording URL handler](#custom-call-recording-url-handler)
+* [Custom EventListener](#custom-eventlistener)
 * [Additional info](#additional-info)
 
 
@@ -180,12 +181,6 @@ class Recording extends \Espo\Modules\Voip\Providers\Asterisk\Scripts\Recording
 
 After saving, clear a local cache (Administration > Clear Cache).
 
-## Additional info
-
-**Dialout Channel** – channel format for outgoing calls.
-
-It can be “SIP/###” or “PJSIP/###”, where ### is a user’s extension (internal number). The extension “###” will be substituted automatically depending on the user.
-
 ## Custom EventListener
 
 There is a possibility to create a custom `EventListener`. For this, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/YOUR_PROVIDER/EventListener.php` with the code:
@@ -202,3 +197,9 @@ class EventListener extends \Espo\Modules\Voip\Providers\YOUR_PROVIDER\EventList
 ```
 
 After saving, clear a local cache (Administration > Clear Cache).
+
+## Additional info
+
+**Dialout Channel** – channel format for outgoing calls.
+
+It can be “SIP/###” or “PJSIP/###”, where ### is a user’s extension (internal number). The extension “###” will be substituted automatically depending on the user.
