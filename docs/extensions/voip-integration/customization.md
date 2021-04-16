@@ -10,7 +10,10 @@ In this article:
 * [Format phone number](#format-phone-number)
 * [Call recording for Asterisk](#call-recording-for-asterisk)
 * [Custom call recording URL handler](#custom-call-recording-url-handler)
+* [Custom ApiClient](#custom-apiclient)
 * [Custom EventListener](#custom-eventlistener)
+* [Custom WebhookHandler](#custom-webhookhandler)
+* [Custom CidManager](#custom-cidmanager)
 * [Additional info](#additional-info)
 
 
@@ -181,9 +184,26 @@ class Recording extends \Espo\Modules\Voip\Providers\Asterisk\Scripts\Recording
 
 After saving, clear a local cache (Administration > Clear Cache).
 
+## Custom ApiClient
+
+For adding a custom `ApiClient`, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/YOUR_PROVIDER/ApiClient.php` with the code:
+
+```
+<?php
+
+namespace Espo\Custom\Modules\Voip\Providers\YOUR_PROVIDER;
+
+class ApiClient extends \Espo\Modules\Voip\Providers\YOUR_PROVIDER\ApiClient
+{
+    // YOUR CUSTOM CODE
+}
+```
+
+After saving, clear a local cache (Administration > Clear Cache).
+
 ## Custom EventListener
 
-There is a possibility to create a custom `EventListener`. For this, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/YOUR_PROVIDER/EventListener.php` with the code:
+For adding a custom `EventListener`, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/YOUR_PROVIDER/EventListener.php` with the code:
 
 ```
 <?php
@@ -197,6 +217,42 @@ class EventListener extends \Espo\Modules\Voip\Providers\YOUR_PROVIDER\EventList
 ```
 
 After saving, clear a local cache (Administration > Clear Cache).
+
+## Custom WebhookHandler
+
+For adding a custom `WebhookHandler`, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/YOUR_PROVIDER/WebhookHandler.php` with the code:
+
+```
+<?php
+
+namespace Espo\Custom\Modules\Voip\Providers\YOUR_PROVIDER;
+
+class WebhookHandler extends \Espo\Modules\Voip\Providers\YOUR_PROVIDER\WebhookHandler
+{
+    // YOUR CUSTOM CODE
+}
+```
+
+After saving, clear a local cache (Administration > Clear Cache).
+
+
+## Custom CidManager
+
+For adding a custom `CidManager`, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/YOUR_PROVIDER/CidManager.php` with the code:
+
+```
+<?php
+
+namespace Espo\Custom\Modules\Voip\Providers\YOUR_PROVIDER;
+
+class CidManager extends \Espo\Modules\Voip\Providers\YOUR_PROVIDER\CidManager
+{
+    // YOUR CUSTOM CODE
+}
+```
+
+After saving, clear a local cache (Administration > Clear Cache).
+
 
 ## Additional info
 
