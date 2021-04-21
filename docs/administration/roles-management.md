@@ -16,13 +16,7 @@ Note: By default, users can **delete self-assigned records** that they have crea
 
 ## Permissions by default
 
-By default (since 5.6.10), users have minimal access. You need to assign roles to grant users specific access levels.
-
-There is the ability to grant users with full access by default by disabling 'ACL Strict Mode' in `data/config.php`:
-
-```
-'aclStrictMode' => false,
-```
+By default, users have minimal access. You need to assign roles to grant users specific access levels.
 
 ## Actions
 
