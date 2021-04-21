@@ -47,7 +47,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 
 ### Access control
 
-* aclStrictMode – `true` – see [here](roles-management.md#permissions-by-default);
+* aclStrictMode – `true` – see [here](roles-management.md#permissions-by-default) (removed in v6.2.0, the system will always be in the strict mode);
 * aclAllowDeleteCreated – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access;
 * aclAllowDeleteCreatedThresholdPeriod – `24 hours` – time window available for deletion of created records;
 
