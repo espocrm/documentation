@@ -179,7 +179,7 @@ Exception: Adding comments may be reasonable in some rare cases.
      */
     public function run(Params $params): void
     {
-        // some logic
+
     }
 ```
 
