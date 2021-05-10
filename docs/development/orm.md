@@ -672,9 +672,9 @@ foreach ($collection as $entity) {
 Delete:
 
 ```php
-$select = $entityManager
+$deleteQuery = $entityManager
     ->getQueryBuilder()
-    ->select()
+    ->delete()
     ->from('SomeTable')
     ->where([
         'someColumn' => 'someValue',
@@ -683,13 +683,13 @@ $select = $entityManager
 
 $entityManager
     ->getQueryExecutor()
-    ->execute($select);
+    ->execute($deleteQuery);
 ```
 
 Select:
 
 ```php
-$select = $entityManager
+$selectQuery = $entityManager
     ->getQueryBuilder()
     ->select()
     ->from('SomeTable')
@@ -700,11 +700,11 @@ $select = $entityManager
 
 $pdoStatement = $entityManager
     ->getQueryExecutor()
-    ->execute($select);
+    ->execute($selectQuery);
 ```
 
 ```php
-$select = $entityManager
+$selectQuery = $entityManager
     ->getQueryBuilder()
     ->select()
     ->from('SomeTable')
@@ -715,7 +715,7 @@ $select = $entityManager
 
 $row = $entityManager
     ->getQueryExecutor()
-    ->execute($select)
+    ->execute($selectQuery)
     ->fetch();
 
 $sum = $row['value'];
@@ -724,7 +724,7 @@ $sum = $row['value'];
 Update:
 
 ```php
-$update = $entityManager
+$updateQuery = $entityManager
     ->getQueryBuilder()
     ->update()
     ->in('SomeTable')
@@ -735,13 +735,13 @@ $update = $entityManager
     ])
     ->build();
 
-$entityManager->getQueryExecutor()->execute($update);
+$entityManager->getQueryExecutor()->execute($updateQuery);
 ```
 
 Update with join:
 
 ```php
-$update = $entityManager
+$updateQuery = $entityManager
     ->getQueryBuilder()
     ->update()
     ->in('SomeTable')
@@ -754,13 +754,13 @@ $update = $entityManager
 
 $entityManager
     ->getQueryExecutor()
-    ->execute($update);
+    ->execute($updateQuery);
 ```
 
 Insert:
 
 ```php
-$insert = $entityManager
+$insertQuery = $entityManager
     ->getQueryBuilder()
     ->insert()
     ->into('SomeTable')
@@ -771,7 +771,7 @@ $insert = $entityManager
     ])
     ->build();
 
-$entityManager->getQueryExecutor()->execute($insert);
+$entityManager->getQueryExecutor()->execute($insertQuery);
 ```
 
 Mass insert:
@@ -796,7 +796,7 @@ $entityManager
 Mass insert by populating with a select sub-query:
 
 ```php
-$insert = $entityManager
+$insertQuery = $entityManager
     ->getQueryBuilder()
     ->insert()
     ->into('SomeTable')
@@ -806,13 +806,13 @@ $insert = $entityManager
 
 $entityManager
     ->getQueryExecutor()
-    ->execute($insert);
+    ->execute($insertQuery);
 ```
 
 Union:
 
 ```php
-$union = $entityManager
+$unionQuery = $entityManager
     ->getQueryBuilder()
     ->union()
     ->all()
@@ -824,7 +824,7 @@ $union = $entityManager
 
 $sth = $entityManager
     ->getQueryExecutor()
-    ->execute($union);
+    ->execute($unionQuery);
 ```
 
 Cloning and modifying an existing query:
