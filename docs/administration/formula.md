@@ -1134,7 +1134,10 @@ Example:
 
 ```
 $attachmentId = ext\pdf\generate(
-    'Lead', entity\attribute('id'), 'pdf-template-id', 'test.pdf'
+    'Lead',
+    entity\attribute('id'),
+    'pdf-template-id',
+    'test.pdf'
 );
 $emailId = record\create('Email',
     'subject', 'Test PDF',
