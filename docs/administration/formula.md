@@ -1148,6 +1148,8 @@ $emailId = record\create('Email',
 ext\email\send($emailId);
 ```
 
+Note, that this won't work for new records in before-create script because a record is not yet created. It will work in Workfows.
+
 ### Util
 
 * [util\generateId](#utilgenerateid)
