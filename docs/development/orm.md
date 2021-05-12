@@ -6,7 +6,7 @@ EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to 
 
 **Repository** serves for fetching and storing records. Each entity type has its own repository. Base classes: `Espo\ORM\Repositories\RDBRepository`, `Espo\Core\Repositories\Database`. *RDB* stands for *relational database*.
 
-**Entity** represents a single record. Each entity type has it's own entity class. Base classes: `Espo\ORM\Entity`, `Espo\Core\ORM\Entity`.
+**Entity** represents a single record. Each entity type has it's own entity class. Base class: `Espo\Core\ORM\Entity`, interface: `Espo\ORM\Entity`.
 
 **EntityCollection** is a collection of entities. It's returned by *find* operations.
 
