@@ -8,9 +8,9 @@ Controllers are supposed to have little code. Usually a controller action calls 
 
 Locations of service classes:
 
-* `application/Espo/Services/`
-* `application/Espo/Modules/{moduleName}/Services/`
-* `custom/Espo/Custom/Services/`
+* `application/Espo/Services`
+* `application/Espo/Modules/{moduleName}/Services`
+* `custom/Espo/Custom/Services`
 
 It's not necessary to create custom service classes for your business logic. You can create a class in any namespace you like (inside your module). Use the dependency injection to require this class in your custom controller (your class will be passed to the constructor of your controller).
 
