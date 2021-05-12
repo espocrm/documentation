@@ -56,7 +56,7 @@ use Espo\Core\Select\SelectBuilderFactory;
 
 class SomeClass
 {
-    protected $selectBuilderFactory;
+    private $selectBuilderFactory;
     
     public function __construct(SelectBuilderFactory $selectBuilderFactory)
     {
