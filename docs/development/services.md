@@ -124,11 +124,9 @@ use Espo\Core\{
     Exceptions\Forbidden,
     Exceptions\NotFound,
     Acl,
-    ORM\EntityManager,
     Acl\Table,
+    ORM\EntityManager,    
 };
-
-use StdClass;
 
 class MyService
 {
