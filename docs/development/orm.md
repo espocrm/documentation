@@ -131,14 +131,6 @@ $entity->clear('attributeName');
 
 It will unset the attribute. If you save the entity after that, it will not change the value to NULL in database.
 
-### Reset
-
-Resets all attributes (used rarely).
-
-```php
-$entity->reset();
-```
-
 ### Fetched attributes
 
 You can check whether an attribute was changed.
