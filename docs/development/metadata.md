@@ -14,9 +14,8 @@ Path to a needed parameter is specified with an array.
 ```php
 // entityDefs > Account > fields > type
 $value = $metadata->get(['entityDefs', 'Account', 'fields', 'name', 'type']);
-
 ```
-// will return `varchar`
+will return `varchar`
 
 ```php
 $metadata->get(['entityDefs', 'Account', 'fields']);
