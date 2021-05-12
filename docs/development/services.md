@@ -14,21 +14,15 @@ Locations of service classes:
 * `application/Espo/Modules/{moduleName}/Services/`
 * `custom/Espo/Custom/Services/`
 
-Service instances are created by the *serviceFactory* (available as a container service, hence can be injected to the controller). [Dependencies](di.md) for service classes can be defined in a constructor or with *Aware* interfaces.
-
-Note that you need to **clear cache** after creating a new service class.
-
-To **customize** an existing service you need to create a class in the custom directory and extend it from the existing one. It's also possible to customize within a module directory. Make sure that the *order* param of your module is higher than the value of the module of the extended service.
-
 **Important**: Since v6.0 it's not recomended to create custom service classes for your business logic. Create a class in any namespace you like (inside your module). Use the dependency injection to require this class in your custom controller (your class will be passed to the constructor of your controller).
-
 
 ## Record service
 
-Operations (CRUD and others) over entities (records) are handled by Record service class `Espo\Services\Record`.
+A record service is a layer to access records via API. It handles CRUD (and some others) operations  over entities (records).
 
-If there's a service class with a name that matches the name of the entity type, then that service class will be used as a record service class. It's supposed that that class extends base `Espo\Services\Record` class. Example: `Espo\Services\User` is treated as a Record service for the *User* entity type.
+The base class is `Espo\Services\Record` (an extension of `Espo\Core\Record\Service`).
 
+If there's a service class with a name that matches the name of the entity type, then that service class will be used as a record service class. It's supposed that that class extends base `Espo\Services\Record` class. Example: `Espo\Services\User` is treated as a Record service for the *User* entity type. Note: You need to clear cache after creating a custom record service class.
 
 Main methods of the Record service class:
 
@@ -38,9 +32,7 @@ Main methods of the Record service class:
 * delete - delete an entity
 * find - get a list of entities, used by list view
 * findLinked - get a list of related entities, used by relationship panels
-* findDuplicates
 * loadAdditionalFields - to load additional fields for an entity before returning it, for detail view
-* loadAdditionalFieldsForList - to load additiona fields, for list view
 
 Hook-methods:
 
@@ -50,6 +42,10 @@ Hook-methods:
 * afterUpdateEntity
 * beforeDeleteEntity
 * afterDeletEntity
+
+### Accessing record service
+
+Record services can be accessed from the record service container `Espo\Core\Record\ServiceContainer`.
 
 ### Extending existing Record service
 
@@ -66,20 +62,7 @@ use Espo\Modules\Crm\Services\Opportunity as BaseOpportunity
 
 class Opportunity extends BaseOpportunity
 {
-    // load additional fields for detail view
-    public function loadAdditionalFields(Entity $entity)
-    {
-        parent::loadAdditionalFields($entity);
 
-        // here do some fetching
-
-        $entity->set('myNotStorableField', $someValue);
-    }
-
-    protected function afterDeleteEntity(Entity $entity, $data)
-    {
-        // do something after entity is deleted
-    }
 }
 ```
 
@@ -87,42 +70,48 @@ You can also extend a service in the *Module* directory. The *order* of your mod
 
 ## Creating new service class (example)
 
-Note: Not recommended since v6.0.
-
-Controller `custom/Espo/Custom/Controllers/Opportunity.php`:
+Controller `custom/Espo/Custom/Controllers/SomeController.php`:
 
 ```php
 <?php
 
+namespace Espo\Custom\Controllers;
+
 use Espo\Core\{
-    ServiceFactory,
+    Exceptions\BadRequest,
     Api\Request,
+    Api\Response,
 };
 
-namespace Espo\Custom\Controllers;
+use Espo\Custom\Services\MyService;
 
 class SomeController
 {
-    protected $serviceFactory;
+    private $myService;
 
-    public function __construct(ServiceFactory $serviceFactory)
+    public function __construct(MyService $myService)
     {
-        $this->serviceFactory = $serviceFactory;
+        $this->myService = $myService;
     }
 
-    public function postActionHello(Request $request)
+    public function postActionHello(Request $request, Response $response): void
     {
-        $service = $this->serviceFactory->create('HelloTest');
-
         $data = $request->getParsedBody();
+        
+        $id = $data->id ?? null;
+        
+        if (!$id) {
+            throw new BadRequest();
+        }
 
-        return $service->doSomething($data);
+        $this->myService->doSomething($id);
+        
+        $response->writeBody('true');
     }
 }
-
 ```
 
-Service `custom/Espo/Custom/Services/HelloTest.php`:
+Service `custom/Espo/Custom/Services/MyService.php`:
 
 ```php
 <?php
@@ -130,19 +119,20 @@ Service `custom/Espo/Custom/Services/HelloTest.php`:
 namespace Espo\Custom\Services;
 
 use Espo\Core\{
-    Exceptions\BadRequest,
     Exceptions\Forbidden,
     Exceptions\NotFound,
     Acl,
     ORM\EntityManager,
+    Acl\Table,
 };
 
 use StdClass;
 
-class HelloTest
+class MyService
 {
-    protected $acl;
-    protected $entityManager;
+    private $acl;
+
+    private $entityManager;
 
     public function __construct(Acl $acl, EntityManager $entityManager)
     {
@@ -150,31 +140,22 @@ class HelloTest
         $this->entityManager = $entityManager;
     }
 
-    public function doSomething(StdClass $data) : StdClass
+    public function doSomething(string $id): void
     {
-        if (!isset($data->id)) {
-            throw new BadRequest();
-        }
-
-        $em = $this->entityManager;
-        $acl = $this->acl;
-
-        $opportunity = $em->getEntity('Opportunity', $data->id);
+        $opportunity = $this->entityManager->getEntity('Opportunity', $id);
 
         if (!$opportunity) {
             throw new NotFound();
         }
 
-        if (!$acl->check($opportunity, 'edit')) {
-            throw new Forbidden();
+        if (!$this->acl->check($opportunity, Table::ACTION_EDIT)) {
+            throw new Forbidden("No 'edit' access.");
         }
 
         $opportunity->set('stage', 'Closed Won');
         $opportunity->set('probability', 100);
 
-        $em->saveEntity($opportunity);
-
-        return $opportunity->getValueMap();
+        $this->entityManager->saveEntity($opportunity);
     }
 }
 ```
