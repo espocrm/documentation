@@ -91,7 +91,7 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 <?php
 namespace Espo\Custom\Hooks\TargetList;
 
-use Espo\ORM\Entity
+use Espo\ORM\Entity;
 
 class MyHook
 {    
