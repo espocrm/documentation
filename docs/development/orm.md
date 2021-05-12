@@ -54,7 +54,7 @@ Note: It creates a new instance but doesn't store it in DB. The entity doesn't h
 ### Fetch existing entity
 
 ```php
-$entity = $entityManager->getEntity($entityType, $accountId);
+$entity = $entityManager->getEntity($entityType, $id);
 ```
 
 ### Store entity
@@ -89,7 +89,7 @@ $entity = $entityManager->createEntity($entityType, [
 ### Remove entity
 
 ```php
-$entityManager->removeEntity($account);
+$entityManager->removeEntity($entity);
 ```
 
 ### Get attribute value
@@ -215,8 +215,8 @@ Relation types:
 
 ```php
 $collection = $entityManager
-    ->getRDBRepository('Account')
-    ->where([
+    ->getRDBRepository($entityType)
+    ->where([ // where clause
         'type' => 'Customer',
     ])
     ->find();
@@ -226,7 +226,7 @@ Descending order:
 
 ```php
 $collection = $entityManager
-    ->getRDBRepository('Account')
+    ->getRDBRepository($entityType)
     ->limit(0, 10)
     ->order('createdAt', true)
     ->find();
@@ -236,7 +236,7 @@ Ascending order:
 
 ```php
 $collection = $entityManager
-    ->getRDBRepository('Account')
+    ->getRDBRepository($entityType)
     ->limit(0, 10)
     ->order('createdAt')
     ->find();
@@ -246,7 +246,7 @@ Descending order:
 
 ```php
 $collection = $entityManager
-    ->getRDBRepository('Account')
+    ->getRDBRepository($entityType)
     ->limit(0, 10)
     ->order('createdAt', 'DESC')
     ->find();
@@ -256,7 +256,7 @@ Complex order:
 
 ```php
 $collection = $entityManager
-    ->getRDBRepository('Account')
+    ->getRDBRepository($entityType)
     ->order([
         ['createdAt', 'ASC'],
         ['name', 'DESC'],
@@ -268,7 +268,7 @@ Or:
 
 ```php
 $collection = $entityManager
-    ->getRDBRepository('Account')
+    ->getRDBRepository($entityType)
     ->order('createdAt', 'ASC')
     ->order('name', 'DESC')
     ->find();
@@ -287,7 +287,7 @@ Feeding a query to a repository:
 
 ```php
 $collection = $entityManager
-    ->getRDBRepository('SomeEntityType')
+    ->getRDBRepository($entityType)
     ->clone($query)
     ->limit(0, 10)
     ->find();
@@ -296,8 +296,8 @@ $collection = $entityManager
 ### Find the first one
 
 ```php
-$account = $entityManager
-    ->getRDBRepository('Account')
+$entity = $entityManager
+    ->getRDBRepository($entityType)
     ->where([
         'type' => 'Customer',
     ])
