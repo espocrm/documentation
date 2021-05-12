@@ -388,7 +388,7 @@ $entityManager
 ```
 
 
-### Check related
+### Check whether related
 
 ```php
 $isRelated = $entityManager
