@@ -31,7 +31,7 @@ use Espo\ORM\EntityManager;
 
 class SomeClass
 {
-    protected $entityManager;
+    private $entityManager;
     
     public function __construct(EntityManager $entityManager)
     {
@@ -47,20 +47,49 @@ class SomeClass
 
 ```php
 $account = $entityManager->getEntity('Account')
-
-// or
-$account = $entityManager->getRepository('Account')->get();
 ```
 
 Note: It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
 
-### Fetch existing
+### Fetch existing entity
 
 ```php
-$account = $entityManager->getRepository('Account')->get($accountId);
-
-// or from entity manager
 $account = $entityManager->getEntity('Account', $accountId);
+```
+
+### Store entity
+
+```php
+$entityManager->saveEntity($account);
+```
+
+With options:
+
+```php
+$options = [
+    'skipHooks' => true, // skip all hooks; workflows, formula will be ignored
+    'silent' => true, // workflows will be ignored, modified fields won't be changed
+    'skipCreatedBy' => true, // createdBy won't be set with current user
+    'skipModifiedBy' => true, // modifiedBy won't be set with current user
+    'createdById' => true, // override createdBy
+    'modifiedById' => true, // override modifiedBy
+];
+
+$entityManager->saveEntity($account, $options);
+```
+
+### Create and store entity
+
+```php
+$account = $entityManager->createEntity('Account', [
+    'name' => 'Test',
+]);
+```
+
+### Remove entity
+
+```php
+$entityManager->removeEntity($account);
 ```
 
 ### Get attribute value
@@ -104,7 +133,7 @@ It will unset the attribute. If you save the entity after that, it will not chan
 
 ### Reset
 
-Resets all attributes.
+Resets all attributes (used rarely).
 
 ```php
 $entity->reset();
@@ -126,50 +155,6 @@ $isChanged = $entity->isChanged('attributeName');
 
 ```php
 $valueMap = $account->getValueMap(); // StdClass
-```
-
-### Store
-
-```php
-$entityManager->saveEntity($account);
-
-// or
-$entityManager->getRepository('Account')->save($account);
-```
-
-Options:
-
-```php
-$options = [
-    'skipHooks' => true, // skip all hooks; workflows, formula will be ignored
-    'silent' => true, // workflows will be ignored, modified fields won't be changed
-    'skipCreatedBy' => true, // createdBy won't be set with current user
-    'skipModifiedBy' => true, // modifiedBy won't be set with current user
-    'createdById' => true, // override createdBy
-    'modifiedById' => true, // override modifiedBy
-];
-
-$entityManager->saveEntity($account, $options);
-
-// or
-$entityManager->getRepository('Account')->save($account, $options);
-```
-
-### Create and store
-
-```php
-$account = $entityManager->createEntity('Account', [
-    'name' => 'Test',
-]);
-```
-
-### Remove
-
-```php
-$entityManager->removeEntity($account);
-
-// or
-$entityManager->getRepository('Account')->remove($account);
 ```
 
 ### Delete from DB
@@ -199,19 +184,19 @@ $paramValue = $entity->getAttributeParam('attributeName', 'attributeParam');
 
 Attribute types:
 
-* id
-* varchar
-* int
-* float
-* text
-* bool
-* foreign
-* foreignId
-* foreignType
-* date
-* datetime
-* jsonArray
-* jsonObject
+* `Entity::ID`
+* `Entity::VARCHAR`
+* `Entity::INT`
+* `Entity::FLOAT`
+* `Entity::TEXT`
+* `Entity::VARCHAR`
+* `Entity::FOREIGN`
+* `Entity::FOREIGN_ID`
+* `Entity::FOREIGN_TYPE`
+* `Entity::DATE`
+* `Entity::DATETIME`
+* `Entity::JSON_ARRAY`
+* `Entity::JSON_OBJECT`
 
 ### Relations
 
@@ -227,18 +212,18 @@ $paramValue = $entity->getRelationParam('relationName', 'paramName')
 
 Relation types:
 
-* manyMany
-* hasMany
-* belongsTo
-* hasOne
-* belongsToParent
-* hasChildren
+* `Entity::MANY_MANY`
+* `Entity::HAS_MANY`
+* `Entity::BELONGS_TO`
+* `Entity::HAS_ONE`
+* `Entity::BELONGS_TO_PARENT`
+* `Entity::HAS_CHILDREN`
 
 ### Find
 
 ```php
 $collection = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->where([
         'type' => 'Customer',
     ])
@@ -249,7 +234,7 @@ Descending order:
 
 ```php
 $collection = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->limit(0, 10)
     ->order('createdAt', true)
     ->find();
@@ -259,16 +244,17 @@ Ascending order:
 
 ```php
 $collection = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->limit(0, 10)
     ->order('createdAt')
     ->find();
 ```
 
 Descending order:
+
 ```php
 $collection = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->limit(0, 10)
     ->order('createdAt', 'DESC')
     ->find();
@@ -278,7 +264,7 @@ Complex order:
 
 ```php
 $collection = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->order([
         ['createdAt', 'ASC'],
         ['name', 'DESC'],
@@ -290,7 +276,7 @@ Or:
 
 ```php
 $collection = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->order('createdAt', 'ASC')
     ->order('name', 'DESC')
     ->find();
@@ -300,7 +286,7 @@ Ordering by a value list:
 
 ```php
 $collection = $entityManager
-    ->getRepository('Opportunity')
+    ->getRDBRepository('Opportunity')
     ->order('LIST:stage:Prospectring,Qualification,Proposal')
     ->find();
 ```
@@ -309,7 +295,7 @@ Feeding a query to a repository:
 
 ```php
 $collection = $entityManager
-    ->getRepository('SomeEntityType')
+    ->getRDBRepository('SomeEntityType')
     ->clone($query)
     ->limit(0, 10)
     ->find();
@@ -319,7 +305,7 @@ $collection = $entityManager
 
 ```php
 $account = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->where([
         'type' => 'Customer',
     ])
@@ -328,26 +314,16 @@ $account = $entityManager
 
 ### Find related
 
-Before v6.0:
-
 ```php
 $opportunityCollection = $entityManager
-    ->getRepository('Account')
-    ->findRelated($account, 'opportunities');
-```
-
-Since v6.0:
-
-```php
-$opportunityCollection = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->limit(0, 10)
     ->where($whereClause)
     ->find();
 
 $opportunity = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->order('createdAt', 'DESC')
     ->findOne();
@@ -357,7 +333,7 @@ Filtering by a relation column:
 
 ```php
  $leads = $entityManager
-    ->getRepository('TargetList')
+    ->getRDBRepository('TargetList')
     ->getRelation($targetList, 'leads')
     ->where([
         '@relation.optedOut' => false,
@@ -368,30 +344,19 @@ Filtering by a relation column:
 
 ### Relate entities
 
-Before v6.0:
-
-```php
-$entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunity);
-
-// or
-$entityManager->getRepository('Account')->relate($account, 'opportunities', $opportunityId);
-```
-
-Since v6.0:
-
 ```php
 $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->relate($opportunity);
 
 $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->relateById($opportunityId);
 
 $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
     ->relate($contact, [
         'role' => 'CEO', // relationship column
@@ -400,43 +365,30 @@ $entityManager
 
 ### Unrelate entities
 
-Before v6.0:
-
-```php
-$entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunity);
-
-// or
-$entityManager->getRepository('Account')->unrelate($account, 'opportunities', $opportunityId);
-```
-
-Since v6.0:
-
 ```php
 $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->unrelate($opportunity);
 
 $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->unrelateById($opportunityId);
 ```
 
 ### Update columns
 
-Since v6.0:
-
 ```php
 $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
     ->updateColumns($contact, [
         'role' => 'CEO', // relationship column
     ]);
 
 $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
     ->updateColumnsById($contactId, [
         'role' => 'CEO', // relationship column
@@ -446,21 +398,9 @@ $entityManager
 
 ### Check related
 
-Before v6.0:
-
-```php
-$entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $relatedEntity);
-
-// or
-$entityManager->getRepository('EntityType')->isRelated($entity, 'relationName', $id);
-```
-
-
-Since v6.0:
-
 ```php
 $isRelated = $entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->isRelated($opportunity);
 ```
@@ -475,7 +415,7 @@ Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 
 ```php
 $opportunityList = $entityManager
-    ->getRepository('Opportunity')
+    ->getRDBRepository('Opportunity')
     ->where([
       'amount>=' => 100
     ])
@@ -486,7 +426,7 @@ $opportunityList = $entityManager
 
 ```php
 $opportunityList = $entityManager
-    ->getRepository('Opportunity')
+    ->getRDBRepository('Opportunity')
     ->where([
       'stage' => ['Closed Lost', 'Closed Won']
     ])
@@ -495,7 +435,7 @@ $opportunityList = $entityManager
 
 ```
 $opportunityList = $entityManager
-    ->getRepository('Opportunity')
+    ->getRDBRepository('Opportunity')
     ->where([
         'stage!=' => ['Closed Lost', 'Closed Won']
     ])
@@ -511,7 +451,7 @@ Supported  operators:
 
 ```php
 $opportunityList = $entityManager
-    ->getRepository('Opportunity')
+    ->getRDBRepository('Opportunity')
     ->where([
         'name*' => '%service%',
     ])
@@ -522,7 +462,7 @@ $opportunityList = $entityManager
 
 ```php
 $opportunityList = $entityManager
-    ->getRepository('Opportunity')
+    ->getRDBRepository('Opportunity')
     ->where([
         [
             'OR' => [
@@ -544,7 +484,7 @@ $opportunityList = $entityManager
 // $query is the instance of Espo\ORM\QueryParams\Select
 
 $collection = $entityManager
-    ->getRepository('EntityType')
+    ->getRDBRepository('EntityType')
     ->where([
         'id=s' => $query->getRaw(),
     ])
@@ -556,7 +496,7 @@ $collection = $entityManager
 
 ```php
 $opportunityList = $entityManager
-    ->getRepository('Opportunity')
+    ->getRDBRepository('Opportunity')
     ->distinct()
     ->find();
 ```
@@ -567,7 +507,7 @@ Join relationship:
 
 ```php
 $contactList = $entityManager
-    ->getRepository('Contact')
+    ->getRDBRepository('Contact')
     ->distinct()
     ->join('opportunities')
     ->where([
@@ -580,7 +520,7 @@ Left Join relationship:
 
 ```php
 $contactList = $entityManager
-    ->getRepository('Contact')
+    ->getRDBRepository('Contact')
     ->distinct()
     ->leftJoin('opportunities')
     ->find();
@@ -592,7 +532,7 @@ Joining any table:
 
 ```php
 $meetingList = $entityManager
-    ->getRepository('Meeting')
+    ->getRDBRepository('Meeting')
     ->join(
         'MeetingUser', // meeting_user table
         'meetingUser', // it's an alias
@@ -612,11 +552,11 @@ Join table alias:
 
 ```php
 $contactList = $entityManager
-    ->getRepository('Contact')
+    ->getRDBRepository('Contact')
     ->distinct()
     ->join('opportunities', 'aliasForJoinedTable')
     ->where([
-      'aliasForJoinedTable.stage' => 'Closed Won'
+        'aliasForJoinedTable.stage' => 'Closed Won'
     ])
     ->find();
 ```
@@ -652,7 +592,8 @@ $rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
 Can be used with `find` and `findRelated` methods. With this param provided, they will return a collection that doesn't allocate memory for all result data.
 
 ```
-$collection = $entityManager->getRepository('Email')
+$collection = $entityManager
+    ->getRDBRepository('Email')
     ->limit(0, 10000)
     ->sth()
     ->find();
