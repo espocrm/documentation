@@ -28,15 +28,12 @@ Note that you need to clear cache after making changes.
 
 Your module can contain classes of the following types (each in separate directories):
 
-* Acl
-* AclPortal
 * Controllers
 * Entities
 * EntryPoints
 * Hooks
 * Jobs
 * Repositories
-* SelectManagers
 * Services
 
 Example: `application/Espo/Modules/{YourModule}/Entities/MyCustomEntity.php`.
