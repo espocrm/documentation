@@ -74,12 +74,6 @@ Class: `Espo\Core\Acl`
 
 Provides access checking functions for a current user. A wrapper for *aclManager*.
 
-## serviceFactory
-
-Class: `Espo\Core\ServiceFactory`
-
-For creation of [service](services.md) instances.
-
 ## selectBuilderFactory
 
 Available as of v6.2.0.
@@ -87,14 +81,6 @@ Available as of v6.2.0.
 Class: `Espo\Core\Select\SelectBuilderFactory`
 
 The layer over ORM. Provides the ability to apply filters, access control. Converts search parameters recived from the front-end to ORM query.
-
-## selectManagerFactory
-
-Deprecated as of v6.2.0.
-
-Class: `Espo\Core\Select\SelectManagerFactory`
-
-For creation of [select manager](select-manager.md) instances.
 
 ## fieldUtil
 
