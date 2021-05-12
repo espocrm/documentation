@@ -529,9 +529,9 @@ $meetingList = $entityManager
         'MeetingUser', // meeting_user table
         'meetingUser', // it's an alias
         [
-          'meetingUser.meetingId:' => 'meeting.id', // join condition;
-                                                   // colon indicates that the right part is not a value;
-                                                   // it translates to meetingUser.meeting_id = meeting.id
+            'meetingUser.meetingId:' => 'meeting.id', // join condition
+            // Colon indicates that the right part is not a value.
+            // It translates to `meetingUser.meeting_id = meeting.id`.
         ],
     )
     ->where([
