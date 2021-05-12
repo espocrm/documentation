@@ -527,7 +527,7 @@ $meetingList = $entityManager
     ->getRDBRepository('Meeting')
     ->join(
         'MeetingUser', // meeting_user table
-        'meetingUser', // it's an alias
+        'meetingUser', // alias
         [
             'meetingUser.meetingId:' => 'meeting.id', // join condition
             // Colon indicates that the right part is not a value.
