@@ -123,7 +123,7 @@ $account->set([
 ]);
 ```
 
-### Clear value
+### Clear attribute value
 
 ```php
 $entity->clear('attributeName');
