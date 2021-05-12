@@ -173,9 +173,9 @@ class Task extends \Espo\Core\Acl\Base
 }
 ```
 
-**Deprecated** as of v6.2.0. `Espo\Core\Select\AccessControl\Filter` interface should be used.
-
 2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
+
+**Deprecated** as of v6.2.0. `Espo\Core\Select\AccessControl\Filter` interface should be used.
 
 ```php
 <?php
