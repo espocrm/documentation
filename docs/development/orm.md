@@ -529,7 +529,7 @@ $meetingList = $entityManager
         'MeetingUser', // meeting_user table
         'meetingUser', // alias
         [
-            'meetingUser.meetingId:' => 'meeting.id', // join condition
+            'meetingUser.meetingId:' => 'id', // join condition
             // Colon indicates that the right part is not a value.
             // It translates to `meetingUser.meeting_id = meeting.id`.
         ],
