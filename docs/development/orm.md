@@ -1,4 +1,4 @@
-# ORM, How to manage entities and perform queries
+# ORM. How to manage entities and perform queries
 
 EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object.
 
