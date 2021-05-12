@@ -9,7 +9,7 @@ See all available methods in the class `Espo\Core\Select\SelectBuilder`.
 Usage example (building a query):
 
 ```php
-$selectBuilder = $selectBuilderFactory->create();
+$selectBuilder = $this->selectBuilderFactory->create();
 
 $query = $selectBuilder
     ->from($entityType)
