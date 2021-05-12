@@ -49,6 +49,8 @@ Record services can be accessed from the record service container `Espo\Core\Rec
 $service = $this->recordServiceContainer->get($entityType);
 ```
 
+If a record service class with the name of an entity type exists in `Espo\Custom\Services` namespace, it will be used instead of the default one.
+
 ### Extending existing Record service
 
 Service `custom/Espo/Custom/Services/Opportunity.php`:
