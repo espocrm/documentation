@@ -35,6 +35,10 @@ use Espo\ORM\Entity;
 
 class MyHook
 {    
+    // optional parameter, defines in which order hooks will be processed
+    // less value means sooner
+    public static $order = 5; 
+    
     public function beforeSave(Entity $entity, array $options): void
     {
         if ($entity->isNew() && !$entity->get('accountName')) { 
