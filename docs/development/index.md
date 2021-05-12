@@ -15,7 +15,6 @@
 * [Dependency injection](di.md)
 * [ORM](orm.md)
 * [Select Builder](select-builder.md)
-* [Select Manager](select-manager.md)
 * [Metadata](metadata.md)
 * [Custom API action](api-action.md)
 * [Services](services.md)
