@@ -60,8 +60,6 @@ Service `custom/Espo/Custom/Services/Opportunity.php`:
 
 namespace Espo\Custom\Services;
 
-use Espo\ORM\Entity;
-
 use Espo\Modules\Crm\Services\Opportunity as BaseOpportunity
 
 class Opportunity extends BaseOpportunity
