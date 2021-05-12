@@ -22,9 +22,10 @@ If you have several hooks, related to one Entity Type and with the same hook typ
 Ascending order - the hook with the smallest order number runs first.
 
 ## Example
+
 This example sets Account Name for new Leads, if it is not set.
 
-`custom/Espo/Custom/Hooks/Lead/AccountName.php`
+`custom/Espo/Custom/Hooks/Lead/MyHook.php`
 
 ```php
 <?php
@@ -32,9 +33,9 @@ namespace Espo\Custom\Hooks\Lead;
 
 use Espo\ORM\Entity;
 
-class AccountName extends \Espo\Core\Hooks\Base
+class MyHook
 {    
-    public function beforeSave(Entity $entity, array $options = [])
+    public function beforeSave(Entity $entity, array $options): void
     {
         if ($entity->isNew() && !$entity->get('accountName')) { 
             $entity->set('accountName', 'No Account');
@@ -86,9 +87,11 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 <?php
 namespace Espo\Custom\Hooks\TargetList;
 
-class MyHook extends \Espo\Core\Hooks\Base
+use Espo\ORM\Entity
+
+class MyHook
 {    
-    public function afterOptOut(\Espo\ORM\Entity $targetList, array $options, array $data)
+    public function afterOptOut(Entity $targetList, array $options, array $data): void
     {
         $targetId = $data['targetId'];
         $targetType = $data['targetType'];
@@ -102,15 +105,17 @@ class MyHook extends \Espo\Core\Hooks\Base
 <?php
 namespace Espo\Custom\Hooks\Meeting;
 
-class MyHook extends \Espo\Core\Hooks\Base
+use Espo\ORM\Entity;
+
+class MyHook
 {    
-    public function afterConfirmation(\Espo\ORM\Entity $meeting, array $options, array $data)
+    public function afterConfirmation(Entity $meeting, array $options, array $data): void
     {
         $status = $data['status'];
         $inviteeType = $data['inviteeType'];
         $inviteeId = $data['inviteeId'];
         
-        if ($status == 'Accepted') {
+        if ($status === 'Accepted') {
         
         }
     }
@@ -121,8 +126,10 @@ class MyHook extends \Espo\Core\Hooks\Base
 
 ### Triggering hook
 
+Inject the hook manager `Espo\Core\HookManager` to your class. User `process` method.
+
 ```php
-$this->getEntityManager()->getHookManager()->process($entityType, $hookType, $entity, $options);
+$this->hookManager->process($entityType, $hookType, $entity, $options);
 ```
 
 Note: A hook name can't start with `set`. It's reserved for a dependency injection.
