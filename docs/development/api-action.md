@@ -255,8 +255,10 @@ class MyController
         $id = $request->getRouteParam('id');
         $data = $request->getParsedBody();
 
-        return $this->someDependency->doSomething($id, $data);
+        $result = $this->someDependency->doSomething($id, $data);
+        
+        // Response can be returned or written with `Response::writeBody`.
+        return $result->toStdClass();
     }
 }
 ```
-
