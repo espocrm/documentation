@@ -243,7 +243,7 @@ use StdClass;
 
 class MyController
 {
-    protected $someDependency;
+    private $someDependency;
 
     public function __construct(SomeDependency $someDependency)
     {
@@ -255,10 +255,8 @@ class MyController
         $id = $request->getRouteParam('id');
         $data = $request->getParsedBody();
 
-        $this->someDependency->doSomething($id, $data);
-
-        return $someData;
-    }   
+        return $this->someDependency->doSomething($id, $data);
+    }
 }
 ```
 
