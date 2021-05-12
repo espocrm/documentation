@@ -581,7 +581,7 @@ $rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
 
 #### STH collection
 
-Can be used with `find` and `findRelated` methods. With this param provided, they will return a collection that doesn't allocate memory for all result data.
+If STH is set (with `sth` method), the find method will return a collection (instance of `SthCollection`) that doesn't allocate memory for all result data.
 
 ```
 $collection = $entityManager
