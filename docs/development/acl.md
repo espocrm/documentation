@@ -12,45 +12,51 @@ With *AclManager* you can check access for any user. *Acl* is a wrapper for *Acl
 You can obtain both objects form the *Container*.
 
 ```php
+use Espo\Core\Acl\Table;
+
 // available actions: create, read, edit, delete, stream
 
+
+
 // check read access to entity for specific user
-$hasAccess = $aclManager->check($user, $entity, 'read');
+$hasAccess = $aclManager->check($user, $entity, Table::ACTION_READ);
 
 // check read access to entity for current user
-$hasAccess = $acl->check($entity, 'read');
+$hasAccess = $acl->check($entity, Table::ACTION_READ);
 
 // check access to scope for specific user
 $hasAccess = $aclManager->check($user, 'Account');
 
 // check create access to scope for current user
-$hasAccess = $acl->check('Account', 'create');
+$hasAccess = $acl->check('Account', Table::ACTION_CREATE);
 
 // get access level 
-$level = $aclManager->check($user, 'Account', 'edit');
-$level = $acl->check('Account', 'edit');
+$level = $aclManager->check($user, 'Account', Table::ACTION_EDIT);
+$level = $acl->check('Account', Table::ACTION_EDIT);
 
-// get permission (e.g. assignmentPermission, portalPermission)
-$assignmentPermission = $aclManager->get($user, 'assignmentPermission');
-$assignmentPermission = $acl->get('assignmentPermission');
+// get permission level (e.g. assignmentPermission, portalPermission)
+$assignmentPermission = $aclManager->getPermissionLevel($user, 'assignmentPermission');
+$assignmentPermission = $acl->getPermissionLevel('assignmentPermission');
 
 // check user is owned of record (by assigned user)
-$isOwner =  $aclManager->checkIsOwner($user, $entity);
-$isOwner =  $acl->checkIsOwner($entity);
+$isOwner =  $aclManager->checkOwnershipOwn($user, $entity);
+$isOwner =  $acl->checkOwnershipOwn($entity);
 
 // check user teams set intersects with record teams
-$inTeam =  $aclManager->checkInTeam($user, $entity);
-$inTeam =  $acl->inTeam($entity);
+$inTeam =  $aclManager->checkOwnershipTeam($user, $entity);
+$inTeam =  $acl->checkOwnershipTeam($entity);
 
 // attributes user doesn't have access to
-$attributeList = $aclManager->getScopeForbiddenAttributeList($user, 'Account', 'read');
-$attributeList = $acl->getScopeForbiddenAttributeList('Account', 'edit');
+$attributeList = $aclManager->getScopeForbiddenAttributeList($user, 'Account', Table::ACTION_READ);
+$attributeList = $acl->getScopeForbiddenAttributeList('Account', Table::ACTION_READ);
 
-$fieldList = $acl->getScopeForbiddenFieldList('Account', 'read');
-$linkList = $acl->getScopeForbiddenLinkList('Account', 'read');
+$fieldList = $acl->getScopeForbiddenFieldList('Account', Table::ACTION_READ);
+$linkList = $acl->getScopeForbiddenLinkList('Account', Table::ACTION_READ);
 ```
 
 ## Custom ACL for entity type
+
+**Deprecated** as of v6.2.0. AccessChecker and OwnershipChecker interfaces should be used.
 
 How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
 
@@ -167,6 +173,7 @@ class Task extends \Espo\Core\Acl\Base
 }
 ```
 
+**Deprecated** as of v6.2.0. `Espo\Core\Select\AccessControl\Filter` interface should be used.
 
 2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
 
