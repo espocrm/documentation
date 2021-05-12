@@ -46,7 +46,7 @@ class SomeClass
 ### Create new entity
 
 ```php
-$account = $entityManager->getEntity($entityType)
+$entity = $entityManager->getEntity($entityType)
 ```
 
 Note: It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
@@ -54,7 +54,7 @@ Note: It creates a new instance but doesn't store it in DB. The entity doesn't h
 ### Fetch existing entity
 
 ```php
-$account = $entityManager->getEntity($entityType, $accountId);
+$entity = $entityManager->getEntity($entityType, $accountId);
 ```
 
 ### Store entity
@@ -81,7 +81,7 @@ $entityManager->saveEntity($entity, $options);
 ### Create and store entity
 
 ```php
-$account = $entityManager->createEntity($entityType, [
+$entity = $entityManager->createEntity($entityType, [
     'name' => 'Test',
 ]);
 ```
