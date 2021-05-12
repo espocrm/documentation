@@ -11,21 +11,27 @@ Create a file (or modify if it already exists) `custom/Espo/Custom/Controllers/A
 
 namespace Espo\Custom\Controllers;
 
+use Espo\Core\{
+    Api\Request,
+    Api\Response,
+};
+
 class Account extends \Espo\Modules\Crm\Controllers\Account
 {
     /**
      *  POST api/v1/Account/action/test
      */
-    public function postActionTest($params, $data, $request, $response)
+    public function postActionTest(Request $request, Response $response): bool
     {
-        // $data - payload
+        $someParam = $request->getQueryParam('someParam'); // GET parameter
+        
+        $data = $request->getParsedBody(); // payload
         
         $someValue = $data->someKey ?? null;
 
-        $response->setStatus(201); // this is optional, example how to set custom response status code
-        
-        // $someData = $this->getContainer()->get('serviceFactory')->create('MyService')
-        //    ->doSomething($data);
+        $response->setStatus(201); // example how to set custom response status code
+
+        // call some service class here
 
         return $someData; // can be true, false, array or object.
     }
@@ -33,11 +39,13 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
     /**
      *  GET api/v1/Account/action/test
      */
-    public function getActionTest($params, $data, $request)
+    public function getActionTest(Request $request, Response $response): void
     {
-        $myUriParam = $request->get('myUriParam');
+        $someParam = $request->getQueryParam('someParam'); // GET parameter
+        
+        // call some service class here
 
-        return $someData; // can be true, false, array or object.
+        $response->writeBody('true');
     }
 }
 ```
@@ -191,8 +199,7 @@ use Espo\Core\{
 };
 
 class MyController
-{
-   
+{   
     // Creates a record.
     public function postActionCreate(Request $request, Response $response)
     {    
