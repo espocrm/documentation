@@ -222,16 +222,15 @@ class MyController
 }
 ```
 
-## New action method signature in 6.0
+## Custom controller
 
-Only two parameters: Request and Response.
 
 Example:
 
 ```php
 <?php
 
-namespace Espo\Custom\Controllers;
+namespace Espo\Modules\MyModule\Controllers;
 
 use Espo\Core\{
     Api\Request,
@@ -239,6 +238,8 @@ use Espo\Core\{
 };
 
 use SomeDependency;
+
+use StdClass;
 
 class MyController
 {
@@ -249,7 +250,7 @@ class MyController
         $this->someDependency = $someDependency;
     }
 
-    public function putActionUpdate(Request $request, Response $response)
+    public function putActionUpdate(Request $request, Response $response): StdClass
     {
         $id = $request->getRouteParam('id');
         $data = $request->getParsedBody();
@@ -260,6 +261,4 @@ class MyController
     }   
 }
 ```
-
-The previous signature is supported as well.
 
