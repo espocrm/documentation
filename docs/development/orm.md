@@ -46,7 +46,7 @@ class SomeClass
 ### Create new entity
 
 ```php
-$account = $entityManager->getEntity('Account')
+$account = $entityManager->getEntity($entityType)
 ```
 
 Note: It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
@@ -54,13 +54,13 @@ Note: It creates a new instance but doesn't store it in DB. The entity doesn't h
 ### Fetch existing entity
 
 ```php
-$account = $entityManager->getEntity('Account', $accountId);
+$account = $entityManager->getEntity($entityType, $accountId);
 ```
 
 ### Store entity
 
 ```php
-$entityManager->saveEntity($account);
+$entityManager->saveEntity($entity);
 ```
 
 With options:
@@ -75,13 +75,13 @@ $options = [
     'modifiedById' => true, // override modifiedBy
 ];
 
-$entityManager->saveEntity($account, $options);
+$entityManager->saveEntity($entity, $options);
 ```
 
 ### Create and store entity
 
 ```php
-$account = $entityManager->createEntity('Account', [
+$account = $entityManager->createEntity($entityType, [
     'name' => 'Test',
 ]);
 ```
@@ -95,7 +95,7 @@ $entityManager->removeEntity($account);
 ### Get attribute value
 
 ```php
-$fieldValue = $account->get('attributeName');
+$fieldValue = $entity->get('attributeName');
 ```
 
 ### Has attribute value
@@ -103,7 +103,7 @@ $fieldValue = $account->get('attributeName');
 Checks whether an attribute is set. Note: If it's set to `NULL` it will return `true`.
 
 ```php
-$fieldNameIsSet = $account->has('fieldName'); // true or false
+$fieldNameIsSet = $entity->has('fieldName'); // true or false
 ```
 
 ### Set attribute value
@@ -111,14 +111,14 @@ $fieldNameIsSet = $account->has('fieldName'); // true or false
 One:
 
 ```php
-$account->set('attributeName', 'Test Account');
+$entity->set('attributeName', 'Test Value');
 ```
 
 Multiple:
 
 ```php
-$account->set([
-    'name' => 'Test Account',
+$entity->set([
+    'name' => 'Test Name',
     'assignedUserId' => '1',
 ]);
 ```
@@ -146,13 +146,13 @@ $isChanged = $entity->isChanged('attributeName');
 ### Get all attribute values
 
 ```php
-$valueMap = $account->getValueMap(); // StdClass
+$valueMap = $entity->getValueMap(); // StdClass
 ```
 
 ### Delete from DB
 
 ```php
-$entityManager->getRepository('Account')->deleteFromDb($id);
+$entityManager->getRepository($entityType)->deleteFromDb($id);
 ```
 
 This will delete a record permanently.
