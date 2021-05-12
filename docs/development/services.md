@@ -47,6 +47,10 @@ Hook-methods:
 
 Record services can be accessed from the record service container `Espo\Core\Record\ServiceContainer`.
 
+```php
+$service = $this->recordServiceContainer->get($entityType);
+```
+
 ### Extending existing Record service
 
 Service `custom/Espo/Custom/Services/Opportunity.php`:
