@@ -28,8 +28,7 @@ $city = $address->getCity();
 ```
 
 ```php
-$address = Address
-    ::fromNothing()
+$address = Address::create()
     ->withCity($city)
     ->withCountry($country)
     ->withPostalCode($postalCode);
@@ -56,7 +55,7 @@ $primary = $emailAddressGroup->getPrimary();
 
 $modifiedEmailAddressGroup = $emailAddressGroup
     ->withAddedEmailAddress(
-        EmailAddress::fromAddress('address@test.com')->optedOut()
+        EmailAddress::create('address@test.com')->optedOut()
     );
 
 $accountEntity->setEmailAddressGroup($modifiedEmailAddressGroup);
@@ -85,7 +84,7 @@ $accountName = $account->getName();
 
 ```php
 $entity->setParent(
-    LinkParent::fromEntityTypeAndId($entityType, $id)
+    LinkParent::create($entityType, $id)
 );
 ```
 
@@ -99,11 +98,11 @@ $entity->setContacts(
 
 ```php
 $contact = LinkMultipleItem
-    ::fromId($contact)
+    ::create($contact->getId())
     ->withColumnValue('role', 'Decision Maker');
 
 $entity->setContacts(
-    LinkMultiple::fromList([$contact]);
+    LinkMultiple::create([$contact->getId()]);
 );
 ```
 
