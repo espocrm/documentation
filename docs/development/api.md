@@ -50,7 +50,7 @@ See also:
 * [PHP](api-client-php.md)
 * [Javascript (Nodejs)](api-client-js.md)
 * [Python](api-client-python.md)
-
+* [Rust](api-client-rust.md)
 
 ## Authentication
 
