@@ -5,8 +5,8 @@
     * [Username and password authorization](##Username-and-Password)
     * [Making a request](##Making-a-request)
 
-For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/)  
-For the source code, refer to [GitHub.com](https://github.com/TheDutchMC/espocrm-rs)
+For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/).
+For the source code, refer to [GitHub](https://github.com/TheDutchMC/espocrm-rs).
 
 # Usage
 ## Adding
@@ -16,9 +16,10 @@ The crate is on crates.io, so you can add it by adding it to your `[dependencies
 espocrm-rs = "0.2.0"
 ```
 
-For the latest version, refer to [crates.io](https://crates.io/crates/espocrm-rs)
+For the latest version, refer to [crates.io](https://crates.io/crates/espocrm-rs).
 
 ## HMAC
+
 ```rust
 use espocrm_rs::EspoApiClient;
 
@@ -28,6 +29,7 @@ let client = EspoApiClient::new("https://espocrm.example.com")
     .build();
 ```
 ## API Key
+
 ```rust
 use espocrm_rs::EspoApiClient;
 let client = EspoApiClient::new("https://espocrm.example.com")
@@ -36,6 +38,7 @@ let client = EspoApiClient::new("https://espocrm.example.com")
 ```
 
 ## Username and Password
+
 ```rust
 use espocrm_rs::EspoApiClient;
 let client = EspoApiClient::new("https://espocrm.example.com")
@@ -45,10 +48,12 @@ let client = EspoApiClient::new("https://espocrm.example.com")
 ```
 
 ## Making a request
+
 To make a GET request, you need to know a couple things:
-- The request method to use
-- On what to perform the request
-- Optionally, any data needed for the request
+
+- the request method to use;
+- on what to perform the request;
+- optionally, any data needed for the request.
 
 ```rust
 use espocrm_rs::{EspoApiClient, Params, Where, FilterType, Value, NoGeneric};
