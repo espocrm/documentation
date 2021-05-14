@@ -1,0 +1,110 @@
+# API CLient implementation in Rust
+* [Usage](#usage)
+    * [HMAC authorization](##HMAC)
+    * [API Key authorization](##Api-Key)
+    * [Username and password authorization](##Username-and-Password)
+    * [Making a request](##Making-a-request)
+
+For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/)  
+For the source code, refer to [GitHub.com](https://github.com/TheDutchMC/espocrm-rs)
+
+# Usage
+## Adding
+The crate is on crates.io, so you can add it by adding it to your `[dependencies]` in your Cargo.toml:
+```toml
+[dependencies]
+espocrm-rs = "0.2.0"
+```
+
+For the latest version, refer to [crates.io](https://crates.io/crates/espocrm-rs)
+
+## HMAC
+```rust
+use espocrm_rs::EspoApiClient;
+
+let client = EspoApiClient::new("https://espocrm.example.com")
+    .set_api_key("Your API Key here")
+    .set_secret_key("Your API Secret")
+    .build();
+```
+## API Key
+```rust
+use espocrm_rs::EspoApiClient;
+let client = EspoApiClient::new("https://espocrm.example.com")
+    .set_api_key("Your API Key here")
+    .build();
+```
+
+## Username and Password
+```rust
+use espocrm_rs::EspoApiClient;
+let client = EspoApiClient::new("https://espocrm.example.com")
+    .set_username("Your Username here")
+    .set_password("Your Password here")
+    .build();
+```
+
+## Making a request
+To make a GET request, you need to know a couple things:
+- The request method to use
+- On what to perform the request
+- Optionally, any data needed for the request
+
+```rust
+use espocrm_rs::{EspoApiClient, Params, Where, FilterType, Value, NoGeneric};
+use reqwest::Method;
+
+let params = Params::default()
+    .set_offset(0)
+    .set_where(vec![
+        Where {
+            r#type: FilterType::IsTrue,
+            attribute: "exampleField".to_string(),
+            value: None
+        },
+        Where {
+            r#type: FilterType::ArrayAnyOf,
+            attribute: "exampleField2".to_string(),
+            value: Some(Value::array(vec![
+                Value::str("a"),
+                Value::str("b"),
+                Value::str("c")
+            ]))
+        }
+    ])
+    .build();
+
+let client = EspoApiClient::new("https://espocrm.example.com")
+    .set_secret_key("Your Secret Key")
+    .set_api_key("Your api key")
+    .build();
+
+let result = client.request::<NoGeneric>(Method::GET, "Contact".to_string(), Some(params), None);
+```
+
+A POST, PUT, etc request is very similar:
+```rust
+use espocrm::EspoApiClient;
+use reqwest::Method;
+use serde::Serialize;
+
+#[derive(Serialize)]
+struct MyData {
+    some_value: String,
+    some_other_value: i64
+}
+
+let client = EspoApiClient::new("https://espocrm.example.com")
+    .set_secret_key("Your Secret Key")
+    .set_api_key("Your api key")
+    .build();
+
+let data = MyData {
+    some_value: "value".to_string(),
+    some_other_value: 10
+}
+
+let result = client.request(Method::POST, "Contact".to_string(), None, Some(data));
+```
+
+The MyData struct here will be serialized into JSON data using Serde's Serialize trait.
