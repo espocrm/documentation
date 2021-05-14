@@ -1,15 +1,17 @@
 # API CLient implementation in Rust
 * [Usage](#usage)
-    * [HMAC authorization](#hmac)
-    * [API Key authorization](#api-key)
-    * [Username and password authorization](#username-and-password)
+    * [HMAC authorization](#hmac-authorization)
+    * [API Key authorization](#api-key-authorization)
+    * [Basic authorization](#basic-authorization)
     * [Making a request](#making-a-request)
 
 For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/).
 For the source code, refer to [GitHub](https://github.com/TheDutchMC/espocrm-rs).
 
 # Usage
+
 ## Adding
+
 The crate is on crates.io, so you can add it by adding it to your `[dependencies]` in your Cargo.toml:
 ```toml
 [dependencies]
@@ -18,7 +20,7 @@ espocrm-rs = "0.2.0"
 
 For the latest version, refer to [crates.io](https://crates.io/crates/espocrm-rs).
 
-## HMAC
+## HMAC authorization
 
 ```rust
 use espocrm_rs::EspoApiClient;
@@ -28,7 +30,7 @@ let client = EspoApiClient::new("https://espocrm.example.com")
     .set_secret_key("Your API Secret")
     .build();
 ```
-## API Key
+## API Key authorization
 
 ```rust
 use espocrm_rs::EspoApiClient;
@@ -37,7 +39,7 @@ let client = EspoApiClient::new("https://espocrm.example.com")
     .build();
 ```
 
-## Username and Password
+## Basic authorization
 
 ```rust
 use espocrm_rs::EspoApiClient;
