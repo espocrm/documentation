@@ -1,9 +1,9 @@
 # API CLient implementation in Rust
 * [Usage](#usage)
-    * [HMAC authorization](##HMAC)
-    * [API Key authorization](##Api-Key)
-    * [Username and password authorization](##Username-and-Password)
-    * [Making a request](##Making-a-request)
+    * [HMAC authorization](#hmac)
+    * [API Key authorization](#api-key)
+    * [Username and password authorization](#username-and-password)
+    * [Making a request](#making-a-request)
 
 For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/).
 For the source code, refer to [GitHub](https://github.com/TheDutchMC/espocrm-rs).
