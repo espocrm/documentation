@@ -116,7 +116,7 @@ E.g. `IFNULL:(name, '')` will return empty string if *name* is NULL.
 
 #### NULLIF
 
-If the first argument equals the second, it returns NULL, otherwise it returns the
+If the first argument equals the second, returns NULL, otherwise returns the first argument.
 
 E.g. `NULLIF:(name, '')` will return NULL if *name* is empty string.
 
