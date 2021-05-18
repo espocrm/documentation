@@ -5,7 +5,9 @@ Complex expressions are used to define SQL expressions. Complex expressions are 
 Where complex expressions can be utilized:
 
 * in report filters;
-* when working with ORM to avoid writing raw SQL (for developers).
+* when working with ORM to avoid writing raw SQL (for developers)
+
+Note (for developers): As of v6.2.0 it's possible to build expressions in OOP way with `Espo\ORM\QueryParams\Parts\Expression` class. See [here](../development/orm.md#complex-expressions).
 
 In this article:
 
