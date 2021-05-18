@@ -305,7 +305,7 @@ The smallest integer value greater than or equal to the argument.
 
 #### ROUND
 
-Round a number to a specified number of decimal places. E.g. `ROUND:(value,2)`.
+Round a number to a specified number of decimal places. E.g. `ROUND:(value, 2)`.
 
 ### Logical
 
