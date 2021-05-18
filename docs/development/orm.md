@@ -603,7 +603,7 @@ $contactList = $entityManager
 
 $query = $entityManager
     ->getQueryBuilder()
-    ->select() // indicates that we build a SELECT query
+    ->select()
     ->from('Opportunity') // entity type
     ->select(['MONTH:(closeDate)', 'SUM:(amountConverted)']) // complex expressions
     ->groupBy('MONTH:(closeDate)') // complex expression
@@ -643,6 +643,31 @@ foreach ($collection as $entity) {
 
 `MONTH:(closeDate)` and `SUM:(amountConverted)` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
 
+As of v6.2.0 it's possible to build expressions in OOP way.
+
+```php
+use Espo\ORM\QueryParams\Parts\Expression as Expr;
+
+$queryBuilder->select(
+    Expr::if(
+        Expr::greaterOrEqual(Expr::column('opportunity.amount'), 1000),
+        '1000 or more',
+        'less than 1000'
+    ),
+    'alias'         
+);
+```
+
+```php
+use Espo\ORM\QueryParams\Parts\Expression as Expr;
+
+$queryBuilder->where(
+    Expr::greater(
+        Expr::column('opportunity.amount'),
+        1000
+    )
+);
+```
 
 ## Query builder
 
