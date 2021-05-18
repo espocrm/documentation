@@ -274,6 +274,23 @@ $collection = $entityManager
     ->find();
 ```
 
+Or (as of v6.2.0):
+
+```
+use Espo\ORM\QueryParams\Parts\Expression as Expr;
+
+$collection = $entityManager
+    ->getRDBRepository($entityType)
+    ->order(
+        Expr::concat(
+            Expr::column('firstName'),
+            Expr::column('lastName')
+        ),
+        'DESC',            
+    )
+    ->find();
+```
+
 Ordering by a value list:
 
 ```php
@@ -332,7 +349,6 @@ Filtering by a relation column:
     ])
     ->find();
 ```
-
 
 ### Relate entities
 
@@ -476,12 +492,40 @@ $opportunityList = $entityManager
 // $query is the instance of Espo\ORM\QueryParams\Select
 
 $collection = $entityManager
-    ->getRDBRepository('EntityType')
+    ->getRDBRepository($entityType)
     ->where([
         'id=s' => $query->getRaw(),
     ])
     ->find();
+```
 
+#### Condition
+
+Available as of v6.2.0.
+
+```php
+use Espo\ORM\QueryParams\Parts\Condition as Cond;
+
+$collection = $entityManager
+    ->getRDBRepository($entityType)
+    ->where(
+        Cond::or(
+            Cond::equal(Cond::column('someColumn'), '1'),
+            Cond::equal(Cond::column('someColumn'), '2')
+        )
+    )
+    ->find();
+```
+
+```php
+use Espo\ORM\QueryParams\Parts\Condition as Cond;
+
+$collection = $entityManager
+    ->getRDBRepository($entityType)
+    ->where(
+        Cond::in(Cond::column('id'), $subQuery)
+    )
+    ->find();
 ```
 
 ### Distinct
