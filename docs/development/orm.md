@@ -936,7 +936,7 @@ Available as of v6.2.0.
 $defs = $entityManager->getDefs();
 ```
 
-ORM Defs can also be required as a dependency so that it will be injected into your class. Use the type hint `Espo\ORM\Defs\Defs`.
+ORM Defs can also be required as a dependency so that it will be injected into your class. Use the type hint `Espo\ORM\Defs`.
 
 Check entity existance:
 
