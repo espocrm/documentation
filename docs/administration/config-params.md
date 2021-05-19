@@ -66,6 +66,7 @@ The list of parameters along with their default values.
 * emailForceUseExternalClient – `false` – when composing an email, all users will be forced to use external client;
 * emailAutoReplySuppressPeriod – `'2 hours'` – an auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter; to prevent looping (as of v6.1.8);
 * emailAutoReplyLimit – `5` – a max number of auto-reply emails that can be sent to one recipient within a period defined by the *emailAutoReplySuppressPeriod* parameter (as of v6.2.0);
+* emailAutoReplySuppressPeriod – `3 hours` – An auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter;
 
 ### Stream
 
