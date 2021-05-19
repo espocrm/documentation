@@ -64,7 +64,7 @@ The list of parameters along with their default values.
 
 * emailKeepParentTeamsEntityList – `['Case']` – when a related email is fetched, teams of the parent record will be copied to the email; by default, it's available only for cases;
 * emailForceUseExternalClient – `false` – when composing an email, all users will be forced to use external client;
-* emailAutoReplaySuppressPeriod – `'3 hours'` – an auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter; to prevent looping (as of v6.1.8);
+* emailAutoReplySuppressPeriod – `'3 hours'` – an auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter; to prevent looping (as of v6.1.8);
 
 ### Stream
 
