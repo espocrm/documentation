@@ -135,7 +135,7 @@ Search criteria. Can contain nested arrays and objects. See more [below](#where-
 
 *String*
 
-A primiry filter. Primary filters are usualy defined in *Select Manager* class.
+A primary filter. Primary filters are usualy defined in *Select Manager* class.
 
 ### boolFilterList
 
