@@ -51,6 +51,7 @@ See also:
 * [Javascript (Nodejs)](api-client-js.md)
 * [Python](api-client-python.md)
 * [Rust](api-client-rust.md)
+* [Java](api-client-java.md)
 
 ## Authentication
 
