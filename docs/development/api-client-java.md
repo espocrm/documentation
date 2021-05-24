@@ -5,7 +5,22 @@
 For the source code, refer to the GitHub repository [here](https://github.com/TheDutchMC/espocrm-java)
 
 ## Installing
-The client is available on the Maven Central repository. Refer to the GitHub README [here](https://github.com/TheDutchMC/espocrm-java/README.md)
+[![Maven Central](https://img.shields.io/maven-central/v/dev.array21/espocrm-api-client.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22dev.array21%22%20AND%20a:%22espocrm-api-client%22)  
+The client is available on the Maven Central repository.
+
+Maven:
+```xml
+<dependency>
+  <groupId>dev.array21</groupId>
+  <artifactId>espocrm-api-client</artifactId>
+  <version>VERSION</version>
+</dependency>
+```
+
+Gradle:
+```groovy
+implementation 'dev.array21:espocrm-api-client:VERSION'
+```
 
 ## Usage
 ```java
