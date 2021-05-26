@@ -1,4 +1,4 @@
-# Optimistic concurrency control
+# Optimistic Concurrency Control
 
 Available as of v6.2.0.
 
