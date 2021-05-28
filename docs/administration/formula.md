@@ -134,6 +134,8 @@ Out-of-the-box functions are listed below.
 
 If CONDITION is met, then do CONSEQUENT. If not - then do ALTERNATIVE.
 
+CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
+
 Example:
 
 ```
@@ -144,13 +146,48 @@ ifThenElse(
 )
 ```
 
+Multiple expressions:
+
+```
+ifThenElse(
+    $someVariable == 'someValue',
+    (
+        $anotherVariable1 = 'test-1';
+        $anotherVariable2 = 'test-2';
+    ),
+    (
+        $anotherVariable1 = 'hello-1';
+        $anotherVariable2 = 'hello-2';
+    )
+)
+```
+
+Assigning:
+
+```
+$value = ifThenElse(
+    $someVariable == 'someValue', // if condition is true
+    'one value', // return this value
+    'another value' // otherwise this
+)
+```
+
 #### ifThen
 
 `ifThen(CONDITION, CONSEQUENT)`
 
 If CONDITION is met, then do CONSEQUENT. If not - do nothing.
 
-CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
+CONSEQUENT can consist of mutliple commands separated by the semicolon `;`.
+
+Example:
+
+```
+ifThenElse(
+    $someVariable == 'someValue', // if condition is true
+    $anotherVariable = 1, // do this
+)
+```
 
 #### list
 
