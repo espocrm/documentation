@@ -2,15 +2,40 @@
 
 In this article:
 
-* [Check logs](#check-logs)
 * [Check system requirements](#check-system-requirements)
+* [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
+* [Check logs](#check-logs)
 * [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
 * [Running rebuild from CLI](#running-rebuild-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
 * [MySQL error: The server requested authentication method unknown to the client](#mysql-error-the-server-requested-authentication-method-unknown-to-the-client)
 * [Emails are not being fetched](#emails-are-not-being-fetched)
-* [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
+* [Delay in fetching emails](#delay-in-fetching-emails)
 * [Admin password is lost, can't log in](#admin-password-is-lost-cant-log-in)
+
+## Check system requirements
+
+At Admiistration > System Requirements. It's important to have all required extensions installed.
+
+## Enabling debug mode for a logger
+
+To enable debug mode for log, edit the file `data/config.php` and change the value:
+
+```
+'logger' => [
+    ...
+    'level' => 'WARNING',
+    ...
+]
+```
+to
+```
+'logger' => [
+    ...
+    'level' => 'DEBUG',
+    ...
+]
+```
 
 ## Check logs
 
@@ -23,10 +48,6 @@ Espo logs are located in `{ESPO_ROOT}/data/logs/` directory. Most of errors are 
 #### Apache error logs
 
 For Ubuntu server, an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
-
-## Check system requirements
-
-At Admiistration > System Requirements. It's important to have all required extensions installed.
 
 ## Scheduled Jobs are not working
 
@@ -102,25 +123,11 @@ MySQL 8.0.4 has changed default authentication method to `caching_sha2_password`
 3. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
 4. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.
 
-## Enabling debug mode for a logger
+## Delay in fetching emails
 
-To enable debug mode for log, edit the file `data/config.php` and change the value:
-
-```
-'logger' => [
-    ...
-    'level' => 'WARNING',
-    ...
-]
-```
-to
-```
-'logger' => [
-    ...
-    'level' => 'DEBUG',
-    ...
-]
-```
+The following configurations will speed up your emails fetching:
+1. Cron should be executed every minute `* * * * *`. More details about the cron, https://docs.espocrm.com/administration/server-configuration/#setting-up-crontab.
+2. The `Jobs Run in Parallel` option should be enabled in Administration > Jobs > Settings (in the top-right corner). More details, https://docs.espocrm.com/administration/jobs/#running-jobs-in-parallel-processes.
 
 ## Admin password is lost, can't log in
 
