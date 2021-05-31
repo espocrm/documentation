@@ -2,9 +2,9 @@
 
 In this article:
 
-* [Check system requirements](#check-system-requirements)
-* [Enabling debug mode for a logger](#enabling-debug-mode-for-a-logger)
 * [Check logs](#check-logs)
+  * [Debug mode](#debug-mode)
+* [Check system requirements](#check-system-requirements)
 * [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
 * [Running rebuild from CLI](#running-rebuild-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
@@ -13,13 +13,23 @@ In this article:
 * [Delay in fetching emails](#delay-in-fetching-emails)
 * [Admin password is lost, can't log in](#admin-password-is-lost-cant-log-in)
 
-## Check system requirements
+## Check logs
 
-At Admiistration > System Requirements. It's important to have all required extensions installed.
+To find out the problem, you check error log files.
 
-## Enabling debug mode for a logger
+#### EspoCRM error logs
 
-To enable debug mode for log, edit the file `data/config.php` and change the value:
+Espo logs are located in `{ESPO_ROOT}/data/logs/` directory. Most of errors are logger there.
+
+#### Apache error logs
+
+For Ubuntu server, an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
+
+### Debug mode
+
+In some cases it can be reasonable to enable debug mode for the logger.
+
+To enable debug mode for the loghger, edit the file `data/config.php` and change the value:
 
 ```
 'logger' => [
@@ -37,17 +47,11 @@ to
 ]
 ```
 
-## Check logs
+## Check system requirements
 
-To find out the problem, you have to check error log files.
+At Admiistration > System Requirements. It's important to have all required extensions installed.
 
-#### EspoCRM error logs
 
-Espo logs are located in `{ESPO_ROOT}/data/logs/` directory. Most of errors are logger there.
-
-#### Apache error logs
-
-For Ubuntu server, an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
 
 ## Scheduled Jobs are not working
 
