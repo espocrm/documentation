@@ -15,15 +15,15 @@ In this article:
 
 ## Check logs
 
-To find out the problem, you check error log files.
+To find out the problem, check error log files.
 
 #### EspoCRM error logs
 
-Espo logs are located in `{ESPO_ROOT}/data/logs/` directory. Most of errors are logger there.
+Espo logs are located in `{ESPO_ROOT}/data/logs/` directory. Most errors are logger there.
 
 #### Apache error logs
 
-For Ubuntu server, an apache error log is located at `/var/log/apache2/error.log` and contains all error information. The location of log files can be different on other systems.
+For Ubuntu server, the apache error log is located at `/var/log/apache2/error.log`. The location of log files can be different on other systems.
 
 ### Debug mode
 
