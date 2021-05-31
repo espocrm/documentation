@@ -134,7 +134,7 @@ MySQL 8.0.4 has changed default authentication method to `caching_sha2_password`
 ## Delay in fetching emails
 
 The following configurations will speed up your emails fetching:
-1. Cron should be executed every minute `* * * * *` or more often. More details [here](https://docs.espocrm.com/administration/server-configuration/#setting-up-crontab).
+1. Cron should be configured to execute once a minute or more often. More details [here](https://docs.espocrm.com/administration/server-configuration/#setting-up-crontab).
 2. The `Jobs Run in Parallel` option should be enabled in Administration > Jobs > Settings (in the top-right corner). More details [here](https://docs.espocrm.com/administration/jobs/#running-jobs-in-parallel-processes).
 
 ## Admin password is lost, can't log in
