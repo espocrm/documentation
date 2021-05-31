@@ -22,7 +22,7 @@ This is the most **important step** in finding out the problem. There are two ma
 
 #### EspoCRM log
 
-EspoCR< log files are located in `{ESPO_ROOT}/data/logs/` directory. Most errors are logger there.
+EspoCRM log files are located in `{ESPO_ROOT}/data/logs/` directory. Most errors are logger there.
 
 #### Apache error log
 
