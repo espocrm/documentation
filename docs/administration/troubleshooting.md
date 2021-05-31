@@ -15,19 +15,22 @@ In this article:
 
 ## Check logs
 
-To find out the problem, check error log files.
+This is the most **important step** in finding out the problem. There are two main logs you need to check:
 
-#### EspoCRM error logs
+* EspoCRM log;
+* Apache error log.
 
-Espo logs are located in `{ESPO_ROOT}/data/logs/` directory. Most errors are logger there.
+#### EspoCRM log
 
-#### Apache error logs
+EspoCR< log files are located in `{ESPO_ROOT}/data/logs/` directory. Most errors are logger there.
+
+#### Apache error log
 
 For Ubuntu server, the apache error log is located at `/var/log/apache2/error.log`. The location of log files can be different on other systems.
 
 ### Debug mode
 
-In some cases it can be reasonable to enable debug mode for the logger.
+In some cases it can be reasonable to enable debug mode for the logger. It will print more information into the log.
 
 To enable debug mode for the loghger, edit the file `data/config.php` and change the value:
 
@@ -47,10 +50,11 @@ to
 ]
 ```
 
+Don't forget to revert the mode back after the problem is solved.
+
 ## Check system requirements
 
-At Admiistration > System Requirements. It's important to have all required extensions installed.
-
+At Admiistration > System Requirements. It's important that you have all required extensions installed.
 
 
 ## Scheduled Jobs are not working
