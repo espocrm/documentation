@@ -277,7 +277,7 @@ $collection = $entityManager
 Or (as of v6.2.0):
 
 ```
-php
+<?php
 use Espo\ORM\QueryParams\Parts\Expression as Expr;
 
 $collection = $entityManager
