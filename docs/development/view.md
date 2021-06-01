@@ -210,3 +210,29 @@ A simple way to wait:
     },
 
 ```
+
+## Events
+
+```js
+    setup: function () {
+        // Use this way only when the view subscribes to self.
+        this.on(eventName, callback); // subscribe to self
+        this.once(eventName, callback); // subscribe once
+        this.off(eventName, callback); // unsubscribe
+        
+        // Use this way to subscribe to another object. Prevents memory leaking.
+        this.listenTo(object, eventName, callback); // subscribe to another object
+        this.listenToOnce(object, eventName, callback); 
+        this.stopListening(object, eventName); // unsubscribe
+        
+        // Triggering event.
+        this.trigger(eventName);  
+        this.trigger(eventName, objectWithEventData); // passing data        
+    },
+```
+
+### Built-in view events
+
+* `after:render` – after the view is rendered;
+* `remove` – when the view is removed (destroyed); use it for cleaning up;
+
