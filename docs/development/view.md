@@ -231,7 +231,7 @@ A simple way to wait:
     },
 ```
 
-### Built-in view events
+### Built-in events
 
 * `after:render` – after the view is rendered;
 * `remove` – when the view is removed (destroyed); use it for cleaning up;
