@@ -47,6 +47,7 @@
   * [Custom dashlets](how-to-create-a-dashlet.md)
   * [Dynamic forms with dynamic handler](dynamic-handler.md)
   * [Link-multiple field with primary record](link-multiple-with-primary.md)
+  * [View setup handlers](frontend/view-setup-handlers.md)
 * Campaigns
   * [Custom unsubscribe page](campaign-unsubscribe-template.md)
 
