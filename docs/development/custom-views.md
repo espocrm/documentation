@@ -149,3 +149,7 @@ define('custom:views/fields/address', 'views/fields/address', function (Dep) {
     });
 });
 ```
+
+## See also
+
+* [View setup handlers](frontend/view-setup-handlers.md)
