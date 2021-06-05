@@ -8,6 +8,8 @@ Dynamic Logic allows to define conditions making certain fields visible, require
 
 For *Enum*, *Array*, *Multi-Enum*, *Checklist* fields it's, possible to define different sets of options that will be available for the field depending on which condition is met. Note, that the order of option list is taken into account.
 
+For *Varchar* and *Text* fields it's possible to define a regular expression to check whether a value matches a specific pattern (since v6.2.0).
+
 Dynamic logic can control:
 
 * Visibility − if the field is visible or not
