@@ -12,10 +12,11 @@ For *Varchar* and *Text* fields it's possible to define a regular expression to 
 
 Dynamic logic can control:
 
-* Visibility − if the field is visible or not
-* Required − if the field is required or not
-* Read-only − if the field read-only or not
-* Options − conditions that determine which options are available (for Enum, Array, Multi-Enum, Checklist fields)
+* Visibility − if the field is visible or not;
+* Required − if the field is required or not;
+* Read-only − if the field read-only or not;
+* Options − conditions that determine which options are available (for Enum, Array, Multi-Enum, Checklist fields);
+* Invalidity - conditions making the field invalid (as of v6.2.0).
 
 Conditions are configured through user interface, no coding required.
 
