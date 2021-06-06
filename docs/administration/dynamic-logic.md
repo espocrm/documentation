@@ -31,3 +31,5 @@ Available in the following layouts:
 * Detail
 * Side Panels
 * Bottom Panels
+
+It's also possible to define conditions on which a specific color will be applied to the panel (as of v6.2.0).
