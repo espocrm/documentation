@@ -54,9 +54,9 @@ A definition example:
 }
 ```
 
-Needed dependencies will be passed to a class constructor. Class constructor parameter names and type hinting will be used to detect dependencies.
+Needed dependencies will be passed to a class constructor. Class constructor parameter names and type hinting will be used (via reflection) to detect dependencies.
 
-For example, if a parameter name is `$entityManager`, then *entityMaanger* container service will be passed.
+Example:
 
 ```php
 <?php
@@ -75,7 +75,7 @@ class MyService
 }
 ```
 
-If there's no service with a matching name but a type hint for the parameter is a class, then a new instance of that class will be instantiated (by Injectable Factory).
+If there's no matching service for a parameter but a type hint is a class, then a new instance of that class will be instantiated (by Injectable Factory).
 
 ## Injectable factory
 
@@ -112,13 +112,17 @@ class SomeFactory
 
 ### Constructor injection
 
-#### Service dependencies
+Constructor parameter names are used to detect dependencies.
 
-Constructor parameter names are used to detect dependencies on services.
+Resolving process:
 
-For example, if the parameter name is `$entityManager`, then *entityManager* service will be passed.
+* Tries to resolve by binding (see below about binding); exit if succcess;
+* Tries to resolve by a parameter name, assuming that parameter name matches a service name; exit if succcess;
+* Creates a new instance if type hind is a class.
 
-Class:
+If there's no service with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
+
+Service 'entityMananger' as a dependency:
 
 ```php
 <?php
@@ -138,11 +142,7 @@ class SomeClass
 }
 ```
 
-Note: A type hint for a parameter should match a class of a service or be a parent class or interface. Otherwise the service won't be passed but a new instance will be created and passed into the constructor.
-
-#### Non-service dependencies
-
-If there's no service with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
+Non-service depedency:
 
 ```php
 <?php
@@ -192,7 +192,11 @@ Using setter injections may be reasonable when you are extending from an existin
 
 Important: Only services can be injected via setters.
 
+Note: It's not recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
+
 ### Manual instantiating
+
+This way is supposed to be utilized in factory classes.
 
 ```php
 <?php
@@ -211,6 +215,37 @@ $injectableFactory->createWith($className, [
     'parameterName2' => $value2,
 ]);
 ```
+
+Factory example:
+
+```php
+<?php
+namespace Espo\Modules\MyModules\SomeTypeFactory;
+
+use Espo\Core\InjectableFactory;
+
+class SomeTypeFactory
+{
+    private $injectableFactory;
+    
+    public function __construct(InjectableFactory $injectableFactory)
+    {
+        $this->injectableFactory = $injectableFactory;
+    }
+    
+    public function create(string $userId): SomeType
+    {
+        return $this->injectableFactory->createWith(SomeType::class, [
+            // The variable $userId will be passed for a constructor parameter
+            // with the name 'userId'.
+            'userId' => $userId, 
+        ]);
+    }    
+}
+
+```
+
+It's also possible to use a binding container. More info below.
 
 ### Classes created by injectableFactory
 
