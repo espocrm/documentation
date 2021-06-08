@@ -22,7 +22,7 @@
 * [ACL](acl.md)
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
-  * [Defining new funtions for formula](new-function-in-formula.md)
+  * [Custom functions for formula](new-function-in-formula.md)
   * [Custom scheduled jobs](scheduled-job.md)
   * [Duplicate checking](duplicate-check.md)
   * [Database indexes](db-indexes.md)
