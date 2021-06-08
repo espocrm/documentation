@@ -220,7 +220,7 @@ Factory example:
 
 ```php
 <?php
-namespace Espo\Modules\MyModules\SomeTypeFactory;
+namespace Espo\Modules\MyModule;
 
 use Espo\Core\InjectableFactory;
 
