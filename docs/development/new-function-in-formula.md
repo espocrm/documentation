@@ -1,4 +1,4 @@
-# Defining new funtions for Formula
+# Custom functions for Formula
 
 EspoCRM provides the possibility to create custom functions that can be used in formula. 
 
