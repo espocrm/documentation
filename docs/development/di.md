@@ -224,6 +224,9 @@ namespace Espo\Modules\MyModules\SomeTypeFactory;
 
 use Espo\Core\InjectableFactory;
 
+/**
+ * The factory instance is supposed to be passed as a dependency of some class.
+ */
 class SomeTypeFactory
 {
     private $injectableFactory;
