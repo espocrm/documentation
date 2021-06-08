@@ -233,11 +233,13 @@ class SomeTypeFactory
         $this->injectableFactory = $injectableFactory;
     }
     
+    /**
+     * The variable $userId will be used for the constructor parameter
+     * with the name 'userId'.
+     */
     public function create(string $userId): SomeType
     {
         return $this->injectableFactory->createWith(SomeType::class, [
-            // The variable $userId will be passed for a constructor parameter
-            // with the name 'userId'.
             'userId' => $userId, 
         ]);
     }    
