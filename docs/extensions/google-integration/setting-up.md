@@ -22,7 +22,15 @@ Do the following steps.
 
 **3\.** Enable needed APIs.
 
-On the *Dashboard*, click *ENABLE APIS AND SERVICES*. Use search to find *Google Calendar API*, *Contacts API* and *Gmail API*. Enable those that you need to be used by the integration. Note, that some APIs can be already enabled.
+On the *Dashboard*, click *ENABLE APIS AND SERVICES*.
+
+Use search to find:
+
+* Google Calendar API (for Calendar sync);
+* People API (for Contacts pushing);
+* Gmail API (for secure connection to Gmail).
+
+Enable those that you need to use in your CRM. Note, that some APIs can be already enabled.
 
 ![Enable API](../../_static/images/extensions/google-integration/setting-up/3.png)
 
