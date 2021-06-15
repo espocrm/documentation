@@ -88,7 +88,7 @@ To add an explicit page break you need to add (since v5.8.0):
 {{pagebreak}}
 ```
 
-For older verseinos (in code view):
+For older versions (in code view):
 
 ```
 <br pagebreak="true">
