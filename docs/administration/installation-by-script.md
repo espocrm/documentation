@@ -164,7 +164,7 @@ bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-dom
 /var/www/espocrm/stop.sh
 ```
 
-2. Rename it:
+2. Rename existing data:
 
 ```
 mv /var/www/espocrm /var/www/espocrm-old
