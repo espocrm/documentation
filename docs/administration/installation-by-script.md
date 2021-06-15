@@ -117,10 +117,17 @@ This certificate is a free of charge and can be used by providing an email addre
 If you need a high-security connection, you have to use your own SSL/TLS certificate. In this mode, EspoCRM will be installed with dummy certificates which should be replaced by real ones.
 
 Post installation steps:
+
 1. Go to your server directory `/var/www/espocrm/data/nginx/ssl/cert/`.
+
 2. Replace the following certificates with your own:
+
     - fullchain.pem
     - privkey.pem
+
+  **Important!**
+  Your own certificates have to substitute the existing certificates and must have the same names.
+
 3. Restart nginx server:
 
 ```
