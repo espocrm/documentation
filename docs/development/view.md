@@ -35,23 +35,23 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             
             // all event listeners are recommended to be initialized here
 
-            this.on('remove', function () {
+            this.on('remove', () => {
 
-            }, this);
+            });
             
             // use listenTo & listenToOnce methods for listening to events of another object
             // to prevent memory leakage
 
             // model changed
-            this.listenTo(this.model, 'change', function () {
+            this.listenTo(this.model, 'change', () => {
                 // whether specific attribute changed        
                 if (this.model.hasChanged('test')) {        
                 }
-            }, this);
+            });
             
             // model saved or fetched         
-            this.listenTo(this.model, 'sync', function () {   
-            }, this);
+            this.listenTo(this.model, 'sync', () => {   
+            });
         },
 
         // called after contents is added to DOM
@@ -130,7 +130,7 @@ Wait method can receive a promise:
         this.wait(
             Promise.all([
                 this.model.fetch(),
-                this.model.collection.fetch()
+                this.model.collection.fetch(),
             ])
         );
     },
@@ -142,17 +142,14 @@ Model factory returns a promise.
     setup: function () {
         this.wait(
             this.getModelFactory().create('Case')
-            .then(
-                function (model) {
-                    model.id = this.model.id
+                .then(model => {
+                    model.id = this.model.id;
+
                     return model.fetch();
-                }.bind(this)
-            )
-            .then(
-                function (data) {
+                })
+                .then(data => {
                     console.log(data);
-                }
-            )
+                })
         );
     },
 ```
@@ -201,12 +198,11 @@ A simple way to wait:
         // this holds off the rendering
         this.wait(true);
 
-        Espo.Ajax.getRequest('Some/Request').then(
-            function (response) {
+        Espo.Ajax.getRequest('Some/Request')
+            .then(response => {
                 // this cancels waiting and proceeds to rendering
-                this.wait(false);
-            }.bind(this)
-        );
+                this.wait(false);                
+            });
     },
 
 ```
