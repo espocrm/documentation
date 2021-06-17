@@ -28,8 +28,10 @@ Saving model (to backend):
 // assuming model.id is set
 model.save()
     .then(() => {
+        // callback on success
     })
     .fail(() => {
+        // callback on fail
     });
 ```
 
