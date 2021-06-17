@@ -15,10 +15,10 @@ model.set({
 });
 
 // specific attribute
-var value = model.get('attributeName');
+let value = model.get('attributeName');
 
 // all attributes
-var attributes = Espo.Utils.cloneDeep(model.attributes);
+let attributes = Espo.Utils.cloneDeep(model.attributes);
 
 ```
 
@@ -82,7 +82,7 @@ define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model)
     return Dep.extend({
     
         setup: function () {
-            var model = new Model;
+            let model = new Model;
             
             model.urlRoot = 'MyModel'; // URL will be used when fetching and saving
             model.id = 'someId';
