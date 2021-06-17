@@ -27,16 +27,10 @@ Saving model (to backend):
 ```js
 // assuming model.id is set
 model.save()
-    .then(
-        function () {
-
-        }.bind(this)
-    )
-    .fail(
-        function () {
-
-        }.bind(this)
-    );
+    .then(() => {
+    })
+    .fail(() => {
+    });
 ```
 
 Fetching model (from backend):
@@ -44,11 +38,8 @@ Fetching model (from backend):
 ```js
 // assuming model.id is set
 model.fetch()
-    .then(
-        function () {
-
-        }.bind(this)
-    );
+    .then(() => {
+    });
 ```
 
 ## Instantiating
@@ -57,25 +48,26 @@ Model-factory is available in views. The model-factory allows to create a model 
 
 ```js
 define('custom:views/some-custom-view', 'view', function (Dep) {
+
     return Dep.extend({
+    
         setup: function () {
-            var entityType = 'Account';
-            // use wait to hold off rendering until model is loaded
+            let entityType = 'Account';
+            
+            // use wait to hold off rendering until model is loaded            
             this.wait(
                 this.getModelFactory().create(entityType)
-                .then(
-                    function (model) {
-                        var entityType = model.entityType; // entityType property is set by the factory
-                        this.model = model;
-                        model.id = this.options.id;
-                        return model.fetch(); // this will make API call using an appropriate URL
-                    }.bind(this)
-                )
-                .then(
-                    function () {
-                        // here you can do some stuff with model
-                    }.bind(this)
-                )
+                .then(model => {
+                    let entityType = model.entityType; // entityType property is set by the factory
+                    
+                    this.model = model;                    
+                    model.id = this.options.id;
+                    
+                    return model.fetch(); // this will make API call using an appropriate URL
+                })
+                .then(() => {
+                    // here you can do some stuff with model
+                })
             );
         },
     });
@@ -86,12 +78,18 @@ Instantiating w/o factory:
 
 ```js
 define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model) {
+
     return Dep.extend({
+    
         setup: function () {
             var model = new Model;
+            
             model.urlRoot = 'MyModel'; // URL will be used when fetching and saving
-            model.id = 'someId';            
-            model.fetch(); // this will make GET MyModel/someId API call
+            model.id = 'someId';
+            
+            this.wait(
+                model.fetch(); // this will make `GET MyModel/someId` API call
+            );
         },
     });
 });
@@ -106,19 +104,20 @@ Note: `listenTo` and `listenToOnce` are methods of *view*.
 When model attributes get changed (not necessarily synced with backend).
 
 ```js
-this.listenTo(model, 'change', function (model, options) {
+this.listenTo(model, 'change', (model, options) => {
     if (this.model.hasChanged('someAttribute')) {
         // someAttribute is changed
     }
+    
     if (options.ui) {
         // changed via UI
         // this options is set by field view
     }
-}, this);
+});
 
-this.listenToOnce(model, 'change:someAttribute', function (model, value, options) {
+this.listenToOnce(model, 'change:someAttribute', (model, value, options) => {
     // someAttribute is changed
-}, this);
+});
 ```
 
 ### sync
@@ -126,9 +125,9 @@ this.listenToOnce(model, 'change:someAttribute', function (model, value, options
 Model synced with backend.
 
 ```js
-this.listenTo(model, 'sync', function () {
+this.listenTo(model, 'sync', () => {
     // synced with backend (fired after fetch or save)
-}, this);
+});
 ```
 
 ### destroy
