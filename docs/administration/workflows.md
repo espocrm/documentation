@@ -218,12 +218,12 @@ Meetings/Calls:
 Quotes/Sales Orders/Invoices:
 
 * *Add Items*
-* *Convery Currency* – converts all currency values based on current rates (since version 5.7.0)
+* *Convert Currency* – converts all currency values based on current rates (since version 5.7.0)
 * *Send in Email*
 
 Opportunities:
 
-* *Convery Currency* (since version 5.7.0)
+* *Convert Currency* (since version 5.7.0)
 
 Contacts/Leads/Accounts:
 
