@@ -159,7 +159,7 @@ Some usage examples:
 
 * Lead count / Contact count;
 * Revenue by month / Campaign Budget by month;
-* Revenu by user / Lead count by User.
+* Revenue by user / Lead count by User.
 
 You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
 
