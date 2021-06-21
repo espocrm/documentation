@@ -112,6 +112,8 @@ class MyClass
 }
 ```
 
+Also avoid the `mixed` type for parameters.
+
 ### 4\. Never return TRUE or FALSE to indicate a success or failure. Throw an exception if failure, return NULL for empty result.
 
 ✔️ Good:
@@ -137,8 +139,6 @@ class MyClass
     }
 }
 ```
-
-Also avoid mixed type hinting. Try to use *mixed* type hinting only when they are really reasonable.
 
 ### 5\. Don't write comments, write self explanatory code.
 
