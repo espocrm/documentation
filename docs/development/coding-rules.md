@@ -61,7 +61,7 @@ Exception: Passing the Container may be acceptable for proxy classes.
 <?php
 
 $account = $this->entityManager
-    ->getRepository('Account')
+    ->getRDBRepository('Account')
     ->select(['id', 'name'])
     ->where([
         'type' => 'Customer',
