@@ -276,9 +276,9 @@ $collection = $entityManager
 
 Or (as of v6.2.0):
 
-```
+```php
 <?php
-use Espo\ORM\QueryParams\Parts\Expression as Expr;
+use Espo\ORM\QueryParams\Part\Expression as Expr;
 
 $collection = $entityManager
     ->getRDBRepository($entityType)
@@ -505,7 +505,7 @@ $collection = $entityManager
 Available as of v6.2.0.
 
 ```php
-use Espo\ORM\QueryParams\Parts\Condition as Cond;
+use Espo\ORM\QueryParams\Part\Condition as Cond;
 
 $collection = $entityManager
     ->getRDBRepository($entityType)
@@ -519,7 +519,7 @@ $collection = $entityManager
 ```
 
 ```php
-use Espo\ORM\QueryParams\Parts\Condition as Cond;
+use Espo\ORM\QueryParams\Part\Condition as Cond;
 
 $collection = $entityManager
     ->getRDBRepository($entityType)
@@ -647,7 +647,7 @@ foreach ($collection as $entity) {
 As of v6.2.0 it's possible to build expressions in OOP way.
 
 ```php
-use Espo\ORM\QueryParams\Parts\Expression as Expr;
+use Espo\ORM\QueryParams\Part\Expression as Expr;
 
 $queryBuilder->select(
     Expr::if(
@@ -660,7 +660,7 @@ $queryBuilder->select(
 ```
 
 ```php
-use Espo\ORM\QueryParams\Parts\Expression as Expr;
+use Espo\ORM\QueryParams\Part\Expression as Expr;
 
 $queryBuilder->where(
     Expr::greater(
