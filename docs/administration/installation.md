@@ -27,11 +27,11 @@ Go to your hosting administration panel, or to SSH, and create a new database an
 
 ### 4. Run EspoCRM installation process
 
-Now, open your web browser, and go to the URL with EspoCRM files (e.g., `http://yourdomain.com/espo`).
+Now, open your web browser, and go to the URL with EspoCRM files (e.g. `http://yourdomain.com/espo` or `http://yourdomain.com` if you extracted to the root).
 
-If you see this screen, you have a "Permission denied" error.
+If you see this screen, you have the 'Permission denied' error.
 You need to execute the displayed command in the terminal via SSH to set correct permissions.
-It should be 755 for directories, 644 for files, and 775 for `data` directory.
+It should be `755` for directories, `644` for files, and `775` for the `data` directory.
 Also, make sure that you have the correct _owner_ and _group_. More info about permissions is available [here](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
