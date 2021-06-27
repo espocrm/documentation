@@ -17,13 +17,13 @@ To get the latest version of EspoCRM, follow the [download page](http://www.espo
 
 Once the download is complete, upload the package to your web server.
 To upload it, you can use SSH, FTP or the hosting administration panel.
-Extract the archive to your public web server directory (e.g., `public_html`, `www`, etc.).
+Extract the archive to your public web server directory (e.g. `public_html`, `www`).
 
 _Note: If you have only FTP access, you need to extract the archive before uploading to your web server._
 
 ### 3. Create MySQL Database for EspoCRM to use
 
-Go to your hosting administration panel, or to SSH, and create a new database and user for EspoCRM (e.g., `MySQL Databases` in cPanel).
+Go to your hosting administration panel, or to SSH, and create a new database and user for EspoCRM (e.g. `MySQL Databases` in cPanel).
 
 ### 4. Run EspoCRM installation process
 
