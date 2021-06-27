@@ -48,11 +48,11 @@ Enter the details for your newly created MySQL database.
 
 ![4](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/4.png)
 
-Enter the user name and password of Administrator EspoCRM.
+Enter a username and password for the admin user in EspoCRM.
 
 ![5](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/5.png)
 
-On this page you can set the default settings of EspoCRM, such as date and time format, timezone, currency and others.
+On this page you can set the default settings of EspoCRM, such as date and time formats, timezone, currency and others.
 
 ![6](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/6.png)
 
