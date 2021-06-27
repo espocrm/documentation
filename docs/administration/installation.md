@@ -55,9 +55,9 @@ Set the default system settings, such as date and time formats, timezone, curren
 Enter SMTP settings for outgoing emails.
 This step **can be skipped** by clicking the _Next_ button.
 
-All of these parameters can be changed in the application after installation.
-
 ![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
+
+**Note**: All these parameters can be changed in the application after installation.
 
 Installation is complete. The last thing is to setup cron (or daemon) in your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems. More info about jobs is available [here](jobs.md).
 
