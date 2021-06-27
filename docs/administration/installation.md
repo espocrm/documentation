@@ -23,26 +23,22 @@ _Note: If you have only FTP access, you need to extract the archive before uploa
 
 ### 3. Create MySQL Database for EspoCRM to use
 
-Go to your hosting administration panel, or to SSH, and create a new database and user for EspoCRM (e.g. `MySQL Databases` in cPanel).
+Go to your hosting administration panel (e.g. *cPanel*), or use SSH, and create a new database and user for EspoCRM.
 
 ### 4. Run EspoCRM installation process
 
 Now, open your web browser, and go to the URL that corresponds to the location where EspoCRM files were extracted (e.g. `http://yourdomain.com/espo` or `http://yourdomain.com` if you extracted to the root).
 
-If you see this screen, you have the 'Permission denied' error.
-You need to execute the displayed command in the terminal via SSH to set correct permissions.
+If you see the screen below, you have the *file permission* issue.
+You need to execute the displayed command in the terminal via SSH to set the correct permissions.
 It should be `755` for directories, `644` for files, and `775` for the `data` directory.
-Also, make sure that you have the correct _owner_ and _group_. More info about permissions is available [here](server-configuration.md#required-permissions-for-unix-based-systems).
+Also, make sure that you have the correct _owner_ and _group_. In most cases it's `www-data:www-data`. More info about permissions is available [here](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/1.png)
 
-If you see the following screen, the permission is correct and you can start installing EspoCRM.
+If you see the following screen, the permission are correct and you can start installing EspoCRM.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/2.png)
-
-On this page, you can read and accept the License Agreement.
-
-![3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/3.png)
 
 Enter the details for your newly created MySQL database.
 
@@ -52,13 +48,14 @@ Enter a username and password for the admin user in EspoCRM.
 
 ![5](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/5.png)
 
-On this page you can set the default settings of EspoCRM, such as date and time formats, timezone, currency and others.
+Set the default system settings, such as date and time formats, timezone, currency and others.
 
 ![6](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/6.png)
 
-Enter SMTP settings for outgoing emails, if you want to have the ability to send emails.
+Enter SMTP settings for outgoing emails.
 This step **can be skipped** by clicking the _Next_ button.
-All of these options can be added/changed in EspoCRM after installation.
+
+All of these parameters can be changed in the application after installation.
 
 ![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
