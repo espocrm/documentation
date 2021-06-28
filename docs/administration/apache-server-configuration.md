@@ -38,7 +38,7 @@ AllowOverride All
 </Directory>
 ```
 
-You need to change */PATH_TO_ESPO/* to the full path to your EspoCRM inctance, e.g. */var/www/html/*.
+You need to change */PATH_TO_ESPO/* to the full path to your EspoCRM instance, e.g. */var/www/html/*.
 
 Afterward, restart apache:
 
