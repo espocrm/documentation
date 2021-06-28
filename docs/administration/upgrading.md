@@ -57,7 +57,7 @@ To check your current version, go to Administration > Upgrade page.
 
 #### Step 2. Download needed upgrade packages
 
-Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your currect version download needed packages.
+Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your current version download needed packages.
 
 #### Step 3. Run upgrade from Administration panel
 
