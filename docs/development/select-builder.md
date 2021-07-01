@@ -18,7 +18,7 @@ $query = $selectBuilder
     ->build();
 
 $collection = $this->entityManager
-    ->getRepository($entityType)
+    ->getRDBRepository($entityType)
     ->clone($query)
     ->find();
 ```
