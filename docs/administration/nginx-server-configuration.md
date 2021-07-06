@@ -13,13 +13,15 @@ sudo phpenmod imap mbstring
 sudo service nginx restart
 ```
 
+## Configuration
+
+To configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
+
 ## Fixing the issue 'API Error: EspoCRM API is unavailable'
 
 When you are trying to install EspoCRM via browser, you may encounter 'API Error: EspoCRM API is unavailable' error.
 
-To fix it, try the following steps **one by one**. After each step check if the issue is solved. If it works, then further steps are not needed.
-
-### 1. Enable rewrite rules in Nginx server
+### Enable rewrite rules in Nginx server
 
 Add this code to your Nginx server config file `/etc/nginx/sites-available/YOUR_SITE` inside **server** block:
 
@@ -92,18 +94,3 @@ If so, run the command to restart nginx server:
 ```
 sudo service nginx restart
 ```
-
-### 2. Add RewriteBase path
-
-Open a file /ESPOCRM_DIRECTORY/api/v1/.htaccess and replace the following line:
-
-```
-# RewriteBase /
-```
-with
-
-```
-RewriteBase /REQUEST_URI/api/v1/
-```
-
-where REQUEST_URI is a part of URL, e.g. for 'http://example.com/espocrm/', REQUEST_URI is 'espocrm'.
