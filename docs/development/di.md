@@ -357,6 +357,7 @@ use Espo\Core\Binding\ContextualBinder;
 $bindingContainer = BindingContainerBuilder::create()
     ->bindInstance(SomeInterface::class, $someInstance)
     ->inContext(SomeClass::class, function (ContextualBinder $binder): void {
+        // Binds dependencies of `SomeClass`.
         $binder->bindValue('$parameterName', 'some value');
     })
     ->build();
