@@ -20,6 +20,16 @@ If the group email account has SMTP and it's checked as **shared**, then users w
 
 There is the ability to make the system send an **auto-reply** for incoming emails.
 
+### Making group email account system default
+
+There's the ability to make a specific group email account to be used as a system default, meaning that all notifications and system emails will be sent from that account.
+
+1. Create and configure group email account.
+2. Navigate to Administration > Outbound Emails.
+3. Specify the email address (the same your group email account has) in the *Email Address* field.
+4. Make sure that the *Server* field is set empty (on the *SMTP* panel).
+
+
 ### Email-to-Case
 
 There is an option to make the system create a new case record from each email incoming to a specific group email account. Cases can be distributed to users of a specific team. There are three available distribution rules: *direct assignment*, *round-robin* and *less-busy*. 
