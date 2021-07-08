@@ -42,7 +42,7 @@ When a user wants to send a reply to the customer, they need to make sure that t
 
 ## Personal Email Accounts
 
-Regular users can set up their own email accounts that need to be monitored. Emails > top right dropdown menu > Personal Email Accounts.
+Regular users can set up their own email accounts that need to be monitored (at Emails tab > top right dropdown menu > Personal Email Accounts).
 
 The administrator also can manage personal email accounts of users (at Administration > Personal Email Accounts).
 
