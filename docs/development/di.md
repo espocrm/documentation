@@ -344,15 +344,13 @@ Available as of v6.2.0.
 
 It's possible to override default binding when creating instances with the injectable factory (usually this will be processed in your factory classes).
 
-```php
-$instance = $injectableFactory->createWithBinding(SomeClass::class, $bindingContainer);
-```
-
 The binding will be applied to all dependencies of the class, including dependencies of dependencies and so on.
 
-Building a binding container:
+Example:
 
 ```php
+<?php
+
 use Espo\Core\Binding\BindingContainerBuilder;
 use Espo\Core\Binding\ContextualBinder;
 
@@ -362,6 +360,8 @@ $bindingContainer = BindingContainerBuilder::create()
         $binder->bindValue('$parameterName', 'some value');
     })
     ->build();
+    
+$instance = $injectableFactory->createWithBinding(SomeClass::class, $bindingContainer);
 ```
 
 The passed binding has a higher priority than the default binding (the default binding is applied globally too all objects resolved via DI).
