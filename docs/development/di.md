@@ -353,19 +353,15 @@ The binding will be applied to all dependencies of the class, including dependen
 Building a binding container:
 
 ```php
-use Espo\Core\{
-    Binding\BindingData,
-    Binding\Binder,
-    Binding\BindingContainer,
-};
+use Espo\Core\Binding\BindingContainerBuilder;
+use Espo\Core\Binding\ContextualBinder;
 
-$bindingData = new BindingData();
-
-$binder = new Binder($bindingData);
-
-$binder->bindInstance(SomeInterface::class, $someInstance);
-
-$bindingContainer = new BindingContainer($bindingData);
+$bindingContainer = BindingContainerBuilder::create()
+    ->bindInstance(SomeInterface::class, $someInstance)
+    ->inContext(SomeClass::class, function (ContextualBinder $binder): void {
+        $binder->bindValue('$parameterName', 'some value');
+    })
+    ->build();
 ```
 
 The passed binding has a higher priority than the default binding (the default binding is applied globally too all objects resolved via DI).
