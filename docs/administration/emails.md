@@ -28,7 +28,7 @@ There's the ability to make a specific group email account to be used as a syste
 
 1. Create and configure group email account (at Administration > Group Email Accounts).
 2. Navigate to Administration > Outbound Emails.
-3. Specify the email address (the same your group email account has) in the *Email Address* field.
+3. Specify the email address  in the *Email Address* field. The email address exactly the same as in the created group email account.
 4. Make sure that the *Server* field is set empty (on the *SMTP* panel).
 
 
