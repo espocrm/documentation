@@ -12,6 +12,8 @@ Note: Email records are not duplicated in the system if they are fetched by diff
 
 ## Group Email Accounts
 
+Group email accounts can be accessed at Administration > Group Email Accounts.
+
 Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails.
 
 *Teams* field (of group email account record) determines which teams incoming emails will be assigned to. 
@@ -40,7 +42,9 @@ When a user wants to send a reply to the customer, they need to make sure that t
 
 ## Personal Email Accounts
 
-Regular users can set up their own email accounts that need to be monitored. Emails > top right dropdown menu > Personal Email Accounts. Administrator also can manage personal email accounts of users.
+Regular users can set up their own email accounts that need to be monitored. Emails > top right dropdown menu > Personal Email Accounts.
+
+The administrator also can manage personal email accounts of users (at Administration > Personal Email Accounts).
 
 Important: By default, regular users don’t have **access** to personal email accounts. Administrator needs to allow access to *Personal Email Accounts* scope in Roles.
 
