@@ -26,7 +26,7 @@ There is the ability to make the system send an **auto-reply** for incoming emai
 
 There's the ability to make a specific group email account to be used as a system default, meaning that all notifications and system emails will be sent from that account.
 
-1. Create and configure group email account.
+1. Create and configure group email account (at Administration > Group Email Accounts).
 2. Navigate to Administration > Outbound Emails.
 3. Specify the email address (the same your group email account has) in the *Email Address* field.
 4. Make sure that the *Server* field is set empty (on the *SMTP* panel).
