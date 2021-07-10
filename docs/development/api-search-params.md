@@ -119,11 +119,13 @@ How much records to return.
 
 ### select
 
-*String*
+*String* (or *Array* of strings if search params passed in JSON)
 
 What record [attributes](../administration/terms-and-naming.md#attribute) to return. Separated by comma. Whitespaces are not allowed. Specify only attributes that you need, it can improve performance.
 
 Example: `id,name,status,assignedUserId`.
+
+Example in JSON: `["id", "name"]`.
 
 ### where
 
