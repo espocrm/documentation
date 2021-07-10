@@ -105,6 +105,10 @@ result = client.request('GET', 'Account', params)
 
 ## Params
 
+Parameters are passed as query parameters (in GET request).
+
+As of v7.0.0 it's possible to pass all parameters in JSON format in one query paramerer `searchParams`.
+
 ### offset
 
 *Integer*
