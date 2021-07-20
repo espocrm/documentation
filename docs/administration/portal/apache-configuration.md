@@ -1,6 +1,6 @@
 # Configuring Portal in Apache
 
-It's possible to be able to access to the portal by a different URL. You need to set the *Custom URL* field in the portal record.
+It's possible to be able to access to the portal by a different URL. You need to set the *Custom URL* field in the portal record. For example, you can use your domain name `portal.my-company.com` to access the portal.
 
 
 ## For EspoCRM v7
