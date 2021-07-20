@@ -116,7 +116,8 @@ Alias /client/ /path_to_espo/client/
 ```
 Note, that `/path_to_espo` should be changed to the absolute path of the EspoCRM instance on your server. It can be `/var/www/html` if you exctracted EspoCRM package to the default Apache root directory.
 
-You need to have *mod_rewrite* enabled. You can do it by running in the terminal:
+You need to have **mod_rewrite** enabled. You can do it by running in the terminal:
+
 ```
 sudo a2enmod rewrite
 sudo service apache2 restart
