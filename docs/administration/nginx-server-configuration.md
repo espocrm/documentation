@@ -13,15 +13,9 @@ sudo phpenmod imap mbstring
 sudo service nginx restart
 ```
 
-## Configuration
-
 To configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
 
-## Fixing the issue 'API Error: EspoCRM API is unavailable'
-
-When you are trying to install EspoCRM via browser, you may encounter 'API Error: EspoCRM API is unavailable' error.
-
-### Enable rewrite rules in Nginx server
+## Enabling rewrite rules in Nginx server
 
 Add this code to your Nginx server config file `/etc/nginx/sites-available/YOUR_SITE` inside **server** block:
 
