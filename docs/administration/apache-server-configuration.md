@@ -46,7 +46,7 @@ Add the following code:
 </Directory>
 ```
 
-You need to change */PATH_TO_ESPO/* to the full path to your EspoCRM instance, e.g. */var/www/html/*.
+You need to change `/PATH_TO_ESPO/` to the full path to your EspoCRM instance. It can be `/var/www/html/`.
 
 Then restart Apache:
 
