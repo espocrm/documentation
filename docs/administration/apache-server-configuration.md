@@ -34,7 +34,7 @@ To enable .htaccess support, add/edit the server configuration settings `/etc/ap
 
 ```
 <Directory /PATH_TO_ESPO/>
-AllowOverride All
+  AllowOverride All
 </Directory>
 ```
 
