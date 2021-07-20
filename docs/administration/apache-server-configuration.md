@@ -13,9 +13,9 @@ sudo phpenmod imap mbstring
 sudo service apache2 restart
 ```
 
-## Fixing the issue 'API Error: EspoCRM API is unavailable'
+## Enabling rewrite rules
 
-When you are trying to install EspoCRM via browser, you may encounter 'API Error: EspoCRM API is unavailable' error.
+When you are trying to install EspoCRM via browser, you may encounter *'API Error: EspoCRM API is unavailable'* error.
 
 To fix it, try the following steps **one by one**. After each step check if the issue is solved. If it works, then further steps are not needed.
 
@@ -40,13 +40,13 @@ AllowOverride All
 
 You need to change */PATH_TO_ESPO/* to the full path to your EspoCRM instance, e.g. */var/www/html/*.
 
-Afterward, restart apache:
+Then restart Apache:
 
 ```
 sudo service apache2 restart
 ```
 
-### 3. Add RewriteBase path (not needed in most cases)
+### 3. Add RewriteBase path (a last resort, not needed in most cases)
 
 Open the file `/ESPOCRM_DIRECTORY/api/v1/.htaccess` and replace the following line:
 
@@ -82,8 +82,8 @@ For FastCgi module:
 ```
 <IfModule mod_fastcgi.c>
    FastCgiConfig -pass-header Authorization \
-                        -pass-header Proxy-Authorization \
-                        -pass-header HTTP_AUTHORIZATION
+                 -pass-header Proxy-Authorization \
+                 -pass-header HTTP_AUTHORIZATION
 </IfModule>
 ```
 
