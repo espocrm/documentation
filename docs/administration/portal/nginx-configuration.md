@@ -1,4 +1,6 @@
-# Portal configuratino for Nginx
+# Configuring portal in Nginx
+
+It's possible to be able to access to the portal by a different URL. You need to set the Custom URL field in the portal record.
 
 ## For EspoCRM v7
 
