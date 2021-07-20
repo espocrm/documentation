@@ -1,4 +1,4 @@
-# Configuring portal in Nginx
+# Configuring Portal in Nginx
 
 It's possible to be able to access to the portal by a different URL. You need to set the Custom URL field in the portal record.
 
