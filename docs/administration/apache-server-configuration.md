@@ -32,7 +32,13 @@ sudo service apache2 restart
 
 ### 2. Enable *.htaccess* support
 
-To enable .htaccess support, add/edit the server configuration settings `/etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf` or `/etc/apache2/apache2.conf` (or `/etc/httpd/conf/httpd.conf`):
+To enable .htaccess support, add or edit the server configuration file. It can be:
+
+* `/etc/apache2/apache2.conf` 
+* `/etc/httpd/conf/httpd.conf`
+* `/etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf`
+
+Add the following code:
 
 ```
 <Directory /PATH_TO_ESPO/>
