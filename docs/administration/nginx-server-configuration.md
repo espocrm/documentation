@@ -13,9 +13,7 @@ sudo phpenmod imap mbstring
 sudo service nginx restart
 ```
 
-To configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
-
-## Enabling rewrite rules
+## For EspoCRM v6 and older
 
 Add this code to your Nginx server config file `/etc/nginx/sites-available/YOUR_SITE` inside **server** block:
 
@@ -88,3 +86,7 @@ If so, run the command to restart nginx server:
 ```
 sudo service nginx restart
 ```
+
+## See also
+
+To configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
