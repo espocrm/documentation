@@ -95,7 +95,7 @@ $entityManager->removeEntity($entity);
 ### Get attribute value
 
 ```php
-$fieldValue = $entity->get('attributeName');
+$attributeValue = $entity->get('attributeName');
 ```
 
 ### Has attribute value
@@ -103,7 +103,7 @@ $fieldValue = $entity->get('attributeName');
 Checks whether an attribute is set. Note: If it's set to `NULL` it will return `true`.
 
 ```php
-$fieldNameIsSet = $entity->has('fieldName'); // true or false
+$attributeIsSet = $entity->has('attributeName'); // true or false
 ```
 
 ### Set attribute value
