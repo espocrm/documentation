@@ -92,3 +92,28 @@ To check which module is currently being used, run this command and find the mod
 ```
 apache2ctl -M
 ```
+
+## For EspoCRM v7
+
+On a **production** environment the following configuration is recommended:
+
+* The document root should be set to `/path/to/espo/public/`.
+* An alias `/client/` => `/path/to/espo/client/` should be added.
+
+Apache config example:
+
+```
+DocumentRoot /path_to_espo/public/
+Alias /client/ /path_to_espo/client/
+
+<Directory /var/www/html/>
+    AllowOverride None
+</Directory>
+
+<Directory /path_to_espo/public/>
+    AllowOverride All
+</Directory>
+```
+Note, that `path_to_espo` should be changed to the absolute path of the EspoCRM instance on your server. It can be `/var/www/html` if you exctracted EspoCRM package to the default Apache root directory.
+
+
