@@ -15,7 +15,7 @@ sudo service nginx restart
 
 To configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
 
-## Enabling rewrite rules in Nginx server
+## Enabling rewrite rules
 
 Add this code to your Nginx server config file `/etc/nginx/sites-available/YOUR_SITE` inside **server** block:
 
