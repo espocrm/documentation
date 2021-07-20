@@ -65,7 +65,7 @@ class SomeClass
 }
 ```
 
-Once you built a query you can pass it to a repository:
+Once you built a query you can pass it to the repository:
 
 ```php
 $collection = $entityManager
