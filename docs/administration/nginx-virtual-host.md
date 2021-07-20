@@ -83,6 +83,8 @@ server {
 }
 ```
 
+You need to change `/path-to-espo` to the absolute path of your EspoCRM instance.
+
 ### EspoCRM v6 and older
 
 ```
