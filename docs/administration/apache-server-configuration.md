@@ -15,6 +15,8 @@ sudo service apache2 restart
 
 ## Enabling rewrite rules
 
+EspoCRM requires *mod_rewrite* being enabled in Apache. 
+
 When you are trying to install EspoCRM via browser, you may encounter *'API Error: EspoCRM API is unavailable'* error.
 
 To fix it, try the following steps **one by one**. After each step check if the issue is solved. If it works, then further steps are not needed.
