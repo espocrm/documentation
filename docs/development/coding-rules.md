@@ -9,9 +9,7 @@
 
 namespace Espo\Modules\MyModule;
 
-use Espo\Core\{
-    Container,
-};
+use Espo\Core\Container;
 
 class MyClass
 {
@@ -32,10 +30,8 @@ class MyClass
 
 namespace Espo\Modules\MyModule;
 
-use Espo\Core\{
-    ORM\EntityManager
-    Utils\Metadata,
-};
+use Espo\Core\ORM\EntityManager;
+use Espo\Core\Utils\Metadata;
 
 class MyClass
 {
