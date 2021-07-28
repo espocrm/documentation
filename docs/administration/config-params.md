@@ -70,8 +70,8 @@ The list of parameters along with their default values.
 
 ### Stream
 
-* noteEditThresholdPeriod – `'7 days'` – how much time is available for editing steam posts;
-* noteDeleteThresholdPeriod – `'1 month'` – how much time is available for deleting steam posts;
+* noteEditThresholdPeriod – `'7 days'` – how much time is available for editing stream posts;
+* noteDeleteThresholdPeriod – `'1 month'` – how much time is available for deleting stream posts;
 * streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
 
 ### Clean-up
