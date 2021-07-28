@@ -38,6 +38,7 @@ The list of parameters along with their default values.
 * exportDelimiter – `','` – default export delimiter;
 * inlineAttachmentUploadMaxSize – `20` – max size of inline attachments (e.g. inline images for emails); in Mb;
 * recordListMaxSizeLimit – `200` – max number of records can be fetched in a single GET API request;
+* maxSelectTextAttributeLengthForList – `5000` – text fields are cut when records accessed with a list request;
 * displayListViewRecordCount – `true` – to display a number of records on the list view;
 * addressCountryList – array of countries available in autocomplete;
 * addressCityList – array of cities available in autocomplete;
