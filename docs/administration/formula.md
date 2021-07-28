@@ -44,12 +44,13 @@ In this article:
 
 EspoCRM formula is written in a simple language designed specifically for this feature.
 
-There are 4 element types (lexemes) that can be used in formula:
+There are 5 element types (lexemes) that can be used in formula:
 
-* operators
-* functions
-* values (scalars and NULL value)
-* attributes
+* operators (e.g. `+`, `-`, `*`)
+* functions (e.g. `string\concatenate()`)
+* values (scalars and NULL value, e.g. `'string'`, `100`, `true`, `null`)
+* attributes (e.g. `contactId`)
+* variables (e.g. `$temp`)
 
 Separated expressions must be delimited by character `;`.
 
