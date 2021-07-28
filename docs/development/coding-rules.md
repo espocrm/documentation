@@ -468,3 +468,42 @@ class AccountChecker implements Checker
      }
 }
 ```
+
+### 11\. Use DTO rather than associative arrays and stdClass objects.
+
+Use immutable data transfer objects.
+
+❗ Bad:
+
+```php
+$data = [
+    'attribute' => $attribute,
+    'value' => $value,
+    'entityType' => $entityType,
+];
+
+$someObject->process($data);
+```
+
+✔️ Good (cloning):
+
+```php
+$data = Data::create()
+    ->withAttribute($attribute)
+    ->withValue($value)
+    ->withEntityType($entityType);
+    
+$someObject->process($data);    
+```
+
+✔️ Good (building):
+
+```php
+$data = Data::createBuilder()
+    ->setAttribute($attribute)
+    ->setValue($value)
+    ->setEntityType($entityType)
+    ->build();
+    
+$someObject->process($data);    
+```
