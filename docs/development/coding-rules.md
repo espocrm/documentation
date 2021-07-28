@@ -223,10 +223,8 @@ class SomeClass
 <?php
 namespace Espo\Some;
 
-use Espo\Modules\MyModule\{
-    Something,
-    AnotherThing,
-};
+use Espo\Modules\MyModule\Something;
+use Espo\Modules\MyModule\AnotherThing;
 
 use RuntimeException;
 
