@@ -49,8 +49,8 @@ There are 5 element types (lexemes) that can be used in formula:
 * operators (e.g. `+`, `-`, `*`)
 * functions (e.g. `string\concatenate()`)
 * values (scalars and NULL value, e.g. `'string'`, `100`, `true`, `null`)
-* attributes (e.g. `contactId`)
 * variables (e.g. `$temp`)
+* attributes (values of the current entity, e.g. `contactId`, `status`)
 
 Separated expressions must be delimited by character `;`.
 
