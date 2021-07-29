@@ -13,7 +13,7 @@ sudo phpenmod imap mbstring
 sudo service nginx restart
 ```
 
-## For EspoCRM v7
+## Server configuration
 
 Nginx config file example:
 
