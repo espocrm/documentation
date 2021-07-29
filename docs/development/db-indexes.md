@@ -55,7 +55,7 @@ $query = $entityManager->getQueryBuilder()
     ->useIndex('myIndexNameOne')
     ->build();
     
-$collection = $entityManager->getRepository($entityType)
+$collection = $entityManager->getRDBRepository($entityType)
     ->clone($query)
     ->find();
 ```
