@@ -13,6 +13,38 @@ sudo phpenmod imap mbstring
 sudo service apache2 restart
 ```
 
+## Server configuration
+
+On a **production** environment the following configuration is recommended:
+
+* The document root should be set to `/path/to/espo/public/`.
+* An alias `/client/` => `/path/to/espo/client/` should be added.
+
+Apache config example:
+
+```
+DocumentRoot /path_to_espo/public/
+Alias /client/ /path_to_espo/client/
+
+<Directory /var/www/html/>
+    AllowOverride None
+</Directory>
+
+<Directory /path_to_espo/public/>
+    AllowOverride All
+</Directory>
+```
+Note, that `/path_to_espo` should be changed to the absolute path of the EspoCRM instance on your server. It can be `/var/www/html` if you exctracted EspoCRM package to the default Apache root directory.
+
+You need to have **mod_rewrite** enabled. You can do it by running in the terminal:
+
+```
+sudo a2enmod rewrite
+sudo service apache2 restart
+```
+
+For **non-production environment** you can just set `AllowOverride All` for the root directory. Then the `.htaccess` file in the root directory will handle all rewrite rules.
+
 ## Enabling rewrite rules
 
 EspoCRM requires *mod_rewrite* being enabled in Apache. W/o it you may encounter *'API Error: EspoCRM API is unavailable'* error during installation or see an information page prompting to configure your webserver.
@@ -99,32 +131,3 @@ To check which module is currently being used, run this command and find the mod
 apache2ctl -M
 ```
 
-## For EspoCRM v7
-
-On a **production** environment the following configuration is recommended:
-
-* The document root should be set to `/path/to/espo/public/`.
-* An alias `/client/` => `/path/to/espo/client/` should be added.
-
-Apache config example:
-
-```
-DocumentRoot /path_to_espo/public/
-Alias /client/ /path_to_espo/client/
-
-<Directory /var/www/html/>
-    AllowOverride None
-</Directory>
-
-<Directory /path_to_espo/public/>
-    AllowOverride All
-</Directory>
-```
-Note, that `/path_to_espo` should be changed to the absolute path of the EspoCRM instance on your server. It can be `/var/www/html` if you exctracted EspoCRM package to the default Apache root directory.
-
-You need to have **mod_rewrite** enabled. You can do it by running in the terminal:
-
-```
-sudo a2enmod rewrite
-sudo service apache2 restart
-```
