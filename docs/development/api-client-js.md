@@ -40,7 +40,7 @@ let params = {
         {
             type: 'equals',
             attribute: 'type',
-            value: 'Customer'
+            value: 'Customer',
         }
     ],
     select: 'id,name',
