@@ -91,11 +91,7 @@ Define a password of EspoCRM administrator. Ex. `--adminPassword=admin-password`
 │   ├── mysql
 │   └── nginx
 ├── docker-compose.yaml
-├── start.sh
-├── stop.sh
-├── status.sh
-├── restart.sh
-├── rebuild.sh
+├── command.sh
 ```
 
 ### Storage location
@@ -211,31 +207,31 @@ The operation of EspoCRM consists of several services, such as `nginx`, `mysql`,
 ### Status of services
 
 ```
-/var/www/espocrm/status.sh
+/var/www/espocrm/command.sh status
 ```
 
 ### Restart services
 
 ```
-/var/www/espocrm/restart.sh
+/var/www/espocrm/command.sh restart
 ```
 
 ### Start services
 
 ```
-/var/www/espocrm/start.sh
+/var/www/espocrm/command.sh start
 ```
 
 ### Stop services
 
 ```
-/var/www/espocrm/stop.sh
+/var/www/espocrm/command.sh stop
 ```
 
 ### EspoCRM rebuild
 
 ```
-/var/www/espocrm/rebuild.sh
+/var/www/espocrm/command.sh rebuild
 ```
 
 ## Logs
