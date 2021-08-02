@@ -164,7 +164,7 @@ bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-dom
 1. Stop your existing EspoCRM instance.
 
 ```
-/var/www/espocrm/stop.sh
+/var/www/espocrm/command.sh stop
 ```
 
 2. Rename your existing directory:
@@ -195,7 +195,7 @@ cp -rp /var/www/espocrm-old/data/mysql /var/www/espocrm/data
 6. Restart services via the command:
 
 ```
-/var/www/espocrm/restart.sh
+/var/www/espocrm/command.sh restart
 ```
 
 7. Login as administrator and update your new `Site URL` in Administration > Settings.
