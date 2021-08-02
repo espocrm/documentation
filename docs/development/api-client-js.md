@@ -21,19 +21,16 @@ let payload = {
     name: 'some name'
 };
 
-client.request('POST', 'Account', payload)
-    .then(
-        (response) => {
-            // success
-            console.log(response);
-        }
-    )
-    .catch(
-        (res) => {
-            // error
-            console.log(res.statusCode, res.statusMessage);
-        }
-    );
+client
+    .request('POST', 'Account', payload)
+    .then(response => {
+        // success
+        console.log(response);
+    })
+    .catch(reresponses => {
+        // error
+        console.log(response.statusCode, response.statusMessage);
+    });
 
 // GET example
 
