@@ -52,6 +52,10 @@ client
     .request('GET', 'Account', params)
     .then(response => {
         console.log(response);
+    })
+    .catch(reresponses => {
+        // error
+        console.log(response.statusCode, response.statusMessage);
     });
 ```
 
