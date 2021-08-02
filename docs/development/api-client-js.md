@@ -3,6 +3,8 @@
 * [Usage](#usage)
 * [Module](#module)
 
+Note: Does not support EspoCRM versions lower than 7.0.0.
+
 ## Usage
 
 ```js
