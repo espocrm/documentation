@@ -202,7 +202,7 @@ cp -rp /var/www/espocrm-old/data/mysql /var/www/espocrm/data
 
 ## Server management
 
-The operation of EspoCRM consists of several services, such as `nginx`, `mysql`, `cron`.
+The operation of EspoCRM consists of several services, such as `nginx`, `mysql`, `daemon`.
 
 ### Status of services
 
