@@ -43,7 +43,7 @@ let params = {
             value: 'Customer',
         }
     ],
-    select: 'id,name',
+    select: ['id', name'],
 };
 
 client
@@ -58,7 +58,6 @@ client
 File `espocrm-api-client.js`:
 
 ```js
-
 class Client {
 
     constructor (url, apiKey, secretKey, options) {
@@ -66,14 +65,13 @@ class Client {
         this.apiKey = apiKey;
         this.secretKey = secretKey;
 
-        if (this.url.substr(-1) == '/') {
+        if (this.url.substr(-1) === '/') {
             this.url = this.url.substr(0, this.url.length -1);
         }
 
-        this.urlPath = '/api/v1/';
-
         this.options = options || {};
 
+        this.urlPath = '/api/v1/';
         this.isHttps = url.toLowerCase().indexOf('https') === 0;
     }
 
@@ -100,21 +98,23 @@ class Client {
             let authPart = Buffer.concat([b1, b2]).toString('base64');
 
             headers['X-Hmac-Authorization'] = authPart;
-
-        } else if (this.apiKey) {
+        }
+        else if (this.apiKey) {
             headers['X-Api-Key'] = this.apiKey;
-        } else {
+        }
+        else {
             throw new Error('Api-Key is not set.');
         }
 
         let postData;
 
         if (data) {
-            if (method == 'GET') {
+            if (method === 'GET') {
                 const querystring = require('querystring');
 
-                url += '?' + querystring.stringify(data);
-            } else {
+                url += '?' + querystring.stringify({searchParams: JSON.stringify(data)});
+            }
+            else {
                 postData = JSON.stringify(data);
 
                 headers['Content-Type'] = 'application/json';
@@ -122,70 +122,61 @@ class Client {
             }
         }
 
-        return new Promise(
-            function (resolve, reject) {
-                let o = {
-                    headers: headers,
-                    method: method,
-                };
+        return new Promise((resolve, reject) => {
+            let o = {
+                headers: headers,
+                method: method,
+            };
 
-                if (this.options.port) {
-                    o.port = this.options.port;
-                }
+            if (this.options.port) {
+                o.port = this.options.port;
+            }
 
-                if (this.options.timeout) {
-                    o.timeout = this.options.timeout;
-                }
+            if (this.options.timeout) {
+                o.timeout = this.options.timeout;
+            }
 
-                let h;
+            const h = this.isHttps ? require('https') : require('http');
 
-                if (this.isHttps) {
-                    h = require('https');
-                } else {
-                    h = require('http');
-                }
+            const req = h.request(url, o, res => {
+                let data = '';
 
-                const req = h.request(url, o, (res) => {
-                    let data = '';
-
-                    res.on('data', (chunk) => {
-                        data += chunk;
-                    });
-
-                    res.on('end', () => {
-                        if (res.statusCode < 200 || res.statusCode > 299) {
-                            reject(res);
-
-                            return;
-                        }
-
-                        try {
-                            data = JSON.parse(data);
-                        } catch (e) {
-                            console.error(`Error: Could not parse response`);
-
-                            reject({});
-
-                            return;
-                        }
-
-                        resolve(data, res);
-                    });
+                res.on('data', chunk => {
+                    data += chunk;
                 });
 
-                req.on('error', (e) => {
-                    console.error(`Error: ${e.message}`);
-                    reject(e);
+                res.on('end', () => {
+                    if (res.statusCode < 200 || res.statusCode > 299) {
+                        reject(res);
+
+                        return;
+                    }
+
+                    try {
+                        data = JSON.parse(data);
+                    }
+                    catch (e) {
+                        console.error(`Error: Could not parse response`);
+                        reject({});
+
+                        return;
+                    }
+
+                    resolve(data, res);
                 });
+            });
 
-                if (data && method != 'GET') {
-                    req.write(postData);
-                }
+            req.on('error', e => {
+                console.error(`Error: ${e.message}`);
+                reject(e);
+            });
 
-                req.end();
+            if (data && method !== 'GET') {
+                req.write(postData);
+            }
 
-            }.bind(this)
-        );
+            req.end();
+        });
     }
 
     _buildUrl (action) {
