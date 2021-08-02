@@ -17,7 +17,7 @@ const client = new Client(
 
 // POST example
 
-var payload = {
+let payload = {
     name: 'some name'
 };
 
@@ -37,7 +37,7 @@ client.request('POST', 'Account', payload)
 
 // GET example
 
-var params = {
+let params = {
     maxSize: 5,
     where: [
         {
@@ -49,12 +49,11 @@ var params = {
     select: 'id,name',
 };
 
-client.request('GET', 'Account', params)
-    .then(
-        (response) => {
-            console.log(response);
-        }
-    )
+client
+    .request('GET', 'Account', params)
+    .then(response => {
+        console.log(response);
+    });
 ```
 
 ## Module
