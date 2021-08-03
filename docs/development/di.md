@@ -338,9 +338,33 @@ Explanation:
 * When `Espo\SomeClass` is instantiated, pass the value 'Same Value' for the parameter `$paramName`.
 * When `Espo\SomeClass` is instantiated, use the callback to resolve a value of the parameter `$anotherParamName`.
 
+### Binding to implementation
+
+Bind an interface to a specific implementation.
+
+```php
+$binder->bindImplementation(SomeInterface::class, SomeImplementation::class);
+```
+
+### Binding to service
+
+Bind an interface to a specific service.
+
+```php
+$binder->bindService(SomeInterface::class, 'someServiceName');
+```
+
+### Binding to factory
+
+Bind an interface to a specific factory so that a specific dependency will be created by a specific factory. The factory should implement `Espo\Core\Binding\Factory` interface.
+
+```php
+$binder->bindFactory(SomeInterface::class, SomeFactory::class);
+```
+
 ### Using with Injectable Factory
 
-Available as of v6.2.0.
+Available as of v7.0.0.
 
 It's possible to override default binding when creating instances with the injectable factory (usually this will be processed in your factory classes).
 
