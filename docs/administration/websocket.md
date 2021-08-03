@@ -121,3 +121,42 @@ Click F12 to open a browser console. See whether there's any error related to We
 * webSocketSslCertificatePassphrase
 * webSocketSslAllowSelfSigned
 * webSocketUseSecureServer
+
+## Installing ZMQ
+
+
+```
+sudo apt-get install php-zmq
+```
+
+If this method won't work try compiling.
+
+You need to have `libzmq3-dev` installed:
+
+```
+apt install libzmq3-dev
+```
+You need to have `php-dev` installed:
+
+```
+apt install php-dev
+```
+
+Then execute the following commands (from the *root* user):
+
+```
+cd /usr
+curl -fSL https://github.com/zeromq/php-zmq/archive/e0db82c3286da81fa8945894dd10125a528299e4.tar.gz -o php-zmq.tar.gz
+tar -zxf php-zmq.tar.gz
+cd php-zmq-e0db82c3286da81fa8945894dd10125a528299e4
+phpize && ./configure
+make
+make install
+cd .. && rm -rf php-zmq-e0db82c3286da81fa8945894dd10125a528299e4 && rm php-zmq.tar.gz
+```
+
+Then edit php.ini (both for cli and webserver), add:
+
+```
+extension=zmq
+```
