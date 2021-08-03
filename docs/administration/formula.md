@@ -1238,7 +1238,7 @@ Section comment:
 
 #### LINK
 
-A name of the relationship. Available link names can be found at Administration > Entity Manager > ... > Relationships.
+A name of the relationship. Available link names can be found at Administration > Entity Manager > {Entity Type} > Relationships.
 
 Link names must be wrapped in quotes when used as function arguments.
 
@@ -1246,7 +1246,7 @@ More info about links [here](terms-and-naming.md#link).
 
 #### ATTRIBUTE
 
-Attribute name usually is the same as a system field name. Fields are listed in Entity Manager > ... > Fields.
+Attribute name usually is the same as a system field name. Fields are listed at Administration > Entity Manager > {Entity Type} > Fields.
 
 Field types having multiple attributes:
 
