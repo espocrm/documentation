@@ -44,7 +44,7 @@ In this article:
 
 EspoCRM formula is written in a simple language designed specifically for EspoCRM.
 
-There are 5 element types (lexemes) that can be used in formula:
+There are 5 element types that can be used in formula:
 
 * operators (e.g. `+`, `-`, `*`)
 * functions (e.g. `string\concatenate()`)
@@ -104,7 +104,7 @@ The priority of operators:
 
 It's possible to access attributes of related entities with the following format `linkName.attributeName`.
 
-The attribute lexeme was introduced to be able to write simple like this:
+The attribute element type was introduced to be able to write like this:
 
 ```
 description = 'test';
