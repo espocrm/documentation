@@ -348,7 +348,7 @@ $binder->bindImplementation(SomeInterface::class, SomeImplementation::class);
 
 ### Binding to service
 
-Bind an interface to a specific service.
+Bind an interface to a specific [service](container-services.md).
 
 ```php
 $binder->bindService(SomeInterface::class, 'someServiceName');
@@ -356,10 +356,23 @@ $binder->bindService(SomeInterface::class, 'someServiceName');
 
 ### Binding to factory
 
+As of v7.0.0.
+
 Bind an interface to a specific factory so that a specific dependency will be created by a specific factory. The factory should implement `Espo\Core\Binding\Factory` interface.
 
 ```php
 $binder->bindFactory(SomeInterface::class, SomeFactory::class);
+```
+
+### Binding to callback
+
+A callback will be used for creatring a specific instance. The callback can have its own dependencies.
+
+```php
+$binder->bindCallback(SomeInterface::class, function (SomeDependency $dependency) {
+    // Create an instance here.
+    return $instance;
+});
 ```
 
 ### Using with Injectable Factory
