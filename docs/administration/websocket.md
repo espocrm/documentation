@@ -127,7 +127,7 @@ Click F12 to open a browser console. See whether there's any error related to We
 ### Option 1
 
 ```
-sudo apt-get install php-zmq
+sudo apt install php-zmq
 ```
 
 ### Option 2
