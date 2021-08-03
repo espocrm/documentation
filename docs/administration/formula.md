@@ -42,7 +42,7 @@ In this article:
 
 ## Syntax
 
-EspoCRM formula is written in a simple language designed specifically for this feature.
+EspoCRM formula is written in a simple language designed specifically for EspoCRM.
 
 There are 5 element types (lexemes) that can be used in formula:
 
