@@ -124,10 +124,13 @@ Click F12 to open a browser console. See whether there's any error related to We
 
 ## Installing ZMQ
 
+### Option 1
 
 ```
 sudo apt-get install php-zmq
 ```
+
+### Option 2
 
 If this method won't work try compiling.
 
