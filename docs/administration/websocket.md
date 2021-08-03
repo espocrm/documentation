@@ -132,7 +132,7 @@ sudo apt-get install php-zmq
 
 ### Option 2
 
-If this method won't work try compiling.
+If the previous won't work try compiling.
 
 You need to have `libzmq3-dev` installed:
 
