@@ -529,11 +529,15 @@ Adds HOURS to datetime VALUE. HOURS can be negative. Returns a modified STRING v
 
 Adds DAYS to date or datetime VALUE. DAYS can be negative.
 
+Example: `datetime\addDays(dateStart, 1)`
+
 #### datetime\addWeeks
 
 `datetime\addWeeks(VALUE, WEEKS)`
 
 Adds WEEKS to date or datetime VALUE. WEEKS can be negative. Returns a modified STRING value.
+
+Example: `datetime\addWeeks(dateStart, 4)`
 
 #### datetime\addMonths
 
@@ -541,9 +545,13 @@ Adds WEEKS to date or datetime VALUE. WEEKS can be negative. Returns a modified 
 
 Adds MONTHS to date or datetime VALUE. MONTHS can be negative. Returns a modified STRING value.
 
+Example: `datetime\addMonths(dateStart, 1)`
+
 #### datetime\addYears
 
 `datetime\addYears(VALUE, YEARS)`
+
+Example: `datetime\addYears(dateStart, 1)`
 
 Adds YEARS to date or datetime VALUE. YEARS can be negative. Returns a modified STRING value.
 
