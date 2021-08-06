@@ -47,4 +47,4 @@ $uniqueId = util\generateId();
 
 3\. In BPM: Add a *Send Message* task. Use an email template with a link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. Replace `TRACKING_URL_ID` with the ID of the *Tracking URL* record. This link is supposed to be clicked by a recipient.
 
-4\. In BPM: Use a *Signlat Catching* event with the signal `clickUniqueUrl.{$uniqueId}`.
+4\. In BPM: Use a *Signal Catching* event with the signal `clickUniqueUrl.{$uniqueId}`.
