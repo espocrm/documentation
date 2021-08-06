@@ -39,12 +39,12 @@ HTML code in the email template:
 A Tracking URL can be created at Campaigns > top-right menu > Tracking URLs.
 
 
-1. Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it to a variable:
+1\. Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it to a variable:
 
 ```
 $uniqueId = util\generateId();
 ```
 
-2. Add a *Send Message* task. Use an email template with a link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. Replace `TRACKING_URL_ID` with an ID of a *Tracking URL* record. This link is supposed to be clicked by a recipient.
-3. Use a *Signlat Catching* event with the signal `clickUniqueUrl.{$uniqueId}`.
+2\. Add a *Send Message* task. Use an email template with a link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. Replace `TRACKING_URL_ID` with the ID of the *Tracking URL* record. This link is supposed to be clicked by a recipient.
 
+3\. Use a *Signlat Catching* event with the signal `clickUniqueUrl.{$uniqueId}`.
