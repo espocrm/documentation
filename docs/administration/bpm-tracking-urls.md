@@ -39,12 +39,12 @@ Steps:
 1\. Create Tracking URL at Campaigns > top-right menu > Tracking URLs.
 
 
-2\. In the BPM flowchart: Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it to a variable:
+2\. In BPM: Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it to a variable:
 
 ```
 $uniqueId = util\generateId();
 ```
 
-3\. In the BPM flowchart: Add a *Send Message* task. Use an email template with a link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. Replace `TRACKING_URL_ID` with the ID of the *Tracking URL* record. This link is supposed to be clicked by a recipient.
+3\. In BPM: Add a *Send Message* task. Use an email template with a link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. Replace `TRACKING_URL_ID` with the ID of the *Tracking URL* record. This link is supposed to be clicked by a recipient.
 
-4\. In the BPM flowchart: Use a *Signlat Catching* event with the signal `clickUniqueUrl.{$uniqueId}`.
+4\. In BPM: Use a *Signlat Catching* event with the signal `clickUniqueUrl.{$uniqueId}`.
