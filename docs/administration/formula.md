@@ -1043,11 +1043,23 @@ Example:
 $list = array\push($list, 'test');
 ```
 
+Example (adding values to a multi-enum field):
+
+```
+someMultiEnumField = array\push(someMultiEnumField, 'New Value 1', 'New Value 2');
+```
+
 #### array\length
 
 `array\length(LIST)`
 
 Returns the number of elements in LIST.
+
+Example (a number of items in multi-enum field):
+
+```
+$number = array\length(someMultiEnumField);
+```
 
 #### array\at
 
