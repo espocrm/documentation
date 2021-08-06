@@ -10,6 +10,7 @@ Webhooks can be created only by API Users (via API request) and Administrators. 
 * [Error handling](#error-handling)
 * [Signature checking](#signature-checking)
 * [Config parameters](#config-parameters)
+* [Debugging](#debugging)
 
 ## Subscription
 
@@ -149,3 +150,8 @@ Can be set manually in `data/config.php`
 
 *webhookTimeout* = 10 (seconds)
 
+## Debugging
+
+Queues are stored in two database tables: `webhook_queue_item` and `webhook_event_queue_item`.
+
+You can enable [debug mode](troubleshooting.md#debug-mode) to see more details in the log.
