@@ -25,6 +25,7 @@ Can be achieved by restriction of access to Template entity type.
 Table of content: 
 
 * [Code view](#code-view)
+* [Code view](#code-view)
 * [Charset issues](#charset-issues)
 * [Access to templates](#access-to-templates)
 * [Page numbering](#page-numbering)
@@ -58,6 +59,8 @@ Examples:
 * `{{account.name}}` – Name of the related account.
 
 Note: If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
+
+You can specify a *document title* with the *Title* field (as of v7.0.0). `{$name}` placeholder is available to substitute an entity name.
 
 ### Code view
 
