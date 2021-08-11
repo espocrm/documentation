@@ -10,6 +10,14 @@ As an email is coming, the system tries to link it with the appropriate record (
 
 Note: Email records are not duplicated in the system if they are fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to use **moving to trash** instead. It's recommended to restrict *delete* access for users in Roles.
 
+## Access control
+
+Access to imported emails is controlled by roles. It means that if a particular email was imported from a mailbox of some user, other users will be able to see that email if they have access to that email.
+
+By default users don't have access to any emails. If a user has read access level set to  *own*, they will be able to see emails where their email address is either in *From*, *To* or *CC* fields.
+
+There are 4 access levels: No, Own, Team, All.
+
 ## Group Email Accounts
 
 Group email accounts can be accessed at Administration > Group Email Accounts.
