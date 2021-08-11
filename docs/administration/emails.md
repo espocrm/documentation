@@ -8,7 +8,7 @@ EspoCRM has the ability to monitor IMAP mailboxes. Emails can be fetched by Grou
 
 As an email is coming, the system tries to link it with the appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not listed in To or CC of the email.
 
-Note: Email records are not duplicated in the system if they are fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to use **moving to trash** instead. It's recommended to restrict *delete* access for users in Roles.
+Important: Email records **are not duplicated** in the system if they are fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to use **moving to trash** instead. It's recommended to restrict *delete* access for users in Roles.
 
 ## Access control
 
