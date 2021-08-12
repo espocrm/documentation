@@ -123,7 +123,7 @@ When you create or update a recod, this error can mean that you didn't pass a **
 
 ### 403 Forbidden
 
-Usually occurs when you **don't have an access** to a specific record or action. See `data/log` for more details.
+Usually occurs when you **don't have access** to a specific record or action. See `data/log` for more details.
 
 ### 404 Not found
 
