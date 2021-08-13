@@ -4,6 +4,7 @@ In this article:
 
 * [Displaying a call recording](#displaying-a-call-recording)
 * [Grant access to Messages](#grant-access-to-messages)
+* [Grant access to Calls](#grant-access-to-calls)
 * [Add click-to-call feature to a custom entity](#add-click-to-call-feature-to-a-custom-entity)
 * [Add custom entities to Quick Create Entities](#add-custom-entities-to-quick-create-entities)
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
@@ -40,6 +41,12 @@ By default regular users don’t have access to Message entity. Administrator ne
 By default the Message entity tab should be added into the tab list.
 
 ![Message tab](../../_static/images/extensions/voip-integration/message-tab.png)
+
+## Grant access to Calls
+
+Don't forget to give the users access to the entity '**Calls**', so that they could make and accept calls. Go to the needed **User** > **Roles**. 
+
+Select the role or create a new one. Turn on '**Enabled**' access to the entity '**Calls**' and click '**Save**'.
 
 ## Add click-to-call feature to a custom entity
 
