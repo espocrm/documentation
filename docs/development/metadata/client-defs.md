@@ -1,45 +1,37 @@
-# Client defenitions
+# clientDefs. Client defenitions
 
 Path: `metadata/clientDefs/{ScopeName}.json`
 
-Can be one of:
-```
-  1) CUSTOM_PATH - custom/Espo/Custom/Resources/metadata/clientDefs/{ScopeName}.json;
-  2) MODULE_PATH - application/Espo/Modules/{ModuleName}/Resources/metadata/clientDefs/{ScopeName}.json;
-  3) BASE_PATH - application/Espo/Resources/metadata/clientDefs/{ScopeName}.json
-```
-
-Parameters used by front-end.
+Contains parameters used by the front-end.
 
 
 ## controller
 
 Defines a client controller class.
 
-
 ## collection
 
 Defines a client record collection class. Optional.
 
-By default `'collection'`. Path `client/src/collection.js`.
+The default value: `'collection'`. Corresponds to the path `client/src/collection.js`.
 
 ## acl
 
-Defines client a scope acl class. Optional.
+Defines a client scope acl class. Optional.
 
-By default `'acl'`. Path `client/src/acl.js`.
+The default value: `'acl'`. Path `client/src/acl.js`.
 
 
 ## aclPortal
 
 Defines client scope acl for portals. Optional.
 
-By default `'acl-portal'`. Path `client/src/acl-portal.js`.
+The default value: `'acl-portal'`. Path `client/src/acl-portal.js`.
 
 
 ## createDisabled
 
-Allows to disable to create entity with user interface.
+Allows to disable the ability to create entity from user interface (from the list view).
 
 
 ## searchPanelDisabled
@@ -87,9 +79,11 @@ Example:
 
 ## filterList
 
-Contains a list of primary (preset) filters.
+A list of primary (preset) filters.
 
 ## boolFilterList
+
+A list of bool filters.
 
 ## defaultFilterData
 
@@ -98,10 +92,6 @@ Contains a list of primary (preset) filters.
 Used as default set filter on the select modal
 Object 'filter' => 'active'
     
-## formDependency
-
-Deprecated
-
 ## menu
 
 
@@ -118,7 +108,6 @@ Deprecated
     
       
 ## massActionList
-
 
 ## checkAllResultMassActionList
 
