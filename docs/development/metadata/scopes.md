@@ -8,7 +8,7 @@ Path: `metadata/scopes/{ScopeName}.json`
 
 ### entity
 
-_Description_: is an entity, has own table in database;
+_Description_: is an entity;
  
 _Type_: boolean;
 
@@ -19,7 +19,7 @@ _Default_: false.
 
 ### object
 
-_Description_: is an object, is available in ....;
+_Description_: is an object;
 
 _Type_: boolean;
 
