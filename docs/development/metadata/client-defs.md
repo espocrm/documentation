@@ -124,4 +124,4 @@ Scope color in HEX.
 
 ## kanbanViewMode
 
-The scope has kanban view mode on the list view
+The scope has kanban view mode on the list view.
