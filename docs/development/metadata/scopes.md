@@ -1,6 +1,6 @@
-# Scope definition
+# scopes. Scope definition
 
-Path: `/metadata/scopes/{ScopeName}.json`
+Path: `metadata/scopes/{ScopeName}.json`
 
 Сontains scope definition. Parameters are optional. Scope can define an entity type.
 
