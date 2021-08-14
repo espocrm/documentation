@@ -2,9 +2,9 @@
 
 Path: `metadata/scopes/{ScopeName}.json`
 
-Сontains scope definition. Parameters are optional. Scope can define an entity type.
+Сontains scope definition. Scope can define an entity type.
 
-## List of options:
+## Parameters
 
 ### entity
 
