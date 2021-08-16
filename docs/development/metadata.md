@@ -2,6 +2,11 @@
 
 Metadata is intended for: storing system data such as entity's fields and relationships, specifying frontend controllers, views, panels, defining fields, dashlets, and other data needed for the application.
 
+Sections:
+
+* [aclDefs](metadata/acl-defs.md)
+* [clientDefs](metadata/client-defs.md)
+* [scopes](metadata/scopes.md)
 
 ## How to access
 
