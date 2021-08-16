@@ -82,3 +82,13 @@ Print the current version:
 ```
 php command.php version
 ```
+
+## Setting user password
+
+
+```
+php command.php set-password [username]
+```
+
+where `[username]` is a user name, e.g. `admin`.
+
