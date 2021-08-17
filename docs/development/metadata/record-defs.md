@@ -6,7 +6,7 @@ Path: metadata > recordDefs > {EntityType}
 
 A class for building a where clause for duplicate checking.
 
-Should implement `Espo\Core\Duplicate\WhereBuilder`.
+Should implement `Espo\Core\Duplicate\WhereBuilder` interface.
 
 ## readLoaderClassNameList
 
