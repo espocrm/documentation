@@ -8,6 +8,7 @@ Sections:
 * [clientDefs](metadata/client-defs.md)
 * [scopes](metadata/scopes.md)
 * [selectDefs](metadata/select-defs.md)
+* [recordDefs](metadata/record-defs.md)
 
 ## How to access
 
