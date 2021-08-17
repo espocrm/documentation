@@ -67,3 +67,44 @@ Disable actions in the back-end.
 ## exportDisabled
 
 To disable export regardless ACL.
+
+## beforeReadHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## afterReadHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## beforeSaveHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## afterSaveHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## beforeDeleteHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## afterDeleteHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## beforeLinkHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## afterLinkHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## beforeUnlinkHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## afterUnlinkHookClassNameList
+
+Hooks (applied only for API calls).
+
