@@ -94,27 +94,43 @@ Object 'filter' => 'active'
     
 ## menu
 
+Top-right menu for views (list, detail, edit, etc.).
 
 ## relationshipPanels
 
+Parameters to be applied for specific relationship panels.
 
 ## sidePanels
+
+Definitions of side-panels for views (list, detail, edit, etc.).
 
       
 ## bottomPanels
 
 
+Definitions of bottom-panels for views (list, detail, edit, etc.).
+
+
 ## additionalLayouts
+
+Additionals layouts for a scope.
     
       
 ## massActionList
 
+Mass actions.
+
 ## checkAllResultMassActionList
 
+Mass actions available when selecting all recults.
 
 ## massActionDefs
 
+Defenitions for mass actions.
+
 ## iconClass
+
+A scope icon class.
 
 Example: `"fas fa-chess-king"`
 
