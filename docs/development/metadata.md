@@ -49,9 +49,9 @@ Metadata is stored in JSON files that can be located in different places:
 When you access data by path `clientDefs.Account.views.edit` the first lexeme `clientDefs` corresponds to dir name, the second `Account` to file name `Account.json`. All following lexemes correspond to path in the JSON.
 ```json
 {
-  "views": {
-    "edit": "crm:views/account/views/edit" 
-  }
+    "views": {
+        "edit": "crm:views/account/views/edit" 
+    }
 }
 ```
 
