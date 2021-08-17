@@ -76,11 +76,19 @@ Hooks (applied only for API calls).
 
 Hooks (applied only for API calls). 
 
-## beforeSaveHookClassNameList
+## beforeCreateHookClassNameList
 
 Hooks (applied only for API calls). 
 
-## afterSaveHookClassNameList
+## afterCreateHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## beforeUpdateHookClassNameList
+
+Hooks (applied only for API calls). 
+
+## afterUpdateHookClassNameList
 
 Hooks (applied only for API calls). 
 
