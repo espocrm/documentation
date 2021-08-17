@@ -25,3 +25,45 @@ Should implement `Espo\Core\FieldProcessing\Loader` interface.
 Array of classes to save additional fields.
 
 Should implement `Espo\Core\FieldProcessing\Saver` interface.
+
+## assignmentNotificatorClassName
+
+A class for notifying upon assignment.
+
+Should implement `Espo\Core\Notification\AssignmentNotificator` interface.
+
+## actions
+
+Parameters of actions (applied only for the back-end).
+
+Parameters:
+
+* allowed - to allow an action for a scope w/o ACL.
+
+## massActions
+
+Parameters of mass actions (applied only for the back-end).
+
+Example:
+
+```json
+{
+    "massActions": {
+        "delete": {
+            "allowed": true
+        }
+    }
+}
+```
+
+Parameters:
+
+* allowed - to allow an action for a scope w/o ACL.
+
+## actionsDisabled
+
+Disable actions in the back-end.
+
+## exportDisabled
+
+To disable export regardless ACL.
