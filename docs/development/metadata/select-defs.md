@@ -14,5 +14,20 @@ Class names for bool filters. Classes should implement `Espo\Core\Select\Bool\Fi
 
 ## primaryFilterClassNameMap
 
-Class names for primary filters. Classes should implement `Espo\Core\Select\Primary\Filter` interface
+Class names for primary filters. Classes should implement `Espo\Core\Select\Primary\Filter` interface.
+
+## selectAttributesDependencyMap
+
+Selecting a specific attribute will actually select attributes defined by the map.
+
+Example:
+
+```
+{
+    "selectAttributesDependencyMap": {
+        "subject": ["name"],
+        "personStringData": ["fromString", "fromEmailAddressId"]
+    }
+}
+```
 
