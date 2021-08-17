@@ -66,13 +66,13 @@ Since metadata is merged recursively you can easily redefine json objects and ar
 
 ```json
 {
-  "fields": {
-    "employeeCount": {
-      "type": "int"
-    },
-    "type": {
-      "options": ["__APPEND__", "Dealer", "Lawyer"]
+    "fields": {
+        "employeeCount": {
+          "type": "int"
+        },
+        "type": {
+            "options": ["__APPEND__", "Dealer", "Lawyer"]
+        }
     }
-  }
 }
 ```
