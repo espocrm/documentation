@@ -92,3 +92,6 @@ php command.php set-password [username]
 
 where `[username]` is a user name, e.g. `admin`.
 
+## Import
+
+See [here](import.md#console-commands).
