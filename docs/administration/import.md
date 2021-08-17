@@ -87,6 +87,8 @@ Run import:
 php command.php import --id={import-id}
 ```
 
+The import must be created via UI (with *Run Manually* checked) before.
+
 Resume failed import (from the last processed row):
 
 ```
