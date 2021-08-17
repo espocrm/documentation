@@ -2,11 +2,15 @@
 
 Path: metadata > selectDefs > {EntityType}
 
+Parameters used by *Select* framework that converts serarch parameters (sent from the front-end) to ORM queries.
+
 ## accessControlFilterClassNameMap
 
 Class names for access control filters. Classes should implement `Espo\Core\Select\AccessControl\Filter` interface.
 
 Default filters are available at `Espo\Core\Select\AccessControl\Filters`.
+
+Note: `mandotory` filter is applied for all users. If you need to apply some a
 
 ## boolFilterClassNameMap
 
@@ -22,7 +26,7 @@ Selecting a specific attribute will actually select attributes defined by the ma
 
 Example:
 
-```
+```json
 {
     "selectAttributesDependencyMap": {
         "subject": ["name"],
@@ -30,4 +34,24 @@ Example:
     }
 }
 ```
+
+## whereItemConverterClassNameMap
+
+Implementations for custom where items.
+
+Example: 
+
+```json
+{
+    "whereItemConverterClassNameMap": {
+        "id_isOfType": "Espo\\Classes\\Select\\User\\Where\\ItemConverters\\IsOfType"
+    }
+}
+```
+
+Classes should implement `Espo\Core\Select\Where\ItemConverter` interface.
+
+## accessControlFilterResolverClassName
+
+Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
 
