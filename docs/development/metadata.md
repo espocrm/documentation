@@ -7,6 +7,7 @@ Sections:
 * [aclDefs](metadata/acl-defs.md)
 * [clientDefs](metadata/client-defs.md)
 * [scopes](metadata/scopes.md)
+* [selectDefs](metadata/select-defs.md)
 
 ## How to access
 
