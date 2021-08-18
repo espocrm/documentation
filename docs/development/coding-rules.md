@@ -463,6 +463,8 @@ class AccountChecker implements Checker
 }
 ```
 
+The *protected* visibility should be used very sparsely.
+
 ### 11\. Use DTO rather than associative arrays and stdClass objects.
 
 Use immutable data transfer objects.
