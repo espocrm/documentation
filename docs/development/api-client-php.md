@@ -198,6 +198,11 @@ class EspoApiClient
                 return json_decode($parsedResponse['body'], true);
             }
 
+            if (substr($responseContentType, 0, 12) === "application/") {
+                //echo $action;
+                return $parsedResponse['body'];
+            }
+
             return $parsedResponse['body'];
         }
 
