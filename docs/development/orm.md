@@ -608,7 +608,7 @@ $query = $entityManager
     ->from('Opportunity') // entity type
     ->select(['MONTH:(closeDate)', 'SUM:(amountConverted)']) // complex expressions
     ->groupBy('MONTH:(closeDate)') // complex expression
-    ->whereClause([
+    ->where([
         'stage' => 'Closed Won',
     ])
     ->order(1) // ordering by the first column
