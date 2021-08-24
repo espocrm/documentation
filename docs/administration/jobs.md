@@ -144,7 +144,7 @@ To print all available jobs run:
 bin/command app-info --jobs
 ```
 
-Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying --target-id and --target-type options.
+Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-id` and `--target-type` options.
 
 Example:
 
