@@ -11,6 +11,7 @@ This is not a full list of params. Most of params available in admin UI are not 
 The list of parameters along with their default values.
 
 * [General](#general)
+* [UI](#ui)
 * [Access control](#access-control)
 * [Notifications](#notifications)
 * [Emails](#emails)
@@ -49,6 +50,10 @@ The list of parameters along with their default values.
 * baseCurrency – which currency to use as base when defining rates;
 * currencyList – array of available currencies;
 * thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (since v6.2.0);
+
+### UI
+
+* applicationDescription – the text in meta tag; by default `EspoCRM - Open Source CRM application` text is used;
 
 ### Access control
 
