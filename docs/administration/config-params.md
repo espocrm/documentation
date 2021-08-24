@@ -49,11 +49,12 @@ The list of parameters along with their default values.
 * defaultCurrency – currency applied by default;
 * baseCurrency – which currency to use as base when defining rates;
 * currencyList – array of available currencies;
-* thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (since v6.2.0);
+* thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (since v7.0.0);
 
 ### UI
 
-* applicationDescription – the text in meta tag; by default `EspoCRM - Open Source CRM application` text is used;
+* applicationDescription – the text in meta tag; by default `EspoCRM - Open Source CRM application` text is used (since v7.0.0);
+* adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page;
 
 ### Access control
 
