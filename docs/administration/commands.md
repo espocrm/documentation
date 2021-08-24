@@ -105,3 +105,11 @@ where `[username]` is a user name, e.g. `admin`.
 ## Import
 
 See [here](import.md#console-commands).
+
+## App info
+
+```
+bin/command app-info
+```
+
+With this command you can get some information about application (container services, binding, jobs).
