@@ -54,7 +54,7 @@ The list of parameters along with their default values.
 ### UI
 
 * applicationDescription – the text in meta tag; by default `EspoCRM - Open Source CRM application` text is used (since v7.0.0);
-* adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page;
+* adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (since v7.0.0);
 
 ### Access control
 
