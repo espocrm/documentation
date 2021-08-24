@@ -67,7 +67,7 @@ The list of parameters along with their default values.
 * adminNotifications – `true` – notifications in admin panel;
 * adminNotificationsNewVersion – `true` – notifications about new versions in admin panel;
 * adminNotificationsNewExtensionVersion – `true` – notifications about new extension versions in admin panel;
-* emailReminderPortionSize – `10` – how much email reminders can be sent at once (as of v6.2.0);
+* emailReminderPortionSize – `10` – how much email reminders can be sent at once (as of v7.0.0);
 
 ### Emails
 
