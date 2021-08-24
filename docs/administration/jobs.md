@@ -138,6 +138,20 @@ Jobs available out-of-the-box:
 * SendEmailReminders
 * SubmitPopupReminders
 
+To print all available jobs run:
+
+```
+bin/command app-info --jobs
+```
+
+Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying --target-id and --target-type options.
+
+Example:
+
+```
+bin/command run-job CheckEmailAccounts --target-id=[paste_id_of_email_account] --target-type=EmailAccount
+```
+
 ## See also
 
 * [Creating custom job](../development/scheduled-job.md)
