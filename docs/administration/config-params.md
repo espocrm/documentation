@@ -50,6 +50,7 @@ The list of parameters along with their default values.
 * baseCurrency – which currency to use as base when defining rates;
 * currencyList – array of available currencies;
 * thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (since v7.0.0);
+* globalSearchMaxSize – `10` – how much records is shown in the global search;
 
 ### UI
 
@@ -68,6 +69,8 @@ The list of parameters along with their default values.
 * adminNotificationsNewVersion – `true` – notifications about new versions in admin panel;
 * adminNotificationsNewExtensionVersion – `true` – notifications about new extension versions in admin panel;
 * emailReminderPortionSize – `10` – how much email reminders can be sent at once (as of v7.0.0);
+* notificationsMaxSize – `5` – how much in-app notifications is shown when the notification panel is shown up;
+* notificationsCheckInterval – `10` – an interval between checks for new notifications (actual only if web socket is not enabled); 
 
 ### Emails
 
@@ -75,6 +78,7 @@ The list of parameters along with their default values.
 * emailForceUseExternalClient – `false` – when composing an email, all users will be forced to use external client;
 * emailAutoReplySuppressPeriod – `'2 hours'` – an auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter; to prevent looping (as of v6.1.8);
 * emailAutoReplyLimit – `5` – a max number of auto-reply emails that can be sent to one recipient within a period defined by the *emailAutoReplySuppressPeriod* parameter (as of v6.2.0);
+* emailFoldersDisabled – `false` – disables email folders;
 
 ### Stream
 
