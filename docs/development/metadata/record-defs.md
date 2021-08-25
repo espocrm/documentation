@@ -32,6 +32,12 @@ A class for notifying upon assignment.
 
 Should implement `Espo\Core\Notification\AssignmentNotificator` interface.
 
+## selectApplierClassNameList
+
+Array of classes for additional handling of a select query.
+
+Should implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
+
 ## actions
 
 Parameters of actions (applied only for the back-end).
