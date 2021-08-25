@@ -9,6 +9,7 @@ Sections:
 * [scopes](metadata/scopes.md)
 * [selectDefs](metadata/select-defs.md)
 * [recordDefs](metadata/record-defs.md)
+* [entityAcl](metadata/entity-acl.md)
 
 ## How to access
 
