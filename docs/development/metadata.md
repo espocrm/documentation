@@ -10,6 +10,7 @@ Sections:
 * [selectDefs](metadata/select-defs.md)
 * [recordDefs](metadata/record-defs.md)
 * [entityAcl](metadata/entity-acl.md)
+* [fields](metadata/fields.md)
 
 ## How to access
 
