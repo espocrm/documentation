@@ -5,10 +5,10 @@ Metadata is intended for: storing system data such as entity's fields and relati
 Sections:
 
 * [aclDefs](metadata/acl-defs.md)
-* [clientDefs](metadata/client-defs.md)
-* [scopes](metadata/scopes.md)
 * [selectDefs](metadata/select-defs.md)
 * [recordDefs](metadata/record-defs.md)
+* [clientDefs](metadata/client-defs.md)
+* [scopes](metadata/scopes.md)
 * [entityAcl](metadata/entity-acl.md)
 * [fields](metadata/fields.md)
 
