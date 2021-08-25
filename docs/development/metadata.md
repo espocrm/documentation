@@ -4,14 +4,15 @@ Metadata is intended for: storing system data such as entity's fields and relati
 
 Sections:
 
-* [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types;
-* [selectDefs](metadata/select-defs.md) – filters for entity types;
-* [recordDefs](metadata/record-defs.md) – CRUD-specific parameters for entity types;
-* [clientDefs](metadata/client-defs.md) – front-end parameters entity types;
-* [scopes](metadata/scopes.md) – general parmeters for scopes and entity types;
-* [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types;
-* entityDefs – entity definitions (fields, links, indexes etc.);
-* [fields](metadata/fields.md) – field types definitions.
+* [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
+* [selectDefs](metadata/select-defs.md) – filters for entity types
+* [recordDefs](metadata/record-defs.md) – CRUD-specific parameters for entity types
+* [clientDefs](metadata/client-defs.md) – front-end parameters entity types
+* [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
+* [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
+* entityDefs – entity definitions (fields, links, indexes etc.)
+* [fields](metadata/fields.md) – field types definitions
+* app – application definitions
 
 ## How to access
 
