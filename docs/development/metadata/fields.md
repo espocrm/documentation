@@ -100,7 +100,7 @@ Available methods:
 #### Example
 
 ```
-"hookClassName": "\\Espo\\Core\\Utils\\FieldManager\\Hooks\\NumberType"
+"hookClassName": "Espo\\Core\\Utils\\FieldManager\\Hooks\\NumberType"
 ```
 You can find this class in `application/Espo/Core/Utils/FieldManager/Hooks/NumberType.php` and read the code.
 
