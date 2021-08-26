@@ -22,7 +22,6 @@ In this article:
 EspoCRM requires PHP 7.3 or later, with the following extensions:
 
 * [pdo](http://php.net/manual/en/book.pdo.php) – for database access;
-* [json](http://php.net/manual/en/book.json.php);
 * [gd](http://php.net/manual/en/book.image.php) – to manipulate images;
 * [openssl](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
 * [zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
@@ -31,7 +30,8 @@ EspoCRM requires PHP 7.3 or later, with the following extensions:
 * [curl](http://php.net/manual/en/book.curl.php) – for integrations;
 * [xml](http://php.net/manual/en/book.xml.php) – for excel export;
 * [xmlwriter](http://php.net/manual/en/book.xmlwriter.php) – for excel export;
-* [exif](http://php.net/manual/en/book.exif.php) – for a proper oriantion of uploaded images.
+* [exif](http://php.net/manual/en/book.exif.php) – for a proper oriantion of uploaded images;
+* [json](http://php.net/manual/en/book.json.php) (always included since PHP v8.0).
 
 php.ini settings:
 
