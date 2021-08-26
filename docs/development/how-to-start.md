@@ -77,3 +77,10 @@ That will force using a backend cache (metadata, langauge etc.).
 
 * `application/Espo/Modules/{YourModuleName}/` – for metadata and all files pertaining to backend
 * `client/modules/{your_module_name}/` – for client files
+
+### Option C. Module dirs in custom
+
+As of v7.0.
+
+* `custom/Espo/Modules/{YourModuleName}/` – for metadata and all files pertaining to backend
+* `client/custom/modules/{your_module_name}/` – for client files
