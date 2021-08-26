@@ -9,7 +9,7 @@
 
 Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
-To build a proper *config.php* file and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in the browser.
+To build a proper *config.php* file and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in the browser. Asuming you have your webserver properly [configured](../administration/server-configuration.md).
 
 Then open `data/config.php` file and add:
 
