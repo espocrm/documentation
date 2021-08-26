@@ -37,15 +37,17 @@ Note: By default grunt installs composer dependencies. You can skip it by runnin
 
 ### Upgrade packages
 
-You need to fetch tags to your git repository. You need to checkout to a needed version tag and build EspoCRM (see above how to build).
+1. Fetch tags to your git repository from the remote: `git fetch --tags`.
+2. Checkout to a needed version tag (or don't if you want to test upgrade to the most recent commit)
+3. Build EspoCRM with grunt (see above how to build).
 
-Upgrade packages can be built with the command:
+Build the upgrade package with the command:
 
 ```
 node diff {version_from}
 ```
 
-The package will be created in `build` directory.
+The package will be created in the `build` directory.
 
 ## Option B. Using installed instance
 
