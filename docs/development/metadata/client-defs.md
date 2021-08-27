@@ -145,3 +145,7 @@ The scope has kanban view mode on the list view.
 ## allowInternalNotes
 
 If true, it will be possible to post internal posts in the stream. Internal posts are not visible in portals.
+
+## isExpandedByDefault
+
+Actual for category scopes (e.g. DocumentFolder). If true, then by default it will be in expanded mode.
