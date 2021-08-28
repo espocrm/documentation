@@ -8,7 +8,7 @@ To disable: Administration > Entity Manager > edit specific entity type > check 
 
 ## Recommendations
 
-* SSD is preferred over HHD.
+* SSD is preferred over HDD.
 * Dedicated server is preferred over shared.
 * More RAM can be helpful if your database grows.
 
