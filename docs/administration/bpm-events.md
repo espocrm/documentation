@@ -250,7 +250,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 It's triggered once a specific signal is broadcasted. Note, that a signal can be triggered from anywhere in the system, not necessarily in the same process.
 
-Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with target's id.
+Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with the target's id.
 
 ![Signal Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-signal-boundary.png)
 
