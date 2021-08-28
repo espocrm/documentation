@@ -26,12 +26,6 @@ Array of classes to save additional fields.
 
 Must implement `Espo\Core\FieldProcessing\Saver` interface.
 
-## assignmentNotificatorClassName
-
-A class for notifying upon assignment.
-
-Must implement `Espo\Core\Notification\AssignmentNotificator` interface.
-
 ## selectApplierClassNameList
 
 Array of classes for additional handling of a select query.
