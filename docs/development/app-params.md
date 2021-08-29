@@ -13,7 +13,7 @@ Create a file: `custom/Espo/Custom/Resources/metadata/app/appParams.json`
 ```json
 {
     "myParam": {
-        "className": "\\Espo\\Custom\\Core\\AppParams\\MyParam"
+        "className": "Espo\\Custom\\Core\\AppParams\\MyParam"
     }
 }
 ```
