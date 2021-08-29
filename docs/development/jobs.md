@@ -25,7 +25,7 @@ $jobSchedulerFactory->create()
 You can pass JobSchedulerFactory as a constructor dependency.
 
 
-Legacy method:
+Legacy method (before v7.0):
 
 ```php
 $entityManager->createEntity('Job', [
