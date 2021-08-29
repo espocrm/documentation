@@ -22,6 +22,8 @@ $jobSchedulerFactory->create()
     ->schedule();
 ```
 
+You can pass JobSchedulerFactory as a constructor dependency.
+
 
 Legacy method:
 
@@ -40,7 +42,30 @@ $entityManager->createEntity('Job', [
 
 ### Job implementation
 
-Create a service class file `custom/Espo/Custom/Services/MyJobService.php`:
+As of v7.0:
+
+```php
+<?php
+namespace Espo\Custom\MyJobs;
+
+use Espo\Core\Job\Job;
+use Espo\Core\Job\JobData;
+
+class MyJob implements Job
+{
+     public function __construct(/* pass needed dependencies */)
+     {
+     }
+     
+     public function run(JobData $data): void
+     {
+         // job logic here
+     }
+}
+```
+
+
+Legacy method. Create a service class file `custom/Espo/Custom/Services/MyJobService.php`:
 
 ```php
 <?php
