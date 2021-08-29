@@ -9,7 +9,6 @@ As of v7.0:
 ```php
 use Espo\Core\Job\JobSchedulerFactory;
 use Espo\Core\Job\QueueName;
-use Espo\Core\Job\JobData;
 
 /** @var JobSchedulerFactory $jobSchedulerFactory */
 $jobSchedulerFactory->create()
