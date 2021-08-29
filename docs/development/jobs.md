@@ -95,8 +95,6 @@ class MyJobService extends \Espo\Core\Services\Base
 
 Clear cache from the admin panel.
 
-More detail about services is [here](services.md).
-
 ### Queues
 
 * e0 - intended for email sending; run as often as possible;
