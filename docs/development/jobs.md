@@ -2,7 +2,28 @@
 
 Sometimes it's reasonable to execute the script in background. For example, to avoid a used waiting for a response  for a long time.
 
-### Creating job record
+### Scheduling job
+
+As of v7.0:
+
+```php
+use Espo\Core\Job\JobSchedulerFactory;
+use Espo\Core\Job\QueueName;
+use Espo\Core\Job\JobData;
+
+/** @var JobSchedulerFactory $jobSchedulerFactory */
+$jobSchedulerFactory->create()
+    ->setClassName($jobClassName) // should implement `Espo\Core\Job\Job` interface
+    ->setQueue(QueueName::Q0) // optional
+    ->setGroup('some-group-name') // optional
+    ->setData([
+        'someKey' => $someValue
+    ])
+    ->schedule();
+```
+
+
+Legacy method:
 
 ```php
 $entityManager->createEntity('Job', [
