@@ -40,3 +40,9 @@ Each user who uses telephony should setup his user extension in User’s Profile
 * **Display call notifications** – if you want to receive incoming/outgoing call notifications.
 * **Silent notifications** – mute notification sound.
 * **Use internal click-to-call** – switching internal click-to-call possibility. Internal click-to-call is a feature to originate an outgoing call. If the checkbox is unchecked, then will be used an external application to handle tel: links.
+
+## Access control for users
+
+Make sure that your users have the access to the entity 'Calls'. 
+
+* [Grant access to Calls](customization.md#grant-access-to-calls)
