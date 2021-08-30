@@ -19,7 +19,7 @@ VoIP Integration extension supports* the following Starface servers:
 
 #### Step 1:
 
-Fill in the connection details of your Starafce server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
+Fill in the connection details of your Starface server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
 
 ![Starface integration config](../../_static/images/extensions/voip-integration/starface-admin-setup.png)
 
@@ -58,3 +58,9 @@ Each user who wants to use Starface integration, should setup his access in the 
 * **Display call notifications** – an option to enable/disable incoming/outgoing call notifications.
 * **Silent notifications** – mute notification sound.
 * **Use internal click-to-call** – an option to enable/disable the internal click-to-call feature. It is a feature to make outgoing calls through the Starface server. If the checkbox is unchecked, then an external application will handle “tel:” links.
+
+## Access control for users
+
+Make sure that your users have the access to the entity 'Calls'. 
+
+* [Grant access to Calls](customization.md#grant-access-to-calls)
