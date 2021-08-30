@@ -74,6 +74,12 @@ Each user who wants to use Asterisk integration, should setup his access in the 
 * **Use internal click-to-call** – an option to enable/disable the internal click-to-call feature. It is a feature to make outgoing calls through Asterisk server. If the checkbox is unchecked, then an external application will handle “tel:” links.
 * **User Dial Context** – Dial Context for a User. If it is empty, a Dial Context of a connector will be used.
 
+## Access control for users
+
+Make sure that your users have the access to the entity 'Calls'. 
+
+* [Grant access to Calls](customization.md#grant-access-to-calls)
+
 ## Additional phone numbers for users
 
 Each user can add several additional phone numbers to handle incoming calls. They can be added in the User’s Profile.
