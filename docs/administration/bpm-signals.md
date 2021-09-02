@@ -4,6 +4,8 @@ Signals are events with a specific name. Signals are broadcasted globally, they 
 
 The signals feature is a part of Advanced Pack extension and can be utilized in BPM and Workflows tools.
 
+How signals are broadcasted:
+
 * There are set of standard signals which are broadcasted upon specific events in the application. These *built-in signals* are listed below in the article.
 * It's possible to broadcast [custom signals](bpm-events.md#signal-intermediate-event-throwing) in a BPM process.
 * It's possible to broadcast custom signals using the [formula function](bpm.md#bpmbroadcastsignal) `bpm\broadcastSignal(SIGNAL_NAME)` (since v2.7.1).
