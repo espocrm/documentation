@@ -2,7 +2,7 @@
 
 Signals are events with a specific name. Signals are broadcasted globally, they are not limited by a process scope. It means that a signal triggered in one BPM process can be caught in another process.
 
-Signals feature is a part of Advanced Pack extension and can be utilized in BPM and Workflows tools.
+The signals feature is a part of Advanced Pack extension and can be utilized in BPM and Workflows tools.
 
 * There are set of standard signals which are broadcasted upon specific events in the application. These *built-in signals* are listed below in the article.
 * It's possible to broadcast [custom signals](bpm-events.md#signal-intermediate-event-throwing) in a BPM process.
