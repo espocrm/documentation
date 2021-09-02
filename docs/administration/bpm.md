@@ -79,11 +79,11 @@ You can setup BPM process to remove itself. Add *Task* > *Update Process Record*
 
 ## Flowchart Elements
 
+See in separate articles:
+
 * [Events](bpm-events.md)
 * [Gateways](bpm-gateways.md)
 * [Activities](bpm-activities.md)
-* Flows
-  * [Sequence](#sequence-flow)
 
 ### Flows
 
