@@ -29,6 +29,8 @@ Note: Signal Intermediate Events can catch and throw regular signals (in BPM pro
 
 ### Built-in signals
 
+The list of out-of-the-box signals that are broadcasted in the system.
+
 Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) will/should be replaced by corresponding values.
 
 #### Default
@@ -98,6 +100,8 @@ Note: Signal Intermediate Event (Catching) can't catch object signals.
 Example: A process triggers signal *@approve*. A target record of *Lead* entity type is attached to the signal. You have another BPM flowchart for *Lead* entity type that starts with *@approve* signal. In this case, a new process will be started, and lead record from the first process will be passed as a target record of the second process. 
 
 ### Built-in signals
+
+The list of out-of-the-box signals that are broadcasted in the system.
 
 Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced by corresponding values.
 
