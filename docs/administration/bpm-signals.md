@@ -38,7 +38,7 @@ Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) must be replaced by
 #### Default
 
 * *create.ENTITY_TYPE* – record of ENTITY_TYPE created, e.g. `create.Lead`
-* *update.ENTITY_TYPE.ID* – record update, e.g. `update.Lead.007`
+* *update.ENTITY_TYPE.ID* – record update, e.g. `update.Lead.aaabbbccc007`
 * *delete.ENTITY_TYPE.ID* – record removed
 * *relate.ENTITY_TYPE.ID.LINK_NAME* – record related with another record (only for *many-to-many*)
 * *relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID* – record related with another record, id of related recod is specified (only for *many-to-many*)
