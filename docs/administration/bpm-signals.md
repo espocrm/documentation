@@ -33,7 +33,7 @@ Note: Signal Intermediate Events can catch and throw regular signals (in BPM pro
 
 The list of out-of-the-box signals that are broadcasted in the system.
 
-Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) must be replaced by corresponding values.
+Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) must be replaced by corresponding values. E.g. when an account with ID = `aabbcc` is updated, a signal `update.Account.aabbcc` is broadcasted.
 
 #### Default
 
