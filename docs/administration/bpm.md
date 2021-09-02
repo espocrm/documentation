@@ -82,13 +82,6 @@ You can setup BPM process to remove itself. Add *Task* > *Update Process Record*
 * [Events](bpm-events.md)
 * [Gateways](bpm-gateways.md)
 * [Activities](bpm-activities.md)
-  * Task
-  * Send Message Task
-  * User Task
-  * Script Task
-  * Sub-Process
-  * Event Sub-Process
-  * Call Activity
 * Flows
   * [Sequence](#sequence-flow)
 
