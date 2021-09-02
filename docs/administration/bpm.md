@@ -142,13 +142,12 @@ Example:
 
 #### bpm\broadcastSignal
 
-`bpm\broadcastSignal(SIGNAL_NAME)`
-
-Broadcasts a custom signal. Available since Advanced Pack v2.7.1.
+* `bpm\broadcastSignal(SIGNAL_NAME)` – broadcast a regular signal (as of v2.7.1)
+* `bpm\broadcastSignal(SIGNAL_NAME, ENTITY_TYPE, ENTITY_ID)` – broadcast an object signal (as of v2.8.5)
 
 It can be useful to broadcast a custom signal from a worfklow rule and then catch it inside a running process. A workflow rule will perform some condition checking and only after than will broadcast a signal.
 
-Example:
+##### Example (regular signal)
 
 ```
 $signalName = string\concatenate(
@@ -160,3 +159,14 @@ bpm\broadcastSignal($signalName);
 ```
 
 Then it will be possible to catch the signal in a BPM process by listening to the signal `notePostedInCaseBySupportManager.{$id}`.
+
+##### Example (object signal)
+
+Workflow on Quote Item broadcasts a signal when amount is changed.
+
+```
+bpm\broadcastSignal('@quoteItemIsChanged', 'Quote', entity\attribute('quoteId'));
+```
+
+Then it will be possible to catch the signal by a workflow. It can be useful for situations when you need to recalculate something when a related record is changed.
+
