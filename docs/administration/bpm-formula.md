@@ -61,5 +61,3 @@ bpm\broadcastSignal('@quoteItemIsChanged', 'Quote', entity\attribute('quoteId'))
 ```
 
 Then it will be possible to catch the signal by a workflow. It can be useful for situations when you need to recalculate something when a related record is changed.
-
-
