@@ -8,7 +8,7 @@ Formula script can be utilized in conditions, script tasks, various task actions
 * [bpm\createdEntity\attribute](#bpmcreatedentityattribute)
 * [bpm\processEntity\attribute](#bpmprocessEntityattribute)
 * [bpm\startProcess](#bpmstartprocess)
-* [bpm\startProcess](#bpmbroadcastsignal)
+* [bpm\broadcastSignal](#bpmbroadcastsignal)
 
 #### bpm\targetEntity\attribute
 
