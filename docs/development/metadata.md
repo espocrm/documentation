@@ -13,6 +13,7 @@ Sections:
 * entityDefs – entity definitions (fields, links, indexes etc.)
 * [fields](metadata/fields.md) – field types definitions
 * app – application definitions
+  * [authentication](metadata/app-authentication.md)
 
 ## How to access
 
