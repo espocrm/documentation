@@ -1,6 +1,6 @@
 # Drip Email Campaign with BPM
 
-With [BPM tool](bpm.md) it's possible to create drip email campaigns.
+With the [BPM tool](bpm.md) it's possible to create drip email campaigns.
 
 ## Campaign starting
 
