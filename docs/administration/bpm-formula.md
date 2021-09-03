@@ -1,6 +1,6 @@
 # BPM Formula Functions
 
-[BPM tool](bpm.md) provides additional formula functions.
+The [BPM tool](bpm.md) provides additional formula functions.
 
 Formula script can be utilized in conditions, script tasks, various task actions. Some functions can be used in a workflow (broadcastSignal, startProcess).
 
