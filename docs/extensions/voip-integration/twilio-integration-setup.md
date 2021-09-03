@@ -89,6 +89,12 @@ All other configuration settings should be made by your administrator. The user 
 * **Silent notifications** – mute notification sound.
 * **Use internal click-to-call** – an option to enable/disable the internal click-to-call feature. It is a feature to make outgoing calls through Twilio. If the checkbox is unchecked, then an external application will handle “tel:” links.
 
+## Access control for users
+
+Make sure that your users have the access to the entity 'Calls'. 
+
+* [Grant access to Calls](customization.md#grant-access-to-calls)
+
 ## How to configure SIP Domains
 
 1. Configure a SIP domain in Twillio:
