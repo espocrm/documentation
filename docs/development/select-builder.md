@@ -79,3 +79,8 @@ Or you can pass it to the QueryExecutor:
 ```php
 $sth = $entityManager->getQueryExecutor()->execute($query);
 ```
+
+## See also
+
+* [metadata selectDefs](metadata/select-defs.md)
+
