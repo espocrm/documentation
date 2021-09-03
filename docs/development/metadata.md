@@ -68,7 +68,7 @@ All JSON files from these directories get merged recursively into a single php a
 
 Since metadata is merged recursively you can easily redefine json objects and arrays in _custom_ and in your _module_.
 
-You can **append** values to existing arrays by using `__APPEND__` as the first element of array.
+You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of array.
 
 `custom/Espo/Custom/Resources/Metadata/entityDefs/Account.json`
 
