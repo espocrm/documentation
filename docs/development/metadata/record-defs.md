@@ -38,7 +38,8 @@ Parameters of actions (applied only for the back-end).
 
 Parameters:
 
-* allowed - to allow an action for a scope w/o ACL.
+* disabled - disables an action;
+* allowed - allows an action for non-object scopes.
 
 ## massActions
 
@@ -58,7 +59,8 @@ Example:
 
 Parameters:
 
-* allowed - to allow an action for a scope w/o ACL.
+* disabled - disables an action;
+* allowed - allows an action for non-object scopes.
 
 ## actionsDisabled
 
