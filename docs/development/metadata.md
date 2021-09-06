@@ -14,6 +14,7 @@ Sections:
 * [fields](metadata/fields.md) – field types definitions
 * app – application definitions
   * [authentication](metadata/app-authentication.md)
+  * [rebuild](metadata/app-rebuild.md)
 
 ## How to access
 
