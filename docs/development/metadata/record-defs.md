@@ -74,15 +74,7 @@ To disable export regardless ACL.
 
 Hooks (applied only for API calls). 
 
-## afterReadHookClassNameList
-
-Hooks (applied only for API calls). 
-
 ## beforeCreateHookClassNameList
-
-Hooks (applied only for API calls). 
-
-## afterCreateHookClassNameList
 
 Hooks (applied only for API calls). 
 
@@ -90,15 +82,7 @@ Hooks (applied only for API calls).
 
 Hooks (applied only for API calls). 
 
-## afterUpdateHookClassNameList
-
-Hooks (applied only for API calls). 
-
 ## beforeDeleteHookClassNameList
-
-Hooks (applied only for API calls). 
-
-## afterDeleteHookClassNameList
 
 Hooks (applied only for API calls). 
 
@@ -106,15 +90,7 @@ Hooks (applied only for API calls).
 
 Hooks (applied only for API calls). 
 
-## afterLinkHookClassNameList
-
-Hooks (applied only for API calls). 
-
 ## beforeUnlinkHookClassNameList
 
 Hooks (applied only for API calls). 
-
-## afterUnlinkHookClassNameList
-
-Hooks (applied only for API calls).
 
