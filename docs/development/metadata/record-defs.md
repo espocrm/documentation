@@ -14,11 +14,15 @@ Array of classes to load additional fields for an entity.
 
 Must implement `Espo\Core\FieldProcessing\Loader` interface.
 
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+
 ## listLoaderClassNameList
 
 Array of classes to load additional fields for an entity for the list view.
 
 Must implement `Espo\Core\FieldProcessing\Loader` interface.
+
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
 
 ## saverClassNameList
 
@@ -26,11 +30,15 @@ Array of classes to save additional fields.
 
 Must implement `Espo\Core\FieldProcessing\Saver` interface.
 
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+
 ## selectApplierClassNameList
 
 Array of classes for additional handling of a select query.
 
 Must implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
+
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
 
 ## actions
 
