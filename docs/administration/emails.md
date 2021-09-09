@@ -56,7 +56,7 @@ The administrator also can manage personal email accounts of users (at Administr
 
 **Important**: By default, regular users don’t have **access** to personal email accounts. Administrator needs to allow access to *Personal Email Accounts* scope in Roles.
 
-**Important**: This is required to have the email functionality working properly. User records need to have their email address (or multiple addresses) set in the *Email* field. Only administrator can change the *Email* field for users.
+**Important**: This is required to have the email functionality working properly. User records need to have their email address (or multiple addresses) set in the *Email* field. Only administrator can change the *Email* field for users. It's supposed that the user's email address is the same as the email address of the user's personal email account.
 
 ## Email Filters
 
