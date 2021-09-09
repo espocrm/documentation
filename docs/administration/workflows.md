@@ -268,9 +268,11 @@ Available placeholders:
 
 #### Handling HTTP response
 
-Available since Advanced Pack v2.6.0.
+Available as of Advanced Pack v2.6.0.
 
 A response body of a sent HTTP request will be stored in the formula variable `_lastHttpResponseBody`. This variable can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
+
+It's also possible to access the last http response body with the function `workflow\lastHttpResponseBody()` (as of v2.8.6).
 
 Example: A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same workflow rule and specify a formula script:
 
@@ -283,7 +285,7 @@ Note: Within a BPM process *$_lastHttpResponseBody* variable is available only w
 
 ### Execute Formula Script
 
-Available since Advanced Pack v2.6.0.
+Available as of Advanced Pack v2.6.0.
 
 Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next workflow actions or BPM process.
 
