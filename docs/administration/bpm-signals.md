@@ -44,7 +44,7 @@ Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) must be replaced by
 * `relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*)
 * `unrelate.ENTITY_TYPE.ID.LINK_NAME` – record unrelated from another record (only for *many-to-many*)
 * `unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – (only for *many-to-many*)
-* `createRelated.ENTITY_TYPE.ID.LINK_NAME` – created celated record, one-to-many relationship, e.g. Opportunity created for Account
+* `createRelated.ENTITY_TYPE.ID.LINK_NAME` – created related record, one-to-many relationship, e.g. Opportunity created for Account
 * `createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE` – when created a record related through parent, e.g. Meeting created for Account
 * `streamPost.ENTITY_TYPE.ID` – when somebody posted in stream
 
