@@ -7,7 +7,7 @@ To define a custom Scheduled Job, create a file `custom/Espo/Custom/Jobs/YourJob
 
 namespace Espo\Custom\Jobs;
 
-use Espo\Core\Jobs\JobDataLess;
+use Espo\Core\Job\JobDataLess;
 
 class YourJobName implements JobDataLess
 {
