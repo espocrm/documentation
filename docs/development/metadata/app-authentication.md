@@ -12,12 +12,6 @@ Array of hook class names. Fired once logging in is failed. Should implement `Es
 
 **Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
 
-## onFailSecondStepHookClassNameList
-
-Array of hook class names. Fired once second step logging in is failed. Should implement `Espo\Core\Authentication\Hook\OnResult` interface.
-
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
-
 ## onSuccessHookClassNameList
 
 Array of hook class names. Fired once logging in is success (not by auth token). Should implement `Espo\Core\Authentication\Hook\OnResult` interface.
