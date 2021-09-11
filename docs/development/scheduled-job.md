@@ -7,16 +7,16 @@ To define a custom Scheduled Job, create a file `custom/Espo/Custom/Jobs/YourJob
 
 namespace Espo\Custom\Jobs;
 
-use Espo\Core\Jobs\Job;
+use Espo\Core\Jobs\JobDataLess;
 
-class YourJobName implements Job
+class YourJobName implements JobDataLess
 {
     // Pass dependencies through the constructor using DI.
     public function __construct()
     {
     }
     
-    public function run() : void 
+    public function run(): void 
     {	 
 	// Write your logic here.
     }	 
