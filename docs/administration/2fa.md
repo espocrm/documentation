@@ -20,3 +20,9 @@ Next time, when you login to EspoCRM, you will need to enter your username & pas
 If you are not an administrator, you need to contact the administrator to ask them to disable 2FA for your user account.
 
 If you are an administrator, the only option is to disable 2FA globally by setting `'auth2FA' => false` in `data/config.php`.
+
+## Authentication via Email
+
+When the Email 2FA is used, after a user entered valid username and password a code is sent to their email address. Then the user needs to enter that code to log in to Espo.
+
+It's highly recommended for users to use a non-primary email address for 2FA. A user should have at least two email addresses (set by admin).
