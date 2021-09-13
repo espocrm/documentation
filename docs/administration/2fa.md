@@ -21,7 +21,7 @@ If you are not an administrator, you need to contact the administrator to ask th
 
 If you are an administrator, the only option is to disable 2FA globally by setting `'auth2FA' => false` in `data/config.php`.
 
-## Authentication via Email
+## Authentication via email
 
 When the Email 2FA is used, after a user entered valid username and password a code is sent to their email address. Then the user needs to enter that code to log in to Espo.
 
