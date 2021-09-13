@@ -1,6 +1,9 @@
 # 2-Factor Authentication
 
-EspoCRM supports [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) 2-factor authentication (since version 5.7.0).
+EspoCRM supports the following 2-factor authentication methods: 
+
+* [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) (as of 5.7.0)
+* Email (as of 7.0.0)
 
 Administrator needs to enable 2FA at Administration > Authentication. Then users can enable 2FA for their accounts.
 
