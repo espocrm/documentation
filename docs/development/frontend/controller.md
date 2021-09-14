@@ -96,20 +96,20 @@ define('custom:views/account/test', ['view'], function (Dep) {
         data: function () {
             return {
                 id: this.options.id,
-                name: this.model.get('name')
+                name: this.model.get('name'),
             }
         },
 
         setup: function () {
             this.wait(
-                this.getModelFactory().create('Account')
-                .then(
-                    function (model) {
-                        this.model = model;
-                        model.id = this.options.id;
-                        return model.fetch();
-                    }.bind(this)
-                )
+                this.getModelFactory()
+                .create('Account')
+                .then(model => {
+                    this.model = model;
+                    model.id = this.options.id;
+                    
+                    return model.fetch();
+                })
             );
         },
         
