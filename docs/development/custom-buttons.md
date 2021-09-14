@@ -55,7 +55,9 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
             this.controlButtonVisibility();
             
             this.view.listenTo(
-                this.view.model, 'change:status', this.controlButtonVisibility.bind(this)
+                this.view.model,
+                'change:status',
+                this.controlButtonVisibility.bind(this)
             );
         },
 
@@ -121,7 +123,9 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
             this.controlActionVisibility();
             
             this.view.listenTo(
-                this.view.model, 'change:status', this.controlActionVisibility.bind(this)
+                this.view.model,
+                'change:status',
+                this.controlActionVisibility.bind(this)
             );
         },
 
