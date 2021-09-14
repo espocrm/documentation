@@ -51,9 +51,9 @@ define('custom:some-handler', [], function () {
         process: function () {
             // Do something with view.
 
-            this.listenTo(this.view, 'after:render', function () {
+            this.listenTo(this.view, 'after:render', () => {
                 // Do something with view after render.
-            }, this);
+            });
         },
     });
 
