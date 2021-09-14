@@ -44,13 +44,16 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
    return Dep.extend({
 
         actionSomeName: function (data, e) {
-            Espo.Ajax.getRequest('Lead/' + this.view.model.id).then(function (response) {
-                console.log(response);
-            });
+            Espo.Ajax
+                .getRequest('Lead/' + this.view.model.id)
+                .then(response => {
+                    console.log(response);
+                });
         },
 
         initSomeName: function () {
             this.controlButtonVisibility();
+            
             this.view.listenTo(
                 this.view.model, 'change:status', this.controlButtonVisibility.bind(this)
             );
@@ -59,9 +62,11 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
         controlButtonVisibility: function () {
             if (~['Converted', 'Dead', 'Recycled'].indexOf(this.view.model.get('status'))) {
                 this.view.hideHeaderActionItem('someName');
-            } else {
-                this.view.showHeaderActionItem('someName');
+                
+                return;
             }
+
+            this.view.showHeaderActionItem('someName');
         },
    });
 });
@@ -105,13 +110,16 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
    return Dep.extend({
 
         actionTest: function (data, e) {
-            Espo.Ajax.getRequest('Lead/' + this.view.model.id).then(function (response) {
-                console.log(response);
-            });
+            Espo.Ajax
+                .getRequest('Lead/' + this.view.model.id)
+                .then(response => {
+                    console.log(response);
+                });
         },
 
         initTest: function () {
             this.controlActionVisibility();
+            
             this.view.listenTo(
                 this.view.model, 'change:status', this.controlActionVisibility.bind(this)
             );
@@ -120,9 +128,11 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
         controlActionVisibility: function () {
             if (~['Converted', 'Dead', 'Recycled'].indexOf(this.view.model.get('status'))) {
                 this.view.hideActionItem('test');
-            } else {
-                this.view.showActionItem('test');
+                
+                return;
             }
+
+            this.view.showActionItem('test');
         },
    });
 });
