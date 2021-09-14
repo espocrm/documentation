@@ -28,7 +28,9 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
 
             // invoke controlFields method every time assignedUserId gets changed
             this.recordView.listenTo(
-                this.model, 'change:assignedUserId', this.controlFields.bind(this)
+                this.model,
+                'change:assignedUserId',
+                this.controlFields.bind(this)
             );
         },
 
@@ -48,18 +50,19 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
                 ]);
 
                 this.recordView.showPanel('activities');
+                
+                return;
             }
-            else {
-                this.recordView.hideField('sicCode');
 
-                this.recordView.setFieldNotRequired('type');
-                this.recordView.setFieldNotReadOnly('teams');
-                this.recordView.setFieldOptionList('type', [
-                    'Test',
-                ]);
+            this.recordView.hideField('sicCode');
 
-                this.recordView.hidePanel('activities');
-            }
+            this.recordView.setFieldNotRequired('type');
+            this.recordView.setFieldNotReadOnly('teams');
+            this.recordView.setFieldOptionList('type', [
+                'Test',
+            ]);
+
+            this.recordView.hidePanel('activities');
         },
     });
 });
