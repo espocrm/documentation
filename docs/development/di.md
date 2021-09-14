@@ -200,7 +200,7 @@ Using setter injections may be reasonable when you are extending from an existin
 
 Important: Only services can be injected via setters.
 
-Note: It's not recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
+Note: It's not a recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
 
 ### Manual instantiating
 
