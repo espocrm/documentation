@@ -24,8 +24,8 @@ The Contanier contains services. These services are supposed to be used in multi
 
 Container services are defined:
 
+* in [metadata](metadata.md) (app > containerServices);
 * by loader classes (in `Espo\Core\Loaders` namespace);
-* in [metadata](metadata.md) (app > containerServices).
 
 Note: The best practice is not to require the *container* in your classes, and never use it directly. A specific service can be required in a constructor or with Aware interface.
 
@@ -44,12 +44,20 @@ If you need to define your custom container services, do it in metadata. In your
 * `application/Espo/Modules/{YourModule}/Resources/metadata/app/containserServices.json`;
 * `custom/Espo/Custom/Resources/metadata/app/containserServices.json`.
 
+When defining in metadata there's 2 options:
+
+* specify a class for a service;
+* specify a loader that loads a service (the loader should implement `Espo\Core\Container\Loader` interface).
+
 A definition example:
 
 ```json
 {
-    "myService": {
-        "className": "Espo\\Modules\\MyModule\\MyService"
+    "myService1": {
+        "className": "Espo\\Modules\\MyModule\\MyService1"
+    },
+    "myService2": {
+        "loaderClassName": "Espo\\Modules\\MyModule\\MyService2Loader"
     }
 }
 ```
@@ -64,7 +72,7 @@ namespace Espo\Modules\MyModule;
 
 use Espo\Core\ORM\EntityManager;
 
-class MyService
+class MyService1
 {
     private $entityManager;
 
