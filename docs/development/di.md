@@ -258,7 +258,7 @@ class SomeTypeFactory
 
 ```
 
-It's also possible to use a binding container. More info below.
+It's also possible to pass a binding container when creating with the injectable factory. More info below.
 
 ## Binding
 
