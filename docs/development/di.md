@@ -87,7 +87,7 @@ If there's no matching service for a parameter but a type hint is a class, then 
 
 ## Injectable factory
 
-Injectable Factory creates objects by a given class names resolving dependencies. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
+The Injectable Factory creates objects by a given class names. It resolves and injects class dependencies. The Injectable Factory is available as a service in the Container. That means that *injectableFactory* can be required as a dependency.
 
 Requiring *injectableFactory* as a dependency:
 
