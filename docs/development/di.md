@@ -278,7 +278,7 @@ Available as of v6.1.0.
 
 There is the ability to bind interfaces to implementations and bind parameter names to specific values. Binding is used for resolving dependencies passed through a constructor.
 
-Binding can be processed in the `Binding` classes in every module and in *Custom* namespace:
+Binding can be processed in the `Binding` classes in every module and in the *Custom* namespace:
 
 * `Espo\Modules\{ModuleName}\Binding`
 * `Espo\Custom\Binding`
