@@ -10,9 +10,11 @@ namespace Espo\Custom\Core\Formula\Functions\StringGroup;
 
 use Espo\Core\Exceptions\Error;
 
+use stdClass;
+
 class MyContainsType extends \Espo\Core\Formula\Functions\Base
 {
-    public function process(\StdClass $item)
+    public function process(stdClass $item)
     {
         $args = $this->fetchArguments($item);
         
