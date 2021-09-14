@@ -54,7 +54,7 @@ A definition example:
 }
 ```
 
-Needed dependencies will be passed to a class constructor. Class constructor parameter names and type hinting will be used (via reflection) to detect dependencies.
+Needed dependencies will be passed to a class constructor. Parameter type hinting and binding (processed on application start) will be used (via reflection) to detect dependencies.
 
 Example:
 
@@ -118,7 +118,7 @@ Resolving process:
 
 * Tries to resolve by binding (see below about binding); exit if succcess;
 * Tries to resolve by a parameter name, assuming that parameter name matches a service name; exit if succcess;
-* Creates a new instance if type hind is a class.
+* Creates a new instance if type hint is a class.
 
 If there's no service with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
 
@@ -251,26 +251,6 @@ class SomeTypeFactory
 ```
 
 It's also possible to use a binding container. More info below.
-
-### Classes created by injectableFactory
-
-The following classes are created by *injectableFactory*:
-
-* ApplicationRunners - `Espo\Core\ApplicationRunners`
-* Controllers - `Espo\Controllers`
-* Services - `Espo\Services`
-* Hooks - `Espo\Hooks`
-* Jobs - `Espo\Jobs`
-* EntryPoints - `Espo\EntryPoints`
-* Repositories - `Espo\Repositories`
-* SelectManagers - `Espo\SelectManagers`
-* Notificators - `Espo\Notificators`
-* Acl - `Espo\Acl`
-* Formula Functions
-* Cleanup - defined in metadata: app > cleanup
-* AppParams - defined in metadata: app > appParams
-
-And many others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
 
 ## Binding
 
