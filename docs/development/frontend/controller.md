@@ -103,13 +103,13 @@ define('custom:views/account/test', ['view'], function (Dep) {
         setup: function () {
             this.wait(
                 this.getModelFactory()
-                .create('Account')
-                .then(model => {
-                    this.model = model;
-                    model.id = this.options.id;
-                    
-                    return model.fetch();
-                })
+                    .create('Account')
+                    .then(model => {
+                        this.model = model;
+                        model.id = this.options.id;
+
+                        return model.fetch();
+                    })
             );
         },
         
