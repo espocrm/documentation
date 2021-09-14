@@ -278,12 +278,12 @@ Available as of v6.1.0.
 
 There is the ability to bind interfaces to implementations and bind parameter names to specific values. Binding is used for resolving dependencies passed through a constructor.
 
-Binding can be processed in the `Binding` classes in every module and in the *Custom* namespace:
+Binding can be processed in the `Binding` classes in every module as well as in the *Custom*:
 
 * `Espo\Modules\{ModuleName}\Binding`
 * `Espo\Custom\Binding`
 
-Note: A module order parameter is used when binding is processed. Meaning that modules with a lower order value will be processed first.
+Note: The module order parameter is used when binding is processed. Meaning that modules with a lower order value will be processed first.
 
 CLI command to print all bindings:
 
