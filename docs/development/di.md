@@ -24,7 +24,7 @@ The Contanier contains services. These services are supposed to be used in multi
 
 Container services are defined:
 
-* by loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
+* by loader classes (in `Espo\Core\Loaders` namespace);
 * in [metadata](metadata.md) (app > containerServices).
 
 Note: The best practice is not to require the *container* in your classes, and never use it directly. A specific service can be required in a constructor or with Aware interface.
