@@ -32,7 +32,7 @@
 * [Currency](administration/currency.md)
 * [Dashboards](administration/dashboards.md)
 * Authentication
-  * [2-factor authentication](administration/2fa.md)
+  * [2 factor authentication](administration/2fa.md)
   * LDAP
     * [Authorization](administration/ldap-authorization.md)
     * [Active Directory](administration/ldap-authorization-for-ad.md)
