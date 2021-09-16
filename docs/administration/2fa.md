@@ -4,6 +4,7 @@ EspoCRM supports the following 2-factor authentication methods:
 
 * [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) (as of 5.7.0)
 * Email (as of 7.0.0)
+* SMS (as of 7.0.0)
 
 Administrator needs to enable 2FA at Administration > Authentication. Then users can enable 2FA for their accounts.
 
@@ -26,3 +27,7 @@ If you are an administrator, the only option is to disable 2FA globally by setti
 When the Email 2FA is used, after a user entered valid username and password a code is sent to their email address. Then the user needs to enter that code to log in to Espo.
 
 It's highly recommended for users to use a non-primary email address for 2FA. A user should have at least two email addresses (set by admin).
+
+## Authentication via SMS
+
+Requires having an implementation for your SMS provider. EspoCRM is not shipped with implementations.
