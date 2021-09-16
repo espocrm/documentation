@@ -16,7 +16,7 @@ Create `custom/Espo/Custom/Resources/metadata/recordDefs/Lead.json`:
 
 ```json
 {
-    "duplicateWhereBuilderClassName": "Espo\Custom\Classes\DuplicateWhereBuilders\Lead"
+    "duplicateWhereBuilderClassName": "Espo\\Custom\\Classes\\DuplicateWhereBuilders\\Lead"
 }
 ```
 
