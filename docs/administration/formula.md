@@ -1131,6 +1131,7 @@ Available since v6.0.0.
 * [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
 * [ext\email\send](#extemailsend)
 * [ext\email\applyTemplate](#extemailapplytemplate)
+* [ext\sms\send](#extsmssend)
 * [ext\pdf\generate](#extpdfgenerate)
 
 #### ext\account\findByEmailAddressDomain
