@@ -55,7 +55,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
         "params": {
             "controller": "Account",
             "action": "test",
-            "order": 0
+            "order": 100
         }
     }
 }
