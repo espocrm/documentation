@@ -80,7 +80,7 @@ To disable export regardless ACL.
 
 ## updateDuplicateCheck
 
-Boolean parameter. If true, then duplicate checking will be processed while updating a record. By default it's processed only when creating a new record.
+A boolean parameter. If true, then duplicate checking will be processed while updating a record. By default it's processed only when creating a new record.
 
 ## beforeReadHookClassNameList
 
