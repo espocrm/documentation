@@ -77,6 +77,7 @@ Disabled by default. Can be enabled in metadata: recordDefs > {entityType} > upd
 {
     "updateDuplicateCheck": true
 }
+```
 
 ## Legacy way
 
