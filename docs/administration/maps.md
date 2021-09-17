@@ -43,13 +43,13 @@ Usage (in PDF Template):
 {{googleMapsImage}}
 ```
 
-Printing specific address field:
+Printing a specific address field:
 
 ```
 {{googleMapsImage field='shippingAddress'}}
 ```
 
-Printing specific address:
+Printing a specific address:
 
 ```
 {{googleMapsImage city='New York' country='United States'}}
