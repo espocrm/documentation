@@ -69,8 +69,14 @@ class Lead implements WhereBuilder
 }
 ```
 
+## Checking for duplicated while update
 
+Disabled by default. Can be enabled in metadata: recordDefs > {entityType} > updateDuplicateCheck.
 
+```json
+{
+    "updateDuplicateCheck": true
+}
 
 ## Legacy way
 
