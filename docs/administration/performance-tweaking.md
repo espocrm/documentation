@@ -29,7 +29,7 @@ It's recommended to set a value that is about 70% of your RAM.
 
 #### sort_buffer_size
 
-You can consider increasing this param to speed up ORDER BY or GROUP BY. [See more](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sort_buffer_size).
+You may consider increasing this param to speed up ORDER BY or GROUP BY. [See more](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sort_buffer_size).
 
 #### innodb_log_file_size
 
