@@ -31,7 +31,7 @@ Parameters:
 * *Execute in idle* − is recommended if you have a big bunch of records to be imported; import will be processed via cron; the status will be set to 'Complete' when the import process is finished.
 * *Skip searching for duplicates* − will make the import faster.
 * *Silent mode* − the majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will make the import faster.
-* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import. (since v5.10.0)
+* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import. (as of v6.0.0)
 
 Click *Next* button to preceed to the _Step 2_.
 
@@ -69,7 +69,7 @@ This will permanently remove all imported records that were recognized as duplic
 
 #### New import with same params
 
-Since version 5.10.0.
+As of v6.0.0.
 
 This will create a new import with the same parameters.
 
@@ -79,7 +79,7 @@ When you import Contacts, Leads or Accounts, you can add them to some target lis
 
 ## Console commands
 
-Since version 6.0.0.
+As of v6.0.0.
 
 Run import:
 
