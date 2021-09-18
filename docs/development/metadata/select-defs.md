@@ -35,6 +35,8 @@ Example:
 }
 ```
 
+In the example, when the *subject* attribute is requested, the *name* attribute will be selected.
+
 ## whereItemConverterClassNameMap
 
 Implementations for custom where items.
