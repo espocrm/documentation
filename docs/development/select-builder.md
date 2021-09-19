@@ -2,7 +2,7 @@
 
 Available as of v7.0.0.
 
-The Select Builder builds select queries for the ORM. It applies search parameters (passed from frontend), access control restrictions, text filters, bool filters, primary filters. It's utilized as a layer over the ORM, since the ORM does not know anything about access control, predefined filters. It does not know how to handle text filters. As well as it does not understand the format of search parameters passed from the frontend.
+The Select Builder builds select queries for the ORM. It applies search parameters (passed from the frontend), access control restrictions, text filters, bool filters, primary filters. It's utilized as a layer over the ORM, since the ORM does not know anything about access control, predefined filters. It does not know how to handle text filters. As well as it does not understand the format of search parameters passed from the frontend.
 
 See all available methods in the class `Espo\Core\Select\SelectBuilder`.
 
