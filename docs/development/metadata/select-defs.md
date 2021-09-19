@@ -10,7 +10,7 @@ Class names for access control filters. Classes should implement `Espo\Core\Sele
 
 Default filters are available at `Espo\Core\Select\AccessControl\Filters`.
 
-Note: `mandotory` filter is applied for all users. If you need to apply some a
+Note: `mandatory` filter is applied for all users. Use if you need to apply some access restrictions for all users (including admin).
 
 ## boolFilterClassNameMap
 
