@@ -59,4 +59,4 @@ A resolver is responsible for choosing an access filter. Should implement `Espo\
 
 ## textFilterClassName
 
-Processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default `Espo\Core\Select\Text\DefaultFilter` is used.
+A class that processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default `Espo\Core\Select\Text\DefaultFilter` is used.
