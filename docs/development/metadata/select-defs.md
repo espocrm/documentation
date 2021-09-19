@@ -56,3 +56,7 @@ Classes should implement `Espo\Core\Select\Where\ItemConverter` interface.
 ## accessControlFilterResolverClassName
 
 A resolver is responsible for choosing an access filter. Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
+
+## textFilterClassName
+
+Processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default `Espo\Core\Select\Text\DefaultFilter` is used.
