@@ -18,7 +18,6 @@ Create a file `custom/Espo/Custom/TemplateHelpers/MyHelper.php`:
 
 ```php
 <?php
-
 namespace Espo\Custom\TemplateHelpers;
 
 use Espo\Core\Htmlizer\Helper;
