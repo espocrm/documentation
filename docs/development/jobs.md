@@ -48,7 +48,7 @@ As of v7.0:
 namespace Espo\Custom\MyJobs;
 
 use Espo\Core\Job\Job;
-use Espo\Core\Job\JobData;
+use Espo\Core\Job\Data;
 
 class MyJob implements Job
 {
@@ -56,7 +56,7 @@ class MyJob implements Job
      {
      }
      
-     public function run(JobData $data): void
+     public function run(Data $data): void
      {
          // job logic here
      }
