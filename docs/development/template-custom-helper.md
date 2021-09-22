@@ -50,6 +50,14 @@ class GoogleMaps implements Helper
 }
 ```
 
+Clear cache.
+
+Then in a template you can use (here `name` refers to the field *name*):
+
+```
+{{myHelper name color='#bd318e'}}
+```
+
 ## Legacy way
 
 Available since version 5.8.0.
