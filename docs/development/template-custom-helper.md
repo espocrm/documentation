@@ -1,5 +1,57 @@
 # Custom Template Helpers
 
+Helpers works for PDF templates and system email templates (Administration > Template Manager).
+
+
+## As of v7.0
+
+
+Create a file `custom/Espo/Custom/Resources/metadata/app/templateHelpers.json`:
+
+```json
+{
+    "myHelper": "Espo\\Custom\\TemplateHelpers\\MyHelper"
+}
+```
+
+Create a file `custom/Espo/Custom/TemplateHelpers/MyHelper.php`:
+
+```php
+<?php
+
+namespace Espo\Custom\TemplateHelpers;
+
+use Espo\Core\Htmlizer\Helper;
+use Espo\Core\Htmlizer\Helper\Data;
+use Espo\Core\Htmlizer\Helper\Result;
+
+use Espo\Core\Utils\Metadata;
+use Espo\Core\Utils\Config;
+use Espo\Core\Utils\Log;
+
+class GoogleMaps implements Helper
+{
+
+    public function __construct(
+        // Pass needed dependencies.
+    ) {
+
+    }
+    
+    public function render(Data $data): Result
+    {
+        $color = $data->getOption('color');        
+        $text = $data->getArgumentList()[0] ?? '';        
+        
+        return Result::createSafeString(
+            "<span style=\"color: {$color};\">" . $text . "</span>"
+        );
+    }
+}
+```
+
+## Legacy way
+
 Available since version 5.8.0.
 
 For PDF templates and system email templates.
