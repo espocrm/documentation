@@ -25,11 +25,7 @@ use Espo\Core\Htmlizer\Helper;
 use Espo\Core\Htmlizer\Helper\Data;
 use Espo\Core\Htmlizer\Helper\Result;
 
-use Espo\Core\Utils\Metadata;
-use Espo\Core\Utils\Config;
-use Espo\Core\Utils\Log;
-
-class GoogleMaps implements Helper
+class MyHelper implements Helper
 {
     public function __construct(
         // Pass needed dependencies.
