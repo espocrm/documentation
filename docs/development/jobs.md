@@ -48,7 +48,7 @@ As of v7.0:
 namespace Espo\Custom\MyJobs;
 
 use Espo\Core\Job\Job;
-use Espo\Core\Job\Data;
+use Espo\Core\Job\Job\Data;
 
 class MyJob implements Job
 {
