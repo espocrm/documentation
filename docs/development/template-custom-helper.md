@@ -52,10 +52,10 @@ class GoogleMaps implements Helper
 
 Clear cache.
 
-Then in a template you can use (here `name` refers to the field *name*):
+Then in a template you can use:
 
 ```
-{{myHelper name color='#bd318e'}}
+{{myHelper 'some text' color='#bd318e'}}
 ```
 
 ## Legacy way
