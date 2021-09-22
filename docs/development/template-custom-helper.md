@@ -31,7 +31,6 @@ use Espo\Core\Utils\Log;
 
 class GoogleMaps implements Helper
 {
-
     public function __construct(
         // Pass needed dependencies.
     ) {
