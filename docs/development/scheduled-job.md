@@ -47,3 +47,9 @@ Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/en_US
 To make the changes applied, clear cache at Administration.
 
 Now, you can create a scheduled job at Administration > Scheduled Jobs.
+
+You can also run your job *from CLI*:
+
+```
+bin/command run-job YourJobName
+```
