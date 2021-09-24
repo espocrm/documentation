@@ -67,4 +67,9 @@ User has been authenticated and automatically created in the EspoCRM.
 
 ### Error: 0x31 (Invalid credentials; 80090308: LdapErr: DSID-0C09041C, comment: AcceptSecurityContext error, data 52e, v4563)
 
-This error occurs when the wrong `Account Canonical Form` is specified. The correct value for Active Directory is `Principal`. For more details, see the [documentaion](ldap-authorization-for-ad.md).
+This error occurs when the wrong `Account Canonical Form` or `Username Attribute` are specified.
+The correct values are:
+- Account Canonical Form: `Principal` or `Username`. 
+- Username Attribute: `sAMAccountName`
+
+The full Active Directory configuration, see in the [documentaion](ldap-authorization-for-ad.md).
