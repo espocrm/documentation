@@ -12,7 +12,7 @@
 
 Then you can build by running `grunt`.
 
-To build a proper *config.php* file and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in the browser. Asuming you have your webserver properly [configured](../administration/server-configuration.md).
+To build a proper *config.php* file and populate database you can run installation. Open `http(s)://{YOUR_CRM_URL}/install` location in the browser. It's assumed that your webserver is properly [configured](../administration/server-configuration.md).
 
 Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
