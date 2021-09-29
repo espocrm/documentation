@@ -5,11 +5,16 @@
 1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository to your local computer.
 2. Change to the project's root directory: `cd path/to/espocrm`.
 3. Install [Composer](https://getcomposer.org/doc/00-intro.md) (v2.0 or greater).
-4. Run `composer install` if Composer is installed globally (or `php composer.phar install` if locally).
+4. Install NPM.
+5. Install [Grunt](https://gruntjs.com/installing-grunt).
+6. Run `composer install` if Composer is installed globally (or `php composer.phar install` if locally).
+7. Run `npm install`.
 
-Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
+Then you can build by running `grunt`.
 
 To build a proper *config.php* file and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in the browser. Asuming you have your webserver properly [configured](../administration/server-configuration.md).
+
+Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
 Then open `data/config.php` file and add:
 
@@ -25,11 +30,8 @@ Branches:
 
 ### Building
 
-You need to have nodejs and Grunt CLI installed.
-
 1. Change to the project's root directory.
-2. Install project dependencies with `npm install`.
-3. Run Grunt with `grunt`.
+2. Run Grunt with `grunt`.
 
 The build will be created in the `build` directory.
 
