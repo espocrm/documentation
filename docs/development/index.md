@@ -29,6 +29,7 @@
   * [App params](app-params.md)
   * [Jobs](jobs.md)
   * [Email sending](email-sending.md)
+  * [Calculated fields](calculated-fields.md)
 
 ### Frontend
 
