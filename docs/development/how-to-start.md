@@ -22,12 +22,6 @@ Then open `data/config.php` file and add:
 
 Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
-### Branches
-
-* *hotfix/** – upcoming maintenance release; fixes should be pushed to this branch;
-* *master* – develop branch; new features should be pushed to this branch;
-* *stable* – last stable release.
-
 ### Building
 
 1. Change to the project's root directory.
@@ -36,6 +30,12 @@ Note: Some dependencies require php extensions that you might don't have install
 The build will be created in the `build` directory.
 
 Note: By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
+
+### Branches
+
+* *hotfix/** – upcoming maintenance release; fixes should be pushed to this branch;
+* *master* – develop branch; new features should be pushed to this branch;
+* *stable* – last stable release.
 
 ### Upgrade packages
 
