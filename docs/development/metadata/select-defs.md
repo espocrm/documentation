@@ -71,7 +71,7 @@ Example:
 
 ```json
 {
-    "whereItemConverterClassNameMap": {
+    "orderItemConverterClassNameMap": {
         "someFieldName": "Espo\\Custom\\Classes\\Select\\MyEntityType\\Order\\ItemConverters\\MyConverter"
     }
 }
