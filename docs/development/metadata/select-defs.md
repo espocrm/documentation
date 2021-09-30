@@ -63,7 +63,7 @@ A class that processes the text filter search. Should implement `Espo\Core\Selec
 
 ## orderItemConverterClassNameMap
 
-An order converter converts an ordered passed from the frontend to an order acceptable for ORM. One can implement a custom converer for a specific field. E.g. make an address field to be ordered by a city (when a user order by the address, it will order by city).
+An order converter converts order parameters passed from the frontend to an order data acceptable for ORM. One can implement a custom converer for a specific field. E.g. make an address field be ordered by a city (when a user orders by the address column, it will actually order by city).
 
 Classes should implement `Espo\Core\Select\Order\ItemConverter` interface.
 
