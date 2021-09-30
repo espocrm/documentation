@@ -60,3 +60,19 @@ A resolver is responsible for choosing an access filter. Should implement `Espo\
 ## textFilterClassName
 
 A class that processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default `Espo\Core\Select\Text\DefaultFilter` is used.
+
+## orderItemConverterClassNameMap
+
+An order converter converts an ordered passed from the frontend to an order acceptable for ORM. One can implement a custom converer for a specific field. E.g. make an address field to be ordered by a city (when a user order by the address, it will order by city).
+
+Classes should implement `Espo\Core\Select\Order\ItemConverter` interface.
+
+Example: 
+
+```json
+{
+    "whereItemConverterClassNameMap": {
+        "someFieldName": "Espo\\Custom\\Classes\\Select\\MyEntityType\\Order\\ItemConverters\\MyConverter"
+    }
+}
+```
