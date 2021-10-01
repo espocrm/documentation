@@ -63,7 +63,7 @@ use Espo\Core\{
 
 class MyController
 {
-    protected $someDependency;
+    private $someDependency;
 
     public function __construct(SomeDependency $someDependency)
     {
@@ -81,7 +81,7 @@ class MyController
             json_encode($someData)
         );
         
-        // You can either write data to response or return from an action method.
+        // You can either write data to the response or use return
         // Returned value will be encoded and written to the reponse.
     }
     
