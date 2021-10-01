@@ -70,20 +70,29 @@ class MyController
         $this->someDependency = $someDependency;
     }
     
-    public function getActionDoSomething(Request $request, Response $response)
+    public function getActionDoSomething(Request $request, Response $response): void
     {
         $id = $request->getRouteParam('id'); // '001'
         
         // Assuming the request POST api/v1/HelloWorld/someName has been sent,
         // a route parameter 'id' will equal '001'.
+        
+        $response->writeBody(
+            json_encode($someData)
+        );
+        
+        // You can either write data to response or return from an action method.
+        // Returned value will be encoded and written to the reponse.
     }
     
-    public function postActionHelloWrold(Request $request, Response $response)
+    public function postActionHelloWrold(Request $request, Response $response): void
     {
         $name = $request->getRouteParam('name'); 
          
         // Assuming the request GET api/v1/Hello/test/001 has been sent,
         // a route parameter 'name' will equal 'someName'.
+        
+        $response->writeBody('true');
     }
 }
 ```
