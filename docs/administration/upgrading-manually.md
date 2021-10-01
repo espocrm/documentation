@@ -3,7 +3,7 @@
 
 Important: Only for very exprerienced users. It's **not recommended** way to upgrade. We do not guarantee any success if you decide to upgrade this way.
 
-If your environment is configured properly, the regular upgrade process via CLI should work fine. We really do not recommend to upgrade manually.
+If your environment is configured properly, the regular upgrade process via CLI should work fine.
 
 In some cases it can be more reasonable to install a fresh instance, then copy your `custom` directory, install all needed extensions.
 
