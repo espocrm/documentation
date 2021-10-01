@@ -198,10 +198,8 @@ Clear cache (Administration > Clear Cache).
 
 namespace Espo\Custom\Controllers;
 
-use Espo\Core\{
-    Api\Request,
-    Api\Response,
-};
+use Espo\Core\Api\Request;
+use Espo\Core\Api\Response;
 
 class MyController
 {   
