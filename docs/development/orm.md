@@ -442,7 +442,7 @@ $opportunityList = $entityManager
     ->find();
 ```
 
-```
+```php
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
@@ -502,7 +502,7 @@ $collection = $entityManager
 
 #### Condition
 
-Available as of v6.2.0.
+Available as of v7.0.
 
 ```php
 use Espo\ORM\Query\Part\Condition as Cond;
@@ -601,7 +601,6 @@ $contactList = $entityManager
 ### Group By
 
 ```php
-
 $query = $entityManager
     ->getQueryBuilder()
     ->select()
@@ -619,7 +618,6 @@ $pdoStatement = $entityManager
     ->execute($query);
 
 $rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
-
 ```
 
 ### Additional Params
@@ -628,7 +626,7 @@ $rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
 
 If STH is set (with `sth` method), the find method will return a collection (instance of `SthCollection`) that doesn't allocate memory for all result data.
 
-```
+```php
 $collection = $entityManager
     ->getRDBRepository('Email')
     ->limit(0, 10000)
@@ -694,9 +692,8 @@ Select:
 ```php
 $selectQuery = $entityManager
     ->getQueryBuilder()
-    ->select()
-    ->from('SomeTable')
     ->select(['column1', 'column2', 'someExpression'])
+    ->from('SomeTable')    
     ->order('column1', 'DESC')
     ->limit(0, 10)
     ->build();
@@ -709,9 +706,8 @@ $pdoStatement = $entityManager
 ```php
 $selectQuery = $entityManager
     ->getQueryBuilder()
-    ->select()
-    ->from('SomeTable')
     ->select('SUM:(someColumn)', 'value')
+    ->from('SomeTable')    
     ->select('anotherColumn')
     ->groupBy('anotherColumn')
     ->build();
