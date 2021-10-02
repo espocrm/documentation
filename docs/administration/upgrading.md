@@ -22,6 +22,7 @@ Note: Upgrading process may take a while. Do not close the terminal until it's f
 2. Disable cron (at Administration > Settings) before upgrading. Enable it back after the upgrade is finished.
 3. Enable *Maintenance Mode* (at Administration > Settings) before upgrading. Disable after the upgrade is finished.
 4. Make sure you have free disk space on the server.
+5. *opcache.enable_cli* parameter in PHP should be set to false (by default it's usually set to false).
 
 ## Additional parameters
 
