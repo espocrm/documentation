@@ -850,6 +850,7 @@ Transaction:
 
 ```php
 $tm = $entityManager->getTransactionManager();
+
 $tm->start();
 
 try {
@@ -867,17 +868,11 @@ Nested transactions:
 $tm = $entityManager->getTransactionManager();
 
 $tm->start();
-
 // do something
-
 $tm->start();
-
 // do something
-
 $tm->commit();
-
 // do something
-
 $tm->commit();
 ```
 
@@ -901,7 +896,7 @@ Locking:
 $entityManager->getTransactionManager()->start();
 
 $entity = $entityManager
-    ->getRepository('SomeTable')
+    ->getRDBRepository('SomeTable')
     ->where(['id' => $id])
     ->forUpdate() // this will lock selected rows until the transaction is finished
     ->findOne();
@@ -927,7 +922,7 @@ $entityManager->getLocker()->commit();
 
 ## Defs
 
-Available as of v6.2.0.
+Available as of v7.0.
 
 ```php
 $defs = $entityManager->getDefs();
