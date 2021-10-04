@@ -46,28 +46,22 @@ See additional parameters [here](upgrading.md#additional-parameters).
 ## Extension
 
 
-Installing or upgrading (as of v5.9.0):
+Installing or upgrading:
 
 ```
 php command.php extension --file="path/to/extension/package.zip"
 ```
 
-Uninstalling (as of v5.9.0):
+Uninstalling:
 
 ```
 php command.php extension -u --name="Extension Name"
 ```
 
-Uninstalling by ID (as of v5.9.0):
+Uninstalling by ID:
 
 ```
 php command.php extension -u --id="extension-ID"
-```
-
-Installing (legacy way):
-
-```
-php extension.php path/to/extension/package.zip
 ```
 
 ## Running job
@@ -86,8 +80,6 @@ php command.php run-job ProcessMassEmail
 ```
 
 ## Version
-
-Since v5.9.0.
 
 Print the current version:
 
