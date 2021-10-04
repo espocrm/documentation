@@ -24,6 +24,8 @@ Note: Upgrading process may take a while. Do not close the terminal until it's f
 4. Make sure you have free disk space on the server.
 5. *opcache.enable_cli* parameter in PHP should be set to false (by default it's usually set to false).
 
+It's recommended to run upgrade either **under the webserver user** (usually *www-data*) or *root* user.
+
 ## Additional parameters
 
 Available parameters (only for advanced users):
