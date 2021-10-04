@@ -8,7 +8,7 @@ Dynamic Logic allows to define conditions making certain fields visible, require
 
 For *Enum*, *Array*, *Multi-Enum*, *Checklist* fields it's, possible to define different sets of options that will be available for the field depending on which condition is met. Note, that the order of option list is taken into account.
 
-For *Varchar* and *Text* fields it's possible to define a regular expression to check whether a value matches a specific pattern (since v7.0.0).
+For *Varchar* and *Text* fields it's possible to define a regular expression to check whether a value matches a specific pattern (as of v7.0).
 
 Dynamic logic can control:
 
@@ -16,7 +16,7 @@ Dynamic logic can control:
 * Required − if the field is required or not;
 * Read-only − if the field read-only or not;
 * Options − conditions that determine which options are available (for Enum, Array, Multi-Enum, Checklist fields);
-* Invalidity − conditions making the field invalid (as of v6.2.0).
+* Invalidity − conditions making the field invalid (as of v7.0).
 
 Conditions are configured through user interface, no coding required.
 
