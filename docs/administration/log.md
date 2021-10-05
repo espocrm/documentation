@@ -12,6 +12,7 @@ In `data/config.php` (or `data/config-internal.php`):
   'logger' => [
     'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR
     'maxFileNumber' => 30,
+    'printTrace' => true, // to print an exception backtrace
   ],
 ```
 
