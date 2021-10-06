@@ -32,7 +32,7 @@ For Ubuntu server, the apache error log is located at `/var/log/apache2/error.lo
 
 In some cases it can be reasonable to enable debug mode for the logger. It will print more information into the log.
 
-To enable debug mode for the loghger, edit the file `data/config.php` (or `data/config-internal.php`) and set the value of the *logger.level* parameter to `DEBUG`:
+To enable debug mode for the loghger, edit the file `data/config-internal.php` (or `data/config.php`) and set the value of the *logger.level* parameter to `DEBUG`:
 
 ```
 'logger' => [
@@ -46,6 +46,8 @@ Don't forget to revert the mode back (`WARNING` or `ERROR`) after the problem is
 ### Backtrace printing
 
 Enablind trace printing will print a backtrace to the log for every thrown exception. Can be very useful for debuging occurred errors.
+
+In `data/config-internal.php` (or `data/config.php`):
 
 ```
 'logger' => [
