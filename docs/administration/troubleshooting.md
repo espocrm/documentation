@@ -17,7 +17,7 @@ In this article:
 
 This is the most **important step** in finding out the problem. There are two main logs you need to check:
 
-* EspoCRM log;
+* EspoCRM [log](log.md);
 * Apache error log.
 
 #### EspoCRM log
@@ -38,7 +38,6 @@ To enable debug mode for the loghger, edit the file `data/config.php` (or `data/
 'logger' => [
     ...
     'level' => 'WARNING',
-    ...
 ]
 ```
 to
@@ -46,11 +45,21 @@ to
 'logger' => [
     ...
     'level' => 'DEBUG',
-    ...
 ]
 ```
 
 Don't forget to revert the mode back after the problem is solved.
+
+### Backtrace printing
+
+Enablind trace printing will print a backtrace to the log for every thrown exception. Can be very useful for debuging occurred errors.
+
+```
+'logger' => [
+    ...
+    'printTrace' => true,
+]
+```
 
 ## Check system requirements
 
