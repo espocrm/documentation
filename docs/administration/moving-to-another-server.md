@@ -33,7 +33,7 @@ First, you have to create a new database with a user in MySQL. To import your da
 
 ### Step 8. Correct EspoCRM configurations
 
-After successfully importing and configuring the server, please correct EspoCRM configurations in the file `ESPOCRM_DIRECTORY/data/config.php`:
+After successfully importing and configuring the server, please correct EspoCRM configurations in the files `data/config-internal.php` and  `data/config.php`:
 
 database connection settings:
 
