@@ -1,4 +1,4 @@
-# Installation by the script
+# Installation by Script
 
 This script automatically installs EspoCRM as a Docker image with NGINX server and MySQL database.
 
