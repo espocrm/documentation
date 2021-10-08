@@ -8,6 +8,7 @@
   * [Nginx](administration/nginx-server-configuration.md)
 * System
   * [Installation](administration/installation.md)
+  * [Installation by script](administration/installation-by-script.md)
   * [Upgrading](administration/upgrading.md)
   * [Extensions](administration/extensions.md)
   * [Troubleshooting](administration/troubleshooting.md)
