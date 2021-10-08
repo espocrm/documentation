@@ -6,9 +6,9 @@ This script automatically installs EspoCRM as a Docker image with NGINX server a
 
 1. Operating system:
 
-    * Ubuntu
-    * Debian
-    * Linux Mint
+* Ubuntu
+* Debian
+* Linux Mint
 
 2. Access via command line.
 
