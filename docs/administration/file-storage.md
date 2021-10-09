@@ -30,7 +30,7 @@ Credentials can be omitted, then they will be read from the environment.
 
 ## Moving existing attachments
 
-After setting up a file storage, all existing attachments will be still stored locally in `data/upload` directory. You can move them manually to the storage and then execute the following SQL query:
+After setting up a file storage, all existing attachments will still be stored locally in `data/upload` directory. You can move them manually to the storage and then execute the following SQL query:
 
 ```sql
 UPDATE `attachment` SET `storage` = '{StorageName}'
