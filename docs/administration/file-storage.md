@@ -36,4 +36,4 @@ After setting up a file storage, all existing attachments will still be stored l
 UPDATE `attachment` SET `storage` = '{StorageName}'
 ```
 
-where '{StorageName}' is a name of the storage, e.g. `AwsS3`.
+where *{StorageName}* is a name of the storage, e.g. `AwsS3`.
