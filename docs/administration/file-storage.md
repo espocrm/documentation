@@ -3,6 +3,12 @@
 By default all uploaded files (attachments) are stored in `data/upload` directory. EspoCRM is shipped with AWS S3 support.
 Developers can add other providers by implementing `Espo\Core\FileStorage\Storage` interface.
 
+When switching to an external file storage it's recommended to disable caching for image thumbs by setting in `data/config.php`:
+
+```
+'thumbImageCacheDisabled' => true',
+```
+
 ## AWS S3
 
 Parameters need to be set in  `data/config-internal.php`:
