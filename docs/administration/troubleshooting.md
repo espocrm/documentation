@@ -18,7 +18,7 @@ In this article:
 This is the most **important step** in finding out the problem. There are two main logs you need to check:
 
 * EspoCRM [log](log.md);
-* Apache error log.
+* Webserver error log.
 
 #### EspoCRM log
 
