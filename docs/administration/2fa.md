@@ -2,7 +2,7 @@
 
 EspoCRM supports the following 2-factor authentication methods: 
 
-* [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) (as of 5.7)
+* TOTP (as of 5.7)
 * Email (as of 7.0)
 * SMS (as of 7.0)
 
@@ -10,7 +10,7 @@ Administrator needs to enable 2FA at Administration > Authentication. Then users
 
 ## TOTP
 
-Time-based One-time Password is a algorithm that generates a one-time password which uses the current time as a source of uniqueness.
+[Time-based One-time Password](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) is a algorithm that generates a one-time password which uses the current time as a source of uniqueness.
 
 **Important**: The server time must be correct. Otherwisy authentication won't work.
 
