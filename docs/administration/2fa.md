@@ -16,7 +16,11 @@ Go to your user profile (from the menu at the top-right corner) and then click *
 
 Next time, when you login to EspoCRM, you will need to enter your username & password, then enter a code from your mobile application.
 
-## If you lost your TOTP key
+## TOTP
+
+**Important**: The server time must be correct. Otherwisy authentication won't work.
+
+### If you lost your TOTP key
 
 If you are not an administrator, you need to contact the administrator to ask them to disable 2FA for your user account.
 
