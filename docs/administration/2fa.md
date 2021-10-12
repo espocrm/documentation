@@ -16,7 +16,7 @@ Administrator needs to enable 2FA at Administration > Authentication. Then users
 
 ### Enabling for user
 
-You need to have an authenticator application installed on your mobile phone (e.g. Google Authenticator).
+You need to have an authenticator application installed on your mobile phone (e.g. [Google Authenticator](https://en.wikipedia.org/wiki/Google_Authenticator)).
 
 Go to your user profile (from the menu at the top-right corner) and then click *Security* button. Then, enable 2FA, enter your current password and after that scan QR-code with your mobile application.
 
