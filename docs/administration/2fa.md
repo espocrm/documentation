@@ -2,9 +2,9 @@
 
 EspoCRM supports the following 2-factor authentication methods: 
 
-* TOTP (as of 5.7)
-* Email (as of 7.0)
-* SMS (as of 7.0)
+* TOTP (as of v5.7)
+* Email (as of v7.0)
+* SMS (as of v7.0)
 
 Administrator needs to enable 2FA at Administration > Authentication. Then users can enable 2FA for their accounts.
 
