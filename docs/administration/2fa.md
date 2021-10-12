@@ -2,23 +2,25 @@
 
 EspoCRM supports the following 2-factor authentication methods: 
 
-* [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) (as of 5.7.0)
-* Email (as of 7.0.0)
-* SMS (as of 7.0.0)
+* [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) (as of 5.7)
+* Email (as of 7.0)
+* SMS (as of 7.0)
 
 Administrator needs to enable 2FA at Administration > Authentication. Then users can enable 2FA for their accounts.
 
-## Enabling for user
+## TOTP
+
+Time-based One-time Password is a algorithm that generates a one-time password which uses the current time as a source of uniqueness.
+
+**Important**: The server time must be correct. Otherwisy authentication won't work.
+
+### Enabling for user
 
 You need to have an authenticator application installed on your mobile phone (e.g. Google Authenticator).
 
 Go to your user profile (from the menu at the top-right corner) and then click *Security* button. Then, enable 2FA, enter your current password and after that scan QR-code with your mobile application.
 
 Next time, when you login to EspoCRM, you will need to enter your username & password, then enter a code from your mobile application.
-
-## TOTP
-
-**Important**: The server time must be correct. Otherwisy authentication won't work.
 
 ### If you lost your TOTP key
 
@@ -32,6 +34,14 @@ When the Email 2FA is used, after a user entered valid username and password a c
 
 It's highly recommended for users to use a non-primary email address for 2FA. A user should have at least two email addresses (set by admin).
 
+### Enabling for user
+
+Go to your user profile (from the menu at the top-right corner) and then click *Security* button. Then, enable 2FA and select *Email* type. Choose an email address (it's highly recommended to choose non-primary one) and then send a code. Then you will need to confirm the code.
+
 ## Authentication via SMS
 
 Requires having an implementation for your SMS provider. EspoCRM is not shipped with implementations.
+
+### Enabling for user
+
+Go to your user profile (from the menu at the top-right corner) and then click *Security* button. Then, enable 2FA and select *SMS* type. Choose a phone number and then send a code. Then you will need to confirm the code.
