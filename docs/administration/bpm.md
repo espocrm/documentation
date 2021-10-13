@@ -24,6 +24,7 @@ In this article:
 * [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
 * [Tracking URLs with BPM](bpm-tracking-urls.md)
 * [Tips](bpm-tips.md)
+* [Configuration](bpm-configuration.md)
 
 ## Process Flowcharts
 
