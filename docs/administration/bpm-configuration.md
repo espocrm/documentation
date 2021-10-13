@@ -13,4 +13,4 @@ If an entity is updated, it will make nodes related to that entity to be checked
 
 ## Pending processing limit
 
-The parameter `bpmnProceedPendingMaxSize` (`20000` by default) limits max number of pending flows that can be processed. Consider increasing it if you usually have a large number of acrive processes.
+The config parameter `bpmnProceedPendingMaxSize` (`20000` by default) limits max number of pending flows that can be processed. Consider increasing it if you usually have a large number of acrive processes.
