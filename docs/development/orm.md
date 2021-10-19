@@ -642,7 +642,7 @@ foreach ($collection as $entity) {
 
 `MONTH:(closeDate)` and `SUM:(amountConverted)` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
 
-As of v6.2.0 it's possible to build expressions in OOP way.
+As of v7.0 it's possible to build expressions in OOP way.
 
 ```php
 use Espo\ORM\Query\Part\Expression as Expr;
@@ -667,6 +667,8 @@ $queryBuilder->where(
     )
 );
 ```
+
+As of v7.0.8 it's possible to add custom functions. An implementation class name for a custom function should be defined in metadata by the path app > orm > functionConverterClassNameMap_Mysql. The class should implement `Espo\ORM\QueryComposer\Part\FunctionConverter` interface.
 
 ## Query builder
 
