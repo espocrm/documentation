@@ -12,6 +12,17 @@ Default filters are available at `Espo\Core\Select\AccessControl\Filters`.
 
 Note: `mandatory` filter is applied for all users. Use if you need to apply some access restrictions for all users (including admin).
 
+Example:
+
+```json
+{
+    "accessControlFilterClassNameMap": {
+        "onlyOwn": "Espo\\Custom\\Classes\\Select\\MyEntityType\\AccessControlFilters\\OnlyOwn",
+        "mandatory": "Espo\\Custom\\Classes\\Select\\MyEntityType\\AccessControlFilters\\Mandatory"
+    }
+}
+```
+
 ## boolFilterClassNameMap
 
 Class names for bool filters. Classes should implement `Espo\Core\Select\Bool\Filter` interface.
@@ -19,6 +30,16 @@ Class names for bool filters. Classes should implement `Espo\Core\Select\Bool\Fi
 ## primaryFilterClassNameMap
 
 Class names for primary filters. Classes should implement `Espo\Core\Select\Primary\Filter` interface.
+
+Example:
+
+```json
+{
+    "primaryFilterClassNameMap": {
+        "myCustomFilter": "Espo\\Custom\\Classes\\Select\\MyEntityType\\PrimaryFilters\\MyCustomFilter"
+    }
+}
+```
 
 ## selectAttributesDependencyMap
 
