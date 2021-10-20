@@ -5,7 +5,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/scheduledJobs.json`:
 ```
 {
     "YourJobName": {
-    	"jobClassName": "Espo\Custom\Jobs\YourJobName"
+    	"jobClassName": "Espo\\Custom\\Jobs\\YourJobName"
     }
 }
 ```
