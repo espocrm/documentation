@@ -71,7 +71,7 @@ This will permanently remove all imported records that were recognized as duplic
 
 As of v6.0.0.
 
-This will create a new import with the same parameters.
+This will create a new import with the same parameters and field mapping.
 
 ## Importing into Target List
 
