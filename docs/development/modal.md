@@ -131,7 +131,7 @@ Parent view calling our modal view:
 
 ## Simple dialog w/o separate view
 
-Available since 5.7.0.
+Available as of v5.7.0.
 
 ```js
 
@@ -141,6 +141,15 @@ Available since 5.7.0.
             backdrop: true,
             message: 'Some *message*\n\nHello world!',
             buttonList: [
+                {
+                    name: 'doSomething',
+                    label: this.translate('Do Something'),
+                    onClick: () => {
+                        // Do something.
+                        this.close();
+                    },
+                    style: 'primary',
+                },
                 {
                     name: 'close',
                     label: this.translate('Close'),
