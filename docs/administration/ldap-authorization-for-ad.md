@@ -8,7 +8,7 @@ Example of configuration LDAP authorization for the Active Directory server. The
 - Password: `******`
 - Username Attribute: `sAMAccountName`
 - User ObjectClass: `person`
-- Account Canonical Form: `Principal` or `Username`
+- Account Canonical Form: `Principal`/`Username`/`Dn`/`Backslash`
 - Bind Requires DN: `no`
 - Base DN: `cn=espo-users,ou=users,dc=espo,dc=local`
 - Account Domain Name: `espo.local`
