@@ -5,11 +5,14 @@
 1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository to your local computer.
 2. Change to the project's root directory: `cd path/to/espocrm`.
 3. Install [Composer](https://getcomposer.org/doc/00-intro.md) (v2.0 or greater).
-4. Run `composer install` if Composer is installed globally (or `php composer.phar install` if locally).
+4. Install npm.
+5. Install [Grunt](https://gruntjs.com/installing-grunt).
+6. Run `composer install` if Composer is installed globally (or `php composer.phar install` if locally).
+7. Run `npm install`.
 
-Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
+Then you can build by running `grunt`.
 
-To build a proper *config.php* file and populate database you can run install by opening `http(s)://{YOUR_CRM_URL}/install` location in the browser. Asuming you have your webserver properly [configured](../administration/server-configuration.md).
+To build a proper *config.php* file and populate database you can run installation. Open `http(s)://{YOUR_CRM_URL}/install` location in the browser. It's assumed that your webserver is properly [configured](../administration/server-configuration.md).
 
 Then open `data/config.php` file and add:
 
@@ -17,23 +20,22 @@ Then open `data/config.php` file and add:
 'isDeveloperMode' => true,
 ```
 
-Branches:
-
-* *hotfix/** – upcoming maintenance release; fixes should be pushed to this branch;
-* *master* – develop branch; new features should be pushed to this branch;
-* *stable* – last stable release.
+Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
 ### Building
 
-You need to have nodejs and Grunt CLI installed.
-
 1. Change to the project's root directory.
-2. Install project dependencies with `npm install`.
-3. Run Grunt with `grunt`.
+2. Run Grunt with `grunt`.
 
 The build will be created in the `build` directory.
 
 Note: By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
+
+### Branches
+
+* *hotfix/** – upcoming maintenance release; fixes should be pushed to this branch;
+* *master* – develop branch; new features should be pushed to this branch;
+* *stable* – last stable release.
 
 ### Upgrade packages
 

@@ -25,7 +25,9 @@ define('custom:controllers/account', ['controllers/record'], function (Dep) {
         },
 
         actionTest: function (options) {
-            if (!options.id) throw new Espo.Exceptions.NotFound();
+            if (!options.id) {
+                throw new Espo.Exceptions.NotFound();
+            }
 
             console.log('action: test');
             console.log(options);
@@ -53,7 +55,8 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
         "params": {
             "controller": "Account",
             "action": "test"
-        }
+        },
+        "order": 1
     }
 }
 ```
@@ -71,10 +74,10 @@ In controller:
                 throw new Espo.Exceptions.NotFound();
             }
 
-            var id = options.id;
+            let id = options.id;
 
             // we need to define view in client/custom/src/views/account/test.js
-            var viewName = 'custom:views/account/test'; 
+            let viewName = 'custom:views/account/test'; 
 
             // this will render view in the main container element #main
             // id will be passed to the view
@@ -96,20 +99,20 @@ define('custom:views/account/test', ['view'], function (Dep) {
         data: function () {
             return {
                 id: this.options.id,
-                name: this.model.get('name')
+                name: this.model.get('name'),
             }
         },
 
         setup: function () {
             this.wait(
-                this.getModelFactory().create('Account')
-                .then(
-                    function (model) {
+                this.getModelFactory()
+                    .create('Account')
+                    .then(model => {
                         this.model = model;
                         model.id = this.options.id;
+
                         return model.fetch();
-                    }.bind(this)
-                )
+                    })
             );
         },
         

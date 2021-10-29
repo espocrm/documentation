@@ -120,8 +120,10 @@ The list of available additional placeholders:
 
 ### Handlebars support
 
-Available since version 5.9.0.
+Available as of 5.9.0.
 
 Note: This is an expiremental feature.
 
-Email templates also support handlebars. It's the same template system used for PDF templates with double-brace placeholders, like `{{name}}`.
+Email templates also support Handlebars. It's the same template system used for PDF templates with double-brace placeholders, like `{{name}}`.
+
+It only applies to emails with the non-empty parent field.

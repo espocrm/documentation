@@ -13,9 +13,9 @@
 
 * [API](api.md)
 * [Dependency injection](di.md)
+* [Metadata](metadata.md)
 * [ORM](orm.md)
 * [Select Builder](select-builder.md)
-* [Metadata](metadata.md)
 * [Custom API actions](api-action.md)
 * [Services](services.md)
 * [Hooks](hooks.md)
@@ -28,6 +28,8 @@
   * [Database indexes](db-indexes.md)
   * [App params](app-params.md)
   * [Jobs](jobs.md)
+  * [Email sending](email-sending.md)
+  * [Calculated fields](calculated-fields.md)
 
 ### Frontend
 

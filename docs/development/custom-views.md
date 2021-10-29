@@ -51,7 +51,7 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
             this.showField('someField');
 
             // custom initialization logic, like binding listening to model changes
-            this.listenTo(this.model, 'change:myField', function () {
+            this.listenTo(this.model, 'change:myField', () => {
                 this.model.set('anotherField', this.model.get('myField') + ' Hello');
 
                 this.hideField('someField');
@@ -64,7 +64,7 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
 
                 this.hidePanel('activities');
                 this.showPanel('history');
-            }, this);
+            });
         },
 
         afterRender: function() {

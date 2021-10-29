@@ -8,9 +8,7 @@ Available in views.
     this.confirm({
         message: this.translate('someMessageName', 'messages'),
         confirmText: this.translate('Confirm'), // text of the confirmation button
-    }).then(
-        function () {
-            // here do some actions
-        }.bind(this)
-    );
+    }).then(() => {
+        // here do some actions
+    });
 ```

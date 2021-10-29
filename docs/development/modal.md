@@ -48,9 +48,9 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                 fields: {
                     'someString': {
                         type: 'varchar', // field type
-                        view: 'views/fields/varchar', // can define custom view
-                        required: true, // field params
-                        trim: true,
+                        view: 'views/fields/varchar', // optional, to define custom view
+                        required: true, // field param
+                        trim: true, // field param
                     },
                     'someCheckbox': {
                         type: 'bool',
@@ -61,9 +61,8 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
             this.createView('record', 'views/record/edit-for-modal', {
                 scope: 'None', // dummy name
                 model: this.formModel,
-                el: this.getSelector() + ' .record',
-                // define layout
-                detailLayout: [
+                el: this.getSelector() + ' .record',                
+                detailLayout: [ // form layout
                     {
                         rows: [
                             [
@@ -84,22 +83,25 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
 
         actionDoSomething: function () {
             // fetch data from form to model and validate
-            var isValid = this.getView('record').processFetch();
+            let isValid = this.getView('record').processFetch();
 
-            if (isValid) { 
-                // make POST request
-                Espo.Ajax.postRequest('MyScope/action/doSomething', {
+            if (!isValid) { 
+                return;
+            }
+            
+            // make POST request
+            Espo.Ajax
+                .postRequest('MyScope/action/doSomething', {
                     id: this.options.id, // passed from the parent view
                     someString: this.formModel.get('someString'),
                     someCheckbox: this.formModel.get('someCheckbox'),
-                }).then(
-                    function (response) {
-                        Espo.Ui.success(this.translate('Done'));
-                        // event 'done' will be catched by the parent view
-                        this.trigger('done', response);
-                        this.close();
-                    }.bind(this)
-                );
+                })
+                .then(response => {
+                    Espo.Ui.success(this.translate('Done'));
+                    // event 'done' will be catched by the parent view
+                    this.trigger('done', response);
+                    this.close();
+                });
             }
         },
     });
@@ -115,12 +117,12 @@ Parent view calling our modal view:
             this.createView('dialog', 'custom:views/modals/my-dialog', {
                 id: this.model.id,
                 title: this.model.get('name'),                
-            }, function (view) {
+            }, view => {
                 view.render();
 
-                this.listenToOnce(view, 'done', function (response) {
+                this.listenToOnce(view, 'done', response => {
                     console.log(response);
-                }, this)
+                })
             });
 
 ...
@@ -129,7 +131,7 @@ Parent view calling our modal view:
 
 ## Simple dialog w/o separate view
 
-Available since 5.7.0.
+Available as of v5.7.0.
 
 ```js
 
@@ -140,11 +142,20 @@ Available since 5.7.0.
             message: 'Some *message*\n\nHello world!',
             buttonList: [
                 {
+                    name: 'doSomething',
+                    label: this.translate('Do Something'),
+                    onClick: () => {
+                        // Do something.
+                        this.close();
+                    },
+                    style: 'primary',
+                },
+                {
                     name: 'close',
                     label: this.translate('Close'),
                 }
             ],
-        }, function (view) {
+        }, view => {
             view.render();
         });
 ```

@@ -10,7 +10,18 @@ Class names for access control filters. Classes should implement `Espo\Core\Sele
 
 Default filters are available at `Espo\Core\Select\AccessControl\Filters`.
 
-Note: `mandotory` filter is applied for all users. If you need to apply some a
+Note: `mandatory` filter is applied for all users. Use if you need to apply some access restrictions for all users (including admin).
+
+Example:
+
+```json
+{
+    "accessControlFilterClassNameMap": {
+        "onlyOwn": "Espo\\Custom\\Classes\\Select\\MyEntityType\\AccessControlFilters\\OnlyOwn",
+        "mandatory": "Espo\\Custom\\Classes\\Select\\MyEntityType\\AccessControlFilters\\Mandatory"
+    }
+}
+```
 
 ## boolFilterClassNameMap
 
@@ -19,6 +30,16 @@ Class names for bool filters. Classes should implement `Espo\Core\Select\Bool\Fi
 ## primaryFilterClassNameMap
 
 Class names for primary filters. Classes should implement `Espo\Core\Select\Primary\Filter` interface.
+
+Example:
+
+```json
+{
+    "primaryFilterClassNameMap": {
+        "myCustomFilter": "Espo\\Custom\\Classes\\Select\\MyEntityType\\PrimaryFilters\\MyCustomFilter"
+    }
+}
+```
 
 ## selectAttributesDependencyMap
 
@@ -34,6 +55,8 @@ Example:
     }
 }
 ```
+
+In the example, when the *subject* attribute is requested, the *name* attribute will be selected.
 
 ## whereItemConverterClassNameMap
 
@@ -53,5 +76,24 @@ Classes should implement `Espo\Core\Select\Where\ItemConverter` interface.
 
 ## accessControlFilterResolverClassName
 
-Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
+A resolver is responsible for choosing an access filter. Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
 
+## textFilterClassName
+
+A class that processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default `Espo\Core\Select\Text\DefaultFilter` is used.
+
+## orderItemConverterClassNameMap
+
+An order converter converts order parameters passed from the frontend to an order data acceptable for ORM. One can implement a custom converer for a specific field. E.g. make an address field be ordered by a city (when a user orders by the address column, it will actually order by city).
+
+Classes should implement `Espo\Core\Select\Order\ItemConverter` interface.
+
+Example: 
+
+```json
+{
+    "orderItemConverterClassNameMap": {
+        "someFieldName": "Espo\\Custom\\Classes\\Select\\MyEntityType\\Order\\ItemConverters\\MyConverter"
+    }
+}
+```

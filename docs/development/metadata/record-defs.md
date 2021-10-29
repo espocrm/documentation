@@ -14,11 +14,15 @@ Array of classes to load additional fields for an entity.
 
 Must implement `Espo\Core\FieldProcessing\Loader` interface.
 
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+
 ## listLoaderClassNameList
 
 Array of classes to load additional fields for an entity for the list view.
 
 Must implement `Espo\Core\FieldProcessing\Loader` interface.
+
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
 
 ## saverClassNameList
 
@@ -26,11 +30,15 @@ Array of classes to save additional fields.
 
 Must implement `Espo\Core\FieldProcessing\Saver` interface.
 
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+
 ## selectApplierClassNameList
 
 Array of classes for additional handling of a select query.
 
 Must implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
+
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
 
 ## actions
 
@@ -38,7 +46,8 @@ Parameters of actions (applied only for the back-end).
 
 Parameters:
 
-* allowed - to allow an action for a scope w/o ACL.
+* disabled - disables an action;
+* allowed - allows an action for non-object scopes.
 
 ## massActions
 
@@ -58,7 +67,8 @@ Example:
 
 Parameters:
 
-* allowed - to allow an action for a scope w/o ACL.
+* disabled - disables an action;
+* allowed - allows an action for non-object scopes.
 
 ## actionsDisabled
 
@@ -68,11 +78,11 @@ Disable actions in the back-end.
 
 To disable export regardless ACL.
 
+## updateDuplicateCheck
+
+A boolean parameter. If true, then duplicate checking will be processed while updating a record. By default it's processed only when creating a new record.
+
 ## beforeReadHookClassNameList
-
-Hooks (applied only for API calls). 
-
-## afterReadHookClassNameList
 
 Hooks (applied only for API calls). 
 
@@ -80,15 +90,7 @@ Hooks (applied only for API calls).
 
 Hooks (applied only for API calls). 
 
-## afterCreateHookClassNameList
-
-Hooks (applied only for API calls). 
-
 ## beforeUpdateHookClassNameList
-
-Hooks (applied only for API calls). 
-
-## afterUpdateHookClassNameList
 
 Hooks (applied only for API calls). 
 
@@ -96,23 +98,11 @@ Hooks (applied only for API calls).
 
 Hooks (applied only for API calls). 
 
-## afterDeleteHookClassNameList
-
-Hooks (applied only for API calls). 
-
 ## beforeLinkHookClassNameList
-
-Hooks (applied only for API calls). 
-
-## afterLinkHookClassNameList
 
 Hooks (applied only for API calls). 
 
 ## beforeUnlinkHookClassNameList
 
 Hooks (applied only for API calls). 
-
-## afterUnlinkHookClassNameList
-
-Hooks (applied only for API calls).
 

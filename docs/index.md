@@ -8,6 +8,7 @@
   * [Nginx](administration/nginx-server-configuration.md)
 * System
   * [Installation](administration/installation.md)
+  * [Installation by script](administration/installation-by-script.md)
   * [Upgrading](administration/upgrading.md)
   * [Extensions](administration/extensions.md)
   * [Troubleshooting](administration/troubleshooting.md)
@@ -32,7 +33,7 @@
 * [Currency](administration/currency.md)
 * [Dashboards](administration/dashboards.md)
 * Authentication
-  * [2-factor authentication](administration/2fa.md)
+  * [2 factor authentication](administration/2fa.md)
   * LDAP
     * [Authorization](administration/ldap-authorization.md)
     * [Active Directory](administration/ldap-authorization-for-ad.md)
@@ -44,6 +45,7 @@
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
+  * [File storage](administration/file-storage.md)
 
 ---
 

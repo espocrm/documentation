@@ -22,6 +22,9 @@ Note: Upgrading process may take a while. Do not close the terminal until it's f
 2. Disable cron (at Administration > Settings) before upgrading. Enable it back after the upgrade is finished.
 3. Enable *Maintenance Mode* (at Administration > Settings) before upgrading. Disable after the upgrade is finished.
 4. Make sure you have free disk space on the server.
+5. *opcache.enable_cli* parameter in PHP should be set to false (by default it's usually set to false).
+
+It's recommended to run upgrade either **under the webserver user** (usually *www-data*) or *root* user.
 
 ## Additional parameters
 
@@ -57,7 +60,7 @@ To check your current version, go to Administration > Upgrade page.
 
 #### Step 2. Download needed upgrade packages
 
-Go to the upgrade page https://www.espocrm.com/download/upgrades/ and based on your current version download needed packages.
+Go to the [download upgrade page](https://www.espocrm.com/download/upgrades/) and download needed packages (based on your current version).
 
 #### Step 3. Run upgrade from Administration panel
 

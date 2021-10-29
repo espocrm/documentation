@@ -24,8 +24,8 @@ The Contanier contains services. These services are supposed to be used in multi
 
 Container services are defined:
 
-* by loader classes in `Espo\Core\Loaders` namespace (can be customized in `Espo\Custom\Core\Loaders`);
-* in [metadata](metadata.md) (app > containerServices).
+* in [metadata](metadata.md) (app > containerServices);
+* by loader classes (in `Espo\Core\Loaders` namespace);
 
 Note: The best practice is not to require the *container* in your classes, and never use it directly. A specific service can be required in a constructor or with Aware interface.
 
@@ -44,17 +44,25 @@ If you need to define your custom container services, do it in metadata. In your
 * `application/Espo/Modules/{YourModule}/Resources/metadata/app/containserServices.json`;
 * `custom/Espo/Custom/Resources/metadata/app/containserServices.json`.
 
+When defining in metadata there's 2 options:
+
+* specify a class for a service;
+* specify a loader that loads a service (the loader should implement `Espo\Core\Container\Loader` interface).
+
 A definition example:
 
 ```json
 {
-    "myService": {
-        "className": "Espo\\Modules\\MyModule\\MyService"
+    "myService1": {
+        "className": "Espo\\Modules\\MyModule\\MyService1"
+    },
+    "myService2": {
+        "loaderClassName": "Espo\\Modules\\MyModule\\MyService2Loader"
     }
 }
 ```
 
-Needed dependencies will be passed to a class constructor. Class constructor parameter names and type hinting will be used (via reflection) to detect dependencies.
+Needed dependencies will be passed to a class constructor. Parameter type hinting and binding (processed on application start) will be used (via reflection) to detect dependencies.
 
 Example:
 
@@ -64,7 +72,7 @@ namespace Espo\Modules\MyModule;
 
 use Espo\Core\ORM\EntityManager;
 
-class MyService
+class MyService1
 {
     private $entityManager;
 
@@ -79,7 +87,7 @@ If there's no matching service for a parameter but a type hint is a class, then 
 
 ## Injectable factory
 
-Injectable Factory creates objects by a given class names resolving dependencies. It is available as a service in *container*. That means that *injectableFactory* can be required as a dependency.
+The Injectable Factory creates objects by a given class names. It resolves and injects class dependencies. The Injectable Factory is available as a service in the Container. That means that *injectableFactory* can be required as a dependency.
 
 Requiring *injectableFactory* as a dependency:
 
@@ -118,7 +126,7 @@ Resolving process:
 
 * Tries to resolve by binding (see below about binding); exit if succcess;
 * Tries to resolve by a parameter name, assuming that parameter name matches a service name; exit if succcess;
-* Creates a new instance if type hind is a class.
+* Creates a new instance if type hint is a class.
 
 If there's no service with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
 
@@ -192,7 +200,7 @@ Using setter injections may be reasonable when you are extending from an existin
 
 Important: Only services can be injected via setters.
 
-Note: It's not recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
+Note: It's not a recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
 
 ### Manual instantiating
 
@@ -250,27 +258,7 @@ class SomeTypeFactory
 
 ```
 
-It's also possible to use a binding container. More info below.
-
-### Classes created by injectableFactory
-
-The following classes are created by *injectableFactory*:
-
-* ApplicationRunners - `Espo\Core\ApplicationRunners`
-* Controllers - `Espo\Controllers`
-* Services - `Espo\Services`
-* Hooks - `Espo\Hooks`
-* Jobs - `Espo\Jobs`
-* EntryPoints - `Espo\EntryPoints`
-* Repositories - `Espo\Repositories`
-* SelectManagers - `Espo\SelectManagers`
-* Notificators - `Espo\Notificators`
-* Acl - `Espo\Acl`
-* Formula Functions
-* Cleanup - defined in metadata: app > cleanup
-* AppParams - defined in metadata: app > appParams
-
-And many others. You can use `grep -R 'injectableFactory'` to find where it's used in Espo.
+It's also possible to pass a binding container when creating with the injectable factory. More info below.
 
 ## Binding
 
@@ -278,12 +266,12 @@ Available as of v6.1.0.
 
 There is the ability to bind interfaces to implementations and bind parameter names to specific values. Binding is used for resolving dependencies passed through a constructor.
 
-Binding can be processed in the `Binding` classes in every module and in *Custom* namespace:
+Binding can be processed in the `Binding` classes in every module as well as in the *Custom*:
 
 * `Espo\Modules\{ModuleName}\Binding`
 * `Espo\Custom\Binding`
 
-Note: A module order parameter is used when binding is processed. Meaning that modules with a lower order value will be processed first.
+Note: The module order parameter is used when binding is processed. Meaning that modules with a lower order value will be processed first.
 
 CLI command to print all bindings:
 

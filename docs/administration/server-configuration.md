@@ -72,8 +72,9 @@ where username is your MySQL user, password is your MySQL user password.
 
 The files and directories should have the following permissions:
 
-* `/data`, `/custom`, `/client/custom` – should be writable all files, directories and subdirectories (664 for files, 775 for directories, including all subdirectories and files);
-* `/application/Espo/Modules`, `/client/modules` – should be writable the current directory (775 for the current directory, 644 for files, 755 for directories and subdirectories);
+* `data`, `custom`, `client/custom` – should be writable all files, directories and subdirectories (664 for files, 775 for directories, including all subdirectories and files);
+* `application/Espo/Modules`, `client/modules` – should be writable the current directory (775 for the current directory, 644 for files, 755 for directories and subdirectories);
+* `bin/command` – should be executable (754);
 * all other files and directories should be readable (644 for files, 755 for directories).
 
 To set the permissions, execute these commands in the terminal:
@@ -83,6 +84,7 @@ cd <PATH-TO-ESPOCRM-DIRECTORY>
 find . -type d -exec chmod 755 {} + && find . -type f -exec chmod 644 {} +;
 find data custom client/custom -type d -exec chmod 775 {} + && find data custom client/custom -type f -exec chmod 664 {} +;
 chmod 775 application/Espo/Modules client/modules;
+chmod 754 bin/command;
 ```
 
 ### Ownership

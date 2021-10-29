@@ -1,5 +1,12 @@
 # LDAP Authorization
 
+* [LDAP configuration](#ldap-configuration)
+* [Active Directory configuration](ldap-authorization-for-ad.md)
+* [OpenLDAP configuration](ldap-authorization-for-openldap.md)
+* [Troubleshooting](#troubleshooting)
+
+## LDAP configuration
+
 In this guide, we will show how to configure LDAP authorization for EspoCRM. Let’s go.
 
 Go to your LDAP server and create a base DN for the EspoCRM users like:
@@ -56,9 +63,13 @@ Now, go to the login page and enter user credentials.
 
 User has been authenticated and automatically created in the EspoCRM.
 
-## Configuration instructions based on your server
+## Troubleshooting
 
-* [Active Directory server](ldap-authorization-for-ad.md)
-* [OpenLDAP server](ldap-authorization-for-openldap.md)
+### Error: 0x31 (Invalid credentials; 80090308: LdapErr: DSID-0C09041C, comment: AcceptSecurityContext error, data 52e, v4563)
 
-You can read more information about configuring LDAP on the [Zend\Ldap library](https://zendframework.github.io/zend-ldap/intro/) page, as EspoCRM uses this library.
+This error occurs when the wrong `Account Canonical Form` or `Username Attribute` are specified.
+The correct values are:
+- Account Canonical Form: `Principal` or `Username`. 
+- Username Attribute: `sAMAccountName`
+
+The full Active Directory configuration, see in the [documentaion](ldap-authorization-for-ad.md).

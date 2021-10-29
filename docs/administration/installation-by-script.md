@@ -1,14 +1,17 @@
-# Installation by the script
+# Installation by Script
 
 This script automatically installs EspoCRM as a Docker image with NGINX server and MySQL database.
 
 ## Requirements
 
 1. Operating system:
-    * Ubuntu
-    * Debian
-    * Linux Mint
+
+  * Ubuntu
+  * Debian
+  * Linux Mint
+
 2. Access via command line.
+
 3. Root or sudo access.
 
 ## Installation

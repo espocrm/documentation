@@ -221,6 +221,8 @@ If Error Code is specified, it will be triggered only when an error with the sam
 
 ![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
+Note: If an error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403). Available as of v2.8.6.
+
 
 ### Conditional Intermediate Event (Boundary)
 

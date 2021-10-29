@@ -56,34 +56,41 @@ Controller:
 
 namespace Espo\Custom\Controllers;
 
-use Espo\Core\{
-    Api\Request,
-    Api\Response,
-};
+use Espo\Core\Api\Request;
+use Espo\Core\Api\Response;
 
 class MyController
 {
-    protected $someDependency;
+    private $someDependency;
 
     public function __construct(SomeDependency $someDependency)
     {
         $this->someDependency = $someDependency;
     }
     
-    public function getActionDoSomething(Request $request, Response $response)
+    public function getActionDoSomething(Request $request, Response $response): void
     {
         $id = $request->getRouteParam('id'); // '001'
         
-        // Assuming the request POST api/v1/HelloWorld/someName has been sent,
+        // Assuming the request GET api/v1/Hello/test/001 has been sent,
         // a route parameter 'id' will equal '001'.
+        
+        $response->writeBody(
+            json_encode($someData)
+        );
+        
+        // You can either write data to the response or use return
+        // Returned value will be encoded and written to the reponse.
     }
     
-    public function postActionHelloWrold(Request $request, Response $response)
+    public function postActionHelloWrold(Request $request, Response $response): void
     {
         $name = $request->getRouteParam('name'); 
          
-        // Assuming the request GET api/v1/Hello/test/001 has been sent,
+        // Assuming the request POST api/v1/HelloWorld/someName has been sent,
         // a route parameter 'name' will equal 'someName'.
+        
+        $response->writeBody('true');
     }
 }
 ```
@@ -101,10 +108,8 @@ Create a file (or modify if it already exists) `custom/Espo/Custom/Controllers/A
 
 namespace Espo\Custom\Controllers;
 
-use Espo\Core\{
-    Api\Request,
-    Api\Response,
-};
+use Espo\Core\Api\Request;
+use Espo\Core\Api\Response;
 
 class Account extends \Espo\Modules\Crm\Controllers\Account
 {
@@ -193,10 +198,8 @@ Clear cache (Administration > Clear Cache).
 
 namespace Espo\Custom\Controllers;
 
-use Espo\Core\{
-    Api\Request,
-    Api\Response,
-};
+use Espo\Core\Api\Request;
+use Espo\Core\Api\Response;
 
 class MyController
 {   
@@ -232,14 +235,12 @@ Example:
 
 namespace Espo\Modules\MyModule\Controllers;
 
-use Espo\Core\{
-    Api\Request,
-    Api\Response,
-};
+use Espo\Core\Api\Request;
+use Espo\Core\Api\Response;
 
 use SomeDependency;
 
-use StdClass;
+use stdClass;
 
 class MyController
 {
@@ -250,7 +251,7 @@ class MyController
         $this->someDependency = $someDependency;
     }
 
-    public function putActionUpdate(Request $request, Response $response): StdClass
+    public function putActionUpdate(Request $request, Response $response): stdClass
     {
         $id = $request->getRouteParam('id');
         $data = $request->getParsedBody();

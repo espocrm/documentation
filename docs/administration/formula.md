@@ -1131,6 +1131,7 @@ Available since v6.0.0.
 * [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
 * [ext\email\send](#extemailsend)
 * [ext\email\applyTemplate](#extemailapplytemplate)
+* [ext\sms\send](#extsmssend)
 * [ext\pdf\generate](#extpdfgenerate)
 
 #### ext\account\findByEmailAddressDomain
@@ -1143,9 +1144,9 @@ Finds an account by an email address. If no full match found, then tries to find
 
 `ext\email\send(EMAIL_ID)`
 
-Sends an email. EMAIL_ID is an ID of the email record. Returns TRUE if sent, false if not sent. (Available since version 5.9.0)
+Sends an email. EMAIL_ID is an ID of an email record. Returns TRUE if sent, false if not sent. (Available since version 5.9.0)
 
-If *from* address is not set in the email, then system email address will be used. If there's match between *from* address and the address of some group email account, then SMTP setting of the group email account will be used.
+If *from* address is not set in the email, then the system email address will be used. If there's match between *from* address and the address of some group email account, then SMTP setting of the group email account will be used.
 
 Example:
 
@@ -1166,7 +1167,7 @@ ext\email\send($id);
 
 `ext\email\applyTemplate(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
 
-Applies an email template to an existng email record. Parent record can be passed optionally. (Available since version 5.9.0)
+Applies an email template to an existng email record. Parent record can be passed optionally. (Available since v5.9.0)
 
 Example:
 
@@ -1182,11 +1183,31 @@ ext\email\applyTemplate($emailId, 'some-email-template-id');
 ext\email\send($emailId);
 ```
 
+#### ext\sms\send
+
+`ext\sms\send(SMS_ID)`
+
+Sends an SMD. SMS_ID is an ID of an SMS record. Returns TRUE if sent, false if not sent. (Available as of v7.0.0)
+
+Example:
+
+```
+$smsId = record\create(
+    'Sms',
+    'to', '+1 000 111 222',
+    'body', 'This is a test.'
+);
+
+ext\sms\send($smsId);
+```
+
+If *from* address is not set in the SMS, then the system SMS from number will be used.
+
 #### ext\pdf\generate
 
 `ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID, [FILENAME])`
 
-Generates PDF file and returns attachment ID. If failed, then returns NULL. TEMPLATE_ID is an ID of PDF template. (Available since version 5.9.0)
+Generates PDF file and returns attachment ID. If failed, then returns NULL. TEMPLATE_ID is an ID of PDF template. (Available since v5.9.0)
 
 Example:
 

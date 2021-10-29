@@ -1,6 +1,6 @@
 # View Setup Handlers
 
-Available as of v6.2.0.
+Available as of v7.0.
 
 ViewSetupHandlers framework provides the ability to customize existing views w/o extending. Multiple handlers can be attached to the view.
 
@@ -51,9 +51,9 @@ define('custom:some-handler', [], function () {
         process: function () {
             // Do something with view.
 
-            this.listenTo(this.view, 'after:render', function () {
+            this.listenTo(this.view, 'after:render', () => {
                 // Do something with view after render.
-            }, this);
+            });
         },
     });
 

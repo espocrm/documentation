@@ -2,7 +2,7 @@
 
 ## Disabling total count on list view
 
-It is relevant if there are a lot of records of a specific entity type in the database. In this case, it's reasonable to disable displaying count on the list view of that entity type, since COUNT is a very slow operation in MySQL.
+It is relevant if there are a lot of records of a specific entity type in the database. In this case, it can be reasonable to disable displaying count on the list view for that entity type, since COUNT can be very slow in MySQL.
 
 To disable: Administration > Entity Manager > edit specific entity type > check *Disable record count*.
 
@@ -29,7 +29,7 @@ It's recommended to set a value that is about 70% of your RAM.
 
 #### sort_buffer_size
 
-You can consider increasing this param to speed up ORDER BY or GROUP BY. [See more](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sort_buffer_size).
+You may consider increasing this param to speed up ORDER BY or GROUP BY. [See more](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sort_buffer_size).
 
 #### innodb_log_file_size
 

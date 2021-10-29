@@ -13,6 +13,9 @@ Sections:
 * entityDefs – entity definitions (fields, links, indexes etc.)
 * [fields](metadata/fields.md) – field types definitions
 * app – application definitions
+  * [authentication](metadata/app-authentication.md)
+  * [cleanup](metadata/app-cleanup.md)
+  * [rebuild](metadata/app-rebuild.md)
 
 ## How to access
 
@@ -65,7 +68,9 @@ All JSON files from these directories get merged recursively into a single php a
 
 ## Extending
 
-Since metadata is merged recursively you can easily redefine json objects and arrays in _custom_ and in your _module_. Also you can append to existing arrays by using `__APPEND__` (since version 2.6.0) as the first element of array.
+Since metadata is merged recursively you can easily redefine json objects and arrays in _custom_ and in your _module_.
+
+You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of array.
 
 `custom/Espo/Custom/Resources/Metadata/entityDefs/Account.json`
 
@@ -76,7 +81,11 @@ Since metadata is merged recursively you can easily redefine json objects and ar
           "type": "int"
         },
         "type": {
-            "options": ["__APPEND__", "Dealer", "Lawyer"]
+            "options": [
+                "__APPEND__",
+                "Dealer",
+                "Lawyer"
+            ]
         }
     }
 }
