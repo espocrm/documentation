@@ -7,7 +7,7 @@ Example of configuration LDAP authorization for OpenLDAP server. The full guide 
 - Full User DN: `cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local`
 - Password: `******`
 - Username Attribute: `uid`
-- User ObjectClass: `person`/`inetOrgPerson`
+- User ObjectClass: `inetOrgPerson`/`person`
 - Account Canonical Form: any of available `Dn`/`Username`/`Backslash`/`Principal`
 - Bind Requires DN: `yes`
 - Base DN: `cn=espo-users,ou=users,dc=espo,dc=local`
