@@ -9,7 +9,7 @@ Full User DN: cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 Password: ******
 Username Attribute: sAMAccountName
 User ObjectClass: person
-Account Canonical Form: Principal
+Account Canonical Form: any of available Principal/Dn/Username/Backslash
 Bind Requires DN: no
 Base DN: cn=espo-users,ou=users,dc=espo,dc=local
 Account Domain Name: espo.local
