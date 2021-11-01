@@ -119,7 +119,7 @@ Returns:
 
 ### 400 Bad request
 
-When you create or update a recod, this error can mean that you didn't pass a **required field** or it has an empty value. Check the response message or see `data/log` for more details.
+When you create or update a record, this error can mean that you didn't pass a **required field** or it has an empty value. Check the response message or see `data/log` for more details.
 
 ### 403 Forbidden
 
