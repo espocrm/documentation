@@ -31,7 +31,7 @@ There is an ability to specify *Folder* in Personal Email Account. Incoming emai
 
 Users can setup SMTP settings in their Personal Email Accounts as well as in Preferences. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts.
 
-Administrator also can allow to use the mailn system SMTP account as well as Group Email Accounts (mark as Shared).
+Administrator also can allow to use the main system SMTP account as well as Group Email Accounts (mark as Shared).
 
 Users can have multiple SMTP accounts.
 
