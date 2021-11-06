@@ -41,7 +41,7 @@ $accountEntity->setBillingAddress($address);
 ```php
 $value = new Currency($amount, 'USD');
 
-$valueInEur = $converter->convert($value , 'EUR');
+$valueInEur = $converter->convert($value, 'EUR');
 
 $opportunityEntity->setAmount($valueInEur);
 ```
