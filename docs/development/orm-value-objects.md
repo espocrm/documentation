@@ -1,6 +1,6 @@
 # Value Objects
 
-Actual as of v6.2.0.
+Actual as of v7.0.
 
 * Value objects are immutable.
 * Value objects are available in `Espo\Core\Field\`.
@@ -107,6 +107,8 @@ $entity->setContacts(
 ```
 
 ## Defining
+
+Defining custom value object type for a speicific field type.
 
 For a field type you need to define 2 parameters in metadata > fields > {fieldType}:
 
