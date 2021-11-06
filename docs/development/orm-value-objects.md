@@ -108,7 +108,7 @@ $entity->setContacts(
 
 ## Defining
 
-Defining custom value object type for a speicific field type.
+Defining a custom value object type for a speicific field type.
 
 For a field type you need to define 2 parameters in metadata > fields > {fieldType}:
 
