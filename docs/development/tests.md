@@ -43,3 +43,11 @@ Command to run:
 ```
 vendor/bin/phpunit tests/integration
 ```
+
+## Static analysys
+
+Command to run:
+
+```
+vendor/bin/phpstan analyse
+```
