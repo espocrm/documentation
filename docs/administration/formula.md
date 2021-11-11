@@ -1203,6 +1203,8 @@ ext\sms\send($smsId);
 
 If *from* address is not set in the SMS, then the system SMS from number will be used.
 
+The extension with SMS providers can be downloaded [here](https://github.com/espocrm/ext-sms-providers/releases).
+
 #### ext\pdf\generate
 
 `ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID, [FILENAME])`
