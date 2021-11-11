@@ -40,7 +40,7 @@ Go to your user profile (from the menu at the top-right corner) and then click *
 
 ## Authentication via SMS
 
-Requires having an implementation for your SMS provider. EspoCRM is not shipped with implementations.
+Requires having an implementation for your SMS provider. An extension with SMS providers can be downloaded [here](https://github.com/espocrm/ext-sms-providers/releases).
 
 ### Enabling for user
 
