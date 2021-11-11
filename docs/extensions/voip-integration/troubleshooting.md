@@ -24,9 +24,9 @@ In this article:
 
 ## VoIP error debug
 
-1. Enable debug mode as described [here](https://docs.espocrm.com/administration/troubleshooting/#enabling-debug-mode-for-a-logger).
+1. Enable debug mode as described [here](../../administration/troubleshooting.md/#debug-mode).
 2. Reproduce an error again.
-3. Get an EspoCRM [log file](https://docs.espocrm.com/administration/troubleshooting/#check-logs) and send it to the support team.
+3. Get an EspoCRM [log file](../../administration/troubleshooting.md/#check-logs) and send it to the support team.
 
 ## Asterisk: The popup window is not displayed
 
