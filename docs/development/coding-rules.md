@@ -202,7 +202,7 @@ namespace Espo\Some;
 
 class SomeClass
 {
-    public function process()
+    public function process(): void
     {
         $object1 = new \Espo\Modules\MyModule\Something();
         $object2 = new \Espo\Modules\MyModule\AnotherThing();
