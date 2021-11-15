@@ -35,7 +35,7 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 Note: Diverging and converging gateways must be balanced.
 
-Note: If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+Note: If one of parallel flows has been ended for some reason, then the diverging converging will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
 
 ----
 
