@@ -58,6 +58,62 @@ class Lead implements WhereBuilder
             $toCheck = true;
         }
         
+        // check for duplicate phone numbers
+        if (    $entity->get('phoneNumber') 
+            ||  $entity->get('phoneNumberData')
+        ) {
+            if ($entity->get('phoneNumber')) {
+                $phoneNumbers = [$entity->get('phoneNumber')];
+            }
+
+            if ($entity->get('phoneNumberData')) {
+                foreach ($entity->get('phoneNumberData') as $phoneData) {
+                    if (!in_array($phoneData->phoneNumber, $phoneNumbers ?? [])) {
+                        $phoneNumbers[] = $phoneData->phoneNumber;
+                    }
+                }
+            }
+
+            foreach ($phoneNumbers as $phoneNumber) {
+                $orBuilder->add(
+                    Cond::equal(
+                        Cond::column('phoneNumber'),
+                        $phoneNumber
+                    )
+                );
+            }
+
+            $toCheck = true;
+        }
+        
+        // check for duplicate email addresses
+        if (    $entity->get('emailAddress') 
+            ||  $entity->get('emailAddressData')
+        ) {
+            if ($entity->get('emailAddress')) {
+                $emailAddresses = [$entity->get('emailAddress')];
+            }
+
+            if ($entity->get('emailAddressData')) {
+                foreach ($entity->get('emailAddressData') as $emailData) {
+                    if (!in_array($emailData->emailAddress, $emailAddresses ?? [])) {
+                        $emailAddresses[] = $emailData->emailAddress;
+                    }
+                }
+            }
+
+            foreach ($emailAddresses as $emailAddress) {
+                $orBuilder->add(
+                    Cond::equal(
+                        Cond::column('emailAddress'),
+                        $emailAddress
+                    )
+                );
+            }
+
+            $toCheck = true;
+        }
+        
         // Here you can add more conditions.
         
         if (!$toCheck) {
