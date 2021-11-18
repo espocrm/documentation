@@ -76,7 +76,7 @@ class EspoAPI:
 
         if self.status_code != 200:
             reason = self.parse_reason(response.headers)
-            raise EspoAPIError('Wrong request, status code is {response.status_code}, reason is {reason}')
+            raise EspoAPIError(f'Wrong request, status code is {response.status_code}, reason is {reason}')
 
         data = response.content
         if not data:
