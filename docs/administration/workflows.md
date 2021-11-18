@@ -149,7 +149,7 @@ Important: Formula within this action must be utilized only for field updating. 
 
 If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function *entity\addLinkMultipleId*. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
-There is the ability to **delete** the record with the following formula code: `deleted = 1`;
+There is the ability to **delete** the record with the following formula code: `deleted = true`;
 
 ### Update Related Record
 
@@ -157,7 +157,7 @@ Allows changing of specific fields of the related record or records.
 
 It's possible to define formula to calculate field values. Note: Variables defined within formula won't be passed back, they are only avaiable within a current script.
 
-There is the ability to delete the record with the following formula code: `deleted = 1`;
+There is the ability to delete the record with the following formula code: `deleted = true`;
 
 ### Link with another Record
 
