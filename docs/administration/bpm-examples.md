@@ -5,7 +5,7 @@
 You can download CSV file with examples and then import it into your EspoCRM instance.
 
 1. Download [CSV file](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/csv/bpm-examples.csv) with examples.
-2. In your EspoCRM, go to Administration > Import, select *Process Flowchart* entity type and upload the CSV file. Go throgh import steps.
+2. In your EspoCRM, go to Administration > Import, select *Process Flowchart* entity type and upload the CSV file. Go through import steps.
 3. You will be able to find examples at Administration > Flowcharts.
 
 Note: These flowcharts are not active, so they won't run until you set them active.
