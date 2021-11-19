@@ -62,6 +62,6 @@ Check the following items to find the cause of the issue:
 1. If Starface integration is properly [configured](starface-integration-setup.md#step-1).
 2. If cron job is [configured](starface-integration-setup.md#step-2).
 3. If internal users are [configured](starface-integration-setup.md#how-to-setup-starface-integration-for-users).
-4. If your SIP client are running.
+4. If your SIP client is running.
 5. If your EspoCRM server is available for the Starface server. This is required, because Starface server should send notifications about call events to EspoCRM server.
 6. If your `Site URL` (Administration > Settings) corresponds to the real one.
