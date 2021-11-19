@@ -129,13 +129,13 @@ It's possible to use the **opt-out** link in an email body.
 
 The system will create a new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate the records.
 
-There is the ability to define **formula** to calculate field values. Note: Variables defined within formula won't be passed back, they are only avaiable within a current script.
+There is the ability to define **formula** to calculate field values. Note: Variables defined within formula won't be passed back, they are only available within a current script.
 
 ### Create Related Record
 
 System will create the record related to the target record.
 
-It's possible to define formula to calculate field values. Note: Variables defined within formula won't be passed back, they are only avaiable within a current script.
+It's possible to define formula to calculate field values. Note: Variables defined within formula won't be passed back, they are only available within a current script.
 
 ### Update Target Record
 
@@ -143,7 +143,7 @@ Allows changing of specific fields of the target record.
 
 It's possible to define **formula** to calculate field values. You can utilize *Update Target Record* action for executing formula script without actually updating any fields.
 
-Note: Variables defined within formula won't be passed back, they are only avaiable within a current script.
+Note: Variables defined within formula won't be passed back, they are only available within a current script.
 
 Important: Formula within this action must be utilized only for field updating. Use *Execute Formula Script* action for any other need. 
 
@@ -155,7 +155,7 @@ There is the ability to **delete** the record with the following formula code: `
 
 Allows changing of specific fields of the related record or records. 
 
-It's possible to define formula to calculate field values. Note: Variables defined within formula won't be passed back, they are only avaiable within a current script.
+It's possible to define formula to calculate field values. Note: Variables defined within formula won't be passed back, they are only available within a current script.
 
 There is the ability to delete the record with the following formula code: `deleted = 1`;
 
