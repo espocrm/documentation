@@ -224,12 +224,15 @@ $target = list();
 
 $i = 0;
 
-while($i < array\length($source),
-    $target = array\push(
-        $target,
-        array\at($source, $i)
-    );
-    $i = $i + 1;
+while(
+    $i < array\length($source),
+    (
+        $target = array\push(
+            $target,
+            array\at($source, $i)
+        );
+        $i = $i + 1;
+    )
 );
 ```
 
