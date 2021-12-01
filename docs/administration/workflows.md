@@ -97,6 +97,12 @@ Formula provides the ability to define conditions of any complexity. To read abo
 
 Note: There should not be any `;` delimiter used in formula code when it determines a condition. It should be one expression that returns a value (TRUE of FALSE).
 
+Example (expression with the logical AND):
+
+```
+status == 'New' && assignedUserId == null
+```
+
 ----
 
 ## Actions
