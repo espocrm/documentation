@@ -2,6 +2,8 @@
 
 In this article it will be shown how to add custom config parameters and how to make them available on the administration panel.
 
+In the example it's supposed that you module is named `MyModule`. Replace `MyModule` and `my-module` with your real module name.
+
 ### 1. Metadata entityDefs > settings
 
 Create a file `custom/Espo/Modules/MyModule/Resources/metadata/entityDefs/Settings.json`:
