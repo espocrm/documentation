@@ -137,5 +137,6 @@ Clear cache.
 The parameter value now can be read this way:
 
 ```php
-$this->config->get('myParameter');
+/** @var \Espo\Core\Utils\Config $config */
+$config->get('myParameter');
 ```
