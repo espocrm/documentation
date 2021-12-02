@@ -134,7 +134,7 @@ define('my-module:views/admin/my-settings', 'views/settings/record/edit', functi
 
 Clear cache.
 
-The parameter value now can be read this way:
+The parameter value now can be read in the back-end:
 
 ```php
 /** @var \Espo\Core\Utils\Config $config */
