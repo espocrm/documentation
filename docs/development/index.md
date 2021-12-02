@@ -30,6 +30,7 @@
   * [Jobs](jobs.md)
   * [Email sending](email-sending.md)
   * [Calculated fields](calculated-fields.md)
+  * [Custom config parameters](custom-config-parameters.md)
 
 ### Frontend
 
