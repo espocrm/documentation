@@ -2,7 +2,7 @@
 
 In this article it will be shown how to add custom config parameters and how to make them available on the administration panel.
 
-### 1. entityDefs > settings
+### 1. Metadata entityDefs > settings
 
 Create a file `custom/Espo/Modules/MyModule/Resources/metadata/entityDefs/Settings.json`:
 
@@ -18,7 +18,7 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/entityDefs/Settin
 }
 ```
 
-### 2. app > config
+### 2. Metadata app > config
 
 Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/config.json`:
 
@@ -34,7 +34,7 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/config.json`:
 
 Setting the *level* parameter to `"admin"` make the parameter available only for admin users. Available values: `global`, `system`, `admin`, `superAdmin`.
 
-### 3. app > adminPanel
+### 3. Metadata app > adminPanel
 
 Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/adminPanel.json`:
 
@@ -56,17 +56,17 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/adminPanel.js
 }
 ```
 
-### 4. language files
+### 4. Language files
 
 Create a file `custom/Espo/Modules/MyModule/Resources/i18n/en_US/Admin.json`:
 
 ```json
 {
     "keywords": {
-        "myPanel": "some keyword,another keyword"
+        "myPanel": "some search keyword,another search keyword"
     },
     "descriptions": {
-        "support": "Support Pack settings."
+        "myPanel": "Description text for my panel."
     },
     "labels": {
         "My Settings": "My Settings",
@@ -93,4 +93,38 @@ Create a file `custom/Espo/Modules/MyModule/Resources/i18n/en_US/Settings.json`:
         }
     }
 }
+```
+
+### 5. View
+
+Create a file `client/custom/modules/my-module/src/views/my-settings`:
+
+```js
+define('my-module:views/admin/my-settings', 'views/settings/record/edit', function (Dep) {
+
+    return Dep.extend({
+
+        detailLayout: [
+            {
+                rows: [
+                    [
+                        {
+                            name: 'myParameter'
+                        },
+                        false
+                    ]
+                ]
+            }
+        ],
+
+        // Dynamic logic can de defined.
+        dynamicLogicDefs: {},
+
+        setup: function () {
+            Dep.prototype.setup.call(this);
+            
+            // Some custom logic can be written here.
+        },
+    });
+});
 ```
