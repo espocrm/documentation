@@ -152,7 +152,7 @@ $valueMap = $entity->getValueMap(); // StdClass
 ### Delete from DB
 
 ```php
-$entityManager->getRepository($entityType)->deleteFromDb($id);
+$entityManager->getRDBRepository($entityType)->deleteFromDb($id);
 ```
 
 This will delete a record permanently.
@@ -274,7 +274,7 @@ $collection = $entityManager
     ->find();
 ```
 
-Or (as of v6.2.0):
+Or (as of v7.0):
 
 ```php
 <?php
@@ -437,7 +437,7 @@ $opportunityList = $entityManager
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
-      'stage' => ['Closed Lost', 'Closed Won']
+        'stage' => ['Closed Lost', 'Closed Won']
     ])
     ->find();
 ```
