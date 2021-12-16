@@ -323,6 +323,9 @@ E.g. `AND:(a, b, c)` corresponds to SQL statement `a AND b AND c`.
 
 E.g. `NOT:(a)` corresponds to SQL statement `NOT a`.
 
+### Custom functions
+
+As of v7.0.8 it's possible to add custom functions. An implementation class name for a custom function should be defined in metadata by the path app > orm > functionConverterClassNameMap_Mysql. The class should implement `Espo\ORM\QueryComposer\Part\FunctionConverter` interface.
 
 ## Attribute names
 
@@ -339,3 +342,4 @@ Field types having attributes named differently:
 Where *field* is the name of the field.
 
 More info about attributes [here](../administration/terms-and-naming.md#attribute).
+
