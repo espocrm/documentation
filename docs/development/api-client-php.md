@@ -120,11 +120,11 @@ class EspoApiClient
      *
      * @param string $method
      * @param string $action
-     * @param array|null $data
+     * @param array|stdClass|null $data
      * @return array
      * @throws \Exception
      */
-    public function request($method, $action, array $data = null)
+    public function request($method, $action, $data = null)
     {
         $method = strtoupper($method);
 
@@ -164,6 +164,10 @@ class EspoApiClient
 
         if ($method != 'GET') {
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
+        }
+
+        if ($data !== null && !is_array($data) && !is_object($data)) {
+            throw new \InvalidArgumentException("\$data should be array|stdClass|null.");
         }
 
         if (isset($data)) {
