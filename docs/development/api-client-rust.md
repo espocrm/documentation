@@ -11,7 +11,7 @@ For the source code, refer to [GitHub](https://github.com/TheDutchMC/espocrm-rs)
 # Usage
 
 ## Adding
-
+[![Crates.io](https://img.shields.io/crates/v/espocrm-rs)](https://crates.io/crates/espocrm-rs)  
 The crate is on crates.io, so you can add it by adding it to your `[dependencies]` in your Cargo.toml:
 ```toml
 [dependencies]
