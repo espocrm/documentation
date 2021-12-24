@@ -1,16 +1,14 @@
-# API CLient implementation in Rust
-* [Usage](#usage)
-    * [HMAC authorization](#hmac-authorization)
-    * [API Key authorization](#api-key-authorization)
-    * [Basic authorization](#basic-authorization)
-    * [Making a request](#making-a-request)
+# API Client implementation in Rust
+* [Installation](#installation)
+* [HMAC authorization](#hmac-authorization)
+* [API Key authorization](#api-key-authorization)
+* [Basic authorization](#basic-authorization)
+* [Making a request](#making-a-request)
 
 For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/).
 For the source code, refer to [GitHub](https://github.com/TheDutchMC/espocrm-rs).
 
-# Usage
-
-## Adding
+## Installation
 [![Crates.io](https://img.shields.io/crates/v/espocrm-rs)](https://crates.io/crates/espocrm-rs)  
 The crate is on crates.io, so you can add it by adding it to your `[dependencies]` in your Cargo.toml:
 ```toml
