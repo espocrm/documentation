@@ -9,7 +9,7 @@ For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest
 For the source code, refer to [GitHub](https://github.com/TheDutchMC/espocrm-rs).
 
 ## Installation
-
+[![Crates.io](https://img.shields.io/crates/v/espocrm-rs)](https://crates.io/crates/espocrm-rs)  
 The crate is on crates.io, so you can add it by adding it to your `[dependencies]` in your Cargo.toml:
 ```toml
 [dependencies]
