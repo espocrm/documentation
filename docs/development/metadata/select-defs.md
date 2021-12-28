@@ -74,6 +74,8 @@ Example:
 
 Classes should implement `Espo\Core\Select\Where\ItemConverter` interface.
 
+The key format: `{fieldName}_{conditionItemType}`.
+
 ## accessControlFilterResolverClassName
 
 A resolver is responsible for choosing an access filter. Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
