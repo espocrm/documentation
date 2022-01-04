@@ -6,7 +6,7 @@
 * [Making a request](#making-a-request)
 
 For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/).
-For the source code, refer to [GitHub](https://github.com/TheDutchMC/espocrm-rs).
+For the source code, refer to [GitHub](https://github.com/TobiasDeBruijn/espocrm-rs).
 
 ## Installation
 [![Crates.io](https://img.shields.io/crates/v/espocrm-rs)](https://crates.io/crates/espocrm-rs)  

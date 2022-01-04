@@ -3,12 +3,12 @@
 - [Installing](#installing)
 - [Usage](#usage)
 
-For the source code, refer to the GitHub repository [here](https://github.com/TheDutchMC/espocrm-java).
+For the source code, refer to the GitHub repository [here](https://github.com/TobiasDeBruijn/espocrm-java).
 
 ## Installing
 
 [![Maven Central](https://img.shields.io/maven-central/v/dev.array21/espocrm-api-client.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22dev.array21%22%20AND%20a:%22espocrm-api-client%22)
-[![Build Status](https://drone.k8s.array21.dev/api/badges/TheDutchMC/espocrm-java/status.svg)](https://drone.k8s.array21.dev/TheDutchMC/espocrm-java)
+[![Build Status](https://drone.k8s.array21.dev/api/badges/TobiasDeBruijn/espocrm-java/status.svg)](https://drone.k8s.array21.dev/TobiasDeBruijn/espocrm-java)
 
 The client is available on the Maven Central repository.  
 Minimum supported Java version: 11
