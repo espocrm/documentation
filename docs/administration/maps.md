@@ -25,7 +25,7 @@ Administration > Entity Manager > Choose entity > Fields > find the map field an
 
 ### In modal dialog
 
-Available since v 5.8.0.
+Available as of v5.8.0.
 
 Administration > Entity Manager > Click on the needed entity type > Click on the needed address field (e.g. *Billing Address*) > Check *View Map Button* and save.
 
@@ -33,7 +33,7 @@ Administration > Entity Manager > Click on the needed entity type > Click on the
 
 ## Printing in PDF
 
-Available since v5.9.2.
+Available as of v5.9.2.
 
 *googleMapsImage* helper is availabe for printing Google Maps in PDF.
 
