@@ -49,5 +49,5 @@ vendor/bin/phpunit tests/integration
 Command to run:
 
 ```
-vendor/bin/phpstan analyse
+vendor/bin/phpstan
 ```
