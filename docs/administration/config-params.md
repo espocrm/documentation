@@ -106,6 +106,7 @@ The list of parameters along with their default values.
 * passwordStrengthNumberCount – how many numbers are required for passwords;
 * passwordStrengthBothCases – `false` – password must contain letters of both upper and lower case;
 * passwordRecoveryRequestLifetime – `3 hours` – how long a password recovery link is valid;
+* passwordChangeRequestNewUserLifetime – `2 days` – how long a password change link for new users is valid (as of v7.1);
 
 ### Auth
 
