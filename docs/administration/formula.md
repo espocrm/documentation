@@ -1136,12 +1136,13 @@ Available since v6.0.0.
 * [ext\email\applyTemplate](#extemailapplytemplate)
 * [ext\sms\send](#extsmssend)
 * [ext\pdf\generate](#extpdfgenerate)
+* [ext\user\sendAccessInfo](#extusersendaccessinfo)
 
 #### ext\account\findByEmailAddressDomain
 
 `ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
 
-Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available since 5.8.3).
+Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available as of 5.8.3).
 
 #### ext\email\send
 
@@ -1223,16 +1224,41 @@ $attachmentId = ext\pdf\generate(
     'pdf-template-id',
     'test.pdf'
 );
+
 $emailId = record\create('Email',
     'subject', 'Test PDF',
     'body', 'PDF is attached',
     'to', entity\attribute('emailAddress'),
     'attachmentsIds', list($attachmentId)
 );
+
 ext\email\send($emailId);
 ```
 
 Note, that this won't work for new records in before-create script because a record is not yet created. It will work in Workfows.
+
+#### ext\user\sendAccessInfo
+
+`ext\user\sendAccessInfo(USER_ID)`
+
+Send an email with access info to a specific user (via email). A user password will be reset. The user will be promted to specify their new password. This function is useful when creating a new user via formula.
+
+Example:
+
+```
+$userId = record\create(
+    'User',
+    'userName', $userName,
+    'firstName', $firstName,
+    'lastName', $lastName,
+    'type', 'portal',
+    'portalsIds', list($portalId)
+);
+
+ext\user\sendAccessInfo($userId);
+```
+
+Available as of v7.1.0.
 
 ### Util
 
@@ -1240,7 +1266,7 @@ Note, that this won't work for new records in before-create script because a rec
 
 #### util\generateId
 
-Generates a unique ID. Returns a string. Since v6.1.3.
+Generates a unique ID. Returns a string. As of v6.1.3.
 
 Example:
 
