@@ -31,7 +31,7 @@ use Espo\ORM\EntityManager;
 
 class SomeClass
 {
-    private $entityManager;
+    private EntityManager $entityManager;
     
     public function __construct(EntityManager $entityManager)
     {
