@@ -10,6 +10,8 @@ You may also need to set fields, that are supposed to be calculated, read-only v
 
 The admin can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
+**Formula Sandbox** provides the ability to test formula scripts. It's available in the Admininstration panel.
+
 Formula can also be utilized in Workflows and BPM tool.
 
 In this article:
