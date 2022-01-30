@@ -1,18 +1,16 @@
 # Formula (& calculated fields)
 
-In Entity Manager, it's possible to define script (formula) for a specific entity type. This script will be executed every time before the record is saved.
+In the Entity Manager, it's possible to define a script (formula) for a specific entity type. This script will be executed every time before the record is saved. It provides the ability to automatically set specific fields (attributes) with values derived from calculation. In addition, some functions can perform actions (e.g. email sending, redord creating).
 
-It provides the ability to automatically set specific fields (attributes) with values derived from calculation. Some functions can also perform some actions.
+To edit the formula script for a specific entity type, follow Administration > Entity Manager > a needed entity type > Formula.
 
-To edit formula for a specific entity type, follow Administration > Entity Manager > dropdown menu on the right on the row of the entity type > Formula.
-
-You may also need to set fields, that are supposed to be calculated, read-only via Entity Manager.
+Note: It can be reasonable to set fields that are supposed to be calculated by formula as read-only (at Entity Manager > Fields).
 
 The admin can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
 **Formula Sandbox** provides the ability to test formula scripts. It's available in the Admininstration panel.
 
-Formula can also be utilized in Workflows and BPM tool.
+Formula can also be utilized in [Workflows](workflows.md) and [BPM tool](bpm.md).
 
 In this article:
 
