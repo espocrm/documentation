@@ -25,9 +25,7 @@ There can be multiple admin users in the system. The admin can create another ad
 
 ### Regular
 
-Regular users have access only to scopes allowed by [Roles](roles-management.md).
-
-Regular users can edit their own user (if allowed by roles) except the following fields: User Name, Emails, Teams, Roles, Is Active.
+Regular users have access only to scopes allowed by [Roles](roles-management.md). Regular users can edit their own user (if allowed by roles) except the following fields: User Name, Emails, Teams, Roles, Is Active.
 
 The admin can manage regular users at Administration > Users.
 
@@ -47,19 +45,17 @@ API users can by managed at Administration > API Users.
 
 The system user serves for system purposes. It's not possible to log in under the system user.
 
-
 ## Sending access info
 
 When a user (regular, admin or portal) is being created by the admin it's possible to send an access info email for the user. On the create form you need to fill in the email address field, then the checkbox 'Send access info' will show up. It will initiate the access email sending after user creation. The access info email contains the link to the system and the username.
 
-If the admin does not specify a **password** for the new user, it will prompt the user to specify their password once they follow the link in the access email. If the password is specified by admin, it will be sent plain in the email. It's not recommended that the passwords is specified by the admin because of security reasons.
+If the admin does not specify a **password** for the new user, it will prompt the user to specify their password once they follow the link in the access email. If the password is specified by the admin, it will be sent plain in the email. It's not recommended that the password is specified by the admin because of security reasons.
 
 The email **template** for access info emails can be changed at Administration > Template Manager > Access info.
 
-
 ## Password recovery
 
-Users can recover their access if they forgot password. There's the link/button 'Forgot Password?' on the login screen. The user needs to enter their email address and the password. If the entered data is correct, an email with an unique link will be sent to the user. This link has an expiration period.
+Users can recover their access if they forgot their password by clicking the link/button 'Forgot Password?' on the login screen. The user needs to enter their email address and the password. If the entered data is correct, an email with a unique link will be sent to the user. This link has an expiration period.
 
 Password recovery (for all, regular or admin users) can be disabled at Administration > Authentication.
 
