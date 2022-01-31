@@ -1,5 +1,12 @@
 # Users management
 
+In this article:
+
+* [User types](#user-types)
+* [Sending access info](#sending-access-info)
+* [Password recovery](#password-recovery)
+* [User inactivating](#user-inactivating)
+
 ## User types
 
 Types of users:
