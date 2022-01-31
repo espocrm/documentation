@@ -33,7 +33,7 @@ Note: By default grunt installs composer dependencies. You can skip it by runnin
 
 ### Branches
 
-* *hotfix/** – upcoming maintenance release; fixes should be pushed to this branch;
+* *fix* – upcoming maintenance release; fixes should be pushed to this branch;
 * *master* – develop branch; new features should be pushed to this branch;
 * *stable* – last stable release.
 
