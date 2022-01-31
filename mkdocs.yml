@@ -26,7 +26,7 @@ theme:
 nav:
     - 'Home': 'index.md'
     - 'Administration':
-        - 'Server Configuration':
+        - 'Server configuration':
             - 'Configuration': 'administration/server-configuration.md'
             - 'Apache': 'administration/apache-server-configuration.md'
             - 'Nginx': 'administration/nginx-server-configuration.md'
@@ -50,7 +50,7 @@ nav:
             - 'Dynamic forms': 'administration/dynamic-logic.md'
         - 'Users management': 'administration/users-management.md'
         - 'Roles management': 'administration/roles-management.md'
-        - 'Email Administration': 'administration/emails.md'
+        - 'Email administration': 'administration/emails.md'
         - 'Formula': 'administration/formula.md'
         - 'Import': 'administration/import.md'
         - 'Portal': 'administration/portal.md'
