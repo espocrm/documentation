@@ -27,7 +27,7 @@
   * [Dynamic forms](administration/dynamic-logic.md)
 * [Users management](administration/users-management.md)
 * [Roles management (access control)](administration/roles-management.md)
-* [Email Administration](administration/emails.md)
+* [Email administration](administration/emails.md)
 * [Formula (calculated fields)](administration/formula.md)
 * [Import](administration/import.md)
 * [Portal](administration/portal.md)
