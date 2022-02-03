@@ -6,6 +6,7 @@ In this article:
 * [Currency conversion](#currency-conversion)
 * [Currency rates API](#currency-rates-api)
 * [Adding missing currency](#adding-missing-currency)
+* [Conversion via formula](#conversion-via-formula)
 
 ## Settings & rates
 
@@ -105,3 +106,12 @@ Create a file: `custom/Espo/Custom/Resources/metadata/app/currency.json`
 where *COD* is a 3-letter currency code in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
 
 Clear cache at Administration.
+
+## Conversion via formula
+
+Example (conversion from Default Currency to EUR, for the field named `amount`):
+
+```
+amountEur = amountConverted * record\attribute('Currency', 'EUR', 'rate');
+```
+
