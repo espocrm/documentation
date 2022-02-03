@@ -138,7 +138,7 @@ The list of parameters along with their default values.
 ### Kanban
 
 * kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; as of v6.1.0;
-* kanbanMinColumnWidth – `200` – a min width of column; the horizontal scrolling will appear to prevent columnt being shrinked less than the specified value; as of v7.1.0;
+* kanbanMinColumnWidth – `220` – a min width of column; the horizontal scrolling will appear to prevent columnt being shrinked less than the specified value; as of v7.1.0;
 
 ### Text search
 
