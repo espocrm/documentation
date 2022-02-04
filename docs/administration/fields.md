@@ -142,7 +142,8 @@ Parameters:
 
 * Min – a validation: min acceptable value; if empty, then no validation applied;
 * Max – a validation: max acceptable value; if empty, then no validation applied;
-* Only default currency – only one (default) currency will be available if enabled (since 5.9.0).
+* Only default currency – only one (default) currency will be available if enabled.
+* Disable Conversion – the currency conversion action won't change the currency of the field.
 
 ![Currency](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/currency.png)
 
@@ -167,6 +168,7 @@ Parameters:
 
 * Min – a validation: min acceptable value; if empty, then no validation applied;
 * Max – a validation: max acceptable value; if empty, then no validation applied.
+* Decimal Places – how many numbers of decimal part to display in read mode.
 
 
 ## Boolean
