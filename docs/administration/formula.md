@@ -412,13 +412,26 @@ will return an array `['{token1}', '{token2}']`.
 
 `string\replace(STRING, SEARCH, REPLACE)`
 
-Replaces all occurrences of SEARCH with REPLACE in STRING. (available since version 5.9.0)
+Replaces all occurrences of SEARCH with REPLACE in STRING. (as of v5.9.0)
 
 Example:
 
 `string\replace('Hello {test}', '{test}', 'world')`
 
 will return `'Hello world'`.
+
+
+#### string\split
+
+`string\split(STRING, SEPARATOR)`
+
+Splits a STRING into array of strings by a string SEPARATOR. (as of v7.1.0)
+
+Example:
+
+```
+string\split('hello world', ' ') // will return ['hello', 'world']
+```
 
 ### Datetime
 
