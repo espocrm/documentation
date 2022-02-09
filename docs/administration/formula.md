@@ -75,7 +75,8 @@ Available scalar types:
 
 ## Operators
 
-* `=` - assignment.
+* `=` - assignment,
+* `??` - null coalescing (as of v7.1.0),
 * `||` - logical OR,
 * `&&` - logical AND,
 * `!` - logical NOT,
@@ -92,7 +93,9 @@ Available scalar types:
 * `<=` - comparison less than or equals.
 
 The priority of operators:
+
 * `=`;
+* `??`;
 * `||`;
 * `&&`
 * `==`, `!=`, `>`, `<`, `>=`, `<=`;
