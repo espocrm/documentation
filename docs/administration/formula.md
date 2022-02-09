@@ -639,7 +639,19 @@ Returns the next highest integer value by rounding up value if necessary.
 
 `number\randomInt([MIN, MAX])`
 
-Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used. (since v5.9.2)
+Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used. (as of v5.9.2)
+
+#### number\parseInt
+
+`number\parseInt(STRING)`
+
+Converts a string to an integer number. (as of v7.1.0)
+
+#### number\parseFloat
+
+`number\parseFloat(STRING)`
+
+Converts a string to a float number. (as of v7.1.0)
 
 ### Entity
 
