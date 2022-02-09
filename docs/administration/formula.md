@@ -302,7 +302,7 @@ string\contains('hello world', 'world') // will return true
 
 `string\pos(STRING, NEEDLE)`
 
-Returns possition of NEEDLE in STRING, *false* if not found. (since v5.7.3)
+Returns possition of NEEDLE in STRING, *false* if not found. (as of v5.7.3)
 
 Example:
 
@@ -390,7 +390,7 @@ string\pad('100', 5, '*', 'right') // will return `100**`
 
 `string\match(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
-Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3.)
+Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (as of v5.8.3)
 
 Example:
 
@@ -404,7 +404,7 @@ The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
-Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (available since version 5.8.3)
+Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (as of v5.8.3)
 
 Example:
 
@@ -797,7 +797,7 @@ It's possible to apply a [list report](../user-guide/reports.md) as a filter. Mo
 
 `entity\getLinkColumn(LINK, ID, COLUMN)`
 
-Fetches a relationship column value (since 5.7.1).
+Fetches a relationship column value (as of v5.7.1).
 
 Example:
 
@@ -857,9 +857,9 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 `record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])`
 
-Returns a first found ID of a record that matches specific criteria. (since version 5.7.0)
+Returns a first found ID of a record that matches specific criteria. (as of v5.7.0)
 
-`record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a record with an optional FILTER applied. (since version 5.7.0)
+`record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a record with an optional FILTER applied. (as of v5.7.0)
 
 Examples:
 
@@ -873,11 +873,11 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 `record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, KEY1, VALUE1, KEY2, VALUE2 ...])`
 
-Returns a first found ID of a related record that matches specific criteria. (since version 5.7.0)
+Returns a first found ID of a related record that matches specific criteria. (as of v5.7.0)
 
 `record\findRelatedOne(ENTITY_TYPE, ID, LINK, [ORDER_BY, ORDER, FILTER])`
 
-Returns a first found ID of a related record with an optional FILTER applied. (since version 5.7.0)
+Returns a first found ID of a related record with an optional FILTER applied. (as of v5.7.0)
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
@@ -895,11 +895,11 @@ Note: Before version 5.9.0 ORDER_BY and ORDER arguments were mandatory.
 
 `record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, KEY1, VALUE1, KEY2, VALUE2 ...])`
 
-Returns an array of IDs of a related record that matches specific criteria. LIMIT is the max number of record. (since version 5.9.0)
+Returns an array of IDs of a related record that matches specific criteria. LIMIT is the max number of record. (as of v5.9.0)
 
 `record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, FILTER])`
 
-Returns an array of IDs of a related record with an optional FILTER applied. (since version 5.9.0)
+Returns an array of IDs of a related record with an optional FILTER applied. (as of v5.9.0)
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
@@ -923,7 +923,7 @@ record\relate('Email', $emailId, 'teams', $ids);
 
 `record\attribute(ENTITY_TYPE, ID, ATTRIBUTE)`
 
-Returns an attribute value of a specific record. (since version 5.7.0)
+Returns an attribute value of a specific record. (as of v5.7.0)
 
 Examples:
 
@@ -937,11 +937,11 @@ By utilizing this function along with *record\findOne*, it's possible to fetch a
 
 `record\relate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
 
-Relates two records. Available since version 5.7.8.
+Relates two records. (as of v5.7.8)
 
 `record\relate(ENTITY_TYPE, ID, LINK, LIST_OF_IDS)`
 
-Links a record with multiple records. Available since version 5.9.0.
+Links a record with multiple records. (as of v5.9.0)
 
 Examples:
 
@@ -955,7 +955,7 @@ Note: It won't work in *Before save script* when creating a new record, because 
 
 `record\unrelate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
 
-Unlinks two records. Available since version 5.7.8.
+Unlinks two records. (as of v5.7.8)
 
 Example:
 
@@ -965,9 +965,7 @@ Example:
 
 `record\create(ENTITY_TYPE, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
 
-Creates a new record of entity type with attributes specified as key-value pairs. Returns id of the created record, or NULL if failure.
-
-Available since version 5.9.0.
+Creates a new record of entity type with attributes specified as key-value pairs. Returns id of the created record, or NULL if failure. (as of v5.9.0)
 
 Examples:
 
@@ -977,9 +975,7 @@ Examples:
 
 `record\update(ENTITY_TYPE, ID, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
 
-Updates an existing record with attributes specified as key-value pairs. Returns TRUE if success, FALSE if failure.
-
-Available since version 5.9.0.
+Updates an existing record with attributes specified as key-value pairs. Returns TRUE if success, FALSE if failure. (as of v5.9.0)
 
 Examples:
 
@@ -991,7 +987,7 @@ It will update the meeting with ID `SOME-MEETING-ID`, and will set `emailAddress
 
 `record\relationColumn(ENTITY_TYPE, ID, LINK, FOREIGN_ID, COLUMN)`
 
-Returns a relation column. Available since v5.8.0.
+Returns a relation column. (as of v5.8.0)
 
 Example:
 
@@ -1006,7 +1002,7 @@ Example (condition checking position in team):
 
 `record\updateRelationColumn(ENTITY_TYPE, ID, LINK, FOREIGN_ID, COLUMN, VALUE)`
 
-Updates a relation column. Available since version 5.8.0.
+Updates a relation column. (as of v5.8.0)
 
 Example:
 
@@ -1025,13 +1021,11 @@ Example:
 
 ### Password
 
-Since version 5.7.0.
-
 #### password\generate
 
 `password\generate()`
 
-Generates and returns a password.
+Generates and returns a password. (as of v5.7.0)
 
 #### password\hash
 
@@ -1097,13 +1091,13 @@ $number = array\length(someMultiEnumField);
 
 `array\at(LIST, INDEX)`
 
-Returns a value by INDEX. (since v5.8.3)
+Returns a value by INDEX. (as of v5.8.3)
 
 #### array\join
 
 `array\join(LIST, SEPARATOR)`
 
-Joins array elements with a string separator. Returns a string. (since v6.1.3)
+Joins array elements with a string separator. Returns a string. (as of v6.1.3)
 
 Example:
 
@@ -1117,25 +1111,21 @@ $string = array\join($array, $separator);
 
 `language\translate(LABEL, [CATEGORY, SCOPE])`
 
-Translates a label to the language set as default.
+Translates a label to the language set as default. (as of v6.0.0)
 
 Example:
 
 `language\translate('passwordWillBeSent', 'messages', 'User')`
 
-Available since v6.0.0.
-
 #### language\translateOption
 
 `language\translateOption(OPTION, FIELD, [SCOPE])`
 
-Translates an option of a specific field to the language set as default. The field can be of the following types: Enum, Multi-enum, Checklist, Array, Varchar.
+Translates an option of a specific field to the language set as default. The field can be of the following types: Enum, Multi-enum, Checklist, Array, Varchar. (as of v6.0.0)
 
 Example:
 
 `language\translateOption('Customer', 'type', 'Account')`
-
-Available since v6.0.0.
 
 ### Json
 
@@ -1143,7 +1133,7 @@ Available since v6.0.0.
 
 `json\retrieve(JSON, PATH)`
 
-Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots.
+Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots. (as of v6.0.0)
 
 Example, retrieving *id* from `{"id": "SOME_ID"}`:
 
@@ -1155,8 +1145,6 @@ Example, retrieving *id* from `[{"id": "SOME_ID"}]`:
 ```
 $value = json\retrieve($someJsonString, '0.id');`
 ```
-
-Available since v6.0.0.
 
 ### Ext
 
@@ -1177,7 +1165,7 @@ Finds an account by an email address. If no full match found, then tries to find
 
 `ext\email\send(EMAIL_ID)`
 
-Sends an email. EMAIL_ID is an ID of an email record. Returns TRUE if sent, false if not sent. (Available since version 5.9.0)
+Sends an email. EMAIL_ID is an ID of an email record. Returns TRUE if sent, false if not sent. (as of v5.9.0)
 
 If *from* address is not set in the email, then the system email address will be used. If there's match between *from* address and the address of some group email account, then SMTP setting of the group email account will be used.
 
@@ -1200,7 +1188,7 @@ ext\email\send($id);
 
 `ext\email\applyTemplate(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
 
-Applies an email template to an existng email record. Parent record can be passed optionally. (Available since v5.9.0)
+Applies an email template to an existng email record. Parent record can be passed optionally. (as of v5.9.0)
 
 Example:
 
@@ -1242,7 +1230,7 @@ The extension with SMS providers can be downloaded [here](https://github.com/esp
 
 `ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID, [FILENAME])`
 
-Generates PDF file and returns attachment ID. If failed, then returns NULL. TEMPLATE_ID is an ID of PDF template. (Available since v5.9.0)
+Generates PDF file and returns attachment ID. If failed, then returns NULL. TEMPLATE_ID is an ID of PDF template. (as of v5.9.0)
 
 Example:
 
@@ -1319,7 +1307,7 @@ description = $test;
 
 ## Comments
 
-Available since version 5.7.6.
+Available as of v5.7.6.
 
 Line comment:
 
