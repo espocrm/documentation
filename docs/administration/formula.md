@@ -1212,7 +1212,7 @@ $value = json\retrieve($someJsonString, '0.id');`
 
 `json\encode(VALUE)`
 
-Encodes a VALUE to a json string.
+Encodes a VALUE to a json string. (as of v7.1.0)
 
 ### Ext
 
