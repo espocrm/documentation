@@ -1132,25 +1132,25 @@ Retrieves a value by a KEY from an OBJECT. Returns NULL if KEY is not set. (as o
 
 `object\set(OBJECT, KEY, VALUE)`
 
-Clones an OBJECT and sets a value by a KEY. (as of v7.1.0)
+Sets a value by a KEY. (as of v7.1.0)
 
 Example:
 
 ```
 $object = object\create();
-$object = object\set($object, 'key', 'some-value');
+object\set($object, 'key', 'some-value');
 ```
 
 ### object\clear
 
 `object\clear(OBJECT, KEY)`
 
-Clones an OBJECT and unsets a value by a KEY. (as of v7.1.0)
+Unsets a value by a KEY. (as of v7.1.0)
 
 Example:
 
 ```
-$object = object\clear($object, 'some-key');
+object\clear($object, 'some-key');
 ```
 
 ### object\has
@@ -1326,7 +1326,7 @@ Note, that this won't work for new records in before-create script because a rec
 
 `ext\user\sendAccessInfo(USER_ID)`
 
-Send an email with access info to a specific user (via email). A user password will be reset. The user will be promted to specify their new password. This function is useful when creating a new user via formula.
+Send an email with access info to a specific user (via email). A user password will be reset. The user will be promted to specify their new password. This function is useful when creating a new user via formula. (as of v7.1.0)
 
 Example:
 
@@ -1343,15 +1343,13 @@ $userId = record\create(
 ext\user\sendAccessInfo($userId);
 ```
 
-Available as of v7.1.0.
-
 ### Util
 
 * [util\generateId](#utilgenerateid)
 
 #### util\generateId
 
-Generates a unique ID. Returns a string. As of v6.1.3.
+Generates a unique ID. Returns a string. (as of v6.1.3)
 
 Example:
 
