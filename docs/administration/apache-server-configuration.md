@@ -8,7 +8,7 @@ To install all necessary libraries, run these commands in the terminal:
 
 ```
 sudo apt-get update
-sudo apt-get install php-mysql php-json php-gd php-zip php-imap php-mbstring php-curl php-exif php-ldap
+sudo apt-get install php-mysql php-json php-gd php-zip php-imap php-mbstring php-curl php-exif php-ldap php-xml
 sudo phpenmod imap mbstring
 sudo service apache2 restart
 ```
