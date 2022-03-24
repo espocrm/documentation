@@ -1113,7 +1113,7 @@ $string = array\join($array, $separator);
 
 `array\index(LIST, ELEMENT)`
 
-Returns a position of the ELEMENT in the LIST. (as of v7.1.0)
+Returns a position of the ELEMENT in the LIST. Returns `null` if the ELEMENT not in the LIST. (as of v7.1.0)
 
 Example:
 
