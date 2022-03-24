@@ -1049,7 +1049,7 @@ $hash = password\hash($password);
 * [array\length](#arraylength)
 * [array\at](#arrayat)
 * [array\join](#arrayjoin)
-* [array\index](#arrayindex)
+* [array\indexOf](#arrayindexof)
 * [array\removeAt](#arrayremoveat)
 * [array\unique](#arrayunique)
 
@@ -1109,7 +1109,7 @@ Example:
 $string = array\join($array, $separator);
 ```
 
-#### array\index
+#### array\indexOf
 
 `array\index(LIST, ELEMENT)`
 
@@ -1118,7 +1118,7 @@ Returns a position of the ELEMENT in the LIST. Returns `null` if the ELEMENT not
 Example:
 
 ```
-$index = array\index($idList, $someId);
+$index = array\indexOf($idList, $someId);
 ```
 
 #### array\removeAt
