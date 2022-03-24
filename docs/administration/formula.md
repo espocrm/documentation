@@ -1137,7 +1137,7 @@ $newArray = array\removeAt($array, $index);
 
 `array\unique(LIST)`
 
-Removes duplicates in the LIST and returna a new array. (as of v7.1.0)
+Removes duplicates in the LIST and returns a new array. (as of v7.1.0)
 
 Example:
 
