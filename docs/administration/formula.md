@@ -1049,6 +1049,9 @@ $hash = password\hash($password);
 * [array\length](#arraylength)
 * [array\at](#arrayat)
 * [array\join](#arrayjoin)
+* [array\index](#arrayindex)
+* [array\removeAt](#arrayremoveat)
+* [array\unique](#arrayunique)
 
 #### array\includes
 
@@ -1104,6 +1107,42 @@ Example:
 
 ```
 $string = array\join($array, $separator);
+```
+
+#### array\index
+
+`array\index(LIST, ELEMENT)`
+
+Returns a position of the ELEMENT in the LIST. (as of v7.1.0)
+
+Example:
+
+```
+$index = array\index($idList, $someId);
+```
+
+#### array\removeAt
+
+`array\removeAt(LIST, INDEX)`
+
+Removes an element by the INDEX and returns a new array. (as of v7.1.0)
+
+Example:
+
+```
+$newArray = array\index($array, $index);
+```
+
+#### array\unique
+
+`array\unique(LIST)`
+
+Removes duplicates in the LIST and returna a new array. (as of v7.1.0)
+
+Example:
+
+```
+$newArray = array\unique($array);
 ```
 
 ### object
