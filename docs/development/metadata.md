@@ -64,12 +64,12 @@ When you access data by path `clientDefs.Account.views.edit` the first lexeme `c
 }
 ```
 
-All JSON files from these directories get merged recursively into a single php array and stored in a cache file. 
+All JSON files from these directories **get merged** recursively into a single file and stored in a cache file. 
 
 
 ## Extending
 
-Since metadata is merged recursively you can easily redefine json objects and arrays in _custom_ and in your _module_.
+Since metadata is merged recursively you can easily redefine JSON objects and arrays in the Custom directory.
 
 You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of array.
 
