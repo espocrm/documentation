@@ -69,7 +69,7 @@ All JSON files from these directories **get merged** recursively into a single f
 
 ## Extending
 
-Since metadata is merged recursively you can easily redefine JSON objects and arrays in the Custom directory.
+Since metadata is merged recursively you can easily redefine JSON objects and arrays in the `custom` directory.
 
 You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of array.
 
