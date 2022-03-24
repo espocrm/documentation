@@ -1130,7 +1130,7 @@ Removes an element by the INDEX and returns a new array. (as of v7.1.0)
 Example:
 
 ```
-$newArray = array\index($array, $index);
+$newArray = array\removeAt($array, $index);
 ```
 
 #### array\unique
