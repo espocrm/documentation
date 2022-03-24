@@ -1111,7 +1111,7 @@ $string = array\join($array, $separator);
 
 #### array\indexOf
 
-`array\index(LIST, ELEMENT)`
+`array\indexOf(LIST, ELEMENT)`
 
 Returns a position of the ELEMENT in the LIST. Returns `null` if the ELEMENT not in the LIST. (as of v7.1.0)
 
