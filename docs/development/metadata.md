@@ -29,7 +29,7 @@ Path to a needed parameter is specified with an array.
 // entityDefs > Account > fields > type
 $value = $metadata->get(['entityDefs', 'Account', 'fields', 'name', 'type']);
 ```
-will return `varchar`
+will return the string value `"varchar"`.
 
 ```php
 $metadata->get(['entityDefs', 'Account', 'fields']);
