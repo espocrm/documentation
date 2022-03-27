@@ -2,15 +2,17 @@
 
 ## Lead Capture
 
-Note: Available since 5.4.0 version.
+Note: Available as of v5.4.0.
 
-By utilizing Lead Capture feature administrator can create an entry point for capturing leads through API. Create an entry point at Administration > Lead Capture.
+By utilizing the Lead Capture feature administrator can create an entry point for capturing leads through API. Follow Administration > Lead Capture to create the entry point.
 
-* Subscribe to Target List - a created lead will be added to a specified target list;
-* Subscribe Contact if exists - If a contact with the same email exists, then the contact will be added to the target list;
-* Target Team - A team to assign a created lead to;
-* Campaign - Statistics will be available in a campaign log;
-* Payload Fields - Select what fields need to be passed.
+Parameters:
+
+* Subscribe to Target List – a created lead will be added to a specified target list;
+* Subscribe Contact if exists – if a contact with the same email exists, then the contact will be added to the target list;
+* Target Team – a team created leads will be assigned to;
+* Campaign – statistics will be available in the log of a selected campaign record;
+* Payload Fields – what fields need to be sent in payload (from the web form to the API entry point).
 
 ### Double Opt-in (confirmed opt-in)
 
@@ -20,9 +22,9 @@ Create Email Template that will be used for a double opt-in. You can use followi
 
 * `{optInUrl}` - confirmation URL;
 * `{optInLink}` - confirmation link;
-* `{optInDate}` - date when a subscription request was submitted (since 5.6.10);
-* `{optInTime}` - time when a subscription request was submitted (since 5.6.10);
-* `{optInDateTime}` - date and time when a subscription request was submitted (since 5.6.10).
+* `{optInDate}` - date when a subscription request was submitted (as of v5.6.10);
+* `{optInTime}` - time when a subscription request was submitted (as of v5.6.10);
+* `{optInDateTime}` - date and time when a subscription request was submitted (as of v5.6.10).
 
 A confirmation link will be added automatically if you haven’t inserted a placeholder in the email template.
 
