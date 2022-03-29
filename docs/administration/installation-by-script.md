@@ -45,43 +45,43 @@ Skip confirmation prompts during installation.
 
 #### `--ssl`
 
-Installation with SSL/TLS certificate. Ex. `--ssl` See [installation modes](#installation-modes).
+Installation with SSL/TLS certificate. Ex. `--ssl`. See [installation modes](#installation-modes).
 
 #### `--letsencrypt`
 
-Installation with a Let's Encrypt free certificate. Ex. `--ssl --letsencrypt` See [installation modes](#1-lets-encrypt-free-certificate).
+Installation with a Let's Encrypt free certificate. Ex. `--ssl --letsencrypt`. See [installation modes](#1-lets-encrypt-free-certificate).
 
 #### `--owncertificate`
 
-Installation with an own SSL/TLS certificate. Ex. `--ssl --owncertificate` See [installation modes](#2-own-ssltls-certificate).
+Installation with an own SSL/TLS certificate. Ex. `--ssl --owncertificate`. See [installation modes](#2-own-ssltls-certificate).
 
 #### `--domain`
 
-Define your domain. Ex. `--domain=my-domain.com`
+Define your domain. Ex. `--domain=my-domain.com`.
 
 #### `--email`
 
-Email address for Let's Encrypt certificate. Ex. `--email=email@my-domain.com`
+Email address for Let's Encrypt certificate. Ex. `--email=email@my-domain.com`.
 
 #### `--clean`
 
-Clean the existing EspoCRM installation and start a new one. This option can be used if you have already installed EspoCRM. Ex. `--clean`
+Clean the existing EspoCRM installation and start a new one. This option can be used if you have already installed EspoCRM. Ex. `--clean`.
 
 #### `--mysqlRootPassword`
 
-Define your own MySQL root password instead of the automatically generated one. Ex. `--mysqlRootPassword=my-password`
+Define your own MySQL root password instead of the automatically generated one. Ex. `--mysqlRootPassword=my-password`.
 
 #### `--mysqlPassword`
 
-Define your own MySQL password for EspoCRM installation. Ex. `--mysqlPassword=my-password`
+Define your own MySQL password for EspoCRM installation. Ex. `--mysqlPassword=my-password`.
 
 #### `--adminUsername`
 
-Define a username of your EspoCRM administrator. Ex. `--adminUsername=admin`
+Define a username of your EspoCRM administrator. Ex. `--adminUsername=admin`.
 
 #### `--adminPassword`
 
-Define a password of EspoCRM administrator. Ex. `--adminPassword=admin-password`
+Define a password of EspoCRM administrator. Ex. `--adminPassword=admin-password`.
 
 ## Data
 
