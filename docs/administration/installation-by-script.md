@@ -256,7 +256,7 @@ This can be achieved by mounting the PHP configuration file and restaring the co
 
 ### Step 1
 
-Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`;
+Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
 ```
 cd /var/www/espocrm
