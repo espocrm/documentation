@@ -306,6 +306,8 @@ Note: The layout, that is specified in the report, is not applied to the list vi
 
 ![Report filter](../_static/images/user-guide/reports/report-filter.png)
 
+It's possible to create filters for specific teams.
+
 ## Report Panels
 
 Report Panels are the detail view panels showing report results. 
