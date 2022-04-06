@@ -57,9 +57,9 @@ You can see all your emails at Emails tab. There are standard folders Inbox, Sen
 
 When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized, then user can link it manually by filling in *Parent* field.
 
-If an email came from a new potential client, user can **convert it to Lead**. Open Email entry and click Create Lead in top-right menu.
+If an email came from a new potential client, user can **convert** it **to Lead** (from the top-right menu).
 
-It's also possible to **create Task or Case** from an email record.
+It's possible to **create a Task or Case** from an email record (from the top-right menu).
 
 If email addresses (from, to, cc) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User etc). If some email address is new, you can **create contact** right from there.
 
@@ -120,7 +120,7 @@ The list of available additional placeholders:
 
 ### Handlebars support
 
-Available as of 5.9.0.
+Available as of v5.9.0.
 
 Note: This is an expiremental feature.
 
