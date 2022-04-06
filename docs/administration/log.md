@@ -20,7 +20,7 @@ In `data/config.php` (or `data/config-internal.php`):
 
 Prints a backtrace when an exception is occurred. Note that in some cases an exception is caught within the application, the trace won't be printed in this case.
 
-Not recommended to enable on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this problem is supposed to be solved.
+It is **not recommended** to enable trace printing on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this problem is supposed to be solved.
 
 ## Handlers
 
