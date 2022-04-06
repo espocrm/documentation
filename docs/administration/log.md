@@ -16,6 +16,12 @@ In `data/config.php` (or `data/config-internal.php`):
   ],
 ```
 
+## Trace printing
+
+Prints a backtrace when an exception is occurred. Note that in some cases an exception is caught within the application, the trace won't be printed in this case.
+
+Not recommended to enable on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this issue supposed to be solved.
+
 ## Handlers
 
 Actual as of v6.1.
