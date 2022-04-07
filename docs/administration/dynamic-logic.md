@@ -32,4 +32,4 @@ Available in the following layouts:
 * Side Panels
 * Bottom Panels
 
-It's also possible to define conditions on which a specific color will be applied to the panel (as of v6.2.0).
+It's also possible to define conditions on which a specific color will be applied to the panel (as of v7.0.0).
