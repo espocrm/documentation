@@ -99,3 +99,21 @@ Example:
     }
 }
 ```
+
+## ordererClassNameMap
+
+As of v7.1.0.
+
+Provides the ability to apply custom order for a specific field.
+
+Classes should implement `Espo\Core\Select\Order\Orderer` interface.
+
+Example: 
+
+```json
+{
+    "ordererClassNameMap": {
+        "someFieldName": "Espo\\Custom\\Classes\\Select\\MyEntityType\\Order\\SomeOrderer"
+    }
+}
+```
