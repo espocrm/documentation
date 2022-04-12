@@ -60,37 +60,33 @@ Unrelates the target record from another specified record.
 
 #### Apply Assignment Rule
 
-Assigns the record to some user by a specific rule. Can be applied to the target record, the process record or any record created by the process.
+Assigns the record to some user by a specific rule. Can be applied to the target record, the process record or any record created by the process. See [more](workflows.md#apply-assignment-rule).
 
 #### Create Notification
 
-Creates in-app notification for specific users.
+Creates in-app notification for specific users. See [more](workflows.md#create-notification).
 
-Process variables can be used in a message with the placeholder `{$$variable}` (since 2.5.8 version).
+Process variables can be used in a message with the placeholder `{$$variable}` (as of v2.5.8).
 
 #### Make Followed
 
 Makes specific users to follow the target record, the process record or any record created by the process.
 
-
 #### Trigger Another Workflow Rule
 
 Runs a workflow rule of the sequential type, target record can be switched a related or a record created by the process.
-
 
 #### Run Service Action
 
 Runs a specific service action. The list of built-in actions is available [here](workflows.md#run-service-action). Developers can create custom service actions.
 
-
 #### Send HTTP Request
 
-Calls external API (since version 2.4.0).
+Calls external API (as of v2.4.0). See [more](workflows.md#send-http-request).
 
 #### Execute Formula Script
 
 Executes a specific formula script.
-
 
 ### Formula usage
 
