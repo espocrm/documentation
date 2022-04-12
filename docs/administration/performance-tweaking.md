@@ -1,11 +1,5 @@
 # Performance Tweaking
 
-## Disabling total count on list view
-
-It is relevant if there are a lot of records of a specific entity type in the database. In this case, it can be reasonable to disable displaying count on the list view for that entity type, since COUNT can be very slow in MySQL.
-
-To disable: Administration > Entity Manager > edit specific entity type > check *Disable record count*.
-
 ## Recommendations
 
 * SSD is preferred over HDD.
@@ -49,3 +43,14 @@ Important: Preloading must be disabled before upgrading and extension installati
 
 Note: Using preloading is not likely to bring a significant performance boost. The database usually is a bottleneck in applications like CRM.
 
+## Misc
+
+### Disabling total count on list view
+
+It is relevant if there are a lot of records of a specific entity type in the database. In this case, it can be reasonable to disable displaying count on the list view for that entity type, since COUNT can be very slow in MySQL.
+
+To disable: Administration > Entity Manager > edit specific entity type > check *Disable record count*.
+
+### Use full-text search
+
+Create [full-text search](../user-guide/text-search.md#full-text-search) indexes for large tables. It will improve record lookup.
