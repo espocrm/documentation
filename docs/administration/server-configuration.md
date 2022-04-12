@@ -21,17 +21,18 @@ In this article:
 
 EspoCRM requires PHP 7.4 or later, with the following extensions:
 
-* [pdo](http://php.net/manual/en/book.pdo.php) – for database access;
-* [gd](http://php.net/manual/en/book.image.php) – to manipulate images;
-* [openssl](http://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
-* [zip](http://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
-* [mbstring](http://php.net/manual/en/book.mbstring.php);
-* [iconv](http://php.net/manual/en/book.iconv.php);
-* [curl](http://php.net/manual/en/book.curl.php) – for integrations;
-* [xml](http://php.net/manual/en/book.xml.php) – for excel export;
+* [pdo](https://php.net/manual/en/book.pdo.php) – for database access;
+* [gd](https://php.net/manual/en/book.image.php) – to manipulate images;
+* [openssl](https://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
+* [zip](https://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
+* [mbstring](https://php.net/manual/en/book.mbstring.php);
+* [iconv](https://php.net/manual/en/book.iconv.php);
+* [curl](https://php.net/manual/en/book.curl.php) – for integrations;
+* [xml](https://php.net/manual/en/book.xml.php) – for excel export;
 * [xmlwriter](http://php.net/manual/en/book.xmlwriter.php) – for excel export;
-* [exif](http://php.net/manual/en/book.exif.php) – for a proper oriantion of uploaded images;
-* [json](http://php.net/manual/en/book.json.php) (included out-of-the-box since PHP v8.0).
+* [exif](https://php.net/manual/en/book.exif.php) – for a proper oriantion of uploaded images;
+* [bcmath](https://www.php.net/manual/en/book.bc.php) – arbitrary precision mathematics;
+* [json](https://php.net/manual/en/book.json.php) (included out-of-the-box since PHP v8.0).
 
 php.ini settings:
 
