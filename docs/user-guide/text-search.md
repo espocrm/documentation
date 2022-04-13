@@ -50,6 +50,12 @@ For InnoDB tables the following operators are available:
 * `*` The truncation (or wildcard) operator. Appended to the word to be affected.
 * `"` A phrase enclosed within double quotes must be contained literally, as it was typed.
 
-Note: The MySQL option `ft_min_word_len` defines a minimum word length available for full-text search. By default it's set to `4`. You might want to set it to `3` to be able to search shorter words. If you change this paramater in MySQL, you also need to run rebuild in Espo.
+### Minimum word length
 
-Note: MySQL has a list of [stopwords](https://dev.mysql.com/doc/refman/8.0/en/fulltext-stopwords.html) that are ignored by full-text search. E.g. *hello*.
+The MySQL option `ft_min_word_len` defines a minimum word length available for full-text search. By default it's set to `4`. You might want to set it to `3` to be able to search shorter words.
+
+If you change this paramater in MySQL, you also need to run rebuild in Espo.
+
+### Stopwords
+
+MySQL has a list of [stopwords](https://dev.mysql.com/doc/refman/8.0/en/fulltext-stopwords.html) that are ignored by full-text search. E.g. *hello*.
