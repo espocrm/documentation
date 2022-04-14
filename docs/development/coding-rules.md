@@ -147,6 +147,9 @@ Exception: Adding comments may be reasonable in some rare cases.
 ❗ Bad (excessive documenting and commenting):
 
 ```php
+<?php
+// ...
+
     /**
      * Sanitize input.
      *
@@ -163,6 +166,9 @@ Exception: Adding comments may be reasonable in some rare cases.
 ✔️ Good:
 
 ```php
+<?php
+// ...
+
     private function sanitizeInput(string $input): string
     {
         return Util::sanitize($input);
@@ -172,6 +178,9 @@ Exception: Adding comments may be reasonable in some rare cases.
 ✔️ Good (documenting public methods is OK):
 
 ```php
+<?php
+// ...
+
     /**
      * Run a command.
      */
@@ -183,6 +192,9 @@ Exception: Adding comments may be reasonable in some rare cases.
 ❗ Bad:
 
 ```php
+<?php
+// ...
+
 // start sanitizing
 $string = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 // end sanitizing
@@ -190,6 +202,9 @@ $string = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
 ✔️ Good:
 ```php
+<?php
+// ...
+
 $string = $this->sanitizeString($string);
 ```
 
@@ -244,6 +259,7 @@ class SomeClass
 ```php
 <?php
 // ...
+
     public function process(): void
     {
         if (!$this->isCached()) {
@@ -261,6 +277,7 @@ class SomeClass
 ```php
 <?php
 // ...
+
     public function process(): void
     {
         if (!$this->isCached()) {
@@ -276,6 +293,7 @@ class SomeClass
 ```php
 <?php
 // ...
+
     public function process(): void
     {
         if (!$this->isCached()) {
@@ -291,6 +309,7 @@ class SomeClass
 ```php
 <?php
 // ...
+
     private function sizeExceedsLimit(Storage $storage, string $id): bool
     {
         $fetchOnlyHeader = false;
@@ -314,6 +333,7 @@ class SomeClass
 ```php
 <?php
 // ...
+
     private function sizeExceedsLimit(Storage $storage, string $id): bool
     {
         $maxSize = $this->config->get('emailMessageMaxSize');
@@ -341,6 +361,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
+
     public function process(string $city, string $country, string $postalCode): void
     {
     }
@@ -351,6 +372,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
+
     public function process(Address $address): void
     {
     }
@@ -371,6 +393,7 @@ Less is better. Four is too much.
 
 ```php
 <?php
+
 // Using a builder.
 $collection = $finder
     ->createBuilder()
@@ -388,6 +411,8 @@ Not a strict rule but in most cases should be followed.
 ❗ Bad:
 
 ```php
+<?php
+
 class SomeProcessor
 {
     private bool $isProcessed = false;
@@ -406,6 +431,8 @@ class SomeProcessor
 ✔️ Good:
 
 ```php
+<?php
+
 class SomeProcessor
 {
     public function process(): Result
@@ -424,6 +451,8 @@ Try to use inheritance only when it's really reasonable.
 ❗ Bad:
 
 ```php
+<?php
+
 class AccountChecker extends BaseChecker
 {
     public function check(Entity $entity): bool
@@ -440,6 +469,8 @@ class AccountChecker extends BaseChecker
 ✔️ Good:
 
 ```php
+<?php
+
 class AccountChecker implements Checker
 {
     private BaseChecker $baseChecker;
@@ -474,6 +505,8 @@ Use immutable data transfer objects.
 ❗ Bad:
 
 ```php
+<?php
+
 $data = [
     'attribute' => $attribute,
     'value' => $value,
@@ -486,6 +519,8 @@ $someObject->process($data);
 ✔️ Good (cloning):
 
 ```php
+<?php
+
 $data = Data::create()
     ->withAttribute($attribute)
     ->withValue($value)
@@ -497,6 +532,8 @@ $someObject->process($data);
 ✔️ Good (building):
 
 ```php
+<?php
+
 $data = Data::createBuilder()
     ->setAttribute($attribute)
     ->setValue($value)
