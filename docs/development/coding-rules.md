@@ -6,6 +6,7 @@
 
 ```php
 <?php
+
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\Container;
@@ -26,6 +27,7 @@ class MyClass
 
 ```php
 <?php
+
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\ORM\EntityManager;
@@ -53,6 +55,7 @@ Exception: Passing the Container may be acceptable for proxy classes.
 
 ```php
 <?php
+
 use Espo\Modules\Crm\Entities\Account;
 
 $account = $this->entityManager
@@ -115,6 +118,7 @@ Also avoid the `mixed` type for parameters.
 
 ```php
 <?php
+
 use Espo\Core\Exceptions\Error;
 
 class MyClass
@@ -195,6 +199,7 @@ $string = $this->sanitizeString($string);
 
 ```php
 <?php
+
 namespace Espo\Some;
 
 class SomeClass
@@ -212,8 +217,8 @@ class SomeClass
 ✔️ Good:
 
 ```php
-
 <?php
+
 namespace Espo\Some;
 
 use Espo\Modules\MyModule\Something;
