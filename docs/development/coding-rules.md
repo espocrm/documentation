@@ -6,14 +6,13 @@
 
 ```php
 <?php
-
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\Container;
 
 class MyClass
 {
-    private $container;
+    private Container $container;
 
     public function __constructor(Container $container)
     {
@@ -27,7 +26,6 @@ class MyClass
 
 ```php
 <?php
-
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\ORM\EntityManager;
@@ -35,9 +33,9 @@ use Espo\Core\Utils\Metadata;
 
 class MyClass
 {
-    private $entityManager;
+    private EntityManager $entityManager;
     
-    private $metadata;
+    private Metadata $metadata;
 
     public function __constructor(EntityManager $entityManager, Metadata $metadata)
     {
@@ -55,9 +53,10 @@ Exception: Passing the Container may be acceptable for proxy classes.
 
 ```php
 <?php
+use Espo\Modules\Crm\Entities\Account;
 
 $account = $this->entityManager
-    ->getRDBRepository('Account')
+    ->getRDBRepository(Account::ENTITY_TYPE)
     ->select(['id', 'name'])
     ->where([
         'type' => 'Customer',
@@ -101,7 +100,7 @@ class MyClass
 
 class MyClass
 {
-    public function getAsString(): ?string
+    public function getString(): ?string
     {
         // ...
     }
@@ -116,7 +115,6 @@ Also avoid the `mixed` type for parameters.
 
 ```php
 <?php
-
 use Espo\Core\Exceptions\Error;
 
 class MyClass
@@ -175,7 +173,6 @@ Exception: Adding comments may be reasonable in some rare cases.
      */
     public function run(Params $params): void
     {
-
     }
 ```
 
@@ -388,7 +385,7 @@ Not a strict rule but in most cases should be followed.
 ```php
 class SomeProcessor
 {
-    private $isProcessed = false;
+    private bool $isProcessed = false;
     
     public function process(): bool
     {
@@ -440,9 +437,9 @@ class AccountChecker extends BaseChecker
 ```php
 class AccountChecker implements Checker
 {
-    private $baseChecker;
+    private BaseChecker $baseChecker;
     
-    private $someDependency;
+    private SomeDependency $someDependency;
      
     // Here we can inject additional dependencies that would be problematic
     // if we extended the base class.
