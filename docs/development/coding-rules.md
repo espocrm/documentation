@@ -140,7 +140,7 @@ class MyClass
 
 ### 5\. Don't write comments, write self explanatory code.
 
-In addition: Do not write *phpdoc* for non-public methods and properties. It's OK if you don't write *phpdoc* at all.
+In addition: Do not write *phpdoc* for non-public methods and properties. It's OK if you don't write *phpdoc* at all (unless needed for static analysis).
 
 Exception: Adding comments may be reasonable in some rare cases.
 
