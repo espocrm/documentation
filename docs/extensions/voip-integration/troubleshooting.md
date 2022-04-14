@@ -55,6 +55,10 @@ Please make sure the following parameters are correct (Administration > VoIP Set
 
   ![Dialout Channel](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-3.png)
 
+4. `Dial Format for outgoing calls` - this option may need to be changed depending on the Asterisk server configuration.
+
+![Dial Format](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-4.png)
+
 ## Starface: The popup window is not displayed
 
 Check the following items to find the cause of the issue:
