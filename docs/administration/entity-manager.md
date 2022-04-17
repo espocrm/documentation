@@ -72,7 +72,7 @@ Relationship panels on both sides.
 
 #### One-to-One Right
 
-*Link* field on one side, *Link-One* on another (since 5.8.0).
+The *Link* field on one side, *Link-One* on another.
 
 #### One-to-One Left
 
@@ -80,11 +80,11 @@ The same as previous but vice versa.
 
 #### Children-to-Parent
 
-Linking with multiple entity types through *Link-Parent* field (since 5.8.0).
+Linking with multiple entity types through *Link-Parent* field.
 
 ### Parameters
 
-#### Link Multiple Field
+#### Link Multiple field
 
 The parameter *Link Multiple Field* implies that the field of *Link-Multiple* type will be created along with the relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of the detail view screen.
 
