@@ -23,27 +23,27 @@ Click *Create Entity* button on Entity Manager main page (Administration > Entit
 
 Types:
 
-* Base - empty entity only with basic fields like Name, Assigned User, Teams, Description.
-* Base Plus - like Base but with Activities, History, Tasks panels.
-* Event - has Date Start, Date End, Duration, Parent, Status fields; available in Calendar and Activities panel (must be [enabled](../user-guide/activities-and-calendar.md#custom-entities-on-calendar) at Administration > Settings).
-* Person - has Email, Phone, First Name, Last Name, Salutation, Address fields; Activities, History, Tasks panels.
-* Company - has Email, Phone, Billing Address, Shipping Address fields; Activities, History, Tasks panels.
+* Base – empty entity only with basic fields like Name, Assigned User, Teams, Description.
+* Base Plus – like Base but with Activities, History, Tasks panels.
+* Event – has Date Start, Date End, Duration, Parent, Status fields; available in Calendar and Activities panel (must be [enabled](../user-guide/activities-and-calendar.md#custom-entities-on-calendar) at Administration > Settings).
+* Person – has Email, Phone, First Name, Last Name, Salutation, Address fields; Activities, History, Tasks panels.
+* Company – has Email, Phone, Billing Address, Shipping Address fields; Activities, History, Tasks panels.
 
 ## Entity type parameters
 
 If you click *Edit* on a certain entity, you will be able to change parameters of that entity.
 
-* Labels - singular and plural names of the entity.
+* Labels – singular and plural names of the entity.
 * Default order in which records are sorted by in list views.
-* Stream - whether Stream feature is enabled for this entity.
-* Disabled - check if you don't need this entity in your system.
-* Text Filter Fields - what fields to search in for the main text filter and global search.
-* Status field - which field (of enum type) will be used for a record status; required for kanban view.
-* Kanban view - available only if Status Field is specified. Enables Kanban view mode.
-* Full-Text Search - see more [here](../user-guide/text-search.md#full-text-search).
-* Disable record count - the total number won't be displayed on the list view; can decrease loading time when the DB table is big.
-* Color - a specific color for a quick recognition.
-* Icon - the picked icon will be displayed in the side navbar.
+* Stream – whether Stream feature is enabled for this entity.
+* Disabled – check if you don't need this entity in your system.
+* Text Filter Fields – what fields to search in for the main text filter and global search.
+* Status field – which field (of enum type) will be used for a record status; required for kanban view.
+* Kanban view – available only if Status Field is specified. Enables Kanban view mode.
+* Full-Text Search – see more [here](../user-guide/text-search.md#full-text-search).
+* Disable record count – the total number won't be displayed on the list view; can decrease loading time when the DB table is big.
+* Color – a specific color for a quick recognition.
+* Icon – the picked icon will be displayed in the side navbar.
 
 ## Fields
 
@@ -90,7 +90,7 @@ The parameter *Link Multiple Field* implies that the field of *Link-Multiple* ty
 
 Examples of link-multiple fields:
 
-* *Teams* field - most entities have this field
+* *Teams* field – most entities have this field
 * *Contacts* field in *Opportunity*
 * *Contacts* field in *Case*
 
