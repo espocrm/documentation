@@ -7,7 +7,7 @@ Entity Manager is available in Administration panel. It provides the ability to 
 * Configure fields: add new, customize existing ones.
 * Configure relationships: add new, change labels of existing ones.
 
-All customizations made via Entity Manager are stored in `custom/` directory. You can make customizations on a separate instance, then copy *custom* dir to your production instance and run rebuild (from administration panel or CLI).
+All customizations made via Entity Manager are stored in the `custom` directory. You can make customizations on a separate instance, then copy *custom* dir to your production instance and run rebuild (from administration panel or CLI).
 
 In this article:
 
