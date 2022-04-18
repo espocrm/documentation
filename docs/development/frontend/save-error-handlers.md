@@ -50,6 +50,5 @@ define('custom:my-error-handler', [], function () {
             // Some logic.
         }
     }
-
 });
 ```
