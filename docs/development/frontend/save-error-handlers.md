@@ -47,8 +47,6 @@ define('custom:my-error-handler', [], function () {
         process(data) {
             Espo.Ui.error('Some error message.', true);
             
-            console.log(data);
-
             // Some logic.
         }
     }
