@@ -10,12 +10,10 @@ use Espo\Core\Exceptions\ConflictSilent;
 use Espo\Core\Utils\Json;
 
 throw ConflictSilent::createWithBody(
-    'anyText',
+    'myReason',
     Json::encode([
-        'reason' => 'myReason',
-        'data' => [
-            'someKey' => 'someValue',
-        ],
+        'someKey1' => 'someValue1',
+        'someKey2' => 'someValue2',
     ])
 );
 
