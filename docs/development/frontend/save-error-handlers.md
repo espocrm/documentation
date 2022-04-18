@@ -1,6 +1,6 @@
 # Save error handlers
 
-When a record is being saved, it's possible to throw an exception in the backend and then handle it on the frontend.
+When a record is being saved, it's possible to throw an exception in the backend and then handle it in the frontend.
 
 In the backend the exception should is thrown. It can be done in a before-save hook.
 
