@@ -12,7 +12,7 @@ use Espo\Core\Utils\Json;
 throw ConflictSilent::createWithBody(
     'anyText',
     Json::encode([
-        'reason' => 'myErrorHandler',
+        'reason' => 'myReason',
         'data' => [
             'someKey' => 'someValue',
         ],
@@ -28,7 +28,7 @@ Define a handler in metadata.
 ```json
 {
     "saveErrorHandlers": {
-        "myErrorHandler": "custom:my-error-handler"
+        "myReason": "custom:my-error-handler"
     }
 }
 ```
