@@ -9,7 +9,8 @@ In the backend the exception should is thrown with the *reason* parameter in the
 use Espo\Core\Exceptions\ConflictSilent;
 use Espo\Core\Utils\Json;
 
-throw new ConflictSilent(
+throw ConflictSilent::createWithBody(
+    'anyText',
     Json::encode([
         'reason' => 'myErrorHandler',
         'data' => [
