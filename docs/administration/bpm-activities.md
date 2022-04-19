@@ -14,9 +14,9 @@ Activities are displayed as rounded rectangles.
 
 ## Task
 
-Task can execute different actions. Available actions are listed bellow.
+A task can execute different actions. Available actions are listed bellow.
 
-The list of actions available for a task is almost the same as for the Workflows tool. See more details about [workflow actions](workflows.md#actions).
+The BPM task utilizes Workflow tool actions, the list of actions availableis almost the same. See more details about [workflow actions](workflows.md#actions).
 
 ### Actions
 
