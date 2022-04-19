@@ -16,7 +16,7 @@ Activities are displayed as rounded rectangles.
 
 Task can execute different actions. Available actions are listed bellow.
 
-The list of actions available for a task is almost the same as for Workflows tool. See more details about [workflow actions](workflows.md#actions).
+The list of actions available for a task is almost the same as for the Workflows tool. See more details about [workflow actions](workflows.md#actions).
 
 ### Actions
 
