@@ -102,7 +102,7 @@ use Espo\Modules\MyModule\Something;
  */
 class SomeFactory
 {
-    private $injectableFactory;
+    private InjectableFactory $injectableFactory;
 
     public function __construct(InjectableFactory $injectableFactory)
     {
@@ -138,7 +138,7 @@ use Espo\Core\ORM\EntityManager;
 
 class SomeClass
 {
-    private $entityManager;
+    private EntityManager $entityManager;
 
     // There's a service with the name 'entityManager'.
     public function __construct(EntityManager $entityManager)
@@ -158,7 +158,7 @@ use Espo\Modules\MyModule\SomeClass;
 
 class SomeClass
 {
-    private $something;
+    private SomeClass $something;
 
     // There's no service with the name 'something' and type hint is a class.
     // Hence an instance of SomeClass is created and passed to the constructor.
@@ -235,7 +235,7 @@ use Espo\Core\InjectableFactory;
  */
 class SomeTypeFactory
 {
-    private $injectableFactory;
+    private InjectableFactory $injectableFactory;
     
     public function __construct(InjectableFactory $injectableFactory)
     {
