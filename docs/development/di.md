@@ -16,8 +16,6 @@ There are two classes repsonsibe for the dependency injection in EspoCRM:
 
 ## Container services
 
-Note: Not to be confused with *Service* classes.
-
 The Contanier contains services. These services are supposed to be used in multiple places throughout the system.
 
 **Lazy initialization** is used, meaning that a service is not loaded until it's asked (as a dependency or implicitly).
