@@ -30,7 +30,7 @@ Note: The best practice is not to require the *container* in your classes, and n
 Console command that prints all available container services with their implementing classes:
 
 ```
-php command.php app-info --container
+bin/command app-info --container
 ```
 
 Most used container services are listed [here](container-services.md).
