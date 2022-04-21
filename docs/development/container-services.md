@@ -76,7 +76,7 @@ Provides access checking functions for a current user. A wrapper for *aclManager
 
 ## selectBuilderFactory
 
-Available as of v6.2.0.
+Available as of v7.0.0.
 
 Class: `Espo\Core\Select\SelectBuilderFactory`
 
