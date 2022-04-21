@@ -30,7 +30,7 @@ A main application config.
 
 Class: `Espo\ORM\Defs\Defs`
 
-Entity definitions. Available as of v6.2.0. 
+Entity definitions. Available as of v7.0.0. 
 
 ## fileManager
 
