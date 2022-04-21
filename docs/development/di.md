@@ -72,7 +72,7 @@ use Espo\Core\ORM\EntityManager;
 
 class MyService1
 {
-    private $entityManager;
+    private EntityManager $entityManager;
 
     public function __construct(EntityManager $entityManager)
     {
