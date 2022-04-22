@@ -1,6 +1,6 @@
 # Dependency Injection
 
-Note: This article is actual as of v6.0.0.
+Note: This article is actual as of v6.1.0.
 
 In this article:
 
@@ -274,7 +274,7 @@ Note: The module order parameter is used when binding is processed. Meaning that
 CLI command to print all bindings:
 
 ```
-php command.php app-info --binding
+bin/command app-info --binding
 ```
 
 Default binding is processed in `Espo\Core\Binding\DefaultBinding`.
