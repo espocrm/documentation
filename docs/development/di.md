@@ -1,6 +1,6 @@
 # Dependency Injection
 
-Note: This article is actual as of v6.1.0.
+Note: This article is actual as of v6.1.
 
 In this article:
 
