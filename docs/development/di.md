@@ -99,8 +99,6 @@ class MyService1
 }
 ```
 
-If there's no matching service for a parameter but the type hint is a class, then a new instance of that class will be instantiated (by the Injectable Factory).
-
 ## Injectable factory
 
 The Injectable Factory creates objects by a given class names. It resolves and injects class dependencies. The Injectable Factory is available as a service in the Container. That means that *injectableFactory* can be required as a dependency.
