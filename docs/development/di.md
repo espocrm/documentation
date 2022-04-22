@@ -25,7 +25,7 @@ Container services are defined:
 
 Note: The best practice is not to require the *container* in your classes, and never use it directly. A specific service can be required in a constructor or with Aware interface.
 
-Console command that prints all available container services with their implementing classes:
+Console command that prints all available container services with their implementation classes:
 
 ```
 bin/command app-info --container
