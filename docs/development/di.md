@@ -33,14 +33,14 @@ bin/command app-info --container
 
 Most used container services are listed [here](container-services.md).
 
-### Defining in metadata
+### Defining
 
 If you need to define your custom container services, do it in metadata. In your module or in the custom folder:
 
-* `application/Espo/Modules/{YourModule}/Resources/metadata/app/containserServices.json`;
+* `custom/Espo/Modules/{YourModule}/Resources/metadata/app/containserServices.json`;
 * `custom/Espo/Custom/Resources/metadata/app/containserServices.json`.
 
-When defining in metadata there's 2 options:
+When defining in metadata there are 2 options:
 
 * specify a class for a service;
 * specify a loader that loads a service (the loader should implement `Espo\Core\Container\Loader` interface).
@@ -58,7 +58,27 @@ A definition example:
 }
 ```
 
-Needed dependencies will be passed to a class constructor. Parameter type hinting and binding (processed on application start) will be used (via reflection) to detect dependencies.
+Then you need to bind a class name to the service.
+
+File `custom/Espo/Modules/MyModule/Binding.php`:
+
+```php
+<?php
+namespace Espo\Modules\MyModule;
+
+use Espo\Core\Binding\BindingProcessor;
+use Espo\Core\Binding\Binder;
+
+class Binding implements BindingProcessor
+{
+    public function process(Binder $binder): void
+    {
+        $binder->bindService('Espo\\Modules\\MyModule\\MyService1', 'myService1');
+    }
+}
+```
+
+Needed dependencies will be passed to a class constructor upon instantiation. Parameter type hinting and binding (processed on application start) will be used (via reflection) to detect dependencies.
 
 Example:
 
@@ -79,7 +99,7 @@ class MyService1
 }
 ```
 
-If there's no matching service for a parameter but a type hint is a class, then a new instance of that class will be instantiated (by Injectable Factory).
+If there's no matching service for a parameter but the type hint is a class, then a new instance of that class will be instantiated (by the Injectable Factory).
 
 ## Injectable factory
 
@@ -120,49 +140,33 @@ Constructor parameter names are used to detect dependencies.
 
 Resolving process:
 
-* Tries to resolve by binding (see below about binding); exit if succcess;
-* Tries to resolve by a parameter name, assuming that parameter name matches a service name; exit if succcess;
-* Creates a new instance if type hint is a class.
+* Tries to resolve by binding (see below about binding); exits if succcess;
+* Tries to resolve by a parameter name, assuming that parameter name matches a service name and the type hint matches the service class; exits if succcess;
+* Creates a new instance if the type hint is a class.
 
-If there's no service with the name that matches a parameter name, and a parameter's type hint is a class, then an instance will be created and passed as a dependency. A new instance will be created every time the dependency is requested. See below.
-
-Service 'entityMananger' as a dependency:
+If a dependency is not a service, a new instance will be created every time the dependency is requested. See below.
 
 ```php
 <?php
 namespace Espo\Custom;
 
 use Espo\Core\ORM\EntityManager;
-
-class SomeClass
-{
-    private EntityManager $entityManager;
-
-    // There's a service with the name 'entityManager'.
-    public function __construct(EntityManager $entityManager)
-    {
-        $this->entityManager = $entityManager;
-    }
-}
-```
-
-Non-service depedency:
-
-```php
-<?php
-namespace Espo\Custom;
-
 use Espo\Modules\MyModule\SomeClass;
 
 class SomeClass
 {
-    private SomeClass $something;
+    private EntityManager $entityManager;
+    
+    private SomeClass $some;
 
-    // There's no service with the name 'something' and type hint is a class.
-    // Hence an instance of SomeClass is created and passed to the constructor.
-    public function __construct(SomeClass $something)
+    /**
+     * EntityManager is a service. The same instance will be used for different classes.
+     * SomeClass is not a service. It will be instantiated every time.
+     */
+    public function __construct(EntityManager $entityManager, SomeClass $some)
     {
-        $this->something = $something;
+        $this->entityManager = $entityManager;
+        $this->some = $some;
     }
 }
 ```
@@ -279,15 +283,16 @@ Default binding is processed in `Espo\Core\Binding\DefaultBinding`.
 
 ### Example
 
-File `application/Espo/Modules/MyModule/Binding.php`:
+File `custom/Espo/Modules/MyModule/Binding.php`:
 
 ```php
 <?php
 namespace Espo\Modules\MyModule;
 
+use Espo\Core\Binding\BindingProcessor;
 use Espo\Core\Binding\Binder;
 
-class Binding
+class Binding implements BindingProcessor
 {
     public function process(Binder $binder): void
     {
