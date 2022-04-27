@@ -51,7 +51,7 @@ If you want to know that your recipient opened the link from your email, you nee
 
 ## Target Lists
 
-Target Lists contains the lists of Accounts, Contacts, Leads and Users records.
+Target Lists contains lists of Accounts, Contacts, Leads and Users records. Custom entities of the Person and Company types are supported too (as of v7.1).
 
 Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all results of the search.
 
@@ -62,6 +62,12 @@ Users can populate target lists manually using _Select_ action on the correspond
 ### Excluding Target Lists
 
 Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
+
+### Custom entity support
+
+[As of v7.1](https://github.com/espocrm/espocrm/issues/2203).
+
+The admin needs to create a Many-to-Many relationship between the Target List and the custom entity (of Person or Company type). Then add the panel to the Bottom Panels layout of the Target List entity.
 
 ## Campaign Log
 
