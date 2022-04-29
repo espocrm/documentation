@@ -305,13 +305,25 @@ It's possible to define formula to calculate fields in the following actions:
 * Create Related Record,
 * Update Related Record.
 
-For the last two, to access attributes of target entity, you should use function `targetEntity\attribute`. To access attributes of target entity that was set before the workflow was triggered, use function `targetEntity\attributeFetched`.
+### Functions
 
-Example:
+#### workflow\targetEntity\attribute
 
-```
-name = string\concatenate(targetEntity\attribute('name'), ' ', datetime\today());
-```
+`workflow\targetEntity\attribute(ATTRIBUTE_NAME)`
+
+Returns an attribute value of the target entity. Useful when the scope is switched to a related record.
+
+#### workflow\targetEntity\attributeFetched
+
+`workflow\targetEntity\attributeFetched(ATTRIBUTE_NAME)`
+
+Returns a previous attribute value of the target entity (before the workflow was triggered).
+
+#### workflow\trigger
+
+`workflow\trigger(ENTITY_TYPE, ID, WORKFLOW_ID)`
+
+Triggers another workflow rule.
 
 ## See also
 
