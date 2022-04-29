@@ -77,7 +77,7 @@ The list of parameters along with their default values.
 * emailKeepParentTeamsEntityList – `['Case']` – when a related email is fetched, teams of the parent record will be copied to the email; by default, it's available only for cases;
 * emailForceUseExternalClient – `false` – when composing an email, all users will be forced to use external client;
 * emailAutoReplySuppressPeriod – `'2 hours'` – an auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter; to prevent looping (as of v6.1.8);
-* emailAutoReplyLimit – `5` – a max number of auto-reply emails that can be sent to one recipient within a period defined by the *emailAutoReplySuppressPeriod* parameter (as of v6.2.0);
+* emailAutoReplyLimit – `5` – a max number of auto-reply emails that can be sent to one recipient within a period defined by the *emailAutoReplySuppressPeriod* parameter (as of v7.0);
 * emailFoldersDisabled – `false` – disables email folders;
 
 ### Stream
@@ -85,6 +85,7 @@ The list of parameters along with their default values.
 * noteEditThresholdPeriod – `'7 days'` – how much time is available for editing stream posts;
 * noteDeleteThresholdPeriod – `'1 month'` – how much time is available for deleting stream posts;
 * streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
+* recordFollowersLoadLimit – `5` – how much records loaded in the *Followers* field;
 
 ### Clean-up
 
