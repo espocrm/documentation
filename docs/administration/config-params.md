@@ -85,7 +85,7 @@ The list of parameters along with their default values.
 * noteEditThresholdPeriod – `'7 days'` – how much time is available for editing stream posts;
 * noteDeleteThresholdPeriod – `'1 month'` – how much time is available for deleting stream posts;
 * streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
-* recordFollowersLoadLimit – `5` – how much records loaded in the *Followers* field;
+* recordFollowersLoadLimit – `6` – how much records loaded in the *Followers* field;
 
 ### Clean-up
 
