@@ -257,6 +257,8 @@ The result of a multi-instance sub-process can be returned to a specific variabl
 
 When a multi-instance sub-process is interrupted by a boundary event, all other instances are cancelled.
 
+The max number of sub-process instances is defined by the config parameter `bpmnMaxSubProcessInstanceCount`. The default value is `20`.
+
 ----
 
 ## Event Sub-Process
