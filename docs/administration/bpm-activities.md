@@ -235,7 +235,7 @@ Sub-process can be interrupted by an interrupting boundary event. When the sub-p
 
 It's possible to **pass a different target** to the sub-process. After you placed a sub-process element on the flowchart, click it to edit, then specify a target. It allows to easily access fields of created records or records related to the target record. E.g. to send notification to the assigned user of the opportunity that was created within the process.
 
-It's possible to define the target record using a formula expression. You need to select the target *Record: {EntityType}* and specify the formula expression in the *Target ID Expression* field. The expression should evaluate to the ID of the record. Available as of v2.10.0.
+It's possible to define the target record using a formula expression. You need to select the target *Record: {EntityType}* and specify the formula expression in the *Target ID Expression* field. The expression should evaluate to the ID of the record. Available as of v2.10.
 
 When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter. Note: Variable names should be specified without *$* character.
 
@@ -245,7 +245,7 @@ When a sub-process is initiated, it receives an information about all records cr
 
 ### Multi-instance sub-process
 
-Available as of v2.10.0.
+Available as of v2.10.
 
 The *Collection Expression* should evaluate to a list of values. Each value will instantiate a separate sub-process. The value will be available in the variable `$inputItem`.
 
