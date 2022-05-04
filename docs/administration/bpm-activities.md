@@ -249,7 +249,7 @@ Available as of v2.10.0.
 
 The *Collection Expression* should evaluate to a list of values. Each value will instantiate a separate sub-process. The value will be available in the variable `$inputItem`.
 
-In the case of the **Sequential** multi-instance sub-process, sub processes will be executed one by one. Otherwise they execute in parallel.
+In the case of the **sequential** multi-instance sub-process, sub processes will be executed one by one. Otherwise they execute in parallel.
 
 It's possible to have multiple sub-processes for different targets. By using the formula function *record\findRelatedMany* it's possible to have sub-processes for related records. The result of the function is the list of IDs. You need to set the *Target ID Expression* with the value `$inputItem`.
 
