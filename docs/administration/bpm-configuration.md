@@ -18,4 +18,4 @@ The config parameter `bpmnProceedPendingMaxSize` (`20000` by default) limits max
 
 ## Multi-instance sub-process limit
 
-The max number of sub-process instances (within a multi-instance sub-process) is defined by the config parameter `bpmnMaxSubProcessInstanceCount`. The default value is `20`.
+The max number of sub-process instances (within a multi-instance sub-process) is defined by the config parameter `bpmnSubProcessInstanceMaxCount`. The default value is `20`.
