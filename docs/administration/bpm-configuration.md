@@ -14,3 +14,8 @@ If an entity is updated, it will make nodes related to that entity to be checked
 ## Pending event checking limit
 
 The config parameter `bpmnProceedPendingMaxSize` (`20000` by default) limits max number of pending flows that can be processed. Consider increasing it if you usually have a large number of acrive processes.
+
+
+## Multi-instance sub-process max number 
+
+The max number of sub-process instances (within a multi-instance sub-process) is defined by the config parameter `bpmnMaxSubProcessInstanceCount`. The default value is `20`.
