@@ -253,6 +253,8 @@ In the case of the **sequential** multi-instance sub-process, sub processes will
 
 It's possible to have multiple sub-processes for different targets. By using the formula function *record\findRelatedMany* it's possible to have sub-processes for related records. The result of the function is the list of IDs. You need to set the *Target ID Expression* with the value `$inputItem`.
 
+The result of the multi-instance sub-process can be returned to a specific variable defined by the *Return Collection Variable* field. It will contain an array of objects. Each object will contain return-variables of each sub-process instance.
+
 ----
 
 ## Event Sub-Process
