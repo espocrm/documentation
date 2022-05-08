@@ -49,13 +49,15 @@ The list of parameters along with their default values.
 * defaultCurrency – currency applied by default;
 * baseCurrency – which currency to use as base when defining rates;
 * currencyList – array of available currencies;
-* thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (since v7.0.0);
+* thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (as of v7.0);
 * globalSearchMaxSize – `10` – how much records is shown in the global search;
+* massActionIdleCountThreshold – `100` – record number threshold after which mass-action is processed in idle (as of v7.1);
+* exportIdleCountThreshold  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
 
 ### UI
 
-* applicationDescription – the text in meta tag; by default `EspoCRM - Open Source CRM application` text is used (since v7.0.0);
-* adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (since v7.0.0);
+* applicationDescription – the text in meta tag; by default `EspoCRM - Open Source CRM application` text is used (since v7.0);
+* adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (since v7.0);
 
 ### Access control
 
