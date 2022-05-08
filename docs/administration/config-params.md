@@ -61,7 +61,7 @@ The list of parameters along with their default values.
 
 ### Access control
 
-* aclStrictMode – `true` – see [here](roles-management.md#permissions-by-default) (removed in v6.2.0, the system will always be in the strict mode);
+* aclStrictMode – `true` – see [here](roles-management.md#permissions-by-default) (removed in v7.0, the system is always in strict mode);
 * aclAllowDeleteCreated – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access;
 * aclAllowDeleteCreatedThresholdPeriod – `24 hours` – time window available for deletion of created records;
 
@@ -70,7 +70,7 @@ The list of parameters along with their default values.
 * adminNotifications – `true` – notifications in admin panel;
 * adminNotificationsNewVersion – `true` – notifications about new versions in admin panel;
 * adminNotificationsNewExtensionVersion – `true` – notifications about new extension versions in admin panel;
-* emailReminderPortionSize – `10` – how much email reminders can be sent at once (as of v7.0.0);
+* emailReminderPortionSize – `10` – how much email reminders can be sent at once (as of v7.0);
 * notificationsMaxSize – `5` – how much in-app notifications is shown when the notification panel is shown up;
 * notificationsCheckInterval – `10` – an interval between checks for new notifications (actual only if web socket is not enabled); 
 
@@ -140,7 +140,7 @@ The list of parameters along with their default values.
 
 ### Kanban
 
-* kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; as of v6.1.0;
+* kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; as of v6.1;
 * kanbanMinColumnWidth – `220` – a min width of column; the horizontal scrolling will appear to prevent columnt being shrinked less than the specified value; as of v7.1.0;
 
 ### Text search
@@ -150,7 +150,7 @@ The list of parameters along with their default values.
 
 ### PDF
 
-* pdfEngine – `Tcpdf` – what PDF engine to use; since v6.1.0;
+* pdfEngine – `Tcpdf` – what PDF engine to use; since v6.1;
 
 ### Events
 
