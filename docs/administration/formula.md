@@ -8,7 +8,7 @@ Note: It can be reasonable to set fields that are supposed to be calculated by f
 
 The admin can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
-**Formula Sandbox** provides the ability to test formula scripts. It's available in the Admininstration panel.
+**Formula Sandbox** provides the ability to test formula scripts. It's available in the Administration panel.
 
 Formula can also be utilized in [Workflows](workflows.md) and [BPM tool](bpm.md).
 
