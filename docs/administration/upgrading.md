@@ -19,9 +19,9 @@ Note: Upgrading process may take a while. Do not close the terminal until it's f
 ## Recommendations
 
 1. Make a [backup](backup-and-restore.md) before upgrading.
-2. Disable cron (at Administration > Settings) before upgrading. Enable it back after the upgrade is finished.
-3. Enable *Maintenance Mode* (at Administration > Settings) before upgrading. Disable after the upgrade is finished.
-4. Make sure you have free disk space on the server.
+2. Make sure you have free disk space on the server.
+3. Disable cron (at Administration > Settings) before upgrading. Enable it back after the upgrade is finished. This will prevent situations when a job started on the previous version and finished on the new version. In most cases this won't cause any issues though. The most significant problem it may cause is the job not being finished.
+4. Enable *Maintenance Mode* (at Administration > Settings) before upgrading. Disable after the upgrade is finished. This will prevent non-admin users accessing the application before you started upgrading.
 5. *opcache.enable_cli* parameter in PHP should be set to false (by default it's usually set to false).
 
 It's recommended to run upgrade either **under the webserver user** (usually *www-data*) or *root* user.
