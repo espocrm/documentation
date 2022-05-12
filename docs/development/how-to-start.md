@@ -14,12 +14,6 @@ Then you can build by running `grunt`.
 
 To build a proper *config.php* file and populate database you can run installation. Open `http(s)://{YOUR_CRM_URL}/install` location in the browser. It's assumed that your webserver is properly [configured](../administration/server-configuration.md).
 
-Optionally, enable the developer mode. In the file `data/config.php` add:
-
-```php
-'isDeveloperMode' => true,
-```
-
 Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
 ### Building
@@ -59,18 +53,20 @@ You can develop and make customizitions right on a regular installed EspoCRM ins
 
 ## Configuration for development
 
-Edit the config file `data/config.php`, add the parameter:
+Parameters can be set in `data/config.php`.
+
+
+Developer mode disables cache, front-end libs are loaded directly from the `node_modules` directory.
 
 ```php
 'isDeveloperMode' => true,
 ```
 
-You can also add the parameter:
+You can force using backend cache (metadata, langauge etc.) in the developer mode. Might be useful as the application will be slow w/o cache.
 
 ```php
 'useCacheInDeveloperMode' => true,
 ```
-That will force using a backend cache (metadata, langauge etc.).
 
 ## Where to put customizations
 
