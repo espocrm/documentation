@@ -62,7 +62,7 @@ Developer mode disables cache, front-end libs are loaded directly from the `node
 'isDeveloperMode' => true,
 ```
 
-You can force using backend cache (metadata, langauge etc.) in the developer mode. Might be useful as the application will be slow w/o cache.
+You can force using backend cache (metadata, langauge etc.) in the developer mode. Can be reasonable as the application might be slow w/o cache.
 
 ```php
 'useCacheInDeveloperMode' => true,
