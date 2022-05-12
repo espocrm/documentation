@@ -14,7 +14,7 @@ Then you can build by running `grunt`.
 
 To build a proper *config.php* file and populate database you can run installation. Open `http(s)://{YOUR_CRM_URL}/install` location in the browser. It's assumed that your webserver is properly [configured](../administration/server-configuration.md).
 
-Then open `data/config.php` file and add:
+Optionally, enable the developer mode. In the file `data/config.php` add:
 
 ```php
 'isDeveloperMode' => true,
