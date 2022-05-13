@@ -108,7 +108,7 @@ _Type_: array;
 
 _Available value_: array of ['create', 'read', 'edit', 'delete', 'stream'];
 
-_Default_: ['create', 'read', 'edit', 'delete'] if `acl` is `true`.
+_Default_: `["create", "read", "edit", "delete"]` if `acl` is `true`.
 
 
 ### aclLevelList
@@ -119,27 +119,22 @@ _Type_: array;
 
 _Available value_: array of ['all', 'team', 'own', 'no'];
 
-_Default_: ['all', 'team', 'own', 'no'] if `acl` is `true`.
+_Default_: `["all", "team", "own", "no"]` if `acl` is `true`.
 
 
-### aclActionLevelListMap !!!!
+### aclActionLevelListMap
 
-_Description_: list of available level for actions in Role configuration;
+_Description_: list of available levels for actions in Role configuration;
 
 _Type_: object;
 
-_Available value_: array of ['all', 'team', 'own', 'no'];
+Example:
 
-_Default_: ['all', 'team', 'own', 'no'] if `acl` is `true`.
 ```
-      array (
-        'edit' => 
-        array (
-          0 => 'own',
-          1 => 'no',
-        ),
-      ),
-```      
+"aclActionLevelListMap": {
+    "edit": ["own", "no"]
+}
+```
       
 ### aclPortal
 
@@ -160,7 +155,7 @@ _Type_: array;
 
 _Available value_: array of ['all', 'account', 'contact', 'own', 'no'];
 
-_Default_: ['all', 'account', 'contact', 'own', 'no'] if `aclPortal` is `true`.
+_Default_: `["all", "account", "contact", "own", "no"]` if `aclPortal` is `true`.
 
 
 ### statusField
@@ -172,9 +167,8 @@ _Type_: string;
 _Available value_: the name of enum field;
 
 _Default_: no default.
- 
- 
- 
+  
+
 ### workflow
 
 _Description_: if Advanced Pack extension is installed and `"object"` is not set, but you need this entity in Target Entity list in Workflow;
@@ -259,7 +253,7 @@ _Type_: array;
 
 _Available value_: options of status field
 
-_Default_: ['Planned'].
+_Default_: `["Planned"]`.
       
 ### historyStatusList
 
@@ -269,5 +263,5 @@ _Type_: array;
 
 _Available value_: options of status field
 
-_Default_: ['Held', 'Not Held'].
+_Default_: `["Held", "Not Held"]`.
 
