@@ -74,7 +74,7 @@ Payload:
 
 Additional headers:
 
-* `X-Skip-Duplicate-Check: true` - skips checks for duplicates (won't return 409 Error if duplicate record is found).
+* `X-Skip-Duplicate-Check: true` - skips checking for duplicates (won't return 409 Error if a duplicate record is found).
 
 ### Update
 
