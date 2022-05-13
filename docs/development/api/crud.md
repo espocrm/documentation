@@ -40,6 +40,10 @@ Returns:
 
 See [more info](../api-search-params.md) about search parameters.
 
+Additional headers:
+
+* `X-No-Total: true` - won't return a total number of records (can be reasonable for big tables, the request will be processed faster).
+
 ### Read
 
 `GET {entityType}/{id}`
