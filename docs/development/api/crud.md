@@ -108,9 +108,8 @@ Payload:
 
 Deletes an existing record.
 
-Returns TRUE if success.
+Returns `true`.
 
 Example:
 
 `DELETE Account/5564764442a6d024c`
-
