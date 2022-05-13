@@ -279,3 +279,11 @@ _Type_: array;
 _Available value_: options of the status field;
 
 _Default_: `[]`.
+
+### hasPersonalData
+
+_Description_: whether the entity contains personal data;
+
+_Type_: boolean;
+
+_Default_: false.
