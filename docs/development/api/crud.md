@@ -50,10 +50,6 @@ Example:
 
 `GET Account/5564764442a6d024c`
 
-Additional headers:
-
-* `X-Skip-Duplicate-Check: true` - skips checks for duplicates (won't return 409 Error if duplicate record is found).
-
 ### Create
 
 `POST {entityType}`
@@ -75,6 +71,10 @@ Payload:
   "assignedUserId": "1"
 }
 ```
+
+Additional headers:
+
+* `X-Skip-Duplicate-Check: true` - skips checks for duplicates (won't return 409 Error if duplicate record is found).
 
 ### Update
 
