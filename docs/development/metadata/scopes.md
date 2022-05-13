@@ -1,6 +1,6 @@
-# scopes. Scope definition
+# scopes
 
-Path: `metadata/scopes/{ScopeName}.json`
+Path: metadata > scopes > {ScopeName}
 
 Сontains scope definition. Scope can define an entity type.
 
@@ -19,7 +19,7 @@ _Default_: false.
 
 ### object
 
-_Description_: is an object;
+_Description_: is an object; means that it's not an entity for internal system purpose; an object entity represents some business entity;
 
 _Type_: boolean;
 
@@ -157,18 +157,16 @@ _Available value_: array of ['all', 'account', 'contact', 'own', 'no'];
 
 _Default_: `["all", "account", "contact", "own", "no"]` if `aclPortal` is `true`.
 
-
 ### statusField
  
-_Description_: the main enum field, with is used as status. Has different view in Stream; 
+_Description_: an enum field which is used to determine the status;; 
 
 _Type_: string;
 
-_Available value_: the name of enum field;
+_Available value_: the name of enum field or null;
 
-_Default_: no default.
+_Default_: null.
   
-
 ### workflow
 
 _Description_: if Advanced Pack extension is installed and `"object"` is not set, but you need this entity in Target Entity list in Workflow;
@@ -193,7 +191,7 @@ _Default_: false.
 
 ### customizable
 
-_Description_: could entity be customized with Entity Manager;
+_Description_: whether the entity can be customized in the Entity Manager;
 
 _Type_: boolean;
 
@@ -204,7 +202,7 @@ _Default_: false.
 
 ### isCustom
 
-_Description_: scope is custom. In general this parameter is set, if the entity was created with Entity Manager;
+_Description_: scope is custom; in general this parameter is true if the entity was created in the Entity Manager;
 
 _Type_: boolean;
 
@@ -215,7 +213,7 @@ _Default_: false.
 
 ### notifications
 
-_Description_: could be able for Notification;
+_Description_: whether notifications can be enabled for the entity;
 
 _Type_: boolean;
 
@@ -225,7 +223,7 @@ _Default_: false.
 
 ### calendar
 
-_Description_: could be displayed on the Calendar;
+_Description_: whether can be displayed on the Calendar;
 
 _Type_: boolean;
 
@@ -236,7 +234,7 @@ _Default_: false.
 
 #### activity
 
-_Description_: could be displayed on the Activities panel;
+_Description_: whether can be displayed on the Activities panel;
 
 _Type_: boolean;
 
@@ -244,24 +242,30 @@ _Available value_: true | false;
 
 _Default_: false.
 
-
 ### activityStatusList
 
-_Description_: filter by status values, which defines, that event is an activity;
+_Description_: status values that determine that a record should be shown in the Activities panel;
 
 _Type_: array;
 
-_Available value_: options of status field
+_Available value_: options of the status field;
 
 _Default_: `["Planned"]`.
       
 ### historyStatusList
 
-_Description_: filter by status values, which defines, that event is in history;
+_Description_: status values that determine that a record should be shown in the History panel;
 
 _Type_: array;
 
-_Available value_: options of status field
+_Available value_: options of the status field;
 
 _Default_: `["Held", "Not Held"]`.
 
+### languageIsGlobal
+
+_Description_: languge labels will be available for all users (not restricted by ACL);
+
+_Type_: boolean;
+
+_Default_: false.
