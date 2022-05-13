@@ -269,3 +269,13 @@ _Description_: languge labels will be available for all users (not restricted by
 _Type_: boolean;
 
 _Default_: false.
+
+### kanbanStatusIgnoreList
+
+_Description_: status values to be ignored on the kanban view;
+
+_Type_: array;
+
+_Available value_: options of the status field;
+
+_Default_: `[]`.
