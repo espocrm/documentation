@@ -37,7 +37,7 @@ _Type_: string.
 
 ### stream
 
-_Description_: entity has Stream panel;
+_Description_: the entity has Stream;
 
 _Type_: boolean;
 
