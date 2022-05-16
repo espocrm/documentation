@@ -31,7 +31,10 @@ You can select specific fields to be exported or check to export all available f
 
 ### Step 4
 
-After clicking Export button the export file will be downloaded.
+After clicking the Export button the export, two scenarios are possible.
+
+* Export will be processed right away and you will receive a prompt to download the file.
+* Export will be proessed in idle (if the number of exported records exceeds a specific threshold). A modal dialog will be shown. After the process is finished, you will be able to download the file.
 
 ## Access control
 
