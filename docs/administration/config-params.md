@@ -2,7 +2,7 @@
 
 Config parameters can be changed or added manually in the file `data/config.php`.
 
-As of v7.0.0 parameters can be added to the file `data/config-internal.php`. Use the **internal config** to store sensitive parameters.
+As of v7.0 parameters can be added to the file `data/config-internal.php`. Use the **internal config** to store sensitive parameters.
 
 This is not a full list of params. Most of params available in admin UI are not listed here.
 
