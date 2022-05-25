@@ -2,35 +2,42 @@
 
 EspoCRM provides the possibility to create custom functions that can be used in formula. 
 
-Create a file `custom/Espo/Custom/Core/Formula/Functions/StringGroup/MyContainsType.php` with the code:
+Create a file `custom/Espo/Custom/Core/Formula/Functions/MyGroup/MyContainsType.php` with the code:
 
 ```php
 <?php
-namespace Espo\Custom\Core\Formula\Functions\StringGroup;
+namespace Espo\Custom\Core\Formula\Functions\MyGroup;
 
 use Espo\Core\Exceptions\Error;
 
+use Espo\Core\Formula\Functions\BaseFunction;
+use Espo\Core\Formula\Functions\ArgumentList;
+
 use stdClass;
 
-class MyContainsType extends \Espo\Core\Formula\Functions\Base
+class MyContainsType extends BaseFunction
 {
-    public function process(stdClass $item)
+    public function process(ArgumentList $args)
     {
-        $args = $this->fetchArguments($item);
-        
         if (count($args) < 2) {
-            throw new Error("MyContains: Too few arguments.");
+            $this->throwTooFewArguments();
         }
 
-        $haystack = $args[0];
-        $needle = $args[1];
+        $haystack = $this->evaluate($args[0]);
+        $needle =  $this->evaluate($args[1]);
 
         if (count($args) > 2) {
             $offset = $args[2];
             
             return strpos($haystack, $needle, $offset) !== false;
         }
-
+        
+        // the entity:
+        // $this->entity
+        
+        // variables:
+        // $this->variables
+        
         return strpos($haystack, $needle) !== false;
     }
 }
@@ -43,11 +50,11 @@ In order to add the created function to the function list of formula, create a f
         "__APPEND__",
         {
             "name": "string\\myContains",
-            "insertText": "string\\myContains(HAYSTACK, NEEDLE, OFFSET)"
+            "insertText": "myGroup\\myContains(HAYSTACK, NEEDLE, OFFSET)"
         }
     ],
     "functionClassNameMap": {
-        "string\\myContains": "Espo\\Custom\\Core\\Formula\\Functions\\StringGroup\\MyContainsType"
+        "string\\myContains": "Espo\\Custom\\Core\\Formula\\Functions\\MyGroup\\MyContainsType"
     }
 }
 ```
