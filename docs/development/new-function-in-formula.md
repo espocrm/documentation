@@ -8,12 +8,8 @@ Create a file `custom/Espo/Custom/Core/Formula/Functions/MyGroup/MyContainsType.
 <?php
 namespace Espo\Custom\Core\Formula\Functions\MyGroup;
 
-use Espo\Core\Exceptions\Error;
-
 use Espo\Core\Formula\Functions\BaseFunction;
 use Espo\Core\Formula\Functions\ArgumentList;
-
-use stdClass;
 
 class MyContainsType extends BaseFunction
 {
