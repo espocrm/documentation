@@ -23,7 +23,7 @@ class MyContainsType extends BaseFunction
         $needle =  $this->evaluate($args[1]);
 
         if (count($args) > 2) {
-            $offset = $args[2];
+            $offset = $this->evaluate($args[2]);
             
             return strpos($haystack, $needle, $offset) !== false;
         }
