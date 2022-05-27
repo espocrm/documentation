@@ -20,7 +20,7 @@ Note that you need to clear cache after making changes.
 
 ## Routes
 
-A module can define additional [API routes](api-action.md/#routing). They are defined in `application/Espo/Modules/{YourModule}/Resources/routes.json`.
+A module can define additional [API routes](api-action.md#routing). They are defined in `application/Espo/Modules/{YourModule}/Resources/routes.json`.
 
 Note that you need to clear cache after making changes.
 
