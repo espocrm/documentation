@@ -11,10 +11,9 @@ When switching to an external file storage it's recommended to disable caching f
 
 ## AWS S3
 
-Parameters need to be set in  `data/config-internal.php`:
+Parameters need to be set in `data/config-internal.php`:
 
 ```
-  'defaultFileStorage' => 'AwsS3',
   'awsS3Storage' => [
     'bucketName' => 'BUCKET_NAME',
     'path' => 'OPTIONAL_PATH_WHERE_FILES_WILL_BE_STORED',
@@ -24,6 +23,12 @@ Parameters need to be set in  `data/config-internal.php`:
     ],
     'region' => 'YOUR_REGION',
   ],
+```
+
+In `data/config.php`:
+
+```
+  'defaultFileStorage' => 'AwsS3',
 ```
 
 Credentials can be omitted, then they will be read from the environment.
