@@ -25,6 +25,7 @@ The list of parameters along with their default values.
 * [Text search](#text-search)
 * [PDF](#pdf)
 * [Events](#events)
+* [Attachments](#attachments)
 
 ### General
 
@@ -39,7 +40,6 @@ The list of parameters along with their default values.
 * language – system language;
 * timeZone – system timezone;
 * exportDelimiter – `','` – default export delimiter;
-* inlineAttachmentUploadMaxSize – `20` – max size of inline attachments (e.g. inline images for emails); in Mb;
 * recordListMaxSizeLimit – `200` – max number of records can be fetched in a single GET API request;
 * maxSelectTextAttributeLengthForList – `10000` – text fields are cut when records accessed with a list request;
 * displayListViewRecordCount – `true` – to display a number of records on the list view;
@@ -141,7 +141,7 @@ The list of parameters along with their default values.
 ### Kanban
 
 * kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; as of v6.1;
-* kanbanMinColumnWidth – `220` – a min width of column; the horizontal scrolling will appear to prevent columnt being shrinked less than the specified value; as of v7.1.0;
+* kanbanMinColumnWidth – `220` – a min width of column; the horizontal scrolling will appear to prevent columnt being shrinked less than the specified value; as of v7.1;
 
 ### Text search
 
@@ -155,3 +155,9 @@ The list of parameters along with their default values.
 ### Events
 
 * eventAssignedUserIsAttendeeDisabled – `false` – If set *true*, then assigned user won't be automatically added to an attendee list (for meetings and calls);
+
+### Attachments
+
+* attachmentUploadMaxSize – `256` – max size of attachments in Mb; as of v7.2;
+* attachmentUploadChunkSize – `4` – chunk size in Mb; attachments uploaded by chunk; `0` disables uploading by chunk; as of v7.2;
+* inlineAttachmentUploadMaxSize – `20` – max size of inline attachments in Mb (e.g. inline images for emails);
