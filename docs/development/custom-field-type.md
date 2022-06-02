@@ -5,7 +5,7 @@
 Create a file `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` with needed parameters.
 ```
 {
-   "view": "custom:views/fields/{field-type}"`
+   "view": "custom:views/fields/{field-type}"
 }
 ```
 
