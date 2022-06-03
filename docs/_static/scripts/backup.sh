@@ -1,10 +1,23 @@
 #!/bin/bash
 
+set -e
+
+function printExitError() {
+    local messsage="$1"
+
+    local red='\033[0;31m'
+    local default='\033[0m'
+
+    printf "\n${red}ERROR${default}: ${messsage}\n"
+    exit 1
+}
+
 DEFAULT_PATH_TO_ESPO="/var/www/html"
 DEFAULT_BACKUP_PATH=$(pwd)
 
 if [ -z "$1" ]; then
     echo "Enter a full path to EspoCRM directory ($DEFAULT_PATH_TO_ESPO):"
+
     read PATH_TO_ESPO
     if [ -z "$PATH_TO_ESPO" ]; then
         PATH_TO_ESPO="$DEFAULT_PATH_TO_ESPO"
@@ -14,17 +27,16 @@ else
 fi
 
 if [ ! -d "$PATH_TO_ESPO" ]; then
-    echo "Error: The directory '$PATH_TO_ESPO' does not exist."
-    exit 1
+    printExitError "The directory '$PATH_TO_ESPO' does not exist"
 fi
 
 if [ ! -r "$PATH_TO_ESPO" ]; then
-    echo "Error: The directory '$PATH_TO_ESPO' is not readable."
-    exit 1
+    printExitError "The directory '$PATH_TO_ESPO' is not readable"
 fi
 
 if [ -z "$2" ]; then
     echo "Enter a full path to backup directory ($DEFAULT_BACKUP_PATH):"
+
     read BACKUP_PATH
     if [ -z "$BACKUP_PATH" ]; then
         BACKUP_PATH="$DEFAULT_BACKUP_PATH"
@@ -34,20 +46,17 @@ else
 fi
 
 if [ ! -d "$BACKUP_PATH" ]; then
-    echo "Error: The directory '$BACKUP_PATH' does not exist."
-    exit 1
+    printExitError "The directory '$BACKUP_PATH' does not exist"
 fi
 
 if [ ! -w "$BACKUP_PATH" ]; then
-    echo "Error: Backup directory '$BACKUP_PATH' is not writable."
-    exit 1
+    printExitError "Backup directory '$BACKUP_PATH' is not writable"
 fi
 
 cd "$PATH_TO_ESPO"
 
 if [ ! -f "data/config.php" ]; then
-    echo "Error: The '$PATH_TO_ESPO' is not EspoCRM directory."
-    exit 1
+    printExitError "The '$PATH_TO_ESPO' is not EspoCRM directory"
 fi
 
 DB_NAME=$(php -r "\$config=include('data/config.php'); echo @\$config['database']['dbname'];")
@@ -67,14 +76,16 @@ if [ -z "$DB_PASS" ]; then
 fi
 
 if [ -z "$DB_NAME" ]; then
-    echo "Error: Unable to determine database name."
-    exit 1
+    printExitError "Unable to determine database name"
 fi
 
 BACKUP_NAME=$(basename "$PATH_TO_ESPO")
 BACKUP_ARCHIVE_NAME="$(date +'%Y-%m-%d_%H%M%S').tar.gz"
 
-cd "$BACKUP_PATH"
+cd "$BACKUP_PATH" || {
+    printExitError "Permission denied on $BACKUP_PATH"
+}
+
 mkdir -p "$BACKUP_NAME"
 cd "$BACKUP_NAME"
 
@@ -87,8 +98,7 @@ mysqldump --user="$DB_USER" --password="$DB_PASS" "$DB_NAME" > "db.sql" || {
     read DB_PASS
 
     mysqldump --user="$DB_USER" --password="$DB_PASS" "$DB_NAME" > "db.sql" || {
-        echo "Error: Unable to create a backup of the database '$DB_NAME'. "
-        exit 1
+        printExitError "Unable to create a backup for the database '$DB_NAME'"
     }
 }
 
