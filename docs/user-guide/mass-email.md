@@ -8,6 +8,7 @@ In this article:
 * [Tracking URL](#tracking-url)
 * [Target lists](#target-lists)
 * [Campaign log](#campaign-log)
+* [Bounce emails](#bounce-emails)
 * [Settings](#settings)
 * [Troubleshooting](#troubleshooting)
 
