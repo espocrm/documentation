@@ -14,22 +14,22 @@ In this article:
 
 ## How to send mass email
 
-You need to have at least one Target List with target records and Email Template in your crm.
+You need to have at least one Target List with target records and an Email Template in your CRM.
 
-1. Create new Campaign with a type `Email` or `Newsletter`. Select one or a few target lists in *Target Lists* field.
-2. After Campaign record is created create Mass Email for this campaign: click plus on Mass Email panel. Specify _Date Start_ - when emails should be sent, and select _Email Template_. Make sure *Status* is set as `Pending`.
+1. Create a new Campaign with the type `Email` or `Newsletter`. Select one or a few target lists in the *Target Lists* field.
+2. After the Campaign record is created create a Mass Email for this campaign: click the plus icon on the Mass Email panel. Specify the _Date Start_ - when emails should be sent, and select a _Email Template_. Make sure the *Status* is set as `Pending`.
 
-If everything is setup right emails should go out. They should be sent each hour with portions (you can change portion size in Administration > Outbound Emails). Administrator can change it by updating *Scheduling* field of 'Check Group Email Accounts' Scheduled Job.
+If everything is setup right emails should go out. They should be sent each hour in portions (you can change the portion size at Administration > Outbound Emails). Administrator can change the *Scheduling* of the 'Check Group Email Accounts' scheduled job.
 
 You can check if emails are sent in Log panel.
 
 ## Test what will be sent to recipients
 
-Click right dropdown on the mass email row in _Mass Email_ panel and then click _Send Test_.
+Click on the right dropdown on the mass email row in the _Mass Email_ panel and then click _Send Test_.
 
 ## Opt-out link
 
-By default the system will append opt-out to all sent emails. But you can use custom one in your Email Template.
+The system appends an opt-out link to all sent emails if it's missing in the email body. You can use a custom opt-out link in your email template.
 
 Example:
 
@@ -37,12 +37,12 @@ Example:
 <a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
 ```
 
-Administrator can disable mandatory opt-out link being added by system at Administration > Outbound Emails.
+Administrator can disable the mandatory opt-out links at Administration > Outbound Emails.
 
 ## Tracking URL
 
 If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
- and _URL_ where your link should lead to. Then you will need to paste generated code into your Email Template.
+ and _URL_ where your link should lead to. Then you will need to paste a generated code into your email template.
 
  Example:
 
@@ -54,21 +54,21 @@ If you want to know that your recipient opened the link from your email, you nee
 
 Target Lists contains lists of Accounts, Contacts, Leads and Users records. Custom entities of the Person and Company types are supported too (as of v7.1).
 
-Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is an ability to make filtering and then select all results of the search.
+Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is the ability to make filtering and then select all results of the search.
 
 ### Populating target lists with Reports
 
-[Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
+[Reports](reports.md#syncing-with-target-lists) feature provides the ability to populate target lists with records matching specific criteria.
 
 ### Excluding target lists
 
-Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
+Specify Excluding Target Lists to avoid sending mass emails to certain recipients. If there is a record with the email address that matches the email address of an excluded record, it will be excluded as well.
 
 ### Custom entity support
 
 [As of v7.1](https://github.com/espocrm/espocrm/issues/2203).
 
-The admin needs to create a Many-to-Many relationship between the Target List and the custom entity (of Person or Company type). Then add the panel to the Bottom Panels layout of the Target List entity.
+The admin needs to create a many-to-many relationship between the Target List and the custom entity (of Person or Company type). Then add the panel to the Bottom Panels layout of the Target List entity.
 
 ## Campaign log
 
