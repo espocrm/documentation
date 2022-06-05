@@ -6,8 +6,8 @@ In this article:
 * [Test sending](#test-what-will-be-sent-to-recipients)
 * [Opt-out-link](#opt-out-link)
 * [Tracking URL](#tracking-url)
-* [Target Lists](#target-lists)
-* [Campaign Log](#campaign-log)
+* [Target lists](#target-lists)
+* [Campaign log](#campaign-log)
 * [Settings](#settings)
 * [Troubleshooting](#troubleshooting)
 
@@ -49,7 +49,7 @@ If you want to know that your recipient opened the link from your email, you nee
 <a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
 ```
 
-## Target Lists
+## Target lists
 
 Target Lists contains lists of Accounts, Contacts, Leads and Users records. Custom entities of the Person and Company types are supported too (as of v7.1).
 
@@ -59,7 +59,7 @@ Users can populate target lists manually using _Select_ action on the correspond
 
 [Reports](reports.md#syncing-with-target-lists) feature provides an ability to populate target lists with records matching specific criteria.
 
-### Excluding Target Lists
+### Excluding target lists
 
 Specify Excluding Target Lists to avoid sending mass email to certain recipients. If there is a record with the email address that matches the email address of any excluding record, the first record will be excluded as well.
 
@@ -69,17 +69,25 @@ Specify Excluding Target Lists to avoid sending mass email to certain recipients
 
 The admin needs to create a Many-to-Many relationship between the Target List and the custom entity (of Person or Company type). Then add the panel to the Bottom Panels layout of the Target List entity.
 
-## Campaign Log
+## Campaign log
 
-In Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email.
+In the Campaign Log you can see emails that have been sent, opened emails, bounced emails, who opted out, and who clicked the link in the email.
 
 * Sent email
-* Links clicked by recipient
+* Links clicked by the recipient
 * Recipients who opted out
-* Bounced emails (not delivered to recipient)
-* Emails opened by recipient (disabled by default)
+* Bounced emails (not delivered to the recipient)
+* Emails opened by the recipient (disabled by default)
 
-It's possible to utilize this log by creating Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+It's possible to utilize this log by creating a Target List (dropdown in the top-right corner on panel) based on records from log. For example, you pick only contacts that clicked on the link (tracking url).
+
+## Bounce emails
+
+Bounce email is an automatic email message from an email system reporting that a sent message has not been delivered.
+
+There are two types of bounced emails: hard and soft. The hard-bounce will mark the recipient email address as invalid so no more email will be sent to it in future. Soft-bounces will be only logged in the campaign log.
+
+Bounced emails can be handled only by a group email account. 
 
 ## Settings
 
@@ -102,14 +110,13 @@ Only for Administrator.
 2. Check if you have setup cron for your system.
 3. Check if you have 'Send Mass Emails' Scheduled Job and it's 'Active' (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in the log.
 
-
 #### What if Tracking URLs has wrong url that does not lead to your crm.
 
 Check *Site URL* parameter at Administration > Settings. The value must be the URL of your EspoCRM, this URL must be accessible externally.
 
 #### Bounced emails are not being logged
 
-Bounced emails can be handled by group email account only. Make sure that you have a group email account that monitors the mailbox bounced emails are sent to.
+Bounced emails can be handled by a group email account only. Make sure that you have a group email account that monitors the mailbox bounced emails are sent to.
 
 Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
 
