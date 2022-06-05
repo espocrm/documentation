@@ -17,7 +17,7 @@ In this article:
 You need to have at least one Target List with target records and an Email Template in your CRM.
 
 1. Create a new Campaign with the type `Email` or `Newsletter`. Select one or a few target lists in the *Target Lists* field.
-2. After the Campaign record is created create a Mass Email for this campaign: click the plus icon on the Mass Email panel. Specify the _Date Start_ - when emails should be sent, and select a _Email Template_. Make sure the *Status* is set as `Pending`.
+2. After the Campaign record is created create a Mass Email for this campaign: click the plus icon on the Mass Email panel. Specify the _Date Start_ − when emails should be sent, and select a _Email Template_. Make sure the *Status* is set as `Pending`.
 
 If everything is setup right emails should go out. They should be sent each hour in portions (you can change the portion size at Administration > Outbound Emails). Administrator can change the *Scheduling* of the 'Check Group Email Accounts' scheduled job.
 
