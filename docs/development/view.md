@@ -54,6 +54,9 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             
             // Subscribe to model sync (saved or fetched).
             this.listenTo(this.model, 'sync', () => {});
+            
+            // Subscribe to a DOM event. `cid` contains a unique ID among all views.
+            $(window).on('some-event.' + this.cid, () => {});
         },
 
         // Called after contents is added in DOM.
@@ -66,6 +69,9 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             
             // Destroying a child view, also removes it from DOM.
             this.clearView('someKeyName');
+            
+            // Initializing a reference to some DOM element.
+            this.$someElement = this.$el.find('.some-element');
         },
         
         // Data to be passed to the template.
@@ -78,17 +84,23 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         // DOM event handlers.
         events: {
             'click a[data-action="test"]': function (e) {
-                console.log(e.currentTarget);
-                this.actionTest();
+                // Reading an element attribute.
+                let value = $(e.currentTarget).attr('data-value');
+                
+                this.actionTest(value);
             },
         },
         
         // Called when the view is removed.
         // Useful for destroying some event listeners inialized for the view.
-        onRemove: function () {},
+        onRemove: function () {
+            $(window).off('some-event.' + this.cid);
+        },
         
         // A custom method.
-        actionTest: function () {},
+        actionTest: function (value) {
+            console.log(value);
+        },
     });
 });
 ```
