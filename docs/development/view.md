@@ -45,6 +45,8 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             // to prevent memory leakage.
 
             // Subscribe to model change.
+            // Subscribing with the `listenTo` method guarantees automatic unsubscribing on view removal,
+            // so there won't be a memory leak.
             this.listenTo(this.model, 'change', () => {
                 // Whether a specific attribute changed.
                 if (this.model.hasChanged('someAttribute')) {
@@ -56,6 +58,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             this.listenTo(this.model, 'sync', () => {});
             
             // Subscribe to a DOM event. `cid` contains a unique ID among all views.
+            // Requires explicit unsubscribing on view removal.
             $(window).on('some-event.' + this.cid, () => {});
         },
 
@@ -92,7 +95,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         },
         
         // Called when the view is removed.
-        // Useful for destroying some event listeners inialized for the view.
+        // Useful for destroying event listeners inialized for the view.
         onRemove: function () {
             $(window).off('some-event.' + this.cid);
         },
