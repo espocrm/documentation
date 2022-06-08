@@ -17,7 +17,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         // Altertatively a template content can be defined right here.
         //templateContent: `<div class="some-test-container">{{{someKeyName}}}</div>`,
 
-        // initializing logic
+        // Initializing. Called on view creation, the view is not yet rendered.
         setup: function () {
             // Calling the parent `setup` method, can be omitted.
             Dep.prototype.setup.call(this);
@@ -27,12 +27,14 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
             // When we create a child view in the setup method, rendering of the view is held off
             // until the child view is loaded (ready).
+            // The first argument is a key name that can be used to access the view further.
+            // The second argument is a view name.
+            // The method returns a promise that resolves to a view object. Can be useful if a child view is created
+            // after the parent view is already rendered.
             this.createView('someKeyName', 'custom:test/my-custom-child-view', {
                 el: this.getSelector() + ' .some-test-container', // define a selector of the container element
                 someParam: 'test', // pass some parameter
-            });
-            
-            // The `createView` method returns a promise that resolves to a view object.
+            });      
             
             // Options passed from the parent view.
             console.log(this.options); 
@@ -63,13 +65,16 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             $(window).on('some-event.' + this.cid, () => {});
         },
 
-        // Called after contents is added in DOM.
+        // Called after contents is added to the DOM.
         afterRender: function () {
-            // View container (DOM element).
+            // The view container (DOM element).
             console.log(this.$el); 
             
-            // Getting a child view.
-            let childView = this.getView('someKeyName'); 
+            // Accessing a child view.
+            let childView = this.getView('someKeyName');
+            
+            // Checking whether a view is set.
+            let hasSomeView = this.hasView('someKeyName');
             
             // Destroying a child view, also removes it from DOM.
             this.clearView('someKeyName');
@@ -103,7 +108,12 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         
         // A custom method.
         actionTest: function (value) {
-            console.log(value);
+            // Create and render a child view.
+            this.createView('testKey', 'custom:test/my-another-custom-child-view', {
+                el: this.getSelector() + ' .another-test-container', 
+                value: value,
+            })
+            .then(view => view.render());
         },
     });
 });
@@ -119,6 +129,8 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 <p>
     <a class="action" data-action="test">Test Action</a>
 </p>
+
+<div class="another-test-container"></div>
 ```
 
 [Handlebars](https://handlebarsjs.com/) library is used for template rendering.
