@@ -57,7 +57,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             // Subscribe to model sync (saved or fetched). Fired only once.
             this.listenToOnce(this.model, 'sync', () => {});
             
-            // Subscribe to a DOM event. `cid` contains a unique ID among all views.
+            // Subscribe to a DOM event. `cid` contains an ID unique among all views.
             // Requires explicit unsubscribing on view removal.
             $(window).on('some-event.' + this.cid, () => {});
         },
