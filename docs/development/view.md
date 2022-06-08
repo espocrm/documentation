@@ -11,11 +11,11 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
     return Dep.extend({
 
-        // template file, contents is printed below
+        // A template file, see its content.
         template: 'custom:test/my-custom-view',
 
-        // altertatively template can be defined right here
-        //templateContent: '<div class="some-test-container">{{{someKeyName}}}</div>',
+        // Altertatively a template content can be defined right here.
+        //templateContent: `<div class="some-test-container">{{{someKeyName}}}</div>`,
 
         // initializing logic
         setup: function () {
@@ -36,6 +36,9 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             // Options passed from the parent view.
             console.log(this.options); 
             
+            // A model can be passed from the parent view.
+            console.log(this.model);
+            
             // All event listeners are recommended to be initialized here.
 
             // Use listenTo & listenToOnce methods for listening to events of another object
@@ -43,7 +46,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
             // Subscribe to model change.
             this.listenTo(this.model, 'change', () => {
-                // whether specific attribute changed        
+                // Whether a specific attribute changed.
                 if (this.model.hasChanged('someAttribute')) {
                     let value = this.model.get('someAttribute');
                 }
