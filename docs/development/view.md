@@ -29,8 +29,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             // until the child view is loaded (ready).
             // The first argument is a key name that can be used to access the view further.
             // The second argument is a view name.
-            // The method returns a promise that resolves to a view object. Can be useful if a child view is created
-            // after the parent view is already rendered.
+            // The method returns a promise that resolves to a view object.
             this.createView('someKeyName', 'custom:test/my-custom-child-view', {
                 el: this.getSelector() + ' .some-test-container', // define a selector of the container element
                 someParam: 'test', // pass some parameter
