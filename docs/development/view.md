@@ -31,7 +31,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
                 someParam: 'test', // pass some parameter
             });
             
-            // The `createView` method returns promise that resolves with a view object.
+            // The `createView` method returns a promise that resolves with a view object.
             
             console.log(this.options); // options passed from a parent view
             
