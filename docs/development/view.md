@@ -39,7 +39,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             // A model can be passed from the parent view.
             console.log(this.model);
             
-            // All event listeners are recommended to be initialized here.
+            // All event listeners are recommended to be initialized in the `setup` method.
 
             // Use listenTo & listenToOnce methods for listening to events of another object
             // to prevent memory leakage.
