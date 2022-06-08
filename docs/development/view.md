@@ -19,9 +19,10 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
         // initializing logic
         setup: function () {
-            // Calling the parent `setup` method, you can omit it.
+            // Calling the parent `setup` method, can be omitted.
             Dep.prototype.setup.call(this);
             
+            // Instantiate some property.
             this.someParam1 = 'test 1';
 
             // When we create a child view in the setup method, rendering of the view is held off
