@@ -31,8 +31,10 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             // The second argument is a view name.
             // The method returns a promise that resolves to a view object.
             this.createView('someKeyName', 'custom:test/my-custom-child-view', {
-                el: this.getSelector() + ' .some-test-container', // define a selector of the container element
-                someParam: 'test', // pass some parameter
+                // Define a selector of the container element.
+                el: this.getSelector() + ' .some-test-container', 
+                // Pass some parameter.
+                someParam: 'test', 
             });      
             
             // Options passed from the parent view.
