@@ -19,7 +19,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
         // initializing logic
         setup: function () {
-            // calling parent setup method, you can omit it
+            // Calling the parent `setup` method, you can omit it.
             Dep.prototype.setup.call(this);
             
             this.someParam1 = 'test 1';
@@ -37,26 +37,21 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             
             // All event listeners are recommended to be initialized here.
 
-            this.once('remove', () => {
-                // called when the view is removed
-            });
-            
             // Use listenTo & listenToOnce methods for listening to events of another object
             // to prevent memory leakage.
 
-            // model changed
+            // Subscribe to model change.
             this.listenTo(this.model, 'change', () => {
                 // whether specific attribute changed        
                 if (this.model.hasChanged('test')) {        
                 }
             });
             
-            // model saved or fetched         
-            this.listenTo(this.model, 'sync', () => { 
-            });
+            // Subscribe to model sync (saved or fetched).
+            this.listenTo(this.model, 'sync', () => {});
         },
 
-        // called after contents is added to DOM
+        // Called after contents is added in DOM.
         afterRender: function () {
             // view container DOM element
             console.log(this.$el); 
@@ -68,14 +63,14 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             this.clearView('someKeyName');
         },
         
-        // data passed to template
+        // Data to be passed to the template.
         data: function () {
             return {
                 someParam2: 'test 2',
             };
         },
         
-        // DOM event handlers
+        // DOM event handlers.
         events: {
             'click a[data-action="test"]': function (e) {
                 console.log(e.currentTarget);
@@ -83,16 +78,12 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             },
         },
         
-        // called when the view is removed
-        // useful for destroying some event listeners inialized for the view
-        onRemove: function () {
+        // Called when the view is removed.
+        // Useful for destroying some event listeners inialized for the view.
+        onRemove: function () {},
         
-        },
-        
-        // custom method
-        actionTest: function () {
-        
-        },
+        // A custom method.
+        actionTest: function () {},
     });
 });
 ```
