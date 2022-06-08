@@ -24,23 +24,25 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             
             this.someParam1 = 'test 1';
 
-            // when we create a child view in setup method, rendering of the view will be held off
-            // until the child view is loaded (ready)
+            // When we create a child view in the setup method, rendering of the view is held off
+            // until the child view is loaded (ready).
             this.createView('someKeyName', 'custom:test/my-custom-child-view', {
-                el: this.getSelector() + ' .some-test-container',
-                someParam: 'test',
+                el: this.getSelector() + ' .some-test-container', // define a selector of the container element
+                someParam: 'test', // pass some parameter
             });
+            
+            // The `createView` method returns promise that resolves with a view object.
             
             console.log(this.options); // options passed from a parent view
             
-            // all event listeners are recommended to be initialized here
+            // All event listeners are recommended to be initialized here.
 
-            this.on('remove', () => {
-
+            this.once('remove', () => {
+                // called when the view is removed
             });
             
-            // use listenTo & listenToOnce methods for listening to events of another object
-            // to prevent memory leakage
+            // Use listenTo & listenToOnce methods for listening to events of another object
+            // to prevent memory leakage.
 
             // model changed
             this.listenTo(this.model, 'change', () => {
@@ -50,7 +52,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             });
             
             // model saved or fetched         
-            this.listenTo(this.model, 'sync', () => {   
+            this.listenTo(this.model, 'sync', () => { 
             });
         },
 
@@ -60,7 +62,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             console.log(this.$el); 
             
             // get child view
-            var childView = this.getView('someKeyName'); 
+            let childView = this.getView('someKeyName'); 
             
             // destroy child view, will also remove it from DOM
             this.clearView('someKeyName');
@@ -84,7 +86,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
         // called when the view is removed
         // useful for destroying some event listeners inialized for the view
         onRemove: function () {
-            
+        
         },
         
         // custom method
