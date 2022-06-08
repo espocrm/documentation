@@ -31,9 +31,10 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
                 someParam: 'test', // pass some parameter
             });
             
-            // The `createView` method returns a promise that resolves with a view object.
+            // The `createView` method returns a promise that resolves to a view object.
             
-            console.log(this.options); // options passed from a parent view
+            // Options passed from the parent view.
+            console.log(this.options); 
             
             // All event listeners are recommended to be initialized here.
 
@@ -43,7 +44,8 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             // Subscribe to model change.
             this.listenTo(this.model, 'change', () => {
                 // whether specific attribute changed        
-                if (this.model.hasChanged('test')) {        
+                if (this.model.hasChanged('someAttribute')) {
+                    let value = this.model.get('someAttribute');
                 }
             });
             
@@ -53,13 +55,13 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
 
         // Called after contents is added in DOM.
         afterRender: function () {
-            // view container DOM element
+            // View container (DOM element).
             console.log(this.$el); 
             
-            // get child view
+            // Getting a child view.
             let childView = this.getView('someKeyName'); 
             
-            // destroy child view, will also remove it from DOM
+            // Destroying a child view, also removes it from DOM.
             this.clearView('someKeyName');
         },
         
