@@ -148,9 +148,9 @@ Note: When you extend a view that already has its *events* and you want to add m
 
 ## Waiting for some data loaded before rendering
 
-Sometimes we need to get some data loaded asynchronously before the view is rendered. For this purpose we can use `wait` method inside `setup` method. 
+Sometimes we need to get some data loaded asynchronously before the view is rendered. For this purpose we can use the `wait` method inside the `setup` method. 
 
-Wait method can receive a promise:
+The `wait` method can receive a promise:
 
 ```js
     setup: function () {
@@ -163,7 +163,7 @@ Wait method can receive a promise:
     },
 ```
 
-Model factory returns a promise.
+The model factory returns a promise, so we can pass it the `view` method:
 
 ```js
     setup: function () {
@@ -181,7 +181,7 @@ Model factory returns a promise.
     },
 ```
 
-Wait for model is fetched. Fetch returns a promise.
+Wait untill a model is fetched. The `fetch` method returns a promise.
 
 ```js
     setup: function () {
@@ -204,7 +204,6 @@ Wait for multiple independent promises:
             Espo.Ajax.getRequest('SomeUrl')
         );
     },
-
 ```
 
 ```js
@@ -212,7 +211,7 @@ Wait for multiple independent promises:
         this.wait(
             Promise.all([
                 this.model.fetch(),
-                Espo.Ajax.getRequest('SomeUrl')
+                Espo.Ajax.getRequest('SomeUrl'),
             ])
         );
     },
@@ -222,12 +221,12 @@ A simple way to wait:
 
 ```js
     setup: function () {
-        // this holds off the rendering
+        // This holds off the rendering.
         this.wait(true);
 
         Espo.Ajax.getRequest('Some/Request')
             .then(response => {
-                // this cancels waiting and proceeds to rendering
+                // This cancels waiting and proceeds to rendering.
                 this.wait(false);                
             });
     },
