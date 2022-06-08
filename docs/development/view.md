@@ -26,7 +26,7 @@ define('custom:views/test/my-custom-view', 'view', function (Dep) {
             this.someParam1 = 'test 1';
 
             // When we create a child view in the setup method, rendering of the view is held off
-            // until the child view is loaded (ready).
+            // until the child view is loaded (ready), the child view will be rendered along with the parent view.
             // The first argument is a key name that can be used to access the view further.
             // The second argument is a view name.
             // The method returns a promise that resolves to a view object.
