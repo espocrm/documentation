@@ -146,6 +146,8 @@ Note: When you extend a view that already has its *events* and you want to add m
     }, Dep.prototype.events),
 ```
 
+See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view.js) of the view class.
+
 ## Waiting for some data loaded before rendering
 
 Sometimes we need to get some data loaded asynchronously before the view is rendered. For this purpose we can use the `wait` method inside the `setup` method. 
