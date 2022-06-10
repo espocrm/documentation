@@ -1,6 +1,5 @@
 # View
 
-
 The View is the most oftenly used class in frontend. Every page is rendered by multiple view objects. Views can have child views. Child views can have their own child views. And so on. When a parent view is rendered (by calling the `render` method), it generates HTML from all children and adds it to the DOM.
 
 
@@ -148,6 +147,20 @@ Note: When you extend a view that already has its *events* and you want to add m
 
 See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view.js) of the view class.
 
+As of v7.2 it's possible to use **es6 classes** with fields when extending a view:
+
+```js
+define('custom:views/test/my-custom-view', 'view', function (Dep) {
+    return class extends Dep {    
+        someProperty = 'value'
+        
+        setup() {
+            super.setup();
+        }
+    }
+});
+```
+
 ## Waiting for some data loaded before rendering
 
 Sometimes we need to get some data loaded asynchronously before the view is rendered. For this purpose we can use the `wait` method inside the `setup` method. 
@@ -183,7 +196,7 @@ The model factory returns a promise, so we can pass it the `view` method:
     },
 ```
 
-Wait untill a model is fetched. The `fetch` method returns a promise.
+Wait until a model is fetched. The `fetch` method returns a promise.
 
 ```js
     setup: function () {
