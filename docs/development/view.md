@@ -139,9 +139,7 @@ Note: When you extend a view that already has its *events* and you want to add m
 
 ```js
     events: _.extend({
-        'click a[data-action="test"]': function () {
-        
-        },
+        'click a[data-action="test"]': function () {},
     }, Dep.prototype.events),
 ```
 
@@ -150,7 +148,7 @@ See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view
 As of v7.2 it's possible to use **es6 classes** with fields when extending a view:
 
 ```js
-define('custom:views/test/my-custom-view', 'view', function (Dep) {
+define('custom:views/test/my-custom-view', 'view', (Dep) => {
     return class extends Dep {    
         someProperty = 'value'
         
