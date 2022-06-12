@@ -6,7 +6,7 @@ The View is the most oftenly used class in frontend. Every page is rendered by m
 A view file `client/custom/src/views/test/my-custom-view.js`:
 
 ```js
-define('custom:views/test/my-custom-view', 'view', function (Dep) {
+define('custom:views/test/my-custom-view', ['view'], function (Dep) {
 
     return Dep.extend({
 
@@ -148,7 +148,7 @@ See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view
 As of v7.2 it's possible to use **es6 classes** with fields when extending a view:
 
 ```js
-define('custom:views/test/my-custom-view', 'view', (Dep) => {
+define('custom:views/test/my-custom-view', ['view'], (Dep) => {
     return class extends Dep {    
         someProperty = 'value'
         
