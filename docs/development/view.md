@@ -155,7 +155,7 @@ define(['view'], View => {
     /**
      * A custom view class extended from the base view class `view`.
      *
-     * Following JSDoc tags assists code completion in PhpStorm/WebStorm.
+     * Following JSDoc tags enables code completion in PhpStorm/WebStorm.
      * @extends module:view.Class
      * @memberOf module:custom:views/my-view
      */
