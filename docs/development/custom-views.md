@@ -106,7 +106,7 @@ The views 'views/list/record' contains rows of records.
 It is worth to mention that you need to inherit your view class from specific class for your entity if one already exists.
 
 ```javascript
-define('custom:views/email/record/detail', 'views/email/record/detail', function (Dep) {
+define('custom:views/email/record/detail', ['views/email/record/detail'], function (Dep) {
 
 });
 ```
@@ -133,7 +133,7 @@ Example for Address field of Account entity type.
 `client/custom/src/views/account/fields/address.js`
 
 ```js
-define('custom:views/fields/address', 'views/fields/address', function (Dep) {
+define('custom:views/fields/address', ['views/fields/address'], function (Dep) {
 
    return Dep.extend({
   
