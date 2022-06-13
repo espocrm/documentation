@@ -152,6 +152,7 @@ As of v7.2 it's possible to use **es6 classes** with fields when extending a vie
 
 ```js
 define(['view'], View => {
+
     /**
      * A custom view class extended from the base view class `view`.
      *
