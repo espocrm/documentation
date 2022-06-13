@@ -7,11 +7,11 @@ A view file `client/custom/src/views/test/my-custom-view.js`:
 
 ```js
 // AMD module definition. The first argument can be omitted.
-define('custom:views/test/my-custom-view', ['view'], function (Dep) {
+define('custom:views/test/my-custom-view', ['view'], function (View) {
 
     // Extending from the base `view` class.
-    // Alternatively, you can use ES6 classes as of v7.2.
-    return Dep.extend({
+    // Alternatively, you can use ES6 classes as of v7.2. Example below.
+    return View.extend({
 
         // A template file, see its content.
         template: 'custom:test/my-custom-view',
@@ -151,14 +151,23 @@ See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view
 As of v7.2 it's possible to use **es6 classes** with fields when extending a view:
 
 ```js
-define('custom:views/test/my-custom-view', ['view'], (Dep) => {
-    return class extends Dep {    
+define(['view'], View => {
+    /**
+     * A custom view class extended from the base view class `view`.
+     *
+     * Following JSDoc tags assists code completion in PhpStorm/WebStorm.
+     * @extends module:view.Class
+     * @memberOf module:custom:views/my-view
+     */
+    class Class extends View {    
         someProperty = 'value'
         
         setup() {
             super.setup();
         }
     }
+    
+    return Class;
 });
 ```
 
