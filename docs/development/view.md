@@ -6,8 +6,11 @@ The View is the most oftenly used class in frontend. Every page is rendered by m
 A view file `client/custom/src/views/test/my-custom-view.js`:
 
 ```js
+// AMD module definition. The first argument can be omitted.
 define('custom:views/test/my-custom-view', ['view'], function (Dep) {
 
+    // Extending from the base `view` class.
+    // Alternatively, you can use ES6 classes as of v7.2.
     return Dep.extend({
 
         // A template file, see its content.
