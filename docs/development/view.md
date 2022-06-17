@@ -16,7 +16,8 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
     // Alternatively, you can use ES6 classes as of v7.2. Example below.
     return View.extend({
 
-        // A template file, see its content.
+        // A template path, see its content.
+        // The `custom` prefix indicates a the base path `client/custom/res/templates`.
         template: 'custom:test/my-custom-view',
 
         // Altertatively a template content can be defined right here.
