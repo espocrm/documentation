@@ -7,6 +7,8 @@ A view file `client/custom/src/views/test/my-custom-view.js`:
 
 ```js
 // AMD module definition. The first argument can be omitted.
+// Names should be in a lower case. A hyphen to be used for word separation.
+// The `custom:` part indecates a loader that the base path is `client/custom/src`.
 define('custom:views/test/my-custom-view', ['view'], function (View) {
 
     // Extending from the base `view` class.
