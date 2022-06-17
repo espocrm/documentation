@@ -17,7 +17,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
     return View.extend({
 
         // A template path, see its content.
-        // The `custom` prefix indicates a the base path `client/custom/res/templates`.
+        // The `custom` prefix indicates that the base path is `client/custom/res/templates`.
         template: 'custom:test/my-custom-view',
 
         // Altertatively a template content can be defined right here.
