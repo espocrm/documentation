@@ -1,5 +1,7 @@
 # Creating custom field type
 
+Use the name of your field type instead of `{field-type}`.
+
 ### Field definition
 
 Create a file `/custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` with needed parameters.
@@ -56,8 +58,8 @@ Use out-of-the-box field types as examples:
 
 ### Translation
 
-The label is used in Entity Manager can be set in `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` in section `fieldTypes`.
-If you need to add translation to other language, use needed language [language code](https://en.wikipedia.org/wiki/ISO_639-1)_[country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) instead of `en_US`. In `data/config.php` in section `languageList` you can find the list of included languages.
+The label is used in Entity Manager can be set in `custom/Espo/Custom/Resources/i18n/en_US/Admin.json` in the section `fieldTypes`.
+If you need to add translation to other language, use [language code](https://en.wikipedia.org/wiki/ISO_639-1)_[Country Code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) instead of `en_US`.
 
 Then you need to clear cache at the administration panel.
 
