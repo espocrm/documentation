@@ -53,8 +53,8 @@ Create detail/list/edit/search  templates (*.tpl extension) in the `client/custo
 
 Use out-of-the-box field types as examples:
 
-- `/client/src/views/fields/` - views
-- `/client/res/templates/fields/` - templates
+- `client/src/views/fields/` — views
+- `client/res/templates/fields/` — templates
 
 ### Translation
 
