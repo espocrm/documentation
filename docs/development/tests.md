@@ -1,14 +1,7 @@
 # Tests
 
-Before running tests, you need to build for testing:
-
-```
-grunt test
-```
-
-This will build an inctance for integration tests and install phpunit (from require-dev).
-
 ## Unit tests
+
 
 Command to run:
 
@@ -39,7 +32,14 @@ return [
 
 This config will be used for test instances that are built for each test.
 
-Command to run:
+
+Before running tests, you need to build for testing:
+
+```
+grunt test
+```
+
+Running tests:
 ```
 vendor/bin/phpunit tests/integration
 ```
