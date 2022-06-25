@@ -2,15 +2,15 @@
 
 EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object.
 
-**EntityManager** is available in [*Container*](di.md). It's a central access point for ORM functionalities.
+*EntityManager* is available in [*Container*](di.md). It's a central access point for ORM functionalities.
 
 **Repository** serves for fetching and storing records. Each entity type has its own repository. Base classes: `Espo\ORM\Repositories\RDBRepository`, `Espo\Core\Repositories\Database`. *RDB* stands for *relational database*.
 
-**Entity** represents a single record. Each entity type has it's own entity class. Base class: `Espo\Core\ORM\Entity`, interface: `Espo\ORM\Entity`.
+*Entity* represents a single record. Each entity type has it's own entity class. Base class: `Espo\Core\ORM\Entity`, interface: `Espo\ORM\Entity`.
 
-**EntityCollection** is a collection of entities. It's returned by *find* operations.
+*EntityCollection* is a collection of entities. It's returned by *find* operations.
 
-**SthCollection** is a collection of entities, consuming much less memory than EntityCollection.
+*SthCollection* is a collection of entities, consuming much less memory than EntityCollection.
 
 ## See also
 
