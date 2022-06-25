@@ -15,7 +15,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/fields/address.json`.
 Create a file `client/custom/src/views/fields/address.js`.
 
 ```js
-define('custom:views/fields/address', 'views/fields/address', function (Dep) {
+define('custom:views/fields/address', ['views/fields/address'], function (Dep) {
 
    return Dep.extend({
    
@@ -75,7 +75,7 @@ Create (or edit if exists) a file `custom/Espo/Custom/Resources/metadata/entityD
 File `client/custom/src/views/meeting/fields/name.js`:
 
 ```js
-define('custom:views/meeting/fields/name', 'views/fields/varchar', function (Dep) {
+define('custom:views/meeting/fields/name', ['views/fields/varchar'], function (Dep) {
 
    return Dep.extend({
   
@@ -91,4 +91,3 @@ define('custom:views/meeting/fields/name', 'views/fields/varchar', function (Dep
     });
 });
 ```
-
