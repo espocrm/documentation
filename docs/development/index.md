@@ -41,6 +41,7 @@
   * [Customizing existing fields](customize-standard-fields.md)
 * [Controller & routing](frontend/controller.md)
 * [Model](model.md)
+* [Ajax requests](frontend/ajax.md)
 * Misc
   * [Custom buttons & dropdown actions for detail/edit/list views](custom-buttons.md)
   * [Modal dialogs](modal.md)
