@@ -48,16 +48,19 @@ class AfterInstall
 {
     public function run($container)
     {
-       $config = $container->get('config');
+        /** @var \Espo\Core\Utils\Config */
+        $config = $container->get('config');
  
-       $tabList = $config->get('tabList');
-       if (!in_array('MyCustomEntity', $tabList)) {
-           $tabList[] = 'MyCustomEntity';
-           $config->set('tabList', $tabList);
-       }
- 
-       $config->save();
-   }
+        $tabList = $config->get('tabList');
+       
+        if (!in_array('MyCustomEntity', $tabList)) {
+            $tabList[] = 'MyCustomEntity';
+           
+            $config->set('tabList', $tabList);
+        }
+  
+        $config->save();
+    }
 }
 ```
 
