@@ -7,16 +7,13 @@ There are two objects that allow to check access:
 * AclManager - `Espo\Core\AclManager`
 * Acl - `Espo\Core\Acl`
 
-With *AclManager* you can check access for any user. *Acl* is a wrapper for *AclManager* for a current user.
+With the *AclManager* you can check access for any user. The *Acl* is a wrapper for the *AclManager* for a current user.
 
-You can obtain both objects form the *Container*.
 
 ```php
 use Espo\Core\Acl\Table;
 
 // available actions: create, read, edit, delete, stream
-
-
 
 // check read access to entity for specific user
 $hasAccess = $aclManager->check($user, $entity, Table::ACTION_READ);
@@ -56,7 +53,7 @@ $linkList = $acl->getScopeForbiddenLinkList('Account', Table::ACTION_READ);
 
 ## Custom ACL for entity type
 
-**Deprecated** as of v6.2.0. AccessChecker and OwnershipChecker interfaces should be used.
+**Deprecated** as of v7.0. AccessChecker and OwnershipChecker interfaces should be used.
 
 How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
 
@@ -117,8 +114,9 @@ class Task extends \Espo\Core\Acl\Base
 	}
 
         // here we call a default logic checking 'delete' access
-        if ($this->checkEntity($user, $entity, $data, 'delete'))
+        if ($this->checkEntity($user, $entity, $data, 'delete')) {
             return true;
+        }
 
         if (is_object($data)) {
         	// here we allow to delete records created by user, if the user has 'create' access and specific 'edit' access
@@ -175,7 +173,7 @@ class Task extends \Espo\Core\Acl\Base
 
 2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
 
-**Deprecated** as of v6.2.0. `Espo\Core\Select\AccessControl\Filter` interface should be used.
+**Deprecated** as of v7.0. `Espo\Core\Select\AccessControl\Filter` interface should be used.
 
 ```php
 <?php

@@ -32,10 +32,8 @@ define('custom:controllers/account', ['controllers/record'], function (Dep) {
             console.log('action: test');
             console.log(options);
         },
-
     });
 });
-
 ```
 
 Clear cache.
@@ -114,8 +112,7 @@ define('custom:views/account/test', ['view'], function (Dep) {
                         return model.fetch();
                     })
             );
-        },
-        
+        },        
     });
 });
 
