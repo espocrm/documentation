@@ -15,10 +15,10 @@ The file structure of the package:
   "name": "Extension Name",
   "version": "1.0.0",
   "acceptableVersions": [
-     ">=5.6.0"
+     ">=7.0.0"
   ],
   "php": [
-     ">=7.2.0"
+     ">=8.1"
   ],
   "releaseDate": "2019-10-22",
   "author": "Your name",
