@@ -7,9 +7,8 @@ There are two objects that allow to check access:
 * AclManager - `Espo\Core\AclManager`
 * Acl - `Espo\Core\Acl`
 
-With *AclManager* you can check access for any user. *Acl* is a wrapper for *AclManager* for a current user.
+With the *AclManager* you can check access for any user. The *Acl* is a wrapper for the *AclManager* for a current user.
 
-You can obtain both objects form the *Container*.
 
 ```php
 use Espo\Core\Acl\Table;
@@ -54,7 +53,7 @@ $linkList = $acl->getScopeForbiddenLinkList('Account', Table::ACTION_READ);
 
 ## Custom ACL for entity type
 
-**Deprecated** as of v6.2.0. AccessChecker and OwnershipChecker interfaces should be used.
+**Deprecated** as of v7.0. AccessChecker and OwnershipChecker interfaces should be used.
 
 How to customize ACL rules for a specific entity type. In this example, we will customize Task entity type.
 
