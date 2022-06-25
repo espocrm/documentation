@@ -1,4 +1,4 @@
-# How to create a dashlet
+# Custom dashlet
 
 Create a file `custom/Espo/Custom/Resources/metadata/dashlets/{DASHLET_NAME}.json` with your dashlet configuration.
 
