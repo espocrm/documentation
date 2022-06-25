@@ -88,11 +88,24 @@ nav:
             - 'Markdown syntax': 'user-guide/markdown.md'
             - 'Browser support': 'user-guide/browser-support.md'
             - 'Data privacy': 'user-guide/data-privacy.md'
+            - 'Complex expressions': 'user-guide/complex-expressions.md'
     - 'Extensions':
         - 'Advanced Pack':
             - 'Reports': 'user-guide/reports.md'
             - 'Workflows': 'administration/workflows.md'
-            - 'Business Process Management': 'administration/bpm.md'
+            - 'BPM':
+              - 'Overview': 'administration/bpm.md'
+              - 'Events': 'administration/bpm-events.md'
+              - 'Gateways': 'administration/bpm-gateways.md'
+              - 'Activities': 'administration/bpm-activities.md'
+              - 'Misc':
+                - 'Examples': 'administration/bpm-examples.md'
+                - 'Signals': 'administration/bpm-signals.md'
+                - 'Formula functions': 'administration/bpm-formula.md'
+                - 'Drip email campaign': 'administration/bpm-drip-email-campaign.md'
+                - 'Tracking URLs': 'administration/bpm-tracking-urls.md'
+                - 'Tips': 'administration/bpm-tips.md'
+                - 'Configuration': 'administration/bpm-configuration.md'
         - 'Sales Pack':
             - 'Products': 'user-guide/products.md'
             - 'Quotes': 'user-guide/quotes.md'
