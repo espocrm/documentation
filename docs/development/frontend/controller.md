@@ -114,8 +114,7 @@ define('custom:views/account/test', ['view'], function (Dep) {
                         return model.fetch();
                     })
             );
-        },
-        
+        },        
     });
 });
 
