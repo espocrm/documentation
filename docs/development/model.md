@@ -26,11 +26,12 @@ Saving model (to backend):
 
 ```js
 // assuming model.id is set
-model.save()
+model
+    .save()
     .then(() => {
         // callback on success
     })
-    .fail(() => {
+    .catch(() => {
         // callback on fail
     });
 ```
@@ -39,7 +40,8 @@ Fetching model (from backend):
 
 ```js
 // assuming model.id is set
-model.fetch()
+model
+    .fetch()
     .then(() => {
     });
 ```
@@ -49,7 +51,7 @@ model.fetch()
 Model-factory is available in views. The model-factory allows to create a model instance of a specific entity type.
 
 ```js
-define('custom:views/some-custom-view', 'view', function (Dep) {
+define('custom:views/some-custom-view', ['view'], function (Dep) {
 
     return Dep.extend({
     
@@ -59,17 +61,17 @@ define('custom:views/some-custom-view', 'view', function (Dep) {
             // use wait to hold off rendering until model is loaded            
             this.wait(
                 this.getModelFactory().create(entityType)
-                .then(model => {
-                    let entityType = model.entityType; // entityType property is set by the factory
-                    
-                    this.model = model;                    
-                    model.id = this.options.id;
-                    
-                    return model.fetch(); // this will make API call using an appropriate URL
-                })
-                .then(() => {
-                    // here you can do some stuff with model
-                })
+                    .then(model => {
+                        let entityType = model.entityType; // entityType property is set by the factory
+
+                        this.model = model;                    
+                        model.id = this.options.id;
+
+                        return model.fetch(); // this will make API call using an appropriate URL
+                    })
+                    .then(() => {
+                        // here you can do some stuff with model
+                    })
             );
         },
     });
@@ -90,7 +92,7 @@ define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model)
             model.id = 'someId';
             
             this.wait(
-                model.fetch(); // this will make `GET MyModel/someId` API call
+                model.fetch(); // this makes a `GET MyModel/someId` API call
             );
         },
     });
@@ -99,7 +101,7 @@ define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model)
 
 ## Events
 
-Note: `listenTo` and `listenToOnce` are methods of *view*.
+Note: `listenTo` and `listenToOnce` are methods of the *view* class.
 
 ### change
 
