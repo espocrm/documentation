@@ -25,6 +25,7 @@ Example:
 ```js
 Espo.Ajax.getRequest('MyController/action/getSomeDataById', {id: id})
   .then(response => {
+      // A parsed response.
       console.log(response);
   });
 ```
