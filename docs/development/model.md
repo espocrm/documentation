@@ -26,8 +26,7 @@ Saving model (to backend):
 
 ```js
 // assuming model.id is set
-model
-    .save()
+model.save()
     .then(() => {
         // callback on success
     })
@@ -40,8 +39,7 @@ Fetching model (from backend):
 
 ```js
 // assuming model.id is set
-model
-    .fetch()
+model.fetch()
     .then(() => {
     });
 ```
