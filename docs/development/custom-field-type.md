@@ -5,7 +5,8 @@ Use the name of your field type instead of `{field-type}`.
 ### Field definition
 
 Create a file `custom/Espo/Custom/Resources/metadata/fields/{field-type}.json` with needed parameters.
-```
+
+```json
 {
    "view": "custom:views/fields/{field-type}"
 }
