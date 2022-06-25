@@ -16,8 +16,6 @@ use Espo\Core\Acl\Table;
 
 // available actions: create, read, edit, delete, stream
 
-
-
 // check read access to entity for specific user
 $hasAccess = $aclManager->check($user, $entity, Table::ACTION_READ);
 
@@ -117,8 +115,9 @@ class Task extends \Espo\Core\Acl\Base
 	}
 
         // here we call a default logic checking 'delete' access
-        if ($this->checkEntity($user, $entity, $data, 'delete'))
+        if ($this->checkEntity($user, $entity, $data, 'delete')) {
             return true;
+        }
 
         if (is_object($data)) {
         	// here we allow to delete records created by user, if the user has 'create' access and specific 'edit' access
@@ -175,7 +174,7 @@ class Task extends \Espo\Core\Acl\Base
 
 2\. Create a file `custom/Espo/Custom/SelectManagers/Task.php`:
 
-**Deprecated** as of v6.2.0. `Espo\Core\Select\AccessControl\Filter` interface should be used.
+**Deprecated** as of v7.0. `Espo\Core\Select\AccessControl\Filter` interface should be used.
 
 ```php
 <?php
