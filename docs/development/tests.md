@@ -13,7 +13,7 @@ This will build an inctance for integration tests and install phpunit (from requ
 Command to run:
 
 ```
-vendor/bin/phpunit tests/unit
+vendor/bin/phpunit
 ```
 
 ## Integration tests
