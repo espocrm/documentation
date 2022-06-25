@@ -12,9 +12,9 @@ Build po file with the following command:
 node po.js en_EN
 ```
 
-(specify needed language instead of en_EN)
+(specify the needed language instead of en_EN)
 
-The file will be created in `build` directory.
+The file will be created in the `build` directory.
 
 After that you can translate the generated po file. You can use some utilite or service for PO file translating. 
 
