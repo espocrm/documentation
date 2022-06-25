@@ -2,7 +2,7 @@
 
 ### General
 
-* [How to get started](how-to-start.md)
+* [Getting started](how-to-start.md)
 * [Making extension package](extension-packages.md)
 * [Modules](modules.md)
 * [Tests](tests.md)
