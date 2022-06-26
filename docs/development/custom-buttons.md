@@ -4,7 +4,9 @@
 
 How to add buttons (or dropdown actions) that will appear in the top-right corner.
 
-An example for the detail view of *Lead* entity type.
+An example for the detail view of a *Lead* entity type.
+
+### Definition
 
 Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
 
@@ -43,6 +45,8 @@ Avaible `style` values:
 * success
 * danger
 * warning
+
+### Handler class
 
 Create a file `client/custom/src/my-action-handler.js`:
 
@@ -86,9 +90,9 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 
 An action item next to the edit button.
 
-Available since version 5.6.14.
+An example for a *Lead* entity type.
 
-An example for *Lead* entity type.
+### Definition
 
 Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clientDefs/Lead.json`:
 
@@ -109,8 +113,9 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 }
 ```
 
-Paremeter *acl* set to *edit* means that a user need *edit* access level to see the action. You can omit it.
+The paremeter *acl* set to *edit* means that a user need an *edit* access level to see the action. You can omit it.
 
+### Handler class
 
 Create a file `client/custom/src/my-action-handler.js`:
 
