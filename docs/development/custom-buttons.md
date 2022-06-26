@@ -49,6 +49,12 @@ In a parameter `accessDataList` its possible to define rules that determine whet
 
 Menu items defined in the `Global.json` file will be applied for all entity types.
 
+Available views (object keys in definitions):
+
+* detail
+* edit
+* list
+
 ### Handler class
 
 Create a file `client/custom/src/my-action-handler.js`:
