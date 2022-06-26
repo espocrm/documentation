@@ -146,7 +146,7 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 
 An action will available in the *Actions* dropdown when you select records on the list view.
 
-Available since version 6.2.0.
+Available as of v7.0.
 
 An example for *Meeting* entity type.
 
