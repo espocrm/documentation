@@ -12,7 +12,7 @@ Available since the version 5.6.4.
 
 2. Create a file `client/custom/res/templates/campaign/unsubscribe.tpl`
 
-```
+```html
 <div class="container content">
     <div class="col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-2">
         <div class="panel panel-default">
@@ -24,7 +24,10 @@ Available since the version 5.6.4.
                     {{translate 'unsubscribed' category='messages' scope='Campaign'}}
                 </p>
                 <p>
-                    <a class="btn btn-default btn-sm" href="?entryPoint=subscribeAgain&id={{actionData.queueItemId}}">{{translate 'Subscribe again' scope='Campaign'}}</a>
+                    <a
+                       class="btn btn-default btn-sm"
+                       href="?entryPoint=subscribeAgain&id={{actionData.queueItemId}}"
+                   >{{translate 'Subscribe again' scope='Campaign'}}</a>
                 </p>
             </div>
         </div>
