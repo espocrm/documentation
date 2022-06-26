@@ -47,6 +47,8 @@ Avaible `style` values:
 
 In a parameter `accessDataList` its possible to define rules that determine whether an action item is visible to a user. See the `module:utils~AccessDefs` JSDoc type in the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/utils.js).
 
+Menu items defined in the `Global.json` file will be applied for all entity types.
+
 ### Handler class
 
 Create a file `client/custom/src/my-action-handler.js`:
