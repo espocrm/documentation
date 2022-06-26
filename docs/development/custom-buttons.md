@@ -36,7 +36,6 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 
 The `acl` parameter defines that a user needs an 'edit' access level to see the button. You can omit this parameter.
 
-
 In order to add dropdown action, you need to use the `dropdown` key instead of *buttons*.
 
 Avaible `style` values:
@@ -45,6 +44,8 @@ Avaible `style` values:
 * success
 * danger
 * warning
+
+In a parameter `accessDataList` its possible to define rules that determine whether an action item is visible to a user. See the `module:utils~AccessDefs` JSDoc type in the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/utils.js).
 
 ### Handler class
 
