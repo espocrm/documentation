@@ -32,9 +32,17 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 }
 ```
 
-`acl` parameter defines that a user needs 'edit' access level to see the button. You can omit this parameter.
+The `acl` parameter defines that a user needs an 'edit' access level to see the button. You can omit this parameter.
 
-In order to add dropdown action, you need to use `dropdown` key instead of *buttons*.
+
+In order to add dropdown action, you need to use the `dropdown` key instead of *buttons*.
+
+Avaible `style` values:
+
+* default
+* success
+* danger
+* warning
 
 Create a file `client/custom/src/my-action-handler.js`:
 
