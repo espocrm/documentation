@@ -124,6 +124,8 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 
 The paremeter *acl* set to *edit* means that a user need an *edit* access level to see the action. You can omit it.
 
+As of v7.2 it's possible to define a `checkVisibilityFunction` parameter. The values should be a handler method name that. The method determines whether the action is visible. It will be called every time the record is synced with the backend and hide or show the action depending on a value returned by the method. The `initFunction` is not needed in this case. 
+
 ### Handler class
 
 Create a file `client/custom/src/my-action-handler.js`:
@@ -163,6 +165,12 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
    });
 });
 ```
+
+## Dropdown action in detail modal view
+
+Available as of v7.2.
+
+Everything is the same as for the detail view. The only difference is that the metadata parameter name is `modalDetailActionList`.
 
 ## Mass action in list view
 
