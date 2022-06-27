@@ -193,7 +193,7 @@ The `wait` method can receive a promise:
     },
 ```
 
-The model factory returns a promise, so we can pass it the `view` method:
+The model factory returns a promise, so we can pass it to the `view` method:
 
 ```js
     setup: function () {
