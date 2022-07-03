@@ -232,7 +232,7 @@ For storing links.
 Parameters:
 
 * Max-length – a max acceptable length of text;
-* Strip – if checked, then `http(s)://` if trailing `/` will be stripped.
+* Strip – if checked, then a protocol part and trailing `/` will be stripped.
 
 
 ## Wysiwyg
