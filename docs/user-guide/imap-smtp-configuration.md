@@ -98,15 +98,9 @@ If you cannot login, make sure you’ve provided the correct username and passwo
 
 For security reasons it's not recommended to use account password when connecting to services like email. That's why major services provides the ability to generate a different password that will be used only in a specific applicaton for a single purpose.
 
-#### For Gmail
+See the articles for the service you use:
 
-See the [article](https://support.google.com/accounts/answer/185833).
+* [Gmail](https://support.google.com/accounts/answer/185833)
+* [Yahoo](https://in.help.yahoo.com/kb/SLN15241.html)
+* [Outlook](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944)
 
-
-#### For Yahoo
-
-See the [article](https://in.help.yahoo.com/kb/SLN15241.html).
-
-####  For Outlook
-
-See the [article](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944).
