@@ -8,7 +8,7 @@ In this article:
 * [Gmail account](#setup-for-gmail-account)
 * [Outlook account](#setup-for-outlook-account)
 * [Yahoo account](#setup-for-yahoo-account)
-* [Troubleshoot problems](#troubleshoot-problems)
+* [App passwords](#app-passwords)
 
 ## IMAP configuration
 
@@ -86,15 +86,7 @@ IMAP and SMTP access are enabled by default. All you need is enable the "less se
 
 Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.html).
 
-## Troubleshoot problems
-
-### Error: Cannot login, user or password wrong
-
-#### Step 1. Check the username and password.
-
-If you cannot login, make sure you’ve provided the correct username and password.
-
-#### Step 2. Generate App Password
+## App passwords
 
 For security reasons it's not recommended to use account password when connecting to services like email. That's why major services provides the ability to generate a different password that will be used only in a specific applicaton for a single purpose.
 
@@ -103,4 +95,3 @@ See the articles for the service you use:
 * [Gmail](https://support.google.com/accounts/answer/185833)
 * [Yahoo](https://in.help.yahoo.com/kb/SLN15241.html)
 * [Outlook](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944)
-
