@@ -88,7 +88,7 @@ Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.htm
 
 ## App passwords
 
-For security reasons it's not recommended to use account password when connecting to services like email. That's why major services provides the ability to generate a different password that will be used only in a specific applicaton for a single purpose.
+For security reasons it's not recommended to use account passwords when connecting to services like email. That's why major services provides the ability to generate a different password that will be used only in a specific application for a single purpose.
 
 See the articles for the service you use:
 
