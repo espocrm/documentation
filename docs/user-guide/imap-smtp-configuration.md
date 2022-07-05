@@ -5,9 +5,9 @@ In this article:
 * [IMAP configuration](#imap-configuration)
 * [SMTP configuration](#smtp-configuration)
 * [G Suite account](#setup-for-g-suite-account)
-* [Gmail account](#setup-for-gmail-account)
-* [Outlook account](#setup-for-outlook-account)
-* [Yahoo account](#setup-for-yahoo-account)
+* [Gmail](#gmail)
+* [Outlook](#outlook)
+* [Yahoo](#yahoo)
 * [App passwords](#app-passwords)
 
 ## IMAP configuration
@@ -53,7 +53,7 @@ To setup SMTP account, do the following:
 4. Under the POP and IMAP Access, uncheck the *Disable POP and IMAP access for all users box* checkbox.
 5. Each user has to enable IMAP access as descibed for [Gmail Account](#setup-for-gmail-account).
 
-## Setup for Gmail account
+## Gmail
 
 1. Sign into your *Gmail Account*.
 2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png) > Settings.
@@ -68,7 +68,7 @@ Note: There are two ways in which you can setup IMAP and SMTP for Gmail account:
 
 For more information, please follow the [link](https://support.google.com/mail/answer/7126229?hl=en).
 
-## Setup for Outlook account
+## Outlook
 
 1. Go to your *Outlook Account*.
 2. Select ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png) > *View all Outlook settings*.
@@ -80,7 +80,7 @@ For more information, please follow the [link](https://support.google.com/mail/a
 
 Note: If you have **2FA** enabled for your Microsoft account, you need to create app password and use it in Espo instead of your main password. More info [here](https://support.microsoft.com/en-us/help/12409/microsoft-account-app-passwords-and-two-step-verification).
 
-## Setup for Yahoo account
+## Yahoo
 
 IMAP and SMTP access are enabled by default. All you need is enable the "less secure" access. For more information, please follow these [instructions](#for-yahoo-accounts).
 
