@@ -4,7 +4,7 @@ In this article:
 
 * [IMAP configuration](#imap-configuration)
 * [SMTP configuration](#smtp-configuration)
-* [G Suite account](#setup-for-g-suite-account)
+* [Google Workspace](#google-workspace)
 * [Gmail](#gmail)
 * [Outlook](#outlook)
 * [Yahoo](#yahoo)
@@ -45,7 +45,7 @@ To setup SMTP account, do the following:
 
 ![SMTP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/3.png)
 
-## Setup for G Suite account
+## Google Workspace
 
 1. Sign into your *Google Admin console*.
 2. Navigate to *App > G Suite > Gmail > Advanced settings*.
