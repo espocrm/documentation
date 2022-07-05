@@ -90,26 +90,23 @@ Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.htm
 
 ### Error: Cannot login, user or password wrong
 
-#### Step 1. Check the Email Client Username and Email Client Password.
+#### Step 1. Check the username and password.
 
-If you cannot login, make sure you’ve provided the right username and password.
+If you cannot login, make sure you’ve provided the correct username and password.
 
-#### Step 2. Allow less secure apps.
+#### Step 2. Generate App Password
 
-Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2, otherwise you have to change your settings to allow less  secure apps to access your account.
+For security reasons it's not recommended to use account password when connecting to services like email. That's why major services provides the ability to generate a different password that will be used only in a specific applicaton for a single purpose.
 
-#### For Gmail accounts
+#### For Gmail
 
-1. Go to your *Google Account*.
-2. Select *Security* on the navigation panel.
-3. In the *Less secure app access section*, click *Turn on access*.
+See the [article](https://support.google.com/accounts/answer/185833).
 
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/6.png)
 
-#### For Yahoo accounts
+#### For Yahoo
 
-1. Go to your *Yahoo Account*.
-2. On the navigation panel, select *Account Security*.
-3. At the bottom of the page, click *Allow apps that use less secure sign in*.
+See the [article](https://in.help.yahoo.com/kb/SLN15241.html).
 
-![Less secure app](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/7.png)
+####  For Outlook
+
+See the [article](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944).
