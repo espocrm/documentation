@@ -67,15 +67,14 @@ A single-line text.
 Parameters:
 
 * Max-length – a max acceptable length of text;
-* Trim – to trim whitespaces from text;
-* Options – a pre-defined list of values for an autocomplete.
+* Options – a pre-defined list of values for an autocomplete;
+* Pattern – a regular expression to check a field value against.
 
 ![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/varchar.png)
 
 ## Enum
 
 Selectbox, only one value can be selected.
-
 
 Parameters:
 
@@ -192,7 +191,8 @@ Parameters:
 * Allow Custom Options – if checked, a user can add custom values (not defined by *Options* parameter) by typing text and pressing the enter key;
 * Max Item Count – a validation: how many items can be added;
 * Display as Label – values will be displayed as a label with color; a color for each option can be specified;
-* Display as List – each value will be displayed in a new line.
+* Display as List – each value will be displayed in a new line;
+* Pattern – a regular expression to check a field value against.
 
 
 ## Checklist
@@ -215,7 +215,8 @@ Parameters:
 * Options – a list of values (key => label pairs); if no options specified, then a user will be able to add any options;
 * Empty string value is not allowed – if not checked, a user can add an empty string as an item;
 * Max Item Count – a validation: how many items can be added;
-* Display as List – each value will be displayed in a new line.
+* Display as List – each value will be displayed in a new line;
+* Pattern – a regular expression to check a field value against.
 
 ![Array](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/array.png)
 
@@ -294,7 +295,7 @@ A generated read-only auto-incrementing integer number.
 
 ## Barcode
 
-Since 5.8.0 version.
+As of v5.8.
 
 A barcode. Can be printed to PDF.
 
