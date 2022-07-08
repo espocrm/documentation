@@ -82,9 +82,7 @@ Note: If you have **2FA** enabled for your Microsoft account, you need to create
 
 ## Yahoo
 
-IMAP and SMTP access are enabled by default. All you need is enable the "less secure" access. For more information, please follow these [instructions](#for-yahoo-accounts).
-
-Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.html).
+IMAP and SMTP access are enabled by default. You need is enable the "less secure" access. Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.html).
 
 ## App passwords
 
