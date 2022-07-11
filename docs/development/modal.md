@@ -36,7 +36,7 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                 },
             ];
             
-            var title = this.options.title || ''; // passed from the parent view
+            let title = this.options.title || ''; // passed from the parent view
 
             this.headerHtml = this.getHelper().escapeString(title); // escape to prevent XSS
 
