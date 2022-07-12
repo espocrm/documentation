@@ -11,6 +11,7 @@ In this article:
 * [Import results](#import-results)
 * [Importing into Target List](#importing-into-target-list)
 * [Console commands](#console-commands)
+* [Errors](#errors)
 * [See also](#see-also)
 
 ## Step 1
@@ -79,7 +80,7 @@ When you import Contacts, Leads or Accounts, you can add them to some target lis
 
 ## Console commands
 
-As of v6.0.0.
+As of v6.0.
 
 Run import:
 
@@ -108,6 +109,14 @@ php command.php import --file=path/to/csv --params-id={import-id}
 ```
 
 *--params-id* is ID of a previously run import. Its parameters will be used for the import.
+
+## Errors
+
+As of v7.2.
+
+All rows that failed to import will be available in the Errors panel on the Import result view. It's possible to view a reason of the failure (in most cases it's a validation), an index of the failed row and values.
+
+There's the ability to export all failed rows back to CSV (in order to fix them and then re-import).
 
 ## See also
 
