@@ -114,7 +114,7 @@ php command.php import --file=path/to/csv --params-id={import-id}
 
 As of v7.2.
 
-All rows that failed to import will be available in the Errors panel on the Import result view. It's possible to view a reason of the failure (in most cases it's a validation), an index of the failed row and values.
+All rows that failed to import will be available in the Errors panel on the Import result view. It's possible to view the reason of the failure (in most cases it's the validation), the index of the failed row and values.
 
 There's the ability to export all failed rows back to CSV (in order to fix them and then re-import).
 
