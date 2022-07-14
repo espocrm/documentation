@@ -143,9 +143,11 @@ The `Access-Control-Allow-Origin` header (see [CORS](https://en.wikipedia.org/wi
 
 ## Lead assignment distribution
 
-By utilizing [Workflows](workflows.md) or [BPM tool](bpm.md), you can create an assignment rule that will distribute leads among team users. There are Round-Robin and Least-Busy rules available.
+By utilizing the [Workflow](workflows.md) or the [BPM](bpm.md) tools, you can create an assignment rule that will distribute leads among team users. *Round-Robin* and *Least-Busy* rules are available.
 
-To apply the rule for only leads coming through the entry point, you can use a condition checking Campaign field.
+To apply the rule only for leads that are coming through the lead-capture form, you can use a condition that checks the *Campaign* field (assuming that you have created the separate campaign record for the lead-capture form).
+
+You can also utilize formula (Administration > Entity Manager > Lead > Formula) to set some additional fields.
 
 
 ## Hooks
