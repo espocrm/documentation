@@ -53,6 +53,7 @@ The list of parameters along with their default values.
 * globalSearchMaxSize – `10` – how much records is shown in the global search;
 * massActionIdleCountThreshold – `100` – record number threshold after which mass-action is processed in idle (as of v7.1);
 * exportIdleCountThreshold  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
+* leadCaptureAllowOrigin –  `*` – *Access-Control-Allow-Origin* response header value for the lead capture endpoint;
 
 ### UI
 
