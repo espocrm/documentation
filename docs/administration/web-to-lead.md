@@ -135,7 +135,7 @@ Example:
 </script>
 ```
 
-The `Access-Control-Allow-Origin` header (see [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) can be set in `data/config.php` with the parameter `leadCaptureAllowOrigin`. The default value is `*`.
+The `Access-Control-Allow-Origin` header (see [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) can be set in the `data/config.php` with the parameter `leadCaptureAllowOrigin`. The default value is `*`.
 
 ```
     'leadCaptureAllowOrigin' => '*',
