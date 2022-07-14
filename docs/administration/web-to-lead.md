@@ -86,45 +86,60 @@ Example:
         </div>
     </form>
 </div>
-<script type="text/javascript">
-    var webToLeadFormElement = document.getElementById('web-to-lead-form');
-    var webToLeadFormIsSubmitted = false;
 
-    webToLeadFormElement.addEventListener('submit', function (event) {
+<script type="text/javascript">
+    let webToLeadFormElement = document.getElementById('web-to-lead-form');
+    let webToLeadFormIsSubmitted = false;
+
+    webToLeadFormElement.addEventListener('submit', event => {
         event.preventDefault();
-        if (webToLeadFormIsSubmitted) return;
+
+        if (webToLeadFormIsSubmitted) {
+            return;
+        }
+
         webToLeadFormIsSubmitted = true;
         webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
 
-        var payloadData = {
+        let payloadData = {
             firstName: webToLeadFormElement.firstName.value,
             lastName: webToLeadFormElement.lastName.value,
-            emailAddress: webToLeadFormElement.emailAddress.value
+            emailAddress: webToLeadFormElement.emailAddress.value,
         };
 
-        // Needed url can be found on Lead Capture detail view.
-        var url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
+        // A needed URL can be found on the Lead Capture detail view.
+        let url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
 
-        var xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
+    
         xhr.open('POST', url, true);
+    
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.setRequestHeader('Accept', 'application/json');
-        xhr.onreadystatechange = function() {
+    
+        xhr.onreadystatechange = () => {
             if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                var containerElement = document.getElementById('web-to-lead-form-container');
+                let containerElement = document.getElementById('web-to-lead-form-container');
+    
                 containerElement.innerHTML = 'Sent';
             }
-        }
-        xhr.onerror = function() {
+        };
+    
+        xhr.onerror = () => {
             webToLeadFormElement.submit.removeAttribute('disabled');
             webToLeadFormIsSubmitted = false;
-        }
+        };
+    
         xhr.send(JSON.stringify(payloadData));
     });
 </script>
 ```
 
-'Access-Control-Allow-Origin' header (see [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) can be set in `data/config.php` with the parameter `leadCaptureAllowOrigin`. By default, `*` value is used. See .
+The `Access-Control-Allow-Origin` header (see [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) can be set in `data/config.php` with the parameter `leadCaptureAllowOrigin`. The default value is `*`.
+
+```
+    'leadCaptureAllowOrigin' => '*',
+```
 
 ## Lead assignment distribution
 
