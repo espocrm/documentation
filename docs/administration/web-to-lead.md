@@ -54,7 +54,7 @@ $apiKey = 'f1b04885f28ee1a6d55dd203daed68f9'; // specify your API key here
 $formData = [
     'firstName' => $_POST['firstName'],
     'lastName' => $_POST['lastName'],
-    'emailAddress' => $_POST['emailAddress']
+    'emailAddress' => $_POST['emailAddress'],
 ];
 
 $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
