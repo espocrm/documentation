@@ -3,7 +3,7 @@
 * `YYYY` – 4 digit year: `2020`
 * `YY` – 2 digit year: `20`
 * `M MM` – month number: `1..12`
-* `MMM MMM` – month: `Jan..December`
+* `MMM MMMM` – month: `Jan..December`
 * `D DD` – day of month: `1..31`
 * `Do` – day of month with ordinal: `1st..31st`
 * `ddd dddd` – day of week: `Tue Tuesday`
