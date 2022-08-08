@@ -2,11 +2,15 @@
 
 All internal users can manage their dashboards: add or remove dashlets and tabs, edit dashlet options.
 
-Admin can edit dashboards of other users. On the user detail view, click Preferences from the dropdown at the top-right corner. There, you can find *Dashboard Layout*.
+Admin can edit dashboards of other users. On the user detail view, click the Preferences item from the dropdown at the top-right corner. There, you can find *Dashboard Layout*.
 
-Users can **reset** their dashboard layout to the default. On Preferences edit view, click *Reset Dashboard to Default* from the dropdown next to the *Edit* button. Admin can reset dashboards of other users.
+Users can **reset** their dashboard layout to the default. On the Preferences edit view, click the *Reset Dashboard to Default* item from the dropdown next to the *Edit* button. Admin can reset dashboards of other users.
 
-Dashlets can be **resized** by dragging the lower-right corner.
+On the dashboard:
+
+* Dashlets can be **dragged** by the header.
+* Dashlets can be **resized** by dragging the lower-right corner.
+* Multiple dashboard tabs can be created to group dashlets by their purpose.
 
 ## System default dashboard
 
