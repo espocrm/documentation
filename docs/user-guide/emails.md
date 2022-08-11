@@ -15,6 +15,8 @@ In this article:
 
 ## IMAP accounts
 
+*(email receiving)*
+
 Note: You need to have [cron](../administration/server-configuration.md#setting-up-crontab) properly configured in your system to have inbound emails working.
 
 User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
@@ -30,6 +32,8 @@ There is an ability to specify *Folder* in Personal Email Account. Incoming emai
 Note: For regular users access to personal email accounts must be allowed in Roles.
 
 ## SMTP accounts
+
+*(email sending)*
 
 Users can setup SMTP settings in their Personal Email Accounts. Personal email accounts available at Emails tab > top-right menu > Personal Email Accounts. 
 Note: For regular users access to personal email accounts must be allowed in Roles.
