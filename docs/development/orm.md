@@ -932,7 +932,7 @@ $defs = $entityManager->getDefs();
 
 ORM Defs can also be required as a dependency so that it will be injected into your class. Use the type hint `Espo\ORM\Defs`.
 
-Check entity existance:
+Check entity existence:
 
 ```php
 $entityExists = $defs->hasEntity($entityType);

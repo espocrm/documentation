@@ -4,7 +4,7 @@ Proper database indexes can drastically improve a performance of list view loadi
 
 After changes you need to rebuild database. It's better to do from CLI to avoid timeout issue.
 
-Command to run rebuld:
+Command to run rebuild:
 
 ```
 php rebuild.php

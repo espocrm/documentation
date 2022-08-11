@@ -182,7 +182,7 @@ namespace Espo\Custom\SelectManagers;
 class Task extends \Espo\Modules\Crm\SelectManagers\Task
 {
     
-    // apply coditions for select query when 'read' access is set to 'own'
+    // apply conditions for select query when 'read' access is set to 'own'
     protected function accessOnlyOwn(&$result)
     {
         $result['whereClause'][] = [
@@ -193,7 +193,7 @@ class Task extends \Espo\Modules\Crm\SelectManagers\Task
         ];
     }
 
-    // apply coditions for select query when 'read' access is set to 'team'
+    // apply codditions for select query when 'read' access is set to 'team'
     protected function accessOnlyTeam(&$result)
     {
         $this->setDistinct(true, $result);

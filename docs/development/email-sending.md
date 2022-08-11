@@ -37,7 +37,7 @@ class SomeClass
 
         $this->emailSender
             ->withSmtpParams($smtpParams) // optional
-            ->withAttachments([$attachment]) // optinal, to send with attachments
+            ->withAttachments([$attachment]) // optional, to send with attachments
             ->send();
     }
 }

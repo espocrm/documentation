@@ -18,7 +18,7 @@ Translation.
 
 ## layouts
 
-Layouts of enities.
+Layouts of entities.
 
 `{PATH}/layouts/{EntityName}/{layoutName}.json`
 
@@ -80,11 +80,11 @@ fields.md link
 
 Integration definition. Options:
 
-- `fields` - definition of the fields, which are available on Itegration configuration view;
+- `fields` - definition of the fields, which are available on Integration configuration view;
 
 - `params` - parameters of integrations, like `endpoint` and `scope`;
 
-- `clientClassName` - class name of Client of External Account, by defout is ;
+- `clientClassName` - class name of Client of External Account, by default is ;
 
 - `authMethod` - the method of authorization; in Client Manager has to be defined a method `create` + this value;
 
