@@ -27,9 +27,12 @@ If you use an **external email client** for sending emails, you can add *Sent* f
 
 There is an ability to specify *Folder* in Personal Email Account. Incoming emails will be put in that folder.
 
+Note: For regular users access to personal email accounts must be allowed in Roles.
+
 ## SMTP accounts
 
-Users can setup SMTP settings in their Personal Email Accounts as well as in Preferences. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts.
+Users can setup SMTP settings in their Personal Email Accounts. Personal email accounts available at Emails tab > top-right menu > Personal Email Accounts. 
+Note: For regular users access to personal email accounts must be allowed in Roles.
 
 Administrator also can allow to use the main system SMTP account as well as Group Email Accounts (mark as Shared).
 
