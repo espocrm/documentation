@@ -80,7 +80,7 @@ class MyController
         );
         
         // You can either write data to the response or use return
-        // Returned value will be encoded and written to the reponse.
+        // Returned value will be encoded and written to the response.
     }
     
     public function postActionHelloWrold(Request $request, Response $response): void

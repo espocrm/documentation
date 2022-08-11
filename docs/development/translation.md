@@ -16,7 +16,7 @@ node po.js en_EN
 
 The file will be created in the `build` directory.
 
-After that you can translate the generated po file. You can use some utilite or service for PO file translating. 
+After that you can translate the generated po file. You can use some utilities or service for PO file translating. 
 
 ### Building language files from PO file
 

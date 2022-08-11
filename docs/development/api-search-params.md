@@ -107,7 +107,7 @@ result = client.request('GET', 'Account', params)
 
 Parameters are passed as query parameters (in GET request).
 
-As of v7.0.0 it's possible to pass all parameters in JSON format in one query paramerer `searchParams`.
+As of v7.0.0 it's possible to pass all parameters in JSON format in one query parameter `searchParams`.
 
 ### offset
 
@@ -141,7 +141,7 @@ Search criteria. Can contain nested arrays and objects. See more [below](#where-
 
 *String*
 
-A primary filter. Primary filters are usualy defined in *Select Manager* class.
+A primary filter. Primary filters are usually defined in *Select Manager* class.
 
 ### boolFilterList
 

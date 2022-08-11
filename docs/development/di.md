@@ -9,7 +9,7 @@ In this article:
 * [Binding](#binding)
 * [See also](#see-also)
 
-There are two classes repsonsibe for the dependency injection in EspoCRM:
+There are two classes responsible for the dependency injection in EspoCRM:
 
 * Container – `Espo\Core\Container` [class](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/Container.php);
 * InjectableFactory – `Espo\Core\InjectableFactory` [class](https://github.com/espocrm/espocrm/blob/master/application/Espo/Core/InjectableFactory.php).
@@ -138,8 +138,8 @@ Constructor parameter names are used to detect dependencies.
 
 Resolving process:
 
-* Tries to resolve by binding (see below about binding); exits if succcess;
-* Tries to resolve by a parameter name, assuming that parameter name matches a service name and the type hint matches the service class; exits if succcess;
+* Tries to resolve by binding (see below about binding); exits if success;
+* Tries to resolve by a parameter name, assuming that parameter name matches a service name and the type hint matches the service class; exits if success;
 * Creates a new instance if the type hint is a class.
 
 If a dependency is not a service, a new instance will be created every time the dependency is requested. See below.

@@ -98,7 +98,7 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                 })
                 .then(response => {
                     Espo.Ui.success(this.translate('Done'));
-                    // event 'done' will be catched by the parent view
+                    // event 'done' will be caught by the parent view
                     this.trigger('done', response);
                     this.close();
                 });

@@ -122,7 +122,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 }
 ```
 
-The paremeter *acl* set to *edit* means that a user need an *edit* access level to see the action. You can omit it.
+The parameter *acl* set to *edit* means that a user need an *edit* access level to see the action. You can omit it.
 
 As of v7.2 it's possible to define a `checkVisibilityFunction` parameter. The values should be a handler method name that. The method determines whether the action is visible. It will be called every time the record is synced with the backend and hide or show the action depending on a value returned by the method. The `initFunction` is not needed in this case. 
 
@@ -227,7 +227,7 @@ define('custom:test-handler', [], function () {
             
             // here you can show a modal or send ajax request
             // this.view.createView( ... )
-            // Espo.Ajax.postReqest( ...)
+            // Espo.Ajax.postRequest( ...)
         },
 
     });

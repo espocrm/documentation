@@ -8,8 +8,8 @@ A view file `client/custom/src/views/test/my-custom-view.js`:
 ```js
 // AMD module definition. The first argument can be omitted.
 // Names should be in a lower case. A hyphen to be used for word separation.
-// The `custom:` prefix indecates a loader that the base path is `client/custom/src`.
-// A `my-module:` prefix would corresond to `client/custom/modules/my-module/src`.
+// The `custom:` prefix indicates a loader that the base path is `client/custom/src`.
+// A `my-module:` prefix would correspond to `client/custom/modules/my-module/src`.
 define('custom:views/test/my-custom-view', ['view'], function (View) {
 
     // Extending from the base `view` class.
@@ -20,7 +20,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         // The `custom` prefix indicates that the base path is `client/custom/res/templates`.
         template: 'custom:test/my-custom-view',
 
-        // Altertatively a template content can be defined right here.
+        // Alternatively a template content can be defined right here.
         //templateContent: `<div class="some-test-container">{{{someKeyName}}}</div>`,
 
         // Initializing. Called on view creation, the view is not yet rendered.
@@ -108,7 +108,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         },
         
         // Called when the view is removed.
-        // Useful for destroying event listeners inialized for the view.
+        // Useful for destroying event listeners initialized for the view.
         onRemove: function () {
             $(window).off('some-event.' + this.cid);
         },

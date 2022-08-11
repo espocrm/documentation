@@ -36,7 +36,7 @@ Entity definitions. Available as of v7.0.0.
 
 Class: `Espo\Core\Utils\File\Manager`
 
-Privides functions for reading and storing files.
+Provides functions for reading and storing files.
 
 ## applicationState
 
@@ -52,13 +52,13 @@ For logging. Messages are written into `data/log`.
 
 ## user
 
-Class: `Espo\Enities\User`
+Class: `Espo\Entities\User`
 
 A current user. If an application does not require an authentication, then *system* is substituted.
 
 ## preferences
 
-Class: `Espo\Enities\Preferences`
+Class: `Espo\Entities\Preferences`
 
 Preferences of a current user.
 
@@ -110,7 +110,7 @@ Class: `Espo\Core\Utils\Language`
 
 Language util of a current user.
 
-## defaultLangage
+## defaultLanguage
 
 Class: `Espo\Core\Utils\Language`
 
