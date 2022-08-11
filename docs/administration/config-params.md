@@ -54,13 +54,14 @@ The list of parameters along with their default values.
 * massActionIdleCountThreshold – `100` – record number threshold after which mass-action is processed in idle (as of v7.1);
 * exportIdleCountThreshold  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
 * leadCaptureAllowOrigin –  `*` – *Access-Control-Allow-Origin* response header value for the lead capture endpoint;
-* clientCspDisabled –  `false` – Disable Content-Secirity-Policy header for the client page (as of v7.2);
-* clientCspScriptSourceList – `[]` – A script source white-list for the Content-Secirity-Policy header (as of v7.2);
+* clientCspDisabled –  `false` – disable Content-Secirity-Policy header for the client page (as of v7.2);
+* clientCspScriptSourceList – `[]` – a script source white-list for the Content-Secirity-Policy header (as of v7.2);
 
 ### UI
 
 * applicationDescription – the text in the meta tag; by default `EspoCRM - Open Source CRM application` text is used (as of v7.0);
 * adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (as of v7.0);
+* activitiesCreateButtonMaxCount – `3` – a max number of create buttons to display on the Activities pagel (as of v7.2);
 
 ### Access control
 
