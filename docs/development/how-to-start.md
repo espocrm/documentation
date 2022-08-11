@@ -14,7 +14,7 @@ Then you can build by running `grunt`.
 
 To build a proper *config.php* file and populate database you can run installation. Open `http(s)://{YOUR_CRM_URL}/install` location in the browser. It's assumed that your webserver is properly [configured](../administration/server-configuration.md).
 
-Note: Some dependencies require php extensions that you might don't have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
+Note: Some dependencies require php extensions that you might not have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
 ### Building
 
@@ -33,7 +33,7 @@ Note: By default grunt installs composer dependencies. You can skip it by runnin
 
 ### Upgrade packages
 
-Preperation:
+Preparation:
 
 1. Fetch tags to your git repository from the remote: `git fetch --tags`.
 2. Checkout to a needed version tag (or don't if you want to test upgrade to the most recent commit).
@@ -49,7 +49,7 @@ The package will be created in the `build` directory.
 
 ## Option B. Using installed instance
 
-You can develop and make customizitions right on a regular installed EspoCRM instance.
+You can develop and make customizations right on a regular installed EspoCRM instance.
 
 ## Configuration for development
 
@@ -62,7 +62,7 @@ Developer mode disables cache, front-end libs are loaded directly from the `node
 'isDeveloperMode' => true,
 ```
 
-You can force using backend cache (metadata, langauge etc.) in the developer mode. Can be reasonable as the application can be slow w/o cache.
+You can force using backend cache (metadata, language etc.) in the developer mode. Can be reasonable as the application can be slow w/o cache.
 
 ```php
 'useCacheInDeveloperMode' => true,
