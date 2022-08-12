@@ -39,9 +39,11 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             this.createView('someKeyName', 'custom:test/my-custom-child-view', {
                 // Define a selector of the container element.
                 el: this.getSelector() + ' .some-test-container', 
+                // Or a relative selector (as of v7.2):
+                // selector: '.some-test-container',
                 // Pass some parameter.
-                someParam: 'test', 
-            });      
+                someParam: 'test',
+            }); 
             
             // Options passed from the parent view.
             console.log(this.options); 
