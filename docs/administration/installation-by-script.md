@@ -316,3 +316,23 @@ Restart the container to apply the changes:
 ```
 ./command.sh restart espocrm
 ```
+
+## Modify Nginx settings
+
+1. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
+
+    ```
+    cd /var/www/espocrm
+    ```
+
+2. Edit the file `./data/nginx/conf.d/default.conf`
+
+    ```
+    nano ./data/nginx/conf.d/default.conf
+    ```
+
+3. Restart the container to apply the changes:
+
+    ```
+    ./command.sh restart espocrm-nginx
+    ```
