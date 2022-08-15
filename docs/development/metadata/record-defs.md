@@ -84,25 +84,25 @@ A boolean parameter. If true, then duplicate checking will be processed while up
 
 ## beforeReadHookClassNameList
 
-Hooks (applied only for API calls). 
+Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
 
 ## beforeCreateHookClassNameList
 
-Hooks (applied only for API calls). 
+Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface.
 
 ## beforeUpdateHookClassNameList
 
-Hooks (applied only for API calls). 
+Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` interface.
 
 ## beforeDeleteHookClassNameList
 
-Hooks (applied only for API calls). 
+Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\DeleteHook` interface.
 
 ## beforeLinkHookClassNameList
 
-Hooks (applied only for API calls). 
+Hooks (applied for API calls).  Should implement the `Espo\Core\Record\Hook\LinkHook` interface.
 
 ## beforeUnlinkHookClassNameList
 
-Hooks (applied only for API calls). 
+Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
 
