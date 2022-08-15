@@ -73,7 +73,7 @@ Since metadata is merged recursively you can easily redefine JSON objects and ar
 
 You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of array.
 
-`custom/Espo/Custom/Resources/Metadata/entityDefs/Account.json`:
+`custom/Espo/Custom/Resources/metadata/entityDefs/Account.json`:
 
 ```json
 {
