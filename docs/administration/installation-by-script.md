@@ -254,68 +254,60 @@ The operation of EspoCRM consists of several services, such as `nginx`, `mysql`,
 
 This can be achieved by mounting the PHP configuration file and restaring the container.
 
-### Step 1
+1. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
-Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
+    ```
+    cd /var/www/espocrm
+    ```
 
-```
-cd /var/www/espocrm
-```
+2. Create the PHP configuration file:
 
-### Step 2
+    ```
+    mkdir -p data/php; \
+    nano data/php/espocrm.ini
+    ```
 
-Create the PHP configuration file:
+    with the content:
 
-```
-mkdir -p data/php; \
-nano data/php/espocrm.ini
-```
+    ```
+    expose_php = Off
+    display_errors = Off
+    display_startup_errors = Off
+    log_errors = On
+    memory_limit=256M
+    max_execution_time=180
+    max_input_time=180
+    post_max_size=30M
+    upload_max_filesize=30M
+    date.timezone=UTC
+    ```
 
-with the content:
+    then press `Ctrl + 0` and `Ctrl + X`
 
-```
-expose_php = Off
-display_errors = Off
-display_startup_errors = Off
-log_errors = On
-memory_limit=256M
-max_execution_time=180
-max_input_time=180
-post_max_size=30M
-upload_max_filesize=30M
-date.timezone=UTC
-```
+3. Mount the created PHP configuration file to the container:
 
-then press `Ctrl + 0` and `Ctrl + X`
+    ```
+    nano docker-compose.yml
+    ```
 
-### Step 3
+    add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as dispalyed below:
 
-Mount the created PHP configuration file to the container:
+    ```
+    espocrm:
+      ...
+      volumes:
+        - ./data/espocrm:/var/www/html
+        - ./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini
+      ...
+    ```
 
-```
-nano docker-compose.yml
-```
+    then press `Ctrl + 0` and `Ctrl + X`
 
-add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as dispalyed below:
+4. Restart the container to apply the changes:
 
-```
-espocrm:
-  ...
-  volumes:
-    - ./data/espocrm:/var/www/html
-    - ./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini
-  ...
-```
-
-then press `Ctrl + 0` and `Ctrl + X`
-
-### Step 4
-
-Restart the container to apply the changes:
-
-```
-./command.sh restart espocrm
-```
+    ```
+    ./command.sh restart espocrm
+    ```
 
 ## Modify Nginx settings
 
