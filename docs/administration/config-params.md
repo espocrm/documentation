@@ -54,8 +54,9 @@ The list of parameters along with their default values.
 * massActionIdleCountThreshold – `100` – record number threshold after which mass-action is processed in idle (as of v7.1);
 * exportIdleCountThreshold  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
 * leadCaptureAllowOrigin –  `*` – *Access-Control-Allow-Origin* response header value for the lead capture endpoint;
+* clientSecurityHeadersDisabled – disable security headers (as of v7.2);
 * clientCspDisabled –  `false` – disable Content-Secirity-Policy header for the client page (as of v7.2);
-* clientCspScriptSourceList – `[]` – a script source white-list for the Content-Secirity-Policy header (as of v7.2);
+* clientCspScriptSourceList – a script source white-list for the Content-Secirity-Policy header (as of v7.2);
 
 ### UI
 
