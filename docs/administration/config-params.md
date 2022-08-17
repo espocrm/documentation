@@ -122,7 +122,7 @@ The list of parameters along with their default values.
 
 ### Security
 
-* clientSecurityHeadersDisabled – disable security headers (as of v7.2);
+* clientSecurityHeadersDisabled – `false` – disable security headers (as of v7.2);
 * clientCspDisabled –  `false` – disable Content-Secirity-Policy header for the client page (as of v7.2);
 * clientCspScriptSourceList – a script source white-list for the Content-Secirity-Policy header (as of v7.2);
 
