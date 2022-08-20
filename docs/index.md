@@ -43,6 +43,7 @@
   * [Terms & naming](administration/terms-and-naming.md)
   * [Web-to-Lead](administration/web-to-lead.md)
   * [Webhooks](administration/webhooks.md)
+  * [Passwords](administration/passwords.md)
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
