@@ -15,7 +15,7 @@ The admin can also generate a new password for a user from the menu. The new pas
 
 ## Password recovery
 
-Users can reset their password from the login form by clicking the 'Forgot Password?' link. They will be promted to enter their username and email address. If credentials are correct, they will receive an email will a unique link. By the link they will be able to specify a new password. Note that the link will be active only for 3 hours and the user is not permitted to send new password change requests during that period.
+Users can reset their password from the login form by clicking the 'Forgot Password?' link. They will be promted to enter their username and email address. If the credentials are correct, they will receive an email with a unique link. By following the link they will be able to specify a new password. Note that the link will be active only for 3 hours and the user is not permitted to send new password change requests during that period.
 
 The admin can disable the ability to recover passwords at Administration > Authentications > Passwords. It can be disabled for all users, for admin users or for internal users.
 
