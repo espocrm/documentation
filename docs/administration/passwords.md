@@ -13,7 +13,7 @@ The admin can send a password change link to an existing user. The user will rec
 
 ![Menu](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/passwords/user-menu.png)
 
-The admin can also generate a new password for a user from the menu. The new password will be send in an email. It's not recommended to do as it's not secure.
+The admin can also generate a new password for the user from the menu. The new password will be send in an email. It's not recommended to do as it's not secure.
 
 ## Password recovery
 
