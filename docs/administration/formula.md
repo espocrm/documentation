@@ -1,4 +1,4 @@
-# Formula (& calculated fields)
+# Formula
 
 Formula-script is a simple scripting language designed specially for EspoCRM. It's a tool that provides the ability to manipulate data and autimatically perform some business operations.
 
