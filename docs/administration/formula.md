@@ -5,7 +5,7 @@ Formula-script is a simple scripting language designed specially for EspoCRM. It
 Where it is used:
 
 * Before-Save script in the Entity Manager;
-* Formula Sandbox;
+* Formula sandbox;
 * Workflows tool (conditions and actions);
 * BPM tool.
 
