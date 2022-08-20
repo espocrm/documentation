@@ -5,7 +5,7 @@
 When an admin is creating a new user, they has two options:
 
 * Let the user set their password (by leaving the password field empty). The user should have an email address filled. An email with a unique link will be sent to the user upon creation.
-* Specify a password for a user. In this case, checking 'Send Email with Access Info to User' will send the password in an email to the user (not recommended to do because of security concerns).
+* Specify the password for a user. In this case, checking 'Send Email with Access Info to User' will send the password in an email to the user (not recommended to do because of security concerns).
 
 ## Existing users
 
