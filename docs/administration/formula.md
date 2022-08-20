@@ -6,8 +6,8 @@ Where it is used:
 
 * Before-Save script;
 * Formula sandbox;
-* Workflows tool (conditions and actions);
-* BPM tool.
+* [Workflows](workflows.md) tool (conditions and actions);
+* [BPM tool](bpm.md) tool.
 
 In the Entity Manager, it's possible to define a script (formula) for a specific entity type. This script will be executed every time before the record is saved. It provides the ability to automatically set specific fields (attributes) with values derived from calculation. In addition, some functions can perform actions (e.g. email sending, record creating).
 
@@ -18,8 +18,6 @@ Note: It can be reasonable to set fields that are supposed to be calculated by f
 The admin can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
 **Formula Sandbox** provides the ability to test formula scripts. It's available in the Administration panel.
-
-Formula can also be utilized in [Workflows](workflows.md) and [BPM tool](bpm.md).
 
 In this article:
 
