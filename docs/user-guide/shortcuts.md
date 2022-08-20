@@ -9,6 +9,7 @@ As of v7.2.
 * `Ctrl + /` – focus on search-bar;
 * `Ctrl + <` – previous primary filter;
 * `Ctrl + >` – next primary filter;
+* `Ctrl + Middle-Click` – quick view (when applied on a record link);
 
 ## Record detail
 
