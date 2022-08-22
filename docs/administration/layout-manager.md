@@ -122,16 +122,16 @@ Some entity types contain additional layouts: Convert Lead, List for Account and
 
 ## Different layouts for teams & portals
 
-As of v5.9.0.
+As of v5.9.
 
 *Layout Sets* provide the ability to have different layouts for teams & portals.
 
-Admin can create Layout Set record, where they will define specific layouts that will differ from standard ones (defined in Layout Manager). Layout Sets are available at Administration > Layout Sets.
+Admin can create a layout set record where they will define specific layouts that will differ from standard ones (defined in the Layout Manager). Layout sets are available at Administration > Layout Sets.
 
-*Team* & *Portal* have *Layout Set* link fields.
+A *Team* & *Portal* have the *Layout Set* link fields.
 
-For internal users (regular & admin), Layout Set is applied through *Default Team*. User > Default Team > Layout Set. The team should have Layout Set specified. That team should be set as a default team for the user.
+For internal users (regular & admin), a Layout Set is applied through the *Default Team* (User > Default Team > Layout Set). The team should have the Layout Set specified. That team should be set as a default team for the user.
 
-For portal users, Layout Set is applied through *Portal* record.
+For portal users, the Layout Set is applied through the *Portal* record.
 
 Note: You need to clear cache (Administration > Clear Cache) after configuring layout sets.
