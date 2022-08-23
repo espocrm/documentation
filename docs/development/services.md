@@ -53,6 +53,8 @@ If a record service class with the name of an entity type exists in `Espo\Custom
 
 ### Extending existing Record service
 
+Note: It's not recommended to use class inheritance for customization but utilize [means the framework](metadata/record-defs.md).
+
 Service `custom/Espo/Custom/Services/Opportunity.php`:
 
 ```php
@@ -85,11 +87,11 @@ use Espo\Core\{
     Api\Response,
 };
 
-use Espo\Custom\Services\MyService;
+use Espo\Custom\MyNamespace\MyService;
 
 class SomeController
 {
-    private $myService;
+    private MyService $myService;
 
     public function __construct(MyService $myService)
     {
@@ -113,12 +115,12 @@ class SomeController
 }
 ```
 
-Service `custom/Espo/Custom/Services/MyService.php`:
+Service `custom/Espo/Custom/MyNamespace/MyService.php`:
 
 ```php
 <?php
 
-namespace Espo\Custom\Services;
+namespace Espo\Custom\MyNamespace;
 
 use Espo\Core\{
     Exceptions\Forbidden,
@@ -130,9 +132,8 @@ use Espo\Core\{
 
 class MyService
 {
-    private $acl;
-
-    private $entityManager;
+    private Acl $acl;
+    private EntityManager $entityManager;
 
     public function __construct(Acl $acl, EntityManager $entityManager)
     {
