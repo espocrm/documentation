@@ -1,7 +1,5 @@
 # WebSocket
 
-Available from version 5.6.0.
-
 WebSocket enables interaction between a server and a client (browser) w/o the latter making polling requests. Example: When a new notification is received, the server sends the information to the browser in real time.
 
 Out-of-the-box WebSocket covers the following features:
