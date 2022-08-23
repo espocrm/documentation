@@ -53,7 +53,7 @@ If a record service class with the name of an entity type exists in `Espo\Custom
 
 ### Extending existing Record service
 
-Note: It's not recommended to use class inheritance for customization but utilize [means the framework](metadata/record-defs.md).
+Note: It's not recommended to use class inheritance for customization but utilize [means the framework](metadata/record-defs.md). The ability to extend service class is a legacy.
 
 Service `custom/Espo/Custom/Services/Opportunity.php`:
 
