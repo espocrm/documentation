@@ -59,3 +59,26 @@ $collection = $entityManager->getRDBRepository($entityType)
     ->clone($query)
     ->find();
 ```
+
+## Relationship table indexes
+
+In entityDefs:
+
+```json
+{
+    "links": {
+        "linkName": {
+            "additionalColumns": {
+                "role": {
+                    "type": "varchar"
+                }
+            },
+            "indexes": {
+                "role": {
+                    "columns": ["role"]
+                }
+            }
+        }
+    }
+}    
+```
