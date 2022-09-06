@@ -42,7 +42,7 @@ Handler example:
 
 define('custom:some-handler', [], function () {
 
-    var Handler = function (view) {
+    let Handler = function (view) {
         this.view = view;
     };
 
