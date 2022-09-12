@@ -109,7 +109,7 @@ Create:
 {
     "post": "Some text",
     "type": "Post",
-    "attachmnetsIds": ["{id-of-attachment}"]
+    "attachmentsIds": ["{id-of-attachment}"]
 }
 ```
 
@@ -119,7 +119,7 @@ Update:
 
 ```json
 {
-    "attachmnetsIds": ["{id-of-attachment}"]
+    "attachmentsIds": ["{id-of-attachment}"]
 }
 ```
 
