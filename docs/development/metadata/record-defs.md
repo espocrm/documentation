@@ -46,8 +46,9 @@ Parameters of actions (applied only for the back-end).
 
 Parameters:
 
-* disabled - disables an action;
-* allowed - allows an action for non-object scopes.
+* disabled – disables an action;
+* allowed – allows an action for non-object scopes;
+* implementationClassName – a class name, should implement `Espo\CoreActionAction`.
 
 ## massActions
 
