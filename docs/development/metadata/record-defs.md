@@ -67,8 +67,9 @@ Example:
 
 Parameters:
 
-* disabled - disables an action;
-* allowed - allows an action for non-object scopes.
+* disabled – disables an action;
+* allowed – allows an action for non-object scopes;
+* implementationClassName – a class name, should implement `Espo\Core\MassAction\MassAction`.
 
 ## actionsDisabled
 
