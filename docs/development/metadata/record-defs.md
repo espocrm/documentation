@@ -38,7 +38,7 @@ Array of classes for additional handling of a select query.
 
 Must implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
 
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening (not needed anymore as of v7.2).
 
 ## actions
 
