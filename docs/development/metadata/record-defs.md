@@ -75,6 +75,10 @@ Parameters:
 
 Disable actions in the back-end.
 
+## massActionsDisabled
+
+Disable mass actions in the back-end.
+
 ## exportDisabled
 
 To disable export regardless ACL.
