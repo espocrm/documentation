@@ -53,7 +53,7 @@ The row can contain 1, 2, 3 or 4 cells. To add a row with single cell, you need 
 
 For panels, it's possible to specify a label, color (style), conditions making a panel visible.
 
-It's possible to put panels into **tabs** by checking the *Tab-break* field in panels (as of v7.2).
+It's possible to put panels into **tabs** by checking the *Tab-break* field in panels (as of v7.2). Node: The *Hidden* parameter is not fully compatible with tabs. It's not recommended to have both tab-breaks and hidden panels on the same layout.
 
 ### List (Small)
 
