@@ -51,9 +51,11 @@ The row can contain 1, 2, 3 or 4 cells. To add a row with single cell, you need 
 
 ![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
-For panels, it's possible to specify a label, color (style), conditions making a panel visible.
+Edit panel parameters by clicking a pancil icon on the panel. It's possible to specify a label, color (style), conditions making a panel visible, group panels in tabs (as of v7.2).
 
-It's possible to put panels into **tabs** by checking the *Tab-break* field in panels (as of v7.2). Node: The *Hidden* parameter is not fully compatible with tabs. It's not recommended to have both tab-breaks and hidden panels on the same layout.
+To enable detail view tabs, you need to check the *Tab-break* for panels. Enable it for panels you want to be first in a tab. All following panels will be in the same tab till the next panel that has the *Tab-break* checked.
+
+Note: The *Hidden* panel parameter is not fully compatible with tabs. It's not recommended to have both tab-breaks and hidden panels on the same layout.
 
 ### List (Small)
 
