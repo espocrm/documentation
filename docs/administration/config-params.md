@@ -119,6 +119,7 @@ The list of parameters along with their default values.
 
 * authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
 * authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
+* authAnotherUserDisabled – `false` – disable the ability to log in as another user for admins (as of v7.3);
 
 ### Security
 
