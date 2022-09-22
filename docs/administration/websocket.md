@@ -7,7 +7,7 @@ Out-of-the-box WebSocket covers the following features:
 * New in-app notifications;
 * New event reminders;
 * Updates in stream on the record detail view;
-* Updates of the detail view (since 5.9.0).
+* Updates of the detail view (as of v5.9).
 
 Important: You need to have *zmq* php extension installed.
 
