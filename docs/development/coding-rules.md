@@ -35,8 +35,7 @@ use Espo\Core\Utils\Metadata;
 
 class MyClass
 {
-    private EntityManager $entityManager;
-    
+    private EntityManager $entityManager;    
     private Metadata $metadata;
 
     public function __constructor(EntityManager $entityManager, Metadata $metadata)
