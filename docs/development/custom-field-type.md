@@ -66,4 +66,4 @@ Then you need to clear cache at the administration panel.
 
 ### Backend validator
 
-You can define a validator class in a field metadata file in the `validatorClassName` parameter. See the [barcode field](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Resources/metadata/fields/barcode.json) as an expamle.
+You can define a validator class in a field metadata file in the `validatorClassName` parameter. See the [barcode field](https://github.com/espocrm/espocrm/blob/stable/application/Espo/Resources/metadata/fields/barcode.json) as an example.
