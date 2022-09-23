@@ -38,15 +38,15 @@ Examples:
 
 Non-working days having a different background color:
 
-![calendar-1](https://user-images.githubusercontent.com/1006792/191037982-ee21833a-1b8e-4657-a6e1-63eadcea5f92.png)
+![Calendar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/working-time-calendar/1.png)
 
 Non-working timeslots:
 
-![calendar-2](https://user-images.githubusercontent.com/1006792/191037986-b75eb987-8687-4bb8-b46b-b782c5b7ce7a.png)
+![Calendar agenda](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/working-time-calendar/2.png)
 
 Timeline has non-working ranges with a different background color:
 
-![Timeline](https://user-images.githubusercontent.com/1006792/191037988-22e7c8ac-6c27-448c-a63e-af13914aa50a.png)
+![Timeline](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/working-time-calendar/3.png)
 
 ## Formula functions
 
