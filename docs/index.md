@@ -66,6 +66,7 @@
 * [Documents](user-guide/documents.md)
 * [Export](user-guide/export.md)
 * [Text search](user-guide/text-search.md)
+* [Working Time Calendar](user-guide/working-time-calendar.md)
 * Misc
   * [Shortcut keys](user-guide/shortcuts.md)
   * [Printing to PDF](user-guide/printing-to-pdf.md)
