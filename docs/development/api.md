@@ -57,9 +57,7 @@ See also:
 
 ### Authentication by Api Key
 
-Available since 5.5.0 version.
-
-The easiest method of authentication. You need to create API User (Administration > API Users) with Api Key authentication method. Apply the needed role to the user to grant needed access.
+The simplest method of authentication. You need to create an API User (Administration > API Users) with the *API Key* authentication method. Apply a needed role to the user to grant access to specific scopes.
 
 Authentication header:
 
@@ -69,9 +67,7 @@ X-Api-Key: API_KEY_COPIED_FROM_THE_USER_DETAIL_VIEW
 
 ### HMAC Authentication
 
-Available since 5.5.0 version.
-
-The most secure method. You need to create API User (Administration > API Users) with HMAC authentication method. Apply needed role to the user to grant needed access.
+The most secure method. You need to create an API User (Administration > API Users) with the *HMAC authentication* method. Apply a needed role to the user to grant access to specific scopes.
 
 Authentication header:
 
@@ -80,22 +76,22 @@ Authentication header:
 ```
 where
 
-* `method` - GET, POST, PUT, DELETE;
-* `uri` - request path, e.g. `Lead/action/convert`.
+* `method` – GET, POST, PUT, DELETE;
+* `uri` – a request path, e.g. `Lead/action/convert`.
 
 ### Basic Authentication
 
 Note: This method is not recommended.
 
-For regular users EspoCRM uses [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Username and password (or token) are passed through `Authorization` header encoded in base64.
+For regular (non-API) users the EspoCRM front-end uses the [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). A username and password (or token) are passed through the `Authorization` header encoded with Base64.
 
 ```
 "Authorization: Basic " + base64Encode(username  + ':' + password)
 ```
 
-It's better to use auth token instead of password when you work with API. In this case you will need to provide username and password/token in `Espo-Authorization` header.
+It's better to use an auth token instead of password. In this case you will need to provide the username and the password/token in the `Espo-Authorization` header.
 ```
-"Espo-Authorization: " + base64Encode(username  + ':' + passwordOrToken)
+"Espo-Authorization: " + base64Encode(username + ':' + passwordOrToken)
 ```
 
 1. Obtain an access token by `GET App/user` request with the username and password passed in `Espo-Authorization` header.
@@ -110,10 +106,10 @@ Make this request to retrieve an access token.
 
 Returns:
 
-* `token` - access token to use
-* `acl` - information about user access
-* `preferences` - user preferences
-* `user` - user record attributes
+* `token` – access token to use
+* `acl` – information about user access
+* `preferences` – user preferences
+* `user` – user record attributes
 
 ## Error codes
 
