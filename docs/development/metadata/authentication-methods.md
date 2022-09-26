@@ -8,6 +8,14 @@ Path: authenticationMethods > {MethodName}.
 
 Defines that the method is to be used for pure API request, not from the front-end.
 
+## credentialsHeader
+
+*string*
+
+*as of v7.3*
+
+A header that is supposed to contain credentials. Actual only for API methods.
+
 ## login
 
 *as of v7.3*
