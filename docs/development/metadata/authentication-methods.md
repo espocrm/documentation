@@ -10,6 +10,8 @@ Defines that the method is to be used for pure API request, not from the front-e
 
 ## login
 
+*as of v7.3*
+
 A framework providing the ability to call custom code on *Sign-In* button click on the login page.
 
 ```json
