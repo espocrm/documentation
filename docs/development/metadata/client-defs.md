@@ -44,12 +44,12 @@ Allows to hide a search panel on the list view.
 list, detail, edit view classes
 
 Example:
+
 ```
 {
     "list": "custom:views/test/list",
     "detail": "custom:views/test/detail"
 }
-
 ```
 
 
@@ -62,7 +62,6 @@ Example:
 {
     "list": "custom:views/test/record/list"
 }
-
 ```
 
 ## modalViews
