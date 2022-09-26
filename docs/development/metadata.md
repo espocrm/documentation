@@ -5,7 +5,7 @@ Metadata is intended for: storing system data such as entity's fields and relati
 Sections:
 
 * [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
-* [authenticationMethods](metadata.authentication-methods.md) – authentication methods
+* [authenticationMethods](metadata/authentication-methods.md) – authentication methods
 * [selectDefs](metadata/select-defs.md) – filters for entity types
 * [recordDefs](metadata/record-defs.md) – CRUD-specific parameters for entity types
 * [clientDefs](metadata/client-defs.md) – front-end parameters entity types
