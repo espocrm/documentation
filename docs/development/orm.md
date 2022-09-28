@@ -592,7 +592,7 @@ $query = $entityManager
     ->getRDBRepository('Meeting')
     ->select([
         'id',
-        'name,
+        'name',
         ['meetingUser.status', 'meetingStatus'],
     ])
     ->join(
