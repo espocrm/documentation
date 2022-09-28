@@ -159,7 +159,7 @@ This will delete a record permanently.
 
 ### Attributes
 
-Note: As of v6.2.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
+Note: As of v7.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
 
 Each entity type has its own set of defined attributes. You cannot set an arbitrary attribute name.
 
@@ -192,7 +192,7 @@ Attribute types:
 
 ### Relations
 
-Note: As of v6.2.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
+Note: As of v7.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
 
 ```php
 $relationList = $entity->getRelationList();
@@ -553,7 +553,7 @@ $contactList = $entityManager
     ->find();
 ```
 
-Left Join relationship:
+Left-Join relationship:
 
 ```php
 $contactList = $entityManager
@@ -565,7 +565,7 @@ $contactList = $entityManager
 
 'opportunities' is a relationship name.
 
-Joining any table:
+Joining any table (a table name should start with an apper case letter):
 
 ```php
 $meetingList = $entityManager
@@ -580,7 +580,31 @@ $meetingList = $entityManager
         ],
     )
     ->where([
-        'meetingUser.userId' => $user->id,
+        'meetingUser.userId' => $user->getId(),
+    ])
+    ->find();
+```
+
+Joining a table with the query builder:
+
+```php
+$query = $entityManager
+    ->getRDBRepository('Meeting')
+    ->select([
+        'id',
+        'name,
+        ['meetingUser.status', 'meetingStatus'],
+    ])
+    ->join(
+        'MeetingUser', // meeting_user table
+        'meetingUser', // alias
+        [
+            'meetingUser.meetingId:' => 'id', // join condition
+            'meetingUser.deleted' => false,
+        ],
+    )
+    ->where([
+        'meetingUser.userId' => $user->getId(),
     ])
     ->find();
 ```
