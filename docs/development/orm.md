@@ -565,6 +565,19 @@ $contactList = $entityManager
 
 'opportunities' is a relationship name.
 
+Join alias:
+
+```php
+$contactList = $entityManager
+    ->getRDBRepository('Contact')
+    ->distinct()
+    ->join('opportunities', 'aliasForJoinedTable')
+    ->where([
+        'aliasForJoinedTable.stage' => 'Closed Won'
+    ])
+    ->find();
+```
+
 Joining any table (a table name should start with an apper case letter):
 
 ```php
@@ -593,7 +606,7 @@ $query = $entityManager
     ->select([
         'id',
         'name',
-        ['meetingUser.status', 'meetingStatus'],
+        ['meetingUser.status', 'meetingStatus'], // expression and alias
     ])
     ->join(
         'MeetingUser', // meeting_user table
@@ -609,18 +622,6 @@ $query = $entityManager
     ->find();
 ```
 
-Join table alias:
-
-```php
-$contactList = $entityManager
-    ->getRDBRepository('Contact')
-    ->distinct()
-    ->join('opportunities', 'aliasForJoinedTable')
-    ->where([
-        'aliasForJoinedTable.stage' => 'Closed Won'
-    ])
-    ->find();
-```
 
 ### Group By
 
