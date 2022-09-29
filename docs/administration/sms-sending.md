@@ -66,9 +66,7 @@ The script uses the variable (*$body*), that concatenates text parts and the *na
 
 With the Workflow tool it's possible to set up SMS notifications.
 
-Create a Workflow rule with needed trigger type and conditions.
-
-Add the *Execute Formula Script* action and paste the following formula-script:
+Create a Workflow rule with the needed trigger type and conditions. Add the *Execute Formula Script* action and paste the following formula-script:
 
 ```
 $body = 'Hi! This is SMS notification from EspoCRM.';
