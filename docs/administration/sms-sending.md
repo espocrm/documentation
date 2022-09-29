@@ -28,7 +28,9 @@ Next, go to Administration > Integrations, select your provider, and set up need
 
 ## Sending with formula
 
-### Notifications
+It's possible to send SMS from a formula script with the [ext\sms\send](formula.md#extsmssend) function.
+
+### With Workflow
 
 *Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
 
@@ -37,7 +39,7 @@ With the Workflow tool it's possible to set up Espo to SMS notification on a spe
 Create a Workflow rule with the needed trigger type and conditions. Add the *Execute Formula Script* action and paste the following formula-script:
 
 ```
-$body = 'Hi! This is SMS notification from EspoCRM.';
+$body = 'Hi! This is an SMS notification from EspoCRM.';
 
 $phoneNumber = phoneNumber;
 
@@ -49,32 +51,6 @@ $smsId = record\create(
 
 ext\sms\send($smsId);
 ```
-
-### Mass
-
-*Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
-
-With the Workflow tool it's possible to send mass SMS.
-
-Create a Report of the *List* type for a needed target entity type (Lead, Contact or Account).
-
-Create a Workflow rule for the same *Target Entity*, with the *Trigger Type* *[Scheduled](https://docs.espocrm.com/administration/workflows/#scheduled)*. Set needed scheduling.
-
-After that, for your Workflow rule, select the *Execute Formula Script* action and paste the following formula-script:
-
-```
-$body = string\concatenate('Hi, ', name, 'This is an SMS notification from EspoCRM.');
-
-$smsId = record\create(
-    'Sms',
-    'to', phoneNumber,
-    'body', $body
-);
-
-ext\sms\send($smsId);
-```
-
-The script uses the variable (*$body*), that concatenates text parts and the *name* of the target entity.
 
 
 ## SMS Two-Factor Authentication
