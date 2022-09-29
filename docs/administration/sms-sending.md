@@ -72,7 +72,7 @@ The [VoIP integration](https://www.espocrm.com/extensions/voip-integration/) int
 
 In order for the Twilio Integration to work for receiving and making calls, SMS and MMS, first configure it according to [this instructions](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). 
 
-At *Administration* > *VoIP Routers* > the phone number required for sending and receiving SMS, check the *SMS* and *MMS* boxes for those team users for whom you need in the Team Users panel.
+At Administration > VoIP Routers > the phone number required for sending and receiving SMS, check the *SMS* and *MMS* boxes for those team users for whom you need in the Team Users panel.
 
 Also, you need to enable Twilio messaging geographic permissions: 
 
