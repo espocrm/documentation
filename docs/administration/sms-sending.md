@@ -1,6 +1,6 @@
 # SMS Sending
 
-In order to send SMS and MMS of any kind to EspoCRM (sending SMS manually, mass SMS, SMS notifications, SMS Two Factor Authentication), you first need to install the [SMS Providers](https://github.com/espocrm/ext-sms-providers/) extension.
+In order to send SMS and MMS of any kind to EspoCRM, you first need to install the [SMS Providers](https://github.com/espocrm/ext-sms-providers/) extension.
 
 The following SMS providers are currently supported by the extension:
 
