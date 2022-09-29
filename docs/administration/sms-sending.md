@@ -4,23 +4,20 @@ In order to send SMS and MMS of any kind to EspoCRM (sending SMS manually, mass 
 
 The following SMS providers are currently supported by the extension:
 
-- [Twilio](#configuring-for-twilio)
+- Twilio
 - Spryng
 - sms77a
 - smstools
 - SerwerSms 
 
 
-
----
-
 In this article:
 
 * [Setting up](#setting-up)
-* [Manual SMS Sending](#manual-sms-sending)
-* [Mass SMS Sending](#mass-sms-sending)
+* [Sending with formula](#mass-sms-sending)
+* [SMS Two-Factor Authentication](#sms-two-factor-authentication)
 * [Notification SMS Sending](#notification-sms-sending)
-* [SMS Two Factor Authentication](#sms-two-factor-authentication)
+* [Configuring for Twilio](#configuring-for-twilio)
 
 ## Setting up
 
@@ -30,11 +27,31 @@ After the SMS Providers extension is installed, go to Administration > SMS and s
 
 Next, go to Administration > Integrations, select your provider, and set up needed credentials and parameters.
 
-## Manual SMS Sending
+## Sending with formula
 
-Will be filled soon.
+### Notification
 
-## Mass SMS Sending
+*Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
+
+With the Workflow tool it's possible to set up SMS notifications.
+
+Create a Workflow rule with the needed trigger type and conditions. Add the *Execute Formula Script* action and paste the following formula-script:
+
+```
+$body = 'Hi! This is SMS notification from EspoCRM.';
+
+$phoneNumber = phoneNumber;
+
+$smsId = record\create(
+    'Sms',
+    'to', $phoneNumber,
+    'body', $body
+);
+
+ext\sms\send($smsId);
+```
+
+### Mass
 
 *Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
 
@@ -60,27 +77,6 @@ ext\sms\send($smsId);
 
 The script uses the variable (*$body*), that concatenates text parts and the *name* of the target entity.
 
-## Notification SMS Sending
-
-*Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
-
-With the Workflow tool it's possible to set up SMS notifications.
-
-Create a Workflow rule with the needed trigger type and conditions. Add the *Execute Formula Script* action and paste the following formula-script:
-
-```
-$body = 'Hi! This is SMS notification from EspoCRM.';
-
-$phoneNumber = phoneNumber;
-
-$smsId = record\create(
-    'Sms',
-    'to', $phoneNumber,
-    'body', $body
-);
-
-ext\sms\send($smsId);
-```
 
 ## SMS Two-Factor Authentication
 
