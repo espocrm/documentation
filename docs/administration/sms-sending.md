@@ -28,11 +28,11 @@ Next, go to Administration > Integrations, select your provider, and set up need
 
 ## Sending with formula
 
-### Notification
+### Notifications
 
 *Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
 
-With the Workflow tool it's possible to set up SMS notifications.
+With the Workflow tool it's possible to set up Espo to SMS notification on a specific condition.
 
 Create a Workflow rule with the needed trigger type and conditions. Add the *Execute Formula Script* action and paste the following formula-script:
 
