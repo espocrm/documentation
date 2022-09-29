@@ -14,7 +14,7 @@ The following SMS providers are currently supported by the extension:
 In this article:
 
 * [Setting up](#setting-up)
-* [Sending with formula](#mass-sms-sending)
+* [Sending with formula](#sending-with-formula)
 * [Two-Factor Authentication](#two-factor-authentication)
 * [VoIP integration for Twilio](#voip-integration-for-twilio)
 
