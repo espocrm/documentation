@@ -97,7 +97,7 @@ Note that the *Phone* field of the user, for whom you want to set up the Two-Fac
 
 In order for Twilio Integration to work for receiving and making calls, SMS and MMS, first configure it according to [this instructions](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). 
 
-At *Administration* > *VoIP Routers* > `the phone number required for sending and receiving SMS`, check the *SMS* and *MMS* boxes for those team users for whom you need in the Team Users panel.
+At *Administration* > *VoIP Routers* > the phone number required for sending and receiving SMS, check the *SMS* and *MMS* boxes for those team users for whom you need in the Team Users panel.
 
 Also, you need to enable Twilio messaging geographic permissions: 
 
