@@ -15,7 +15,7 @@ In this article:
 
 * [Setting up](#setting-up)
 * [Sending with formula](#mass-sms-sending)
-* [Notification SMS Sending](#notification-sms-sending)
+* [Two-Factor Authentication](#two-factor-authentication)
 * [VoIP integration for Twilio](#voip-integration-for-twilio)
 
 ## Setting up
@@ -52,7 +52,9 @@ $smsId = record\create(
 ext\sms\send($smsId);
 ```
 
-## SMS Two-Factor Authentication
+## Two-Factor Authentication
+
+[SMS 2FA](2fa.md#authentication-via-sms) is supported out-of-the-box, but you need to have an implementation for your SMS provider (SMS Providers extension).
 
 Note that the *Phone* field of the user, for whom you want to set up the Two-Factor Authentication, must be filled in with at least one number.
 
