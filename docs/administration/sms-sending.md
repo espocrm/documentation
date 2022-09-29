@@ -1,15 +1,16 @@
 # SMS Sending
 
-In order to send SMS and MMS of any kind to EspoCRM, you first need to install the [SMS Providers](https://github.com/espocrm/ext-sms-providers/) extension.
-
-The following SMS providers are currently supported by the extension:
+EspoCRM has the built-in functionality for sending SMS, but it's not shipped with any provider implementation. The official [SMS Providers](https://github.com/espocrm/ext-sms-providers/) extension includes implementations for the following SMS providers:
 
 - Twilio
 - Spryng
 - sms77a
 - smstools
-- SerwerSms 
+- SerwerSms
 
+Out-of-the-box it's possible to send SMS from formula-script or from PHP code. 
+
+The [VoiP Integration](https://www.espocrm.com/extensions/voip-integration/) has the ability to send SMS from UI (only for the Twilio provider).
 
 In this article:
 
