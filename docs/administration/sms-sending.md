@@ -15,7 +15,6 @@ In this article:
 
 * [Setting up](#setting-up)
 * [Sending with formula](#mass-sms-sending)
-* [SMS Two-Factor Authentication](#sms-two-factor-authentication)
 * [Notification SMS Sending](#notification-sms-sending)
 * [Configuring for Twilio](#configuring-for-twilio)
 
