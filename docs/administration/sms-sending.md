@@ -2,33 +2,15 @@
 
 In order to send SMS and MMS of any kind to EspoCRM (sending SMS manually, mass SMS, SMS notifications, SMS Two Factor Authentication), you first need to install the [SMS Providers](https://github.com/espocrm/ext-sms-providers/) extension.
 
-The following SMS Providers are currently supported out-of-the-box:
+The following SMS providers are currently supported by the extension:
 
-- [Twilio](#configuring-sms-providers-extension-for-twilio)
+- [Twilio](#configuring-for-twilio)
 - Spryng
 - sms77a
 - smstools
 - SerwerSms 
 
-You can also create your own integration for your SMS Provider using [this example](https://github.com/espocrm/ext-sms-providers/pulls?q=is%3Apr+is%3Aclosed).
 
-### Configuring SMS Providers Extension for Twilio
-
-In order for Twilio Integration to work properly both for receiving / making calls, and for sending / receiving SMS and MMS messages, first configure it according to [this instruction](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). Be sure to check the functionality of [VoIP Extension](https://www.espocrm.com/extensions/voip-integration/) for Twilio Integration. 
-
-In the *Administration* > *VoIP Routers* > `the phone number required for sending and receiving SMS`, check the **SMS** and **MMS** boxes for those team users for whom you need in the Team Users panel.
-
-Also, you need to enable Twilio messaging geographic permissions: 
-
-1. Login to your **Twilio** account. 
-2. Navigate to the *Programmable SMS* > *Settings* > *[Geo Permissions](https://www.twilio.com/console/sms/settings/geo-permissions)*. 
-3. Enable needed countries.
-
-Do not forget to set **[Grant access to Messages](https://docs.espocrm.com/extensions/voip-integration/customization/#grant-access-to-messages)** for the required users.
-
-Keep in mind that for Twilio Trial account you will need to add a [**Verified Phone Numbers** or **Caller ID**](https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio).
-
-After that, you can proceed to the full installation and configuration of the SMS Providers extension.
 
 ---
 
@@ -108,3 +90,22 @@ Note that the Phone field of the user for whom you want to set up 2FA must be fi
 3. In the record of this user, click on the **Access** button and check the box *Enable 2-Factor Authentication*. Also, choose `SMS` 2FA Method in the drop down list. Click the Apply button.
 4. Enter the Administrator password, select a phone number that will be used for 2FA in the *Phone* dropdown list, and click the **Send Code** button.
 5. Enter the code that will be sent to the selected phone number and click the Apply button.
+
+
+## Configuring for Twilio
+
+In order for Twilio Integration to work for receiving and making calls, SMS and MMS, first configure it according to [this instructions](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). 
+
+At *Administration* > *VoIP Routers* > `the phone number required for sending and receiving SMS`, check the **SMS** and **MMS** boxes for those team users for whom you need in the Team Users panel.
+
+Also, you need to enable Twilio messaging geographic permissions: 
+
+1. Login to your **Twilio** account. 
+2. Navigate to the *Programmable SMS* > *Settings* > *[Geo Permissions](https://www.twilio.com/console/sms/settings/geo-permissions)*. 
+3. Enable needed countries.
+
+Do not forget to set **[Grant access to Messages](https://docs.espocrm.com/extensions/voip-integration/customization/#grant-access-to-messages)** for the required users.
+
+Keep in mind that for Twilio Trial account you will need to add a [**Verified Phone Numbers** or **Caller ID**](https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio).
+
+After that, you can proceed to the full installation and configuration of the SMS Providers extension.
