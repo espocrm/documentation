@@ -48,7 +48,7 @@
   * [B2C mode](administration/b2c.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
   * [File storage](administration/file-storage.md)
-  * [SMS Sending](administration/sms-sending.md)
+  * [SMS sending](administration/sms-sending.md)
 
 ---
 
