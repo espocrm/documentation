@@ -16,13 +16,13 @@ The following SMS providers are currently supported by the extension:
 
 In this article:
 
-* [SMS Providers Extension Installation and Configuration](#sms-providers-extension-installation-and-configuration)
+* [Setting up](#setting-up)
 * [Manual SMS Sending](#manual-sms-sending)
 * [Mass SMS Sending](#mass-sms-sending)
 * [Notification SMS Sending](#notification-sms-sending)
 * [SMS Two Factor Authentication](#sms-two-factor-authentication)
 
-## SMS Providers Extension Installation and Configuration
+## Setting up
 
 In the [espocrm/ext-sms-providers](https://github.com/espocrm/ext-sms-providers/) repository, go to the **Releases** tab and download the `sms-providers-1.4.0.zip` archive (or any other latest version).
 
