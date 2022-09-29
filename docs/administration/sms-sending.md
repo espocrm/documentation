@@ -16,12 +16,12 @@ You can also create your own integration for your SMS Provider using [this examp
 
 In order for Twilio Integration to work properly both for receiving / making calls, and for sending / receiving SMS and MMS messages, first configure it according to [this instruction](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). Be sure to check the functionality of [VoIP Extension](https://www.espocrm.com/extensions/voip-integration/) for Twilio Integration. 
 
-In the *Administration* -> *VoIP Routers* -> `the phone number required for sending and receiving SMS`, check the **SMS** and **MMS** boxes for those team users for whom you need in the Team Users panel.
+In the *Administration* > *VoIP Routers* > `the phone number required for sending and receiving SMS`, check the **SMS** and **MMS** boxes for those team users for whom you need in the Team Users panel.
 
 Also, you need to enable Twilio messaging geographic permissions: 
 
 1. Login to your **Twilio** account. 
-2. Navigate to the *Programmable SMS* -> *Settings* -> *[Geo Permissions](https://www.twilio.com/console/sms/settings/geo-permissions)*. 
+2. Navigate to the *Programmable SMS* > *Settings* > *[Geo Permissions](https://www.twilio.com/console/sms/settings/geo-permissions)*. 
 3. Enable needed countries.
 
 Do not forget to set **[Grant access to Messages](https://docs.espocrm.com/extensions/voip-integration/customization/#grant-access-to-messages)** for the required users.
@@ -44,12 +44,11 @@ In this article:
 
 In the [espocrm/ext-sms-providers](https://github.com/espocrm/ext-sms-providers/) repository, go to the **Releases** tab and download the `sms-providers-1.4.0.zip` archive (or any other latest version).
 
-After you have downloaded the required archive with the extension, go to your instance in the browser to the *Administration* -> *Extensions* tab and upload the downloaded archive, then install it.
+After you have downloaded the required archive with the extension, go to your instance in the browser to the *Administration* > *Extensions* tab and upload the downloaded archive, then install it.
 
-After SMS Providers extension installation, go to *Administration* -> *SMS* and select the **SMS Provider** you need in the drop-down list. Also, in the **SMS From Number** field, enter the number with the country code (*like +11111111111*) from which you will send SMS messages.
+After SMS Providers extension installation, go to *Administration* > *SMS* and select the **SMS Provider** you need in the drop-down list. Also, in the **SMS From Number** field, enter the number with the country code (*like +11111111111*) from which you will send SMS messages.
 
-Next, go to *Administration* -> *Integrations* and set up the SMS Provider you need.
-
+Next, go to *Administration* > *Integrations* and set up the SMS Provider you need.
 
 ## Manual SMS Sending
 
@@ -79,7 +78,6 @@ ext\sms\send($smsId);
 
 This action uses the creation of a variable (*$body*) using **[string\concatenate](https://docs.espocrm.com/administration/formula/#stringconcatenate)** formula, which stores the plain text and the attribute of the entity (*name*). You can paste any other text. This will be the **body** of your SMS.
 
-
 ## Notification SMS Sending
 
 To send SMS notification, you will need to create a Workflow ([Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension feature). 
@@ -105,8 +103,8 @@ This action uses the creation of a variable (*$body*) , which stores the plain t
 
 Note that the Phone field of the user for whom you want to set up 2FA must be filled in with at least one phone number.
 
-1. Go to *Administration* -> *Authentication* and check box **Enable 2-Factor Authentication**. Add the `SMS` value in field **Available 2FA methods**. Save changes. 
-2. Go to *Administration* -> *Users* and select the user for which 2FA will be configured.
+1. Go to *Administration* > *Authentication* and check box **Enable 2-Factor Authentication**. Add the `SMS` value in field **Available 2FA methods**. Save changes. 
+2. Go to *Administration* > *Users* and select the user for which 2FA will be configured.
 3. In the record of this user, click on the **Access** button and check the box *Enable 2-Factor Authentication*. Also, choose `SMS` 2FA Method in the drop down list. Click the Apply button.
 4. Enter the Administrator password, select a phone number that will be used for 2FA in the *Phone* dropdown list, and click the **Send Code** button.
 5. Enter the code that will be sent to the selected phone number and click the Apply button.
