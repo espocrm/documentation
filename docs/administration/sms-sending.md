@@ -44,7 +44,7 @@ Create a Report of the *List* type for a needed target entity type (Lead, Contac
 
 Create a Workflow rule for the same *Target Entity*, with the *Trigger Type* *[Scheduled](https://docs.espocrm.com/administration/workflows/#scheduled)*. Set needed scheduling.
 
-After that, for your Workflow rule, select **Execute Formula Script** *Action* and paste the following formula-script:
+After that, for your Workflow rule, select the *Execute Formula Script* action and paste the following formula-script:
 
 ```
 $body = string\concatenate('Hi, ', name, 'This is an SMS notification from EspoCRM.');
