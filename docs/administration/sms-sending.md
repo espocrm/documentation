@@ -101,7 +101,7 @@ At *Administration* > *VoIP Routers* > `the phone number required for sending an
 
 Also, you need to enable Twilio messaging geographic permissions: 
 
-1. Login to your **Twilio** account. 
+1. Login to your *Twilio* account. 
 2. Navigate to the *Programmable SMS* > *Settings* > *[Geo Permissions](https://www.twilio.com/console/sms/settings/geo-permissions)*. 
 3. Enable needed countries.
 
