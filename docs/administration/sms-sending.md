@@ -24,13 +24,11 @@ In this article:
 
 ## Setting up
 
-In the [espocrm/ext-sms-providers](https://github.com/espocrm/ext-sms-providers/) repository, go to the **Releases** tab and download the `sms-providers-1.4.0.zip` archive (or any other latest version).
+Download the extension package from the [GitHub repository](https://github.com/espocrm/ext-sms-providers/releases) (under Assets section). Then upload and install the package in Espo at Administration > Extensions.
 
-After you have downloaded the required archive with the extension, go to your instance in the browser to the *Administration* > *Extensions* tab and upload the downloaded archive, then install it.
+After the SMS Providers extension is installed, go to Administration > SMS and select the **SMS Provider** you want to use from the drop-down list. Also, in the **SMS From Number** field, enter the number with the country code (e.g. +11111111111) from which you will be sending SMS messages.
 
-After SMS Providers extension installation, go to *Administration* > *SMS* and select the **SMS Provider** you need in the drop-down list. Also, in the **SMS From Number** field, enter the number with the country code (*like +11111111111*) from which you will send SMS messages.
-
-Next, go to *Administration* > *Integrations* and set up the SMS Provider you need.
+Next, go to Administration > Integrations, select your provider, and set up needed credentials and parameters.
 
 ## Manual SMS Sending
 
@@ -38,16 +36,18 @@ Will be filled soon.
 
 ## Mass SMS Sending
 
-To send mass SMS, you will need to create a Report and Workflow ([Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension features).
+*Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
 
-To begin with, you need to create a Report with a list of contacts/leads/accounts for which you want to send SMS. You can learn more about Reports [here](https://docs.espocrm.com/user-guide/reports/).
+With the Workflow tool it's possible to send mass SMS.
 
-After that, you need to create a Workflow with the *Target Entity* (Contact/Lead/Account) for which you created the Report, and with the *Trigger Type* **[Scheduled](https://docs.espocrm.com/administration/workflows/#scheduled)**. Set Scheduling as you need, with what frequency SMS should be sent. You can learn more about Workflows [here](https://docs.espocrm.com/administration/workflows/).
+Create a Report of the *List* type for a needed target entity type (Lead, Contact or Account).
 
-After that, for this Workflow, select **Execute Formula Script** *Action* and paste this formula:
+Create a Workflow rule for the same *Target Entity*, with the *Trigger Type* *[Scheduled](https://docs.espocrm.com/administration/workflows/#scheduled)*. Set needed scheduling.
+
+After that, for your Workflow rule, select **Execute Formula Script** *Action* and paste the following formula-script:
 
 ```
-$body = string\concatenate('Hi, ', name, '! This is SMS notification from EspoCRM.');
+$body = string\concatenate('Hi, ', name, 'This is an SMS notification from EspoCRM.');
 
 $smsId = record\create(
     'Sms',
@@ -58,38 +58,41 @@ $smsId = record\create(
 ext\sms\send($smsId);
 ```
 
-This action uses the creation of a variable (*$body*) using **[string\concatenate](https://docs.espocrm.com/administration/formula/#stringconcatenate)** formula, which stores the plain text and the attribute of the entity (*name*). You can paste any other text. This will be the **body** of your SMS.
+The script uses the variable (*$body*), that concatenates text parts and the *name* of the target entity.
 
 ## Notification SMS Sending
 
-To send SMS notification, you will need to create a Workflow ([Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension feature). 
-You can learn more about Workflows [here](https://docs.espocrm.com/administration/workflows/).
+*Requires [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).*
 
-You can choose any *Target Entity* and *Trigger Type* you want. In any case, at the end you will need to select **Execute Formula Script** *Action* and paste this formula:
+With the Workflow tool it's possible to set up SMS notifications.
+
+Create a Workflow rule with needed trigger type and conditions.
+
+Add the *Execute Formula Script* action and paste the following formula-script:
 
 ```
 $body = 'Hi! This is SMS notification from EspoCRM.';
 
+$phoneNumber = phoneNumber;
+
 $smsId = record\create(
     'Sms',
-    'to', '+11111111111',
+    'to', $phoneNumber,
     'body', $body
 );
 
 ext\sms\send($smsId);
 ```
 
-This action uses the creation of a variable (*$body*) , which stores the plain text. You can insert any other text in single brackets instead of text `Hi! This is SMS notification from EspoCRM.`. This will be the **body** of your SMS.
+## SMS Two-Factor Authentication
 
-## SMS Two Factor Authentication
+Note that the *Phone* field of the user, for whom you want to set up the Two-Factor Authentication, must be filled in with at least one number.
 
-Note that the Phone field of the user for whom you want to set up 2FA must be filled in with at least one phone number.
-
-1. Go to *Administration* > *Authentication* and check box **Enable 2-Factor Authentication**. Add the `SMS` value in field **Available 2FA methods**. Save changes. 
-2. Go to *Administration* > *Users* and select the user for which 2FA will be configured.
-3. In the record of this user, click on the **Access** button and check the box *Enable 2-Factor Authentication*. Also, choose `SMS` 2FA Method in the drop down list. Click the Apply button.
-4. Enter the Administrator password, select a phone number that will be used for 2FA in the *Phone* dropdown list, and click the **Send Code** button.
-5. Enter the code that will be sent to the selected phone number and click the Apply button.
+1. At Administration > Authentication, check the box *Enable 2-Factor Authentication*. Add the *SMS* value in the field *Available 2FA methods*. Save changes. 
+2. At Administration > Users, select the user for which the 2FA will be configured.
+3. On the detail view of the user, click on the *Access* button and check the box *Enable 2-Factor Authentication*. Also, choose *SMS* 2FA Method in the drop down list. Click the *Apply* button.
+4. Enter the Administrator password, select a phone number that will be used for 2FA in the *Phone* dropdown list, and click the *Send Code* button.
+5. Enter the code that will be sent to the selected phone number and click the *Apply* button.
 
 
 ## Configuring for Twilio
