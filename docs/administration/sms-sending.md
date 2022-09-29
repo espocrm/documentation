@@ -16,7 +16,7 @@ In this article:
 * [Setting up](#setting-up)
 * [Sending with formula](#mass-sms-sending)
 * [Notification SMS Sending](#notification-sms-sending)
-* [Configuring for Twilio](#configuring-for-twilio)
+* [VoIP integration for Twilio](#voip-integration-for-twilio)
 
 ## Setting up
 
@@ -52,7 +52,6 @@ $smsId = record\create(
 ext\sms\send($smsId);
 ```
 
-
 ## SMS Two-Factor Authentication
 
 Note that the *Phone* field of the user, for whom you want to set up the Two-Factor Authentication, must be filled in with at least one number.
@@ -64,9 +63,11 @@ Note that the *Phone* field of the user, for whom you want to set up the Two-Fac
 5. Enter the code that will be sent to the selected phone number and click the *Apply* button.
 
 
-## Configuring for Twilio
+## VoIP integration for Twilio
 
-In order for Twilio Integration to work for receiving and making calls, SMS and MMS, first configure it according to [this instructions](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). 
+The [VoIP integration](https://www.espocrm.com/extensions/voip-integration/) integration allows to send and receive SMS/MMS from UI.
+
+In order for the Twilio Integration to work for receiving and making calls, SMS and MMS, first configure it according to [this instructions](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). 
 
 At *Administration* > *VoIP Routers* > the phone number required for sending and receiving SMS, check the *SMS* and *MMS* boxes for those team users for whom you need in the Team Users panel.
 
@@ -78,6 +79,6 @@ Also, you need to enable Twilio messaging geographic permissions:
 
 Do not forget to set *[Grant access to Messages](https://docs.espocrm.com/extensions/voip-integration/customization/#grant-access-to-messages)* for the required users.
 
-Keep in mind that for Twilio Trial account you will need to add a [*Verified Phone Numbers* or *Caller ID*](https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio).
+Keep in mind that for the Twilio Trial account you will need to add a [*Verified Phone Numbers* or *Caller ID*](https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio).
 
 After that, you can proceed to the full installation and configuration of the SMS Providers extension.
