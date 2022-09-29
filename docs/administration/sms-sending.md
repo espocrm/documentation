@@ -8,9 +8,7 @@ EspoCRM has the built-in functionality for sending SMS, but it's not shipped wit
 - smstools
 - SerwerSms
 
-Out-of-the-box it's possible to send SMS from formula-script or from PHP code. 
-
-The [VoiP Integration](https://www.espocrm.com/extensions/voip-integration/) has the ability to send SMS from UI (only for the Twilio provider).
+Out-of-the-box it's possible to send SMS from formula-script or from PHP code. The [VoiP Integration](https://www.espocrm.com/extensions/voip-integration/) has the ability to send SMS from UI (only for the Twilio provider).
 
 In this article:
 
