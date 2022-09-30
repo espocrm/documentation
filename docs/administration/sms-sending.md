@@ -40,6 +40,7 @@ Create a Workflow rule with the needed trigger type and conditions. Add the *Exe
 ```
 $body = 'Hi! This is an SMS notification from EspoCRM.';
 
+// Phone number is obtained from the entity.
 $phoneNumber = phoneNumber;
 
 $smsId = record\create(
