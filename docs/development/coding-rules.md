@@ -472,8 +472,7 @@ class AccountChecker extends BaseChecker
 
 class AccountChecker implements Checker
 {
-    private BaseChecker $baseChecker;
-    
+    private BaseChecker $baseChecker;    
     private SomeDependency $someDependency;
      
     // Here we can inject additional dependencies that would be problematic
