@@ -7,7 +7,7 @@ The best practice is to place customizations in a module directory:
 
 ## Order
 
-Every module has its *order* property. The order is used by the system to define which module to load firts. For example, if two modules have some metadata with the same key, the metadata of the module that has a higher order will be used. If two modules have the controller classes with the same name, then the class of the module that has a higher order will be used.
+Every module has its *order* property. The order is used by the system to define which module to load first. For example, if two modules have some metadata with the same key, the metadata of the module that has a higher order will be used. If two modules have the controller classes with the same name, then the class of the module that has a higher order will be used.
 
 The *order* property is defined in `custom/Espo/Modules/{YourModule}/Resources/module.json`:
 
