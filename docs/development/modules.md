@@ -1,6 +1,6 @@
 # Modules
 
-The best practice is to place all customizations in a specific module directory:
+The best practice is to place all customizations in a module directory:
 
 * `custom/Espo/Modules/{YourModule}/` – backend (CamelCase name);
 * `client/custom/modules/{your-module}/` – frontend (hyphen name).
