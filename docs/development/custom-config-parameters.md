@@ -34,7 +34,12 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/config.json`:
 }
 ```
 
-Setting the *level* parameter to `"admin"` make the parameter available only for admin users. Available values: `global`, `system`, `admin`, `superAdmin`.
+The *level* parameter defines availability of the config parameter in the front-end.
+
+* `global` – available even before logging in,
+* `system` – never available,
+* `admin` – available only for admin (read and write),
+* `superAdmin` – available only for super-admin (read and write).
 
 ### 3. Metadata app > adminPanel
 
