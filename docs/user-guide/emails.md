@@ -58,11 +58,11 @@ You can see all your emails at Emails tab. There are standard folders Inbox, Sen
 
 *Status* field:
 
-* *Sent* - was sent via CRM
+* *Sent* – was sent via CRM
 * *Archived* – fetched from IMAP account or archived manually
 * *Draft* – email was created as a draft
 
-When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized, then user can link it manually by filling in *Parent* field.
+When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized, then user can link it manually by filling in *Parent* field.
 
 If an email came from a new potential client, user can **convert** it **to Lead** (from the top-right menu).
 
@@ -73,6 +73,8 @@ If email addresses (from, to, cc) of the email record are known to the system, i
 All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
 
 When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. Administrator may not grant *delete* access for users to prevent losing emails.
+
+On the list view it's possible to **drag & drop** emails into folders by dragging by a subject link (as of v7.3).
 
 ## Sending emails
 
