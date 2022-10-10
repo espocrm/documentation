@@ -64,8 +64,7 @@ Grid reports show summarized values, can be grouped by one or two fields and dis
 
 To create a new grid report, click on *Reports* tab and then click *Create Report* button. Choose a needed *Entity Type*, then click the *Create* button at the *Grid Report* section.
 
-When choosing the *Entity Type* for a grid report, consider the following. The *Entity Type* contains the field that will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you neeed to aggregate by fields from multiple entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
-
+When choosing the *Entity Type* for a grid report, consider the following. The *Entity Type* contains the field that will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you neeed to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
 
 The example of grid report results that shows revenue grouped by User:
 
