@@ -82,14 +82,14 @@ You can specify conditions that must be met to trigger the workflow. There are t
 
 Some available condition types:
 
-* _equals_ - the field equals to a specific value or a value of another field;
-* _was equal_ - the field was equal to a specific value before the workflow was triggered;
-* _not equals_ - the field does not equal to a specific value or a value of another field;
-* _was not equal_ - the field was not equal to specific value before the workflow was triggered;
-* _empty_ - the field value is empty;
-* _not empty_ - the field value is not empty;
-* _changed_ - the field was changed;
-* _not changed_ - the field was not changed.
+* _equals_ – the field equals to a specific value or a value of another field;
+* _was equal_ – the field was equal to a specific value before the workflow was triggered;
+* _not equals_ – the field does not equal to a specific value or a value of another field;
+* _was not equal_ – the field was not equal to specific value before the workflow was triggered;
+* _empty_ – the field value is empty;
+* _not empty_ – the field value is not empty;
+* _changed_ – the field was changed;
+* _not changed_ – the field was not changed.
 
 ### Formula conditions
 
