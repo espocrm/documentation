@@ -154,8 +154,6 @@ Note that non-aggregared columns (in grid reports) are not exported to XLSX.
 
 ## Joint Grid reports
 
-As of Advanced Pack v2.2.0.
-
 Joint Grid reports combine multiple grid reports of different entity types. Sub-reports must be grouped by 1 or 0 fields.
 
 If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
@@ -168,9 +166,11 @@ Some usage examples:
 
 You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
 
+For charts, colors of columns must be specified in sub-reports.
+
 Runtime filters are not supported in joint reports. Only regular filters (specified in each sub-report) can be used.
 
-For charts, colors of columns must be specified in sub-reports.
+Non-aggregate columns are not supported in joint reports.
 
 ## Filters
 
