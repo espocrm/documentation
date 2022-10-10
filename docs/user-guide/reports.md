@@ -62,11 +62,15 @@ Additional features where list reports can be utilized:
 
 Grid reports show summarized values, can be grouped by one or two fields and displayed as a chart.
 
-To create a new grid report, click on *Reports* tab and then click *Create Report* button. Choose needed Entity Type, then click *Create* button at *Grid Report* section.
+To create a new grid report, click on *Reports* tab and then click *Create Report* button. Choose a needed *Entity Type*, then click the *Create* button at the *Grid Report* section.
+
+When choosing the *Entity Type* for a grid report, consider the following. The entity contains the field that will be aggregated by. E.g. if you need sum by an opportunity amount, choose the Opportunity entity type. If you neeed to aggregate by fields from multiple entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
+
 
 The example of grid report results that shows revenue grouped by User:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
+
 
 ### Group By
 
