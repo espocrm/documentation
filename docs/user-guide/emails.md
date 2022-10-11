@@ -10,6 +10,7 @@ In this article:
 * [Working with emails](#working-with-emails)
 * [Sending emails](#sending-emails)
 * [Email folders](#email-folders)
+* [Group email folders](#group-email-folders)
 * [Email filters](#email-filters)
 * [Email templates](#email-templates)
 
@@ -93,9 +94,23 @@ It's possible to use an **external email client** (the default one on your compu
 
 ## Email Folders
 
-Users can create their own email folders to put some of emails in for convenience. The list of available folders is available at the Emails list view at the left side. To create or edit folders follow Emails > dropdown in the top-right corner > Folders. `Skip Notification` means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Users can create their personal email folders to put some emails in for convenience. To create or edit folders follow: the Emails list view > dropdown in the top-right corner > Folders. `Skip Notification` means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
 
 Note that email folders in EspoCRM have nothing to do with IMAP folders.
+
+## Group Email Folders
+
+*As of v7.3*
+
+Group email folders are shared for teams. Admin can create group email folders and specify which teams have access to a particular folder.
+
+If an email is moved from a group folder to a personal folder or inbox, it will unlink the email from that group folder.
+
+There's the ability to automatically put inbound emails imported through a group email account to a specific group folder.
+
+Users that have access to a group folder can put there any email (only read level access to the email is required). If an email is located in a group folder the user does not have access to, they won't be able to move that email to another folder.
+
+The field-level-security (in Roles) can be used to restrict the ability to change (edit) the group folder.
 
 ## Email Filters
 
