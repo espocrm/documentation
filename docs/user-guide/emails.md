@@ -100,13 +100,13 @@ Note that email folders in EspoCRM have nothing to do with IMAP folders.
 
 ## Group Email Folders
 
-*As of v7.3*
+*As of v7.3.*
 
 Group email folders are shared for teams. Admin can create group email folders and specify which teams have access to a particular folder.
 
 If an email is moved from a group folder to a personal folder or inbox, it will unlink the email from that group folder.
 
-There's the ability to automatically put inbound emails imported through a group email account to a specific group folder.
+There's the ability to automatically put inbound emails imported through a group email account to a specific group folder. It's also possible move emails matching an email filter to a specific group folder (the filter should be related to a group email account).
 
 Users that have access to a group folder can put there any email (only read level access to the email is required). If an email is located in a group folder the user does not have access to, they won't be able to move that email to another folder.
 
