@@ -45,7 +45,9 @@ Avaible `style` values:
 * danger
 * warning
 
-In a parameter `accessDataList` it's possible to define rules that determine whether an action item is visible to a user. See the `module:utils~AccessDefs` JSDoc type in the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/utils.js).
+In the parameter `accessDataList` it's possible to define rules that determine whether an action item is visible to a user. See the `module:utils~AccessDefs` JSDoc type in the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/utils.js).
+
+The parameter `labelTranslation` defines a label translation path. Useful if you don't want to incorporate a new label but use an existing one. Example: `Global.scopeNamesPlural.Opportunity`. 
 
 Menu items defined in the `Global.json` file will be applied for all entity types.
 
