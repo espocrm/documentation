@@ -343,7 +343,7 @@ $binder->bindService(SomeInterface::class, 'someServiceName');
 
 ### Binding to factory
 
-As of v7.0.0.
+*As of v7.0.*
 
 Bind an interface to a specific factory so that a specific dependency will be created by a specific factory. The factory should implement `Espo\Core\Binding\Factory` interface.
 
@@ -364,7 +364,7 @@ $binder->bindCallback(SomeInterface::class, function (SomeDependency $dependency
 
 ### Using with Injectable Factory
 
-Available as of v7.0.0.
+*As of v7.0.*
 
 It's possible to override default binding when creating instances with the injectable factory (usually this will be processed in your factory classes).
 
