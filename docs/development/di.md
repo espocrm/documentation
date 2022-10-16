@@ -260,11 +260,11 @@ It's also possible to pass a binding container when creating with the injectable
 
 ## Binding
 
-Available as of v6.1.0.
+*As of v6.1.0.*
 
 There is the ability to bind interfaces to implementations and bind parameter names to specific values. Binding is used for resolving dependencies passed through a constructor.
 
-Binding can be processed in the `Binding` classes in every module as well as in the *Custom*:
+Custom binding can be set up in a `Binding` class of a module:
 
 * `Espo\Modules\{ModuleName}\Binding`
 * `Espo\Custom\Binding`
@@ -277,7 +277,7 @@ CLI command to print all bindings:
 bin/command app-info --binding
 ```
 
-Default binding is processed in `Espo\Core\Binding\DefaultBinding`.
+The default binding is set up in `Espo\Binding`.
 
 ### Example
 
