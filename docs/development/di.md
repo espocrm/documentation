@@ -260,7 +260,7 @@ It's also possible to pass a binding container when creating with the injectable
 
 ## Binding
 
-*As of v6.1.0.*
+*As of v6.1.*
 
 There is the ability to bind interfaces to implementations and bind parameter names to specific values. Binding is used for resolving dependencies passed through a constructor.
 
