@@ -140,7 +140,7 @@ You can check whether an attribute was changed.
 $value = $entity->getFetched('attributeName')
 
 // check whether an attribute was changed since the last syncing with DB
-$isChanged = $entity->isChanged('attributeName');
+$attributeChanged = $entity->isAttributeChanged('attributeName');
 ```
 
 ### Get all attribute values
