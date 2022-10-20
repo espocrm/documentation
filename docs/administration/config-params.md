@@ -165,6 +165,7 @@ The list of parameters along with their default values.
 ### Events
 
 * eventAssignedUserIsAttendeeDisabled – `false` – If set *true*, then assigned user won't be automatically added to an attendee list (for meetings and calls);
+* eventInvitationForceSystemSmtp – `false` – To send invitation emails from system SMTP (otherwise a user's personal account can be used); as of v7.3;
 
 ### Attachments
 
