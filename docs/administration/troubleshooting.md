@@ -58,7 +58,7 @@ In `data/config-internal.php` (or `data/config.php`):
 
 ## Check system requirements
 
-At Admiistration > System Requirements. It's important that you have all required extensions installed.
+At Administration > System Requirements. It's important that you have all required extensions installed.
 
 
 ## Scheduled Jobs are not working
