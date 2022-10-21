@@ -8,7 +8,7 @@ EspoCRM has the built-in functionality for sending SMS, but it's not shipped wit
 - smstools
 - SerwerSms
 
-Out-of-the-box it's possible to send SMS from formula-script or from PHP code. The [VoiP Integration](https://www.espocrm.com/extensions/voip-integration/) has the ability to send SMS from UI (only for the Twilio provider).
+It's possible to send SMS from formula-script or from PHP code out-of-the-box. The [VoIP Integration](https://www.espocrm.com/extensions/voip-integration/) provides the ability to send SMS through the UI (only for the Twilio provider).
 
 In this article:
 
@@ -19,7 +19,7 @@ In this article:
 
 ## Setting up
 
-Download the extension package from the [GitHub repository](https://github.com/espocrm/ext-sms-providers/releases) (under Assets section). Then upload and install the package in Espo at Administration > Extensions.
+Download the extension package from the [GitHub repository](https://github.com/espocrm/ext-sms-providers/releases) (under the Assets section). Then upload and install the package in Espo at Administration > Extensions.
 
 After the SMS Providers extension is installed, go to Administration > SMS and select the *SMS Provider* you want to use from the drop-down list. Also, in the *SMS From Number* field, enter the number with the country code (e.g. +11111111111) from which you will be sending SMS messages.
 
@@ -67,11 +67,11 @@ Note that the *Phone* field of the user, for whom you want to set up the Two-Fac
 
 ## VoIP integration for Twilio
 
-The [VoIP integration](https://www.espocrm.com/extensions/voip-integration/) integration allows to send and receive SMS/MMS from UI.
+The [VoIP integration](https://www.espocrm.com/extensions/voip-integration/) integration allows to send and receive SMS/MMS through UI.
 
-In order for the Twilio Integration to work for receiving and making calls, SMS and MMS, first configure it according to [this instructions](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). 
+To use Twilio Integration for receiving and making calls, SMS and MMS, first configure it according to [these instructions](https://docs.espocrm.com/extensions/voip-integration/twilio-integration-setup/). 
 
-At Administration > VoIP Routers > the phone number required for sending and receiving SMS, check the *SMS* and *MMS* boxes for those team users for whom you need in the Team Users panel.
+At Administration > VoIP Routers > the phone number required for sending and receiving SMS, check the *SMS* and *MMS* boxes for those team users whom you need in the Team Users panel.
 
 Also, you need to enable Twilio messaging geographic permissions: 
 
@@ -83,4 +83,4 @@ Do not forget to set *[Grant access to Messages](https://docs.espocrm.com/extens
 
 Keep in mind that for the Twilio Trial account you will need to add a [*Verified Phone Numbers* or *Caller ID*](https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio).
 
-After that, you can proceed to installation and configuration of the SMS Providers extension.
+After that, you can proceed to the installation and configuration of the SMS Providers extension.
