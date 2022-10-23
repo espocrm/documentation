@@ -1,6 +1,6 @@
 # View
 
-The View is the most oftenly used class in frontend. Every page is rendered by multiple view objects. Views can have child views. Child views can have their own child views. And so on. When a parent view is rendered (by calling the `render` method), it generates HTML from all children and adds it to the DOM.
+The View is the most oftenly used class in the frontend. Every page is rendered by multiple view objects. Views can have child views. Child views can have their own child views. And so on. When a parent view is rendered (by calling the `render` method), it generates HTML from all children and adds it to the DOM.
 
 
 A view file `client/custom/src/views/test/my-custom-view.js`:
