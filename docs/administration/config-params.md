@@ -160,7 +160,7 @@ The list of parameters along with their default values.
 
 ### PDF
 
-* pdfEngine – `Tcpdf` – what PDF engine to use; since v6.1;
+* pdfEngine – `Tcpdf` – what PDF engine to use; as of v6.1;
 
 ### Events
 
