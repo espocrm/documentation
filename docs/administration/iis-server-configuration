@@ -35,3 +35,5 @@ Note that all configuration settings listed here are made on **Wndows Server 201
 2. Locate the *< handlers >* tag.
 3. Locate **"PHP_via_FastCGI"** section, add all HTTP methods modifiyng ***verb="GET,HEAD,POST"*** value to ***verb="GET,HEAD,POST,PUT,DELETE,PATCH"***.
 4. Save the **ApplicationHost.config** file.
+
+**Reboot your server after all the steps are done.**
