@@ -17,7 +17,13 @@ POST:
 ```js
 Espo.Ajax.postRequest(url, data, options)
   .then(response => {})
-  .catch(xhr => {});
+  .catch(xhr => {
+      if (xhr.status === 403) {
+          // Prevent error handling in the global handler.
+          xhr.errorIsHandled = true;
+          // Do something.
+      }
+  });
 ```
 
 Example:
