@@ -27,7 +27,7 @@ Note that all configuration settings listed here are made on **Wndows Server 201
 4. Specify ***"C:\Program Files\PHP\v7.4\php-cgi.exe"*** path in the *Executable (Optional)* field (***double quotes requiered***).
 5. Navigate *Request Restrictions*, locate *Verbs*.
 6. Specify the verbs to be handled. Select ***All verbs*** or specify *One of the following verbs:* ***GET,HEAD,POST,PUT,DELETE,PATCH***, click on *OK*.
-7. Click on *OK*.
+7. Click on *OK* and *Yes*.
 
 ### Via Text Editor (Notepad as Administrator, Sublime Text, VSCode, etc.)
 
