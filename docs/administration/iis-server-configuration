@@ -8,7 +8,7 @@ Note that all configuration settings listed here are made on **Wndows Server 201
 
 1. Go to **IIS Manager**, select your *Site*.
 
-![IIS Manager](https://github.com/tkachukvadym/documentation/blob/33bd4ed5f89cda2d2787ad2e36887116f83fb3ee/docs/_static/images/administration/iis/iis-manager.png)
+![IIS Manager](https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/iis-manager.png)
 
 2. Click on *Advanced Settings*.
 3. Specify ***C:\inetpub\wwwroot\EspoCRM-7.2.5\public*** path in the *Physical Path* field.
