@@ -14,7 +14,7 @@ Note that all configuration settings listed here are made on **Wndows Server 201
 
 ![Physical Path](https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/physical-path.png?raw=true)
 
-3. Specify ***C:\inetpub\wwwroot\EspoCRM-7.2.5\public*** path in the *Physical Path* field.
+3. Specify your EspoCRM public directory path (e.g., ***C:\inetpub\wwwroot\EspoCRM-7.2.5\public***) in the *Physical Path* field.
 4. Click on *OK*.
 
 ![Physical Path-2](https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/physical-path-2.png?raw=true)
@@ -26,7 +26,7 @@ Note that all configuration settings listed here are made on **Wndows Server 201
 ![Virtual Path](https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/virtual-path.png?raw=true)
 
 2. Type *client* name in the *Alias* field.
-3. Specify ***C:\inetpub\wwwroot\EspoCRM-7.2.5\client*** path in the *Physical Path* field.
+3. Specify your EspoCRM client directory path (e.g., ***C:\inetpub\wwwroot\EspoCRM-7.2.5\client***) in the *Physical Path* field.
 4. Click *OK*.
 
 ![Virtual Path-2](https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/virtual-path-directory.png?raw=true)
