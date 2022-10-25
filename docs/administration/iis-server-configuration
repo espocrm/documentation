@@ -11,8 +11,13 @@ Note that all configuration settings listed here are made on **Wndows Server 201
 ![IIS Manager](https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/iis-manager.png?raw=true)
 
 2. Click on *Advanced Settings*.
+
+![Physical Path]https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/physical-path.png?raw=true
+
 3. Specify ***C:\inetpub\wwwroot\EspoCRM-7.2.5\public*** path in the *Physical Path* field.
 4. Click on *OK*.
+
+![Physical Path-2]https://github.com/tkachukvadym/documentation/blob/master/docs/_static/images/administration/iis/physical-path-2.png?raw=true
 
 ### Virtual Path adjusting
 
