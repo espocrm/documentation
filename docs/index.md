@@ -35,6 +35,7 @@
 * [Dashboards](administration/dashboards.md)
 * Authentication
   * [2 factor authentication](administration/2fa.md)
+  * [OpenID Connect](administration/oidc.md)
   * LDAP
     * [Authorization](administration/ldap-authorization.md)
     * [Active Directory](administration/ldap-authorization-for-ad.md)
