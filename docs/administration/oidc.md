@@ -43,7 +43,7 @@ You need to specify the *Group Claim*, the [claim](https://en.wikipedia.org/wiki
 ### Auth0
 
 1. Set the *Group Claim* to `http://www.myexample.com/roles` in Espo.
-2. Create [a rule](https://auth0.com/docs/manage-users/access-control/sample-use-cases-actions-with-authorization?_ga=2.226983773.1572279349.1664444295-1913114833.1664024344&_gl=1*1y6ck81*rollup_ga*MTkxMzExNDgzMy4xNjY0MDI0MzQ0*rollup_ga_F1G3E656YZ*MTY2NDQ1ODY2Mi44LjEuMTY2NDQ2MzU5OS40OS4wLjA.#add-user-roles-to-tokens) to include the roles claim in JWT.
+2. Create [a rule](https://auth0.com/docs/manage-users/access-control/sample-use-cases-actions-with-authorization?_ga=2.226983773.1572279349.1664444295-1913114833.1664024344&_gl=1*1y6ck81*rollup_ga*MTkxMzExNDgzMy4xNjY0MDI0MzQ0*rollup_ga_F1G3E656YZ*MTY2NDQ1ODY2Mi44LjEuMTY2NDQ2MzU5OS40OS4wLjA.#add-user-roles-to-tokens) to include the roles claim in the JWT.
 
 ## Debugging
 
