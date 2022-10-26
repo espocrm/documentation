@@ -36,7 +36,7 @@ Details:
 
 ## Team mapping
 
-If your identity provider users have groups (roles or teams, depending how your provider names it), it's reasonable to map them against Espo teams. When an Espo user is created (upon signing in first time) or synced, corresponding teams will be assigned to that used according to the confiured team mapping.
+If your identity provider users have groups (roles or teams, depending on how your provider names it), it's reasonable to map them against Espo teams. When an Espo user is created (upon signing in first time) or synced, corresponding teams will be assigned to that used according to the confiured team mapping.
 
 You need to specify the *Group Claim*, the [claim](https://en.wikipedia.org/wiki/JSON_Web_Token) that will carry the information about user groups. Some identity providers don't include the group claim to the JWT payload by default and you need to do some settings to have it.
 
