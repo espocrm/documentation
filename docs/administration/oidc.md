@@ -36,14 +36,14 @@ Details:
 
 ## Team mapping
 
-If your identity provider users have groups (roles or teams, depending on how your provider names it), it's reasonable to map them against Espo teams. When an Espo user is created (upon signing in first time) or synced, corresponding teams will be assigned to that used according to the confiured team mapping.
+If your identity provider users have groups (roles or teams, depending on how your provider names it), it's reasonable to map them against Espo teams. When an Espo user is created (upon signing in first time) or synced, corresponding teams will be assigned to that user according to the configured team mapping.
 
-You need to specify the *Group Claim*, the [claim](https://en.wikipedia.org/wiki/JSON_Web_Token) that will carry the information about user groups. Some identity providers don't include the group claim to the JWT payload by default and you need to do some settings to have it.
+You need to specify the *Group Claim*, the [claim](https://en.wikipedia.org/wiki/JSON_Web_Token) that will be carrying the information about user groups. Some identity providers don't include the group claim in the JWT payload by default and you need to do some settings to have it.
 
 ### Auth0
 
 1. Set the *Group Claim* to `http://www.myexample.com/roles` in Espo.
-2. Create [a rule](https://auth0.com/docs/manage-users/access-control/sample-use-cases-actions-with-authorization?_ga=2.226983773.1572279349.1664444295-1913114833.1664024344&_gl=1*1y6ck81*rollup_ga*MTkxMzExNDgzMy4xNjY0MDI0MzQ0*rollup_ga_F1G3E656YZ*MTY2NDQ1ODY2Mi44LjEuMTY2NDQ2MzU5OS40OS4wLjA.#add-user-roles-to-tokens) to include the roles claim to JKW.
+2. Create [a rule](https://auth0.com/docs/manage-users/access-control/sample-use-cases-actions-with-authorization?_ga=2.226983773.1572279349.1664444295-1913114833.1664024344&_gl=1*1y6ck81*rollup_ga*MTkxMzExNDgzMy4xNjY0MDI0MzQ0*rollup_ga_F1G3E656YZ*MTY2NDQ1ODY2Mi44LjEuMTY2NDQ2MzU5OS40OS4wLjA.#add-user-roles-to-tokens) to include the roles claim in JWT.
 
 ## Debugging
 
