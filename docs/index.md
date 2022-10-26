@@ -25,8 +25,8 @@
   * [Fields](administration/fields.md)
   * [Layouts](administration/layout-manager.md)
   * [Dynamic forms](administration/dynamic-logic.md)
-* [Users management](administration/users-management.md)
-* [Roles management (access control)](administration/roles-management.md)
+* [Users](administration/users-management.md)
+* [Roles (access control)](administration/roles-management.md)
 * [Email administration](administration/emails.md)
 * [Formula (calculated fields)](administration/formula.md)
 * [Import](administration/import.md)
@@ -35,6 +35,7 @@
 * [Dashboards](administration/dashboards.md)
 * Authentication
   * [2 factor authentication](administration/2fa.md)
+  * [OpenID Connect](administration/oidc.md)
   * LDAP
     * [Authorization](administration/ldap-authorization.md)
     * [Active Directory](administration/ldap-authorization-for-ad.md)

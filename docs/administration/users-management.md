@@ -6,6 +6,7 @@ In this article:
 * [Sending access info](#sending-access-info)
 * [Password recovery](#password-recovery)
 * [User inactivating](#user-inactivating)
+* [Logging in as another user](#logging-in-as-another-user)
 
 ## User types
 
@@ -55,7 +56,7 @@ The email **template** for access info emails can be changed at Administration >
 
 ## Password recovery
 
-Users can recover their access if they forgot their password by clicking the link/button 'Forgot Password?' on the login screen. The user needs to enter their email address and the password. If the entered data is correct, an email with a unique link will be sent to the user. This link has an expiration period.
+Users can recover their access if they forgot their password by clicking the link/button *Forgot Password?* on the login screen. The user needs to enter their email address and the password. If the entered data is correct, an email with a unique link will be sent to the user. This link has an expiration period.
 
 Password recovery (for all, regular or admin users) can be disabled at Administration > Authentication.
 
@@ -67,6 +68,23 @@ The email **template** for password recovery can be changed at Administration > 
 
 The admin can send the password change link for a specific user at the user detail view > the dropdown next to the Edit button > Send Password Change Link.
 
+See more in the [separate article](passwords.md).
+
 ## User inactivating
 
-To disable access for a specific user w/o deleting the record, the admin needs to uncheck the field 'Is Active'.
+To disable access for a specific user w/o deleting the record, the admin needs to uncheck the field *Is Active*.
+
+## Logging in as another user
+
+*As of v7.3*
+
+The admin can log in as another regular user. The user detail view > the dropdown next to the *Edit* > Log In.
+
+Limitations:
+
+* WebSocked is disabled when logged in as another user.
+* Requires re-entering admin password to log in as another user.
+* Recommended to open the login link in an incognito/private window to avoid losing a current login session.
+
+
+The functionality can be disabled in the config: `'authAnotherUserDisabled' => true`.
