@@ -67,6 +67,8 @@ The email **template** for password recovery can be changed at Administration > 
 
 The admin can send the password change link for a specific user at the user detail view > the dropdown next to the Edit button > Send Password Change Link.
 
+See more in the [separate article](passwords.md).
+
 ## User inactivating
 
 To disable access for a specific user w/o deleting the record, the admin needs to uncheck the field 'Is Active'.
