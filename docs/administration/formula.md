@@ -375,7 +375,7 @@ Converts letters to upper case.
 Example:
 
 ```
-string\upperCase('HELLO world') // will return `HELLO WROLD`
+string\upperCase('HELLO world') // will return `HELLO WORLD`
 ```
 
 #### string\pad
