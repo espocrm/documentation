@@ -124,9 +124,7 @@ Some entity types contain additional layouts: Convert Lead, List for Account and
 
 ## Different layouts for teams & portals
 
-As of v5.9.
-
- *Layout Sets* provide the ability to have different layouts for teams & portals.
+*Layout Sets* provide the ability to have different layouts for teams & portals.
 
 Admin can create a layout set record where they will define specific layouts that will differ from standard ones (defined in the Layout Manager). Layout sets are available at Administration > Layout Sets.
 
