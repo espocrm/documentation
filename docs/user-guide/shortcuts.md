@@ -1,6 +1,6 @@
 # Shortcut keys
 
-As of v7.2.
+*As of v7.2*
 
 ## Record list
 
@@ -39,3 +39,8 @@ As of v7.2.
 
 * `Arrow Left` – previous image;
 * `Arrow Right` – next image;
+
+## Email list view
+
+* `Ctrl + Delete` – move selected emails to trash (as of v7.3);
+* 
