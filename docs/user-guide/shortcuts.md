@@ -43,3 +43,4 @@
 ## Emails
 
 * `Ctrl + Delete` – move selected emails to trash (as of v7.3);
+* `Ctrl + I` – mark selected emails as important or not-important (as of v7.3);
