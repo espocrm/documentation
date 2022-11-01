@@ -43,4 +43,3 @@
 ## Email list view
 
 * `Ctrl + Delete` – move selected emails to trash (as of v7.3);
-* 
