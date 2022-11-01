@@ -40,6 +40,6 @@
 * `Arrow Left` – previous image;
 * `Arrow Right` – next image;
 
-## Email list view
+## Email list
 
 * `Ctrl + Delete` – move selected emails to trash (as of v7.3);
