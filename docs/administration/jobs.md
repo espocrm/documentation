@@ -9,7 +9,7 @@ In this article:
 * [Running jobs in parallel processes](#running-jobs-in-parallel-processes)
 * [Running specific job manually in CLI](#running-specific-job-manually-in-cli)
 
-## Scheduled Jobs
+## Scheduled jobs
 
 Scheduled Jobs are intended for recurring job execution. They are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using a crontab notation.
 
