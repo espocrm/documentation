@@ -141,12 +141,12 @@ To print all available jobs run:
 bin/command app-info --jobs
 ```
 
-Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-id` and `--target-type` options.
+Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-id` and/or `--target-type` options.
 
 Example:
 
 ```
-bin/command run-job CheckEmailAccounts --target-id=[paste_id_of_email_account] --target-type=EmailAccount
+bin/command run-job CheckEmailAccounts --target-id={id_of_email_account}
 ```
 
 ## See also
