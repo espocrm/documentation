@@ -151,4 +151,4 @@ bin/command run-job CheckEmailAccounts --target-id={id_of_email_account}
 
 ## See also
 
-* [Creating custom job](../development/scheduled-job.md)
+* [Custom scheduled job](../development/scheduled-job.md)
