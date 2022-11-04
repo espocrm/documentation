@@ -31,6 +31,8 @@ Important: Scheduling works in **UTC timezone**. It doesn't honor the server's t
 
 There are two ways how jobs can be processed: with crontab or daemon.
 
+It's **highly recommended** to turn on processing jobs **in parallel** processes: Administration > Jobs > Settings (in the top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
+
 ### Cron
 
 Cron is easy to configure. It's supported by most hosting providers.
@@ -52,11 +54,9 @@ Note that command that runs cron may differ depending on your server environment
 
 ### Daemon
 
-Requires *pcntl* and *posix* extensions.
+Only for Unix-like operating system. Requires *pcntl* and *posix* PHP extensions (usually available by default).
 
-It's recommended to turn on processing jobs in parallel processes: Administration > Jobs > Settings (in the top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
-
-Command to start daemon using nohup:
+Command to start the daemon using nohup:
 
 ```
 nohup php /path/to/espocrm/daemon.php &
@@ -65,7 +65,6 @@ nohup php /path/to/espocrm/daemon.php &
 #### Using Systemd
 
 Service configuration file: `/etc/systemd/system/espocrm-daemon.service`
-
 
 Configuration (file content):
 
@@ -107,9 +106,7 @@ It's **highly recommended to enable** running jobs in parallel processes.
 
 By default jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Jobs > Settings (in the top-right corner).
 
-Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes.
-
-Windows is not supported.
+Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes. Windows is not supported.
 
 ## Running specific job manually in CLI
 
