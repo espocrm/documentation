@@ -32,7 +32,7 @@ Parameters:
 * *Execute in idle* − is recommended if you have a **big number of records** to be imported; import will be processed **via cron**; the status will be set to 'Complete' when the import process is finished.
 * *Skip searching for duplicates* − will **make the import faster**.
 * *Silent mode* − the majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will **make the import faster**.
-* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import. (as of v6.0.0)
+* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import. (as of v6.0)
 
 Click *Next* button to preceed to the _Step 2_.
 
@@ -114,7 +114,7 @@ php command.php import --file=path/to/csv --params-id={import-id}
 
 As of v7.2.
 
-All rows that failed to import will be available in the Errors panel on the Import result view. It's possible to view the reason of the failure (in most cases it's the validation), the index of the failed row and values.
+All rows that failed to import will be available in the Errors panel on the Import result view. It's possible to view the reason of the failure (in most cases it's the validation), the index of the failed row and values. To view error details, click the *View* from the dropdown.
 
 There's the ability to export all failed rows back to CSV (in order to fix them and then re-import).
 
