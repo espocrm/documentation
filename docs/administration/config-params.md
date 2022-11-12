@@ -104,6 +104,8 @@ The list of parameters along with their default values.
 * cleanupAttachmentsFromPeriod – `'3 months'` – attachments related to records that were marked as deleted (*deleted = 1*);
 * cleanupBackupPeriod – `'2 months'` – backup of files created during upgrades;
 * cleanupDeletedRecordsPeriod – `'3 months'` – complete deletion of records that were marked as deleted (*deleted = 1*);
+* cleanupSubscribers – `true` – cleaning up stream subscribers for not-actual records (as of v7.3);
+* cleanupSubscribersPeriod – `'2 months'` – period for cleaning up subscribers for not-actual records (as of v7.3);
 
 ### Passwords
 
