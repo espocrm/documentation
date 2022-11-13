@@ -89,7 +89,7 @@ E.g. `mySignal.{$status}.{$id}` – *type* and *id* are attributes of the target
 * Broadcasted along with the entity (record).
 * Prefixed with `@` character.
 * Can be used only to initiate a new process or workflow rule.
-* Can't by caught withing a running process.
+* Can't be caught within a running process.
 * Can be broadcasted by a running process. 
 
 Note: Signal Intermediate Event (Catching) can't catch object signals. 
