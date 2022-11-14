@@ -88,6 +88,28 @@ To disable export regardless ACL.
 
 A boolean parameter. If true, then duplicate checking will be processed while updating a record. By default it's processed only when creating a new record.
 
+## relationships
+
+*As of v7.3*
+
+Relationship parameters. Key-object pairs, where keys are link names.
+
+Example:
+
+```json
+{
+    "cases": {
+        "linkRequiredAccess": "edit",
+        "linkRequiredForeignAccess": "read"
+    }
+}
+```
+
+Parameters:
+
+* linkRequiredAccess – access to a current record that is needed to be able to link and unlink records (`create`, `read`, `edit`, `delete`, `stream`); applied only in the back-end, for the front-end specify clientDefes > {EntityType} > relationshipPanels > {link} > selectRequiredAccess.
+* linkRequiredForeignAccess – access to a foreign record that is needed to be able to link and unlink;
+
 ## beforeReadHookClassNameList
 
 Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
@@ -111,4 +133,3 @@ Hooks (applied for API calls).  Should implement the `Espo\Core\Record\Hook\Link
 ## beforeUnlinkHookClassNameList
 
 Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
-
