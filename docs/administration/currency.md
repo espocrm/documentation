@@ -89,7 +89,7 @@ Rate values are related to *Base Currency* specified in Settings.
 
 ## Adding missing currency
 
-If a currency that you need is missing, you can add it manaully.
+If a currency that you need is missing, you can add it manually.
 
 Create a file: `custom/Espo/Custom/Resources/metadata/app/currency.json`
 
