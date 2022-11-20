@@ -306,8 +306,8 @@ class Binding implements BindingProcessor
             ->bindImplementation('Espo\\SomeInterface', 'Espo\\SomeImplementation')
             ->bindValue('$paramName', 'Some Value')
             ->bindCallback(
-                 '$anotherParamName', 
-                 // callback arguments are resolved automatically
+                 'Espo\\AnotherClass', 
+                 // Callback arguments are resolved automatically.
                  function (SomeDependency $dependency) {                     
                      return $dependency->getSomething();
                  }
@@ -323,7 +323,7 @@ Explanation:
 * If any class requires `Espo\SomeServiceName ` and a parameter name is `$name`, then give `anotherServiceName` service.
 * When `Espo\SomeClass` requires `Espo\SomeInterface`, give an instance of `Espo\SomeImplementation`.
 * When `Espo\SomeClass` is instantiated, pass the value 'Same Value' for the parameter `$paramName`.
-* When `Espo\SomeClass` is instantiated, use the callback to resolve a value of the parameter `$anotherParamName`.
+* When `Espo\SomeClass` is instantiated, use the callback to resolve a value of the parameter with the type `Espo\AnotherClass`.
 
 ### Binding to implementation
 
