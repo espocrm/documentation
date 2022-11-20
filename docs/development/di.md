@@ -153,8 +153,7 @@ use Espo\Modules\MyModule\SomeClass;
 
 class SomeClass
 {
-    private EntityManager $entityManager;
-    
+    private EntityManager $entityManager;    
     private SomeClass $some;
 
     /**
