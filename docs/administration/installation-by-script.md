@@ -83,6 +83,14 @@ Define a username of your EspoCRM administrator. Ex. `--adminUsername=admin`.
 
 Define a password of EspoCRM administrator. Ex. `--adminPassword=admin-password`.
 
+#### `--command`
+
+Update the `command.sh` for the existing instllation. Ex. `--command`.
+
+#### `--backupPath`
+
+A path for the backup. Ex. `--backupPath="/backup"`.
+
 ## Data
 
 ### Structure
@@ -184,6 +192,7 @@ bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-dom
 ```
 
 4. Copy your existing data to a new installation:
+
 ```
 rm -rf /var/www/espocrm/data/espocrm
 rm -rf /var/www/espocrm/data/mysql
@@ -207,6 +216,8 @@ cp -rp /var/www/espocrm-old/data/mysql /var/www/espocrm/data
 
 The operation of EspoCRM consists of several services, such as `nginx`, `mysql`, `daemon`.
 
+In order to update the command tool, see [update the command.sh](#update-the-command.sh).
+
 ### Status of services
 
 ```
@@ -225,6 +236,14 @@ The operation of EspoCRM consists of several services, such as `nginx`, `mysql`,
 /var/www/espocrm/command.sh start
 ```
 
+### Build and start services
+
+In order to apply changes in `docker-compose.yml`.
+
+```
+/var/www/espocrm/command.sh build
+```
+
 ### Stop services
 
 ```
@@ -237,9 +256,68 @@ The operation of EspoCRM consists of several services, such as `nginx`, `mysql`,
 /var/www/espocrm/command.sh rebuild
 ```
 
+### EspoCRM upgrade
+
+```
+/var/www/espocrm/command.sh upgrade
+```
+
+### EspoCRM logs
+
+```
+/var/www/espocrm/command.sh logs
+```
+
+### Backup
+
+Create a full backup of EspoCRM.
+
+```
+/var/www/espocrm/command.sh backup "BACKUP_DIRECTORY"
+```
+
+An example: `/var/www/espocrm/command.sh backup /var/www/espocrm-backup`.
+
+### Restore
+
+Restore the backup created by the `backup` command.
+
+```
+/var/www/espocrm/command.sh restore "BACKUP_PATH"
+```
+
+An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2023-01-01_142051.tar.gz"`.
+
+### Clean
+
+Delete old and unnecessary files.
+
+```
+/var/www/espocrm/command.sh clean
+```
+
+### Import the SQL dump
+
+Import the database by the SQL dump created by `mysqldump`, `phpMyAdmin`, etc.
+
+```
+/var/www/espocrm/command.sh import-db "PATH/DB.sql"
+```
+
+An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/db.sql"`.
+
+### Help
+
+In order to display a list of available commands.
+
+```
+/var/www/espocrm/command.sh help
+```
+
 ## Logs
 
 ### Nginx logs
+
 ```
 /var/www/espocrm/data/nginx/logs
 ```
@@ -248,6 +326,15 @@ The operation of EspoCRM consists of several services, such as `nginx`, `mysql`,
 
 ```
 /var/www/espocrm/data/espocrm/data/logs
+```
+
+## Update the command.sh
+
+In order to load the latest version of the `command.sh`, run the command:
+
+```
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+bash install.sh --command
 ```
 
 ## Modify PHP settings
