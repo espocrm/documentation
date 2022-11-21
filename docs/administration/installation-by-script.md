@@ -216,7 +216,7 @@ cp -rp /var/www/espocrm-old/data/mysql /var/www/espocrm/data
 
 The operation of EspoCRM consists of several services, such as `nginx`, `mysql`, `daemon`.
 
-In order to update the command tool, see [update the command.sh](#update-the-command.sh).
+In order to update the command tool, see [update the command.sh](#update-the-commandsh).
 
 ### Status of services
 
