@@ -37,14 +37,14 @@ server {
     gzip_types text/plain text/css text/javascript application/javascript application/json;
     gzip_min_length 1000;
     gzip_comp_level 9;
-    
+
     root /path-to-espo/public; # path to public dir
 
     location /client {
         root /path-to-espo; # path to espocrm root dir
         autoindex off;
 
-        location ~* ^.+.(js|css|png|jpg|jpeg|gif|ico|tpl)$ {
+        location ~* ^.+.(js|css|png|jpg|svg|svgz|jpeg|gif|ico|tpl)$ {
             access_log off;
             expires max;
         }
@@ -91,44 +91,44 @@ You need to change `/path-to-espo` to the absolute path of your EspoCRM instance
 server {
     listen 80;
     listen [::]:80;
- 
+
     server_name espocrm.local; # Replace espocrm.local to your domain name
     root /var/www/html/espocrm; # Specify your EspoCRM document root
- 
+
     index index.php index.html index.htm;
- 
+
     # SSL configuration
     #
     # listen 443 ssl;
     # listen [::]:443 ssl;
-    # include snippets/snakeoil.conf;    
- 
+    # include snippets/snakeoil.conf;
+
     # Specify your PHP (php-cgi or php-fpm) based on your configuration
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
- 
+
         # With php7.0-cgi alone:
         # fastcgi_pass 127.0.0.1:9000;
- 
+
         # With php7.0-fpm:
         fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-    }    
- 
+    }
+
     # Add rewrite rules
     location / {
         try_files $uri $uri/ =404;
     }
- 
+
     location /api/v1/ {
         if (!-e $request_filename){
             rewrite ^/api/v1/(.*)$ /api/v1/index.php last; break;
         }
     }
- 
+
     location ~ /reset/?$ {
         try_files /reset.html =404;
     }
- 
+
     location ^~ (data|api)/ {
         if (-e $request_filename){
             return 403;

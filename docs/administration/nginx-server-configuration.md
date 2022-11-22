@@ -40,14 +40,14 @@ server {
     gzip_types text/plain text/css text/javascript application/javascript application/json;
     gzip_min_length 1000;
     gzip_comp_level 9;
-    
+
     root /path-to-espo/public; # path to public dir
 
     location /client {
         root /path-to-espo; # path to espocrm root dir
         autoindex off;
 
-        location ~* ^.+.(js|css|png|jpg|jpeg|gif|ico|tpl)$ {
+        location ~* ^.+.(js|css|png|jpg|svg|svgz|jpeg|gif|ico|tpl)$ {
             access_log off;
             expires max;
         }
@@ -123,7 +123,7 @@ server {
             return 403;
         }
     }
-    
+
     location ^~ /data/ {
         deny all;
     }
