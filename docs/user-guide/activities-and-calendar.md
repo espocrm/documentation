@@ -26,6 +26,8 @@ There are 3 types of attendees supported: Users, Contacts, Leads. For each atten
 
 There is the ability to send **invitation emails** to attendees by clicking the button in the top-right corner. Attendees will be able to set their acceptance status by clicking on a corresponding link in the email. The template for invitation emails can be changed at Administration > Template Manager > Invitation.
 
+For events with *Not Held* status it's possible to send cancellation emails (from the top-right menu) (as of v7.3).
+
 ### Reminders
 
 There are two types of reminders: Popup (in-app message) and Email. Reminders will be applied to *Assigned User* and users specified in *Users* field.
