@@ -129,7 +129,7 @@ Note: If you are attaching to an existing record, you need also to add current a
 
 ### Downloading
 
-Available since version 5.9.0.
+*As of v5.9*
 
 `GET Attachment/file/{id}`
 
