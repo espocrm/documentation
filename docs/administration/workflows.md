@@ -149,9 +149,9 @@ Allows changing of specific fields of the target record.
 
 It's possible to define **formula** to calculate field values. You can utilize *Update Target Record* action for executing formula script without actually updating any fields.
 
-Note: Variables defined within formula won't be passed back, they are only available within a current script.
+Note: Variables defined within formula won't be passed back, they are only available within the current script.
 
-Important: Formula within this action must be utilized only for field updating. Use *Execute Formula Script* action for any other need. 
+Important: Formula within this action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need. 
 
 If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function *entity\addLinkMultipleId*. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
