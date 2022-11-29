@@ -742,6 +742,8 @@ Example:
 
 `entity\attributeFetched('assignedUserId')`
 
+Note: Should not be used in workflow and BPM actions, use `workflow\targetEntity\attributeFetched` instead.
+
 #### entity\addLinkMultipleId
 
 `entity\addLinkMultipleId(LINK, ID)`
