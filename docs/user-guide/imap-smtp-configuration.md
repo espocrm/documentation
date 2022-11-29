@@ -76,6 +76,8 @@ For more information, please follow the [link](https://support.google.com/mail/a
 4. Click *Yes* to enable POP and IMAP access.
 5. Press *Save* button on the top of the page.
 
+Important: The TLS encryption method may not work for IMAP, use the SSL method in this case.
+
 ![Outlook configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/5.png)
 
 Note: If you have **2FA** enabled for your Microsoft account, you need to create app password and use it in Espo instead of your main password. More info [here](https://support.microsoft.com/en-us/help/12409/microsoft-account-app-passwords-and-two-step-verification).

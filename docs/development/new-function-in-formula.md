@@ -9,7 +9,7 @@ Create a file `custom/Espo/Custom/Core/Formula/Functions/MyGroup/MyContainsType.
 namespace Espo\Custom\Core\Formula\Functions\MyGroup;
 
 use Espo\Core\Formula\Functions\BaseFunction;
-use Espo\Core\Formula\Functions\ArgumentList;
+use Espo\Core\Formula\ArgumentList;
 
 class MyContainsType extends BaseFunction
 {
