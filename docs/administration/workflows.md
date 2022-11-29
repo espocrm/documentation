@@ -192,8 +192,8 @@ Notify specific users with the message.
 
 It's possible to use placeholders in the message template:
 
-* `{entity}` - a target record;
-* `{user}` - a current user.
+* `{entity}` – a target record;
+* `{user}` – a current user.
 
 ### Make Followed
 
@@ -229,7 +229,7 @@ Quotes/Sales Orders/Invoices:
 
 Opportunities:
 
-* *Convert Currency* (since version 5.7.0)
+* *Convert Currency* (as of v5.7.0)
 
 Contacts/Leads/Accounts:
 
@@ -291,9 +291,11 @@ Note: Within a BPM process *$_lastHttpResponseBody* variable is available only w
 
 ### Execute Formula Script
 
-Available as of Advanced Pack v2.6.0.
+As of Advanced Pack v2.6.0.
 
 Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next workflow actions or BPM process.
+
+Note: It's not possible to obtain previous attribute values in the *Execute Formula Script* action. Use *Update Target Record* instead.
 
 ## Using formula in actions
 
