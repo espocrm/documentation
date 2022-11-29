@@ -88,3 +88,7 @@ Note: Additional phone numbers are used for incoming calls only. Outgoing calls 
 ![Phone numbers formats](../../_static/images/extensions/voip-integration/asterisk-additional-numbers.png)
 
 * **Phone numbers formats:** +442031112233, 00442031112233, 02031112233.
+
+## VoIP configuration for Docker containers
+
+To display pop-up windows for calls and correct working of the Asterisk VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#docker-asterisk-line-for-crontab).
