@@ -295,8 +295,6 @@ As of Advanced Pack v2.6.0.
 
 Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next workflow actions or BPM process.
 
-Note: It's not possible to obtain previous attribute values in the *Execute Formula Script* action. Use *Update Target Record* instead.
-
 ## Using formula in actions
 
 It's possible to define formula to calculate fields in the following actions:
