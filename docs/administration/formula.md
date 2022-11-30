@@ -244,63 +244,12 @@ Out-of-the-box functions are listed below.
 
 ### object
 
-* [object\create](#objectcreate)
-* [object\get](#objectget)
-* [object\set](#objectset)
-* [object\clear](#objectclear)
-* [object\has](#objecthas)
-* [object\clonedeep](#objectclonedeep)
-
-
-### object\create
-
-`object\create()`
-
-Creates and returns an empty object (key-value map). (as of v7.1.0)
-
-### object\get
-
-`object\get(OBJECT, KEY)`
-
-Retrieves a value by a KEY from an OBJECT. Returns NULL if KEY is not set. (as of v7.1.0)
-
-### object\set
-
-`object\set(OBJECT, KEY, VALUE)`
-
-Sets a value by a KEY. (as of v7.1.0)
-
-Example:
-
-```
-$object = object\create();
-object\set($object, 'key', 'some-value');
-```
-
-### object\clear
-
-`object\clear(OBJECT, KEY)`
-
-Unsets a value by a KEY. (as of v7.1.0)
-
-Example:
-
-```
-object\clear($object, 'some-key');
-```
-
-### object\has
-
-`object\has(OBJECT, KEY)`
-
-Checks whether an OBJECT has a value set by a KEY. Returns a boolean. (as of v7.1.0)
-
-
-### object\cloneDeep
-
-`object\cloneDeep(OBJECT)`
-
-Deep clones an OBJECT. (as of v7.1.0)
+* [object\create](formula/object.md#objectcreate)
+* [object\get](formula/object.md#objectget)
+* [object\set](formula/object.md#objectset)
+* [object\clear](formula/object.md#objectclear)
+* [object\has](formula/object.md#objecthas)
+* [object\clonedeep](formula/object.md#objectclonedeep)
 
 
 ### Language
@@ -319,7 +268,7 @@ Example:
 
 `language\translateOption(OPTION, FIELD, [SCOPE])`
 
-Translates an option of a specific field to the language set as default. The field can be of the following types: Enum, Multi-enum, Checklist, Array, Varchar. (as of v6.0.0)
+Translates an option of a specific field to the language set as default. The field can be of the following types: Enum, Multi-enum, Checklist, Array, Varchar. (as of v6.0)
 
 Example:
 
@@ -331,7 +280,7 @@ Example:
 
 `json\retrieve(JSON, PATH)`
 
-Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots. (as of v6.0.0)
+Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots. (as of v6.0)
 
 Example, retrieving *id* from `{"id": "SOME_ID"}`:
 
