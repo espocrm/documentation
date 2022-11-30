@@ -3,7 +3,7 @@
 * [json\retrieve](#jsonretrieve)
 * [json\encode](#jsonencode)
 
-#### json\retrieve
+## json\retrieve
 
 `json\retrieve(JSON, PATH)`
 
@@ -20,7 +20,7 @@ Example, retrieving *id* from `[{"id": "SOME_ID"}]`:
 $value = json\retrieve($someJsonString, '0.id');`
 ```
 
-#### json\encode
+## json\encode
 
 `json\encode(VALUE)`
 
