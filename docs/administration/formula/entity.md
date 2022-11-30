@@ -19,13 +19,13 @@ the target record is the record is being created. For Workflow's conditions, the
 * [entity\getLinkColumn](#entitygetlinkcolumn)
 
 
-#### entity\isNew
+## entity\isNew
 
 `entity\isNew()`
 
 Returns TRUE if the entity is new (being created) and FALSE if not (being updated).
 
-#### entity\isAttributeChanged
+## entity\isAttributeChanged
 
 `entity\isAttributeChanged(ATTRIBUTE)`
 
@@ -35,13 +35,13 @@ Example:
 
 `entity\isAttributeChanged('status')`
 
-#### entity\isAttributeNotChanged
+## entity\isAttributeNotChanged
 
 `entity\isAttributeNotChanged(ATTRIBUTE)`
 
 Return TRUE if ATTRIBUTE of the record was not changed.
 
-#### entity\attribute
+## entity\attribute
 
 `entity\attribute(ATTRIBUTE)`
 
@@ -55,7 +55,7 @@ Examples:
 
 `entity\attribute('account.name')`
 
-#### entity\setAttribute
+## entity\setAttribute
 
 `entity\setAttribute(ATTRIBUTE, VALUE)`
 
@@ -68,7 +68,7 @@ Example:
 `entity\setAttribute('stage', 'Closed Won')`
 
 
-#### entity\attributeFetched
+## entity\attributeFetched
 
 `entity\attributeFetched(ATTRIBUTE)`
 
@@ -80,7 +80,7 @@ Example:
 
 Note: Should not be used in workflow and BPM actions, use `workflow\targetEntity\attributeFetched` instead.
 
-#### entity\addLinkMultipleId
+## entity\addLinkMultipleId
 
 `entity\addLinkMultipleId(LINK, ID)`
 
@@ -97,25 +97,25 @@ Example:
 Add 'someTeamId' to 'teams' field.
 
 
-#### entity\hasLinkMultipleId
+## entity\hasLinkMultipleId
 
 `entity\hasLinkMultipleId(LINK, ID)`
 
 Checks whether Link Multiple field has specific ID.
 
-#### entity\removeLinkMultipleId
+## entity\removeLinkMultipleId
 
 `entity\removeLinkMultipleId(LINK, ID)`
 
 Removes a specific ID from the Link Multiple field.
 
-#### entity\isRelated
+## entity\isRelated
 
 `entity\isRelated(LINK, ID)`
 
 Checks whether a target entity is related with another entity represented by LINK and ID.
 
-#### entity\sumRelated
+## entity\sumRelated
 
 `entity\sumRelated(LINK, FIELD, [FILTER])`
 
@@ -127,7 +127,7 @@ Example:
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
 
-#### entity\countRelated
+## entity\countRelated
 
 `entity\countRelated(LINK, [FILTER])`
 
@@ -139,7 +139,7 @@ Example:
 
 It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info about filters [below](#filter).
 
-#### entity\getLinkColumn
+## entity\getLinkColumn
 
 `entity\getLinkColumn(LINK, ID, COLUMN)`
 
