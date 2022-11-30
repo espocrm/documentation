@@ -18,7 +18,7 @@ Returns ID or null.
 
 `ext\email\send(EMAIL_ID)`
 
-Sends an email. EMAIL_ID is an ID of an email record. Returns TRUE if sent, false if not sent. (as of v5.9.0)
+Sends an email. EMAIL_ID is an ID of an email record. Returns TRUE if sent, false if not sent.
 
 If *from* address is not set in the email, then the system email address will be used. If there's match between *from* address and 
 the address of some group email account, then SMTP setting of the group email account will be used.
@@ -62,7 +62,7 @@ ext\email\send($emailId);
 
 `ext\sms\send(SMS_ID)`
 
-Sends an SMD. SMS_ID is an ID of an SMS record. Returns TRUE if sent, false if not sent. (Available as of v7.0.0)
+Sends an SMD. SMS_ID is an ID of an SMS record. Returns TRUE if sent, false if not sent. (Available as of v7.0)
 
 Example:
 
@@ -113,7 +113,7 @@ Note, that this won't work for new records in before-create script because a rec
 `ext\user\sendAccessInfo(USER_ID)`
 
 Send an email with access info to a specific user (via email). A user password will be reset. The user will be promted to specify their 
-new password. This function is useful when creating a new user via formula. (as of v7.1.0)
+new password. This function is useful when creating a new user via formula. (as of v7.1)
 
 Example:
 
