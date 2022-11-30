@@ -1,12 +1,12 @@
 # Formula > Functions > Password
 
-#### password\generate
+## password\generate
 
 `password\generate()`
 
 Generates and returns a password.
 
-#### password\hash
+## password\hash
 
 `password\hash(PASSWORD)`
 
