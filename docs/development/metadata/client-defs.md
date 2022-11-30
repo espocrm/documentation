@@ -134,8 +134,44 @@ Example:
         }
     }
 }
-
 ```
+
+### layout
+
+A layout name or a layout defined as an array.
+
+### createDisabled
+
+Disable the ability to create related records.
+
+### selectDisabled
+
+Disable the ability to select related records.
+
+### viewDisabled
+
+Disable the ability to view related records in a modal.
+
+### unlinkDisabled
+
+Disable the ability to unlink related records.
+
+### label
+
+A custom translatable label.
+
+### createRequiredAccess
+
+Access (to a current entity type) required for creating related records.
+
+### selectRequiredAccess
+
+Access (to a current entity type) required for selecting related records.
+
+### filters
+
+Filters available in the dropdown. An array of strings.
+
 
 ## additionalLayouts
 
