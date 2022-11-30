@@ -106,9 +106,36 @@ Definitions of side-panels for views (list, detail, edit, etc.).
       
 ## bottomPanels
 
-
 Definitions of bottom-panels for views (list, detail, edit, etc.).
 
+## relationshipPanels
+
+Relationship panels definitions.
+
+
+Example:
+
+```json
+{
+    "relationshipPanels": {
+        "linkName": {
+            "view": "my-module:views/panels/my-panel"
+            "readOnly": false,
+            "selectDisabled": false,
+            "createDisabled": false,
+            "viewDisabled": false,
+            "unlinkDisabled": false,
+            "orderBy": "someField",
+            "orderDirection": "ASC",
+            "createRequiredAccess": "read",
+            "selectRequiredAccess": "edit",
+            "selectPrimaryFilterName": "filterName",
+            "boolFilterList": ["onlyMy"]
+        }
+    }
+}
+
+```
 
 ## additionalLayouts
 
