@@ -7,7 +7,7 @@
 * [number\ceil](#numberceil)
 * [number\randomInt](#numberrandomint)
 
-#### number\format
+## number\format
 
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])`
 
@@ -22,44 +22,44 @@ Examples:
 `number\format(10.1, 0)` - results 10.
 
 
-#### number\abs
+## number\abs
 
 `number\abs(VALUE)`
 
 Absolute value. Returns null if VALUE is not numeric.
 
-#### number\round
+## number\round
 
 `number\round(VALUE, PRECISION)`
 
 Returns the rounded value of VALUE to specified PRECISION (number of digits after the decimal point). PRECISION can also be negative or zero (default).
 
-#### number\floor
+## number\floor
 
 `number\floor(VALUE)`
 
 Returns the next lowest integer value by rounding down value if necessary.
 
-#### number\ceil
+## number\ceil
 
 `number\ceil(VALUE)`
 
 Returns the next highest integer value by rounding up value if necessary.
 
-#### number\randomInt
+## number\randomInt
 
 `number\randomInt([MIN, MAX])`
 
-Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used. (as of v5.9.2)
+Generates a cryptographic random integer between specified MIN and MAX. If MIN is omitted, then `0` is used.
 
-#### number\parseInt
+## number\parseInt
 
 `number\parseInt(STRING)`
 
-Converts a string to an integer number. (as of v7.1.0)
+Converts a string to an integer number. (as of v7.1)
 
 #### number\parseFloat
 
 `number\parseFloat(STRING)`
 
-Converts a string to a float number. (as of v7.1.0)
+Converts a string to a float number. (as of v7.1)
