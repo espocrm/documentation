@@ -32,7 +32,7 @@ In this article:
 
 API functions:
 
-* [CRUD operations](api/crud.md) - create, read, update, delete
+* [CRUD operations](api/crud.md) – create, read, update, delete
 * [Related records](api/relationships.md)
 * [Stream](api/stream.md)
 * [CurrencyRate](api/currency-rate.md)
