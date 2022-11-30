@@ -1,7 +1,7 @@
 # Formula > Functions > JSON
 
-* [json\retrieve](formula/json.md#jsonretrieve)
-* [json\encode](formula/json.md#jsonencode)
+* [json\retrieve](#jsonretrieve)
+* [json\encode](#jsonencode)
 
 #### json\retrieve
 
