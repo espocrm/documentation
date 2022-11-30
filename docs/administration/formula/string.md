@@ -15,7 +15,7 @@
 * [string\replace](#stringreplace)
 
 
-#### string\concatenate
+## string\concatenate
 
 `string\concatenate(STRING_1, STRING_2)`
 
@@ -27,7 +27,7 @@ Example:
 $someVariable = string\concatenate('ab', 'cd'); // will return 'abcd'
 ```
 
-#### string\substring
+## string\substring
 
 `string\substring(STRING, START, LENGTH)`
 
@@ -45,7 +45,7 @@ $someVariable = string\substring('abcde', 1, 2); // will return 'bc'
 $someVariable = string\substring('abcde', 1, -1); // will return 'bcd'
 ```
 
-#### string\contains
+## string\contains
 
 `string\contains(STRING, NEEDLE)`
 
@@ -57,7 +57,7 @@ Example:
 string\contains('hello world', 'world') // will return true
 ```
 
-#### string\pos
+## string\pos
 
 `string\pos(STRING, NEEDLE)`
 
@@ -69,7 +69,7 @@ Example:
 string\pos('hello world', 'world') // will return `6`
 ```
 
-#### string\test
+## string\test
 
 `string\test(STRING, REGULAR_EXPRESSION)`
 
@@ -81,7 +81,7 @@ Example:
 string\test('hello world', '/hello/i') // will return TRUE
 ```
 
-#### string\length
+## string\length
 
 `string\length(STRING)`
 
@@ -93,7 +93,7 @@ Example:
 string\length('hello world') // will return `11`
 ```
 
-#### string\trim
+## string\trim
 
 `string\trim(STRING)`
 
@@ -105,7 +105,7 @@ Example:
 string\length(' hello world ') // will return `hello world`
 ```
 
-#### string\lowerCase
+## string\lowerCase
 
 `string\lowerCase(STRING)`
 
@@ -117,7 +117,7 @@ Example:
 string\lowerCase('HELLO world') // will return `hello world`
 ```
 
-#### string\upperCase
+## string\upperCase
 
 `string\upperCase(STRING)`
 
@@ -129,7 +129,7 @@ Example:
 string\upperCase('HELLO world') // will return `HELLO WORLD`
 ```
 
-#### string\pad
+## string\pad
 
 `string\pad(STRING, LENGTH, [PAD_STRING], [PAD_TYPE])`
 
@@ -145,7 +145,7 @@ Example:
 string\pad('100', 5, '*', 'right') // will return `100**`
 ```
 
-#### string\match
+## string\match
 
 `string\match(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
@@ -159,7 +159,7 @@ will return `{token1}`.
 
 The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 
-#### string\matchAll
+## string\matchAll
 
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
@@ -171,7 +171,7 @@ Example:
 
 will return an array `['{token1}', '{token2}']`.
 
-#### string\replace
+## string\replace
 
 `string\replace(STRING, SEARCH, REPLACE)`
 
@@ -184,7 +184,7 @@ Example:
 will return `'Hello world'`.
 
 
-#### string\split
+## string\split
 
 `string\split(STRING, SEPARATOR)`
 
