@@ -48,7 +48,7 @@ Examples:
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. 
 More info [below](#filter).
 
-#### record\findOne
+## record\findOne
 
 `record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])`
 
