@@ -290,8 +290,6 @@ description = $test;
 
 ## Comments
 
-Available as of v5.7.6.
-
 Line comment:
 
 ```
