@@ -305,8 +305,8 @@ Out-of-the-box functions are listed below.
 * Strings. E.g. `'some string'`, `"some string"`.
 * Integer numbers. E.g. `1`, `100`, `40300`.
 * Float numbers. E.g. `5.2`.
-* Booleans. `true`, `false`.
-* Null. `null`.
+* Booleans: `true`, `false`.
+* Null: `null`.
 
 ## Variables
 
