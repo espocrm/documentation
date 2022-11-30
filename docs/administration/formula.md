@@ -227,24 +227,8 @@ Out-of-the-box functions are listed below.
 
 ### Password
 
-#### password\generate
-
-`password\generate()`
-
-Generates and returns a password.
-
-#### password\hash
-
-`password\hash(PASSWORD)`
-
-Hashes a password. You need to hash the password before setting *password* field of *User* record.
-
-Example:
-
-```
-$password = password\generate();
-$hash = password\hash($password);
-```
+* [password\generate](formula/password.md#passwordgenerate)
+* [password\hash](formula/password.md#passwordhash)
 
 
 ### Array
