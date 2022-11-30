@@ -98,12 +98,48 @@ Top-right menu for views (list, detail, edit, etc.).
 
 ## sidePanels
 
-Definitions of side-panels for views (list, detail, edit, etc.).
+Definitions of side-panels for views (detail, edit, detailSmall, editSmall). Defined panels will be available in the layout manager.
 
+Example: 
+
+```json
+{
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "attendees",
+                "label": "Attendees",
+                "view": "crm:views/meeting/record/panels/attendees",
+                "options": {
+                    "fieldList": [
+                        "users",
+                        "contacts",
+                        "leads"
+                    ]
+                },
+                "isForm": true,
+                "notRefreshable": true
+            }
+        ]
+    }
+}
+```
+
+### isForm
+
+Needed for a proper UI styling when the panel contains a form.
+
+### notRefreshable
+
+Not refreshable (when clicking on the header).
+
+### options
+
+Options to pass to the panel view.
       
 ## bottomPanels
 
-Definitions of bottom-panels for views (list, detail, edit, etc.).
+Definitions of bottom-panels for views. The same as sidePanels.
 
 ## relationshipPanels
 
