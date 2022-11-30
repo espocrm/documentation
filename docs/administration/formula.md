@@ -257,28 +257,8 @@ Out-of-the-box functions are listed below.
 
 ### Json
 
-#### json\retrieve
-
-`json\retrieve(JSON, PATH)`
-
-Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots. (as of v6.0)
-
-Example, retrieving *id* from `{"id": "SOME_ID"}`:
-
-```
-$value = json\retrieve($someJsonString, 'id');`
-```
-
-Example, retrieving *id* from `[{"id": "SOME_ID"}]`:
-```
-$value = json\retrieve($someJsonString, '0.id');`
-```
-
-#### json\encode
-
-`json\encode(VALUE)`
-
-Encodes a VALUE to a json string. (as of v7.1.0)
+* [json\retrieve](formula/json.md#jsonretrieve)
+* [json\encode](formula/json.md#jsonencode)
 
 ### Ext
 
@@ -293,7 +273,7 @@ Encodes a VALUE to a json string. (as of v7.1.0)
 
 `ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
 
-Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null. (Available as of 5.8.3).
+Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. Returns ID or null.
 
 #### ext\email\send
 
