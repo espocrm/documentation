@@ -7,14 +7,14 @@
 * [ext\pdf\generate](#extpdfgenerate)
 * [ext\user\sendAccessInfo](#extusersendaccessinfo)
 
-#### ext\account\findByEmailAddressDomain
+## ext\account\findByEmailAddressDomain
 
 `ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
 
 Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. 
 Returns ID or null.
 
-#### ext\email\send
+## ext\email\send
 
 `ext\email\send(EMAIL_ID)`
 
@@ -38,7 +38,7 @@ $id = record\create(
 ext\email\send($id);
 ```
 
-#### ext\email\applyTemplate
+## ext\email\applyTemplate
 
 `ext\email\applyTemplate(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
 
@@ -58,7 +58,7 @@ ext\email\applyTemplate($emailId, 'some-email-template-id');
 ext\email\send($emailId);
 ```
 
-#### ext\sms\send
+## ext\sms\send
 
 `ext\sms\send(SMS_ID)`
 
@@ -80,7 +80,7 @@ If *from* address is not set in the SMS, then the system SMS from number will be
 
 The extension with SMS providers can be downloaded [here](https://github.com/espocrm/ext-sms-providers/releases).
 
-#### ext\pdf\generate
+## ext\pdf\generate
 
 `ext\pdf\generate(ENTITY_TYPE, ENTITY_ID, TEMPLATE_ID, [FILENAME])`
 
@@ -108,7 +108,7 @@ ext\email\send($emailId);
 
 Note, that this won't work for new records in before-create script because a record is not yet created. It will work in Workfows.
 
-#### ext\user\sendAccessInfo
+## ext\user\sendAccessInfo
 
 `ext\user\sendAccessInfo(USER_ID)`
 
