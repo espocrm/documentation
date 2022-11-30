@@ -21,19 +21,19 @@ Date and date-time values are represented as strings. E.g. `'2021-01-01'`, `'202
 * [datetime\closest](#datetimeclosest)
 
 
-#### datetime\today
+## datetime\today
 
 `datetime\today()`
 
 Returns today's date (w/o time).
 
-#### datetime\now
+## datetime\now
 
 `datetime\now()`
 
 Returns current datetime.
 
-#### datetime\format
+## datetime\format
 
 `datetime\format(VALUE, [TIMEZONE], [FORMAT])`
 
@@ -47,13 +47,13 @@ Examples:
 
 `datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
 
-#### datetime\date
+## datetime\date
 
 `datetime\date(VALUE, [TIMEZONE])`
 
 Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
-#### datetime\month
+## datetime\month
 
 `datetime\month(VALUE, [TIMEZONE])`
 
@@ -65,31 +65,31 @@ Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system
 
 Returns year. `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
-#### datetime\hour
+## datetime\hour
 
 `datetime\hour(VALUE, [TIMEZONE])`
 
 Returns hour (0-23). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
-#### datetime\minute
+## datetime\minute
 
 `datetime\minute(VALUE, [TIMEZONE])`
 
 Returns minute (0-59). `-1` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
-#### datetime\dayOfWeek
+## datetime\dayOfWeek
 
 `datetime\dayOfWeek(VALUE, [TIMEZONE])`
 
 Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIMEZONE is omitted, then system timezone is used.
 
-#### datetime\diff
+## datetime\diff
 
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)`
 
 Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. The result will be negative if VALUE_1 < VALUE_2.
 
-#### datetime\addMinutes
+## datetime\addMinutes
 
 `datetime\addMinutes(VALUE, MINUTES)`
 
@@ -99,13 +99,13 @@ Example:
 
 `$modifiedValue = datetime\addMinutes('2021-01-01 00:00', 10)`
 
-#### datetime\addHours
+## datetime\addHours
 
 `datetime\addHours(VALUE, HOURS)`
 
 Adds HOURS to datetime VALUE. HOURS can be negative. Returns a modified STRING value.
 
-#### datetime\addDays
+## datetime\addDays
 
 `datetime\addDays(VALUE, DAYS)`
 
@@ -113,7 +113,7 @@ Adds DAYS to date or datetime VALUE. DAYS can be negative.
 
 Example: `datetime\addDays(dateStart, 1)`
 
-#### datetime\addWeeks
+## datetime\addWeeks
 
 `datetime\addWeeks(VALUE, WEEKS)`
 
@@ -121,7 +121,7 @@ Adds WEEKS to date or datetime VALUE. WEEKS can be negative. Returns a modified 
 
 Example: `datetime\addWeeks(dateStart, 4)`
 
-#### datetime\addMonths
+## datetime\addMonths
 
 `datetime\addMonths(VALUE, MONTHS)`
 
@@ -129,7 +129,7 @@ Adds MONTHS to date or datetime VALUE. MONTHS can be negative. Returns a modifie
 
 Example: `datetime\addMonths(dateStart, 1)`
 
-#### datetime\addYears
+## datetime\addYears
 
 `datetime\addYears(VALUE, YEARS)`
 
@@ -137,13 +137,14 @@ Example: `datetime\addYears(dateStart, 1)`
 
 Adds YEARS to date or datetime VALUE. YEARS can be negative. Returns a modified STRING value.
 
-#### datetime\closest
+## datetime\closest
 
 `datetime\closest(VALUE, TYPE, TARGET, [IS_PAST], [TIMEZONE])`
 
 Returns the closest date or datetime to VALUE based on passed arguments.
 
-TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. IS_PAST means to find the closest in the past. If TIMEZONE is omitted, then default timezone is used.
+TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. 
+IS_PAST means to find the closest in the past. If TIMEZONE is omitted, then default timezone is used.
 
 Examples:
 
