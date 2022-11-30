@@ -1,7 +1,7 @@
 # Formula > Functions > Language
 
-* [language\translate](formula/language.md#languagetranslate)
-* [language\translateOption](formula/language.md#languagetranslateOption)
+* [language\translate](#languagetranslate)
+* [language\translateOption](#languagetranslateOption)
 
 #### language\translate
 
