@@ -223,14 +223,7 @@ Out-of-the-box functions are listed below.
 
 ### Env
 
-#### env\userAttribute
-`env\userAttribute(ATTRIBUTE)`
-
-Returns ATTRIBUTE of the current user.
-
-Example:
-
-`env\userAttribute('id')` - ID of the current user.
+* [env\userAttribute](formula/env.md#envuserattribute)
 
 ### Password
 
