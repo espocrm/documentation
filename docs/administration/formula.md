@@ -84,7 +84,7 @@ Available scalar types:
 ## Operators
 
 * `=` - assignment,
-* `??` - null coalescing (as of v7.1.0),
+* `??` - null coalescing (as of v7.1),
 * `||` - logical OR,
 * `&&` - logical AND,
 * `!` - logical NOT,
@@ -220,7 +220,6 @@ Out-of-the-box functions are listed below.
 * [record\relationColumn](formula/record.md#recordrelationcolumn)
 * [record\updateRelationColumn](formula/record.md#recordupdaterelationcolumn)
 
-
 ### Env
 
 * [env\userAttribute](formula/env.md#envuserattribute)
@@ -229,7 +228,6 @@ Out-of-the-box functions are listed below.
 
 * [password\generate](formula/password.md#passwordgenerate)
 * [password\hash](formula/password.md#passwordhash)
-
 
 ### Array
 
@@ -249,30 +247,13 @@ Out-of-the-box functions are listed below.
 * [object\set](formula/object.md#objectset)
 * [object\clear](formula/object.md#objectclear)
 * [object\has](formula/object.md#objecthas)
-* [object\clonedeep](formula/object.md#objectclonedeep)
-
+* [object\cloneDeep](formula/object.md#objectclonedeep)
 
 ### Language
 
-#### language\translate
+* [language\translate](formula/language.md#languagetranslate)
+* [language\translateOption](formula/language.md#languagetranslateOption)
 
-`language\translate(LABEL, [CATEGORY, SCOPE])`
-
-Translates a label to the language set as default. (as of v6.0.0)
-
-Example:
-
-`language\translate('passwordWillBeSent', 'messages', 'User')`
-
-#### language\translateOption
-
-`language\translateOption(OPTION, FIELD, [SCOPE])`
-
-Translates an option of a specific field to the language set as default. The field can be of the following types: Enum, Multi-enum, Checklist, Array, Varchar. (as of v6.0)
-
-Example:
-
-`language\translateOption('Customer', 'type', 'Account')`
 
 ### Json
 
