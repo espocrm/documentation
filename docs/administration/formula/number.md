@@ -15,11 +15,11 @@ Converts numeric VALUE into string formatted according to a specific format or d
 
 Examples:
 
-`number\format(2.666667, 2)` - results 2.67;
+`number\format(2.666667, 2)` – results 2.67;
 
-`number\format(1000, 2)` - results 1,000.00;
+`number\format(1000, 2)` – results 1,000.00;
 
-`number\format(10.1, 0)` - results 10.
+`number\format(10.1, 0)` – results 10.
 
 
 ## number\abs
