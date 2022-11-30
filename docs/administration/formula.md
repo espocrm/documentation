@@ -136,10 +136,10 @@ Out-of-the-box functions are listed below.
 
 ### General
 
-* [ifThenElse](formuila/general.md#ifthenelse)
-* [ifThen](formuila/general.md#ifthen)
-* [list](formuila/general.md#list)
-* [while](formuila/general.md#while)
+* [ifThenElse](formula/general.md#ifthenelse)
+* [ifThen](formula/general.md#ifthen)
+* [list](formula/general.md#list)
+* [while](formula/general.md#while)
 
 ### String
 
