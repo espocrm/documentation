@@ -3,7 +3,7 @@
 * [language\translate](#languagetranslate)
 * [language\translateOption](#languagetranslateOption)
 
-#### language\translate
+## language\translate
 
 `language\translate(LABEL, [CATEGORY, SCOPE])`
 
@@ -13,7 +13,7 @@ Example:
 
 `language\translate('passwordWillBeSent', 'messages', 'User')`
 
-#### language\translateOption
+## language\translateOption
 
 `language\translateOption(OPTION, FIELD, [SCOPE])`
 
