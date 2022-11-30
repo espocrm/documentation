@@ -1,5 +1,12 @@
 # Formula > Functions > Number
 
+* [number\format](#numberformat)
+* [number\abs](#numberabs)
+* [number\round](#numberround)
+* [number\floor](#numberfloor)
+* [number\ceil](#numberceil)
+* [number\randomInt](#numberrandomint)
+
 #### number\format
 
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])`
