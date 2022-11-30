@@ -2,7 +2,7 @@
 
 * [util\generateId](#utilgenerateid)
 
-#### util\generateId
+## util\generateId
 
 Generates a unique ID. Returns a string. (as of v6.1.3)
 
