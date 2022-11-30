@@ -95,9 +95,6 @@ Object 'filter' => 'active'
 
 Top-right menu for views (list, detail, edit, etc.).
 
-## relationshipPanels
-
-Parameters to be applied for specific relationship panels.
 
 ## sidePanels
 
@@ -110,8 +107,7 @@ Definitions of bottom-panels for views (list, detail, edit, etc.).
 
 ## relationshipPanels
 
-Relationship panels definitions.
-
+Parameters to be applied for specific relationship panels.
 
 Example:
 
@@ -119,7 +115,10 @@ Example:
 {
     "relationshipPanels": {
         "linkName": {
-            "view": "my-module:views/panels/my-panel"
+            "view": "my-module:views/panels/panel-view",
+            "recordListView": "my-module:views/record/list",
+            "rowActionsView": "my-module:views/record/row-actions/view",
+            "label": "Panel Label",
             "readOnly": false,
             "selectDisabled": false,
             "createDisabled": false,
@@ -130,7 +129,8 @@ Example:
             "createRequiredAccess": "read",
             "selectRequiredAccess": "edit",
             "selectPrimaryFilterName": "filterName",
-            "boolFilterList": ["onlyMy"]
+            "boolFilterList": ["onlyMy"],
+            "layout": "listLayoutName"
         }
     }
 }
