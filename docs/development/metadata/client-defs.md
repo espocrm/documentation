@@ -78,11 +78,38 @@ Example:
 
 ## filterList
 
-A list of primary (preset) filters.
+A list of primary filters.
+
+Exanmple:
+
+```json
+{
+    "filterList": [
+        {
+            "name": "planned"
+        },
+        {
+            "name": "held",
+            "style": "success"
+        },
+        {
+            "name": "todays"
+        }
+    ]
+}
+```
 
 ## boolFilterList
 
 A list of bool filters.
+
+Example:
+
+```json
+{
+    "boolFilterList": ["onlyMy"]
+}
+```
 
 ## defaultFilterData
 
@@ -93,8 +120,36 @@ Object 'filter' => 'active'
     
 ## menu
 
-Top-right menu for views (list, detail, edit, etc.).
+Top-right menu for views (list, detail, edit). Available types: *buttons*, *dropdown*.
 
+Example:
+
+```json
+{
+    "menu": {
+        "detail": {
+            "buttons": [
+                {
+                    "labelTranslation": "Campaign.links.trackingUrls",
+                    "link": "#CampaignTrackingUrl",
+                    "acl": "read",
+                    "aclScope": "CampaignTrackingUrl",
+                }
+            ],
+            "dropdown": [
+                {
+                    "label": "Some Action",
+                    "acl": "edit",
+                    "aclScope": "SomeScope",
+                    "action": "someAction"
+                }
+            ]
+        }
+    }
+}
+```
+
+See [more](../custom-buttons.md).
 
 ## sidePanels
 
@@ -217,7 +272,6 @@ Filters available in the dropdown. An array of strings.
 
 Additionals layouts for a scope.
     
-      
 ## massActionList
 
 Mass actions.
