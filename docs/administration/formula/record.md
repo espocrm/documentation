@@ -45,7 +45,8 @@ Examples:
 
 `record\count('Lead', 'status=', list('Assigned', 'In Process'))`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. 
+More info [below](#filter).
 
 #### record\findOne
 
@@ -61,7 +62,8 @@ Examples:
 
 `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. 
+More info [below](#filter).
 
 ## record\findRelatedOne
 
@@ -81,19 +83,18 @@ Examples:
 
 `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
-
-Note: Before version 5.9.0 ORDER_BY and ORDER arguments were mandatory.
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. 
+More info [below](#filter).
 
 ## record\findRelatedMany
 
 `record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, KEY1, VALUE1, KEY2, VALUE2 ...])`
 
-Returns an array of IDs of a related record that matches specific criteria. LIMIT is the max number of record. (as of v5.9.0)
+Returns an array of IDs of a related record that matches specific criteria. LIMIT is the max number of record.
 
 `record\findRelatedMany(ENTITY_TYPE, ID, LINK, LIMIT, [ORDER_BY, ORDER, FILTER])`
 
-Returns an array of IDs of a related record with an optional FILTER applied. (as of v5.9.0)
+Returns an array of IDs of a related record with an optional FILTER applied.
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
@@ -159,7 +160,7 @@ Example:
 
 `record\create(ENTITY_TYPE, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
 
-Creates a new record of entity type with attributes specified as key-value pairs. Returns id of the created record, or NULL if failure. (as of v5.9.0)
+Creates a new record of entity type with attributes specified as key-value pairs. Returns id of the created record, or NULL if failure.
 
 Examples:
 
@@ -169,7 +170,7 @@ Examples:
 
 `record\update(ENTITY_TYPE, ID, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
 
-Updates an existing record with attributes specified as key-value pairs. Returns TRUE if success, FALSE if failure. (as of v5.9.0)
+Updates an existing record with attributes specified as key-value pairs. Returns TRUE if success, FALSE if failure.
 
 Examples:
 
