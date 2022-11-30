@@ -136,12 +136,16 @@ Out-of-the-box functions are listed below.
 
 ### General
 
+[general](formula/general.md)
+
 * [ifThenElse](formula/general.md#ifthenelse)
 * [ifThen](formula/general.md#ifthen)
 * [list](formula/general.md#list)
 * [while](formula/general.md#while)
 
 ### String
+
+[string](formula/string.md)
 
 * [string\concatenate](formula/string.md#stringconcatenate)
 * [string\substring](formula/string.md#stringsubstring)
@@ -159,6 +163,8 @@ Out-of-the-box functions are listed below.
 
 
 ### Datetime
+
+[datetime](formula/datetime.md)
 
 * [datetime\today](formula/datetime.md#datetimetoday)
 * [datetime\now](formula/datetime.md#datetimenow)
@@ -178,17 +184,20 @@ Out-of-the-box functions are listed below.
 * [datetime\addYears](formula/datetime.md#datetimeaddyears)
 * [datetime\closest](formula/datetime.md#datetimeclosest)
 
-
 ### Number
 
-* [number\format](formula/datetime.md#numberformat)
-* [number\abs](formula/datetime.md#numberabs)
-* [number\round](formula/datetime.md#numberround)
-* [number\floor](formula/datetime.md#numberfloor)
-* [number\ceil](formula/datetime.md#numberceil)
-* [number\randomInt](formula/datetime.md#numberrandomint)
+[number](formula/number.md)
+
+* [number\format](formula/number.md#numberformat)
+* [number\abs](formula/number.md#numberabs)
+* [number\round](formula/number.md#numberround)
+* [number\floor](formula/number.md#numberfloor)
+* [number\ceil](formula/number.md#numberceil)
+* [number\randomInt](formula/number.md#numberrandomint)
 
 ### Entity
+
+[entity](formula/entity.md)
 
 * [entity\isNew](formula/entity.md#entityisnew)
 * [entity\isAttributeChanged](formula/entity.md#entityisattributechanged)
@@ -204,8 +213,9 @@ Out-of-the-box functions are listed below.
 * [entity\countRelated](formula/entity.md#entitycountrelated)
 * [entity\getLinkColumn](formula/entity.md#entitygetlinkcolumn)
 
-
 ### Record
+
+[record](formula/record.md)
 
 * [record\exists](formula/record.md#recordexists)
 * [record\count](formula/record.md#recordcount)
@@ -222,14 +232,20 @@ Out-of-the-box functions are listed below.
 
 ### Env
 
+[env](formula/env.md)
+
 * [env\userAttribute](formula/env.md#envuserattribute)
 
 ### Password
+
+[password](formula/password.md)
 
 * [password\generate](formula/password.md#passwordgenerate)
 * [password\hash](formula/password.md#passwordhash)
 
 ### Array
+
+[array](formula/array.md)
 
 * [array\includes](formula/array.md#arrayincludes)
 * [array\push](formula/array.md#arraypush)
@@ -242,6 +258,8 @@ Out-of-the-box functions are listed below.
 
 ### object
 
+[object](formula/object.md)
+
 * [object\create](formula/object.md#objectcreate)
 * [object\get](formula/object.md#objectget)
 * [object\set](formula/object.md#objectset)
@@ -251,16 +269,22 @@ Out-of-the-box functions are listed below.
 
 ### Language
 
+[language](formula/language.md)
+
 * [language\translate](formula/language.md#languagetranslate)
 * [language\translateOption](formula/language.md#languagetranslateOption)
 
 
 ### Json
 
+[json](formula/json.md)
+
 * [json\retrieve](formula/json.md#jsonretrieve)
 * [json\encode](formula/json.md#jsonencode)
 
 ### Ext
+
+[ext](formula/ext.md)
 
 * [ext\account\findByEmailAddressDomain](formula/ext.md##extaccountfindbyemailaddressdomain)
 * [ext\email\send](formula/ext.md#extemailsend)
@@ -271,6 +295,8 @@ Out-of-the-box functions are listed below.
 
 
 ### Util
+
+[util](formula/util.md)
 
 * [util\generateId](formula/util.md#utilgenerateid)
 
