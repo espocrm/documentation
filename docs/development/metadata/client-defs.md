@@ -133,7 +133,7 @@ Example:
                     "labelTranslation": "Campaign.links.trackingUrls",
                     "link": "#CampaignTrackingUrl",
                     "acl": "read",
-                    "aclScope": "CampaignTrackingUrl",
+                    "aclScope": "CampaignTrackingUrl"
                 }
             ],
             "dropdown": [
