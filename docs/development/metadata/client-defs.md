@@ -161,7 +161,7 @@ Example:
             "viewDisabled": false,
             "unlinkDisabled": false,
             "orderBy": "someField",
-            "orderDirection": "ASC",
+            "orderDirection": "asc",
             "createRequiredAccess": "read",
             "selectRequiredAccess": "edit",
             "selectPrimaryFilterName": "filterName",
@@ -207,6 +207,10 @@ Access (to a current entity type) required for selecting related records.
 ### filters
 
 Filters available in the dropdown. An array of strings.
+
+### orderDirection
+
+`"asc"` or `"desc"`.
 
 
 ## additionalLayouts
