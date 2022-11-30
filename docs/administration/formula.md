@@ -302,15 +302,20 @@ Out-of-the-box functions are listed below.
 
 ## Values
 
-* Strings. E.g. 'some string';
-* Integer numbers. E.g. 1, 100, 40300.
-* Float numbers. E.g. 5.2.
+* Strings. E.g. `'some string'`, `"some string"`.
+* Integer numbers. E.g. `1`, `100`, `40300`.
+* Float numbers. E.g. `5.2`.
+* Booleans. `true`, `false`.
+* Null. `null`.
 
 ## Variables
 
-It's possible to define custom variables in formula.
+Variables starets with the dollar sign.
 ```
+// Assign the value to the variable.
 $someVariableName = 'Test';
+
+// Assign the variable to the attribute (field).
 description = $test;
 ```
 
