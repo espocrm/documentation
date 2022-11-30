@@ -15,6 +15,10 @@ Defines a client record collection class. Optional.
 
 The default value: `'collection'`. Corresponds to the path `client/src/collection.js`.
 
+## model
+
+Defines a client record model class. Optional.
+
 ## acl
 
 Defines a client scope acl class. Optional.
@@ -55,7 +59,7 @@ Example:
 
 ## recordViews
 
-Record view classes. list, detail, edit, detailSmall, editSmall, kanban.
+Record view classes. list, detail, edit, detailQuick, editQuick, kanban, listRelated.
 
 Example:
 ```
