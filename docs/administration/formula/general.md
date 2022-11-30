@@ -5,7 +5,7 @@
 * [list](#list)
 * [while](#while)
 
-#### ifThenElse
+## ifThenElse
 
 `ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)`
 
@@ -49,7 +49,7 @@ $value = ifThenElse(
 )
 ```
 
-#### ifThen
+## ifThen
 
 `ifThen(CONDITION, CONSEQUENT)`
 
@@ -66,7 +66,7 @@ ifThenElse(
 )
 ```
 
-#### list
+## list
 
 `list(VALUE-1[, ... VALUE-N])` 
 
@@ -86,7 +86,7 @@ Example:
 teamsIds = list($teamId) // `['team-id']`
 ```
 
-#### while
+## while
 
 `while(CONDITION, STATEMENT)`
 
