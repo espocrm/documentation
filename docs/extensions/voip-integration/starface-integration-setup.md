@@ -64,3 +64,7 @@ Each user who wants to use Starface integration, should setup his access in the 
 Make sure that your users have the access to the entity 'Calls'. 
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
+
+## VoIP configuration for Docker containers
+
+To display pop-up windows for calls and correct working of the Starface VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#docker-starface-line-for-crontab).
