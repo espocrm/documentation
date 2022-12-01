@@ -106,6 +106,7 @@
   * [Starface server](extensions/voip-integration/starface-integration-setup.md)
   * [Twilio service](extensions/voip-integration/twilio-integration-setup.md)
   * [IexPBX server](extensions/voip-integration/iexpbx-integration-setup.md)
+  * [Docker container](extensions/voip-integration/docker-container.md)
   * [Customization](extensions/voip-integration/customization.md)
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
 
