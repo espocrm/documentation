@@ -46,6 +46,8 @@ Setup a cron job (scheduled task) to handle Starface Events (incoming/outgoing c
 * * * * * cd /var/www/html/espocrm; /usr/bin/php -f command.php voip Starface > /dev/null 2>&1
 ```
 
+For docker containers, see [here](#setting-up-cron-for-docker-container).
+
 ## How to setup Starface Integration for users
 
 Each user who wants to use Starface integration, should setup his access in the User’s Profile, under “VoIP Settings”. Please note that login and password should be to the Starface web interface, not to the SIP credentials. Also, the user can change some VoIP settings on this window.
@@ -61,10 +63,10 @@ Each user who wants to use Starface integration, should setup his access in the 
 
 ## Access control for users
 
-Make sure that your users have the access to the entity 'Calls'. 
+Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 
-## VoIP configuration for Docker containers
+## Setting up cron for Docker container
 
 To display pop-up windows for calls and correct working of the Starface VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#docker-starface-line-for-crontab).

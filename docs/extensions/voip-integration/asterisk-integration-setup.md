@@ -53,11 +53,14 @@ Fill in the connection details of your Asterisk server. To do this, go to the Ad
 * **Active Queue Numbers** – a list of queue phone numbers which should be determined by EspoCRM.
 
 #### Step 2:
+
 Setup a cron job (scheduled task) to handle Asterisk events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right section of your Asterisk settings. For linux-based OS, it looks like:
 
 ```
 * * * * * cd /var/www/html/espocrm; /usr/bin/php -f command.php voip Asterisk > /dev/null 2>&1
 ```
+
+For docker containers, see [here](#setting-up-cron-for-docker-container).
 
 
 ## How to setup Asterisk Integration for users
@@ -76,7 +79,7 @@ Each user who wants to use Asterisk integration, should setup his access in the 
 
 ## Access control for users
 
-Make sure that your users have the access to the entity 'Calls'. 
+Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 
@@ -89,6 +92,6 @@ Note: Additional phone numbers are used for incoming calls only. Outgoing calls 
 
 * **Phone numbers formats:** +442031112233, 00442031112233, 02031112233.
 
-## VoIP configuration for Docker containers
+## Setting up cron for Docker container
 
 To display pop-up windows for calls and correct working of the Asterisk VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#docker-asterisk-line-for-crontab).
