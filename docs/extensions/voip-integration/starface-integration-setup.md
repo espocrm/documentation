@@ -69,4 +69,4 @@ Make sure that your users have the access to the entity 'Calls'.
 
 ## Setting up cron for Docker container
 
-To display pop-up windows for calls and correct working of the Starface VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#docker-starface-line-for-crontab).
+To display pop-up windows for calls and correct working of the Starface VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#starface-crontab-line).
