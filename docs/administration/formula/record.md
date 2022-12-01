@@ -45,7 +45,7 @@ Examples:
 
 `record\count('Lead', 'status=', list('Assigned', 'In Process'))`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. 
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More info [below](#filter).
 
 ## record\findOne
@@ -62,7 +62,7 @@ Examples:
 
 `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. 
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More info [below](#filter).
 
 ## record\findRelatedOne
@@ -83,7 +83,7 @@ Examples:
 
 `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. 
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More info [below](#filter).
 
 ## record\findRelatedMany
@@ -104,7 +104,7 @@ Examples:
 
 `record\findRelatedOne('Account', accountId, 'oppotunities', 3, 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More info [below](#filter).
 
 This function can be utilized for copying related records from one record to another. Example:
 

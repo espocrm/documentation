@@ -1,7 +1,7 @@
 # Formula > Functions > Entity
 
-Functions of the *Entity* group operate with a target record. There can be only one target record available in formula-script context. 
-For *Before Update Script*, the target record is the record that is currently updated. For Workflow's *Create Record* action, 
+Functions of the *Entity* group operate with a target record. There can be only one target record available in formula-script context.
+For *Before Update Script*, the target record is the record that is currently updated. For Workflow's *Create Record* action,
 the target record is the record is being created. For Workflow's conditions, the target record is the target record of the workflow rule.
 
 * [entity\isNew](#entityisnew)
@@ -125,7 +125,7 @@ Example:
 
 `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../user-guide/reports.md) as a filter. More info [below](#filter).
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More info [below](#filter).
 
 ## entity\countRelated
 
@@ -137,7 +137,7 @@ Example:
 
 `entity\countRelated('opportunities', 'open')`
 
-It's possible to apply a [list report](../user-guide/reports.md) as a filter. More info about filters [below](#filter).
+It's possible to apply a [list report](../../user-guide/reports.md) as a filter. More info about filters [below](#filter).
 
 ## entity\getLinkColumn
 
