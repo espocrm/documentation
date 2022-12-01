@@ -4,6 +4,8 @@
 
 Oauth authentication is available in [Outlook Integration](https://www.espocrm.com/extensions/outlook-integration) extension. It provides a secure authentication for Office 365 accounts. With this extension, you won’t need to store your Outlook password in EspoCRM.
 
+For Office 365 accounts using the integration is the only option to receive and send emails.
+
 Note: Requires EspoCRM v5.9.3 or later.
 
 ## Setting-up email account
