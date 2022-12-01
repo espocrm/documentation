@@ -343,75 +343,75 @@ This can be achieved by mounting the PHP configuration file and restaring the co
 
 1. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
-    ```
-    cd /var/www/espocrm
-    ```
+```
+cd /var/www/espocrm
+```
 
 2. Create the PHP configuration file:
 
-    ```
-    mkdir -p data/php; \
-    nano data/php/espocrm.ini
-    ```
+```
+mkdir -p data/php; \
+nano data/php/espocrm.ini
+```
 
     with the content:
 
-    ```
-    expose_php = Off
-    display_errors = Off
-    display_startup_errors = Off
-    log_errors = On
-    memory_limit=256M
-    max_execution_time=180
-    max_input_time=180
-    post_max_size=30M
-    upload_max_filesize=30M
-    date.timezone=UTC
-    ```
+```
+expose_php = Off
+display_errors = Off
+display_startup_errors = Off
+log_errors = On
+memory_limit=256M
+max_execution_time=180
+max_input_time=180
+post_max_size=30M
+upload_max_filesize=30M
+date.timezone=UTC
+```
 
     then press `Ctrl + 0` and `Ctrl + X`
 
 3. Mount the created PHP configuration file to the container:
 
-    ```
-    nano docker-compose.yml
-    ```
+```
+nano docker-compose.yml
+```
 
     add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as dispalyed below:
 
-    ```
-    espocrm:
-      ...
-      volumes:
-        - ./data/espocrm:/var/www/html
-        - ./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini
-      ...
-    ```
+```
+espocrm:
+  ...
+  volumes:
+    - ./data/espocrm:/var/www/html
+    - ./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini
+  ...
+```
 
     then press `Ctrl + 0` and `Ctrl + X`
 
 4. Restart the container to apply the changes:
 
-    ```
-    ./command.sh restart espocrm
-    ```
+```
+./command.sh restart espocrm
+```
 
 ## Modify Nginx settings
 
 1. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
-    ```
-    cd /var/www/espocrm
-    ```
+```
+cd /var/www/espocrm
+```
 
 2. Edit the file `./data/nginx/conf.d/default.conf`
 
-    ```
-    nano ./data/nginx/conf.d/default.conf
-    ```
+```
+nano ./data/nginx/conf.d/default.conf
+```
 
 3. Restart the container to apply the changes:
 
-    ```
-    ./command.sh restart espocrm-nginx
-    ```
+```
+./command.sh restart espocrm-nginx
+```
