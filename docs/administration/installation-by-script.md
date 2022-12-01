@@ -91,6 +91,108 @@ Update the `command.sh` for the existing instllation. Ex. `--command`.
 
 A path for the backup. Ex. `--backupPath="/backup"`.
 
+## Server management
+
+The operation of EspoCRM consists of several services, such as `nginx`, `mysql`, `daemon`.
+
+In order to update the command tool, see [update the command.sh](#update-the-commandsh).
+
+### Status of services
+
+```
+/var/www/espocrm/command.sh status
+```
+
+### Restart services
+
+```
+/var/www/espocrm/command.sh restart
+```
+
+### Start services
+
+```
+/var/www/espocrm/command.sh start
+```
+
+### Build and start services
+
+In order to apply changes in `docker-compose.yml`.
+
+```
+/var/www/espocrm/command.sh build
+```
+
+### Stop services
+
+```
+/var/www/espocrm/command.sh stop
+```
+
+### EspoCRM rebuild
+
+```
+/var/www/espocrm/command.sh rebuild
+```
+
+### EspoCRM upgrade
+
+```
+/var/www/espocrm/command.sh upgrade
+```
+
+### EspoCRM logs
+
+```
+/var/www/espocrm/command.sh logs
+```
+
+### Backup
+
+Create a full backup of EspoCRM.
+
+```
+/var/www/espocrm/command.sh backup "BACKUP_DIRECTORY"
+```
+
+An example: `/var/www/espocrm/command.sh backup /var/www/espocrm-backup`.
+
+### Restore
+
+Restore the backup created by the `backup` command.
+
+```
+/var/www/espocrm/command.sh restore "BACKUP_PATH"
+```
+
+An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2023-01-01_142051.tar.gz"`.
+
+### Clean
+
+Delete old and unnecessary files.
+
+```
+/var/www/espocrm/command.sh clean
+```
+
+### Import the SQL dump
+
+Import the database by the SQL dump created by `mysqldump`, `phpMyAdmin`, etc.
+
+```
+/var/www/espocrm/command.sh import-db "PATH/DB.sql"
+```
+
+An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/db.sql"`.
+
+### Help
+
+In order to display a list of available commands.
+
+```
+/var/www/espocrm/command.sh help
+```
+
 ## Data
 
 ### Structure
@@ -211,108 +313,6 @@ cp -rp /var/www/espocrm-old/data/mysql /var/www/espocrm/data
 ```
 
 7. Login as administrator and update your new `Site URL` in Administration > Settings.
-
-## Server management
-
-The operation of EspoCRM consists of several services, such as `nginx`, `mysql`, `daemon`.
-
-In order to update the command tool, see [update the command.sh](#update-the-commandsh).
-
-### Status of services
-
-```
-/var/www/espocrm/command.sh status
-```
-
-### Restart services
-
-```
-/var/www/espocrm/command.sh restart
-```
-
-### Start services
-
-```
-/var/www/espocrm/command.sh start
-```
-
-### Build and start services
-
-In order to apply changes in `docker-compose.yml`.
-
-```
-/var/www/espocrm/command.sh build
-```
-
-### Stop services
-
-```
-/var/www/espocrm/command.sh stop
-```
-
-### EspoCRM rebuild
-
-```
-/var/www/espocrm/command.sh rebuild
-```
-
-### EspoCRM upgrade
-
-```
-/var/www/espocrm/command.sh upgrade
-```
-
-### EspoCRM logs
-
-```
-/var/www/espocrm/command.sh logs
-```
-
-### Backup
-
-Create a full backup of EspoCRM.
-
-```
-/var/www/espocrm/command.sh backup "BACKUP_DIRECTORY"
-```
-
-An example: `/var/www/espocrm/command.sh backup /var/www/espocrm-backup`.
-
-### Restore
-
-Restore the backup created by the `backup` command.
-
-```
-/var/www/espocrm/command.sh restore "BACKUP_PATH"
-```
-
-An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2023-01-01_142051.tar.gz"`.
-
-### Clean
-
-Delete old and unnecessary files.
-
-```
-/var/www/espocrm/command.sh clean
-```
-
-### Import the SQL dump
-
-Import the database by the SQL dump created by `mysqldump`, `phpMyAdmin`, etc.
-
-```
-/var/www/espocrm/command.sh import-db "PATH/DB.sql"
-```
-
-An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/db.sql"`.
-
-### Help
-
-In order to display a list of available commands.
-
-```
-/var/www/espocrm/command.sh help
-```
 
 ## Logs
 
