@@ -354,7 +354,7 @@ mkdir -p data/php; \
 nano data/php/espocrm.ini
 ```
 
-    with the content:
+with the content:
 
 ```
 expose_php = Off
@@ -369,7 +369,7 @@ upload_max_filesize=30M
 date.timezone=UTC
 ```
 
-    then press `Ctrl + 0` and `Ctrl + X`
+then press `Ctrl + 0` and `Ctrl + X`
 
 3. Mount the created PHP configuration file to the container:
 
@@ -377,7 +377,7 @@ date.timezone=UTC
 nano docker-compose.yml
 ```
 
-    add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as dispalyed below:
+add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as dispalyed below:
 
 ```
 espocrm:
@@ -388,7 +388,7 @@ espocrm:
   ...
 ```
 
-    then press `Ctrl + 0` and `Ctrl + X`
+then press `Ctrl + 0` and `Ctrl + X`
 
 4. Restart the container to apply the changes:
 
