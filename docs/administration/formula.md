@@ -372,7 +372,7 @@ More info about entity types [here](terms-and-naming.md#entity-type).
 
 #### FILTER
 
-A name of a filter pre-defined in the system. Usually, it is defined in [SelectManager class](../development/select-manager.md). Developers can define own filters in a custom SelectManager class.
+A name of a filter pre-defined in the system. Developers can define own [filters](../development/metadata/select-defs.md#primaryfilterclassnamemap).
 
 For non-developers, it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then, you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from the URL.
 
