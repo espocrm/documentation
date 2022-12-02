@@ -33,7 +33,7 @@ Returns a count of records with specified criteria.
 
 `record\count(ENTITY_TYPE, [FILTER])`
 
-Returns a count of records with an optional FILTER applied. More info about filters [below](#filter).
+Returns a count of records with an optional FILTER applied. More [info](../formula.md#filter).
 
 Examples:
 
@@ -63,7 +63,7 @@ Examples:
 `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
-More info [below](#filter).
+More [info](../formula.md#filter).
 
 ## record\findRelatedOne
 
@@ -84,7 +84,7 @@ Examples:
 `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
-More info [below](#filter).
+More [info](../formula.md#filter).
 
 ## record\findRelatedMany
 
@@ -104,7 +104,7 @@ Examples:
 
 `record\findRelatedOne('Account', accountId, 'oppotunities', 3, 'createdAt', 'desc', 'open')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More info [below](#filter).
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More [info](../formula.md#filter).
 
 This function can be utilized for copying related records from one record to another. Example:
 
@@ -136,7 +136,7 @@ Relates two records.
 
 `record\relate(ENTITY_TYPE, ID, LINK, LIST_OF_IDS)`
 
-Links a record with multiple records. (as of v5.9)
+Links a record with multiple records.
 
 Examples:
 
