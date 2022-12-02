@@ -125,7 +125,7 @@ Example:
 
 `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More info [below](#filter).
+FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More [info](../formula.md#filter).
 
 ## entity\countRelated
 
@@ -137,7 +137,7 @@ Example:
 
 `entity\countRelated('opportunities', 'open')`
 
-It's possible to apply a [list report](../../user-guide/reports.md) as a filter. More info about filters [below](#filter).
+It's possible to apply a [list report](../../user-guide/reports.md) as a filter. More [info](../formula.md#filter).
 
 ## entity\getLinkColumn
 
