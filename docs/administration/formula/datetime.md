@@ -59,7 +59,7 @@ Returns date of the month (1-31). `0` if VALUE is empty. If TIMEZONE is omitted,
 
 Returns month (1-12). `0` if VALUE is empty. If TIMEZONE is omitted, then system timezone is used.
 
-#### datetime\year
+## datetime\year
 
 `datetime\year(VALUE, [TIMEZONE])`
 
