@@ -66,17 +66,20 @@ $entityManager->saveEntity($entity);
 With options:
 
 ```php
-$options = [
-    'skipHooks' => true, // skip all hooks; workflows, formula will be ignored
-    'silent' => true, // workflows will be ignored, modified fields won't be changed
-    'skipCreatedBy' => true, // createdBy won't be set with current user
-    'skipModifiedBy' => true, // modifiedBy won't be set with current user
-    'createdById' => true, // override createdBy
-    'modifiedById' => true, // override modifiedBy
-];
-
-$entityManager->saveEntity($entity, $options);
+$entityManager->saveEntity($entity, [
+    \Espo\Core\ORM\Repository\SaveOption::SILENT => true,
+]);
 ```
+
+Options:
+
+* skipHooks – skip all hooks; workflows, formula will be ignored;
+* silent – workflows will be ignored, modified fields won't be change;
+* skipAll – skip all additional processing;
+* skipCreatedBy – createdBy won't be set with current user;
+* skipModifiedBy – modifiedBy won't be set with current user;
+* createdById – override createdBy;
+* modifiedById – override modifiedBy.
 
 ### Create and store entity
 
