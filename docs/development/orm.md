@@ -149,7 +149,7 @@ $attributeChanged = $entity->isAttributeChanged('attributeName');
 ### Get all attribute values
 
 ```php
-$valueMap = $entity->getValueMap(); // StdClass
+$valueMap = $entity->getValueMap(); // stdClass
 ```
 
 ### Delete from DB
