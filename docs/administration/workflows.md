@@ -229,7 +229,7 @@ Quotes/Sales Orders/Invoices:
 
 Opportunities:
 
-* *Convert Currency* (as of v5.7.0)
+* *Convert Currency*
 
 Contacts/Leads/Accounts:
 
@@ -237,7 +237,7 @@ Contacts/Leads/Accounts:
 
 Users:
 
-* *Generate Password* – generates a new password for a user and sends it to their email address (since version 5.7.0)
+* *Generate Password* – generates a new password for a user and sends it to their email address
 
 Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
 
@@ -274,7 +274,7 @@ Available placeholders:
 
 #### Handling HTTP response
 
-Available as of Advanced Pack v2.6.0.
+*As of v2.6.0*
 
 A response body of a sent HTTP request will be stored in the formula variable `_lastHttpResponseBody`. This variable can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
 
@@ -291,7 +291,7 @@ Note: Within a BPM process *$_lastHttpResponseBody* variable is available only w
 
 ### Execute Formula Script
 
-As of Advanced Pack v2.6.0.
+*As of v2.6.0*
 
 Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next workflow actions or BPM process.
 
