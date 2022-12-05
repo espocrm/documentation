@@ -30,9 +30,11 @@ Fetches an attribute value of a process record.
 
 ### bpm\startProcess
 
+*As of v2.5.2*
+
 `bpm\startProcess(FLOWCHART_ID, TARGET_TYPE, TARGET_ID, [ELEMENT_ID])`
 
-Starts a process. Available since Advanced Pack v2.5.2.
+Starts a process.
 
 Example:
 
