@@ -8,7 +8,7 @@ How signals are broadcasted:
 
 * There are set of standard signals which are broadcasted upon specific events in the application. These *built-in signals* are listed below in the article.
 * It's possible to broadcast [custom signals](bpm-events.md#signal-intermediate-event-throwing) in a BPM process.
-* It's possible to broadcast custom signals using the [formula function](bpm-formula.md#bpmbroadcastsignal) `bpm\broadcastSignal(SIGNAL_NAME)` (since v2.7.1).
+* It's possible to broadcast custom signals using the [formula function](bpm-formula.md#bpmbroadcastsignal) `bpm\broadcastSignal(SIGNAL_NAME)` (as of v2.7.1).
 * It's possible to broadcast custom signals via PHP code.
 
 There are two types of signals:
