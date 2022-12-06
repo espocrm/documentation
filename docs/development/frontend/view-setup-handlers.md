@@ -62,6 +62,7 @@ define('custom:some-handler', [], function () {
         },
     });
 
+    // Establish event support.
     _.extend(Handler.prototype, Backbone.Events);
 
     return Handler;
