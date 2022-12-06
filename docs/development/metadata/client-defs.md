@@ -309,3 +309,7 @@ If true, it will be possible to post internal posts in the stream. Internal post
 ## isExpandedByDefault
 
 Actual for category scopes (e.g. DocumentFolder). If true, then by default it will be in expanded mode.
+
+## dynamicLogic
+
+[Dynamic logic](../administration/dynamic-logic.md) definitions making a form dynamic.
