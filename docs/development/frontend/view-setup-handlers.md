@@ -20,6 +20,7 @@ In clientDefs:
 ```
 
 Can be defined:
+
 * for scope (clientDefs > scope name)
 * globally (clientDefs > Global)
 
