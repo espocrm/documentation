@@ -42,7 +42,8 @@ For workflow rules with this trigger type, it's a common practice to have a cond
 
 ### Manual
 
-*As if v2.12*
+*As of v2.12*
+*For EspoCRM v7.0 and greater*
 
 Triggered manually by a user by clicking a button (or a dropdown menu item) on the record detail view.
 
