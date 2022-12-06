@@ -30,7 +30,7 @@ class MyParam
     {
     }
     
-    public function get(): int
+    public function get(): mixed
     {
         // Value fetching logic.
         // Your value can be a scalar, array or stdClass.
