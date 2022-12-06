@@ -1,7 +1,5 @@
 # App Params
 
-*As of v5.8*
-
 App params are returned by backend once a user logged in. You can use these params in frontend. For example, a build-in param — the list of entity types available for printing to PDF.
 
 ## Custom app params
