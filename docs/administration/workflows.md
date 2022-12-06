@@ -4,10 +4,10 @@ Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extens
 
 Workflows automate your business process in an easy way. You can access workflows from Administration panel. To create a workflow rule you need to define:
 
-* Target Entity – what entity type a workflow is applied to;
-* Trigger Type – when a workflow will be triggered;
-* Conditions – conditions need to be met to trigger a workflow;
-* Actions – what to do if a workflow is triggered.
+* Target Entity – what entity type the workflow is applied to;
+* Trigger Type – how the workflow will be triggered;
+* Conditions – conditions need to be met to trigger the workflow;
+* Actions – what to do if the workflow is triggered.
 
 In this article:
 
@@ -31,6 +31,24 @@ Triggered only when an existing record is updated. If specified conditions are m
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
 
 For workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed, then execute some actions.
+
+### Manual
+
+*As if v2.12*
+
+Triggered manually by a user by clicking a button (or a dropdown menu item) on the record detail view.
+
+The ability to define:
+
+* an element type (a button or a dropdown item);
+* a label text;
+* teams allowed to run the workflow;
+* dynamic-logic defining conditions making a button/menu-item visible;
+* access to the record required to be able to run the workflow (read, edit, admin).
+
+Limitations:
+
+* portal users are not allowed to run manual workflows.
 
 ### Scheduled
 
