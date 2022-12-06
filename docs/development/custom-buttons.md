@@ -251,5 +251,9 @@ Create a language file `custom/Espo/Custom/Resources/i18n/en_US/Meeting.json`:
 
 Clear cache.
 
-You can use *Mass Action* framework to handle mass actions in the back-end. Available since v6.2.0. Send a POST request to `MassAction` URL with data passed into the action method.
+You can use *Mass Action* framework to handle mass actions in the back-end. Available as of v6.2. Send a POST request to the `MassAction` endpoint with data passed to the action method.
+
+## See more
+
+As of Advanced Pack v2.12 it's possible to create buttons and dropdown items running workflow actions. A button can be configured to be visible only if specific conditions are met.
 
