@@ -32,7 +32,8 @@ class MyParam
     
     public function get(): int
     {
-        // ...
+        // Value fetching logic.
+        // Your param can be a scalar, array or stdClass.
 
         return $someValue;
     }
@@ -40,7 +41,7 @@ class MyParam
 
 Clear cache.
 
-In frontend in *view* you can access your parameter the following way:
+In the fron-tend in *view* you can access your parameter the following way:
 
 ```js
     this.getHelper().getAppParam('myParam');
