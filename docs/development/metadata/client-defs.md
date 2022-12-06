@@ -312,7 +312,7 @@ Actual for category scopes (e.g. DocumentFolder). If true, then by default it wi
 
 ## dynamicLogic
 
-[Dynamic logic](../administration/dynamic-logic.md) definitions making a form dynamic.
+[Dynamic logic](../../administration/dynamic-logic.md) definitions making a form dynamic.
 
 ```json
 {
