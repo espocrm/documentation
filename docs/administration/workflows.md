@@ -51,7 +51,7 @@ The ability to define:
 * an element type (a button or a dropdown item);
 * a label text;
 * teams allowed to run the workflow;
-* dynamic-logic defining conditions making a button/menu-item visible;
+* dynamic-logic conditions that make a button/menu-item available;
 * access to the record required to be able to run the workflow (read, edit, admin).
 
 Limitations:
