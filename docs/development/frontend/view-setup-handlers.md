@@ -10,11 +10,13 @@ In clientDefs:
 {
     "viewSetupHandlers": {
         "list": [
+            "__APPEND__",
             "custom:some-handler-1"
-         ],
+        ],
         "record/search": [
+            "__APPEND__",
             "custom:some-handler-2"
-         ]
+        ]
     }
 }
 ```
@@ -36,6 +38,8 @@ The following types are supported:
 * record/detail
 * record/edit
 * record/kanban
+
+Important: The `*__APPEND__*` element is needed in the beginning of arrays to establish extending of existing items that can be defined by other modules.
 
 Handler example:
 
