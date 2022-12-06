@@ -33,7 +33,7 @@ class MyParam
     public function get(): int
     {
         // Value fetching logic.
-        // Your param can be a scalar, array or stdClass.
+        // Your value can be a scalar, array or stdClass.
 
         return $someValue;
     }
