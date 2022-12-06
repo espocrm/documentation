@@ -24,7 +24,7 @@
   * [Entity Manager: entities, fields, relationships](administration/entity-manager.md)
   * [Fields](administration/fields.md)
   * [Layouts](administration/layout-manager.md)
-  * [Dynamic forms](administration/dynamic-logic.md)
+  * [Dynamic Logic](administration/dynamic-logic.md)
 * [Users](administration/users-management.md)
 * [Roles (access control)](administration/roles-management.md)
 * [Email administration](administration/emails.md)
