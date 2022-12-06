@@ -22,7 +22,7 @@ Create a file `custom/Espo/Custom/Core/AppParams/MyParam.php`:
 <?php
 namespace Espo\Custom\Core\AppParams;
 
-// As of v7.2 recommended to implement the \Espo\Tools\App\AppParam interface.
+// As of v7.2 it's recommended to implement the \Espo\Tools\App\AppParam interface.
 
 class MyParam
 {
