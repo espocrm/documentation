@@ -1,6 +1,6 @@
 # View Setup Handlers
 
-Available as of v7.0.
+*As of v7.0*
 
 ViewSetupHandlers framework provides the ability to customize existing views w/o extending. Multiple handlers can be attached to the view.
 
@@ -21,7 +21,7 @@ In clientDefs:
 
 Can be defined:
 
-* for scope (clientDefs > scope name)
+* for a scope (clientDefs > {ScopeName})
 * globally (clientDefs > Global)
 
 Handlers are processed in the `setup` method of the view.
