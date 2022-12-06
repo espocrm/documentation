@@ -18,6 +18,14 @@ In this article:
 
 ## Trigger types
 
+* [After record created](#after-record-created)
+* [After record updated](#after-record-updated)
+* [After record saved](#after-record-saved)
+* [Manual](#manual)
+* [Scheduled](#scheduled)
+* [Sequential](#sequential)
+* [Signal](#signal)
+
 ### After record created
 
 Triggered only when a new record is created. If specified conditions are met, then actions will be executed.
