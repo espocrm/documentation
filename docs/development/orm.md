@@ -590,9 +590,10 @@ $meetingList = $entityManager
         'MeetingUser', // meeting_user table
         'meetingUser', // alias
         [
-            'meetingUser.meetingId:' => 'id', // join condition
             // Colon indicates that the right part is not a value.
             // It translates to `meetingUser.meeting_id = meeting.id`.
+            'meetingUser.meetingId:' => 'id', // join condition
+            'meetingUser.deleted' => false, // important
         ],
     )
     ->where([
@@ -616,7 +617,7 @@ $query = $entityManager
         'meetingUser', // alias
         [
             'meetingUser.meetingId:' => 'id', // join condition
-            'meetingUser.deleted' => false,
+            'meetingUser.deleted' => false, // important
         ],
     )
     ->where([
@@ -624,6 +625,8 @@ $query = $entityManager
     ])
     ->find();
 ```
+
+Important: When joining by a table name (upper case is used), `'deleted' => false` filter is not applied implicitly. You need to provide it explicitly.
 
 
 ### Group By
