@@ -33,6 +33,7 @@ For example, a user belongs to the team 'Sales'. That team has a single role 'Sa
 The 'Salesman' role is defined in the following way:
 
 Lead:
+
 ```
 create – yes
 read – team
@@ -42,6 +43,7 @@ stream – team
 ```
 
 Opportunity:
+
 ```
 create – yes
 read – team
@@ -50,15 +52,16 @@ delete – no
 stream – team
 ```
 
-Users will be able to read only those leads and opportunities which belong to the 'Sales Department' team (*Teams* field).
-The users will be able to edit only those leads and opportunities which they are assigned to or those they have created.
+Users will be able to read only those leads and opportunities which belong to the 'Sales' team (the *Teams* field of the User).
+The users will be able to edit only those leads and opportunities which they are assigned.
 The users won't be able to remove any leads or opportunities.
 
-We want to give more rights to a certain user who holds a sales manager position in the company. This employee must have the ability to read/edit/delete all records from the 'Sales' team. The user should belong to our 'Sales' team. But we need to create a new role 'Sales Manager' and select this role for that user in *Roles* field.
+We want to give more rights to a certain user who holds a sales manager position in the company. This employee must have the ability to read/edit/delete all records from the 'Sales' team. The user should be in the 'Sales' team. We need to create a new role 'Sales Manager' and select this role for that user (in the *Roles* field).
 
 The 'Sales Manager' role is defined in the following way:
 
 Lead:
+
 ```
 create - yes
 read – team
@@ -68,6 +71,7 @@ stream - team
 ```
 
 Opportunity:
+
 ```
 create – yes
 read – team
