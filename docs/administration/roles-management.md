@@ -52,7 +52,7 @@ delete – no
 stream – team
 ```
 
-Users of the 'Sales' team will be able to read only those leads/opportunities that belong to the 'Sales' team.
+Users of the 'Sales' team will be able to read only those leads/opportunities that belong to the 'Sales' team (through the *Teams* field of a record).
 The users will be able to edit only those leads/opportunities which they are assigned to.
 The users won't be able to remove any leads/opportunities.
 
@@ -98,7 +98,7 @@ Allows to restrict the ability for users to view activities, calendar and stream
 
 Defines access to portal information, the ability to post messages to portal users.
 
-Users with the Portal Permission can manage followers of a specific record (since v6.2.0). Only portal users can be managed.
+Users with the Portal Permission can manage followers of a specific record (as of v7.0). Only portal users can be managed.
 
 ### Group Email Account Permission
 
