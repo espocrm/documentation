@@ -28,7 +28,7 @@ By default, users have minimal access. You need to assign roles to grant users s
 
 ## Example
 
-For example, a user belongs to the team 'Sales'. That team has a single role 'Salesman'. So, all users from this team will obtain the 'Salesman' role (as all team roles are automatically applied to users of the team).
+We have a team 'Sales'. That team has a single role 'Salesman'. All users from this team will obtain the 'Salesman' role (as all team roles are automatically applied to users of the team).
 
 The 'Salesman' role is defined in the following way:
 
