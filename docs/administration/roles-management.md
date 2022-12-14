@@ -56,7 +56,7 @@ Users of the 'Sales' team:
 
 * Can create new leads/opportunities.
 * Are able to read only those leads/opportunities that are related to the 'Sales' team (through the *Teams* field of a record).
-* Are able to edit only those leads/opportunities which they are assigned to.
+* Are able to edit only those leads/opportunities that they are assigned to.
 * Can't remove any lead/opportunity.
 * Have access to the stream of leads/opportunities that are related to the 'Sales' team.
 
