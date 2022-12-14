@@ -28,7 +28,7 @@ By default, users have minimal access. You need to assign roles to grant users s
 
 ## Example
 
-We have a team 'Sales'. That team has a single role 'Salesman'. All users from this team will obtain the 'Salesman' role (as all team roles are automatically applied to users of the team).
+We have a team 'Sales'. That team has a single role 'Salesman' (the *Roles* field of the Team). All users from this team will obtain the 'Salesman' role (as all team roles are automatically applied to users of the team).
 
 The 'Salesman' role is defined in the following way:
 
@@ -60,7 +60,7 @@ Users of the 'Sales' team:
 * Can't remove any lead/opportunity.
 * Have access to the stream of leads/opportunities that are related to the 'Sales' team.
 
-We want to give more rights to a certain user who holds a sales manager position in the company. This employee needs to have the ability to read/edit/delete all records related to the 'Sales' team. We need to add that user to the 'Sales' team. We also need to create a new role 'Sales Manager' and select this role for that user (the *Roles* field of the *User*).
+We want to give more rights to a certain user who holds a sales manager position in the company. This employee needs to have the ability to read/edit/delete all records related to the 'Sales' team. We need to add that user to the 'Sales' team. We also need to create a new role 'Sales Manager' and select this role for that user (the *Roles* field of the User).
 
 The 'Sales Manager' role is defined in the following way:
 
