@@ -52,7 +52,7 @@ delete – no
 stream – team
 ```
 
-Users will be able to read only those leads/opportunities which belong to the 'Sales' team (the *Teams* field of the User).
+Users of the 'Sales' team will be able to read only those leads/opportunities that belong to the 'Sales' team.
 The users will be able to edit only those leads/opportunities which they are assigned to.
 The users won't be able to remove any leads/opportunities.
 
