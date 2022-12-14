@@ -56,7 +56,7 @@ Users of the 'Sales' team will be able to read only those leads/opportunities th
 The users will be able to edit only those leads/opportunities which they are assigned to.
 The users won't be able to remove any leads/opportunities.
 
-We want to give more rights to a certain user who holds a sales manager position in the company. This employee must have the ability to read/edit/delete all records from the 'Sales' team. We need to add that user to the 'Sales' team. We also need to create a new role 'Sales Manager' and select this role for that user (in the *Roles* field).
+We want to give more rights to a certain user who holds a sales manager position in the company. This employee must have the ability to read/edit/delete all records from the 'Sales' team. We need to add that user to the 'Sales' team. We also need to create a new role 'Sales Manager' and select this role for that user (the *Roles* field of the *User*).
 
 The 'Sales Manager' role is defined in the following way:
 
