@@ -52,9 +52,13 @@ delete – no
 stream – team
 ```
 
-Users of the 'Sales' team will be able to read only those leads/opportunities that are related to 'Sales' team (through the *Teams* field of a record).
-The users will be able to edit only those leads/opportunities which they are assigned to.
-The users won't be able to remove any leads/opportunities.
+Users of the 'Sales' team:
+
+* Can create new leads/opportunities.
+* Are able to read only those leads/opportunities that are related to the 'Sales' team (through the *Teams* field of a record).
+* Are able to edit only those leads/opportunities which they are assigned to.
+* Are able to remove any leads/opportunities.
+* Have access to the stream of leads/opportunities that are related to the 'Sales' team.
 
 We want to give more rights to a certain user who holds a sales manager position in the company. This employee needs to have the ability to read/edit/delete all records related to the 'Sales' team. We need to add that user to the 'Sales' team. We also need to create a new role 'Sales Manager' and select this role for that user (the *Roles* field of the *User*).
 
