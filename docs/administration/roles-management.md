@@ -26,6 +26,16 @@ By default, users have minimal access. You need to assign roles to grant users s
 * Delete – the ability to remove records
 * Stream – the ability to see a record's stream
 
+## Levels
+
+Listed from more permissive to less permissive.
+
+* yes
+* all
+* team
+* own
+* no
+
 ## Example
 
 We have a team 'Sales'. That team has a single role 'Salesman' (the *Roles* field of the Team). All users from this team will obtain the 'Salesman' role (as all team roles are automatically applied to users of the team).
@@ -84,7 +94,7 @@ delete – team
 stream – team
 ```
 
-Our user will be able to manage all leads/opportunities related to the 'Sales' team.
+Our sales manager user will be able to manage all leads/opportunities related to the 'Sales' team. Under the hood this user have two roles ('Salesman' and 'Sales Manager') merged into one in a way that a more permissive level suppresses less permissive.
 
 ## Special Permissions
 
