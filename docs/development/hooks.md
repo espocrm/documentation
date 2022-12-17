@@ -35,8 +35,8 @@ use Espo\ORM\Entity;
 
 class MyHook
 {    
-    // An optional parameter, defines in which order hooks will be processed
-    // less value means sooner.
+    // An optional parameter, defines in which order hooks will be processed.
+    // Lesser value means sooner.
     public static $order = 5; 
     
     public function __construct(
