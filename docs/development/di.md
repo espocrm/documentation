@@ -2,6 +2,8 @@
 
 *As of v6.1.*
 
+The Dependency Injection framework provides needed dependencies to classes (usually via a constructor). E.g. if your hook needs an EntityManager service, you just  define it as a constructor parameter.
+
 In this article:
 
 * [Container services](#container-services)
