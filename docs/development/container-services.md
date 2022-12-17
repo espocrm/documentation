@@ -10,7 +10,7 @@ Most often used services are listed below.
 
 ## entityManager
 
-Class: `Espo\Core\ORM\EntityManager`
+Class: `Espo\ORM\EntityManager`
 
 A central access point to [ORM](orm.md) functionality.
 
@@ -18,7 +18,7 @@ A central access point to [ORM](orm.md) functionality.
 
 Class: `Espo\Core\Utils\Metadata`
 
-Access to [metadata](metadata.md).
+Application [metadata](metadata.md).
 
 ## config
 
@@ -32,7 +32,7 @@ A main application config.
 
 Class: `Espo\ORM\Defs\Defs`
 
-Entity definitions.
+Entity definitions (fields, attributes, relations).
 
 ## fileManager
 
@@ -50,7 +50,7 @@ Provides information about an application, current user, portal.
 
 Class: `Espo\Core\Utils\Log`
 
-For logging. Messages are written into `data/log`.
+A logger. Messages are written into `data/log`.
 
 ## user
 
@@ -88,17 +88,19 @@ The layer over ORM. Provides the ability to apply filters, access control. Conve
 
 Class: `Espo\Core\Utils\FieldUtil`
 
+An utility class for obtaining information about fields.
+
 ## dateTime
 
 Class: `Espo\Core\Utils\DateTime`
 
-Date-time functions.
+Date-time utility functions.
 
 ## number
 
 Class: `Espo\Core\Utils\NumberUtil`
 
-Number functions.
+Number utility functions.
 
 ## fileStorageManager
 
