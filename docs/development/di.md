@@ -186,6 +186,8 @@ class SomeClass
 
 ### Setter method injection
 
+*Not recommended, was introduced for backward compatibility reasons.*
+
 Can be used along with the constructor injection. If a class implements *Aware* interface, the factory will use a corresponding setter function to inject a dependency. Setter traits can be utilized for adding setter functions into your class.
 
 Example:
@@ -211,7 +213,7 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 
 Using setter injections may be reasonable when you are extending from an existing class and want to add additional dependencies.
 
-Important: Only services can be injected via setters.
+Limitation: Only container services can be injected via setters.
 
 Note: It's not a recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
 
