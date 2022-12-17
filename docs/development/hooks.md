@@ -35,8 +35,8 @@ use Espo\ORM\Entity;
 
 class MyHook
 {    
-    // optional parameter, defines in which order hooks will be processed
-    // less value means sooner
+    // An optional parameter, defines in which order hooks will be processed
+    // less value means sooner.
     public static $order = 5; 
     
     public function __construct(
@@ -62,7 +62,7 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 
 * *afterOptOut* - when a target clicks an opt-out link, data are passed in the 3rd $data argument
 * *afterCancelOptOut* - when a target subscribes again
-* *afterOptIn* - when a target opts-in through Lead Capture, data are passed in the 3rd $data argument (since 5.6.9)
+* *afterOptIn* - when a target opts-in through Lead Capture, data are passed in the 3rd $data argument
 
 #### Meeting / Call
 
@@ -70,23 +70,23 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 
 #### Contact
 
-* *afterLeadCapture* - when a contact (existing in crm) opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument (since 5.6.9)
-* *afterOptOut* (since 5.7.0)
-* *afterCancelOptOut* (since 5.7.0)
+* *afterLeadCapture* - when a contact (existing in crm) opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
+* *afterOptOut*
+* *afterCancelOptOut*
 
 #### Lead
 
-* *afterLeadCapture* - when a lead opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument (since 5.6.9)
-* *afterOptOut* (since 5.7.0)
-* *afterCancelOptOut* (since 5.7.0)
+* *afterLeadCapture* - when a lead opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
+* *afterOptOut*
+* *afterCancelOptOut*
 
 #### LeadCapture
 
-* *afterLeadCapture* - when a target (lead or contact) opts-in through Lead Capture, target data are passed in the 3rd $data argument (since 5.6.9)
+* *afterLeadCapture* - when a target (lead or contact) opts-in through Lead Capture, target data are passed in the 3rd $data argument
 
 #### CampaignTrackingUrl
 
-* *afterClick* - when a target (lead/contact/account) opened a tracking url in email (since 5.7.0)
+* *afterClick* - when a target (lead/contact/account) opened a tracking url in email
 
 #### Examples
 
