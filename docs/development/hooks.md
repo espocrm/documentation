@@ -39,6 +39,10 @@ class MyHook
     // less value means sooner
     public static $order = 5; 
     
+    public function __construct(
+        // Define needed dependencies.
+    ) {}
+    
     public function beforeSave(Entity $entity, array $options): void
     {
         if ($entity->isNew() && !$entity->get('accountName')) { 
