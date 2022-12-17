@@ -4,6 +4,18 @@
 
 The Dependency Injection framework provides needed dependencies to classes (usually via a constructor). E.g. if your hook needs an EntityManager service, you just  define it as a constructor parameter.
 
+For example, your controller has a dependency on some service class. That service class has other dependencies (e.g. the entity manager, some utility classes), these dependencies can have their own dependencies and so on. You don't need to instantiate dependencies, you just define them in class contructors and the framework provides them automatically.
+
+```
+- MyController
+    - MyService
+        - EntityManager (container service)
+        - MyUtilityClass1
+            - EntityManager (container service)
+            - FileStorageManager (container service)
+        - MyUtilityClass2
+```
+
 In this article:
 
 * [Container services](#container-services)
