@@ -28,9 +28,11 @@ A main application config.
 
 ## ormDefs
 
+*As of v7.0.*
+
 Class: `Espo\ORM\Defs\Defs`
 
-Entity definitions. Available as of v7.0.0. 
+Entity definitions.
 
 ## fileManager
 
@@ -76,7 +78,7 @@ Provides access checking functions for a current user. A wrapper for *aclManager
 
 ## selectBuilderFactory
 
-Available as of v7.0.0.
+*As of v7.0.*
 
 Class: `Espo\Core\Select\SelectBuilderFactory`
 
