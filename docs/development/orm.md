@@ -19,7 +19,7 @@ An *SthCollection* is a collection of entities, consuming much less memory than 
 
 ## Injecting Entity Manager
 
-Entity Manager is available as a [*Container*](di.md) service.
+The Entity Manager is available as a [*Container*](di.md) service.
 
 A class with the `entityManager` dependency:
 
