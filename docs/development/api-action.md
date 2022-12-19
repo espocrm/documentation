@@ -83,7 +83,7 @@ class MyController
         // Returned value will be encoded and written to the response.
     }
     
-    public function postActionHelloWrold(Request $request, Response $response): void
+    public function postActionHelloWorld(Request $request, Response $response): void
     {
         $name = $request->getRouteParam('name'); 
          
