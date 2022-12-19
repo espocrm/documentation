@@ -151,6 +151,8 @@ class SomeFactory
 
 ### Constructor injection
 
+*A recommended way.*
+
 Constructor parameter names are used to detect dependencies.
 
 Resolving process:
