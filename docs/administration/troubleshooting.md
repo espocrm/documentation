@@ -12,6 +12,7 @@ In this article:
 * [Emails are not being fetched](#emails-are-not-being-fetched)
 * [Delay in fetching emails](#delay-in-fetching-emails)
 * [Admin password is lost, can't log in](#admin-password-is-lost-cant-log-in)
+* [MySQL error: MySQL can only use 61 tables in a join](#mysql-error-mysql-can-only-use-61-tables-in-a-join)
 
 ## Check logs
 
@@ -153,7 +154,9 @@ php command.php set-password [username]
 
 where `[username]` is a user name, e.g. `admin`.
 
-## MySQL error: Too many tables; MySQL can only use 61 tables in a join
+## MySQL error: MySQL can only use 61 tables in a join
+
+Full error message: *General error: 1116 Too many tables; MySQL can only use 61 tables in a join*.
 
 1. Remove unused many-to-one and one-to-one relationships (if you have such).
 2. Disable link-multiple for some many-to-many relationships of the problem entity type.
