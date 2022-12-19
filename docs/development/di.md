@@ -143,6 +143,7 @@ class SomeFactory
 
     public function create(): Something
     {
+        // Here can be logic that choose a specific class upon some criteria.
         return $this->injectableFactory->create(Something::class);
     }
 }
