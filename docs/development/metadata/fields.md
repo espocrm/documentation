@@ -134,5 +134,5 @@ The list of actual fields.
 
 The list of not actual fields.
 
->For example, for field type `link` in `actualFields` is `['id']`, in `notActualFields` is `['name']`.
->Means, if you load record with link field, you have values in `{fieldName}Id` and `{fieldName}Name` (suffix naming). But you need set only `{fieldName}Id`, if you want to update this field.
+For example, for field type `link` in `actualFields` is `['id']`, in `notActualFields` is `['name']`.
+Means, if you load record with link field, you have values in `{fieldName}Id` and `{fieldName}Name` (suffix naming). But you need set only `{fieldName}Id`, if you want to update this field.
