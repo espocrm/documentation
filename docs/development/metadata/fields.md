@@ -6,13 +6,13 @@ Path: `metadata/fields/{fieldType}.json`
 
 _true_ | _false_
 
-If you merge records, is this field type mergeable.
+Whether this field type is mergeable (when merging duplicate records).
 
 ### notCreatable
 
 _true_ | _false_
 
-Could be created a field with this type in Entity Manager.
+Whether the field of this type can be created in the Entity Manager tool.
 
 ### readOnly
 
@@ -24,7 +24,7 @@ Is this field type Read Only (can't be edit).
 
 _true_ | _false_
 
-Skip convert in ORM.
+Skip converting to defs for ORM.
 
 ### filter
 
@@ -34,11 +34,11 @@ Entity could be filtered by field with this field type.
 
 ### view
 
-By default for displaying a field with this field type  the system try to read the view `"views/fields/{field-type}"` (path is `client/src/views/fields/{field-name}.js`). But if want to define own view, you can set this parameter here.
+By default for displaying a field of this field type the system try to read the view `"views/fields/{field-type}"` (path is `client/src/views/fields/{field-name}.js`). But if want to define own view, you can set this parameter here.
 
 ### params
 
-Array of fields, that described field type parameters. This parameters could be set for each field with this field type in Entity Manager.
+Array of fields, that described field type parameters. This parameters could be set for each field of this field type in the Entity Manager.
 
 #### Example
 
@@ -83,7 +83,7 @@ Also you can set here such definition as:
 
 _true_ | _false_
 
-Does field have options, which can be translated.
+Does the field have options that can be translated.
 
 
 ### hookClassName
@@ -107,7 +107,7 @@ You can find this class in `application/Espo/Core/Utils/FieldManager/Hooks/Numbe
 
 ### fields
 
-The definition of all additional fields, which contain this field type.
+The definition of all additional fields that contain this field type.
 
 
 ### naming
@@ -135,4 +135,4 @@ The list of actual fields.
 The list of not actual fields.
 
 >For example, for field type `link` in `actualFields` is `['id']`, in `notActualFields` is `['name']`.
->Means, if you load record with link field, you have values in `{fieldName}Id` and `{fieldName}Name` (suffix naming). But you need set only `{fieldName}Id`, if you want to update this field
+>Means, if you load record with link field, you have values in `{fieldName}Id` and `{fieldName}Name` (suffix naming). But you need set only `{fieldName}Id`, if you want to update this field.
