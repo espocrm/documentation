@@ -158,6 +158,8 @@ where `[username]` is a user name, e.g. `admin`.
 
 Full error message: *General error: 1116 Too many tables; MySQL can only use 61 tables in a join*.
 
+Any of the following actions may solve the problem.
+
 1. Remove unused many-to-one and one-to-one relationships (if you have such).
 2. Disable link-multiple for some many-to-many relationships of the problem entity type.
 3. Set `noJoin` parameter (to `true`) for some *belongsTo* links. [Example](https://github.com/espocrm/espocrm/blob/7.2.7/application/Espo/Modules/Crm/Resources/metadata/entityDefs/Campaign.json#L269).
