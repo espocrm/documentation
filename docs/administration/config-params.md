@@ -126,8 +126,8 @@ The list of parameters along with their default values.
 ### Security
 
 * clientSecurityHeadersDisabled – `false` – disable security headers (as of v7.2);
-* clientCspDisabled –  `false` – disable Content-Secirity-Policy header for the client page (as of v7.2);
-* clientCspScriptSourceList – a script source white-list for the Content-Secirity-Policy header (as of v7.2);
+* clientCspDisabled –  `false` – disable Content-Security-Policy header for the client page (as of v7.2);
+* clientCspScriptSourceList – a script source white-list for the Content-Security-Policy header (as of v7.2);
 * clientStrictTransportSecurityHeaderDisabled – disable `Strict-Transport-Security` header, actual if a webserver adds it (as of v7.3);
 * clientXFrameOptionsHeaderDisabled – disable `X-Frame-Options` header restricting the ability to use Espo in an iframe (as of v7.3);
 
