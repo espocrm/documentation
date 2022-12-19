@@ -143,7 +143,7 @@ The following configuration will speed up your email fetching (and other backgro
 
 ## Admin password is lost, can't log in
 
-Available since EspoCRM 5.8.3.
+*As of v5.8.3.*
 
 Run the following command in CLI:
 
@@ -152,3 +152,10 @@ php command.php set-password [username]
 ```
 
 where `[username]` is a user name, e.g. `admin`.
+
+## MySQL error: Too many tables; MySQL can only use 61 tables in a join
+
+1. Remove unused many-to-one and one-to-one relationships (if you have such).
+2. Disable link-multiple for some many-to-many relationships of the problem entity type.
+3. Set `noJoin` parameter (to `true`) for some *belongsTo* links. [Example](https://github.com/espocrm/espocrm/blob/7.2.7/application/Espo/Modules/Crm/Resources/metadata/entityDefs/Campaign.json#L269).
+4. Set *currencyNoJoinMode* (`'currencyNoJoinMode' => true,` in `data/config.php`). With this mode enabled you will need to clear cache (in Espo) every time you cache currency rates. (as of v7.3.)
