@@ -61,7 +61,7 @@ use Espo\Core\Api\Response;
 
 class MyController
 {
-    private $someDependency;
+    private SomeDependency $someDependency;
 
     public function __construct(SomeDependency $someDependency)
     {
