@@ -150,7 +150,7 @@ nav:
           - 'Metadata': 'development/metadata.md'
           - 'ORM': 'development/orm.md'
           - 'Select Builder': 'development/select-builder.md'
-          - 'Custom API actions': 'development/api-action.md'
+          - 'API actions': 'development/api-action.md'
           - 'Services': 'development/services.md'
           - 'Hooks': 'development/hooks.md'
           - 'ACL': 'development/acl.md'
