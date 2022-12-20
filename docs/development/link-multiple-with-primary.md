@@ -72,11 +72,8 @@ class AfterSave
     public function __construct(private EntityManager $entityManager) {}
 
     public function afterSave(Entity $entity, array $options): void
-    {
-        $contactIdChanged = $entity->has('contactId') &&
-            $entity->get('contactId') !== $entity->getFetched('contactId');
-            
-        if (!$contactIdChanged) {
+    {            
+        if (!$entity->isAttributeChanged('contactId')) {
             return;
         }
         
