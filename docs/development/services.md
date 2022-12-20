@@ -16,13 +16,13 @@ If there's a service class with a name that matches the name of the entity type,
 
 Main methods of the Record service class:
 
-* read - get an entity
-* create - create an entity
-* update - update an entity
-* delete - delete an entity
-* find - get a list of entities, used by list view
-* findLinked - get a list of related entities, used by relationship panels
-* loadAdditionalFields - to load additional fields for an entity before returning it, for detail view
+* read – get an entity
+* create – create an entity
+* update – update an entity
+* delete – delete an entity
+* find – get a list of entities, used by list view
+* findLinked – get a list of related entities, used by relationship panels
+* loadAdditionalFields – to load additional fields for an entity before returning it, for detail view
 
 Hook-methods:
 
