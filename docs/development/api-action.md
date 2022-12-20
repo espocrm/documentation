@@ -2,7 +2,7 @@
 
 ## Routing
 
-You can define a specific route to access your custom API action.
+You can define a specific route to access your custom API action (endpoint).
 
 Default routes are defined here `application/Espo/Resources/routes.json`.
 
@@ -47,7 +47,7 @@ Custom routes can be defined in following places:
 ]
 ```
 
-The parameter `noAuth` allows making requests w/o authentication.
+The parameter `noAuth` makes an endpoint not requring authentication.
 
 Controller:
 
