@@ -58,52 +58,49 @@ Create (or edit) `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`:
 ```
 
 ### Step 3
-`custom/Espo/Custom/Repositories/Stock.php`
+`custom/Espo/Custom/Hooks/Stock/AfterSave.php`
+
 ```php
 <?php
+namespace Espo\Custom\Hooks\Stock;
 
-namespace Espo\Custom\Repositories;
+use Espo/ORM/Entity;
+use Espo/ORM/EntityManager;
 
-class Stock extends \Espo\Core\ORM\Repositories\RDB
+class AfterSave
 {
-    public function afterSave(Entity $entity, array $options)
-    {
-        $result = parent::afterSave($entity, $options);
-        $this->handleAfterSaveContacts($entity, $options);
-        return $result;
-    }
+    public function __construct(private EntityManager $entityManager) {}
 
-    protected function handleAfterSaveContacts(Entity $entity, array $options)
+    public function afterSave(Entity $entity, array $options): void
     {
-        $contactIdChanged = $entity->has('contactId') && $entity->get('contactId') != $entity->getFetched('contactId');
-        if ($contactIdChanged) {
-            $contactId = $entity->get('contactId');
-            if (empty($contactId)) {
-                $this->unrelate($entity, 'contacts', $entity->getFetched('contactId'));
-                return;
-            }
+        $contactIdChanged = $entity->has('contactId') &&
+            $entity->get('contactId') !== $entity->getFetched('contactId');
+            
+        if (!$contactIdChanged) {
+            return;
         }
-        if ($contactIdChanged) {
-            $pdo = $this->getEntityManager()->getPDO();
-            $sql = "
-                SELECT id FROM contact_stock
-                WHERE
-                    contact_id = ".$pdo->quote($contactId)." AND
-                    stock_id = ".$pdo->quote($entity->id)." AND
-                    deleted = 0
-            ";
-            $sth = $pdo->prepare($sql);
-            $sth->execute();
-            if (!$sth->fetch()) {
-                $this->relate($entity, 'contacts', $contactId);
-            }
+        
+        $contactId = $entity->get('contactId');
+        $fetchedContactId = $entity->getFetched('contactId');
+        
+        $relation = $this->entityManager
+            ->getRDBRepository($entity->getEntityType())
+            ->getRelation($entity, 'contacts');
+
+        if (!$contactId) {
+            $relation->unrelateById($fetchedContactId);
+            
+            return;
         }
+        
+        $relation->relateById($contactId);        
     }
 }
 ```
 
 ### Step 4
 `client/custom/src/views/stock/fields/contacts.js`
+
 ```js
 define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
     return Dep.extend({
