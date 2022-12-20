@@ -61,9 +61,7 @@ use Espo\Core\Api\Response;
 class MyController
 {
     public function __construct(private SomeDependency $someDependency)
-    {
-        $this->someDependency = $someDependency;
-    }
+    {}
     
     public function getActionDoSomething(Request $request, Response $response): void
     {
@@ -237,9 +235,7 @@ use stdClass;
 class MyController
 {
     public function __construct(private SomeDependency $someDependency)
-    {
-        $this->someDependency = $someDependency;
-    }
+    {}
 
     public function putActionUpdate(Request $request, Response $response): stdClass
     {
