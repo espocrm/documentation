@@ -55,10 +55,8 @@ namespace Espo\Custom\SomeNamespace;
 use Espo\Core\Select\SelectBuilderFactory;
 
 class SomeClass
-{
-    private $selectBuilderFactory;
-    
-    public function __construct(SelectBuilderFactory $selectBuilderFactory)
+{    
+    public function __construct(private SelectBuilderFactory $selectBuilderFactory)
     {
         $this->selectBuilderFactory = $selectBuilderFactory
     }
