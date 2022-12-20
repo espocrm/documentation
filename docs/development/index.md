@@ -16,7 +16,7 @@
 * [Metadata](metadata.md)
 * [ORM](orm.md)
 * [Select Builder](select-builder.md)
-* [Custom API actions](api-action.md)
+* [API actions](api-action.md)
 * [Services](services.md)
 * [Hooks](hooks.md)
 * [ACL](acl.md)
