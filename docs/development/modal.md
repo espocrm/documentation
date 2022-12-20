@@ -14,7 +14,9 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
         className: 'dialog dialog-record',
 
         // template content can be defined right here or externally
-        templateContent: '<div class="record">{{{record}}}</div>',
+        templateContent: `
+            <div class="record">{{{record}}}</div>
+        `,
 
         // template content can be defined in external file client/custom/res/templates/my-dialog.tpl 
         // template: 'custom:modals/my-dialog',
