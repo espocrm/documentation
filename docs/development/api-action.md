@@ -1,4 +1,4 @@
-# Custom API actions
+# API actions
 
 ## Routing
 
