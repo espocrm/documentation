@@ -1,6 +1,6 @@
 # Hooks
 
-Hooks framework provides the ability to catch some actions in the system in order to call custom logic.
+The Hooks framework provides the ability to catch some actions in the system in order to call custom logic.
 
 Common hooks for all entity types (called from the ORM repository class):
 
