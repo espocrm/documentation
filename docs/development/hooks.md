@@ -135,7 +135,7 @@ class MyHook
 
 ### Triggering hook
 
-Inject the hook manager `Espo\Core\HookManager` to your class. User `process` method.
+Inject the hook manager `Espo\Core\HookManager` to your class. Use the `process` method.
 
 ```php
 $this->hookManager->process($entityType, $hookType, $entity, $options);
