@@ -1,6 +1,8 @@
 # Hooks
 
-Common hooks:
+Hooks framework provides the ability to catch some actions in the system in order to call custom logic.
+
+Common hooks for all entity types (called from the ORM repository class):
 
 - beforeSave
 - afterSave
@@ -12,9 +14,9 @@ Common hooks:
 
 ## Creating hook
 
-* create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php`;
-* declare hook type action;
-- clear Cache in Administration.
+* create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php` (you can also use a module directory);
+* declare a hook action method with a name the same as a hook name (e.g. *beforeSave*);
+* clear Cache in Administration.
 
 ## Hook order
 
