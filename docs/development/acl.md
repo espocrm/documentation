@@ -48,4 +48,4 @@ Methods of the *Acl* is the same but w/o the *$user* parameter, as the current u
 
 You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclassname) and [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata. They are used for checking access against a specific record (or a scope).
 
-You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). They are used when generating a select query for fetching records from DB.
+You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). They are used for applying filtering when generating a select query for fetching records from DB.
