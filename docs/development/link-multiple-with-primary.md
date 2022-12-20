@@ -108,7 +108,8 @@ define('custom:views/stock/fields/contacts', ['views/fields/link-multiple-with-p
 ```
 
 ### Step 5
-Run Rebuild
+
+Run Rebuild.
 
 ### Step 6
 
