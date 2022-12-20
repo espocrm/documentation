@@ -17,13 +17,14 @@ Common hooks:
 - clear Cache in Administration.
 
 ## Hook order
-If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property in an integer value.
 
-Ascending order - the hook with the smallest order number runs first.
+If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property with an integer value.
+
+Ascending order is applied – a hook with the smallest order number runs first.
 
 ## Example
 
-This example sets Account Name for new Leads, if it is not set.
+This example sets an Account Name for new Leads, if it's not set.
 
 `custom/Espo/Custom/Hooks/Lead/MyHook.php`
 
