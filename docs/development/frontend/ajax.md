@@ -8,32 +8,32 @@ GET:
 
 ```js
 Espo.Ajax.getRequest(url, data, options)
-  .then(response => {})
-  .catch(xhr => {});
+    .then(response => {})
+    .catch(xhr => {});
 ```
 
 POST:
 
 ```js
 Espo.Ajax.postRequest(url, data, options)
-  .then(response => {})
-  .catch(xhr => {
-      if (xhr.status === 403) {
-          // Prevent error handling in the global handler.
-          xhr.errorIsHandled = true;
-          // Do something.
-      }
-  });
+    .then(response => {})
+    .catch(xhr => {
+        if (xhr.status === 403) {
+            // Prevent error handling in the global handler.
+            xhr.errorIsHandled = true;
+            // Do something.
+        }
+    });
 ```
 
 Example:
 
 ```js
 Espo.Ajax.getRequest('MyController/action/getSomeDataById', {id: id})
-  .then(response => {
-      // A parsed response.
-      console.log(response);
-  });
+    .then(response => {
+        // A parsed response.
+        console.log(response);
+    });
 ```
 
 ## Request options
