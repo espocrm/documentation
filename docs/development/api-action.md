@@ -8,7 +8,7 @@ Default routes are defined here `application/Espo/Resources/routes.json`.
 
 Custom routes can be defined in following places:
 
-* `application/Espo/Modules/{moduleName}/Resources/routes.json`
+* `custom/Espo/Modules/{moduleName}/Resources/routes.json`
 * `custom/Espo/Custom/Resources/routes.json`
 
 ### Example
