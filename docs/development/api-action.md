@@ -2,7 +2,7 @@
 
 ## Routing
 
-You can define a specific route to access your api action.
+You can define a specific route to access your custom API action.
 
 Default routes are defined here `application/Espo/Resources/routes.json`.
 
