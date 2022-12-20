@@ -89,6 +89,7 @@ use Espo\Core\Exceptions\NotFound;
 use Espo\Core\Acl;
 use Espo\Core\Acl\Table;
 use Espo\ORM\EntityManager;
+use Espo\Modules\Entities\Opportunity;
 
 class MyService
 {
@@ -97,7 +98,7 @@ class MyService
 
     public function doSomething(string $id): void
     {
-        $opportunity = $this->entityManager->getEntityById('Opportunity', $id);
+        $opportunity = $this->entityManager->getEntityById(Opportunity::ENTITY_TYPE, $id);
 
         if (!$opportunity) {
             throw new NotFound();
