@@ -53,7 +53,6 @@ Controller:
 
 ```php
 <?php
-
 namespace Espo\Custom\Controllers;
 
 use Espo\Core\Api\Request;
@@ -61,9 +60,7 @@ use Espo\Core\Api\Response;
 
 class MyController
 {
-    private SomeDependency $someDependency;
-
-    public function __construct(SomeDependency $someDependency)
+    public function __construct(private SomeDependency $someDependency)
     {
         $this->someDependency = $someDependency;
     }
@@ -79,7 +76,7 @@ class MyController
             json_encode($someData)
         );
         
-        // You can either write data to the response or use return
+        // You can either write data to the response or use return.
         // Returned value will be encoded and written to the response.
     }
     
@@ -105,7 +102,6 @@ Create a file (or modify if it already exists) `custom/Espo/Custom/Controllers/A
 
 ```php
 <?php
-
 namespace Espo\Custom\Controllers;
 
 use Espo\Core\Api\Request;
@@ -118,8 +114,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
      */
     public function postActionTest(Request $request, Response $response): bool
     {
-        $someParam = $request->getQueryParam('someParam'); // GET parameter
-        
+        $someParam = $request->getQueryParam('someParam'); // GET parameter        
         $data = $request->getParsedBody(); // payload
         
         $someValue = $data->someKey ?? null;
@@ -145,7 +140,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 }
 ```
 
-Note: For Account entity type we extend `Espo\Modules\Crm\Controllers\Account`. Some entity types might not have controllers in `Espo\Modules\Crm\Controllers` namespace. They are defined in `Espo\Controllers` namespace.
+Note: For the *Account* entity type we extend `Espo\Modules\Crm\Controllers\Account`. Some entity types might not have controllers in `Espo\Modules\Crm\Controllers` namespace. They are defined in `Espo\Controllers` namespace.
 
 ## Custom controller
 
@@ -204,22 +199,22 @@ use Espo\Core\Api\Response;
 class MyController
 {   
     // Creates a record.
-    public function postActionCreate(Request $request, Response $response)
+    public function postActionCreate(Request $request, Response $response): void
     {    
     }
 
     // Reads a record.
-    public function getActionRead(Request $request, Response $response)
+    public function getActionRead(Request $request, Response $response): void
     {    
     }
     
     // Updates a record.
-    public function putActionUpdate(Request $request, Response $response)
+    public function putActionUpdate(Request $request, Response $response): void
     {    
     }
     
     // Deletes a record.
-    public function deleteActionDelete(Request $request, Response $response)
+    public function deleteActionDelete(Request $request, Response $response): void
     {    
     }
 }
@@ -232,14 +227,11 @@ Example:
 
 ```php
 <?php
-
 namespace Espo\Modules\MyModule\Controllers;
 
 use Espo\Core\Api\Request;
 use Espo\Core\Api\Response;
-
 use SomeDependency;
-
 use stdClass;
 
 class MyController
