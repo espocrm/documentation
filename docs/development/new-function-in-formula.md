@@ -1,6 +1,6 @@
 # Custom functions for Formula
 
-EspoCRM provides the possibility to create custom functions that can be used in formula. 
+EspoCRM provides the ability to create custom functions that can be used in formula-script. 
 
 Create a file `custom/Espo/Custom/Core/Formula/Functions/MyGroup/MyContainsType.php` with the code:
 
@@ -39,7 +39,7 @@ class MyContainsType extends BaseFunction
 }
 ```
 
-In order to add the created function to the function list of formula, create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
+In order to add the created function to the function list (for being available in a suggestion dropdown), create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
 ```json
 {
     "functionList": [
