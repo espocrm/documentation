@@ -108,7 +108,7 @@ class MyService
             throw new Forbidden("No 'edit' access.");
         }
 
-        $opportunity->set('stage', 'Closed Won');
+        $opportunity->set('stage', Opportunity::STATUS_CLOSED_WON);
         $opportunity->set('probability', 100);
 
         $this->entityManager->saveEntity($opportunity);
