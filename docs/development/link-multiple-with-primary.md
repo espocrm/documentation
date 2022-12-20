@@ -1,8 +1,8 @@
 # Link Multiple field with Primary
 
-Sometimes you have `hasMany` relationship and need to have an ability to select primary record among related ones. As example, `Contacts` field of Case entity.
+Sometimes you have a *hasMany* relationship and need to have the ability to a select primary record among related ones. As example, a *Contacts* field of the *Case* entity.
 
->Need to create `contacts` linkMultiple field with a primary for our custom entity `Stock`. 
+>Need to create a `contacts` linkMultiple field with a primary for our custom entity *Stock*. 
 >
 
 ### Step 1
@@ -39,6 +39,7 @@ Create (or edit) `custom/Espo/Custom/Resources/metadata/entityDefs/Stock.json`:
 ### Step 2
 
 `custom/Espo/Custom/Resources/metadata/entityDefs/Contact.json`
+
 ```json
 {
     "links":{
@@ -99,9 +100,9 @@ class AfterSave
 `client/custom/src/views/stock/fields/contacts.js`
 
 ```js
-define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-primary', function (Dep) {   
+define('custom:views/stock/fields/contacts', ['views/fields/link-multiple-with-primary'], function (Dep) {   
     return Dep.extend({
-        primaryLink: 'contact'
+        primaryLink: 'contact',
     });
 });
 ```
@@ -110,7 +111,9 @@ define('custom:views/stock/fields/contacts', 'views/fields/link-multiple-with-pr
 Run Rebuild
 
 ### Step 6
-Execute SQL query
+
+Execute an SQL query:
+
 ```sql
 UPDATE stock
 JOIN contact_stock
