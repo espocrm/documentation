@@ -96,7 +96,6 @@ Some other parameters:
 
 Does the field have options that can be translated.
 
-
 ## hookClassName
 
 Called after the field is created or edited in the Entity Manager tool.
@@ -124,7 +123,7 @@ Definitions of additional fields that will be created with this field. E.g. for 
 
 _"suffix"_ | _"prefix"_ ("suffix" is default)
 
-The naming determine how additional fields will be name.
+The naming determines how additional fields will be named.
 
 ### Example
 
