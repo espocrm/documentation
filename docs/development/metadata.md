@@ -27,7 +27,7 @@ Sections:
 
 #### Backend
 
-The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available in DI Container.
+The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as an [container service](di.md).
 
 Path to a needed parameter is specified with an array.
 
