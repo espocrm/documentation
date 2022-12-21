@@ -1,4 +1,4 @@
-# Metadata > Fields
+# fields
 
 Definitions for field types.
 
