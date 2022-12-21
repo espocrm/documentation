@@ -18,7 +18,7 @@ Whether the field of this type can be created in the Entity Manager tool.
 
 _true_ | _false_
 
-Is this field type Read Only (can't be edit).
+Is this field type Read Only (can't be edited).
  
 ### skipOrmDefs
 
