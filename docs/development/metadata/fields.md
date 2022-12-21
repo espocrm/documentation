@@ -76,15 +76,17 @@ Parameters are passed to the field view in the `params` option.
 ## fieldDefs
 
 An object of field type definition. The most of them is used as database column parameter:
-- `type` - _"varchar"_, _"int"_, _"bool"_, _"text"_, _"float"_ etc.;
-- `notNull` - value can't be set as NULL (_true_ | _false_);
-- `unique` - value is unique in the table column (_true_ | _false_);
-- `autoincrement` - value is autoincrement an is calculated with database (_true_ | _false_).
 
-Also you can set here such definition as:
-- `notStorable` - the column of field with this field type wont be created in the database (_true_ | _false_);
-- `readOnly` - field is not editable (_true_ | _false_);
-- `layoutListDisabled` - field can notbe displayed on the list view (_true_ | _false_).
+- *type* – _"varchar"_, _"int"_, _"bool"_, _"text"_, _"float"_ etc.;
+- *notNull* – value can't be set as NULL (_true_ | _false_);
+- *unique* – value is unique in the table column (_true_ | _false_);
+- *autoincrement* - value is autoincrement an is calculated with database (_true_ | _false_).
+
+Some other parameters:
+
+- *notStorable* – the column of field with this field type wont be created in the database (_true_ | _false_);
+- *readOnly* – field is not editable (_true_ | _false_);
+- *layoutListDisabled* – field can notbe displayed on the list view (_true_ | _false_).
 
 ## translatedOptions
 
