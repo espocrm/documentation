@@ -1,4 +1,6 @@
-# Field-type definition
+# Metadata > Fields
+
+Definitions for field types.
 
 Path: `metadata/fields/{fieldType}.json`
 
