@@ -44,27 +44,31 @@ Array of field parameters. Theses parameters then can be edited for every field 
 
 ### Example
 
-```
-[
-  [
-    "name": "required",
-    "type": "bool",
-    "default": false
-  ],
-  [
-    "name": "translation",
-    "type": "varchar",
-    "hidden": true
-  ],
-  [
-    "name": "audited",
-    "type": "bool"
-  ],
-  [
-    "name": "readOnly",
-    "type": "bool"
-  ]
-]
+```json
+{
+    "params": {
+        [
+            [
+                "name": "required",
+                "type": "bool",
+                "default": false
+            ],
+            [
+                "name": "translation",
+                "type": "varchar",
+                "hidden": true
+            ],
+            [
+                "name": "audited",
+                "type": "bool"
+            ],
+            [
+                "name": "readOnly",
+                "type": "bool"
+            ]
+        ]
+    }
+}
 ```
 
 Parameters are passed to the field view in the `params` option.
