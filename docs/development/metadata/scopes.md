@@ -6,13 +6,13 @@ Path: metadata > scopes > {ScopeName}.
 
 ## entity
 
-*{boolean}*
+*boolean*
 
 Whether the scope represents an entity type.
 
 ## object
 
-*{boolean}*
+*boolean*
 
 Whether the entity is a business object. Means that it's not an entity for internal system purpose; an object entity represents some business entity.
 
@@ -24,23 +24,25 @@ The the name of the module, where this scope is defined.
 
 ## stream
 
-*{boolean}*
+*boolean*
 
 Whether the entity has the stream.
 
 ## importable
 
-*{boolean}*
+*boolean*
 
 Whether the entity is avialble in the Import tool.
 
 ## layouts
 
+*boolean*
+
 Whether the entity is avialble in the Layout Manager tool.
 
 ## tab
 
-*{boolean}*
+*boolean*
 
 Whether the scope is available as a navbar tab.
 
@@ -171,20 +173,15 @@ Status values that determine that a record should be shown in the History panel.
 
 Languge labels will be available for all users (not restricted by ACL).
 
-### kanbanStatusIgnoreList
+## kanbanStatusIgnoreList
 
-_Description_: status values to be ignored on the kanban view;
+*string[]*
 
-_Type_: array;
+Status values to be ignored on the Kanban view.
 
-_Available value_: options of the status field;
+## hasPersonalData
 
-_Default_: `[]`.
+*boolean*
 
-### hasPersonalData
+Whether the entity may contain personal data.
 
-_Description_: whether the entity contains personal data;
-
-_Type_: boolean;
-
-_Default_: false.
