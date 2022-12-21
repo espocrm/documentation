@@ -163,11 +163,19 @@ The field will be available in the list of text filters (in the Entity Manager t
 
 ## textFilterForeign
 
+*boolean*
+
 The field will be available in the list of text filters as a foreign field.
 
 ## fieldDefs
 
 Definitions to be set in ORM attribute defs.
+
+## fullTextSearch
+
+*boolean*
+
+Full-text search will be available for the field.
 
 ## valueFactoryClassName
 
@@ -209,3 +217,7 @@ Example:
     }
 }
 ```
+
+## duplicatorClassName
+
+A duplicator class. Should implement `Espo\Core\Record\Duplicator\FieldDuplicator`. Duplicates attributes of a field. Some fields can require some processing when an entity is being duplicated.
