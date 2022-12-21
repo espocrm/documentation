@@ -61,7 +61,8 @@ Metadata is stored in JSON files that can be located in different places:
 * `custom/Espo/Modules/{ModuleName}/Resources/metadata`
 * `custom/Espo/Custom/Resources/metadata`
 
-When you access data by path `clientDefs.Account.views.edit` the first lexeme `clientDefs` corresponds to dir name, the second `Account` to file name `Account.json`. All following lexemes correspond to path in the JSON.
+When you access data by a path `clientDefs.Account.views.edit` the first lexeme `clientDefs` corresponds to a dir name, the second `Account` – to a file name `Account.json`. All following lexemes correspond to a path in the JSON object.
+
 ```json
 {
     "views": {
@@ -70,8 +71,7 @@ When you access data by path `clientDefs.Account.views.edit` the first lexeme `c
 }
 ```
 
-All JSON files from these directories **get merged** recursively into a single file and stored in a cache file. 
-
+All JSON files from these directories **get merged** recursively into a single file and stored in a cache. 
 
 ## Extending
 
