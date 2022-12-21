@@ -1,6 +1,6 @@
 # entityDefs
 
-Path: metadata > entityDefs > {EntityType}
+Path: metadata > entityDefs > {EntityType}.
 
 Contains entity definitions, particularly fields, links and indexes.
 
