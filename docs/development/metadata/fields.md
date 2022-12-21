@@ -191,7 +191,7 @@ Example:
 ```json
 {
     "validatorClassNameMap": {
-        "required": "Espo\Modules\MyModule\Classes\FieldValidators\MyField\RequiredValidator"
+        "required": "Espo\\Modules\\MyModule\\Classes\\FieldValidators\\MyField\\RequiredValidator"
     }
 }
 ```
