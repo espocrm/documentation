@@ -66,7 +66,7 @@ Whether the scope is available in Roles. Available values: true, false, "boolean
 
 A list of available actions in Roles. Available item values: create, read, edit, delete, stream.
 
-### aclLevelList
+## aclLevelList
 
 *string[]*
 
@@ -138,7 +138,6 @@ Wether the entity can be customized in the Entity Manager tool.
 
 Entities creted in the Entity Manager tool marked as custom.
 
-
 ## notifications
 
 *boolean*
@@ -151,7 +150,7 @@ Whether notifications can be enabled for the entity.
 
 Whether the entity can be displayed on the Calendar.
 
-### activity
+## activity
 
 Whether the entity can be displayed on the Activities panel;
 
@@ -161,7 +160,7 @@ Whether the entity can be displayed on the Activities panel;
 
 Status values that determine that a record should be shown in the Activities panel.
       
-### historyStatusList
+## historyStatusList
 
 *string[]*
 
@@ -184,4 +183,3 @@ Status values to be ignored on the Kanban view.
 *boolean*
 
 Whether the entity may contain personal data.
-
