@@ -2,7 +2,7 @@
 
 Path: metadata > scopes > {ScopeName}.
 
-Сontains scope definitions. A scope can define an entity type.
+Сontains scope definitions.
 
 ## entity
 
@@ -58,40 +58,21 @@ Available values: Base, BasePlus, Person, Company, CategoryTree, Event.
 
 Whether the scope is available in Roles. Available values: true, false, "boolean". Boolean means that it will be available in roles w/o actions.
 
-## aclPortal
+## aclActionList
 
-*boolean|"boolean"*
+*string[]*
 
-Whether the scope is available in Portal Roles. Available values: true, false, "boolean". Boolean means that it will be available in roles w/o actions.
-
-
-### aclActionList
-
-_Description_: list of available actions in Role configuration;
-
-_Type_: array;
-
-_Available value_: array of ['create', 'read', 'edit', 'delete', 'stream'];
-
-_Default_: `["create", "read", "edit", "delete"]` if `acl` is `true`.
-
+A list of available actions in Roles. Available item values: create, read, edit, delete, stream.
 
 ### aclLevelList
 
-_Description_: list of available level for actions in Role configuration;
+*string[]*
 
-_Type_: array;
+A list of available levels in Roles. Available item values: all, team, own, no.
 
-_Available value_: array of ['all', 'team', 'own', 'no'];
+## aclActionLevelListMap
 
-_Default_: `["all", "team", "own", "no"]` if `acl` is `true`.
-
-
-### aclActionLevelListMap
-
-_Description_: list of available levels for actions in Role configuration;
-
-_Type_: object;
+Lists of available levels for specific actions in Roles.
 
 Example:
 
@@ -100,129 +81,95 @@ Example:
     "edit": ["own", "no"]
 }
 ```
+
+## aclPortal
+
+*boolean|"boolean"*
+
+Whether the scope is available in Portal Roles. Available values: true, false, "boolean". Boolean means that it will be available in roles w/o actions.
+
+## aclPortalActionList
+
+*string[]*
+
+A list of available actions in Portal Roles. Available item values: create, read, edit, delete, stream.
       
-### aclPortalLevelList
+## aclPortalLevelList
 
-_Description_: list of available level for actions in Portal Role configuration;
+*string[]*
 
-_Type_: array;
+A list of available levels in Portal Roles. Available item values: all, team, own, no.
 
-_Available value_: array of ['all', 'account', 'contact', 'own', 'no'];
+## aclPortalActionLevelListMap
 
-_Default_: `["all", "account", "contact", "own", "no"]` if `aclPortal` is `true`.
+Lists of available levels for specific actions in Portal Roles.
 
-### statusField
+Example:
+
+```
+"aclPortalActionLevelListMap": {
+    "edit": ["own", "no"]
+}
+```
+
+## statusField
  
-_Description_: an enum field which is used to determine the status;; 
+*string*
 
-_Type_: string;
+Defines a field that should be used as a status field.
 
-_Available value_: the name of enum field or null;
+## disabled
 
-_Default_: null.
-  
-### workflow
+*boolean*
 
-_Description_: if Advanced Pack extension is installed and `"object"` is not set, but you need this entity in Target Entity list in Workflow;
+Disables the scope in the system.
 
-_Type_: boolean;
+## customizable
 
-_Available value_: true | false;
+*boolean*
 
-_Default_: false.
+Wether the entity can be customized in the Entity Manager tool.
 
+## isCustom
 
-### disabled
+*boolean*
 
-_Description_: is disabled and invisible in the system;
-
-_Type_: boolean;
-
-_Available value_: true | false;
-
-_Default_: false.
+Entities creted in the Entity Manager tool marked as custom.
 
 
-### customizable
+## notifications
 
-_Description_: whether the entity can be customized in the Entity Manager;
+*boolean*
 
-_Type_: boolean;
+Whether notifications can be enabled for the entity.
 
-_Available value_: true | false;
+## calendar
 
-_Default_: false.
+*boolean*
 
+Whether the entity can be displayed on the Calendar.
 
-### isCustom
+### activity
 
-_Description_: scope is custom; in general this parameter is true if the entity was created in the Entity Manager;
+Whether the entity can be displayed on the Activities panel;
 
-_Type_: boolean;
+## activityStatusList
 
-_Available value_: true | false;
+*string[]*
 
-_Default_: false.
-
-
-### notifications
-
-_Description_: whether notifications can be enabled for the entity;
-
-_Type_: boolean;
-
-_Available value_: true | false;
-
-_Default_: false.
-
-### calendar
-
-_Description_: whether can be displayed on the Calendar;
-
-_Type_: boolean;
-
-_Available value_: true | false;
-
-_Default_: false.
-
-
-#### activity
-
-_Description_: whether can be displayed on the Activities panel;
-
-_Type_: boolean;
-
-_Available value_: true | false;
-
-_Default_: false.
-
-### activityStatusList
-
-_Description_: status values that determine that a record should be shown in the Activities panel;
-
-_Type_: array;
-
-_Available value_: options of the status field;
-
-_Default_: `["Planned"]`.
+Status values that determine that a record should be shown in the Activities panel.
       
 ### historyStatusList
 
-_Description_: status values that determine that a record should be shown in the History panel;
+*string[]*
 
-_Type_: array;
+Status values that determine that a record should be shown in the History panel.
 
-_Available value_: options of the status field;
+## languageIsGlobal
 
-_Default_: `["Held", "Not Held"]`.
+*boolean*
 
-### languageIsGlobal
-
-_Description_: languge labels will be available for all users (not restricted by ACL);
-
-_Type_: boolean;
-
-_Default_: false.
+Languge labels will be available for all users (not restricted by ACL).
 
 ### kanbanStatusIgnoreList
 
