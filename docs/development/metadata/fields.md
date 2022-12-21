@@ -6,35 +6,37 @@ Path: metadata > fields > {fieldType}
 
 ## notMergeable
 
-_true_ | _false_
+*boolean*
 
 Whether this field type is mergeable (when merging duplicate records).
 
 ## notCreatable
 
-_true_ | _false_
+*boolean*
 
 Whether the field of this type can be created in the Entity Manager tool.
 
 ## readOnly
 
-_true_ | _false_
+*boolean*
 
 Is this field type Read Only (can't be edited).
  
 ## skipOrmDefs
 
-_true_ | _false_
+*boolean*
 
 Skip converting to defs for the ORM.
 
 ## filter
 
-_true_ | _false_
+*boolean*
 
 Records can be filtered by this field (available as filter on the list view). 
 
 ## view
+
+*string*
 
 By default when displaying a field the system try to read the view `"views/fields/{field-type}"` (path is `client/src/views/fields/{field-name}.js`). You can define a custom view with this parameter.
 
@@ -90,7 +92,7 @@ Some other parameters:
 
 ## translatedOptions
 
-_true_ | _false_
+*boolean*
 
 Does the field have options that can be translated.
 
@@ -132,6 +134,8 @@ The result (with default _suffix_ naming): *billingAddressCountry*.
 
 ## actualFields
 
+*string[]*
+
 The list of actual attributes (which contain useful data). 
 
 For example, for field type `link` in `actualFields` is `['id']`, in `notActualFields` is `['name']`.
@@ -140,6 +144,8 @@ Means, if you load record with link field, you have values in `{fieldName}Id` an
 Attributes for field are created by the ORM Converter framework.
 
 ## notActualFields
+
+*string[]*
 
 The list of not actual attributes.
 
@@ -156,3 +162,16 @@ A factory that creates value-objects for this field. Should implement `Espo\ORM\
 ## attributeExtractorClassName
 
 A class that extracts values (attribute => value map) from a value-object. Used internally for obtaining values from a value-object and writting them to an entity. Should implement `Espo\ORM\Value\AttributeExtractor`.
+
+
+## validationList
+
+*string[]*
+
+Validations applied server-side.
+
+## mandatoryValidationList
+
+*string[]*
+
+Mandatory validations applied server-side. The difference from regular validations is that mandatory are applied always, regardless a corresponding field parameter. E.g. if a field has a parameter *required = false*, then the validation *required* won't be applied unless it's listed as mandatory.
