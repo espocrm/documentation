@@ -46,6 +46,12 @@ Whether the entity is avialble in the Layout Manager tool.
 
 Whether the scope is available as a navbar tab.
 
+## tabAclPermission
+
+*?string*
+
+A permission level required for a user to have the scope available as a navbar tab. Examples: `portal`, `massUpdate`.
+
 ## type
 
 *?string*
@@ -183,3 +189,4 @@ Status values to be ignored on the Kanban view.
 *boolean*
 
 Whether the entity may contain personal data.
+
