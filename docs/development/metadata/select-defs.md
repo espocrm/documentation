@@ -2,7 +2,7 @@
 
 Path: metadata > selectDefs > {EntityType}
 
-Parameters used by [Select](../select-builder.md) framework that converts serarch parameters (sent from the front-end) to ORM queries.
+Parameters used by the [Select](../select-builder.md) framework that converts serarch parameters (sent from the front-end) to ORM queries.
 
 ## accessControlFilterClassNameMap
 
