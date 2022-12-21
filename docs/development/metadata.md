@@ -12,7 +12,7 @@ Sections:
 * [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
 * [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
 * [entityDefs](metadata/entity-defs.md) – entity definitions (fields, links, indexes etc.)
-* [pdfDefs](metadata/pdf-defs.md)
+* [pdfDefs](metadata/pdf-defs.md) – PDF generation parameters for entity types
 * [fields](metadata/fields.md) – field types definitions
 * [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
 * app – application definitions
