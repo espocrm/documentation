@@ -1,6 +1,6 @@
 # Entity Manager
 
-Entity Manager is available in Administration panel. It provides the ability to highly customize your EspoCRM instance. You are able to do the following:
+The Entity Manager tool is available from the Administration panel. It provides the ability to highly customize your EspoCRM instance. You are able to do the following:
 
 * Add new entity types.
 * Customize existing entity types: change labels, default order in list view, etc.
