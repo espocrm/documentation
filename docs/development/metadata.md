@@ -11,7 +11,7 @@ Sections:
 * [clientDefs](metadata/client-defs.md) – front-end parameters entity types
 * [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
 * [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
-* entityDefs – entity definitions (fields, links, indexes etc.)
+* [entityDefs](metadata/entity-defs.md) – entity definitions (fields, links, indexes etc.)
 * [pdfDefs](metadata/pdf-defs.md)
 * [fields](metadata/fields.md) – field types definitions
 * app – application definitions
