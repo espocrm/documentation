@@ -155,6 +155,16 @@ The list of not actual attributes.
 
 Wherer the field may contain personal data.
 
+## textFilter
+
+*boolean*
+
+The field will be available in the list of text filters (in the Entity Manager tool).
+
+## fieldDefs
+
+Definitions to carry to ORM attribute defs.
+
 ## valueFactoryClassName
 
 A factory that creates value-objects for this field. Should implement `Espo\ORM\Value\ValueFactory` inteface. A value-object can be obtainer by calling `getValueObject` method on an `Entity`.
