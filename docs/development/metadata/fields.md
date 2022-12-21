@@ -177,6 +177,12 @@ Definitions to be set in ORM attribute defs.
 
 Full-text search will be available for the field.
 
+## fullTextSearchColumnList
+
+*string[]*
+
+Colums used in full-text search.
+
 ## valueFactoryClassName
 
 A factory that creates value-objects for this field. Should implement `Espo\ORM\Value\ValueFactory` inteface. A value-object can be obtainer by calling `getValueObject` method on an `Entity`.
@@ -184,7 +190,6 @@ A factory that creates value-objects for this field. Should implement `Espo\ORM\
 ## attributeExtractorClassName
 
 A class that extracts values (attribute => value map) from a value-object. Used internally for obtaining values from a value-object and writting them to an entity. Should implement `Espo\ORM\Value\AttributeExtractor`.
-
 
 ## validationList
 
