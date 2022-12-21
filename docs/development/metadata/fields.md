@@ -24,21 +24,21 @@ Is this field type Read Only (can't be edited).
 
 _true_ | _false_
 
-Skip converting to defs for ORM.
+Skip converting to defs for the ORM.
 
 ### filter
 
 _true_ | _false_
 
-Entity could be filtered by field with this field type. 
+Records can be filtered by this field (available as filter on the list view). 
 
 ### view
 
-By default for displaying a field of this field type the system try to read the view `"views/fields/{field-type}"` (path is `client/src/views/fields/{field-name}.js`). But if want to define own view, you can set this parameter here.
+By default when displaying a field the system try to read the view `"views/fields/{field-type}"` (path is `client/src/views/fields/{field-name}.js`). You can define a custom view with this parameter.
 
 ### params
 
-Array of fields, that described field type parameters. This parameters could be set for each field of this field type in the Entity Manager.
+Array of field parameters. Theses parameters then can be edited for every field of this field type in the Entity Manager tool.
 
 #### Example
 
@@ -63,8 +63,9 @@ Array of fields, that described field type parameters. This parameters could be 
     "type": "bool"
   ]
 ]
-
 ```
+
+Parameters are passed to the field view in the `params` option.
 
 ### fieldDefs
 
