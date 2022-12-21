@@ -14,7 +14,7 @@ Sections:
 * [entityDefs](metadata/entity-defs.md) – entity definitions (fields, links, indexes etc.)
 * [pdfDefs](metadata/pdf-defs.md)
 * [fields](metadata/fields.md) – field types definitions
-* [notificationDefs](notification-defs.md) – notification defs for entity types
+* [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
 * app – application definitions
   * [authentication](metadata/app-authentication.md)
   * [cleanup](metadata/app-cleanup.md)
