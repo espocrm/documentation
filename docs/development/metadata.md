@@ -10,7 +10,7 @@ Sections:
   * [rebuild](metadata/app-rebuild.md)
 * [fields](metadata/fields.md) – field types definitions
 * [authenticationMethods](metadata/authentication-methods.md) – authentication methods
-* [integrations](metadata/integrations.md] – integrations
+* [integrations](metadata/integrations.md) – integrations
 * [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
 * [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
 * [selectDefs](metadata/select-defs.md) – filters for entity types
