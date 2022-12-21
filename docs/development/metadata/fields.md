@@ -129,13 +129,22 @@ The list of actual attributes (which contain useful data).
 For example, for field type `link` in `actualFields` is `['id']`, in `notActualFields` is `['name']`.
 Means, if you load record with link field, you have values in `{fieldName}Id` and `{fieldName}Name` (suffix naming). But you need set only `{fieldName}Id`, if you want to update this field.
 
-### notActualFields
+Attributes for field are created by the ORM Converter framework.
+
+## notActualFields
 
 The list of not actual attributes.
 
-
-### personalData
+## personalData
 
 *boolean*
 
 Wherer the field may contain personal data.
+
+## valueFactoryClassName
+
+A factory that creates value-objects for this field. Should implement `Espo\ORM\Value\ValueFactory` inteface. Value-object can be obtainer by calling `getValueObject` method on an `Entity`.
+
+## attributeExtractorClassName
+
+A class that extracts values (attribute => value map) from a value-object. Used internally for obtaining values from a value-object and writting them to an entity. Should implement `Espo\ORM\Value\AttributeExtractor`.
