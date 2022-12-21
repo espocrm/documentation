@@ -157,7 +157,7 @@ Wherer the field may contain personal data.
 
 ## valueFactoryClassName
 
-A factory that creates value-objects for this field. Should implement `Espo\ORM\Value\ValueFactory` inteface. Value-object can be obtainer by calling `getValueObject` method on an `Entity`.
+A factory that creates value-objects for this field. Should implement `Espo\ORM\Value\ValueFactory` inteface. A value-object can be obtainer by calling `getValueObject` method on an `Entity`.
 
 ## attributeExtractorClassName
 
@@ -175,3 +175,23 @@ Validations applied server-side.
 *string[]*
 
 Mandatory validations applied server-side. The difference from regular validations is that mandatory are applied always, regardless a corresponding field parameter. E.g. if a field has a parameter *required = false*, then the validation *required* won't be applied unless it's listed as mandatory.
+
+## validatorClassName
+
+A validator class name. The class should contain validation method corresponding to validations listed in *validationList* and *mandatoryValidationList*. This is a legacy, consider using *validatorClassNameMap*. If not defined, then a class `Espo\Classes\FieldValidations\{Type}Type` is used.
+
+## validatorClassNameMap
+
+*As if v7.3.*
+
+Validators defined as validation-type => class-name map. Classes should implement `Espo\Core\FieldValidation\Validator` interface.
+
+Example:
+
+```json
+{
+    "validatorClassNameMap": {
+        "required": "Espo\Modules\MyModule\Classes\FieldValidators\MyField\RequiredValidator"
+    }
+}
+```
