@@ -2,7 +2,7 @@
 
 Definitions for field types.
 
-Path: `metadata/fields/{fieldType}.json`
+Path: metadata > fields > {fieldType}
 
 ## notMergeable
 
