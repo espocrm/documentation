@@ -163,7 +163,7 @@ The field will be available in the list of text filters (in the Entity Manager t
 
 ## fieldDefs
 
-Definitions to carry to ORM attribute defs.
+Definitions to be set in ORM attribute defs.
 
 ## valueFactoryClassName
 
