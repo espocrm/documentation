@@ -161,6 +161,10 @@ Wherer the field may contain personal data.
 
 The field will be available in the list of text filters (in the Entity Manager tool).
 
+## textFilterForeign
+
+The field will be available in the list of text filters as a foreign field.
+
 ## fieldDefs
 
 Definitions to be set in ORM attribute defs.
