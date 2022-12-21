@@ -1,103 +1,68 @@
 # scopes
 
-Path: metadata > scopes > {ScopeName}
+Path: metadata > scopes > {ScopeName}.
 
-Сontains scope definition. Scope can define an entity type.
+Сontains scope definitions. A scope can define an entity type.
 
-## Parameters
+## entity
 
-### entity
+*{boolean}*
 
-_Description_: is an entity;
- 
-_Type_: boolean;
+Whether the scope represents an entity type.
 
-_Available value_: true | false;
+## object
 
-_Default_: false.
+*{boolean}*
 
+Whether the entity is a business object. Means that it's not an entity for internal system purpose; an object entity represents some business entity.
 
-### object
+## module
 
-_Description_: is an object; means that it's not an entity for internal system purpose; an object entity represents some business entity;
+*string*
 
-_Type_: boolean;
+The the name of the module, where this scope is defined.
 
-_Available value_: true | false;
+## stream
 
-_Default_: false.
+*{boolean}*
 
+Whether the entity has the stream.
 
-### module
+## importable
 
-_Description_: the name of the module, where is this scope defined;
+*{boolean}*
 
-_Type_: string.
+Whether the entity is avialble in the Import tool.
 
+## layouts
 
-### stream
+Whether the entity is avialble in the Layout Manager tool.
 
-_Description_: the entity has Stream;
+## tab
 
-_Type_: boolean;
+*{boolean}*
 
-_Available value_: true | false;
+Whether the scope is available as a navbar tab.
 
-_Default_: false.
+## type
 
+*?string*
 
-### importable
+A template type of the entity.
 
-_Description_: could be imported with Import feature;
+Available values: Base, BasePlus, Person, Company, CategoryTree, Event.
 
-_Type_: boolean;
+## acl
 
-_Available value_: true | false;
+*boolean|"boolean"*
 
-_Default_: false.
+Whether the scope is available in Roles. Available values: true, false, "boolean". Boolean means that it will be available in roles w/o actions.
 
+## aclPortal
 
-### layouts
+*boolean|"boolean"*
 
-_Description_: has layouts, is available in Layout Manager;
-
-_Type_: boolean;
-
-_Available value_: true | false;
-
-_Default_: false.
-
-
-### tab
-
-_Description_: could be displayed on the tab list;
-
-_Type_: boolean;
-
-_Available value_: true | false;
-
-_Default_: false.
-
-
-### type
-
-_Description_: type of entity;
-
-_Type_: string;
-
-_Available value_: one of ["Base", "BasePlus", "Person", "Company", "CategoryTree", "Event"];
-
-_Default_: "Base".
-
-### acl
-
-_Description_: could be set permissions in Role;
-
-_Type_: boolean | string;
-
-_Available value_: true | false | 'boolean';
-
-_Default_: false.
+Whether the scope is available in Portal Roles. Available values: true, false, "boolean". Boolean means that it will be available in roles w/o actions.
 
 
 ### aclActionList
@@ -136,17 +101,6 @@ Example:
 }
 ```
       
-### aclPortal
-
-_Description_: could be set permissions in Portal Role;
-
-_Type_: boolean;
-
-_Available value_: true | false;
-
-_Default_: false.
-
-
 ### aclPortalLevelList
 
 _Description_: list of available level for actions in Portal Role configuration;
