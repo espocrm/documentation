@@ -2,7 +2,7 @@
 
 ## Customizing field type
 
-An example for *Address* field type.
+An example for the *Address* field type.
 
 Create a file `custom/Espo/Custom/Resources/metadata/fields/address.json`.
 
