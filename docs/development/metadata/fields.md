@@ -220,4 +220,4 @@ Example:
 
 ## duplicatorClassName
 
-A duplicator class. Should implement `Espo\Core\Record\Duplicator\FieldDuplicator`. Duplicates attributes of a field. Some fields can require some processing when an entity is being duplicated.
+A duplicator class. Should implement `Espo\Core\Record\Duplicator\FieldDuplicator` interface. Duplicates attributes of a field. Some fields can require some processing when an entity is being duplicated.
