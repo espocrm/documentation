@@ -8,7 +8,7 @@ Sections:
 * [authenticationMethods](metadata/authentication-methods.md) – authentication methods
 * [selectDefs](metadata/select-defs.md) – filters for entity types
 * [recordDefs](metadata/record-defs.md) – CRUD-specific parameters for entity types
-* [clientDefs](metadata/client-defs.md) – front-end parameters entity types
+* [clientDefs](metadata/client-defs.md) – front-end parameters for entity types
 * [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
 * [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
 * [entityDefs](metadata/entity-defs.md) – entity definitions (fields, links, indexes etc.)
