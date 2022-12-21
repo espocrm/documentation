@@ -14,7 +14,7 @@ Sections:
 * [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
 * [entityDefs](metadata/entity-defs.md) – entity definitions (fields, links, indexes etc.)
 * [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
-* [selectDefs](metadata/select-defs.md) – select-framework parameters for entity types
+* [selectDefs](metadata/select-defs.md) – Select-framework parameters for entity types
 * [recordDefs](metadata/record-defs.md) – CRUD-specific parameters for entity types
 * [clientDefs](metadata/client-defs.md) – front-end parameters for entity types
 * [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
