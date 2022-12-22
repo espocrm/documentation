@@ -310,6 +310,20 @@ Arguments:
 
 * *viewKey* – a view key.
 
+### reRender
+
+Re-renders a view. Usually, called from inside the view. Returns a promise resolved once rendering is finished.
+
+Argumets:
+
+* *force* – *boolean* – force rendering if the view was not rendered before.
+
+### render
+
+Render a view. Should be called if the view is called not in the *setup* method (after the view is already ready or rendered). Returns a promise resolved once rendering is finished.
+
+
+
 
 ```js
 templateContent = `
