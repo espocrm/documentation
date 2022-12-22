@@ -76,8 +76,11 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
 
         // Called after contents is added to the DOM.
         afterRender: function () {
-            // The view container (DOM element).
+            // The view container (JQuery DOM element).
             console.log(this.$el); 
+            
+            // The view container (DOM element).
+            console.log(this.el); 
             
             // Accessing a child view.
             let childView = this.getView('someKeyName');
