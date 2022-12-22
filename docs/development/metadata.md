@@ -2,7 +2,7 @@
 
 Metadata is intended for: storing system data such as entity's fields and relationships, specifying frontend controllers, views, panels, defining fields, dashlets, and other data needed for the application.
 
-Reference:
+## References
 
 * app – application definitions
   * [acl](metadata/app-acl.md) – access control parameters
@@ -27,7 +27,7 @@ Reference:
 
 ## How to access
 
-#### Backend
+### Backend
 
 The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as an [container service](di.md).
 
@@ -45,7 +45,7 @@ $metadata->get(['entityDefs', 'Account', 'fields']);
 will return an associative array with definitions of all fields.
 
 
-#### Frontend
+### Frontend
 
 Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as backend's one.
 
