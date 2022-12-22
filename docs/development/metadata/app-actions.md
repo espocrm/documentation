@@ -14,8 +14,17 @@ Example:
     "merge": {
         "implementationClassName": "Espo\\Core\\Action\\Actions\\Merge"
     }
-  }
+}
 ```
+
+API endpoint: `POST Action`.
+
+API payload params:
+
+* entityType – *string*
+* action – *string*
+* id – *string*
+* data – *Object.<string, mixed>*
 
 ## implementationClassName
 
