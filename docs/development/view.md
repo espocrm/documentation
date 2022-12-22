@@ -294,6 +294,18 @@ Standard options (all are optional):
 
 If you won't pass the *selector* option, a selector `[data-view="{viewKey}"]` will be used. It's important that every view have their actual selector so that the application knows how to access them (for re-rendering).
 
+### setup
+
+Called internally on initialization. Put initialization logic here. Options passed by the parent view are available in `this.options`.
+
+### afterRender
+
+Called internally after render. Put manipulation with DOM here.
+
+### onRemove
+
+Called intenally on view removal. Reasonable for unsubscribing.
+
 ### clearView
 
 Removes a child view.
@@ -322,7 +334,9 @@ Argumets:
 
 Render a view. Should be called if the view is called not in the *setup* method (after the view is already ready or rendered). Returns a promise resolved once rendering is finished.
 
+### data
 
+Method should is called internally when rendering. Should return a key => value data (*Object.<string, mixed>*) that will be passed to a template.
 
 
 ```js
@@ -341,9 +355,9 @@ actionShowModal() {
             
             this.listenToOnce(view, 'some-event, eventData => {
                 console.log(eventData);
+                
+                this.clearView('dialog');
             });
-            
-            this.clearView();
         });
 }
 ```
