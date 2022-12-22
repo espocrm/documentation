@@ -26,9 +26,10 @@ namespace Espo\Custom\Core\AppParams;
 
 class MyParam //implements \Espo\Tools\App\AppParam
 {
-    public function __construct(/* Pass needed dependencies. */)
-    {
-    }
+    public function __construct(
+        /* Pass needed dependencies. */        
+        //private \Espo\Entities\User $user
+    ) {}
     
     public function get(): mixed
     {
