@@ -5,7 +5,7 @@ Metadata is intended for: storing system data such as entity's fields and relati
 In this article:
 
 * [Reference](#reference)
-* [How to access](#how-to-access)
+* [Accessing](#accessing)
 * [How it's stored](#how-its-stored)
 * [Extending](#extending)
 
@@ -32,7 +32,7 @@ In this article:
 * [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
 
 
-## How to access
+## Accessing
 
 ### Backend
 
