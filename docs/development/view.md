@@ -356,7 +356,7 @@ actionShowModal() {
         .then(view => {
             view.render();
             
-            this.listenToOnce(view, 'some-event, eventData => {
+            this.listenToOnce(view, 'some-event', eventData => {
                 console.log(eventData);
                 
                 this.clearView('dialog');
