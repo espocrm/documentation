@@ -5,6 +5,8 @@ Metadata is intended for: storing system data such as entity's fields and relati
 Sections:
 
 * app – application definitions
+  * [acl](metadata/app-acl.md)
+  * [aclPortal](metadata/app-acl-portal.md)  
   * [authentication](metadata/app-authentication.md)
   * [cleanup](metadata/app-cleanup.md)
   * [rebuild](metadata/app-rebuild.md)
@@ -20,7 +22,6 @@ Sections:
 * [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
 * [pdfDefs](metadata/pdf-defs.md) – PDF generation parameters for entity types
 * [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
-
 
 
 ## How to access
