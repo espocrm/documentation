@@ -15,6 +15,7 @@ In this article:
   * [acl](metadata/app-acl.md) – access control parameters
   * [aclPortal](metadata/app-acl-portal.md) – access control parameters for portals
   * [actions](metadata/app-actions.md) – Action framework
+  * [addressFormats](metadata/app-address-formats.md)
   * [authentication](metadata/app-authentication.md)
   * [cleanup](metadata/app-cleanup.md)
   * [rebuild](metadata/app-rebuild.md)
