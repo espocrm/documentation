@@ -24,7 +24,7 @@ namespace Espo\Custom\Core\AppParams;
 
 // As of v7.2 it's recommended to implement the \Espo\Tools\App\AppParam interface.
 
-class MyParam
+class MyParam //implements \Espo\Tools\App\AppParam
 {
     public function __construct(/** Pass needed dependencies. */)
     {
