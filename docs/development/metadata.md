@@ -5,8 +5,8 @@ Metadata is intended for: storing system data such as entity's fields and relati
 Sections:
 
 * app – application definitions
-  * [acl](metadata/app-acl.md)
-  * [aclPortal](metadata/app-acl-portal.md)  
+  * [acl](metadata/app-acl.md) – access control parameters
+  * [aclPortal](metadata/app-acl-portal.md) – access control parameters for portals
   * [authentication](metadata/app-authentication.md)
   * [cleanup](metadata/app-cleanup.md)
   * [rebuild](metadata/app-rebuild.md)
