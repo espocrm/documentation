@@ -279,9 +279,21 @@ A simple way to wait:
 
 ```
 
+### setup
+
+Called internally on initialization. Put initialization logic here. Options passed by the parent view are available in `this.options`.
+
+### afterRender
+
+Called internally after render. Put manipulation with DOM here.
+
+### onRemove
+
+Called intenally on view removal. Reasonable for unsubscribing.
+
 ### createView
 
-Creates a child view. When we create a child view in the setup method, rendering of the view is held off until the child view is loaded (ready), the child view will be rendered along with the parent view.  The first argument is a key name that can be used to access the view further (with `getView` method). The second argument is a view name. The method returns a promise that resolves to a view object.
+Creates a child view. When we create a child view in the setup method, rendering of the view is held off until the child view is loaded (ready), the child view will be rendered along with the parent view. The first argument is a key name that can be used to access the view further (with `getView` method). The second argument is a view name. The method returns a promise that resolves to a view object.
 
 Arguments:
 
@@ -295,19 +307,7 @@ Standard options (all are optional):
 * *model* – a model;
 * *collection* – a collection.
 
-If you won't pass the *selector* option, a selector `[data-view="{viewKey}"]` will be used. It's important that every view have their actual selector so that the application knows how to access them (for re-rendering).
-
-### setup
-
-Called internally on initialization. Put initialization logic here. Options passed by the parent view are available in `this.options`.
-
-### afterRender
-
-Called internally after render. Put manipulation with DOM here.
-
-### onRemove
-
-Called intenally on view removal. Reasonable for unsubscribing.
+It's important that every view have their actual selector so that the application knows how to access them (for re-rendering).
 
 ### clearView
 
@@ -344,7 +344,7 @@ Method should is called internally when rendering. Should return a key => value 
 
 ```js
 templateContent = `
-    <div data-view="someKeyName">{{{someKeyName}}}</div>
+    <div data-name="someName">{{{someKeyName}}}</div>
 `;
 
 setup() {
@@ -352,7 +352,7 @@ setup() {
 }
 
 actionShowModal() {
-    this.createView('dialog', 'custom:test/my-modal-view', {})
+    this.createView('dialog', 'custom:test/my-modal-view', {selector: '> [data-name="someName]'})
         .then(view => {
             view.render();
             
