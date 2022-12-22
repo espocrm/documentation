@@ -126,7 +126,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         },
         
         someMethod: function () {
-            // As of v7.3.0.
+            // As of v7.3.
             // To proceed only when the view is rendered.
             // Useful when the method can be invoked by the caller before the view is rendered.
             this.whenRendered().then(() => {
@@ -156,9 +156,11 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 Note: When you extend a view that already has its *events* and you want to add more events, do it the following way:
 
 ```js
-    events: _.extend({
-        'click a[data-action="test"]': function () {},
-    }, Dep.prototype.events),
+    events: {
+        'click a[data-action="test"]': function (e) {
+        },
+        ...Dep.prototype.events
+    },
 ```
 
 See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view.js) of the view class.
@@ -272,6 +274,64 @@ A simple way to wait:
             });
     },
 
+```
+
+## createView
+
+Creates a child view. When we create a child view in the setup method, rendering of the view is held off until the child view is loaded (ready), the child view will be rendered along with the parent view.  The first argument is a key name that can be used to access the view further (with `getView` method). The second argument is a view name. The method returns a promise that resolves to a view object.
+
+Arguments:
+
+* *viewKey* – a view key;
+* *viewName* – a view name (path);
+* *options* – options.
+
+Standard options (all are optional):
+
+* *selector* – a relative CSS to the view selector (as of v7.3);
+* *model* – a model;
+* *collection* – a collection.
+
+If you won't pass the *selector* option, a selector `[data-view="{viewKey}"]` will be used. It's important that every view have their actual selector so that the application knows how to access them (for re-rendering).
+
+## clearView
+
+Removes a child view.
+
+Arguments:
+
+* *viewKey* – a view key.
+
+## getView
+
+Get a child view by a key.
+
+Arguments:
+
+* *viewKey* – a view key.
+
+
+```js
+templateContent = `
+    <div data-view="someKeyName">{{{someKeyName}}}</div>
+`;
+
+setup() {
+    this.createView('someKeyName', 'custom:test/my-custom-child-view', {}); 
+}
+
+actionShowModal() {
+    this.createView('dialog', 'custom:test/my-modal-view', {})
+        .then(view => {
+            view.render();
+            
+            this.listenToOnce(view, 'some-event, eventData => {
+                console.log(eventData);
+            });
+            
+            this.clearView();
+        });
+}
 ```
 
 ## Events
