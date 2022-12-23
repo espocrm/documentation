@@ -17,6 +17,7 @@ Note that all configuration settings listed here are made on **Windows Server 20
 ![Physical Path](../_static/images/administration/iis/physical-path.png)
 
 1.3. Specify your EspoCRM public directory path (e.g., `C:\inetpub\wwwroot\EspoCRM-7.2.7\public`) in the *Physical Path* field.
+
 1.4. Click on *OK*.
 
 ![Physical Path-2](../_static/images/administration/iis/physical-path-2.png)
