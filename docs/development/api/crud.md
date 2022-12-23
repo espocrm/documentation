@@ -23,7 +23,7 @@ GET parameters:
 * `offset` – *int* – offset;
 * `where` – *array* – filters;
 * `orderBy` – *string* – attribute to sort by;
-* `order` – *string: 'asc' | 'desc'* – sort direction;
+* `order` – *"asc"|"desc"* – sort direction;
 * `select` – *string* – list of [attributes](../../administration/terms-and-naming.md#attribute) to be returned, sepratated by comma; if not specified, then all attributes will be returned; whitespaces are not allowed.
 
 Example:
