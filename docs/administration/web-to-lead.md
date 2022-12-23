@@ -26,7 +26,7 @@ Create Email Template that will be used for a double opt-in. You can use followi
 
 A confirmation link will be added automatically if you haven’t inserted a placeholder in the email template.
 
-Note: When sending empty values (for Varchar, URL, Email, Phone fields), use *null* rather than an empty strings.
+Note: When sending empty values (for Varchar, URL, Email, Phone fields), use *null* rather than an empty string.
 
 ## Posting API request
 
