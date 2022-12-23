@@ -68,7 +68,7 @@ It's possible to convert manually all currency fields of a record.
 
 ## Currency rates API
 
-Available since 5.8.0.
+*As of v5.8.
 
 API User needs to have *Currency* scope enabled in roles.
 
