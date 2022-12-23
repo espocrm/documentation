@@ -1,6 +1,6 @@
 # app > cleanup
 
-A Key-Value map. Defines cleaning up classes. Fired by the Cleanup job.
+A Key-Value map. Defines cleaning up classes. Fired by the *Cleanup* job.
 
 Example:
 
