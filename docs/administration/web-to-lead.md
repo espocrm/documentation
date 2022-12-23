@@ -20,11 +20,13 @@ Create Email Template that will be used for a double opt-in. You can use followi
 
 * `{optInUrl}` - confirmation URL;
 * `{optInLink}` - confirmation link;
-* `{optInDate}` - date when a subscription request was submitted (as of v5.6.10);
-* `{optInTime}` - time when a subscription request was submitted (as of v5.6.10);
-* `{optInDateTime}` - date and time when a subscription request was submitted (as of v5.6.10).
+* `{optInDate}` - date when a subscription request was submitted;
+* `{optInTime}` - time when a subscription request was submitted;
+* `{optInDateTime}` - date and time when a subscription request was submitted.
 
 A confirmation link will be added automatically if you haven’t inserted a placeholder in the email template.
+
+Note: When sending empty values (for Varchar, URL, Email, Phone fields), use *null* rather than an empty strings.
 
 ## Posting API request
 
