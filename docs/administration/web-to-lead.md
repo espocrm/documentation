@@ -54,9 +54,9 @@ $client = new EspoApiClient('https://URL_OF_YOUR_CRM');
 $apiKey = 'f1b04885f28ee1a6d55dd203daed68f9'; // specify your API key here
 
 $formData = [
-    'firstName' => $_POST['firstName'] ?? null,
-    'lastName' => $_POST['lastName'] ?? null,
-    'emailAddress' => $_POST['emailAddress'] ?? null,
+    'firstName' => $_POST['firstName'] ?: null,
+    'lastName' => $_POST['lastName'] ?: null,
+    'emailAddress' => $_POST['emailAddress'] ?: null,
 ];
 
 $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
