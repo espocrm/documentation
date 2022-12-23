@@ -104,9 +104,9 @@ Example:
         webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
 
         let payloadData = {
-            firstName: webToLeadFormElement.firstName.value,
-            lastName: webToLeadFormElement.lastName.value,
-            emailAddress: webToLeadFormElement.emailAddress.value,
+            firstName: webToLeadFormElement.firstName.value || null,
+            lastName: webToLeadFormElement.lastName.value || null,
+            emailAddress: webToLeadFormElement.emailAddress.value || null,
         };
 
         // A needed URL can be found on the Lead Capture detail view.
