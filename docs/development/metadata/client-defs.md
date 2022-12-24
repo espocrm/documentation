@@ -1,9 +1,8 @@
-# clientDefs. Client defenitions
+# clientDefs
 
-Path: `metadata/clientDefs/{ScopeName}.json`
+Path: metadata > clientDefs > {EntityType}
 
 Contains parameters used by the front-end.
-
 
 ## controller
 
