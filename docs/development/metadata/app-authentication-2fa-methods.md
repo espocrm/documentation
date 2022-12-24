@@ -2,7 +2,7 @@
 
 Path: metadata > app > authentication2FAMethods.
 
-Definitions for 2-factor authentication methods. A method => defs map.
+Definitions for 2-factor authentication methods. A method-name => Object map.
 
 ```json
 {
