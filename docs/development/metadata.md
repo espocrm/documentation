@@ -20,6 +20,7 @@ In this article:
   * [appParams](metadata/app-app-params.md) – AppParams framework
   * [authentication](metadata/app-authentication.md)
   * [cleanup](metadata/app-cleanup.md)
+  * [hook](metadata/app-hook.md) – Hook framework
   * [rebuild](metadata/app-rebuild.md)
 * [fields](metadata/fields.md) – field types
 * [authenticationMethods](metadata/authentication-methods.md) – authentication methods
