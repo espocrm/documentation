@@ -19,6 +19,7 @@ In this article:
   * [adminPanel](metadata/app-admin-panel.md) – Administration panel
   * [appParams](metadata/app-app-params.md) – AppParams framework
   * [authentication](metadata/app-authentication.md)
+  * [authentication2FAMethods](metadata/app-authentication-2fa-methods.md) – 2-factor authentication
   * [cleanup](metadata/app-cleanup.md)
   * [hook](metadata/app-hook.md) – Hook framework
   * [rebuild](metadata/app-rebuild.md)
