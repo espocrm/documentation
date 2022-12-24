@@ -1,6 +1,6 @@
 # selectDefs
 
-Path: metadata > selectDefs > {EntityType}
+Path: metadata > selectDefs > {EntityType}.
 
 Parameters used by the [Select](../select-builder.md) framework that converts serarch parameters (sent from the front-end) to ORM queries.
 
@@ -102,7 +102,7 @@ Example:
 
 ## ordererClassNameMap
 
-As of v7.1.0.
+*As of v7.1.*
 
 Provides the ability to apply custom order for a specific field.
 
