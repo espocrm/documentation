@@ -348,6 +348,14 @@ Example:
 }
 ```
 
+### notMergeable
+
+*boolean*
+
+*(available for hasMany)*
+
+Disable merging related records when duplicate records are being merged.
+
 ## collection
 
 Collection parameters.
