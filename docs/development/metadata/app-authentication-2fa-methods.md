@@ -1,4 +1,6 @@
-# metadata > app > authentication2FAMethods
+# app > authentication2FAMethods
+
+Path: metadata > app > authentication2FAMethods
 
 Definitions for 2-factor authentication methods. A method => defs map.
 
