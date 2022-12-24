@@ -1,6 +1,6 @@
 # aclDefs
 
-Path: metadata > aclDefs > {scope}.
+Path: metadata > aclDefs > {ScopeName}.
 
 Defines access control parameters for a specific scope (or entity type).
 
