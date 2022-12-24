@@ -1,6 +1,6 @@
 # pdfDefs
 
-Path: `metadata/pdfDefs/{EntityType}.json`
+Path: metadata > pdfDefs > {EntityType}.
 
 ## dataLoaderClassNameList
 
