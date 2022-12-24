@@ -352,7 +352,7 @@ Example:
 
 *boolean*
 
-*(available for hasMany)*
+*(available for hasMany, hasChildren)*
 
 Disable merging related records when duplicate records are being merged.
 
