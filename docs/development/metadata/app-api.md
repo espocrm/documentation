@@ -46,7 +46,7 @@ A class list of global middlewares. Global middlewares applied for all API reque
 
 *Object.<string, class-string<Psr\Http\Server\MiddlewareInterface>[]>*
 
-Middlewares for specific routes. Keys are composed in the following form: `{method}_{route}`.
+Middlewares for specific routes. Keys are composed in the form: `{method}_{route}`.
 
 ## controllerMiddlewareClassNameListMap
 
@@ -58,4 +58,4 @@ Middlewares for specific controllers. A controller-name => class-string-list map
 
 *Object.<string, class-string<Psr\Http\Server\MiddlewareInterface>[]>*
 
-Middlewares for specific controller actions. Keys are composed in the following form: `{ControllerName}_{method}_{actionName}`.
+Middlewares for specific controller actions. Keys are composed in the form: `{ControllerName}_{method}_{actionName}`.
