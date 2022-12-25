@@ -6,7 +6,7 @@ Path: metadata > app > api.
 
 Definitions for API framework.
 
-Provides the ability to add middlewares for all requests, specific routes, controllers and controller actions. Supporting the PSR-15 standard means that it's possible to use 3rd party middlewares, like [these](https://github.com/middlewares/psr15-middlewares). If a middleware you want to use has dependencies in the constructor, use DI binding to resolve them.
+Provides the ability to add middlewares for all requests, specific routes, controllers and controller actions. Supporting the PSR-15 standard means that it's possible to use 3rd party middlewares, like [these](https://github.com/middlewares/psr15-middlewares). If a middleware you want to use has dependencies in a constructor, use DI binding to resolve them.
 
 Example:
 
