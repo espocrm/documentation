@@ -4,7 +4,11 @@ Path: metadata > app > api.
 
 *As of v7.4.*
 
-Definitions for API framework. Middleware classes should implement [PSR-15](https://www.php-fig.org/psr/psr-15/) `Psr\Http\Server\MiddlewareInterface` interface.
+Definitions for API framework.
+
+Provides the ability to add middlewares for all requests, specific routes, controllers and controller actions. Supporting the PSR-15 standard means that it's possible to use 3rd party middlewares, like [these](https://github.com/middlewares/psr15-middlewares). If a middleware you want to use has dependencies in the constructor, use DI binding to resolve them.
+
+See in the [docs](https://github.com/espocrm/documentation/blob/master/docs/development/metadata/app-api.md).
 
 Example:
 
