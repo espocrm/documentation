@@ -17,6 +17,7 @@ In this article:
   * [actions](metadata/app-actions.md) – Action framework
   * [addressFormats](metadata/app-address-formats.md)
   * [adminPanel](metadata/app-admin-panel.md) – Administration panel
+  * [api](metadata/app-api.md)
   * [appParams](metadata/app-app-params.md) – AppParams framework
   * [authentication](metadata/app-authentication.md)
   * [authentication2FAMethods](metadata/app-authentication-2fa-methods.md) – 2-factor authentication methods
