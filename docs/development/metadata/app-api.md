@@ -29,7 +29,7 @@ Example:
             "Espo\\Custom\\Classes\\ApiMiddlewares\\Test5"
         ],
         "Contact_post_create": [
-            "Espo\\Custom\\Classes\\ApiMiddlewares\\Test5"
+            "Espo\\Custom\\Classes\\ApiMiddlewares\\Test6"
         ]
     }
 }
