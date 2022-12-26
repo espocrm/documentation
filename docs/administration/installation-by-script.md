@@ -183,7 +183,7 @@ Import the database by the SQL dump created by `mysqldump`, `phpMyAdmin`, etc.
 /var/www/espocrm/command.sh import-db "PATH/DB.sql"
 ```
 
-An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/db.sql"`.
+An example: `/var/www/espocrm/command.sh import-db "/var/www/espocrm-backup/db.sql"`.
 
 ### Help
 
