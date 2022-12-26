@@ -4,7 +4,7 @@ These instructions are supplementary to the [server configuration](server-config
 
 Note that all configuration settings listed here are made on **Windows Server 2019**.
 
-# To completely сonfigure IIS server for smooth EspoCRM v7 operation please do the following steps:
+# To completely сonfigure IIS server for smooth EspoCRM v7 operation, do the following steps:
 
 ## Step 1. Physical Path adjusting
 
@@ -27,9 +27,9 @@ Note that all configuration settings listed here are made on **Windows Server 20
 
 ![Virtual Path](../_static/images/administration/iis/virtual-path.png)
 
-2.3. Type *client* name in the *Alias* field.
+2.3. Type the *client* name in the *Alias* field.
 2.4. Specify your EspoCRM client directory path (e.g., `C:\inetpub\wwwroot\EspoCRM-7.2.7\client`) in the *Physical Path* field.
-2.5. Click *OK*.
+2.5. Click on *OK*.
 
 ![Virtual Path-2](../_static/images/administration/iis/virtual-path-2.png)
 
@@ -37,11 +37,11 @@ Note that all configuration settings listed here are made on **Windows Server 20
 
 ### Via IIS Manager
 
-3.1. Navigate **Handler Mappings** scope of your *Site*.
+3.1. Navigate the **Handler Mappings** scope of your *Site*.
 
 ![Handler Mappings](../_static/images/administration/iis/handler-mappings.png)
 
-3.2. Select *PHP_via_FastCGI* module > *Actions* > *Edit*.
+3.2. Select the *PHP_via_FastCGI* module > *Actions* > *Edit*.
 
 ![FastCGI](../_static/images/administration/iis/fast-cgi.png)
 
@@ -62,7 +62,7 @@ Note that all configuration settings listed here are made on **Windows Server 20
 
 3.1. Open **%windir%\system32\inetsrv\config\applicationhost.config** file.
 3.2. Locate the *< handlers >* tag.
-3.3. Locate **"PHP_via_FastCGI"** section, add all HTTP methods modifiyng `verb="GET,HEAD,POST"` value to `verb="GET,HEAD,POST,PUT,DELETE,PATCH"`.
+3.3. Locate the **"PHP_via_FastCGI"** section, add all HTTP methods modifying `verb="GET,HEAD,POST"` value to `verb="GET,HEAD,POST,PUT,DELETE,PATCH"`.
 3.4. Save the **ApplicationHost.config** file.
 
 **Reboot your IIS server after all the steps are done.**
