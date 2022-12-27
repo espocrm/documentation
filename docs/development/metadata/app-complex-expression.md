@@ -2,7 +2,7 @@
 
 Path: metadata > app > complexExpression.
 
-Definitions for the [complex expression](../user-guide/complex-expressions.md) editor.
+Definitions for the [complex expression](../../user-guide/complex-expressions.md) editor.
 
 ## functionList
 
