@@ -409,7 +409,7 @@ $bindingContainer = BindingContainerBuilder::create()
 $instance = $injectableFactory->createWithBinding(SomeClass::class, $bindingContainer);
 ```
 
-The passed binding has a higher priority than the default binding (the default binding is applied globally too all objects resolved via DI).
+The passed binding has a higher priority than the default binding (the default binding is applied globally to all objects resolved via DI).
 
 ## See also
 
