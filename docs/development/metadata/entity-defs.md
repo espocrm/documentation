@@ -252,9 +252,15 @@ Parameters for specific types a listed below.
 
 *boolean*
 
-*(available for belongsTo)*
+*(available for belongsTo, hasOne)*
 
-Prevents joining a foreign table when fetching a record.
+
+### foreignName
+
+*string*
+
+A field to be used as a name of a foreign record. Needed when a foreign entity type does not have a field *name*.
+
 
 ### audited
 
