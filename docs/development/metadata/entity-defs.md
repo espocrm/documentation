@@ -259,8 +259,9 @@ Parameters for specific types a listed below.
 
 *string*
 
-A field to be used as a name of a foreign record. Needed when a foreign entity type does not have a field *name*.
+*(available for belongsTo, hasOne)*
 
+A field to be used as a name of a foreign record. Needed when a foreign entity type does not have the field *name*.
 
 ### audited
 
