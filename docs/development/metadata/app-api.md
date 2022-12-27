@@ -32,6 +32,15 @@ Example:
         ],
         "Contact_post_create": [
             "Espo\\Custom\\Classes\\ApiMiddlewares\\Test6"
+        ],
+        "Contact_put_update": [
+            "Espo\\Custom\\Classes\\ApiMiddlewares\\Test6"
+        ],
+        "Contact_get_read": [
+            "Espo\\Custom\\Classes\\ApiMiddlewares\\Test7"
+        ],
+        "Contact_delete_delete": [
+            "Espo\\Custom\\Classes\\ApiMiddlewares\\Test8"
         ]
     }
 }
