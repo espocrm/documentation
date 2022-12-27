@@ -22,8 +22,8 @@ In this article:
   * [authentication](metadata/app-authentication.md)
   * [authentication2FAMethods](metadata/app-authentication-2fa-methods.md) – 2-factor authentication methods
   * [cleanup](metadata/app-cleanup.md)
-  * [client](metadata/app-client.md)
-  * [clientRoutes](metadata/app-client-routes.md)
+  * [client](metadata/app-client.md) – front-end client
+  * [clientRoutes](metadata/app-client-routes.md) – front-end routes
   * [complexExpression](metadata/app-complex-expression.md)
   * [hook](metadata/app-hook.md) – Hook framework
   * [rebuild](metadata/app-rebuild.md)
