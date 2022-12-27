@@ -254,6 +254,7 @@ Parameters for specific types a listed below.
 
 *(available for belongsTo, hasOne)*
 
+Prevents joining a foreign table when fetching a record.
 
 ### foreignName
 
