@@ -51,8 +51,8 @@ Most used container services are listed [here](container-services.md).
 
 If you need to define your custom container services, do it in metadata. In your module or in the custom folder:
 
-* `custom/Espo/Modules/{YourModule}/Resources/metadata/app/containserServices.json`;
-* `custom/Espo/Custom/Resources/metadata/app/containserServices.json`.
+* `custom/Espo/Modules/{YourModule}/Resources/metadata/app/containerServices.json`;
+* `custom/Espo/Custom/Resources/metadata/app/containerServices.json`.
 
 When defining in metadata there are 2 options:
 
