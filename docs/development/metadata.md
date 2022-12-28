@@ -21,8 +21,9 @@ In this article:
 * [pdfDefs](metadata/pdf-defs.md) – PDF generation defs for entity types
 * [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
 * [fields](metadata/fields.md) – field types
+* [dashlets](metadata/dashlets.md)
 * [authenticationMethods](metadata/authentication-methods.md) – authentication methods
-* [integrations](metadata/integrations.md) – integrations
+* [integrations](metadata/integrations.md)
 * app – application definitions
   * [acl](metadata/app-acl.md) – access control
   * [aclPortal](metadata/app-acl-portal.md) – access control for portals
