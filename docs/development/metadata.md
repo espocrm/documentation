@@ -11,9 +11,6 @@ In this article:
 
 ## Reference
 
-* [fields](metadata/fields.md) – field types
-* [authenticationMethods](metadata/authentication-methods.md) – authentication methods
-* [integrations](metadata/integrations.md) – integrations
 * [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
 * [entityDefs](metadata/entity-defs.md) – entity defs (fields, links, indexes)
 * [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
@@ -23,6 +20,9 @@ In this article:
 * [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
 * [pdfDefs](metadata/pdf-defs.md) – PDF generation defs for entity types
 * [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
+* [fields](metadata/fields.md) – field types
+* [authenticationMethods](metadata/authentication-methods.md) – authentication methods
+* [integrations](metadata/integrations.md) – integrations
 * app – application definitions
   * [acl](metadata/app-acl.md) – access control
   * [aclPortal](metadata/app-acl-portal.md) – access control for portals
