@@ -53,7 +53,7 @@ In this article:
   * [fileStorage](metadata/app-file-storage.md)
   * [formula](metadata/app-formula.md)
   * [hook](metadata/app-hook.md) – Hook framework
-  * [](metadata/)
+  * [image](metadata/app-image.md)
   * [](metadata/)
   * [](metadata/)
   * [](metadata/)
