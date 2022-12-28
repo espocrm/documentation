@@ -63,10 +63,11 @@ In this article:
   * [pdfEngines](metadata/app-pdf-engines.md)
   * [portalContainerServices](metadata/app-portal-container-services.md)
   * [rebuild](metadata/app-rebuild.md)
-  * [](metadata/)
-  * [](metadata/)
-  * [](metadata/)
-  * [](metadata/)
+  * [regExpPatterns](metadata/app-reg-exp-patterns.md)
+  * [scheduledJobs](metadata/app-scheduled-jobs.md)
+  * [smsProviders](metadata/app-sms-prividers.md)
+  * [templateHelpers](metadata/app-template-helpers.md)
+  * [templates](metadata/app-templates.md)
   * [webSocket](metadata/app-web-socket.md)
 
 
