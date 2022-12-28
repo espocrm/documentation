@@ -64,6 +64,7 @@ In this article:
   * [](metadata/)
   * [](metadata/)
   * [rebuild](metadata/app-rebuild.md)
+  * [webSocket](metadata/app-web-socket.md)
 
 
 ## Accessing
