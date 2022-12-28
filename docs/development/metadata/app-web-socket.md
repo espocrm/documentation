@@ -37,7 +37,7 @@ A console [command](../../administration/commands.md) that will be used to check
 
 *Object.<string, Object>*
 
-Provides the ability to implement other messangers rather than default ZeroMQ. E.g. RabbitMQ.
+Provides the ability to implement other messangers rather than the default ZeroMQ. E.g. RabbitMQ.
 
 Example:
 
