@@ -16,6 +16,6 @@ Example:
 
 ## implementationClassName
 
-*class-string<Espo\Core\MassAction\MassAction>*
+*class-string<Espo\Core\MassAction\MassAction\>*
 
 A main class for the mass action.
