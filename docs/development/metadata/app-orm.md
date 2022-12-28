@@ -23,7 +23,7 @@ Example:
 
 ## queryComposerClassNameMap
 
-*Object.<string, class-string<Espo\ORM\QueryComposer\QueryComposer>>*
+*Object.<string, class-string<Espo\ORM\QueryComposer\QueryComposer\>\>*
 
 Query composers for platforms.
 
@@ -32,7 +32,7 @@ PDO factories for platforms.
 
 ## pdoFactoryClassNameMap
 
-*Object.<string, class-string<Espo\ORM\PDO\PDOFactory>>*
+*Object.<string, class-string<Espo\ORM\PDO\PDOFactory\>\>*
 
 
 *As of v7.4.*
@@ -41,6 +41,6 @@ PDO factories for platforms.
 
 ## functionConverterClassNameMap_{platform}
 
-*Object.<string, class-string<Espo\ORM\QueryComposer\Part\FunctionConverter>*
+*Object.<string, class-string<Espo\ORM\QueryComposer\Part\FunctionConverter\>*
 
 [Complex expression](../../user-guide/complex-expressions.md) function converters. Use it to define custom complex expression functons.
