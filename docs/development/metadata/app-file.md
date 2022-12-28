@@ -4,7 +4,7 @@ Path: metadata > app > file.
 
 ## extensionMimeTypeMap
 
-*Object.<string, string[]>*
+*Object.<string, string[]\>*
 
 Mime types associated with file extensions.
 
