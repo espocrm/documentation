@@ -12,13 +12,13 @@ Defines that the method is to be used for pure API request, not from the front-e
 
 *string*
 
-*as of v7.3*
+*As of v7.3.*
 
 A header that is supposed to contain credentials. Actual only for API methods.
 
 ## login
 
-*as of v7.3*
+*As of v7.3.*
 
 A framework providing the ability to call custom code on *Sign-In* button click on the login page.
 
