@@ -60,7 +60,7 @@ A front-end view for the external account page (at User > External Accounts).
 
 ## params
 
-*Object.<string, mixed>*
+*Object*
 
 Define any params needed for the integration.
 
