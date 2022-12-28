@@ -22,11 +22,11 @@ Implementations.
 
 ### entity
 
-*class-string<Espo\Tools\Pdf\EntityPrinter>*
+*class-string<Espo\Tools\Pdf\EntityPrinter\>*
 
 ### collection
 
-*class-string<Espo\Tools\Pdf\CollectionPrinter>*
+*class-string<Espo\Tools\Pdf\CollectionPrinter\>*
 
 ## fontFaceList
 
