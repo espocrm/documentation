@@ -27,9 +27,6 @@ Example:
 
 Query composers for platforms.
 
-
-PDO factories for platforms.
-
 ## pdoFactoryClassNameMap
 
 *Object.<string, class-string<Espo\ORM\PDO\PDOFactory\>\>*
