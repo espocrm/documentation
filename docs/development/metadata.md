@@ -54,7 +54,7 @@ In this article:
   * [formula](metadata/app-formula.md)
   * [hook](metadata/app-hook.md) – Hook framework
   * [image](metadata/app-image.md)
-  * [](metadata/)
+  * [jsLibs](metadata/app-js-libs.md) – JS libs
   * [](metadata/)
   * [](metadata/)
   * [](metadata/)
