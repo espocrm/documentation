@@ -28,7 +28,7 @@ A list of image mime types that can be previewed in the File or Attachment-Multi
 
 ## sizes
 
-*Object>*
+*Object*
 
 Size dimensions.
 
