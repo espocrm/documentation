@@ -32,3 +32,30 @@ Parameters passed with within a WebSocket topic. E.g. the topic name `myGroupNam
 *string*
 
 A console [command](../../administration/commands.md) that will be used to check whether a topic is allowed for a user when they attempting to subscribe. Patameter placeholders starts with the colon `:`. The `userId` parameter contains a user ID.
+
+## messagers
+
+*Object*
+
+Provides the ability to implement other messangers rather than default ZeroMQ. E.g. RabbitMQ.
+
+Example:
+
+```json
+{
+    "messagers": {
+        "ZeroMQ": {
+            "senderClassName": "Espo\\Core\\WebSocket\\ZeroMQSender",
+            "subscriberClassName": "Espo\\Core\\WebSocket\\ZeroMQSubscriber"
+        }
+    }
+}
+```
+
+### senderClassName
+
+*class-string<Espo\Core\WebSocket\Sender>*
+
+### subscriberClassName
+
+*class-string<Espo\Core\WebSocket\Subscriber>*
