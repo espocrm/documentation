@@ -6,7 +6,7 @@ File storages.
 
 ## implementationClassNameMap
 
-*Object.<string, class-string<Espo\Core\FileStorage\Storage>>*
+*Object.<string, class-string<Espo\Core\FileStorage\Storage\>\>*
 
 Implementation classes for file storages.
 
