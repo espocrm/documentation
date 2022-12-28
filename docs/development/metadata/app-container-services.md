@@ -26,7 +26,7 @@ A service class.
 
 ## loaderClassName
 
-*class-string<Espo\Core\Container\Loader>*
+*class-string<Espo\Core\Container\Loader\>*
 
 A service loader class. Should implement `Espo\Core\Container\Loader` interface.
 
