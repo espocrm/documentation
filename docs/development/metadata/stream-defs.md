@@ -12,6 +12,19 @@ A field (of a link-multiple type) that store users which should automatically fo
 
 *Object*
 
+Example:
+
+```json
+{
+    "followingUsersField": "users",
+    "subscribersCleanup": {
+        "enabled": true,
+        "dateField": "dateStart",
+        "statusList": ["Held", "Not Held"]
+    }
+}
+```
+
 ### enabled
 
 *boolean*
@@ -29,4 +42,3 @@ A date (or date-time) field that stores a value after which followers will autom
 *string[]*
 
 A list of statuses records should have to be eligible for the subscriberes cleanup. E.g. for the *Meeting*, it's `["Held", "Not Held"]`.
-
