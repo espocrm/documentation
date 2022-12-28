@@ -12,7 +12,7 @@ Functions available in the editor.
 
 Example:
 
-```josn
+```json
 {
     "functionList": [
         "__APPEND__",
