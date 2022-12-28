@@ -24,7 +24,7 @@ API payload params:
 * entityType – *string*
 * action – *string*
 * id – *string*
-* data – *Object.<string, mixed>*
+* data – *Object.<string, mixed\>*
 
 ## implementationClassName
 
