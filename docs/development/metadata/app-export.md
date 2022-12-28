@@ -12,7 +12,7 @@ Available export formats.
 
 ## formatDefs
 
-*Object.<string, Object>>*
+*Object.<string, Object\>\>*
 
 Definitions for export formats. You can define here also custom params specific to your custom format.
 
@@ -33,13 +33,13 @@ Example:
 
 ### processorClassName
 
-*class-string<Espo\Tools\Export\Processor>*
+*class-string<Espo\Tools\Export\Processor\>*
 
 A main processing class. Should implement `Espo\Tools\Export\Processor` interface.
 
 ### additionalFieldsLoaderClassName
 
-*class-string<Espo\Tools\Export\AdditionalFieldsLoader>*
+*class-string<Espo\Tools\Export\AdditionalFieldsLoader\>*
 
 An additional field loader class. Should implement `Espo\Tools\Export\AdditionalFieldsLoader` interface.
 
