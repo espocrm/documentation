@@ -36,7 +36,7 @@ In this article:
   * [export](metadata/app-export.md)
   * [fieldProcessing](metadata/app-field-processing.md)
   * [file](metadata/app-file.md)
-  * [fileSstorage](metadata/app-file-storage.md)
+  * [fileStorage](metadata/app-file-storage.md)
   * [formula](metadata/app-formula.md)
   * [](metadata/)
   * [](metadata/)
