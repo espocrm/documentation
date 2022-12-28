@@ -23,7 +23,7 @@ Example:
 
 ## aclDependencies
 
-*Object.<string, Object>>*
+*Object.<string, Object\>\>*
 
 Rules making a metadata sections available for a user when they don't have access to a scope.
 
