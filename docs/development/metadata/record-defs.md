@@ -90,7 +90,7 @@ A boolean parameter. If true, then duplicate checking will be processed while up
 
 ## relationships
 
-*As of v7.3*
+*As of v7.3.*
 
 Relationship parameters. Key-object pairs, where keys are link names.
 
