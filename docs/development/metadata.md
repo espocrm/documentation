@@ -27,6 +27,15 @@ In this article:
   * [complexExpression](metadata/app-complex-expression.md)
   * [hook](metadata/app-hook.md) – Hook framework
   * [rebuild](metadata/app-rebuild.md)
+  * [config](metadata/app-config.md)
+  * [consoleCommands](metadata/app-console-commands.md)
+  * [](metadata/)
+  * [](metadata/)
+  * [](metadata/)
+  * [](metadata/)
+  * [](metadata/)
+  * [](metadata/)
+  * [](metadata/)
 * [fields](metadata/fields.md) – field types
 * [authenticationMethods](metadata/authentication-methods.md) – authentication methods
 * [integrations](metadata/integrations.md) – integrations
