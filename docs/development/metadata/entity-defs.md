@@ -94,7 +94,7 @@ A field validator. Legacy, consider using *validatorClassNameMap* or *validatorC
 
 ### validatorClassNameMap
 
-*Object.<string, class-string>*
+*Object.<string, class-string\>*
 
 *As of v7.4.*
 
