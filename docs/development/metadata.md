@@ -25,17 +25,23 @@ In this article:
   * [client](metadata/app-client.md) – front-end client
   * [clientRoutes](metadata/app-client-routes.md) – front-end routes
   * [complexExpression](metadata/app-complex-expression.md)
-  * [hook](metadata/app-hook.md) – Hook framework
-  * [rebuild](metadata/app-rebuild.md)
   * [config](metadata/app-config.md)
   * [consoleCommands](metadata/app-console-commands.md)
+  * [containerServices](metadata/app-container-services.md)
+  * [currency](metadata/app-currency.md)
+  * [dateTime](metadata/app-date-time.md)
+  * [defaultDashboardLayouts](metadata/app-default-dashboard-layouts.md)
+  * [defaultDashboardOptions](metadata/app-default-dashboard-options.md)
+  * [entityTemplateList](metadata/app-entity-template-list.md)
+  * [export](metadata/app-export.md)
+  * [fieldProcessing](metadata/app-field-processing.md)
+  * [file](metadata/app-file.md)
+  * [fileSstorage](metadata/app-file-storage.md)
+  * [formula](metadata/app-formula.md)
   * [](metadata/)
   * [](metadata/)
-  * [](metadata/)
-  * [](metadata/)
-  * [](metadata/)
-  * [](metadata/)
-  * [](metadata/)
+  * [hook](metadata/app-hook.md) – Hook framework
+  * [rebuild](metadata/app-rebuild.md)
 * [fields](metadata/fields.md) – field types
 * [authenticationMethods](metadata/authentication-methods.md) – authentication methods
 * [integrations](metadata/integrations.md) – integrations
