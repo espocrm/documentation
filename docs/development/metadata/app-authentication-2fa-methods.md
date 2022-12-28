@@ -36,13 +36,13 @@ A front-end view for a user when they apply the 2FA method to their account.
 
 ## loginClassName
 
-*class-string<Espo\Core\Authentication\TwoFactor\Login>*
+*class-string<Espo\Core\Authentication\TwoFactor\Login\>*
 
 A login class. Processes the second step of the login process.
 
 ## userSetupClassName
 
-*class-string<Espo\Core\Authentication\TwoFactor\UserSetup>*
+*class-string<Espo\Core\Authentication\TwoFactor\UserSetup\>*
 
 A user-setup class.
 
