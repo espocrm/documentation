@@ -26,7 +26,7 @@ Example:
         "exportsTo": "$.fn",
         "exportsAs": "some-jquery-lib",
         "sourceMap": true
-
+    }
 }
 ```
 
