@@ -11,7 +11,7 @@ Called after entity is saved.  By default, `Espo\Core\Notification\DefaultAssign
 
 ## emailNotificationHandlerClassNameMap
 
-*Object.<string, class-string>*
+*Object.<string, class-string\>*
 
 Email notification handlers. Should implement `Espo\Core\Notification\EmailNotificationHandler` interface. 
 Handles a notification emails (supposed for adding CC, BCC addresses). Provides sender parameters for notification emails (e.g. setting Reply-To address).
