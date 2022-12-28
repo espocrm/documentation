@@ -15,4 +15,6 @@ Path: metadata > app > appParams.
 
 ## className
 
+*string<Espo\Tools\App\AppParam>*
+
 An implementation class name. Should implement `Espo\Tools\App\AppParam` interface.
