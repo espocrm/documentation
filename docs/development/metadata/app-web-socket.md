@@ -25,7 +25,7 @@ Example:
 
 *string[]*
 
-Parameters passed with within a WebSocket topic. E.g. the topic name `myGroupName.myCustomName.Account.someId`. This makes a topic name unique for a specific record. For global events, omit this parameter.
+Parameters passed within a topic. E.g. the topic name `myGroupName.myCustomName.Account.someId`. This makes a topic name unique for a specific record. For global events, omit this parameter.
 
 ### accessCheckCommand
 
