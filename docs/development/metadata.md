@@ -55,7 +55,7 @@ In this article:
   * [hook](metadata/app-hook.md) – Hook framework
   * [image](metadata/app-image.md)
   * [jsLibs](metadata/app-js-libs.md) – JS libs
-  * [](metadata/)
+  * [language](metadata/app-language.md)
   * [](metadata/)
   * [](metadata/)
   * [](metadata/)
