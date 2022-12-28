@@ -41,6 +41,6 @@ PDO factories for platforms.
 
 ## functionConverterClassNameMap_{platform}
 
-*Object.<string, class-string<Espo\ORM\QueryComposer\Part\FunctionConverter\>*
+*Object.<string, class-string<Espo\ORM\QueryComposer\Part\FunctionConverter\>\>*
 
 [Complex expression](../../user-guide/complex-expressions.md) function converters. Use it to define custom complex expression functons.
