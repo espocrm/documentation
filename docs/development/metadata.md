@@ -125,7 +125,7 @@ All JSON files from these directories **get merged** recursively into a single f
 
 Since metadata is merged recursively you can easily redefine JSON objects and arrays in the `custom` directory.
 
-You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of array.
+You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of an array.
 
 `custom/Espo/Custom/Resources/metadata/entityDefs/Account.json`:
 
