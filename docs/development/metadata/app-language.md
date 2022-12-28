@@ -12,7 +12,7 @@ A list of available languages available in the application. The name format: `en
 
 ## aclDependencies
 
-*Object.<string, Object>>*
+*Object.<string, Object\>\>*
 
 Rules making language translations available for a user when they don't have access to a scope.
 
