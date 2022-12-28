@@ -6,7 +6,7 @@ Currency definitions.
 
 ## symbolMap
 
-*Object<string, string>*
+*Object<string, string\>*
 
 A currency-name => symbol mapping.
 
