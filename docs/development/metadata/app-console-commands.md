@@ -18,7 +18,7 @@ Example:
 
 ## className
 
-*class-string<Espo\Core\Console\Command>*
+*class-string<Espo\Core\Console\Command\>*
 
 A command class. Should implement `Espo\Core\Console\Command` interface.
 
