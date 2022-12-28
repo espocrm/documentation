@@ -1,6 +1,6 @@
 # Metadata
 
-Metadata is intended for storing application data such as entity's fields and relationships, front-end controllers, views, panels, defining fields, dashlets etc.
+Metadata is intended for storing application data such as fields, relationships, front-end controllers, views, panels, dashlets etc.
 
 In this article:
 
