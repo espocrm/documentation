@@ -6,13 +6,13 @@ Access control level parameters for the system (excluding portals).
 
 ## mandatory
 
-*Object.<string, Object>*
+*Object.<string, Object\>*
 
 Access levels forcibly applied for regular and API users. These roles can't be changed by Roles assigned to a user.
 
 ### scopeLevel
 
-*Object.<string, (Object|boolean|string)>*
+*Object.<string, (Object|boolean|string)\>*
 
 Mandatory access levels for specific scopes.
 
@@ -39,7 +39,7 @@ Example:
 
 ### scopeFieldLevel
 
-*Object.<string, Object.<string, Object|false>>*
+*Object.<string, Object.<string, Object|false\>\>*
 
 Mandatory access levels for fields for scopific scopes (entity types). Available levels: *yes*, *no*. False disables access to a field.
 
@@ -78,13 +78,13 @@ Example:
 
 ## adminMandatory
 
-*Object.<string, Object>*
+*Object.<string, Object\>*
 
 Access levels forcibly applied for admin users. This section has the same parameters as the *mandatory* section: scopeLevel, scopeFieldLevel, fieldLevel.
 
 ## strictDefault
 
-*Object.<string, Object>*
+*Object.<string, Object\>*
 
 Access levels applied for regular and API users when access is not defined by Roles assigned to those users. This section has the same parameters as the *mandatory* section: scopeLevel, scopeFieldLevel, fieldLevel.
 
@@ -115,7 +115,7 @@ Use `__APPEND__` as the first value if you want to extend the list.
 
 ## permissionsStrictDefaults
 
-*Object.<string, "all"|"yes"|"team"|"own">*
+*Object.<string, "all"|"yes"|"team"|"own"\>*
 
 Permissions applied for regular and API users when they are not defined by Roles assigned to those users.
 
@@ -138,7 +138,7 @@ Example:
 
 ## valuePermissionHighestLevels
 
-*Object.<string, "all"|"yes"|"team"|"own">*
+*Object.<string, "all"|"yes"|"team"|"own"\>*
 
 Highest levels for permissions.
 
