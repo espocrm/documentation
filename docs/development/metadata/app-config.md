@@ -6,7 +6,7 @@ Application config definitions.
 
 ## params
 
-*Object.<string, Object>>*
+*Object.<string, Object\>\>*
 
 Parameters. A name => params map.
 
