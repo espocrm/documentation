@@ -4,7 +4,7 @@ A mapping format => params. Defines address formats (used in the backend).
 
 ## formatterClassName
 
-*class-string*
+*class-string<Espo\Core\Field\Address\AddressFormatter\>*
 
 A formatter class. Should implement `Espo\Core\Field\Address\AddressFormatter` interface.
 
