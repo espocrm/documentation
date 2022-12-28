@@ -11,6 +11,18 @@ In this article:
 
 ## Reference
 
+* [fields](metadata/fields.md) – field types
+* [authenticationMethods](metadata/authentication-methods.md) – authentication methods
+* [integrations](metadata/integrations.md) – integrations
+* [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
+* [entityDefs](metadata/entity-defs.md) – entity defs (fields, links, indexes)
+* [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
+* [selectDefs](metadata/select-defs.md) – Select-framework defs for entity types
+* [recordDefs](metadata/record-defs.md) – CRUD-specific defs for entity types
+* [clientDefs](metadata/client-defs.md) – front-end defs for entity types
+* [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
+* [pdfDefs](metadata/pdf-defs.md) – PDF generation defs for entity types
+* [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
 * app – application definitions
   * [acl](metadata/app-acl.md) – access control
   * [aclPortal](metadata/app-acl-portal.md) – access control for portals
@@ -42,18 +54,6 @@ In this article:
   * [](metadata/)
   * [hook](metadata/app-hook.md) – Hook framework
   * [rebuild](metadata/app-rebuild.md)
-* [fields](metadata/fields.md) – field types
-* [authenticationMethods](metadata/authentication-methods.md) – authentication methods
-* [integrations](metadata/integrations.md) – integrations
-* [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
-* [entityDefs](metadata/entity-defs.md) – entity defs (fields, links, indexes)
-* [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
-* [selectDefs](metadata/select-defs.md) – Select-framework defs for entity types
-* [recordDefs](metadata/record-defs.md) – CRUD-specific defs for entity types
-* [clientDefs](metadata/client-defs.md) – front-end defs for entity types
-* [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
-* [pdfDefs](metadata/pdf-defs.md) – PDF generation defs for entity types
-* [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
 
 
 ## Accessing
