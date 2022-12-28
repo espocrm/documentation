@@ -38,12 +38,12 @@ A default scheduling in crontab notation.
 
 ## jobClassName
 
-*class-string<Espo\Core\Job\Job|Espo\Core\Job\JobDataLess>*
+*class-string<Espo\Core\Job\Job|Espo\Core\Job\JobDataLess\>*
 
 A job implementation. Should implement either `Job` or `JobDataLess` interfaces. Usage of the former requires having the preparator.
 
 ## preparatorClassName
 
-*class-string<Espo\Core\Job\Preparator>*
+*class-string<Espo\Core\Job\Preparator\>*
 
 A preparator. Optional. The preparator is called by the application. It serves for creating job records. E.g. for email checking, the preparator creates jobs for each email account.
