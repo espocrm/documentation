@@ -35,7 +35,7 @@ A console [command](../../administration/commands.md) that will be used to check
 
 ## messagers
 
-*Object.<string, Object>*
+*Object.<string, Object\>*
 
 Provides the ability to implement other messangers rather than the default ZeroMQ. E.g. RabbitMQ.
 
@@ -54,8 +54,8 @@ Example:
 
 ### senderClassName
 
-*class-string<Espo\Core\WebSocket\Sender>*
+*class-string<Espo\Core\WebSocket\Sender\>*
 
 ### subscriberClassName
 
-*class-string<Espo\Core\WebSocket\Subscriber>*
+*class-string<Espo\Core\WebSocket\Subscriber\>*
