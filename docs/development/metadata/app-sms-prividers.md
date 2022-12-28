@@ -16,6 +16,6 @@ Example:
 
 ## senderClassName
 
-*class-string<Espo\Core\Sms\Sender>*
+*class-string\<Espo\Core\Sms\Sender\>*
 
 A sender class.
