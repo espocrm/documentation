@@ -13,4 +13,8 @@ Example:
 }
 ```
 
-A class name should implement `Espo\Core\Cleanup\Cleanup` interface.
+## className
+
+*class-string<Espo\Core\Cleanup\Cleanup\>*
+
+An implementation class. Should implement `Espo\Core\Cleanup\Cleanup` interface.
