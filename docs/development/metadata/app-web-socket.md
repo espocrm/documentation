@@ -35,7 +35,7 @@ A console [command](../../administration/commands.md) that will be used to check
 
 ## messagers
 
-*Object*
+*Object.<string, Object>*
 
 Provides the ability to implement other messangers rather than default ZeroMQ. E.g. RabbitMQ.
 
