@@ -38,7 +38,7 @@ Records can be filtered by this field (available as filter on the list view).
 
 *string*
 
-By default when displaying a field the system try to read the view `"views/fields/{field-type}"` (path is `client/src/views/fields/{field-name}.js`). You can define a custom view with this parameter.
+By default, when displaying a field, the system tries to read the view `"views/fields/{field-type}"` (path is `client/src/views/fields/{field-name}.js`). You can define a custom view with this parameter.
 
 ## params
 
