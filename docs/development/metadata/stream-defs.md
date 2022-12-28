@@ -1,6 +1,6 @@
 # streamDefs
 
-Path: metadata > streamDefs > {EntityType}
+Path: metadata > streamDefs > {EntityType}.
 
 ## followingUsersField
 
