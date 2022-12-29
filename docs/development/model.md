@@ -1,5 +1,7 @@
 # Model
 
+The [class](https://github.com/espocrm/espocrm/blob/stable/client/src/model.js).
+
 ## Methods
 
 ### set
@@ -51,6 +53,49 @@ model.fetch()
     .then(() => {
     });
 ```
+
+### getClonedAttributes
+
+Get cloned attributes.
+
+```js
+let attributes = model.getClonedAttributes();
+```
+
+### populateDefaults
+
+Populate default values.
+
+### setDefs
+
+Sets field and link defs. May be needed if a model instantiared explicitly, not by the factory.
+
+```js
+model.setDefs({
+    fields: {},
+    links: {},
+};
+```
+
+## Properties
+
+### id
+
+*string*
+
+A record ID.
+
+### name
+
+*string*
+
+A name. Usually, it is an entity type.
+
+### urlRoot
+
+*string*
+
+A root API URL.
 
 ## Instantiating
 
