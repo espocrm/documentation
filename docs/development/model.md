@@ -188,7 +188,7 @@ this.listenToOnce(model, 'change:someAttribute', (model, value, options) => {
 Model synced with backend.
 
 ```js
-this.listenTo(model, 'sync', () => {
+this.listenTo(model, 'sync', (model, response, options) => {
     // synced with backend (fired after fetch or save)
 });
 ```
