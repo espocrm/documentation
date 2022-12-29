@@ -19,9 +19,11 @@ model.set({
 
 // Options.
 model.set(attributes, {
-    'silent': true, // supresses 'change' events
+    'silent': true, // suppresses 'change' events
 });
 ```
+
+You can pass custom options and check them in 'change' event listenters.
 
 ### get
 
