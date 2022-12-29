@@ -2,30 +2,36 @@
 
 ## Methods
 
-Setting and getting attributes:
+### set
+
+Sets an attribute or multiple attributes.
 
 ```js
-// specific attribute
 model.set('attributeName', value);
 
-// multiple attributes
 model.set({
     attributeName1: value1,
     attributeName2: value2,
 });
+```
 
-// specific attribute
+### get
+
+Gets an attribute.
+
+```js
 let value = model.get('attributeName');
 
 // all attributes
 let attributes = Espo.Utils.cloneDeep(model.attributes);
-
 ```
 
-Saving model (to backend):
+### save
+
+Saves a model (to the back-end).
 
 ```js
-// assuming model.id is set
+// Assuming model.id is set.
 model.save()
     .then(() => {
         // callback on success
@@ -35,7 +41,9 @@ model.save()
     });
 ```
 
-Fetching model (from backend):
+### fetch
+
+Fetches a model (from the backend). Loads attribute values to the model.
 
 ```js
 // assuming model.id is set
