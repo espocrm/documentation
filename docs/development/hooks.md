@@ -24,6 +24,20 @@ If you have several hooks, related to one Entity Type and with the same hook typ
 
 Ascending order is applied – a hook with the smallest order number runs first.
 
+### Interfaces
+
+*As of v7.4.*
+
+There are interfaces for built-in hooks. It's recommended that your hooks implement these interfaces. This makes easier for a developer to obtain needed data (passed to the hook) as each interface has a unique method signature. The list of interfaces:
+
+* `Espo\Core\Hook\Hook\BeforeSave`
+* `Espo\Core\Hook\Hook\AfterSave`
+* `Espo\Core\Hook\Hook\BeforeRemove`
+* `Espo\Core\Hook\Hook\AfterRemove`
+* `Espo\Core\Hook\Hook\AfterRelate`
+* `Espo\Core\Hook\Hook\AfterUnrelate`
+* `Espo\Core\Hook\Hook\AfterMassRelate`
+
 ## Example
 
 This example sets an Account Name for new Leads, if it's not set.
