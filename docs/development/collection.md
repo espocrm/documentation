@@ -224,3 +224,7 @@ Once a collection is fetched.
 ```js
 this.listenTo(collection, 'sync', (collection, response, options) => {});
 ```
+
+### update
+
+Once a collection is updated.
