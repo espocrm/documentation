@@ -80,6 +80,7 @@ An iteration block helper.
 {{#each array}}
     {{this}} – item
     {{@index}} – index
+{{/each}}
 ```
 
 ```
