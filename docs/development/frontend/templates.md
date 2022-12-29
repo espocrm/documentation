@@ -1,6 +1,6 @@
 # Templates
 
-A template of a [view](../view.md) is used to render an HTML. Before rendering, the view passes data to the template. Templates can be stored in separate .tpl files or right in a the view's `templateContent` property. [Handlebars](https://handlebarsjs.com) library is used for templating.
+A template of a [view](../view.md) is used to render an HTML. Before rendering, the view passes data to the template. Templates can be stored in separate .tpl files or specified right in a the view's `templateContent` property. [Handlebars](https://handlebarsjs.com) library is used for templating.
 
 ## Expressions
 
