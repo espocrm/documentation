@@ -175,6 +175,7 @@ nav:
           - 'Controller & routing': 'development/frontend/controller.md'
           - 'Model': 'development/model.md'
           - 'Collection': 'development/collection.md'
+          - 'Templates': 'development/frontend/templates.md'
           - 'Ajax requests': 'development/frontend/ajax.md'
           - 'Misc':
               - 'Custom buttons & dropdown actions': 'development/custom-buttons.md'
