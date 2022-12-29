@@ -154,7 +154,7 @@ Template file `client/custom/res/templates/test/my-custom-view.tpl`:
 <div class="another-test-container"></div>
 ```
 
-[Handlebars](https://handlebarsjs.com/) library is used for template rendering.
+See more about [templates](frontend/templates.md).
 
 Note: When you extend a view that already has its *events* and you want to add more events, do it the following way:
 
