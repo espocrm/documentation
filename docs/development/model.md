@@ -1,6 +1,6 @@
 # Model
 
-The [class](https://github.com/espocrm/espocrm/blob/stable/client/src/model.js).
+A model instance usually represents a single entity record. See the [class](https://github.com/espocrm/espocrm/blob/stable/client/src/model.js).
 
 ## Methods
 
