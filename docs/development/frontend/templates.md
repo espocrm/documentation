@@ -46,7 +46,6 @@ Template whitespace can be omitted from either side of any mustache statement by
 {{#each items ~}}
     <button data-name="{{name}}">{{label}}</button>
 {{~/each}}
-
 ```
 
 ## Helpers
