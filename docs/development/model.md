@@ -15,6 +15,12 @@ model.set({
     attributeName1: value1,
     attributeName2: value2,
 });
+
+
+// Options.
+model.set(attributes, {
+    'silent': true, // supresses 'change' events
+});
 ```
 
 ### get
@@ -45,7 +51,7 @@ model.save()
 
 ### fetch
 
-Fetches a model (from the backend). Loads attribute values to the model.
+Fetches a model (from the backend). Loads attribute values to the model. Returns a promise.
 
 ```js
 // assuming model.id is set
@@ -56,7 +62,7 @@ model.fetch()
 
 ### getClonedAttributes
 
-Get cloned attributes.
+Get cloned attributes. Returns an object.
 
 ```js
 let attributes = model.getClonedAttributes();
