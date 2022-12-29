@@ -192,6 +192,124 @@ To disable the ability to export the field.
 Whether the field may contain personal data.
 
 
+### select
+
+*Object*
+
+A custom [complex expression](../../user-guide/complex-expressions.md) to be used for the field when reading from DB. It's possible to define *leftJoins* and *joins* that are needed to be applied when the field is being selected.
+
+Example:
+
+```json
+{
+    "fields": {
+        "myField": {
+            "type": "float",
+            "readOnly": true,
+            "notStorable": true,
+            "select": {
+                "select": "DIV:(MUL:(amount, probability, someTableAlias.rate), 100)",
+                "leftJoins": [
+                    [
+                        "SomeTable",
+                        "someTableAlias",
+                        {"someTableAlias.id:": "amountCurrency"}
+                    ]
+                ]
+            }
+        }
+    }
+}
+```
+
+### order
+
+*Object*
+
+Custom [complex expressions](../../user-guide/complex-expressions.md) to be used when ordering by the field. It's possible to define *leftJoins* and *joins* that are needed to be applied.
+
+Example:
+
+```json
+{
+    "fields": {
+        "myField": {
+            "type": "float",
+            "readOnly": true,
+            "notStorable": true,
+            "order": {
+                "order": [
+                    ["DIV:(MUL:(amount, probability, someTableAlias.rate), 100)", "{direction}"]
+                ],
+                "leftJoins": [
+                    [
+                        "SomeTable",
+                        "someTableAlias",
+                        {"someTableAlias.id:": "amountCurrency"}
+                    ]
+                ]
+            }
+        }
+    }
+}
+```
+
+### where
+
+*Object*
+
+Custom where clause to be used when the field is met in a provided where-clause. It's possible to define *leftJoins* and *joins* that are needed to be applied. Every comparison operation that you need to support should have its own definitions.
+
+Supported comparison keys:
+
+* `=`
+* `<>`
+* `<`
+* `>`
+* `<=`
+* `>=`
+* `IS NULL`
+* `IS NOT NULL`
+* `LIKE`
+* `NOT LIKE`
+* `IN`
+* `NOT IN`
+* `= TRUE`
+* `= FALSE`
+
+Example:
+
+```json
+{
+    "fields": {
+        "myField": {
+            "type": "float",
+            "readOnly": true,
+            "notStorable": true,
+            "where": {
+                "=": {
+                    "whereClause": {
+                        "DIV:(MUL:(amount, probability, someTableAlias.rate), 100)=": "{value}"
+                    },
+                    "leftJoins": [
+                        [
+                            "SomeTable",
+                            "someTableAlias",
+                            {"someTableAlias.id:": "amountCurrency"}
+                        ]
+                    ]
+                },
+                "IS NULL": {
+                    "whereClause": {
+                       "IS_NULL:(amount)": true
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
 ## links
 
 A link-name => parameters map.
