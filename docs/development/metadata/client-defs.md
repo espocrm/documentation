@@ -1,6 +1,6 @@
 # clientDefs
 
-Path: metadata > clientDefs > {EntityType}
+Path: metadata > clientDefs > {Scope}
 
 Contains parameters used by the front-end.
 
