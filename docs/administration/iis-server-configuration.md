@@ -60,7 +60,7 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 
 ### Via Text Editor (Notepad as Administrator, Sublime Text, VSCode, etc.)
 
-3.1. Open **%windir%\system32\inetsrv\config\applicationhost.config** file.
+3.1. Open `%windir%\system32\inetsrv\config\applicationhost.config` file.
 3.2. Locate the *< handlers >* tag.
 3.3. Locate the **"PHP_via_FastCGI"** section, add all HTTP methods modifying `verb="GET,HEAD,POST"` value to `verb="GET,HEAD,POST,PUT,DELETE,PATCH"`.
 3.4. Save the **ApplicationHost.config** file.
