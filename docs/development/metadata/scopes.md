@@ -84,7 +84,7 @@ Lists of available levels for specific actions in Roles.
 
 Example:
 
-```
+```json
 "aclActionLevelListMap": {
     "edit": ["own", "no"]
 }
@@ -114,7 +114,7 @@ Lists of available levels for specific actions in Portal Roles.
 
 Example:
 
-```
+```json
 "aclPortalActionLevelListMap": {
     "edit": ["own", "no"]
 }
