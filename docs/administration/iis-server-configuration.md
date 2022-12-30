@@ -1,4 +1,4 @@
-# IIS server configuration
+# IIS server configuration for EspoCRM
 
 *As of v7.0.*
 
