@@ -1,4 +1,6 @@
-# IIS server configuration for EspoCRM v7
+# IIS server configuration
+
+*As of v7.0.*
 
 These instructions are supplementary to the [server configuration](server-configuration.md) guidelines. Note that all configuration settings listed here are made on Ubuntu server.
 
