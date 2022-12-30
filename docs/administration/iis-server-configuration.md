@@ -2,11 +2,9 @@
 
 *As of v7.0.*
 
-These instructions are supplementary to the [server configuration](server-configuration.md) guidelines. Note that all configuration settings listed here are made on Ubuntu server.
+These instructions are supplementary to the [server configuration](server-configuration.md) guidelines. All configuration settings listed here are made on Windows Server 2019.
 
-Note that all configuration settings listed here are made on **Windows Server 2019**.
-
-To completely сonfigure IIS server for EspoCRM, do the following steps.
+To сonfigure IIS server for EspoCRM, do the following steps.
 
 ## Step 1. Physical Path adjusting
 
