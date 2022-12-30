@@ -43,6 +43,7 @@
 * [Model](model.md)
 * [Collection](collection.md)
 * [Templates](frontend/templates.md)
+* [HTML & CSS](frontend/html-css.md)
 * [Ajax requests](frontend/ajax.md)
 * Misc
   * [Custom buttons & dropdown actions for detail/edit/list views](custom-buttons.md)
