@@ -9,6 +9,8 @@
 Methods in BaseEntity:
 
 ```php
+<?php
+
 $valueObject = $entity->getValueObject($field);
 
 $entity->setValueObject($field, $valueObject);
@@ -21,6 +23,8 @@ $entity->setValueObject($field, null); // null can be set
 ### Address
 
 ```php
+<?php
+
 $address = $accountEntity->getBillingAddress() ?? new Address();
 
 $country = $address->getCountry();
@@ -39,6 +43,8 @@ $accountEntity->setBillingAddress($address);
 ### Currency
 
 ```php
+<?php
+
 $value = new Currency($amount, 'USD');
 
 $valueInEur = $converter->convert($value, 'EUR');
@@ -49,6 +55,8 @@ $opportunityEntity->setAmount($valueInEur);
 ### Email address, Phone number
 
 ```php
+<?php
+
 $emailAddressGroup = $accountEntity->getEmailAddressGroup();
 
 $primary = $emailAddressGroup->getPrimary();
@@ -76,6 +84,8 @@ $opportunityEntity->setCloseDate(
 ### Link, Link-Parent, Link-Multiple
 
 ```php
+<?php
+
 $account = $entity->getAccount(); // Link value object
 
 $accountId = $account->getId();
@@ -83,12 +93,16 @@ $accountName = $account->getName();
 ```
 
 ```php
+<?php
+
 $entity->setParent(
     LinkParent::create($entityType, $id)
 );
 ```
 
 ```php
+<?php
+
 $contacts = $entity->getContacts(); // Link-Multiple value object
 
 $entity->setContacts(
@@ -97,6 +111,8 @@ $entity->setContacts(
 ```
 
 ```php
+<?php
+
 $contact = LinkMultipleItem
     ::create($contact->getId())
     ->withColumnValue('role', 'Decision Maker');
