@@ -17,6 +17,7 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 ![Physical Path](../_static/images/administration/iis/physical-path.png)
 
 1.3. Specify your EspoCRM public directory path (e.g. `C:\inetpub\wwwroot\EspoCRM-7.2.7\public`) in the *Physical Path* field.
+
 1.4. Click on *OK*.
 
 ![Physical Path-2](../_static/images/administration/iis/physical-path-2.png)
@@ -28,7 +29,9 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 ![Virtual Path](../_static/images/administration/iis/virtual-path.png)
 
 2.3. Type the *client* name in the *Alias* field.
+
 2.4. Specify your EspoCRM client directory path (e.g. `C:\inetpub\wwwroot\EspoCRM-7.2.7\client`) in the *Physical Path* field.
+
 2.5. Click on *OK*.
 
 ![Virtual Path-2](../_static/images/administration/iis/virtual-path-2.png)
@@ -50,6 +53,7 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 ![Edit Module](../_static/images/administration/iis/edit-module.png)
 
 3.4. Navigate *Request Restrictions* > *Verbs*.
+
 3.5. Specify the verbs to be handled. Select *All verbs* or specify *One of the following verbs:* `GET,HEAD,POST,PUT,DELETE,PATCH`, click on *OK*.
 
 ![Verbs](../_static/images/administration/iis/verbs.png)
@@ -61,8 +65,11 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 ### Via Text Editor (Notepad as Administrator, Sublime Text, VSCode, etc.)
 
 3.1. Open `%windir%\system32\inetsrv\config\applicationhost.config` file.
+
 3.2. Locate the *< handlers >* tag.
+
 3.3. Locate the *"PHP_via_FastCGI"* section, add all HTTP methods modifying `verb="GET,HEAD,POST"` value to `verb="GET,HEAD,POST,PUT,DELETE,PATCH"`.
+
 3.4. Save the *ApplicationHost.config* file.
 
 **Reboot your IIS server after all the steps are done.**
