@@ -264,5 +264,5 @@ nav:
               - 'Link-multiple field with primary record': 'development/link-multiple-with-primary.md'
               - 'View setup handlers': 'development/frontend/view-setup-handlers.md'
               - 'Save error handlers': 'development/frontend/save-error-handlers.md'
-          - 'Campaigns':
-              -  'Custom unsubscribe page': 'development/campaign-unsubscribe-template.md'
+              - 'Campaigns':
+                -  'Custom unsubscribe page': 'development/campaign-unsubscribe-template.md'
