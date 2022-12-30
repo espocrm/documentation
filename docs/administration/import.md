@@ -17,7 +17,7 @@ In this article:
 ## Step 1
 
 Select what type of records you need to import (*Entity Type* field).
-Select a CSV file. A file should be formated with `UTF-8`.
+Select a CSV file. A file should be formatted in *UTF-8*.
 Select *What to do?*. Available options: 'Create Only', 'Create & Update', 'Update Only'.
 
 * *Create Only* − import will only create records;
