@@ -112,7 +112,6 @@ Example:
 
 See more about [field validation](fields.md#validationlist).
 
-
 ### validatorClassNameList
 
 *class-string[]*
@@ -166,7 +165,6 @@ Example:
 
 To disable the ability to add the field to text filters (in the Entity Manager tool).
 
-
 ### directAccessDisabled
 
 *boolean*
@@ -191,6 +189,17 @@ To disable the ability to export the field.
 
 Whether the field may contain personal data.
 
+### valueFactoryClassName
+
+*class-string<Espo\ORM\Value\ValueFactory\>*
+
+A factory for value objects. For field types it's defined at metadata > fields. Here you can define a factory for a specific field.
+
+### attributeExtractorClassName
+
+*class-string<Espo\ORM\Value\AttributeExtractor\>*
+
+An extractor for value objects. For field types it's defined at metadata > fields. Here you can define an extractor for a specific field.
 
 ### select
 
@@ -361,7 +370,6 @@ A foreign entity type.
 *string*
 
 A foreign link name.
-
 
 
 Parameters for specific types a listed below.
