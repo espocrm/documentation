@@ -61,3 +61,7 @@
 .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav {
     display: none;
 }
+
+.md-nav__list {
+    user-select: none;
+}
