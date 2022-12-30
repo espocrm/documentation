@@ -24,7 +24,7 @@ Select *What to do?*. Available options: 'Create Only', 'Create & Update', 'Upda
 * *Create & Update* − records will be created, if records with matching field values will be found, they will be updated; you will be able to check what fields to match by on the _Step 2_.
 * *Update only* − only records with matching field values will be found, it will be updated.
 
-Once you select a CSV file, you will be able to see how it will be parsed in *Preview* panel. When you change parameters, the preview will be updated.
+Once you select a CSV file, you will be able to see how it will be parsed in the *Preview* panel. When you change parameters, the preview will be updated.
 
 Parameters:
 
@@ -70,7 +70,7 @@ This will permanently remove all imported records that were recognized as duplic
 
 #### New import with same params
 
-As of v6.0.0.
+*As of v6.0.*
 
 This will create a new import with the same parameters and field mapping.
 
@@ -80,7 +80,7 @@ When you import Contacts, Leads or Accounts, you can add them to some target lis
 
 ## Console commands
 
-As of v6.0.
+*As of v6.0.*
 
 Run import:
 
