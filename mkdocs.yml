@@ -244,14 +244,14 @@ nav:
               - 'Custom config parameters': 'development/custom-config-parameters.md'
         - 'Frontend':
           - 'View': 'development/view.md'
-          - 'Custom views (for records and fields)': 'development/custom-views.md'
+          - 'Custom views': 'development/custom-views.md'
+          - 'Templates': 'development/frontend/templates.md'
           - 'Fields':
               - 'Custom field type': 'development/custom-field-type.md'
               - 'Customizing existing fields': 'development/customize-standard-fields.md'
           - 'Controller & routing': 'development/frontend/controller.md'
           - 'Model': 'development/model.md'
-          - 'Collection': 'development/collection.md'
-          - 'Templates': 'development/frontend/templates.md'
+          - 'Collection': 'development/collection.md'          
           - 'HTML & CSS': 'development/frontend/html-css.md'
           - 'Ajax requests': 'development/frontend/ajax.md'
           - 'Misc':
