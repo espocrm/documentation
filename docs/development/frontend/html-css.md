@@ -196,6 +196,8 @@ Sizes:
 
 ### Text
 
+Style:
+
 * `text-soft`
 * `text-muted`
 * `text-bold`
