@@ -193,13 +193,13 @@ Whether the field may contain personal data.
 
 *class-string<Espo\ORM\Value\ValueFactory\>*
 
-A factory for value objects. For field types it's defined at metadata > fields. Here you can define a factory for a specific field.
+A factory for [value objects](../orm-value-objects.md). For field types it's defined at metadata > fields. Here you can define a factory for a specific field.
 
 ### attributeExtractorClassName
 
 *class-string<Espo\ORM\Value\AttributeExtractor\>*
 
-An extractor for value objects. For field types it's defined at metadata > fields. Here you can define an extractor for a specific field.
+An extractor for [value objects](../orm-value-objects.md). For field types it's defined at metadata > fields. Here you can define an extractor for a specific field.
 
 ### select
 
