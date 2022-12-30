@@ -1,6 +1,6 @@
 # Value Objects
 
-Actual as of v7.0.
+*As of v7.0.*
 
 * Value objects are immutable.
 * Value objects are available in `Espo\Core\Field\`.
@@ -119,4 +119,3 @@ It's also possible to define a value object for a specific field in metadata > e
 
 * `valueFactoryClassName`;
 * `attributeExtractorClassName`.
-
