@@ -236,23 +236,36 @@ Size classes:
 
 ## Misc
 
+Centering:
+
 * `center-align` – applies `text-align: center`;
 
+A horizontally centered block:
 
-* `block-center` – a horizontally cenetered block;
+* `block-center`;
 * `block-center-sm`
 * `block-center-md`
 
-* `container-centering` – a container that horizontally & vertically centers its child;
+A container that horizontally & vertically centers its child:
+
+* `container-centering`
+
+Border radius:
 
 * `radius-left` – forces an element to have border radius on the left;
 * `radius-right` – forces an element to have border radius on the right;
 
+Floating:
+
 * `pull-left` – applies `float: left`;
 * `pull-right` – applies `float: right`;
 
+Cancelling margins:
+
 * `no-margin` – cancels margins for an element contained in a panel and other containers;
 * `no-side-margin` – cancels seide margins for an element contained in a panel and other containers;
+
+Margins:
 
 * `margin` – applies a margin to all sides;
 * `margin-top-sm`
@@ -263,5 +276,3 @@ Size classes:
 * `margin-bottom-2x`
 * `margin-bottom-3x`
 * `margin-bottom-4x`
-
-
