@@ -44,6 +44,7 @@ nav:
             - 'Backup and restore': 'administration/backup-and-restore.md'
             - 'Moving to another server': 'administration/moving-to-another-server.md'
             - 'Config parameters': 'administration/config-params.md'
+            - 'Log': 'administration/log.md'
         - 'Customization':
             - 'Entity Manager': 'administration/entity-manager.md'
             - 'Fields': 'administration/fields.md'
@@ -52,7 +53,22 @@ nav:
         - 'Users': 'administration/users-management.md'
         - 'Roles management': 'administration/roles-management.md'
         - 'Email administration': 'administration/emails.md'
-        - 'Formula Script': 'administration/formula.md'
+        - 'Formula script': 'administration/formula.md'
+        - 'Formula functions':
+          - 'general': 'administration/formula/general.md'
+          - 'string': 'administration/formula/string.md'
+          - 'datetime': 'administration/formula/datetime.md'
+          - 'number': 'administration/formula/number.md'
+          - 'entity': 'administration/formula/entity.md'
+          - 'record': 'administration/formula/record.md'
+          - 'env': 'administration/formula/env.md'
+          - 'password': 'administration/formula/password.md'
+          - 'array': 'administration/formula/array.md'
+          - 'object': 'administration/formula/object.md'
+          - 'language': 'administration/formula/language.md'
+          - 'json': 'administration/formula/json.md'
+          - 'ext': 'administration/formula/ext.md'
+          - 'util': 'administration/formula/util.md'
         - 'Import': 'administration/import.md'
         - 'Portal': 'administration/portal.md'
         - 'Currency': 'administration/currency.md'
@@ -96,6 +112,7 @@ nav:
             - 'Browser support': 'user-guide/browser-support.md'
             - 'Data privacy': 'user-guide/data-privacy.md'
             - 'Complex expressions': 'user-guide/complex-expressions.md'
+            - 'Optimistic concurrency control': 'user-guide/optimistic-concurrency-control.md'
     - 'Extensions':
         - 'Advanced Pack':
             - 'Reports': 'user-guide/reports.md'
@@ -149,7 +166,7 @@ nav:
           - 'API': 'development/api.md'
           - 'Dependency injection': 'development/di.md'
           - 'Metadata': 'development/metadata.md'
-          - 'Metadata Reference':
+          - 'Metadata reference':
             - 'scopes': 'development/metadata/scopes.md'
             - 'entityDefs': 'development/metadata/entity-defs.md'
             - 'aclDefs': 'development/metadata/acl-defs.md'
@@ -181,7 +198,7 @@ nav:
             - 'app/consoleCommands': 'development/metadata/app-console-commands.md'
             - 'app/containerServices': 'development/metadata/app-container-services.md'
             - 'app/currency': 'development/metadata/app-currency.md'
-            - 'app/dateTime': 'development/metadata/app-default-dashboard-layouts.md'
+            - 'app/dateTime': 'development/metadata/app-date-time.md'
             - 'app/defaultDashboardLayouts': 'development/metadata/app-default-dashboard-layouts.md'
             - 'app/defaultDashboardOptions': 'development/metadata/app-default-dashboard-options.md'
             - 'app/entityTemplateList': 'development/metadata/app-entity-template-list.md'
