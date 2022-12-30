@@ -1,6 +1,6 @@
 # Optimistic Concurrency Control
 
-Available as of v7.0.
+*As of v7.0.*
 
 Prevents overriding data written (by another user) in between record fetching and saving. 
 
