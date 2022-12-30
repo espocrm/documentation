@@ -6,7 +6,7 @@ These instructions are supplementary to the [server configuration](server-config
 
 Note that all configuration settings listed here are made on **Windows Server 2019**.
 
-# To completely сonfigure IIS server for smooth EspoCRM v7 operation, do the following steps:
+To completely сonfigure IIS server for EspoCRM, do the following steps.
 
 ## Step 1. Physical Path adjusting
 
