@@ -45,7 +45,7 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 
 ![FastCGI](../_static/images/administration/iis/fast-cgi.png)
 
-3.3. Specify `"C:\Program Files\PHP\v7.4\php-cgi.exe"` path in the *Executable (Optional)* field (***double quotes are required***).
+3.3. Specify `"C:\Program Files\PHP\v7.4\php-cgi.exe"` path in the *Executable (Optional)* field (double quotes are required).
 
 ![Edit Module](../_static/images/administration/iis/edit-module.png)
 
@@ -62,7 +62,7 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 
 3.1. Open `%windir%\system32\inetsrv\config\applicationhost.config` file.
 3.2. Locate the *< handlers >* tag.
-3.3. Locate the **"PHP_via_FastCGI"** section, add all HTTP methods modifying `verb="GET,HEAD,POST"` value to `verb="GET,HEAD,POST,PUT,DELETE,PATCH"`.
-3.4. Save the **ApplicationHost.config** file.
+3.3. Locate the *"PHP_via_FastCGI"* section, add all HTTP methods modifying `verb="GET,HEAD,POST"` value to `verb="GET,HEAD,POST,PUT,DELETE,PATCH"`.
+3.4. Save the *ApplicationHost.config* file.
 
 **Reboot your IIS server after all the steps are done.**
