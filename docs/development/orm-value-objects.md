@@ -32,6 +32,8 @@ $city = $address->getCity();
 ```
 
 ```php
+<?php
+
 $address = Address::create()
     ->withCity($city)
     ->withCountry($country)
@@ -74,6 +76,8 @@ The same is available for phone numbers.
 ### Date, DateTime, DateTimeOptional
 
 ```php
+<?php
+
 $closeDate = $opportunityEntity->getCloseDate();
 
 $opportunityEntity->setCloseDate(
