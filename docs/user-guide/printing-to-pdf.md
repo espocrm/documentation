@@ -171,7 +171,7 @@ Printing tables:
 
 Note: Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended, since it breaks a layout of a *contenteditable* element.
 
-Displaying certain number of items in one row (since v5.9.2):
+Displaying certain number of items in one row (as of v5.9.2):
 
 ```
 {{#each contacts}}
@@ -188,8 +188,6 @@ Access parent scope:
 ```
 
 ### Images
-
-(this way is available since the version 5.8.0)
 
 ```
 {{imageTag imageFieldNameId width=50 height=50}}
@@ -208,8 +206,6 @@ where `imageFieldNameId` – the name of an image field, concatenated with the s
 
 
 ### Date & Time formatting
-
-Available since version 5.8.0.
 
 See info about [date formatting](../administration/date-formatting.md).
 
@@ -313,8 +309,6 @@ Printing selected items:
 
 ### Checklist field
 
-Available since version 5.8.0.
-
 ```
 Option 1: {{checkboxTag fieldName option='Option 1' color='blue'}}
 Option 2: {{checkboxTag fieldName option='Option 2' color='blue'}}
@@ -322,8 +316,6 @@ Option 3: {{checkboxTag fieldName option='Option 3' color='blue'}}
 ```
 
 ### Barcode field
-
-Available since version 5.8.0.
 
 ```
 {{barcodeImage barcodeField type='EAN8' width=60 height=30 fontsize=14 text=true padding=0}}
