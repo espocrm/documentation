@@ -554,13 +554,13 @@ Example:
 }
 ```
 
-## columns
+### columns
 
 *string[]*
 
 Database columns of the index.
 
-## unique
+### unique
 
 *boolean*
 
