@@ -197,7 +197,7 @@ Displaying certain number of items in one row:
 {{/each}}
 ```
 
-Access parent scope:
+Access a parent scope:
 
 ```
 {{#each contacts}}
