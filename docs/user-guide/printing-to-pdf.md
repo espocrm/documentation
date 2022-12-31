@@ -61,7 +61,7 @@ Examples:
 
 Note: If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
-You can specify a **document title** with the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
+You can specify a **document title** in the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
 
 ### Code view
 
