@@ -59,7 +59,7 @@ Examples:
 
 Note: If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
-You can specify a **document title** with the *Title* field (as of v7.0.0). `{$name}` placeholder is available to substitute an entity name.
+You can specify a **document title** with the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
 
 ### Code view
 
@@ -79,12 +79,12 @@ Administrator can add Templates tab at Administration > User Interface. An acces
 Placeholders are only available in footer (and header if it's set to be printed on each page).
 
 * `{pageNumber}` – the current number of the page
-* `{totalPageNumber}` – the total number of record (since 5.7.12)
+* `{totalPageNumber}` – the total number of record
 * `{pageAbsoluteNumber}` – the absolute number of the page, when printing multiple records
 
 ### Page breaking
 
-To add an explicit page break you need to add (since v5.8.0):
+To add an explicit page break you need to add:
 
 ```
 {{pagebreak}}
@@ -342,7 +342,7 @@ Available types:
 
 ### Tables
 
-You can use a regular *table* tag or special *tableTag* helper (available since version 5.8.0). The latter way is preferable when using *{{#each}}* helper inside a table.
+You can use a regular *table* tag or special *tableTag* helper. The latter way is preferable when using *{{#each}}* helper inside a table.
 
 The following example prints all account's opportunities in a table format.
 
