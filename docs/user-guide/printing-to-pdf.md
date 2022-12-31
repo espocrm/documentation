@@ -154,6 +154,24 @@ Example:
 {{/each}}
 ```
 
+Array (list):
+
+```
+{{#each array}}
+   {{this}} – item
+   {{@index}} – index
+{{/each}}
+```
+
+Object (map):
+
+```
+{{#each map}}
+   {{this}} – item
+   {{@key}} – key
+{{/each}}
+```
+
 Printing tables:
 
 ```
@@ -167,11 +185,11 @@ Printing tables:
 {{/tableTag}}
 ```
 
-`itemList` is an *jsonArray* field (available in Quote, Sales Order, Invoices entity types).
+`itemList` is a *jsonArray* field (available in Quote, Sales Order, Invoices entity types).
 
 Note: Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended, since it breaks a layout of a *contenteditable* element.
 
-Displaying certain number of items in one row (as of v5.9.2):
+Displaying certain number of items in one row:
 
 ```
 {{#each contacts}}
@@ -205,7 +223,7 @@ Another way to print images for older versions. Add in code view:
 where `imageFieldNameId` – the name of an image field, concatenated with the suffix *Id*.
 
 
-### Date & Time formatting
+### Date & time formatting
 
 See info about [date formatting](../administration/date-formatting.md).
 
@@ -287,7 +305,7 @@ Example, printing contact names and roles of an opportunity:
 {{/each}}
 ```
 
-where `contacts` is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
+where *contacts* is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
 
 Example, printing contact names of an opportunity:
 
