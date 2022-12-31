@@ -225,13 +225,13 @@ Access a parent scope:
 In object (map):
 
 ```
-`{{lookup subject key}}`
+{{lookup subject key}}
 ```
 
 In array:
 
 ```
-`{{lookup teamsId index}}`
+{{lookup teamsId index}}
 ```
 
 ### Expressions
