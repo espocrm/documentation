@@ -31,26 +31,21 @@ define('custom:views/fields/{field-type}', ['views/fields/base'], function (Dep)
      */
     return Dep.extend(/** @lends modules:custom:views/fields/{field-type}.Class# */{
     
-        detailTemplate: 'custom:fields/{field-type}/detail',
-        
-        listTemplate: 'custom:fields/{field-type}/list',
-        
-        editTemplate: 'custom:fields/{field-type}/edit',
-        
+        detailTemplate: 'custom:fields/{field-type}/detail',        
+        listTemplate: 'custom:fields/{field-type}/list',        
+        editTemplate: 'custom:fields/{field-type}/edit',        
         searchTemplate: 'custom:fields/{field-type}/search',
         
-        setup: function () {
-        
+        setup: function () {        
         },
         
-        afterRender: function () {
-        
+        afterRender: function () {        
         },
     });
 });
 ```
 
-Create detail, list, edit, search  templates (*.tpl extension) in the `client/custom/res/templates/fields/{field-type}/` directory.
+Create detail, list, edit, search  templates (*.tpl extension) in a `client/custom/res/templates/fields/{field-type}/` directory.
 
 Use out-of-the-box field types as examples:
 
