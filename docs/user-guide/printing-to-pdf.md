@@ -106,11 +106,22 @@ For older versions (in code view):
 {{#if value}}
     {{value}}
 {{/if}}
-
+```
+```
 {{#if value}}
     {{value}}
 {{else}}
     No value
+{{/if}}
+```
+
+```
+{{#if condition1}}
+    
+{{else if condition2}}
+
+{{else}}
+
 {{/if}}
 ```
 
@@ -122,7 +133,9 @@ Opposite to *if*.
 {{#unless value}}
     No value
 {{/unless}}
+```
 
+```
 {{#unless value}}
     No value
 {{else}}
@@ -223,13 +236,12 @@ In array:
 
 ### Expressions
 
-* {{subject.key}} – lookup in objects;
-* {{array.[0]}} – lookup in arrays;
-* {{~anyTag}} – remove all previous spacing;
-* {{anyTag~}} – remove all next spacing;
-* {{{helper}}} – execute helper and render result;
-* {{helper}} – execute helper and render escape result;
-* {{helper1 (helper2  arg1 arg2) arg2 arg3}} – sub-expression passed as an argument;
+* `{{subject.key}}` – lookup in objects;
+* `{{array.[0]}}` – lookup in arrays;
+* `{{~anyTag}}` – remove all previous spacing;
+* `{{anyTag~}}` – remove all next spacing;
+* `{{{helper}}}` – prevent escaping;
+* `{{helper1 (helper2  arg1 arg2) arg2 arg3}}` – sub-expression passed as an argument;
 
 ### Images
 
