@@ -31,6 +31,8 @@ Table of content:
 * [Page breaking](#page-breaking)
 * [Condition checking](#condition-checking)
 * [Each iterator](#each-iterator)
+* [Lookup](#lookup)
+* [Expressions](#expressions)
 * [Images](#images)
 * [Date & time formattng](#date-time-formatting)
 * [Number formatting](#number-formatting)
@@ -204,6 +206,30 @@ Access a parent scope:
     {{../name}}
 {{/each}}
 ```
+
+### Lookup
+
+In object (map):
+
+```
+`{{lookup subject key}}`
+```
+
+In array:
+
+```
+`{{lookup teamsId index}}`
+```
+
+### Expressions
+
+* {{subject.key}} – lookup in objects;
+* {{array.[0]}} – lookup in arrays;
+* {{~anyTag}} – remove all previous spacing;
+* {{anyTag~}} – remove all next spacing;
+* {{{helper}}} – execute helper and render result;
+* {{helper}} – execute helper and render escape result;
+* {{helper1 (helper2  arg1 arg2) arg2 arg3}} – sub-expression passed as an argument;
 
 ### Images
 
