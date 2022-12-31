@@ -25,7 +25,6 @@ Can be achieved by restriction of access to Template entity type.
 Table of content: 
 
 * [Code view](#code-view)
-* [Code view](#code-view)
 * [Charset issues](#charset-issues)
 * [Access to templates](#access-to-templates)
 * [Page numbering](#page-numbering)
@@ -33,7 +32,7 @@ Table of content:
 * [Condition checking](#condition-checking)
 * [Each iterator](#each-iterator)
 * [Images](#images)
-* [Date & Time formattng](#date-time-formatting)
+* [Date & time formattng](#date-time-formatting)
 * [Number formatting](#number-formatting)
 * [Currency symbol](#currency-symbol)
 * [Text field](#text-field)
