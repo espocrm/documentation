@@ -105,7 +105,7 @@ Create a file `custom/Espo/Modules/MyModule/Resources/i18n/en_US/Settings.json`:
 
 ### 5. View
 
-Create a file `client/custom/modules/my-module/src/views/my-settings.js`:
+Create a file `client/custom/modules/my-module/src/views/admin/my-settings.js`:
 
 ```js
 define('my-module:views/admin/my-settings', ['views/settings/record/edit'], function (Dep) {
