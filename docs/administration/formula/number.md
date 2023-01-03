@@ -6,6 +6,8 @@
 * [number\floor](#numberfloor)
 * [number\ceil](#numberceil)
 * [number\randomInt](#numberrandomint)
+* [number\parseInt](#numberparseint)
+* [number\parseFloat](#numberparsefloat)
 
 ## number\format
 
