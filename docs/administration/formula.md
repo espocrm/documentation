@@ -194,6 +194,8 @@ Out-of-the-box functions are listed below.
 * [number\floor](formula/number.md#numberfloor)
 * [number\ceil](formula/number.md#numberceil)
 * [number\randomInt](formula/number.md#numberrandomint)
+* [number\parseInt](formula/number.md#numberparseint)
+* [number\parseFloat](formula/number.md#numberparsefloat)
 
 ### Entity
 
