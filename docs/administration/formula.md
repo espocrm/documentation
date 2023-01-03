@@ -23,6 +23,7 @@ In this article:
 
 * [Syntax](#syntax)
 * [Operators](#operators)
+* [Control structures](#control-structures)
 * [Attributes](#operators)
 * [Functions](#functions)
   * [General](#general)
@@ -109,6 +110,52 @@ The priority of operators:
 * `==`, `!=`, `>`, `<`, `>=`, `<=`;
 * `+`, `-`;
 * `*`, `/`, `%`.
+
+## Control structures
+
+### if
+
+*As of v7.4.*
+
+```
+if (CONDITION) {
+    CODE
+}
+
+if (CONDITION) {
+    CODE
+} else {
+    CODE
+}
+
+if (CONDITION) {
+    CODE
+} else if (CONDITION) {
+    CODE
+} else {
+    CODE
+}
+```
+
+### while
+
+*As of v7.4.*
+
+```
+while (CONDITION) {
+    CODE
+}
+
+while (CONDITION1) {
+    if (CONDITION2) {
+        break;
+    }
+
+    if (CONDITION3) {
+        continue;
+    }
+}
+```
 
 ## Attributes
 
