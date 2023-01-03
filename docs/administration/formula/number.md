@@ -58,7 +58,7 @@ Generates a cryptographic random integer between specified MIN and MAX. If MIN i
 
 Converts a string to an integer number. (as of v7.1)
 
-#### number\parseFloat
+## number\parseFloat
 
 `number\parseFloat(STRING)`
 
