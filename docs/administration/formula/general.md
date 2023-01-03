@@ -92,6 +92,8 @@ teamsIds = list($teamId) // `['team-id']`
 
 Executes STATEMENT repeatedly as long CONDITION is true.
 
+Note: As of v7.4 it's recommended to use the *while* statement instead.
+
 Example:
 
 ```
