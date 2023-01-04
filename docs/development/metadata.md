@@ -11,7 +11,7 @@ In this article:
 
 ## Reference
 
-* [scopes](metadata/scopes.md) – general parmeters for scopes and entity types
+* [scopes](metadata/scopes.md) – general parameters for scopes and entity types
 * [entityDefs](metadata/entity-defs.md) – entity defs (fields, links, indexes)
 * [aclDefs](metadata/acl-defs.md) – access control for scopes and entity types
 * [selectDefs](metadata/select-defs.md) – Select-framework defs for entity types
@@ -75,7 +75,7 @@ In this article:
 
 ### Backend
 
-The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as an [container service](di.md).
+The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as n [container service](di.md).
 
 Path to a needed parameter is specified with an array.
 
@@ -93,7 +93,7 @@ will return an associative array with definitions of all fields.
 
 ### Frontend
 
-Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as backend's one.
+Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as the backend's one.
 
 ```JavaScript
 this.getMetadata().get(['entityDefs', 'Account', 'fields', 'name', 'type']);
@@ -123,9 +123,9 @@ All JSON files from these directories **get merged** recursively into a single f
 
 ## Extending
 
-Since metadata is merged recursively you can easily redefine JSON objects and arrays in the `custom` directory.
+Since metadata is merged recursively, you can easily redefine JSON objects and arrays in the `custom` directory.
 
-You can **append** values to existing arrays by using `"__APPEND__"` string as the first element of an array.
+You can **append** values to existing arrays by using the `__APPEND__` string as the first element of an array.
 
 `custom/Espo/Custom/Resources/metadata/entityDefs/Account.json`:
 
