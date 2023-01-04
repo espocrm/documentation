@@ -43,6 +43,7 @@ In this article:
   * [consoleCommands](metadata/app-console-commands.md)
   * [containerServices](metadata/app-container-services.md)
   * [currency](metadata/app-currency.md)
+  * [database](metadata/app-database.md)
   * [dateTime](metadata/app-date-time.md)
   * [defaultDashboardLayouts](metadata/app-default-dashboard-layouts.md)
   * [defaultDashboardOptions](metadata/app-default-dashboard-options.md)
