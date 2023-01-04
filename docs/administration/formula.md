@@ -53,9 +53,10 @@ In this article:
 
 EspoCRM formula is written in a simple language designed specifically for EspoCRM.
 
-There are 5 element types that can be used in formula:
+There are 6 language elements in formula script:
 
 * operators (e.g. `+`, `-`, `*`)
+* control structures (`if`, `while`)
 * functions (e.g. `string\concatenate()`)
 * values (scalars and NULL value, e.g. `'string'`, `100`, `true`, `null`)
 * variables (e.g. `$temp`)
