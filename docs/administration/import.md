@@ -122,6 +122,14 @@ There's the ability to export all failed rows back to CSV (in order to fix them 
 
 Occurs when importing an ID that already exists. Most likely, you didn't reverted the previously imported records and try to import them again.
 
+### Validation
+
+Validation is applied for imported records. If a row does not pass validation, the record won't be created.
+
+#### Enum fields
+
+When importing to an enum field, values in a CSV should be the same as values (options) defined for the field in Espo. If your data source use different values, consider replacing them in the CSV before importing. One can utilize the `VLOOKUP` function in the spreadsheet app, or use simple Find & Replace.
+
 ## See also
 
 * [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
