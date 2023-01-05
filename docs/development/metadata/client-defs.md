@@ -277,15 +277,39 @@ Additionals layouts for a scope.
     
 ## massActionList
 
+*strng[]*
+
 Mass actions.
 
 ## checkAllResultMassActionList
+
+*strng[]*
 
 Mass actions available when selecting all recults.
 
 ## massActionDefs
 
+*Object.<string, mixed\>*
+
 Defenitions for mass actions.
+
+### handler
+
+*string*
+
+A handler class for the mass action.
+
+### initFunction
+
+*string*
+
+An init function of the handler.
+
+### configCheck
+
+*string*
+
+A config path (separated by the `.`) to check whether the action is enabled. The `!` prefix reverts.
 
 ## iconClass
 
