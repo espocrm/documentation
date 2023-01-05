@@ -66,7 +66,6 @@ Example:
 }
 ```
 
-
 ## recordViews
 
 Custom record view classes. For list, detail, edit, detailQuick, editQuick, kanban, listRelated.
@@ -89,6 +88,37 @@ Example:
     "select": "custom:views/test/modal/select-records"
 }
 ```
+
+## exportDisabled
+
+*boolean*
+
+Disable the *export* mass-action.
+
+## massUpdateDisabled
+
+*boolean*
+
+Disable the *mass-update* mass-action.
+
+## massFollowDisabled
+
+*boolean*
+
+Disable the *mass-follow* mass-action.
+
+## convertCurrencyDisabled
+
+*boolean*
+
+Disable the *convert-currency* mass-action and action.
+
+## mergeDisabled
+
+*boolean*
+
+Disable the record merge functionallity.
+
 
 ## filterList
 
