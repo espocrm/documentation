@@ -99,7 +99,15 @@ Disable the *export* mass-action.
 
 *boolean*
 
-Disable the *mass-update* action.
+Disable the *mass-update* mass action.
+
+## massRemoveDisabled
+
+*boolean*
+
+*As of v7.4.*
+
+Disable the *remove* mass action.
 
 ## massFollowDisabled
 
