@@ -386,7 +386,7 @@ An acl action access to which is required for the action.
 
 *Object[]*
 
-The detail view actions (available from the dropdown next to the *Edit* button).
+Detail view actions (available from the dropdown next to the *Edit* button).
 
 ### name
 
@@ -433,6 +433,12 @@ A scope access to which is required for the action.
 *?string*
 
 An acl action access to which is required for the action.
+
+## modalDetailActionList
+
+*Object[]*
+
+Modal detail view actions. Parameters are the same as for *detailActionList*.
 
 ## iconClass
 
