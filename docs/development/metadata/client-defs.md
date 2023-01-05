@@ -6,9 +6,13 @@ Contains parameters used by the front-end.
 
 ## controller
 
+*string*
+
 Defines a client controller class.
 
 ## collection
+
+*string*
 
 Defines a client record collection class. Optional.
 
@@ -16,35 +20,42 @@ The default value: `'collection'`. Corresponds to the path `client/src/collectio
 
 ## model
 
+*string*
+
 Defines a client record model class. Optional.
 
 ## acl
 
-Defines a client scope acl class. Optional.
+*string*
+
+Defines a client acl class. Optional.
 
 The default value: `'acl'`. Path `client/src/acl.js`.
 
-
 ## aclPortal
 
-Defines client scope acl for portals. Optional.
+*string*
+
+Defines a client acl class for portals. Optional.
 
 The default value: `'acl-portal'`. Path `client/src/acl-portal.js`.
 
-
 ## createDisabled
+
+*boolean*
 
 Allows to disable the ability to create entity from user interface (from the list view).
 
-
 ## searchPanelDisabled
+
+*boolean*
 
 Allows to hide a search panel on the list view.
 
 
 ## views
 
-list, detail, edit view classes
+Custom view classes for list, detail, edit.
 
 Example:
 
@@ -58,7 +69,7 @@ Example:
 
 ## recordViews
 
-Record view classes. list, detail, edit, detailQuick, editQuick, kanban, listRelated.
+Custom record view classes. For list, detail, edit, detailQuick, editQuick, kanban, listRelated.
 
 Example:
 ```
@@ -116,10 +127,19 @@ Example:
 
 ## defaultFilterData
 
+A default filter data.
+
 ## selectDefaultFilters
 
-Used as default set filter on the select modal
-Object 'filter' => 'active'
+Used as a default set filter on the select-records modal.
+
+```json
+{
+    "selectDefaultFilters": {
+        "filter" => "myPrimaryFilter"
+    }
+}
+```
     
 ## menu
 
@@ -185,13 +205,19 @@ Example:
 
 ### isForm
 
+*boolean*
+
 Needed for a proper UI styling when the panel contains a form.
 
 ### notRefreshable
 
+*boolean*
+
 Not refreshable (when clicking on the header).
 
 ### options
+
+*string[]*
 
 Options to pass to the panel view.
       
@@ -236,43 +262,77 @@ A layout name or a layout defined as an array.
 
 ### createDisabled
 
+*boolean*
+
 Disable the ability to create related records.
 
 ### selectDisabled
+
+*boolean*
 
 Disable the ability to select related records.
 
 ### viewDisabled
 
+*boolean*
+
 Disable the ability to view related records in a modal.
 
 ### unlinkDisabled
+
+*boolean*
 
 Disable the ability to unlink related records.
 
 ### label
 
+*string*
+
 A custom translatable label.
 
 ### createRequiredAccess
+
+*string*
 
 Access (to a current entity type) required for creating related records.
 
 ### selectRequiredAccess
 
+*string*
+
 Access (to a current entity type) required for selecting related records.
 
 ### filters
 
-Filters available in the dropdown. An array of strings.
+*string[]*
+
+Filters available in the dropdown.
 
 ### orderDirection
+
+*string*
 
 `"asc"` or `"desc"`.
 
 ## additionalLayouts
 
 Additionals layouts for a scope.
+
+```json
+{
+    "additionalLayouts": {
+        "detailConvert": {
+            "type": "detail"
+        },
+        "listForAccount": {
+            "type": "listSmall"
+        },
+        "listForContact": {
+            "type": "listSmall"
+        }
+    }
+}
+```
     
 ## massActionList
 
@@ -334,13 +394,19 @@ Scope color in HEX.
 
 ## kanbanViewMode
 
-The scope has kanban view mode on the list view.
+*boolean*
+
+Whether the scope has the kanban view mode on the list view.
 
 ## allowInternalNotes
+
+*boolean*
 
 If true, it will be possible to post internal posts in the stream. Internal posts are not visible in portals.
 
 ## isExpandedByDefault
+
+*boolean*
 
 Actual for category scopes (e.g. DocumentFolder). If true, then by default it will be in expanded mode.
 
