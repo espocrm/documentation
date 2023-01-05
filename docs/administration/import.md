@@ -128,7 +128,7 @@ Validation is applied for imported records. If a row does not pass validation, t
 
 #### Enum fields
 
-When importing to an enum field, values in a CSV should be the same as values (options) defined for the field in Espo. If your data source use different values, consider replacing them in the CSV before importing. One can utilize the `VLOOKUP` function in the spreadsheet app, or use simple Find & Replace.
+When importing to an enum field, values in a CSV should be the same as values (options) defined for the field in Espo. If your data source use different values, consider replacing them in the CSV before importing. One can utilize the *VLOOKUP* function in the spreadsheet app, or use simple Find & Replace.
 
 If you import an empty value, but your enum field does not have an empty option, validation will fail.
 
