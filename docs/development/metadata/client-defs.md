@@ -270,20 +270,19 @@ Filters available in the dropdown. An array of strings.
 
 `"asc"` or `"desc"`.
 
-
 ## additionalLayouts
 
 Additionals layouts for a scope.
     
 ## massActionList
 
-*strng[]*
+*string[]*
 
 Mass actions.
 
 ## checkAllResultMassActionList
 
-*strng[]*
+*string[]*
 
 Mass actions available when selecting all recults.
 
@@ -307,9 +306,21 @@ An init function of the handler.
 
 ### configCheck
 
-*string*
+*?string*
 
 A config path (separated by the `.`) to check whether the action is enabled. The `!` prefix reverts.
+
+### aclScope
+
+*?string*
+
+A scope access to which is required for the action.
+
+### acl
+
+*?string*
+
+An acl action access to which is required for the action.
 
 ## iconClass
 
