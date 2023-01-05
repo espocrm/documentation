@@ -99,13 +99,13 @@ Disable the *export* mass-action.
 
 *boolean*
 
-Disable the *mass-update* mass-action.
+Disable the *mass-update* action.
 
 ## massFollowDisabled
 
 *boolean*
 
-Disable the *mass-follow* mass-action.
+Disable the *follow* mass-action.
 
 ## convertCurrencyDisabled
 
