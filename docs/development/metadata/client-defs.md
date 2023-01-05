@@ -344,7 +344,7 @@ Mass actions.
 
 *string[]*
 
-Mass actions available when selecting all recults.
+Mass actions available when selecting all results.
 
 ## massActionDefs
 
@@ -363,6 +363,58 @@ A handler class for the mass action.
 *string*
 
 An init function of the handler.
+
+### configCheck
+
+*?string*
+
+A config path (separated by the `.`) to check whether the action is enabled. The `!` prefix reverts.
+
+### aclScope
+
+*?string*
+
+A scope access to which is required for the action.
+
+### acl
+
+*?string*
+
+An acl action access to which is required for the action.
+
+## detailActionList
+
+*Object[]*
+
+The detail view actions (available from the dropdown next to the *Edit* button).
+
+### name
+
+*string*
+
+An action name.
+
+### label
+
+A translatable label.
+
+### handler
+
+*string*
+
+A handler class for the action.
+
+### initFunction
+
+*string*
+
+An init function of the handler.
+
+### checkVisibilityFunction
+
+*?string*
+
+The handler function that checks whether the action is available. Should return a boolean value. Called on model sync.
 
 ### configCheck
 
