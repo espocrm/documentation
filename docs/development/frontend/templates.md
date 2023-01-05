@@ -142,7 +142,7 @@ Translates a label.
 Translates an enum option.
 
 ```
-{{translate field category='fields' scope='Account'}}
+{{translate field field='fieldName' scope='EntityType'}}
 ```
 
 ### complexText
