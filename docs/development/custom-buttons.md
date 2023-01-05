@@ -170,7 +170,7 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 
 ## Dropdown action in detail modal view
 
-Available as of v7.2.
+*As of v7.2.*
 
 Everything is the same as for the detail view. The only difference is that the metadata parameter name is `modalDetailActionList`.
 
@@ -178,7 +178,7 @@ Everything is the same as for the detail view. The only difference is that the m
 
 An action will available in the *Actions* dropdown when you select records on the list view.
 
-Available as of v7.0.
+*As of v7.0.*
 
 An example for *Meeting* entity type.
 
