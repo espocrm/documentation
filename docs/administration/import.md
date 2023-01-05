@@ -118,6 +118,10 @@ All rows that failed to import will be available in the Errors panel on the Impo
 
 There's the ability to export all failed rows back to CSV (in order to fix them and then re-import).
 
+### Integrity-Constraint-Violation
+
+Occurs when importing an ID that already exists. Most likely, you didn't reverted the previously imported records and try to import them again.
+
 ## See also
 
 * [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
