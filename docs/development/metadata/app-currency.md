@@ -8,7 +8,7 @@ Currency definitions.
 
 *Object<string, string\>*
 
-A currency-name => symbol mapping.
+A currency-code => symbol mapping.
 
 Example:
 
