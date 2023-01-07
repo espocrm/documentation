@@ -86,16 +86,10 @@ Placeholders are only available in footer (and header if it's set to be printed 
 
 ### Page breaking
 
-To add an explicit page break you need to add:
+In places where you need to have an explicit page break, add:
 
 ```
 {{pagebreak}}
-```
-
-For older versions (in code view):
-
-```
-<br pagebreak="true">
 ```
 
 ### Condition checking
