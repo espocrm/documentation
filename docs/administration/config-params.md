@@ -166,7 +166,7 @@ The list of parameters along with their default values.
 
 * pdfEngine – `Tcpdf` – what PDF engine to use; as of v6.1;
 * pdfFontFace – default font face;
-* pdfFontSize – 12 – default font size;
+* pdfFontSize – default font size;
 
 ### Events
 
