@@ -173,7 +173,7 @@ Quarter number w/ year. E.g. `2019_1`.
 
 Fiscal quarter number, where X is a number (between 1 and 12) of the fiscal year start. E.g. `QUARTER_3`.
 
-#### WEEK
+#### WEEK_0
 
 Week number w/ year.
 
