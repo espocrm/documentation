@@ -175,13 +175,13 @@ Fiscal quarter number, where X is a number (between 1 and 12) of the fiscal year
 
 #### WEEK_0
 
-Week number w/ year.
+Week number w/ a year. Sunday is a first day of week.
 
-E.g. `2018/4`. Sunday is a first day of week.
+E.g. `2018/4`.
 
 #### WEEK_1
 
-Week number w/ year. Monday as a first day of week.
+Week number w/ a year. Monday as a first day of week.
 
 #### NOW
 
