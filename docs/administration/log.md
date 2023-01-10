@@ -24,7 +24,7 @@ It is **not recommended** to enable trace printing on the production environment
 
 ## Handlers
 
-Actual as of v6.1.
+**As of v6.1.**
 
 EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
 The library is shipped with the set of handlers.
