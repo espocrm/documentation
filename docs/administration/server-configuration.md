@@ -21,7 +21,7 @@ In this article:
 
 EspoCRM requires PHP 8.0, 8.1 or 8.2 with the following extensions:
 
-* [pdo](https://php.net/manual/en/book.pdo.php) – for database access;
+* [pdo_mysql](https://php.net/manual/en/book.pdo.php) – for database access;
 * [gd](https://php.net/manual/en/book.image.php) – to manipulate images;
 * [openssl](https://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
 * [zip](https://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
