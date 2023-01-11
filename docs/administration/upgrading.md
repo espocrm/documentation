@@ -2,7 +2,7 @@
 
 ## Upgrade from CLI
 
-Available as of v5.6.
+*As of v5.6.*
 
 This is **the most preferable** way to upgrade.
 
