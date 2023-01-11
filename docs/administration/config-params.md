@@ -76,6 +76,7 @@ The list of parameters along with their default values.
 * emailReminderPortionSize – `10` – how much email reminders can be sent at once (as of v7.0);
 * notificationsMaxSize – `5` – how much in-app notifications is shown when the notification panel is shown up;
 * notificationsCheckInterval – `10` – an interval between checks for new notifications (actual only if web socket is not enabled); 
+* popupNotificationsCheckInterval – `15` – an interval between checks for new popup notifications (actual only if web socket is not enabled) (as of v7.3.2); 
 
 ### Emails
 
