@@ -129,12 +129,7 @@ use Espo\Modules\MyModule\Something;
  */
 class SomeFactory
 {
-    private InjectableFactory $injectableFactory;
-
-    public function __construct(InjectableFactory $injectableFactory)
-    {
-        $this->injectableFactory = $injectableFactory;
-    }
+    public function __construct(private InjectableFactory $injectableFactory) {}
 
     public function create(): Something
     {
@@ -167,18 +162,14 @@ use Espo\Modules\MyModule\SomeClass;
 
 class SomeClass
 {
-    private EntityManager $entityManager;    
-    private SomeClass $some;
-
     /**
      * EntityManager is a service. The same instance will be used for different classes.
      * SomeClass is not a service. It will be instantiated every time.
      */
-    public function __construct(EntityManager $entityManager, SomeClass $some)
-    {
-        $this->entityManager = $entityManager;
-        $this->some = $some;
-    }
+    public function __construct(
+        private EntityManager $entityManager,
+        private SomeClass $some
+    ) {}
 }
 ```
 
@@ -250,12 +241,7 @@ use Espo\Core\InjectableFactory;
  */
 class SomeTypeFactory
 {
-    private InjectableFactory $injectableFactory;
-    
-    public function __construct(InjectableFactory $injectableFactory)
-    {
-        $this->injectableFactory = $injectableFactory;
-    }
+    public function __construct(private InjectableFactory $injectableFactory) {}
     
     /**
      * The variable $userId will be used for the constructor parameter
