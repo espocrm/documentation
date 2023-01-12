@@ -62,6 +62,7 @@ In this article:
   * [metadata](metadata/app-metadata.md)
   * [orm](metadata/app-orm.md)
   * [pdfEngines](metadata/app-pdf-engines.md)
+  * [popupNotifications](metadata/app-popup-notifications.md)
   * [portalContainerServices](metadata/app-portal-container-services.md)
   * [rebuild](metadata/app-rebuild.md)
   * [regExpPatterns](metadata/app-reg-exp-patterns.md)
