@@ -100,7 +100,7 @@ Example:
 <?php
 namespace Espo\Modules\MyModule;
 
-use Espo\Core\ORM\EntityManager;
+use Espo\ORM\EntityManager;
 
 class MyService1
 {
@@ -157,7 +157,7 @@ If a dependency is not a service, a new instance will be created every time the 
 <?php
 namespace Espo\Custom;
 
-use Espo\Core\ORM\EntityManager;
+use Espo\ORM\EntityManager;
 use Espo\Modules\MyModule\SomeClass;
 
 class SomeClass
