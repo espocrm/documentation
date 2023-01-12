@@ -41,7 +41,7 @@ class SomeClass
 
 ```
 
-## Entity Manager usage
+## Usage
 
 ### Create new entity
 
@@ -505,7 +505,7 @@ $collection = $entityManager
 
 #### Condition
 
-Available as of v7.0.
+*As of v7.0.*
 
 ```php
 use Espo\ORM\Query\Part\Condition as Cond;
@@ -651,9 +651,7 @@ $pdoStatement = $entityManager
 $rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
 ```
 
-### Additional Params
-
-#### STH collection
+## STH collection
 
 If STH is set (with `sth` method), the find method will return a collection (instance of `SthCollection`) that doesn't allocate memory for all result data.
 
@@ -669,7 +667,7 @@ foreach ($collection as $entity) {
 }
 ```
 
-### Complex expressions
+## Complex expressions
 
 `MONTH:(closeDate)` and `SUM:(amountConverted)` in the example above are complex expressions. [See more](../user-guide/complex-expressions.md) about them.
 
@@ -955,7 +953,7 @@ $entityManager->getLocker()->commit();
 
 ## Defs
 
-Available as of v7.0.
+*As of v7.0.*
 
 ```php
 $defs = $entityManager->getDefs();
