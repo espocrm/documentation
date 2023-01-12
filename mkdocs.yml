@@ -218,6 +218,7 @@ nav:
               - 'metadata': 'development/metadata/app-metadata.md'
               - 'orm': 'development/metadata/app-orm.md'
               - 'pdfEngines': 'development/metadata/app-pdf-engines.md'
+              - 'popupNotifications': 'development/metadata/app-popup-notifications.md'
               - 'portalContainerServices': 'development/metadata/app-portal-container-services.md'
               - 'rebuild': 'development/metadata/app-rebuild.md'
               - 'regExpPatterns': 'development/metadata/app-reg-exp-patterns.md'
