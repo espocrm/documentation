@@ -104,12 +104,7 @@ use Espo\Core\ORM\EntityManager;
 
 class MyService1
 {
-    private EntityManager $entityManager;
-
-    public function __construct(EntityManager $entityManager)
-    {
-        $this->entityManager = $entityManager;
-    }
+    public function __construct(private EntityManager $entityManager) {}
 }
 ```
 
