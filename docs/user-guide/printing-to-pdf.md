@@ -10,11 +10,11 @@ Important: You need to have at least one Template for the entity type of the rec
 
 ### Printing multiple records
 
-*Print to PDF* is available on the list view as a mass action. You need to select needed records and click Print to PDF from Actions menu. It will generate a single merged PDF file for multiple records.
+*Print to PDF* is available on the list view as a mass action. You need to select needed records and click *Print to PDF* from *Actions* menu. It will generate a single merged PDF file (or multiple PDFs zipped, depending on a used engine) for multiple records.
 
-By default the max number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
+By default, the max number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
 
-Note, that page numbering gets reset for each record. You need to use the placeholder `{pageAbsoluteNumber}` to print absolute page numbers in the footer.
+Note that page numbering gets reset for each record. You need to use the placeholder `{pageAbsoluteNumber}` to print absolute page numbers in the footer.
 
 ### Access restriction to printing
 
