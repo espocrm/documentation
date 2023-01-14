@@ -81,8 +81,8 @@ Administrator can add Templates tab at Administration > User Interface. An acces
 Placeholders are only available in footer (and header if it's set to be printed on each page).
 
 * `{pageNumber}` – the current number of the page
-* `{totalPageNumber}` – the total number of record
-* `{pageAbsoluteNumber}` – the absolute number of the page, when printing multiple records
+* `{totalPageNumber}` – the total number of record (TCPDF only)
+* `{pageAbsoluteNumber}` – the absolute number of the page, when printing multiple records (TCPDF only)
 
 ### Page breaking
 
@@ -371,7 +371,9 @@ Option 3: {{checkboxTag fieldName option='Option 3' color='blue'}}
 {{barcodeImage barcodeField type='EAN8' width=60 height=30 fontsize=14 text=true padding=0}}
 ```
 
-`barcodeField` is a name of your field.
+Parameters *fontsize*, *text*, *padding* are supported only in the TCPDF engine.
+
+(TCPDF only)
 
 Available types:
 
