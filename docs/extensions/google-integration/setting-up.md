@@ -40,7 +40,7 @@ On the *Credentials* page, click *CREATE CREDENTIALS*, select *OAuth client ID*.
 
 ![Credentials](../../_static/images/extensions/google-integration/setting-up/4.png)
 
-Select 'Web application' in *Appication type* field. Add your site URL in *Authorized JavaScript origins*. Add *Redirect URI* (copied from EspoCRM integration panel) to *Authorized redirect URIs*.
+Select 'Web application' in *Application type* field. Add your site URL in *Authorized JavaScript origins*. Add *Redirect URI* (copied from EspoCRM integration panel) to *Authorized redirect URIs*.
 
 ![Client ID](../../_static/images/extensions/google-integration/setting-up/5.png)
 
