@@ -10,6 +10,6 @@ Note: Administration can create template at Administration > PDF Templates. Temp
 
 4\. On the campaign detail view click on the dropdown next to the *Edit* button and then click *Generate Mail Merge PDF*. Select an entity type and click *Proceed* button.
 
-It will generate a single PDF document for multiple records that you can print.
+It will generate a single PDF document (or multiple PDFs zipped, depending on a used engine) for multiple records that you can print.
 
 Note: By default, records with empty *Address* field are skiped.
