@@ -120,8 +120,8 @@ File permissions can be set to not proper values on some shared hostings after u
 
 Check permissions of the files:
 
-* public/index.php
-* public/api/v1/index.php
+* `public/index.php`
+* `public/api/v1/index.php`
 
 They must be 644. If any of those files have permission 664, you need to change it to 644. Use your hosting's control panel or chmod command.
 
