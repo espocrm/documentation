@@ -114,7 +114,7 @@ php rebuild.php
 
 [Check logs](#check-logs) for errors. Googling an error message may help figure out the cause of the problem.
 
-Ofter the problem is caused by a webserver PHP version being lower than the minimin required.
+Often the problem is caused by a webserver PHP version being lower than the minimin required.
 
 File permissions can be set not proper values on some shared hostings after upgrade. 
 
