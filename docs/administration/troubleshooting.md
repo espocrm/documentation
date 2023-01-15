@@ -62,7 +62,7 @@ In `data/config-internal.php` (or `data/config.php`):
 At Administration > System Requirements. It's important that you have all required extensions installed.
 
 
-## Scheduled Jobs are not working
+## Scheduled jobs are not working
 
 #### Problem #1: Your crontab is not configured
 
