@@ -21,7 +21,7 @@ Make sure no error occured. If any error occured it means your Espo instance is 
 
 Find a needed upgraded package at https://www.espocrm.com/download/upgrades/. If the needed package is not listed
 you can try to compose an URL `https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-{FROM}-to-{TO}.zip` by substituting the *from* and *to* versions.
-Maybe the needed file exists but not listed on the page. Note that there are no packages that skip minor versions. `6.0.10` can be upgraded to `6.1.3` but not to `6.2.0`.
+Maybe the needed file exists but not listed on the page. Note that there are no packages that skip minor versions. *6.0.10* can be upgraded to *6.1.3* in one step but cannot to *6.2.0*.
 
 ## 3. Copy files from copyBefore
 
