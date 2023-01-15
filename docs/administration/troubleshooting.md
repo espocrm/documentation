@@ -112,17 +112,21 @@ php rebuild.php
 
 ## EspoCRM is not loading after upgrade
 
-Sometimes it can happen on some shared hostings.
+[Check logs](#check-logs) for errors.
+
+File permissions can be set not proper values on some shared hostings after upgrade. 
 
 Check permissions of the files:
-/index.php
-/api/v1/index.php
+
+* public/index.php
+* public/api/v1/index.php
 
 They must be 644. If any of those files have permission 664, you need to change it to 644. Use your hosting's control panel or chmod command.
 
 ```
 chmod 644 /path/to/file
 ```
+
 More information about file permissions can be found [here](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ## MySQL error: The server requested authentication method unknown to the client
