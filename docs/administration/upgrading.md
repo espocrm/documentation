@@ -19,7 +19,7 @@ Note: Upgrading process may take a while. Do not close the terminal until it's f
 ## Recommendations
 
 1. Make a [backup](backup-and-restore.md) before upgrading.
-2. If the next Espo version requires a higher PHP version, upgrade your PHP (with all extensions). The PHP version you are upgrading to must be supported by your current Espo (usually you make a +2 minor version step). After that, make sure your Espo is working, cron is running. Make sure that the new PHP version is applied for the CLI (command `php -v`) and the webserver (in Espo at Administration > System Requirements > PHP Version).
+2. If the next Espo version requires a higher PHP version, upgrade your PHP (with all extensions). The PHP version you are upgrading to must be supported by your current Espo (usually you make a +2 minor version steps). After that, make sure your Espo is working, cron is running. Make sure that the new PHP version is applied for the CLI (command `php -v`) and the webserver (in Espo at Administration > System Requirements > PHP Version).
 3. Make sure you have free disk space on the server.
 4. Disable cron before upgrading (at Administration > Settings). Enable it back after the upgrade is finished. This will prevent situations when a job started on the previous version and finished on the new version. In most cases this won't cause any issues though. The most significant problem it may cause is the job not being finished.
 5. Enable *Maintenance Mode* before upgrading (at Administration > Settings). Disable after upgrade is finished. This will prevent non-admin users accessing the application before you started upgrading.
