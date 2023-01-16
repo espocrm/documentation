@@ -16,6 +16,8 @@ This will check the next available version, download it and install. Once the up
 
 Note: Upgrading process may take a while. Do not close the terminal until it's finished.
 
+Note: If the next Espo version requires a higher PHP version, upgrade won't be processed, a message will be displayed. 
+
 ## Recommendations
 
 1. Make a [backup](backup-and-restore.md) before upgrading.
