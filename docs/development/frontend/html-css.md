@@ -168,12 +168,12 @@ A field cell on a form:
 </div>
 ```
 
-Supported screen sizes:
+Supported screen widths:
 
-* `xs` – phones;
-* `sm` – tablets;
-* `md`
-* `lg`
+* `xs` – phones, 480px;
+* `sm` – tablets, 768px;
+* `md` – medium, 992px;
+* `lg` – large, 1200px;
 
 ### Auto-fill grid
 
@@ -244,7 +244,7 @@ Centering:
 
 A horizontally centered block:
 
-* `block-center`;
+* `block-center`
 * `block-center-sm`
 * `block-center-md`
 
