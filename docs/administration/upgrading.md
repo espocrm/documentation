@@ -72,4 +72,5 @@ Go to Administration > Upgrade. Upload and install upgrade packages one by one.
 ## See also
 
 * [Upgrading manually](upgrading-manually.md)
+* [Troubleshooting](troubleshooting.md)
 
