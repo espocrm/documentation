@@ -4,7 +4,7 @@
 
 *As of v5.6.*
 
-This is **the most preferable** way to upgrade.
+This is the most preferable way to upgrade.
 
 Command to run:
 
