@@ -44,16 +44,16 @@ E.g. for Active Directory: "userPrincipalName" or "sAMAccountName",for OpenLDAP:
 * Try Username Split – the option to split a username with the domain.
 * Opt Referrals – if referrals should be followed to the LDAP client.
 * Create User in EspoCRM – this option allows EspoCRM to create a user from the LDAP.
-    * User First Name Attribute – LDAP attribute which is used to determine the user’s first name.
-    * User Last Name Attribute – LDAP attribute which is used to determine the user’s last name.
-    * User Title Attribute – LDAP attribute which is used to determine the user title.
-    * User Email Address Attribute – LDAP attribute which is used to determine the user’s email address.
-    * User Phone Number Attribute – LDAP attribute which is used to determine the user’s phone number.
-    * User Teams – Teams for created user. For more, see user profile.
-    * User Default Team – Default team for created user. For more, see user profile.
+* User First Name Attribute – LDAP attribute which is used to determine the user’s first name.
+* User Last Name Attribute – LDAP attribute which is used to determine the user’s last name.
+* User Title Attribute – LDAP attribute which is used to determine the user title.
+* User Email Address Attribute – LDAP attribute which is used to determine the user’s email address.
+* User Phone Number Attribute – LDAP attribute which is used to determine the user’s phone number.
+* User Teams – Teams for created user. For more, see user profile.
+* User Default Team – Default team for created user. For more, see user profile.
 * Use LDAP Authentication for Portal Users – Allow portal users to use LDAP authentication instead of Espo authentication.
-    * Default Portals for a Portal User – Default Portals for created Portal User.
-    * Default Roles for a Portal User – Default Roles for created Portal User.
+* Default Portals for a Portal User – Default Portals for created Portal User.
+* Default Roles for a Portal User – Default Roles for created Portal User.
 
 **Note**, for the **first** LDAP user login (both system and portal) the `Create User in EspoCRM` parameter should be checked. Otherwise it won't be able to login.
 
