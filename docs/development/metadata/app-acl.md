@@ -20,7 +20,6 @@ Example:
 
 ```json
 {
-
     "MyEntityType1": {
         "create": "yes",
         "read": "own",
