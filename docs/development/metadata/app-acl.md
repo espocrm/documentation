@@ -20,15 +20,19 @@ Example:
 
 ```json
 {
-    "MyEntityType1": {
-        "create": "yes",
-        "read": "own",
-        "edit": "own",
-        "delete": "own",
-        "stream": "team"
-    },
-    "MyScope1": true,
-    "WorkingTimeRange": "WorkingTimeCalendar"
+    "mandatory": {
+        "scopeLevel": {
+            "MyEntityType1": {
+                "create": "yes",
+                "read": "own",
+                "edit": "own",
+                "delete": "own",
+                "stream": "team"
+            },
+            "MyScope1": true,
+            "WorkingTimeRange": "WorkingTimeCalendar"
+        }
+    }
 }
 ```
 
@@ -46,12 +50,16 @@ Example:
 
 ```json
 {
-    "MyEntityType": {
-        "myField1": {
-            "read": "yes",
-            "edit": "no"
-        },
-        "myField2": false
+    "mandatory": {
+        "scopeFieldLevel": {
+            "MyEntityType": {
+                "myField1": {
+                    "read": "yes",
+                    "edit": "no"
+                },
+                "myField2": false
+            }
+        }
     }
 }
 ```
@@ -67,11 +75,15 @@ Example:
 
 ```json
 {
-   "myField1": {
-        "read": "yes",
-        "edit": "no"
-    },
-    "myField2": false
+    "mandatory": {
+        "fieldLevel": {
+            "myField1": {
+                "read": "yes",
+                "edit": "no"
+            },
+            "myField2": false
+        }
+    }
 }
 ```
 
@@ -156,5 +168,4 @@ Example:
         "dataPrivacyPermission": "yes"
     }
 }
-
 ```
