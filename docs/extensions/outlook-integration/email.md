@@ -22,12 +22,12 @@ After that, you can test imap connection and sent test email to make sure everyt
 
 ## Troubleshooting
 
-Important: when connecting to Outlook using the Outlook Integration extension and pressing *Connect* button, you must be asked to enter your credentials fully. If the system just connects you without asking, then it is most likely using the cached values which allow connection, but may not allow access to the specific mailbox correctly.
+Important: when connecting to Outlook using the Outlook Integration extension and pressing *Connect* button, you must be asked to enter your credentials fully. This must be done if you did not enter the email address and password in the pop-up window earlier, because if you did, then in the pop-up window you will have the option to select email accounts. If the system just connects you without asking anything, then it is most likely using the cached values which allow connection, but may not allow access to the specific mailbox correctly.
 
 There are some recommendations for setting up an email account if you encounter errors when connecting to SMTP.
 
 1. Ensure you are not signed into `office.com`.
-2. Clear cache in browser.
+2. Clear cookies and other site data.
 3. Go to email account and connect to Outlook.
 4. Click Test Connection button.
 5. If OK, then enter email account password.
