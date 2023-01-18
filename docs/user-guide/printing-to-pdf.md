@@ -18,7 +18,7 @@ Note that page numbering gets reset for each record. You need to use the placeho
 
 ### Access restriction to printing
 
-Can be achieved by restriction of access to Template entity type.
+Can be achieved by restricting access to the *Template* entity type in Roles.
 
 ### Engines
 
