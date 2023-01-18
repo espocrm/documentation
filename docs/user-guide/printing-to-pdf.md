@@ -16,9 +16,9 @@ By default, the max number of records is limited to 50. The limit is defined by 
 
 Note that page numbering gets reset for each record. You need to use the placeholder `{pageAbsoluteNumber}` to print absolute page numbers in the footer.
 
-### Access restriction to printing
+### Access control
 
-Can be achieved by restricting access to the *Template* entity type in Roles.
+Access to PDF printing is controlled by Roles. Admin can set a *read* access level for the *Template* entity type.
 
 ### Engines
 
