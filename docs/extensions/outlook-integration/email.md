@@ -19,3 +19,16 @@ After that, *Outlook* panel should appear on the right. You need to click *Conne
 Note: You need to be logged in to Outlook as a user to which an email address of the current email account record belongs. For example, if you configure email account for *example@outlook.com*, you need to log in to Outlook as a user who has *example@outlook.com* email address.
 
 After that, you can test imap connection and sent test email to make sure everything works fine.
+
+## Troubleshooting
+
+Important: when connecting to Outlook using the Outlook Integration extension and pressing *Connect* button, you must be asked to enter your credentials fully. If the system just connects you without asking, then it is most likely using the cached values which allow connection, but may not allow access to the specific mailbox correctly.
+
+There are some recommendations for setting up an email account if you encounter errors when connecting to SMTP.
+
+1. Ensure you are not signed into `office.com`.
+2. Clear cache in browser.
+3. Go to email account and connect to Outlook.
+4. Click Test Connection button.
+5. If OK, then enter email account password.
+6. Click Send Test Email button.
