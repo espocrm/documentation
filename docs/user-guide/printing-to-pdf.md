@@ -20,6 +20,15 @@ Note that page numbering gets reset for each record. You need to use the placeho
 
 Can be achieved by restriction of access to Template entity type.
 
+### Engines
+
+PDF documents are generated from HTML code. Espo supports two PDF engines:
+
+* [Dompdf](https://github.com/dompdf/dompdf) (as of v7.3)
+* [Tcpdf](https://github.com/tecnickcom/TCPDF)
+
+Dompdf has better CSS support.
+
 ## Templates
 
 Table of content: 
