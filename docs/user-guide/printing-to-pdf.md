@@ -24,7 +24,7 @@ Can be achieved by restriction of access to Template entity type.
 
 PDF documents are generated from HTML code. Espo supports two PDF engines:
 
-* [Dompdf](https://github.com/dompdf/dompdf) (as of v7.3)
+* [Dompdf](https://github.com/dompdf/dompdf) (as of v7.4)
 * [Tcpdf](https://github.com/tecnickcom/TCPDF)
 
 The engine can be switched at Administration > Settings > PDF Engine.
