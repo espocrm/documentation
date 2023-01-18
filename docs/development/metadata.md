@@ -77,7 +77,7 @@ In this article:
 
 ### Backend
 
-The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as n [container service](di.md).
+The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as a [container service](di.md).
 
 Path to a needed parameter is specified with an array.
 
@@ -111,7 +111,7 @@ Metadata is stored in JSON files that can be located in different places:
 * `custom/Espo/Modules/{ModuleName}/Resources/metadata`
 * `custom/Espo/Custom/Resources/metadata`
 
-When you access data by a path `clientDefs.Account.views.edit` the first lexeme `clientDefs` corresponds to a dir name, the second `Account` – to a file name `Account.json`. All following lexemes correspond to a path in the JSON object.
+When you access data by a path `clientDefs.Account.views.edit` the first lexeme `clientDefs` corresponds to a dir name, the second `Account` – to a file name `Account.json`. All the following lexemes correspond to a path in the JSON object.
 
 ```json
 {
@@ -121,7 +121,7 @@ When you access data by a path `clientDefs.Account.views.edit` the first lexeme 
 }
 ```
 
-All JSON files from these directories **get merged** recursively into a single file and stored in a cache. 
+All JSON files from these directories **get merged** recursively into a single file and stored in an application cache. 
 
 ## Extending
 
