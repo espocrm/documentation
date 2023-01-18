@@ -27,7 +27,7 @@ PDF documents are generated from HTML code. Espo supports two PDF engines:
 * [Dompdf](https://github.com/dompdf/dompdf) (as of v7.3)
 * [Tcpdf](https://github.com/tecnickcom/TCPDF)
 
-Engine can be switched at Administration > Settings > PDF Engine.
+The engine can be switched at Administration > Settings > PDF Engine.
 
 Dompdf has better CSS support.
 
