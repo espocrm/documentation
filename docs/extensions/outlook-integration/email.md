@@ -20,7 +20,7 @@ Note: You need to be logged in to Outlook as a user to which an email address of
 
 After that, you can test imap connection and sent test email to make sure everything works fine.
 
-## Troubleshooting
+## Recommendations
 
 Important: when connecting to Outlook using the Outlook Integration extension and pressing *Connect* button, you must be asked to enter your credentials fully. This must be done if you did not enter the email address and password in the pop-up window earlier, because if you did, then in the pop-up window you will have the option to select email accounts. If the system just connects you without asking anything, then it is most likely using the cached values which allow connection, but may not allow access to the specific mailbox correctly.
 
@@ -29,6 +29,5 @@ There are some recommendations for setting up an email account if you encounter 
 1. Ensure you are not signed into `office.com`.
 2. Clear cookies and other site data.
 3. Go to email account and connect to Outlook.
-4. Click Test Connection button.
-5. If OK, then enter email account password.
-6. Click Send Test Email button.
+4. Click Test Connection button, check if successful.
+6. Click Send Test Email button, check if successful.
