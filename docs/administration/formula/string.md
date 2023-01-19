@@ -13,6 +13,7 @@
 * [string\match](#stringmatch)
 * [string\matchAll](#stringmatchall)
 * [string\replace](#stringreplace)
+* [string\split](#strinsplit)
 
 
 ## string\concatenate
