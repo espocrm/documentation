@@ -89,6 +89,12 @@ Example:
 }
 ```
 
+## inlineEditDisabled
+
+*boolean*
+
+Disable inline edit.
+
 ## exportDisabled
 
 *boolean*
