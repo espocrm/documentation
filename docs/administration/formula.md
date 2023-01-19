@@ -208,6 +208,7 @@ Out-of-the-box functions are listed below.
 * [string\match](formula/string.md#stringmatch)
 * [string\matchAll](formula/string.md#stringmatchall)
 * [string\replace](formula/string.md#stringreplace)
+* [string\split](formula/string.md#stringsplit)
 
 
 ### Datetime
