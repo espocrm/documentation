@@ -184,7 +184,7 @@ Example:
 
 will return `'Hello world'`.
 
-Note: The REPLACE parameter mush be string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
+Note: The REPLACE parameter mush be a string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
 
 
 ## string\split
