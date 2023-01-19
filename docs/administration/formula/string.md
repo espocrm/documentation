@@ -176,7 +176,7 @@ will return an array `['{token1}', '{token2}']`.
 
 `string\replace(STRING, SEARCH, REPLACE)`
 
-Replaces all occurrences of SEARCH with REPLACE in STRING. (as of v5.9.0)
+Replaces all occurrences of SEARCH with REPLACE in STRING. (as of v5.9)
 
 Example:
 
@@ -184,12 +184,14 @@ Example:
 
 will return `'Hello world'`.
 
+Note: The REPLACE parameter mush be string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
+
 
 ## string\split
 
 `string\split(STRING, SEPARATOR)`
 
-Splits a STRING into array of strings by a string SEPARATOR. (as of v7.1.0)
+Splits a STRING into array of strings by a string SEPARATOR. (as of v7.1)
 
 Example:
 
