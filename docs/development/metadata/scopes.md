@@ -190,3 +190,16 @@ Status values to be ignored on the Kanban view.
 
 Whether the entity may contain personal data.
 
+## exportFormatList
+
+*string[]*
+
+A list of allowed export formats.
+
+Example:
+
+```json
+{
+    "exportFormatList": ["csv"]
+}
+```
