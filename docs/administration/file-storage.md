@@ -25,7 +25,7 @@ Parameters need to be set in `data/config-internal.php`:
   ],
 ```
 
-In `data/config.php`:
+In `data/config-internal.php`:
 
 ```
   'defaultFileStorage' => 'AwsS3',
