@@ -51,6 +51,32 @@ Compatible with 2FA.
 
 On the login page only global config parameters are available. When implementing a custom login, consider having some global config parameters to access in the handler.
 
+## portalDefault
+
+*boolean*
+
+*As of v7.4.*
+
+If true, the method will be applied for portals when the method is selected as the default in the settings and the portal does not have a specific authentication provider.
+
 ## settings
 
-Defines config parameters and a form on the admin UI. See `application/Espo\Resources/metadata/authenticationMethods/LDAP.json` as an example.
+Defines config parameters and a form on the admin UI. See `application/Espo\Resources/metadata/authenticationMethods/Oidc.json` for an example.
+
+### isAvailable
+
+*boolean*
+
+Whether the method is available in the settings.
+
+## provider
+
+*As of v7.4.*
+
+Parameters for the Authentication Provider entity. Same as in the *settings*. If omitted, then a corresponding parameter from the *settings* is used.
+
+### isAvailable
+
+*boolean*
+
+Whether is available in the Authentication Provider entity.
