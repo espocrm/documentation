@@ -12,14 +12,14 @@ Additional features:
 * Team mapping. Espo teams against groups/teams/roles of the identity provider.
 * User profile and user teams sync. Optional, on every login.
 * Ability to choose a claim that will be used for a username.
-* Fallback login. Only for admins or for regular users too.
+* Fallback login. Only for admins or for regular users.
 * For admins OIDC can be disabled, so that only the fallback method  allowed.
 * Logout redirect. To clear an identity provider session when a user is logging out from Espo.
 * Backchannel logout. The ability to forcibly log out a user from Espo. `api/v1/backchannelLogout` endpoint.
 
 Details:
 
-* No portal support.
+* Portals supported as of v7.4.
 * Espo 2FA may not work with some identity providers (where an authorization code can't be used twice).
 * The *userName* field length may need to be increased up to 255 in some cases (by default Espo has the limit 50).
 * Supported signing algorithms: RS256, RS384. RS512, HS256, HS384, HS512. Developers can add implementations of other algorithms in an upgrade-safe manner.
@@ -39,6 +39,14 @@ Details:
 If your identity provider users have groups (roles or teams, depending on how your provider names it), it's reasonable to map them against Espo teams. When an Espo user is created (upon signing in first time) or synced, corresponding teams will be assigned to that user according to the configured team mapping.
 
 You need to specify the *Group Claim*, the [claim](https://en.wikipedia.org/wiki/JSON_Web_Token) that will be carrying the information about user groups. Some identity providers don't include the group claim in the JWT payload by default and you need to do some settings to have it.
+
+## Setting up for portals
+
+*As of v7.4.*
+
+1. Create an application in your identity provider.
+2. In EspoCRM, at Administration > Authentication Providers, create a provider.
+3. In EspoCRM, edit the Portal record, select the Authentication Provider.
 
 ### Auth0
 
