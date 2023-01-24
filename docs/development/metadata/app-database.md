@@ -2,19 +2,31 @@
 
 Path: metadata > app > database.
 
-## dbalConnectionFactoryClassNameMap
+## platforms
 
-*Object.<string, class-string<Espo\Core\Utils\Database\DBAL\ConnectionFactory\>\>*
+*Object.<string, Object\>*
 
-*As of v7.4.*
+Parameters for platforms.
 
-DBAL connection factories for platforms.
+Example:
 
 ```json
 {
-    "dbalConnectionFactoryClassNameMap": {
-        "Mysql": "Espo\\Core\\Utils\\Database\\DBAL\\Factories\\MysqlConnectionFactory",
-        "Postgresql": "Espo\\Core\\Utils\\Database\\DBAL\\Factories\\PostgresqlConnectionFactory"
+    "platforms": {
+        "Mysql": {}
     }
 }
 ```
+
+### dbalConnectionFactoryClass
+
+*class-string<Espo\Core\Utils\Database\DBAL\ConnectionFactory\>*
+
+*As of v7.4.*
+
+
+### indexHelperClassName
+
+*class-string<Espo\Core\Utils\Database\Orm\IndexHelper\>*
+
+*As of v7.4.*
