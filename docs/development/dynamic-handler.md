@@ -30,11 +30,13 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             this.recordView.listenTo(
                 this.model,
                 'change:assignedUserId',
-                this.controlFields.bind(this)
+                (model, value, options) => this.controlFields(model, value, options)
             );
         },
 
-        controlFields: function () {     
+        controlFields: function (model, value, options) {
+            // options.ui will be set to true if the change was initiated by a user interaction
+        
             // if assigned user is not empty
             if (this.model.get('assignedUserId')) {
                 
@@ -74,7 +76,7 @@ Clear cache after all.
 
 ## Multiple dynamic handlers
 
-Since v5.8.0 it's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
+As of v5.8 it's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
 
 In metadata > YourEntityType > clientDefs:
 
