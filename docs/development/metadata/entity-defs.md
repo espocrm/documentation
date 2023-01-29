@@ -286,6 +286,13 @@ Supported comparison keys:
 * `= TRUE`
 * `= FALSE`
 
+Supported parameters:
+
+* whereClause
+* leftJoins
+* joins
+* distinct – bool
+
 Example:
 
 ```json
