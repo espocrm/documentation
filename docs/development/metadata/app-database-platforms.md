@@ -23,7 +23,7 @@ Example:
 
 ## dbalTypeClassNameMap
 
-*Object.<string, class-string<Doctrine\DBAL\Types\Type\>\>
+*Object.<string, class-string<Doctrine\DBAL\Types\Type\>\>*
 
 ## indexHelperClassName
 
@@ -40,4 +40,3 @@ Example:
 ## postRebuildActionClassNameList
 
 *class-string<Espo\Core\Utils\Database\Schema\RebuildAction\>[]*
-
