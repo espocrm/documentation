@@ -2,6 +2,7 @@
 
 Path: metadata > app > databasePlatforms.
 
+*As of v7.4.*
 
 Example:
 
@@ -16,10 +17,11 @@ Example:
 
 *class-string<Espo\Core\Utils\Database\DBAL\ConnectionFactory\>*
 
-*As of v7.4.*
 
 ## indexHelperClassName
 
 *class-string<Espo\Core\Utils\Database\Orm\IndexHelper\>*
 
-*As of v7.4.*
+## detailsProviderClassName
+
+*class-string<Espo\Core\Utils\Database\DBAL\DetailsProvider\>*
