@@ -184,11 +184,15 @@ Colums used in full-text search.
 
 ## valueFactoryClassName
 
-A factory that creates value-objects for this field. Should implement `Espo\ORM\Value\ValueFactory` inteface. A value-object can be obtainer by calling `getValueObject` method on an `Entity`.
+*class-string<Espo\ORM\Value\ValueFactory\>*
+
+A factory that creates value-objects for this field. A value-object can be obtainer by calling `getValueObject` method on an `Entity`.
 
 ## attributeExtractorClassName
 
-A class that extracts values (attribute => value map) from a value-object. Used internally for obtaining values from a value-object and writting them to an entity. Should implement `Espo\ORM\Value\AttributeExtractor`.
+*class-string<Espo\ORM\Value\AttributeExtractor\>*
+
+A class that extracts values (attribute => value map) from a value-object. Used internally for obtaining values from a value-object and writting them to an entity.
 
 ## validationList
 
@@ -202,9 +206,6 @@ Validations applied server-side.
 
 Mandatory validations applied server-side. The difference from regular validations is that mandatory are applied always, regardless a corresponding field parameter. E.g. if a field has a parameter *required = false*, then the validation *required* won't be applied unless it's listed as mandatory.
 
-## validatorClassName
-
-A validator class name. The class should contain validation method corresponding to validations listed in *validationList* and *mandatoryValidationList*. This is a legacy, consider using *validatorClassNameMap*. If not defined, then a class `Espo\Classes\FieldValidations\{Type}Type` is used.
 
 ## validatorClassNameMap
 
@@ -222,6 +223,20 @@ Example:
 }
 ```
 
+## validatorClassName
+
+A validator class name. The class should contain validation method corresponding to validations listed in *validationList* and *mandatoryValidationList*. This is a legacy, consider using *validatorClassNameMap*. If not defined, then a class `Espo\Classes\FieldValidations\{Type}Type` is used.
+
 ## duplicatorClassName
 
-A duplicator class. Should implement `Espo\Core\Record\Duplicator\FieldDuplicator` interface. Duplicates attributes of a field. Some fields can require some processing when an entity is being duplicated.
+*class-string<Espo\Core\Record\Duplicator\FieldDuplicator\>*
+
+Duplicates attributes of a field. Some fields can require some processing when an entity is being duplicated.
+
+## converterClassName
+
+*class-string<Espo\Core\Utils\Database\Orm\FieldConverter\>*
+
+*As of v7.4.*
+
+Converts field metadata to ORM metadata.
