@@ -30,15 +30,10 @@ namespace Espo\SomeNamespace;
 use Espo\ORM\EntityManager;
 
 class SomeClass
-{
-    private EntityManager $entityManager;
-    
-    public function __construct(EntityManager $entityManager)
-    {
-        $this->entityManager = $entityManager;
-    }
+{    
+    public function __construct(private EntityManager $entityManager)
+    {}
 }
-
 ```
 
 ## Usage
