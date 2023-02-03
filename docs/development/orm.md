@@ -41,7 +41,7 @@ class SomeClass
 ### Create new entity
 
 ```php
-$entity = $entityManager->getEntity($entityType)
+$entity = $entityManager->getNewEntity($entityType)
 ```
 
 Note: It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
@@ -49,7 +49,7 @@ Note: It creates a new instance but doesn't store it in DB. The entity doesn't h
 ### Fetch existing entity
 
 ```php
-$entity = $entityManager->getEntity($entityType, $id);
+$entity = $entityManager->getEntityById($entityType, $id);
 ```
 
 ### Store entity
@@ -61,9 +61,9 @@ $entityManager->saveEntity($entity);
 With options:
 
 ```php
-$entityManager->saveEntity($entity, [
-    \Espo\Core\ORM\Repository\SaveOption::SILENT => true,
-]);
+use Espo\Core\ORM\Repository\SaveOption;
+
+$entityManager->saveEntity($entity, [SaveOption::SILENT => true]);
 ```
 
 Options:
