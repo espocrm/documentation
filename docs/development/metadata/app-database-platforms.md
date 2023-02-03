@@ -2,7 +2,7 @@
 
 Path: metadata > app > databasePlatforms.
 
-*Object.<string, Object>*
+*Object.<string, Object\>*
 
 *As of v7.4.*
 
