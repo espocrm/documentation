@@ -209,9 +209,11 @@ Mandatory validations applied server-side. The difference from regular validatio
 
 ## validatorClassNameMap
 
+*Object.<string, class-string<Espo\Core\FieldValidation\Validator\>\>*
+
 *As if v7.3.*
 
-Validators defined as validation-type => class-name map. Classes should implement `Espo\Core\FieldValidation\Validator` interface.
+Validators defined as validation-type => class-name map.
 
 Example:
 
