@@ -15,13 +15,29 @@ Example:
 
 ## dbalConnectionFactoryClass
 
-*class-string<Espo\Core\Utils\Database\DBAL\ConnectionFactory\>*
+*class-string<Espo\Core\Utils\Database\Dbal\ConnectionFactory\>*
 
+## detailsProviderClassName
+
+*class-string<Espo\Core\Utils\Database\Dbal\DetailsProvider\>*
+
+## dbalTypeClassNameMap
+
+*Object.<string, class-string<Doctrine\DBAL\Types\Type\>\>
 
 ## indexHelperClassName
 
 *class-string<Espo\Core\Utils\Database\Orm\IndexHelper\>*
 
-## detailsProviderClassName
+## columnPreparatorClassName
 
-*class-string<Espo\Core\Utils\Database\DBAL\DetailsProvider\>*
+*class-string<Espo\Core\Utils\Database\Schema\ColumnPreparator\>*
+
+## preRebuildActionClassNameList
+
+*class-string<Espo\Core\Utils\Database\Schema\RebuildAction\>[]*
+
+## postRebuildActionClassNameList
+
+*class-string<Espo\Core\Utils\Database\Schema\RebuildAction\>[]*
+
