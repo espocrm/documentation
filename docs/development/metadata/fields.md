@@ -211,7 +211,7 @@ Mandatory validations applied server-side. The difference from regular validatio
 
 *Object.<string, class-string<Espo\Core\FieldValidation\Validator\>\>*
 
-*As if v7.3.*
+*As of v7.3.*
 
 Validators defined as validation-type => class-name map.
 
