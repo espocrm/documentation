@@ -199,7 +199,7 @@ nav:
               - 'consoleCommands': 'development/metadata/app-console-commands.md'
               - 'containerServices': 'development/metadata/app-container-services.md'
               - 'currency': 'development/metadata/app-currency.md'
-              - 'database': 'development/metadata/app-database.md'
+              - 'databasePlatforms': 'development/metadata/app-database-platforms.md'
               - 'dateTime': 'development/metadata/app-date-time.md'
               - 'defaultDashboardLayouts': 'development/metadata/app-default-dashboard-layouts.md'
               - 'defaultDashboardOptions': 'development/metadata/app-default-dashboard-options.md'
