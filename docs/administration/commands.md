@@ -22,6 +22,16 @@ php rebuild.php
 
 Clears cache, rebuilds database.
 
+### Hard rebuild
+
+*As of v7.4.*
+
+```
+php command.php rebuild --hard
+```
+
+Hard database rebuild. It will drop unused columns, decrease exceeding column lengths, fix index names. Recommended to have database backup before running hard rebuild.
+
 
 ## Changing user password
 
