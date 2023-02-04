@@ -168,6 +168,11 @@ nav:
         - 'Translation': 'development/translation.md'
         - 'Coding rules': 'development/coding-rules.md'
         - 'Backend':
+          - 'Entities':
+            - 'Types of Entities': 'development/entity.md'
+            - 'Base Entity': 'development/entity/base-entity.md'
+            - 'Entity Plus': 'development/entity/entity-plus.md'
+            - 'Event Entity': 'development/entity/entity-event.md'
           - 'API': 'development/api.md'
           - 'Dependency injection': 'development/di.md'
           - 'Metadata': 'development/metadata.md'
