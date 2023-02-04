@@ -37,7 +37,7 @@ We recommend to set it to `2`.
 
 ### Preloading
 
-Since EspoCRM v6.0.0 you can use a [preloading](https://www.php.net/manual/en/opcache.preloading.php). The file `preload.php` is available at the root directory.
+You can use a [preloading](https://www.php.net/manual/en/opcache.preloading.php). The file `preload.php` is available at the root directory.
 
 Important: Preloading must be disabled before upgrading and extension installation.
 
