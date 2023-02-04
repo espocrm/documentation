@@ -30,7 +30,7 @@ Clears cache, rebuilds database.
 php command.php rebuild --hard
 ```
 
-Hard database rebuild. It will drop unused columns, decrease exceeding column lengths, fix index names. It won't drop unused tables (consider removing them manually).
+Hard database rebuild. It will drop unused columns, decrease exceeding column lengths, fix index names, set proper collations. It won't drop unused tables (consider removing them manually).
 
 Recommended to have database backup before running hard rebuild.
 
