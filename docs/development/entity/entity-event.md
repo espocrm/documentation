@@ -2,9 +2,12 @@
 
 !!! note
 
-    If you create the entity through the GUI, that file will reside at `custom/Espo/Custom/Resources/metadata/entityDefs/{TestEventEntityName}.json`. 
+    If you create the entity through the GUI, that file will reside at `custom/Espo/Custom/Resources/metadata/entityDefs/{YourEventEntityName}.json`. 
     
-    If you create it as part of a module, the path should be created at `custom/Espo/Modules/{ModuleName}/Resources/metadata/clientDefs/{TestEventEntityName}.json`.
+    If you create it as part of a module, the path should be created at `custom/Espo/Modules/{ModuleName}/Resources/metadata/clientDefs/{YourEventEntityName}.json`.
+
+## Example entityDefs file
+By default, creating a "Base Entity" from the Admin interface generates the following entityDefs file at `custom/Espo/Custom/Resources/metadata/entityDefs/{YourEventEntityName}.json`.
 
 ```
 {

@@ -72,7 +72,7 @@ Parameters:
 
 ![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/varchar.png)
 
-??? example "Example entityDefs JSON Configuration"
+??? example "Example Varchar JSON Configuration (entityDefs)"
 
     ```
     "someVarcharFieldName": {
@@ -95,7 +95,7 @@ Parameters:
 
 ### Important
 - `maxLength` minimum is an integer with a minimum of 1 and maximum of 65535
-- Default `patterns` include:  
+- Any [regex](https://regex-generator.olafneumann.org/) can be used in the "Pattern" property. By default, EspoCRM includes the following `patterns`:  
     - `$noBadCharacters`  
     - `$noAsciiSpecialCharacters`  
     - `$latinLetters`  
@@ -113,12 +113,40 @@ Parameters:
 * Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
 * Is Sorted – to sort a list alphabetically;
 * Display as Label – a value will be displayed as a label with color; a color for each option can be specified.
+* Style - Defines color properties to the options based on theme. Includes "success", "info", "warning", "primary," and "danger."
 
 It's possible to define conditional options with Dynamic Logic.
 
 ![Enum](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/enum.png)
 
 ![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/enum-detail.png)
+
+??? example "Example Enum JSON Configuration (entityDefs)"
+
+    ```
+    "someEnumFieldName": {
+        "type": "enum",
+        "options": [
+            "Option 1",
+            "Option 2",
+            "Option 3"
+        ],
+        "style": {
+            "Option 1": null,
+            "Option 2": null,
+            "Option 3": null
+        },
+        "isSorted": true,
+        "displayAsLabel": false,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "default": "Option 1",
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 
 ## Text
 
@@ -142,13 +170,33 @@ Date w/o time.
 
 Parameters:
 
-* After (field) – a validation: a date value should be after a date value of a specified field;
-* Before (field) – a validation: a date value should be before a date value of a specified field;
+* After (field) – a validation: a date value should be after a date value of a specified field. See example below;
+* Before (field) – a validation: a date value should be before a date value of a specified field. See example below;
 * Use Numeric Format – if not checked, then words 'today', 'yesterday', 'tomorrow' are in the detail view mode.
+* Default - A Javascript function can be provided to this field. See example below.
 
 ![Date](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date.png)
 
 ![Date detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date-detail.png)
+
+??? example "Example Date JSON Configuration (entityDefs)"
+
+    ```
+    "someDateFieldName": {
+        "notNull": false,
+        "type": "date",
+        "required": fale,
+        "default": "javascript: return this.dateTime.getDateShiftedFromToday(1, 'days');",
+        "after": "createdAt",
+        "before": "modifiedAt",
+        "useNumericFormat": fale,
+        "audited": fale,
+        "readOnly": fale,
+        "inlineEditDisabled": fale,
+        "tooltip": fale,
+        "isCustom": true
+    }
+    ```
 
 ## Date-Time
 
@@ -180,6 +228,24 @@ Parameters:
 
 ![Currency detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/currency-detail.png)
 
+??? example "Example Currency JSON Configuration (entityDefs)"
+
+    ```
+    "someCurrencyFieldName": {
+        "type": "currency",
+        "required": false,
+        "onlyDefaultCurrency": false,
+        "conversionDisabled": false,
+        "min": <someInt>,
+        "max": <someInt>,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 ## Int
 
 A whole number.
@@ -207,6 +273,21 @@ Parameters:
 A checkbox. Two possible values: true and false.
 
 ![Boolean](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/bool.png)
+
+??? example "Example Boolean JSON Configuration (entityDefs)"
+
+    ```
+    "someBooleanFieldName": {
+        "notNull": true,
+        "type": "bool",
+        "default": false,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Multi-Enum
 
@@ -237,6 +318,28 @@ Parameters:
 * Is Sorted – to sort a list alphabetically;
 * Max Item Count – a validation: how many items can be checked;
 
+??? example "Example Checklist JSON Configuration (entityDefs)"
+
+    ```
+    "someChecklistFieldName": {
+        "type": "checklist",
+        "storeArrayValues": true,
+        "required": false,
+        "options": [
+            "Item 1",
+            "Item 2",
+            "Item 3",
+            "Item 4"
+        ],
+        "isSorted": false,
+        "maxCount": <someInt || null>,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Array
 
@@ -252,11 +355,47 @@ Parameters:
 
 ![Array](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/array.png)
 
+??? example "Example Array JSON Configuration (entityDefs)"
+
+    ```
+    "someArrayFieldName": {
+        "type": "array",
+        "storeArrayValues": true,
+        "required": false,
+        "noEmptyString": false,
+        "options": [
+            "Option 1",
+            "Option 2",
+            "Option 3"
+        ],
+        "displayAsList": false,
+        "maxCount": 3,
+        "pattern": "$noBadCharacters",
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 ## Address
 
 An address with street, city, state, postal code and country.
 
 ![Address](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/address.png)
+
+??? example "Example Address JSON Configuration (entityDefs)"
+
+    ```
+    "someAddressFieldName": {
+        "type": "address",
+        "viewMap": true,
+        "inlineEditDisabled": true,
+        "tooltip": true,
+        "isCustom": true
+    }
+    ```
 
 ## Url
 
@@ -309,6 +448,22 @@ Parameters:
 * Accept – which file types can be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types;
 * Preview Size – defines a size of an image displayed on the detail/list view.
 
+??? example "Example Attachment-Multiple JSON Configuration (entityDefs)"
+
+    ```
+    "someAttachmentMultipleName": {
+        "type": "attachmentMultiple",
+        "required": false,
+        "previewSize": "medium",
+        "sourceList": [],
+        "maxFileSize": 2,
+        "accept": [],
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 ## Number
 
 An auto-incrementing number of string type with a possible prefix and specific length.
@@ -325,6 +480,19 @@ Parameters:
 
 A generated read-only auto-incrementing integer number.
 
+??? example "Example Auto-increment JSON Configuration (entityDefs)"
+
+    ```
+    "someAutoIncrementFieldName": {
+        "type": "autoincrement",
+        "autoincrement": true,
+        "unique": true,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 ## Barcode
 
 A barcode. Can be printed to PDF.
@@ -333,6 +501,22 @@ Parameters:
 
 * Code Type – a type of barcode; supported types: CODE128, CODE128A, CODE128B, CODE128C, EAN13, EAN8, EAN5, EAN2, UPC, UPCE, ITF14, pharmacode, QRcode;
 * Last Character – for EAN13 type, often is `>`.
+
+??? example "Example Barcode JSON Configuration (entityDefs)"
+
+    ```
+    "someBarcodeFieldName": {
+        "type": "barcode",
+        "len": 255,
+        "required": false,
+        "lastChar": ">",
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "codeType": "CODE128",
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Foreign
 

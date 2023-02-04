@@ -5,12 +5,12 @@ Entity properties are defined in an entityDefs file.
 
 !!! note 
 
-    If you create the entity through the GUI, that file will reside at `custom/Espo/Custom/Resources/metadata/entityDefs/{BaseEntityName}.json`. 
+    If you create the entity through the GUI, that file will reside at `custom/Espo/Custom/Resources/metadata/entityDefs/{YourBaseEntityName}.json`. 
     
-    If you create it as part of a module, the path should be created at `custom/Espo/Modules/{ModuleName}/Resources/metadata/clientDefs/{BaseEntityName}.json`.
+    If you create it as part of a module, the path should be created at `custom/Espo/Modules/{ModuleName}/Resources/metadata/clientDefs/{YourBaseEntityName}.json`.
 
 ## Example entityDefs file
-By default, creating a "Base Entity" generates the following entityDefs file at `custom/Espo/Custom/Resources/metadata/entityDefs/{BaseEntityName}.json`.
+By default, creating a "Base Entity" from the Admin interface generates the following entityDefs file at `custom/Espo/Custom/Resources/metadata/entityDefs/{YourBaseEntityName}.json`.
 
 ```
 {

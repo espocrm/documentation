@@ -173,6 +173,8 @@ nav:
             - 'Base Entity': 'development/entity/base-entity.md'
             - 'Entity Plus': 'development/entity/entity-plus.md'
             - 'Event Entity': 'development/entity/entity-event.md'
+            - 'Person Entity': 'development/entity/entity-person.md'
+            - 'Company Entity': 'development/entity/entity-company.md'
           - 'API': 'development/api.md'
           - 'Dependency injection': 'development/di.md'
           - 'Metadata': 'development/metadata.md'

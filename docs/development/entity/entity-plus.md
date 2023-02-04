@@ -6,16 +6,17 @@ Entity properties are defined in an entityDefs file.
 
 !!! note
 
-    If you create the entity through the GUI, that file will reside at `custom/Espo/Custom/Resources/metadata/entityDefs/{TestBaseEntityName}.json`. 
+    If you create the entity through the GUI, that file will reside at `custom/Espo/Custom/Resources/metadata/entityDefs/{YourBaseEntityPlusName}.json`. 
     
-    If you create it as part of a module, the path should be created at `custom/Espo/Modules/{ModuleName}/Resources/metadata/clientDefs/{TestBaseEntityName}.json`.
+    If you create it as part of a module, the path should be created at `custom/Espo/Modules/{ModuleName}/Resources/metadata/clientDefs/{YourBaseEntityPlusName}.json`.
+
+## Example entityDefs file
+By default, creating a "Base Entity" from the Admin interface generates the following entityDefs file at `custom/Espo/Custom/Resources/metadata/entityDefs/{YourBaseEntityPlusName}.json`.
 
 !!! note
 
     Note the additional fields in the "links" object. This is where the references to the Task, Meeting, Calls, and Email entities (e.g., Activities & History) are stored.
 
-## Example entityDefs file
-By default, creating a "Base Entity" generates the following entityDefs file at `custom/Espo/Custom/Resources/metadata/entityDefs/{TestBaseEntityName}.json`.
 
 ```
 {
