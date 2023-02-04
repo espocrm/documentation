@@ -32,7 +32,7 @@ php command.php rebuild --hard
 
 Hard database rebuild. It will drop unused columns, decrease exceeding column lengths, fix index names, set proper collations. It won't drop unused tables (consider removing them manually).
 
-Recommended to have database backup before running hard rebuild.
+Recommended to have a database backup before running hard rebuild.
 
 
 ## Changing user password
