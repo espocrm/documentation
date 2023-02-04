@@ -9,6 +9,9 @@ extra_css:
 
 markdown_extensions:
   - mdx_truly_sane_lists
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - codehilite:
       guess_lang: false
       use_pygments: true
@@ -22,6 +25,8 @@ theme:
     palette:
         primary: blue grey
         accent: blue grey
+    features:
+        - content.code.copy
 
 nav:
     - 'Home': 'index.md'

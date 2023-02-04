@@ -72,6 +72,38 @@ Parameters:
 
 ![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/varchar.png)
 
+??? example "Example entityDefs JSON Configuration"
+
+    ```
+    "someVarcharFieldName": {
+        "type": "varchar",
+        "required": false,
+        "maxLength": 150,
+        "default": "some test",
+        "options": [
+            "option 1, option2, option 3",
+            "another option"
+        ],
+        "pattern": "$noBadCharacters",
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
+### Important
+- `maxLength` minimum is an integer with a minimum of 1 and maximum of 65535
+- Default `patterns` include:  
+    - `$noBadCharacters`  
+    - `$noAsciiSpecialCharacters`  
+    - `$latinLetters`  
+    - `$latinLettersDigits`  
+    - `$latinLettersDigitsWhitespace`  
+    - `$latinLettersWhitespace`  
+    - `$digits`
+
 ## Enum
 
 Selectbox, only one value can be selected.
