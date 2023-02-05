@@ -17,7 +17,7 @@ See article about [how to create indexes](../development/db-indexes.md).
 
 ## Database choice
 
-MariaDB has made optimizer improvements that make some sub-queries running much faster than in MySQL. As of Espo v7.4, filters by teams, relations, multi-enums performs better on MariaDB.
+As of Espo v7.4, filters by teams, relations, multi-enums performs faster on MariaDB.
 
 ## MySQL params
 
