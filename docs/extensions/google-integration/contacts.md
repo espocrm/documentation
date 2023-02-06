@@ -2,8 +2,6 @@
 
 **Note**: Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
 
-[Google Integration](https://www.espocrm.com/extensions/google-integration) provides the ability to sync calendar events in both directions.
-
 Features:
 
 * The ability to push your EspoCRM contacts and leads to Google Contacts;
