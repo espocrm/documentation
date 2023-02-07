@@ -58,7 +58,17 @@ Available items:
 * Conditions making field read-only
 * Conditional options – for enum, multi-enum, checklist, array, varchar fields
 
-----
+## Regex
+
+Any [regex](https://regex-generator.olafneumann.org/) can be used in the "Pattern" property of supported fields. By default, EspoCRM includes the following `patterns`:  
+
+- `$noBadCharacters`  
+- `$noAsciiSpecialCharacters`  
+- `$latinLetters`  
+- `$latinLettersDigits`  
+- `$latinLettersDigitsWhitespace`  
+- `$latinLettersWhitespace`  
+- `$digits`
 
 ## Varchar
 
@@ -92,17 +102,7 @@ Parameters:
         "isCustom": true
     }
     ```
-
-### Important
-- `maxLength` minimum is an integer with a minimum of 1 and maximum of 65535
-- Any [regex](https://regex-generator.olafneumann.org/) can be used in the "Pattern" property. By default, EspoCRM includes the following `patterns`:  
-    - `$noBadCharacters`  
-    - `$noAsciiSpecialCharacters`  
-    - `$latinLetters`  
-    - `$latinLettersDigits`  
-    - `$latinLettersDigitsWhitespace`  
-    - `$latinLettersWhitespace`  
-    - `$digits`
+    Labels for the options can be updated in the Internationalization files (e.g., `custom/Espo/Custom/Resources/i18n/en_US/TestBaseEntity.json`)
 
 ## Enum
 
@@ -146,6 +146,7 @@ It's possible to define conditional options with Dynamic Logic.
         "isCustom": true
     }
     ```
+    Labels for the options can be updated in the Internationalization files (e.g., `custom/Espo/Custom/Resources/i18n/en_US/TestBaseEntity.json`)
 
 
 ## Text
@@ -163,6 +164,27 @@ Parameters:
 ![Text](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/text.png)
 
 ![Text detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/text-detail.png)
+
+??? example "Example Text JSON Configuration (entityDefs)"
+
+    ```
+    "someTextFieldName": {
+        "type": "text",
+        "required": false,
+        "rowsMin": <someInt>,
+        "cutHeight": <someInt>,
+        "default": "Some default test text",
+        "maxLength": 255,
+        "seeMoreDisabled": false,
+        "rows": <someInt>,
+        "displayRawText": false,
+        "readOnly": false,
+        "audited": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Date
 
@@ -185,15 +207,15 @@ Parameters:
     "someDateFieldName": {
         "notNull": false,
         "type": "date",
-        "required": fale,
+        "required": false,
         "default": "javascript: return this.dateTime.getDateShiftedFromToday(1, 'days');",
         "after": "createdAt",
         "before": "modifiedAt",
-        "useNumericFormat": fale,
-        "audited": fale,
-        "readOnly": fale,
-        "inlineEditDisabled": fale,
-        "tooltip": fale,
+        "useNumericFormat": false,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
         "isCustom": true
     }
     ```
@@ -212,6 +234,25 @@ Parameters:
 ![Date-Time](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date-time.png)
 
 ![Date-Time detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/date-time-detail.png)
+
+??? example "Example Date-Time JSON Configuration (entityDefs)"
+
+    ```
+    "someDatetimeFieldName": {
+        "notNull": false,
+        "type": "datetime",
+        "required": false,
+        "after": "",
+        "before": "",
+        "useNumericFormat": false,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "minuteStep": 30,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Currency
 
@@ -256,6 +297,24 @@ Parameters:
 * Max – a validation: max acceptable value; if empty, then no validation applied;
 * Disable Formatting – if not checked, then a value is formatted with a thousand separator.
 
+??? example "Example Integer JSON Configuration (entityDefs)"
+
+    ```
+    "someIntegerFieldName": {
+        "type": "int",
+        "required": false,
+        "default": <someInt>,
+        "min": <someInt>,
+        "max": <someInt>,
+        "disableFormatting": false,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 
 ## Float
 
@@ -266,6 +325,25 @@ Parameters:
 * Min – a validation: min acceptable value; if empty, then no validation applied;
 * Max – a validation: max acceptable value; if empty, then no validation applied;
 * Decimal Places – how many numbers of decimal part to display in read mode.
+
+??? example "Example Float JSON Configuration (entityDefs)"
+
+    ```
+    "someFloatFieldName": {
+        "notNull": false,
+        "type": "float",
+        "required": false,
+        "default": <someFloat>,
+        "min": <someFloat>,
+        "max": <someFloat>,
+        "decimalPlaces": <someInt>,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 
 ## Boolean
@@ -307,6 +385,37 @@ Parameters:
 * Display as List – each value will be displayed in a new line;
 * Pattern – a regular expression to check a field value against.
 
+??? example "Example Multi-Enum JSON Configuration (entityDefs)"
+
+    ```
+    "someMultiEnumFieldName": {
+        "type": "multiEnum",
+        "storeArrayValues": false,
+        "required": false,
+        "options": [
+            "Option 1",
+            "Option 2",
+            "Option 3"
+        ],
+        "style": {
+            "Option 1": null,
+            "Option 2": null,
+            "Option 3": null
+        },
+        "isSorted": false,
+        "allowCustomOptions": false,
+        "maxCount": <someInt>,
+        "displayAsLabel": false,
+        "displayAsList": false,
+        "pattern": "$noBadCharacters",
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+    Labels for the options can be updated in the Internationalization files (e.g., `custom/Espo/Custom/Resources/i18n/en_US/TestBaseEntity.json`)
 
 ## Checklist
 
@@ -340,6 +449,7 @@ Parameters:
         "isCustom": true
     }
     ```
+    Labels for the options can be updated in the Internationalization files (e.g., `custom/Espo/Custom/Resources/i18n/en_US/TestBaseEntity.json`)
 
 ## Array
 
@@ -369,7 +479,7 @@ Parameters:
             "Option 3"
         ],
         "displayAsList": false,
-        "maxCount": 3,
+        "maxCount": <someInt>,
         "pattern": "$noBadCharacters",
         "audited": false,
         "readOnly": false,
@@ -378,6 +488,7 @@ Parameters:
         "isCustom": true
     }
     ```
+    Labels for the options can be updated in the Internationalization files (e.g., `custom/Espo/Custom/Resources/i18n/en_US/TestBaseEntity.json`)
 
 ## Address
 
@@ -406,6 +517,23 @@ Parameters:
 * Max-length – a max acceptable length of text;
 * Strip – if checked, then a protocol part and trailing `/` will be stripped.
 
+??? example "Some Example URL Field (entityDefs)"
+
+    ```
+    "someUrlFieldName": {
+        "type": "url",
+        "required": false,
+        "default": "https://www.someurl.com",
+        "maxLength": 255,
+        "strip": false,
+        "audited": false,
+        "readOnly": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 
 ## Wysiwyg
 
@@ -417,6 +545,25 @@ Parameters:
 * Min Height (px) – a min height of the field (in the edit view mode);
 * Use Iframe – if checked, then HTML will be placed into IFRAME element.
 
+??? example "Example Wysiwyg JSON Configuration (entityDefs)"
+
+    ```
+    "someWysiwygFieldName": {
+        "type": "wysiwyg",
+        "required": false,
+        "default": "Some default text",
+        "height": <someInt>,
+        "minHeight": <someInt>,
+        "readOnly": false,
+        "useIframe": false,
+        "maxLength": <someInt>,
+        "audited": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
 ## File
 
 For file uploading.
@@ -427,6 +574,42 @@ Parameters:
 * Max File Size (Mb) – a validation;
 * Accept – which file types can be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types.
 
+??? example "Example File JSON Configuration (entityDefs)"
+
+    ```
+    "someFileName": {
+        "type": "file",
+        "required": false,
+        "sourceList": [
+            "Document"
+        ],
+        "maxFileSize": <someInt>,
+        "accept": [
+            "image/*",
+            "audio/*",
+            "video/*",
+            ".zip",
+            ".pdf",
+            ".odt",
+            ".ods",
+            ".odp",
+            ".docx",
+            ".xlsx",
+            ".pptx",
+            ".doc",
+            ".xls",
+            ".ppt",
+            ".rtf",
+            ".csv",
+            ".md",
+            ".txt"
+        ],
+        "audited": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Image
 
@@ -436,6 +619,21 @@ Parameters:
 
 * Preview Size – defines a size of an image displayed on the detail/list view;
 * Max File Size (Mb) – a validation.
+
+??? example "Example Image JSON Configuration (entityDefs)"
+
+    ```
+    "someImageField": {
+        "type": "image",
+        "required": false,
+        "previewSize": "small",
+        "maxFileSize": <someInt>,
+        "audited": false,
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Attachment-Multiple
 
@@ -456,7 +654,7 @@ Parameters:
         "required": false,
         "previewSize": "medium",
         "sourceList": [],
-        "maxFileSize": 2,
+        "maxFileSize": <someInt>,
         "accept": [],
         "inlineEditDisabled": false,
         "tooltip": false,
@@ -475,6 +673,23 @@ Parameters:
 * Pad Length – a length of the numeric part; if less, then will be padded with zero digits, e.g. `00001`.
 
 ![Number](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/number.png)
+
+??? example "Example Auto-Incrementing Number JSON Configuration (entityDefs)"
+
+    ```
+    "someAutoIncrementNumberFieldName": {
+        "type": "number",
+        "len": <someInt>,
+        "notNull": false,
+        "unique": false,
+        "nextNumber": <someInt - default 1>,
+        "padLength": <someInt - default 5>,
+        "prefix": "Some Prefix",
+        "inlineEditDisabled": false,
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Auto-increment
 
@@ -526,6 +741,39 @@ Parameters:
 
 * Link – defines where the field will be taken from.
 * Field – a field of a related record.
+
+??? example "Example Foreign Field JSON Configuration (entityDefs)"
+
+    ```
+    "someForeignFieldName": {
+        "readOnly": true,
+        "type": "foreign",
+        "link": "<someEntity>",
+        "field": "<someEntityField>",
+        "view": "views/fields/foreign-varchar",
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
+
+## Iframe
+
+??? example "Example iFrame JSON Configuration (entityDefs)"
+
+    ```
+    "someTestIframeField": {
+        "type": "iframe",
+        "dynamicLogicVisible": null,
+        "dynamicLogicReadOnly": null,
+        "dynamicLogicInvalid": null,
+        "name": "someTestIframeField",
+        "label": "Some Test Iframe Field",
+        "inlineEditDisabled": false,
+        "tooltipText": "test",
+        "tooltip": false,
+        "isCustom": true
+    }
+    ```
 
 ## Email
 
