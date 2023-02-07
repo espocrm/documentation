@@ -231,6 +231,12 @@ Example:
 }
 ```
 
+Parameters:
+
+* select – *string* – select expressions;
+* leftJoins – *Array[]* – left joins to apply;
+* joins – *Array[]* – joins to apply;
+
 ### order
 
 *Object*
@@ -263,6 +269,13 @@ Example:
 }
 ```
 
+Parameters:
+
+* order – *Array[]* – order expressions;
+* leftJoins – *Array[]* – left joins to apply;
+* joins – *Array[]* – joins to apply;
+* additionalSelect – *string[]* – additional columns to be selected when order by the field is applied.
+
 ### where
 
 *Object*
@@ -288,10 +301,10 @@ Supported comparison keys:
 
 Supported parameters:
 
-* whereClause
-* leftJoins
-* joins
-* distinct – bool
+* whereClause – where-clause;
+* leftJoins – *Array[]* – left joins to apply;
+* joins – *Array[]* – joins to apply;
+* distinct – bool – apply DISTINCT to the query;
 
 Example:
 
@@ -488,6 +501,14 @@ Example:
     }
 }
 ```
+
+### indexes
+
+*(available for hasMany)*
+
+*Object.<string, Object\>*
+
+Indexes for a middle table. Definition is the same as for entity indexes.
 
 ### notMergeable
 
