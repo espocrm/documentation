@@ -76,6 +76,7 @@
   * [Markdown syntax](user-guide/markdown.md)
   * [Browser support](user-guide/browser-support.md)
   * [Data privacy](user-guide/data-privacy.md)
+  * [Complex expressions](user-guide/complex-expressions.md)
   * [Optimistic concurrency control](user-guide/optimistic-concurrency-control.md)
 
 ---
