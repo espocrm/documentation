@@ -75,5 +75,4 @@ Indicates what field is used for ownership checking. If an entity uses a field o
 
 *As of v7.4.*
 
-Linking/unlinking checking classes for specific links. A link-name => class-string map. The class receives two entities and should determine whether a user are allowed to link/unlink these records.
-
+Linking/unlinking checking classes for specific links. A link-name => class-string map. The class receives two entities and should determine whether a user is allowed to link/unlink these records.
