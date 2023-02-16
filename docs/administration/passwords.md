@@ -2,10 +2,10 @@
 
 ## New users
 
-When an admin is creating a new user, they has two options:
+When an admin is creating a new user, two options are available for password generation:
 
-* Let the user set their password (by leaving the password field empty). The user should have an email address filled. An email with a unique link will be sent to the user upon creation.
-* Specify the password for the user. In this case, checking 'Send Email with Access Info to User' will send the password in an email to the user (not recommended to do because of security concerns).
+* Let the user set a password by leaving the password field empty. The user must have a valid email address. Upon creation, an email with a unique link to finish the setup process will be sent to the user.
+* Specify the password for the user. In this case, checking 'Send Email with Access Info to User' will send the password in an email to the user. This method is not recommended due to security concerns.
 
 ## Existing users
 
