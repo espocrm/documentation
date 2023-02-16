@@ -101,10 +101,10 @@ php command.php version
 
 
 ```
-php command.php set-password [username]
+php command.php set-password {username}
 ```
 
-where `[username]` is a user name, e.g. `admin`.
+where `{username}` is a user name, e.g. `admin`.
 
 ## Import
 
