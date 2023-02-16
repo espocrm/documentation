@@ -110,15 +110,15 @@ Note: More information about jobs in EspoCRM is available [here](jobs.md).
 
 To setup crontab on Unix-like system, take the following steps:
 
-1\. Login as administrator into your EspoCRM instance.
+1. Login as administrator into your EspoCRM instance.
 
-2\. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
+2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
 
 ```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
 
-3\. Open a terminal and run this command:
+3. Open a terminal and run this command:
 
 ```
 crontab -e -u WEBSERVER_USER
@@ -126,7 +126,7 @@ crontab -e -u WEBSERVER_USER
 
 WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
 
-4\. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
+4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
 ### Windows
 
@@ -134,21 +134,21 @@ Note that all configuration settings listed here are made on **Windows Server 20
 
 To setup crontab on Windows system, take the following steps:
 
-1\. Login as administrator into your EspoCRM instance.
+1. Login as administrator into your EspoCRM instance.
 
-2\. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab, replace  *php.exe* instead of *php-cgi.exe* and add *"* symbols to the start and the end of the *php.exe* path. It looks like this one:
+2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab, replace  *php.exe* instead of *php-cgi.exe* and add *"* symbols to the start and the end of the *php.exe* path. It looks like this one:
 
 ```
 "C:\Program Files\PHP\v8.2\php.exe" -f C:\inetpub\wwwroot\733\cron.php
 ```
 
-3\. Create a batch file by using Notepad and save with the *.bat* extension with string from step 2.
+3. Create a batch file by using Notepad and save with the *.bat* extension with string from step 2.
 
-4\. From the Windows Start menu, select Administrative Tools and then Task Scheduler.
+4. From the Windows Start menu, select Administrative Tools and then Task Scheduler.
 
-5\. Create a folder inside Windows directory and Task inside.
+5. Create a folder inside Windows directory and Task inside.
 
-6\. Congigure the Task with the following settings and click `OK`:
+6. Congigure the Task with the following settings and click `OK`:
 
 ![IIS Manager](../_static/images/administration/iis/general.png)
 
@@ -160,7 +160,7 @@ To setup crontab on Windows system, take the following steps:
 
 ![IIS Manager](../_static/images/administration/iis/settings.png)
 
-7\. Right-click on the created Task and Click on `Run`.
+7. Right-click on the created Task and Click on `Run`.
 
 ## Configuration instructions based on your server
 
