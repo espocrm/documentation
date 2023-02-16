@@ -17,7 +17,7 @@ See article about [how to create indexes](../development/db-indexes.md).
 
 ## Database choice
 
-As of Espo v7.4, filters by teams, relations, multi-enums performs faster on MariaDB.
+Filters by teams, relations, multi-enums performs faster on MariaDB.
 
 ## MySQL params
 
