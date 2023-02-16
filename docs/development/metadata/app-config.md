@@ -16,6 +16,10 @@ Example:
 {
 
     "params": {
+        "myParam": {
+            "level": "default",
+            "readOnly": true
+        }
         "smtpPassword": {
             "level": "internal"
         },
@@ -38,6 +42,14 @@ Defines availability of the config parameter in the front-end. Possible values:
 * `internal` – never available for read, admin can write (useful for passwords, secrets) (as of v7.3);
 * `admin` – available only for admin (read and write);
 * `superAdmin` – available only for super-admin (read and write).
+
+### readOnly
+
+*boolean*
+
+*As of v7.4.*
+
+Disables the ability to change a parameter value for admin users. Useful for parameters that are supposed to be set either manually (by writting into the config file) or automatically by the application. 
 
 ## entityTypeListParamList
 
