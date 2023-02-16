@@ -57,7 +57,6 @@ Can implement additional interfaces:
 * `Espo\Core\Portal\AclOwnershipAccountChecker`
 * `Espo\Core\Portal\AclOwnershipContactChecker`
 
-
 ## assignmentCheckerClassName
 
 An assignment checking class.
@@ -69,3 +68,12 @@ Default class: `Espo\Core\Acl\DefaultAssignmentChecker`.
 ## readOwnerUserField
 
 Indicates what field is used for ownership checking. If an entity uses a field other than *assignedUser* or *assignedUsers*, you need to specify that field.
+
+## linkCheckerClassNameMap 
+
+*Object.<string, class-string<Espo\Core\Acl\LinkChecker\>\>*
+
+*As of v7.4.*
+
+Linking/unlinking checking classes for specific links. A link-name => class-string map. The class receives two entities and should determine whether a user are allowed to link/unlink these records.
+
