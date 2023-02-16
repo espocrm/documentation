@@ -130,7 +130,35 @@ WEBSERVER_USER can be one of the following “www”, “www-data”, “apache�
 
 ### Windows
 
-For Windows servers you can utilize Scheduled Tasks.
+Note that all configuration settings listed here are made on **Windows Server 2019**.
+
+To setup crontab on Windows, take the following steps:
+
+1\. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab replacing *php.exe* instead of *php-cgi.exe* and adding `"` symbols to the start and the end of the *php.exe* path . It looks like this one: 
+
+```
+"C:\Program Files\PHP\v8.2\php.exe" -f C:\inetpub\wwwroot\733\cron.php
+```
+
+2\. From the Windows Start menu, select Administrative Tools and then Task Scheduler.
+
+3\. Open Notepad and create a batch (.bat) file with the string (from step 2), save the file with **.bat** extension and put into EspoCRM root directory.
+
+4\. Create Task folder e.g., "EspoCRM" inside Windows directory and Task inside.
+
+5\. Configure the each tab of Task like on the screenshots below:
+
+![IIS Manager](../_static/images/administration/iis/general.png)
+
+![IIS Manager](../_static/images/administration/iis/triggers.png)
+
+![IIS Manager](../_static/images/administration/iis/actions.png)
+
+![IIS Manager](../_static/images/administration/iis/conditions.png)
+
+![IIS Manager](../_static/images/administration/iis/settings.png)
+
+6\. After task is completely configured, press on `OK`. Then right-click on the created task and click on `run`.
 
 ## Configuration instructions based on your server
 
