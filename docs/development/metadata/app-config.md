@@ -36,12 +36,12 @@ Example:
 
 Defines availability of the config parameter in the front-end. Possible values:
 
-* `default` – logged-in users can read, admin can write (applied by default);
+* `default` – available for logged-in users (applied by default);
 * `global` – available even before logging in (value is exposed to the world);
 * `system` – never available;
 * `internal` – never available for read, admin can write (useful for passwords, secrets) (as of v7.3);
-* `admin` – available only for admin (read and write);
-* `superAdmin` – available only for super-admin (read and write).
+* `admin` – available only for admin;
+* `superAdmin` – available only for super-admin.
 
 ### readOnly
 
