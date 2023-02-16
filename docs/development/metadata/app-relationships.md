@@ -10,7 +10,7 @@ Definitions of specific named relationships.
 
 Example:
 
-```
+```json
 {
     "attachments": {
         "converterClassName": "Espo\\Core\\Utils\\Database\\Orm\\LinkConverters\\Attachments"
