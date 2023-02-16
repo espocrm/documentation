@@ -166,6 +166,7 @@ To setup crontab on Windows system, take the following steps:
 
 * [Apache server configuration](apache-server-configuration.md)
 * [Nginx server configuration](nginx-server-configuration.md)
+* [IIS server configuration](iis-server-configuration.md)
 
 ## See also
 
