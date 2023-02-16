@@ -166,12 +166,6 @@ The field will be available in the list of text filters (in the Entity Manager t
 
 The field will be available in the list of text filters as a foreign field.
 
-## fieldDefs
-
-*Object*
-
-Definitions to be set in ORM attribute defs.
-
 ## linkDefs
 
 *Object*
