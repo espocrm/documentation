@@ -168,7 +168,15 @@ The field will be available in the list of text filters as a foreign field.
 
 ## fieldDefs
 
+*Object*
+
 Definitions to be set in ORM attribute defs.
+
+## linkDefs
+
+*Object*
+
+If defined, a link with the same name as the field name will be created. Defines link parameters.
 
 ## fullTextSearch
 
