@@ -49,7 +49,7 @@ Defines availability of the config parameter in the front-end. Possible values:
 
 *As of v7.4.*
 
-Disables the ability to change a parameter value for admin users. Useful for parameters that are supposed to be set either manually (by writting into the config file) or automatically by the application. 
+Disables the ability to change a parameter value for admin users. Useful for parameters that are supposed to be set either manually by writting into the config file or automatically by the application. 
 
 ## entityTypeListParamList
 
