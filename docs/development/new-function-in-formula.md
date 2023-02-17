@@ -44,7 +44,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add t
 ```json
 {
     "functionClassNameMap": {
-        "string\\myContains": "Espo\\Custom\\FormulaFunctions\\MyContains"
+        "myNamespace\\myContains": "Espo\\Custom\\FormulaFunctions\\MyContains"
     },
     "functionList": [
         "__APPEND__",
