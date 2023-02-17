@@ -61,5 +61,4 @@ Clear cache.
 
 *As of v7.4.*
 
-Instead of extending *BaseFunction*, you can implement `Espo\Core\Formula\Func` interface. This allows to inject any dependency to the function class via the constructor. Values passed to the *processes* method are alraedy evaluated.
-
+Instead of extending *BaseFunction*, you can implement `Espo\Core\Formula\Func` interface. This allows to inject any dependency to the function class via the constructor. Values passed to the *processes* method are already evaluated.
