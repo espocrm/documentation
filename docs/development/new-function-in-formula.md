@@ -56,3 +56,10 @@ In order to add the created function to the function list (for being available i
 ```
 
 Clear cache.
+
+## Func interface
+
+*As of v7.4.*
+
+Instead of extending *BaseFunction*, you can implement `Espo\Core\Formula\Func` interface. This allows to inject any dependency to the function class via the constructor. Values passed to the *processes* method are alraedy evaluated.
+
