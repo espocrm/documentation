@@ -2,16 +2,16 @@
 
 EspoCRM provides the ability to create custom functions that can be used in formula-script. 
 
-Create a file `custom/Espo/Custom/Core/Formula/Functions/MyGroup/MyContainsType.php` with the code:
+Create a file `custom/Espo/Custom/FormulaFunctions/MyContains.php` with the code:
 
 ```php
 <?php
-namespace Espo\Custom\Core\Formula\Functions\MyGroup;
+namespace Espo\Custom\FormulaFunctions;
 
 use Espo\Core\Formula\Functions\BaseFunction;
 use Espo\Core\Formula\ArgumentList;
 
-class MyContainsType extends BaseFunction
+class MyContains extends BaseFunction
 {
     public function process(ArgumentList $args)
     {
@@ -39,19 +39,20 @@ class MyContainsType extends BaseFunction
 }
 ```
 
-In order to add the created function to the function list (for being available in a suggestion dropdown), create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
+Create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add the code:
+
 ```json
 {
+    "functionClassNameMap": {
+        "string\\myContains": "Espo\\Custom\\FormulaFunctions\\MyContains"
+    },
     "functionList": [
         "__APPEND__",
         {
-            "name": "string\\myContains",
-            "insertText": "myGroup\\myContains(HAYSTACK, NEEDLE, OFFSET)"
+            "name": "myNamespace\\myContains",
+            "insertText": "myNamespace\\myContains(HAYSTACK, NEEDLE, OFFSET)"
         }
-    ],
-    "functionClassNameMap": {
-        "string\\myContains": "Espo\\Custom\\Core\\Formula\\Functions\\MyGroup\\MyContainsType"
-    }
+    ]
 }
 ```
 
