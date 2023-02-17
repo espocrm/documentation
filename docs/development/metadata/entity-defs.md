@@ -593,3 +593,9 @@ Database columns of the index.
 *boolean*
 
 Whether the index is unique.
+
+## optimisticConcurrencyControl
+
+*boolean*
+
+Enables optimistic concurrency control for the entity type.
