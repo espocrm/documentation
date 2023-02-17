@@ -28,7 +28,7 @@ class MyContains extends BaseFunction
             return strpos($haystack, $needle, $offset) !== false;
         }
         
-        // the entity:
+        // target entity:
         // $this->entity
         
         // variables:
