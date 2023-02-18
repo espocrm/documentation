@@ -52,9 +52,18 @@ Custom routes can be defined in following places:
 ]
 ```
 
-The parameter `noAuth` makes an endpoint not requring authentication.
+The parameter *noAuth* makes an endpoint not requring authentication.
 
-You need to clear cache after changes in routing files.
+The parameter *method* specifies an HTTP method.
+
+Mostly used methods:
+
+* get
+* post
+* put
+* delete
+
+Clearing cache is required after changes in routing files.
 
 ## Action
 
