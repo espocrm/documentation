@@ -44,9 +44,12 @@ For different purposes EspoCRM supports the following types of scripts. All of t
 Example:
 
 ```php
+<?php
+use Espo\Core\Container;
+
 class AfterInstall
 {
-    public function run($container)
+    public function run(Container $container)
     {
         /** @var \Espo\Core\Utils\Config */
         $config = $container->get('config');
