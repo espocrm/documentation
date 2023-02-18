@@ -68,7 +68,7 @@ Middlewares for specific routes. Keys are composed in the form: `{method}_{route
 
 *Object.<string, class-string<Psr\Http\Server\MiddlewareInterface>[]\>*
 
-Middlewares for routes with an *actionClassName*. Keys are composed in the form: `{method}_{route}`. Processed after authentication.
+Middlewares for routes with *actionClassName*. Keys are composed in the form: `{method}_{route}`. Processed after authentication.
 
 ## controllerMiddlewareClassNameListMap
 
