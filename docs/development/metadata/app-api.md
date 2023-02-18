@@ -21,6 +21,11 @@ Example:
             "Espo\\Custom\\Classes\\ApiMiddlewares\\Test3"
         ]
     },
+    "actionMiddlewareClassNameListMap": {
+        "get_/Activities": [
+            "Espo\\Custom\\Classes\\ApiMiddlewares\\Test3"
+        ]
+    },
     "controllerMiddlewareClassNameListMap": {
         "Contact": [
             "Espo\\Custom\\Classes\\ApiMiddlewares\\Test4"
@@ -58,6 +63,12 @@ A class list of global middlewares. Global middlewares applied for all API reque
 *Object.<string, class-string<Psr\Http\Server\MiddlewareInterface\>[]\>*
 
 Middlewares for specific routes. Keys are composed in the form: `{method}_{route}`. Processed before authentication.
+
+## actionMiddlewareClassNameListMap
+
+*Object.<string, class-string<Psr\Http\Server\MiddlewareInterface>[]\>*
+
+Middlewares for routes with an *actionClassName*. Keys are composed in the form: `{method}_{route}`. Processed after authentication.
 
 ## controllerMiddlewareClassNameListMap
 
