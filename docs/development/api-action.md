@@ -56,7 +56,7 @@ The parameter *noAuth* makes an endpoint not requring authentication.
 
 The parameter *method* specifies an HTTP method.
 
-Mostly used methods:
+The mostly used methods:
 
 * get
 * post
