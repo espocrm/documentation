@@ -43,58 +43,106 @@ Custom routes can be defined in following places:
             "action": "test"
         },
         "noAuth": true
-    }
+    },
+    {
+        "route": "/TestAction",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\MyModule\\Api\\GetTestAction"
+    },
 ]
 ```
 
 The parameter `noAuth` makes an endpoint not requring authentication.
 
-Controller:
+You need to clear cache after changes in routing files.
+
+## Action
+
+*As of v7.4.*
+
+A route can define an action class with the *actionClassName* parameter. Action classes should implement an interface `Espo\Core\Api\Action`.
+
+Example:
+
+
+
+
+
+## Custom controller
+
+### In Custom folder
+
+Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
 
 ```php
 <?php
+
 namespace Espo\Custom\Controllers;
+
+class MyController
+{
+}
+```
+
+Clear cache (Administration > Clear Cache).
+
+### In Module folder
+
+Create a file `custom/Espo/Modules/MyModule/Resources/metadata/scopes/MyController.json`.
+
+```json
+{
+    "module": "MyModule"
+}
+```
+
+Create a file `custom/Espo/Modules/MyModule/Controllers/MyController.php`.
+
+```php
+<?php
+
+namespace Espo\Modules\MyModule\Controllers;
+
+class MyController
+{
+    // Dependencies are passed to the constructor.
+}
+```
+
+Clear cache after creating a new controller (Administration > Clear Cache).
+
+Example:
+
+```php
+<?php
+namespace Espo\Modules\MyModule\Controllers;
 
 use Espo\Core\Api\Request;
 use Espo\Core\Api\Response;
+use SomeDependency;
+use stdClass;
 
 class MyController
 {
     public function __construct(private SomeDependency $someDependency)
     {}
-    
-    public function getActionDoSomething(Request $request, Response $response): void
+
+    public function putActionUpdate(Request $request, Response $response): stdClass
     {
-        $id = $request->getRouteParam('id'); // '001'
+        $id = $request->getRouteParam('id');
+        $data = $request->getParsedBody();
+
+        $result = $this->someDependency->doSomething($id, $data);
         
-        // Assuming the request GET api/v1/Hello/test/001 has been sent,
-        // a route parameter 'id' will equal '001'.
-        
-        $response->writeBody(
-            json_encode($someData)
-        );
-        
-        // You can either write data to the response or use return.
-        // Returned value will be encoded and written to the response.
-    }
-    
-    public function postActionHelloWorld(Request $request, Response $response): void
-    {
-        $name = $request->getRouteParam('name'); 
-         
-        // Assuming the request POST api/v1/HelloWorld/someName has been sent,
-        // a route parameter 'name' will equal 'someName'.
-        
-        $response->writeBody('true');
+        // Response can be returned or written with `Response::writeBody`.
+        return $result->toStdClass();
     }
 }
 ```
 
-You need to clear cache after changes.
-
 ## Extending existing controller
 
-Example for Account scope.
+Example for the *Account* scope.
 
 Create a file (or modify if it already exists) `custom/Espo/Custom/Controllers/Account.php`.
 
@@ -141,49 +189,6 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 Note: For the *Account* entity type we extend `Espo\Modules\Crm\Controllers\Account`.
 Some entity types might not have controllers in `Espo\Modules\Crm\Controllers` namespace. They are defined in `Espo\Controllers` namespace.
 
-## Custom controller
-
-### In Custom folder
-
-Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
-
-```php
-<?php
-
-namespace Espo\Custom\Controllers;
-
-class MyController
-{
-}
-```
-
-Clear cache (Administration > Clear Cache).
-
-### In Module folder
-
-Create a file `custom/Espo/Modules/MyModule/Resources/metadata/scopes/MyController.json`.
-
-```json
-{
-    "module": "MyModule"
-}
-```
-
-Create a file `custom/Espo/Modules/MyModule/Controllers/MyController.php`.
-
-```php
-<?php
-
-namespace Espo\Modules\MyModule\Controllers;
-
-class MyController
-{
-    // Dependencies are passed to the constructor.
-}
-```
-
-Clear cache (Administration > Clear Cache).
-
 ## CRUD actions
 
 ```php
@@ -218,34 +223,3 @@ class MyController
 }
 ```
 
-## Custom controller
-
-
-Example:
-
-```php
-<?php
-namespace Espo\Modules\MyModule\Controllers;
-
-use Espo\Core\Api\Request;
-use Espo\Core\Api\Response;
-use SomeDependency;
-use stdClass;
-
-class MyController
-{
-    public function __construct(private SomeDependency $someDependency)
-    {}
-
-    public function putActionUpdate(Request $request, Response $response): stdClass
-    {
-        $id = $request->getRouteParam('id');
-        $data = $request->getParsedBody();
-
-        $result = $this->someDependency->doSomething($id, $data);
-        
-        // Response can be returned or written with `Response::writeBody`.
-        return $result->toStdClass();
-    }
-}
-```
