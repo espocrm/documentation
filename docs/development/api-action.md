@@ -56,6 +56,8 @@ The parameter *noAuth* makes an endpoint not requring authentication.
 
 The parameter *method* specifies an HTTP method.
 
+A route can be processed either by an action class or by a controller.
+
 The mostly used methods:
 
 * get
