@@ -60,7 +60,7 @@ You need to clear cache after changes in routing files.
 
 *As of v7.4.*
 
-A route can define an action class with the *actionClassName* parameter. Action classes should implement an interface `Espo\Core\Api\Action`.
+A route can define an action class with the *actionClassName* parameter. Action classes should implement the interface `Espo\Core\Api\Action`.
 
 Example:
 
