@@ -45,9 +45,9 @@ Custom routes can be defined in following places:
         "noAuth": true
     },
     {
-        "route": "/TestAction",
+        "route": "/MyAction",
         "method": "get",
-        "actionClassName": "Espo\\Modules\\MyModule\\Api\\GetTestAction"
+        "actionClassName": "Espo\\Modules\\MyModule\\Api\\MyAction"
     },
 ]
 ```
