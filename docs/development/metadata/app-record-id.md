@@ -29,4 +29,6 @@ ID column data type. By default, set to *string* (equivalent to *varchar* in MyS
 
 In MariaDB (as of v10.7) and PostgreSQL it's possible to use *uuid* data type, which positively effect on performance.
 
-Beware of setting the *uuid* data type for instances with data. You will need to migrate all stored IDs to an UUID compatible format (e.g. by applying an MD5 function), attachment files and all other referrences. This may be not a trivial task. Consider setting the *uuid* type for new instances.
+Beware of setting the *uuid* data type for instances with data. You will need to migrate all stored IDs to an UUID compatible format (e.g. by applying an MD5 function), attachment files and all other referrences. This may be not a trivial task.
+
+Consider setting the *uuid* type for new instances. If you do it before installation, no any migration work will be needed.
