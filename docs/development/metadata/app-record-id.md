@@ -12,8 +12,8 @@ A type of generated IDs.
 
 Available types:
 
-* `espo` – by default, 17-character hex;
-* `uuid4` – UUID v4.
+* *espo* – by default, 17-character hex;
+* *uuid4* – UUID v4.
 
 ## length
 
