@@ -12,7 +12,7 @@ A type of generated IDs.
 
 Available types:
 
-* *id* – by default, 17-character hex;
+* *id* – set by default, 17-character hex;
 * *uuid4* – UUID v4.
 
 ## length
