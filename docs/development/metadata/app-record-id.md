@@ -4,12 +4,29 @@ Path: metadata > app > recordId.
 
 *As of v7.4.*
 
+## type
+
+*string*
+
+A type of generated IDs.
+
+Available types:
+
+* `espo` – by default, 17-character hex;
+* `uuid4` – UUID v4.
+
 ## length
 
 *int*
 
-ID column length.
+ID column length. By default, set to *17*.
 
 ## dbType
 
-ID column type.
+*string*
+
+ID column data type. By default, set to *string* (equivalent to *varchar* in MySQL). Changing this parameter will change types of all ID columns once you run rebuild.
+
+In MariaDB (as of v10.7) and PostgreSQL it's possible to use *uuid* data type, which positively effect on performance.
+
+Beware of setting the *uuid* data type for instances with data. You will need to migrate all stored IDs to an UUID compatible format (e.g. by applying MD5 function), attachment files and any other referrences. This may be not a trivial task. Consider setting the *uuid* type for new instances.
