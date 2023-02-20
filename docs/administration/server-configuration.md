@@ -136,7 +136,7 @@ To setup crontab on Windows system, take the following steps:
 
 1. Login as administrator into your EspoCRM instance.
 
-2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab, replace  *php.exe* instead of *php-cgi.exe* and add *"* symbols to the start and the end of the *php.exe* path. It looks like this one:
+2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab, replace  `php.exe` instead of `php-cgi.exe` and add `"` symbols to the start and the end of the `php.exe` path. It looks like this one:
 
 ```
 "C:\Program Files\PHP\v8.2\php.exe" -f C:\inetpub\wwwroot\733\cron.php
