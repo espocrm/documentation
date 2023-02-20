@@ -148,7 +148,7 @@ To setup crontab on Windows system, take the following steps:
 
 5. Create a folder inside Windows directory and Task inside.
 
-6. Congigure the Task with the following settings and click `OK`:
+6. Configure the Task with the following settings and click `OK`:
 
 ![IIS Manager](../_static/images/administration/iis/general.png)
 
