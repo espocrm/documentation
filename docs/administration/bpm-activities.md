@@ -227,11 +227,11 @@ $tmpVariable = null;
 
 ## Sub-Process
 
-An isolated process that executes within the current process. The sub-process has it's own flowchart. It starts once the flow reaches its activity element.
+An isolated process that executes within a current process. The sub-process has it's own flowchart. It starts once the flow reaches its activity element.
 
-Sub-process should have one (and only one) regular Start Event.
+A sub-process should have one (and only one) regular Start Event.
 
-Sub-process can be interrupted by an interrupting boundary event. When the sub-process is successfully ended (not interrupted, not ended with an error), the flow of the parent process proceeds to the next element.
+A sub-process can be interrupted by an interrupting boundary event. When the sub-process is successfully ended (not interrupted, not ended with an error), the flow of the parent process proceeds to the next element.
 
 It's possible to **pass a different target** to the sub-process. After you placed a sub-process element on the flowchart, click it to edit, then specify a target. It allows to easily access fields of created records or records related to the target record. E.g. to send notification to the assigned user of the opportunity that was created within the process.
 
