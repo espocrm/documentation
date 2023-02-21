@@ -604,4 +604,4 @@ Enables optimistic concurrency control for the entity type.
 
 *boolean*
 
-To skip ORM metadata creation for the entity type.
+To skip database table creation the entity type.
