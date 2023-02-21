@@ -122,8 +122,19 @@ If the first argument equals the second, returns NULL, otherwise returns the fir
 
 E.g. `NULLIF:(name, '')` will return NULL if *name* is empty string.
 
-### Date & time
+#### GREATEST
 
+*As of v7.4.*
+
+Returns the max value from a list of expressions.
+
+#### LEAST
+
+*As of v7.4.*
+
+Returns the min value from a list of expressions.
+
+### Date & time
 
 #### MONTH_NUMBER
 
