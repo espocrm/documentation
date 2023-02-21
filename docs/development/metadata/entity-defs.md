@@ -599,3 +599,9 @@ Whether the index is unique.
 *boolean*
 
 Enables optimistic concurrency control for the entity type.
+
+## skipRebuild
+
+*boolean*
+
+To skip ORM metadata creation for the entity type.
