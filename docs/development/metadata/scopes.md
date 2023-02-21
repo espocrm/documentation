@@ -182,7 +182,7 @@ Languge labels will be available for all users (not restricted by ACL).
 
 *boolean*
 
-Disables access control application for language labels. All labels of the scope will be avaialble in the front-end regardless user roles.
+Disables access control application for language labels. All labels of the scope will be avaialble in the front-end regardless of user roles.
 
 ## kanbanStatusIgnoreList
 
