@@ -245,7 +245,7 @@ When a sub-process is initiated, it receives an information about all records cr
 
 ### Multi-instance sub-process
 
-*As of of v2.10.*
+*As of v2.10.*
 
 The *Collection Expression* should evaluate to a list of values. Each value will instantiate a separate sub-process. The value will be available in the variable `$inputItem`.
 
