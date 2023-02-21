@@ -11,7 +11,7 @@ composer require espocrm/php-espo-api-client
 ```php
 use Espo\ApiClient\Client;
 
-$client = new EspoApiClient('https://your-espocrm-site');
+$client = new Client('https://your-espocrm-site');
 
 $client->setApiKey('API_KEY');
 
