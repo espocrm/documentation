@@ -5,6 +5,7 @@ Require [Espo Api Client](https://github.com/espocrm/php-espo-api-client) with C
 ```
 composer require espocrm/php-espo-api-client
 ```
+Before executing this script, create an API user with the correct permissions and rebuild the cache.
 
 ### Usage
 
@@ -28,7 +29,7 @@ $response = $client->request(Client::METHOD_GET, 'Opportunity', [
     'primaryFilter' => 'open',
 ]);
 
-$parsedBody = $response->getPasredBody();
+$parsedBody = $response->getParsedBody();
 
 $fileContentsResponse = $client->request(Client::METHOD_GET, "Attachment/file/{$attachmentId}")
     ->getBodyPart();
