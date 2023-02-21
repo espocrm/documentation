@@ -233,13 +233,13 @@ A sub-process should have one (and only one) regular Start Event.
 
 A sub-process can be interrupted by an interrupting boundary event. When the sub-process is successfully ended (not interrupted, not ended with an error), the flow of the parent process proceeds to the next element.
 
-It's possible to **pass a different target** to the sub-process. After you placed a sub-process element on the flowchart, click it to edit, then specify a target. It allows to easily access fields of created records or records related to the target record. E.g. to send notification to the assigned user of the opportunity that was created within the process.
+It's possible to **pass a different target record** to the sub-process (to switch the target record to another). After you placed the sub-process element on the flowchart, click it to edit, then specify a target. It allows to easily access fields of created records or records related to the target record. E.g. to send a notification to the assigned user of the opportunity that was created within the process.
 
-It's possible to define the target record using a formula expression. You need to select the target *Record: {EntityType}* and specify the formula expression in the *Target ID Expression* field. The expression should evaluate to the ID of the record. Available as of v2.10.
+It's possible to define a target record using a formula expression. You need to select the target *Record: {EntityType}* and specify a formula expression in the *Target ID Expression* field. The expression should evaluate to the ID of the record. Available as of v2.10.
 
-When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in *Return Variables* parameter. Note: Variable names should be specified without *$* character.
+When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in the *Return Variables* parameter. Note: Variable names should be specified without *$* character.
 
-When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes information about created records to the parent process.
+When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes the information about created records to the parent process.
 
 ![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/sub-process.png)
 
@@ -251,7 +251,7 @@ The *Collection Expression* should evaluate to a list of values. Each value will
 
 In the case of the **sequential** multi-instance sub-process, sub processes will be executed one by one. Otherwise they execute in parallel.
 
-It's possible to have multiple sub-processes for different targets. By using the formula function *record\findRelatedMany* it's possible to have sub-processes for related records. The result of the function is the list of IDs. You need to set the *Target ID Expression* with the value `$inputItem`.
+It's possible to have multiple sub-processes for different targets. By using the formula function *record\findRelatedMany* it's possible to have sub-processes for related records. The result of the function is the list of IDs. You need to set the *Target ID Expression* to the value `$inputItem`.
 
 The result of a multi-instance sub-process can be returned to a specific variable defined by the *Return Collection Variable* field. It will contain an array of objects. Each object will contain return-variables of each sub-process instance.
 
@@ -263,9 +263,9 @@ The max number of sub-process instances is defined by the config parameter `bpmn
 
 ## Event Sub-Process
 
-Event Sub-Process has neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
+An Event Sub-Process has neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
 
-It possible to **pass a different target** to the event sub-process. The event sub-process can *interrupt* its parent process. Whether the sub-process is interrupting is determined by *Is Interrupting* parameter of its start event.
+It possible to **pass a different target record** to an event sub-process. The event sub-process can *interrupt* its parent process. Whether the sub-process is interrupting is determined by the *Is Interrupting* parameter of its start event.
 
 When an event sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process.
 
@@ -279,6 +279,6 @@ Non-interrupting event sub-process can be executed **multiple times**. E.g. a co
 
 ## Call Activity
 
-Executes a sub-process defined by a flowchart stored separately. Provides the ability to re-use the same flowchart in different processes. Call Activity sub-process works the same way as a regular sub-process.
+Executes a sub-process defined by a flowchart stored separately. Provides the ability to re-use the same flowchart in different processes. The Call Activity sub-process works the same way as a regular sub-process.
 
-It possible to pass a different target to the sub-process.
+It possible to pass a different target record to the sub-process.
