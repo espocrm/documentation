@@ -178,6 +178,12 @@ Status values that determine that a record should be shown in the History panel.
 
 Languge labels will be available for all users (not restricted by ACL).
 
+## languageAclDisabled
+
+*boolean*
+
+Disables access control application for language labels. All labels of the scope will be avaialble in the front-end regardless user roles.
+
 ## kanbanStatusIgnoreList
 
 *string[]*
