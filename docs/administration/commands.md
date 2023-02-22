@@ -99,12 +99,23 @@ php command.php version
 
 ## Setting user password
 
-
 ```
 php command.php set-password {username}
 ```
 
 where `{username}` is a user name, e.g. `admin`.
+
+## Creating admin user
+
+*As of v7.4.*
+
+```
+php command.php create-admin-user {username}
+```
+
+where `{username}` is a user name, e.g. `admin`.
+
+Can be useful when you need to run an Espo instance from a repository without the need to go through UI installation.
 
 ## Import
 
