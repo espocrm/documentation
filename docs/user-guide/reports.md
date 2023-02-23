@@ -206,7 +206,7 @@ Note: It's recommended to avoid using NOT IN group when possible, by using filte
 
 ### IN group
 
-* As of v2.1.*
+*As of v2.1.*
 
 IN is similar to AND group but utilizes a sub-query.
 
