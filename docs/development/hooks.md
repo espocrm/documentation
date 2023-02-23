@@ -24,6 +24,13 @@ If you have several hooks, related to one Entity Type and with the same hook typ
 
 Ascending order is applied – a hook with the smallest order number runs first.
 
+If the *order* property is omitted, the value *9* is applied for a hook.
+
+Order values of existing hooks:
+
+* Before-Save formula script: *11*
+* After-Save workflow actions: *99* (advanced pack)
+
 ### Interfaces
 
 *As of v7.4.*
