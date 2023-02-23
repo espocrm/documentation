@@ -1,6 +1,6 @@
 # ORM
 
-EspoCRM utilizes own built-in ORM (Object-relational mapping). Create, update, read, delete and search operations are processed via the Entity Manager instance.
+EspoCRM utilizes own built-in ORM (Object-relational mapping). Create, update, read, delete and search operations are performed via the Entity Manager instance.
 
 The *EntityManager* is available as a [*container service*](di.md). It's a central access point for ORM functionalities.
 
