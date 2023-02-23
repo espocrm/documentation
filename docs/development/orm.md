@@ -1,16 +1,14 @@
-# ORM. How to manage entities and perform queries
+# ORM
 
-EspoCRM has built-in own ORM (Object-relational mapping). It’s very simple to create, update, read, delete and search entities. All these operations available through EntityManager object.
+EspoCRM utilizes own built-in ORM (Object-relational mapping). Create, update, read, delete and search operations are processed via the Entity Manager instance.
 
 The *EntityManager* is available as a [*container service*](di.md). It's a central access point for ORM functionalities.
 
-A **Repository** class serves for fetching and storing records. Base classes: `Espo\ORM\Repositories\RDBRepository`, `Espo\Core\Repositories\Database`. *RDB* stands for a *relational database*.
+A *Repository* class serves for fetching and storing records. Base classes: `Espo\ORM\Repositories\RDBRepository`, `Espo\Core\Repositories\Database`. *RDB* stands for a *relational database*.
 
 An *Entity* class represents a single record. Each entity type has it's own entity class. Base class: `Espo\Core\ORM\Entity`, interface: `Espo\ORM\Entity`.
 
-A *EntityCollection* is a collection of entities. It's returned by *find* operations.
-
-An *SthCollection* is a collection of entities, consuming much less memory than EntityCollection.
+An *EntityCollection* is a collection of entities. It's returned by *find* operations. An *SthCollection* is a collection of entities, consuming much less memory than EntityCollection.
 
 ## See also
 
