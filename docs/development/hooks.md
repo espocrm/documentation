@@ -20,7 +20,7 @@ Common hooks for all entity types (called from the ORM repository class):
 
 ## Hook order
 
-If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static $order` property with an integer value.
+If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static int $order` property with an integer value.
 
 Ascending order is applied – a hook with the smallest order number runs first.
 
@@ -61,7 +61,7 @@ class MyHook
 {    
     // An optional parameter, defines in which order hooks will be processed.
     // Lesser value means sooner.
-    public static $order = 5; 
+    public static int $order = 5; 
     
     public function __construct(
         // Define needed dependencies.
