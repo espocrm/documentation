@@ -206,7 +206,7 @@ Note: It's recommended to avoid using NOT IN group when possible, by using filte
 
 ### IN group
 
-Note: Available in since EspoCRM v5.6.0 and Advanced Pack v2.1.0.
+* As of v2.1.*
 
 IN is similar to AND group but utilizes a sub-query.
 
@@ -278,7 +278,7 @@ The Max number of records that can be sent in an email by default is 3000. You c
 
 ## Printing to PDF
 
-Available since Advanced Pack v2.5.0, compatible with EspoCRM v5.8.0 and later.
+*As of v2.5.0.*
 
 Note: A user needs to have access to *Template* scope (set in Roles).
 
