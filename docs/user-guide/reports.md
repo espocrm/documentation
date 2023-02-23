@@ -64,7 +64,7 @@ Grid reports show summarized values, can be grouped by one or two fields and dis
 
 To create a new grid report, click on *Reports* tab and then click *Create Report* button. Choose a needed *Entity Type*, then click the *Create* button at the *Grid Report* section.
 
-When choosing the *Entity Type* for a grid report, consider the following. The *Entity Type* contains the field that will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
+When choosing an *Entity Type* for a grid report, consider the following. The *Entity Type* contains the field that will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
 
 The example of grid report results that shows revenue grouped by User:
 
@@ -151,6 +151,12 @@ Pie:
 It's possible to export grid report results to XLSX (Excel) and CSV formats. Both a results table and chart are exported to XLSX.
 
 Note that non-aggregared columns (in grid reports) are not exported to XLSX.
+
+### Access
+
+By checking *Apply ACL* the report result will not include records that the current user don't have access to.
+
+If a regular user does not have edit access to the *Apply ACL* field (via role field level securiry), all reports they create will get *Apply ACL* automatically checked (as of v2.13.5).
 
 ## Joint Grid reports
 
