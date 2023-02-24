@@ -7,7 +7,7 @@ Out-of-the-box WebSocket covers the following features:
 * New in-app notifications;
 * New event reminders;
 * Updates in stream on the record detail view;
-* Updates of the detail view (as of v5.9).
+* Updates of the detail view.
 
 Important: You need to have *zmq* php extension installed.
 
@@ -101,7 +101,7 @@ location /wss {
 }
 ```
 
-Note: By default, Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example, we set it to 14h.
+Note: By default, Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example, we set it to 12h.
 
 ## Checking whether it works
 
