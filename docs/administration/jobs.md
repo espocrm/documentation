@@ -115,7 +115,7 @@ Command:
 ```
 php command.php run-job JobName
 ```
-where JobName is an intrernal name of the job you want to run.
+where JobName is an internal name of the job you want to run.
 
 Examples:
 ```
