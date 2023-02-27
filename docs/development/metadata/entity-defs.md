@@ -551,7 +551,7 @@ Disable fetching a total records number (on the list view).
 
 *boolean*
 
-Enabled full-text search.
+Enable full-text search.
 
 ### fullTextSearchOrderType
 
