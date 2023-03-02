@@ -129,8 +129,6 @@ Note: If you are attaching to an existing record, you need also to add current a
 
 ### Downloading
 
-*As of v5.9*
-
 `GET Attachment/file/{id}`
 
 Where `{id}` is an ID of the attachment record.
