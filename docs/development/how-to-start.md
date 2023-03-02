@@ -77,8 +77,6 @@ You can force using backend cache (metadata, language etc.) in the developer mod
 
 ### Option B. Module dirs
 
-*As of v7.0.*
-
 * `custom/Espo/Modules/{YourModuleName}/` – for metadata and all files pertaining to backend
 * `client/custom/modules/{your-module-name}/` – for client files
 
