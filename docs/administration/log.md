@@ -12,7 +12,8 @@ In `data/config.php` (or `data/config-internal.php`):
   'logger' => [
     'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR
     'maxFileNumber' => 30,
-    'printTrace' => true, // to print an exception backtrace
+    'printTrace' => true, // to print an exception backtrace,
+    'sql' => true, // log all SQL queries
   ],
 ```
 
@@ -22,9 +23,15 @@ Prints a backtrace when an exception is occurred. Note that in some cases an exc
 
 It is **not recommended** to enable trace printing on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this problem is supposed to be solved.
 
+## SQL queries
+
+*As of v7.4.*
+
+If the parameter *sql* is set to true, all executed SQL queries will be printed to the log. Requires *INFO* or *DEBUG* level. Not to be enabled on production.
+
 ## Handlers
 
-**As of v6.1.**
+*As of v6.1.*
 
 EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
 The library is shipped with the set of handlers.
