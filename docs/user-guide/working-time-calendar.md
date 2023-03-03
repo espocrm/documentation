@@ -1,6 +1,6 @@
 # Working Time Calendar
 
-*(as of v7.3)*
+*As of v7.3.*
 
 Features:
 
