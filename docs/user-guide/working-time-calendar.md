@@ -51,10 +51,10 @@ Timeline has non-working ranges with a different background color:
 ## Formula functions
 
 * `ext\workingTime\addWorkingDays(DATE, DAYS)` – adds working days, the result will be a date-time pointing at the beginning of the day  (`00:00`) in a corresponding time zone;
-* `ext\workingTime\findClosestWorkingTime(DATE)` – finds the beginning of the next  closest working time slot;
+* `ext\workingTime\findClosestWorkingTime(DATE)` – finds the beginning of the next closest working time slot;
 * `ext\workingTime\getSummedWorkingHours(FROM, TO)` – get a total number of working hours between two dates;
 * `ext\workingTime\getWorkingDays(FROM, TO)` – get a number of working days between two dates;
 * `ext\workingTime\hasWorkingTime(FROM, TO)` – whether a date range contains any working time;
-* `ext\workingTime\isWorkingDay(FROM, TO)` – whether a date falls into a working day.
+* `ext\workingTime\isWorkingDay(DATE_OR_DATETIME)` – whether a date falls into a working day.
 
 Functions can be applied for the default calendar, user calendar or team calendar. The entity type ( `'User'` or `'Team'`) and the entity ID can be passed as last two arguments.
