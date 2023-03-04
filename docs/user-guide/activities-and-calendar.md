@@ -46,8 +46,6 @@ Date Start and Date Due fields are not required. Dates can be specified with or 
 
 ### Scheduler
 
-Available since v5.9.0.
-
 Provides the ability to view free & busy time ranges for attendees (users) when scheduling an event. Available for Meetings, Calls and custom entities of Event type.
 
 Scheduler panel can be added or removed at Administration > Layout Manager > select needed entity type > Bottom Panels.
