@@ -92,7 +92,7 @@ Administrator can add Templates tab at Administration > User Interface. An acces
 Placeholders are only available in footer (and header if it's set to be printed on each page).
 
 * `{pageNumber}` – the current number of the page
-* `{totalPageNumber}` – the total number of records (TCPDF only)
+* `{totalPageNumber}` – the total number of pages (TCPDF only)
 * `{pageAbsoluteNumber}` – the absolute number of the page, when printing multiple records (TCPDF only)
 
 ### Page breaking
