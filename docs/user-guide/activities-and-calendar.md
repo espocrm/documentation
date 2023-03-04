@@ -89,4 +89,5 @@ For custom entities, by default, *Assigned User* field determines a user who wil
 
 ## See also
 
+* [Working time calendar](working-time-calendar.md)
 * [How to manage your calendar](https://www.espocrm.com/tips/calendar/)
