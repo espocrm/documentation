@@ -22,13 +22,12 @@ Create a file `custom/Espo/Custom/Core/AppParams/MyParam.php`:
 <?php
 namespace Espo\Custom\Core\AppParams;
 
-// As of v7.2 it's recommended to implement the \Espo\Tools\App\AppParam interface.
+use Espo\Tools\App\AppParam;
 
-class MyParam //implements \Espo\Tools\App\AppParam
+class MyParam implements AppParam
 {
     public function __construct(
-        /* Pass needed dependencies. */        
-        //private \Espo\Entities\User $user
+        // Pass needed dependencies.
     ) {}
     
     public function get(): mixed
