@@ -27,7 +27,9 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             this.controlFields();
 
             // invoke controlFields method every time assignedUserId gets changed
-            this.recordView.listenTo(this.model, 'change:assignedUserId', () => this.controlFields());
+            this.recordView.listenTo(this.model, 'change:assignedUserId', (model, value, options) => {
+                this.controlFields(model, value, options);
+            });
         },
 
         controlFields: function (model, value, options) {
