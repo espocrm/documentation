@@ -34,8 +34,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             // options.ui will be set to true if the change was initiated by a user interaction
         
             // if assigned user is not empty
-            if (this.model.get('assignedUserId')) {
-                
+            if (this.model.get('assignedUserId')) {                
                 this.recordView.showField('sicCode');
 
                 this.recordView.setFieldRequired('type');
@@ -69,10 +68,11 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
 
 Clear cache after all.
 
+Important. If you set model attributes inside an attribute-change listener, you might need to do it with *setTimeout* with a zero or a small interval value. It will prevent some side effects.
 
 ## Multiple dynamic handlers
 
-As of v5.8 it's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
+It's possible to add multiple dynamic handlers to for one entity type. This allows different extensions to have their own dynamic handler.
 
 In metadata > YourEntityType > clientDefs:
 
