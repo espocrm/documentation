@@ -761,7 +761,7 @@ $updateQuery = $entityManager
 $entityManager->getQueryExecutor()->execute($updateQuery);
 ```
 
-Update with join:
+Update with join (not implemented for PostgreSQL):
 
 ```php
 $updateQuery = $entityManager
