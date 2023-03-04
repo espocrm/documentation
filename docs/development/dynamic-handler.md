@@ -68,7 +68,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
 
 Clear cache after all.
 
-Important. If you set model attributes inside an attribute-change listener, you might need to do it with *setTimeout* with a zero or a small interval value. It will prevent some side effects.
+Important. If you set model attributes from a model-change listener callback, you might need to do it with *setTimeout* with a zero or a small interval value. It will prevent some side effects.
 
 ## Multiple dynamic handlers
 
