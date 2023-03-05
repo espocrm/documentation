@@ -37,7 +37,9 @@ Container services are defined:
 * in [metadata](metadata.md) (app > containerServices);
 * by loader classes (in `Espo\Core\Loaders` namespace);
 
-Note: The best practice is not to require the *container* in your classes, and never use it directly. A specific service can be required in a constructor or with Aware interface.
+!!! note
+
+    The best practice is not to require the *container* in your classes, and never use it directly. A specific service can be required in a constructor or with Aware interface.
 
 Console command that prints all available container services with their implementation classes:
 
@@ -204,7 +206,9 @@ Using setter injections may be reasonable when you are extending from an existin
 
 Limitation: Only container services can be injected via setters.
 
-Note: It's not a recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
+!!! note
+
+    It's not a recommended way to inject dependencies. Use it as a last resort if you don't want to modify an existing constructor signature.
 
 ### Manual instantiating
 
@@ -242,7 +246,7 @@ use Espo\Core\InjectableFactory;
 class SomeTypeFactory
 {
     public function __construct(private InjectableFactory $injectableFactory) {}
-    
+
     /**
      * The variable $userId will be used for the constructor parameter
      * with the name 'userId'.
@@ -270,7 +274,9 @@ Custom binding can be set up in a `Binding` class of a module:
 * `Espo\Modules\{ModuleName}\Binding`
 * `Espo\Custom\Binding`
 
-Note: The module order parameter is used when binding is processed. Meaning that modules with a lower order value will be processed first.
+!!! note
+
+    The module order parameter is used when binding is processed. Meaning that modules with a lower order value will be processed first.
 
 CLI command to print all bindings:
 

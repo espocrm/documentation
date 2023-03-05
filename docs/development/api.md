@@ -10,15 +10,17 @@ Requests needs to have the header: `Content-Type: application/json`.
 
 The path to the API in EspoCRM is: `api/v1/`. 
 
-Example of GET API request: 
+!!! example "Example of GET API request"
 
-```
-GET https://address_of_your_crm/api/v1/Contact/55643ca033f7ab4c5
-```
+    ```
+    GET https://address_of_your_crm/api/v1/Contact/55643ca033f7ab4c5
+    ```
 
 In this documentation we omit the site URL and `api/v1/` path when we show examples of API functions. If you utilize any our client implementation, it will prepend these parts automatically.
 
-Note: API client implementations (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
+!!! note
+
+    API client implementations (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
 
 It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
 
@@ -81,7 +83,9 @@ where
 
 ### Basic Authentication
 
-Note: This method is not recommended.
+!!! warning
+
+    This method is not recommended.
 
 For regular (non-API) users the EspoCRM front-end uses the [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). A username and password (or token) are passed through the `Authorization` header encoded with Base64.
 
