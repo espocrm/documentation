@@ -12,7 +12,9 @@ In this article:
 
 ## IMAP configuration
 
-Note: You need to have cron properly configured in your system to have inbound emails working.
+!!! note
+
+    You need to have cron properly configured in your system to have inbound emails working.
 
 IMAP allows to retrieve your emails from an email client. To setup the IMAP account, do the following steps:
 1. Select *Emails Tab > top-right menu > Personal Email Accounts*.
@@ -49,7 +51,7 @@ To setup SMTP account, do the following:
 
 1. Sign into your *Google Admin console*.
 2. Navigate to *App > G Suite > Gmail > Advanced settings*.
-3. Select the organizational unit in the **rganizations section*.
+3. Select the organizational unit in the *organizations section*.
 4. Under the POP and IMAP Access, uncheck the *Disable POP and IMAP access for all users box* checkbox.
 5. Each user has to enable IMAP access as descibed for [Gmail Account](#setup-for-gmail-account).
 
@@ -61,10 +63,12 @@ To setup SMTP account, do the following:
 4. In the *IMAP access*, select *Enable IMAP*.
 5. Click on *Save Changes*.
 
-Note: There are two ways in which you can setup IMAP and SMTP for Gmail account:
+!!! note
 
-* Use the [Google Integration](https://www.espocrm.com/extensions/google-integration/) extension that provides a secure authentication via Oauth2.
-* Use a generated [App Password](https://support.google.com/accounts/answer/185833). Requires enabling 2-step verification for your Google account.
+    There are two ways in which you can setup IMAP and SMTP for Gmail account:
+
+    * Use the [Google Integration](https://www.espocrm.com/extensions/google-integration/) extension that provides a secure authentication via Oauth2.
+    * Use a generated [App Password](https://support.google.com/accounts/answer/185833). Requires enabling 2-step verification for your Google account.
 
 For more information, please follow the [link](https://support.google.com/mail/answer/7126229?hl=en).
 
@@ -80,7 +84,9 @@ Important: The TLS encryption method may not work for IMAP, use the SSL method i
 
 ![Outlook configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/5.png)
 
-Note: If you have **2FA** enabled for your Microsoft account, you need to create app password and use it in Espo instead of your main password. More info [here](https://support.microsoft.com/en-us/help/12409/microsoft-account-app-passwords-and-two-step-verification).
+!!! note
+
+    If you have **2FA** enabled for your Microsoft account, you need to create app password and use it in Espo instead of your main password. More info [here](https://support.microsoft.com/en-us/help/12409/microsoft-account-app-passwords-and-two-step-verification).
 
 ## Yahoo
 

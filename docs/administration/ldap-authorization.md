@@ -55,7 +55,9 @@ E.g. for Active Directory: "userPrincipalName" or "sAMAccountName",for OpenLDAP:
 * Default Portals for a Portal User – Default Portals for created Portal User.
 * Default Roles for a Portal User – Default Roles for created Portal User.
 
-**Note**, for the **first** LDAP user login (both system and portal) the `Create User in EspoCRM` parameter should be checked. Otherwise it won't be able to login.
+!!! note
+
+    For the **first** LDAP user login (both system and portal) the `Create User in EspoCRM` parameter should be checked. Otherwise it won't be able to login.
 
 Now, go to the login page and enter user credentials.
 

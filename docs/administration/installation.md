@@ -5,7 +5,7 @@
 EspoCRM can run on most hosting providers. Requirements are the following:
 
 * PHP 8.0 and later,
-* MySQL 5.7 (and later) or MariaDB 10.1 (and later).
+* MySQL 5.7 (and later) or MariaDB 10.2 (and later).
 
 See [server configuration](server-configuration.md) article for more information.
 
@@ -57,7 +57,9 @@ This step **can be skipped** by clicking the _Next_ button.
 
 ![7](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/installation/7.png)
 
-**Note**: All these parameters can be changed in the application after installation.
+!!! note
+
+    All these parameters can be changed in the application after installation.
 
 Installation is complete. The last thing is to setup cron (or daemon) in your system. It can be done by running `crontab -e` in linux cli and in _Windows Tasks Scheduler_ in Windows systems. More info about jobs is available [here](jobs.md).
 

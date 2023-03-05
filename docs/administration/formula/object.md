@@ -25,12 +25,12 @@ Retrieves a value by a KEY from an OBJECT. Returns NULL if KEY is not set. (as o
 
 Sets a value by a KEY. (as of v7.1)
 
-Example:
+!!! example
 
-```
-$object = object\create();
-object\set($object, 'key', 'some-value');
-```
+    ```
+    $object = object\create();
+    object\set($object, 'key', 'some-value');
+    ```
 
 ## object\clear
 
@@ -38,11 +38,11 @@ object\set($object, 'key', 'some-value');
 
 Unsets a value by a KEY. (as of v7.1)
 
-Example:
+!!! example
 
-```
-object\clear($object, 'some-key');
-```
+    ```
+    object\clear($object, 'some-key');
+    ```
 
 ## object\has
 

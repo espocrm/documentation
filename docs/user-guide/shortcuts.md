@@ -1,6 +1,6 @@
 # Shortcut keys
 
-*As of v7.2*
+*As of v7.2.*
 
 ## Record list
 

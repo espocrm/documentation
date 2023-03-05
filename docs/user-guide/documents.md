@@ -14,6 +14,4 @@ While composing an email, there is the ability to add a certain document as an a
 
 ## Creating from email attachment
 
-Available since version 5.9.0.
-
 It's possible to create a document from an email attachment. On the email detail view from the dropdown at top-right corner click *Create Document*. The email should have at least one attachment.

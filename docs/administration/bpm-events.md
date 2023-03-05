@@ -72,9 +72,13 @@ When it is used to start a process, only object signals can be used.
 
 When it is used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id. 
 
-Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+!!! note
 
-Note: Signal name can not be empty.
+    Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
+!!! note
+
+    Signal name can not be empty.
 
 ![Signal Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-signal.png)
 
@@ -122,7 +126,9 @@ By utilizing datetime\closest formula function it's possible to set the timer to
 
 Stops the flow until a specific signal catched. Placeholders can be used in a signal name.
 
-Note: Signal name can not be empty.
+!!! note
+
+    Signal name can not be empty.
 
 See [more info](bpm-signals.md) about signals.
 
@@ -134,9 +140,13 @@ If the first character of the signal name is `@`, it will broadcast an object si
 
 ![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-signal-throw.png)
 
-Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+!!! note
 
-Note: Signal name can not be empty.
+    Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
+!!! note
+
+    Signal name can not be empty.
 
 See [more info](bpm-signals.md) about signals.
 
@@ -198,9 +208,13 @@ Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be 
 
 If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
-Note: Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+!!! note
 
-Note: Signal name can not be empty.
+    Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+
+!!! note
+
+    Signal name can not be empty.
 
 See [more info](bpm-signals.md) about signals.
 
@@ -221,12 +235,14 @@ If Error Code is specified, it will be triggered only when an error with the sam
 
 ![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
-Note: If an error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403). Available as of v2.8.6.
+!!! note
+
+    If an error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403). Available as of v2.8.6.
 
 
 ### Conditional Intermediate Event (Boundary)
 
-Triggered when specific conditions are met. Note, that non interrupting event can be triggered multiple times, when coditions get met, then get not met, and met again.
+Triggered when specific conditions are met. Note that non interrupting event can be triggered multiple times, when coditions get met, then get not met, and met again.
 
 ![Conditional Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional-boundary.png)
 
@@ -250,7 +266,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 ### Signal Intermediate Event (Boundary)
 
-It's triggered once a specific signal is broadcasted. Note, that a signal can be triggered from anywhere in the system, not necessarily in the same process.
+It's triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily in the same process.
 
 Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with the target's id.
 

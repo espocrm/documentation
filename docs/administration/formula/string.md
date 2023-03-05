@@ -22,11 +22,11 @@
 
 Concatenates two or more strings.
 
-Example:
+!!! example
 
-```
-$someVariable = string\concatenate('ab', 'cd'); // will return 'abcd'
-```
+    ```
+    $someVariable = string\concatenate('ab', 'cd'); // will return 'abcd'
+    ```
 
 ## string\substring
 
@@ -38,13 +38,13 @@ If LENGTH is omitted, the substring starting from START until the end of the STR
 
 If LENGTH is negative, then that many characters will be omitted from the end of STRING.
 
-Examples:
+!!! example
 
-```
-$someVariable = string\substring('abcde', 1, 2); // will return 'bc'
+    ```
+    $someVariable = string\substring('abcde', 1, 2); // will return 'bc'
 
-$someVariable = string\substring('abcde', 1, -1); // will return 'bcd'
-```
+    $someVariable = string\substring('abcde', 1, -1); // will return 'bcd'
+    ```
 
 ## string\contains
 
@@ -52,23 +52,23 @@ $someVariable = string\substring('abcde', 1, -1); // will return 'bcd'
 
 Whether STRING contains NEEDLE.
 
-Example:
+!!! example
 
-```
-string\contains('hello world', 'world') // will return true
-```
+    ```
+    string\contains('hello world', 'world') // will return true
+    ```
 
 ## string\pos
 
 `string\pos(STRING, NEEDLE)`
 
-Returns possition of NEEDLE in STRING, *false* if not found. (as of v5.7.3)
+Returns possition of NEEDLE in STRING, *false* if not found.
 
-Example:
+!!! example
 
-```
-string\pos('hello world', 'world') // will return `6`
-```
+    ```
+    string\pos('hello world', 'world') // will return `6`
+    ```
 
 ## string\test
 
@@ -76,11 +76,11 @@ string\pos('hello world', 'world') // will return `6`
 
 Search a match between REGULAR_EXPRESSION and STRING. Returns TRUE of FALSE.
 
-Example:
+!!! example
 
-```
-string\test('hello world', '/hello/i') // will return TRUE
-```
+    ```
+    string\test('hello world', '/hello/i') // will return TRUE
+    ```
 
 ## string\length
 
@@ -88,11 +88,11 @@ string\test('hello world', '/hello/i') // will return TRUE
 
 The length of STRING.
 
-Example:
+!!! example
 
-```
-string\length('hello world') // will return `11`
-```
+    ```
+    string\length('hello world') // will return `11`
+    ```
 
 ## string\trim
 
@@ -100,11 +100,11 @@ string\length('hello world') // will return `11`
 
 Strips whitespace from the beginning and end of STRING.
 
-Example:
+!!! example
 
-```
-string\length(' hello world ') // will return `hello world`
-```
+    ```
+    string\length(' hello world ') // will return `hello world`
+    ```
 
 ## string\lowerCase
 
@@ -112,11 +112,11 @@ string\length(' hello world ') // will return `hello world`
 
 Converts letters to lower case.
 
-Example:
+!!! example
 
-```
-string\lowerCase('HELLO world') // will return `hello world`
-```
+    ```
+    string\lowerCase('HELLO world') // will return `hello world`
+    ```
 
 ## string\upperCase
 
@@ -124,11 +124,11 @@ string\lowerCase('HELLO world') // will return `hello world`
 
 Converts letters to upper case.
 
-Example:
+!!! example
 
-```
-string\upperCase('HELLO world') // will return `HELLO WORLD`
-```
+    ```
+    string\upperCase('HELLO world') // will return `HELLO WORLD`
+    ```
 
 ## string\pad
 
@@ -140,23 +140,25 @@ PAD_STRING by default is a whitespace string `' '`.
 
 PAD_TYPE can be *'right'*, *'left'*, *'both'*. By default it is *'right'*.
 
-Example:
+!!! example
 
-```
-string\pad('100', 5, '*', 'right') // will return `100**`
-```
+    ```
+    string\pad('100', 5, '*', 'right') // will return `100**`
+    ```
 
 ## string\match
 
 `string\match(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
-Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (as of v5.8.3)
+Retrieves the first result of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found.
 
-Example:
+!!! example
 
-`string\match('{token1} foo {token2} bar', '/{[^}]*}/')`
+    ```
+    string\match('{token1} foo {token2} bar', '/{[^}]*}/')
+    ```
 
-will return `{token1}`.
+    Will return `{token1}`.
 
 The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 
@@ -164,27 +166,33 @@ The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 
 `string\matchAll(STRING, REGULAR_EXPRESSION, [OFFSET])`
 
-Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found. (as of v5.8.3)
+Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns NULL if no matches are found.
 
-Example:
+!!! example
 
-`string\matchAll('{token1} foo {token2} bar', '/{[^}]*}/')`
+    ```
+    string\matchAll('{token1} foo {token2} bar', '/{[^}]*}/')
+    ```
 
-will return an array `['{token1}', '{token2}']`.
+    Will return an array `['{token1}', '{token2}']`.
 
 ## string\replace
 
 `string\replace(STRING, SEARCH, REPLACE)`
 
-Replaces all occurrences of SEARCH with REPLACE in STRING. (as of v5.9)
+Replaces all occurrences of SEARCH with REPLACE in STRING.
 
-Example:
+!!! example
 
-`string\replace('Hello {test}', '{test}', 'world')`
+    ```
+    string\replace('Hello {test}', '{test}', 'world')
+    ```
 
-will return `'Hello world'`.
+    Will return `'Hello world'`.
 
-Note: The REPLACE parameter mush be a string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
+!!! note
+
+    The REPLACE parameter mush be a string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
 
 
 ## string\split
@@ -193,8 +201,8 @@ Note: The REPLACE parameter mush be a string. Use [number\format](number.md#numb
 
 Splits a STRING into array of strings by a string SEPARATOR. (as of v7.1)
 
-Example:
+!!! example
 
-```
-string\split('hello world', ' ') // will return ['hello', 'world']
-```
+    ```
+    string\split('hello world', ' ') // will return ['hello', 'world']
+    ```

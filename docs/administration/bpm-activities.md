@@ -92,20 +92,22 @@ Executes a specific formula script.
 
 When using formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`.
 
-Example:
+!!! example
 
-```
-// attribute of the target record
-$someVariable1 = targetEntity\attribute('name');
+    ```
+    // attribute of the target record
+    $someVariable1 = targetEntity\attribute('name');
 
-// attribute of the record you are creating or updating
-$someVariable2 = name;
+    // attribute of the record you are creating or updating
+    $someVariable2 = name;
 
-// attribute of the record you are creating or updating
-$someVariable3 = entity\attribute('name');
-```
+    // attribute of the record you are creating or updating
+    $someVariable3 = entity\attribute('name');
+    ```
 
-In the context of *update record* actions it's recommended to use formula only for setting attributes. Use *Script Task* for any other logic.
+!!! warning
+
+    In the context of *update record* actions it's recommended to use formula only for setting attributes. Use *Script Task* for any other logic.
 
 ----
 
@@ -217,11 +219,13 @@ In Script Task you can define actions that are impossible to do with the regular
 * Create a new user and send generated password ([see](formula-scripts-examples.md#creating-new-user))
 * Send email with generated PDF in attachment ([see](formula-scripts-examples.md#sending-email-with-generated-pdf-in-attachment))
 
-Note: It's recommended to **clear temporary variables**, that won't be needed further in the process, in the end of the script.
+!!! note
 
-```
-$tmpVariable = null;
-```
+    It's recommended to **clear temporary variables**, that won't be needed further in the process, in the end of the script.
+
+    ```
+    $tmpVariable = null;
+    ```
 
 ----
 

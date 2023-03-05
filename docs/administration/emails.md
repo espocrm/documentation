@@ -8,7 +8,9 @@ EspoCRM has the ability to monitor IMAP mailboxes. Emails can be fetched by Grou
 
 As an email is coming, the system tries to link it with the appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not listed in To or CC of the email.
 
-**Important**: Email records **are not duplicated** in the system if they are fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to use **moving to trash** instead. It's recommended to restrict *delete* access for users in Roles.
+!!! warning "Important"
+
+    Email records **are not duplicated** in the system if they are fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to use **moving to trash** instead. It's recommended to restrict *delete* access for users in Roles.
 
 ## Access control
 
@@ -54,9 +56,13 @@ Regular users can set up their own email accounts that need to be monitored (at 
 
 The administrator also can manage personal email accounts of users (at Administration > Personal Email Accounts).
 
-**Important**: By default, regular users don’t have **access** to personal email accounts. Administrator needs to allow access to *Personal Email Accounts* scope in Roles.
+!!! warning "Important"
 
-**Important**: This is required to have the email functionality working properly. User records need to have their email address (or multiple addresses) set in the *Email* field. Only administrator can change the *Email* field for users. It's supposed that the user's email address is the same as the email address of the user's personal email account.
+    By default, regular users don’t have **access** to personal email accounts. Administrator needs to allow access to *Personal Email Accounts* scope in Roles.
+
+!!! warning "Important"
+
+    This is required to have the email functionality working properly. User records need to have their email address (or multiple addresses) set in the *Email* field. Only administrator can change the *Email* field for users. It's supposed that the user's email address is the same as the email address of the user's personal email account.
 
 ## Email Filters
 

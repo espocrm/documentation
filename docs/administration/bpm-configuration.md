@@ -1,9 +1,8 @@
 # BPM Configuration
 
-
 ## Deferring conditional event checking
 
-Actual as of v2.8.7.
+*As of v2.8.7.*
 
 Within a period defined by the config parameter `bpmnPendingDeferPeriod` (`"6 hours"` by default) pending conditional events nodes are being checked as soon as possible.
 After that period they will be checked with an interval defined by the parameter `bpmnPendingDeferIntervalPeriod` (`"10 minutes"` by default).

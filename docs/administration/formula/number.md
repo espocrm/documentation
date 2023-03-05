@@ -15,13 +15,13 @@
 
 Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK or THOUSAND_SEPARATOR are omitted, then system defaults are used.
 
-Examples:
+!!! example
 
-`number\format(2.666667, 2)` – results 2.67;
+    `number\format(2.666667, 2)` – results 2.67;
 
-`number\format(1000, 2)` – results 1,000.00;
+    `number\format(1000, 2)` – results 1,000.00;
 
-`number\format(10.1, 0)` – results 10.
+    `number\format(10.1, 0)` – results 10.
 
 
 ## number\abs

@@ -18,15 +18,15 @@ In this article:
 
 Function names should be in UPPER_CASE. You need to append the **trailing colon** character to a function name. There **should not be any whitespace** between function name and parentheses.
 
-Examples:
+!!! example "Examples"
 
-```
-CONCAT:(firstName, ' ', lastName)
-```
+    ```
+    CONCAT:(firstName, ' ', lastName)
+    ```
 
-```
-IF:(EQUAL:(status, 'Complete'), 'Complete', 'Not Complete')`
-```
+    ```
+    IF:(EQUAL:(status, 'Complete'), 'Complete', 'Not Complete')`
+    ```
 
 Functions:
 

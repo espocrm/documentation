@@ -83,7 +83,9 @@ How it works:
 
 Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the report and take all records from the report result. Then, it will apply the action (or multiple actions) for every record.
 
-The usage example: Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day.
+!!! example "Example, a use case"
+
+    Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day.
 
 ### Sequential
 
@@ -92,7 +94,9 @@ Supposed to be run by another workflow. Provides the ability to make a complex l
 1. Create a workflow with sequential trigger type.
 2. Create another workflow with another trigger type. Add action *Trigger another Workflow* and select the workflow from the step 1.
 
-Note: It can be reasonable to utilize [BPM tool](bpm.md) rather than Workflows if you need more complex logic.
+!!! note
+
+    It can be reasonable to utilize [BPM tool](bpm.md) rather than Workflows if you need more complex logic.
 
 ### Signal
 
@@ -121,13 +125,17 @@ Some available condition types:
 
 Formula provides the ability to define conditions of any complexity. To read about formula syntax, follow [this article](formula.md).
 
-Note: There should not be any `;` delimiter used in formula code when it determines a condition. It should be one expression that returns a value (TRUE of FALSE).
+!!! note
 
-Example (expression with the logical AND):
+    There should not be any `;` delimiter used in formula code when it determines a condition. It should be one expression that returns a value (TRUE of FALSE).
 
-```
-status == 'New' && assignedUserId == null
-```
+!!! example
+
+    Expression with the logical AND):
+
+    ```
+    status == 'New' && assignedUserId == null
+    ```
 
 ----
 
@@ -175,9 +183,13 @@ Allows changing of specific fields of the target record.
 
 It's possible to define **formula** to calculate field values. You can utilize *Update Target Record* action for executing formula script without actually updating any fields.
 
-Note: Variables defined within formula won't be passed back, they are only available within the current script.
+!!! note
 
-Important: Formula within this action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need. 
+    Variables defined within formula won't be passed back, they are only available within the current script.
+
+!!! warning "Important"
+
+    Formula within this action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
 
 If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function *entity\addLinkMultipleId*. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
@@ -233,9 +245,13 @@ It's possible to delay executing of a sequential workflow. In the sequential wor
 
 Target for a triggered workflow can be substituted with a related record.
 
-Note: For complex logic, it can be more reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
+!!! note
 
-Note: It's possible to trigger only workflow rules of 'Sequential' type.
+    For complex logic, it can be more reasonable to utilize [BPM tool](bpm.md) rather than Workflows.
+
+!!! note
+
+    It's possible to trigger only workflow rules of 'Sequential' type.
 
 ### Run Service Action
 
@@ -300,24 +316,28 @@ Available placeholders:
 
 #### Handling HTTP response
 
-*As of v2.6.0*
+*As of v2.6.*
 
 A response body of a sent HTTP request will be stored in the formula variable `_lastHttpResponseBody`. This variable can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
 
 It's also possible to access the last http response body with the function `workflow\lastHttpResponseBody()` (as of v2.8.6).
 
-Example: A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same workflow rule and specify a formula script:
+!!! example
 
-```
-$id = json\retrieve($_lastHttpResponseBody, 'id');
-entity\setAttribute('someIdField', $id);
-```
+    A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same workflow rule and specify a formula script:
 
-Note: Within a BPM process *$_lastHttpResponseBody* variable is available only within a task that contains Send HTTP Request action. The variable won't be passed further along a process flow.
+    ```
+    $id = json\retrieve($_lastHttpResponseBody, 'id');
+    entity\setAttribute('someIdField', $id);
+    ```
+
+!!! note
+
+    Within a BPM process *$_lastHttpResponseBody* variable is available only within a task that contains Send HTTP Request action. The variable won't be passed further along a process flow.
 
 ### Execute Formula Script
 
-*As of v2.6.0*
+*As of v2.6.*
 
 Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next workflow actions or BPM process.
 

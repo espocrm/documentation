@@ -27,9 +27,11 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             this.controlFields();
 
             // invoke controlFields method every time assignedUserId gets changed
-            this.recordView.listenTo(this.model, 'change:assignedUserId', (model, value, options) => {
-                this.controlFields(model, value, options);
-            });
+            this.recordView.listenTo(
+                this.model,
+                'change:assignedUserId',
+                (model, value, options) => this.controlFields(model, value, options)
+            );
         },
 
         controlFields: function (model, value, options) {
@@ -70,7 +72,9 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
 
 Clear cache after all.
 
-Important. If you set model attributes from a model-change listener callback, you might need to use *setTimeout* with a zero or a small interval value. It will prevent some side effects.
+!!! note
+
+    If you set model attributes from a model-change listener callback, you might need to use *setTimeout* with a zero or a small interval value. It will prevent some side effects.
 
 ## Multiple dynamic handlers
 

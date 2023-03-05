@@ -76,7 +76,7 @@ To disable access for a specific user w/o deleting the record, the admin needs t
 
 ## Logging in as another user
 
-*As of v7.3*
+*As of v7.3.*
 
 The admin can log in as another regular user. The user detail view > the dropdown next to the *Edit* > Log In.
 

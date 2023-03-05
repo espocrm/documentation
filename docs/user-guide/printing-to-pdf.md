@@ -2,7 +2,9 @@
 
 Printing to PDF provides the ability to generate PDF documents with a record data. The document content is defined by Template.
 
-Important: You need to have at least one Template for the entity type of the record you want to print.
+!!! warning "Important"
+
+    You need to have at least one Template for the entity type of the record you want to print.
 
 ### Printing single record
 
@@ -64,13 +66,15 @@ For more precise editing it's recommended to use Code View mode. To switch to Co
 
 You can print fields of the record as well as fields of related records by utilizing placeholders (Handlebars like) in your template.
 
-Examples:
+!!! example "Examples"
 
-* `{{name}}` – Name of the record;
-* `{{assignedUserName}}` – Assigned User;
-* `{{account.name}}` – Name of the related account.
+    * `{{name}}` – Name of the record;
+    * `{{assignedUserName}}` – Assigned User;
+    * `{{account.name}}` – Name of the related account.
 
-Note: If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
+!!! note
+
+    If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
 You can specify a **document title** in the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
 
@@ -338,25 +342,30 @@ It's possible to loop through a link collection.
 
 The max number of records is 100. It can be changed with a config parameter *htmlizerLinkLimit*.
 
-Example, printing contact names and roles of an opportunity:
+!!! example
 
-```
-{{#each contacts}}
-    Name: {{name}},
-    Role: {{opportunityRole}},
-    Contact's Account Type: {{account.type}}
-{{/each}}
-```
+    Printing contact names and roles of an opportunity:
 
-where *contacts* is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
+    ```
+    {{#each contacts}}
+        Name: {{name}},
+        Role: {{opportunityRole}},
+        Contact's Account Type: {{account.type}}
+    {{/each}}
+    ```
 
-Example, printing contact names of an opportunity:
+    Where *contacts* is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
 
-```
-{{#each contactsIds}}
-    {{var this ../contactsNames}}
-{{/each}}
-```
+
+!!! example
+
+    Example, printing contact names of an opportunity:
+
+    ```
+    {{#each contactsIds}}
+        {{var this ../contactsNames}}
+    {{/each}}
+    ```
 
 ### Multi-enum & Array fields
 
@@ -407,35 +416,40 @@ Available types:
 
 You can use a regular *table* tag or special *tableTag* helper. The latter way is preferable when using *{{#each}}* helper inside a table.
 
-The following example prints all account's opportunities in a table format.
+!!! example
 
-In code view:
+    The following example prints all account's opportunities in a table format.
 
-```
-{{#tableTag width="80%" border="0.5pt" cellpadding="4"}}
-{{#each opportunities}}
-{{#trTag}}
-  {{#tdTag width="40%"}}{{name}}{{/tdTag}}
-  {{#tdTag width="30%"}}{{assignedUserName}}{{/tdTag}}
-  {{#tdTag width="30%" align="right"}}{{stage}}{{/tdTag}}
-{{/trTag}}
-{{/each}}
-{{/tableTag}}
-```
+    In code view:
 
-where *trTag* is a table row, *tdTag* is a table cell.
+    ```
+    {{#tableTag width="80%" border="0.5pt" cellpadding="4"}}
+    {{#each opportunities}}
+    {{#trTag}}
+      {{#tdTag width="40%"}}{{name}}{{/tdTag}}
+      {{#tdTag width="30%"}}{{assignedUserName}}{{/tdTag}}
+      {{#tdTag width="30%" align="right"}}{{stage}}{{/tdTag}}
+    {{/trTag}}
+    {{/each}}
+    {{/tableTag}}
+    ```
+
+    Where *trTag* is a table row, *tdTag* is a table cell.
 
 ### Raw values
 
 To access a raw value of a specific attribute you need to add  `_RAW` to the attribute name. The raw value is not formatted value, timezone is UTC for date-time fields.
 
-Example (applying another format to the raw value):
 
-```
-{{numberFormat quantity_RAW decimals=0}}
-```
+!!! example
 
-*quantity* is a field name.
+    Example (applying another format to the raw value):
+
+    ```
+    {{numberFormat quantity_RAW decimals=0}}
+    ```
+
+    *quantity* is a field name.
 
 ### Maps
 

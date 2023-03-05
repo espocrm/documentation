@@ -33,9 +33,13 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 ![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
 
-Note: Diverging and converging gateways must be balanced.
+!!! note
 
-Note: If one of parallel flows has been ended for some reason, then the diverging converging will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+    Diverging and converging gateways must be balanced.
+
+!!! note
+
+    If one of parallel flows has been ended for some reason, then the diverging converging will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
 
 ----
 
@@ -49,9 +53,13 @@ In case of converging it waits until all incoming flows come and then continues 
 
 ![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
-Note: Diverging and converging gateways must be balanced.
+!!! note
 
-Note: If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+    Diverging and converging gateways must be balanced.
+
+!!! note
+
+    If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
 
 ----
 

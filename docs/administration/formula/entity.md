@@ -31,9 +31,9 @@ Returns TRUE if the entity is new (being created) and FALSE if not (being update
 
 Returns TRUE if ATTRIBUTE of the record was changed.
 
-Example:
+!!! example
 
-`entity\isAttributeChanged('status')`
+    `entity\isAttributeChanged('status')`
 
 ## entity\isAttributeNotChanged
 
@@ -49,11 +49,11 @@ An ATTRIBUTE value of a target record. It's also possibe to fetch an attribute o
 
 `$test = entity\attribute('name')` is equivalent to `$test = name`.
 
-Examples:
+!!! example
 
-`entity\attribute('assignedUserId')`
+    `entity\attribute('assignedUserId')`
 
-`entity\attribute('account.name')`
+    `entity\attribute('account.name')`
 
 ## entity\setAttribute
 
@@ -63,9 +63,9 @@ Set ATTRIBUTE with a VALUE.
 
 `entity\setAttribute('stage', 'Closed Won')` is equivalent to `stage = 'Closed Won'`.
 
-Example:
+!!! example
 
-`entity\setAttribute('stage', 'Closed Won')`
+    `entity\setAttribute('stage', 'Closed Won')`
 
 
 ## entity\attributeFetched
@@ -74,9 +74,9 @@ Example:
 
 An ATTRIBUTE value that was set when a target record was fetched from database. Before it was modified.
 
-Example:
+!!! example
 
-`entity\attributeFetched('assignedUserId')`
+    `entity\attributeFetched('assignedUserId')`
 
 Note: Should not be used in workflow and BPM actions, use `workflow\targetEntity\attributeFetched` instead.
 
@@ -90,9 +90,9 @@ Adds ID to Link Multiple field.
 
 Adds the list of ids.
 
-Example:
+!!! example
 
-`entity\addLinkMultipleId('teams', 'someTeamId')`
+    `entity\addLinkMultipleId('teams', 'someTeamId')`
 
 Add 'someTeamId' to 'teams' field.
 
@@ -121,9 +121,9 @@ Checks whether a target entity is related with another entity represented by LIN
 
 Sums related records by a specified FIELD with an optional FILTER.
 
-Example:
+!!! example
 
-`entity\sumRelated('opportunities', 'amountConverted', 'won')`
+    `entity\sumRelated('opportunities', 'amountConverted', 'won')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More [info](../formula.md#filter).
 
@@ -133,9 +133,9 @@ FILTER is a name of a filter pre-defined in the system. It's also possible to ap
 
 Returns a number of related records with an optional FILTER applied.
 
-Example:
+!!! example
 
-`entity\countRelated('opportunities', 'open')`
+    `entity\countRelated('opportunities', 'open')`
 
 It's possible to apply a [list report](../../user-guide/reports.md) as a filter. More [info](../formula.md#filter).
 
@@ -145,6 +145,6 @@ It's possible to apply a [list report](../../user-guide/reports.md) as a filter.
 
 Fetches a relationship column value.
 
-Example:
+!!! example
 
-`entity\getLinkColumn('targetLists', 'TARGET_LIST_ID', 'optedOut')`
+    `entity\getLinkColumn('targetLists', 'TARGET_LIST_ID', 'optedOut')`

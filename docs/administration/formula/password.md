@@ -12,9 +12,9 @@ Generates and returns a password.
 
 Hashes a password. You need to hash the password before setting *password* field of *User* record.
 
-Example:
+!!! example
 
-```
-$password = password\generate();
-$hash = password\hash($password);
-```
+    ```
+    $password = password\generate();
+    $hash = password\hash($password);
+    ```

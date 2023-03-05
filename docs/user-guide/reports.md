@@ -115,7 +115,7 @@ At *Filters* section, you can specify criteria to limit data displayed in the re
 
 *Runtime Filters* allow you to specify different filters before you run the report.
 
-Note: Specifying the runtime filter can be also useful for dashlets and report panels.
+Note: Specifying a runtime filter can be also useful for dashlets and report panels.
 
 ### Charts
 

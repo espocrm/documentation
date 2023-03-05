@@ -16,9 +16,11 @@ In this article:
 
 ## IMAP accounts
 
-*(email receiving)*
+*Email receiving*
 
-Note: You need to have [cron](../administration/server-configuration.md#setting-up-crontab) properly configured in your system to have inbound emails working.
+!!! note
+
+    You need to have [cron](../administration/server-configuration.md#setting-up-crontab) properly configured in your system to have inbound emails working.
 
 User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
@@ -30,14 +32,19 @@ If you use an **external email client** for sending emails, you can add *Sent* f
 
 There is an ability to specify *Folder* in Personal Email Account. Incoming emails will be put in that folder.
 
-Note: For regular users access to personal email accounts must be allowed in Roles.
+!!! note
+
+    For regular users access to personal email accounts must be allowed in Roles.
 
 ## SMTP accounts
 
-*(email sending)*
+*Email sending*
 
 Users can setup SMTP settings in their Personal Email Accounts. Personal email accounts available at Emails tab > top-right menu > Personal Email Accounts. 
-Note: For regular users access to personal email accounts must be allowed in Roles.
+
+!!! note
+
+    For regular users access to personal email accounts must be allowed in Roles.
 
 Administrator also can allow to use the main system SMTP account as well as Group Email Accounts (mark as Shared).
 
@@ -96,7 +103,9 @@ It's possible to use an **external email client** (the default one on your compu
 
 Users can create their personal email folders to put some emails in for convenience. To create or edit folders follow: the Emails list view > dropdown in the top-right corner > Folders. `Skip Notification` means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
 
-Note that email folders in EspoCRM have nothing to do with IMAP folders.
+!!! note
+
+    Email folders in EspoCRM have nothing to do with IMAP folders.
 
 ## Group Email Folders
 
@@ -146,9 +155,11 @@ The list of available additional placeholders:
 
 ### Handlebars support
 
-Available as of v5.9.0.
+*As of v5.9.*
 
-Note: This is an expiremental feature.
+!!! note
+
+    This is an expiremental feature.
 
 Email templates also support Handlebars. It's the same template system used for PDF templates with double-brace placeholders, like `{{name}}`.
 

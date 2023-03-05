@@ -26,7 +26,9 @@ Create Email Template that will be used for a double opt-in. You can use followi
 
 A confirmation link will be added automatically if you haven’t inserted a placeholder in the email template.
 
-Note: When sending empty values (for Varchar, URL, Email, Phone fields), use *null* rather than an empty string.
+!!! note
+
+    When sending empty values (for Varchar, URL, Email, Phone fields), use *null* rather than an empty string.
 
 ## Posting API request
 
@@ -40,28 +42,30 @@ Required headers:
 
 ### PHP
 
-You can use [API client for PHP](../development/api-client-php.md).
+You can use [API client](https://github.com/espocrm/php-espo-api-client).
 
-Example:
+!!! example
 
-```php
-<?php
+    ```php
+    <?php
 
-require_once('EspoApiClient.php');
+    use Espo\ApiClient\Client;
 
-$client = new EspoApiClient('https://URL_OF_YOUR_CRM');
+    $client = new Client($yourEspoUrl);
+    $client->setApiKey($apiKey);
+    $client->setSecretKey($secretKey); // if you use HMAC method
 
-$apiKey = 'f1b04885f28ee1a6d55dd203daed68f9'; // specify your API key here
+    $apiKey = 'f1b04885f28ee1a6d55dd203daed68f9'; // specify your API key here
 
-$formData = [
-    'firstName' => $_POST['firstName'] ?: null,
-    'lastName' => $_POST['lastName'] ?: null,
-    'emailAddress' => $_POST['emailAddress'] ?: null,
-];
+    $formData = [
+        'firstName' => $_POST['firstName'] ?: null,
+        'lastName' => $_POST['lastName'] ?: null,
+        'emailAddress' => $_POST['emailAddress'] ?: null,
+    ];
 
-$client->request('POST', 'LeadCapture/' . $apiKey, $formData);
+    $client->request(Client::METHOD_POST, 'LeadCapture/' . $apiKey, $formData);
 
-```
+    ```
 
 ### Python
 
@@ -69,78 +73,78 @@ $client->request('POST', 'LeadCapture/' . $apiKey, $formData);
 
 ### Directly by a web browser
 
-Example:
+!!! example
 
-```html
-<div id="web-to-lead-form-container">
-    <form id="web-to-lead-form">
-        <div>
-            <input type="text" name="firstName" placeholder="First Name">
-        </div>
-        <div>
-            <input type="text" name="lastName" placeholder="Last Name" required>
-        </div>
-        <div>
-            <input type="email" name="emailAddress" placeholder="Email Address" required>
-        </div>
-        <div>
-            <button type="submit" name="submit">Submit</button>
-        </div>
-    </form>
-</div>
+    ```html
+    <div id="web-to-lead-form-container">
+        <form id="web-to-lead-form">
+            <div>
+                <input type="text" name="firstName" placeholder="First Name">
+            </div>
+            <div>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+            </div>
+            <div>
+                <input type="email" name="emailAddress" placeholder="Email Address" required>
+            </div>
+            <div>
+                <button type="submit" name="submit">Submit</button>
+            </div>
+        </form>
+    </div>
 
-<script type="text/javascript">
-    let webToLeadFormElement = document.getElementById('web-to-lead-form');
-    let webToLeadFormIsSubmitted = false;
+    <script type="text/javascript">
+        let webToLeadFormElement = document.getElementById('web-to-lead-form');
+        let webToLeadFormIsSubmitted = false;
 
-    webToLeadFormElement.addEventListener('submit', event => {
-        event.preventDefault();
+        webToLeadFormElement.addEventListener('submit', event => {
+            event.preventDefault();
 
-        if (webToLeadFormIsSubmitted) {
-            return;
-        }
-
-        webToLeadFormIsSubmitted = true;
-        webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
-
-        let payloadData = {
-            firstName: webToLeadFormElement.firstName.value || null,
-            lastName: webToLeadFormElement.lastName.value || null,
-            emailAddress: webToLeadFormElement.emailAddress.value || null,
-        };
-
-        // A needed URL can be found on the Lead Capture detail view.
-        let url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
-
-        let xhr = new XMLHttpRequest();
-    
-        xhr.open('POST', url, true);
-    
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('Accept', 'application/json');
-    
-        xhr.onreadystatechange = () => {
-            if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                let containerElement = document.getElementById('web-to-lead-form-container');
-    
-                containerElement.innerHTML = 'Sent';
+            if (webToLeadFormIsSubmitted) {
+                return;
             }
-        };
-    
-        xhr.onerror = () => {
-            webToLeadFormElement.submit.removeAttribute('disabled');
-            webToLeadFormIsSubmitted = false;
-        };
-    
-        xhr.send(JSON.stringify(payloadData));
-    });
-</script>
-```
+
+            webToLeadFormIsSubmitted = true;
+            webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
+
+            let payloadData = {
+                firstName: webToLeadFormElement.firstName.value || null,
+                lastName: webToLeadFormElement.lastName.value || null,
+                emailAddress: webToLeadFormElement.emailAddress.value || null,
+            };
+
+            // A needed URL can be found on the Lead Capture detail view.
+            let url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.open('POST', url, true);
+
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('Accept', 'application/json');
+
+            xhr.onreadystatechange = () => {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    let containerElement = document.getElementById('web-to-lead-form-container');
+
+                    containerElement.innerHTML = 'Sent';
+                }
+            };
+
+            xhr.onerror = () => {
+                webToLeadFormElement.submit.removeAttribute('disabled');
+                webToLeadFormIsSubmitted = false;
+            };
+
+            xhr.send(JSON.stringify(payloadData));
+        });
+    </script>
+    ```
 
 The `Access-Control-Allow-Origin` header (see [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) can be set in the `data/config.php` with the parameter `leadCaptureAllowOrigin`. The default value is `*`.
 
 ```
-    'leadCaptureAllowOrigin' => '*',
+'leadCaptureAllowOrigin' => '*',
 ```
 
 ## Lead assignment distribution

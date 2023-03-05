@@ -99,10 +99,11 @@ Command to start the service:
 systemctl start espocrm-daemon.service
 ```
 
-
 ## Running jobs in parallel processes
 
-It's **highly recommended** to enable running jobs in parallel processes.
+!!! note
+
+    It's **highly recommended** to enable running jobs in parallel processes.
 
 By default jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Jobs > Settings (in the top-right corner).
 
@@ -110,18 +111,20 @@ Requires *pcntl* and *posix* extensions. Some server configurations may restrict
 
 ## Running specific job manually in CLI
 
-
 Command:
+
 ```
 php command.php run-job JobName
 ```
 where JobName is an internal name of the job you want to run.
 
-Examples:
-```
-php command.php run-job Cleanup
-php command.php run-job ProcessMassEmail
-```
+
+!!! example
+
+    ```
+    php command.php run-job Cleanup
+    php command.php run-job ProcessMassEmail
+    ```
 
 Jobs available out-of-the-box:
 
@@ -143,11 +146,11 @@ bin/command app-info --jobs
 
 Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-id` and/or `--target-type` options.
 
-Example:
+!!! example
 
-```
-bin/command run-job CheckEmailAccounts --target-id={id_of_email_account}
-```
+    ```
+    bin/command run-job CheckEmailAccounts --target-id={id_of_email_account}
+    ```
 
 ## See also
 

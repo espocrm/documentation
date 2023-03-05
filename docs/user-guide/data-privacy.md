@@ -1,7 +1,5 @@
 # Data Privacy
 
-Available since the version 5.2.0.
-
 EspoCRM provides the ability to view and erase personal data for specific records (Contacts, Leads, Accounts).
 
 In Entity Manager administrator can check certain fields as those that can contain personal data. This option is available for Accounts, Contacts, Leads entity types as well as custom entities of the Person types.

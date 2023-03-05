@@ -5,6 +5,8 @@
 
 Returns ATTRIBUTE of the current user.
 
-Example:
+!!! example
 
-`env\userAttribute('id')` – ID of the current user.
+    ```
+    env\userAttribute('id') // an ID of the current user
+    ```

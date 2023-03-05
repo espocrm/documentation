@@ -31,11 +31,11 @@ Click on the right dropdown on the mass email row in the _Mass Email_ panel and 
 
 The system appends an opt-out link to all sent emails if it's missing in the email body. You can use a custom opt-out link in your email template.
 
-Example:
+!!! example
 
-```html
-<a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
-```
+    ```html
+    <a href="{optOutUrl}">Unsubscribe from the mailing list.</a>
+    ```
 
 Administrator can disable the mandatory opt-out links at Administration > Outbound Emails.
 
@@ -44,11 +44,11 @@ Administrator can disable the mandatory opt-out links at Administration > Outbou
 If you want to know that your recipient opened the link from your email, you need to create Tracking URL. Specify any _Name_
  and _URL_ where your link should lead to. Then you will need to paste a generated code into your email template.
 
- Example:
+!!! example
 
-```html
-<a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
-```
+    ```html
+    <a href="{trackingUrl:55f2c87b09a220a78}">Try our demo</a>
+    ```
 
 ## Target lists
 
@@ -66,7 +66,7 @@ Specify Excluding Target Lists to avoid sending mass emails to certain recipient
 
 ### Custom entity support
 
-[As of v7.1](https://github.com/espocrm/espocrm/issues/2203).
+*[As of v7.1.](https://github.com/espocrm/espocrm/issues/2203)*
 
 The admin needs to create a many-to-many relationship between the Target List and the custom entity (of Person or Company type). Then add the panel to the Bottom Panels layout of the Target List entity.
 

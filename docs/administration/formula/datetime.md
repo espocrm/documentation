@@ -39,13 +39,13 @@ Returns current datetime.
 
 Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then default time zone will be used. If FORMAT is omitted, then default format will be used.
 
-Examples:
+!!! example
 
-`datetime\format(closeDate, 'America/New_York', 'MM/DD/YYYY')`
+    `datetime\format(closeDate, 'America/New_York', 'MM/DD/YYYY')`
 
-`datetime\format(dateStart, 'America/New_York', 'MM/DD/YYYY hh:mma')`
+    `datetime\format(dateStart, 'America/New_York', 'MM/DD/YYYY hh:mma')`
 
-`datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
+    `datetime\format(dateStart, 'Europe/Amsterdam', 'DD/MM/YYYY HH:mm')`
 
 ## datetime\date
 
@@ -95,9 +95,9 @@ Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'yea
 
 Adds MINUTES to datetime VALUE. MINUTES can be negative. Returns a modified STRING value.
 
-Example:
+!!! example
 
-`$modifiedValue = datetime\addMinutes('2021-01-01 00:00', 10)`
+    `$modifiedValue = datetime\addMinutes('2021-01-01 00:00', 10)`
 
 ## datetime\addHours
 
@@ -111,7 +111,9 @@ Adds HOURS to datetime VALUE. HOURS can be negative. Returns a modified STRING v
 
 Adds DAYS to date or datetime VALUE. DAYS can be negative.
 
-Example: `datetime\addDays(dateStart, 1)`
+!!! example
+
+    `datetime\addDays(dateStart, 1)`
 
 ## datetime\addWeeks
 
@@ -119,7 +121,9 @@ Example: `datetime\addDays(dateStart, 1)`
 
 Adds WEEKS to date or datetime VALUE. WEEKS can be negative. Returns a modified STRING value.
 
-Example: `datetime\addWeeks(dateStart, 4)`
+!!! example
+
+    `datetime\addWeeks(dateStart, 4)`
 
 ## datetime\addMonths
 
@@ -127,13 +131,17 @@ Example: `datetime\addWeeks(dateStart, 4)`
 
 Adds MONTHS to date or datetime VALUE. MONTHS can be negative. Returns a modified STRING value.
 
-Example: `datetime\addMonths(dateStart, 1)`
+!!! example
+
+    `datetime\addMonths(dateStart, 1)`
 
 ## datetime\addYears
 
 `datetime\addYears(VALUE, YEARS)`
 
-Example: `datetime\addYears(dateStart, 1)`
+!!! example
+
+    `datetime\addYears(dateStart, 1)`
 
 Adds YEARS to date or datetime VALUE. YEARS can be negative. Returns a modified STRING value.
 
@@ -146,10 +154,10 @@ Returns the closest date or datetime to VALUE based on passed arguments.
 TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. 
 IS_PAST means to find the closest in the past. If TIMEZONE is omitted, then default timezone is used.
 
-Examples:
+!!! example
 
-`datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
+    `datetime\closest(datetime\now(), 'time', '20:00')` Will return the closest datetime value in the future with 20:00 time.
 
-`datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month.
+    `datetime\closest('2017-11-20', 'date', 1, true)` Will return `2017-11-01`, the first day of the month.
 
-`datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day).
+    `datetime\closest(datetime\now(), 'dayOfWeek', 1)` Will return the next Monday (the beginning of the day).

@@ -30,15 +30,15 @@ Fetches an attribute value of a process record.
 
 ### bpm\startProcess
 
-*As of v2.5.2*
+*As of v2.5.2.*
 
 `bpm\startProcess(FLOWCHART_ID, TARGET_TYPE, TARGET_ID, [ELEMENT_ID])`
 
 Starts a process.
 
-Example:
+!!! example
 
-`bpm\startProcess('flowchart-id', 'Account', 'account-id');`
+    `bpm\startProcess('flowchart-id', 'Account', 'account-id');`
 
 ### bpm\broadcastSignal
 
@@ -47,25 +47,26 @@ Example:
 
 It can be useful to broadcast a custom signal from a worfklow rule and then catch it inside a running process. A workflow rule will perform some condition checking and only after than will broadcast a signal.
 
-#### Example (regular signal)
 
-```
-$signalName = string\concatenate(
-    'notePostedInCaseBySupportManager.',
-    entity\attribute('id')
-);
+!!! example "Example, regular signal"
 
-bpm\broadcastSignal($signalName);
-```
+    ```
+    $signalName = string\concatenate(
+        'notePostedInCaseBySupportManager.',
+        entity\attribute('id')
+    );
 
-Then it will be possible to catch the signal in a BPM process by listening to the signal `notePostedInCaseBySupportManager.{$id}`.
+    bpm\broadcastSignal($signalName);
+    ```
 
-#### Example (object signal)
+    Then it will be possible to catch the signal in a BPM process by listening to the signal `notePostedInCaseBySupportManager.{$id}`.
 
-Workflow on Quote Item broadcasts a signal when amount is changed.
+!!! example "Example, object signal"
 
-```
-bpm\broadcastSignal('@quoteItemIsChanged', 'Quote', entity\attribute('quoteId'));
-```
+    Workflow on Quote Item broadcasts a signal when amount is changed.
 
-Then it will be possible to catch the signal by a workflow. It can be useful for situations when you need to recalculate something when a related record is changed.
+    ```
+    bpm\broadcastSignal('@quoteItemIsChanged', 'Quote', entity\attribute('quoteId'));
+    ```
+
+    Then it will be possible to catch the signal by a workflow. It can be useful for situations when you need to recalculate something when a related record is changed.

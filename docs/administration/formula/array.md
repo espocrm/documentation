@@ -21,19 +21,24 @@ Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields
 
 Adds one or more elements to the end of an array and returns the new array.
 
-Important: An array argument is not passed by reference. You need to re-assign the array to a function result.
 
-Example:
+!!! warning
 
-```
-$list = array\push($list, 'test');
-```
+    An array argument is not passed by reference. You need to re-assign the array to a function result.
 
-Example (adding values to a multi-enum field):
+!!! example
 
-```
-someMultiEnumField = array\push(someMultiEnumField, 'New Value 1', 'New Value 2');
-```
+    ```
+    $list = array\push($list, 'test');
+    ```
+
+!!! example
+
+    Adding values to a multi-enum field.
+
+    ```
+    someMultiEnumField = array\push(someMultiEnumField, 'New Value 1', 'New Value 2');
+    ```
 
 ## array\length
 
@@ -41,11 +46,13 @@ someMultiEnumField = array\push(someMultiEnumField, 'New Value 1', 'New Value 2'
 
 Returns the number of elements in LIST.
 
-Example (a number of items in multi-enum field):
+!!! example
 
-```
-$number = array\length(someMultiEnumField);
-```
+    A number of items in multi-enum field.
+
+    ```
+    $number = array\length(someMultiEnumField);
+    ```
 
 ## array\at
 
@@ -59,11 +66,11 @@ Returns a value by INDEX.
 
 Joins array elements with a string separator. Returns a string. (as of v6.1.3)
 
-Example:
+!!! example
 
-```
-$string = array\join($array, $separator);
-```
+    ```
+    $string = array\join($array, $separator);
+    ```
 
 ## array\indexOf
 
@@ -71,11 +78,11 @@ $string = array\join($array, $separator);
 
 Returns a position of the ELEMENT in the LIST. Returns `null` if the ELEMENT not in the LIST. (as of v7.1)
 
-Example:
+!!! example
 
-```
-$index = array\indexOf($idList, $someId);
-```
+    ```
+    $index = array\indexOf($idList, $someId);
+    ```
 
 ## array\removeAt
 
@@ -83,11 +90,11 @@ $index = array\indexOf($idList, $someId);
 
 Removes an element by the INDEX and returns a new array. (as of v7.1)
 
-Example:
+!!! example
 
-```
-$newArray = array\removeAt($array, $index);
-```
+    ```
+    $newArray = array\removeAt($array, $index);
+    ```
 
 ## array\unique
 
@@ -95,8 +102,8 @@ $newArray = array\removeAt($array, $index);
 
 Removes duplicates in the LIST and returns a new array. (as of v7.1)
 
-Example:
+!!! example
 
-```
-$newArray = array\unique($array);
-```
+    ```
+    $newArray = array\unique($array);
+    ```

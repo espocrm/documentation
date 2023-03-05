@@ -19,11 +19,11 @@
 
 Check whether a record with specified criteria exists.
 
-Examples:
+!!! example
 
-`record\exists('Lead', 'emailAddress=', fromAddress)`
+    `record\exists('Lead', 'emailAddress=', fromAddress)`
 
-`record\exists('Lead', 'status=', list('Assigned', 'In Process'))`
+    `record\exists('Lead', 'status=', list('Assigned', 'In Process'))`
 
 ## record\count
 
@@ -35,15 +35,15 @@ Returns a count of records with specified criteria.
 
 Returns a count of records with an optional FILTER applied. More [info](../formula.md#filter).
 
-Examples:
+!!! example
 
-`record\count('Opportunity', 'accountId=', id, 'stage=', 'Closed Won')`
+    `record\count('Opportunity', 'accountId=', id, 'stage=', 'Closed Won')`
 
-`record\count('Opportunity', 'amountConverted>', 1000)`
+    `record\count('Opportunity', 'amountConverted>', 1000)`
 
-`record\count('Opportunity', 'open')`
+    `record\count('Opportunity', 'open')`
 
-`record\count('Lead', 'status=', list('Assigned', 'In Process'))`
+    `record\count('Lead', 'status=', list('Assigned', 'In Process'))`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More [info](../formula.md#filter).
@@ -56,11 +56,11 @@ Returns a first found ID of a record that matches specific criteria.
 
 `record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a record with an optional FILTER applied.
 
-Examples:
+!!! example
 
-`record\findOne('Opportunity', 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
+    `record\findOne('Opportunity', 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
 
-`record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
+    `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More [info](../formula.md#filter).
@@ -77,11 +77,11 @@ Returns a first found ID of a related record with an optional FILTER applied.
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
-Examples:
+!!! example
 
-`record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'stage=', 'Closed Won')`
+    `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'stage=', 'Closed Won')`
 
-`record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
+    `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More [info](../formula.md#filter).
@@ -98,11 +98,11 @@ Returns an array of IDs of a related record with an optional FILTER applied.
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
-Examples:
+!!! example
 
-`record\findRelatedMany('Account', accountId, 'oppotunities', 10, 'createdAt', 'desc', 'stage=', 'Closed Won')`
+    `record\findRelatedMany('Account', accountId, 'oppotunities', 10, 'createdAt', 'desc', 'stage=', 'Closed Won')`
 
-`record\findRelatedOne('Account', accountId, 'oppotunities', 3, 'createdAt', 'desc', 'open')`
+    `record\findRelatedOne('Account', accountId, 'oppotunities', 3, 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More [info](../formula.md#filter).
 
@@ -120,11 +120,11 @@ record\relate('Email', $emailId, 'teams', $ids);
 
 Returns an attribute value of a specific record.
 
-Examples:
+!!! example
 
-`record\attribute('Opportunity', $opportunityId, 'amountConverted')`
+    `record\attribute('Opportunity', $opportunityId, 'amountConverted')`
 
-`record\attribute('Opportunity', $opportunityId, 'teamsIds')`
+    `record\attribute('Opportunity', $opportunityId, 'teamsIds')`
 
 By utilizing this function along with *record\findOne*, it's possible to fetch attribute values of any record in the system.
 
@@ -138,11 +138,11 @@ Relates two records.
 
 Links a record with multiple records.
 
-Examples:
+!!! example
 
-`record\relate('Account', $accountId, 'opportunities', $opportunityId)`
+    `record\relate('Account', $accountId, 'opportunities', $opportunityId)`
 
-`record\relate('Account', $accountId, 'tasks', list('id1', 'id2'))`
+    `record\relate('Account', $accountId, 'tasks', list('id1', 'id2'))`
 
 Note: It won't work in *Before save script* when creating a new record, because the record doesn't exist yet when formula is processed.
 
@@ -152,9 +152,9 @@ Note: It won't work in *Before save script* when creating a new record, because 
 
 Unlinks two records.
 
-Example:
+!!! example
 
-`record\unrelate('Account', $accountId, 'opportunities', $opportunityId)`
+    `record\unrelate('Account', $accountId, 'opportunities', $opportunityId)`
 
 ## record\create
 
@@ -162,9 +162,9 @@ Example:
 
 Creates a new record of entity type with attributes specified as key-value pairs. Returns id of the created record, or NULL if failure.
 
-Examples:
+!!! example
 
-`$id = record\create('Meeting', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
+    `$id = record\create('Meeting', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
 
 ## record\update
 
@@ -172,9 +172,9 @@ Examples:
 
 Updates an existing record with attributes specified as key-value pairs. Returns TRUE if success, FALSE if failure.
 
-Examples:
+!!! example
 
-`record\update('Meeting', 'SOME-MEETING-ID', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
+    `record\update('Meeting', 'SOME-MEETING-ID', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
 
 It will update the meeting with ID `SOME-MEETING-ID`, and will set `emailAddress = 'SOME@ADDRESS.com'`, `assignedUserId = 'SOME-USER-ID'`.
 
@@ -184,13 +184,13 @@ It will update the meeting with ID `SOME-MEETING-ID`, and will set `emailAddress
 
 Returns a relation column.
 
-Example:
+!!! example
 
-`record\relationColumn('Account', $accountId, 'contacts', $contactId, 'role')`
+    `record\relationColumn('Account', $accountId, 'contacts', $contactId, 'role')`
 
-Example (condition checking position in team):
+!!! example "Example: Condition checking position in team"
 
-`record\relationColumn('User', $someUserId, 'teams', 'some-team-id, 'role') == 'Support Manager'`
+    `record\relationColumn('User', $someUserId, 'teams', 'some-team-id, 'role') == 'Support Manager'`
 
 
 ## record\updateRelationColumn
@@ -199,6 +199,6 @@ Example (condition checking position in team):
 
 Updates a relation column.
 
-Example:
+!!! example
 
-`record\updateRelationColumn('Account', $accountId, 'contacts', $contactId, 'role', 'CEO')`
+    `record\updateRelationColumn('Account', $accountId, 'contacts', $contactId, 'role', 'CEO')`

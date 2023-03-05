@@ -14,9 +14,13 @@ php command.php upgrade
 
 This will check the next available version, download it and install. Once the upgrade is complete, it will prompt to run the command again, if a newer version is available.
 
-Note: Upgrading process may take a while. Do not close the terminal until it's finished.
+!!! note
 
-Note: If the next Espo version requires a higher PHP version, upgrade won't be processed, a message will be displayed. 
+    Upgrading process may take a while. Do not close the terminal until it's finished.
+
+!!! note
+
+    If the next Espo version requires a higher PHP version, upgrade won't be processed, a message will be displayed.
 
 ## Recommendations
 
@@ -45,7 +49,9 @@ php command.php upgrade -y --file="EspoCRM-upgrade.zip"
 
 ## Legacy way to upgrade
 
-For EspoCRM versions lower than 5.6.0. **Not recommended** for versions greater than 5.6.0.
+!!! warning
+
+    For EspoCRM versions lower than 5.6.0. Not recommended for versions greater than 5.6.0.
 
 Execute the following command from the EspoCRM root directory:
 
@@ -55,7 +61,9 @@ php upgrade.php /path/to/upgrade/package.zip
 
 ## Upgrade from UI
 
-This is **not recommended** way to upgrade. It may cause problems as the upgrade will be processed in a single web server process.
+!!! warning
+
+    This is not recommended way to upgrade. It may cause problems as the upgrade will be processed in a single web server process.
 
 #### Step 1. Check your current version
 

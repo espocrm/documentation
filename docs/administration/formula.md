@@ -13,7 +13,9 @@ In the Entity Manager, it's possible to define a script (formula) for a specific
 
 To edit the formula script for a specific entity type, follow Administration > Entity Manager > a needed entity type > Formula.
 
-Note: It can be reasonable to set fields that are supposed to be calculated by formula as read-only (at Entity Manager > Fields).
+!!! note
+
+    It can be reasonable to set fields that are supposed to be calculated by formula as read-only (at Entity Manager > Fields).
 
 The admin can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
@@ -64,17 +66,17 @@ There are 6 language elements in formula script:
 
 Separated expressions must be delimited by the character `;`.
 
-Example:
+!!! example
 
-```
-string\concatenate(name, ' + ', $test);
-```
-where:
+    ```
+    string\concatenate(name, ' + ', $test);
+    ```
+    where:
 
-* `string\concatenate` – a function
-* `name` – an attribute (of a target entity, to which formula is applied)
-* `' + '` – a value (of string type)
-* `$test` – a variable (supposed to be declared somewhere above)
+    * `string\concatenate` – a function
+    * `name` – an attribute (of a target entity, to which formula is applied)
+    * `' + '` – a value (of string type)
+    * `$test` – a variable (supposed to be declared somewhere above)
 
 Available scalar types:
 
@@ -361,7 +363,7 @@ Out-of-the-box functions are listed below.
 
 ## Variables
 
-Variables starets with the dollar sign.
+Variables starts with the dollar sign.
 ```
 // Assign the value to the variable.
 $someVariableName = 'Test';
@@ -443,38 +445,45 @@ Important: Strict comparison is used. If you compare int `1` to float `1.0` with
 
 ## Examples
 
-```
-ifThen(
-  entity\isNew() && assignedUserId == null,
-  assignedUserId = 'managerId'; status = 'Assigned'
-);
+!!! example
 
-someDateField = ifThen(
-  entity\isNew() && closeDate == null && stage == 'Closed Won',
-  datetime\today()
-);
-```
+    ```
+    ifThen(
+      entity\isNew() && assignedUserId == null,
+      assignedUserId = 'managerId'; status = 'Assigned'
+    );
 
-```
-amount = product.listPrice - (product.listPriceConverted * discount / 100.0);
-amountCurrency = 'USD';
-```
+    someDateField = ifThen(
+      entity\isNew() && closeDate == null && stage == 'Closed Won',
+      datetime\today()
+    );
+    ```
 
-```
-someField = string\concatenate(firstName, " '", middleName, "' ", lastName);
-```
+!!! example
 
-```
-ifThenElse(
-  entity\isNew() && status == 'Planned' && dateStart == null,
-  dateStart = datetime\addDays(datetime\now(), 10),
-  ifThen(
-    status == 'Held' && dateStart == null,
-    dateStart = datetime\now()
-  )
-);
+    ```
+    amount = product.listPrice - (product.listPriceConverted * discount / 100.0);
+    amountCurrency = 'USD';
+    ```
 
-```
+!!! example
+
+    ```
+    someField = string\concatenate(firstName, " '", middleName, "' ", lastName);
+    ```
+
+!!! example
+
+    ```
+    ifThenElse(
+      entity\isNew() && status == 'Planned' && dateStart == null,
+      dateStart = datetime\addDays(datetime\now(), 10),
+      ifThen(
+        status == 'Held' && dateStart == null,
+        dateStart = datetime\now()
+      )
+    );
+    ```
 
 ## Explanation
 

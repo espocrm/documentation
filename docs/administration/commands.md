@@ -82,12 +82,12 @@ php command.php run-job JobName
 
 where *JobName* is an internal name of the job you want to run.
 
-Examples:
+!!! example
 
-```
-php command.php run-job Cleanup
-php command.php run-job ProcessMassEmail
-```
+    ```
+    php command.php run-job Cleanup
+    php command.php run-job ProcessMassEmail
+    ```
 
 ## Version
 
