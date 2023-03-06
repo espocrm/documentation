@@ -228,6 +228,7 @@ nav:
               - 'regExpPatterns': 'development/metadata/app-reg-exp-patterns.md'
               - 'relationships': 'development/metadata/app-relationships.md'
               - 'scheduledJobs': 'development/metadata/app-scheduled-jobs.md'
+              - 'select': 'development/metadata/app-select.md'
               - 'smsProviders': 'development/metadata/app-sms-prividers.md'
               - 'templateHelpers': 'development/metadata/app-template-helpers.md'
               - 'templates': 'development/metadata/app-templates.md'
