@@ -69,6 +69,7 @@ In this article:
   * [regExpPatterns](metadata/app-reg-exp-patterns.md)
   * [relationships](metadata/app-relationships.md)
   * [scheduledJobs](metadata/app-scheduled-jobs.md)
+  * [select](metadata/app-select.md)
   * [smsProviders](metadata/app-sms-prividers.md)
   * [templateHelpers](metadata/app-template-helpers.md)
   * [templates](metadata/app-templates.md)
