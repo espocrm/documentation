@@ -49,9 +49,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             );
         },
 
-        controlFields: function (model, value, options) {            
-
-        
+        controlFields: function (model, value, options) {        
             // if assigned user is not empty
             if (this.model.get('assignedUserId')) {                
                 this.recordView.showField('sicCode');
