@@ -30,7 +30,7 @@ Function names should be in UPPER_CASE. You need to append the **trailing colon*
 
 Functions:
 
-* [Flow control](#flow-control)
+* [Conditional](#conditional)
 * [Comparison](#comparison)
 * [Date & time](#date-time)
 * [String](#string)
@@ -38,11 +38,18 @@ Functions:
 * [Logical](#logical)
 
 
-### Flow control
+### Conditional
 
 #### IF
 
 E.g. `IF:(a, '1', '0')` – if 'a' is true then return '1'; return '0' otherwise.
+
+#### SWITCH
+
+*As of v7.4.*
+
+'CASE WHEN ... THEN ... ELSE ... END'. Even arguments define 'WHEN' conditions, following odd arguments
+define 'THEN' values. The last unmatched argument defines 'ELSE'.
 
 ### Comparison
 
