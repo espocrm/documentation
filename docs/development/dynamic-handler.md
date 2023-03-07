@@ -32,10 +32,25 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
                 'change:assignedUserId',
                 (model, value, options) => this.controlFields(model, value, options)
             );
+            
+            this.recordView.listenTo(
+                this.model,
+                'change:status',
+                (model, value, options) => {
+                    if (!options.ui) {
+                        // Skip if the change was initiated not by a user interaction.
+                        return;
+                    }
+                    
+                    if (value === 'SomeStatus') {
+                        setTimeout(() => this.model.set('someField', 'someValue'), 1);
+                    }
+                }
+            );
         },
 
-        controlFields: function (model, value, options) {
-            // options.ui will be set to true if the change was initiated by a user interaction
+        controlFields: function (model, value, options) {            
+
         
             // if assigned user is not empty
             if (this.model.get('assignedUserId')) {                
