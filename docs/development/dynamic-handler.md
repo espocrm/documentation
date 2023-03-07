@@ -26,13 +26,14 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
         init: function () {
             this.controlFields();
 
-            // invoke controlFields method every time assignedUserId gets changed
+            // Invoke controlFields method every time assignedUserId gets changed.
             this.recordView.listenTo(
                 this.model,
                 'change:assignedUserId',
-                (model, value, options) => this.controlFields(model, value, options)
+                () => this.controlFields()
             );
             
+            // Changing another attribute on status change.
             this.recordView.listenTo(
                 this.model,
                 'change:status',
@@ -50,7 +51,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
             );
         },
 
-        controlFields: function (model, value, options) {        
+        controlFields: function () {        
             // if assigned user is not empty
             if (this.model.get('assignedUserId')) {                
                 this.recordView.showField('sicCode');
