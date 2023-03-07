@@ -42,7 +42,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
                         return;
                     }
                     
-                    if (value === 'SomeStatus') {
+                    if (value === 'Some Status') {
                         setTimeout(() => this.model.set('someField', 'someValue'), 1);
                     }
                 }
