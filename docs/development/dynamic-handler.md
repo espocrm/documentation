@@ -39,6 +39,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
                 (model, value, options) => {
                     if (!options.ui) {
                         // Skip if the change was initiated not by a user interaction.
+                        // Important.
                         return;
                     }
                     
