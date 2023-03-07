@@ -36,7 +36,7 @@ Example:
 
 Defines availability of the config parameter in the front-end. Possible values:
 
-* `default` – available for logged-in users (applied by default);
+* `default` – available for logged-in users (applied by default) (as of v7.4);
 * `global` – available even before logging in (value is exposed to the world);
 * `system` – never available;
 * `internal` – never available for read, admin can write (useful for passwords, secrets) (as of v7.3);
