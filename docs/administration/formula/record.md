@@ -10,6 +10,7 @@
 * [record\unrelate](#recordunrelate)
 * [record\create](#recordcreate)
 * [record\update](#recordupdate)
+* [record\delete](#recorddelete)
 * [record\relationColumn](#recordrelationcolumn)
 * [record\updateRelationColumn](#recordupdaterelationcolumn)
 
@@ -170,13 +171,21 @@ Creates a new record of entity type with attributes specified as key-value pairs
 
 `record\update(ENTITY_TYPE, ID, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
 
-Updates an existing record with attributes specified as key-value pairs. Returns TRUE if success, FALSE if failure.
+Updates an existing record with attributes specified as key-value pairs.
 
 !!! example
 
     `record\update('Meeting', 'SOME-MEETING-ID', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
 
 It will update the meeting with ID `SOME-MEETING-ID`, and will set `emailAddress = 'SOME@ADDRESS.com'`, `assignedUserId = 'SOME-USER-ID'`.
+
+## record\delete
+
+`record\delete(ENTITY_TYPE, ID)`
+
+*As of v7.4.*
+
+Removes a record.
 
 ## record\relationColumn
 
