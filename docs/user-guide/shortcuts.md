@@ -2,6 +2,10 @@
 
 *As of v7.2.*
 
+!!! note
+
+    On Mac OS, the CMD key (⌘) is the equivalent of the Ctrl.
+
 ## Record list
 
 * `Ctrl + Enter` –  apply search filter;
