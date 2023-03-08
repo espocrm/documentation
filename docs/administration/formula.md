@@ -280,6 +280,7 @@ Out-of-the-box functions are listed below.
 * [record\unrelate](formula/record.md#recordunrelate)
 * [record\create](formula/record.md#recordcreate)
 * [record\update](formula/record.md#recordupdate)
+* [record\delete](formula/record.md#recorddelete)
 * [record\relationColumn](formula/record.md#recordrelationcolumn)
 * [record\updateRelationColumn](formula/record.md#recordupdaterelationcolumn)
 
