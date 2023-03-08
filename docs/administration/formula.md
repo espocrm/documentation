@@ -209,6 +209,7 @@ Out-of-the-box functions are listed below.
 * [string\pad](formula/string.md#stringpad)
 * [string\match](formula/string.md#stringmatch)
 * [string\matchAll](formula/string.md#stringmatchall)
+* [string\matchExtract](formula/string.md#stringmatchextract)
 * [string\replace](formula/string.md#stringreplace)
 * [string\split](formula/string.md#stringsplit)
 
