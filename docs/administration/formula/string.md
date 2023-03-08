@@ -183,7 +183,7 @@ Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns
 
 *As of v7.4.*
 
-Returns an array of substrings that match arenthesized subpatterns. Returns NULL if no matches are found.
+Returns an array of substrings that match parenthesized sub-patterns. Returns NULL if no matches are found.
 
 !!! example
 
