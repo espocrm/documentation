@@ -12,6 +12,7 @@
 * [string\pad](#stringpad)
 * [string\match](#stringmatch)
 * [string\matchAll](#stringmatchall)
+* [string\matchExtract](#stringmatchextract)
 * [string\replace](#stringreplace)
 * [string\split](#stringsplit)
 
@@ -175,6 +176,24 @@ Retrieves all results of matching a STRING against a REGULAR_EXPRESSION. Returns
     ```
 
     Will return an array `['{token1}', '{token2}']`.
+    
+## string\matchExtract
+
+`string\matchExtract(STRING, REGULAR_EXPRESSION)`
+
+*As of v7.4.*
+
+Returns an array of substrings that match arenthesized subpatterns. Returns NULL if no matches are found.
+
+!!! example
+
+    ```
+    string\matchExtract('values: 1000 2000', '/values\: (.*) (.*)$/')
+    ```
+
+    Will return `['1000', '2000']`.
+
+The slash character `/` defines the start and the end of a REGULAR_EXPRESSION.
 
 ## string\replace
 
