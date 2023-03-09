@@ -8,7 +8,7 @@ Application languages.
 
 *string*
 
-A list of available languages available in the application. The name format: `en_US`.
+A list of languages available in the application. The name format: `en_US`.
 
 ## aclDependencies
 
