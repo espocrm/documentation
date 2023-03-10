@@ -24,6 +24,8 @@ Dynamic logic can control:
 
 Conditions are configured through user interface, no coding required.
 
+![Condition builder](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/dynamic-logic/1.png)
+
 !!! note
 
     When a condition for a field checks the value of the same field, it may cause side effects.
@@ -38,8 +40,6 @@ Conditions are configured through user interface, no coding required.
 
     In some cases it may be reasonable to disable the inline-edit functionallity for a specific field as it may
     interfere with the dynamic logic.
-
-![Condition builder](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/dynamic-logic/1.png)
 
 ## Panels
 
