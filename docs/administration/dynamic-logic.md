@@ -3,7 +3,7 @@
 ## Fields
 
 Dynamic behavior of forms can be achieved by utilizing Dynamic Logic feature. Dynamic Logic parameters are available
-for every field. Parameters are available in Entity Manager when you edit or create a field.
+for every field. Parameters are available in the Entity Manager when you edit or create a field.
 
 Dynamic Logic allows to define conditions making certain fields visible, required or read-only. Conditions will be
 checked automatically when data in the form is changed.
@@ -40,6 +40,12 @@ Conditions are configured through user interface, no coding required.
 
     In some cases it may be reasonable to disable the inline-edit functionallity for a specific field as it may
     interfere with the dynamic logic.
+    
+!!! note
+
+    Dynamic logic operates fields on the form, it has no effect on buttons and menu items. E.g. for Tasks, if you define a rule
+    that makes some field required the Status field is 'Complete', it won't disable the ability to complete tasks by clicking
+    *Complete* buttons and menu actions thare are available in a few places in the UI.
 
 ## Panels
 
