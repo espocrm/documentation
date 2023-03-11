@@ -44,8 +44,8 @@ Conditions are configured through user interface, no coding required.
 !!! note
 
     Dynamic logic operates fields on the form, it has no effect on buttons and menu items. E.g. for Tasks, if you define a rule
-    that makes some field required the Status field is 'Complete', it won't disable the ability to complete tasks by clicking
-    *Complete* buttons and menu actions thare are available in a few places in the UI.
+    that makes some field required when the Status field is 'Complete', it won't disable the ability to complete a task
+    by clicking *Complete* buttons and menu actions which are available in a few places in the UI.
 
 ## Panels
 
