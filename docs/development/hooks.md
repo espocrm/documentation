@@ -14,9 +14,14 @@ Common hooks for all entity types (called from the ORM repository class):
 
 ## Creating hook
 
-* create a file `custom/Espo/Custom/Hooks/{EntityName}/{HookName}.php` (you can also use a module directory);
+* create a file `custom/Espo/Custom/Hooks/{EntityType}/{HookName}.php` (you can also use a module directory);
 * declare a hook action method with a name the same as a hook name (e.g. *beforeSave*);
 * clear Cache in Administration.
+
+!!! note
+
+    {HookName} must be unique within {EntityType}. If there are two hooks (in different modules) with the same name
+    for the same entity type, only one will be applied (honoring order).
 
 ## Hook order
 
