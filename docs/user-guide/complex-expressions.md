@@ -51,6 +51,8 @@ E.g. `IF:(a, '1', '0')` – if 'a' is true then return '1'; return '0' otherwise
 'CASE WHEN ... THEN ... ELSE ... END'. Even arguments define 'WHEN' conditions, following odd arguments
 define 'THEN' values. The last unmatched argument defines 'ELSE'.
 
+E.g. `SWITCH:(EQUAL:(monthNumber, 1), 'Jan', EQUAL:(monthNumber, 2), 'Feb', EQUAL:(monthNumber, 3), 'Mar')`.
+
 ### Comparison
 
 #### LIKE
