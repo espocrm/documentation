@@ -16,7 +16,7 @@ VoIP Integration extension supports* the following Asterisk servers:
 * Asterisk 13
 * Asterisk 12
 * Asterisk 11
-* Asterisk 10.
+* Asterisk 10
 * Asterisk 1.8
 
 \* these servers were tested with VoIP Integration extension.
