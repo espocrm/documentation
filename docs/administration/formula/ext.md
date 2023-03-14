@@ -12,8 +12,8 @@
 
 `ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
 
-Finds an account by an email address. If no full match found, then tries to find by domain name. Free email provider domains are ignored. 
-Returns ID or null.
+Finds an account by an email address. If no full match found, then tries to find by domain name.
+Free email provider domains are ignored. Returns ID or null.
 
 ## ext\currency\convert
 
@@ -22,7 +22,7 @@ Returns ID or null.
 *As of v7.4.*
 
 Converts a currency amount from one currency code (FROM_CODE) to another currency code (TO_CODE). If TO_CODE is omitted, then
-the system default currency is used. Returns amount represented as string.
+the system default currency is used. Returns an amount represented as string.
 
 !!! example
 
