@@ -20,7 +20,20 @@ Fetches an attribute value of a target record.
 
 `bpm\createdEntity\attribute(ALIAS_ID, ATTRIBUTE)`
 
-Fetches an attribute value of a record created within a process. ALIAS_ID can be obtained from the detail view of Task, that has an action creating a record.
+Fetches an attribute value of a record created within a process. 
+
+Available records:
+
+* records created within *Task* activities;
+* user tasks;
+* sent messages.
+
+
+ALIAS_ID can be obtained:
+
+* from the detail view of a *Task* that has an action that creates a record;
+* from the detail view of a *User Task* (ID field);
+* from the detail view of a *Send Message Task* (ID field).
 
 ### bpm\processEntity\attribute
 
