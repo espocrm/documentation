@@ -35,6 +35,12 @@ ALIAS_ID can be obtained:
 * from the detail view of a *User Task* (ID field);
 * from the detail view of a *Send Message Task* (ID field).
 
+!!! example
+
+    ```
+    $resolutionNote = bpm\createdEntity\attribute('e6cmwnd894', 'resolutionNote');
+    ```
+
 ### bpm\processEntity\attribute
 
 `bpm\processEntity\attribute(ATTRIBUTE)`
