@@ -60,7 +60,7 @@ CONSEQUENT can consist of mutliple commands separated by the semicolon `;`.
 !!! example
 
     ```
-    ifThenElse(
+    ifThen(
         $someVariable == 'someValue', // if condition is true
         $anotherVariable = 1, // do this
     )
@@ -68,7 +68,7 @@ CONSEQUENT can consist of mutliple commands separated by the semicolon `;`.
 
 ## list
 
-`list(VALUE-1[, ... VALUE-N])` 
+`list(VALUE-1 [, ... VALUE-N])` 
 
 Returns array. Values are passed as arguments to the function.
 
