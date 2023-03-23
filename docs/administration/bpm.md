@@ -73,6 +73,8 @@ It's possible to **manually reject or interrupt** pending and active flow nodes.
 
 It's possible to **manually start a flow from any element** of an already started process. You need to click on a specific flowchart element on the process detail view and then click the button *Start flow from here*.
 
+Ended, stopped and interrupted processes can be *reactivated* (from the dropdown next to the Edit button) (as of v2.14). After reactivation, the process does not have any active flow node. You need to manually start the flow from a specific flow node element. Ended sub-processes can be reactivated only if their parent process is active. Meaning that you might need to reactivate the parent process first.
+
 ### Self-removal
 
 You can setup BPM process to remove itself. Add *Task* > *Update Process Record*. Add in formula: `deleted = 1;`.
