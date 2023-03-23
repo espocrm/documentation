@@ -38,9 +38,10 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                 },
             ];
             
-            let title = this.options.title || ''; // passed from the parent view
+            let title = this.options.title || ''; // assuming it's passed by our parent view
 
-            this.headerHtml = this.getHelper().escapeString(title); // escape to prevent XSS
+            this.headerText = title;             
+            // this.headerHtml = this.getHelper().escapeString(title);
 
             this.formModel = new Model();
             this.formModel.name = 'None'; // dummy name
