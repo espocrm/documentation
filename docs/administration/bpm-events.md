@@ -194,6 +194,10 @@ Terminates the process and triggers an error. Error Code can be specified. Error
 
 ![Error End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
+!!! note
+
+    Uncaught errors are propagated to the parent process. As of v2.14.
+
 ### Escalation End Event
 
 Ends the flow and triggers an escalation. Escalation Code can be specified. Escalation can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
