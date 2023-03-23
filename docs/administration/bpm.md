@@ -1,6 +1,8 @@
 # Business Process Management
 
-Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
+The Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM. It's an engine executing business processes described in BPMN 2.0 standard. It's a no-code/low-code tool.
+
+The BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/) extension.
 
 ![BPM example](../_static/images/administration/bpm/bpm-1.png)
 
