@@ -34,6 +34,9 @@ nav:
             - 'Apache': 'administration/apache-server-configuration.md'
             - 'Nginx': 'administration/nginx-server-configuration.md'
             - 'IIS': 'administration/iis-server-configuration.md'
+        - 'Docker':
+            - 'Installation': 'administration/docker/installation.md'
+            - 'Traefik': 'administration/docker/traefik.md'
         - 'System':
             - 'Installation': 'administration/installation.md'
             - 'Installation by script': 'administration/installation-by-script.md'
