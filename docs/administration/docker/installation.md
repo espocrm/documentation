@@ -4,10 +4,10 @@ In this article:
 
 - [Install EspoCRM with Docker](#install-espocrm-with-docker)
 - [Install EspoCRM with Docker Compose](#install-espocrm-with-docker-compose)
-- [Enter the EspoCRM container](#enter-the-espocrm-container)
-- [Upgrading EspoCRM in Docker Compose environment](#upgrading-espocrm-in-docker-compose-environment)
-- [Shutdown and cleanup in Docker Compose environment](#shutdown-and-cleanup-in-docker-compose-environment)
 - [Install EspoCRM with Traefik](#install-espocrm-with-traefik)
+- [Enter the EspoCRM container](#enter-the-espocrm-container)
+- [Upgrading](#upgrading-espocrm-in-docker-compose-environment)
+- [Shutdown and cleanup](#shutdown-and-cleanup-in-docker-compose-environment)
 
 ## Install EspoCRM with Docker
 
@@ -137,7 +137,11 @@ More about *Installation Enviroments* you can find [here](#installation-environm
 $ docker compose up -d
 ```
 
-5. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open http://localhost:80 in a web browser.
+5. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open http://localhost:8080 in a web browser.
+
+### Install EspoCRM with Traefik
+
+You can read the instructions for installing EspoCRM in conjunction with Traefik in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/traefik/).
 
 ### Upgrading EspoCRM in Docker Compose environment
 
@@ -157,10 +161,6 @@ Within a few minutes the container will be upgraded to the latest version.
 The `docker compose down` command removes the containers and default network, but preserves EspoCRM database.
 
 The `docker compose down --volumes` removes the containers, default network, and the EspoCRM database.
-
-### Install EspoCRM with Traefik
-
-You can read the instructions for installing EspoCRM in conjunction with Traefik in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/traefik/).
 
 ### Enter the EspoCRM container
 
