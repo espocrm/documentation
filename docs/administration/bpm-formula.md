@@ -6,9 +6,11 @@ Formula script can be utilized in conditions, script tasks, various task actions
 
 * [bpm\targetEntity\attribute](##bpmtargetentityattribute)
 * [bpm\createdEntity\attribute](#bpmcreatedentityattribute)
-* [bpm\processEntity\attribute](#bpmprocessEntityattribute)
+* [bpm\processEntity\attribute](#bpmprocessentityattribute)
 * [bpm\startProcess](#bpmstartprocess)
 * [bpm\broadcastSignal](#bpmbroadcastsignal)
+* [bpm\caughtErrorCode](#bpmcaughterrorcode)
+* [bpm\caughtErrorMessage](#bpmcaughterrormessage)
 
 ### bpm\targetEntity\attribute
 
