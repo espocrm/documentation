@@ -87,3 +87,18 @@ It can be useful to broadcast a custom signal from a worfklow rule and then catc
     ```
 
     Then it will be possible to catch the signal by a workflow. It can be useful for situations when you need to recalculate something when a related record is changed.
+    
+    
+### bpm\caughtErrorCode
+
+*As of v2.14.*
+
+Returns the code of a caught error. Error codes are of the string type. Can be used in after Catch Error Events.
+
+
+### bpm\caughtErrorMessage
+
+*As of v2.14.*
+
+Returns the message of a caught exception. Can be used in after Catch Error Events.
+
