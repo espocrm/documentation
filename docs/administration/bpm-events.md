@@ -96,6 +96,8 @@ It can't be non interrupting, because a process gets terminated once an error ev
 
 It's possible to view an error code and message in the flow log (as of v2.14).
 
+The error code and the exception message can be obtained further in the flow with formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage` (as of v2.14).
+
 ### Escalation Start Event
 
 Can only be used to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
@@ -242,6 +244,8 @@ If Error Code is specified, it will be triggered only when an error with the sam
 ![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
 It's possible to view an error code and message in the flow log (as of v2.14).
+
+The error code and the exception message can be obtained further in the flow with formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage` (as of v2.14).
 
 !!! note
 
