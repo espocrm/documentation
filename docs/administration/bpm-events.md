@@ -94,6 +94,8 @@ It can't be non interrupting, because a process gets terminated once an error ev
 
 ![Error Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-error.png)
 
+It's possible to view an error code and message in the flow log (as of v2.14).
+
 ### Escalation Start Event
 
 Can only be used to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
@@ -239,9 +241,11 @@ If Error Code is specified, it will be triggered only when an error with the sam
 
 ![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
+It's possible to view an error code and message in the flow log (as of v2.14).
+
 !!! note
 
-    If an error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403). Available as of v2.8.6.
+    If the error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403). As of v2.8.6.
 
 
 ### Conditional Intermediate Event (Boundary)
