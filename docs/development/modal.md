@@ -44,7 +44,7 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
             // this.headerHtml = this.getHelper().escapeString(title);
 
             this.formModel = new Model();
-            this.formModel.name = 'None'; // dummy name
+            this.formModel.name = 'None'; // dummy name, important
 
             // define fields
             this.formModel.setDefs({
