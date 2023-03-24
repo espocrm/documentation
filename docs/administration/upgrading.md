@@ -31,7 +31,7 @@ This will check the next available version, download it and install. Once the up
 5. Enable *Maintenance Mode* before upgrading (at Administration > Settings). Disable after upgrade is finished. This will prevent non-admin users accessing the application before you started upgrading.
 6. *opcache.enable_cli* parameter in PHP should be set to false (usually set to false by default).
 
-It's recommended to run upgrade either **under the webserver user** (usually *www-data*) or *root* user.
+It's recommended to run upgrade either under the webserver user (usually *www-data*) or *root* user.
 
 ## Additional parameters
 
