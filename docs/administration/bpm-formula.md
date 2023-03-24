@@ -93,12 +93,12 @@ It can be useful to broadcast a custom signal from a worfklow rule and then catc
 
 *As of v2.14.*
 
-Returns the code of a caught error. Error codes are of the string type. Can be used in after a catching Error Event.
+Returns the code of a caught error. Error codes are of the string type. Can be used after a catching Error Event.
 
 
 ### bpm\caughtErrorMessage
 
 *As of v2.14.*
 
-Returns the message of a caught exception. Can be used in after a catching Error Event.
+Returns the message of a caught exception. Can be used after a catching Error Event.
 
