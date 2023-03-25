@@ -100,8 +100,8 @@ The error code and the exception message can be obtained further in the flow wit
 
 !!! note
 
-    When an error event sub-process is defined inside a regular sub-process, it's important to re-throw the error in the end
-    of the event sub-process with the Error End Event. Otherwise, the sub-process will be hanging on unfinished. 
+    When an error event sub-process is defined inside a regular sub-process, it may be reasonable to re-throw the error in the end
+    of the event sub-process with the Error End Event. It will propagate the error to the top level.
 
 ### Escalation Start Event
 
