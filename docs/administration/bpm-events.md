@@ -9,6 +9,7 @@ Events are displayed on a flowchart as circles.
   * [Signal](#signal-start-event)
   * [Error](#error-start-event)
   * [Escalation](#escalation-start-event)
+  * [Compensation](#compensation-start-event)
 * Intermediate Events
   * [Conditional (catching)](#conditional-intermediate-event-catching)
   * [Timer (catching)](#timer-intermediate-event-catching)
@@ -105,11 +106,25 @@ The error code and the exception message can be obtained further in the flow wit
 
 ### Escalation Start Event
 
-Can only be used to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
+Can be used only to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
 
 If Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If Escalation Code is empty, it will catch any escalation.
 
 ![Escalation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-escalation.png)
+
+### Compensation Start Event
+
+*As of v2.14.*
+
+Starts a sub-process compensation handler. Can be used only in an event sub-process.
+
+When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that actvity, it will checks whether the sub-process contans an event sub-process with the compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
+
+![Compensation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-compensation.png)
+
+!!! note
+
+    Actual only when the event sub-process is in a regular sub-process.
 
 ----
 
