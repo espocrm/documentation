@@ -30,6 +30,7 @@ Events are displayed on a flowchart as circles.
   * [Escalation](#escalation-intermediate-event-boundary)
   * [Signal](#signal-intermediate-event-boundary)
   * [Message](#message-intermediate-event-boundary)
+  * [Compensation](#compensation-intermediate-event-boundary)
 
 ----
 
@@ -307,3 +308,11 @@ Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be repl
 ### Message Intermediate Event (Boundary)
 
 Triggered once an email is received. It functions the same as *Message Intermediate Event (Catching)*.
+
+### Compensation Intermediate Event (Boundary)
+
+*As of v2.14.*
+
+Triggered once compensation is initiated for an activity it is attached to. Must be connected with a compensation activity (task or sub-process).
+
+![Compensation Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-compensation-boundary.png)
