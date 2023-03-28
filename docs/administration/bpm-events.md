@@ -271,7 +271,7 @@ From the event sub-process:
 
 ![Compensation End Event, event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-1.png)
 
-When the activity ID is omitted, all visible completed activites are compensated in the order reverse to their instatiation.
+When the activity ID is omitted, all visible completed activites are compensated in the order reverse to their instantiation.
 
 ----
 
