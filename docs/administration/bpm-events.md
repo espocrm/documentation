@@ -263,11 +263,11 @@ An activity is considered visible from the throwing event when:
 * It is contained in normal flow at the same level of the process/sub-process.
 * It is contained in the parent process/sub-process of an event sub-process in which the event is contained.
 
-Compensate in the same level:
+In the same level:
 
 ![Compensation End Event, same level](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-2.png)
 
-Compensate from the event sub-process:
+From the event sub-process:
 
 ![Compensation End Event, event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-1.png)
 
