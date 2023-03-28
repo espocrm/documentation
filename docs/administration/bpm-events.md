@@ -23,6 +23,7 @@ Events are displayed on a flowchart as circles.
   * [Error](#error-end-event)
   * [Escalation](#escalation-end-event)
   * [Signal](#signal-end-event)
+  * [Compensation](#compensation-end-event)
 * Boundary Events
   * [Error](#error-intermediate-event-boundary)
   * [Conditional](#conditional-intermediate-event-boundary)
@@ -248,6 +249,29 @@ If the first character of the signal name is `@`, it will broadcast an object si
     Signal name can not be empty.
 
 See [more info](bpm-signals.md) about signals.
+
+### Compensation End Event
+
+*As of v7.4.*
+
+Initiates compensation and ends the flow once compensation is completed.
+
+Can compensate a specific activity (by specifying an activity's ID, the activity ID can be obtained on the detail view of the activity) or all activities (that are visible from the event). Only completed activities (not failed or interrupted) are compensated.
+
+An activity is considered visible from the throwing event when:
+
+* It is contained in normal flow at the same level of the process/sub-process.
+* It is contained in the parent process/sub-process of an event sub-process in which the event is contained.
+
+Compensate in the same level:
+
+![Compensation End Event, same level](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-2.png)
+
+Compensate from the event sub-process:
+
+![Compensation End Event, event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-1.png)
+
+When the activity ID is omitted, all visible completed activites are compensated in the order reverse to their instatiation.
 
 ----
 
