@@ -273,6 +273,8 @@ From the event sub-process:
 
 When the activity ID is omitted, all visible completed activites are compensated in the order reverse to their instantiation.
 
+Compensation is supposed to perform undo actions when something went wrong. Usually, compensation is triggered from error handlers.
+
 ----
 
 ## Boundary Events
