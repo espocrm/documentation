@@ -126,6 +126,8 @@ When the parent process initiates compensation for the sub-process activity, if 
 !!! note
 
     Actual only when the event sub-process is inside a regular sub-process.
+    
+In case of a multi-instance sub-process, the compensation handler is processed for each completed instance of the sub-process.
 
 ----
 
