@@ -316,3 +316,12 @@ Triggered once an email is received. It functions the same as *Message Intermedi
 Triggered once compensation is initiated for an activity it is attached to. Must be connected with a compensation activity (task or sub-process).
 
 ![Compensation Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-compensation-boundary.png)
+
+!!! note
+
+    Compensation can be applied only for activities that were successfuly completed.
+
+When it's a sub-process being compensated, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use a compensation event sub-process inside the sub-process instead.
+
+In case of a multi-instance sub-process, the compensation activity is processed for each completed instance of the sub-process.
+
