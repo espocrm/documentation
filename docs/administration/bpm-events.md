@@ -17,6 +17,7 @@ Events are displayed on a flowchart as circles.
   * [Signal (throwing)](#signal-intermediate-event-throwing)
   * [Message (catching)](#message-intermediate-event-catching)
   * [Escalation (throwing)](#escalation-intermediate-event-throwing)
+  * [Compensation (throwing)](#compensation-intermediate-event-throwing)
 * End Events
   * [End](#end-event)
   * [Terminate](#terminate-end-event)
@@ -198,6 +199,16 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 
 ![Escalation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-escalation.png)
 
+
+### Compensation Intermediate Event (Throwing)
+
+*As of v7.4.*
+
+Behaves the same as the [compensation end event](#compensation-end-event) with the only difference that it continues flow exection to the next element.
+
+Can be useful to process compensations in a specific order.
+
+![Compensation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-compensation.png)
 
 ----
 
