@@ -269,10 +269,10 @@ Initiates compensation and ends the flow once compensation is completed.
 
 Can compensate a specific activity (by specifying an activity's ID, the activity ID can be obtained on the detail view of the activity) or all activities (that are visible from the event). Only completed activities (not failed or interrupted) are compensated.
 
-An activity is considered visible from the throwing event when:
+An activity is considered visible from the throwing Event when:
 
 * It is contained in normal flow at the same level of the process/sub-process.
-* It is contained in the parent process/sub-process of an event sub-process in which the event is contained.
+* It is contained in the parent process/sub-process of an event sub-process in which the Event is contained.
 
 In the same level:
 
