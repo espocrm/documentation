@@ -124,7 +124,7 @@ When the parent process initiates compensation for the sub-process activity, if 
 
 !!! note
 
-    Actual only when the event sub-process is in a regular sub-process.
+    Actual only when the event sub-process is inside a regular sub-process.
 
 ----
 
