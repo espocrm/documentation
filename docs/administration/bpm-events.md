@@ -321,7 +321,7 @@ Triggered once compensation is initiated for an activity it is attached to. Must
 
     Compensation can be applied only for activities that were successfuly completed.
 
-When it's a sub-process being compensated, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use a compensation event sub-process inside the sub-process instead.
+When it's a sub-process being compensated, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use the compensation event sub-process inside the sub-process instead.
 
 In case of a multi-instance sub-process, the compensation activity is processed for each completed instance of the sub-process.
 
