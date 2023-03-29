@@ -1,6 +1,6 @@
 # Compensation in BPM
 
-*As of v7.4.*
+*As of Advanced Pack v2.14.*
 
 Compensation mechanism is supposed to perform undo actions when something went wrong. Only successfuly completed activities can be compensated. Both tasks and sub-processes can be compensated.
 
