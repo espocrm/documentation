@@ -1,4 +1,4 @@
-# Compensation
+# BPM Compensation
 
 *As of v7.4.*
 
