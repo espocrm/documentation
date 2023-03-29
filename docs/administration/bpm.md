@@ -22,6 +22,7 @@ In this article:
 ## See also
 * [Examples](bpm-examples.md)
 * [Signals](bpm-signals.md)
+* [Compensation](bpm-compensation.md)
 * [BPM specific formula functions](bpm-formula.md)
 * [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
 * [Tracking URLs with BPM](bpm-tracking-urls.md)
