@@ -202,7 +202,7 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 
 ### Compensation Intermediate Event (Throwing)
 
-*As of v7.4.*
+*As of v2.14.*
 
 Behaves the same as the [compensation end event](#compensation-end-event) with the only difference that it continues flow exection to the next element.
 
@@ -263,7 +263,7 @@ See [more info](bpm-signals.md) about signals.
 
 ### Compensation End Event
 
-*As of v7.4.*
+*As of v2.14.*
 
 Initiates compensation and ends the flow once compensation is completed.
 
