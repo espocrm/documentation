@@ -6,6 +6,8 @@ Compensation mechanism is supposed to perform undo actions when something went w
 
 Compensation is initiated by triggering a Compensation Event (usually from an error handler). The throwing compensation event can specify an activity's ID that needs to be compensated. If the ID is omitted, all *visible* *compensable* activities will be compensated in the order reverse to their instantiation.
 
+By utilizing intermediate throwing compensation events it is possible to establish a specific order in which compensations will be executed.
+
 !!! note
 
     Compensation can be applied only for activities that were successfuly completed. A sub-process that is not yet finished cannot be compensated from outside.
