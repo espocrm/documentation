@@ -82,7 +82,7 @@ Runs a specific service action. The list of built-in actions is available [here]
 
 #### Send HTTP Request
 
-Calls external API (as of v2.4.0). See [more](workflows.md#send-http-request).
+Calls an external API endpoint. See [more](workflows.md#send-http-request).
 
 #### Execute Formula Script
 
@@ -180,6 +180,15 @@ It's possible to create Children-to-Parent relationship between some entity type
 ### Resolution
 
 It's possible to check the resolution of the passed user task in diverging gateways or conditional events, making ramification in the process flow depending on the resolution. User Task resolution is avaible in conditions of geteways and conditional events.
+
+The resulution (as well as any user task field) can be also accessed further in the flow with formula:
+
+```
+$resolution = bpm\createdEntity\attribute('USER_TASK_ELEMENT_ID', 'resolution');
+$resolutionNote = bpm\createdEntity\attribute('USER_TASK_ELEMENT_ID', 'resolutionNote');
+```
+
+The element ID can be obtained from the user task's detail view.
 
 ### Canceling
 
