@@ -45,8 +45,8 @@ From the event sub-process:
 
 Compensation events:
 
+* [Boundary](bpm-events.md##compensation-intermediate-event-boundary)
 * [Start](bpm-events.md#compensation-start-event) 
 * [Intermediate throwing](bpm-events.md#compensation-intermediate-event-throwing)
-* [Boundary](bpm-events.md##compensation-intermediate-event-boundary)
 * [End](bpm-events.md#compensation-end-event)
 
