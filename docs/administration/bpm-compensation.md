@@ -12,7 +12,7 @@ Compensation is initiated by triggering a Compensation Event (usually from an er
 
 An activity is **compensable** if one of the two following conditions is met:
 
-* Activity has a Boundary Compensation Event attached.
+* Activity has a Boundary Compensation Event attached that is associated with a compensation activity.
 * Activity is a sub-process that contains a Compensation Event Sub-Process.
 
 Boundary compensation:
