@@ -130,6 +130,7 @@ nav:
               - 'Misc':
                 - 'Examples': 'administration/bpm-examples.md'
                 - 'Signals': 'administration/bpm-signals.md'
+                - 'Compensation': 'administration/bpm-compensation.md'
                 - 'Formula functions': 'administration/bpm-formula.md'
                 - 'Drip email campaign': 'administration/bpm-drip-email-campaign.md'
                 - 'Tracking URLs': 'administration/bpm-tracking-urls.md'
