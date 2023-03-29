@@ -41,3 +41,12 @@ In the same level:
 From the event sub-process:
 
 ![Compensation End Event, event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-1.png)
+
+
+Compensation events:
+
+* [Start](bpm-events.md#compensation-start-event) 
+* [Intermediate throwing](bpm-events.md#compensation-intermediate-event-throwing)
+* [Boundary](bpm-events.md##compensation-intermediate-event-boundary)
+* [End](bpm-events.md#compensation-end-event)
+
