@@ -8,7 +8,7 @@ Compensation is initiated by triggering a Compensation Event (usually from an er
 
 !!! note
 
-    Compensation can be applied only for activities that were successfuly completed. If a sub-process is not yet finished, it cannot be compensated from outside.
+    Compensation can be applied only for activities that were successfuly completed. A sub-process that is not yet finished cannot be compensated from outside.
 
 An activity is **compensable** if one of the two following conditions is met:
 
