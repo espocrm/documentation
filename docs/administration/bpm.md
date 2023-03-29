@@ -82,6 +82,10 @@ Ended, stopped and interrupted processes can be *reactivated* (from the dropdown
 
 You can setup BPM process to remove itself. Add *Task* > *Update Process Record*. Add in formula: `deleted = 1;`.
 
+### Access control
+
+Only admin users can create or edit flowcharts. With roles it's possible to allow regular users to view flowcharts, view or edit processes. Note that a user needs also to have access to the Process Flowchart scope be able to view process flowchart details. 
+
 ## Flowchart Elements
 
 See in separate articles:
