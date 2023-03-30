@@ -1,6 +1,6 @@
 # Jobs
 
-Sometimes it's reasonable to execute the script in background. For example, to avoid a used waiting for a response  for a long time.
+Sometimes it's reasonable to execute the script in background.
 
 ### Scheduling job
 
