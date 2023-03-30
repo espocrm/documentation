@@ -1,8 +1,8 @@
 # Workflows
 
-Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+A Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-Workflows automate your business process in an easy way. You can access workflows from Administration panel. To create a workflow rule you need to define:
+The Workflows tool automates your business processes in an easy way. You can access workflows from Administration panel. To create a workflow rule you need to define:
 
 * Target Entity – what entity type the workflow is applied to;
 * Trigger Type – how the workflow will be triggered;
@@ -42,7 +42,7 @@ For workflow rules with this trigger type, it's a common practice to have a cond
 
 ### Manual
 
-*As of Advanced Pack v2.12; As of EspoCRM v7.0*
+*As of v2.12.*
 
 Triggered manually by a user by clicking a button (or a dropdown menu item) on the record detail view.
 
