@@ -14,7 +14,7 @@ $jobSchedulerFactory->create()
     ->setQueue(QueueName::Q0) // optional
     ->setGroup('some-group-name') // optional
     ->setData([
-        'someKey' => $someValue
+        'someKey' => $someValue,
     ])
     ->schedule();
 ```
@@ -33,8 +33,7 @@ use Espo\Core\Job\Job\Data;
 class MyJob implements Job
 {
      public function __construct(/* pass needed dependencies */)
-     {
-     }
+     {}
      
      public function run(Data $data): void
      {
