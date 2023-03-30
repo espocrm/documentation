@@ -20,7 +20,7 @@ It's possible to use the wildcard `*`.
 
 ![Text Search](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/text-search/1.png)
 
-There is an option to use 'contains' operator for varchar fields by default. Parameter is available at Administration > Settings. Note, that it can affect performance.
+There is an option to use 'contains' operator for varchar fields by default. Parameter is available at Administration > Settings. Note that it can affect performance.
 
 ## Global search
 
