@@ -60,7 +60,7 @@ Limitations:
 
 ### Scheduled
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. So, you need also to create a list report.
+Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. Hence you need also to create a list report.
 
 Scheduling is specified in a crontab notation.
 
