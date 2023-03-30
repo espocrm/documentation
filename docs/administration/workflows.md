@@ -15,6 +15,8 @@ In this article:
 * [Conditions](#conditions)
 * [Actions](#actions)
 * [Using formula in actions](#using-formula-in-actions)
+* [Formula functions](#formula-functions)
+* [See also](#see-also)
 
 ## Trigger types
 
@@ -351,7 +353,7 @@ It's possible to define formula to calculate fields in the following actions:
 * Create Related Record,
 * Update Related Record.
 
-### Functions
+## Formula functions
 
 #### workflow\targetEntity\attribute
 
