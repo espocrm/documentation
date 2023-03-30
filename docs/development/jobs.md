@@ -1,6 +1,6 @@
 # Jobs
 
-Sometimes it's reasonable to execute the script in background.
+Sometimes it's reasonable to execute some actions in background.
 
 ### Scheduling job
 
