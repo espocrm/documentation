@@ -2,7 +2,7 @@
 
 Sometimes it's reasonable to execute some actions in background.
 
-### Scheduling job
+### Scheduling
 
 ```php
 use Espo\Core\Job\JobSchedulerFactory;
@@ -21,7 +21,7 @@ $jobSchedulerFactory->create()
 
 You can pass JobSchedulerFactory as a constructor dependency.
 
-### Job implementation
+### Job
 
 ```php
 <?php
