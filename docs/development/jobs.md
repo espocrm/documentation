@@ -1,6 +1,6 @@
 # Jobs
 
-Sometimes it's reasonable to execute some actions in background.
+Sometimes it's reasonable to execute some actions in background. For example, when sending an email, to prevent a user to wait until sending is processed. 
 
 ### Scheduling
 
