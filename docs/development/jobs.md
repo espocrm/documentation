@@ -4,8 +4,6 @@ Sometimes it's reasonable to execute some actions in background.
 
 ### Scheduling job
 
-As of v7.0:
-
 ```php
 use Espo\Core\Job\JobSchedulerFactory;
 use Espo\Core\Job\QueueName;
@@ -24,8 +22,6 @@ $jobSchedulerFactory->create()
 You can pass JobSchedulerFactory as a constructor dependency.
 
 ### Job implementation
-
-As of v7.0:
 
 ```php
 <?php
@@ -47,39 +43,8 @@ class MyJob implements Job
 }
 ```
 
-
-Legacy method. Create a service class file `custom/Espo/Custom/Services/MyJobService.php`:
-
-```php
-<?php
-namespace Espo\Custom\Services;
-
-class MyJobService extends \Espo\Core\Services\Base
-{
-    protected function init()
-    {
-        $this->addDependencyList([
-            'entityManager',
-        ]);
-    }
-
-    public function jobDoSomething($data)
-    {
-        $key1 = $data->key1;
-        $key2 = $data->key2;
-
-        $entityManager = $this->getInjection('entityManager');
-
-        // do something
-    }
-}
-
-```
-
-Clear cache from the admin panel.
-
 ### Queues
 
-* e0 - intended for email sending; run as often as possible;
-* q0 - for general use; run as often as possible;
-* q1 - for general use; run every minute.
+* e0 – intended for email sending; run as often as possible;
+* q0 – for general use; run as often as possible;
+* q1 – for general use; run every minute.
