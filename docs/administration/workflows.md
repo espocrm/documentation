@@ -285,7 +285,7 @@ Developers can write their own service actions. See [more detail](../development
 
 ### Start BPM Process
 
-Starts BPM process. You can specify which target will be used for a process.
+Starts a BPM process. You can specify which target record will be used for the process.
 
 ### Send HTTP Request
 
@@ -293,13 +293,13 @@ Provides the ability to call an external API.
 
 Supported request methods:
 
+* GET
 * POST
 * PUT
 * PATCH
 * DELETE
-* GET
 
-Payload should be specified in JSON format (event if *Content type* is not *application/json*). It's possible to use placeholders in payload json.
+Payload should be specified in JSON format (even so if *Content type* is other than *application/json*). It's possible to use placeholders in the JSON payload.
 
 Additional headers can be specified.
 
