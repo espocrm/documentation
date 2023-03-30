@@ -23,22 +23,6 @@ $jobSchedulerFactory->create()
 
 You can pass JobSchedulerFactory as a constructor dependency.
 
-
-Legacy method (before v7.0):
-
-```php
-$entityManager->createEntity('Job', [
-    'serviceName' => 'MyJobService',
-    'methodName' => 'jobDoSomething',
-    'data' => (object) [
-        'key1' => 'value1',
-        'key2' => 'value2',
-    ],
-    'executeTime' => date('Y-m-d H:i:s'), // you can delay execution by setting a later time
-    'queue' => 'q0', // available queues are listed below
-]);
-```
-
 ### Job implementation
 
 As of v7.0:
