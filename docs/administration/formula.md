@@ -4,10 +4,10 @@ Formula-script is a simple scripting language designed specially for EspoCRM. It
 
 Where it is used:
 
-* Before-save script;
-* Formula sandbox;
-* [Workflows](workflows.md) tool (conditions and actions);
-* [BPM tool](bpm.md) tool.
+* Before-save script
+* Formula sandbox
+* [Workflows](workflows.md) tool (conditions and actions)
+* [BPM tool](bpm.md)
 
 In the Entity Manager, it's possible to define a script (formula) for a specific entity type. This script will be executed every time before the record is saved. It provides the ability to automatically set specific fields (attributes) with values derived from calculation. In addition, some functions can perform actions (e.g. email sending, record creating).
 
