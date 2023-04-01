@@ -188,10 +188,9 @@ Out-of-the-box functions are listed below.
 
 [general](formula/general.md)
 
+* [list](formula/general.md#list)
 * [ifThenElse](formula/general.md#ifthenelse)
 * [ifThen](formula/general.md#ifthen)
-* [list](formula/general.md#list)
-* [while](formula/general.md#while)
 
 ### String
 
