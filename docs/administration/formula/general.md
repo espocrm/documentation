@@ -1,70 +1,9 @@
 # Formula > Functions > General
 
+* [list](#list)
 * [ifThenElse](#ifthenelse)
 * [ifThen](#ifthen)
-* [list](#list)
 * [while](#while)
-
-## ifThenElse
-
-`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)`
-
-If CONDITION is met, then do CONSEQUENT. If not - then do ALTERNATIVE.
-
-CONSEQUENT and ALTERNATIVE can consist of mutliple commands separated by the semicolon `;`.
-
-!!! example
-
-    ```
-    ifThenElse(
-        $someVariable == 'someValue', // if condition is true
-        $anotherVariable = 1, // do this
-        $anotherVariable = 2 // otherwise do this
-    )
-    ```
-
-!!! example "Example: Multiple expressions"
-
-    ```
-    ifThenElse(
-        $someVariable == 'someValue',
-        (
-            $anotherVariable1 = 'test-1';
-            $anotherVariable2 = 'test-2';
-        ),
-        (
-            $anotherVariable1 = 'hello-1';
-            $anotherVariable2 = 'hello-2';
-        )
-    )
-    ```
-
-!!! example "Example: Assigning"
-
-    ```
-    $value = ifThenElse(
-        $someVariable == 'someValue', // if condition is true
-        'one value', // return this value
-        'another value' // otherwise this
-    )
-    ```
-
-## ifThen
-
-`ifThen(CONDITION, CONSEQUENT)`
-
-If CONDITION is met, then do CONSEQUENT. If not - do nothing.
-
-CONSEQUENT can consist of mutliple commands separated by the semicolon `;`.
-
-!!! example
-
-    ```
-    ifThen(
-        $someVariable == 'someValue', // if condition is true
-        $anotherVariable = 1, // do this
-    )
-    ```
 
 ## list
 
@@ -84,6 +23,37 @@ Useful to create an array for link-multiple IDs.
 
     ```
     teamsIds = list($teamId) // `['team-id']`
+    ```
+
+## ifThenElse
+
+`ifThenElse(CONDITION, CONSEQUENT, ALTERNATIVE)`
+
+If CONDITION is met, then return CONSEQUENT. If not, then return ALTERNATIVE.
+
+!!! example
+
+    ```
+    $value = ifThenElse(
+        $someVariable == 'someValue', // if condition is true
+        'one value', // return this value
+        'another value' // otherwise, this
+    )
+    ```
+
+## ifThen
+
+`ifThen(CONDITION, CONSEQUENT)`
+
+If CONDITION is met, then return CONSEQUENT. Otherwise, return NULL.
+
+!!! example
+
+    ```
+    ifThen(
+        $someVariable == 'someValue', // if condition is true
+        $anotherVariable = 1, // do this
+    )
     ```
 
 ## while
