@@ -301,7 +301,7 @@ Supported request methods:
 * PATCH
 * DELETE
 
-Payload should be specified in JSON format (even so if *Content type* is other than *application/json*). It's possible to use placeholders in the JSON payload.
+Payload can taken from a formula variable (as of v2.15) or specified in a JSON format.
 
 Additional headers can be specified.
 
@@ -309,7 +309,7 @@ Placeholders can be used in:
 
 * Headers
 * Request URL
-* Payload
+* Payload JSON
 
 Available placeholders:
 
