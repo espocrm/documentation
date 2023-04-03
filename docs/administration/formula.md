@@ -261,6 +261,7 @@ Out-of-the-box functions are listed below.
 * [entity\addLinkMultipleId](formula/entity.md#entityaddlinkmultipleid)
 * [entity\hasLinkMultipleId](formula/entity.md#entityhaslinkmultipleid)
 * [entity\removeLinkMultipleId](formula/entity.md#entityremovelinkmultipleid)
+* [entity\setLinkMultipleColumn](formula/entity.md#entitysetlinkmultiplecolumn)
 * [entity\isRelated](formula/entity.md#entityisrelated)
 * [entity\sumRelated](formula/entity.md#entitysumrelated)
 * [entity\countRelated](formula/entity.md#entitycountrelated)
