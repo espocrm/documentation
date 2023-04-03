@@ -115,6 +115,8 @@ Removes a specific ID from the Link Multiple field.
 
 *As of v7.4.*
 
+Sets a column value in a link-multiple field.
+
 ## entity\isRelated
 
 `entity\isRelated(LINK, ID)`
