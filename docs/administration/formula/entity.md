@@ -13,6 +13,7 @@ the target record is the record is being created. For Workflow's conditions, the
 * [entity\addLinkMultipleId](#entityaddlinkmultipleid)
 * [entity\hasLinkMultipleId](#entityhaslinkmultipleid)
 * [entity\removeLinkMultipleId](#entityremovelinkmultipleid)
+* [entity\setLinkMultipleColumn](#entitysetlinkmultiplecolumn)
 * [entity\isRelated](#entityisrelated)
 * [entity\sumRelated](#entitysumrelated)
 * [entity\countRelated](#entitycountrelated)
@@ -96,7 +97,6 @@ Adds the list of ids.
 
 Add 'someTeamId' to 'teams' field.
 
-
 ## entity\hasLinkMultipleId
 
 `entity\hasLinkMultipleId(LINK, ID)`
@@ -108,6 +108,12 @@ Checks whether Link Multiple field has specific ID.
 `entity\removeLinkMultipleId(LINK, ID)`
 
 Removes a specific ID from the Link Multiple field.
+
+## entity\setLinkMultipleColumn
+
+`entity\setLinkMultipleColumn(LINK, ID, COLUMN, VALUE)`
+
+*As of v7.4.*
 
 ## entity\isRelated
 
