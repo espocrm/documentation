@@ -104,7 +104,7 @@ Strips whitespace from the beginning and end of STRING.
 !!! example
 
     ```
-    string\length(' hello world ') // will return `hello world`
+    string\trim(' hello world ') // will return `hello world`
     ```
 
 ## string\lowerCase
