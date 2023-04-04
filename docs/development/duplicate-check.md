@@ -65,6 +65,8 @@ class Lead implements WhereBuilder
 }
 ```
 
+You can find built-in duplicate where-builders [here](https://github.com/espocrm/espocrm/tree/master/application/Espo/Classes/DuplicateWhereBuilders). You can reuse them for your entity.
+
 ## Checking for duplicates when update
 
 Disabled by default. Can be enabled in metadata: recordDefs > {entityType} > updateDuplicateCheck.
