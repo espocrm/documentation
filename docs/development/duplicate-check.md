@@ -23,6 +23,9 @@ Create a file `custom/Espo/Custom/Classes/DuplicateWhereBuilders/Lead.php`:
 namespace Espo\Custom\Classes\DuplicateWhereBuilders;
 
 use Espo\Core\Duplicate\WhereBuilder;
+use Espo\Core\Field\EmailAddressGroup;
+use Espo\Core\Field\PhoneNumberGroup;
+use Espo\Core\ORM\Entity as CoreEntity;
 
 use Espo\ORM\Query\Part\Condition as Cond;
 use Espo\ORM\Query\Part\WhereItem;
@@ -53,6 +56,49 @@ class Lead implements WhereBuilder
 
             $toCheck = true;
         }
+
+        // check for duplicate email addresses
+         if (
+            ($entity->get('emailAddress') || $entity->get('emailAddressData')) &&
+            (
+                $entity->isNew() ||
+                $entity->isAttributeChanged('emailAddress') ||
+                $entity->isAttributeChanged('emailAddressData')
+            )
+        ) {
+            foreach ($this->getEmailAddressList($entity) as $emailAddress) {
+                $orBuilder->add(
+                    Cond::equal(
+                        Cond::column('emailAddress'),
+                        $emailAddress
+                    )
+                );
+
+                $toCheck = true;
+            }
+        }
+        
+        // check for duplicate phone numbers
+         if (
+            ($entity->get('phoneNumber') || $entity->get('phoneNumberData')) 
+                &&
+            (
+                $entity->isNew() ||
+                $entity->isAttributeChanged('phoneNumber') ||
+                $entity->isAttributeChanged('phoneNumberData')
+            )
+        ) {
+            foreach ($this->getPhoneNumberList($entity) as $phoneNumber) {
+                $orBuilder->add(
+                    Cond::equal(
+                        Cond::column('phoneNumber'),
+                        $phoneNumber
+                    )
+                );
+
+                $toCheck = true;
+            }
+        }
         
         // Here you can add more conditions.
         
@@ -61,6 +107,48 @@ class Lead implements WhereBuilder
         }
 
         return $orBuilder->build();
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getEmailAddressList(CoreEntity $entity): array
+    {
+        if ($entity->get('emailAddressData')) {
+            /** @var EmailAddressGroup $eaGroup */
+            $eaGroup = $entity->getValueObject('emailAddress');
+
+            return $eaGroup->getAddressList();
+        }
+
+        if ($entity->get('emailAddress')) {
+            return [
+                $entity->get('emailAddress')
+            ];
+        }
+
+        return [];
+    }
+    
+    /**
+     * @return string[]
+     */
+    private function getPhoneNumberList(CoreEntity $entity): array
+    {
+        if ($entity->get('phoneNumberData')) {
+            /** @var PhoneNumberGroup $eaGroup */
+            $eaGroup = $entity->getValueObject('phoneNumber');
+
+            return $eaGroup->getNumberList();
+        }
+
+        if ($entity->get('phoneNumber')) {
+            return [
+                $entity->get('phoneNumber')
+            ];
+        }
+
+        return [];
     }
 }
 ```
