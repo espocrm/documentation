@@ -100,7 +100,8 @@ Example:
 {
     "cases": {
         "linkRequiredAccess": "edit",
-        "linkRequiredForeignAccess": "read"
+        "linkRequiredForeignAccess": "read",
+        "linkForeignAccessCheckDisabled": false
     }
 }
 ```
@@ -109,6 +110,7 @@ Parameters:
 
 * linkRequiredAccess – access to a current record that is needed to be able to link and unlink records (`create`, `read`, `edit`, `delete`, `stream`); applied only in the back-end, for the front-end specify clientDefes > {EntityType} > relationshipPanels > {link} > selectRequiredAccess.
 * linkRequiredForeignAccess – access to a foreign record that is needed to be able to link and unlink;
+* linkForeignAccessCheckDisabled – disable foreign record access check when linking (as of v7.4).
 
 ## beforeReadHookClassNameList
 
