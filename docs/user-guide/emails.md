@@ -146,12 +146,12 @@ This is unsubscribe link for mass email.
 
 The list of available additional placeholders:
 
-* `{today}` - today's date,
-* `{now}` - current date & time,
-* `{optOutUrl}` - opt-out url (only for mass email),
-* `{optOutLink}` - opt-out link (only for mass email),
-* `{optInUrl}` - opt-in url (only for lead capture confirm opt-in),
-* `{optInLink}` - opt-in link (only for lead capture confirm opt-in).
+* `{today}` – today's date,
+* `{now}` – current date & time,
+* `{optOutUrl}` – opt-out url (only for mass email),
+* `{optOutLink}` – opt-out link (only for mass email),
+* `{optInUrl}` – opt-in url (only for lead capture confirm opt-in),
+* `{optInLink}` – opt-in link (only for lead capture confirm opt-in).
 
 ### Handlebars support
 
