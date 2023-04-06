@@ -145,8 +145,10 @@ Links a record with multiple records.
 
     `record\relate('Account', $accountId, 'tasks', list('id1', 'id2'))`
 
-Note: It won't work in *Before save script* when creating a new record, because the record doesn't exist yet when formula is processed.
 
+!!! note
+    It won't work in *Before save script* when applied for the current record. Use an after-save Workflow rule instead.
+    
 ## record\unrelate
 
 `record\unrelate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
@@ -156,6 +158,9 @@ Unlinks two records.
 !!! example
 
     `record\unrelate('Account', $accountId, 'opportunities', $opportunityId)`
+    
+!!! note
+    It won't work in *Before save script* when applied for the current record. Use an after-save Workflow rule instead.
 
 ## record\create
 
