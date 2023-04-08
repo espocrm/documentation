@@ -62,6 +62,8 @@ Returns a first found ID of a record that matches specific criteria.
     `record\findOne('Opportunity', 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
 
     `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
+    
+ORDER_BY and ORDER can be null.
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More [info](../formula.md#filter).
