@@ -1,8 +1,8 @@
 # fields
 
-Definitions for field types.
+Path: metadata > fields > {fieldType}.
 
-Path: metadata > fields > {fieldType}
+Definitions for field types.
 
 ## notMergeable
 
@@ -88,7 +88,7 @@ Some other parameters:
 
 - *notStorable* – the column of field with this field type wont be created in the database (_true_ | _false_);
 - *readOnly* – field is not editable (_true_ | _false_);
-- *layoutListDisabled* – field can notbe displayed on the list view (_true_ | _false_).
+- *layoutListDisabled* – field can not be displayed on the list view (_true_ | _false_).
 
 ## translatedOptions
 
@@ -152,7 +152,7 @@ The list of not actual attributes.
 
 *boolean*
 
-Wherer the field may contain personal data.
+Where the field may contain personal data.
 
 ## textFilter
 
@@ -182,19 +182,19 @@ Full-text search will be available for the field.
 
 *string[]*
 
-Colums used in full-text search.
+Columns used in full-text search.
 
 ## valueFactoryClassName
 
 *class-string<Espo\ORM\Value\ValueFactory\>*
 
-A factory that creates value-objects for this field. A value-object can be obtainer by calling `getValueObject` method on an `Entity`.
+A factory that creates value-objects for this field. A value-object can be obtained by calling `getValueObject` method on an `Entity`.
 
 ## attributeExtractorClassName
 
 *class-string<Espo\ORM\Value\AttributeExtractor\>*
 
-A class that extracts values (attribute => value map) from a value-object. Used internally for obtaining values from a value-object and writting them to an entity.
+A class that extracts values (attribute => value map) from a value-object. Used internally for obtaining values from a value-object and writing them to an entity.
 
 ## validationList
 
