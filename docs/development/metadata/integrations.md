@@ -2,7 +2,7 @@
 
 Path: metadata > integrations > {IntegrationName}.
 
-Integration definitinos.
+Integration definitions.
 
 ## fields
 
