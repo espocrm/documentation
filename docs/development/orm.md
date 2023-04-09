@@ -59,7 +59,7 @@ $entityManager->saveEntity($entity);
 With options:
 
 ```php
-use Espo\Core\ORM\Repository\SaveOption;
+use Espo\Core\ORM\Repository\Option\SaveOption;
 
 $entityManager->saveEntity($entity, [SaveOption::SILENT => true]);
 ```
