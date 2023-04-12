@@ -293,7 +293,8 @@ Example:
             "createRequiredAccess": "read",
             "selectRequiredAccess": "edit",
             "selectPrimaryFilterName": "filterName",
-            "boolFilterList": ["onlyMy"],
+            "selectBoolFilterList": ["onlyMy"],
+            "filters": ["filterName"],
             "layout": "listLayoutName"
         }
     }
@@ -345,6 +346,18 @@ Access (to a current entity type) required for creating related records.
 *string*
 
 Access (to a current entity type) required for selecting related records.
+
+### selectPrimaryFilterName
+
+*string*
+
+A primary filter applied when selecting records.
+
+### selectBoolFilterList
+
+*string[]*
+
+Bool filters applied when selecting records.
 
 ### filters
 
