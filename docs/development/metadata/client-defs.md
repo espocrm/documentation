@@ -294,7 +294,7 @@ Example:
             "selectRequiredAccess": "edit",
             "selectPrimaryFilterName": "filterName",
             "selectBoolFilterList": ["onlyMy"],
-            "filters": ["filterName"],
+            "filterList": ["all", "filterName"],
             "layout": "listLayoutName"
         }
     }
@@ -359,7 +359,7 @@ A primary filter applied when selecting records.
 
 Bool filters applied when selecting records.
 
-### filters
+### filterList
 
 *string[]*
 
