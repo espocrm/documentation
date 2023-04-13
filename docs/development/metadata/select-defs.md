@@ -23,6 +23,17 @@ Example:
 }
 ```
 
+Available out-of-the-box filters:
+
+* mandatory
+* all
+* onlyOwn
+* onlyTeam
+* portalAll
+* portalOnlyAccount
+* portalOnlyContact
+* portalOnlyOwn
+
 ## boolFilterClassNameMap
 
 Class names for bool filters. Classes should implement `Espo\Core\Select\Bool\Filter` interface.
