@@ -27,8 +27,8 @@ Available out-of-the-box filters:
 
 * mandatory
 * all
-* onlyOwn
 * onlyTeam
+* onlyOwn
 * portalAll
 * portalOnlyAccount
 * portalOnlyContact
