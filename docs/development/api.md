@@ -2,7 +2,7 @@
 
 EspoCRM is a single page application so a frontend uses REST API to connect with a backend. 
 All operations you perform using UI, you can implement via API calls using your programing language. 
-You can learn how API works if you trace what's going in the network tab in your **browser console** (press F12 key to open the console).
+You can learn how API works if you trace what's going in the network tab in your browser console (press F12 key to open the console).
 
 Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format.
 
