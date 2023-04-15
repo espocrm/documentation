@@ -341,9 +341,9 @@ For list reports it's possible to display:
 
 The order of side panels can be customized at Layout Manager > Side Panels (Detail).
 
-The order of bottom panels can be customized at Layout Manager > Bottom Panels (since v5.9.0).
+The order of bottom panels can be customized at Layout Manager > Bottom Panels.
 
-The report panel shows results related to the record that is viewed. The first found relationship is used. If the report has an appropriate runtime filter, then it will be used to restrict results. The runtime filter must be a field of link, link-multiple or link-parent type.
+The report panel shows results related to the record that is viewed. The first found relationship is used. If the report has an appropriate runtime filter, then it will be used to filter report results. The runtime filter must be a field of a link, link-multiple or link-parent type.
 
 ## See also
 
