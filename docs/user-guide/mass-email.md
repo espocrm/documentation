@@ -121,6 +121,8 @@ Bounced emails can be handled by a group email account only. Make sure that you 
 
 Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
 
+Enable [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path) at Administration > Outbound Emails > Mass Email. Note that your SMTP needs to support it. 
+
 ## See also
 
 * [Custom unsubscribe page](../development/campaign-unsubscribe-template.md)
