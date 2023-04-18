@@ -7,7 +7,7 @@ In this article:
 * [Asterisk: The popup window is not displayed](#asterisk-the-popup-window-is-not-displayed)
 * [Asterisk: Click to call is not working](#asterisk-click-to-call-is-not-working)
 * [Starface: The popup window is not displayed](#starface-the-popup-window-is-not-displayed)
-* [Twilio: VoIP Routers do not sync](#twilio-voip-routers-do-not-sync)
+* [Twilio: Unable to activate the phone number](#twilio-unable-to-activate-the-phone-number)
 
 ## How to report
 
@@ -71,7 +71,7 @@ Check the following items to find the cause of the issue:
 5. If your EspoCRM server is available for the Starface server. This is required, because Starface server should send notifications about call events to EspoCRM server.
 6. If your `Site URL` (Administration > Settings) corresponds to the real one.
 
-## Twilio: VoIP Routers do not sync
+## Twilio: Unable to activate the phone number
 
 In your [Twilio Console](https://www.twilio.com/console) on the left panel click on United States (US1) (or any other country) > Phone Numbers > Manage > Active Numbers > the number you purchased and in the *Voice and Fax* and *Messaging* sections, set the following settings:
 
