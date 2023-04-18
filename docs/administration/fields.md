@@ -68,7 +68,8 @@ Parameters:
 
 * Max-length – a max acceptable length of text;
 * Options – a pre-defined list of values for an autocomplete;
-* Pattern – a regular expression to check a field value against.
+* Pattern – a regular expression to check a field value against;
+* Copy to clipboard button.
 
 ![Varchar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/varchar.png)
 
@@ -233,7 +234,8 @@ For storing links.
 Parameters:
 
 * Max-length – a max acceptable length of text;
-* Strip – if checked, then a protocol part and trailing `/` will be stripped.
+* Strip – if checked, then a protocol part and trailing `/` will be stripped;
+* Copy to clipboard button.
 
 
 ## Wysiwyg
@@ -285,7 +287,8 @@ Parameters:
 
 * Prefex – a text that will be preprended to a number;
 * Next Number – a number that will be applied to the next created record;
-* Pad Length – a length of the numeric part; if less, then will be padded with zero digits, e.g. `00001`.
+* Pad Length – a length of the numeric part; if less, then will be padded with zero digits, e.g. `00001`;
+* Copy to clipboard button.
 
 ![Number](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/number.png)
 
