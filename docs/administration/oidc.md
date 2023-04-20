@@ -19,7 +19,6 @@ Additional features:
 
 Details:
 
-* Portals supported as of v7.4.
 * Espo 2FA may not work with some identity providers (where an authorization code can't be used twice).
 * The *userName* field length may need to be increased up to 255 in some cases (by default Espo has the limit 50).
 * Supported signing algorithms: RS256, RS384. RS512, HS256, HS384, HS512. Developers can add implementations of other algorithms in an upgrade-safe manner.
