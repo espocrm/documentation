@@ -55,6 +55,7 @@ The list of parameters along with their default values.
 * massActionIdleCountThreshold – `100` – record number threshold after which mass-action is processed in idle (as of v7.1);
 * exportIdleCountThreshold  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
 * leadCaptureAllowOrigin –  `*` – *Access-Control-Allow-Origin* response header value for the lead capture endpoint;
+* ipAddressServerParam – `REMOTE_ADDR` – server parameter to be used for obtaining a request IP address (as of v7.5);
 
 ### UI
 
