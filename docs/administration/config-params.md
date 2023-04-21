@@ -147,7 +147,6 @@ The list of parameters along with their default values.
 * daemonMaxProcessNumber – `5` – max number of processes run simultaneously;
 * daemonInterval – `10` – interval between process runs (in seconds);
 * daemonProcessTimeout – `36000` – max lifetime of a process run (in seconds);
-* jobNoTableLocking – false – don't use table locking; can be useful for database clusters where table locking is not allowed; jobRunInParallel must be enabled if this parameter is set to true (as of v7.5);
 * jobE0MaxPortion – `100` – max portion of jobs executed in a single process for *e0* queue; this queue is intended for email sending; is run as often as possible;
 * jobQ0MaxPortion – `200` – *q0* is a queue for a general usage; is run as often as possible;
 * jobQ1MaxPortion – `500` – *q1* is a queue for a general usage; is run every minute;
