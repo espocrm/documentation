@@ -15,6 +15,7 @@ In this article:
 * [Entity type parameters](#entity-type-parameters)
 * [Fields](#fields)
 * [Relationships](#relationships)
+* [Formula](#formula)
 * [Copying to another instance](#copying-to-another-instance)
 
 ## Creating new entity type
@@ -97,6 +98,12 @@ Examples of link-multiple fields:
 #### Audited
 
 If the parameter *Audited* is checked, then updates of the relationship will be logged in Stream.
+
+## Formula
+
+### Before-save custom script
+
+A [formula](formula.md) script executed before entity is saved (created or updated). Useful for setting fields that are supposed to be calculated (usually such fields are read-only).
 
 ## Copying to another instance
 
