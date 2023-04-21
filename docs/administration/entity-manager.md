@@ -100,4 +100,4 @@ If the parameter *Audited* is checked, then updates of the relationship will be 
 
 ## Copying to another instance
 
-All customizations made through Entity Manager are stored in the 'custom' folder. You need to copy contents of that folder to another instance and then run rebuild (CLI command `php rebuild.php`).
+All customizations made through Entity Manager are stored in the `custom/Espo/Custom` folder. You need to copy contents of this folder to another instance and then run rebuild (CLI command `php rebuild.php`).
