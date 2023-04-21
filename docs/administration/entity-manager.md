@@ -103,7 +103,7 @@ If the parameter *Audited* is checked, then updates of the relationship will be 
 
 ### Before-save custom script
 
-A [formula](formula.md) script executed before entity is saved (created or updated). Useful for setting fields that are supposed to be calculated (usually such fields are read-only).
+A [formula](formula.md) script executed before an entity (record) is saved (created or updated). Useful for setting fields that are supposed to be calculated (usually such fields are read-only).
 
 ## Copying to another instance
 
