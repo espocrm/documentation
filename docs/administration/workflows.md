@@ -1,6 +1,6 @@
 # Workflows
 
-A Workflows feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
 The Workflows tool automates your business processes in an easy way. You can access workflows from Administration panel. To create a workflow rule you need to define:
 
