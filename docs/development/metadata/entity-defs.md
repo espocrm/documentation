@@ -98,7 +98,7 @@ A field validator. Legacy, consider using *validatorClassNameMap* or *validatorC
 
 *As of v7.4.*
 
-Validators defined as validation-type => class-name map. Classes should implement `Espo\Core\FieldValidation\Validator` interface. If not defined, metadata > fields > {fieldType} > validatorClassNameMap is used.
+Validators defined as validation-type => class-name map. Classes should implement `Espo\Core\FieldValidation\Validator` interface. If not defined for a tyoe, metadata > fields > {fieldType} > validatorClassNameMap > {type} is used.
 
 Example:
 
