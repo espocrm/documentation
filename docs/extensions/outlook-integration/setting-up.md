@@ -40,6 +40,8 @@ Copy *Redirect URI* from EspoCRM. Note, that type should be set to `Web`.
 
 ![Secret](../../_static/images/extensions/outlook-integration/setting-up/7.png)
 
+If the *Never* option is not available, choose *In 2 years*.
+
 ![Secret](../../_static/images/extensions/outlook-integration/setting-up/8.png)
 
 ![Secret](../../_static/images/extensions/outlook-integration/setting-up/9.png)
