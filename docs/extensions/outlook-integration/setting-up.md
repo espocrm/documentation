@@ -48,7 +48,9 @@ Copy *Redirect URI* from EspoCRM. Note, that type should be set to `Web`.
 
 **6\.** Grant required permissions for Azure app.
 
-Note: This step is required for Office365 users. For Outlook, it usually works without this step, but it might be needed either.
+!!! note
+
+    This step is required for Office365 users. For Outlook, it usually works without this step, but it might be needed either.
 
 Click *Api Permissions* on the left panel. Click *Add a permission*. Click *Microsoft Graph*. Click *Delegated permissions*. Then, use search to find the needed permissions and enable them.
 
