@@ -1,6 +1,6 @@
 # Printing to PDF
 
-Printing to PDF provides the ability to generate PDF documents with a record data. The document content is defined by a Template.
+Printing to PDF provides the ability to generate PDF documents with record data. The document content is defined by a Template.
 
 !!! warning "Important"
 
