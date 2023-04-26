@@ -18,6 +18,7 @@ The list of field types available for creating:
 * [Array](#array) – a list of values, similar to Multi-Enum field;
 * [Address](#address) – an address with street, city, state, postal code and country;
 * [Url](#url) – for storing links;
+* [Url-Multiple](#url-multiple) – for storing multiple links;
 * [Wysiwyg](#wysiwyg) – similar to Text field, but with HTML support;
 * [File](#file) – for file uploading;
 * [Image](#image) – for image uploading;
@@ -237,6 +238,16 @@ Parameters:
 * Strip – if checked, then a protocol part and trailing `/` will be stripped;
 * Copy to clipboard button.
 
+## Url-Multiple
+
+*As of v7.5.*
+
+For storing multiple links.
+
+Parameters:
+
+* Max Item Count – max number or items;
+* Strip – if checked, then a protocol part and trailing `/` will be stripped.
 
 ## Wysiwyg
 
