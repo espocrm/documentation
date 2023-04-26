@@ -26,7 +26,7 @@ In this article:
 * [Syntax](#syntax)
 * [Operators](#operators)
 * [Control structures](#control-structures)
-* [Attributes](#operators)
+* [Attributes](#attributes)
 * [Functions](#functions)
   * [General](#general)
   * [String](#string)
