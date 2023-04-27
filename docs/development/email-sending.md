@@ -1,10 +1,9 @@
 # Email Sending
 
-Actual as of v7.0.0.
-
 Example:
 
 ```php
+<?php
 namespace Espo\SomeNamespace;
 
 use Espo\Core\Mail\EmailSender;
@@ -12,13 +11,11 @@ use Espo\Core\Mail\EmailFactory;
 use Espo\Core\Mail\SmtpParams; // optional
 
 class SomeClass
-{
-    private $emailSender;
-    
-    private $emailFactory;
-    
-    public function __construct(EmailSender $emailSender, EmailFactory $emailFactory)
-    {
+{   
+    public function __construct(
+        private EmailSender $emailSender,
+        private EmailFactory $emailFactory
+    ) {
         $this->emailSender = $emailSender;
         $this->emailFactory = $emailFactory;
     }
@@ -41,5 +38,4 @@ class SomeClass
             ->send();
     }
 }
-
 ```
