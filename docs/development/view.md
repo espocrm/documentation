@@ -325,6 +325,22 @@ Arguments:
 
 * *viewKey* – a view key.
 
+### assignView
+
+*As of v7.5.*
+
+Assign a view instance as a child view.
+
+Arguments:
+
+* *viewKey* – a view key;
+* *view* – a view instance;
+* *selector* – a relative CSS selector.
+
+```js
+this.assignView('someKey', new SomeView(options), 'some-selector');
+```
+
 ### reRender
 
 Re-renders a view. Usually, called from inside the view. Returns a promise resolved once rendering is finished.
