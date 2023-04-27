@@ -8,7 +8,7 @@ namespace Espo\SomeNamespace;
 
 use Espo\Core\Mail\EmailSender;
 use Espo\Core\Mail\EmailFactory;
-use Espo\Core\Mail\SmtpParams; // optional
+use Espo\Core\Mail\SmtpParams;
 
 class SomeClass
 {   
