@@ -46,7 +46,7 @@ A metadata location. Where the parameter  will be stored. Supported values:
 
 ## fieldDefs
 
-Field definitions. Same as [entityDefs > fields](entity-defs.md#fields). The defined field will be rendered on the entity manager edit view.
+Field definitions (same as [entityDefs > fields](entity-defs.md#fields)). The defined field will be rendered on the entity manager edit view.
 
 !!! note
 
