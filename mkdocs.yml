@@ -209,6 +209,7 @@ nav:
               - 'dateTime': 'development/metadata/app-date-time.md'
               - 'defaultDashboardLayouts': 'development/metadata/app-default-dashboard-layouts.md'
               - 'defaultDashboardOptions': 'development/metadata/app-default-dashboard-options.md'
+              - 'entityManagerParams': 'development/metadata/app-entity-manager-params.md'
               - 'entityTemplateList': 'development/metadata/app-entity-template-list.md'
               - 'export': 'development/metadata/app-export.md'
               - 'fieldProcessing': 'development/metadata/app-field-processing.md'
