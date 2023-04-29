@@ -28,6 +28,7 @@
   * [Fields](administration/fields.md)
   * [Layouts](administration/layout-manager.md)
   * [Dynamic Logic](administration/dynamic-logic.md)
+  * [API Before-Save script](administration/api-before-save-script.md)
 * [Users](administration/users-management.md)
 * [Roles (access control)](administration/roles-management.md)
 * [Email administration](administration/emails.md)
