@@ -48,6 +48,12 @@ Template whitespace can be omitted from either side of any mustache statement by
 {{~/each}}
 ```
 
+### Sub-expressions
+
+```
+    {{complexText (translate this category='messages' scope='MyScope')}
+```
+
 ## Helpers
 
 ### if
