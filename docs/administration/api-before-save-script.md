@@ -16,7 +16,7 @@ These functions are available only in *API Before-Save Script*. Using them in ot
 
 ### recordService\skipDuplicateCheck
 
-Returns *true* if a *skipDuplicateCheck* HTTP header is passed (when a user warned about a duplicate but opts to save a record anyway).
+Returns *true* if a *skipDuplicateCheck* HTTP header is passed (when a user warned about a duplicate but opts to save the record anyway).
 
 !!! example
 
