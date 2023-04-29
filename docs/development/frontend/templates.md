@@ -51,7 +51,7 @@ Template whitespace can be omitted from either side of any mustache statement by
 ### Sub-expressions
 
 ```
-    {{complexText (translate this category='messages' scope='MyScope')}
+{{complexText (translate this category='messages' scope='MyScope')}
 ```
 
 ## Helpers
@@ -153,7 +153,7 @@ Translates an enum option.
 
 ### complexText
 
-Parses Markdown.
+Prints a parsed Markdown text.
 
 ```
 {{complexText text}}
