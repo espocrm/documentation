@@ -105,7 +105,6 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                     this.trigger('done', response);
                     this.close();
                 });
-            }
         },
     });
 });
