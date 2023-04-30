@@ -4,7 +4,7 @@
 
 Path: metadata > app > entityManagerParams
 
-Additional entity parameters. Defined parameters are available in the entity manager. Global and entity type specific parameters can be defined.
+Additional entity parameters. Defined parameters are available in the entity manager. Global, template type and entity type specific parameters can be defined.
 
 Example:
 
@@ -27,12 +27,23 @@ Example:
                 "tooltip": true
             }
         }
+    },
+    "@Event": {
+        "someParam": {
+            "location": "clientDefs",
+            "fieldDefs": {
+                "type": "varchar",
+                "tooltip": true
+            }
+        }
     }
 }
 
 ```
 
-*Global* parameters are available for all entity types. Field labels and tooltips should be defined in language data in the *EntityManager* scope.
+*Global* parameters are available for all entity types. *@Event* defines template specific parameters.
+
+Field labels and tooltips should be defined in language data in the *EntityManager* scope.
 
 ## location
 
