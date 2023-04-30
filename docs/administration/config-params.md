@@ -87,7 +87,7 @@ The list of parameters along with their default values.
 * emailAutoReplyLimit – `5` – a max number of auto-reply emails that can be sent to one recipient within a period defined by the *emailAutoReplySuppressPeriod* parameter (as of v7.0);
 * emailFoldersDisabled – `false` – disables email folders;
 * emailRecipientAddressMaxCount – `100` – max number of addresses allowed in TO, CC, BCC (as of v7.5);
-* emailTemplateHtmlizerDisabled – `false` – disables Handlebars template enginge for email templates;
+* emailTemplateHtmlizerDisabled – `false` – disables Handlebars template engine for email templates;
 
 ### Stream
 
