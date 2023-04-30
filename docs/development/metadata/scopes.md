@@ -126,6 +126,14 @@ Example:
 
 Defines a field that should be used as a status field.
 
+## statusFieldLocked
+
+*bool*
+
+*As of v7.5.*
+
+Disables the ability to change the status field.
+
 ## disabled
 
 *boolean*
