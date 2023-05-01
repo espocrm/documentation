@@ -218,7 +218,7 @@ Example:
 }
 ```
 
-## mainCurrencyFieldList
+## currencyConversionAccessRequiredFieldList
 
 *string[]*
 
