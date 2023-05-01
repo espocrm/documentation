@@ -217,3 +217,11 @@ Example:
     "exportFormatList": ["csv"]
 }
 ```
+
+## mainCurrencyFieldList
+
+*string[]*
+
+*As of v7.5.*
+
+When a user converts currency of an entity, edit access to all listed fields is checked. Otherwise, the operation will be forbidden.
