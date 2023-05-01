@@ -10,9 +10,9 @@ Example:
 }
 ```
 
-## MyEntityCurrencyConverter
+## entityConverterClassNameMap
 
-*class-string<Espo\Tools\Currency\Conversion\EntityConverter\>*
+*Object.<string, class-string<Espo\Tools\Currency\Conversion\EntityConverter\>\>*
 
 *As of v7.5.*
 
