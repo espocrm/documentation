@@ -5,7 +5,7 @@ When a record is being saved, it's possible to throw an exception in the backend
 In the backend the exception should is thrown with the *reason* parameter in the body. It can be done in a before-save hook. Only `Conflict` and `Error` exceptions are supported.
 
 ```php
-
+<?php
 use Espo\Core\Exceptions\ConflictSilent;
 use Espo\Core\Utils\Json;
 
@@ -16,8 +16,11 @@ throw ConflictSilent::createWithBody(
         'someKey2' => 'someValue2',
     ])
 );
-
 ```
+
+!!! note
+
+    It's also possible to throw exceptions in [API before-save script](../../administration/api-before-save-script.md).
 
 Define a handler in metadata.
 
