@@ -7,6 +7,7 @@
 * [ext\sms\send](#extsmssend)
 * [ext\pdf\generate](#extpdfgenerate)
 * [ext\user\sendAccessInfo](#extusersendaccessinfo)
+* [ext\calendar\userIsBusy](#extcalendaruserisbusy)
 
 ## ext\account\findByEmailAddress
 
@@ -146,3 +147,5 @@ new password. This function is useful when creating a new user via formula. (as 
 
     ext\user\sendAccessInfo($userId);
     ```
+    
+## ext\calendar\userIsBusy
