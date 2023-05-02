@@ -89,6 +89,10 @@ Example:
 }
 ```
 
+## saveErrorHandlers
+
+Save error handlers. See [here](../frontend/save-error-handlers.md).
+
 ## inlineEditDisabled
 
 *boolean*
