@@ -341,7 +341,7 @@ Out-of-the-box functions are listed below.
 
 [ext](formula/ext.md)
 
-* [ext\account\findByEmailAddressDomain](formula/ext.md##extaccountfindbyemailaddressdomain)
+* [ext\account\findByEmailAddress](formula/ext.md##extaccountfindbyemailaddress)
 * [ext\currency\convert](formula/ext.md#extcurrencyconvert)
 * [ext\email\send](formula/ext.md#extemailsend)
 * [ext\email\applyTemplate](formula/ext.md#extemailapplytemplate)
