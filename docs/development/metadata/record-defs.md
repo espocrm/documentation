@@ -115,24 +115,24 @@ Parameters:
 
 ## beforeReadHookClassNameList
 
-Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
 
 ## beforeCreateHookClassNameList
 
-Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface.
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface.
 
 ## beforeUpdateHookClassNameList
 
-Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` interface.
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` interface.
 
 ## beforeDeleteHookClassNameList
 
-Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\DeleteHook` interface.
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\DeleteHook` interface.
 
 ## beforeLinkHookClassNameList
 
-Hooks (applied for API calls).  Should implement the `Espo\Core\Record\Hook\LinkHook` interface.
+An array of hooks (applied for API calls).  Should implement the `Espo\Core\Record\Hook\LinkHook` interface.
 
 ## beforeUnlinkHookClassNameList
 
-Hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
