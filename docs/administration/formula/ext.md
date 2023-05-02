@@ -149,3 +149,19 @@ new password. This function is useful when creating a new user via formula. (as 
     ```
     
 ## ext\calendar\userIsBusy
+
+*As of v7.5.*
+
+`ext\calendar\userIsBusy(USER_ID, FROM, TO, [ENTITY_TYPE, ID])`
+
+Returns TRUE if a user is has calendar activities within a given range. FROM and TO should be date-time strings.
+
+If ENTITY_TYPE and ID specified, then this record will be ignored when checking. Useful when editing an existing record.
+
+!!! example
+
+    ```
+    if (entity\isNew() && ext\calendar\userIsBusy(assignedUserId, dateStart, dateEnd)) {
+        // throw exception
+    }
+    ```
