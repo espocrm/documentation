@@ -278,6 +278,7 @@ Out-of-the-box functions are listed below.
 * [record\findRelatedOne](formula/record.md#recordfindrelatedone)
 * [record\findRelatedMany](formula/record.md#recordfindrelatedmany)
 * [record\attribute](formula/record.md#recordattribute)
+* [record\fetch](formula/record.md#recordfetch)
 * [record\relate](formula/record.md#recordrelate)
 * [record\unrelate](formula/record.md#recordunrelate)
 * [record\create](formula/record.md#recordcreate)
