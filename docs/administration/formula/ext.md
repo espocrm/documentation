@@ -1,6 +1,6 @@
 # Formula > Functions > Ext
 
-* [ext\account\findByEmailAddressDomain](#extaccountfindbyemailaddressdomain)
+* [ext\account\findByEmailAddress](#extaccountfindbyemailaddress)
 * [ext\currency\convert](#extcurrencyconvert)
 * [ext\email\send](#extemailsend)
 * [ext\email\applyTemplate](#extemailapplytemplate)
@@ -8,9 +8,9 @@
 * [ext\pdf\generate](#extpdfgenerate)
 * [ext\user\sendAccessInfo](#extusersendaccessinfo)
 
-## ext\account\findByEmailAddressDomain
+## ext\account\findByEmailAddress
 
-`ext\account\findByEmailAddressDomain(EMAIL_ADDRESS)`
+`ext\account\findByEmailAddress(EMAIL_ADDRESS)`
 
 Finds an account by an email address. If no full match found, then tries to find by domain name.
 Free email provider domains are ignored. Returns ID or null.
