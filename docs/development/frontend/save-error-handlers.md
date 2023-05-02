@@ -2,7 +2,9 @@
 
 When a record is being saved, it's possible to throw an exception in the backend and then handle it in the frontend.
 
-In the backend the exception should is thrown with the *reason* parameter in the body. It can be done in a before-save hook. Only `Conflict` and `Error` exceptions are supported.
+In the backend the exception should is thrown with the *reason* parameter in the body. It can be done from a before-create or before-update [record hooks](../metadata/record-defs.md#beforereadhookclassnamelist).
+
+Only `Conflict` and `Error` exceptions are supported.
 
 ```php
 <?php
@@ -20,7 +22,7 @@ throw ConflictSilent::createWithBody(
 
 !!! note
 
-    It's also possible to throw exceptions in [API before-save script](../../administration/api-before-save-script.md).
+    It's also possible to throw exceptions with formula in [API before-save script](../../administration/api-before-save-script.md).
 
 Define a handler in metadata.
 
