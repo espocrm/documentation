@@ -6,6 +6,7 @@
 * [record\findRelatedOne](#recordfindrelatedone)
 * [record\findRelatedMany](#recordfindrelatedmany)
 * [record\attribute](#recordattribute)
+* [record\fetch](#recordfetch)
 * [record\relate](#recordrelate)
 * [record\unrelate](#recordunrelate)
 * [record\create](#recordcreate)
@@ -130,6 +131,24 @@ Returns an attribute value of a specific record.
     `record\attribute('Opportunity', $opportunityId, 'teamsIds')`
 
 By utilizing this function along with *record\findOne*, it's possible to fetch attribute values of any record in the system.
+
+## record\fetch
+
+*As of v7.5.*
+
+`record\fetch(ENTITY_TYPE, ID)`
+
+Fetches record attributes into an object. Returns NULL if a record does not exists.
+
+!!! example
+
+    ```
+    $o = record\fetch('Account', $accountId);
+
+    if ($o) {
+        $name = object\get($o, 'name');
+    }
+    ```
 
 ## record\relate
 
