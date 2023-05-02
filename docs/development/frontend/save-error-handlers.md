@@ -46,6 +46,7 @@ define('custom:my-error-handler', [], function () {
 
     return class {
         constructor(view) {
+            /** @type {module:views/record/detail.Class} */
             this.view = view;
         }
 
