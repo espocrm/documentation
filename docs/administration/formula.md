@@ -348,7 +348,7 @@ Out-of-the-box functions are listed below.
 * [ext\sms\send](formula/ext.md#extsmssend)
 * [ext\pdf\generate](formula/ext.md#extpdfgenerate)
 * [ext\user\sendAccessInfo](formula/ext.md#extusersendaccessinfo)
-* [ext\user\userIsBusy](formula/ext.md#extuserisbusy)
+* [ext\calendar\userIsBusy](formula/ext.md#extcalendaruserisbusy)
 
 
 ### Util
