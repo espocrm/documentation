@@ -13,7 +13,7 @@ Gateways are displayed as diamonds.
 
 Can diverge or converge flows.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is the ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
+In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is the ability to specify a default flow. The default flow will be chosen if no conditions met. The default flow is marked with a slash sign.
 
 !!! important
 
@@ -47,7 +47,7 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 !!! note
 
-    If one of parallel flows has been ended for some reason, then the diverging converging will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+    If one of parallel flows has been ended for some reason, then the diverging converging will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
 
 ----
 
@@ -67,7 +67,7 @@ In case of converging it waits until all incoming flows come and then continues 
 
 !!! note
 
-    If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid a flowchart design that can bring about such a situation.
+    If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
 
 ----
 
