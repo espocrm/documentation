@@ -40,7 +40,7 @@ Events are displayed on a flowchart as circles.
 
 ### Start Event
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has an access to create processes. The user needs to click 'Start Process' button on the list view of processes.
+Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has access to create processes. The user needs to click 'Start Process' button on the list view of processes.
 
 ![Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-1.png)
 
