@@ -50,7 +50,7 @@ Can be also used as an entry point of a sub-process.
 
 ### Conditional Start Event
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', 'After record saved'. Conditions are defined in the same way as in Worfklow tool. See [here](workflows.md#conditions).
+A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', 'After record saved'. Conditions are defined in the same way as in the Worfklows tool. See [here](workflows.md#conditions).
 
 ![Conditional Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-1.png)
 
