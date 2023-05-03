@@ -44,7 +44,7 @@ Doesn't have parameters. It's a starting point of the process. Start Event can b
 
 ![Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-1.png)
 
-Can be used as an entry point of a sub-process.
+Can be also used as an entry point of a sub-process.
 
 ![Start Event in sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-2.png)
 
