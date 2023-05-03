@@ -114,6 +114,7 @@ Click F12 to open a browser console. See whether there's any error related to We
 * webSocketUseSecureServer – bool – `false` – to use SSL w/o a proxy;
 * webSocketZeroMQSubscriberDsn – string – `tcp://127.0.0.1:5555` – an endpoint to bind to for message listening; actual to change when used inside containers;
 * webSocketZeroMQSubmissionDsn – string – `tcp://localhost:5555'` – an endpoint to connect to for message sending; actual to change when used inside containers;
+* webSocketPort – string – by default '8443' (ssl) or '8080';
 * webSocketSslCertificateFile
 * webSocketSslCertificateLocalPrivateKey
 * webSocketSslCertificatePassphrase
