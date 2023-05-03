@@ -13,9 +13,13 @@ Gateways are displayed as diamonds.
 
 Can diverge or converge flows.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign. There must be at least two outgoing flows to be able to specify diverging criteria.
+In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
 
-In case of converging it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
+!!! important
+
+    There must be at least two outgoing flows to be able to specify diverging criteria.
+
+In case of converging, it just directs the flow to the outgoing element. It doesn't get blocked after the flow come though, so parallel flows won't be merged into the single flow.
 
 ![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
 
