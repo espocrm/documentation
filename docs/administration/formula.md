@@ -358,6 +358,7 @@ Out-of-the-box functions are listed below.
 [util](formula/util.md)
 
 * [util\generateId](formula/util.md#utilgenerateid)
+* [util\generateRecordId](formula/util.md#utilgeneraterecordid)
 
 ## Values
 
