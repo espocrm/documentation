@@ -60,11 +60,11 @@ Can be used to start an event sub-process.
 
 ### Timer Start Event
 
-A starting point of the process. It initiates processes by scheduling. You need to specify the list report that returns records for initiating processes and scheduling in crontab notation.
+A starting point of the process. It initiates processes by scheduling. You need to select a list report (which returns records for initiating processes) and specify execution scheduling (in crontab notation).
 
 ![Timer Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-1.png)
 
-Can be used to start an event sub-process.
+Can be also used to start an event sub-process. In this case, it is scheduled to be triggered at a time defined by event paramaters.
 
 ![Timer Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-2.png)
 
@@ -72,7 +72,7 @@ Can be used to start an event sub-process.
 
 Can be used to start processes and event sub-processes.
 
-When it is used to start a process, only object signals can be used.
+When it is used to start a process, only *object signals* can be used.
 
 When it is used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id. 
 
@@ -92,7 +92,7 @@ See [more info](bpm-signals.md) about signals.
 
 Can only be used to start an event sub-process. It's triggered once an error event is thrown within the same process.
 
-If Error Code is specified, it will be triggered only when an error with the same code occurs. If Error Code is empty, it will catch any error.
+If *Error Code* is specified, it will be triggered only when an error with the same code occurs. If *Error Code* is empty, it will catch any error.
 
 It can't be non interrupting, because a process gets terminated once an error event is thrown.
 
