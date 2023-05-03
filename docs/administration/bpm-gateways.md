@@ -13,7 +13,7 @@ Gateways are displayed as diamonds.
 
 Can diverge or converge flows.
 
-In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is an ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
+In case of diverging it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is the ability to specify default flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
 
 !!! important
 
