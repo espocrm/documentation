@@ -31,7 +31,11 @@ In case of converging, it just directs the flow to the outgoing element. It does
 
 Can diverge or converge flows.
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign. There must be at least two outgoing flows to be able to specify diverging criteria.
+In case of diverging, it can direct to one or multiple parallel flows (paths), depending on accomplishment of criteria of each flow. Default flow is chosen if there are no met conditions. Default flow is marked with a slash sign.
+
+!!! important
+
+    There must be at least two outgoing flows to be able to specify diverging criteria.
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway you need to use a converging inclusive gateway. It will wait for all incoming flows and then continue to the outgoing element.
 
