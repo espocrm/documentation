@@ -227,9 +227,9 @@ If you need a high-security connection, you have to use your own SSL/TLS certifi
 
 Post installation steps:
 
-1. Go to your server directory `/var/www/espocrm/data/nginx/ssl/cert/`.
+1\. Go to your server directory `/var/www/espocrm/data/nginx/ssl/cert/`.
 
-2. Replace the following certificates with your own:
+2\. Replace the following certificates with your own:
 
     - fullchain.pem
     - privkey.pem
@@ -237,7 +237,7 @@ Post installation steps:
   **Important!**
   Your own certificates have to substitute the existing certificates and must have the same names.
 
-3. Restart nginx server:
+3\. Restart nginx server:
 
 ```
 /var/www/espocrm/restart.sh espocrm-nginx
@@ -274,26 +274,26 @@ bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-dom
 
 ### Manually (advanced users only)
 
-1. Stop your existing EspoCRM instance.
+1\. Stop your existing EspoCRM instance.
 
 ```
 /var/www/espocrm/command.sh stop
 ```
 
-2. Rename your existing directory:
+2\. Rename your existing directory:
 
 ```
 mv /var/www/espocrm /var/www/espocrm-old
 ```
 
-3. Run the installer in the required mode, e.g. `Let's Encrypt certificate` mode:
+3\. Run the installer in the required mode, e.g. `Let's Encrypt certificate` mode:
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
-4. Copy your existing data to a new installation:
+4\. Copy your existing data to a new installation:
 
 ```
 rm -rf /var/www/espocrm/data/espocrm
@@ -302,17 +302,17 @@ cp -rp /var/www/espocrm-old/data/espocrm /var/www/espocrm/data
 cp -rp /var/www/espocrm-old/data/mysql /var/www/espocrm/data
 ```
 
-5. Update your `/var/www/espocrm/docker-compose.yml` file. You have to copy your existing options from `/var/www/espocrm-old/docker-compose.yml` for the services:
+5\. Update your `/var/www/espocrm/docker-compose.yml` file. You have to copy your existing options from `/var/www/espocrm-old/docker-compose.yml` for the services:
 - `espocrm-mysql`
 - `espocrm`
 
-6. Restart services via the command:
+6\. Restart services via the command:
 
 ```
 /var/www/espocrm/command.sh restart
 ```
 
-7. Login as administrator and update your new `Site URL` in Administration > Settings.
+7\. Login as administrator and update your new `Site URL` in Administration > Settings.
 
 ## Logs
 
@@ -341,13 +341,13 @@ bash install.sh --command
 
 This can be achieved by mounting the PHP configuration file and restaring the container.
 
-1. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
+1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
 ```
 cd /var/www/espocrm
 ```
 
-2. Create the PHP configuration file:
+2\. Create the PHP configuration file:
 
 ```
 mkdir -p data/php; \
@@ -371,7 +371,7 @@ date.timezone=UTC
 
 then press `Ctrl + 0` and `Ctrl + X`
 
-3. Mount the created PHP configuration file to the container:
+3\. Mount the created PHP configuration file to the container:
 
 ```
 nano docker-compose.yml
@@ -390,7 +390,7 @@ espocrm:
 
 then press `Ctrl + 0` and `Ctrl + X`
 
-4. Restart the container to apply the changes:
+4\. Restart the container to apply the changes:
 
 ```
 ./command.sh restart espocrm
@@ -398,19 +398,19 @@ then press `Ctrl + 0` and `Ctrl + X`
 
 ## Modify Nginx settings
 
-1. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
+1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
 ```
 cd /var/www/espocrm
 ```
 
-2. Edit the file `./data/nginx/conf.d/default.conf`
+2\. Edit the file `./data/nginx/conf.d/default.conf`
 
 ```
 nano ./data/nginx/conf.d/default.conf
 ```
 
-3. Restart the container to apply the changes:
+3\. Restart the container to apply the changes:
 
 ```
 ./command.sh restart espocrm-nginx
