@@ -116,6 +116,8 @@ amountEur = amountConverted * record\attribute('Currency', 'EUR', 'rate');
 
 The field *amountConverted* contains an automatically calculated value in the default currency. Such fields are automatically created for all currency fields.
 
+See also [ext\currency\convert](formula/ext.md#extcurrencyconvert) function.
+
 ## Decimal data type
 
 *As of v7.4.*
