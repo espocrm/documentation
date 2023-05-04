@@ -106,7 +106,7 @@ Returns an array of IDs of a related record with an optional FILTER applied.
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
-!!! example
+!!! examples
 
     `record\findRelatedMany('Account', accountId, 'oppotunities', 10, 'createdAt', 'desc', 'stage=', 'Closed Won')`
 
@@ -128,7 +128,7 @@ record\relate('Email', $emailId, 'teams', $ids);
 
 Returns an attribute value of a specific record.
 
-!!! example
+!!! examples
 
     `record\attribute('Opportunity', $opportunityId, 'amountConverted')`
 
