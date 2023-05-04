@@ -32,7 +32,7 @@ Grouped popup notifications are fetched with a single API request.
 
 *As of v7.3.*
 
-A provider class. Actual only is the *grouped* parameter set to true.
+A provider class. Actual only if the *grouped* parameter is set to true.
 
 ## useWebSocket
 
