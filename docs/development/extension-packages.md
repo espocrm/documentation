@@ -36,10 +36,10 @@ All extension files should be placed in `files` directory. They will be copied t
 
 For different purposes EspoCRM supports the following types of scripts. All of them should be  placed in `scripts` directory.
 
-* `BeforeInstall.php` – a script executed before an installation process
-* `AfterInstall.php` – executed once the installation process is finished
-* `BeforeUninstall.php` – executed before uninstallation process
-* `AfterUninstall.php` – executed once the uninstallation process is finished
+* `BeforeInstall.php` – a script executed before an installation process;
+* `AfterInstall.php` – executed once the installation process is finished;
+* `BeforeUninstall.php` – executed before uninstallation process;
+* `AfterUninstall.php` – executed once the uninstallation process is finished.
 
 Example:
 
