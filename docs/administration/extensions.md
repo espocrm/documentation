@@ -54,5 +54,5 @@ See more [commands](commands.md#extension).
 
 !!! note
 
-    In some cases installing extensions via CLI is preferable, as usually PHP configuration for CLI is not as limited as for a web server.
+    In some cases, installing extensions via CLI is preferable, as usually PHP configuration for CLI is not as limited as for a web server.
     Hence, it handles better such tasks as database index creation.
