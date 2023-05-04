@@ -26,6 +26,20 @@ Check whether a record with specified criteria exists.
     `record\exists('Lead', 'emailAddress=', fromAddress)`
 
     `record\exists('Lead', 'status=', list('Assigned', 'In Process'))`
+    
+    `record\exists('Lead', 'body*', '%word%')`
+    
+Available operators:
+
+* `=`
+* `!=`
+* `>`
+* `<`
+* `>=`
+* `<=`
+* `*` – LIKE operator
+
+Other querying functions also supports these operators.
 
 ## record\count
 
