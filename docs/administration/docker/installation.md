@@ -53,19 +53,19 @@ Then, access it via `http://172.20.0.100:8080` with credentials **admin** and **
 
 You can use Docker Compose to run EspoCRM in an isolated environment built with Docker containers. Before starting, make sure you have [Compose](https://docs.docker.com/compose/install/) installed.
 
-1. Create an empty directory.
+1\. Create an empty directory.
 
 ```
 $ mkdir espocrm-docker
 ```
 
-2. Change into this directory.
+2\. Change into this directory.
 
 ```
 $ cd espocrm-docker/
 ```
 
-3. Create a **`docker-compose.yml`** file:
+3\. Create a **`docker-compose.yml`** file:
 
 ```
 version: '3.8'
@@ -131,13 +131,13 @@ volumes:
 
 More about *Installation Enviroments* you can find [here](#installation-environments).
 
-4. Build EspoCRM project from directory.
+4\. Build EspoCRM project from directory.
 
 ```
 $ docker compose up -d
 ```
 
-5. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open http://localhost:8080 in a web browser.
+5\. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open http://localhost:8080 in a web browser.
 
 ### Install EspoCRM with Traefik
 
@@ -150,9 +150,9 @@ In order to upgrade the container created by the `docker-compose.yml`:
 1. Open your EspoCRM container directory.
 2. Run the command:
 
-```
-$ docker compose pull && docker compose up -d
-```
+  ```
+  $ docker compose pull && docker compose up -d
+  ```
 
 Within a few minutes the container will be upgraded to the latest version.
 
