@@ -223,7 +223,6 @@ You can specify constructor injections explicitly using *createdWith* method. Th
 
 ```php
 <?php
-
 $injectableFactory->createWith($className, [
     'parameterName1' => $value1,
     'parameterName2' => $value2,
@@ -256,7 +255,6 @@ class SomeTypeFactory
         ]);
     }    
 }
-
 ```
 
 It's also possible to pass a binding container when creating with the injectable factory. More info below.
@@ -333,6 +331,7 @@ Explanation:
 Bind an interface to a specific implementation.
 
 ```php
+<?php
 $binder->bindImplementation(SomeInterface::class, SomeImplementation::class);
 ```
 
@@ -351,6 +350,7 @@ $binder->bindService(SomeInterface::class, 'someServiceName');
 Bind an interface to a specific factory so that a specific dependency will be created by a specific factory. The factory should implement `Espo\Core\Binding\Factory` interface.
 
 ```php
+<?php
 $binder->bindFactory(SomeInterface::class, SomeFactory::class);
 ```
 
@@ -359,6 +359,7 @@ $binder->bindFactory(SomeInterface::class, SomeFactory::class);
 A callback will be used for creatring a specific instance. The callback can have its own dependencies.
 
 ```php
+<?php
 $binder->bindCallback(SomeInterface::class, function (SomeDependency $dependency) {
     // Create an instance here.
     return $instance;
@@ -377,7 +378,6 @@ Example:
 
 ```php
 <?php
-
 use Espo\Core\Binding\BindingContainerBuilder;
 use Espo\Core\Binding\ContextualBinder;
 
