@@ -22,6 +22,8 @@ It's possible to use the wildcard `*`.
 
 There is an option to use 'contains' operator for varchar fields by default. Parameter is available at Administration > Settings. Note that it can affect performance.
 
+To disable previous search suggestions, uncheck the checkbox at Preferences > Misc > Disable text filter storing.
+
 ## Global search
 
 Global Search performs a search in multiple entity types simultaneously.
