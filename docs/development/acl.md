@@ -11,6 +11,7 @@ There are two [container services](di.md/#container-services) that allow to chec
 AclManager:
 
 ```php
+<?php
 use Espo\Core\Acl\Table;
 
 // Available actions: create, read, edit, delete, stream.
