@@ -48,6 +48,7 @@ You need to run rebuild after changes.
 You need to specify an index name in *useIndex* param.
 
 ```php
+<?php
 $query = $entityManager->getQueryBuilder()
     ->select()
     ->from($entityType)    
