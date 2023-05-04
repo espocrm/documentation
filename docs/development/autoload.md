@@ -1,7 +1,7 @@
 # Autoload
 
-Sometimes when developing a module for Espo, you need to include a 3rd party library via composer. 
-To let Espo know about these library,you need to define an *autoload* configuration file `custom/Espo/Modules/{Module}/Resources/autoload.json`.
+Sometimes when developing a module for Espo, you need to include 3rd party libraries via composer. 
+To let Espo know about these libraries, you need to define an *autoload* configuration file `custom/Espo/Modules/{Module}/Resources/autoload.json`.
 
 Example:
 
