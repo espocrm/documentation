@@ -159,14 +159,16 @@ class MyHook
 }
 ```
 
-
-
 ### Triggering hook
 
 Inject the hook manager `Espo\Core\HookManager` to your class. Use the `process` method.
 
 ```php
+<?php
 $this->hookManager->process($entityType, $hookType, $entity, $options);
 ```
 
-Note: A hook name can't start with `set`. It's reserved for a dependency injection.
+!!! note
+
+    A hook name can't start with `set`. It's reserved for a dependency injection.
+
