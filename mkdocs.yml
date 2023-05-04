@@ -256,6 +256,7 @@ nav:
               - 'Email sending': 'development/email-sending.md'
               - 'Calculated fields': 'development/calculated-fields.md'
               - 'Custom config parameters': 'development/custom-config-parameters.md'
+              - 'Autoload': 'development/autoload.md'
         - 'Frontend':
           - 'View': 'development/view.md'
           - 'Custom views': 'development/custom-views.md'
