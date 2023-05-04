@@ -53,7 +53,6 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                         type: 'varchar', // field type
                         view: 'views/fields/varchar', // optional, to define custom view
                         required: true, // field param
-                        trim: true, // field param
                     },
                     'someCheckbox': {
                         type: 'bool',
@@ -76,10 +75,10 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                                 {
                                     name: 'someCheckbox',
                                     labelText: this.translate('Some Checkbox', 'labels', 'MyScope'),
-                                }
-                            ]
-                        ]
-                    }
+                                },
+                            ],
+                        ],
+                    },
                 ],
             });
         },
