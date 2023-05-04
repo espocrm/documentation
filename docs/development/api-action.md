@@ -48,7 +48,7 @@ Custom routes can be defined in following places:
         "route": "/MyAction",
         "method": "get",
         "actionClassName": "Espo\\Modules\\MyModule\\Api\\MyAction"
-    },
+    }
 ]
 ```
 
