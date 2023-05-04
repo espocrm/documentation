@@ -22,7 +22,7 @@ In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP int
 
 !!! note
 
-    There's NO need to install intermediate versions. Install just the latest one.
+    There's no need to install intermediate versions. Install just the latest one.
 
 ## Uninstalling
 
