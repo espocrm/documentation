@@ -50,3 +50,8 @@ php command.php extension --file="path/to/extension/package.zip"
 ```
 
 See more [commands](commands.md#extension).
+
+!!! note
+
+    In some cases installing extensions via CLI is preferable, as PHP configuration for CLI usually is not that limited as for webserver.
+    Hence, it handles better such tasks as database index creation.
