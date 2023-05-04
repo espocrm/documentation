@@ -106,6 +106,7 @@ $attributeValue = $entity->get('attributeName');
 Checks whether an attribute is set. Note: If it's set to `NULL` it will return `true`.
 
 ```php
+<?php
 $attributeIsSet = $entity->has('attributeName'); // true or false
 ```
 
