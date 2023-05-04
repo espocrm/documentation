@@ -15,7 +15,7 @@ The file structure of the package:
   "name": "Extension Name",
   "version": "1.0.0",
   "acceptableVersions": [
-     ">=7.0.0"
+     ">=7.4.0"
   ],
   "php": [
      ">=8.1"
@@ -72,8 +72,8 @@ class AfterInstall
 
 ### Package
 
-At the end, we need to pack all these files into a ZIP archive.
+In the end, we need to pack all these files into a ZIP archive.
 
 ## Template repository
 
-You can use [this template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
+You can use a [template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
