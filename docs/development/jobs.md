@@ -5,6 +5,7 @@ Sometimes it's reasonable to execute some actions in background. For example, wh
 ### Scheduling
 
 ```php
+<?php
 use Espo\Core\Job\JobSchedulerFactory;
 use Espo\Core\Job\QueueName;
 
