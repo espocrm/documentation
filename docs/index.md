@@ -8,7 +8,8 @@
   * [Nginx](administration/nginx-server-configuration.md)
   * [IIS](administration/iis-server-configuration.md)
 * System
-  * [Installation](administration/installation.md)
+  * Installation
+    * [Installation](administration/installation.md)
     * [Installation by script](administration/installation-by-script.md)
     * [Installation with Docker](administration/docker/installation.md)
     * [Installation with Traefik](administration/docker/traefik.md)
