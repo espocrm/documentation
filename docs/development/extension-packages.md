@@ -72,7 +72,7 @@ class AfterInstall
 
 ### Package
 
-At the end, we need to pack all these files into a .zip archive.
+At the end, we need to pack all these files into a ZIP archive.
 
 ## Template repository
 
