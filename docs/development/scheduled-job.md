@@ -1,6 +1,6 @@
 # Scheduled Jobs
 
-## Creating custom scheduled jobs
+## Creating custom scheduled job
 
 Create a file `custom/Espo/Custom/Resources/metadata/app/scheduledJobs.json`:
 
