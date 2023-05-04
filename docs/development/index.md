@@ -23,7 +23,7 @@
 * Misc
   * [Template (PDF) custom helpers](template-custom-helper.md)
   * [Custom functions for formula](new-function-in-formula.md)
-  * [Custom scheduled jobs](scheduled-job.md)
+  * [Scheduled jobs](scheduled-job.md)
   * [Duplicate checking](duplicate-check.md)
   * [Database indexes](db-indexes.md)
   * [App params](app-params.md)
