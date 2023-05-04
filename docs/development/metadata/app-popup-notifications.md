@@ -38,7 +38,7 @@ A provider class. Actual only if the *grouped* parameter is set to true.
 
 *boolean*
 
-If WebSocked is configured and the parameter is set to true, notifications won't be polled in the front-end (except once when page is loaded).
+If WebSocked is configured and the parameter is set to true, notifications won't be polled in the front-end (except once, when page is loaded).
 
 ## disabled
 
