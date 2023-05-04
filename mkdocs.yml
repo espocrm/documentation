@@ -249,7 +249,7 @@ nav:
           - 'Misc':
               - 'Template (PDF) custom helpers': 'development/template-custom-helper.md'
               - 'Custom functions for formula': 'development/new-function-in-formula.md'
-              - 'Custom scheduled jobs': 'development/scheduled-job.md'
+              - 'Scheduled jobs': 'development/scheduled-job.md'
               - 'Duplicate checking': 'development/duplicate-check.md'
               - 'Database indexes': 'development/db-indexes.md'
               - 'App params': 'development/app-params.md'
