@@ -209,8 +209,10 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 }
 ```
 
-Note: For the *Account* entity type we extend `Espo\Modules\Crm\Controllers\Account`.
-Some entity types might not have controllers in `Espo\Modules\Crm\Controllers` namespace. They are defined in `Espo\Controllers` namespace.
+!!! note
+    
+    For the *Account* entity type we extend `Espo\Modules\Crm\Controllers\Account`. 
+    Some entity types might not have controllers in `Espo\Modules\Crm\Controllers` namespace. They are defined in `Espo\Controllers` namespace.
 
 ## CRUD actions
 
