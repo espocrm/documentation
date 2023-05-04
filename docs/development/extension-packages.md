@@ -49,20 +49,23 @@ use Espo\Core\Container;
 
 class AfterInstall
 {
-    public function run(Container $container)
+    public function run(Container $container): void
     {
-        /** @var \Espo\Core\Utils\Config */
-        $config = $container->get('config');
+        $config = $container->getByClass(\Espo\Core\Utils\Config::class);
+        
+        $configWriter = $container
+            ->getByClass(\Espo\Core\InjectableFactory::class)
+            ->create(\Espo\Core\Utils\Config\ConfigWriter::class)
  
-        $tabList = $config->get('tabList');
+        $tabList = $config->get('tabList') ?? [];
        
         if (!in_array('MyCustomEntity', $tabList)) {
             $tabList[] = 'MyCustomEntity';
            
-            $config->set('tabList', $tabList);
+            $configWriter->set('tabList', $tabList);
         }
   
-        $config->save();
+        $configWriter->save();
     }
 }
 ```
