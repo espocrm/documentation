@@ -7,6 +7,7 @@ In this article:
 * [Currency rates API](#currency-rates-api)
 * [Adding missing currency](#adding-missing-currency)
 * [Conversion via formula](#conversion-via-formula)
+* [Decimal data type](#decimal-data-type)
 
 ## Settings & rates
 
@@ -114,3 +115,31 @@ amountEur = amountConverted * record\attribute('Currency', 'EUR', 'rate');
 ```
 
 The field *amountConverted* contains an automatically calculated value in the default currency. Such fields are automatically created for all currency fields.
+
+## Decimal data type
+
+*As of v7.4.*
+
+When precision is necessary for a specific currency field, it's recommended to use a Decimal data type this field. When creating a new currency field, check a corresponding checkbox.
+
+
+For existing fields can be enabled manually in metadata > entityDefs:
+
+```json
+{
+    "fields": {
+        "myCurrencyField": {
+            "decimal": true,
+            "precision": 13,
+            "scale": 4 
+        }
+    }
+}
+```
+Rebuild is required after modifying an existing field. Can take long if the table is big. Run from CLI in this case.
+
+If the parameters *precision* and *scale* are not defined, values 13, 4 are used.
+
+In app, amount values will be represented as strings (rather than floats). 
+
+In templates (PDF, email), need to use the *numberFormat* helper to print currency values.
