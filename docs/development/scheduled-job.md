@@ -1,4 +1,6 @@
-# Custom Scheduled Job
+# Scheduled Jobs
+
+## Creating custom scheduled jobs
 
 Create a file `custom/Espo/Custom/Resources/metadata/app/scheduledJobs.json`:
 
@@ -34,6 +36,7 @@ class YourJobName implements JobDataLess
 ```
 
 Also, you can set a label for your job (`custom/Espo/Custom/Resources/i18n/en_US/ScheduledJob.json`).
+
 ```json
 {
    "options": { 
