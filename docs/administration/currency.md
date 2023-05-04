@@ -120,10 +120,9 @@ The field *amountConverted* contains an automatically calculated value in the de
 
 *As of v7.4.*
 
-When precision is necessary for a specific currency field, it's recommended to use a Decimal data type this field. When creating a new currency field, check a corresponding checkbox.
+When precision is necessary for a specific currency field, it's recommended to use a Decimal data type. When creating a new currency field, check a corresponding checkbox.
 
-
-For existing fields can be enabled manually in metadata > entityDefs:
+For existing fields, can be enabled manually in metadata > entityDefs:
 
 ```json
 {
