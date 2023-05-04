@@ -39,7 +39,7 @@ Available operators:
 * `<=`
 * `*` – LIKE operator
 
-Other querying functions also support these operators.
+Other querying record functions also support these operators.
 
 ## record\count
 
