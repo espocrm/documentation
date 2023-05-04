@@ -144,6 +144,7 @@ Clear cache.
 The parameter value now can be read in the back-end:
 
 ```php
+<?php
 /** @var \Espo\Core\Utils\Config $config */
 $config->get('myParameter');
 ```
