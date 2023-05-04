@@ -9,9 +9,9 @@
   * [IIS](administration/iis-server-configuration.md)
 * System
   * [Installation](administration/installation.md)
-  * [Installation by script](administration/installation-by-script.md)
-  * [Installation with Docker](administration/docker/installation.md)
-  * [Installation with Traefik](administration/docker/traefik.md)
+    * [Installation by script](administration/installation-by-script.md)
+    * [Installation with Docker](administration/docker/installation.md)
+    * [Installation with Traefik](administration/docker/traefik.md)
   * [Upgrading](administration/upgrading.md)
   * [Extensions](administration/extensions.md)
   * [Jobs](administration/jobs.md)
