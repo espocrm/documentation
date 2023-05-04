@@ -76,4 +76,4 @@ In the end, we need to pack all these files into a ZIP archive.
 
 ## Template repository
 
-You can use a [template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
+You can use this [template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
