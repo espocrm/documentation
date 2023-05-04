@@ -104,8 +104,7 @@ Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
 namespace Espo\Custom\Controllers;
 
 class MyController
-{
-}
+{}
 ```
 
 Clear cache (Administration > Clear Cache).
