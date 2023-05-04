@@ -11,7 +11,7 @@ In this article:
 
 ## Scheduled jobs
 
-Scheduled Jobs are intended for recurring job execution. They are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using a crontab notation.
+Scheduled jobs are intended for recurring job execution. They are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using a crontab notation.
 
 ```
 * * * * *
