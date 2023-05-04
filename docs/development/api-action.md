@@ -227,23 +227,19 @@ class MyController
 {   
     // Creates a record.
     public function postActionCreate(Request $request, Response $response): void
-    {    
-    }
+    {}
 
     // Reads a record.
     public function getActionRead(Request $request, Response $response): void
-    {    
-    }
+    {}
     
     // Updates a record.
     public function putActionUpdate(Request $request, Response $response): void
-    {    
-    }
+    {}
     
     // Deletes a record.
     public function deleteActionDelete(Request $request, Response $response): void
-    {    
-    }
+    {}
 }
 ```
 
