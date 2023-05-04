@@ -21,7 +21,7 @@
 
 Check whether a record with specified criteria exists.
 
-!!! example
+!!! examples
 
     `record\exists('Lead', 'emailAddress=', fromAddress)`
 
@@ -41,7 +41,7 @@ Returns a count of records with specified criteria.
 
 Returns a count of records with an optional FILTER applied. More [info](../formula.md#filter).
 
-!!! example
+!!! examples
 
     `record\count('Opportunity', 'accountId=', id, 'stage=', 'Closed Won')`
 
@@ -62,7 +62,7 @@ Returns a first found ID of a record that matches specific criteria.
 
 `record\findOne(ENTITY_TYPE, ORDER_BY, ORDER, [FILTER])` Returns a first found ID of a record with an optional FILTER applied.
 
-!!! example
+!!! examples
 
     `record\findOne('Opportunity', 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
 
@@ -85,7 +85,7 @@ Returns a first found ID of a related record with an optional FILTER applied.
 
 If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
-!!! example
+!!! examples
 
     `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'stage=', 'Closed Won')`
 
@@ -164,12 +164,11 @@ Relates two records.
 
 Links a record with multiple records.
 
-!!! example
+!!! examples
 
     `record\relate('Account', $accountId, 'opportunities', $opportunityId)`
 
     `record\relate('Account', $accountId, 'tasks', list('id1', 'id2'))`
-
 
 !!! note
     It won't work in *Before save script* when applied for the current record. Use an after-save Workflow rule instead.
@@ -185,6 +184,7 @@ Unlinks two records.
     `record\unrelate('Account', $accountId, 'opportunities', $opportunityId)`
     
 !!! note
+
     It won't work in *Before save script* when applied for the current record. Use an after-save Workflow rule instead.
 
 ## record\create
@@ -230,7 +230,6 @@ Returns a relation column.
 !!! example "Example: Condition checking position in team"
 
     `record\relationColumn('User', $someUserId, 'teams', 'some-team-id, 'role') == 'Support Manager'`
-
 
 ## record\updateRelationColumn
 
