@@ -87,12 +87,14 @@ The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as a [c
 Path to a needed parameter is specified with an array.
 
 ```php
+<?php
 // entityDefs > Account > fields > type
 $value = $metadata->get(['entityDefs', 'Account', 'fields', 'name', 'type']);
 ```
 will return the string value `"varchar"`.
 
 ```php
+<?php
 $metadata->get(['entityDefs', 'Account', 'fields']);
 ```
 will return an associative array with definitions of all fields.
@@ -102,7 +104,7 @@ will return an associative array with definitions of all fields.
 
 Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as the backend's one.
 
-```JavaScript
+```js
 this.getMetadata().get(['entityDefs', 'Account', 'fields', 'name', 'type']);
 ```
 
