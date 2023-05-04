@@ -39,6 +39,7 @@ class SomeClass
 ### Create new entity
 
 ```php
+<?php
 $entity = $entityManager->getNewEntity($entityType)
 ```
 
@@ -47,18 +48,21 @@ Note: It creates a new instance but doesn't store it in DB. The entity doesn't h
 ### Fetch existing entity
 
 ```php
+<?php
 $entity = $entityManager->getEntityById($entityType, $id);
 ```
 
 ### Store entity
 
 ```php
+<?php
 $entityManager->saveEntity($entity);
 ```
 
 With options:
 
 ```php
+<?php
 use Espo\Core\ORM\Repository\Option\SaveOption;
 
 $entityManager->saveEntity($entity, [SaveOption::SILENT => true]);
@@ -77,6 +81,7 @@ Options:
 ### Create and store entity
 
 ```php
+<?php
 $entity = $entityManager->createEntity($entityType, [
     'name' => 'Test',
 ]);
@@ -85,12 +90,14 @@ $entity = $entityManager->createEntity($entityType, [
 ### Remove entity
 
 ```php
+<?php
 $entityManager->removeEntity($entity);
 ```
 
 ### Get attribute value
 
 ```php
+<?php
 $attributeValue = $entity->get('attributeName');
 ```
 
@@ -107,12 +114,14 @@ $attributeIsSet = $entity->has('attributeName'); // true or false
 One:
 
 ```php
+<?php
 $entity->set('attributeName', 'Test Value');
 ```
 
 Multiple:
 
 ```php
+<?php
 $entity->set([
     'name' => 'Test Name',
     'assignedUserId' => '1',
@@ -122,6 +131,7 @@ $entity->set([
 ### Clear attribute value
 
 ```php
+<?php
 $entity->clear('attributeName');
 ```
 
@@ -132,6 +142,7 @@ It will unset the attribute. If you save the entity after that, it will not chan
 You can check whether an attribute was changed.
 
 ```php
+<?php
 // a value that was set once the record was fetched from DB
 $value = $entity->getFetched('attributeName')
 
@@ -142,12 +153,14 @@ $attributeChanged = $entity->isAttributeChanged('attributeName');
 ### Get all attribute values
 
 ```php
+<?php
 $valueMap = $entity->getValueMap(); // stdClass
 ```
 
 ### Delete from DB
 
 ```php
+<?php
 $entityManager->getRDBRepository($entityType)->deleteFromDb($id);
 ```
 
@@ -160,6 +173,7 @@ Note: As of v7.0 it's recommended to use *ORM Defs* to get entity definitions. S
 Each entity type has its own set of defined attributes. You cannot set an arbitrary attribute name.
 
 ```php
+<?php
 // whether attribute is defined for entity
 $hasAttribute = $entity->hasAttribute('attributeName');
 
@@ -191,6 +205,7 @@ Attribute types:
 Note: As of v7.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
 
 ```php
+<?php
 $relationList = $entity->getRelationList();
 
 $type = $entity->getRelationType('relationName');
@@ -210,6 +225,7 @@ Relation types:
 ### Find
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->where([ // where clause
@@ -221,6 +237,7 @@ $collection = $entityManager
 Descending order:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->limit(0, 10)
@@ -231,6 +248,7 @@ $collection = $entityManager
 Ascending order:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->limit(0, 10)
@@ -241,6 +259,7 @@ $collection = $entityManager
 Descending order:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->limit(0, 10)
@@ -251,6 +270,7 @@ $collection = $entityManager
 Complex order:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->order([
@@ -263,6 +283,7 @@ $collection = $entityManager
 Or:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->order('createdAt', 'ASC')
@@ -270,9 +291,10 @@ $collection = $entityManager
     ->find();
 ```
 
-Or (as of v7.0):
+Or:
 
 ```php
+<?php
 <?php
 use Espo\ORM\Query\Part\Expression as Expr;
 
@@ -291,6 +313,7 @@ $collection = $entityManager
 Ordering by a value list:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository('Opportunity')
     ->order('LIST:stage:Prospectring,Qualification,Proposal')
@@ -300,6 +323,7 @@ $collection = $entityManager
 Feeding a query to a repository:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->clone($query)
@@ -310,6 +334,7 @@ $collection = $entityManager
 ### Find the first one
 
 ```php
+<?php
 $entity = $entityManager
     ->getRDBRepository($entityType)
     ->where([
@@ -321,6 +346,7 @@ $entity = $entityManager
 ### Find related
 
 ```php
+<?php
 $opportunityCollection = $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
@@ -338,6 +364,7 @@ $opportunity = $entityManager
 Filtering by a relation column:
 
 ```php
+<?php
  $leads = $entityManager
     ->getRDBRepository('TargetList')
     ->getRelation($targetList, 'leads')
@@ -350,6 +377,7 @@ Filtering by a relation column:
 ### Relate entities
 
 ```php
+<?php
 $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
@@ -371,6 +399,7 @@ $entityManager
 ### Unrelate entities
 
 ```php
+<?php
 $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
@@ -385,6 +414,7 @@ $entityManager
 ### Update columns
 
 ```php
+<?php
 $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
@@ -404,6 +434,7 @@ $entityManager
 ### Check whether related
 
 ```php
+<?php
 $isRelated = $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
@@ -419,6 +450,7 @@ $isRelated = $entityManager
 Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 
 ```php
+<?php
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
@@ -430,6 +462,7 @@ $opportunityList = $entityManager
 #### IN and NOT IN operators
 
 ```php
+<?php
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
@@ -439,6 +472,7 @@ $opportunityList = $entityManager
 ```
 
 ```php
+<?php
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
@@ -455,6 +489,7 @@ Supported  operators:
 * `!*` - NOT LIKE
 
 ```php
+<?php
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
@@ -466,6 +501,7 @@ $opportunityList = $entityManager
 #### OR, AND operators
 
 ```php
+<?php
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
@@ -486,13 +522,28 @@ $opportunityList = $entityManager
 #### Sub-query operator
 
 ```php
-// $query is the instance of Espo\ORM\Query\Select
+<?php
+// $subQuery is the instance of Espo\ORM\Query\Select
 
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->where([
-        'id=s' => $query->getRaw(),
+        'id=s' => $subQuery->getRaw(),
     ])
+    ->find();
+```
+
+Or:
+
+```php
+<?php
+use Espo\ORM\Query\Part\Condition as Cond;
+
+$collection = $entityManager
+    ->getRDBRepository($entityType)
+    ->where(
+        Cond::in(Cond::column('id'), $subQuery)
+    )
     ->find();
 ```
 
@@ -501,6 +552,7 @@ $collection = $entityManager
 *As of v7.0.*
 
 ```php
+<?php
 use Espo\ORM\Query\Part\Condition as Cond;
 
 $collection = $entityManager
@@ -515,6 +567,7 @@ $collection = $entityManager
 ```
 
 ```php
+<?php
 use Espo\ORM\Query\Part\Condition as Cond;
 
 $collection = $entityManager
@@ -528,6 +581,7 @@ $collection = $entityManager
 ### Distinct
 
 ```php
+<?php
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->distinct()
@@ -539,6 +593,7 @@ $opportunityList = $entityManager
 Join relationship:
 
 ```php
+<?php
 $contactList = $entityManager
     ->getRDBRepository('Contact')
     ->distinct()
@@ -552,6 +607,7 @@ $contactList = $entityManager
 Left-Join relationship:
 
 ```php
+<?php
 $contactList = $entityManager
     ->getRDBRepository('Contact')
     ->distinct()
@@ -564,6 +620,7 @@ $contactList = $entityManager
 Join alias:
 
 ```php
+<?php
 $contactList = $entityManager
     ->getRDBRepository('Contact')
     ->distinct()
@@ -577,6 +634,7 @@ $contactList = $entityManager
 Joining any table (a table name should start with an apper case letter):
 
 ```php
+<?php
 $meetingList = $entityManager
     ->getRDBRepository('Meeting')
     ->join(
@@ -598,6 +656,7 @@ $meetingList = $entityManager
 Joining a table with the query builder:
 
 ```php
+<?php
 $query = $entityManager
     ->getRDBRepository('Meeting')
     ->select([
@@ -625,6 +684,7 @@ Important: When joining by a table name (upper case is used), `'deleted' => fals
 ### Group By
 
 ```php
+<?php
 $query = $entityManager
     ->getQueryBuilder()
     ->select()
@@ -649,6 +709,7 @@ $rowList = $pdoStatement->fetchAll(\PDO::FETCH_ASSOC);
 If STH is set (with `sth` method), the find method will return a collection (instance of `SthCollection`) that doesn't allocate memory for all result data.
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository('Email')
     ->limit(0, 10000)
@@ -667,6 +728,7 @@ foreach ($collection as $entity) {
 It's possible to build expressions with the *Expression* class (as of v7.0).
 
 ```php
+<?php
 use Espo\ORM\Query\Part\Expression as Expr;
 
 $queryBuilder->select(
@@ -680,6 +742,7 @@ $queryBuilder->select(
 ```
 
 ```php
+<?php
 use Espo\ORM\Query\Part\Expression as Expr;
 
 $queryBuilder->where(
@@ -697,6 +760,7 @@ It's possible to add custom functions (as of v7.0.8). An implementation class na
 Delete:
 
 ```php
+<?php
 $deleteQuery = $entityManager
     ->getQueryBuilder()
     ->delete()
@@ -714,6 +778,7 @@ $entityManager
 Select:
 
 ```php
+<?php
 $selectQuery = $entityManager
     ->getQueryBuilder()
     ->select(['column1', 'column2', 'someExpression'])
@@ -728,6 +793,7 @@ $pdoStatement = $entityManager
 ```
 
 ```php
+<?php
 $selectQuery = $entityManager
     ->getQueryBuilder()
     ->select('SUM:(someColumn)', 'value')
@@ -747,6 +813,7 @@ $sum = $row['value'];
 Update:
 
 ```php
+<?php
 $updateQuery = $entityManager
     ->getQueryBuilder()
     ->update()
@@ -764,6 +831,7 @@ $entityManager->getQueryExecutor()->execute($updateQuery);
 Update with join (not implemented for PostgreSQL):
 
 ```php
+<?php
 $updateQuery = $entityManager
     ->getQueryBuilder()
     ->update()
@@ -783,6 +851,7 @@ $entityManager
 Insert:
 
 ```php
+<?php
 $insertQuery = $entityManager
     ->getQueryBuilder()
     ->insert()
@@ -800,6 +869,7 @@ $entityManager->getQueryExecutor()->execute($insertQuery);
 Mass insert:
 
 ```php
+<?php
 $insert = $entityManager
     ->getQueryBuilder()
     ->insert()
@@ -819,6 +889,7 @@ $entityManager
 Mass insert by populating with a select sub-query:
 
 ```php
+<?php
 $insertQuery = $entityManager
     ->getQueryBuilder()
     ->insert()
@@ -835,6 +906,7 @@ $entityManager
 Union:
 
 ```php
+<?php
 $unionQuery = $entityManager
     ->getQueryBuilder()
     ->union()
@@ -853,6 +925,7 @@ $sth = $entityManager
 Cloning and modifying an existing query:
 
 ```php
+<?php
 $clonedQuery = $entityManager
     ->getQueryBuilder()
     ->clone($query)
@@ -865,6 +938,7 @@ $clonedQuery = $entityManager
 Mass insert with Mapper:
 
 ```php
+<?php
 $entityManager->getMapper()->massInsert($collection);
 ```
 
@@ -873,6 +947,7 @@ $entityManager->getMapper()->massInsert($collection);
 Transaction:
 
 ```php
+<?php
 $tm = $entityManager->getTransactionManager();
 
 $tm->start();
@@ -889,6 +964,7 @@ catch (Throwable $e) {
 Nested transactions:
 
 ```php
+<?php
 $tm = $entityManager->getTransactionManager();
 
 $tm->start();
@@ -903,6 +979,7 @@ $tm->commit();
 Running a function in a transaction:
 
 ```php
+<?php
 $entityManager
     ->getTransactionManager()
     ->run(
@@ -917,6 +994,7 @@ $entityManager
 Locking:
 
 ```php
+<?php
 $entityManager->getTransactionManager()->start();
 
 $entity = $entityManager
@@ -935,6 +1013,7 @@ $entityManager->getTransactionManager()->commit();
 ## Locker
 
 ```php
+<?php
 // this will start a transaction implicitly and lock a table
 $entityManager->getLocker()->lockExclusive('SomeEntityType');
 
@@ -949,6 +1028,7 @@ $entityManager->getLocker()->commit();
 *As of v7.0.*
 
 ```php
+<?php
 $defs = $entityManager->getDefs();
 ```
 
@@ -957,48 +1037,56 @@ ORM Defs can also be required as a dependency so that it will be injected into y
 Check entity existence:
 
 ```php
+<?php
 $entityExists = $defs->hasEntity($entityType);
 ```
 
 Entity defs:
 
 ```php
+<?php
 $entityDefs = $defs->getEntity($entityType);
 ```
 
 An attribute list:
 
 ```php
+<?php
 $attributeList = $entityDefs->getAttributeNameList();
 ```
 
 Attribute defs:
 
 ```php
+<?php
 $attributeDefs = $entityDefs->getAttribute($attributeName);
 ```
 
 A relation list:
 
 ```php
+<?php
 $relationList = $entityDefs->getRelationNameList();
 ```
 
 Relation defs:
 
 ```php
+<?php
 $relationDefs = $entityDefs->getRelation($relationName);
 ```
 
 A field list:
 
 ```php
+<?php
 $fieldList = $entityDefs->getFieldNameList();
 ```
 
 Field defs:
 
 ```php
+<?php
 $fieldDefs = $entityDefs->getField($field);
 ```
 
