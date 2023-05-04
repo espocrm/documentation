@@ -388,8 +388,10 @@ Option 3: {{checkboxTag fieldName option='Option 3' color='blue'}}
 ### Barcode field
 
 ```
-{{barcodeImage barcodeField type='EAN8' width=60 height=30 fontsize=14 text=true padding=0}}
+{{barcodeImage barcodeField_RAW type='EAN8' width=60 height=30 fontsize=14 text=true padding=0}}
 ```
+
+Where *barcodeField* is the name of your barcode field.
 
 Parameters *fontsize*, *text*, *padding* are supported only in the TCPDF engine.
 
