@@ -25,23 +25,28 @@ Scheduled jobs are intended for recurring job execution. They are available at A
 
 If you want a job to be run as often as possible, you need to set the scheduling to `* * * * *`.
 
-Important: Scheduling works in **UTC timezone**. It doesn't honor the server's timezone. You need to take it into account when setting up scheduling for specific hours.
+!!! important
+
+    Scheduling runs in **UTC timezone**. It doesn't honor the server's timezone. You need to take it into account when setting up scheduling for specific hours.
 
 ## Setting up
 
-There are two ways how jobs can be processed: with crontab or daemon.
+There are two options to set up job processing in the system:
 
-It's **highly recommended** to turn on processing jobs **in parallel** processes: Administration > Jobs > Settings (in the top-right corner) > Jobs Run in Parallel. Note: Parallel processing is not supported on Windows environment.
+* [Crontab](#cron)
+* [Daemon](#daemon)
+
+For both, it's **highly recommended** to turn on processing jobs **in parallel** processes: Administration > Jobs > Settings (in the top-right corner) > Jobs Run in Parallel.
+
+!!! note
+
+    Parallel processing is not supported on Windows environment.
 
 ### Cron
 
-Cron is easy to configure. It's supported by most hosting providers.
+Cron is easy to configure. It's supported by most hosting providers. See how to configure cron [here](server-configuration.md#setting-up-crontab).
 
-See how to configure cron [here](server-configuration.md#setting-up-crontab).
-
-In Unix systems, cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick.
-
-Add multiple lines in crontab with delays in seconds:
+In Unix systems, cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick. Add multiple lines in crontab with delays in seconds:
 
 ```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
@@ -50,11 +55,14 @@ Add multiple lines in crontab with delays in seconds:
 * * * * * sleep 45; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
 
-Note that command that runs cron may differ depending on your server environment.
+!!! note
+
+     The command that runs cron.php may differ depending on your server environment.
+
 
 ### Daemon
 
-Only for Unix-like operating system. Requires *pcntl* and *posix* PHP extensions (usually available by default).
+Available only on Unix-like operating system. Requires *pcntl* and *posix* PHP extensions (usually available by default).
 
 Command to start the daemon using nohup:
 
