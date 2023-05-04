@@ -44,7 +44,7 @@ If you see the following screen, the permission are correct and you can start in
 
 In the next step, enter details of your newly created database.
 
-Further, you will be asked to specify a desired username and password for an admin user, some system settings (date formats, default timzone, currency etc). Optionally, you can configure SMTP credentials for system emails.
+Further, you will be asked to specify a desired username and password for an admin user, some system settings (date formats, default timzone, currency, etc.). Optionally, you can configure SMTP credentials for system emails.
 
 !!! note
 
