@@ -24,3 +24,7 @@ Requires clearing cache after changes.
 A module can define additional [API routes](api-action.md#routing). They are defined in `custom/Espo/Modules/{YourModule}/Resources/routes.json`.
 
 Requires clearing cache after changes.
+
+## Composer
+
+You can create a `composer.json` in your module directory to include 3rd party libraries. To let Espo know about these libraries, you need to create an [autoload configuration file](autoload.md) in your module.
