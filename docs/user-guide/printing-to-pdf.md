@@ -440,8 +440,7 @@ You can use a regular *table* tag or special *tableTag* helper. The latter way i
 
 ### Raw values
 
-To access a raw value of a specific attribute you need to add  `_RAW` to the attribute name. The raw value is not formatted value, timezone is UTC for date-time fields.
-
+To access a raw value of a specific attribute you need to add a suffix  `_RAW` to the attribute name. The raw value is a not formatted value. Raw date-time values are in UTC timezone.
 
 !!! example
 
