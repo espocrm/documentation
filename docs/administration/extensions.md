@@ -20,7 +20,9 @@ In order to upgrade an already installed extension (e.g. Advanced Pack, VoIP int
 4. Upload your new extension package (zip file) without uninstalling the already installed version.
 5. Click Install button.
 
-There's NO need to install intermediate versions. Install just the latest one.
+!!! note
+
+    There's NO need to install intermediate versions. Install just the latest one.
 
 ## Uninstalling
 
@@ -30,7 +32,6 @@ Steps to uninstall an extension:
 2. Go to Administration > Extensions.
 3. Find the needed extension on the list of available extensions.
 4. Click Uninstall button.
-
 
 ## Deleting
 
