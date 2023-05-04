@@ -57,7 +57,7 @@ class AfterInstall
         $config = $container->getByClass(Config::class);
         
         $configWriter = $container->getByClass(InjectableFactory::class)
-          ->create(ConfigWriter::class)
+            ->create(ConfigWriter::class)
  
         $tabList = $config->get('tabList') ?? [];
        
