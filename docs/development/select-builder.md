@@ -9,6 +9,7 @@ See all available methods in the class `Espo\Core\Select\SelectBuilder`.
 Usage example (building a query):
 
 ```php
+<?php
 $selectBuilder = $this->selectBuilderFactory->create();
 
 $query = $selectBuilder
@@ -26,6 +27,7 @@ $collection = $this->entityManager
 Usage example (building a query builder):
 
 ```php
+<?php
 $query = $selectBuilder
     ->from($entityType)
     ->withPrimaryFilter($primaryFilter)
@@ -39,6 +41,7 @@ $query = $selectBuilder
 Usage example (another user):
 
 ```php
+<?php
 $query = $selectBuilder
     ->from($entityType)
     ->forUser($user) // to apply access control for another user
@@ -64,6 +67,7 @@ class SomeClass
 Once you built a query you can pass it to the repository:
 
 ```php
+<?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
     ->clone($query)
@@ -73,6 +77,7 @@ $collection = $entityManager
 Or you can pass it to the QueryExecutor:
 
 ```php
+<?php
 $sth = $entityManager->getQueryExecutor()->execute($query);
 ```
 
