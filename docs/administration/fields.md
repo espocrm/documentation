@@ -38,13 +38,13 @@ Field types not available for creating directly:
 
 ## Common field parameters
 
-* Label – a name of a field displayed on UI;
-* Required – whether a field is mandatory; user won't be able to save a record w/o filling the field;
+* Label – a name of the field displayed on UI;
+* Required – whether the field is mandatory; user won't be able to save a record w/o filling the field;
 * Audited – field changes will be stored in stream;
 * Read-only – a field value can't be specified; can be calculated by formula or workflow rule;
 * Default – a value pre-filled when creating a new record;
 * Disable Inline Edit – useful when using dynamic forms logic;
-* Tooltip Text – info about a field for users.
+* Tooltip Text – information about the field for users (Markfown supported).
 
 ## Dynamic Logic
 
