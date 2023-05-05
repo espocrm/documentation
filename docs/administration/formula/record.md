@@ -29,7 +29,7 @@ Check whether a record with specified criteria exists.
     
     `record\exists('Lead', 'body*', '%word%')`
     
-Available operators: `=`, `!=`, `>`, `<`, `>=`, `<=`, `*` (LIKE operator). Other querying record functions also support these operators.
+Available operators: `=`, `!=`, `>`, `<`, `>=`, `<=`, `*` (LIKE operator), `!*`. Other querying record functions also support these operators.
 
 ## record\count
 
