@@ -73,11 +73,11 @@ Relationship panels on both sides.
 
 #### One-to-One Right
 
-The *Link* field on one side, *Link-One* on another.
+The *Link* field will be created in the current (edited) entity type, the *Link-One* field – in the foreign entity type.
 
 #### One-to-One Left
 
-The same as previous but vice versa.
+The same as previous but vice versa. The *Link* field will be created in the foreign entity type.
 
 #### Children-to-Parent
 
