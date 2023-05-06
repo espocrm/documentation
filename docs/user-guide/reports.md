@@ -313,11 +313,15 @@ Report Filters are the list view filters based on reports.
 
 Administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
 
-Note: The layout, that is specified in the report, is not applied to the list view when the filter is selected.
+!!! note
+
+    The layout, that is specified in the report, is not applied to the list view when the filter is selected.
 
 ![Report filter](../_static/images/user-guide/reports/report-filter.png)
 
-It's possible to create filters for specific teams.
+It's possible to create filters **for specific teams**.
+
+Report filters can be also utilized in *Record List* dashlets (as a primary filter) and in [formula functions](#../formula.md#filter) `entity\sumRelated`, `record\fineOne`, `record\findRelatedMany`, `entity\sumRelated`, `entity\coundRelated`.
 
 ## Report Panels
 
