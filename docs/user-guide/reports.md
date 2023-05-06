@@ -321,7 +321,16 @@ Administrator can create custom list view filters based on specific reports. Ava
 
 It's possible to create filters **for specific teams**.
 
-Report filters can be also utilized in *Record List* dashlets (as a primary filter) and in [formula functions](../administration/formula.md#filter) `entity\sumRelated`, `record\fineOne`, `record\findRelatedMany`, `entity\sumRelated`, `entity\coundRelated`.
+Report filters can utilized in *Record List* dashlets (as a primary filter).
+
+Report filters can be utilized in [formula functions](../administration/formula.md#filter):
+
+* `record\count`
+* `record\findOne`
+* `record\findRelatedOne`
+* `record\findRelatedMany`
+* `entity\sumRelated`
+* `entity\coundRelated`
 
 ## Report Panels
 
