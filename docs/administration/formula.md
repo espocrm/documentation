@@ -434,7 +434,7 @@ More info about entity types [here](terms-and-naming.md#entity-type).
 
 A name of a filter pre-defined in the system. Developers can define own [filters](../development/metadata/select-defs.md#primaryfilterclassnamemap).
 
-For non-developers, it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create a [report filter](../user-guide/reports.md#report-filters) (at Administration page). Then, you can use a filter name `reportFilter{filterId}` in functions `entity\sumRelated`, `record\fineOne`, `record\findRelatedMany`, `entity\sumRelated`, `entity\coundRelated`.
+For non-developers, it's possible to apply a [list report](../user-guide/reports.md#list-reports) as a filter. First, you need to create a [report filter](../user-guide/reports.md#report-filters) (at Administration page). Then, you can use a filter name `reportFilter{filterId}` in functions `entity\sumRelated`, `record\fineOne`, `record\findRelatedMany`, `entity\sumRelated`, `entity\coundRelated`.
 
 !!! example
 
