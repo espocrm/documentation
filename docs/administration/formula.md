@@ -434,7 +434,13 @@ More info about entity types [here](terms-and-naming.md#entity-type).
 
 A name of a filter pre-defined in the system. Developers can define own [filters](../development/metadata/select-defs.md#primaryfilterclassnamemap).
 
-For non-developers, it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create Report Filter (at Administration page). Then, you can use: `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`, where '5c41a0a396f66725d' is an ID of Report Filter record, that you can obtain from the URL.
+For non-developers, it's possible to apply a [list report](../user-guide/reports.md) as a filter. First, you need to create a [report filter](../user-guide/reports.md#report-filters) (at Administration page). Then, you can use a filter name `reportFilter{filterId}` in functions `entity\sumRelated`, `record\fineOne`, `entity\sumRelated`, `record\findRelatedMany`.
+
+!!! example
+
+    `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`
+    
+    Where *5c41a0a396f66725d* is an ID of the Report Filter record which you can obtain from the URL.
 
 ## Comparison
 
@@ -447,7 +453,9 @@ The following comparison operators are available:
 * `>=` - greater than or equals,
 * `<=` - less than or equals.
 
-Important: Strict comparison is used. If you compare int `1` to float `1.0` with `==` operator they are treated as not equal. You need to compare values of same types or check whether a value falls in range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
+!!! important
+
+    Strict comparison is used. If you compare int `1` to float `1.0` with `==` operator they are treated as not equal. You need to compare values of same types or check whether a value falls in range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
 
 
 ## Examples
