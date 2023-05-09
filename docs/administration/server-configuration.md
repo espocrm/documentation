@@ -91,9 +91,13 @@ chmod 754 bin/command;
 
 All files should be owned and group-owned by the webserver process. It can be *www-data*, *daemon*, *apache*, *www*, etc.
 
-Note: On Bitnami Stack, files should be owned and group-owned by *daemon* user.
+!!! note
 
-Note: On shared hosts, files should be owned and group-owned by your user account.
+    On Bitnami Stack, files should be owned and group-owned by *daemon* user.
+
+!!! note
+
+    On shared hosts, files should be owned and group-owned by your user account.
 
 To set the owner and group-owner, execute these commands in the terminal:
 
@@ -104,7 +108,7 @@ chown -R <OWNER>:<GROUP-OWNER> .;
 
 ## Setting up crontab
 
-Note: More information about jobs in EspoCRM is available [here](jobs.md).
+More information about jobs in EspoCRM is available [here](jobs.md).
 
 ### Unix-like systems
 
@@ -134,21 +138,21 @@ Note that all configuration settings listed here are made on **Windows Server 20
 
 To setup crontab on Windows system, take the following steps:
 
-1. Login as administrator into your EspoCRM instance.
+1\. Login as administrator into your EspoCRM instance.
 
-2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab, replace  `php.exe` instead of `php-cgi.exe` and add `"` symbols to the start and the end of the `php.exe` path. It looks like this one:
+2\. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab, replace  `php.exe` instead of `php-cgi.exe` and add `"` symbols to the start and the end of the `php.exe` path. It looks like this one:
 
 ```
 "C:\Program Files\PHP\v8.2\php.exe" -f C:\inetpub\wwwroot\733\cron.php
 ```
 
-3. Create a batch file by using Notepad and save with the *.bat* extension with string from step 2.
+3\. Create a batch file by using Notepad and save with the *.bat* extension with string from step 2.
 
-4. From the Windows Start menu, select Administrative Tools and then Task Scheduler.
+4\. From the Windows Start menu, select Administrative Tools and then Task Scheduler.
 
-5. Create a folder inside Windows directory and Task inside.
+5\. Create a folder inside Windows directory and Task inside.
 
-6. Configure the Task with the following settings and click `OK`:
+6\. Configure the Task with the following settings and click `OK`:
 
 ![IIS Manager](../_static/images/administration/iis/general.png)
 
@@ -160,7 +164,7 @@ To setup crontab on Windows system, take the following steps:
 
 ![IIS Manager](../_static/images/administration/iis/settings.png)
 
-7. Right-click on the created Task and Click on `Run`.
+7\. Right-click on the created Task and Click on `Run`.
 
 ## Configuration instructions based on your server
 
