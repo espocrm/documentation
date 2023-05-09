@@ -94,21 +94,21 @@ What this config does:
 * redirects `/client/` requests to `/path-to-espo/client/` (as the *client* dir is located outside of the *public* dir);
 * adds some rewrite rules.
 
-Config file path: `/etc/nginx/sites-available/YOUR_SITE`. If you don’t have this file, you have to create it. For this open a terminal and run the command:
+Config file path: `/etc/nginx/sites-available/YOUR_SITE`. If you don’t have this file, you have to create it. For this, open the terminal and run the command:
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-For more information on how to configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
+For more information on how to configure the new virtual host on Nginx, please read this [guidelines](nginx-virtual-host.md).
 
-Run this command in a terminal to check if everything is fine:
+Run this command in the terminal to check if everything is fine:
 
 ```
 sudo nginx -t
 ```
 
-If so, run the command to restart nginx server:
+If so, run the command to restart the nginx server:
 
 ```
 sudo service nginx restart
