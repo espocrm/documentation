@@ -88,6 +88,12 @@ server {
 
 You need to change `/path-to-espo` to the absolute path of your EspoCRM instance.
 
+What this config does:
+
+* sets the document root to `/path-to-espo/public/`;
+* redirects `/client/` requests to `/path-to-espo/client/` (as the *client* dir is located outside of the *public* dir);
+* adds some rewrite rules.
+
 Config file path: `/etc/nginx/sites-available/YOUR_SITE`. If you don’t have this file, you have to create it. For this open a terminal and run the command:
 
 ```
