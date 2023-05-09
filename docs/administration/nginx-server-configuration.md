@@ -88,67 +88,13 @@ server {
 
 You need to change `/path-to-espo` to the absolute path of your EspoCRM instance.
 
-## For EspoCRM v6 and older
-
-Add this code to your Nginx server config file `/etc/nginx/sites-available/YOUR_SITE` inside **server** block:
-
-```
-server {
-    # ...
-
-    client_max_body_size 50M;
-
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    location /api/v1/ {
-        if (!-e $request_filename){
-            rewrite ^/api/v1/(.*)$ /api/v1/index.php last; break;
-        }
-    }
-
-    location /portal/ {
-        try_files $uri $uri/ /portal/index.php?$query_string;
-    }
-
-    location /api/v1/portal-access {
-        if (!-e $request_filename){
-            rewrite ^/api/v1/(.*)$ /api/v1/portal-access/index.php last; break;
-        }
-    }
-
-    location ^~ (data|api)/ {
-        if (-e $request_filename){
-            return 403;
-        }
-    }
-
-    location ^~ /data/ {
-        deny all;
-    }
-    location ^~ /application/ {
-        deny all;
-    }
-    location ^~ /custom/ {
-        deny all;
-    }
-    location ^~ /vendor/ {
-        deny all;
-    }
-    location ~ /\.ht {
-        deny all;
-    }
-}
-```
-
-If you don’t have this file, you have to create it. For this open a terminal and run the command:
+Config file path: `/etc/nginx/sites-available/YOUR_SITE`. If you don’t have this file, you have to create it. For this open a terminal and run the command:
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-And add the code listed above. For more information on how to configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
+For more information on how to configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
 
 Run this command in a terminal to check if everything is fine:
 
