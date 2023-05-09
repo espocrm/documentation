@@ -75,9 +75,13 @@ To refresh calendar items you can click on the date range title at the top in th
 
 Users can create custom shared views that will display events of specific teams.
 
-Note: User must have a proper *User Permission* set in [Roles](../administration/roles-management.md) to be able to use shared calendars. Set the permission to `team` or `all`.
+!!! note
 
-Note: Shared view displays events of users of the selected team. It doesn't necessary display events assigned to that team (e.g. event is assigned to the team, but doesn't assigned to any user of that team).
+    User must have a proper *User Permission* set in [Roles](../administration/roles-management.md) to be able to use shared calendars. Set the permission to `team` or `all`.
+
+!!! note
+
+    Shared view displays events of users of the selected team. It doesn't necessary display events assigned to that team (e.g. event is assigned to the team, but doesn't assigned to any user of that team).
 
 Shared view is also available for *Timeline* view. It allows to view events of multiple users.
 
