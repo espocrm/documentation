@@ -114,15 +114,15 @@ More information about jobs in EspoCRM is available [here](jobs.md).
 
 To setup crontab on Unix-like system, take the following steps:
 
-1. Login as administrator into your EspoCRM instance.
+1\. Login as administrator into your EspoCRM instance.
 
-2. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
+2\. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
 
 ```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
 
-3. Open a terminal and run this command:
+3\. Open a terminal and run this command:
 
 ```
 crontab -e -u WEBSERVER_USER
@@ -130,7 +130,7 @@ crontab -e -u WEBSERVER_USER
 
 WEBSERVER_USER can be one of the following “www”, “www-data”, “apache”, etc (depends on your webserver).
 
-4. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
+4\. Paste the copied string (from step 2) and save the crontab file (Ctrl+O, then Ctrl+X for nano editor).
 
 ### Windows
 
