@@ -10,7 +10,7 @@ There are two types of stream in EspoCRM: record stream and user stream.
 
 The *Stream* panel is available on the record detail view at the bottom. Posts, updates and new additions related to the current record are displayed here.
 
-It's possible to **move the stream panel down** so that it will appear under other panels. Administrator can do it at Administration > Layout Manager > select entity type > Bottom panels (since v5.9.0).
+It's possible to **move the stream panel down** so that it will appear under other panels. Administrator can do it at Administration > Layout Manager > select entity type > Bottom panels.
 
 ## User Stream
 
