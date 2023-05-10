@@ -1,6 +1,8 @@
 # Email Administration
 
-Important: [Cron](server-configuration.md#setting-up-crontab) should be configured in your system to make email fetching work.
+!!! important
+
+    [Cron](server-configuration.md#setting-up-crontab) should be configured in your system to make email fetching work.
 
 ## Overview
 
