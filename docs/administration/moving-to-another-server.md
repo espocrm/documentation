@@ -69,6 +69,8 @@ where `www-data` is your web-server user.
 
 Setup a [crontab](server-configuration.md#setting-up-crontab).
 
-Note: it should be configured under your web-server user.
+!!! note
 
-That's all. Now, your EspoCRM instance is running on a new server.
+    it should be configured under your web-server user.
+
+Now, your EspoCRM instance is running on a new server.
