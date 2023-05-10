@@ -61,4 +61,4 @@ You can find the URL for your portal in the *URL* field of the portal record. It
 
 ## See also
 
-[Portal ACL customization](../development/acl.md#portal-acl)
+[ACL customization](../development/acl.md#custom-acl-for-entity-type)
