@@ -33,7 +33,9 @@ Example for *amount* field of *Opportunity*. Set *Default* value at Administrati
 
 All fields of *Currency* type are paired with a special read-only field of *Currency Converted* type. When you create a new Currency field, Converted field is created automatically. This field represents a value converted to *Default Currency* based on current currency rates. This field is used for sorting by currency field, filtering, comparison, reporting.
 
-Note, that when currency rates are changed, the value of Currency Converted field is also changed. Technically the value is not stored, but calculated on-fly. This can cause an issue that your reports get changed every time currency rates are changed.
+!!! note
+
+    When currency rates are changed, the value of Currency Converted field is also changed. Technically the value is not stored, but calculated on-fly. This can cause an issue that your reports get changed every time currency rates are changed.
 
 To store a converted value based on current rates you can:
 
