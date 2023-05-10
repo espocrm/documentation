@@ -170,8 +170,7 @@ A field cell on a form:
 
 ```html
 <div class="row">
-    <div class="col-md-offset-6"></div>
-    <div class="col-md-6"></div>
+    <div class="col-md-6 col-md-offset-6"></div>
 </div>
 ```
 
