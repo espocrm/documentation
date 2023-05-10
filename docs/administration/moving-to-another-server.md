@@ -73,4 +73,4 @@ Setup a [crontab](server-configuration.md#setting-up-crontab).
 
     it should be configured under your web-server user.
 
-Now, your EspoCRM instance is running on a new server.
+Now, your EspoCRM instance is running on the new server.
