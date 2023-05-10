@@ -48,7 +48,9 @@ Add *default values* you want new and updated records to set with. For example, 
 
 After the import is done, you will be able to **revert** created records. You will be able to see which records were recognized as duplicate and which were updated. Duplicate means that there was a similar record in the system. You can remove all imported duplicates at once.
 
-Important: Revert doesn't work with updated records, you can't revert the update.
+!!! important
+
+    Revert doesn't work with updated records, you can't revert the update.
 
 Click *Run Import* button to proceed. It may take some time before the import process gets finished. If you want to import a large bunch of records, it's recommended to run import in idle.
 
