@@ -7,7 +7,7 @@ Where complex expressions can be utilized:
 * in report filters;
 * when working with ORM to avoid writing raw SQL (for developers)
 
-!!! example "Note for developers"
+!!! note "Note for developers"
 
     It's possible to build expressions with `Espo\ORM\Query\Part\Expression` class. See [here](../development/orm.md#complex-expressions).
 
