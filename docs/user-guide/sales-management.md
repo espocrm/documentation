@@ -17,7 +17,7 @@ New leads are supposed to be created by the following scenarios:
 * Through the API (e.g. through the web form);
 * Automatically by a Workflow rule.
 
-By utilizing [Workflows](../administration/workflows.md) administrator can set up the system to apply a specific assignment rule to new leads, i.e. *Round-Robin* and *Least-Busy* rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
+By utilizing [Workflows](../administration/workflows.md), administrator can set up the system to apply a specific assignment rule to new leads, i.e. *Round-Robin* and *Least-Busy* rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
 
 To prevent overlooking of new leads, users can add *Lead* entity type to the *Global Auto-follow* list at Preferences. Then they will automatically follow every new lead.
 
