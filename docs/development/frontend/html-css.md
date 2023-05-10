@@ -168,6 +168,13 @@ A field cell on a form:
 </div>
 ```
 
+```html
+<div class="row">
+    <div class="col-md-offset-6"></div>
+    <div class="col-md-6"></div>
+</div>
+```
+
 Supported screen widths:
 
 * `xs` – phones, 480px;
