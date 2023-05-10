@@ -7,7 +7,9 @@ Where complex expressions can be utilized:
 * in report filters;
 * when working with ORM to avoid writing raw SQL (for developers)
 
-Note for developers: It's possible to build expressions with `Espo\ORM\Query\Part\Expression` class. See [here](../development/orm.md#complex-expressions).
+!!! example "Note for developers"
+
+    It's possible to build expressions with `Espo\ORM\Query\Part\Expression` class. See [here](../development/orm.md#complex-expressions).
 
 In this article:
 
