@@ -1,6 +1,8 @@
 # Console Commands
 
-Note: As of v7.0 you can run `bin/command` instead of `php command.php`.
+!!! note
+
+    As of v7.0 you can run `bin/command` instead of `php command.php`.
 
 ## List of available commands
 
