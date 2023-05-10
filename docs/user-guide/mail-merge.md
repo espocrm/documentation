@@ -12,4 +12,6 @@ Note: Administration can create template at Administration > PDF Templates. Temp
 
 It will generate a single PDF document (or multiple PDFs zipped, depending on a used engine) for multiple records that you can print.
 
-Note: By default, records with empty *Address* field are skiped.
+!!! note
+
+    By default, records with empty *Address* field are skiped.
