@@ -9,7 +9,9 @@ Out-of-the-box WebSocket covers the following features:
 * Updates in stream on the record detail view;
 * Updates of the detail view.
 
-Important: You need to have *zmq* php extension installed.
+!!! important
+
+    You need to have *zmq* php extension installed.
 
 Enable *Use WebSocket* parameter at Administation > Settings.
 
@@ -101,7 +103,9 @@ location /wss {
 }
 ```
 
-Note: By default, Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example, we set it to 12h.
+!!! note
+
+    By default, Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example, we set it to 12h.
 
 ## Checking whether it works
 
