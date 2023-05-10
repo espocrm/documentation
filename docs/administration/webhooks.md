@@ -45,7 +45,9 @@ Administrator can manage webhooks at Administration > Webhooks. It's possible to
 
 ## Events
 
-Note: The list of available entity types can be obtained at Administration > Entity Manager.
+!!! note
+
+    The list of available entity types can be obtained at Administration > Entity Manager.
 
 ### ENTITY_TYPE.create
 
@@ -71,7 +73,9 @@ Triggered when a specific field is updated. New field attributes will be sent in
 
 Example: `Account.fieldUpdate.assignedUserId`
 
-Note: The list of available fields can be obtained at Administration > Entity Manager > fields.
+!!! note
+
+    The list of available fields can be obtained at Administration > Entity Manager > fields.
 
 
 ## Webhook requests
