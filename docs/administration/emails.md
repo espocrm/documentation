@@ -18,7 +18,7 @@ As an email is coming, the system tries to link it with the appropriate record (
 
 Access to imported emails is controlled by roles. It means that if a particular email was imported from a mailbox of some user, other users will be able to see that email if they have access to that email.
 
-By default users don't have access to any emails. If a user has read access level set to  *own*, they will be able to see emails where their email address is either in *From*, *To* or *CC* fields.
+By default, users don't have access to any emails. If a user has read access level set to  *own*, they will be able to see emails where their email address is either in *From*, *To* or *CC* fields.
 
 There are 4 access levels: No, Own, Team, All.
 
