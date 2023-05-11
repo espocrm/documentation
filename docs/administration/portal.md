@@ -17,7 +17,7 @@ To create portal follow Administration > Portals, click Create Portal button.
 Administrators can create portal users.
 
 1. Administration > Portal Users.
-2. Click *Create Portal User* button .
+2. Click *Create Portal User* button.
 3. Select Contact the portal user will be linked with or *Proceed w/o Contact*
 4. Fill needed fields on the form and click *Save*.
 
