@@ -100,7 +100,6 @@ Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
 
 ```php
 <?php
-
 namespace Espo\Custom\Controllers;
 
 class MyController
@@ -123,7 +122,6 @@ Create a file `custom/Espo/Modules/MyModule/Controllers/MyController.php`.
 
 ```php
 <?php
-
 namespace Espo\Modules\MyModule\Controllers;
 
 class MyController
@@ -218,7 +216,6 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 
 ```php
 <?php
-
 namespace Espo\Custom\Controllers;
 
 use Espo\Core\Api\Request;
@@ -243,4 +240,3 @@ class MyController
     {}
 }
 ```
-
