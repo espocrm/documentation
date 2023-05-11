@@ -88,22 +88,22 @@ Available scalar types:
 
 ## Operators
 
-* `=` - assignment,
-* `??` - null coalescing (as of v7.1),
-* `||` - logical OR,
-* `&&` - logical AND,
-* `!` - logical NOT,
-* `+`- numeric summation,
-* `-` - numeric subtraction,
-* `*` - numeric multiplication,
-* `/` - numeric division,
-* `%` - numeric modulo,
-* `==` - comparison equals,
-* `!=` - comparison not equals,
-* `>` - comparison greater than,
-* `<` - comparison less than,
-* `>=` - comparison greater than or equals,
-* `<=` - comparison less than or equals.
+* `=` – assignment,
+* `??` – null coalescing (as of v7.1),
+* `||` – logical OR,
+* `&&` – logical AND,
+* `!` – logical NOT,
+* `+` – numeric summation,
+* `-` – numeric subtraction,
+* `*` – numeric multiplication,
+* `/` – numeric division,
+* `%` – numeric modulo,
+* `==` – comparison equals,
+* `!=` – comparison not equals,
+* `>` – comparison greater than,
+* `<` – comparison less than,
+* `>=` – comparison greater than or equals,
+* `<=` – comparison less than or equals.
 
 The priority of operators:
 
