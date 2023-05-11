@@ -48,8 +48,8 @@ Portal roles can be applied to:
 *Portal users should be able to create cases, view cases related to their account; they should be able to view knowledge base.*
 
 1. Open Create Portal Role form (Administration > Portal Roles > Create Role).
-2. Enable access to Cases, set: *create - yes, read - account, edit - no, delete - no, stream - account*.
-3. Enable access to Knowledge Base, set: *create - no, read - account, edit - no, delete - no*.
+2. Enable access to Cases, set: *create – yes, read – account, edit – no, delete – no, stream – account*.
+3. Enable access to Knowledge Base, set: *create – no, read – account, edit – no, delete – no*.
 4. Edit your portal record (Administration > Portals). Select your portal role in Roles field and then save.
 
 ## Access to Portal
