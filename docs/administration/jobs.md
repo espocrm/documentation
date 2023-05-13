@@ -62,7 +62,7 @@ In Unix systems, cron is supposed to be run not more often than once a minute. I
 
 ### Daemon
 
-Available only on Unix-like operating system. Requires *pcntl* and *posix* PHP extensions (usually available by default).
+Available only in Unix-like operating systems. Requires *pcntl* and *posix* PHP extensions (usually available by default).
 
 Command to start the daemon using nohup:
 
