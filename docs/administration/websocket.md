@@ -91,7 +91,7 @@ upstream websocket {
 }
 ```
 
-Add to section `server`:
+Add to the section `server`:
 
 ```
 location /wss {
