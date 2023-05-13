@@ -32,11 +32,11 @@ Alias /api/v1/ /path_to_espo/public/api/v1/
 
 What this configuration does:
 
-* Sets the *portal* directory as a root directory.
-* Creates an alias to redirect */client* requests to the *client* directory which is located outside of our webserver root.
-* Creates an alies to redirect */api/v1* requests to the respective directory.
-* Disables *.htaccess* in the Espo root dirctory.
-* Enables *.htaccess* in the *public* directory.
+* Sets the *public/portal* directory as a root directory.
+* Creates an alias to redirect */client/* requests to the *client* directory which is located outside of our webserver root.
+* Creates an alias to redirect */api/v1/* requests to the respective directory.
+* Disables *.htaccess* in the Espo root dirctory (as it's not needed).
+* Enables *.htaccess* in the *public* directory (which defines rewrite rules for API requests).
 * Enables *mod_rewrite*.
 * Makes the portal ID to be passed in an environment variable to let Espo know what portal to start (as there can be multiple portals in Espo).
 
