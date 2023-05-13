@@ -40,7 +40,7 @@ What this configuration does:
 * Enables *mod_rewrite*.
 * Makes the portal ID to be passed in an environment variable to let Espo know what portal to start (as there can be multiple portals in Espo).
 
-Note that you might also need to [setup proxy](../websocket.md#apache) for websocket for the custom portal URL.
+Note that if you use [WebSocket](../websocket.md) you also need to setup a [proxy](../websocket.md#apache) for the portal URL.
 
 ## For EspoCRM v6 and older
 
