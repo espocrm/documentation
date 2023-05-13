@@ -12,11 +12,11 @@ DocumentRoot /path_to_espo/public/portal/
 Alias /client/ /path_to_espo/client/
 Alias /api/v1/ /path_to_espo/public/api/v1/
 
-<Directory /var/www/html/>
+<Directory /path_to_espo/>
     AllowOverride None
 </Directory>
 
-<Directory /var/www/html/public/>
+<Directory /path_to_espo/public/>
     AllowOverride All
 </Directory>
 
