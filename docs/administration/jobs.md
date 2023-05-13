@@ -36,7 +36,7 @@ There are two options to set up job processing in the system:
 * [Crontab](#cron)
 * [Daemon](#daemon)
 
-For both, it's **highly recommended** to turn on processing jobs **in parallel** processes: Administration > Jobs > Settings (in the top-right corner) > Jobs Run in Parallel.
+For both, it's **highly recommended** to turn on processing jobs **in parallel** processes: Administration > Job Settings > Jobs Run in Parallel.
 
 !!! note
 
@@ -113,7 +113,7 @@ systemctl start espocrm-daemon.service
 
     It's **highly recommended** to enable running jobs in parallel processes.
 
-By default jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Jobs > Settings (in the top-right corner).
+By default, jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually, it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Job Settings.
 
 Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes. Windows is not supported.
 
