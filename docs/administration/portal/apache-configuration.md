@@ -28,7 +28,7 @@ Alias /api/v1/ /path_to_espo/public/api/v1/
 ```
 
 * Change `path_to_espo` to the absolule path of your EspoCRM instance.
-* Change `{PORTAL_ID}` to the ID of your portal. Portal record ID can be obtained from the address bar of your web browser when you open the detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is the portal record ID.
+* Change `{PORTAL_ID}` to the ID of your portal. The portal record ID can be obtained from the address bar of your web browser when you open the detail view of the portal record. E.g. in https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24, *16b9hm41c069e6j24* is the portal record ID.
 
 Note that you might also need to [setup proxy](../websocket.md#apache) for websocket for the custom portal URL.
 
