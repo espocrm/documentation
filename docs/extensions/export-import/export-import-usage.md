@@ -41,7 +41,7 @@ An import path. The default value is `build/ExportImport/Import`. Example: `--im
 
 #### `--entity-type-list`
 
-An Entity Type list. If empty, then applies all Entity Types. Example: `--entity-type-list="ENTITY_TYPE1, ENTITY_TYPE2"`
+An Entity Type list. If omitted, then all entity types are applied. Example: `--entity-type-list="ENTITY_TYPE1, ENTITY_TYPE2"`
 
 Supported values:
 
