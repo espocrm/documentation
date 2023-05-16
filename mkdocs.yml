@@ -162,6 +162,8 @@ nav:
             - 'Docker container': 'extensions/voip-integration/docker-container.md'
             - 'Customization': 'extensions/voip-integration/customization.md'
             - 'Troubleshooting' : 'extensions/voip-integration/troubleshooting.md'
+        - 'Export Import':
+            - 'Usage': 'extensions/export-import/export-import-usage.md'
     - 'Developer':
         - 'Index': 'development/index.md'
         - 'Getting started': 'development/how-to-start.md'
