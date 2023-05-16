@@ -106,7 +106,7 @@
   * [Calendar](extensions/outlook-integration/calendar.md)
   * [Contacts](extensions/outlook-integration/contacts.md)
   * [Email](extensions/outlook-integration/email.md)
-* VoIP integration
+* VoIP Integration
   * [Asterisk server](extensions/voip-integration/asterisk-integration-setup.md)
   * [Binotel service](extensions/voip-integration/binotel-integration-setup.md)
   * [Starface server](extensions/voip-integration/starface-integration-setup.md)
@@ -115,7 +115,9 @@
   * [Docker container](extensions/voip-integration/docker-container.md)
   * [Customization](extensions/voip-integration/customization.md)
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
-
+* Export Import
+  * [Usage](extensions/export-import/export-import-usage.md)
+  
 ---
 
 ### See also
