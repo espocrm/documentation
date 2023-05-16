@@ -38,15 +38,15 @@ bin/command export-import import --format=json --import-path="build/ExportImport
 
 #### `--export-path`
 
-Define an export path. By default define `build/ExportImport/Export` path. Ex. `--export-path="PATH"`. 
+Export path. The default value is `build/ExportImport/Export`. Ex. `--export-path="PATH"`. 
 
 #### `--import-path`
 
-Define an import path. By default define `build/ExportImport/Import`. Ex. `--import-path="PATH"`. 
+Import path. The default value is `build/ExportImport/Import`. Ex. `--import-path="PATH"`. 
 
 #### `--entity-type-list`
 
-The needed Entity type list can be defined. If empty, then gets all Entity types. By default define all available entities. Ex. `--entity-type-list="ENTITY_TYPE1, ENTITY_TYPE2"`. Possible values:
+Entity type list. If empty, then gets all Entity types. The default value is all available entities. Ex. `--entity-type-list="ENTITY_TYPE1, ENTITY_TYPE2"`. Possible values:
 
 * a string, e.g. `"Account"`,
 * a string which is separated by a comma, e.g. `"Account, Contact"`,
@@ -54,7 +54,7 @@ The needed Entity type list can be defined. If empty, then gets all Entity types
 
 #### `--import-type`
 
-Define an importing data type. By default define `createAndUpdate` type. Ex. `--import-type="TYPE"`. Possible values: 
+Importing data type. The default value is `createAndUpdate`. Ex. `--import-type="TYPE"`. Possible values: 
 
 * `create`,
 * `createAndUpdate`,
@@ -62,14 +62,14 @@ Define an importing data type. By default define `createAndUpdate` type. Ex. `--
 
 #### `--pretty-print`
 
-Store data in pretty print format. By default define `false` value. Possible values:
+Store data in pretty print format. The default value is `false`. Possible values:
 
 * `true`,
 * `false`.
 
 #### `--user-active`
 
-Default user status for imported users. This applies to all user except admin user with ID `1`. By default define `false` value. Possible values:
+Default user status for imported users. This applies to all user except admin user with ID `1`. The default value is `false`. Possible values:
 
 * `true`,
 * `false`.
@@ -80,7 +80,7 @@ User password for imported users. If empty then generates random values. Ex. `--
 
 #### `--update-currency`
 
-Update all currency fields. This option is depends on [`currency`](#currency). If [`currency`](#currency) option is not defined, the default currency will be used instead. By default define `false` value. Possible values:
+Update all currency fields. This option depends on [`currency`](#currency). If the `currency` option is not defined, the default currency will be used instead. The default value is `false`. Possible values:
 
 * `true`,
 * `false`.
@@ -91,21 +91,21 @@ Currency symbol. If not defined, the default currency will be used instead. Ex. 
 
 #### `--customization`
 
-Export / import all customization made for the instance. By default define `false` value. Possible values:
+Export / import all customization made for the instance. The default value is `false`. Possible values:
 
 * `true`,
 * `false`.
 
 #### `--config`
 
-Enable export / import configuration data. By default define `false` value. Possible values:
+Enable export / import configuration data. The default value is `false`. Possible values:
 
 * `true`,
 * `false`.
 
 #### `--update-created-at`
 
-The current time will be defined for the createAt field. By default define `false` value. Possible values:
+Current time for the createdAt field. The default value is `false`. Possible values:
 
 * `true`,
 * `false`.
