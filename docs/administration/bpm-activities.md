@@ -165,7 +165,7 @@ You can use placeholders in *Name* and *Instructions* fields:
 
 Users can also add Process User Tasks **dashlet** on their dashboard to see their actual process user tasks.
 
-### Dispaying on detail view
+### Displaying on detail view
 
 It's possible to display process task on the target entity detail view.
 
