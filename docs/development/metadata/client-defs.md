@@ -183,7 +183,7 @@ Used as a default set filter on the select-records modal.
 ```json
 {
     "selectDefaultFilters": {
-        "filter" => "myPrimaryFilter"
+        "filter": "myPrimaryFilter"
     }
 }
 ```
