@@ -567,7 +567,6 @@ Database indexes.
 Example:
 
 ```json
-
 {
 
     "indexes": {
@@ -604,4 +603,4 @@ Enables optimistic concurrency control for the entity type.
 
 *boolean*
 
-To skip database table creation the entity type.
+To skip database table creation for the entity type.
