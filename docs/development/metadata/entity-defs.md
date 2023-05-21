@@ -118,7 +118,7 @@ See more about [field validation](fields.md#validationlist).
 
 A list of additional validators. Should implement `Espo\Core\FieldValidation\Validator` interface.
 
-### validationList
+### validationList[]
 
 *string*
 
@@ -126,7 +126,7 @@ A custom validation list for the field. Use this parameter to re-define validati
 
 ### mandatoryValidationList
 
-*string*
+*string[]*
 
 A custom mandatory validation list for the field. Use this parameter to re-define mandatory validations applied for a specific field. By default, [mandatory validations](fields.md#mandatoryvalidationlist) for a field type are applied.
 
