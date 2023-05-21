@@ -436,7 +436,7 @@ A relationship name. Defines how a middle table will be named (for a many-to-man
 
 ### additionalColumns
 
-*Object[]*
+*Object*
 
 *(available for hasMany)*
 
