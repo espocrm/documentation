@@ -178,7 +178,7 @@ A default filter data.
 
 ## selectDefaultFilters
 
-Used as a default set filter on the select-records modal.
+A default filter on the select-records modal.
 
 ```json
 {
