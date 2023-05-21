@@ -392,7 +392,7 @@ A foreign entity type.
 A foreign link name.
 
 
-Parameters for specific types a listed below.
+Parameters for specific types are listed below.
 
 ### noJoin
 
