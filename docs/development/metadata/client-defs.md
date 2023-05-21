@@ -44,7 +44,7 @@ The default value: `'acl-portal'`. Path `client/src/acl-portal.js`.
 
 *boolean*
 
-Allows to disable the ability to create entity from user interface (from the list view).
+Disables the ability to create a record from the user interface (from the list view).
 
 ## searchPanelDisabled
 
