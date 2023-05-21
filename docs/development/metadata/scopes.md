@@ -166,7 +166,7 @@ Whether the entity can be displayed on the Calendar.
 
 ## activity
 
-Whether the entity can be displayed on the Activities panel;
+Whether the entity can be displayed on the Activities panel.
 
 ## activityStatusList
 
