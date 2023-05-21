@@ -106,7 +106,7 @@ A list of available actions in Portal Roles. Available item values: create, read
 
 *string[]*
 
-A list of available levels in Portal Roles. Available item values: all, team, own, no.
+A list of available levels in Portal Roles. Available item values: all, account, contact, own, no.
 
 ## aclPortalActionLevelListMap
 
