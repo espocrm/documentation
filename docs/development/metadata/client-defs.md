@@ -50,8 +50,7 @@ Disables the ability to create a record from the user interface (from the list v
 
 *boolean*
 
-Allows to hide a search panel on the list view.
-
+Hides the search panel on the list view.
 
 ## views
 
