@@ -264,7 +264,7 @@ Not refreshable (when clicking on the header).
 
 ### options
 
-*string[]*
+*object*
 
 Options to pass to the panel view.
       
