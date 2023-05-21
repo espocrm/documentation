@@ -74,19 +74,27 @@ Parameters:
 
 ## actionsDisabled
 
+*bool*
+
 Disable actions in the back-end.
 
 ## massActionsDisabled
+
+*bool*
 
 Disable mass actions in the back-end.
 
 ## exportDisabled
 
+*bool*
+
 To disable export regardless ACL.
 
 ## updateDuplicateCheck
 
-A boolean parameter. If true, then duplicate checking will be processed while updating a record. By default it's processed only when creating a new record.
+*bool*
+
+A boolean parameter. If true, then duplicate checking will be processed while updating a record. By default, it's processed only when creating a new record.
 
 ## relationships
 
