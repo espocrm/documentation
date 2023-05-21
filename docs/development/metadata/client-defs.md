@@ -368,6 +368,12 @@ Bool filters applied when selecting records.
 
 Filters available in the dropdown.
 
+### orderBy
+
+*string*
+
+An order-by field.
+
 ### orderDirection
 
 *string*
