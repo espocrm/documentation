@@ -2,6 +2,8 @@
 
 Metadata is intended for storing application data such as fields, relationships, front-end controllers, views, panels, dashlets etc.
 
+JSON Schema is available [here](https://github.com/espocrm/espocrm/tree/master/schema/metadata) (not full as the moment).
+
 In this article:
 
 * [Reference](#reference)
