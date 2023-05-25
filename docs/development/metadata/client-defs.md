@@ -134,7 +134,7 @@ Disable the *convert-currency* mass-action and action.
 
 *boolean*
 
-Disable the record merge functionallity.
+Disable the record merge functionality.
 
 
 ## filterList
