@@ -52,7 +52,7 @@ Custom routes can be defined in following places:
 ]
 ```
 
-The parameter *noAuth* makes an endpoint not requring authentication.
+The parameter *noAuth* makes an endpoint not requiring authentication.
 
 The parameter *method* specifies an HTTP method. The mostly used methods are: *get*, *post*, *put*, *delete*.
 
