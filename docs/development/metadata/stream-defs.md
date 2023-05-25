@@ -29,7 +29,7 @@ A field (of a link-multiple type) that store users which should automatically fo
 
 *boolean*
 
-Enables the cleanup of subscriberes.
+Enables the cleanup of subscribers.
 
 ### dateField
 
