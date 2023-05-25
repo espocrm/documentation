@@ -6,7 +6,7 @@ Path: metadata > streamDefs > {EntityType}.
 
 *string*
 
-A field (of a link-multiple type) that store users which should automatically follow a record. If not set, then the *assignedUsers* field is checked for existance and then used. E.g. for the *Meeting*, it's the *users* field.
+A field (of a link-multiple type) that store users which should automatically follow a record. If not set, then the *assignedUsers* field is checked for existence and then used. E.g. for the *Meeting*, it's the *users* field.
 
 ## subscribersCleanup
 
