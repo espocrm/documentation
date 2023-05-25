@@ -32,13 +32,13 @@ Whether the entity has the stream.
 
 *boolean*
 
-Whether the entity is avialble in the Import tool.
+Whether the entity is available in the Import tool.
 
 ## layouts
 
 *boolean*
 
-Whether the entity is avialble in the Layout Manager tool.
+Whether the entity is available in the Layout Manager tool.
 
 ## tab
 
