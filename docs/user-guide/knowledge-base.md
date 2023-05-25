@@ -6,8 +6,6 @@ To make an article available in the portal you need to set its status to 'Publis
 
 If you specify *Expiration Date*, then the article will be automatically hidden from the portal on that date.
 
-It's possible to specify a language for an article. The article will be shown only for those portal users which have that language set.
-
 An order in which articles are listed can be manipulated by actions in the dropdown menu of a specific article.
 
 Knowledge Base articles can be related with Case records, providing a quick access to information from a case record.
