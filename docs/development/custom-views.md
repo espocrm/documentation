@@ -21,7 +21,7 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 }
 ```
 
-#### Detail view
+### Detail view
 
 `client/custom/src/views/your-entity-type/record/detail.js`
 
@@ -84,14 +84,14 @@ You are able to create a custom template with the following path: `client/custom
 
 Detail view contains a record view and header view.
 
-#### Edit view
+### Edit view
 
 `client/custom/src/views/your-entity-type/edit.js`
 `client/custom/src/views/your-entity-type/record/edit.js`
 
 The same as detail but it is used when record is being created or edited not in inline-edit mode.
 
-#### List view
+### List view
 
 `client/custom/src/views/your-entity-type/list.js`
 
@@ -101,7 +101,7 @@ List view contains Record/List view, Header and Search Form View.
 
 The views 'views/list/record' contains rows of records.
 
-#### Extending from specific view
+### Extending from specific view
 
 It's worth to mention that you need to inherit your view class from specific class for your entity if one already exists.
 
