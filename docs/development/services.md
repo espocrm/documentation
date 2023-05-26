@@ -8,9 +8,9 @@ You can create a service class in any namespace you like (inside your module). U
 
 ## Record service
 
-The Record Service is a layer to access records via API. It handles CRUD (and some others) operations  over entities (records).
+The Record Service is a layer to access records via API. It handles CRUD (and some others) operations over entities (records). It applies validation and access checks before saving or reading.
 
-The base class is `Espo\Services\Record` (an extension of `Espo\Core\Record\Service`).
+The base class `Espo\Core\Record\Service`.
 
 If there's a service class with a name that matches the name of the entity type, then that service class will be used as a record service class. It's supposed that that class extends base `Espo\Services\Record` class. Example: `Espo\Services\User` is treated as a Record service for the *User* entity type. Note: You need to clear cache after creating a custom record service class.
 
