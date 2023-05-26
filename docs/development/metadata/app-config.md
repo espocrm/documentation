@@ -19,7 +19,7 @@ Example:
         "myParam": {
             "level": "default",
             "readOnly": true
-        }
+        },
         "smtpPassword": {
             "level": "internal"
         },
