@@ -8,7 +8,7 @@ Definitions for the [complex expression](../../user-guide/complex-expressions.md
 
 *Object[]*
 
-Functions available in the editor when editing complex expression.
+Functions available in the editor when editing a complex expression.
 
 Example:
 
