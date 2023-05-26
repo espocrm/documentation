@@ -28,4 +28,4 @@ API payload params:
 
 ## implementationClassName
 
-An action class. Should implement `Espo\Core\Action\Action` interface. Can be overriden for a specific entity type at: recordDefs > {EntityType} > actions > {action} > implementationClassName.
+An action class. Should implement `Espo\Core\Action\Action` interface. Can be overridden for a specific entity type at: recordDefs > {EntityType} > actions > {action} > implementationClassName.
