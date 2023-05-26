@@ -49,13 +49,13 @@ Used for ordering panels on the page.
 
 *string*
 
-A link URL.
+A link URL. You can use an URL like #Admin/{myName}, in this case you also need to define a recordView.
 
 ### label
 
 *string*
 
-An item (link) label. A translation path: Admin > labels > {label}. You can use an URL like `#Admin/{myName}`, in this case you also need to define the *recordView*.
+An item (link) label. A translation path: Admin > labels > {label}.
 
 ### iconClass
 
