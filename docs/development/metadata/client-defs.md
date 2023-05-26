@@ -382,7 +382,7 @@ An order-by field.
 
 ## additionalLayouts
 
-Additionals layouts for a scope.
+Additional layouts for a scope.
 
 ```json
 {
