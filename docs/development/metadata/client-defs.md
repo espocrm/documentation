@@ -416,7 +416,7 @@ Mass actions available when selecting all results.
 
 *Object.<string, mixed\>*
 
-Defenitions for mass actions.
+Definitions for mass actions.
 
 ### handler
 
