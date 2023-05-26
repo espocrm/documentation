@@ -16,4 +16,4 @@ Example:
 
 *As of v7.5.*
 
-An entity currency converter.
+Entity currency converters.
