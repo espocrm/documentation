@@ -298,7 +298,8 @@ Example:
             "selectPrimaryFilterName": "filterName",
             "selectBoolFilterList": ["onlyMy"],
             "filterList": ["all", "filterName"],
-            "layout": "listLayoutName"
+            "layout": "listLayoutName",
+            "createAction": "customAction"
         }
     }
 }
