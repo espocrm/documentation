@@ -25,7 +25,7 @@ ID column length. By default, set to *17*.
 
 *string*
 
-ID column data type. By default, set to *string* (equivalent to *varchar* in MySQL). Changing this parameter will change types of all ID columns once you run rebuild.
+An ID column data type. By default, set to *string* (equivalent to *varchar* in MySQL). Changing this parameter will change types of all ID columns once you run rebuild.
 
 In MariaDB (as of v10.7) and PostgreSQL it's possible to use *uuid* data type.
 
