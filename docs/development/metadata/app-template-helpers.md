@@ -10,6 +10,6 @@ Example:
 
 ```json
 {
-    "MyHelper": "Espo\\Customm\\TemplateHelpers\\MyHelper"
+    "MyHelper": "Espo\\Custom\\TemplateHelpers\\MyHelper"
 }
 ```
