@@ -356,9 +356,7 @@ E.g. `NOT:(a)` corresponds to SQL statement `NOT a`.
 
 ### Custom functions
 
-*As of v7.0.8.*
-
-It is possible to add custom functions. An implementation class name for a custom function should be defined in [metadata](../development/metadata/app-orm.md) by the path app > orm > functionConverterClassNameMap_Mysql. The class should implement `Espo\ORM\QueryComposer\Part\FunctionConverter` interface.
+It is possible to add custom functions. An implementation class name for a custom function should be defined in [metadata](../development/metadata/app-orm.md) by the path app > orm > platforms > {platform} > functionConverterClassNameMap > {function}. The class should implement `Espo\ORM\QueryComposer\Part\FunctionConverter` interface.
 
 ## Attribute names
 
