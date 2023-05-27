@@ -56,7 +56,7 @@ Disables in portals.
 
 *string*
 
-A view for a popup notification.
+A view for the popup notification.
 
 ## interval
 
