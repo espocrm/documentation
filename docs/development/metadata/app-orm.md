@@ -40,4 +40,4 @@ PDO factories for platforms.
 
 *Object.<string, class-string<Espo\ORM\QueryComposer\Part\FunctionConverter\>\>*
 
-[Complex expression](../../user-guide/complex-expressions.md) function converters. Use it to define custom complex expression functons.
+[Complex expression](../../user-guide/complex-expressions.md) function converters. Use it to define custom complex expression functions.
