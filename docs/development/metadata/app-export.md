@@ -60,21 +60,21 @@ An extension of export files.
 Additional export parameters.
 
 ```json
-    "fields": {
-        "myParam": {
-            "type": "bool"
-        }
-    },
-    "layout": [
-        [
-            {"name": "myParam"}
-        ]
-    ],
-    "dynamicLogic": {
-        "myParam": {
-            "visible": {
-                "conditionGroup": []
-            }
+"fields": {
+    "myParam": {
+        "type": "bool"
+    }
+},
+"layout": [
+    [
+        {"name": "myParam"}
+    ]
+],
+"dynamicLogic": {
+    "myParam": {
+        "visible": {
+            "conditionGroup": []
         }
     }
+}
 ```
