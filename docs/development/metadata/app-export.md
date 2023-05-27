@@ -54,3 +54,27 @@ A mime type of export files.
 *string*
 
 An extension of export files.
+
+### params
+
+Additional export parameters.
+
+```json
+    "fields": {
+        "myParam": {
+            "type": "bool"
+        }
+    },
+    "layout": [
+        [
+            {"name": "myParam"}
+        ]
+    ],
+    "dynamicLogic": {
+        "myParam": {
+            "visible": {
+                "conditionGroup": []
+            }
+        }
+    }
+```
