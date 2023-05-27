@@ -8,35 +8,37 @@ Example:
 
 ```json
 {
-    "functionConverterClassNameMap_Mysql": {
-        "ABS": "Espo\\Core\\ORM\\QueryComposer\\Part\\FunctionConverters\\Abs"
-    },
-    "queryComposerClassNameMap": {
-        "Mysql": "Espo\\ORM\\QueryComposer\\MysqlQueryComposer"
-    },
-    "pdoFactoryClassNameMap": {
-        "Mysql": "Espo\\ORM\\PDO\\MysqlPDOFactory"
+    "platforms": {
+        "Mysql": {
+            "queryComposerClassName": "Espo\\ORM\\QueryComposer\\MysqlQueryComposer",
+            "pdoFactoryClassName": "Espo\\ORM\\PDO\\MysqlPDOFactory",
+            "functionConverterClassNameMap": {
+                "ABS": "Espo\\Core\\ORM\\QueryComposer\\Part\\FunctionConverters\\Abs"
+            }
+        }
     }
 }
 ```
 
+## platforms
 
-## queryComposerClassNameMap
+*As of v7.5.*
 
-*Object.<string, class-string<Espo\ORM\QueryComposer\QueryComposer\>\>*
+Definitions for database platforms.
 
-Query composers for platforms.
+### queryComposerClassName
 
-## pdoFactoryClassNameMap
+class-string<Espo\ORM\QueryComposer\QueryComposer\>
 
-*Object.<string, class-string<Espo\ORM\PDO\PDOFactory\>\>*
+A query composer.
 
+### pdoFactoryClassName
 
-*As of v7.4.*
+class-string<Espo\ORM\PDO\PDOFactory\>
 
-PDO factories for platforms.
+A PDO factory.
 
-## functionConverterClassNameMap_{platform}
+### functionConverterClassNameMap
 
 *Object.<string, class-string<Espo\ORM\QueryComposer\Part\FunctionConverter\>\>*
 
