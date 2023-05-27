@@ -48,8 +48,7 @@ Array of field parameters. Theses parameters then can be edited for every field 
 
 ```json
 {
-    "params": {
-        [
+    "params": [
             [
                 "name": "required",
                 "type": "bool",
@@ -68,8 +67,7 @@ Array of field parameters. Theses parameters then can be edited for every field 
                 "name": "readOnly",
                 "type": "bool"
             ]
-        ]
-    }
+        ]  
 }
 ```
 
@@ -125,7 +123,7 @@ _"suffix"_ | _"prefix"_ ("suffix" is default)
 
 The naming determines how additional fields will be named.
 
-### Example
+#### Example
 
 Field name: *billingAddress*.
 Additional field: *country*.
