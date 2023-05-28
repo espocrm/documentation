@@ -6,19 +6,14 @@
 
 ```php
 <?php
-
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\Container;
 
 class MyClass
 {
-    private Container $container;
-
-    public function __constructor(Container $container)
-    {
-        $this->container = $container;
-    }
+    public function __constructor(private Container $container)
+    {}
 }
 
 ```
@@ -27,7 +22,6 @@ class MyClass
 
 ```php
 <?php
-
 namespace Espo\Modules\MyModule;
 
 use Espo\Core\ORM\EntityManager;
@@ -35,14 +29,10 @@ use Espo\Core\Utils\Metadata;
 
 class MyClass
 {
-    private EntityManager $entityManager;    
-    private Metadata $metadata;
-
-    public function __constructor(EntityManager $entityManager, Metadata $metadata)
-    {
-        $this->entityManager = $entityManager;
-        $this->metadata = $metadata;
-    }
+    public function __constructor(
+        private EntityManager $entityManager,
+        private Metadata $metadata
+    ) {}
 }
 ```
 
@@ -54,15 +44,12 @@ Exception: Passing the Container may be acceptable for proxy classes.
 
 ```php
 <?php
-
 use Espo\Modules\Crm\Entities\Account;
 
 $account = $this->entityManager
     ->getRDBRepository(Account::ENTITY_TYPE)
     ->select(['id', 'name'])
-    ->where([
-        'type' => 'Customer',
-    ])
+    ->where(['type' => Account::TYPE_CUSTOMER])
     ->order('createdAt')
     ->findOne();
 ```
@@ -77,8 +64,7 @@ $account = $this->entityManager
 class MyClass
 {
     public function myMethod($request, $text)
-    {
-    }
+    {}
 }
 ```
 
@@ -90,8 +76,7 @@ class MyClass
 class MyClass
 {
     public function myMethod(Request $request, string $text): void
-    {
-    }
+    {}
 }
 ```
 
@@ -184,8 +169,7 @@ Exception: Adding comments may be reasonable in some rare cases.
      * Run a command.
      */
     public function run(Params $params): void
-    {
-    }
+    {}
 ```
 
 ❗ Bad:
@@ -202,8 +186,6 @@ $string = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 ✔️ Good:
 ```php
 <?php
-// ...
-
 $string = $this->sanitizeString($string);
 ```
 
@@ -213,7 +195,6 @@ $string = $this->sanitizeString($string);
 
 ```php
 <?php
-
 namespace Espo\Some;
 
 class SomeClass
@@ -232,12 +213,10 @@ class SomeClass
 
 ```php
 <?php
-
 namespace Espo\Some;
 
 use Espo\Modules\MyModule\Something;
 use Espo\Modules\MyModule\AnotherThing;
-
 use RuntimeException;
 
 class SomeClass
@@ -258,7 +237,6 @@ class SomeClass
 ```php
 <?php
 // ...
-
     public function process(): void
     {
         if (!$this->isCached()) {
@@ -276,7 +254,6 @@ class SomeClass
 ```php
 <?php
 // ...
-
     public function process(): void
     {
         if (!$this->isCached()) {
@@ -292,7 +269,6 @@ class SomeClass
 ```php
 <?php
 // ...
-
     public function process(): void
     {
         if (!$this->isCached()) {
@@ -308,7 +284,6 @@ class SomeClass
 ```php
 <?php
 // ...
-
     private function sizeExceedsLimit(Storage $storage, string $id): bool
     {
         $fetchOnlyHeader = false;
@@ -332,7 +307,6 @@ class SomeClass
 ```php
 <?php
 // ...
-
     private function sizeExceedsLimit(Storage $storage, string $id): bool
     {
         $maxSize = $this->config->get('emailMessageMaxSize');
@@ -342,12 +316,8 @@ class SomeClass
         }
             
         $size = $storage->getSize($id);
-
-        if ($size > $maxSize) {
-            return true;
-        }
-
-        return false;
+        
+        return $size > $maxSize;
     }
 ```
 
@@ -360,10 +330,8 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-
     public function process(string $city, string $country, string $postalCode): void
-    {
-    }
+    {}
 ```
 
 ✔️ Good:
@@ -371,12 +339,9 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-
     public function process(Address $address): void
-    {
-    }
+    {}
 ```
-
 
 ❗ Bad:
 
@@ -384,8 +349,7 @@ Less is better. Four is too much.
 <?php
 // ...
     public function find(array $where, int $offset = 0, ?int $limit = null, bool $applyAcl = false): Collection
-    {
-    }
+    {}
 ```
 
 ✔️ Good:
@@ -471,17 +435,13 @@ class AccountChecker extends BaseChecker
 <?php
 
 class AccountChecker implements Checker
-{
-    private BaseChecker $baseChecker;    
-    private SomeDependency $someDependency;
-     
+{     
     // Here we can inject additional dependencies that would be problematic
     // if we extended the base class.
-    public function __construct(BaseChecker $baseChecker, SomeDependency $someDependency)
-    {
-        $this->baseChecker = $baseChecker;
-        $this->someDependency = $someDependency;
-    }
+    public function __construct(
+        private BaseChecker $baseChecker,
+        private SomeDependency $someDependency
+    ) {}
 
     public function check(Entity $entity): bool
     {
@@ -496,7 +456,7 @@ class AccountChecker implements Checker
 
 The *protected* visibility should be used very sparsely.
 
-### 11\. Use DTO rather than associative arrays or stdClass objects.
+### 11\. Use DTOs rather than associative arrays or stdClass objects.
 
 Use immutable data transfer objects.
 
