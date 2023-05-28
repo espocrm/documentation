@@ -8,7 +8,7 @@ The file structure of the package:
 * `files/` – a directory that contains extension files;
 * `scripts/` – a directory that contains extension scripts.
 
-### Manifest
+## Manifest
 
 ```json
 {
@@ -28,11 +28,11 @@ The file structure of the package:
 
 Syntax of `version` and `acceptableVersions` is described by the v2.0.0 specification found at http://semver.org.
 
-### Files
+## Files
 
 All extension files should be placed in `files` directory. They will be copied to EspoCRM core directory.
 
-### Scripts
+## Scripts
 
 For different purposes EspoCRM supports the following types of scripts. All of them should be  placed in `scripts` directory.
 
@@ -72,10 +72,18 @@ class AfterInstall
 }
 ```
 
-### Package
+## Package
 
 In the end, we need to pack all these files into a ZIP archive.
 
 ## Template repository
 
 You can use this [template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
+
+## Recomendations
+
+
+!!! note
+
+    It's recommended to give some prefix to names of your custom entity types. E.g. `MyPrefixMyEntityTypeName`, this prefix can be the name of your company.
+    It will prevent possible conflicts with other extensions.
