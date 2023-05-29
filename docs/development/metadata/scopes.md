@@ -144,13 +144,13 @@ Disables the scope in the system.
 
 *boolean*
 
-Wether the entity can be customized in the Entity Manager tool.
+Whether the entity can be customized in the Entity Manager tool.
 
 ## isCustom
 
 *boolean*
 
-Entities creted in the Entity Manager tool marked as custom.
+Entities created in the Entity Manager tool marked as custom.
 
 ## notifications
 
@@ -184,13 +184,13 @@ Status values that determine that a record should be shown in the History panel.
 
 *boolean*
 
-Languge labels will be available for all users (not restricted by ACL).
+Language labels will be available for all users (not restricted by ACL).
 
 ## languageAclDisabled
 
 *boolean*
 
-Disables access control application for language labels. All labels of the scope will be avaialble in the front-end regardless of user roles.
+Disables access control application for language labels. All labels of the scope will be available in the front-end regardless of user roles.
 
 ## kanbanStatusIgnoreList
 
