@@ -363,6 +363,12 @@ The report panel shows results related to the record that is viewed. The first f
 
 Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Reports* field on the Report detail view. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
 
+It's possible to add a report dashlet on the portal dashboard.
+
+!!! note
+
+    For grid reports which are meant be available in the portal, it's usually reasonable to enable *Apply ACL*.
+
 
 ## See also
 
