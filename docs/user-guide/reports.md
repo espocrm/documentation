@@ -367,7 +367,7 @@ It's possible to add a report dashlet on the portal dashboard.
 
 !!! note
 
-    For grid reports which are meant be available in the portal, it's usually reasonable to enable [*Apply ACL*](#access).
+    For grid reports which are meant be available in the portal, it's usually reasonable to enable [Apply ACL](#access).
 
 
 ## See also
