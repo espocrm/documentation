@@ -16,6 +16,7 @@ In this article:
 * [Syncing with Target Lists](#syncing-with-target-lists)
 * [List view filters based on reports](#report-filters)
 * [Reports panels](#report-panels)
+* [Portal access](#portal-access)
 
 See also:
 
@@ -357,6 +358,11 @@ The order of side panels can be customized at Layout Manager > Side Panels (Deta
 The order of bottom panels can be customized at Layout Manager > Bottom Panels.
 
 The report panel shows results related to the record that is viewed. The first found relationship is used. If the report has an appropriate runtime filter, then it will be used to filter report results. The runtime filter must be a field of a link, link-multiple or link-parent type.
+
+## Portal access
+
+Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Reports* field on the Report detail view. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
+
 
 ## See also
 
