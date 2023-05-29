@@ -154,7 +154,8 @@ Exanmple:
             "style": "success"
         },
         {
-            "name": "todays"
+            "name": "someFilter",
+            "accessDataList": []
         }
     ]
 }
@@ -169,6 +170,19 @@ Example:
 ```json
 {
     "boolFilterList": ["onlyMy"]
+}
+```
+
+Example:
+
+```json
+{
+    "boolFilterList": [
+        {
+            "name": "onlyMy",
+            "accessDataList": []
+        }
+    ]
 }
 ```
 
