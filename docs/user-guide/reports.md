@@ -155,7 +155,7 @@ Note that non-aggregared columns (in grid reports) are not exported to XLSX.
 
 ### Access
 
-By checking *Apply ACL* the report result will not include records that the current user don't have access to.
+By checking *Apply ACL* the report result will not include records that the current user doesn't have access to.
 
 If a regular user does not have edit access to the *Apply ACL* field (via role field level securiry), all reports they create will get *Apply ACL* automatically checked (as of v2.13.5).
 
@@ -367,7 +367,7 @@ It's possible to add a report dashlet on the portal dashboard.
 
 !!! note
 
-    For grid reports which are meant be available in the portal, it's usually reasonable to enable *Apply ACL*.
+    For grid reports which are meant be available in the portal, it's usually reasonable to enable [*Apply ACL*](#access).
 
 
 ## See also
