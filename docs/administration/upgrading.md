@@ -39,7 +39,7 @@ Available parameters (only for advanced users):
 
 - `-y` − run w/o user confirmation;
 - `-s` − run an upgrade in a single process;
-- `--file="EspoCRM-upgrade.zip"` − install a specific upgrade package (path to file).
+- `--file="EspoCRM-upgrade.zip"` − install a specific [upgrade package](https://www.espocrm.com/download/upgrades/) (path to file).
 
 Example of using parameters:
 
