@@ -14,7 +14,7 @@ $hash = password\hash($password);
 
 $userId = record\create('User',
     'userName', $userName,
-    'password', $hash
+    'password', $hash,
     'emailAddress', $emailAddress
 );
 
