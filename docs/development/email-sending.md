@@ -15,10 +15,7 @@ class SomeClass
     public function __construct(
         private EmailSender $emailSender,
         private EmailFactory $emailFactory
-    ) {
-        $this->emailSender = $emailSender;
-        $this->emailFactory = $emailFactory;
-    }
+    ) {}
     
     public function send(): void
     {
@@ -35,7 +32,7 @@ class SomeClass
         $this->emailSender
             ->withSmtpParams($smtpParams) // optional
             ->withAttachments([$attachment]) // optional, to send with attachments
-            ->send();
+            ->send($email);
     }
 }
 ```
