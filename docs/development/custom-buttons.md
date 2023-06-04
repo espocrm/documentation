@@ -101,7 +101,7 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 
 An action item next to the edit button.
 
-An example for a *Lead* entity type.
+An example for the *Lead* entity type.
 
 ### Definition
 
