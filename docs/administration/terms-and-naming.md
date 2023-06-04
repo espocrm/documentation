@@ -28,12 +28,12 @@ Most fields have only one attribute named the same as the field. E.g. the `creat
 
 Attributes are named in lowerCamelCase (start with a lowercase letter).
 
-Field types having multiple attributes:
+Field types that have multiple attributes:
 
 * Link: *fieldId*, *fieldName*
-* Link-Multiple: *fieldIds*, *fieldNames* (ids − array of ids, names − object of id=>name pairs)
-* Link-Parent: *fieldId*, *fieldType*, *fieldName* (type is entity type)
-* Currency: *field*, *fieldCurrency* (currency is currency code)
+* Link-Multiple: *fieldIds*, *fieldNames* (ids − array of IDs, names − object of ID => name pairs)
+* Link-Parent: *fieldId*, *fieldType*, *fieldName* (type is an entity type)
+* Currency: *field*, *fieldCurrency* (currency is a currency code)
 * Person Name: *firstName*, *lastName*, *middleName*, *salutationName*
 * Address: *fieldStreet*, *fieldCity*, *fieldPostalCode*, *fieldCountry*, *fieldState*
 
