@@ -28,7 +28,7 @@ Most fields have only one attribute named the same as the field. E.g. the `creat
 
 Attributes are named in lowerCamelCase (start with a lowercase letter).
 
-Field types that have multiple attributes:
+Field types that have multiple attributes and their attribute naming:
 
 * Link: *fieldId*, *fieldName*
 * Link-Multiple: *fieldIds*, *fieldNames* (ids − array of IDs, names − object of ID => name pairs)
