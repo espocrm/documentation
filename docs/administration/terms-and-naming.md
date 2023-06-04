@@ -24,7 +24,7 @@ The list of available field types can be found [here](fields.md).
 
 ## Attribute
 
-Most fields have only one attribute named the same as its field. E.g. `createdAt` field has attribute `createdAt`. Some fields have multiple attributes.
+Most fields have only one attribute named the same as the field. E.g. the `createdAt` field has an attribute `createdAt`. Some fields have multiple attributes.
 
 Attributes are named in lowerCamelCase (start with a lowercase letter).
 
