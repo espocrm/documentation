@@ -351,4 +351,4 @@ Parameters:
 
 ## Link-Multiple
 
-A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) relationship. Not all relationships have their link-multiple fields. Only those do, where *Link-Multiple* parameter(s) is enabled.
+A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) relationship. Not all relationships have a link-multiple field. Only those do, where *Link-Multiple* parameter(s) is enabled.
