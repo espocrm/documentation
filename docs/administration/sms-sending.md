@@ -4,7 +4,7 @@ EspoCRM has the built-in functionality for sending SMS, but it's not shipped wit
 
 - Twilio
 - Spryng
-- sms77a
+- seven (formerly sms77)
 - smstools
 - SerwerSms
 
