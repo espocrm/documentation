@@ -129,11 +129,11 @@ Get a where-clause.
 
 ## Properties
 
-### name
+### entityType
 
 *string*
 
-A name. Usually, an entity type.
+An entity type.
 
 ### length
 
