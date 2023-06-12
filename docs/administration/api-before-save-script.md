@@ -4,7 +4,7 @@
 
 A [formula](formula.md) script that is called on create and update API requests before an entity is saved.
 It's executed only when a record is created or updated via API, including via UI (as EspoCRM is a single page application). It's not executed when a record is saved from whithin the system (e.g. in hooks, workflow actions).
-Can be used for custom validation, duplicate checking and access control. Available at Administration > Entity Manager > {Entity} > Formula.
+Can be used for custom validation, duplicate checking, and access control. Available at Administration > Entity Manager > {Entity} > Formula.
 
 !!! note
 
