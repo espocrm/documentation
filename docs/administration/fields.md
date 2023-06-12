@@ -81,6 +81,7 @@ Selectbox, only one value can be selected.
 Parameters:
 
 * Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
+* Options Reference – options from another field to re-use (as of v7.5);
 * Is Sorted – to sort a list alphabetically;
 * Display as Label – a value will be displayed as a label with color; a color for each option can be specified.
 
@@ -189,6 +190,7 @@ A list of values, multiple values can be selected. The list is ordered.
 Parameters:
 
 * Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
+* Options Reference – options from another field to re-use (as of v7.5);
 * Is Sorted – to sort a list alphabetically;
 * Allow Custom Options – if checked, a user can add custom values (not defined by *Options* parameter) by typing text and pressing the enter key;
 * Max Item Count – a validation: how many items can be added;
@@ -204,6 +206,7 @@ A list of checkboxes.
 Parameters:
 
 * Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
+* Options Reference – options from another field to re-use (as of v7.5);
 * Is Sorted – to sort a list alphabetically;
 * Max Item Count – a validation: how many items can be checked;
 
@@ -215,6 +218,7 @@ A list of values, similar to Multi-Enum field.
 Parameters:
 
 * Options – a list of values (key => label pairs); if no options specified, then a user will be able to add any options;
+* Options Reference – options from another field to re-use (as of v7.5);
 * Empty string value is not allowed – if not checked, a user can add an empty string as an item;
 * Max Item Count – a validation: how many items can be added;
 * Display as List – each value will be displayed in a new line;
