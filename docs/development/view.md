@@ -157,12 +157,14 @@ See more about [templates](frontend/templates.md).
 
 Note: When you extend a view that already has its *events* and you want to add more events, do it the following way:
 
-```js
-    events: {
-        'click a[data-action="test"]': function (e) {
-        },
-        ...Dep.prototype.events
-    },
+```js    
+    setup() {
+        super.setup();
+        
+        this.events['click a[data-action="test"]'] = (e) => {
+        
+        };
+    }
 ```
 
 See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view.js) of the view class.
