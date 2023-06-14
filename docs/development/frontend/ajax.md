@@ -1,6 +1,6 @@
 # Ajax Requests
 
-*Espo.Ajax* object is used to make reqeusts to Espo API endpoints. See the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/ajax.js) with JSDoc for more info. An API base path `api/v1` is prepended to each request URL. 
+The *Espo.Ajax* object is used to make reqeusts to Espo API endpoints. See the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/ajax.js) with JSDoc for more info. An API base path `api/v1` is prepended to each request URL. 
 
 GET:
 
