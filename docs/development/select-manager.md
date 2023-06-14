@@ -18,7 +18,7 @@ $selectManager->applyOrder('createdAt', true, $params);
 $selectManager->applyLimit(0, 5, $params);
 
 $params['whereClause'][] = [
-    'accontId' => $accountId,
+    'accountId' => $accountId,
 ];
 
 $entityManager->getRepository('Opportunity')->find($params);
