@@ -1,8 +1,6 @@
 # Ajax Requests
 
-See the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/ajax.js) with JSDoc for more info.
-
-By default an API base path `api/v1` is prepended to each request URL. 
+*Espo.Ajax* object is used to make reqeusts to Espo API endpoints. See the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/ajax.js) with JSDoc for more info. An API base path `api/v1` is prepended to each request URL. 
 
 GET:
 
@@ -39,6 +37,5 @@ Espo.Ajax.getRequest('MyController/action/getSomeDataById', {id: id})
 ## Request options
 
 * `[timeout] {Number}` A timeout.
-* `[headers] {Object.<string,string>}` A request headers.
+* `[headers] {Object.<string, string>}` A request headers.
 * `[dataType] {'xml'|'json'|'text'}` A data type.
-* `[local] {boolean}` If true, the API URL won't be prepended.
