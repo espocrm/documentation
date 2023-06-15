@@ -47,23 +47,25 @@ Handler example:
 
 define('custom:some-handler', [], function () {
 
-    let Handler = function (view) {
-        this.view = view;
-    };
+    class Handler {
+        
+        /**
+         * @param {module:view} view
+         */
+        constructor(view) {
+            this.view = view;
+        }
 
-    _.extend(Handler.prototype, {
-
-        process: function () {
-            // Do something with view.
-
+        process() {
             this.listenTo(this.view, 'after:render', () => {
                 // Do something with view after render.
             });
-        },
-    });
+        }
+    }
 
     // Establish event support.
-    _.extend(Handler.prototype, Backbone.Events);
+    Object.assign(Handler.prototype, Backbone.Events);
+    // Object.assign(Handler.prototype, Bull.Events); // as of v7.6
 
     return Handler;
 });
