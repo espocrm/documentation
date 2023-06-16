@@ -62,6 +62,6 @@ Set the debug mode for the [log](log.md). More information will be printed to th
 
 Can be set manually in `data/config.php`.
 
-* oidcAuthorizationPrompt – `consent` | `login` | `none` (default: `consent`)
+* oidcAuthorizationPrompt –  `none` | `consent` | `login` | `select_account` (default: `consent`)
 * oidcAuthorizationMaxAge – integer
 * oidcJwksCachePeriod – string  (default: `'10 minutes'`)
