@@ -84,7 +84,9 @@ Disables the field.
 
 Enable a tooltip for the field. A tooltip text is taken from the language by: {EntityType} > tooltips > {fieldName}.
 
-If defined as a string, then text will be taken from the language by: {EntityType} > tooltips > {value}.
+If defined as a string, then text will be taken from the language by a path {EntityType} > tooltips > {value}.
+
+If defined as a string containing a dot character, then parsed with {EntityType}.{key} format, a text will be taken by a path {EntityType} > tooltips > {key} (as of v7.6).
 
 ### validatorClassName
 
