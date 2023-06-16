@@ -65,7 +65,6 @@ define('custom:some-handler', [], function () {
 
     // Establish event support.
     Object.assign(Handler.prototype, Backbone.Events);
-    // Object.assign(Handler.prototype, Bull.Events); // as of v7.6
 
     return Handler;
 });
