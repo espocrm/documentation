@@ -99,8 +99,8 @@ It's better to use an auth token instead of a password. In this case you will ne
 ```
 
 1. Obtain an access token by `GET App/user` request with the username and password passed in `Espo-Authorization` header.
-2. Use this token instead of a password in `Espo-Authorization` header for all further request.
-3. If the request returns 401 error that means either username/password is wrong or token is not valid anymore.
+2. Use this token instead of a password in `Espo-Authorization` header for all further requests.
+3. If the request returns 401 error that means either that the username/password is wrong or the token is not valid anymore.
 
 #### Authentication Token / User Specific Data
 
