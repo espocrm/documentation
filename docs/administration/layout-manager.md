@@ -31,6 +31,10 @@ Available parameters for columns are listed below.
 
 Width of a column in percent, empty means auto-width.
 
+#### Width (px)
+
+Width of a column in pixels. The field shows up only if *Width (%)* is empty.
+
 #### Link
 
 If checked, then a field value will be displayed as a link pointing to the detail view of the record. Usually, it is used for *Name* fields.
