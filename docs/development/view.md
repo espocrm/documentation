@@ -20,6 +20,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         template: 'custom:test/my-custom-view',
 
         // Alternatively a template content can be defined right here.
+        // Use // language=Handlebars to highlight syntax in JetBrains IDEs.
         //templateContent: `<div class="some-test-container">{{{someKeyName}}}</div>`,
 
         // Initializing. Called on view creation, the view is not yet rendered.
