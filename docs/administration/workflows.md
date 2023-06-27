@@ -301,7 +301,7 @@ Supported request methods:
 * PATCH
 * DELETE
 
-Payload can taken from a formula variable (as of v2.15) or specified in a JSON format.
+Payload can be taken from a formula variable (as of v2.15) or specified in a JSON format.
 
 Additional headers can be specified.
 
