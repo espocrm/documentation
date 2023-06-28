@@ -206,12 +206,13 @@ Style:
 
 * `text-soft`
 * `text-muted`
-* `text-bold`
 * `text-primary`
 * `text-success`
 * `text-danger`
 * `text-warning`
 * `text-info`
+* `text-bold`
+* `text-italic` (as of v7.6)
 
 Size:
 
