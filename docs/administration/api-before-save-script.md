@@ -12,7 +12,9 @@ Can be used for custom validation, duplicate checking, and access control. Avail
 
 ## Special functions
 
-These functions are available only in *API Before-Save Script*. Using them in other places will produce an error.
+!!! warning
+
+    These functions are available only in *API Before-Save Script*. Using them in other places will produce an error.
 
 ### recordService\skipDuplicateCheck
 
