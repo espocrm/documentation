@@ -8,12 +8,16 @@
 
 ## Record list
 
-* `Ctrl + Enter` –  apply search filter;
+* `Ctrl + Enter` – apply search filter;
 * `Ctrl + Space` – create new record;
 * `Ctrl + /` – focus on search-bar;
 * `Ctrl + <` – previous primary filter;
 * `Ctrl + >` – next primary filter;
 * `Ctrl + Middle-Click` – quick view (when applied on a record link);
+
+!!! note "Tip"
+
+Combination `Ctrl + Middle-Click` (on a record link) following by `Ctrl + Space` can be used for quick edit.
 
 ## Record detail
 
