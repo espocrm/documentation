@@ -17,7 +17,7 @@
 
 !!! note "Tip"
 
-Combination `Ctrl + Middle-Click` (on a record link) following by `Ctrl + Space` can be used for quick edit.
+    Combination `Ctrl + Middle-Click` (on a record link) following by `Ctrl + Space` can be used for quick edit.
 
 ## Record detail
 
