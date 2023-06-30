@@ -17,7 +17,7 @@ Binotel Integration is available as part of [VoIP Integration extension](https:/
 * **Default Country** – The country is used to format phone numbers. E.g. 02011112222 for United Kingdom will be formatted to +442011112222.
 * **Dial Format for outgoing calls** – Phone number format for outgoing (click-to-call) calls.
 E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031112233".
-* **List of ignored numbers** – list of numbers, which will be ignored and popup window will not be displayed.
+* **List of ignored numbers** – list of numbers, which will be ignored and popup window will not be displayed. Use numbers in the following formats: +14844608117 (full number match) or #4844608117# (regular expression).
 * **Permitted Entities** – entities that will be displayed in popup window and will be used to identify a caller by his phone number.
 * **Hide a Lead** – Hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display an account related to the contact in the popup window.
