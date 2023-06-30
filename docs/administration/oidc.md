@@ -18,14 +18,13 @@ Additional features:
 * For admins OIDC can be disabled, so that only the fallback method  allowed.
 * Logout redirect. To clear an identity provider session when a user is logging out from Espo.
 * Backchannel logout. The ability to forcibly log out a user from Espo. `api/v1/backchannelLogout` endpoint.
-* *client_secret_jwt* and *private_key_jwt* [methods](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication) are not supported. You might need to enable *client_secret_post* method for providers that apply JWT method by default (e.g. Keycloak).
 
 Details:
 
 * Espo 2FA likely won't work with OIDC (if your identity provider does not allow an authorization code to be used twice; as Espo authentication process is stateless it will use the same autherization code for the second step). Consider using 2FA of the identity providers.
 * The *userName* field length may need to be increased up to 255 in some cases (by default, Espo has the limit 50).
 * Supported signing algorithms: RS256, RS384. RS512, HS256, HS384, HS512. Developers can add implementations of other algorithms in an upgrade-safe manner.
-
+* *client_secret_jwt* and *private_key_jwt* [methods](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication) are not supported. You might need to enable *client_secret_post* method for providers that apply JWT method by default (e.g. Keycloak).
 
 ## Setting up
 
