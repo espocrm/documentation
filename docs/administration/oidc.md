@@ -18,7 +18,7 @@ Additional features:
 * For admins OIDC can be disabled, so that only the fallback method  allowed.
 * Logout redirect. To clear an identity provider session when a user is logging out from Espo.
 * Backchannel logout. The ability to forcibly log out a user from Espo. `api/v1/backchannelLogout` endpoint.
-* *client_secret_jwt* and *private_key_jwt* [methods](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication) are not supported. You might need to enable basic authotization method for providers that apply JWT method by default (e.g. Keycloak).
+* *client_secret_jwt* and *private_key_jwt* [methods](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication) are not supported. You might need to enable *client_secret_post* method for providers that apply JWT method by default (e.g. Keycloak).
 
 Details:
 
