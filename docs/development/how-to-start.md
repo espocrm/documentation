@@ -65,7 +65,7 @@ You can develop and make customizations right on a regular installed EspoCRM ins
 
 ## Option C. Extension development
 
-By utilizing [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM.
+By utilizing [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. Template tools allows you to run your extension in Espo instance for testing.
 
 ## Configuration for development
 
