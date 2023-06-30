@@ -3,6 +3,7 @@
 * [record\exists](#recordexists)
 * [record\count](#recordcount)
 * [record\findOne](#recordfindone)
+* [record\findMany](#recordfindmany)
 * [record\findRelatedOne](#recordfindrelatedone)
 * [record\findRelatedMany](#recordfindrelatedmany)
 * [record\attribute](#recordattribute)
@@ -51,7 +52,7 @@ Returns a count of records with an optional FILTER applied. More [info](../formu
 
     `record\count('Lead', 'status=', list('Assigned', 'In Process'))`
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
+FILTER is a name of a primary filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More [info](../formula.md#filter).
 
 ## record\findOne
@@ -67,10 +68,26 @@ Returns a first found ID of a record that matches specific criteria.
     `record\findOne('Opportunity', 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
 
     `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
+
+## record\findMany
+
+*As of v7.6*.
+
+`record\findMany(ENTITY_TYPE, LIMIT, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])`
+
+Returns an array of IDs of records that match specific criteria.
+
+`record\findMany(ENTITY_TYPE, LIMIT, ORDER_BY, ORDER, [FILTER])` With an optional FILTER applied.
+
+!!! examples
+
+    `record\findMany('Opportunity', 10, 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
+
+    `record\findOne('Opportunity', 5, 'createdAt', 'desc', 'open')`
     
 ORDER_BY and ORDER can be null.
 
-FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
+FILTER is a name of a primary filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More [info](../formula.md#filter).
 
 ## record\findRelatedOne
