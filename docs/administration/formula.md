@@ -274,8 +274,8 @@ Out-of-the-box functions are listed below.
 
 * [record\exists](formula/record.md#recordexists)
 * [record\count](formula/record.md#recordcount)
-* [record\findMant](formula/record.md#recordfindmany)
 * [record\findOne](formula/record.md#recordfindone)
+* [record\findMany](formula/record.md#recordfindmany)
 * [record\findRelatedOne](formula/record.md#recordfindrelatedone)
 * [record\findRelatedMany](formula/record.md#recordfindrelatedmany)
 * [record\attribute](formula/record.md#recordattribute)
