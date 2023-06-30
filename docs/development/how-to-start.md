@@ -8,6 +8,8 @@
 
 ## Option A. Using git repository
 
+Using the main EspoCRM repository.
+
 1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository to your local computer.
 2. Change to the project's root directory: `cd path/to/espocrm`.
 3. Install [Composer](https://getcomposer.org/doc/00-intro.md) (v2.0 or greater).
