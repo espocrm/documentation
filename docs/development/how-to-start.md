@@ -69,16 +69,15 @@ By utilizing [ext-template](https://github.com/espocrm/ext-template) repository,
 
 ## Configuration for development
 
-Parameters can be set in `data/config.php`.
+EspoCRM instance configuration for development. Parameters should be set in `data/config.php`.
 
-
-Developer mode disables cache, front-end libs are loaded directly from the `node_modules` directory.
+Developer mode disables cache.
 
 ```php
 'isDeveloperMode' => true,
 ```
 
-You can force using backend cache (metadata, language etc.) in the developer mode. Can be reasonable as the application can be slow w/o cache.
+You can force using backend cache (metadata, language etc.) in the developer mode. Can be reasonable as the application can run slow w/o cache.
 
 ```php
 'useCacheInDeveloperMode' => true,
