@@ -41,7 +41,7 @@ Fill in the connection details of your Asterisk server. To do this, go to the Ad
 * **Read Timeout** – timeout of read events from Asterisk server.
 * **Default Country** – the country is used to format phone numbers.
 * **Dial Format for outgoing calls** – a phone number format for outgoing (click-to-call) calls.
-* **List of ignored numbers** – list of numbers which will be ignored. Popup window will not be displayed.
+* **List of ignored numbers** – list of numbers which will be ignored. Popup window will not be displayed. Use numbers in the following formats: +14844608117 (full number match) or #4844608117# (regular expression).
 * **Permitted Entities** – entities that will be displayed in popup window and will be used to identify a caller by his phone number.
 * **Hide a Lead** – Hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display only Accounts related to Contacts.
