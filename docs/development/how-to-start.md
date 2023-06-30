@@ -1,5 +1,10 @@
 # How to get started
 
+* [Option A. Using git repository](#option-a-using-git-repository)
+* [Option B. Using installed instance](#option-b-using-installed-instance)
+* [Configuration for development](#configuration-for-development)
+* [Where to put customizations](#where-to-put-customizations)
+
 ## Option A. Using git repository
 
 1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository to your local computer.
@@ -14,7 +19,9 @@ Then you can build by running `grunt`.
 
 To build a proper *config.php* file and populate database you can run installation. Open `http(s)://{YOUR_CRM_URL}/install` location in the browser. It's assumed that your webserver is properly [configured](../administration/server-configuration.md).
 
-Note: Some dependencies require php extensions that you might not have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
+!!! note
+
+    Some dependencies require php extensions that you might not have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
 ### Building
 
@@ -23,7 +30,9 @@ Note: Some dependencies require php extensions that you might not have installed
 
 The build will be created in the `build` directory.
 
-Note: By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
+!!! note
+
+    By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
 
 ### Branches
 
