@@ -90,7 +90,7 @@ To add some custom entities to Permitted Entities, please create/modify the file
 }
 ```
 
-Please make sure that your JSON data is correct after changes.
+Please note, <YOUR_CUSTOM_ENTITY> must be Person type entity. Please make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
 
