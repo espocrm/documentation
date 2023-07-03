@@ -281,6 +281,10 @@ Not refreshable (when clicking on the header).
 *object*
 
 Options to pass to the panel view.
+
+### accessDataList
+
+Access control defs.
       
 ## bottomPanels
 
