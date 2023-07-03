@@ -73,6 +73,8 @@ To take effect, clear a system cache (Administration > Clear Cache) and reload a
 
 ## Add custom entities to Permitted Entities
 
+**Important**: the added entity must be of the `Person` type.
+
 To add some custom entities to Permitted Entities, please create/modify the file `/custom/Espo/Custom/Resources/metadata/integrations/<CONNECTOR_NAME>.json` with the code:
 
 (e.g. for Asterisk connector it's the file `/custom/Espo/Custom/Resources/metadata/integrations/Asterisk.json`)
@@ -90,9 +92,8 @@ To add some custom entities to Permitted Entities, please create/modify the file
 }
 ```
 
-Note, that <YOUR_CUSTOM_ENTITY> must be Person type entity. Please make sure that your JSON data is correct after changes.
+Please make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
-
 
 ## Add custom entities to Quick Create Entities
 
