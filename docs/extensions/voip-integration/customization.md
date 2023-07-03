@@ -6,6 +6,7 @@ In this article:
 * [Grant access to Messages](#grant-access-to-messages)
 * [Grant access to Calls](#grant-access-to-calls)
 * [Add click-to-call feature to a custom entity](#add-click-to-call-feature-to-a-custom-entity)
+* [Add custom entities to Permitted Entities](#add-custom-entities-to-permitted-entities)
 * [Add custom entities to Quick Create Entities](#add-custom-entities-to-quick-create-entities)
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
 * [Format phone number](#format-phone-number)
@@ -67,6 +68,29 @@ In this file should be defined a phoneNumber field (a field with "type": "phone"
 
 Please make sure that your JSON data is correct after changes.
 
+To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
+
+
+## Add custom entities to Permitted Entities
+
+To add some custom entities to Permitted Entities, please create/modify the file `/custom/Espo/Custom/Resources/metadata/integrations/<CONNECTOR_NAME>.json` with the code:
+
+(e.g. for Asterisk connector it's the file `/custom/Espo/Custom/Resources/metadata/integrations/Asterisk.json`)
+
+```
+{
+    "fields": {
+        "permittedEntities": {
+            "options": [
+                "__APPEND__",
+                "<YOUR_CUSTOM_ENTITY>"
+            ]
+        }
+    }
+}
+```
+
+Please make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
 
