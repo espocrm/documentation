@@ -211,7 +211,9 @@ Printing tables:
 
 `itemList` is a *jsonArray* field (available in Quote, Sales Order, Invoices entity types).
 
-Note: Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended, since it breaks a layout of a *contenteditable* element.
+!!! note
+
+    Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended, since it breaks a layout of a *contenteditable* element.
 
 Displaying certain number of items in one row:
 
