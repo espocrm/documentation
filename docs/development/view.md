@@ -80,7 +80,10 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             console.log(this.$el); 
             
             // The view container (DOM element).
-            console.log(this.el); 
+            console.log(this.el);
+
+            // The view container (DOM element). As of v8.0.
+            console.log(this.element); 
             
             // Accessing a child view.
             let childView = this.getView('someKeyName');
