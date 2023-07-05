@@ -36,6 +36,6 @@ Espo.Ajax.getRequest('MyController/action/getSomeDataById', {id: id})
 
 ## Request options
 
-* `[timeout] {Number}` A timeout.
+* `[timeout] {Number}` A timeout in milliseconds.
 * `[headers] {Object.<string, string>}` A request headers.
 * `[dataType] {'xml'|'json'|'text'}` A data type.
