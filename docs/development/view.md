@@ -399,6 +399,17 @@ actionShowModal() {
 }
 ```
 
+### addHandler
+
+*As of v8.0.*
+
+Adds a DOM event handler.
+
+```js
+this.addEventHandler('click', 'selector', 'methodName');
+this.addEventHandler('mousedown', 'selector', event => { ... });
+```
+
 ## Events
 
 ```js
