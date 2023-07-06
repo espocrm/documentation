@@ -31,16 +31,20 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             // Instantiate some property.
             this.someParam1 = 'test 1';
 
+            // As of v8.0.
+            this.addHandler('click', 'a[data-action="something"]', 'someMethod');
+            this.addHandler('focus', '.record input[data-name="something"]', event => this.someMethod(event));
+
             // When we create a child view in the setup method, rendering of the view is held off
             // until the child view is loaded (ready), the child view will be rendered along with the parent view.
             // The first argument is a key name that can be used to access the view further.
             // The second argument is a view name.
             // The method returns a promise that resolves to a view object.
             this.createView('someKeyName', 'custom:test/my-custom-child-view', {
-                // Define a selector of the container element.
-                el: this.getSelector() + ' .some-test-container', 
-                // Or a relative selector (as of v7.2):
-                // selector: '.some-test-container',
+                // A relative selector of the DOM container.
+                selector: '.some-test-container',
+                // A full selector (as of v8.0)
+                //fullSelector: '#some-id',
                 // Pass some parameter.
                 someParam: 'test',
             }); 
@@ -106,6 +110,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         },
         
         // DOM event handlers.
+        // Prefer using `addHandler` method instead as of v8.0.
         events: {
             'click a[data-action="test"]': function (e) {
                 // Reading an element attribute.
