@@ -406,8 +406,8 @@ actionShowModal() {
 Adds a DOM event handler.
 
 ```js
-this.addEventHandler('click', 'selector', 'methodName');
-this.addEventHandler('mousedown', 'selector', event => { ... });
+this.addHandler('click', 'selector', 'methodName');
+this.addHandler('mousedown', 'selector', event => { ... });
 ```
 
 ## Events
