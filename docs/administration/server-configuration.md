@@ -119,7 +119,7 @@ To setup crontab on Unix-like system, take the following steps:
 2\. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab. It looks like this one:
 
 ```
-* * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
+* * * * * /usr/bin/php -f /path/to/espocrm/cron.php > /dev/null 2>&1
 ```
 
 3\. Open a terminal and run this command:
