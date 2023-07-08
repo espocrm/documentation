@@ -1,12 +1,12 @@
 # Modal view (dialog)
 
-## Modal form
+## Modal with a form
 
+Example of a modal dialog with a form.
 
 Modal view: `client/custom/src/views/modals/my-dialog.js`
 
 ```js
-
 define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep, Model) {
 
     return Dep.extend({
