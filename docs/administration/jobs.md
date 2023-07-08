@@ -50,9 +50,9 @@ In Unix systems, cron is supposed to be run not more often than once a minute. I
 
 ```
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
-* * * * * sleep 15; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
-* * * * * sleep 30; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
-* * * * * sleep 45; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
+* * * * * sleep 15; /usr/bin/php -f /path/to/espocrm//cron.php > /dev/null 2>&1
+* * * * * sleep 30; /usr/bin/php -f /path/to/espocrm/cron.php > /dev/null 2>&1
+* * * * * sleep 45; /usr/bin/php -f /path/to/espocrm/cron.php > /dev/null 2>&1
 ```
 
 !!! note
