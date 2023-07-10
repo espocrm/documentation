@@ -57,7 +57,7 @@ In Unix systems, cron is supposed to be run not more often than once a minute. I
 
 !!! note
 
-     The command that runs cron.php may differ depending on your server environment.
+     The command that runs cron.php may differ depending on your server environment. You might need to replace `/var/www/html/espocrm/` with an actual path to your instance.
 
 
 ### Daemon
