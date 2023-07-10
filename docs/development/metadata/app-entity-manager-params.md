@@ -54,6 +54,7 @@ A metadata location. Where the parameter  will be stored. Supported values:
 * `scopes`
 * `entityDefs`
 * `clientDefs`
+* `recordDefs` (as of v8.0)
 
 ## fieldDefs
 
