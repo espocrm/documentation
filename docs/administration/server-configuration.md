@@ -122,6 +122,10 @@ To setup crontab on Unix-like system, take the following steps:
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
 
+!!! note
+
+    You might need to replace `/var/www/html/espocrm/` with an actual path to your instance.
+
 3\. Open a terminal and run this command:
 
 ```
