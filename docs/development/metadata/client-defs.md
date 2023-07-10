@@ -402,7 +402,7 @@ An order-by field.
 
 *string*
 
-A select handler for providing filters when selecting reledate records. Should have a method *getFilters* returning a promise.
+A select handler for providing filters when selecting related records. Should have a method *getFilters* returning a promise.
 
 ### createHandler
 
