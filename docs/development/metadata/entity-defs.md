@@ -78,6 +78,14 @@ Overrides the type of the DB column.
 
 Disables the field.
 
+### utility
+
+*As of v8.0.*
+
+*boolean*
+
+The field will be hidden from a user on the UI whenever possible.
+
 ### tooltip
 
 *boolean|string*
