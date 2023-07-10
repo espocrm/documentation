@@ -408,7 +408,7 @@ A select handler for providing filters when selecting related records. Should ha
 
 *string*
 
-A create handler. Provices attributes when creating a new related record. Should have a method *getAttributes* returing a promise.
+A create handler. Provides attributes when creating a new related record. Should have a method *getAttributes* returning a promise.
 
 ## additionalLayouts
 
