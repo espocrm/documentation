@@ -292,7 +292,7 @@ Definitions of bottom-panels for views. The same as sidePanels.
 
 ## relationshipPanels
 
-Parameters to be applied for specific relationship panels.
+Parameters to be applied for specific relationship panels. Some parameters are also applied for link, link-multiple fields, e.g. *selectPrimaryFilterName*, *selectBoolFilterList*, *selectHandler*.
 
 Example:
 
@@ -397,6 +397,18 @@ An order-by field.
 *string*
 
 `"asc"` or `"desc"`.
+
+### selectHandler
+
+*string*
+
+A select handler for providing filters when selecting reledate records. Should have a method *getFilters* returning a promise.
+
+### createHandler
+
+*string*
+
+A create handler. Provices attributes when creating a new related record. Should have a method *getAttributes* returing a promise.
 
 ## additionalLayouts
 
