@@ -71,7 +71,7 @@ Returns a first found ID of a record that matches specific criteria.
 
 ## record\findMany
 
-*As of v7.6*.
+*As of v8.0*.
 
 `record\findMany(ENTITY_TYPE, LIMIT, ORDER_BY, ORDER, [KEY1, VALUE1, KEY2, VALUE2 ...])`
 
