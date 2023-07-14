@@ -212,7 +212,7 @@ Style:
 * `text-warning`
 * `text-info`
 * `text-bold`
-* `text-italic` (as of v7.6)
+* `text-italic` (as of v8.0)
 
 Size:
 
