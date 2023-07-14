@@ -136,7 +136,7 @@ Allows to manage followers of specific records. Users will be able to add and re
 
 ### Message Permission
 
-Allows to send stream messages to other users. (as of v7.6)
+Allows to send stream messages to other users. (as of v8.0)
 
 ## Field Level Security
 
