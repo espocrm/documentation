@@ -66,7 +66,10 @@ Other classes:
         </li>
         <li class="divider"></li>
         <li>
-            <a href="some-link">Some Link</a>
+            <a
+                href="some-link"
+                tabindex="0"
+            >Some Link</a>
         </li>
     </ul>
 </div>
