@@ -140,6 +140,14 @@ A custom validation list for the field. Use this parameter to re-define validati
 
 A custom mandatory validation list for the field. Use this parameter to re-define mandatory validations applied for a specific field. By default, [mandatory validations](fields.md#mandatoryvalidationlist) for a field type are applied.
 
+### suppressValidationList
+
+*string[]*
+
+*As of v8.0.*
+
+A validation list to be bypassed for the field.
+
 ### customizationDisabled
 
 *boolean*
