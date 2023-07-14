@@ -216,6 +216,7 @@ nav:
               - 'defaultDashboardOptions': 'development/metadata/app-default-dashboard-options.md'
               - 'entityManagerParams': 'development/metadata/app-entity-manager-params.md'
               - 'entityTemplateList': 'development/metadata/app-entity-template-list.md'
+              - 'entityTemplates': 'development/metadata/app-entity-templates.md'
               - 'export': 'development/metadata/app-export.md'
               - 'fieldProcessing': 'development/metadata/app-field-processing.md'
               - 'file': 'development/metadata/app-file.md'
