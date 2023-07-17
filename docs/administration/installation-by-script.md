@@ -67,13 +67,13 @@ Email address for Let's Encrypt certificate. Ex. `--email=email@my-domain.com`.
 
 Clean the existing EspoCRM installation and start a new one. This option can be used if you have already installed EspoCRM. Ex. `--clean`.
 
-#### `--mysqlRootPassword`
+#### `--dbRootPassword`
 
-Define your own MySQL root password instead of the automatically generated one. Ex. `--mysqlRootPassword=my-password`.
+Define your own MySQL root password instead of the automatically generated one. Ex. `--dbRootPassword=my-password`.
 
-#### `--mysqlPassword`
+#### `--dbPassword`
 
-Define your own MySQL password for EspoCRM installation. Ex. `--mysqlPassword=my-password`.
+Define your own MySQL password for EspoCRM installation. Ex. `--dbPassword=my-password`.
 
 #### `--adminUsername`
 
@@ -85,7 +85,7 @@ Define a password of EspoCRM administrator. Ex. `--adminPassword=admin-password`
 
 #### `--command`
 
-Update the `command.sh` for the existing instllation. Ex. `--command`.
+Update the `command.sh` for the existing installation. Ex. `--command`.
 
 #### `--backupPath`
 
@@ -93,7 +93,7 @@ A path for the backup. Ex. `--backupPath="/backup"`.
 
 ## Server management
 
-The operation of EspoCRM consists of several services, such as `nginx`, `mysql`, `daemon`.
+The operation of EspoCRM consists of several services, such as `nginx`, `mariadb`, `daemon`.
 
 In order to update the command tool, see [update the command.sh](#update-the-commandsh).
 
@@ -177,7 +177,7 @@ Delete old and unnecessary files.
 
 ### Import the SQL dump
 
-Import the database by the SQL dump created by `mysqldump`, `phpMyAdmin`, etc.
+Import the database by the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
 
 ```
 /var/www/espocrm/command.sh import-db "PATH/DB.sql"
@@ -201,7 +201,7 @@ In order to display a list of available commands.
 .
 ├── data
 │   ├── espocrm
-│   ├── mysql
+│   ├── mariadb
 │   └── nginx
 ├── docker-compose.yaml
 ├── command.sh
@@ -297,13 +297,13 @@ bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-dom
 
 ```
 rm -rf /var/www/espocrm/data/espocrm
-rm -rf /var/www/espocrm/data/mysql
+rm -rf /var/www/espocrm/data/mariadb
 cp -rp /var/www/espocrm-old/data/espocrm /var/www/espocrm/data
-cp -rp /var/www/espocrm-old/data/mysql /var/www/espocrm/data
+cp -rp /var/www/espocrm-old/data/mariadb /var/www/espocrm/data
 ```
 
 5\. Update your `/var/www/espocrm/docker-compose.yml` file. You have to copy your existing options from `/var/www/espocrm-old/docker-compose.yml` for the services:
-- `espocrm-mysql`
+- `espocrm-db`
 - `espocrm`
 
 6\. Restart services via the command:
