@@ -21,6 +21,14 @@ Example:
 }
 ```
 
+## frontendNonAdminHiddenPathList
+
+*Array*
+
+*As of v8.0*.
+
+Sections of metadata (defined as paths) to be hidden from the front-end for non-admin users.
+
 ## aclDependencies
 
 *Object.<string, Object\>\>*
