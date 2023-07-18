@@ -1,9 +1,10 @@
 # Layout Management
 
-Layout Manager is available at Administration panel. It provides the ability to customize the appearance of detail, edit, list views as well as search filters and fields for mass-update forms.
+The layout manager provides the ability to customize the appearance of detail, edit, list views as well as search filters and fields for mass-update forms. Layouts for a specific entity type can be accessed from Administration > Entity Manager.
 
 * [Layouts](#layouts)
 * [Different layouts for teams & portals](#different-layouts-for-teams-portals)
+* [Custom list layouts](#custom-list-layouts)
 
 ## Layouts
 
@@ -138,4 +139,12 @@ For internal users (regular & admin), a Layout Set is applied through the *Defau
 
 For portal users, the Layout Set is applied through the *Portal* record.
 
-Note: You need to clear cache (Administration > Clear Cache) after configuring layout sets.
+!!! note
+
+    You need to clear cache (Administration > Clear Cache) after configuring layout sets.
+
+## Custom list layouts
+
+*As of v8.0.*
+
+The administrator can create custom list layouts. These layouts can then be selected for specific relationship panels (at Administration > Entity Manager > {Entity Type} > Relationships).
