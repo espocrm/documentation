@@ -1,6 +1,6 @@
 # app > entityManager
 
-Path: metadata > app > entityManager
+Path: metadata > app > entityManager.
 
 
 ## createHookClassNameList
