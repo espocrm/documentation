@@ -116,10 +116,11 @@ Example:
 
 Parameters:
 
-* linkRequiredAccess – access to a current record that is needed to be able to link and unlink records (`create`, `read`, `edit`, `delete`, `stream`); applied only in the back-end, for the front-end specify clientDefes > {EntityType} > relationshipPanels > {link} > selectRequiredAccess.
+* aclDisabled – disable access control when listing related records; only access to a parent record will be checked (as of v8.0);
+* linkRequiredAccess – access to a current record that is needed to be able to link and unlink records (`create`, `read`, `edit`, `delete`, `stream`); applied only in the back-end, for the front-end specify clientDefes > {EntityType} > relationshipPanels > {link} > selectRequiredAccess;
 * linkRequiredForeignAccess – access to a foreign record that is needed to be able to link and unlink;
 * linkForeignAccessCheckDisabled – disable foreign record access check when linking (as of v7.4);
-* linkCheckDisabled – disable a link-check functionallity linking through link-multiple field (as of v7.4.4).
+* linkCheckDisabled – disable a link-check functionality linking through link-multiple field (as of v7.4.4).
 
 ## beforeReadHookClassNameList
 
