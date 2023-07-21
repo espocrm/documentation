@@ -76,7 +76,7 @@ In your apache config inside VirtualHost section for SSL (`<VirtualHost _default
     </IfModule>
 ```
 
-### Ngnix
+### Nginx
 
 Add to server.conf:
 
