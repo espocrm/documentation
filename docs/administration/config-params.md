@@ -127,8 +127,8 @@ The list of parameters along with their default values.
 * authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
 * authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
 * authAnotherUserDisabled – `false` – disable the ability to log in as another user for admins (as of v7.3);
-* authLogDisabled – `false` – disasble auth log records (as of v7.4);
-* authApiUserLogDisabled – `false` – disasble auth log records for successful connections of API users (as of v7.4);
+* authLogDisabled – `false` – disable auth log records (as of v7.4);
+* authApiUserLogDisabled – `false` – disable auth log records for successful connections of API users (as of v7.4);
 
 ### Security
 
