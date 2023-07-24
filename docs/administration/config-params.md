@@ -66,7 +66,6 @@ The list of parameters along with their default values.
 
 ### Access control
 
-* aclStrictMode – `true` – see [here](roles-management.md#permissions-by-default) (removed in v7.0, the system is always in strict mode);
 * aclAllowDeleteCreated – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access;
 * aclAllowDeleteCreatedThresholdPeriod – `24 hours` – time window available for deletion of created records;
 
