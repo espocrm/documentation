@@ -62,7 +62,7 @@ The list of parameters along with their default values.
 
 * applicationDescription – the text in the meta tag; by default `EspoCRM - Open Source CRM application` text is used (as of v7.0);
 * adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (as of v7.0);
-* activitiesCreateButtonMaxCount – `3` – a max number of create buttons to display on the Activities pagel (as of v7.2);
+* activitiesCreateButtonMaxCount – `3` – a max number of create buttons to display on the Activities page (as of v7.2);
 
 ### Access control
 
@@ -127,8 +127,8 @@ The list of parameters along with their default values.
 * authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
 * authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
 * authAnotherUserDisabled – `false` – disable the ability to log in as another user for admins (as of v7.3);
-* authLogDisabled – `false` – disasble auth log records (as of v7.4);
-* authApiUserLogDisabled – `false` – disasble auth log records for successful connections of API users (as of v7.4);
+* authLogDisabled – `false` – disable auth log records (as of v7.4);
+* authApiUserLogDisabled – `false` – disable auth log records for successful connections of API users (as of v7.4);
 
 ### Security
 
@@ -162,7 +162,7 @@ The list of parameters along with their default values.
 ### Kanban
 
 * kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; as of v6.1;
-* kanbanMinColumnWidth – `220` – a min width of column; the horizontal scrolling will appear to prevent columnt being shrinked less than the specified value; as of v7.1;
+* kanbanMinColumnWidth – `220` – a min width of column; the horizontal scrolling will appear to prevent column being shrunk less than the specified value; as of v7.1;
 
 ### Text search
 
