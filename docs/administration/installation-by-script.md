@@ -97,6 +97,14 @@ The operation of EspoCRM consists of several services, such as `nginx`, `mariadb
 
 In order to update the command tool, see [update the command.sh](#update-the-commandsh).
 
+### Help
+
+In order to display a list of available commands.
+
+```
+/var/www/espocrm/command.sh help
+```
+
 ### Status of services
 
 ```
@@ -185,12 +193,28 @@ Import the database by the SQL dump created by `mariadb-dump`, `mysqldump`, `php
 
 An example: `/var/www/espocrm/command.sh import-db "/var/www/espocrm-backup/db.sql"`.
 
-### Help
+### Certificate generation
 
-In order to display a list of available commands.
+Generate a new Let's Encrypt certificate. It can be used to create a certificate for the first time or after a domain change.
 
 ```
-/var/www/espocrm/command.sh help
+/var/www/espocrm/command.sh cert-generate
+```
+
+### Certificate renewal
+
+Renew an existing Let's Encrypt certificate. It can be used in crontab to automatically renewal.
+
+```
+/var/www/espocrm/command.sh cert-renew
+```
+
+### Apply a domain change
+
+Applying a domain change described [here](#change-a-domain-name).
+
+```
+/var/www/espocrm/command.sh apply-domain
 ```
 
 ## Data
@@ -377,7 +401,7 @@ then press `Ctrl + 0` and `Ctrl + X`
 nano docker-compose.yml
 ```
 
-add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as dispalyed below:
+add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as displayed below:
 
 ```
 espocrm:
@@ -404,10 +428,10 @@ then press `Ctrl + 0` and `Ctrl + X`
 cd /var/www/espocrm
 ```
 
-2\. Edit the file `./data/nginx/conf.d/default.conf`
+2\. Edit the file `./data/nginx/conf.d/default.conf.template`
 
 ```
-nano ./data/nginx/conf.d/default.conf
+nano ./data/nginx/conf.d/default.conf.template
 ```
 
 3\. Restart the container to apply the changes:
@@ -415,3 +439,31 @@ nano ./data/nginx/conf.d/default.conf
 ```
 ./command.sh restart espocrm-nginx
 ```
+
+## Change a domain name
+
+1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
+
+```
+cd /var/www/espocrm
+```
+
+2\. Find and replace the old domain name with the new one in the file `./docker-compose.yml`
+
+```
+nano ./docker-compose.yml
+```
+
+Options to change:
+
+1. `NGINX_HOST`.
+2. `ESPOCRM_CONFIG_SITE_URL`.
+3. `command` under the `espocrm-certbot` service (required only for the letsencrypt mode).
+
+3\. Run the command:
+
+```
+./command.sh apply-domain
+```
+
+Note: You have to clear your browser cache for this change to take effect.
