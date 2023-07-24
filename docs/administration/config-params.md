@@ -66,7 +66,7 @@ The list of parameters along with their default values.
 
 ### Access control
 
-* aclAllowDeleteCreated – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access;
+* aclAllowDeleteCreated – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access to;
 * aclAllowDeleteCreatedThresholdPeriod – `24 hours` – time window available for deletion of created records;
 
 ### Notifications
