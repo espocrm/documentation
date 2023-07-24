@@ -1,6 +1,6 @@
 # Installation by Script
 
-This script automatically installs EspoCRM as a Docker image with NGINX server and MySQL database.
+This script automatically installs EspoCRM as a Docker image with NGINX server and MariaDB database.
 
 ## Requirements
 
@@ -20,21 +20,21 @@ Open your server's command line and run the commands:
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh
+sudo bash install.sh
 ```
 
 ## Installation with SSL/TLS certificate
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh --ssl
+sudo bash install.sh --ssl
 ```
 
 ## Installation without prompts
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh -y --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
+sudo bash install.sh -y --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
 ## Available options
@@ -102,25 +102,25 @@ In order to update the command tool, see [update the command.sh](#update-the-com
 In order to display a list of available commands.
 
 ```
-/var/www/espocrm/command.sh help
+sudo /var/www/espocrm/command.sh help
 ```
 
 ### Status of services
 
 ```
-/var/www/espocrm/command.sh status
+sudo /var/www/espocrm/command.sh status
 ```
 
 ### Restart services
 
 ```
-/var/www/espocrm/command.sh restart
+sudo /var/www/espocrm/command.sh restart
 ```
 
 ### Start services
 
 ```
-/var/www/espocrm/command.sh start
+sudo /var/www/espocrm/command.sh start
 ```
 
 ### Build and start services
@@ -128,31 +128,31 @@ In order to display a list of available commands.
 In order to apply changes in `docker-compose.yml`.
 
 ```
-/var/www/espocrm/command.sh build
+sudo /var/www/espocrm/command.sh build
 ```
 
 ### Stop services
 
 ```
-/var/www/espocrm/command.sh stop
+sudo /var/www/espocrm/command.sh stop
 ```
 
 ### EspoCRM rebuild
 
 ```
-/var/www/espocrm/command.sh rebuild
+sudo /var/www/espocrm/command.sh rebuild
 ```
 
 ### EspoCRM upgrade
 
 ```
-/var/www/espocrm/command.sh upgrade
+sudo /var/www/espocrm/command.sh upgrade
 ```
 
 ### EspoCRM logs
 
 ```
-/var/www/espocrm/command.sh logs
+sudo /var/www/espocrm/command.sh logs
 ```
 
 ### Backup
@@ -160,27 +160,27 @@ In order to apply changes in `docker-compose.yml`.
 Create a full backup of EspoCRM.
 
 ```
-/var/www/espocrm/command.sh backup "BACKUP_DIRECTORY"
+sudo /var/www/espocrm/command.sh backup "BACKUP_DIRECTORY"
 ```
 
-An example: `/var/www/espocrm/command.sh backup /var/www/espocrm-backup`.
+An example: `sudo /var/www/espocrm/command.sh backup /var/www/espocrm-backup`.
 
 ### Restore
 
 Restore the backup created by the `backup` command.
 
 ```
-/var/www/espocrm/command.sh restore "BACKUP_PATH"
+sudo /var/www/espocrm/command.sh restore "BACKUP_PATH"
 ```
 
-An example: `/var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2023-01-01_142051.tar.gz"`.
+An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2023-01-01_142051.tar.gz"`.
 
 ### Clean
 
 Delete old and unnecessary files.
 
 ```
-/var/www/espocrm/command.sh clean
+sudo /var/www/espocrm/command.sh clean
 ```
 
 ### Import the SQL dump
@@ -188,17 +188,17 @@ Delete old and unnecessary files.
 Import the database by the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
 
 ```
-/var/www/espocrm/command.sh import-db "PATH/DB.sql"
+sudo /var/www/espocrm/command.sh import-db "PATH/DB.sql"
 ```
 
-An example: `/var/www/espocrm/command.sh import-db "/var/www/espocrm-backup/db.sql"`.
+An example: `sudo /var/www/espocrm/command.sh import-db "/var/www/espocrm-backup/db.sql"`.
 
 ### Certificate generation
 
 Generate a new Let's Encrypt certificate. It can be used to create a certificate for the first time or after a domain change.
 
 ```
-/var/www/espocrm/command.sh cert-generate
+sudo /var/www/espocrm/command.sh cert-generate
 ```
 
 ### Certificate renewal
@@ -206,7 +206,7 @@ Generate a new Let's Encrypt certificate. It can be used to create a certificate
 Renew an existing Let's Encrypt certificate. It can be used in crontab to automatically renewal.
 
 ```
-/var/www/espocrm/command.sh cert-renew
+sudo /var/www/espocrm/command.sh cert-renew
 ```
 
 ### Apply a domain change
@@ -214,7 +214,7 @@ Renew an existing Let's Encrypt certificate. It can be used in crontab to automa
 Applying a domain change described [here](#change-a-domain-name).
 
 ```
-/var/www/espocrm/command.sh apply-domain
+sudo /var/www/espocrm/command.sh apply-domain
 ```
 
 ## Data
@@ -279,21 +279,21 @@ All the actions can be applied to already installed EspoCRM instance.
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh --ssl --owncertificate --domain=my-espocrm.com
+sudo bash install.sh --ssl --owncertificate --domain=my-espocrm.com
 ```
 
 ### From HTTP to Let's Encrypt certificate
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
+sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
 ### From Own SSL/TLS certificate to Let's Encrypt certificate
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
+sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
 ### Manually (advanced users only)
@@ -301,7 +301,7 @@ bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-dom
 1\. Stop your existing EspoCRM instance.
 
 ```
-/var/www/espocrm/command.sh stop
+sudo /var/www/espocrm/command.sh stop
 ```
 
 2\. Rename your existing directory:
@@ -314,7 +314,7 @@ mv /var/www/espocrm /var/www/espocrm-old
 
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
+sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
 4\. Copy your existing data to a new installation:
@@ -333,7 +333,7 @@ cp -rp /var/www/espocrm-old/data/mariadb /var/www/espocrm/data
 6\. Restart services via the command:
 
 ```
-/var/www/espocrm/command.sh restart
+sudo /var/www/espocrm/command.sh restart
 ```
 
 7\. Login as administrator and update your new `Site URL` in Administration > Settings.
@@ -358,12 +358,12 @@ In order to load the latest version of the `command.sh`, run the command:
 
 ```
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-bash install.sh --command
+sudo bash install.sh --command
 ```
 
 ## Modify PHP settings
 
-This can be achieved by mounting the PHP configuration file and restaring the container.
+This can be achieved by mounting the PHP configuration file and restarting the container.
 
 1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
@@ -398,7 +398,7 @@ then press `Ctrl + 0` and `Ctrl + X`
 3\. Mount the created PHP configuration file to the container:
 
 ```
-nano docker-compose.yml
+sudo nano docker-compose.yml
 ```
 
 add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as displayed below:
@@ -417,7 +417,7 @@ then press `Ctrl + 0` and `Ctrl + X`
 4\. Restart the container to apply the changes:
 
 ```
-./command.sh restart espocrm
+sudo ./command.sh restart espocrm
 ```
 
 ## Modify Nginx settings
@@ -431,13 +431,13 @@ cd /var/www/espocrm
 2\. Edit the file `./data/nginx/conf.d/default.conf.template`
 
 ```
-nano ./data/nginx/conf.d/default.conf.template
+sudo nano ./data/nginx/conf.d/default.conf.template
 ```
 
 3\. Restart the container to apply the changes:
 
 ```
-./command.sh restart espocrm-nginx
+sudo ./command.sh restart espocrm-nginx
 ```
 
 ## Change a domain name
@@ -451,7 +451,7 @@ cd /var/www/espocrm
 2\. Find and replace the old domain name with the new one in the file `./docker-compose.yml`
 
 ```
-nano ./docker-compose.yml
+sudo nano ./docker-compose.yml
 ```
 
 Options to change:
@@ -463,7 +463,7 @@ Options to change:
 3\. Run the command:
 
 ```
-./command.sh apply-domain
+sudo ./command.sh apply-domain
 ```
 
 Note: You have to clear your browser cache for this change to take effect.
