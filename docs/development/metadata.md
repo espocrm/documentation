@@ -50,7 +50,7 @@ In this article:
   * [dateTime](metadata/app-date-time.md)
   * [defaultDashboardLayouts](metadata/app-default-dashboard-layouts.md)
   * [defaultDashboardOptions](metadata/app-default-dashboard-options.md)
-  * [entityManagerParams](metadata/app-entity-manager.md)
+  * [entityManager](metadata/app-entity-manager.md)
   * [entityManagerParams](metadata/app-entity-manager-params.md)
   * [entityTemplateList](metadata/app-entity-template-list.md)
   * [entityTemplates](metadata/app-entity-templates.md)
