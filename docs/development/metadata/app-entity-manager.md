@@ -10,7 +10,7 @@ Path: metadata > app > entityManager.
 *As of v8.0.*
 
 
-Hooks processed when a new custom entity type is craeted.
+Hooks processed when a new custom entity type is created.
 
 
 ## deleteHookClassNameList
