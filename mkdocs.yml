@@ -251,8 +251,8 @@ nav:
           - 'Hooks': 'development/hooks.md'
           - 'ACL': 'development/acl.md'
           - 'Misc':
-              - 'Template (PDF) custom helpers': 'development/template-custom-helper.md'
-              - 'Custom functions for formula': 'development/new-function-in-formula.md'
+              - 'Template helpers (PDF)': 'development/template-custom-helper.md'
+              - 'Formula functions': 'development/new-function-in-formula.md'
               - 'Scheduled jobs': 'development/scheduled-job.md'
               - 'Duplicate checking': 'development/duplicate-check.md'
               - 'Database indexes': 'development/db-indexes.md'
@@ -260,7 +260,7 @@ nav:
               - 'Jobs': 'development/jobs.md'
               - 'Email sending': 'development/email-sending.md'
               - 'Calculated fields': 'development/calculated-fields.md'
-              - 'Custom config parameters': 'development/custom-config-parameters.md'
+              - 'Config parameters': 'development/custom-config-parameters.md'
               - 'Autoload': 'development/autoload.md'
               - 'Value Objects': 'development/orm-value-objects.md'
         - 'Frontend':
