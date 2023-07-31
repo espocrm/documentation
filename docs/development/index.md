@@ -21,8 +21,8 @@
 * [Hooks](hooks.md)
 * [ACL](acl.md)
 * Misc
-  * [Template (PDF) custom helpers](template-custom-helper.md)
-  * [Custom functions for formula](new-function-in-formula.md)
+  * [Template helpers (PDF)](template-custom-helper.md)
+  * [Formula functions](new-function-in-formula.md)
   * [Scheduled jobs](scheduled-job.md)
   * [Duplicate checking](duplicate-check.md)
   * [Database indexes](db-indexes.md)
@@ -30,7 +30,7 @@
   * [Jobs](jobs.md)
   * [Email sending](email-sending.md)
   * [Calculated fields](calculated-fields.md)
-  * [Custom config parameters](custom-config-parameters.md)
+  * [Config parameters](custom-config-parameters.md)
   * [Autoload](autoload.md)
 
 ### Frontend
