@@ -29,6 +29,10 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/config.json`:
     "params": {
         "myParameter": {
             "level": "admin"
+        },
+        "myAnotherParameter": {
+            "level": "global",
+            "readOnly": true
         }
     }
 }
@@ -41,6 +45,8 @@ The *level* parameter defines availability of the config parameter in the front-
 * `internal` – never available for read, admin can write (useful for passwords, secrets; recommended to use the *password* field type) (as of v7.3);
 * `admin` – available only for admin (read and write);
 * `superAdmin` – available only for super-admin (read and write).
+
+The *readOnly* parameter disables the ability to change a parameter value for admin users. Useful for parameters that are supposed to be set either manually by writing into the config file or automatically by the application.
 
 ### 3. Metadata app > adminPanel
 
