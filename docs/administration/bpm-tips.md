@@ -21,3 +21,10 @@ $tempVariable = null;
 ## Cleaning up ended processes
 
 Ended processes are *not* cleaned up automatically as a process may hold information important for a business. You may utilize a scheduled workflow rule that will be handle removal of ended processes.
+
+## Displaying processes on record detail view
+
+You can utilize the [Report Panels](../user-guide.md#report-panels) feature to display all related processes on the record detail view.
+
+1. Create a List report for the Process entity type with the 'Target' runtime filter.
+2. Create a report panel (Administration > Report Panels) for your entity type, select the report.
