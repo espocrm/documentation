@@ -62,7 +62,7 @@ namespace Espo\Custom\Hooks\Lead;
 
 use Espo\ORM\Entity;
 
-class MyHook
+class MyHook implementes BeforeSave
 {    
     // An optional parameter, defines in which order hooks will be processed.
     // Lesser value means sooner.
