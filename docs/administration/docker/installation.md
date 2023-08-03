@@ -26,17 +26,18 @@ $ docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8 --default-a
 Run EspoCRM container:
 
 ```
-$ docker run --name my-espocrm --link mysql:mysql -d espocrm/espocrm
+$ docker run --name my-espocrm -e ESPOCRM_DATABASE_PASSWORD=password --link mysql:mysql -d espocrm/espocrm
 ```
 
 - `my-espocrm` — name of EspoCRM container,
 - `mysql:mysql` — name (link) of MySQL container,
+- `ESPOCRM_DATABASE_PASSWORD=password` — `password` should match `MYSQL_ROOT_PASSWORD` set in the previous step,
 - `espocrm/espocrm` — [EspoCRM image](https://hub.docker.com/r/espocrm/espocrm/tags) version.
 
 #### Run EspoCRM container via a specific port:
 
 ```
-$ docker run --name my-espocrm -p 8080:80 --link mysql:mysql -d espocrm/espocrm
+$ docker run --name my-espocrm -e ESPOCRM_DATABASE_PASSWORD=password -p 8080:80 --link mysql:mysql -d espocrm/espocrm
 ```
 
 Then, access it via `http://localhost:8080` with credentials admin and password.
@@ -44,7 +45,7 @@ Then, access it via `http://localhost:8080` with credentials admin and password.
 #### Run EspoCRM via a specific IP or a domain with a port:
 
 ```
-$ docker run --name my-espocrm -e ESPOCRM_SITE_URL=http://172.20.0.100:8080 -p 8080:80 --link mysql:mysql -d espocrm/espocrm
+$ docker run --name my-espocrm -e ESPOCRM_SITE_URL=http://172.20.0.100:8080 -e ESPOCRM_DATABASE_PASSWORD=password -p 8080:80 --link mysql:mysql -d espocrm/espocrm
 ```
 
 Then, access it via `http://172.20.0.100:8080` with credentials **admin** and **password**.
