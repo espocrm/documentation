@@ -219,6 +219,12 @@ A factory for [value objects](../orm-value-objects.md). For field types it's def
 
 An extractor for [value objects](../orm-value-objects.md). For field types it's defined at metadata > fields. Here you can define an extractor for a specific field.
 
+### duplicatorClassName
+
+*class-string<Espo\Core\Record\Duplicator\FieldDuplicator\>*
+
+Duplicates attributes of a field. Some fields can require some processing when an entity is being duplicated.
+
 ### select
 
 *Object*
