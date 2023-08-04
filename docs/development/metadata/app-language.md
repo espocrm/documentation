@@ -42,16 +42,16 @@ Keys are paths to translation data.
 
 *string*
 
-If a user have access to the scope, they will have access to translations defined by a key.
+If a user has access to the scope, they will have access to translations defined by a key.
 
 ### field
 
 *string*
 
-If a user have access to the field (of a scope), they will have access to translations defined by a key.
+If a user has access to the field (of a scope), they will have access to translations defined by a key.
 
 ### anyScopeList
 
 *string[]*
 
-If a user have access to any of listed scopes, they will have access to translations defined by a key.
+If a user has access to any of listed scopes, they will have access to translations defined by a key.
