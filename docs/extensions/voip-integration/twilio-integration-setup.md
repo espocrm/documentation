@@ -57,6 +57,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
 * **Voicemail Greeting Text** – a voicemail greeting message. Note: the “Voicemail Greeting Audio” has higher priority.
 * **Voicemail Notifications** – Types of notification for a new voicemail message.
 * **Farewell at the end of the call**
+* **Display the router's phone number as a caller** – display the office phone number (VoIP Router phone number) as caller. 
 * **Team Users** – a list of users to configure receiving incoming/outgoing calls, SMS and MMS.
 
 
