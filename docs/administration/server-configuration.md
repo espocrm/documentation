@@ -66,7 +66,9 @@ where username is your MySQL user, password is your MySQL user password.
 
 ## Required permissions for Unix-based systems
 
-**Note**: In most cases permissions are set properly after extracting EspoCRM instance from a zip package. You need only to set ownership.
+!!! note
+
+    In most cases, permissions are set properly after extracting EspoCRM instance from a zip package. You need only to set ownership.
 
 ### Permissions
 
