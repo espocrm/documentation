@@ -58,7 +58,7 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/adminPanel.js
                 "url": "#Admin/mySettings",
                 "label": "My Settings",
                 "iconClass": "fas fa-cog",
-                "description": "myPanel",
+                "description": "myDescription",
                 "recordView": "my-module:views/admin/my-settings"
             }
         ],
@@ -77,7 +77,7 @@ Create a file `custom/Espo/Modules/MyModule/Resources/i18n/en_US/Admin.json`:
         "myPanel": "some search keyword,another search keyword"
     },
     "descriptions": {
-        "myPanel": "Description text for my panel."
+        "myDescription": "Description text."
     },
     "labels": {
         "My Settings": "My Settings",
