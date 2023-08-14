@@ -36,6 +36,7 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/config.json`:
 
 The *level* parameter defines availability of the config parameter in the front-end.
 
+* `default` –  available for logged-in users (applied by default);
 * `global` – available even before logging in;
 * `system` – never available;
 * `internal` – never available for read, admin can write (useful for passwords, secrets; recommended to use the *password* field type) (as of v7.3);
