@@ -18,7 +18,7 @@ Also you can define other options, if your view needs more data. You will be abl
 
 Create a file `custom/Espo/Custom/Resources/metadata/dashlets/MyDashlet.json`:
 
-```
+```json
 {
     "view": "custom:views/dashlets/my-dashlet",
     "aclScope": "Account",
