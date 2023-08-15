@@ -1,6 +1,8 @@
 # Service Classes
 
-Note: Not to be confused with [*Container services*](di.md).
+!!! note
+
+    Not to be confused with [*Container services*](di.md).
 
 Services are entry points for business logic. You can write business logic right in a service class or delegate it inside the service to another classes. Controllers are supposed to have little code. Usually, a controller action calls some service method.
 
