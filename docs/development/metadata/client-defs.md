@@ -411,6 +411,14 @@ A select handler for providing filters when selecting related records. Should ha
 
 A create handler. Provides attributes when creating a new related record. Should have a method *getAttributes* returning a promise.
 
+### selectFieldHandler
+
+*string*
+
+*As of v8.0.*
+
+A handler called when change a link field. Only for belongs-to and has-one relations. Should have *getAttributes* and *getClearAttributes* methods.
+
 ### selectMandatoryAttributeList
 
 *string[]*
