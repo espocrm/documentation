@@ -316,7 +316,8 @@ Example:
             "selectPrimaryFilterName": "filterName",
             "selectBoolFilterList": ["onlyMy"],
             "filterList": ["all", "filterName"],
-            "layout": "listLayoutName"
+            "layout": "listLayoutName",
+            "selectMandatoryAttributeList": ["accountId", "accountName"]
         }
     }
 }
@@ -409,6 +410,14 @@ A select handler for providing filters when selecting related records. Should ha
 *string*
 
 A create handler. Provides attributes when creating a new related record. Should have a method *getAttributes* returning a promise.
+
+### selectMandatoryAttributeList
+
+*string[]*
+
+*As of v8.0.*
+
+Attributes to be selected when selecting records. Can be useful for a select handler when need to copy some attributes for a related record.
 
 ## additionalLayouts
 
