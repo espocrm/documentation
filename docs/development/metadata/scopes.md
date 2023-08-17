@@ -198,6 +198,12 @@ Disables access control application for language labels. All labels of the scope
 
 Status values to be ignored on the Kanban view.
 
+## kanbanOrderDisabled
+
+*boolean*
+
+Disable the ability to order items for users.
+
 ## hasPersonalData
 
 *boolean*
