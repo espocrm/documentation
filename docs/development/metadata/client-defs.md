@@ -52,6 +52,18 @@ Disables the ability to create a record from the user interface (from the list v
 
 Hides the search panel on the list view.
 
+## searchPanelInPortalDisabled
+
+*boolean*
+
+Hides the search panel on the list view in portals.
+
+## textFilterDisabled
+
+*boolean*
+
+Disables text search.
+
 ## views
 
 Custom view classes for list, detail, edit.
