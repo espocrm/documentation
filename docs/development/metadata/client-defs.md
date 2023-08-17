@@ -92,6 +92,10 @@ Example:
 
 Save error handlers. See [here](../frontend/save-error-handlers.md).
 
+## viewSetupHandlers
+
+"View setup handlers. See [here](https://docs.espocrm.com/development/frontend/view-setup-handlers/).
+
 ## inlineEditDisabled
 
 *boolean*
