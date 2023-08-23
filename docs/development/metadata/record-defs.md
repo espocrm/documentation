@@ -40,6 +40,14 @@ Must implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
 
 **Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening (not needed anymore as of v7.2).
 
+## loadAdditionalFieldsAfterUpdate
+
+*boolean*
+
+*As of v8.0.*
+
+Load additional fields after update. Needed for cases when additional fields need to be re-loaded since they are not actual after update.
+
 ## actions
 
 Parameters of actions (applied only for the back-end).
