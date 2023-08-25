@@ -42,7 +42,7 @@ See [more info](../api-search-params.md) about search parameters.
 
 Additional headers:
 
-* `X-No-Total: true` - won't return a total number of records (can be reasonable for big tables, the request will be processed faster).
+* `X-No-Total: true` – won't return a total number of records (can be reasonable for big tables, the request will be processed faster).
 
 ### Read
 
@@ -78,7 +78,7 @@ Payload:
 
 Additional headers:
 
-* `X-Skip-Duplicate-Check: true` - skips checking for duplicates (won't return 409 Error if a duplicate record is found).
+* `X-Skip-Duplicate-Check: true` – skips checking for duplicates (won't return 409 Error if a duplicate record is found).
 
 ### Update
 
