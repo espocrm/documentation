@@ -11,7 +11,6 @@
 
 ### Backend
 
-* [API](api.md)
 * [Dependency injection](di.md)
 * [Metadata](metadata.md)
 * [ORM](orm.md)
@@ -60,3 +59,7 @@
   * Campaigns
     * [Custom unsubscribe page](campaign-unsubscribe-template.md)
 
+
+### API
+
+* [API Overview](api.md)

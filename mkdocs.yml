@@ -173,25 +173,6 @@ nav:
         - 'Translation': 'development/translation.md'
         - 'Coding rules': 'development/coding-rules.md'
         - 'Backend':          
-          - 'API':
-            - 'API overview': 'development/api.md'
-            - 'Endpoints':
-              - 'CRUD operations': 'development/api/crud.md'
-              - 'Related records': 'development/api/relationships.md'
-              - 'Stream': 'development/api/stream.md'
-              - 'CurrencyRate': 'development/api/currency-rate.md'
-              - 'Attachment': 'development/api/attachment.md'
-              - 'I18n': 'development/api/i18n.md'
-              - 'Account': 'development/api/account.md'
-            - 'Misc':
-              - 'Search parameters': 'development/api-search-params.md'
-              - 'Usage tutorial': 'development/api-tutorial.md'
-            - 'Clients':
-              - 'PHP': 'development/api-client-php.md'
-              - 'JavaScript': 'development/api-client-js.md'
-              - 'Python': 'development/api-client-python.md'
-              - 'Rust': 'development/api-client-rust.md'
-              - 'Java': 'development/api-client-java.md'
           - 'Dependency injection': 'development/di.md'
           - 'Metadata': 'development/metadata.md'
           - 'Metadata reference':
@@ -306,3 +287,22 @@ nav:
               - 'Link-multiple field with primary record': 'development/link-multiple-with-primary.md'
               - 'Campaigns':
                 -  'Custom unsubscribe page': 'development/campaign-unsubscribe-template.md'
+        - 'API':
+          - 'API overview': 'development/api.md'
+          - 'Endpoints':
+            - 'CRUD operations': 'development/api/crud.md'
+            - 'Related records': 'development/api/relationships.md'
+            - 'Stream': 'development/api/stream.md'
+            - 'CurrencyRate': 'development/api/currency-rate.md'
+            - 'Attachment': 'development/api/attachment.md'
+            - 'I18n': 'development/api/i18n.md'
+            - 'Account': 'development/api/account.md'
+          - 'Misc':
+            - 'Search parameters': 'development/api-search-params.md'
+            - 'Usage tutorial': 'development/api-tutorial.md'
+          - 'Clients':
+            - 'PHP': 'development/api-client-php.md'
+            - 'JavaScript': 'development/api-client-js.md'
+            - 'Python': 'development/api-client-python.md'
+            - 'Rust': 'development/api-client-rust.md'
+            - 'Java': 'development/api-client-java.md'

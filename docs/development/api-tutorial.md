@@ -13,32 +13,9 @@
 
 ### PHP
 
-1. Create a new PHP file: `EspoApiClient.php` with the code copied from [here](api-client-php.md#class).
-2. Include this file in the place where you want to call EspoCRM API and use it. See the code below.
+Install [PHP API client](api-client-php.md) via composer. See usage examples in the same article.
 
-```php
-<?php
-
-require_once('EspoApiClient.php');
-
-$url = 'https://address-of-your-espocrm';
-$apiKey = 'copy API key from API user to here';
-
-$client = new EspoApiClient($url);
-$client->setApiKey($apiKey);
-
-// example creating a new lead
-try {
-    $response = $client->request('POST', 'Lead', [
-        'firstName' => 'Test',
-        'lastName' => 'Hello',
-    ]);
-} catch (\Exception $e) {
-    $errorCode = $e->getCode();
-}
-```
-
-Check `data/logs` in your EspoCRM if something went wrong. See [error codes](api.md#error-codes).
+If something went wrong, check `data/logs` in your EspoCRM. See [error codes](api.md#error-codes).
 
 ### Javascript (Nodejs)
 
@@ -54,7 +31,7 @@ const client = new Client(
 );
 
 // POST request example
-var payload = {
+const payload = {
     name: 'some name',
     type: 'Customer',
 };
@@ -75,8 +52,7 @@ client
     );
 ```
 
-
-Check `data/logs` in your EspoCRM if something went wrong. See [error codes](api.md#error-codes).
+If something went wrong, check `data/logs` in your EspoCRM. See [error codes](api.md#error-codes).
 
 ### Python
 
