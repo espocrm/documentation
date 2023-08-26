@@ -6,9 +6,9 @@ You can learn how API works if you trace what's going in the network tab in your
 
 Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format.
 
-Requests needs to have the header: `Content-Type: application/json`.
+The path to the API in EspoCRM is: `api/v1/`.
 
-The path to the API in EspoCRM is: `api/v1/`. 
+Whenever you send the JSON payload, add the header: `Content-Type: application/json`.
 
 !!! example "Example of GET API request"
 

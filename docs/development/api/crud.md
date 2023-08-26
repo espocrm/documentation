@@ -2,7 +2,9 @@
 
 CRUD stands for create, read, update, delete.
 
-Note: You can obtain the list of [entity types](../../administration/terms-and-naming.md#entity-type) at Administration > Entity Manager > the left column.
+!!! note
+
+    You can obtain the list of [entity types](../../administration/terms-and-naming.md#entity-type) at Administration > Entity Manager > the left column.
 
 * [List](#list)
 * [Read](#read)
@@ -64,6 +66,10 @@ Payload: Object of entity [attributes](../../administration/terms-and-naming.md#
 
 Returns attributes of the created record.
 
+Headers:
+
+*  `Content-Type: application/json`
+
 Example:
 
 `POST Account`
@@ -89,6 +95,10 @@ Updates an existing record.
 Payload: Object of entity [attributes](../../administration/terms-and-naming.md#attribute) needed to be changed.
 
 Returns attributes of the updated record.
+
+Headers:
+
+*  `Content-Type: application/json`
 
 Example:
 

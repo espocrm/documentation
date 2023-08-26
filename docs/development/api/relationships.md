@@ -49,6 +49,10 @@ Payload:
 * `massRelate` - optional, false or true, whether to use search criteria that will be used instead of specific ids
 * `where` - optional [search criteria](../api-search-params.md#where)
 
+Headers:
+
+*  `Content-Type: application/json`
+
 Example:
 
 `POST Account/5564764442a6d024c/opportunities`
@@ -70,6 +74,10 @@ Payload fields:
 
 * `id` - ID of related record to remove
 * `ids` - array of IDs of related records to remove
+
+Headers:
+
+*  `Content-Type: application/json`
 
 Example:
 
