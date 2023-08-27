@@ -2,11 +2,13 @@
 
 EspoCRM has the built-in functionality for sending SMS, but it's not shipped with any provider implementation. The official [SMS Providers](https://github.com/espocrm/ext-sms-providers/) extension includes implementations for the following SMS providers:
 
-- Twilio
-- Spryng
-- seven (formerly sms77)
-- smstools
-- SerwerSms
+* Twilio
+* Spryng
+* seven
+* smstools
+* SerwerSms
+* Verimor
+* GatewayAPI
 
 It's possible to send SMS from formula-script or from PHP code out-of-the-box. The [VoIP Integration](https://www.espocrm.com/extensions/voip-integration/) provides the ability to send SMS through the UI (only for the Twilio provider).
 
