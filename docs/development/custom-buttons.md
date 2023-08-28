@@ -126,7 +126,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 
 The parameter *acl* set to *edit* means that a user need an *edit* access level to see the action. You can omit it.
 
-As of v7.2 it's possible to define a `checkVisibilityFunction` parameter. The values should be a handler method name that returns a boolean value. The method determines whether the action is visible. It will be called every time the record is synced with the backend and hide or show the action depending on a value returned by the method. The `initFunction` is not needed in this case. 
+As of v7.2 it's possible to define a `checkVisibilityFunction` parameter. The values should be a handler method name that returns a boolean value. The method determines whether the action is visible. It will be called every time the record is synced with the backend and will hide or show the action depending on a value returned by the method. The `initFunction` is not needed in this case. 
 
 ### Handler class
 
