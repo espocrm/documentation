@@ -188,10 +188,10 @@ sudo /var/www/espocrm/command.sh clean
 Import the database by the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
 
 ```
-sudo /var/www/espocrm/command.sh import-db "PATH/DB.sql"
+sudo /var/www/espocrm/command.sh import-sql "PATH/DB.sql"
 ```
 
-An example: `sudo /var/www/espocrm/command.sh import-db "/var/www/espocrm-backup/db.sql"`.
+An example: `sudo /var/www/espocrm/command.sh import-sql "/var/www/espocrm-backup/db.sql"`.
 
 ### Certificate generation
 
