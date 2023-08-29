@@ -55,7 +55,7 @@ See also:
 
 ## Authentication
 
-### Authentication by Api Key
+### Authentication by API Key
 
 The simplest method of authentication. You need to create an API User (Administration > API Users) with the *API Key* authentication method. Apply a needed role to the user to grant access to specific scopes.
 
