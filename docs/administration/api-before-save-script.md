@@ -10,6 +10,10 @@ Can be used for custom validation, duplicate checking, and access control. Avail
 
     API Before-Save Script is not executed when doing mass update.
 
+!!! note
+
+   Avoid accessing related records in API Before-Save Script using a dot (e.g. `account.assignedUserId`). When the script is executed, the relaionship can be not yet established.
+
 ## Special functions
 
 !!! warning
