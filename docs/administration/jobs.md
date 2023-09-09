@@ -21,6 +21,7 @@ Scheduled jobs are intended for recurring job execution. They are available at A
 | | | +------ Month of the Year (range: 1-12)
 | | +-------- Day of the Month  (range: 1-31)
 | +---------- Hour              (range: 0-23)
++------------ Minute            (range: 0-59)
 ```
 
 If you want a job to be run as often as possible, you need to set the scheduling to `* * * * *`.
