@@ -26,7 +26,7 @@ The file structure of the package:
 }
 ```
 
-Syntax of `version` and `acceptableVersions` is described by the v2.0.0 the [SemVer](http://semver.org) specification. It's possible to define [ranges](https://getcomposer.org/doc/articles/versions.md#version-range) in the acceptable versions.
+Syntax of `version` is described by the v2.0.0 the [SemVer](http://semver.org) specification. It's possible to define [ranges](https://getcomposer.org/doc/articles/versions.md#version-range) in `acceptableVersions`.
 
 ## Files
 
