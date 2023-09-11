@@ -114,10 +114,12 @@ Example:
 
 ```json
 {
-    "cases": {
-        "linkRequiredAccess": "edit",
-        "linkRequiredForeignAccess": "read",
-        "linkForeignAccessCheckDisabled": false
+    "relationships": {
+        "cases": {
+            "linkRequiredAccess": "edit",
+            "linkRequiredForeignAccess": "read",
+            "linkForeignAccessCheckDisabled": false
+        }
     }
 }
 ```
