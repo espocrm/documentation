@@ -40,6 +40,10 @@ define('my-module-name', ['some-lib'], (SomeLib) => {});
 ```
 
 ```js
+import MyLib from 'my-lib';
+```
+
+```js
 Espo.loader.requirePromise('some-lib').then(SomeLib => {});
 ```
 
