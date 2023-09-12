@@ -15,6 +15,9 @@ Example:
         "exportsAs": "LibObjectName",
         "sourceMap": false
     },
+    "some-umd-lib": {
+        "path": "client/custom/modules/my-module/lib/some-umd-lib.js"
+    },
     "ace-ext-language_tools": {
         "path": "client/lib/ace-ext-language_tools.js",
         "exportsTo": "ace.require.define.modules",
