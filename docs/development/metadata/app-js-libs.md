@@ -33,11 +33,11 @@ Example:
 Libs can be required in the front-end the following ways:
 
 ```js
-define('my-module-name', ['lib!some-lib'], (SomeLib) => {});
+define('my-module-name', ['some-lib'], (SomeLib) => {});
 ```
 
 ```js
-Espo.loader.requirePromise('lib!some-lib').then(SomeLib => {});
+Espo.loader.requirePromise('some-lib').then(SomeLib => {});
 ```
 
 ## path
@@ -69,3 +69,15 @@ A key name by which the lib is available in a containing object.
 *boolean*
 
 Whether the source map file is available.
+
+## exposeAs
+
+*string*
+
+If set, the lib will be exposed to the window object. A variable name the lib will be set to. To be used for backward compatibility reasons.
+
+## aliases
+
+*string[]*
+
+Additional module IDs the lib will be available by. Can be useful for establishing backward compatibility or when another lib requires this lib by a different ID.
