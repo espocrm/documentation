@@ -48,7 +48,7 @@ Field types not available for creating directly:
 
 !!! note
 
-    When the read-only parameter is enabled for a *link* or *link-multiple* field, it won't be possible to create a related record from the relationship panel.
+    When the read-only parameter is enabled for a *link* or *link-multiple* field, it won't be possible to create a related record from the relationship panel. It happens because an ID of the current record is passed in the link field.
 
 ## Dynamic Logic
 
