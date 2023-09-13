@@ -47,6 +47,7 @@ Field types not available for creating directly:
 * Tooltip Text – information about the field for users (Markfown supported).
 
 !!! note
+
     When the read-only parameter is enabled for a *link* or *link-multiple* field, it won't be possible to create a related record from the relationship panel.
 
 ## Dynamic Logic
