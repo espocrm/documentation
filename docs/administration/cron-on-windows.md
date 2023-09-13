@@ -1,6 +1,8 @@
 # Setting up Cron on Windows
 
-Note that all configuration settings listed here are made on **Windows Server 2019**.
+!!! note
+
+    All configuration settings listed here are made on **Windows Server 2019**.
 
 To setup crontab on Windows system, take the following steps:
 
