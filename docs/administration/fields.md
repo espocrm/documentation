@@ -46,6 +46,10 @@ Field types not available for creating directly:
 * Disable Inline Edit – useful when using dynamic forms logic;
 * Tooltip Text – information about the field for users (Markfown supported).
 
+!!! note
+
+    Be careful when using the Read-only parameter for fields with the Link and Link Multiple types, since in this case, linking records through the Bottom Panels (when record created by clicking on the plus) will not work, although the record will be created. You need to use either a formula, work flow, or dynamic logic.
+
 ## Dynamic Logic
 
 Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
