@@ -131,8 +131,8 @@ Regular user can create email filters for their Personal Email Accounts or for t
 
 There are two types of filters:
 
-* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder - imported emails will be put into specified user's folder automatically.
+* Skip – email will be put in *Trash* or not imported if filter is related to Personal Email Account;
+* Put in Folder – imported emails will be put into specified user's folder automatically.
 
 ## Email Templates
 
