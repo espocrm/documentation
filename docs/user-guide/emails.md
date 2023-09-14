@@ -34,7 +34,7 @@ There is an ability to specify *Folder* in Personal Email Account. Incoming emai
 
 !!! note
 
-    For regular users access to personal email accounts must be allowed in Roles.
+    For regular users, access to personal email accounts must be allowed in Roles.
 
 ## SMTP accounts
 
@@ -44,7 +44,7 @@ Users can setup SMTP settings in their Personal Email Accounts. Personal email a
 
 !!! note
 
-    For regular users access to personal email accounts must be allowed in Roles.
+    For regular users, access to personal email accounts must be allowed in Roles.
 
 Administrator also can allow to use the main system SMTP account as well as Group Email Accounts (mark as Shared).
 
