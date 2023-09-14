@@ -56,10 +56,7 @@ In Unix systems, cron is supposed to be run not more often than once a minute. I
 * * * * * sleep 45; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
 
-!!! note
-
-     The command that runs cron.php may differ depending on your server environment. You might need to replace `/var/www/html/espocrm/` with an actual path to your instance.
-
+The command that runs cron.php may differ depending on your server environment. You might need to replace `/var/www/html/espocrm/` with an actual path to your instance.
 
 ### Daemon
 
