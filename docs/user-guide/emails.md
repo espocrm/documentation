@@ -16,7 +16,7 @@ In this article:
 
 ## IMAP accounts
 
-*Email receiving*
+*(Email receiving)*
 
 !!! note
 
@@ -38,7 +38,7 @@ There is an ability to specify *Folder* in Personal Email Account. Incoming emai
 
 ## SMTP accounts
 
-*Email sending*
+*(Email sending)*
 
 Users can setup SMTP settings in their Personal Email Accounts. Personal email accounts available at Emails tab > top-right menu > Personal Email Accounts. 
 
