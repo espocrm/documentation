@@ -99,9 +99,8 @@ All files should be owned and group-owned by the webserver process. It can be *w
 
     On Bitnami Stack, files should be owned and group-owned by *daemon* user.
 
-!!! note
-
     On shared hosts, files should be owned and group-owned by your user account.
+   
 
 To set the owner and group-owner, execute these commands in the terminal:
 
@@ -126,9 +125,7 @@ To setup crontab on Unix-like system, take the following steps:
 * * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
 ```
 
-!!! note
-
-    You might need to replace `/var/www/html/espocrm/` with an actual path to your instance.
+You might need to replace `/var/www/html/espocrm/` with an actual path to your instance.
 
 3\. Open a terminal and run this command:
 
