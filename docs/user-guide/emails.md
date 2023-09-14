@@ -50,7 +50,9 @@ Administrator also can allow to use the main system SMTP account as well as Grou
 
 Users can have multiple SMTP accounts.
 
-Important: Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
+!!! important
+
+    Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
 
 ## Gmail accounts
 
