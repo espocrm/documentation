@@ -139,7 +139,7 @@ WEBSERVER_USER can be one of the following “www”, “www-data”, “apache�
 
 ### Windows
 
-See in a separate [article](cron-on-windows.md).
+See in a separate [article](cron-on-windows.md) how to configure cron on Windows.
 
 ## Configuration instructions based on your server
 
