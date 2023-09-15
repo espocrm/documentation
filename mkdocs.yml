@@ -24,12 +24,14 @@ theme:
     highlightjs: true
     palette:
         - scheme: default
+          media: "(prefers-color-scheme: light)"
           primary: white
           accent: white
           toggle:
               icon: material/brightness-7
               name: Switch to dark mode
         - scheme: slate
+          media: "(prefers-color-scheme: dark)"
           primary: indigo
           accent: indigo
           toggle:

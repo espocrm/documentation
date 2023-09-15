@@ -11,6 +11,9 @@
 label.md-nav__link:not(.md-nav__container):focus,
 label.md-nav__link:not(.md-nav__container):hover {
     color: var(--md-typeset-color);
+}
+
+label.md-nav__link:not(.md-nav__container):hover {
     text-decoration: underline;
 }
 
