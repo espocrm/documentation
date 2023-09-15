@@ -1,6 +1,7 @@
 site_name: EspoCRM Documentation
 
 repo_url: https://github.com/espocrm/documentation/
+edit_uri: edit/master/docs/
 
 extra_javascript: [js/extra.js]
 
@@ -22,6 +23,10 @@ markdown_extensions:
 theme:
     name: material
     highlightjs: true
+    features:
+        - content.action.edit
+    icon:
+        edit: material/pencil
     palette:
         - scheme: default
           media: "(prefers-color-scheme: light)"
