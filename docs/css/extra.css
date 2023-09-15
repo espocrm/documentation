@@ -21,6 +21,10 @@ a.md-nav__link:not(.md-nav__container):hover {
     color: var(--md-typeset-a-color);
 }
 
+.md-nav--secondary a.md-nav__link:not(.md-nav__container):hover {
+    color: var(--md-typeset-color)
+}
+
 .md-typeset h1 {
     font-weight: 400 !important;
     color: var(--md-default-fg-color);
