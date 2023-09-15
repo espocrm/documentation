@@ -24,8 +24,8 @@ theme:
     highlightjs: true
     palette:
         - scheme: default
-          primary: indigo
-          accent: indigo
+          primary: white
+          accent: white
           toggle:
               icon: material/brightness-7
               name: Switch to dark mode
