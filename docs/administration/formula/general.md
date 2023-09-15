@@ -64,7 +64,7 @@ Executes STATEMENT repeatedly as long CONDITION is true.
 
 !!! note
 
-    As of v7.4 it's recommended to use the [*while*](../formula.md#while) statement instead.
+    As of v7.4, it's recommended to use the [*while*](../formula.md#while) statement instead.
 
 !!! example
 
