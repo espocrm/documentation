@@ -25,13 +25,13 @@
 .md-main a:hover,
 .md-main a:visited,
 .md-main a {
-    color: var(--md-link-color);
+    color: var(--md-typeset-a-color);
 }
 
 .md-main a:focus,
 .md-main a:hover {
     text-decoration: underline !important;
-    color: var(--md-link-color);
+    color: var(--md-typeset-a-color);
 }
 
 .md-nav--secondary a:focus,
