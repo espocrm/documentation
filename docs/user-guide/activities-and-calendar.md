@@ -6,7 +6,7 @@ There are three types of activities available in EspoCRM by default:
 * Calls
 * Tasks
 
-Administrator can create a custom entity of Event type. Then at Administration > Settings > Activities it's possible to set this entity type as an Activity and make it available in Calendar.
+Administrator can create a custom entity of an *Event* type. Then, at Administration > Settings > Activities, it's possible to set this entity type as an *Activity* and make it available in *Calendar*.
 
 There is 'My Activities' dashlet showing actual and upcoming activity records related to the current user.
 
