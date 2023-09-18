@@ -145,6 +145,7 @@ MySQL 8.0.4 has changed default authentication method to `caching_sha2_password`
 ## Delay in fetching emails
 
 The following configuration will speed up your email fetching (and other background processes):
+
 1. Cron should be configured to execute once a minute or more often. More details [here](jobs.md#setting-up).
 2. The *Jobs Run in Parallel* parameter should be enabled in Administration > Jobs > Settings (in the top-right corner). More details [here](jobs.md#running-jobs-in-parallel-processes).
 

@@ -15,6 +15,9 @@ Example:
         "exportsAs": "LibObjectName",
         "sourceMap": false
     },
+    "some-umd-lib": {
+        "path": "client/custom/modules/my-module/lib/some-umd-lib.js"
+    },
     "ace-ext-language_tools": {
         "path": "client/lib/ace-ext-language_tools.js",
         "exportsTo": "ace.require.define.modules",
@@ -33,11 +36,15 @@ Example:
 Libs can be required in the front-end the following ways:
 
 ```js
-define('my-module-name', ['lib!some-lib'], (SomeLib) => {});
+define('my-module-name', ['some-lib'], (SomeLib) => {});
 ```
 
 ```js
-Espo.loader.requirePromise('lib!some-lib').then(SomeLib => {});
+import MyLib from 'my-lib';
+```
+
+```js
+Espo.loader.requirePromise('some-lib').then(SomeLib => {});
 ```
 
 ## path
@@ -69,3 +76,15 @@ A key name by which the lib is available in a containing object.
 *boolean*
 
 Whether the source map file is available.
+
+## exposeAs
+
+*string*
+
+If set, the lib will be exposed to the window object. A variable name the lib will be set to. To be used for backward compatibility reasons.
+
+## aliases
+
+*string[]*
+
+Additional module IDs the lib will be available by. Can be useful for establishing backward compatibility or when another lib requires this lib by a different ID.

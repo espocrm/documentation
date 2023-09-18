@@ -46,6 +46,10 @@ Field types not available for creating directly:
 * Disable Inline Edit – useful when using dynamic forms logic;
 * Tooltip Text – information about the field for users (Markfown supported).
 
+!!! note
+
+    When the read-only parameter is enabled for a *link* or *link-multiple* field, it won't be possible to create a related record from the relationship panel. It happens because an ID of the current record is passed in the link field.
+
 ## Dynamic Logic
 
 Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.

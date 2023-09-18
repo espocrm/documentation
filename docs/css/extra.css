@@ -1,7 +1,28 @@
 :root {
-    --md-link-color: #537898;
+    //--md-link-color: #537898;
     --md-accent-fg-color: #af4d73;
     --md-accent-fg-color-light: #cc95aa;
+}
+
+.md-typeset .admonition {
+    border-style: none;
+}
+
+label.md-nav__link:not(.md-nav__container):focus,
+label.md-nav__link:not(.md-nav__container):hover {
+    color: var(--md-typeset-color);
+}
+
+label.md-nav__link:not(.md-nav__container):hover {
+    text-decoration: underline;
+}
+
+a.md-nav__link:not(.md-nav__container):hover {
+    color: var(--md-typeset-a-color);
+}
+
+.md-nav--secondary a.md-nav__link:not(.md-nav__container):hover {
+    color: var(--md-typeset-color)
 }
 
 .md-typeset h1 {
@@ -25,13 +46,13 @@
 .md-main a:hover,
 .md-main a:visited,
 .md-main a {
-    color: var(--md-link-color);
+    color: var(--md-typeset-a-color);
 }
 
 .md-main a:focus,
 .md-main a:hover {
     text-decoration: underline !important;
-    color: var(--md-link-color);
+    color: var(--md-typeset-a-color);
 }
 
 .md-nav--secondary a:focus,

@@ -35,7 +35,7 @@ The build will be created in the `build` directory.
 
 !!! note
 
-    By default grunt installs composer dependencies. You can skip it by running `grunt offline`.
+    By default, grunt installs composer dependencies. You can skip it by running `grunt offline`.
 
 ### Branches
 

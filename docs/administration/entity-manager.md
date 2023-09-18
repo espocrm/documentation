@@ -52,8 +52,9 @@ By clicking *Fields* link, you will be moved to a separate page. There, you will
 
 [More detail](fields.md) about fields.
 
-**Note**: After you have added a new field, you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
+!!! note
 
+    After you have added a new field, you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
 
 ## Relationships
 

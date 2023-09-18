@@ -16,7 +16,7 @@ In this article:
 
 ## IMAP accounts
 
-*Email receiving*
+*(Email receiving)*
 
 !!! note
 
@@ -34,23 +34,25 @@ There is an ability to specify *Folder* in Personal Email Account. Incoming emai
 
 !!! note
 
-    For regular users access to personal email accounts must be allowed in Roles.
+    For regular users, access to personal email accounts must be allowed in Roles.
 
 ## SMTP accounts
 
-*Email sending*
+*(Email sending)*
 
 Users can setup SMTP settings in their Personal Email Accounts. Personal email accounts available at Emails tab > top-right menu > Personal Email Accounts. 
 
 !!! note
 
-    For regular users access to personal email accounts must be allowed in Roles.
+    For regular users, access to personal email accounts must be allowed in Roles.
 
 Administrator also can allow to use the main system SMTP account as well as Group Email Accounts (mark as Shared).
 
 Users can have multiple SMTP accounts.
 
-Important: Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
+!!! important
+
+    Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
 
 ## Gmail accounts
 
@@ -129,8 +131,8 @@ Regular user can create email filters for their Personal Email Accounts or for t
 
 There are two types of filters:
 
-* Skip - email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder - imported emails will be put into specified user's folder automatically.
+* Skip – email will be put in *Trash* or not imported if filter is related to Personal Email Account;
+* Put in Folder – imported emails will be put into specified user's folder automatically.
 
 ## Email Templates
 
