@@ -13,30 +13,30 @@ In this article:
 
 One of the ways to install EspoCRM is by using its official Docker Image. The EspoCRM Container Package contains the Docker image, which incorporates all the required files and dependencies to launch EspoCRM in development or production environments. You can use Docker to run EspoCRM in an isolated environment built with Docker containers. 
 
-EspoCRM image requires to run MySQL server:
+EspoCRM image requires to run MariaDB server:
 
 ```
-$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8 --default-authentication-plugin=mysql_native_password
+$ docker run --detach --name mariadb --env MARIADB_ROOT_PASSWORD=password  mariadb:latest
 ```
 
-- `mysql` — name of MySQL container,
-- `MYSQL_ROOT_PASSWORD=password` — you can change `password` to any password you want,
-- `mysql:8` — [MySQL image](https://hub.docker.com/_/mysql/tags) version.
+- `mariadb` — name of MariaDB container,
+- `MARIADB_ROOT_PASSWORD=password` — you can change `password` to any password you want,
+- `mariadb:latest` — [MariaDB image](https://hub.docker.com/_/mariadb/tags) version.
 
 Run EspoCRM container:
 
 ```
-$ docker run --name my-espocrm --link mysql:mysql -d espocrm/espocrm
+$ docker run --name my-espocrm --link mariadb:mariadb -d espocrm/espocrm
 ```
 
 - `my-espocrm` — name of EspoCRM container,
-- `mysql:mysql` — name (link) of MySQL container,
+- `mariadb:mariadb` — name (link) of MariaDB container,
 - `espocrm/espocrm` — [EspoCRM image](https://hub.docker.com/r/espocrm/espocrm/tags) version.
 
 #### Run EspoCRM container via a specific port:
 
 ```
-$ docker run --name my-espocrm -p 8080:80 --link mysql:mysql -d espocrm/espocrm
+$ docker run --name my-espocrm -p 8080:80 --link mariadb:mariadb -d espocrm/espocrm
 ```
 
 Then, access it via `http://localhost:8080` with credentials admin and password.
@@ -44,7 +44,7 @@ Then, access it via `http://localhost:8080` with credentials admin and password.
 #### Run EspoCRM via a specific IP or a domain with a port:
 
 ```
-$ docker run --name my-espocrm -e ESPOCRM_SITE_URL=http://172.20.0.100:8080 -p 8080:80 --link mysql:mysql -d espocrm/espocrm
+$ docker run --name my-espocrm -e ESPOCRM_SITE_URL=http://172.20.0.100:8080 -p 8080:80 --link mariadb:mariadb -d espocrm/espocrm
 ```
 
 Then, access it via `http://172.20.0.100:8080` with credentials **admin** and **password**.
@@ -72,24 +72,23 @@ version: '3.8'
 
 services:
 
-  mysql:
-    image: mysql:8
-    container_name: mysql
-    command: --default-authentication-plugin=mysql_native_password    
+  espocrm-db:
+    image: mariadb:latest
+    container_name: espocrm-db
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: espocrm
-      MYSQL_USER: espocrm
-      MYSQL_PASSWORD: database_password
+      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_DATABASE: espocrm
+      MARIADB_USER: espocrm
+      MARIADB_PASSWORD: database_password
     volumes:
-      - mysql:/var/lib/mysql
+      - espocrm-db:/var/lib/mysql
     restart: always
 
   espocrm:
     image: espocrm/espocrm
     container_name: espocrm
     environment:
-      ESPOCRM_DATABASE_HOST: mysql
+      ESPOCRM_DATABASE_HOST: espocrm-db
       ESPOCRM_DATABASE_USER: espocrm
       ESPOCRM_DATABASE_PASSWORD: database_password
       ESPOCRM_ADMIN_USERNAME: admin
@@ -98,6 +97,8 @@ services:
     volumes:
       - espocrm:/var/www/html
     restart: always
+    depends_on:
+      - espocrm-db
     ports:
       - 8080:80
 
@@ -107,11 +108,13 @@ services:
     volumes:
       - espocrm:/var/www/html
     restart: always
+    depends_on:
+      - espocrm
     entrypoint: docker-daemon.sh
 
   espocrm-websocket:
     image: espocrm/espocrm
-    container_name: espocrm-websocket    
+    container_name: espocrm-websocket
     environment:
       ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
       ESPOCRM_CONFIG_WEB_SOCKET_URL: "ws://localhost:8081"
@@ -120,13 +123,15 @@ services:
     volumes:
       - espocrm:/var/www/html
     restart: always
+    depends_on:
+      - espocrm
     entrypoint: docker-websocket.sh
     ports:
       - 8081:8080
 
 volumes:
-  mysql:
   espocrm:
+  espocrm-db:
 ```
 
 More about *Installation Enviroments* you can find [here](#installation-environments).
@@ -176,7 +181,7 @@ This is one-time environment variables which are using only for the fresh instal
 
 - `ESPOCRM_DATABASE_HOST`
 
-MySQL host name for EspoCRM. The default value is `mysql`.
+Database host name for EspoCRM. The default value is `mysql`.
 
 - `ESPOCRM_DATABASE_NAME`
 
