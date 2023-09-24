@@ -26,7 +26,7 @@ $ docker run --detach --name mariadb --env MARIADB_ROOT_PASSWORD=password  maria
 Run EspoCRM container:
 
 ```
-$ docker run --name my-espocrm --link mariadb:mariadb -d espocrm/espocrm
+$ docker run --name my-espocrm --link mariadb:mariadb --env ESPOCRM_DATABASE_HOST=mariadb -d espocrm/espocrm
 ```
 
 - `my-espocrm` — name of EspoCRM container,
