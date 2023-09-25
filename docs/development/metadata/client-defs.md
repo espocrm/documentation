@@ -443,6 +443,14 @@ A handler called when change a link field. Only for belongs-to and has-one relat
 
 Attributes to be selected when selecting records.
 
+### selectLayout
+
+*string*
+
+*As of v8.0.3*
+
+A list layout name for the select dialog.
+
 ## additionalLayouts
 
 Additional layouts for a scope.
