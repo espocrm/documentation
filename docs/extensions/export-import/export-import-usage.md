@@ -9,7 +9,7 @@ What can be transferred:
 * customizations
 * files
 
-How it can bused:
+How it can be used:
 
 * as a part of a continuous delivery pipeline (e.g. to transfer roles, workflows, BPM flowcharts from dev to production);
 * for demo data;
