@@ -1,6 +1,6 @@
 # Export Import extension
 
-The Export Import extension is a tool for transferring between EspoCRM instances using CLI commands.
+The Export Import extension is a tool for transferring data between EspoCRM instances using CLI commands.
 
 What can be transferred:
 
