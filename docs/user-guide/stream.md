@@ -32,7 +32,7 @@ If you want to mention somebody in your post, you need to type `@` symbol and st
 
 !!! note
 
-    The user who was mentioned in the post, needs to have an access to stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
+    The user who was mentioned in the post, needs to have access to stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
 
 !!! note
 
