@@ -81,7 +81,7 @@ You can use placeholders when you define a signal name that will be broadcasted 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – formula variable
 
-E.g. `mySignal.{$status}.{$id}` – *type* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySigal.New.someIdValue`.
+E.g. `mySignal.{$status}.{$id}` – *status* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySigal.New.someIdValue`.
 
 
 ## Object signals
