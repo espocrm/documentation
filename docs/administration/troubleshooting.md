@@ -181,22 +181,21 @@ have to change some columns to TEXT or BLOBs.*
 2. *ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to 
 TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.*
 
-You can get this error if there are a large number of Varchar fields in an entity. Once you receive it, you cannot create new fields.
+You can get this error if there are a large number of Varchar fields in an entity type. After this you cannot create new fields.
 
-To fix this error go to `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` and change all coincidences (for Varchar fields) from:
+To fix this issue, you can change the type for some fields from *Varchar* to *Text*. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+
+Change definitions for some fields from:
 
 ```
-...
  "type": "varchar",
  "maxLength": 150
-...
 ```
+
 to:
 
 ```
-...
  "type": "text"
-...
 ```
 
-After making the changes, make a rebuild via CLI and refresh the page.
+After this, make a rebuild via CLI.
