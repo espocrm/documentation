@@ -13,6 +13,7 @@ In this article:
 * [Delay in fetching emails](#delay-in-fetching-emails)
 * [Admin password is lost, can't log in](#admin-password-is-lost-cant-log-in)
 * [MySQL error: MySQL can only use 61 tables in a join](#mysql-error-mysql-can-only-use-61-tables-in-a-join)
+* [MySQL error: Row size too large](#mysql-error-row-size-too-large)
 
 ## Check logs
 
