@@ -200,4 +200,6 @@ to:
  "type": "text"
 ```
 
+Note that the *maxLength* value can be different for your field. You neeed just remove it. Make sure that the resulting JSON is valid.
+
 After this, make a rebuild (via CLI or from the Administration page).
