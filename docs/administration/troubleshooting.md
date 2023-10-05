@@ -183,7 +183,7 @@ TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored i
 
 You can get this error if there are a large number of Varchar fields in an entity. Once you receive it, you cannot create new fields.
 
-To fix this error go to `custom/Espo/Custom/Resources/metadata/entityDefs/[EntityName].json` and change all coincidences (for Varchar fields) from:
+To fix this error go to `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` and change all coincidences (for Varchar fields) from:
 
 ```
 ...
