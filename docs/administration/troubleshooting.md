@@ -174,16 +174,17 @@ Any of the following actions may solve the problem.
 
 ## MySQL error: Row size too large
 
-Full error messages (may be one of the options):
+Full error messages (may be one of the following):
+
 1. *ERROR 1118 (42000): Row size too large. The maximum row size for the used table type, 
 not counting BLOBs, is 65535. This includes storage overhead, check the manual. You 
 have to change some columns to TEXT or BLOBs.*
 2. *ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to 
 TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.*
 
-You can get this error if there are a large number of Varchar fields in an entity type. After this you cannot create new fields.
+You can get this error if there are a large number of Varchar fields in an entity type. After this, you cannot create new fields.
 
-To fix this issue, you can change the type for some fields from *Varchar* to *Text*. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+To fix this problem, you can change the type for some fields from *Varchar* to *Text*. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
 
 Change definitions for some fields from:
 
@@ -198,4 +199,4 @@ to:
  "type": "text"
 ```
 
-After this, make a rebuild via CLI.
+After this, make a rebuild (via CLI or from the Administration page).
