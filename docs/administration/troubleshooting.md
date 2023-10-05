@@ -188,18 +188,14 @@ To fix this error go to `custom/Espo/Custom/Resources/metadata/entityDefs/{Entit
 ```
 ...
  "type": "varchar",
- "maxLength": 150,
- "options": []
+ "maxLength": 150
 ...
 ```
 to:
 
 ```
 ...
- "type": "text",
- "rowsMin": 2,
- "cutHeight": 200,
- "rows": 1
+ "type": "text"
 ...
 ```
 
