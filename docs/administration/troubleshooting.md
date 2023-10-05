@@ -171,3 +171,32 @@ Any of the following actions may solve the problem.
 2. Disable link-multiple for some many-to-many relationships of the problem entity type.
 3. Set `noJoin` parameter (to `true`) for some *belongsTo* links. [Example](https://github.com/espocrm/espocrm/blob/7.2.7/application/Espo/Modules/Crm/Resources/metadata/entityDefs/Campaign.json#L269).
 4. Set *currencyNoJoinMode* (`'currencyNoJoinMode' => true,` in `data/config.php`). With this mode enabled, you will need to clear cache (in Espo) every time you change currency rates. (as of v7.3)
+
+## MySQL error: Row size too large
+
+Full error messages (may be one of the following):
+
+1. *ERROR 1118 (42000): Row size too large. The maximum row size for the used table type, 
+not counting BLOBs, is 65535. This includes storage overhead, check the manual. You 
+have to change some columns to TEXT or BLOBs.*
+2. *ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to 
+TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.*
+
+You can get this error if there are a large number of Varchar fields in an entity type. After this, you cannot create new fields.
+
+To fix this problem, you can change the type for some fields from *Varchar* to *Text*. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+
+Change definitions for some fields from:
+
+```
+ "type": "varchar",
+ "maxLength": 150
+```
+
+to:
+
+```
+ "type": "text"
+```
+
+After this, make a rebuild (via CLI or from the Administration page).
