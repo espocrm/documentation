@@ -2,7 +2,7 @@
 
 ## Default log
 
-By default log files are created in `{ESPO_ROOT}/data/logs/` directory.
+By default, log files are created in `{ESPO_ROOT}/data/logs/` directory.
 
 ## Parameters
 
