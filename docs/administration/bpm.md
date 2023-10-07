@@ -88,7 +88,7 @@ Only admin users can create or edit flowcharts. With roles it's possible to allo
 
 ## Flowchart Elements
 
-See in separate articles:
+See more detail in separate articles:
 
 * [Events](bpm-events.md)
 * [Gateways](bpm-gateways.md)
