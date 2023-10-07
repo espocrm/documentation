@@ -116,13 +116,13 @@ Represented as a solid arrow. It indicates the order in which process elements w
 
 Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
 
-Through UI there is an ability to check conditions for the following records:
+Through the UI there is the ability to check conditions for the following records:
 
 * Target record;
 * Records related to the target through many-to-one and children-to-parent relationships;
 * Records created by the process via tasks;
 * User task records, which allows checking the resolution.
 
-It's also possible to define conditions in [Espo-formula](formula.md) language.
+It's also possible to define conditions with [formula](formula.md) expressions.
 
 Conditions in BPM tool are the same as in Workflow feature. See more details about [workflow's conditions](workflows.md#conditions).
