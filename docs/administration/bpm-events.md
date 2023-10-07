@@ -1,6 +1,13 @@
 # BPM Events
 
-Events are displayed on a flowchart as circles.
+Events are displayed on a flowchart as circles. They can be divided into the following groups:
+
+* Start – green color. They are entry points of processes and sub-processes.
+* Intermediate – blue color. Can throw or catch.
+* End – red color. Define final points of process flows.
+* Boundary – blue color and attached to an activity. They allow to interact with running activities. Technically, there are intermediate catching events.
+
+All available events:
 
 * Start Events
   * [Start](#start-event)
