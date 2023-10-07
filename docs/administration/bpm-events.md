@@ -2,10 +2,10 @@
 
 Events are displayed on a flowchart as circles. They can be divided into the following groups:
 
-* Start – green color. They are entry points of processes and sub-processes.
-* Intermediate – blue color. Can throw or catch.
-* End – red color. Define final points of process flows.
-* Boundary – blue color and attached to an activity. They allow to interact with running activities. Technically, there are intermediate catching events.
+* Start – green circle. They are entry points of processes and sub-processes.
+* Intermediate – blue circle. Occurs between start and end events in a process. Can throw or catch.
+* End – red circle. Define final points of process flows.
+* Boundary – blue circle attached to an activity. They allow to interact with running activities. Technically, there are intermediate catching events.
 
 All available events:
 
