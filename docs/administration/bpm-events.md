@@ -137,7 +137,7 @@ In case of a multi-instance sub-process, the compensation handler is processed f
 
 ### Conditional Intermediate Event (Catching)
 
-This event stops the flow until specified criteria is met. Conditions are defined in the same way as in Worfklow tool. See [here](workflows.md#conditions). Note that BPM tool intruduces [additonal functions](bpm.md#additional-formula-functions) that can be used in formula.
+This event stops the flow until specified criteria is met. Conditions are defined in the same way as in the Worfklow tool. See [here](workflows.md#conditions). Note that BPM tool intruduces [additonal functions](bpm.md#additional-formula-functions) that can be used in formula.
 
 ![Conditional Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional.png)
 
