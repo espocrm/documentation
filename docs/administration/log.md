@@ -6,7 +6,7 @@ By default, log files are created in `{ESPO_ROOT}/data/logs/` directory.
 
 ## Parameters
 
-In `data/config.php` (or `data/config-internal.php`):
+In `data/config-internal.php`:
 
 ```
   'logger' => [
