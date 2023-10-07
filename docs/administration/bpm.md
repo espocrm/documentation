@@ -31,11 +31,11 @@ In this article:
 
 ## Process Flowcharts
 
-The link to process flowcharts is available from administration panel. It also can be added as a tab on the navigation panel.
+The link to process flowcharts is available from the administration panel. It also can be added as a tab on the navigation panel.
 
-Flowcharts are intended for business processes modeling. Administrator can create and edit flowcharts. Regular users can only view flowcharts.
+Flowcharts are intended for business processes modeling. An administrator can create and edit flowcharts. Regular users can only view flowcharts.
 
-Every flowchart has its specific entity type (Target Type field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
+Every flowchart has its specific entity type (specified by the *Target Type* field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
 
 If the process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
 
@@ -43,7 +43,7 @@ To show details and parameters of a certain flowchart element you need to click 
 
 ## Processes
 
-Processes are available at administration panel. The link also can be added as a tab on the navigation panel.
+Processes are available at the administration panel. The link also can be added as a tab on the navigation panel.
 
 The process represents a business process instance. When it's initiated, it gets the status 'Started'. When the process is finished, it gets the status 'Ended'. 
 
