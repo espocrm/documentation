@@ -22,6 +22,10 @@ $tempVariable = null;
 
 Ended processes are *not* cleaned up automatically as a process may hold information important for a business. You may utilize a scheduled workflow rule that will be handle removal of ended processes.
 
+## Self-removal
+
+You can setup a BPM process to remove itself. Add *Task* > *Update Process Record*. Add in formula: `deleted = 1;`.
+
 ## Displaying processes on record detail view
 
 You can utilize the [Report Panels](../user-guide/reports.md#report-panels) feature to display all related processes on the record detail view.
