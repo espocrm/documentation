@@ -78,10 +78,6 @@ It's possible to **manually start a flow from any element** of an already starte
 
 Ended, stopped and interrupted processes can be *reactivated* (from the dropdown next to the Edit button) (as of v2.14). After reactivation, the process does not have any active flow node. You need to manually start the flow from a specific flow node element. Ended sub-processes can be reactivated only if their parent process is active. Meaning that you might need to reactivate the parent process first.
 
-### Self-removal
-
-You can setup BPM process to remove itself. Add *Task* > *Update Process Record*. Add in formula: `deleted = 1;`.
-
 ### Access control
 
 Only admin users can create or edit flowcharts. With roles it's possible to allow regular users to view flowcharts, view or edit processes. Note that a user needs also to have access to the Process Flowchart scope be able to view process flowchart details. 
