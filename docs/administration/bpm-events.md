@@ -145,7 +145,7 @@ This event stops the flow until specified criteria is met. Conditions are define
 
 This event stops the flow and waits as long as it is specified by the event's parameters.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes, the flow will be proceeded to the next element.
+For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return a Date-Time value (in UTC timezone). Once this time comes, the flow will be proceeded to the next element.
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
 
