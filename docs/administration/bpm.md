@@ -123,6 +123,6 @@ Through the UI there is the ability to check conditions for the following record
 * Records created by the process via tasks;
 * User task records, which allows checking the resolution.
 
-It's also possible to define conditions with [formula](formula.md) expressions. Example: `status == 'New'`. 
+It's also possible to define conditions with [formula](formula.md) expressions. Example: `status == 'New' && assignedUserId == null`. 
 
 Conditions in the BPM tool are the same as in the Workflow tool. See more details about [workflow's conditions](workflows.md#conditions).
