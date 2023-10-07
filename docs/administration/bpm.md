@@ -94,6 +94,18 @@ See in separate articles:
 * [Gateways](bpm-gateways.md)
 * [Activities](bpm-activities.md)
 
+### Events
+
+Events represent something that happens during a business process. They also start, end and interrupt the process flow. Depicted as a circle.
+
+### Gateways
+
+Gateways diverge and converge flows. Depicted as a yellow diamond.
+
+### Activities
+
+Automated tasks, manual tasks and sub-processes. Represented as a gray rectangle.
+
 ### Flows
 
 #### Sequence Flow
