@@ -66,7 +66,7 @@ Assigns the record to some user by a specific rule. Can be applied to the target
 
 Creates in-app notification for specific users. See [more](workflows.md#create-notification).
 
-Process variables can be used in a message with the placeholder `{$$variable}` (as of v2.5.8).
+Process variables can be used in a message with the placeholder `{$$variable}`.
 
 #### Make Followed
 
@@ -130,9 +130,9 @@ You can specify which email address the email will sent from.
 
 If you specify a *Reply-to* address, a sent email will contain it in a *Reply-to* header. It will facilitate a recipient to reply to that address instead of the address specified in the *From* field.
 
-It's possible to use process variables to specify email address (recipient or sender) with *Specific email address* option, e.g. `{$$emailAddress}`, where *emailAddress* is a variable defined in the process before. Available since version 2.4.5.
+It's possible to use process variables to specify email address (recipient or sender) with *Specific email address* option, e.g. `{$$emailAddress}`, where *emailAddress* is a variable defined in the process before.
 
-Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitue field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}` (since advanced pack 2.4).
+Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitue field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}`.
 
 You can catch a reply on the sent email with *Message Intermediate Event* further in the process.
 
