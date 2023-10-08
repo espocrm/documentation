@@ -37,32 +37,32 @@ Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) must be replaced by
 
 #### Default
 
-* `create.ENTITY_TYPE` – record of ENTITY_TYPE created, e.g. `create.Lead`
-* `update.ENTITY_TYPE.ID` – record update, e.g. `update.Lead.aaabbbccc007`
-* `delete.ENTITY_TYPE.ID` – record removed
-* `relate.ENTITY_TYPE.ID.LINK_NAME` – record related with another record (only for *many-to-many*)
-* `relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*)
-* `unrelate.ENTITY_TYPE.ID.LINK_NAME` – record unrelated from another record (only for *many-to-many*)
-* `unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – (only for *many-to-many*)
-* `createRelated.ENTITY_TYPE.ID.LINK_NAME` – created related record, one-to-many relationship, e.g. Opportunity created for Account
-* `createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE` – when created a record related through parent, e.g. Meeting created for Account
-* `streamPost.ENTITY_TYPE.ID` – when somebody posted in stream
+* `create.ENTITY_TYPE` – record of ENTITY_TYPE created, e.g. `create.Lead`;
+* `update.ENTITY_TYPE.ID` – record update, e.g. `update.Lead.aaabbbccc007`;
+* `delete.ENTITY_TYPE.ID` – record removed;
+* `relate.ENTITY_TYPE.ID.LINK_NAME` – record related with another record (only for *many-to-many*);
+* `relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*);
+* `unrelate.ENTITY_TYPE.ID.LINK_NAME` – record unrelated from another record (only for *many-to-many*);
+* `unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – (only for *many-to-many*);
+* `createRelated.ENTITY_TYPE.ID.LINK_NAME` – created related record, one-to-many relationship, e.g. Opportunity created for Account;
+* `createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE` – when created a record related through parent, e.g. Meeting created for Account;
+* `streamPost.ENTITY_TYPE.ID` – when somebody posted in stream;
 
 #### Contacts/Leads
 
-* `leadCapture.ENTITY_TYPE.ID` – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled)
-* `leadCapture.ENTITY_TYPE.ID.LEAD_CAPTURE_ID` – the same, but id of Lead Capture record is specified
-* `optOut.ENTITY_TYPE.ID` – person opted-out
-* `optOut.ENTITY_TYPE.ID.TARGET_LIST_ID` – person opted-out from specific target list
-* `cancelOptOut.ENTITY_TYPE.ID` – person opted-in again
-* `cancelOptOut.ENTITY_TYPE.ID.TARGET_LIST_ID`
-* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person accepted meeting/call invitation
-* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID` – person accepted meeting/call invitation, event id is specified
-* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Tentative status in meeting/call invitation
-* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`
-* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Accepted or Tentative status in meeting/call invitation
-* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`
-* `eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person declined meeting/call invitation
+* `leadCapture.ENTITY_TYPE.ID` – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled);
+* `leadCapture.ENTITY_TYPE.ID.LEAD_CAPTURE_ID` – the same, but id of Lead Capture record is specified;
+* `optOut.ENTITY_TYPE.ID` – person opted-out;
+* `optOut.ENTITY_TYPE.ID.TARGET_LIST_ID` – person opted-out from specific target list;
+* `cancelOptOut.ENTITY_TYPE.ID` – person opted-in again;
+* `cancelOptOut.ENTITY_TYPE.ID.TARGET_LIST_ID`;
+* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person accepted meeting/call invitation;
+* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID` – person accepted meeting/call invitation, event id is specified;
+* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Tentative status in meeting/call invitation;
+* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`;
+* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Accepted or Tentative status in meeting/call invitation;
+* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`;
+* `eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person declined meeting/call invitation;
 * `eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`
 
 #### Contacts/Leads/Accounts/Users
@@ -126,6 +126,12 @@ Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced 
 * `@clickUrl` – recipient opened a tracking url
 * `@clickUrl.CAMPAIGN_TRACKING_URL_ID` – recipient opened a specfic tracking url
 
+#### Meetings/Calls/Events
+
+`@eventAccepted.ENTITY_TYPE` – an attendee accepted the event (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
+`@eventTentative.ENTITY_TYPE`
+`@eventDeclined.ENTITY_TYPE`
+`@eventAcceptedTentative.ENTITY_TYPE` – an attendee accepted the event or set as tentative (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
 
 ## Naming clarification
 
