@@ -31,7 +31,7 @@ In this article:
 
 ## Process Flowcharts
 
-The link to process flowcharts is available from the administration panel. It also can be added as a tab on the navigation panel.
+Available at Administration > Flowcharts. It also can be added as a tab on the navigation panel.
 
 Flowcharts are intended for business processes modeling. An administrator can create and edit flowcharts. Regular users can only view flowcharts.
 
@@ -43,7 +43,7 @@ To show details and parameters of a certain flowchart element you need to click 
 
 ## Processes
 
-Processes are available at the administration panel. The link also can be added as a tab on the navigation panel.
+Available at Administration > Processes. The link also can be added as a tab on the navigation panel (Administration > User Interface > Navbar > Tab List).
 
 The process represents a business process instance. When it's initiated, it gets the status 'Started'. When the process is finished, it gets the status 'Ended'. 
 
