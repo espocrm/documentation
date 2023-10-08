@@ -86,17 +86,17 @@ Only admin users can create or edit flowcharts. With roles it's possible to allo
 
 See more detail in separate articles:
 
-* [Events](bpm-events.md)
 * [Gateways](bpm-gateways.md)
+* [Events](bpm-events.md)
 * [Activities](bpm-activities.md)
-
-### Events
-
-Events represent something that happens during a business process. They also start, end and interrupt the process flow. Depicted as a circle.
 
 ### Gateways
 
 Gateways diverge and converge flows. Depicted as a yellow diamond. They can be used to determine a path in which the flow will go depending on specific conditions. They can split the flow into multiple parallel flows and join parallel flows into a single one.
+
+### Events
+
+Events represent something that happens during a business process. They also start, end and interrupt the process flow. Depicted as a circle.
 
 ### Activities
 
