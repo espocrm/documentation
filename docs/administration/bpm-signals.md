@@ -129,7 +129,7 @@ Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced 
 #### Meetings/Calls/Events
 
 * `@eventAccepted.ENTITY_TYPE` – an attendee accepted the event (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
-* `@eventTentative.ENTITY_TYPE` – an attendee set the acceptance status as tentative;
+* `@eventTentative.ENTITY_TYPE` – an attendee set a tentative acceptance status;
 * `@eventDeclined.ENTITY_TYPE` – an attendee declined the event;
 * `@eventAcceptedTentative.ENTITY_TYPE` – an attendee accepted the event or set as tentative (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
 
