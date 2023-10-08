@@ -91,7 +91,7 @@ When it is used to start an event sub-process, it's possible to use placeholders
 
 !!! note
 
-    Signal name can not be empty.
+    Signal name cannot be empty.
 
 ![Signal Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-signal.png)
 
