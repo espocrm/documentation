@@ -1,6 +1,8 @@
 # BPM Events
 
-Events are displayed on a flowchart as circles. They can be divided into the following groups:
+Events represent something that happens during a business process. They also start, end and interrupt the process flow. Depicted as a circle.
+
+Events can be divided into the following groups:
 
 * Start – green circle. They are entry points of processes and sub-processes.
 * Intermediate – blue circle. Occur between start and end events in a process. Can throw or catch.
