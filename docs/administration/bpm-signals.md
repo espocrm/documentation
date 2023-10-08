@@ -25,15 +25,13 @@ In this article:
 ## Regular signals
 
 * Can be broadcasted and caught within a running process.
-* Can't be used to start a process or workflow rule.
+* Cannot be used to start a process or a workflow rule.
 
-!!! note
-
-    Signal Intermediate Events can catch and throw regular signals (in BPM process).
+*Signal Intermediate Events* can catch and throw only regular signals (in BPM process).
 
 ### Built-in signals
 
-The list of out-of-the-box signals that are broadcasted in the system.
+The list of out-of-the-box signals which are broadcasted in the system upon specific conditions.
 
 !!! note
 
