@@ -144,8 +144,8 @@ nav:
             - 'Workflows': 'administration/workflows.md'
             - 'BPM':
               - 'Overview': 'administration/bpm.md'
-              - 'Events': 'administration/bpm-events.md'
               - 'Gateways': 'administration/bpm-gateways.md'
+              - 'Events': 'administration/bpm-events.md'              
               - 'Activities': 'administration/bpm-activities.md'
               - 'Misc':
                 - 'Examples': 'administration/bpm-examples.md'
