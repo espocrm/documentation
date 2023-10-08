@@ -1,6 +1,6 @@
 # BPM Gateways
 
-Gateways are displayed as diamonds.
+Gateways diverge and converge flows. Depicted as a yellow diamond. They can be used to determine a path in which the flow will go depending on specific conditions. They can split the flow into multiple parallel flows and join parallel flows into a single one.
 
 * [Exclusive](#exclusive-gateway)
 * [Inclusive](#inclusive-gateway)
