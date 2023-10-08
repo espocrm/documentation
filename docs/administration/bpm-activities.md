@@ -1,6 +1,6 @@
 # BPM Activities
 
-Activities are displayed as rounded rectangles.
+Activities represent automated tasks, manual tasks and sub-processes. Depicted as a gray rectangle.
 
 * [Task](#task)
 * [Send Message Task](#send-message-task)
