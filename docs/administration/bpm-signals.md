@@ -27,13 +27,17 @@ In this article:
 * Can be broadcasted and caught within a running process.
 * Can't be used to start a process or workflow rule.
 
-Note: Signal Intermediate Events can catch and throw regular signals (in BPM process).
+!!! note
+
+    Signal Intermediate Events can catch and throw regular signals (in BPM process).
 
 ### Built-in signals
 
 The list of out-of-the-box signals that are broadcasted in the system.
 
-Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) must be replaced by corresponding values. E.g. when an account with ID = `aabbcc` is updated, a signal `update.Account.aabbcc` is broadcasted.
+!!! note
+
+    Signal name parts written in the upper case (e.g. ENTITY_TYPE, ID, LINK_NAME) must be replaced with corresponding values. E.g. when an Account with an ID `abc01` is updated, a signal `update.Account.abc01` is broadcasted. See the naming clarification below.
 
 #### Default
 
@@ -83,7 +87,6 @@ You can use placeholders when you define a signal name that will be broadcasted 
 
 E.g. `mySignal.{$status}.{$id}` – *status* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySigal.New.someIdValue`.
 
-
 ## Object signals
 
 * Broadcasted along with the entity (record).
@@ -92,7 +95,9 @@ E.g. `mySignal.{$status}.{$id}` – *status* and *id* are attributes of the targ
 * Can't be caught within a running process.
 * Can be broadcasted by a running process. 
 
-Note: Signal Intermediate Event (Catching) can't catch object signals. 
+!!! note
+
+    Signal Intermediate Event (Catching) can't catch object signals. 
 
 Example: A process triggers signal *@approve*. A target record of *Lead* entity type is attached to the signal. You have another BPM flowchart for *Lead* entity type that starts with *@approve* signal. In this case, a new process will be started, and lead record from the first process will be passed as a target record of the second process. 
 
@@ -100,7 +105,9 @@ Example: A process triggers signal *@approve*. A target record of *Lead* entity 
 
 The list of out-of-the-box signals that are broadcasted in the system.
 
-Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced by corresponding values.
+!!! note
+
+    Signal name parts written in the upper case (e.g LINK_NAME, FOREIGN_ID) must be replaced with corresponding values. See the naming clarification below.
 
 #### Default
 
@@ -135,7 +142,7 @@ Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced 
 
 ## Naming clarification
 
-* *ID* – ID of a record that you can obtain from the browser address bar
-* *ENTITY_TYPE* – entity type of the record (not translated), you can obtain it at Administration > Entity Manager
-* *LINK_NAME* – relation name, you can obtain it at Administration > Entity Manager
-* *FOREIGN_ID* – ID of a related record
+* *ID* – ID of a record that you can obtain from the browser address bar;
+* *ENTITY_TYPE* – entity type of the record (not translated), you can obtain it at Administration > Entity Manager;
+* *LINK_NAME* – relation name, you can obtain it at Administration > Entity Manager;
+* *FOREIGN_ID* – ID of a related record.
