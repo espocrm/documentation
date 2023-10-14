@@ -13,9 +13,9 @@ Additional features:
 * User creation. Optional.
 * Team mapping. Espo teams against groups/teams/roles of the identity provider.
 * User profile and user teams sync. Optional, on every login.
-* Ability to choose a claim that will be used for a username.
-* Fallback login. Only for admins or for regular users.
-* For admins OIDC can be disabled, so that only the fallback method  allowed.
+* The ability to choose a claim that will be used for a username.
+* Fallback login method. The ability to use the default Espo method. Can be enabled for admins or for both regular users and admins.
+* For admins, the OIDC method can be disabled, so that only the fallback method is allowed.
 * Logout redirect. To clear an identity provider session when a user is logging out from Espo.
 * Backchannel logout. The ability to forcibly log out a user from Espo. `api/v1/backchannelLogout` endpoint.
 
