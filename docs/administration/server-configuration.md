@@ -2,9 +2,15 @@
 
 EspoCRM can be installed on:
 
-* [Apache](apache-server-configuration.md), [Nginx](nginx-server-configuration.md), or [IIS](iis-server-configuration.md) server;
-* with PHP 8.0, 8.1, 8.2;
-* MySQL 5.7 (and later), or MariaDB 10.2.2 (and later), or PostgreSQL 15 (supported expetimentally).
+* Webserver
+  * [Apache](apache-server-configuration.md)
+  * [Nginx](nginx-server-configuration.md)
+  * [IIS](iis-server-configuration.md)
+* PHP 8.0, 8.1, 8.2
+* Database
+  * MySQL 5.7, 8.0
+  * MariaDB 10.2.2 and greater
+  * PostgreSQL 15 (supported expetimentally)
 
 In this article:
 
@@ -53,7 +59,7 @@ Optional php extensions that may be needed:
 
 ### Database requirements
 
-EspoCRM supports MySQL 5.7 or greater and MariaDB 10.1 or greater. These are no special peculiarities. All default settings are fine for EspoCRM.
+EspoCRM supports MySQL (5.7, 8.0) and MariaDB (10.1 and greater). These are no special peculiarities. All default settings are fine for EspoCRM.
 
 EspoCRM also experimentally supports PostgreSQL 15. Though it's planned to become official soon.
 
