@@ -5,9 +5,11 @@
 
 ## json\retrieve
 
-`json\retrieve(JSON, PATH)`
+`json\retrieve(JSON, [PATH])`
 
 Retrieves a specific attribute from a JSON string. PATH is a string, items are separated by dots. (as of v6.0)
+
+If PATH is omitted, it will return the whole JSON parsed (as of v8.0.4).
 
 !!! example
 
