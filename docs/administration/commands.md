@@ -79,7 +79,7 @@ php command.php extension -u --id="extension-ID"
 List all extensions:
 
 ```
-php command.php extension -l"
+php command.php extension -l
 ```
 
 ## Running job
