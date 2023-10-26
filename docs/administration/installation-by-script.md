@@ -193,6 +193,28 @@ sudo /var/www/espocrm/command.sh import-sql "PATH/DB.sql"
 
 An example: `sudo /var/www/espocrm/command.sh import-sql "/var/www/espocrm-backup/db.sql"`.
 
+### Export a database into the SQL dump
+
+Export a database into the .sql dump.
+
+```
+sudo /var/www/espocrm/command.sh export-sql "PATH"
+```
+
+An example: `sudo /var/www/espocrm/command.sh export-sql "/var/www/espocrm-backup"`.
+
+### Export a database table into the SQL dump
+
+Export a single database table into the .sql dump.
+
+Notice: the database tables have different names than Entities. Ex. `TargetList` entity has the `target_list` table.
+
+```
+sudo /var/www/espocrm/command.sh export-table-sql "PATH" "TABLE_NAME"
+```
+
+An example: `sudo /var/www/espocrm/command.sh export-table-sql "/var/www/espocrm-backup" account`.
+
 ### Certificate generation
 
 Generate a new Let's Encrypt certificate. It can be used to create a certificate for the first time or after a domain change.
