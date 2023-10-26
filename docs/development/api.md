@@ -85,7 +85,7 @@ where
 
     This method is not recommended.
 
-For regular (non-API) users the EspoCRM front-end uses the [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). A username and password (or token) are passed through the `Authorization` header encoded with Base64.
+For regular users, the EspoCRM front-end uses the [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). A username and password (or token) are passed through the `Authorization` header encoded with Base64.
 
 ```
 "Authorization: Basic " + base64Encode(username  + ':' + password)
