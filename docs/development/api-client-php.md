@@ -31,8 +31,9 @@ $response = $client->request(Client::METHOD_GET, 'Opportunity', [
 
 $parsedBody = $response->getParsedBody();
 
-$fileContentsResponse = $client->request(Client::METHOD_GET, "Attachment/file/$attachmentId")
-    ->getBodyPart();
+$fileContentsResponse =
+    $client->request(Client::METHOD_GET, "Attachment/file/$attachmentId")
+        ->getBodyPart();
 ```
 
 ### Api Key Authentication
