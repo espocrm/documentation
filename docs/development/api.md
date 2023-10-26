@@ -20,7 +20,7 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
     API client implementations (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
 
-It's recommended to create a **separate API user** with specific rights (roles) and use this user for API calls.
+It's recommended to create a **separate API user** with specific permissions (roles) and use this user for API calls. You can have multiple API users for different purposes, give each user specific permissions.
 
 See in [tutorial](api-tutorial.md) **how to get started**.
 
