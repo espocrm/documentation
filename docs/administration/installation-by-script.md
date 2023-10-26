@@ -195,7 +195,7 @@ An example: `sudo /var/www/espocrm/command.sh import-sql "/var/www/espocrm-backu
 
 ### Export a database into the SQL dump
 
-Export a database into the .sql dump.
+Export the database structure and data into a .sql dump.
 
 ```
 sudo /var/www/espocrm/command.sh export-sql "PATH"
@@ -205,7 +205,7 @@ An example: `sudo /var/www/espocrm/command.sh export-sql "/var/www/espocrm-backu
 
 ### Export a database table into the SQL dump
 
-Export a single database table into the .sql dump.
+Export the single database table structure and data into a .sql dump.
 
 Notice: the database tables have different names than Entities. Ex. `TargetList` entity has the `target_list` table.
 
