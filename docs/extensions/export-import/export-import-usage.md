@@ -46,11 +46,11 @@ bin/command export-import import --format=json --import-path="build/ExportImport
 
 #### `--export-path`
 
-An export path. The default value is `build/ExportImport/Export`. Example: `--export-path="PATH"`. 
+An export path. The default value is `build/ExportImport/Export`. Example: `--export-path="PATH"`.
 
 #### `--import-path`
 
-An import path. The default value is `build/ExportImport/Import`. Example: `--import-path="PATH"`. 
+An import path. The default value is `build/ExportImport/Import`. Example: `--import-path="PATH"`.
 
 #### `--entity-type-list`
 
@@ -66,7 +66,7 @@ Supported values:
 
 An import type. The default value is `createAndUpdate`. Example: `--import-type="TYPE"`.
 
-Available values: 
+Available values:
 
 * `create`
 * `createAndUpdate`
@@ -94,7 +94,7 @@ Available values:
 
 A user password for imported users. If omitted, then random values a generated. Example: `--user-password="PASSWORD"`.
 
-For resetting the password, use `bin/command set-password [username]`. 
+For resetting the password, use `bin/command set-password [username]`.
 
 #### `--update-currency`
 
@@ -120,7 +120,7 @@ Available values:
 
 #### `--config`
 
-Enable export / import configuration data. The default value is `false`. 
+Enable export / import configuration data. The default value is `false`.
 
 Available values:
 
@@ -129,7 +129,7 @@ Available values:
 
 #### `--update-created-at`
 
-Current time for the createdAt field. The default value is `false`. 
+Current time for the createdAt field. The default value is `false`.
 
 Available values:
 
@@ -138,21 +138,21 @@ Available values:
 
 #### `--hard-export-list`
 
-This option enables export feature for an entity which is disabled in `exportImportDefs`. Example: `--hard-export-list="ENTITY_TYPE"`. 
+This option allows to export data for an entity which is disabled by default in `exportImportDefs` with the `"exportDisabled": true` option. Example: `--hard-export-list="ENTITY_TYPE"`.
 
 Available values:
 
-* `a string`, e.g. `"Account"`,
-* `a string which is separated by a comma`, e.g. `"Account, Contact"`.
+* `a string`, e.g. `"ScheduledJob"`,
+* `a string which is separated by a comma`, e.g. `"ScheduledJob, ScheduledJobLogRecord"`.
 
 #### `--hard-import-list`
 
-This option enables import feature for an entity which is disabled in `exportImportDefs`. Example: `--hard-import-list="ENTITY_TYPE"`.
+This option allows to import data for an entity which is disabled by default in `exportImportDefs` with the `"importDisabled": true` option. Example: `--hard-import-list="ENTITY_TYPE"`.
 
 Available values:
 
-* `a string`, e.g. `"Account"`,
-* `a string which is separated by a comma`, e.g. `"Account, Contact"`.
+* `a string`, e.g. `"ScheduledJob"`,
+* `a string which is separated by a comma`, e.g. `"ScheduledJob, ScheduledJobLogRecord"`.
 
 #### `--config-ignore-list`
 
