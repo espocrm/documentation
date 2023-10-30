@@ -5,7 +5,7 @@
 * [object\set](#objectset)
 * [object\clear](#objectclear)
 * [object\has](#objecthas)
-* [object\clonedeep](#objectclonedeep)
+* [object\cloneDeep](#objectclonedeep)
 
 ## object\create
 
