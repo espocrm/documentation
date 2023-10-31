@@ -1,8 +1,7 @@
 # How to get started
 
 * [Option A. Using git repository](#option-a-using-git-repository)
-* [Option B. Using installed instance](#option-b-using-installed-instance)
-* [Option C. Extension development](#option-c-extension-development)
+* [Option B. Extension development](#option-b-extension-development)
 * [Configuration for development](#configuration-for-development)
 * [Where to put customizations](#where-to-put-customizations)
 
@@ -59,11 +58,7 @@ node diff {version_from}
 
 The package will be created in the `build` directory.
 
-## Option B. Using installed instance
-
-You can develop and make customizations right on a regular installed EspoCRM instance.
-
-## Option C. Extension development
+## Option B. Extension development
 
 By utilizing [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. Template tools allows you to run your extension in Espo instance for testing.
 
