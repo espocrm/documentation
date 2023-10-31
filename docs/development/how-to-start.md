@@ -66,7 +66,7 @@ By utilizing [ext-template](https://github.com/espocrm/ext-template) repository,
 
 EspoCRM instance configuration for development. Parameters should be set in `data/config.php`.
 
-Developer mode disables cache.
+Developer mode, disables cache.
 
 ```php
 'isDeveloperMode' => true,
