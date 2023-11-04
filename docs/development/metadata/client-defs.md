@@ -218,7 +218,7 @@ A default filter on the select-records modal.
 }
 ```
 
-## rowActions
+## rowActionList
 
 *As of v8.1.*
 
