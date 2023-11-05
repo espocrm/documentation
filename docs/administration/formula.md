@@ -447,12 +447,12 @@ For non-developers, it's possible to apply a [list report](../user-guide/reports
 
 The following comparison operators are available:
 
-* `==` - equals,
-* `!=` - not equals,
-* `>` - greater than,
-* `<` - less than,
-* `>=` - greater than or equals,
-* `<=` - less than or equals.
+* `==` – equals,
+* `!=` – not equals,
+* `>` – greater than,
+* `<` – less than,
+* `>=` – greater than or equals,
+* `<=` – less than or equals.
 
 !!! important
 
