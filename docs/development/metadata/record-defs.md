@@ -138,11 +138,11 @@ An array of hooks (applied for API calls). Should implement the `Espo\Core\Recor
 
 ## beforeCreateHookClassNameList
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface.
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface. As of v8.1, can also implement `Espo\Core\Record\Hook\SaveHook`.
 
 ## beforeUpdateHookClassNameList
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` interface.
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` interface. As of v8.1, can also implement `Espo\Core\Record\Hook\SaveHook`.
 
 ## beforeDeleteHookClassNameList
 
