@@ -187,9 +187,25 @@ You can get this error if there are a large number of Varchar fields in an entit
 
 To fix this problem, you can try two solutions:
 
-1. Change the type for some fields from *Varchar* to *Text*. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+1. Change the max length for your varchar fields. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
 
-Change definitions for some fields from:
+Change definitions for `varchar` fields from:
+
+```
+"maxLength": 255
+```
+
+to:
+
+```
+"maxLength" 100
+```
+
+Then, go to phpMyAdmin > your database > your entity type table > Structure and change the fields Length/Values to 100. After this, make a rebuild in EspoCRM (via CLI or from the Administration page).
+
+2. Change the type for varchar fields from *Varchar* to *Text*. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+
+Change definitions for `varchar` fields from:
 
 ```
  "type": "varchar",
@@ -202,22 +218,6 @@ to:
  "type": "text"
 ```
 
-Note that the *maxLength* value can be different for your field. You need just remove it. Make sure that the resulting JSON is valid.
+Note that the *maxLength* value can be different for your field. You just need to remove it. Make sure that the resulting JSON is valid.
 
 After this, make a rebuild (via CLI or from the Administration page).
-
-2. Change the max length for some fields. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
-
-Change definitions for some fields from:
-
-```
- "maxLength": 150
-```
-
-to:
-
-```
-"maxLength" 100
-```
-
-Then, go to phpMyAdmin > your database > your entity type table > Structure and change some fields Length/Values to 100. After this, make a rebuild (via CLI or from the Administration page).
