@@ -21,6 +21,8 @@ Example:
 
 ## items
 
+Navbar items (in the top right corner).
+
 *Object*
 
 Items.
