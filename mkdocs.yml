@@ -232,6 +232,7 @@ nav:
               - 'dateTime': 'development/metadata/app-date-time.md'
               - 'defaultDashboardLayouts': 'development/metadata/app-default-dashboard-layouts.md'
               - 'defaultDashboardOptions': 'development/metadata/app-default-dashboard-options.md'
+              - 'emailTemplate': 'development/metadata/app-email-template.md'
               - 'entityManager': 'development/metadata/app-entity-manager.md'
               - 'entityManagerParams': 'development/metadata/app-entity-manager-params.md'
               - 'entityTemplateList': 'development/metadata/app-entity-template-list.md'
