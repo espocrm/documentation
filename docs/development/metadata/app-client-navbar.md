@@ -37,3 +37,9 @@ A frontend view.
 *string*
 
 A CSS class or multiple classes for the LI tag.
+
+## itemList
+
+*string[]*
+
+An actual item list. Use `__APPEND__` for extending.
