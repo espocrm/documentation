@@ -205,11 +205,13 @@ to:
 
 #### Step 2. Change columns length in the database
 
-Go to phpMyAdmin > your database > your entity type table > Structure and change the fields Length/Values to 100. 
+Then you need to amend the corresponding columns in your database by changing their length. You can do it manually or run a [hard rebuild](commands.md#hard-rebuild).
 
 #### Step 3. Rebuild
 
-Login as administrator in EspoCRM, go to Administration and click the Rebuild link or do it via [CLI](commands.md/#rebuild).
+*Not needed if you already run a hard rebuild.*
+
+Log in as an administrator in EspoCRM, go to Administration and click the *Rebuild*. You can also do it via [CLI](commands.md/#rebuild).
 
 ### Solution 2. Change the type for varchar fields from *Varchar* to *Text* 
 
