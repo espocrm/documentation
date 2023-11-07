@@ -187,9 +187,11 @@ You can get this error if there are a large number of Varchar fields in an entit
 
 To fix this problem, you can try two solutions:
 
-1. Change the max length for your varchar fields. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+### Solution 1. Change the max length for your varchar fields
 
-Change definitions for `varchar` fields from:
+You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+
+#### Step 1. Change definitions for `varchar` fields from:
 
 ```
 "maxLength": 255
@@ -201,23 +203,33 @@ to:
 "maxLength" 100
 ```
 
-Then, go to phpMyAdmin > your database > your entity type table > Structure and change the fields Length/Values to 100. After this, make a rebuild in EspoCRM (via CLI or from the Administration page).
+#### Step 2. Change columns length in the database
 
-2. Change the type for varchar fields from *Varchar* to *Text*. You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+Go to phpMyAdmin > your database > your entity type table > Structure and change the fields Length/Values to 100. 
 
-Change definitions for `varchar` fields from:
+#### Step 3. Rebuild
+
+Login as administrator in EspoCRM, go to Administration and click the Rebuild link or do it via [CLI](commands.md/#rebuild).
+
+### Solution 2. Change the type for varchar fields from *Varchar* to *Text* 
+
+You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+
+#### Step 1. Change definitions for `varchar` fields from:
 
 ```
- "type": "varchar",
- "maxLength": 150
+"type": "varchar",
+"maxLength": 150
 ```
 
 to:
 
 ```
- "type": "text"
+"type": "text"
 ```
 
 Note that the *maxLength* value can be different for your field. You just need to remove it. Make sure that the resulting JSON is valid.
 
-After this, make a rebuild (via CLI or from the Administration page).
+#### Step 2. Rebuild
+
+Login as administrator in EspoCRM, go to Administration and click the Rebuild link or do it via [CLI](commands.md/#rebuild).
