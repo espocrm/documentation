@@ -42,4 +42,4 @@ A CSS class or multiple classes for the LI tag.
 
 *string[]*
 
-An actual item list. Use `__APPEND__` for extending.
+An actual item list. Use `"__APPEND__"` for extending.
