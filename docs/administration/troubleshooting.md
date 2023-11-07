@@ -187,15 +187,15 @@ You can get this error if there are a large number of Varchar fields in an entit
 
 To fix this problem, you can try two solutions:
 
-### Solution 1. Decrease the max length for some varchar fields
+### Solution 1. Decrease max length for some varchar fields
 
-#### Step 1. Change definitions
+#### Step 1. Change in definitions
 
 Edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json`. Decrease *maxLength* parameter for some custom varchar fields. E.g. from 255 to 100.
 
-#### Step 2. Change columns length in the database
+#### Step 2. Change columns length in database
 
-Then you need to amend the corresponding columns in your database by changing their length. You can do it manually or run a [hard rebuild](commands.md#hard-rebuild).
+Then you need to amend the corresponding columns in your database by changing their length. You can do it manually (via a database admin tool) or run a [hard rebuild](commands.md#hard-rebuild).
 
 #### Step 3. Rebuild
 
