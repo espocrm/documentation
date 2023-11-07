@@ -23,7 +23,7 @@ Example:
 
 *Object*
 
-Definitions.
+Items.
 
 ### view
 
