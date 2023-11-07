@@ -11,12 +11,11 @@ Example:
     "itemDefs": {
         "quickCreate": {
             "view": "views/site/navbar/quick-create",
-            "class": "dropdown hidden-xs quick-create-container"
+            "class": "dropdown hidden-xs quick-create-container",
+            "order": 0,
+            "disabled": false
         }
-    },
-    "itemList": [
-        "quickCreate"
-    ]
+    }
 }
 ```
 
@@ -38,8 +37,17 @@ A frontend view.
 
 A CSS class or multiple classes for the LI tag.
 
-## itemList
+### order
 
-*string[]*
+*integer*
 
-An actual item list. Use `"__APPEND__"` for extending.
+An order position.
+
+### disabled
+
+*bool*
+
+Whether is disabled.
+
+
+
