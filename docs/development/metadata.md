@@ -39,6 +39,7 @@ In this article:
   * [authentication2FAMethods](metadata/app-authentication-2fa-methods.md) – 2-factor authentication methods
   * [cleanup](metadata/app-cleanup.md)
   * [client](metadata/app-client.md) – front-end client
+  * [clientNavbar](metadata/app-client-navbar.md) – front-end navbar
   * [clientRoutes](metadata/app-client-routes.md) – front-end routes
   * [complexExpression](metadata/app-complex-expression.md)
   * [config](metadata/app-config.md)
@@ -66,7 +67,6 @@ In this article:
   * [linkManager](metadata/app-link-manager.md)
   * [massActions](metadata/app-mass-actions.md)
   * [metadata](metadata/app-metadata.md)
-  * [clientNavbar](metadata/client-navbar.md)
   * [orm](metadata/app-orm.md)
   * [pdfEngines](metadata/app-pdf-engines.md)
   * [popupNotifications](metadata/app-popup-notifications.md)
