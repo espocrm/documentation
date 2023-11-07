@@ -203,11 +203,11 @@ Then you need to amend the corresponding columns in your database by changing th
 
 Log in as an administrator in EspoCRM, go to Administration and click *Rebuild*. You can also do it via [CLI](commands.md/#rebuild).
 
-### Solution 2. Change the type for varchar fields from *Varchar* to *Text* 
+### Solution 2. Change type for some varchar fields from *Varchar* to *Text* 
 
-You can do it by editing the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually.
+#### Step 1. Change in definitions
 
-#### Step 1. Change definitions for `varchar` fields from:
+Edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually. Change definitions of some custom varchar fields from:
 
 ```
 "type": "varchar",
