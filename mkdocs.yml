@@ -220,6 +220,7 @@ nav:
               - 'authentication2FAMethods': 'development/metadata/app-authentication-2fa-methods.md'
               - 'cleanup': 'development/metadata/app-cleanup.md'
               - 'client': 'development/metadata/app-client.md'
+              - 'clientNavbar': 'development/metadata/app-client-navbar.md'
               - 'clientRoutes': 'development/metadata/app-client-routes.md'
               - 'complexExpression': 'development/metadata/app-complex-expression.md'
               - 'config': 'development/metadata/app-config.md'
