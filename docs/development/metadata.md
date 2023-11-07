@@ -66,6 +66,7 @@ In this article:
   * [linkManager](metadata/app-link-manager.md)
   * [massActions](metadata/app-mass-actions.md)
   * [metadata](metadata/app-metadata.md)
+  * [clientNavbar](metadata/client-navbar.md)
   * [orm](metadata/app-orm.md)
   * [pdfEngines](metadata/app-pdf-engines.md)
   * [popupNotifications](metadata/app-popup-notifications.md)
