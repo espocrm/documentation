@@ -30,7 +30,7 @@ Definitions.
 
 *string*
 
-A frontend view.
+A frontend view. By setting to *null*, it's possible to disable a specific item.
 
 ### class
 
