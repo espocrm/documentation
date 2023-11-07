@@ -8,7 +8,7 @@ Example:
 
 ```json
 {
-    "itemDefs": {
+    "items": {
         "quickCreate": {
             "view": "views/site/navbar/quick-create",
             "class": "dropdown hidden-xs quick-create-container",
@@ -19,7 +19,7 @@ Example:
 }
 ```
 
-## itemDefs
+## items
 
 *Object*
 
