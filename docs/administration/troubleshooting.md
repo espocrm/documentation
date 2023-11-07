@@ -211,7 +211,7 @@ Then you need to amend the corresponding columns in your database by changing th
 
 *Not needed if you already run a hard rebuild.*
 
-Log in as an administrator in EspoCRM, go to Administration and click the *Rebuild*. You can also do it via [CLI](commands.md/#rebuild).
+Log in as an administrator in EspoCRM, go to Administration and click *Rebuild*. You can also do it via [CLI](commands.md/#rebuild).
 
 ### Solution 2. Change the type for varchar fields from *Varchar* to *Text* 
 
