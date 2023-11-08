@@ -58,9 +58,10 @@ The list of parameters along with their default values.
 
 ### UI
 
-* applicationDescription – the text in the meta tag; by default `EspoCRM - Open Source CRM application` text is used (as of v7.0);
+* applicationDescription – the text in the meta tag; default value: `EspoCRM – Open Source CRM application` (as of v7.0);
 * adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (as of v7.0);
 * activitiesCreateButtonMaxCount – `3` – a max number of create buttons to display on the Activities page (as of v7.2);
+* listViewSettingsDisabled – `false` – disable list view settings (as of v8.1);
 
 ### Access control
 
