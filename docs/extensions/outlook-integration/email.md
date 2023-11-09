@@ -20,6 +20,8 @@ Note: You need to be logged in to Outlook as a user to which an email address of
 
 After that, you can test imap connection and sent test email to make sure everything works fine.
 
+If during IMAP testing, TLS doesn't work, try the SSL option. This will most likely work since this transaction is made through an API call.
+
 ## Recommendations
 
 Important: when connecting to Outlook using the Outlook Integration extension and pressing *Connect* button, you must be asked to enter your credentials fully. This must be done if you did not enter the email address and password in the pop-up window earlier, because if you did, then in the pop-up window you will have the option to select email accounts. If the system just connects you without asking anything, then it's most likely the browser is using the stored values in cookies which allow connection, but may not allow access to the required scope.
