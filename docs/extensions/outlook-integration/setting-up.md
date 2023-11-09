@@ -66,6 +66,8 @@ Permissions that need to be enabled:
 
 ![Permissions](../../_static/images/extensions/outlook-integration/setting-up/10.png)
 
+After adding the above listed API permissions, click Grant Admin Consent for (your organization).
+
 
 ## Access control
 
