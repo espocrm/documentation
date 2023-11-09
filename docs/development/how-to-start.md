@@ -45,11 +45,15 @@ Building with *grunt* includes the transpiling step. Though you can run it manua
 
 Transpile all:
 
-`node js/transpile`
+```
+node js/transpile
+```
 
 Transpile a specific file (can be useful for a file watcher in the IDE):
 
-`node js/transpile -f $FilePathRelativeToProjectRoot$`
+```
+node js/transpile -f $FilePathRelativeToProjectRoot$
+```
 
 ### Branches
 
