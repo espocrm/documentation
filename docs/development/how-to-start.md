@@ -1,5 +1,7 @@
 # How to get started
 
+*(for developers)*
+
 * [Option A. Using git repository](#option-a-using-git-repository)
 * [Option B. Extension development](#option-b-extension-development)
 * [Configuration for development](#configuration-for-development)
