@@ -38,6 +38,19 @@ The build will be created in the `build` directory.
 
     By default, grunt installs composer dependencies. You can skip it by running `grunt offline`.
 
+
+#### Javascript transpiling
+
+Building with *grunt* includes the transpiling step. Though you can run it manually with the folloing commands.
+
+Transpile all:
+
+`node js/transpile`
+
+Transpile a specific file (can be useful for a file watcher in the IDE):
+
+`node js/transpile -f $FilePathRelativeToProjectRoot$`
+
 ### Branches
 
 * *fix* – upcoming maintenance release; fixes should be pushed to this branch;
