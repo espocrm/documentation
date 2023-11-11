@@ -242,3 +242,11 @@ Duplicates attributes of a field. Some fields can require some processing when a
 *As of v7.4.*
 
 Converts field metadata to ORM metadata.
+
+## sanitizerClassName
+
+*class-string<Espo\Core\FieldSanitize\Sanitizer\>*
+
+*As of v8.1.*
+
+An input sanitizer.
