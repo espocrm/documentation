@@ -43,7 +43,7 @@ To enable debug mode for the loghger, edit the file `data/config-internal.php` (
 ]
 ```
 
-Don't forget to revert the mode back (`WARNING` or `ERROR`) after the problem is solved.
+Don't forget to revert the mode back after the problem is solved (to `WARNING` or `ERROR`).
 
 ### Backtrace printing
 
