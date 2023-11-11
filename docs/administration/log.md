@@ -34,7 +34,7 @@ If the parameter *sql* is set to true, all executed SQL queries will be printed 
 *As of v6.1.*
 
 EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
-The library is shipped with the set of handlers.
+The library is shipped with a set of handlers.
 There is the ability to specify which handlers to use in Espo.
 
 In `data/config.php`:
