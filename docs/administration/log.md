@@ -2,11 +2,11 @@
 
 ## Default log
 
-By default log files are created in `{ESPO_ROOT}/data/logs/` directory.
+By default, log files are created in `{ESPO_ROOT}/data/logs/` directory.
 
 ## Parameters
 
-In `data/config.php` (or `data/config-internal.php`):
+In `data/config-internal.php`:
 
 ```
   'logger' => [
@@ -21,7 +21,9 @@ In `data/config.php` (or `data/config-internal.php`):
 
 Prints a backtrace when an exception is occurred. Note that in some cases an exception is caught within the application, the trace won't be printed in this case.
 
-It is **not recommended** to enable trace printing on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this problem is supposed to be solved.
+!!! warning
+
+    It is not recommended to enable trace printing on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this problem is supposed to be solved.
 
 ## SQL queries
 
@@ -34,7 +36,7 @@ If the parameter *sql* is set to true, all executed SQL queries will be printed 
 *As of v6.1.*
 
 EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
-The library is shipped with the set of handlers.
+The library is shipped with a set of handlers.
 There is the ability to specify which handlers to use in Espo.
 
 In `data/config.php`:

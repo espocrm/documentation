@@ -13,15 +13,15 @@ Additional features:
 * User creation. Optional.
 * Team mapping. Espo teams against groups/teams/roles of the identity provider.
 * User profile and user teams sync. Optional, on every login.
-* Ability to choose a claim that will be used for a username.
-* Fallback login. Only for admins or for regular users.
-* For admins OIDC can be disabled, so that only the fallback method  allowed.
+* The ability to choose a claim that will be used for a username.
+* Fallback login method. The ability to use the default Espo method. Can be enabled for admins or for both regular users and admins.
+* For admins, the OIDC method can be disabled, so that only the fallback method is allowed.
 * Logout redirect. To clear an identity provider session when a user is logging out from Espo.
 * Backchannel logout. The ability to forcibly log out a user from Espo. `api/v1/backchannelLogout` endpoint.
 
 Details:
 
-* Espo 2FA likely won't work with OIDC (if your identity provider does not allow an authorization code to be used twice; as Espo authentication process is stateless it will use the same autherization code for the second step). Consider using 2FA of the identity providers.
+* Espo 2FA likely won't work with OIDC (if your identity provider does not allow an authorization code to be used twice; as Espo authentication process is stateless it will use the same autherization code for the second step). Consider using 2FA of your identity provider.
 * The *userName* field length may need to be increased up to 255 in some cases (by default, Espo has the limit 50).
 * Supported signing algorithms: RS256, RS384. RS512, HS256, HS384, HS512. Developers can add implementations of other algorithms in an upgrade-safe manner.
 * *client_secret_jwt* and *private_key_jwt* [methods](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication) are not supported. You might need to enable *client_secret_post* method for providers that apply a JWT method by default (e.g. Keycloak).

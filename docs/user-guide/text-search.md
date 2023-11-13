@@ -56,7 +56,7 @@ For InnoDB tables the following operators are available:
 
 ### Minimum word length
 
-The MySQL option `ft_min_word_len` defines a minimum word length available for full-text search. By default it's set to `4`. You might want to set it to `3` to be able to search shorter words.
+The MySQL option `ft_min_word_len` defines a minimum word length available for full-text search. By default, it's set to `4`. You might want to set it to `3` to be able to search shorter words.
 
 If you change this paramater in MySQL, you also need to run rebuild in Espo.
 

@@ -110,6 +110,7 @@ nav:
             - 'Web-to-Lead': 'administration/web-to-lead.md'
             - 'Webhooks': 'administration/webhooks.md'
             - 'Passwords': 'administration/passwords.md'
+            - 'Security': 'administration/security.md'
             - 'Maps': 'administration/maps.md'
             - 'B2C mode': 'administration/b2c.md'
             - 'Multiple assigned users': 'administration/multiple-assigned-users.md'
@@ -144,8 +145,8 @@ nav:
             - 'Workflows': 'administration/workflows.md'
             - 'BPM':
               - 'Overview': 'administration/bpm.md'
-              - 'Events': 'administration/bpm-events.md'
               - 'Gateways': 'administration/bpm-gateways.md'
+              - 'Events': 'administration/bpm-events.md'              
               - 'Activities': 'administration/bpm-activities.md'
               - 'Misc':
                 - 'Examples': 'administration/bpm-examples.md'
@@ -220,6 +221,7 @@ nav:
               - 'authentication2FAMethods': 'development/metadata/app-authentication-2fa-methods.md'
               - 'cleanup': 'development/metadata/app-cleanup.md'
               - 'client': 'development/metadata/app-client.md'
+              - 'clientNavbar': 'development/metadata/app-client-navbar.md'
               - 'clientRoutes': 'development/metadata/app-client-routes.md'
               - 'complexExpression': 'development/metadata/app-complex-expression.md'
               - 'config': 'development/metadata/app-config.md'
@@ -231,6 +233,7 @@ nav:
               - 'dateTime': 'development/metadata/app-date-time.md'
               - 'defaultDashboardLayouts': 'development/metadata/app-default-dashboard-layouts.md'
               - 'defaultDashboardOptions': 'development/metadata/app-default-dashboard-options.md'
+              - 'emailTemplate': 'development/metadata/app-email-template.md'
               - 'entityManager': 'development/metadata/app-entity-manager.md'
               - 'entityManagerParams': 'development/metadata/app-entity-manager-params.md'
               - 'entityTemplateList': 'development/metadata/app-entity-template-list.md'

@@ -13,6 +13,7 @@ In this article:
 * [Delay in fetching emails](#delay-in-fetching-emails)
 * [Admin password is lost, can't log in](#admin-password-is-lost-cant-log-in)
 * [MySQL error: MySQL can only use 61 tables in a join](#mysql-error-mysql-can-only-use-61-tables-in-a-join)
+* [MySQL error: Row size too large](#mysql-error-row-size-too-large)
 
 ## Check logs
 
@@ -42,7 +43,7 @@ To enable debug mode for the loghger, edit the file `data/config-internal.php` (
 ]
 ```
 
-Don't forget to revert the mode back (`WARNING` or `ERROR`) after the problem is solved.
+Don't forget to revert the mode back after the problem is solved (to `WARNING` or `ERROR`).
 
 ### Backtrace printing
 
@@ -171,3 +172,56 @@ Any of the following actions may solve the problem.
 2. Disable link-multiple for some many-to-many relationships of the problem entity type.
 3. Set `noJoin` parameter (to `true`) for some *belongsTo* links. [Example](https://github.com/espocrm/espocrm/blob/7.2.7/application/Espo/Modules/Crm/Resources/metadata/entityDefs/Campaign.json#L269).
 4. Set *currencyNoJoinMode* (`'currencyNoJoinMode' => true,` in `data/config.php`). With this mode enabled, you will need to clear cache (in Espo) every time you change currency rates. (as of v7.3)
+
+## MySQL error: Row size too large
+
+Full error messages (may be one of the following):
+
+1. *ERROR 1118 (42000): Row size too large. The maximum row size for the used table type, 
+not counting BLOBs, is 65535. This includes storage overhead, check the manual. You 
+have to change some columns to TEXT or BLOBs.*
+2. *ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to 
+TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.*
+
+You can get this error if there are a large number of Varchar fields in an entity type. After this, you cannot create new fields.
+
+To fix this problem, you can try two solutions:
+
+### Solution 1. Decrease max length for some varchar fields
+
+#### Step 1. Change in definitions
+
+Edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json`. Decrease *maxLength* parameter for some custom varchar fields. E.g. from 255 to 100.
+
+#### Step 2. Change columns length in database
+
+Then you need to amend the corresponding columns in your database by changing their length. You can do it manually (via a database admin tool) or run a [hard rebuild](commands.md#hard-rebuild).
+
+#### Step 3. Rebuild
+
+*Not needed if you already run a hard rebuild.*
+
+Log in as an administrator in EspoCRM, go to Administration and click *Rebuild*. You can also do it via [CLI](commands.md/#rebuild).
+
+### Solution 2. Change type for some varchar fields from *Varchar* to *Text* 
+
+#### Step 1. Change in definitions
+
+Edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.json` manually. Change definitions of some custom varchar fields from:
+
+```
+"type": "varchar",
+"maxLength": 150
+```
+
+to:
+
+```
+"type": "text"
+```
+
+Note that the *maxLength* value can be different for your field. You just need to remove it. Make sure that the resulting JSON is valid.
+
+#### Step 2. Rebuild
+
+Login as administrator in EspoCRM, go to Administration and click the Rebuild link or do it via [CLI](commands.md/#rebuild).

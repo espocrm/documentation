@@ -148,6 +148,14 @@ A custom mandatory validation list for the field. Use this parameter to re-defin
 
 A validation list to be bypassed for the field.
 
+### sanitizerClassNameList
+
+*class-string[]*
+
+*As of v8.1.*
+
+A list of input sanitizers. Should implement `Espo\Core\FieldSanitize\Sanitizer` interface.
+
 ### customizationDisabled
 
 *boolean*

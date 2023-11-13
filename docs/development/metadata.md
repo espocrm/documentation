@@ -39,6 +39,7 @@ In this article:
   * [authentication2FAMethods](metadata/app-authentication-2fa-methods.md) – 2-factor authentication methods
   * [cleanup](metadata/app-cleanup.md)
   * [client](metadata/app-client.md) – front-end client
+  * [clientNavbar](metadata/app-client-navbar.md) – front-end navbar
   * [clientRoutes](metadata/app-client-routes.md) – front-end routes
   * [complexExpression](metadata/app-complex-expression.md)
   * [config](metadata/app-config.md)
@@ -50,6 +51,7 @@ In this article:
   * [dateTime](metadata/app-date-time.md)
   * [defaultDashboardLayouts](metadata/app-default-dashboard-layouts.md)
   * [defaultDashboardOptions](metadata/app-default-dashboard-options.md)
+  * [emailTemplate](metadata/app-email-template.md)
   * [entityManager](metadata/app-entity-manager.md)
   * [entityManagerParams](metadata/app-entity-manager-params.md)
   * [entityTemplateList](metadata/app-entity-template-list.md)

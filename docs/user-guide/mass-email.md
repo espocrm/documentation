@@ -54,7 +54,7 @@ If you want to know that your recipient opened the link from your email, you nee
 
 Target Lists contains lists of Accounts, Contacts, Leads and Users records. Custom entities of the Person and Company types are supported too (as of v7.1).
 
-Users can populate target lists manually using _Select_ action on the corresponding panel on Target List detail view. There is the ability to make filtering and then select all results of the search.
+Users can populate target lists manually using _Select_ action on the corresponding panel on the Target List detail view. There is the ability to make filtering and then **select all results** of the search.
 
 ### Populating target lists with Reports
 

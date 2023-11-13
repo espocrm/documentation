@@ -1,8 +1,9 @@
 # How to get started
 
+*(for developers)*
+
 * [Option A. Using git repository](#option-a-using-git-repository)
-* [Option B. Using installed instance](#option-b-using-installed-instance)
-* [Option C. Extension development](#option-c-extension-development)
+* [Option B. Extension development](#option-b-extension-development)
 * [Configuration for development](#configuration-for-development)
 * [Where to put customizations](#where-to-put-customizations)
 
@@ -15,7 +16,7 @@ Using the main EspoCRM repository.
 3. Install [Composer](https://getcomposer.org/doc/00-intro.md) (v2.0 or greater).
 4. Install npm (v8.0 or greater).
 5. Install [Grunt](https://gruntjs.com/installing-grunt).
-6. Run `composer install` if Composer is installed globally (or `php composer.phar install` if locally).
+6. Run `composer install` if Composer is installed globally (or, `php composer.phar install`, if locally).
 7. Run `npm ci`.
 
 Then you can build by running `grunt`.
@@ -36,6 +37,23 @@ The build will be created in the `build` directory.
 !!! note
 
     By default, grunt installs composer dependencies. You can skip it by running `grunt offline`.
+
+
+#### Javascript transpiling
+
+Building with *grunt* includes the transpiling step. Though you can run it manually with the folloing commands.
+
+Transpile all:
+
+```
+node js/transpile
+```
+
+Transpile a specific file (can be useful for a file watcher in the IDE):
+
+```
+node js/transpile -f $FilePathRelativeToProjectRoot$
+```
 
 ### Branches
 
@@ -59,11 +77,7 @@ node diff {version_from}
 
 The package will be created in the `build` directory.
 
-## Option B. Using installed instance
-
-You can develop and make customizations right on a regular installed EspoCRM instance.
-
-## Option C. Extension development
+## Option B. Extension development
 
 By utilizing [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. Template tools allows you to run your extension in Espo instance for testing.
 
@@ -71,7 +85,7 @@ By utilizing [ext-template](https://github.com/espocrm/ext-template) repository,
 
 EspoCRM instance configuration for development. Parameters should be set in `data/config.php`.
 
-Developer mode disables cache.
+Developer mode, disables cache.
 
 ```php
 'isDeveloperMode' => true,

@@ -107,54 +107,47 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
         },
     });
 });
-
 ```
 
 Parent view calling our modal view:
 
 ```js
+this.createView('dialog', 'custom:views/modals/my-dialog', {
+    id: this.model.id,
+    title: this.model.get('name'),                
+}, view => {
+    view.render();
 
-...
-            this.createView('dialog', 'custom:views/modals/my-dialog', {
-                id: this.model.id,
-                title: this.model.get('name'),                
-            }, view => {
-                view.render();
-
-                this.listenToOnce(view, 'done', response => {
-                    console.log(response);
-                })
-            });
-
-...
-
+    this.listenToOnce(view, 'done', response => {
+        console.log(response);
+    })
+});
 ```
 
 ## Simple dialog w/o separate view
 
 ```js
-
-        this.createView('dialog', 'views/modal', {
-            templateContent: '<p>{{complexText viewObject.options.message}}</p>',
-            headerText: 'Hello world',
-            backdrop: true,
-            message: 'Some *message*\n\nHello world!',
-            buttonList: [
-                {
-                    name: 'doSomething',
-                    label: this.translate('Do Something'),
-                    onClick: () => {
-                        // Do something.
-                        this.close();
-                    },
-                    style: 'primary',
-                },
-                {
-                    name: 'close',
-                    label: this.translate('Close'),
-                }
-            ],
-        }, view => {
-            view.render();
-        });
+this.createView('dialog', 'views/modal', {
+    templateContent: '<p>{{complexText viewObject.options.message}}</p>',
+    headerText: 'Hello world',
+    backdrop: true,
+    message: 'Some *message*\n\nHello world!',
+    buttonList: [
+        {
+            name: 'doSomething',
+            label: this.translate('Do Something'),
+            onClick: () => {
+                // Do something.
+                this.close();
+            },
+            style: 'primary',
+        },
+        {
+            name: 'close',
+            label: this.translate('Close'),
+        }
+    ],
+}, view => {
+    view.render();
+});
 ```

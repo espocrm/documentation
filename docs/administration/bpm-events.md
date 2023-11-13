@@ -1,6 +1,15 @@
 # BPM Events
 
-Events are displayed on a flowchart as circles.
+Events represent something that happens during a business process. They also start, end and interrupt the process flow. Depicted as a circle.
+
+Events can be divided into the following groups:
+
+* Start – green circle. They are entry points of processes and sub-processes.
+* Intermediate – blue circle. Occur between start and end events in a process. Can throw or catch.
+* End – red circle. Define final points of process flows.
+* Boundary – blue circle attached to an activity. They allow to interact with running activities. Technically, there are intermediate catching events.
+
+All available events:
 
 * Start Events
   * [Start](#start-event)
@@ -74,7 +83,7 @@ Can be used to start processes and event sub-processes.
 
 When it is used to start a process, only *object signals* can be used.
 
-When it is used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id. 
+When it is used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
 
 !!! note
 
@@ -82,7 +91,7 @@ When it is used to start an event sub-process, it's possible to use placeholders
 
 !!! note
 
-    Signal name can not be empty.
+    Signal name cannot be empty.
 
 ![Signal Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-signal.png)
 
@@ -137,7 +146,7 @@ In case of a multi-instance sub-process, the compensation handler is processed f
 
 ### Conditional Intermediate Event (Catching)
 
-This event stops the flow until specified criteria is met. Conditions are defined in the same way as in Worfklow tool. See [here](workflows.md#conditions). Note that BPM tool intruduces [additonal functions](bpm.md#additional-formula-functions) that can be used in formula.
+This event stops the flow until specified criteria is met. Conditions are defined in the same way as in the Worfklow tool. See [here](workflows.md#conditions). Note that BPM tool intruduces [additonal functions](bpm.md#additional-formula-functions) that can be used in formula.
 
 ![Conditional Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional.png)
 
@@ -145,7 +154,7 @@ This event stops the flow until specified criteria is met. Conditions are define
 
 This event stops the flow and waits as long as it is specified by the event's parameters.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return Date-Time value (in UTC timezone). Once this time comes, the flow will be proceeded to the next element.
+For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return a Date-Time value (in UTC timezone). Once this time comes, the flow will be proceeded to the next element.
 
 By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
 
@@ -163,7 +172,7 @@ See [more info](bpm-signals.md) about signals.
 
 ### Signal Intermediate Event (Throwing)
 
-Broadcasts a specified signal. Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id.
+Broadcasts a specified signal. Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record.
 
 If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
@@ -247,7 +256,7 @@ Ends the flow and triggers an escalation. Escalation Code can be specified. Esca
 
 Ends the flow and broadcasts a specified signal.
 
-Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be replaced with target's id.
+Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record.
 
 If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
@@ -340,7 +349,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 It's triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily in the same process.
 
-Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with the target's id.
+Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with the target's ID.
 
 ![Signal Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-signal-boundary.png)
 

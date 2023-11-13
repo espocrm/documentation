@@ -1,6 +1,6 @@
 # BPM Gateways
 
-Gateways are displayed as diamonds.
+Gateways diverge and converge flows. Depicted as a yellow diamond. They can be used to determine a path in which the flow will go depending on specific conditions. They can split the flow into multiple parallel flows and join parallel flows into a single one.
 
 * [Exclusive](#exclusive-gateway)
 * [Inclusive](#inclusive-gateway)
@@ -75,7 +75,7 @@ In case of converging it waits until all incoming flows come and then continues 
 
 Can only diverge flows.
 
-It stops the flow until any of outgoing events gets triggered. Triggered event determines the single flow. Other outgoing events get rejected.
+It stops the flow until any of outgoing events gets triggered. The triggered event determines the single flow. Other outgoing events get rejected.
 
 Only intermediate events can be on the other end of outgoing sequence flows.
 

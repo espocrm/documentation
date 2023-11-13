@@ -217,6 +217,70 @@ A default filter on the select-records modal.
     }
 }
 ```
+
+## rowActionList
+
+*As of v8.1.*
+
+Row actions for the main list view.
+
+Example:
+
+```json
+{
+    "rowActionList": {
+        "moveToTop",
+        "moveUp",
+        "moveDown",
+        "moveToBottom"
+    }
+}
+```
+
+Use `"__APPEND__"` for extending.
+
+## rowActionDefs
+
+*As of v8.1.*
+
+Row action definitions.
+
+Example:
+
+```json
+{
+    "rowActionDefs": {
+        "moveToTop": {
+            "label": "Move to Top",
+            "handler": "crm:handlers/knowledge-base-article/move",
+            "acl": "edit"
+        }
+}
+```
+
+### handler
+
+*string*
+
+A handler. Should extend handlers/row-action.
+
+### label
+
+*string*
+
+A translatable label.
+
+### labelTranslation
+
+*string*
+
+A label translation path.
+
+### acl
+
+*"edit"|"delete"*
+
+Required access.
     
 ## menu
 
@@ -325,6 +389,8 @@ Example:
             "createDisabled": false,
             "viewDisabled": false,
             "unlinkDisabled": false,
+            "editDisabled": false,
+            "removeDisabled": false,
             "orderBy": "someField",
             "orderDirection": "asc",
             "createRequiredAccess": "read",
@@ -366,6 +432,22 @@ Disable the ability to view related records in a modal.
 *boolean*
 
 Disable the ability to unlink related records.
+
+### editDisabled
+
+*boolean*
+
+*As of v8.1.*
+
+Hide the edit action.
+
+### removeDisabled
+
+*boolean*
+
+*As of v8.1.*
+
+Hide the remove action.
 
 ### label
 
@@ -442,6 +524,22 @@ A handler called when change a link field. Only for belongs-to and has-one relat
 *As of v8.0.*
 
 Attributes to be selected when selecting records.
+
+### selectLayout
+
+*string*
+
+*As of v8.0.3*
+
+A list layout name for the select dialog.
+
+### rowActionList
+
+*string[]*
+
+*As of v8.1.*
+
+Row actions.
 
 ## additionalLayouts
 

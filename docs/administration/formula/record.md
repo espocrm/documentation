@@ -83,7 +83,7 @@ Returns an array of IDs of records that match specific criteria.
 
     `record\findMany('Opportunity', 10, 'createdAt', 'desc', 'accountId=', id, 'stage=', 'Closed Won')`
 
-    `record\findOne('Opportunity', 5, 'createdAt', 'desc', 'open')`
+    `record\findMany('Opportunity', 5, 'createdAt', 'desc', 'open')`
     
 ORDER_BY and ORDER can be null.
 

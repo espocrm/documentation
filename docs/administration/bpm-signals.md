@@ -25,44 +25,46 @@ In this article:
 ## Regular signals
 
 * Can be broadcasted and caught within a running process.
-* Can't be used to start a process or workflow rule.
+* Cannot be used to start a process or a workflow rule.
 
-Note: Signal Intermediate Events can catch and throw regular signals (in BPM process).
+*Signal Intermediate Events* can catch and throw only regular signals (in BPM process).
 
 ### Built-in signals
 
-The list of out-of-the-box signals that are broadcasted in the system.
+The list of out-of-the-box signals which are broadcasted in the system upon specific conditions.
 
-Note: Parts in upper case (ENTITY_TYPE, ID, LINK_NAME, etc.) must be replaced by corresponding values. E.g. when an account with ID = `aabbcc` is updated, a signal `update.Account.aabbcc` is broadcasted.
+!!! note
+
+    Signal name parts written in the upper case (e.g. ENTITY_TYPE, ID, LINK_NAME) must be replaced with corresponding values. E.g. when an Account with an ID `abc01` is updated, a signal `update.Account.abc01` is broadcasted. See the naming clarification below.
 
 #### Default
 
-* `create.ENTITY_TYPE` – record of ENTITY_TYPE created, e.g. `create.Lead`
-* `update.ENTITY_TYPE.ID` – record update, e.g. `update.Lead.aaabbbccc007`
-* `delete.ENTITY_TYPE.ID` – record removed
-* `relate.ENTITY_TYPE.ID.LINK_NAME` – record related with another record (only for *many-to-many*)
-* `relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*)
-* `unrelate.ENTITY_TYPE.ID.LINK_NAME` – record unrelated from another record (only for *many-to-many*)
-* `unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – (only for *many-to-many*)
-* `createRelated.ENTITY_TYPE.ID.LINK_NAME` – created related record, one-to-many relationship, e.g. Opportunity created for Account
-* `createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE` – when created a record related through parent, e.g. Meeting created for Account
-* `streamPost.ENTITY_TYPE.ID` – when somebody posted in stream
+* `create.ENTITY_TYPE` – record of ENTITY_TYPE created, e.g. `create.Lead`;
+* `update.ENTITY_TYPE.ID` – record update, e.g. `update.Lead.aaabbbccc007`;
+* `delete.ENTITY_TYPE.ID` – record removed;
+* `relate.ENTITY_TYPE.ID.LINK_NAME` – record related with another record (only for *many-to-many*);
+* `relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*);
+* `unrelate.ENTITY_TYPE.ID.LINK_NAME` – record unrelated from another record (only for *many-to-many*);
+* `unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – (only for *many-to-many*);
+* `createRelated.ENTITY_TYPE.ID.LINK_NAME` – created related record, one-to-many relationship, e.g. Opportunity created for Account;
+* `createChild.ENTITY_TYPE.ID.CHILD_ENTITY_TYPE` – when created a record related through parent, e.g. Meeting created for Account;
+* `streamPost.ENTITY_TYPE.ID` – when somebody posted in stream;
 
 #### Contacts/Leads
 
-* `leadCapture.ENTITY_TYPE.ID` – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled)
-* `leadCapture.ENTITY_TYPE.ID.LEAD_CAPTURE_ID` – the same, but id of Lead Capture record is specified
-* `optOut.ENTITY_TYPE.ID` – person opted-out
-* `optOut.ENTITY_TYPE.ID.TARGET_LIST_ID` – person opted-out from specific target list
-* `cancelOptOut.ENTITY_TYPE.ID` – person opted-in again
-* `cancelOptOut.ENTITY_TYPE.ID.TARGET_LIST_ID`
-* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person accepted meeting/call invitation
-* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID` – person accepted meeting/call invitation, event id is specified
-* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Tentative status in meeting/call invitation
-* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`
-* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Accepted or Tentative status in meeting/call invitation
-* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`
-* `eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person declined meeting/call invitation
+* `leadCapture.ENTITY_TYPE.ID` – when lead (or contact) is processed through Lead Capture (confirmed opt-in if it's enabled);
+* `leadCapture.ENTITY_TYPE.ID.LEAD_CAPTURE_ID` – the same, but id of Lead Capture record is specified;
+* `optOut.ENTITY_TYPE.ID` – person opted-out;
+* `optOut.ENTITY_TYPE.ID.TARGET_LIST_ID` – person opted-out from specific target list;
+* `cancelOptOut.ENTITY_TYPE.ID` – person opted-in again;
+* `cancelOptOut.ENTITY_TYPE.ID.TARGET_LIST_ID`;
+* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person accepted meeting/call invitation;
+* `eventAccepted.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID` – person accepted meeting/call invitation, event id is specified;
+* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Tentative status in meeting/call invitation;
+* `eventTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`;
+* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person set Accepted or Tentative status in meeting/call invitation;
+* `eventAcceptedTentative.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`;
+* `eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE` – person declined meeting/call invitation;
 * `eventDeclined.ENTITY_TYPE.ID.EVENT_ENTITY_TYPE.EVENT_ID`
 
 #### Contacts/Leads/Accounts/Users
@@ -81,8 +83,7 @@ You can use placeholders when you define a signal name that will be broadcasted 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – formula variable
 
-E.g. `mySignal.{$status}.{$id}` – *type* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySigal.New.someIdValue`.
-
+E.g. `mySignal.{$status}.{$id}` – *status* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySigal.New.someIdValue`.
 
 ## Object signals
 
@@ -92,7 +93,9 @@ E.g. `mySignal.{$status}.{$id}` – *type* and *id* are attributes of the target
 * Can't be caught within a running process.
 * Can be broadcasted by a running process. 
 
-Note: Signal Intermediate Event (Catching) can't catch object signals. 
+!!! note
+
+    Signal Intermediate Event (Catching) can't catch object signals. 
 
 Example: A process triggers signal *@approve*. A target record of *Lead* entity type is attached to the signal. You have another BPM flowchart for *Lead* entity type that starts with *@approve* signal. In this case, a new process will be started, and lead record from the first process will be passed as a target record of the second process. 
 
@@ -100,7 +103,9 @@ Example: A process triggers signal *@approve*. A target record of *Lead* entity 
 
 The list of out-of-the-box signals that are broadcasted in the system.
 
-Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced by corresponding values.
+!!! note
+
+    Signal name parts written in the upper case (e.g LINK_NAME, FOREIGN_ID) must be replaced with corresponding values. See the naming clarification below.
 
 #### Default
 
@@ -126,10 +131,16 @@ Note: Parts in upper case (LINK_NAME, FOREIGN_ID, etc.) will/should be replaced 
 * `@clickUrl` – recipient opened a tracking url
 * `@clickUrl.CAMPAIGN_TRACKING_URL_ID` – recipient opened a specfic tracking url
 
+#### Meetings/Calls/Events
+
+* `@eventAccepted.ENTITY_TYPE` – an attendee accepted the event (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
+* `@eventTentative.ENTITY_TYPE` – an attendee set a tentative acceptance status;
+* `@eventDeclined.ENTITY_TYPE` – an attendee declined the event;
+* `@eventAcceptedTentative.ENTITY_TYPE` – an attendee accepted the event or set as tentative (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
 
 ## Naming clarification
 
-* *ID* – ID of a record that you can obtain from the browser address bar
-* *ENTITY_TYPE* – entity type of the record (not translated), you can obtain it at Administration > Entity Manager
-* *LINK_NAME* – relation name, you can obtain it at Administration > Entity Manager
-* *FOREIGN_ID* – ID of a related record
+* *ID* – ID of a record that you can obtain from the browser address bar;
+* *ENTITY_TYPE* – entity type of the record (not translated), you can obtain it at Administration > Entity Manager;
+* *LINK_NAME* – relation name, you can obtain it at Administration > Entity Manager;
+* *FOREIGN_ID* – ID of a related record.

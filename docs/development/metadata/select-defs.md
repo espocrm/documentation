@@ -67,7 +67,7 @@ Example:
 }
 ```
 
-In the example, when the *subject* attribute is requested, the *name* attribute will be selected.
+In the example, when the *subject* attribute is requested, the *name* attribute will be selected. We can have the *subject* field on the list layout but don't have the *name* field. Without this mapping the *name* field won't be fetched when we fetch a collection for the list view. 
 
 ## whereItemConverterClassNameMap
 
