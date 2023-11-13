@@ -20,7 +20,7 @@ Note: You need to be logged in to Outlook as a user to which an email address of
 
 After that, you can test imap connection and sent test email to make sure everything works fine.
 
-If during IMAP testing, TLS doesn't work, try the SSL option. This will most likely work since this transaction is made through an API call.
+If during IMAP testing, TLS doesn't work, try the SSL option.
 
 ## Recommendations
 
