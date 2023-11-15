@@ -479,6 +479,14 @@ A primary filter applied when selecting records.
 
 Bool filters applied when selecting records.
 
+### primaryFilter
+
+*string*
+
+*As of v8.1.*
+
+A default primary filter.
+
 ### filterList
 
 *string[]*
