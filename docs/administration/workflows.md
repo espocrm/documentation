@@ -191,7 +191,7 @@ It's possible to define **formula** to calculate field values. You can utilize *
 
 !!! note
 
-    It's not recommended to rely on an *Update Target Record* action triggering another after-update workflow. In some cases it won't work. It's better to define additional actions in the same workflow or trigger a sequential worklow.
+    It's not recommended to rely on an *Update Target Record* action triggering another after-update workflow. In some cases it won't work. It's better to define additional actions in the same workflow or trigger a sequential workflow.
 
 !!! warning "Important"
 
