@@ -189,9 +189,13 @@ It's possible to define **formula** to calculate field values. You can utilize *
 
     Variables defined within formula won't be passed back, they are only available within the current script.
 
+!!! note
+
+    It's not recommended to rely on an *Update Target Record* action triggering another after-update workflow. In some cases it won't work. It's better to define additional actions in the same workflow or trigger a sequential worklow.
+
 !!! warning "Important"
 
-    Formula within this action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
+    Formula within this an *Update Target Record* action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
 
 If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function *entity\addLinkMultipleId*. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
 
