@@ -1,12 +1,12 @@
 # Sales Orders
 
-Sales Orders feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
+The Sales Orders feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
 
-Sales Order represents a group of products or services with their quantities and prices.
+A Sales Order represents a group of products or services with their quantities and prices.
 
-You can add Sales Orders panel to Account detail view to be able to see related sales orders. Administration > Layout Manager > Accounts > Relationships.
+You can add the Sales Orders panel to the Account detail view to be able to see related sales orders. At Administration > Layout Manager > Accounts > Relationships.
 
-You can add Sales Orders panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
+You can add the Sales Orders panel to the Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
 
 In the article:
 
