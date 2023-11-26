@@ -16,7 +16,7 @@ Product fields can be printed in PDF. More detail [here](quotes.md#templates).
 
 ## Opportunity line items
 
-Products can be added as line items to an Opportunity record. By default, this feature is disabled. Administrator needs to add the *Item List* field to the *Detail* layout of the Opportunity in the Layout Manager. Make the cell full-width wide using minus icon.
+Products can be added as line items in an Opportunity record. By default, this feature is disabled. Administrator needs to add the *Item List* field to the *Detail* layout of the Opportunity in the Layout Manager. Make the cell full-width wide using minus icon.
 
 ## Categories
 
