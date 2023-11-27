@@ -24,14 +24,9 @@ Access to PDF printing is controlled by Roles. Admin can set a *read* access lev
 
 ### Engines
 
-PDF documents are generated from HTML code. Espo supports two PDF engines:
-
-* [Dompdf](https://github.com/dompdf/dompdf) (as of v7.4)
-* [Tcpdf](https://github.com/tecnickcom/TCPDF)
+PDF documents are generated from HTML code by the use a PDF engine. Out of the box, Espo supports [Dompdf](https://github.com/dompdf/dompdf) engine. [Tcpdf](https://github.com/tecnickcom/TCPDF) engine is available as an [extension](https://github.com/yurikuzn/ext-tcpdf/releases). Dompdf has better CSS support. Tcpdf has better support for some languages.
 
 The engine can be switched at Administration > Settings > PDF Engine.
-
-Dompdf has better CSS support.
 
 ## Templates
 
