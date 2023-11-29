@@ -247,6 +247,7 @@ nav:
               - 'image': 'development/metadata/app-image.md'
               - 'jsLibs': 'development/metadata/app-js-libs.md'
               - 'language': 'development/metadata/app-language.md'
+              - 'layouts': 'development/metadata/app-layouts.md'
               - 'linkManager': 'development/metadata/app-link-manager.md'
               - 'massActions': 'development/metadata/app-mass-actions.md'
               - 'metadata': 'development/metadata/app-metadata.md'
