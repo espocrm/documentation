@@ -65,6 +65,7 @@ In this article:
   * [image](metadata/app-image.md)
   * [jsLibs](metadata/app-js-libs.md) – JS libs
   * [language](metadata/app-language.md)
+  * [layouts](metadata/app-layouts.md)
   * [linkManager](metadata/app-link-manager.md)
   * [massActions](metadata/app-mass-actions.md)
   * [metadata](metadata/app-metadata.md)
