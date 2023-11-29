@@ -7,6 +7,7 @@ In this article:
 * [Scheduled jobs](#scheduled-jobs)
 * [Setting up (cron & daemon)](#setting-up)
 * [Running jobs in parallel processes](#running-jobs-in-parallel-processes)
+* [Parameters](#parameters)
 * [Running specific job manually in CLI](#running-specific-job-manually-in-cli)
 
 ## Scheduled jobs
@@ -114,6 +115,14 @@ systemctl start espocrm-daemon.service
 By default, jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually, it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Job Settings.
 
 Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes. Windows is not supported.
+
+## Parameters
+
+The administrator can set job parameters at Administration > Job Settings.
+
+#### Jobs Max Portion
+
+It's may be reasonable to increase the *Jobs Max Portion* parameter with increase of the number your internal users. It defines the max number of jobs that can be processed in a single cron or daemon run. By default, it's set to *15*.
 
 ## Running specific job manually in CLI
 
