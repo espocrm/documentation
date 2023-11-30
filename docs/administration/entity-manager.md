@@ -58,11 +58,17 @@ By clicking *Fields* link, you will be moved to a separate page. There, you will
 
 ## Relationships
 
-You can create new relationships between both out-of-the-box and custom entities. Relationship types are listed below.
+You can create custom relationships between entity types. Both standard and custom entities can be related to each other.
+
+It's possible to create a relationship between the same entity type. E.g. a Company can have a parent company and child companies.
+
+It's possible to have multiple relationships between the same entity type pairs. E.g. a Person and an Event can be linked by two relationships: attendees and organizers.
+
+Relationship types are listed below.
 
 #### One-to-Many
 
-After you have created this relationship, you can put a link field to the detail layout of the right entity and add relationship panel to the left entity.
+After you created the relationship, a *Link* field will be automatically created for the right-side entity type. You can add the link field to the Detail layout (at Administration > Entity Manager > {Entity Type} > Layouts > Detail). You can also add the relationship panel to the left entity type (at Administration > Entity Manager > {Entity Type} > Layouts > Bottom Panels).
 
 #### Many-to-One
 
@@ -70,7 +76,7 @@ The same as One-to-Many but vice versa.
 
 #### Many-to-Many
 
-Relationship panels on both sides.
+After you created the relationship, relationship panels will be available on both sides (at Administration > Entity Manager > {Entity Type} > Layouts > Bottom Panels).
 
 #### One-to-One Right
 
@@ -82,7 +88,7 @@ The same as previous but vice versa. The *Link* field will be created in the for
 
 #### Children-to-Parent
 
-Linking with multiple entity types through *Link-Parent* field.
+Linking with multiple entity types through the *Link-Parent* field.
 
 ### Parameters
 
