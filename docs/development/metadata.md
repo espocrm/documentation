@@ -67,6 +67,7 @@ In this article:
   * [language](metadata/app-language.md)
   * [layouts](metadata/app-layouts.md)
   * [linkManager](metadata/app-link-manager.md)
+  * [mapProviders](metadata/app-map-providers.md)
   * [massActions](metadata/app-mass-actions.md)
   * [metadata](metadata/app-metadata.md)
   * [orm](metadata/app-orm.md)
