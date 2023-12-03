@@ -1,7 +1,9 @@
 # Autoload
 
 Sometimes when developing a module for Espo, you need to include 3rd party libraries via composer. 
-To let Espo know about these libraries, you need to define an *autoload* configuration file `custom/Espo/Modules/{Module}/Resources/autoload.json`.
+As Espo extensions are not installed via composer and even don't require CLI access to be installed, we needed a mechanism to let Espo know about additional libraries.
+
+You need to create an *autoload* configuration file `custom/Espo/Modules/{Module}/Resources/autoload.json`:
 
 Example:
 
@@ -19,3 +21,6 @@ Example:
     }
 }
 ```
+
+
+This assumes that you installed composer dependencies in your extension's repository. When using an [ext-template](https://github.com/espocrm/ext-template), it will be the directory `src/files/custom/Espo/Modules/MyModule`.
