@@ -81,6 +81,8 @@ The package will be created in the `build` directory.
 
 By utilizing [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. Template tools allows you to run your extension in Espo instance for testing.
 
+You can [install](autoload.md) additional composer libraries in your extension.
+
 ## Configuration for development
 
 EspoCRM instance configuration for development. Parameters should be set in `data/config.php`.
