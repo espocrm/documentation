@@ -143,4 +143,4 @@ With this command you can get some information about the application (container 
 php command.php update-app-timestamp
 ```
 
-Updates the app timestamp to the current time. When an Espo instance is update or extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, e.g. when writing custom JS.
+Updates the app timestamp to the current time. When an Espo instance is updated or an extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, e.g. when writing custom JS.
