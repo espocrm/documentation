@@ -36,7 +36,6 @@ Hard database rebuild. It will drop unused columns, decrease exceeding column le
 
 Recommended to have a database backup before running hard rebuild.
 
-
 ## Changing user password
 
 ```
@@ -56,7 +55,6 @@ Upgrades EspoCRM instance to the next available version. The upgrade package is 
 See additional parameters [here](upgrading.md#additional-parameters).
 
 ## Extension
-
 
 Installing or upgrading:
 
@@ -136,3 +134,13 @@ php command.php app-info
 ```
 
 With this command you can get some information about the application (container services, binding, jobs).
+
+## Update app timestamp
+
+*As of v8.1.*
+
+```
+php command.php update-app-timestamp
+```
+
+Updates the app timestamp to the current time. When an Espo instance is update or extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, e.g. when writing custom JS.
