@@ -33,6 +33,8 @@ In `data/config.php`:
 
 Credentials can be omitted, then they will be read from the environment.
 
+It's possible to use non-AWS S3 endpoints with the `endpoint` parameter (as of v8.1). Then for some providers you also need to add the parameter `pathStyleEndpoint` set to *true* to use path styled endpoints. 
+
 ## Moving existing attachments
 
 After setting up a file storage, all existing attachments will still be stored locally in `data/upload` directory. You can move them manually to the storage and then execute the following SQL query:
