@@ -80,7 +80,7 @@ After you created the relationship, relationship panels will be available on bot
 
 #### One-to-One Right
 
-The *Link* field will be created in the current entity type (left), the *Link-One* field – in the foreign entity type (right).
+The *Link* field will be created in the current entity type (left), the *Link-One* field – in the foreign entity type (right). It does not matter which one-to-one type to choose from the user perspective.
 
 #### One-to-One Left
 
