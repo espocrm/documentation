@@ -329,7 +329,15 @@ where `amount` is a field name (of *currency* type).
 
 ### Text field
 
-To display text fields (multi-line) use triple braces: ```{{{description}}}```.
+To display text fields (multi-line) use triple braces
+
+```{{{description}}}```.
+
+Print markdown (as of v8.1):
+
+```
+{{markdownText fieldName}}
+```
 
 ### Related records
 
