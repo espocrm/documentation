@@ -107,13 +107,13 @@ Mass Email system parameters available at Administration > Outbound Emails > Mas
 
 Only for the administrator.
 
-#### What to do if emails are not sent out.
+#### What to do if emails are not sent out
 
 1. Check if _Send Test_ works. If doesn't work, then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
 3. Check if you have 'Send Mass Emails' Scheduled Job and it's 'Active' (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in the log.
 
-#### What if Tracking URLs has wrong url that does not lead to your crm.
+#### What if Tracking URLs has wrong url that does not lead to your crm
 
 Check *Site URL* parameter at Administration > Settings. The value must be the URL of your EspoCRM, this URL must be accessible externally.
 
