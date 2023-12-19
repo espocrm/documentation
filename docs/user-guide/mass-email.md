@@ -115,7 +115,7 @@ Only for the administrator.
 
 #### What if Tracking URLs has wrong url that does not lead to your crm
 
-Check *Site URL* parameter at Administration > Settings. The value must be the URL of your EspoCRM, this URL must be accessible externally.
+Check out the **Site URL** parameter at Administration > Settings. The value must be the URL of your EspoCRM instance, this URL must be accessible externally.
 
 #### Bounced emails are not being logged
 
