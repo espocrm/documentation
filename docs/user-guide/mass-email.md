@@ -3,7 +3,7 @@
 In this article:
 
 * [How to send mass email](#how-to-send-mass-email)
-* [Test sending](#test-what-will-be-sent-to-recipients)
+* [Test sending](#test-sending)
 * [Opt-out](#opt-out)
 * [Tracking URL](#tracking-url)
 * [Target lists](#target-lists)
@@ -23,7 +23,7 @@ If everything is set up right, emails should go out. They should be sent in port
 
 You can check if emails are sent in the **Log** panel on the Campaign detail view..
 
-## Test what will be sent to recipients
+## Test sending
 
 Click the dropdown on the right for a specific record in the **Mass Email** panel and then click **Send Test**.
 
