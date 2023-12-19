@@ -39,7 +39,7 @@ The system will append an opt-out link to all sent emails in case it's missing i
 
 The administrator can disable the mandatory opt-out links at Administration > Outbound Emails.
 
-If the *Opt-Out Entirely* is checked for the Mass Email, once the recipient clicks on the opt-out link, their email address will be marked as opted out so that marketing emails will never be sent to them, unless the email address is unmarked back. If the parameter is not checked, then the receipient will be marked as opted-out in all Target Lists of the current Campaign. They still can receive marketing emails if a different Target List is used.
+If the **Opt-Out Entirely** is checked for the Mass Email, once the recipient clicks on the opt-out link, their email address will be marked as opted out so that marketing emails will never be sent to them, unless the email address is unmarked back. If the parameter is not checked, then the receipient will be marked as opted-out in all Target Lists of the current Campaign. They still can receive marketing emails if a different Target List is used.
 
 ## Tracking URL
 
