@@ -47,7 +47,7 @@ Exception: Passing the Container may be acceptable for proxy classes.
 use Espo\Modules\Crm\Entities\Account;
 
 $account = $this->entityManager
-    ->getRDBRepository(Account::ENTITY_TYPE)
+    ->getRDBRepositoryByClass(Account::class)
     ->select(['id', 'name'])
     ->where(['type' => Account::TYPE_CUSTOMER])
     ->order('createdAt')
