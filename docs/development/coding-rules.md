@@ -500,3 +500,17 @@ $data = Data::createBuilder()
     
 $someObject->process($data);    
 ```
+
+✔️ Good (constructor named parameters):
+
+```php
+<?php
+
+$data = new Data(
+    attribute: $attribute,
+    value: $value,
+    entityType: $entityType,
+);
+   
+$someObject->process($data);    
+```
