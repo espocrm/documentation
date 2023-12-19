@@ -123,7 +123,7 @@ Bounced emails can be handled by a group email account only. Make sure that you 
 
 Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
 
-Enable **VERP** at Administration > Outbound Emails > Mass Email. Note that your SMTP needs to support it. 
+Enable **VERP** at Administration > Outbound Emails > Mass Email. Note that your SMTP provider needs to support it. 
 
 ## See also
 
