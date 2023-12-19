@@ -21,7 +21,7 @@ You need to have at least one **Target List** with target records and an **Email
 
 If everything is set up right, emails should go out. They should be sent in portions every hour (you can change the portion size at Administration > Outbound Emails). The administrator can change the **Scheduling** at Administration > Scheduled Jobs > Check Group Email Accounts.
 
-You can check if emails are sent in the **Log** panel on the Campaign detail view..
+You can check if emails are sent in the **Log** panel on the Campaign detail view.
 
 ## Test sending
 
