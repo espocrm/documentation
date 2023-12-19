@@ -4,7 +4,7 @@ In this article:
 
 * [How to send mass email](#how-to-send-mass-email)
 * [Test sending](#test-what-will-be-sent-to-recipients)
-* [Opt-out-link](#opt-out-link)
+* [Opt-out](#opt-out)
 * [Tracking URL](#tracking-url)
 * [Target lists](#target-lists)
 * [Campaign log](#campaign-log)
@@ -27,7 +27,7 @@ You can check if emails are sent in the **Log** panel on the Campaign detail vie
 
 Click the dropdown on the right for a specific record in the **Mass Email** panel and then click **Send Test**.
 
-## Opt-out link
+## Opt-out
 
 The system will append an opt-out link to all sent emails in case it's missing in the email template body. You can use a custom opt-out link in your email template.
 
@@ -38,6 +38,8 @@ The system will append an opt-out link to all sent emails in case it's missing i
     ```
 
 The administrator can disable the mandatory opt-out links at Administration > Outbound Emails.
+
+If the *Opt-Out Entirely* is checked for the Mass Email, once the recipient clicks on the opt-out link, their email address will be marked as opted out so that marketing emails will never be sent to them, unless the email address is unmarked back. If the parameter is not checked, then the receipient will be marked as opted-out in all Target Lists of the current Campaign. They still can receive marketing emails if a different Target List is used.
 
 ## Tracking URL
 
