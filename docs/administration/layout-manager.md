@@ -42,7 +42,7 @@ If checked, then a field value will be displayed as a link pointing to the detai
 
 #### Not Sortable
 
-Disables an ability to sort the column.
+Disables the ability to sort the column.
 
 #### Align
 
@@ -99,7 +99,7 @@ The list of fields available in the Mass Update form.
 
 ### Side Panels
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides an ability to hide or re-order the list of panels: Activities, History, Tasks and others. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
+Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides the ability to hide or re-order the list of panels: Activities, History, Tasks and others. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
 
 Parameters are listed below.
 
