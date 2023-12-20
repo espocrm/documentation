@@ -1,13 +1,13 @@
 # Entity Manager
 
-The Entity Manager tool is available from the Administration panel. It provides the ability to highly customize your EspoCRM instance. You are able to do the following:
+The Entity Manager tool is available from the Administration panel. It provides the ability to highly customize your EspoCRM instance. You are able to do the following.
 
 * Add new entity types.
 * Customize existing entity types: change labels, default order in list view, etc.
 * Configure fields: add new, customize existing ones.
 * Configure relationships: add new, change labels of existing ones.
 
-All customizations made via Entity Manager are stored in the `custom` directory. You can make customizations on a separate instance, then copy *custom* dir to your production instance and run rebuild (from administration panel or CLI).
+All customizations made via the Entity Manager are stored in the `custom` directory. You can make customizations on a separate instance, then copy the *custom* directory to your production instance and run rebuild (from the administration panel or CLI).
 
 In this article:
 
@@ -20,19 +20,19 @@ In this article:
 
 ## Creating new entity type
 
-Click *Create Entity* button on Entity Manager main page (Administration > Entity Manager). Specify name, labels and select type. If you select *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check *Stream* if you want to have a stream panel (users will be able to follow records).
+Click the **Create Entity** button on the Entity Manager main page (Administration > Entity Manager). Specify the name, labels and select the type. If you select the *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check the **Stream** if you want to have a stream panel (users will be able to follow records).
 
 Types:
 
-* Base – empty entity only with basic fields like Name, Assigned User, Teams, Description.
-* Base Plus – like Base but with Activities, History, Tasks panels.
-* Event – has Date Start, Date End, Duration, Parent, Status fields; available in Calendar and Activities panel (must be [enabled](../user-guide/activities-and-calendar.md#custom-entities-on-calendar) at Administration > Settings).
-* Person – has Email, Phone, First Name, Last Name, Salutation, Address fields; Activities, History, Tasks panels.
-* Company – has Email, Phone, Billing Address, Shipping Address fields; Activities, History, Tasks panels.
+* Base – has only basic fields created by default: Name, Assigned User, Teams, Description.
+* Base Plus – like the Base type but with the Activities, History, Tasks panels.
+* Event – has the Date Start, Date End, Duration, Parent, Status fields; available in the Calendar and in the Activities panel (must be [enabled](../user-guide/activities-and-calendar.md#custom-entities-on-calendar) at Administration > Settings).
+* Person – has the Email, Phone, First Name, Last Name, Salutation, Address fields; the Activities, History, Tasks panels.
+* Company – has the Email, Phone, Billing Address, Shipping Address fields; the Activities, History, Tasks panels.
 
 ## Entity type parameters
 
-If you click *Edit* on a certain entity, you will be able to change parameters of that entity.
+If you click **Edit** on the entity view, you will be able to change parameters of that entity.
 
 * Labels – singular and plural names of the entity.
 * Default order in which records are sorted by in list views.
@@ -48,13 +48,13 @@ If you click *Edit* on a certain entity, you will be able to change parameters o
 
 ## Fields
 
-By clicking *Fields* link, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
+By clicking the **Fields**, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
 
 [More detail](fields.md) about fields.
 
 !!! note
 
-    After you have added a new field, you need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
+    After you created a new field, you may also need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
 
 ## Relationships
 
@@ -94,7 +94,7 @@ Linking with multiple entity types through the *Link-Parent* field.
 
 #### Link Multiple field
 
-The parameter *Link Multiple Field* implies that the field of *Link-Multiple* type will be created along with the relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of the detail view screen.
+The parameter **Link Multiple Field** implies that the field of the *Link-Multiple* type will be created along with the relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of the detail view screen.
 
 Examples of link-multiple fields:
 
@@ -104,19 +104,19 @@ Examples of link-multiple fields:
 
 #### Audited
 
-If the parameter *Audited* is checked, then updates of the relationship will be logged in Stream.
+If the parameter **Audited** is checked, then updates of the relationship will be logged in Stream.
 
 ## Formula
 
 ### Before-save custom script
 
-A [formula](formula.md) script executed before an entity (record) is saved (created or updated). Useful for setting fields that are supposed to be calculated (usually such fields are read-only).
+A [formula](formula.md) script executed before a record is saved (created or updated). Useful for setting fields that are supposed to be calculated (usually such fields are read-only).
 
 ### API before-save script
 
 *As of v7.5.*
 
-A [formula](formula.md) script called on create and update API requests before an entity is saved. See more [detail](api-before-save-script.md).
+A [formula](formula.md) script called on create and update API requests before a record is saved. See more [detail](api-before-save-script.md).
 
 ## Copying to another instance
 
