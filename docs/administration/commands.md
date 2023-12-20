@@ -2,12 +2,12 @@
 
 !!! note
 
-    As of v7.0 you can run `bin/command` instead of `php command.php`.
+    You can `php command.php` instead of `bin/command`. May be reasonable if there's no execute permission for *bin/command*.
 
 ## List of available commands
 
 ```
-php command.php
+bin/command
 ```
 
 ## Clear cache
@@ -29,7 +29,7 @@ Clears cache, rebuilds database.
 *As of v7.4.*
 
 ```
-php command.php rebuild --hard
+bin/command rebuild --hard
 ```
 
 Hard database rebuild. It will drop unused columns, decrease exceeding column lengths, fix index names, set proper collations. It won't drop unused tables (consider removing them manually).
@@ -39,7 +39,7 @@ Recommended to have a database backup before running hard rebuild.
 ## Changing user password
 
 ```
-php command.php set-password [username]
+bin/command set-password [username]
 ```
 
 where `[username]` is a user name, e.g. `admin`.
@@ -47,7 +47,7 @@ where `[username]` is a user name, e.g. `admin`.
 ## Upgrade
 
 ```
-php command.php upgrade
+bin/command upgrade
 ```
 
 Upgrades EspoCRM instance to the next available version. The upgrade package is downloaded automatically. It may take a few steps to upgrade to the latest version, so you will need to run the same command a few times.
@@ -59,31 +59,31 @@ See additional parameters [here](upgrading.md#additional-parameters).
 Installing or upgrading:
 
 ```
-php command.php extension --file="path/to/extension/package.zip"
+bin/command extension --file="path/to/extension/package.zip"
 ```
 
 Uninstalling:
 
 ```
-php command.php extension -u --name="Extension Name"
+bin/command extension -u --name="Extension Name"
 ```
 
 Uninstalling by ID:
 
 ```
-php command.php extension -u --id="extension-ID"
+bin/command extension -u --id="extension-ID"
 ```
 
 List all extensions:
 
 ```
-php command.php extension -l
+bin/command extension -l
 ```
 
 ## Running job
 
 ```
-php command.php run-job JobName
+bin/command run-job JobName
 ```
 
 where *JobName* is an internal name of the job you want to run.
@@ -91,8 +91,8 @@ where *JobName* is an internal name of the job you want to run.
 !!! example
 
     ```
-    php command.php run-job Cleanup
-    php command.php run-job ProcessMassEmail
+    bin/command run-job Cleanup
+    bin/command run-job ProcessMassEmail
     ```
 
 ## Version
@@ -100,13 +100,13 @@ where *JobName* is an internal name of the job you want to run.
 Print the current version:
 
 ```
-php command.php version
+bin/command version
 ```
 
 ## Setting user password
 
 ```
-php command.php set-password {username}
+bin/command set-password {username}
 ```
 
 where `{username}` is a user name, e.g. `admin`.
@@ -116,7 +116,7 @@ where `{username}` is a user name, e.g. `admin`.
 *As of v7.4.*
 
 ```
-php command.php create-admin-user {username}
+bin/command create-admin-user {username}
 ```
 
 where `{username}` is a user name, e.g. `admin`.
@@ -130,7 +130,7 @@ See [here](import.md#console-commands).
 ## App info
 
 ```
-php command.php app-info
+bin/command app-info
 ```
 
 With this command you can get some information about the application (container services, binding, jobs).
@@ -140,7 +140,7 @@ With this command you can get some information about the application (container 
 *As of v8.1.*
 
 ```
-php command.php update-app-timestamp
+bin/command update-app-timestamp
 ```
 
 Updates the app timestamp to the current time. When an Espo instance is updated or an extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, e.g. when writing custom JS.
