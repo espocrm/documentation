@@ -38,13 +38,14 @@ Field types not available for creating directly:
 
 ## Common field parameters
 
-* Label – a name of the field displayed on UI;
+* Label – a name of the field displayed on the UI;
 * Required – whether the field is mandatory; user won't be able to save a record w/o filling the field;
 * Audited – field changes will be stored in stream;
-* Read-only – a field value can't be specified; can be calculated by formula or workflow rule;
+* Read-only – a field value can't be specified, but can be calculated by formula or workflow rule;
+* Read-only After Create – a field value can be specified only when creating a record, after that the field will became read-only; 
 * Default – a value pre-filled when creating a new record;
-* Disable Inline Edit – useful when using dynamic forms logic;
-* Tooltip Text – information about the field for users (Markfown supported).
+* Disable Inline Edit – may be useful when using Dynamic Logic;
+* Tooltip Text – information about the field for users (Markfown is supported).
 
 !!! note
 
@@ -52,9 +53,9 @@ Field types not available for creating directly:
 
 ## Dynamic Logic
 
-Provides an ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
+Provides the ability to make forms dynamic. It's possible to define conditions making certain fields visible, required or read-only. Conditions will be checked automatically when data in the form is changed.
 
-For *Enum*, *Array*, *Multi-Enum*, *Checklist* fields, it's possible to define different sets of options that will be available for the field depending on which condition is met. See more [here](dynamic-logic.md).
+For the *Enum*, *Array*, *Multi-Enum*, *Checklist* fields, it's possible to define different sets of options that will be available for the field depending on which condition is met. See more [here](dynamic-logic.md).
 
 Available items:
 
