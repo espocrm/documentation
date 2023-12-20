@@ -1,10 +1,10 @@
 # Backup and Restore
 
-## How to backup EspoCRM manually
+## How to back up EspoCRM manually
 
-EspoCRM consists of files and database data. All these data are needed in order to create a full backup of EspoCRM. Here are the instructions on how to do it on Ubuntu server, with MySQL.
+To make a full backup of your EspoCRM instance you need to copy EspoCRM files and dump the database. Here are the instructions on how to do it on an Ubuntu server with MySQL or MariaDB.
 
-### Step 1. Backup files
+### Step 1. Back up files
 
 Create an archive of the directory content of installed EspoCRM. The default path for Ubuntu is `/var/www/html`. You can use this command:
 
@@ -12,9 +12,9 @@ Create an archive of the directory content of installed EspoCRM. The default pat
 tar -czf "files.tar.gz" -C /var/www/html .
 ```
 
-### Step 2. Backup database
+### Step 2. Back up database
 
-To backup all your data, you have to know the database name and access credentials. You can find the database name in the configuration file `/ESPOCRM_DIRECTORY/data/config.php` under section `database`. You can use this command to backup your database:
+To back up all your data, you have to know the database name and credentials for access. You can find the database name in the configuration file `/ESPOCRM_DIRECTORY/data/config-internal.php` under the section *database*. You can use this command to back up your database:
 
 ```bash
 mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
@@ -25,9 +25,9 @@ mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql
 That's all. Now, you have to copy the created backup to a safe place.
 
 
-## How to backup EspoCRM with a script
+## How to back up EspoCRM with a script
 
-You can use a script to backup all needed data. Login via SSH and run the commands (tested on Ubuntu server).
+You can use a script to back up all needed data. Login via SSH and run the commands (tested on the Ubuntu server).
 
 ### Download a script
 
@@ -40,6 +40,7 @@ wget https://raw.githubusercontent.com/espocrm/documentation/stable/docs/_static
 ```bash
 bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
 ```
+
 where
 
  * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory
@@ -57,24 +58,25 @@ After successful creation, you will get a path to the created backup.
 
 ## Restore EspoCRM from a backup
 
-You can restore EspoCRM from the backup created as described above.
+You can restore the EspoCRM instance from the backup created as described above.
 
 ### Step 1. Unarchive backup files
 
-To unarchive files, you can use Archive Manager or run the below command. Files need to be placed in the web-server directory.
+To unarchive files, you can use *Archive Manager* or run the below command. Files need to be placed in the web-server directory.
 
 ```bash
 tar -xzf "files.tar.gz" -C /var/www/html
 ```
+
 where `/var/www/html` is the web-server directory.
 
 ### Step 2. Set required permissions
 
-The files should be owned by a web-server user and have correct permissions. Please set required permissions by following this [instruction](server-configuration.md#required-permissions-for-unix-based-systems).
+The files should be owned by the web-server user and have correct permissions. Please set required permissions by following this [instruction](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ### Step 3. Import database dump
 
-Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config.php`. To import your database from the dump, run the command below in a terminal:
+Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config-internal.php`. To import your database from the dump, run the command below in a terminal:
 
 ```bash
 mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
@@ -87,6 +89,7 @@ Check if your crontab is configured properly. Run the command below and check if
 ```bash
 sudo crontab -l -u www-data
 ```
+
 where `www-data` is your web-server user.
 
 If you have to make any changes, use this command:
@@ -95,4 +98,4 @@ If you have to make any changes, use this command:
 sudo crontab -l -u www-data
 ```
 
-More details about configuring crontab for EspoCRM are described [here](server-configuration.md#setting-up-crontab).
+More details about configuring crontab see [here](server-configuration.md#setting-up-crontab).
