@@ -1,8 +1,8 @@
 # WebSocket
 
-WebSocket enables interaction between a server and a client (browser) w/o the latter making polling requests. Example: When a new notification is received, the server sends the information to the browser in real time.
+The WebSocket enables interaction between a server and a client (browser) w/o the latter making polling requests. Example: When a new notification is received, the server sends the information to the browser in real time.
 
-Out-of-the-box WebSocket covers the following features:
+Out-of-the-box the WebSocket covers the following features:
 
 * New in-app notifications;
 * New event reminders;
@@ -13,7 +13,7 @@ Out-of-the-box WebSocket covers the following features:
 
     You need to have *zmq* php extension installed.
 
-Enable *Use WebSocket* parameter at Administation > Settings.
+Enable **Use WebSocket** parameter at Administation > Settings.
 
 ## Daemon
 
@@ -109,7 +109,7 @@ location /wss {
 
 ## Checking whether it works
 
-Click F12 to open a browser console. See whether there's any error related to WebSocket. If you enabled WebSocket in settings, a frontend client will try to connect to WebSocket once a page is loaded. If something went wrong, an error will be displayed in the browser console.
+Click F12 to open the browser console. See whether there's any error related to the WebSocket. If you enabled the WebSocket in the settings, the frontend client will try to connect to the WebSocket once the page is loaded. If something went wrong, an error will be displayed in the browser console.
 
 ## Config params
 
@@ -142,6 +142,7 @@ You need to have `libzmq3-dev` installed:
 ```
 apt install libzmq3-dev
 ```
+
 You need to have `php-dev` installed:
 
 ```
@@ -161,7 +162,7 @@ make install
 cd .. && rm -rf php-zmq-e0db82c3286da81fa8945894dd10125a528299e4 && rm php-zmq.tar.gz
 ```
 
-Then edit php.ini (both for cli and webserver), add:
+Then edit *php.ini* (both for the CLI and webserver), add:
 
 ```
 extension=zmq
