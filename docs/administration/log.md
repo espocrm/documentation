@@ -19,7 +19,7 @@ In `data/config-internal.php`:
 
 ## Trace printing
 
-Prints a backtrace when an exception is occurred. Note that in some cases an exception is caught within the application, the trace won't be printed in this case.
+Prints a backtrace when an exception is occurred. Note that in some cases an exception is caught and handled within the application, the trace won't be printed in this case.
 
 !!! warning
 
