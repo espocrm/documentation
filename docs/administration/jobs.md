@@ -12,7 +12,7 @@ In this article:
 
 ## Scheduled jobs
 
-Scheduled jobs are intended for recurring job execution. They are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using a crontab notation.
+Scheduled jobs are intended for recurring job execution. They are available at Administration > Scheduled Jobs. Scheduling for a specific job can be configured using the crontab notation.
 
 ```
 * * * * *
@@ -46,18 +46,18 @@ For both, it's **highly recommended** to turn on processing jobs **in parallel**
 
 ### Cron
 
-Cron is easy to configure. It's supported by most hosting providers. See how to configure cron [here](server-configuration.md#setting-up-crontab).
+The Cron is easy to configure, it's supported by most hosting providers. See how to configure cron [here](server-configuration.md#setting-up-crontab).
 
-In Unix systems, cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation with the following trick. Add multiple lines in crontab with delays in seconds:
+In Unix systems, the cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation by adding multiple lines in the crontab with delays:
 
 ```
-* * * * * /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
-* * * * * sleep 15; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
-* * * * * sleep 30; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
-* * * * * sleep 45; /usr/bin/php -f /var/www/html/espocrm/cron.php > /dev/null 2>&1
+* * * * * /usr/bin/php -f /path/to/espo/cron.php > /dev/null 2>&1
+* * * * * sleep 15; /usr/bin/php -f /path/to/espo/cron.php > /dev/null 2>&1
+* * * * * sleep 30; /usr/bin/php -f /path/to/espo/cron.php > /dev/null 2>&1
+* * * * * sleep 45; /usr/bin/php -f /path/to/espo/cron.php > /dev/null 2>&1
 ```
 
-The command that runs cron.php may differ depending on your server environment. You might need to replace `/var/www/html/espocrm/` with an actual path to your instance.
+The command that runs cron.php may differ depending on your server environment. You might need to replace `/path/to/espo/` with the actual path to your instance.
 
 ### Daemon
 
@@ -122,7 +122,7 @@ The administrator can set job parameters at Administration > Job Settings.
 
 #### Jobs Max Portion
 
-It's may be reasonable to increase the *Jobs Max Portion* parameter with increase of the number your internal users. It defines the max number of jobs that can be processed in a single cron or daemon run. By default, it's set to *15*.
+It's may be reasonable to increase the **Jobs Max Portion** parameter when the number of users in your CRM is increased. It defines the max number of jobs that can be processed in a single cron or daemon run. By default, it's set to *15*.
 
 ## Running specific job manually in CLI
 
@@ -143,15 +143,15 @@ where JobName is an internal name of the job you want to run.
 
 Jobs available out-of-the-box:
 
-* CheckEmailAccounts – checks personal email accounts
-* CheckInboundEmails – checks group email accounts
-* Cleanup
-* ProcessWebhookQueue
+* CheckEmailAccounts – fetches emails for personal email accounts;
+* CheckInboundEmails – fetches emails for group email accounts;
+* Cleanup – performs cleanup, completely deletes removed records;
+* ProcessMassEmail – sends mass emails;
+* ProcessWebhookQueue – sends webhooks;
 * SendEmailNotifications
-* ControlKnowledgeBaseArticleStatus
-* ProcessMassEmail
 * SendEmailReminders
 * SubmitPopupReminders
+* ControlKnowledgeBaseArticleStatus
 
 To print all available jobs run:
 
