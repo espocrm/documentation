@@ -549,6 +549,14 @@ A list layout name for the select dialog.
 
 Row actions.
 
+### syncWithModel
+
+*boolean*
+
+*As of v8.1.*
+
+Re-fetch records when the parent model is saved or refreshed by WebSocket.
+
 ## additionalLayouts
 
 Additional layouts for a scope.
