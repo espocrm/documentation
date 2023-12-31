@@ -19,7 +19,7 @@ You need to have at least one **Target List** with target records and an **Email
 1. Create a new **Campaign** with the type *Email* or *Newsletter*. Select one or a few target lists in the **Target Lists** field.
 2. After the Campaign record is created create a **Mass Email** for this campaign: click the plus icon on the Mass Email panel. Specify the **Date Start** − when emails should be sent, and select an **Email Template**. Make sure the **Status** is set to *Pending*.
 
-If everything is set up right, emails should go out. They should be sent in portions every hour (you can change the portion size at Administration > Outbound Emails). The administrator can change the **Scheduling** at Administration > Scheduled Jobs > Check Group Email Accounts.
+If everything is set up right, emails should go out. They will be sent in portions. You can change the portion size at Administration > Outbound Emails. The administrator can change the **Scheduling** at Administration > Scheduled Jobs > Send Mass Emails.
 
 You can check if emails are sent in the **Log** panel on the Campaign detail view.
 
