@@ -96,7 +96,7 @@ Bounced emails can be handled only by a **Group Email Account**.
 
 Only for the administrator.
 
-Mass Email system parameters available at Administration > Outbound Emails > Mass Email panel.
+Mass Email system parameters are available at Administration > Outbound Emails > Mass Email panel.
 
 * Max number of emails sent per hour – to avoid sending rate exceeding; the actual number of emails sent per hour will be always less than this limit; the more often the job is run per hour, the more close to the limit number the number of sent emails will be;
 * Max number of emails sent per batch – how many emails to send per job run per one Mass Email (as of v8.1);
