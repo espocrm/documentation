@@ -98,7 +98,8 @@ Only for the administrator.
 
 Mass Email system parameters available at Administration > Outbound Emails > Mass Email panel.
 
-* Max number of emails sent per hour;
+* Max number of emails sent per hour – to avoid sending rate exceeding; the actual number of emails sent per hour will be always less than this limit; the more often the job is run per hour, the more close to the limit number the number of sent emails will be;
+* Max number of emails sent per batch – how many emails to send per job run per one Mass Email (as of v8.1);
 * Disable mandatory opt-out link − by default opt-out link is added even if it's absent in Email Template, you can disable this behaviour;
 * Email Open Tracking − whether to track email opening (not working with most of email providers);
 * Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path) − for more reliable bounced email precessing.
