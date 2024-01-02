@@ -30,10 +30,10 @@ You can pass custom options and check them in 'change' event listenters.
 Gets an attribute.
 
 ```js
-let value = model.get('attributeName');
+const value = model.get('attributeName');
 
 // all attributes
-let attributes = Espo.Utils.cloneDeep(model.attributes);
+const attributes = Espo.Utils.cloneDeep(model.attributes);
 ```
 
 ### save
@@ -67,7 +67,7 @@ model.fetch()
 Get cloned attributes. Returns an object.
 
 ```js
-let attributes = model.getClonedAttributes();
+const attributes = model.getClonedAttributes();
 ```
 
 ### populateDefaults
@@ -115,13 +115,13 @@ define('custom:views/some-custom-view', ['view'], function (Dep) {
     return Dep.extend({
     
         setup: function () {
-            let entityType = 'Account';
+            const entityType = 'Account';
             
             // use wait to hold off rendering until model is loaded            
             this.wait(
                 this.getModelFactory().create(entityType)
                     .then(model => {
-                        let entityType = model.entityType; // entityType property is set by the factory
+                        const entityType = model.entityType; // entityType property is set by the factory
 
                         this.model = model;                    
                         model.id = this.options.id;
@@ -145,7 +145,7 @@ define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model)
     return Dep.extend({
     
         setup: function () {
-            let model = new Model;
+            const model = new Model;
             
             model.urlRoot = 'MyModel'; // URL will be used when fetching and saving
             model.id = 'someId';
