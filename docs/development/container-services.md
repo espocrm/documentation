@@ -56,7 +56,7 @@ A logger. Messages are written into `data/log`.
 
 Class: `Espo\Entities\User`
 
-A current user. If an application does not require an authentication, then *system* is substituted.
+A current user. If an application does not require an authentication, then the *system* user is substituted.
 
 ## preferences
 
