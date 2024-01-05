@@ -8,7 +8,7 @@
 - [Making an update PUT request](#making-an-update-put-request)
 - [Making a delete DELETE request](#making-a-delete-delete-request)
 
-For the source code, refer to [GitHub](https://github.com/definitepotato/go-espocrm).
+For the source code, refer to [GitHub](https://github.com/definitepotato/espocrm).
 
 ## Using API Key Authentication
 
