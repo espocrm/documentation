@@ -17,7 +17,7 @@ import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
-    WithApiKeyAuth("Your API Key here"),
+    espocrm.WithApiKeyAuth("Your API Key here"),
 )
 ```
 
@@ -30,7 +30,7 @@ import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
-    WithBasicAuth("username", "password"),
+    espocrm.WithBasicAuth("username", "password"),
 )
 ```
 
@@ -40,7 +40,7 @@ client := espocrm.NewApiClient(
 import "github.com/definitepotato/espocrm"
 
 parameters := espocrm.NewParameters(
-    SetWhere([]Where{
+    espocrm.SetWhere([]Where{
         {
             Type: Equals,
             Attribute: "myAttribute",
@@ -51,7 +51,7 @@ parameters := espocrm.NewParameters(
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
-    WithApiKeyAuth("Your API Key here"),
+    espocrm.WithApiKeyAuth("Your API Key here"),
 )
 
 contacts, err := client.List("Contact", parameters)
@@ -64,7 +64,7 @@ import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
-    WithApiKeyAuth("Your API Key here"),
+    espocrm.WithApiKeyAuth("Your API Key here"),
 )
 
 contact, err := client.Read("Contact", "78abc123def456")
@@ -79,7 +79,7 @@ newContact := `"{ "name": "Test", "assignedUserId": "1" }"`
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
-    WithApiKeyAuth("Your API Key here"),
+    espocrm.WithApiKeyAuth("Your API Key here"),
 )
 
 attributes, err := client.Create("Contact", newContact)
@@ -94,7 +94,7 @@ updatePayload := `"{ assignedUserId": "1" }"`
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
-    WithApiKeyAuth("Your API Key here"),
+    espocrm.WithApiKeyAuth("Your API Key here"),
 )
 
 attributes, err := client.Update("Contact", updatePayload)
@@ -107,7 +107,7 @@ import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
-    WithApiKeyAuth("Your API Key here"),
+    espocrm.WithApiKeyAuth("Your API Key here"),
 )
 
 status, err := client.Delete("Contact", "78abc123def456")
