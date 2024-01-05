@@ -2,7 +2,7 @@
 
 Provides the ability to import records from CSV files.
 
-Administrator can access import at Administration > Import. By default, regular users don't have access. It can be granted with ACL roles. Administrator also can add the Import tab at Administration > User Interface > Tab List.
+Administrator can access the Import tool at Administration > Import. By default, regular users don't have access, but it can be granted with Roles. The administrator also can add the *Import* tab to the navbar at Administration > User Interface > Tab List.
 
 In this article:
 
@@ -18,41 +18,42 @@ In this article:
 
 Select what type of records you need to import (*Entity Type* field).
 Select a CSV file. A file should be formatted in *UTF-8*.
-Select *What to do?*. Available options: 'Create Only', 'Create & Update', 'Update Only'.
+Select *What to do?*. Available options: Create Only, Create & Update, Update Only.
 
 * *Create Only* − import will only create records;
-* *Create & Update* − records will be created, if records with matching field values will be found, they will be updated; you will be able to check what fields to match by on the _Step 2_.
-* *Update only* − only records with matching field values will be found, it will be updated.
+* *Create & Update* − records will be created, if records with matching field values are found, they will be updated; you will be able to check what fields to match by on the _Step 2_.
+* *Update Only* − records with matching field values will be updated.
 
-Once you select a CSV file, you will be able to see how it will be parsed in the *Preview* panel. When you change parameters, the preview will be updated.
+Once you select a CSV file, you will be able to see how it will be parsed in the **Preview** panel. When you change parameters, the preview is updated.
 
 Parameters:
 
-* *Header Row* − whether CSV file has the first row with field names.
+* *Header Row* − whether the CSV file has the first row with field names.
 * *Execute in idle* − is recommended if you have a **big number of records** to be imported; import will be processed **via cron**; the status will be set to 'Complete' when the import process is finished.
 * *Skip searching for duplicates* − will **make the import faster**.
 * *Silent mode* − the majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will **make the import faster**.
-* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import. (as of v6.0)
+* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import.
+* *Telephone country code* − phone numbers in a regional format will be converted to the internation format according the selected country. (as of v8.1)
 
-Click *Next* button to preceed to the _Step 2_.
+Click the **Next** button to preceed to the _Step 2_.
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-1.png)
 
 ## Step 2
 
-Setup the field mapping: how fields correspond to columns of the CSV file. You can skip not needed columns here.
+Setup the field mapping: how fields correspond to columns of the CSV file. Not mapped columns will be ignored.
 
-In cases of 'Create & Update' and 'Update only', you need to check fields by which records that should be updated will be found. For example, if you check *update by* 'Name' field, then records with the matching name will be updated.
+In the cases of *Create & Update* and *Update Only*, you need to check fields by which records that should be updated will be found. For example, if you check *update by* 'Name' field, then records with the matching Name will be updated.
 
-Add *default values* you want new and updated records to set with. For example, you can specify 'Assigned User' and 'Teams' that will be applied by default.
+Add **Default Values** you want new and updated records to set with. For example, you can specify 'Assigned User' and 'Teams' that will be applied by default.
 
-After the import is done, you will be able to **revert** created records. You will be able to see which records were recognized as duplicate and which were updated. Duplicate means that there was a similar record in the system. You can remove all imported duplicates at once.
+After the import is done, you will be able to **revert** created records. You will be able to see which records were recognized as duplicate and which were updated. Duplicate means that there was a similar record in the system. You can remove all imported duplicates at once or remove only specific ones.
 
 !!! important
 
-    Revert doesn't work with updated records, you can't revert the update.
+    Revert doesn't work with updated records, you cannot revert the update.
 
-Click *Run Import* button to proceed. It may take some time before the import process gets finished. If you want to import a large bunch of records, it's recommended to run import in idle.
+Click the **Run Import** button to proceed. It may take some time before the import process gets finished. If you want to import a large bunch of records, it's recommended to run import *in idle*.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-2.png)
 
