@@ -13,7 +13,7 @@ For the source code, refer to [GitHub](https://github.com/definitepotato/espocrm
 ## Using API Key Authentication
 
 ```go
-import espocrm "github.com/definitepotato/go-espocrm"
+import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
@@ -26,7 +26,7 @@ client := espocrm.NewApiClient(
 (**this is highly discouraged**)
 
 ```go
-import espocrm "github.com/definitepotato/go-espocrm"
+import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
@@ -37,7 +37,7 @@ client := espocrm.NewApiClient(
 ## Making a list GET request
 
 ```go
-import espocrm "github.com/definitepotato/go-espocrm"
+import "github.com/definitepotato/espocrm"
 
 parameters := espocrm.NewParameters(
     SetWhere([]Where{
@@ -60,7 +60,7 @@ contacts, err := client.List("Contact", parameters)
 ## Making a read GET request
 
 ```go
-import espocrm "github.com/definitepotato/go-espocrm"
+import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
@@ -73,7 +73,7 @@ contact, err := client.Read("Contact", "78abc123def456")
 ## Making a create POST request
 
 ```go
-import espocrm "github.com/definitepotato/go-espocrm"
+import "github.com/definitepotato/espocrm"
 
 newContact := `"{ "name": "Test", "assignedUserId": "1" }"`
 
@@ -88,7 +88,7 @@ attributes, err := client.Create("Contact", newContact)
 ## Making an update PUT request
 
 ```go
-import espocrm "github.com/definitepotato/go-espocrm"
+import "github.com/definitepotato/espocrm"
 
 updatePayload := `"{ assignedUserId": "1" }"`
 
@@ -103,7 +103,7 @@ attributes, err := client.Update("Contact", updatePayload)
 ## Making a delete DELETE request
 
 ```go
-import espocrm "github.com/definitepotato/go-espocrm"
+import "github.com/definitepotato/espocrm"
 
 client := espocrm.NewApiClient(
     "https://espocrm.example.com",
