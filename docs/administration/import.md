@@ -73,8 +73,6 @@ This will permanently remove all imported records that were recognized as duplic
 
 #### New import with same params
 
-*As of v6.0.*
-
 This will create a new import with the same parameters and field mapping.
 
 ## Importing into Target List
@@ -82,8 +80,6 @@ This will create a new import with the same parameters and field mapping.
 When you import Contacts, Leads or Accounts, you can add them to some target list. On the Step 2, you need to add *Target List* field on *Default Values* panel and select a needed target list record. You can also use 'Update only' or 'Create & Update' import type to link existing records with a target list.
 
 ## Console commands
-
-*As of v6.0.*
 
 Run import:
 
