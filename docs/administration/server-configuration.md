@@ -6,7 +6,7 @@ EspoCRM can be installed on:
   * [Apache](apache-server-configuration.md)
   * [Nginx](nginx-server-configuration.md)
   * [IIS](iis-server-configuration.md)
-* PHP 8.1 - 8.2
+* PHP 8.1 - 8.3
 * Database
   * MySQL 5.7, 8.0 - 8.2
   * MariaDB 10.2.2 and greater
