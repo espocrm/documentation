@@ -228,12 +228,12 @@ Example:
 
 ```json
 {
-    "rowActionList": {
+    "rowActionList": [
         "moveToTop",
         "moveUp",
         "moveDown",
         "moveToBottom"
-    }
+    ]
 }
 ```
 
