@@ -6,7 +6,7 @@ edit_uri: edit/master/docs/
 extra_javascript: [js/extra.js]
 
 extra_css:
-    - css/extra.css
+  - css/extra.css
 
 markdown_extensions:
   - admonition
@@ -21,311 +21,311 @@ markdown_extensions:
       toc_depth: 4
 
 theme:
-    name: material
-    highlightjs: true
-    features:
-        - content.action.edit
-    icon:
-        edit: material/pencil
-    palette:
-        - scheme: default
-          media: "(prefers-color-scheme: light)"
-          primary: white
-          accent: white
-          toggle:
-              icon: material/brightness-7
-              name: Switch to dark mode
-        - scheme: slate
-          media: "(prefers-color-scheme: dark)"
-          primary: indigo
-          accent: indigo
-          toggle:
-              icon: material/brightness-4
-              name: Switch to light mode
-
+  name: material
+  highlightjs: true
+  features:
+    - content.action.edit
+  icon:
+    edit: material/pencil
+  palette:
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: white
+      accent: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 nav:
-    - 'Home': 'index.md'
-    - 'Administration':
-        - 'Server configuration':
-            - 'Configuration': 'administration/server-configuration.md'
-            - 'Apache': 'administration/apache-server-configuration.md'
-            - 'Nginx': 'administration/nginx-server-configuration.md'
-            - 'IIS': 'administration/iis-server-configuration.md'
-        - 'System':
-            - 'Installation':
-                - 'Installation': 'administration/installation.md'
-                - 'Installation by script': 'administration/installation-by-script.md'
-                - 'Installation with Docker': 'administration/docker/installation.md'
-                - 'Installation with Traefik': 'administration/docker/traefik.md'
-            - 'Upgrading': 'administration/upgrading.md'
-            - 'Extensions': 'administration/extensions.md'
-            - 'Jobs': 'administration/jobs.md'
-            - 'Troubleshooting': 'administration/troubleshooting.md'
-            - 'Console commands': 'administration/commands.md'
-            - 'WebSocket': 'administration/websocket.md'
-            - 'Performance tweaking': 'administration/performance-tweaking.md'
-            - 'Backup and restore': 'administration/backup-and-restore.md'
-            - 'Moving to another server': 'administration/moving-to-another-server.md'
-            - 'Config parameters': 'administration/config-params.md'
-            - 'Log': 'administration/log.md'
-        - 'Customization':
-            - 'Entity Manager': 'administration/entity-manager.md'
-            - 'Fields': 'administration/fields.md'
-            - 'Layouts': 'administration/layout-manager.md'
-            - 'Dynamic Logic': 'administration/dynamic-logic.md'
-            - 'API Before-Save script': 'administration/api-before-save-script.md'
-        - 'Users': 'administration/users-management.md'
-        - 'Roles management': 'administration/roles-management.md'
-        - 'Email administration': 'administration/emails.md'
-        - 'Formula script': 'administration/formula.md'
-        - 'Formula functions':
-          - 'general': 'administration/formula/general.md'
-          - 'string': 'administration/formula/string.md'
-          - 'datetime': 'administration/formula/datetime.md'
-          - 'number': 'administration/formula/number.md'
-          - 'entity': 'administration/formula/entity.md'
-          - 'record': 'administration/formula/record.md'
-          - 'env': 'administration/formula/env.md'
-          - 'password': 'administration/formula/password.md'
-          - 'array': 'administration/formula/array.md'
-          - 'object': 'administration/formula/object.md'
-          - 'language': 'administration/formula/language.md'
-          - 'json': 'administration/formula/json.md'
-          - 'ext': 'administration/formula/ext.md'
-          - 'util': 'administration/formula/util.md'
-        - 'Import': 'administration/import.md'
-        - 'Portal': 'administration/portal.md'
-        - 'Currency': 'administration/currency.md'
-        - 'Dashboards': 'administration/dashboards.md'
-        - 'Authentication':
-            - '2-factor authentication': 'administration/2fa.md'
-            - 'OpenID Connect': 'administration/oidc.md'
-            - 'LDAP':
-                - 'Authorization': 'administration/ldap-authorization.md'
-                - 'Active Directory': 'administration/ldap-authorization-for-ad.md'
-                - 'OpenLDAP': 'administration/ldap-authorization-for-openldap.md'
-        - 'Misc':
-            - 'Terms & naming': 'administration/terms-and-naming.md'
-            - 'Web-to-Lead': 'administration/web-to-lead.md'
-            - 'Webhooks': 'administration/webhooks.md'
-            - 'Passwords': 'administration/passwords.md'
-            - 'Security': 'administration/security.md'
-            - 'Maps': 'administration/maps.md'
-            - 'B2C mode': 'administration/b2c.md'
-            - 'Multiple assigned users': 'administration/multiple-assigned-users.md'
-            - 'File storage': 'administration/file-storage.md'
-            - 'SMS sending': 'administration/sms-sending.md'
-    - 'User Guide':
-        - 'Emails':
-            - 'General guidelines': 'user-guide/emails.md'
-            - 'IMAP & SMTP configuration': 'user-guide/imap-smtp-configuration.md'
-            - 'Mass Email': 'user-guide/mass-email.md'
-        - 'Stream': 'user-guide/stream.md'
-        - 'Sales management': 'user-guide/sales-management.md'
-        - 'Case management': 'user-guide/case-management.md'
-        - 'Activities & Calendar': 'user-guide/activities-and-calendar.md'
-        - 'Mail Merge': 'user-guide/mail-merge.md'
-        - 'Knowledge Base': 'user-guide/knowledge-base.md'
-        - 'Documents': 'user-guide/documents.md'
-        - 'Export': 'user-guide/export.md'
-        - 'Text search': 'user-guide/text-search.md'
-        - 'Working Time Calendar': 'user-guide/working-time-calendar.md'
-        - 'Misc':
-            - 'Shortcut keys': 'user-guide/shortcuts.md'
-            - 'Printing to PDF': 'user-guide/printing-to-pdf.md'
-            - 'Markdown syntax': 'user-guide/markdown.md'
-            - 'Browser support': 'user-guide/browser-support.md'
-            - 'Data privacy': 'user-guide/data-privacy.md'
-            - 'Complex expressions': 'user-guide/complex-expressions.md'
-            - 'Optimistic concurrency control': 'user-guide/optimistic-concurrency-control.md'
-    - 'Extensions':
-        - 'Advanced Pack':
-            - 'Reports': 'user-guide/reports.md'
-            - 'Workflows': 'administration/workflows.md'
-            - 'BPM':
-              - 'Overview': 'administration/bpm.md'
-              - 'Gateways': 'administration/bpm-gateways.md'
-              - 'Events': 'administration/bpm-events.md'              
-              - 'Activities': 'administration/bpm-activities.md'
-              - 'Misc':
-                - 'Examples': 'administration/bpm-examples.md'
-                - 'Signals': 'administration/bpm-signals.md'
-                - 'Compensation': 'administration/bpm-compensation.md'
-                - 'Formula functions': 'administration/bpm-formula.md'
-                - 'Drip email campaign': 'administration/bpm-drip-email-campaign.md'
-                - 'Tracking URLs': 'administration/bpm-tracking-urls.md'
-                - 'Tips': 'administration/bpm-tips.md'
-                - 'Configuration': 'administration/bpm-configuration.md'
-        - 'Sales Pack':
-            - 'Products': 'user-guide/products.md'
-            - 'Quotes': 'user-guide/quotes.md'
-            - 'Sales Orders': 'user-guide/sales-orders.md'
-            - 'Invoices': 'user-guide/invoices.md'
-        - 'Google Integration':
-            - 'Setting-up': 'extensions/google-integration/setting-up.md'
-            - 'Calendar': 'extensions/google-integration/calendar.md'
-            - 'Contacts': 'extensions/google-integration/contacts.md'
-            - 'Gmail': 'extensions/google-integration/gmail.md'
-        - 'Outlook Integration':
-            - 'Setting-up': 'extensions/outlook-integration/setting-up.md'
-            - 'Calendar': 'extensions/outlook-integration/calendar.md'
-            - 'Contacts': 'extensions/outlook-integration/contacts.md'
-            - 'Email': 'extensions/outlook-integration/email.md'
-        - 'VoIP Integration':
-            - 'Asterisk server': 'extensions/voip-integration/asterisk-integration-setup.md'
-            - 'Binotel service' : 'extensions/voip-integration/binotel-integration-setup.md'
-            - 'Starface server': 'extensions/voip-integration/starface-integration-setup.md'
-            - 'Twilio service' : 'extensions/voip-integration/twilio-integration-setup.md'
-            - 'IexPBX server' : 'extensions/voip-integration/iexpbx-integration-setup.md'
-            - 'Docker container': 'extensions/voip-integration/docker-container.md'
-            - 'Customization': 'extensions/voip-integration/customization.md'
-            - 'Troubleshooting' : 'extensions/voip-integration/troubleshooting.md'
-        - 'Export Import':
-            - 'Usage': 'extensions/export-import/export-import-usage.md'
-    - 'Developer':
-        - 'Index': 'development/index.md'
-        - 'Getting started': 'development/how-to-start.md'
-        - 'Making extension package': 'development/extension-packages.md'
-        - 'Modules': 'development/modules.md'
-        - 'Tests': 'development/tests.md'
-        - 'Translation': 'development/translation.md'
-        - 'Coding rules': 'development/coding-rules.md'
-        - 'Backend':          
-          - 'Dependency injection': 'development/di.md'
-          - 'Metadata': 'development/metadata.md'
-          - 'Metadata reference':
-            - 'scopes': 'development/metadata/scopes.md'
-            - 'entityDefs': 'development/metadata/entity-defs.md'
-            - 'aclDefs': 'development/metadata/acl-defs.md'
-            - 'selectDefs': 'development/metadata/select-defs.md'
-            - 'recordDefs': 'development/metadata/record-defs.md'
-            - 'clientDefs': 'development/metadata/client-defs.md'
-            - 'entityAcl': 'development/metadata/entity-acl.md'
-            - 'pdfDefs': 'development/metadata/pdf-defs.md'
-            - 'notificationDefs': 'development/metadata/notification-defs.md'
-            - 'streamDefs': 'development/metadata/stream-defs.md'
-            - 'fields': 'development/metadata/fields.md'
-            - 'dashlets': 'development/metadata/dashlets.md'
-            - 'authenticationMethods': 'development/metadata/authentication-methods.md'
-            - 'integrations': 'development/metadata/integrations.md'
-            - 'app':
-              - 'acl': 'development/metadata/app-acl.md'
-              - 'acl-portal': 'development/metadata/app-acl-portal.md'
-              - 'actions': 'development/metadata/app-actions.md'
-              - 'address-formats': 'development/metadata/app-address-formats.md'
-              - 'admin-panel': 'development/metadata/app-admin-panel.md'
-              - 'api': 'development/metadata/app-api.md'
-              - 'app-params': 'development/metadata/app-app-params.md'
-              - 'authentication': 'development/metadata/app-authentication.md'
-              - 'authentication2FAMethods': 'development/metadata/app-authentication-2fa-methods.md'
-              - 'cleanup': 'development/metadata/app-cleanup.md'
-              - 'client': 'development/metadata/app-client.md'
-              - 'clientNavbar': 'development/metadata/app-client-navbar.md'
-              - 'clientRoutes': 'development/metadata/app-client-routes.md'
-              - 'complexExpression': 'development/metadata/app-complex-expression.md'
-              - 'config': 'development/metadata/app-config.md'
-              - 'consoleCommands': 'development/metadata/app-console-commands.md'
-              - 'containerServices': 'development/metadata/app-container-services.md'
-              - 'currency': 'development/metadata/app-currency.md'
-              - 'currencyConversion': 'development/metadata/app-currency-conversion.md'
-              - 'databasePlatforms': 'development/metadata/app-database-platforms.md'
-              - 'dateTime': 'development/metadata/app-date-time.md'
-              - 'defaultDashboardLayouts': 'development/metadata/app-default-dashboard-layouts.md'
-              - 'defaultDashboardOptions': 'development/metadata/app-default-dashboard-options.md'
-              - 'emailTemplate': 'development/metadata/app-email-template.md'
-              - 'entityManager': 'development/metadata/app-entity-manager.md'
-              - 'entityManagerParams': 'development/metadata/app-entity-manager-params.md'
-              - 'entityTemplateList': 'development/metadata/app-entity-template-list.md'
-              - 'entityTemplates': 'development/metadata/app-entity-templates.md'
-              - 'export': 'development/metadata/app-export.md'
-              - 'fieldProcessing': 'development/metadata/app-field-processing.md'
-              - 'file': 'development/metadata/app-file.md'
-              - 'fileStorage': 'development/metadata/app-file-storage.md'
-              - 'formula': 'development/metadata/app-formula.md'
-              - 'hook': 'development/metadata/app-hook.md'
-              - 'image': 'development/metadata/app-image.md'
-              - 'jsLibs': 'development/metadata/app-js-libs.md'
-              - 'language': 'development/metadata/app-language.md'
-              - 'layouts': 'development/metadata/app-layouts.md'
-              - 'linkManager': 'development/metadata/app-link-manager.md'
-              - 'mapProviders': 'development/metadata/app-map-providers.md'
-              - 'massActions': 'development/metadata/app-mass-actions.md'
-              - 'metadata': 'development/metadata/app-metadata.md'
-              - 'orm': 'development/metadata/app-orm.md'
-              - 'pdfEngines': 'development/metadata/app-pdf-engines.md'
-              - 'popupNotifications': 'development/metadata/app-popup-notifications.md'
-              - 'portalContainerServices': 'development/metadata/app-portal-container-services.md'
-              - 'rebuild': 'development/metadata/app-rebuild.md'
-              - 'recordId': 'development/metadata/app-record-id.md'
-              - 'regExpPatterns': 'development/metadata/app-reg-exp-patterns.md'
-              - 'relationships': 'development/metadata/app-relationships.md'
-              - 'scheduledJobs': 'development/metadata/app-scheduled-jobs.md'
-              - 'select': 'development/metadata/app-select.md'
-              - 'smsProviders': 'development/metadata/app-sms-prividers.md'
-              - 'templateHelpers': 'development/metadata/app-template-helpers.md'
-              - 'templates': 'development/metadata/app-templates.md'
-              - 'webSocket': 'development/metadata/app-web-socket.md'
-          - 'ORM': 'development/orm.md'
-          - 'Select Builder': 'development/select-builder.md'
-          - 'API actions': 'development/api-action.md'
-          - 'Services': 'development/services.md'
-          - 'Hooks': 'development/hooks.md'
-          - 'ACL': 'development/acl.md'
-          - 'Misc':
-              - 'Template helpers (PDF)': 'development/template-custom-helper.md'
-              - 'Formula functions': 'development/new-function-in-formula.md'
-              - 'Scheduled jobs': 'development/scheduled-job.md'
-              - 'Duplicate checking': 'development/duplicate-check.md'
-              - 'Database indexes': 'development/db-indexes.md'
-              - 'App params': 'development/app-params.md'
-              - 'Jobs': 'development/jobs.md'
-              - 'Email sending': 'development/email-sending.md'
-              - 'Calculated fields': 'development/calculated-fields.md'
-              - 'Config parameters': 'development/custom-config-parameters.md'
-              - 'Autoload': 'development/autoload.md'
-              - 'Value Objects': 'development/orm-value-objects.md'
-        - 'Frontend':
-          - 'View': 'development/view.md'
-          - 'Templates': 'development/frontend/templates.md'
-          - 'Model': 'development/model.md'
-          - 'Collection': 'development/collection.md'          
-          - 'HTML & CSS': 'development/frontend/html-css.md'
-          - 'Ajax requests': 'development/frontend/ajax.md'
-          - 'Controller & routing': 'development/frontend/controller.md'
-          - 'Modal dialogs': 'development/modal.md'
-          - 'Confirmation dialogs': 'development/confirm-dialog.md'
-          - 'Custom views': 'development/custom-views.md'
-          - 'View setup handlers': 'development/frontend/view-setup-handlers.md'
-          - 'Save error handlers': 'development/frontend/save-error-handlers.md'
-          - 'Dynamic handler': 'development/dynamic-handler.md'
-          - 'Fields':
-              - 'Custom field type': 'development/custom-field-type.md'
-              - 'Customizing existing fields': 'development/customize-standard-fields.md'
-          - 'Misc':
-              - 'Buttons & actions on record views': 'development/custom-buttons.md'
-              - 'Panels on record view': 'development/frontend/record-panels.md'
-              - 'Custom CSS file': 'development/custom-css.md'
-              - 'Dashlets': 'development/how-to-create-a-dashlet.md'              
-              - 'Link-multiple field with primary record': 'development/link-multiple-with-primary.md'
-              - 'Campaigns':
-                -  'Custom unsubscribe page': 'development/campaign-unsubscribe-template.md'
-        - 'API':
-          - 'API overview': 'development/api.md'
-          - 'Endpoints':
-            - 'CRUD operations': 'development/api/crud.md'
-            - 'Related records': 'development/api/relationships.md'
-            - 'Stream': 'development/api/stream.md'
-            - 'CurrencyRate': 'development/api/currency-rate.md'
-            - 'Attachment': 'development/api/attachment.md'
-            - 'I18n': 'development/api/i18n.md'
-            - 'Account': 'development/api/account.md'
-          - 'Misc':
-            - 'Search parameters': 'development/api-search-params.md'
-            - 'Usage tutorial': 'development/api-tutorial.md'
-          - 'Clients':
-            - 'PHP': 'development/api-client-php.md'
-            - 'JavaScript': 'development/api-client-js.md'
-            - 'Python': 'development/api-client-python.md'
-            - 'Rust': 'development/api-client-rust.md'
-            - 'Java': 'development/api-client-java.md'
+  - "Home": "index.md"
+  - "Administration":
+      - "Server configuration":
+          - "Configuration": "administration/server-configuration.md"
+          - "Apache": "administration/apache-server-configuration.md"
+          - "Nginx": "administration/nginx-server-configuration.md"
+          - "IIS": "administration/iis-server-configuration.md"
+      - "System":
+          - "Installation":
+              - "Installation": "administration/installation.md"
+              - "Installation by script": "administration/installation-by-script.md"
+              - "Installation with Docker": "administration/docker/installation.md"
+              - "Installation with Traefik": "administration/docker/traefik.md"
+          - "Upgrading": "administration/upgrading.md"
+          - "Extensions": "administration/extensions.md"
+          - "Jobs": "administration/jobs.md"
+          - "Troubleshooting": "administration/troubleshooting.md"
+          - "Console commands": "administration/commands.md"
+          - "WebSocket": "administration/websocket.md"
+          - "Performance tweaking": "administration/performance-tweaking.md"
+          - "Backup and restore": "administration/backup-and-restore.md"
+          - "Moving to another server": "administration/moving-to-another-server.md"
+          - "Config parameters": "administration/config-params.md"
+          - "Log": "administration/log.md"
+      - "Customization":
+          - "Entity Manager": "administration/entity-manager.md"
+          - "Fields": "administration/fields.md"
+          - "Layouts": "administration/layout-manager.md"
+          - "Dynamic Logic": "administration/dynamic-logic.md"
+          - "API Before-Save script": "administration/api-before-save-script.md"
+      - "Users": "administration/users-management.md"
+      - "Roles management": "administration/roles-management.md"
+      - "Email administration": "administration/emails.md"
+      - "Formula script": "administration/formula.md"
+      - "Formula functions":
+          - "general": "administration/formula/general.md"
+          - "string": "administration/formula/string.md"
+          - "datetime": "administration/formula/datetime.md"
+          - "number": "administration/formula/number.md"
+          - "entity": "administration/formula/entity.md"
+          - "record": "administration/formula/record.md"
+          - "env": "administration/formula/env.md"
+          - "password": "administration/formula/password.md"
+          - "array": "administration/formula/array.md"
+          - "object": "administration/formula/object.md"
+          - "language": "administration/formula/language.md"
+          - "json": "administration/formula/json.md"
+          - "ext": "administration/formula/ext.md"
+          - "util": "administration/formula/util.md"
+      - "Import": "administration/import.md"
+      - "Portal": "administration/portal.md"
+      - "Currency": "administration/currency.md"
+      - "Dashboards": "administration/dashboards.md"
+      - "Authentication":
+          - "2-factor authentication": "administration/2fa.md"
+          - "OpenID Connect": "administration/oidc.md"
+          - "LDAP":
+              - "Authorization": "administration/ldap-authorization.md"
+              - "Active Directory": "administration/ldap-authorization-for-ad.md"
+              - "OpenLDAP": "administration/ldap-authorization-for-openldap.md"
+      - "Misc":
+          - "Terms & naming": "administration/terms-and-naming.md"
+          - "Web-to-Lead": "administration/web-to-lead.md"
+          - "Webhooks": "administration/webhooks.md"
+          - "Passwords": "administration/passwords.md"
+          - "Security": "administration/security.md"
+          - "Maps": "administration/maps.md"
+          - "B2C mode": "administration/b2c.md"
+          - "Multiple assigned users": "administration/multiple-assigned-users.md"
+          - "File storage": "administration/file-storage.md"
+          - "SMS sending": "administration/sms-sending.md"
+  - "User Guide":
+      - "Emails":
+          - "General guidelines": "user-guide/emails.md"
+          - "IMAP & SMTP configuration": "user-guide/imap-smtp-configuration.md"
+          - "Mass Email": "user-guide/mass-email.md"
+      - "Stream": "user-guide/stream.md"
+      - "Sales management": "user-guide/sales-management.md"
+      - "Case management": "user-guide/case-management.md"
+      - "Activities & Calendar": "user-guide/activities-and-calendar.md"
+      - "Mail Merge": "user-guide/mail-merge.md"
+      - "Knowledge Base": "user-guide/knowledge-base.md"
+      - "Documents": "user-guide/documents.md"
+      - "Export": "user-guide/export.md"
+      - "Text search": "user-guide/text-search.md"
+      - "Working Time Calendar": "user-guide/working-time-calendar.md"
+      - "Misc":
+          - "Shortcut keys": "user-guide/shortcuts.md"
+          - "Printing to PDF": "user-guide/printing-to-pdf.md"
+          - "Markdown syntax": "user-guide/markdown.md"
+          - "Browser support": "user-guide/browser-support.md"
+          - "Data privacy": "user-guide/data-privacy.md"
+          - "Complex expressions": "user-guide/complex-expressions.md"
+          - "Optimistic concurrency control": "user-guide/optimistic-concurrency-control.md"
+  - "Extensions":
+      - "Advanced Pack":
+          - "Reports": "user-guide/reports.md"
+          - "Workflows": "administration/workflows.md"
+          - "BPM":
+              - "Overview": "administration/bpm.md"
+              - "Gateways": "administration/bpm-gateways.md"
+              - "Events": "administration/bpm-events.md"
+              - "Activities": "administration/bpm-activities.md"
+              - "Misc":
+                  - "Examples": "administration/bpm-examples.md"
+                  - "Signals": "administration/bpm-signals.md"
+                  - "Compensation": "administration/bpm-compensation.md"
+                  - "Formula functions": "administration/bpm-formula.md"
+                  - "Drip email campaign": "administration/bpm-drip-email-campaign.md"
+                  - "Tracking URLs": "administration/bpm-tracking-urls.md"
+                  - "Tips": "administration/bpm-tips.md"
+                  - "Configuration": "administration/bpm-configuration.md"
+      - "Sales Pack":
+          - "Products": "user-guide/products.md"
+          - "Quotes": "user-guide/quotes.md"
+          - "Sales Orders": "user-guide/sales-orders.md"
+          - "Invoices": "user-guide/invoices.md"
+      - "Google Integration":
+          - "Setting-up": "extensions/google-integration/setting-up.md"
+          - "Calendar": "extensions/google-integration/calendar.md"
+          - "Contacts": "extensions/google-integration/contacts.md"
+          - "Gmail": "extensions/google-integration/gmail.md"
+      - "Outlook Integration":
+          - "Setting-up": "extensions/outlook-integration/setting-up.md"
+          - "Calendar": "extensions/outlook-integration/calendar.md"
+          - "Contacts": "extensions/outlook-integration/contacts.md"
+          - "Email": "extensions/outlook-integration/email.md"
+      - "VoIP Integration":
+          - "Asterisk server": "extensions/voip-integration/asterisk-integration-setup.md"
+          - "Binotel service": "extensions/voip-integration/binotel-integration-setup.md"
+          - "Starface server": "extensions/voip-integration/starface-integration-setup.md"
+          - "Twilio service": "extensions/voip-integration/twilio-integration-setup.md"
+          - "IexPBX server": "extensions/voip-integration/iexpbx-integration-setup.md"
+          - "Docker container": "extensions/voip-integration/docker-container.md"
+          - "Customization": "extensions/voip-integration/customization.md"
+          - "Troubleshooting": "extensions/voip-integration/troubleshooting.md"
+      - "Export Import":
+          - "Usage": "extensions/export-import/export-import-usage.md"
+  - "Developer":
+      - "Index": "development/index.md"
+      - "Getting started": "development/how-to-start.md"
+      - "Making extension package": "development/extension-packages.md"
+      - "Modules": "development/modules.md"
+      - "Tests": "development/tests.md"
+      - "Translation": "development/translation.md"
+      - "Coding rules": "development/coding-rules.md"
+      - "Backend":
+          - "Dependency injection": "development/di.md"
+          - "Metadata": "development/metadata.md"
+          - "Metadata reference":
+              - "scopes": "development/metadata/scopes.md"
+              - "entityDefs": "development/metadata/entity-defs.md"
+              - "aclDefs": "development/metadata/acl-defs.md"
+              - "selectDefs": "development/metadata/select-defs.md"
+              - "recordDefs": "development/metadata/record-defs.md"
+              - "clientDefs": "development/metadata/client-defs.md"
+              - "entityAcl": "development/metadata/entity-acl.md"
+              - "pdfDefs": "development/metadata/pdf-defs.md"
+              - "notificationDefs": "development/metadata/notification-defs.md"
+              - "streamDefs": "development/metadata/stream-defs.md"
+              - "fields": "development/metadata/fields.md"
+              - "dashlets": "development/metadata/dashlets.md"
+              - "authenticationMethods": "development/metadata/authentication-methods.md"
+              - "integrations": "development/metadata/integrations.md"
+              - "app":
+                  - "acl": "development/metadata/app-acl.md"
+                  - "acl-portal": "development/metadata/app-acl-portal.md"
+                  - "actions": "development/metadata/app-actions.md"
+                  - "address-formats": "development/metadata/app-address-formats.md"
+                  - "admin-panel": "development/metadata/app-admin-panel.md"
+                  - "api": "development/metadata/app-api.md"
+                  - "app-params": "development/metadata/app-app-params.md"
+                  - "authentication": "development/metadata/app-authentication.md"
+                  - "authentication2FAMethods": "development/metadata/app-authentication-2fa-methods.md"
+                  - "cleanup": "development/metadata/app-cleanup.md"
+                  - "client": "development/metadata/app-client.md"
+                  - "clientNavbar": "development/metadata/app-client-navbar.md"
+                  - "clientRoutes": "development/metadata/app-client-routes.md"
+                  - "complexExpression": "development/metadata/app-complex-expression.md"
+                  - "config": "development/metadata/app-config.md"
+                  - "consoleCommands": "development/metadata/app-console-commands.md"
+                  - "containerServices": "development/metadata/app-container-services.md"
+                  - "currency": "development/metadata/app-currency.md"
+                  - "currencyConversion": "development/metadata/app-currency-conversion.md"
+                  - "databasePlatforms": "development/metadata/app-database-platforms.md"
+                  - "dateTime": "development/metadata/app-date-time.md"
+                  - "defaultDashboardLayouts": "development/metadata/app-default-dashboard-layouts.md"
+                  - "defaultDashboardOptions": "development/metadata/app-default-dashboard-options.md"
+                  - "emailTemplate": "development/metadata/app-email-template.md"
+                  - "entityManager": "development/metadata/app-entity-manager.md"
+                  - "entityManagerParams": "development/metadata/app-entity-manager-params.md"
+                  - "entityTemplateList": "development/metadata/app-entity-template-list.md"
+                  - "entityTemplates": "development/metadata/app-entity-templates.md"
+                  - "export": "development/metadata/app-export.md"
+                  - "fieldProcessing": "development/metadata/app-field-processing.md"
+                  - "file": "development/metadata/app-file.md"
+                  - "fileStorage": "development/metadata/app-file-storage.md"
+                  - "formula": "development/metadata/app-formula.md"
+                  - "hook": "development/metadata/app-hook.md"
+                  - "image": "development/metadata/app-image.md"
+                  - "jsLibs": "development/metadata/app-js-libs.md"
+                  - "language": "development/metadata/app-language.md"
+                  - "layouts": "development/metadata/app-layouts.md"
+                  - "linkManager": "development/metadata/app-link-manager.md"
+                  - "mapProviders": "development/metadata/app-map-providers.md"
+                  - "massActions": "development/metadata/app-mass-actions.md"
+                  - "metadata": "development/metadata/app-metadata.md"
+                  - "orm": "development/metadata/app-orm.md"
+                  - "pdfEngines": "development/metadata/app-pdf-engines.md"
+                  - "popupNotifications": "development/metadata/app-popup-notifications.md"
+                  - "portalContainerServices": "development/metadata/app-portal-container-services.md"
+                  - "rebuild": "development/metadata/app-rebuild.md"
+                  - "recordId": "development/metadata/app-record-id.md"
+                  - "regExpPatterns": "development/metadata/app-reg-exp-patterns.md"
+                  - "relationships": "development/metadata/app-relationships.md"
+                  - "scheduledJobs": "development/metadata/app-scheduled-jobs.md"
+                  - "select": "development/metadata/app-select.md"
+                  - "smsProviders": "development/metadata/app-sms-prividers.md"
+                  - "templateHelpers": "development/metadata/app-template-helpers.md"
+                  - "templates": "development/metadata/app-templates.md"
+                  - "webSocket": "development/metadata/app-web-socket.md"
+          - "ORM": "development/orm.md"
+          - "Select Builder": "development/select-builder.md"
+          - "API actions": "development/api-action.md"
+          - "Services": "development/services.md"
+          - "Hooks": "development/hooks.md"
+          - "ACL": "development/acl.md"
+          - "Misc":
+              - "Template helpers (PDF)": "development/template-custom-helper.md"
+              - "Formula functions": "development/new-function-in-formula.md"
+              - "Scheduled jobs": "development/scheduled-job.md"
+              - "Duplicate checking": "development/duplicate-check.md"
+              - "Database indexes": "development/db-indexes.md"
+              - "App params": "development/app-params.md"
+              - "Jobs": "development/jobs.md"
+              - "Email sending": "development/email-sending.md"
+              - "Calculated fields": "development/calculated-fields.md"
+              - "Config parameters": "development/custom-config-parameters.md"
+              - "Autoload": "development/autoload.md"
+              - "Value Objects": "development/orm-value-objects.md"
+      - "Frontend":
+          - "View": "development/view.md"
+          - "Templates": "development/frontend/templates.md"
+          - "Model": "development/model.md"
+          - "Collection": "development/collection.md"
+          - "HTML & CSS": "development/frontend/html-css.md"
+          - "Ajax requests": "development/frontend/ajax.md"
+          - "Controller & routing": "development/frontend/controller.md"
+          - "Modal dialogs": "development/modal.md"
+          - "Confirmation dialogs": "development/confirm-dialog.md"
+          - "Custom views": "development/custom-views.md"
+          - "View setup handlers": "development/frontend/view-setup-handlers.md"
+          - "Save error handlers": "development/frontend/save-error-handlers.md"
+          - "Dynamic handler": "development/dynamic-handler.md"
+          - "Fields":
+              - "Custom field type": "development/custom-field-type.md"
+              - "Customizing existing fields": "development/customize-standard-fields.md"
+          - "Misc":
+              - "Buttons & actions on record views": "development/custom-buttons.md"
+              - "Panels on record view": "development/frontend/record-panels.md"
+              - "Custom CSS file": "development/custom-css.md"
+              - "Dashlets": "development/how-to-create-a-dashlet.md"
+              - "Link-multiple field with primary record": "development/link-multiple-with-primary.md"
+              - "Campaigns":
+                  - "Custom unsubscribe page": "development/campaign-unsubscribe-template.md"
+      - "API":
+          - "API overview": "development/api.md"
+          - "Endpoints":
+              - "CRUD operations": "development/api/crud.md"
+              - "Related records": "development/api/relationships.md"
+              - "Stream": "development/api/stream.md"
+              - "CurrencyRate": "development/api/currency-rate.md"
+              - "Attachment": "development/api/attachment.md"
+              - "I18n": "development/api/i18n.md"
+              - "Account": "development/api/account.md"
+          - "Misc":
+              - "Search parameters": "development/api-search-params.md"
+              - "Usage tutorial": "development/api-tutorial.md"
+          - "Clients":
+              - "PHP": "development/api-client-php.md"
+              - "JavaScript": "development/api-client-js.md"
+              - "Python": "development/api-client-python.md"
+              - "Rust": "development/api-client-rust.md"
+              - "Java": "development/api-client-java.md"
+              - "Go": "development/api-client-go.md"

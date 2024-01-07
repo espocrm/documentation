@@ -40,9 +40,9 @@ client := espocrm.NewApiClient(
 import "github.com/definitepotato/espocrm"
 
 parameters := espocrm.NewParameters(
-    espocrm.SetWhere([]Where{
+    espocrm.SetWhere([]espocrm.Where{
         {
-            Type: Equals,
+            Type: espocrm.Equals,
             Attribute: "myAttribute",
             Value: "myValue",
         },
