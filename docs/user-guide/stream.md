@@ -50,7 +50,12 @@ An administrator can configure the *Attachments* field at Administration > Entit
 
 ## Posts to users
 
-Users can create post to certain users, to certain teams, to all users and to self. Access for this ability is controlled by *Assignment Permission* field in Roles.
+Users can create posts to certain users, to certain teams, to all users and to self. Access for this ability is controlled by *Message Permission* in Roles.
+
+You can post to users:
+
+* from the Stream dashlet;
+* in the Stream on the user's detail view.
 
 ## Filtering
 
