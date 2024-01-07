@@ -1,6 +1,6 @@
 # Stream
 
-Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post messages to the own stream and to stream of another users.
+The Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post messages to your own stream and to stream of another users.
 
 By default, the following entity types have the stream: Accounts, Contacts, Leads, Opportunities, Cases, Tasks. Administrators can **enable** or **disable** stream for a certain entity type in [Entity Manager](../administration/entity-manager.md).
 
