@@ -57,7 +57,7 @@ You can re-generate variants. It will create all missing combinations.
 
     Once a product variant is references somewhere in the system (e.g. in a sales order), you should not remove that variant. Otherwise, after you re-generate it, it will be a different product record with a different ID.
 
-    For the same reason, it's not recommended to add additional attributes to product templates variants of which are already referenced.
+    For the same reason, it's not recommended to add additional attributes to product templates, variants of which are already referenced.
 
 ### Misc
 
