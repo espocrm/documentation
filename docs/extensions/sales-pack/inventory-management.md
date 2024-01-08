@@ -110,13 +110,13 @@ Compressing can be configured to be run automatically. You need to create **Inve
 It's also possible to run compressing manually from the CLI:
 
 ```
-vendor/bin command inventory-compress
+bin/command inventory-compress
 ```
 
 Only for transactions prior a specific date:
 
 ```
-vendor/bin command inventory-compress --before=2024-01-01
+bin/command inventory-compress --before=2024-01-01
 ```
 
 Receipt Orders, Delivery Orders and Transfer Orders can be marked as *Locked*. It will disallow changing their status and items. After that, it is possible to detach transactions from records that were locked. These detached transactions can be consequently compressed.
@@ -126,7 +126,7 @@ Detaching can be configured to be run automatically. You need to create **Invent
 Or run from the CLI:
 
 ```
-vendor/bin command inventory-detach
+bin/command inventory-detach
 ```
 
 It's also possible create a scheduled job that automatically locks old Receipt Orders, Delivery Orders and Transfer Orders.
