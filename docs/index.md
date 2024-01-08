@@ -93,6 +93,7 @@
   * [Workflows](administration/workflows.md)
   * [Business Process Management (BPM)](administration/bpm.md)
 * Sales Pack
+  * [Overview](extensions/sales-pack/overview.md)
   * [Products](user-guide/products.md)
   * [Prices](extensions/sales-pack/prices.md)
   * Sales

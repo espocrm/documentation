@@ -158,6 +158,7 @@ nav:
                 - 'Tips': 'administration/bpm-tips.md'
                 - 'Configuration': 'administration/bpm-configuration.md'
         - 'Sales Pack':
+            - 'Overview': 'extensions/sales-pack/overview.md'
             - 'Products': 'user-guide/products.md'
             - 'Prices': 'extensions/sales-pack/prices.md'
             - 'Sales':
