@@ -67,9 +67,11 @@ Sales Order PDF can be send in email as an attachment. Open a sales order record
 
 ## Automatic numbering
 
-By default a number field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Sales Order > Fields > number. It's also possible to make the number field read-only.
+By default the *Number* field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Sales Order > Fields > number. It's also possible to make the number field read-only.
 
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Sales Order > Fields > numberA.
+
+By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Sales Order > Layouts > Detail.
 
 ## Default tax
 
