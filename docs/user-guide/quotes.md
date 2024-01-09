@@ -153,7 +153,7 @@ By default, the *Number* field is auto-incremented. You can disable auto-increme
 
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Quote > Fields > numberA.
 
-By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Quotes > Layouts > Detail.
+By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Quote > Layouts > Detail.
 
 ## Default tax
 
