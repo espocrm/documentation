@@ -52,6 +52,7 @@ See also:
 * [Python](api-client-python.md)
 * [Rust](api-client-rust.md)
 * [Java](api-client-java.md)
+* [Go](api-client-go.md)
 
 ## Authentication
 
