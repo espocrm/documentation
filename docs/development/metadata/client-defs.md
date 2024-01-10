@@ -399,7 +399,9 @@ Example:
             "selectBoolFilterList": ["onlyMy"],
             "filterList": ["all", "filterName"],
             "layout": "listLayoutName",
-            "selectMandatoryAttributeList": ["accountId", "accountName"]
+            "selectMandatoryAttributeList": ["accountId", "accountName"],
+            "selectOrderBy": "createdAt",
+            "selectOrderDirection": "asc"
         }
     }
 }
@@ -540,6 +542,22 @@ Attributes to be selected when selecting records.
 *As of v8.0.3*
 
 A list layout name for the select dialog.
+
+### selectOrderBy
+
+*string*
+
+*As of v8.2.0*
+
+A field to order by when selecting records.
+
+### selectOrderDirection
+
+*"asc"|"desc"*
+
+*As of v8.2.0*
+
+An direction to order by when selecting records.
 
 ### rowActionList
 
