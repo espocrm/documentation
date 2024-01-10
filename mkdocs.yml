@@ -339,3 +339,4 @@ nav:
             - 'Python': 'development/api-client-python.md'
             - 'Rust': 'development/api-client-rust.md'
             - 'Java': 'development/api-client-java.md'
+            - 'Go': 'development/api-client-go.md'
