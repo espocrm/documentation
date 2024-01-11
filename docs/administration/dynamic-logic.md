@@ -31,8 +31,8 @@ Conditions are configured through user interface, no coding required.
     * When a condition for a field checks the value of the same field, it may cause side effects. E.g. making a field read-only when the same field is not empty.
     * When defining enum options that depends on the current value of the field, you need to include the current value to the option set.
     * In some cases it may be reasonable to disable the inline-edit functionallity for a specific field as it may interfere with the dynamic logic.
-    * Dynamic logic operates fields on the form, it has no effect on buttons and menu items in the UI.
-    
+    * Dynamic Logic operates fields on the form, it has no effect on buttons and menu items in the UI.
+    * Dynamic Logic is not applied on the list view.    
 
 ## Panels
 
