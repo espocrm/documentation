@@ -1,6 +1,6 @@
 # Google Integration. Setting-up for Administrator
 
-Note, that the integration requires curl, libxml and xml PHP extensions installed. If any is not installed, you will be notified after saving.
+Note that the integration requires curl, libxml and xml PHP extensions installed. If any is not installed, you will be notified after saving.
 
 * [Integration](#integration)
 * [Access control](#access-control)
