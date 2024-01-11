@@ -28,7 +28,9 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you connected successfully, but *Google Calendar* checkbox didn't show up, that means that the administrator did not grant you access to *Google Calendar* scope.
+!!! important
+
+    If you connected successfully, but *Google Calendar* checkbox didn't show up, that means that the administrator did not grant you access to *Google Calendar* scope.
 
 Check *Google Calendar* checkbox and configure sync parameters.
 
@@ -36,7 +38,7 @@ After that, you need to click *Save*.
 
 ![Params](../../_static/images/extensions/google-integration/calendar-params.png)
 
-### Parameters
+## Parameters
 
 * Direction – a type of sync. Possible types: *One-way: EspoCRM to Google*, *One-way: Google to EspoCRM*, and *Two-way*.
 
@@ -46,7 +48,7 @@ After that, you need to click *Save*.
 
 * Default Entity – by default, events will be synced as entities of a selected type.
 
-* Remove Google Calendar Event upon removal in EspoCRM –  if you create an event in Google Calendar, you can not delete it from EspoCRM (if you delete it in CRM, this event won’t be deleted in Google Calendar). If you check this box, it will allow to delete Google event from EspoCRM as well.
+* Remove Google Calendar Event upon removal in EspoCRM – if you create an event in Google Calendar, you can not delete it from EspoCRM (if you delete it in CRM, this event won’t be deleted in Google Calendar). If you check this box, it will allow to delete Google event from EspoCRM as well.
 
 * Don’t sync event attendees.
 
@@ -55,3 +57,7 @@ After that, you need to click *Save*.
 * Other Calendars – other calendars to monitor.
 
 * Assign User's Default Team - a user default team will be auto-assigned to an event synced from Google Calendar to EspoCRM (see the `Default Team` parameter in a user's profile).
+
+## Misc
+
+If in EspoCRM your entity type has a field named `location` of *Text* or *Varchar* type, it will be synced with the Google Calendar's location.
