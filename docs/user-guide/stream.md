@@ -14,29 +14,31 @@ It's possible to **move the stream panel down** so that it will appear under oth
 
 ## User Stream
 
-Users can see their stream in the Stream dashlet as well as under Stream tab. Users also can see stream of another users in the user's detail view, if they have access that is controlled by *User Permission* field in Roles.
+Users can see their Stream in the **Stream** dashlet as well as under the Stream tab. By default, the Stream tab is not added to the navbar.
 
-In the user stream you can see posts and updates of records that the user follows. You can also see posts addressed to the user.
+Users can see the Stream of another users on the user's detail view if they have access defined by the *User Permission* in Roles.
+
+In the user's Stream you can see posts and updates of records that the user follows. You can also see posts addressed to the user.
 
 ## Notifications
 
-You will receive notifications about updates in your stream that were done by another users.
+You will receive notifications about updates in your Stream that were done by another users.
 
 ## Posts
 
-You can create post related to a certain record. You are also able to attach multiple files and images to the post. Images can be pasted from the clipboard.
+You can create a post related to a certain record. You are also able to attach multiple files and images to the post. Images can be pasted from the clipboard.
 
 ### Mentions
 
-If you want to mention somebody in your post, you need to type `@` symbol and start to type user's name. The user you has mentioned in your post will be notified about it. 
+If you want to mention somebody in your post, you need to type `@` symbol and start typing the user's name. The user you have mentioned in your post will be notified.
 
 !!! note
 
-    The user who was mentioned in the post, needs to have access to stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
+    The user who was mentioned in the post needs to have access to the Stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
 
 !!! note
 
-    The user needs to have a proper *Assignment Permission* (set in roles) to be able to mention a specific user. If the assignment permission is set to `no`, then the user won't be able to mention anybody. If set to `team`, then they will be able to mention only users of their team (or teams). If set to `all`, then will be able to mention anybody.
+    The user needs to have a proper *Assignment Permission* (set in Roles) to be able to mention a specific user. If the assignment permission is set to `no`, then the user won't be able to mention anyone. If set to `team`, then they will be able to mention only users of their team (or teams). If set to `all`, then they will be able to mention anyone. Portal users are not able to mention users.
 
 ### Attachments
 
@@ -50,16 +52,16 @@ An administrator can configure the *Attachments* field at Administration > Entit
 
 ## Posts to users
 
-Users can create posts to certain users, to certain teams, to all users and to self. Access for this ability is controlled by *Message Permission* in Roles.
+Users can create posts to certain Users, to certain Teams, to all Users and to self. Access for this feature is controlled by the *Message Permission* in Roles.
 
-You can post to users:
+You can post to Users:
 
-* from the Stream dashlet;
-* in the Stream on the user's detail view.
+* from the *Stream* dashlet;
+* in the *Stream* panel on the user's detail view.
 
 ## Filtering
 
-You can filter what to show in a stream: *All*, *Posts* or *Updates*. Filters are availble in the dropdown in to top-right corner of the panel.
+You can filter what to show in the Stream: *All*, *Posts* or *Updates*. Filters are availble in the dropdown in to top-right corner of the panel.
 
 ## See also
 
