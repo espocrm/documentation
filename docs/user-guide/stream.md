@@ -1,16 +1,16 @@
 # Stream
 
-The Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post messages to your own stream and to stream of another users.
+The Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post messages to your own Stream and to the Stream of another Users.
 
-By default, the following entity types have the stream: Accounts, Contacts, Leads, Opportunities, Cases, Tasks. Administrators can **enable** or **disable** stream for a certain entity type in [Entity Manager](../administration/entity-manager.md).
+By default, the following entity types have the Stream enabled: Accounts, Contacts, Leads, Opportunities, Cases, Tasks. Administrators can **enable** or **disable** the Stream for a certain entity type in the [Entity Manager](../administration/entity-manager.md).
 
-There are two types of stream in EspoCRM: record stream and user stream.
+There are two types of the Stream in EspoCRM: Record Stream and User Stream.
 
 ## Record Stream
 
-The *Stream* panel is available on the record detail view at the bottom. Posts, updates and new additions related to the current record are displayed here.
+The *Stream* panel is available on the record detail view in the bottom. Posts, updates and new additions related to the current record are displayed here.
 
-It's possible to **move the stream panel down** so that it will appear under other panels. Administrator can do it at Administration > Layout Manager > select entity type > Bottom panels.
+The administrator can move the Stream panel down so that it will appear under other panels or put it into a tab. This can be done at Administration > Entity Manager > {Entity Type} > Layouts > Bottom panels.
 
 ## User Stream
 
