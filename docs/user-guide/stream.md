@@ -73,6 +73,10 @@ The Global Stream is available on a separate page where users can see all Stream
 * A separate navbar tab is available.
 * Can be also reached from the Stream page.
 
+!!! note
+
+    If a user does not have *all* access level for all entity types, there are possible scenario that the result list is empty. It's a server load optimization measure when it would take a lot of resources to find the first notes the user has access to. Consider adding some search filters in such cases.
+
 ## See also
 
 * [Activity Stream – Keep up with changes](https://www.espocrm.com/tips/activity-stream/)
