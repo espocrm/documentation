@@ -75,7 +75,7 @@ The Global Stream is available on a separate page where users can see all Stream
 
 !!! note
 
-    If a user does not have *all* access level for all entity types, there are possible scenarios leading to an empty or not complete result list being displayed. It's a server load optimization measure when it would take a lot of resources to find the first notes the user has access to. Consider adding some search filters in such cases.
+    If a user does not have *all* access level for all entity types, there are possible scenarios leading to an empty or not complete result list being displayed. It's a server load optimization measure when it would take too much of resources to find the first records the user has access to. Consider adding some search filters in such cases.
 
 ## See also
 
