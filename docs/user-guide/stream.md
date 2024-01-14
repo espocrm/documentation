@@ -63,6 +63,16 @@ You can post to Users:
 
 You can filter what to show in the Stream: *All*, *Posts* or *Updates*. Filters are availble in the dropdown in to top-right corner of the panel.
 
+## Global Stream
+
+*As of v8.2.*
+
+The Global Stream is available on a separate page where users can see all Stream notes, not only related to records they follow. Users can peform search: by specific fields or by a text filter. Notes that user don't have access to are not listed.
+
+* Access to the Global Stream is controlled by Roles.
+* A separate navbar tab is available.
+* Can be also reached from the Stream page.
+
 ## See also
 
 * [Activity Stream – Keep up with changes](https://www.espocrm.com/tips/activity-stream/)
