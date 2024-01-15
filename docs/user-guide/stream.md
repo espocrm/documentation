@@ -18,7 +18,9 @@ Users can see their Stream in the **Stream** dashlet as well as under the Stream
 
 Users can see the Stream of another users on the user's detail view if they have access defined by the *User Permission* in Roles.
 
-In the user's Stream you can see posts and updates of records that the user follows. You can also see posts addressed to the user.
+In the user's Stream you can see posts and updates of records that the user follows. You can also see posts addressed to that user.
+
+It's possible to view all activity for a specific user. It will display all notes that either created directly by the user or created as a result of that users' actions. Available from the dropdown menu on the Stream panel on the User's detail view. As of v8.2.
 
 ## Notifications
 
