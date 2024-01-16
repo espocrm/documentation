@@ -28,7 +28,7 @@ The transactional model is used for the inventory management. A single transacti
 * Parent – a record that generated the transaction; e.g. Receipt Order, Develivery Order;
 * Type – transfer, reserve, or soft-reserve;
 * Warehouse – what warehouse the transaction is related to;
-* Inventory Number – needed when the product is trached by a number.
+* Inventory Number – needed when the product is tracked by a number.
 
 Access to Inventory Transactions is controlled by Roles. The administrator can allow specific users to read and/or create transactions.
 
