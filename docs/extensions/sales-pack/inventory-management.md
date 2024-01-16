@@ -59,7 +59,7 @@ It's possible to view quantity for a specific Inventory Number.
 
 Multiple inventory items can be assigned to one Batch number.
 
-When inventory is recieved, Batch numbers should be assigned to products that are tracked by batch. It's possible to split a Receipt Order Item into multiple batches.
+When inventory is received, Batch numbers should be assigned to products that are tracked by batch. It's possible to split a Receipt Order Item into multiple batches.
 
 When inventory is delivered to a customer, Batch numbers should be selected for products that are tracked by batch.
 
@@ -67,7 +67,7 @@ When inventory is delivered to a customer, Batch numbers should be selected for 
 
 Only one inventory item can be assigned to one Serial number.
 
-When inventory is recieved, Serial numbers should be assigned to every item for products that are tracked by serial. It's possible to **Import Serial Numbers** from a CSV file within a Receipt Order.
+When inventory is received, Serial numbers should be assigned to every item for products that are tracked by serial. It's possible to **Import Serial Numbers** from a CSV file within a Receipt Order.
 
 When inventory is delivered to a customer, Serial numbers should be selected for products that are tracked by serial.
 
