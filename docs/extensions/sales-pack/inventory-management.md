@@ -99,9 +99,9 @@ Access to Inventory Adjustments is controlled by Roles.
 
 ## Transaction compressing
 
-As the Inventory Transaction table grows, the system may became slower to calculate product quantities. For this reason, there is the functionallity that compresses the inventory transaction table.
+As the Inventory Transaction table grows, the system may became slower to calculate product quantities. For this reason, there is the functionality that compresses the inventory transaction table.
 
-Balanced transaction pairs can be removed. E.g. when the same item quantity is reserved and then unreserved, it will generate two transactins with opposite quantity values.
+Balanced transaction pairs can be removed. E.g. when the same item quantity is reserved and then unreserved, it will generate two transactions with opposite quantity values.
 
 If there are multiple transactions that differentiate only by quantity, they can be merged into one. The new quantity will be the sum of all.
 
