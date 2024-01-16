@@ -241,6 +241,12 @@ An extractor for [value objects](../orm-value-objects.md). For field types it's 
 
 Duplicates attributes of a field. Some fields can require some processing when an entity is being duplicated.
 
+### duplicateIgnore
+
+*boolean*
+
+Do not carry over a field value when duplicating an entity.
+
 ### select
 
 *Object*
