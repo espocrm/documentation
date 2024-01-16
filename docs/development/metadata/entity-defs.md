@@ -172,7 +172,7 @@ Parameters available in the Entity Manager tool when editing the field. Specify 
 
 *string[]*
 
-A list of layout types there the field should be available. Specify an empty array to disable in all layouts.
+A list of layout types available for the field. Specify an empty array to disable in all layouts. If not specified, then no limitation is applied.
 
 Example:
 
@@ -184,6 +184,14 @@ Example:
     ]
 }
 ```
+
+### layoutIgnoreList
+
+*string[]*
+
+*As of v8.2.*
+
+A list of layout types not available for the field.
 
 ### textFilterDisabled
 
