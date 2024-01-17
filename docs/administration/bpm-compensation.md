@@ -23,7 +23,7 @@ Boundary compensation:
 
 When a sub-process is compensated with the boundary event, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use the Compensation Event Sub-Process inside the sub-process.
 
-When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that actvity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
+When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
 
 Compensation event sub-process:
 
