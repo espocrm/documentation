@@ -33,7 +33,7 @@ In this article:
 
 Available at Administration > Flowcharts. It also can be added as a tab on the navigation panel.
 
-Flowcharts are intended for business processes modeling. An administrator can create and edit flowcharts. Regular users can only view flowcharts.
+Flowcharts are intended for modeling business processes. An administrator can create and edit flowcharts. Regular users can only view flowcharts.
 
 Every flowchart has its specific entity type (specified by the *Target Type* field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
 
