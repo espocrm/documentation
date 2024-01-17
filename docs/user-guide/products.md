@@ -69,10 +69,6 @@ An Inventory Number cannot be associated with a Product Template. It should be a
 
 ## Properties
 
-### Inventory Number Type
-
-Products can be tracked by a *Batch* or *Serial* number.
-
 ### Allow Fractional Quantity
 
 If enabled, it will be possible to use fractional quantity values for a product.
@@ -85,7 +81,18 @@ Actual if the *Inventory Transactions* feature is enabled in the system. If the 
 
 Can be empty, Batch or Serial. See more about inventory numbers [here](../extensions/sales-pack/inventory-management.md#inventory-numbers).
 
+### Removal strategy
+
+Available if *Inventory Number Type* is not empty. Determines how Inventory Numbers will be sorted when a user picks a number for a deliery or transfer order.
+
+* FIFO – first in, first out; sorted by *Incoming Date* in ascending order;
+* FEFO – first expired, first out; sorted by *Expiration Date* in ascending order;
+* LIFO – last in, first out; sorted by *Incoming Date* in descending order.
+
+### Expiration Days
+
+Available if *Inventory Number Type* is not empty. A number of days that is automatically added to the current date to determine an *Expiration Date* of an Inventory Number when the number is created in the system. Note that the Expiration Date then can be changed by a user.
+
 ### Tax-free
 
 The product can be marked as *Tax-free*. It will prevent applying the tax rate upon adding the product to a quote, sales order or invoice.
-
