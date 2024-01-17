@@ -37,7 +37,7 @@ Flowcharts are intended for modeling business processes. An administrator can cr
 
 Every flowchart has its specific entity type (specified by the *Target Type* field). The flowchart determines execution of future process instances. It comprises flowchart elements and connections between elements.
 
-If the process flowchart has the unchecked 'Is Active' field then it won't initiate process instances.
+If the process flowchart has the unchecked *Is Active* field, then it won't initiate process instances.
 
 To show details and parameters of a certain flowchart element you need to click on it. In the edit mode you will be able to edit parameters.
 
