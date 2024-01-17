@@ -66,21 +66,21 @@ The execution of the process is visualized with colors highlighting flow nodes:
 
 ![Process execution](../_static/images/administration/bpm/process-execution.png)
 
-**Only one process** for the same target record and flowchart can be active **at the same time**. It means that if you have multiple start events, once one of them is triggered (the process is started), other start events will be ignored while the process is active. 
+**Only one Process** for the same target record and Flowchart can be active **at the same time**. It means that if you have multiple Start Events, once one of them is triggered (the process is started), other Start Events will be ignored while the Process is active. 
 
 ### Manipulating
 
-A process can be **stopped manually** by a user who has 'edit' access to the process. You can do it from the dropdown menu next to the Edit button.
+A Process can be **stopped manually** by a user who has 'edit' access to the Process. You can do it from the dropdown menu next to the *Edit* button.
 
-It's possible to **manually reject or interrupt** pending and active flow nodes. You can do it from the Log panel on the process detail view in the dropdown menu of a specific flow node. Note that after rejecting a flow node it's possible that the process will become suspended and won't ever end by itself. You will need either manually stop it or start a flow from any node to continue executing.
+It's possible to **manually reject or interrupt** pending and active flow nodes. You can do it from the *Log* panel on the Process detail view in the dropdown menu of a specific Flow Node. Note that in some cases, after rejecting a Flow Node the Process becomes suspended and won't ever end by itself. You will need to either manually stop it or start a flow from any node to continue executing.
 
-It's possible to **manually start a flow from any element** of an already started process. You need to click on a specific flowchart element on the process detail view and then click the button *Start flow from here*.
+It's possible to **manually start a flow from any element** of an already started Process. You need to click on a specific flowchart element on the Process detail view and then click the button *Start flow from here*.
 
-Ended, stopped and interrupted processes can be *reactivated* (from the dropdown next to the Edit button) (as of v2.14). After reactivation, the process does not have any active flow node. You need to manually start the flow from a specific flow node element. Ended sub-processes can be reactivated only if their parent process is active. Meaning that you might need to reactivate the parent process first.
+Ended, stopped and interrupted Processes can be *reactivated* (from the dropdown next to the *Edit* button). After reactivation, the Process does not have any active Flow Nodes. You need to manually start the flow from a specific Flow Node element. Ended Sub-Processes can be reactivated only if their parent Process is active. Meaning that you might need to reactivate the parent Process first.
 
 ### Access control
 
-Only admin users can create or edit flowcharts. With roles it's possible to allow regular users to view flowcharts, view or edit processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view process flowchart details. 
+Only admin users can create or edit Flowcharts. With Roles it's possible to allow regular users to view Flowcharts, view or edit Processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view Process Flowchart details. 
 
 ## Flowchart Elements
 
