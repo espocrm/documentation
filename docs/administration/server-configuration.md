@@ -10,7 +10,7 @@ EspoCRM can be installed on:
 * Database
   * MySQL 5.7, 8.0 - 8.2
   * MariaDB 10.2.2 and greater
-  * PostgreSQL 15 (supported expetimentally)
+  * PostgreSQL 15 (supported experimentally )
 
 In this article:
 
