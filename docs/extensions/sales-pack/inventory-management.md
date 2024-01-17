@@ -55,6 +55,16 @@ From the Inventory Number detail view it's possible to view the **History**: rec
 
 It's possible to view quantity for a specific Inventory Number.
 
+### Removal Strategy
+
+The Removal Strategy is defined in a Product record. It determines how Inventory Numbers will be sorted when a user picks a number for a deliery or transfer order.
+
+Available options:
+
+* FIFO – first in, first out; sorted by *Incoming Date* in ascending order;
+* FEFO – first expired, first out; sorted by *Expiration Date* in ascending order;
+* LIFO – last in, first out; sorted by *Incoming Date* in descending order.
+
 ### Batch
 
 Multiple inventory items can be assigned to one Batch number.
