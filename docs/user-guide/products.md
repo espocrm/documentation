@@ -85,6 +85,8 @@ Can be empty, Batch or Serial. See more about inventory numbers [here](../extens
 
 Available if *Inventory Number Type* is not empty. Determines how Inventory Numbers will be sorted when a user picks a number for a deliery or transfer order.
 
+Available options:
+
 * FIFO – first in, first out; sorted by *Incoming Date* in ascending order;
 * FEFO – first expired, first out; sorted by *Expiration Date* in ascending order;
 * LIFO – last in, first out; sorted by *Incoming Date* in descending order.
