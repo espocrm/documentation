@@ -10,6 +10,17 @@ General definitions for the front-end client.
 
 JS files to include on the HTML page. Use `__APPEND__` to append custom values w/o removing existing.
 
+Example:
+
+```json
+{
+    "scriptList": [
+        "__APPEND__",
+        "client/custom/modules/my-module/my-script.js"
+    ]
+}
+```
+
 ## developerModeScriptList
 
 *string[]*
