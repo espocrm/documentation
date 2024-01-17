@@ -55,16 +55,6 @@ From the Inventory Number detail view it's possible to view the **History**: rec
 
 It's possible to view quantity for a specific Inventory Number.
 
-### Removal Strategy
-
-The Removal Strategy is defined in a Product record. It determines how Inventory Numbers will be sorted when a user picks a number for a deliery or transfer order.
-
-Available options:
-
-* FIFO – first in, first out; sorted by *Incoming Date* in ascending order;
-* FEFO – first expired, first out; sorted by *Expiration Date* in ascending order;
-* LIFO – last in, first out; sorted by *Incoming Date* in descending order.
-
 ### Batch
 
 Multiple inventory items can be assigned to one Batch number.
@@ -80,6 +70,16 @@ Only one inventory item can be assigned to one Serial number.
 When inventory is received, Serial numbers should be assigned to every item for products that are tracked by serial. It's possible to **Import Serial Numbers** from a CSV file within a Receipt Order.
 
 When inventory is delivered to a customer, Serial numbers should be selected for products that are tracked by serial.
+
+### Removal Strategy
+
+The Removal Strategy is defined in a Product record. It determines how Inventory Numbers will be sorted when a user picks a number for a deliery or transfer order.
+
+Available options:
+
+* FIFO – first in, first out; sorted by *Incoming Date* in ascending order;
+* FEFO – first expired, first out; sorted by *Expiration Date* in ascending order;
+* LIFO – last in, first out; sorted by *Incoming Date* in descending order.
 
 ## Warehouses
 
