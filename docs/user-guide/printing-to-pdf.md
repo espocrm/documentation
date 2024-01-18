@@ -336,7 +336,7 @@ To display text fields (multi-line) use triple braces
 Print markdown (as of v8.1):
 
 ```
-{{markdownText fieldName}}
+{{markdownText fieldName_RAW}}
 ```
 
 ### Related records
