@@ -281,11 +281,11 @@ The Max number of records that can be sent in an email by default is 3000. You c
 
 *As of v2.5.0.*
 
-Note: A user needs to have access to *Template* scope (set in Roles).
+Note: A user needs to have access to the *Template* scope in Roles.
 
-Note: You need to have at least one PDF Template for Report entity type. The template can be created at Administration > PDF Templates.
+Note: You need to have at least one PDF Template record for the Report entity type. The template can be created at Administration > PDF Templates.
 
-To print a report: on the report detail view on *Report* panel, from the dropdown next to *Edit* button, click *Print to PDF*.
+To print a Report: on the Report detail view on the *Report* panel, from the dropdown next to the *Edit* button, click *Print to PDF*.
 
 In PDF table, `{{reportTable}}` is used to print a report results table.
 
@@ -302,7 +302,8 @@ Available attributes:
 * cellpadding;
 * fontSize;
 * color – a text color;
-* flip – to flip table, true or false.
+* flip – to flip table, true or false;
+* width – a table width, a CSS parameter (as of v3.1).
 
 ## Syncing with Target Lists
 
