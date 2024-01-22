@@ -191,7 +191,7 @@ Object (map):
 {{/each}}
 ```
 
-Printing tables:
+Printing tables (not recommended as of v8.2):
 
 ```
 {{#tableTag}}
@@ -208,7 +208,20 @@ Printing tables:
 
 !!! note
 
-    Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended, since it breaks a layout of a *contenteditable* element.
+    Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended as it breaks markup of a *contenteditable* element.
+
+With *iterate* attribute (as of v8.2):
+
+```html
+<table style="width: 100%;">
+  <tbody>
+    <tr iterate="{{contacts}}">
+      <td>{{name}}</td>
+      <td>{{assignedUserName}}</td>
+    </tr>
+  </tbody>
+</table>
+```
 
 Displaying certain number of items in one row:
 
