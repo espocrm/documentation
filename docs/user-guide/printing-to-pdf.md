@@ -75,7 +75,7 @@ You can specify a **document title** in the *Title* field (as of v7.0). `{$name}
 
 ### Code view
 
-A code view mode can be enabled by clicking *</>* button. It allows to edit raw HTML and make sure a layout is not messed up.
+A code view mode can be enabled by clicking *\</\>* button. It allows to edit raw HTML and make sure a layout is not messed up.
 
 ### Charset issues
 
