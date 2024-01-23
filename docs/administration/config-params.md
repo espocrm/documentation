@@ -25,6 +25,7 @@ The list of parameters along with their default values.
 * [PDF](#pdf)
 * [Events](#events)
 * [Attachments](#attachments)
+* [Misc](#misc)
 
 ### General
 
@@ -185,3 +186,7 @@ The list of parameters along with their default values.
 * attachmentUploadMaxSize – `256` – max size of attachments in Mb; as of v7.2;
 * attachmentUploadChunkSize – `4` – chunk size in Mb; attachments uploaded by chunk; `0` disables uploading by chunk; as of v7.2;
 * inlineAttachmentUploadMaxSize – `20` – max size of inline attachments in Mb (e.g. inline images for emails);
+
+### Misc
+
+* wysiwygCodeEditorDisabled – `false` – disable the Wysiwyg field code editor; as of v8.2;
