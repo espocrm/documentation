@@ -10,36 +10,41 @@ You have added custom fields to quote items or/and quote entity types. You want 
 
 ### Server-side calculation
 
-You need to create custom repository for Quote entity type.
+You need to create a custom Hook for the Quote entity type.
 
 Create a new file:
 
-`custom/Espo/Custom/Repositories/Quote.php`
+`custom/Espo/Custom/Hooks/Quote/CalculateItems.php`
 
 ```php
-<?php
+namespace Espo\Custom\Hooks\Quote;
 
-namespace Espo\Custom\Repositories;
+use Espo\ORM\Entity;
 
-class Quote extends \Espo\Modules\Sales\Repositories\Quote
-{
-    protected function calculateItems(\Espo\ORM\Entity $entity, array $options = array())
-    {
-        parent::calculateItems($entity, $options);
+class CalculateItems
+{    
+    public static int $order = 10;
+
+    public function __construct(
+        // Define needed dependencies.
+    ) {}
+
+    public function beforeSave(Entity $entity, array $options): void
+    {
+        if (!$entity->has('itemList')) {
+             $entity->loadItemListField();
+        }
 
         $itemList = $entity->get('itemList');
 
-        $amount = 0.0;		
+        $amount = 0.0;
         foreach ($itemList as $item) {
             $amount +=  $item->quantity * $item->unitPrice * $item->factor;
-        }		
+        }
         $entity->set('amount', $amount);
-    }
-}
-
+    }
+}​
 ```
-
-Note: For Sales Orders use `SalesOrder` file and class names. For Invoices use `Invoice` file and class names. Extend from a corresponding classes: `\Espo\Modules\Sales\Repositories\SalesOrder` or `\Espo\Modules\Sales\Repositories\Invoice`.
 
 ### Client-side calculation
 
@@ -60,16 +65,14 @@ Create a new file:
 `client/custom/src/quote-calculation-handler.js`
 
 ```js
-Espo.define('custom:quote-calculation-handler', ['sales:quote-calculation-handler'], function (Dep) {
+define('custom:quote-calculation-handler', ['sales:quote-calculation-handler'], function (Dep) {
 
     return Dep.extend({
 	
         // Define custom calculations here.
         // Use client/modules/sales/quote-calculation-handler.js as an example.
-
     });
 });
-
 ```
 
 It's also possible to make certain product fields copied to a quote item on product selection. The logic is determined in selectProduct method.
