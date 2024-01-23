@@ -46,6 +46,8 @@ class CalculateItems
 }​
 ```
 
+Note: For other entity types, e.g. SalesOrder, do the same but use *SalesOrder* namespace and file location instead of *Quote*.
+
 ### Client-side calculation
 
 In Quote's clientDefs you need to specify custom calculation handler:
