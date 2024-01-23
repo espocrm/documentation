@@ -27,10 +27,6 @@ Scheduled jobs are intended for recurring job execution. They are available at A
 
 If you want a job to be run as often as possible, you need to set the scheduling to `* * * * *`.
 
-!!! important
-
-    Scheduling runs in **UTC timezone**. It doesn't honor the server's timezone. You need to take it into account when setting up scheduling for specific hours.
-
 ## Setting up
 
 There are two options to set up job processing in the system:
