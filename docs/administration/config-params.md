@@ -2,11 +2,14 @@
 
 Config parameters can be changed or added manually in the file `data/config.php`. Parameters can also be added to the file `data/config-internal.php`. Use the **internal config** to store sensitive parameters.
 
-This is not a full list of params. Most of params available in admin UI are not listed here.
+In this article:
+
+* [List of parameters](#list-of-parameters)
+* [Config files](#config-files)
 
 ## List of parameters
 
-The list of parameters along with their default values.
+The list of parameters along with their default values. This is not a full list of params. Most of params available in the admin UI are not listed here.
 
 * [General](#general)
 * [UI](#ui)
@@ -190,3 +193,11 @@ The list of parameters along with their default values.
 ### Misc
 
 * wysiwygCodeEditorDisabled – `false` – disable the Wysiwyg field code editor; as of v8.2;
+
+## Config files
+
+* `data/config.php` – the main config; can be written by the application or manually;
+* `data/config-internal.php` – for storing sensitive parameters that should never make their way to the front-end; can be written by the application or manually;
+* `data/config-override.php` – overrides parameters of the main config, supposed to be written only manually; as of v8.2;
+* `data/config-override-internal.php` – overrides parameters of the main config, supposed to be written only manually; for storing sensitive parameters; as of v8.2.
+
