@@ -10,6 +10,7 @@ In this article:
 * [Step 2](#step-2)
 * [Import results](#import-results)
 * [Importing into Target List](#importing-into-target-list)
+* [Relations](#relations)
 * [Console commands](#console-commands)
 * [Errors](#errors)
 * [See also](#see-also)
@@ -78,6 +79,12 @@ This will create a new import with the same parameters and field mapping.
 ## Importing into Target List
 
 When you import Contacts, Leads or Accounts, you can add them to some target list. On the Step 2, you need to add *Target List* field on *Default Values* panel and select a needed target list record. You can also use 'Update only' or 'Create & Update' import type to link existing records with a target list.
+
+## Relations
+
+It's possible to automatically relate imported records by a foreign name. For example, when you import Opportunities, if you have Account names in the CSV but don't have Account IDs, Accounts with corresponding names will be automatically related with imported records. Note that this functionality is only available for many-to-one relationships.
+
+It's also possible to automatically relate imported records by a *Foreign* field other than the Name. The Foreign field should have *Relate on Import* parameter enabled. Available as of v8.2.
 
 ## Console commands
 
