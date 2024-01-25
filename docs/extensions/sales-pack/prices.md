@@ -21,7 +21,7 @@ The Quote, Sales Order and Invoice have the **Price Book** field. When a new rec
 
 A Price Book can have a **Parent Price Book** and so on. If there's no price found for a specific product in a Price Book, then the system will look up the price in the Parent Price Book.
 
-The **Default Price Book** can be specified at Administration > Sales Pack (Settings). It will used to fetch default prices when there's no Price Book associated with an order.
+The **Default Price Book** can be specified at Administration > Sales Pack (Settings). It will be used to fetch default prices when there's no Price Book associated with an order.
 
 When a product is added to an order and there's no price found in a related Price Book or there's no related Price Book, the Default Price Book will be used. If there's no Default Price Book, the price from the Product record will be used.
 
