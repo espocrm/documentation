@@ -250,3 +250,11 @@ Converts field metadata to ORM metadata.
 *As of v8.1.*
 
 An input sanitizer.
+
+## sanitizerClassNameList
+
+*class-string<Espo\Core\FieldSanitize\Sanitizer\>[]*
+
+*As of v8.2.*
+
+Input sanitizers.
