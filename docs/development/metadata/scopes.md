@@ -120,6 +120,22 @@ Example:
 }
 ```
 
+## aclFieldLevelDisabled
+
+*boolean*
+
+*As of v8.2.*
+
+Disable field level security.
+
+## aclPortalFieldLevelDisabled
+
+*boolean*
+
+*As of v8.2.*
+
+Disable field level security for portals.
+
 ## statusField
  
 *string*
