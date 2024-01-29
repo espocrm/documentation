@@ -63,6 +63,15 @@ EspoCRM supports MySQL (5.7, 8.0) and MariaDB (10.1 and greater). These are no s
 
 EspoCRM also experimentally supports PostgreSQL 15. Though it's planned to become official soon.
 
+### Basic user setup
+In this example it will create a database named `espocrm`, a user named `www_espo`, and give permission for the `www_espo` to only access the `espocrm` database when connecting from localhost.
+
+```
+CREATE SCHEMA espocrm;
+CREATE USER 'www_espo'@'localhost' identified with mysql_native_password by 'ThePasswordYouWillBeUsing';
+GRANT ALL PRIVILEGES ON espocrm.* TO 'www_espo'@'localhost';
+```
+
 ### MySQL 8 support
 
 MySQL 8.0.4 has changed a default authentication method to `caching_sha2_password` which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to `mysql_native_password` method. For a user it can be done with the query:
