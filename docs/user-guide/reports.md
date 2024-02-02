@@ -78,7 +78,7 @@ At *Group By* field, pick one or two fields you want your report data be grouped
 
 You can leave *Group By* field empty.
 
-There is the ability to specify a custom complex expression (with functions) for grouping. The complex expression is translated into SQL statement. More info about complex expressions is available [here](complex-expressions.md).
+There is the ability to specify a custom [complex expression](complex-expressions.md) (with functions) for grouping. The complex expression is translated into an SQL statement.
 
 ### Columns
 
@@ -104,7 +104,7 @@ Grouping grid report with non-aggregated columns:
 
 ![Grid list grouped](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid-list-1.png)
 
-There is the ability to specify custom [complex expressions](complex-expressions.md) for columns. The complex expression is translated into SQL statement.
+There is the ability to specify custom [complex expressions](complex-expressions.md) for columns. The complex expression is translated into an SQL statement.
 
 ### Order by
 
@@ -234,9 +234,9 @@ Comparing the result of custom complex expression & the result of formula:
 ![Complex Expression filter](../_static/images/user-guide/reports/filter-complex-expression.png)
 
 
-* Complex expression is translated into SQL statement and becomes a part of SQL query.
-* Formula is executed by PHP and the result value is substituted into SQL query.
-* Comparison operator is substituted into SQL query between complex expression statement and formula result value.
+* Complex expression is translated into an SQL statement and becomes a part of an SQL query.
+* Formula is executed by PHP and the result value is substituted into an SQL query.
+* Comparison operator is substituted into an SQL query between complex expression statement and formula result value.
 
 More info about complex expressions is available [here](complex-expressions.md).
 
