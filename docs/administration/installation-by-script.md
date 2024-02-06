@@ -167,13 +167,32 @@ An example: `sudo /var/www/espocrm/command.sh backup /var/www/espocrm-backup`.
 
 ### Restore
 
-Restore the backup created by the `backup` command.
+Restore the backup created by the [backup](#backup) command.
 
 ```
-sudo /var/www/espocrm/command.sh restore "BACKUP_PATH"
+sudo /var/www/espocrm/command.sh restore "BACKUP_ARCHIVE"
 ```
 
-An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2023-01-01_142051.tar.gz"`.
+An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2024-01-01_142051.tar.gz"`.
+
+### Restore on a fresh server
+
+Restore the backup created by the [backup](#backup) command.
+
+1. Configure the environment
+
+```
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+sudo bash install.sh --environment
+```
+
+2. Restore a backup
+
+```
+sudo /var/www/espocrm/command.sh restore "BACKUP_ARCHIVE"
+```
+
+An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2024-01-01_142051.tar.gz"`.
 
 ### Clean
 
