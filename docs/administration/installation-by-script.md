@@ -202,15 +202,25 @@ Delete old and unnecessary files.
 sudo /var/www/espocrm/command.sh clean
 ```
 
-### Import the SQL dump
+### Import SQL dump
 
-Import the database by the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
+Import the database from the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
 
 ```
 sudo /var/www/espocrm/command.sh import-sql "PATH/DB.sql"
 ```
 
 An example: `sudo /var/www/espocrm/command.sh import-sql "/var/www/espocrm-backup/db.sql"`.
+
+### Import SQL dump for one / several tables
+
+Import the database with enabled `DROP TABLE` statement in the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
+
+```
+sudo /var/www/espocrm/command.sh import-sql --skip-drop "PATH/DB.sql"
+```
+
+An example: `sudo /var/www/espocrm/command.sh import-sql "/var/www/espocrm-backup/db.sql" --skip-drop`.
 
 ### Export a database into the SQL dump
 
