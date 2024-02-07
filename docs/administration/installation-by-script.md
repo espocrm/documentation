@@ -179,20 +179,30 @@ An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2
 
 Restore the backup created by the [backup](#backup) command.
 
-1. Configure the environment
+#### 1. Configure the environment
 
 ```
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --environment
 ```
 
-2. Restore a backup
+#### 2. Restore a backup
 
 ```
 sudo /var/www/espocrm/command.sh restore "BACKUP_ARCHIVE"
 ```
 
 An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2024-01-01_142051.tar.gz"`.
+
+#### 3. (Optional) For legacy installation only
+
+In order to fix the `Error response from daemon: network external not found` issue, run the command:
+
+```
+sudo bash install.sh --network
+```
+
+and then run the `Step 2` again.
 
 ### Clean
 
