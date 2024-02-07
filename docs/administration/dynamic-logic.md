@@ -47,3 +47,6 @@ Available in the following layouts:
 
 It's also possible to define conditions on which a specific color will be applied to the panel (as of v7.0).
 
+## Misc
+
+To determine whether a record is being created, check whether an ID is empty. It can be useful to hide some fields when a record not yet created or to show some panel with instructions described in a note. 
