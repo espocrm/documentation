@@ -2,15 +2,15 @@
 
 The Hooks framework provides the ability to catch some actions in the system in order to call custom logic.
 
-Common hooks for all entity types (called from the ORM repository class):
+Common hooks for all entity types (called from the ORM Repository class):
 
 - beforeSave
 - afterSave
 - beforeRemove
 - afterRemove
-- afterRelate
-- afterUnrelate
-- afterMassRelate
+- afterRelate – for many-to-many relationships
+- afterUnrelate – for many-to-many relationships
+- afterMassRelate – for many-to-many relationships
 
 ## Creating hook
 
