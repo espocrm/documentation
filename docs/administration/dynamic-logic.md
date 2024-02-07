@@ -1,9 +1,10 @@
-# Dynamic Logic (dynamic forms)
+# Dynamic Logic
+
+A dynamic behavior for forms can be achieved by utilizing the Dynamic Logic feature.
 
 ## Fields
 
-A dynamic behavior for forms can be achieved by utilizing the Dynamic Logic feature. Dynamic Logic parameters are available
-for every field (Administration > Entity Manager > {Entity Type} > Fields > {field}.
+Dynamic Logic parameters are available for every field (Administration > Entity Manager > {Entity Type} > Fields > {field}.
 
 The Dynamic Logic allows to define conditions making certain fields visible, required or read-only. Conditions will be
 checked automatically when data in the form is changed.
@@ -45,3 +46,4 @@ Available in the following layouts:
 * Bottom Panels
 
 It's also possible to define conditions on which a specific color will be applied to the panel (as of v7.0).
+
