@@ -8,9 +8,11 @@ Common hooks for all entity types (called from the ORM Repository class):
 - afterSave
 - beforeRemove
 - afterRemove
-- afterRelate – for many-to-many relationships
-- afterUnrelate – for many-to-many relationships
-- afterMassRelate – for many-to-many relationships
+- afterRelate – when two records are related through a many-to-many relationship;
+- afterUnrelate – when two records are unrelated through a many-to-many relationship;
+- afterMassRelate
+
+
 
 ## Creating hook
 
@@ -89,29 +91,29 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 
 #### TargetList
 
-* *afterOptOut* - when a target clicks an opt-out link, data are passed in the 3rd $data argument
-* *afterCancelOptOut* - when a target subscribes again
-* *afterOptIn* - when a target opts-in through Lead Capture, data are passed in the 3rd $data argument
+* *afterOptOut* – when a target clicks an opt-out link, data are passed in the 3rd $data argument
+* *afterCancelOptOut* – when a target subscribes again
+* *afterOptIn* – when a target opts-in through Lead Capture, data are passed in the 3rd $data argument
 
 #### Meeting / Call
 
-* *afterConfirmation* - when an event attendee clicks on accept/decline/tentative link; details are passed in the 3rd $data argument
+* *afterConfirmation* – when an event attendee clicks on accept/decline/tentative link; details are passed in the 3rd $data argument
 
 #### Contact
 
-* *afterLeadCapture* - when a contact (existing in crm) opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
+* *afterLeadCapture* – when a contact (existing in crm) opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
 * *afterOptOut*
 * *afterCancelOptOut*
 
 #### Lead
 
-* *afterLeadCapture* - when a lead opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
+* *afterLeadCapture* – when a lead opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
 * *afterOptOut*
 * *afterCancelOptOut*
 
 #### LeadCapture
 
-* *afterLeadCapture* - when a target (lead or contact) opts-in through Lead Capture, target data are passed in the 3rd $data argument
+* *afterLeadCapture* – when a target (lead or contact) opts-in through Lead Capture, target data are passed in the 3rd $data argument
 
 #### CampaignTrackingUrl
 
