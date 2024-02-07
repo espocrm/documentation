@@ -194,9 +194,9 @@ sudo /var/www/espocrm/command.sh restore "BACKUP_ARCHIVE"
 
 An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2024-01-01_142051.tar.gz"`.
 
-#### 3. (Optional) For legacy installation only
+#### Troubleshooting
 
-In order to fix the `Error response from daemon: network external not found` issue, run the command:
+In order to fix the `Error response from daemon: network external not found`, run:
 
 ```
 sudo bash install.sh --network
