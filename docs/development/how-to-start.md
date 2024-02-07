@@ -27,7 +27,7 @@ To build a proper *config.php* file and populate database you can run installati
 
     Some dependencies require php extensions that you might not have installed. You can skip these requirements by installing with a flag *--ignore-platform-reqs*: `composer install --ignore-platform-reqs`.
 
-You also need to enable [Developer Mode](#configuration-for-development).
+You also need to enable [developer mode](#configuration-for-development).
 
 After building you will be able to run the instance in your browser right from the project root directory, considering that your web server is properly configured.
 
