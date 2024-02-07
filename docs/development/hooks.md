@@ -4,13 +4,13 @@ The Hooks framework provides the ability to catch some actions in the system in 
 
 Common hooks for all entity types (called from the ORM Repository class):
 
-- beforeSave – just before a record is saved;
-- afterSave – after a record is saved;
-- beforeRemove – before a record is removed;
-- afterRemove – after a record is removed;
-- afterRelate – when two records are related through a many-to-many relationship;
-- afterUnrelate – when two records are unrelated through a many-to-many relationship;
-- afterMassRelate
+- *beforeSave* – just before a record is saved;
+- *afterSave* – after a record is saved;
+- *beforeRemove* – before a record is removed;
+- *afterRemove* – after a record is removed;
+- *afterRelate* – when two records are related through a many-to-many relationship;
+- *afterUnrelate* – when two records are unrelated through a many-to-many relationship;
+- *afterMassRelate*
 
 
 
