@@ -31,9 +31,9 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             // Instantiate some property.
             this.someParam1 = 'test 1';
 
-            // As of v8.0.
-            this.addHandler('click', 'a[data-action="test"]', 'someMethod');
-            this.addHandler('focus', '.record input[data-name="hello"]', (event, target) => this.someMethod(event, target));
+            this.addHandler('focus', '.record input[data-name="hello"]', (event, target) => {
+                // Do something.
+            });
 
             // When we create a child view in the setup method, rendering of the view is held off
             // until the child view is loaded (ready), the child view will be rendered along with the parent view.
@@ -43,7 +43,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             this.createView('someKeyName', 'custom:test/my-custom-child-view', {
                 // A relative selector of the DOM container.
                 selector: '.some-test-container',
-                // A full selector (as of v8.0)
+                // Or a full selector.
                 //fullSelector: '#some-id',
                 // Pass some parameter.
                 someParam: 'test',
@@ -113,7 +113,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         },
         
         // A custom method.
-        actionTest: function (value) {
+        someMethod1: function (value) {
             // Create and render a child view.
             this.createView('testKey', 'custom:test/my-another-custom-child-view', {
                 el: this.getSelector() + ' .another-test-container', 
@@ -122,8 +122,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             .then(view => view.render());
         },
         
-        someMethod: function () {
-            // As of v7.3.
+        someMethod2: function () {
             // To proceed only when the view is rendered.
             // Useful when the method can be invoked by the caller before the view is rendered.
             this.whenRendered().then(() => {
