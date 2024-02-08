@@ -105,7 +105,7 @@ define('custom:my-action-handler', ['action-handler'], function (Dep) {
 
 An action item next to the edit button.
 
-An example for the *Lead* entity type.
+An example for the *Lead* entity type. Menu items defined in the `Global.json` file will be applied for all entity types.
 
 ### Definition
 
