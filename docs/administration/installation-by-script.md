@@ -67,29 +67,29 @@ Email address for Let's Encrypt certificate. Ex. `--email=email@my-domain.com`.
 
 Clean the existing EspoCRM installation and start a new one. This option can be used if you have already installed EspoCRM. Ex. `--clean`.
 
-#### `--dbRootPassword`
+#### `--db-root-password`
 
-Define your own MySQL root password instead of the automatically generated one. Ex. `--dbRootPassword=my-password`.
+Define your own MySQL root password instead of the automatically generated one. Ex. `--db-root-password=my-password`.
 
-#### `--dbPassword`
+#### `--db-password`
 
-Define your own MySQL password for EspoCRM installation. Ex. `--dbPassword=my-password`.
+Define your own MySQL password for EspoCRM installation. Ex. `--db-password=my-password`.
 
-#### `--adminUsername`
+#### `--admin-username`
 
-Define a username of your EspoCRM administrator. Ex. `--adminUsername=admin`.
+Define a username of your EspoCRM administrator. Ex. `--admin-username=admin`.
 
-#### `--adminPassword`
+#### `--admin-password`
 
-Define a password of EspoCRM administrator. Ex. `--adminPassword=admin-password`.
+Define a password of EspoCRM administrator. Ex. `--admin-password=admin-password`.
 
 #### `--command`
 
 Update the `command.sh` for the existing installation. Ex. `--command`.
 
-#### `--backupPath`
+#### `--backup-path `
 
-A path for the backup. Ex. `--backupPath="/backup"`.
+A path for the backup. Ex. `--backup-path ="/backup"`.
 
 ## Server management
 
