@@ -5,7 +5,7 @@ The View is the most oftenly used class in the frontend. Every page is rendered 
 A view file `client/custom/src/views/test/my-custom-view.js`:
 
 ```js
-// AMD module definition (ES module support is comming soon). The first argument can be omitted.
+// AMD module definition (ES modules are supported in ext-template). The first argument can be omitted.
 // Names should be in a lower case. A hyphen to be used for word separation.
 // The `custom:` prefix indicates a loader that the base path is `client/custom/src`.
 // A `my-module:` prefix would correspond to `client/custom/modules/my-module/src`.
