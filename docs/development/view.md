@@ -7,7 +7,7 @@ A view file `client/custom/src/views/test/my-custom-view.js`:
 ```js
 // AMD module definition (ES modules are supported in ext-template). The first argument can be omitted.
 // Names should be in a lower case. A hyphen to be used for word separation.
-// The `custom:` prefix indicates a loader that the base path is `client/custom/src`.
+// The `custom:` prefix indicates to the loader that the base path is `client/custom/src`.
 // A `my-module:` prefix would correspond to `client/custom/modules/my-module/src`.
 define('custom:views/test/my-custom-view', ['view'], function (View) {
 
