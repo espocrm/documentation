@@ -12,7 +12,7 @@ A view file `client/custom/src/views/test/my-custom-view.js`:
 define('custom:views/test/my-custom-view', ['view'], function (View) {
 
     // Extending from the base `view` class.
-    // Alternatively, you can use ES6 classes as of v7.2. Example below.
+    // You can use ES6 classes as well. Example below.
     return View.extend({
 
         // A template path, see its content.
