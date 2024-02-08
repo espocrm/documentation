@@ -392,7 +392,7 @@ Adds a DOM event handler.
 
 ```js
 this.addHandler('click', 'selector', 'methodName');
-this.addHandler('mousedown', 'selector', event => { ... });
+this.addHandler('mousedown', 'selector', (event, target) => { ... });
 ```
 
 ## Events
