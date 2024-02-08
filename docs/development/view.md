@@ -32,8 +32,8 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             this.someParam1 = 'test 1';
 
             // As of v8.0.
-            this.addHandler('click', 'a[data-action="something"]', 'someMethod');
-            this.addHandler('focus', '.record input[data-name="something"]', event => this.someMethod(event));
+            this.addHandler('click', 'a[data-action="test"]', 'someMethod');
+            this.addHandler('focus', '.record input[data-name="hello"]', (event, target) => this.someMethod(event, target));
 
             // When we create a child view in the setup method, rendering of the view is held off
             // until the child view is loaded (ready), the child view will be rendered along with the parent view.
@@ -83,9 +83,6 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             // The view container (JQuery DOM element).
             console.log(this.$el); 
             
-            // The view container (DOM element).
-            console.log(this.el);
-
             // The view container (DOM element). As of v8.0.
             console.log(this.element); 
             
@@ -107,17 +104,6 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             return {
                 someParam2: 'test 2',
             };
-        },
-        
-        // DOM event handlers.
-        // Prefer using `addHandler` method instead as of v8.0.
-        events: {
-            'click a[data-action="test"]': function (e) {
-                // Reading an element attribute.
-                const value = $(e.currentTarget).attr('data-value');
-                
-                this.actionTest(value);
-            },
         },
         
         // Called when the view is removed.
