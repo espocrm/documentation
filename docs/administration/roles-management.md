@@ -138,6 +138,10 @@ Allows to manage followers of specific records. Users will be able to add and re
 
 Allows to send stream messages to other users. (as of v8.0)
 
+### Audit Permission
+
+Allows to view the audit log. (as of v8.2)
+
 ## Field Level Security
 
 Allows to control access for specific fields.
