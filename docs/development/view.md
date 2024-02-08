@@ -26,7 +26,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         // Initializing. Called on view creation, the view is not yet rendered.
         setup: function () {
             // Calling the parent `setup` method, can be omitted.
-            Dep.prototype.setup.call(this);
+            View.prototype.setup.call(this);
             
             // Instantiate some property.
             this.someParam1 = 'test 1';
