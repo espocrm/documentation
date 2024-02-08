@@ -66,7 +66,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             this.listenTo(this.model, 'change', () => {
                 // Whether a specific attribute changed.
                 if (this.model.hasChanged('someAttribute')) {
-                    let value = this.model.get('someAttribute');
+                    const value = this.model.get('someAttribute');
                 }
             });
             
@@ -90,10 +90,10 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             console.log(this.element); 
             
             // Accessing a child view.
-            let childView = this.getView('someKeyName');
+            const childView = this.getView('someKeyName');
             
             // Checking whether a view is set.
-            let hasSomeView = this.hasView('someKeyName');
+            const hasSomeView = this.hasView('someKeyName');
             
             // Destroying a child view, also removes it from DOM.
             this.clearView('someKeyName');
@@ -114,7 +114,7 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
         events: {
             'click a[data-action="test"]': function (e) {
                 // Reading an element attribute.
-                let value = $(e.currentTarget).attr('data-value');
+                const value = $(e.currentTarget).attr('data-value');
                 
                 this.actionTest(value);
             },
