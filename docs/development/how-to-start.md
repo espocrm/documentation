@@ -89,19 +89,24 @@ You can [install](autoload.md) additional composer libraries in your extension.
 
 ## Configuration for development
 
-EspoCRM instance configuration for development. Parameters should be set in `data/config.php`.
+EspoCRM instance configuration for development. Config parameters should be set in `data/config.php`.
 
-Developer mode, disables cache.
+A developer mode, disables cache.
 
 ```php
 'isDeveloperMode' => true,
 ```
 
-You can force using backend cache (metadata, language etc.) in the developer mode. Can be reasonable as the application can run slow w/o cache.
+!!! note
+
+    The developr mode won't work on a release instance. It requires the *frontend* folder from the repository and *client/lib/transpiled* which should contain all JS files separately and transpiled.
+
+You can force using some additional cache in the developer mode. Can be reasonable as the application can run very slow w/o cache.
 
 ```php
 'useCacheInDeveloperMode' => true,
 ```
+
 
 ## Where to put customizations
 
