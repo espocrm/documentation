@@ -148,6 +148,7 @@ class MyController
     public function __construct(private SomeDependency $someDependency)
     {}
 
+    // Naming convention: {method}Action{Action}
     public function putActionUpdate(Request $request, Response $response): stdClass
     {
         $id = $request->getRouteParam('id');
