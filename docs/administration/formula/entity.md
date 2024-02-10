@@ -9,6 +9,7 @@ the target record is the record is being created. For Workflow's conditions, the
 * [entity\isAttributeNotChanged](#entityisattributenotchanged)
 * [entity\attribute](#entityattribute)
 * [entity\setAttribute](#entitysetattribute)
+* [entity\clearAttribute](#entityclearattribute)
 * [entity\attributeFetched](#entityattributefetched)
 * [entity\addLinkMultipleId](#entityaddlinkmultipleid)
 * [entity\hasLinkMultipleId](#entityhaslinkmultipleid)
@@ -60,7 +61,7 @@ An ATTRIBUTE value of a target record. It's also possibe to fetch an attribute o
 
 `entity\setAttribute(ATTRIBUTE, VALUE)`
 
-Set ATTRIBUTE with a VALUE.
+Set an ATTRIBUTE with a VALUE.
 
 `entity\setAttribute('stage', 'Closed Won')` is equivalent to `stage = 'Closed Won'`.
 
@@ -68,6 +69,17 @@ Set ATTRIBUTE with a VALUE.
 
     `entity\setAttribute('stage', 'Closed Won')`
 
+## entity\clearAttribute
+
+`entity\clearAttribute(ATTRIBUTE)`
+
+*As of v8.2.*
+
+Clear an ATTRIBUTE.
+
+!!! example
+
+    `entity\cleaAttribute('stage')`
 
 ## entity\attributeFetched
 
