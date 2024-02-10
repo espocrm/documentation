@@ -258,6 +258,7 @@ Out-of-the-box functions are listed below.
 * [entity\isAttributeNotChanged](formula/entity.md#entityisattributenotchanged)
 * [entity\attribute](formula/entity.md#entityattribute)
 * [entity\setAttribute](formula/entity.md#entitysetattribute)
+* [entity\clearAttribute](formula/entity.md#entityclearattribute)
 * [entity\attributeFetched](formula/entity.md#entityattributefetched)
 * [entity\addLinkMultipleId](formula/entity.md#entityaddlinkmultipleid)
 * [entity\hasLinkMultipleId](formula/entity.md#entityhaslinkmultipleid)
