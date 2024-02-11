@@ -22,6 +22,7 @@ define('custom:views/fields/address', ['views/fields/address'], function (Dep) {
         detailTemplate: 'custom:fields/address/detail', // omit if you don't need custom template
         editTemplate: 'custom:fields/address/edit', // omit if you don't need custom template
         listTemplate: 'custom:fields/address/list', // omit if you don't need custom template
+        listLinkTemplate: 'custom:fields/address/list-link', // omit if you don't need custom template
   
         setup: function () {
             Dep.prototype.setup.call(this);
