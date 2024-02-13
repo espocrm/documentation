@@ -31,6 +31,8 @@ Prints a backtrace when an exception is occurred. Note that in some cases an exc
 
 If the parameter *sql* is set to true, all executed SQL queries will be printed to the log. Requires *INFO* or *DEBUG* level. Not to be enabled on production.
 
+If *sql* is set to true, and the log level is *NOTICE* or higher, than only failed queries will be logged. As of v8.2.
+
 ## Handlers
 
 *As of v6.1.*
