@@ -101,7 +101,7 @@ The list of parameters along with their default values. This is not a full list 
 
 ### Clean-up
 
-* cleanupJobPeriod – `'10 days'` – cleaning up deleted records;
+* cleanupJobPeriod – `'10 days'` – cleaning up deleted Job records;
 * cleanupActionHistoryPeriod – `'15 days'` – action history records;
 * cleanupAuthTokenPeriod – `'1 month'` – auth tokens;
 * cleanupAuthLogPeriod – `'2 months'` – auth log;
