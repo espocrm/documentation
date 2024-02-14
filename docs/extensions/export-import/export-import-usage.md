@@ -21,6 +21,8 @@ You need to install the Export Import extension on your EspoCRM instance. Downlo
 
 ## Usage
 
+This is the documentation for Export Import v2. For v1 use this [documentation](export-import-usage.md).
+
 This extension works via console (CLI). Commands should be executed from the root directory of your EspoCRM instance.
 
 There are two commands:
@@ -33,34 +35,126 @@ Each can be used with additional options. See examples below.
 #### Export
 
 ```
-bin/command export-import export --format=json --export-path="build/ExportImport/Export" --pretty-print
+bin/command export-import export --format=json --path="./data/export-import"
 ```
 
 #### Import
 
 ```
-bin/command export-import import --format=json --import-path="build/ExportImport/Import" --import-type=createAndUpdate --user-password="pass"
+bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate
 ```
 
-## Avaliable options
+## More usage
 
-#### `--export-path`
+### Export
 
-An export path. The default value is `build/ExportImport/Export`. Example: `--export-path="PATH"`.
+#### Export customization only
 
-#### `--import-path`
+```
+bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config
+```
 
-An import path. The default value is `build/ExportImport/Import`. Example: `--import-path="PATH"`.
+#### Export customization for a single entity along with relationships
 
-#### `--entity-type-list`
+```
+bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
+```
 
-An Entity Type list. If omitted, then all entity types are applied. Example: `--entity-type-list="ENTITY_TYPE1, ENTITY_TYPE2"`
+#### Export customization for a single entity without relationships
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
+```
+
+#### Export data for a single entity along with relationships
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account"
+```
+
+#### Export data for a single entity without relationships
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account" --skip-related-entities
+```
+
+#### Export data without passwords
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --clear-password
+```
+
+### Import
+
+#### Import customization only
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config
+```
+
+#### Import customization for a single entity along with relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
+```
+
+#### Import customization for a single entity without relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
+```
+
+#### Import data for a single entity along with relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account"
+```
+
+#### Import data for a single entity without relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account" --skip-related-entities
+```
+
+## Available options
+
+#### `--path`
+
+An export / import path. The default value is `./data/export-import`. Example: `--path="PATH"`.
+
+#### `--skip-data`
+
+Skip exporting / importing data. By default the data will be exported / imported.
+
+#### `--skip-customization`
+
+Skip exporting / importing all customization made for the instance. By default the customization will be exported / imported.
+
+#### `--skip-config`
+
+Skip exporting / importing configuration data. By default the configuration data will be exported / imported.
+
+#### `--skip-internal-config`
+
+Skip exporting / importing internal configuration data which are stored at `config-internal.php`.
+Use [`--user-password`](#user-password) in order to set a user password since the `passwordSalt` will not be exported / imported.
+
+#### `--entity-list`
+
+A list of Entity Type. If omitted, then all entity types are applied. Example: `--entity-list="ENTITY_TYPE1, ENTITY_TYPE2"`
+
+**Note:**
+- The defined list will be exported / imported only with data of `Many-to-One`, `One-to-One Right`, `Children-to-Parent` relationships.
+- In order to export / import data with `Many-to-Many`, `One-to-Many`, `One-to-One Left`, `Parent-to-Children` relationships, they should be defined in the list additionally.
 
 Supported values:
 
 * a string, e.g. `"Account"`;
-* a string which is separated by a comma, e.g. `"Account, Contact"`;
-* merge with a default list, e.g. `"__APPEND__, Account"`.
+* a string which is separated by a comma, e.g. `"Account, Contact"`.
+
+#### `--skip-related-entities`
+
+Skip exporting / importing data and customization for related entities. This option is used in conjunction with `--entity-list`. By default this option is `off`.
 
 #### `--import-type`
 
@@ -74,92 +168,56 @@ Available values:
 
 #### `--pretty-print`
 
-Store data in pretty print format. The default value is `false`.
+Store data in a pretty print format. By default this option is `off`.
 
-Available values:
+#### `--activate-users`
 
-* `false`
-* `true`
+Activate all imported users. The `Is Active` option will be defined as true.
 
-#### `--user-active`
+#### `--deactivate-users`
 
-A default user status for imported users. This applies to all user except the admin user with an ID `1`. The default value is `false`.
-
-Available values:
-
-* `false`
-* `true`
+Deactivate all imported users. The `Is Active` option will be defined as false.
+In order to keep at least one active user, use `--user-active-list="admin"`.
 
 #### `--user-password`
 
-A user password for imported users. If omitted, then random values a generated. Example: `--user-password="PASSWORD"`.
+A user password for all imported users. Example: `--user-password="PASSWORD"`.
 
 For resetting the password, use `bin/command set-password [username]`.
 
+#### `--clear-password`
+
+Clear all exported / imported passwords. Example: `--clear-password"`.
+Use [`--user-password`](#user-password) in order to set a user password.
+
 #### `--update-currency`
 
-To update all currency fields. This option depends on [`currency`](#currency). If the `currency` option is not defined, the default currency will be used instead. The default value is `false`.
-
-Available values:
-
-* `false`
-* `true`
+To update all currency fields. This option depends on [`currency`](#currency). If the `currency` option is not defined, the default currency will be used instead. By default this option is `off`.
 
 #### `--currency`
 
 Currency symbol. If not defined, the default currency will be used instead. Example: `--currency="USD"`.
 
-#### `--customization`
-
-Export/import all customization made for the instance. The default value is `false`.
-
-Available values:
-
-* `false`
-* `true`
-
-#### `--config`
-
-Enable export / import configuration data. The default value is `false`.
-
-Available values:
-
-* `false`
-* `true`
-
 #### `--update-created-at`
 
-Current time for the createdAt field. The default value is `false`.
+Current time for the createdAt field. By default this option is `off`.
 
-Available values:
+#### `--entity-hard-list`
 
-* `false`
-* `true`
-
-#### `--hard-export-list`
-
-This option allows to export data for an entity which is disabled by default in `exportImportDefs` with the `"exportDisabled": true` option. Example: `--hard-export-list="ENTITY_TYPE"`.
+This option allows to export or import data for entities which are disabled by default in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
 
 Available values:
 
 * `a string`, e.g. `"ScheduledJob"`,
 * `a string which is separated by a comma`, e.g. `"ScheduledJob, ScheduledJobLogRecord"`.
 
-#### `--hard-import-list`
+#### `--config-hard-list`
 
-This option allows to import data for an entity which is disabled by default in `exportImportDefs` with the `"importDisabled": true` option. Example: `--hard-import-list="ENTITY_TYPE"`.
-
-Available values:
-
-* `a string`, e.g. `"ScheduledJob"`,
-* `a string which is separated by a comma`, e.g. `"ScheduledJob, ScheduledJobLogRecord"`.
-
-#### `--config-ignore-list`
-
-Additional ignore list for the config. Ex. `--config-ignore-list="option"`. The default list is defined in `application/Espo/Modules/ExportImport/Resources/metadata/app/exportImport.json`.
+This option allows to export / import data for config options which are disabled by default. Ex. `--config-hard-list="CONFIG_OPTION"`.
+The default list is defined in `application/Espo/Modules/ExportImport/Resources/metadata/app/exportImport.json`.
 
 Available values:
 
-* `a string`, e.g. `"version"`,
-* `a string which is separated by a comma`, e.g. `"version, useCache"`,
-* `merge with a default list`, e.g. `"__APPEND__, useCache"`.
+* `a string`, e.g. `"database"`,
+* `a string which is separated by a comma`, e.g. `"database, siteUrl"`.
+
