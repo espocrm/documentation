@@ -172,7 +172,7 @@ Store data in a pretty print format. By default this option is `off`.
 
 #### `--activate-users`
 
-Activate all imported users. The `Is Active` option will be defined as true.
+Activate all imported users. The `Is Active` option will be defined as `true`.
 
 #### `--deactivate-users`
 
