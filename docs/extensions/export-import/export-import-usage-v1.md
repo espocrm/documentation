@@ -21,6 +21,8 @@ You need to install the Export Import extension on your EspoCRM instance. Downlo
 
 ## Usage
 
+This is outdated documentation which is used for Export Import v1. Follow latest [documentation](export-import-usage.md) to get usage of the latest version of Export Import extension.
+
 This extension works via console (CLI). Commands should be executed from the root directory of your EspoCRM instance.
 
 There are two commands:
