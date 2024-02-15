@@ -193,6 +193,7 @@ The list of parameters along with their default values. This is not a full list 
 ### Misc
 
 * wysiwygCodeEditorDisabled – `false` – disable the Wysiwyg field code editor; as of v8.2;
+* customPrefixDisabled – `false` – disable adding a *c* prefix to custom entity types, fields and links; as of v8.2;
 
 ## Config files
 
