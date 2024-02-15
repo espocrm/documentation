@@ -99,7 +99,7 @@ A developer mode, disables cache.
 
 !!! note
 
-    The developr mode won't work on a release instance. It requires the *frontend* folder from the repository and *client/lib/transpiled* which should contain all JS files separately and transpiled.
+    The developer mode won't work on a release instance. It requires the *frontend* folder from the repository and *client/lib/transpiled* which should contain all JS files separately and transpiled.
 
 You can force using some additional cache in the developer mode. Can be reasonable as the application can run very slow w/o cache.
 
