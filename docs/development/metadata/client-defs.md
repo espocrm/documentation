@@ -157,7 +157,7 @@ Disable the record merge functionality.
 
 A list of primary filters.
 
-Exanmple:
+Example:
 
 ```json
 {
