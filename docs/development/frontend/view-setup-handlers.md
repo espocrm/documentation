@@ -2,7 +2,7 @@
 
 *As of v7.0*
 
-ViewSetupHandlers framework provides the ability to customize existing views w/o extending. Multiple handlers can be attached to the view.
+ViewSetupHandlers framework provides the ability to customize existing views w/o extending. Multiple handlers can be attached to a view.
 
 In clientDefs:
 
