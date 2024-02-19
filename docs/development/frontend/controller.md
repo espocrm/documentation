@@ -61,7 +61,9 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
 
 Clear cache.
 
-If you open in the browser URL `your-espo-url#Account/test/myId` it will execute *actionTest* method. Argument *options* will be the object `{id: 'myId'}`
+If you open in the browser URL `your-espo-url#Account/test/myId` it will execute *actionTest* method. Argument *options* will be the object `{id: 'myId'}`.
+
+Note that it's also possible to specify a specific controller class with `controllerClassName` instead of a scope name `controller`.
 
 ## Rendering view
 
