@@ -22,33 +22,42 @@ Do the following steps.
 
 **3\.** Enable needed APIs.
 
-On the *Dashboard*, click *ENABLE APIS AND SERVICES*.
+From the Navigation menu, click *APIs & Services* > *Enabled APIs & services*.
 
-Use search to find:
+![APIs and Services](../../_static/images/extensions/google-integration/setting-up/3.png)
+
+Then, click *+ ENABLE APIS AND SERVICES*.
+
+![Enable APIs and Services](../../_static/images/extensions/google-integration/setting-up/3a.png)
+
+On the API Library page, use search to find the relevant APIs:
 
 * Google Calendar API (for Calendar sync);
 * People API (for Contacts pushing);
 * Gmail API (for secure connection to Gmail).
 
-Enable those that you need to use in your CRM. Note, that some APIs can be already enabled.
+Enable the APIs that you need to use in your CRM. Note that some APIs can be already enabled.
 
-![Enable API](../../_static/images/extensions/google-integration/setting-up/3.png)
+![Enable API](../../_static/images/extensions/google-integration/setting-up/3b.png)
 
-**4\.** Create credentials.
+**4\.** Configure consent screen.
+
+To create an OAuth client ID, you must first configure your OAuth consent screen. Go to OAuth consent screen and follow the instructions on the page.
+
+![Enable API](../../_static/images/extensions/google-integration/setting-up/4.png)
+
+**5\.** Create credentials.
 
 On the *Credentials* page, click *CREATE CREDENTIALS*, select *OAuth client ID*.
 
-![Credentials](../../_static/images/extensions/google-integration/setting-up/4.png)
+![Credentials](../../_static/images/extensions/google-integration/setting-up/5.png)
 
 Select 'Web application' in *Application type* field. Add your site URL in *Authorized JavaScript origins*. Add *Redirect URI* (copied from EspoCRM integration panel) to *Authorized redirect URIs*.
 
-![Client ID](../../_static/images/extensions/google-integration/setting-up/5.png)
+![Client ID](../../_static/images/extensions/google-integration/setting-up/5a.png)
 
-**5\.** Find *Client ID* and *Client secret*. Copy them to EspoCRM integration panel and save.
+**6\.** Find *Client ID* and *Client secret*. Copy them to EspoCRM integration panel and save.
 
-**6\.** Configure consent screen.
-
-In Google Developers Console, click *Oauth consent screen* on the sidebar. Follow the instructions on the page.
 
 ## Access control
 
