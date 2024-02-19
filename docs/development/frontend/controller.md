@@ -63,7 +63,7 @@ Clear cache.
 
 If you open in the browser URL `your-espo-url#Account/test/myId` it will execute *actionTest* method. Argument *options* will be the object `{id: 'myId'}`.
 
-Note that it's also possible to specify a specific controller class with `controllerClassName` instead of a scope name `controller`.
+Note that it's also possible to specify a specific controller class in `controller` instead of a scope name. As of v8.2.
 
 ## Rendering view
 
