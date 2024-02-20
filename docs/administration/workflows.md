@@ -322,28 +322,22 @@ Available placeholders:
 
 #### Handling HTTP response
 
-*As of v2.6.*
-
-A response body of a sent HTTP request will be stored in the formula variable `_lastHttpResponseBody`. This variable can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
-
-It's also possible to access the last http response body with the function `workflow\lastHttpResponseBody()` (as of v2.8.6).
+A response body of a sent HTTP request will be available in formula with a function `workflow\lastHttpResponseBody()`. It can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
 
 !!! example
 
     A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same workflow rule and specify a formula script:
 
     ```
-    $id = json\retrieve($_lastHttpResponseBody, 'id');
+    $id = json\retrieve(workflow\lastHttpResponseBody(), 'id');
     entity\setAttribute('someIdField', $id);
     ```
 
 !!! note
 
-    Within a BPM process *$_lastHttpResponseBody* variable is available only within the task that contains the Send HTTP Request action. The variable won't be passed further along the process flow.
+    Within a BPM process the last response body is available only within the task that contains the Send HTTP Request action. The variable won't be passed further along the process flow.
 
 ### Execute Formula Script
-
-*As of v2.6.*
 
 Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next workflow actions or BPM process.
 
