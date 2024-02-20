@@ -118,6 +118,10 @@ bin/command export-import import --format=json --path="./data/export-import" --i
 
 ## Available options
 
+#### `--y`
+
+Confirmation of running the import. By default, a prompt will be displayed.
+
 #### `--path`
 
 An export / import path. The default value is `./data/export-import`. Example: `--path="PATH"`.
@@ -151,6 +155,12 @@ Supported values:
 
 * a string, e.g. `"Account"`;
 * a string which is separated by a comma, e.g. `"Account, Contact"`.
+
+#### `--all-customization`
+
+**Note**: This option works along with the `--entity-list` option only.
+
+This option enables exporting / importing all customization, ignoring the `--entity-list` option.
 
 #### `--skip-related-entities`
 
@@ -220,4 +230,3 @@ Available values:
 
 * `a string`, e.g. `"database"`,
 * `a string which is separated by a comma`, e.g. `"database, siteUrl"`.
-
