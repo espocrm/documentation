@@ -44,78 +44,6 @@ bin/command export-import export --format=json --path="./data/export-import"
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate
 ```
 
-## More usage
-
-### Export
-
-#### Export customization only
-
-```
-bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config
-```
-
-#### Export customization for a single entity along with relationships
-
-```
-bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
-```
-
-#### Export customization for a single entity without relationships
-
-```
-bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
-```
-
-#### Export data for a single entity along with relationships
-
-```
-bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account"
-```
-
-#### Export data for a single entity without relationships
-
-```
-bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account" --skip-related-entities
-```
-
-#### Export data without passwords
-
-```
-bin/command export-import export --format=json --path="./data/export-import" --clear-password
-```
-
-### Import
-
-#### Import customization only
-
-```
-bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config
-```
-
-#### Import customization for a single entity along with relationships
-
-```
-bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
-```
-
-#### Import customization for a single entity without relationships
-
-```
-bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
-```
-
-#### Import data for a single entity along with relationships
-
-```
-bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account"
-```
-
-#### Import data for a single entity without relationships
-
-```
-bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account" --skip-related-entities
-```
-
 ## Available options
 
 #### `--y`
@@ -148,8 +76,9 @@ Use [`--user-password`](#user-password) in order to set a user password since th
 A list of Entity Type. If omitted, then all entity types are applied. Example: `--entity-list="ENTITY_TYPE1, ENTITY_TYPE2"`
 
 **Note:**
+- For advanced users only.
 - The defined list will be exported / imported only with data of `Many-to-One`, `One-to-One Right`, `Children-to-Parent` relationships.
-- In order to export / import data with `Many-to-Many`, `One-to-Many`, `One-to-One Left`, `Parent-to-Children` relationships, they should be defined in the list additionally.
+- The `Many-to-Many`, `One-to-Many`, `One-to-One Left`, `Parent-to-Children` relationships for related entities should be defined in the list additionally.
 
 Supported values:
 
@@ -230,3 +159,75 @@ Available values:
 
 * `a string`, e.g. `"database"`,
 * `a string which is separated by a comma`, e.g. `"database, siteUrl"`.
+
+## More usage
+
+### Export
+
+#### Export customization only
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config
+```
+
+#### Export customization for a single entity along with relationships
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
+```
+
+#### Export customization for a single entity without relationships
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
+```
+
+#### Export data for a single entity along with relationships
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account"
+```
+
+#### Export data for a single entity without relationships
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account" --skip-related-entities
+```
+
+#### Export data without passwords
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --clear-password
+```
+
+### Import
+
+#### Import customization only
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config
+```
+
+#### Import customization for a single entity along with relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
+```
+
+#### Import customization for a single entity without relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
+```
+
+#### Import data for a single entity along with relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account"
+```
+
+#### Import data for a single entity without relationships
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account" --skip-related-entities
+```
