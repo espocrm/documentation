@@ -73,12 +73,13 @@ Use [`--user-password`](#user-password) in order to set a user password since th
 
 #### `--entity-list`
 
-A list of Entity Type. If omitted, then all entity types are applied. Example: `--entity-list="ENTITY_TYPE1, ENTITY_TYPE2"`
-
 **Note:**
+
 - For advanced users only.
 - The defined list will be exported / imported only with data of `Many-to-One`, `One-to-One Right`, `Children-to-Parent` relationships.
 - The `Many-to-Many`, `One-to-Many`, `One-to-One Left`, `Parent-to-Children` relationships for related entities should be defined in the list additionally.
+
+A list of Entity Type. If omitted, then all entity types are applied. Example: `--entity-list="ENTITY_TYPE1, ENTITY_TYPE2"`
 
 Supported values:
 
