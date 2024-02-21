@@ -112,9 +112,9 @@ The list of out-of-the-box signals that are broadcasted in the system.
 * `@create` – record created;
 * `@update` – record updated;
 * `@delete` – record removed;
-* `@relate.LINK_NAME` – record related with another record (only for *many-to-many*);
+* `@relate.LINK_NAME` – record related with another record (only for *many-to-many*); the foreign ID is passed in an `id` parameter;
 * `@relate.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*);
-* `@unrelate.LINK_NAME` – record unrelated from another record (only for *many-to-many*);
+* `@unrelate.LINK_NAME` – record unrelated from another record (only for *many-to-many*); the foreign ID is passed in an `id` parameter;
 * `@unrelate.LINK_NAME.FOREIGN_ID`
 
 #### Contacts/Leads:
@@ -133,10 +133,16 @@ The list of out-of-the-box signals that are broadcasted in the system.
 
 #### Meetings/Calls/Events
 
-* `@eventAccepted.ENTITY_TYPE` – an attendee accepted the event (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
-* `@eventTentative.ENTITY_TYPE` – an attendee set a tentative acceptance status;
-* `@eventDeclined.ENTITY_TYPE` – an attendee declined the event;
-* `@eventAcceptedTentative.ENTITY_TYPE` – an attendee accepted the event or set as tentative (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13);
+* `@eventAccepted.ENTITY_TYPE` – an attendee accepted the event (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13); the foreign ID is passed in an `id` parameter;
+* `@eventTentative.ENTITY_TYPE` – an attendee set a tentative acceptance status; the foreign ID is passed in an `id` parameter;
+* `@eventDeclined.ENTITY_TYPE` – an attendee declined the event; the foreign ID is passed in an `id` parameter;
+* `@eventAcceptedTentative.ENTITY_TYPE` – an attendee accepted the event or set as tentative (ENTITY_TYPE can be *Contact*, *Lead*, *User*; as of v3.0.13); the foreign ID is passed in an `id` parameter;
+
+### Signal parameters
+
+*As of v3.2.0.*
+
+Some object signal are passed with additional parameters. These parameters can be accessed with a formula function `workflow\\signalParam('parameterName')`.
 
 ## Naming clarification
 
