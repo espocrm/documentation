@@ -216,6 +216,7 @@ Style:
 * `text-info`
 * `text-bold`
 * `text-italic` (as of v8.0)
+* `text-strikethrough` (as of v8.2)
 
 Size:
 
