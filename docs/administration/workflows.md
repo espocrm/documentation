@@ -371,6 +371,12 @@ Returns a previous attribute value of the target entity (before the workflow was
 
 Triggers another workflow rule.
 
+#### workflow\signalParam
+
+`workflow\signalParam(PARAM)`
+
+Get a signal param.
+
 ## See also
 
 * [Birthday notifications in EspoCRM](https://www.espocrm.com/blog/birthday-notifications-in-espocrm/)
