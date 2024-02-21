@@ -140,7 +140,7 @@ The list of out-of-the-box signals that are broadcasted in the system.
 
 ### Signal parameters
 
-*As of v3.2.0.*
+*As of v3.2.*
 
 Some object signal are passed with additional parameters. These parameters can be accessed with a formula function `workflow\\signalParam('parameterName')`.
 
