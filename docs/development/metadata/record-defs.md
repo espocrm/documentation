@@ -140,11 +140,29 @@ An array of hooks (applied for API calls). Should implement the `Espo\Core\Recor
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface. As of v8.1, can also implement `Espo\Core\Record\Hook\SaveHook`.
 
+## afterCreateHookClassNameList
+
+*As of v8.2.*
+
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` or `Espo\Core\Record\Hook\SaveHook`.
+
 ## beforeUpdateHookClassNameList
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` interface. As of v8.1, can also implement `Espo\Core\Record\Hook\SaveHook`.
 
+## afterUpdateHookClassNameList
+
+*As of v8.2.*
+
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` or `Espo\Core\Record\Hook\SaveHook`.
+
 ## beforeDeleteHookClassNameList
+
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\DeleteHook` interface.
+
+## afterDeleteHookClassNameList
+
+*As of v8.2.*
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\DeleteHook` interface.
 
