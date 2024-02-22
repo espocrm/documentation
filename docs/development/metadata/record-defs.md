@@ -127,6 +127,7 @@ Example:
             "linkRequiredAccess": "edit",
             "linkRequiredForeignAccess": "read",
             "linkForeignAccessCheckDisabled": false
+            "mandatoryAttributeList": ["number"]
         }
     }
 }
@@ -134,11 +135,12 @@ Example:
 
 Parameters:
 
-* selectAccessControlDisabled – disable access control when listing related records; only access to a parent record will be checked (as of v8.0);
+* selectAccessControlDisabled – disable access control when listing related records; only access to a parent record will be checked; as of v8.0;
 * linkRequiredAccess – access to a current record that is needed to be able to link and unlink records (`create`, `read`, `edit`, `delete`, `stream`); applied only in the back-end, for the front-end specify clientDefes > {EntityType} > relationshipPanels > {link} > selectRequiredAccess (*edit* by default);
 * linkRequiredForeignAccess – access to a foreign record that is needed to be able to link and unlink (*edit* by default);
-* linkForeignAccessCheckDisabled – disable foreign record access check when linking (as of v7.4);
-* linkCheckDisabled – disable a link-check functionality linking when through link-multiple field (as of v7.4.4).
+* linkForeignAccessCheckDisabled – disable foreign record access check when linking; as of v7.4;
+* linkCheckDisabled – disable a link-check functionality linking when through link-multiple fieldl; as of v7.4.4;
+* mandatoryAttributeList – *string[]* – mandatory attributes to be selected when find related; as of v8.2;
 
 ## beforeReadHookClassNameList
 
