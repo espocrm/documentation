@@ -98,6 +98,14 @@ Disable mass actions in the back-end.
 
 To disable export regardless ACL.
 
+## actionHistoryDisabled
+
+*bool*
+
+*As of v8.2.*
+
+Disable Action History processing.
+
 ## updateDuplicateCheck
 
 *bool*
