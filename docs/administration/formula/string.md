@@ -211,7 +211,7 @@ Replaces all occurrences of SEARCH with REPLACE in STRING.
 
 !!! note
 
-    The REPLACE parameter mush be a string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
+    The REPLACE parameter must be a string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
 
 
 ## string\split
