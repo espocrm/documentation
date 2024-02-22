@@ -26,15 +26,6 @@ Main methods of the Record service class:
 * findLinked – get a list of related entities, used by relationship panels
 * loadAdditionalFields – to load additional fields for an entity before returning it, for detail view
 
-Hook-methods:
-
-* beforeCreateEntity
-* afterCreateEntity
-* beforeUpdateEntity
-* afterUpdateEntity
-* beforeDeleteEntity
-* afterDeleteEntity
-
 ### Accessing record service
 
 Record services can be accessed from the record service container `Espo\Core\Record\ServiceContainer`.
