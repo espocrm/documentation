@@ -38,7 +38,7 @@ Each can be used with additional options. See examples below.
 bin/command export-import export --format=json --path="./data/export-import"
 ```
 
-#### Import
+##### Import
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate
@@ -171,13 +171,13 @@ bin/command export-import export --format=json --path="./data/export-import" --c
 
 ### Customization only
 
-#### Export
+##### Export
 
 ```
 bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config
 ```
 
-#### Import
+##### Import
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config
@@ -185,13 +185,13 @@ bin/command export-import import --format=json --path="./data/export-import" --s
 
 ### Customization for a single entity along with relationships
 
-#### Export
+##### Export
 
 ```
 bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
 ```
 
-#### Import
+##### Import
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account"
@@ -199,13 +199,13 @@ bin/command export-import import --format=json --path="./data/export-import" --s
 
 ### Customization for a single entity without relationships
 
-#### Export
+##### Export
 
 ```
 bin/command export-import export --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
 ```
 
-#### Import
+##### Import
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --skip-data --skip-config --entity-list="Account" --skip-related-entities
@@ -213,13 +213,13 @@ bin/command export-import import --format=json --path="./data/export-import" --s
 
 ### Data, configuration, customization for a single entity along with relationships
 
-#### Export
+##### Export
 
 ```
 bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account"
 ```
 
-#### Import
+##### Import
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account"
@@ -227,13 +227,13 @@ bin/command export-import import --format=json --path="./data/export-import" --i
 
 ### Data, configuration, customization for a single entity without relationships
 
-#### Export
+##### Export
 
 ```
 bin/command export-import export --format=json --path="./data/export-import" --entity-list="Account" --skip-related-entities
 ```
 
-#### Import
+##### Import
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account" --skip-related-entities
