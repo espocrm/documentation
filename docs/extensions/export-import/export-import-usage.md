@@ -38,7 +38,7 @@ Each can be used with additional options. See examples below.
 bin/command export-import export --format=json --path="./data/export-import"
 ```
 
-##### Import
+#### Import
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate
