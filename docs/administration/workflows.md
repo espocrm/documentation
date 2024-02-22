@@ -165,7 +165,7 @@ System will send an email using a specified email template. A recipient’s emai
 
 If you specify *From* address with the address of an existing Group Email Account, then SMTP parameters of that account will be used for sending.
 
-It's possible to use the **opt-out** link in an email body.
+It's possible to add an **opt-out** link to an email body.
 
 ### Create Record
 
