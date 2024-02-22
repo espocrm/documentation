@@ -112,13 +112,21 @@ Disable Action History processing.
 
 A boolean parameter. If true, then duplicate checking will be processed while updating a record. By default, it's processed only when creating a new record.
 
+## forceSelectAllAttributes
+
+*bool*
+
+*As of v8.2.*
+
+To select all attributes when calling find.
+
 ## mandatoryAttributeList
 
 *string[]*
 
 *As of v8.2.*
 
-Attributes to select when calling find records.
+Attributes to select when calling find.
 
 ## relationships
 
