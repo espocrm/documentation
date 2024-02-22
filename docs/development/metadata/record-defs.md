@@ -157,6 +157,7 @@ Parameters:
 * linkForeignAccessCheckDisabled – disable foreign record access check when linking; as of v7.4;
 * linkCheckDisabled – disable a link-check functionality linking when through link-multiple fieldl; as of v7.4.4;
 * mandatoryAttributeList – *string[]* – mandatory attributes to be selected when find related; as of v8.2;
+* countDisabled – bool – disable total count; as of 8.2;
 
 ## beforeReadHookClassNameList
 
