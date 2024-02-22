@@ -37,32 +37,33 @@ services:
       - ./letsencrypt:/letsencrypt                       # volume for certificates (TLS)
       - /var/run/docker.sock:/var/run/docker.sock:ro     # volume for Docker admin
 
-  mysql:
-    image: mysql:latest
-    container_name: mysql
-    command: --default-authentication-plugin=mysql_native_password
+  espocrm-db:
+    image: mariadb:latest
+    container_name: espocrm-db
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: espocrm
-      MYSQL_USER: espouser
-      MYSQL_PASSWORD: database_password
+      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_DATABASE: espocrm
+      MARIADB_USER: espocrm
+      MARIADB_PASSWORD: database_password
     volumes:
-      - ./mysql:/var/lib/mysql
+      - espocrm-db:/var/lib/mysql
     restart: always
 
   espocrm:
-    image: espocrm/espocrm:latest
+    image: espocrm/espocrm
     container_name: espocrm
     environment:
-      ESPOCRM_DATABASE_HOST: mysql
-      ESPOCRM_DATABASE_USER: espouser
+      ESPOCRM_DATABASE_HOST: espocrm-db
+      ESPOCRM_DATABASE_USER: espocrm
       ESPOCRM_DATABASE_PASSWORD: database_password
       ESPOCRM_ADMIN_USERNAME: admin
       ESPOCRM_ADMIN_PASSWORD: password
-      ESPOCRM_SITE_URL: "https://your_domain.com"
+     ESPOCRM_SITE_URL: "https://your_domain.com"
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     restart: always
+    depends_on:
+      - espocrm-db
     labels:
       - traefik.enable=true                                           
       - traefik.http.routers.espocrm-app.rule=Host(`your_domain.com`)
@@ -71,15 +72,17 @@ services:
       - traefik.http.routers.espocrm-app.tls.certresolver=esporesolver
 
   espocrm-daemon:
-    image: espocrm/espocrm:latest
+    image: espocrm/espocrm
     container_name: espocrm-daemon
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     restart: always
+    depends_on:
+      - espocrm
     entrypoint: docker-daemon.sh
 
   espocrm-websocket:
-    image: espocrm/espocrm:latest
+    image: espocrm/espocrm
     container_name: espocrm-websocket
     environment:
      ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
@@ -87,8 +90,10 @@ services:
      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     restart: always
+    depends_on:
+      - espocrm
     entrypoint: docker-websocket.sh
     labels:
       - traefik.enable=true
@@ -98,8 +103,8 @@ services:
       - traefik.http.routers.espocrm-ws.tls.certresolver=esporesolver
 
 volumes:
-  mysql:
   espocrm:
+  espocrm-db:
 ```
 
 Let's take a closer look at the commands of the Traefik container:
