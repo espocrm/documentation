@@ -144,3 +144,11 @@ bin/command update-app-timestamp
 ```
 
 Updates the app timestamp to the current time. When an Espo instance is updated or an extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, e.g. when writing custom JS.
+
+## Rebuild category paths
+
+```
+bin/command rebuild-category-paths {EntityType}
+```
+
+Rebuilds category paths. E.g. for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
