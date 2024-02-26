@@ -575,6 +575,12 @@ Row actions.
 
 Re-fetch records when the parent model is saved or refreshed by WebSocket.
 
+### massSelect
+
+*bool*
+
+Enables mass select.
+
 ## additionalLayouts
 
 Additional layouts for a scope.
