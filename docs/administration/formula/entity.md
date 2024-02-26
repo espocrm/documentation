@@ -79,7 +79,7 @@ Clear an ATTRIBUTE.
 
 !!! example
 
-    `entity\cleaAttribute('stage')`
+    `entity\clearAttribute('stage')`
 
 ## entity\attributeFetched
 
