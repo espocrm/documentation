@@ -128,6 +128,14 @@ To select all attributes when calling find.
 
 Attributes to select when calling find.
 
+## duplicateLinkList
+
+*string[]*
+
+*As of v8.2.*
+
+Links to be copied when duplicating a record. As of v8.2.
+
 ## relationships
 
 *As of v7.3.*
