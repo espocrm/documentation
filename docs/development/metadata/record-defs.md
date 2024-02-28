@@ -10,7 +10,7 @@ Must implement `Espo\Core\Duplicate\WhereBuilder` interface.
 
 ## defaultsPopulatorClassName
 
-*class-string<Espo\Core\Record\Create\DefaultsPopulator\>*
+*class-string<Espo\Core\Record\Defaults\Populator\>*
 
 *As of v8.2.*
 
