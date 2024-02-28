@@ -8,6 +8,14 @@ A class for building a where clause for duplicate checking.
 
 Must implement `Espo\Core\Duplicate\WhereBuilder` interface.
 
+## defaultsPopulatorClassName
+
+*class-string<Espo\Core\Record\Create\DefaultsPopulator\>*
+
+*As of v8.2.*
+
+Populates default values when creating a record.
+
 ## readLoaderClassNameList
 
 Array of classes to load additional fields for an entity.
