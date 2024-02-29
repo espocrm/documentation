@@ -176,6 +176,22 @@ Parameters:
 * countDisabled – bool – disable total count; as of 8.2;
 * massLink – bool – allows mass linking; as of 8.2;
 
+## createInputFilterClassNameList
+
+*class-string<Espo\Core\Record\Input\Filter\>[]*
+
+*As of v8.2.*
+
+Create input filters.
+
+## updateInputFilterClassNameList
+
+*class-string<Espo\Core\Record\Input\Filter\>[]*
+
+*As of v8.2.*
+
+Update input filters.
+
 ## beforeReadHookClassNameList
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
