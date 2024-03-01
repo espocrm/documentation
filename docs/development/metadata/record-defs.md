@@ -233,3 +233,15 @@ An array of hooks (applied for API calls).  Should implement the `Espo\Core\Reco
 ## beforeUnlinkHookClassNameList
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
+
+## afterLinkHookClassNameList
+
+*As of v8.2.*
+
+An array of hooks (applied for API calls).  Should implement the `Espo\Core\Record\Hook\LinkHook` interface.
+
+## afterUnlinkHookClassNameList
+
+*As of v8.2.*
+
+An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
