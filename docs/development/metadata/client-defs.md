@@ -581,6 +581,12 @@ Re-fetch records when the parent model is saved or refreshed by WebSocket.
 
 Enables mass select.
 
+### createAttributeMap
+
+*Object.<strring, string\>*
+
+Attributes to carry over to a related record when creating. Mapping Parent => Related.
+
 ## additionalLayouts
 
 Additional layouts for a scope.
