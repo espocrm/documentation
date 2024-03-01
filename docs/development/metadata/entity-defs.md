@@ -128,6 +128,14 @@ See more about [field validation](fields.md#validationlist).
 
 A list of additional validators. Should implement `Espo\Core\FieldValidation\Validator` interface.
 
+### forceValidation
+
+*boolean*
+
+*As of v8.2.*
+
+Always to perform validation, regardless whether field values are sent.
+
 ### validationList[]
 
 *string*
