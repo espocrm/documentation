@@ -658,3 +658,19 @@ Enables optimistic concurrency control for the entity type.
 *boolean*
 
 To skip database table creation for the entity type.
+
+## repositoryClassName
+
+*class-string<Espo\ORM\Repository\Repositroy\>*
+
+*As of v8.2.*
+
+A repository.
+
+## entityClassName
+
+*class-string<Espo\ORM\Entity\>*
+
+*As of v8.2.*
+
+An entity. Usually should extend `Espo\Core\ORM\Entity`.
