@@ -192,6 +192,14 @@ Create input filters.
 
 Update input filters.
 
+## outputFilterClassNameList
+
+*class-string<Espo\Core\Record\Output\Filter\>[]*
+
+*As of v8.2.*
+
+Output filters.
+
 ## beforeReadHookClassNameList
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
