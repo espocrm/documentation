@@ -659,6 +659,14 @@ Enables optimistic concurrency control for the entity type.
 
 To skip database table creation for the entity type.
 
+## hooksDisabled
+
+*boolean*
+
+*As of v8.2.*
+
+Disable hooks.
+
 ## repositoryClassName
 
 *class-string<Espo\ORM\Repository\Repositroy\>*
