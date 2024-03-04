@@ -172,6 +172,10 @@ Example:
         {
             "name": "someFilter",
             "accessDataList": []
+        },
+        {
+            "name": "notAvailableOnListViewFilter",
+            "aux": true
         }
     ]
 }
