@@ -34,12 +34,12 @@ The list of parameters along with their default values. This is not a full list 
 
 * siteUrl – URL of EspoCRM instance;
 * useCache – `true`;
-* isDeveloperMode – `false` – toggle developer mode;
+* isDeveloperMode – `false` – enables developer mode; not to be used on instances installed from a package, only when Espo is run from a repository;
 * useCacheInDeveloperMode – `false` – to use front-end cache in developer mode; front-end is not cached by default in developer mode;
 * maintenanceMode – `false` – only administrators will have access to the system;
 * disableCron – `false`;
 * useWebSocket – `false`;
-* restrictedMode – `false` – disables for admin users: upgrade via UI, extension management, changing specific config parameters;
+* restrictedMode – `false` – disables for admin users: upgrade via the UI, extension management, changing specific config parameters;
 * ajaxTimeout – `60000` – timeout for ajax requests (in milliseconds);
 * language – system language;
 * timeZone – system timezone;
