@@ -12,7 +12,9 @@ It's possible to see what permissions are applied to a certain user by clicking 
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
-Note: By default, users can **delete self-assigned records** that they have created during a specific period of time. It is possible to disable this ability at Administration > Settings > Allow to remove created records.
+!!! note
+
+    By default, users can **delete self-assigned records** that they have created during a specific period of time. It is possible to disable this ability at Administration > Settings > Allow to remove created records.
 
 ## Permissions by default
 
