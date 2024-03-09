@@ -119,6 +119,15 @@ Activate all imported users. The `Is Active` option will be defined as `true`.
 Deactivate all imported users. The `Is Active` option will be defined as false.
 In order to keep at least one active user, use `--user-active-list="admin"`.
 
+#### `--user-active-list`
+
+Define a list of active users. The value can be a list of `ID` or `User Name`. Other users will be deactivated. Example: `--user-active-list="admin"`.
+
+Available values:
+
+* `a string`, e.g. `"admin"`,
+* `a string which is separated by a comma`, e.g. `"admin, user2"`.
+
 #### `--user-password`
 
 A user password for all imported users. Example: `--user-password="PASSWORD"`.
