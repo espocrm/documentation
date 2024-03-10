@@ -134,7 +134,7 @@ More about *Installation Enviroments* you can find [here](#installation-environm
 4\. Build EspoCRM project from directory.
 
 ```
-$ docker compose up -d
+$ docker-compose up -d
 ```
 
 5\. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open http://localhost:8080 in a web browser.
