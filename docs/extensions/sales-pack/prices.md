@@ -5,6 +5,11 @@ Product prices can be determined by:
 * price values in a Product record;
 * Price Books.
 
+In this article:
+
+* [Price Books](price-books.md)
+* [Supplier Prices](supplier-prices.md)
+
 ## Price Books
 
 *As of Sales Pack v2.0.*
