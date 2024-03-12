@@ -7,8 +7,8 @@ Product prices can be determined by:
 
 In this article:
 
-* [Price Books](price-books.md)
-* [Supplier Prices](supplier-prices.md)
+* [Price Books](#price-books)
+* [Supplier Prices](#supplier-prices)
 
 ## Price Books
 
