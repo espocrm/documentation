@@ -118,7 +118,7 @@ Negation of IS_NULL.
 
 Check whether a value is within a set of values.
 
-E.g. `IN:(stage, 'Closed Won', 'Closed Lost')` will give true is stage is 'Closed Won' or 'Closed Lost'.
+E.g. `IN:(stage, 'Closed Won', 'Closed Lost')` will return true if stage is 'Closed Won' or 'Closed Lost'.
 
 #### NOT_IN
 
