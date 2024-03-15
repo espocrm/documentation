@@ -1,6 +1,6 @@
 # Prices
 
-Product prices can be determined by:
+Product sales prices can be determined by:
 
 * price values in a Product record;
 * Price Books.
