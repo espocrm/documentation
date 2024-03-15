@@ -45,7 +45,7 @@ If there's no supplier price found for a product, the *Cost Price* of the produc
 
 ## Import
 
-It's possible to import Product Prices from a CSV file using the basic [Import tool](../administration/import.md). To import into a specific Price Book, select that Price Book as a default field value on the second step of the Import.
+It's possible to import Product Prices from a CSV file using the basic [Import tool](../../administration/import.md). To import into a specific Price Book, select that Price Book as a default field value on the second step of the Import.
 
 Each CSV row must be associated with a corresponding Product record. It can be:
 
