@@ -33,12 +33,13 @@ When a product is added to an order and there's no price found in a related Pric
 
 When a user changes the quantity of an order line, the system will look up the new unit price for that quantity. If there's such, it will prompt the user to apply the new unit price. The user can reject and leave the previous price.
 
-
 ### Rules
 
 *As of Sales Pack v2.2.*
 
 Price Rules can be added to a specific Price Book. One Rule can modify the base price for multiple Products. It's possible to add or subtract a percentage of the price, apply rounding, add or subtract a specific amount.
+
+![Rule](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/extensions/sales-pack/price-rule.png)
 
 
 #### Target
