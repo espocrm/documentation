@@ -9,6 +9,7 @@ In this article:
 
 * [Price Books](#price-books)
 * [Supplier Prices](#supplier-prices)
+* [Import](#import)
 
 ## Price Books
 
@@ -41,3 +42,15 @@ A *Supplier* record can have prices for specific products. These prices are used
 A Supplier record can contain different prices for a single product: actual for a specific date period or quantity.
 
 If there's no supplier price found for a product, the *Cost Price* of the product will be used instead.
+
+## Import
+
+It's possible to import Product Prices from a CSV file using the basic [Import tool](../administration/import.md). To import into a specific Price Book, select that Price Book as a default field value on the second step of the Import.
+
+Each CSV row must be associated with a corresponding Product record. It can be:
+
+* The *Name* of the Product;
+* The *Part Number* of the Product (as of v8.2).
+
+In the similar fashion, it's possible to import Supplier Prices.
+
