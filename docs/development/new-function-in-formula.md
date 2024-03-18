@@ -26,7 +26,7 @@ class MyContains implements Func
         $needle = $arguments[1];
 
         if (count($args) > 2) {
-            $offset = $this->evaluate($arguments[2]);
+            $offset = $arguments[2];
             
             return strpos($haystack, $needle, $offset) !== false;
         }
