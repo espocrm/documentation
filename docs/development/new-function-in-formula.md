@@ -14,7 +14,7 @@ use Espo\Core\Formula\EvaluatedArgumentList;
 
 class MyContains implements Func
 {
-    public function __construct(/** pass needed dependencies */) {}
+    public function __construct(/* pass needed dependencies */) {}
 
     public function process(EvaluatedArgumentList $arguments): mixed
     {
