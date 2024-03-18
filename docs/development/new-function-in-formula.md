@@ -8,32 +8,29 @@ Create a file `custom/Espo/Custom/FormulaFunctions/MyContains.php` with the code
 <?php
 namespace Espo\Custom\FormulaFunctions;
 
-use Espo\Core\Formula\Functions\BaseFunction;
-use Espo\Core\Formula\ArgumentList;
+use Espo\Core\Formula\Exceptions\TooFewArguments;
+use Espo\Core\Formula\Func;
+use Espo\Core\Formula\EvaluatedArgumentList;
 
-class MyContains extends BaseFunction
+class MyContains implements Func
 {
-    public function process(ArgumentList $args)
+    public function __construct(/** pass needed dependencies */) {}
+
+    public function process(EvaluatedArgumentList $arguments): mixed
     {
-        if (count($args) < 2) {
-            $this->throwTooFewArguments();
+        if (count($arguments) < 2) {
+            throw TooFewArguments::create(1);
         }
 
-        $haystack = $this->evaluate($args[0]);
-        $needle =  $this->evaluate($args[1]);
+        $haystack = $arguments[0];
+        $needle = $arguments[1];
 
         if (count($args) > 2) {
-            $offset = $this->evaluate($args[2]);
+            $offset = $this->evaluate($arguments[2]);
             
             return strpos($haystack, $needle, $offset) !== false;
         }
-        
-        // target entity:
-        // $this->entity
-        
-        // variables:
-        // $this->variables
-        
+                
         return strpos($haystack, $needle) !== false;
     }
 }
@@ -58,8 +55,3 @@ Create a file `custom/Espo/Custom/Resources/metadata/app/formula.json` and add t
 
 Clear cache.
 
-## Func interface
-
-*As of v7.4.*
-
-Instead of extending *BaseFunction*, you can implement `Espo\Core\Formula\Func` interface. This allows to inject any dependency to the function class via the constructor. Values passed to the *process* method are already evaluated.
