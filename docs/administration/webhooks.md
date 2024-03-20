@@ -145,10 +145,10 @@ Can be set manually in `data/config.php`.
 * *webhookMaxAttemptNumber* = 4
 * *webhookFailAttemptPeriod* = '10 minutes'
 * *webhookConnectTimeout* = 5 (seconds)
- * *webhookTimeout* = 10 (seconds)
+* *webhookTimeout* = 10 (seconds)
 
 ## Debugging
 
-Queues are stored in two database tables: `webhook_queue_item` and `webhook_event_queue_item`.
+Queues are stored in two database tables: `webhook_queue_item` and `webhook_event_queue_item`. Webhook Queue Items are avaliabe from the UI at Administration > Webhooks > menu in the top-right corner > Webhook Queue Items.
 
 You can enable [debug mode](troubleshooting.md#debug-mode) to see more details in the log.
