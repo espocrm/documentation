@@ -38,6 +38,7 @@ API functions:
 * [CurrencyRate](api/currency-rate.md)
 * [Attachment](api/attachment.md)
 * [I18n](api/i18n.md)
+* [Metadata](api/metadata.md)
 * [Account](api/account.md)
 
 See also:
