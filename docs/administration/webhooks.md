@@ -25,7 +25,7 @@ Webhooks can be created only by API Users (via API request) and Administrators. 
 }
 ```
 
-Webhook ID (*id*), secret key (*secretKey*) will be sent back in a response.
+A Webhook ID (*id*) and a secret key (*secretKey*) will be sent back in a response.
 
 
 ### Deleting request
