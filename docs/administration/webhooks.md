@@ -67,7 +67,7 @@ Triggered when a record is removed.
 
 Example: `Account.delete`
 
-### *ENTITY_TYPE.fieldUpdate.FIELD*
+### ENTITY_TYPE.fieldUpdate.FIELD
 
 Triggered when a specific field is updated. New field attributes will be sent in payload.
 
