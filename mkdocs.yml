@@ -329,6 +329,7 @@ nav:
             - 'CurrencyRate': 'development/api/currency-rate.md'
             - 'Attachment': 'development/api/attachment.md'
             - 'I18n': 'development/api/i18n.md'
+            - 'Metadata': 'development/api/metadata.md'
             - 'Account': 'development/api/account.md'
           - 'Misc':
             - 'Search parameters': 'development/api-search-params.md'
