@@ -32,13 +32,6 @@ A Webhook ID (*id*) and a secret key (*secretKey*) will be sent back in a respon
 
 `DELETE api/v1/Webhook/WEBHOOK_ID`
 
-```json
-{
-    "event": "EVENT",
-    "url": "URL"
-}
-```
-
 ### Administration
 
 Administrator can manage webhooks at Administration > Webhooks. It's possible to remove, edit or create webhooks there.
