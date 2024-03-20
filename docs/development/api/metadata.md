@@ -4,7 +4,7 @@
 
 `GET Metadata`
 
-Returns application metadata. Note that not all metadata is available to read from outside, some data is stripped from the result.
+Returns application metadata. Note that not all metadata is available to be read from outside, some data is stripped from the result.
 
 Query params:
 
