@@ -20,12 +20,9 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
     API client implementations (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
 
-It's recommended to create a **separate API user** with specific permissions (roles) and use this user for API calls. You can have multiple API users for different purposes, give each user specific permissions.
-
-See in [tutorial](api-tutorial.md) **how to get started**.
-
 In this article:
 
+* [Setting up][#setting-up]
 * [Client implementations](#client-implementations)
 * [Authentication](#authentication)
 * [Error codes](#error-codes)
@@ -54,6 +51,14 @@ See also:
 * [Rust](api-client-rust.md)
 * [Java](api-client-java.md)
 * [Go](api-client-go.md)
+
+## Setting up
+
+It's recommended to create a separate **API User** with specific permissions (defined by Roles) and use this user for API calls. You can have multiple API Users for different purposes, give each user specific permissions.
+
+See in the [tutorial](api-tutorial.md) **how to get started**.
+
+Client imlementations require specifying the Site URL. It's an URL that you open in the browser to use EspoCRM.
 
 ## Authentication
 
