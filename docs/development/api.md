@@ -22,7 +22,7 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
 In this article:
 
-* [Setting up][#setting-up]
+* [Setting up](#setting-up)
 * [Client implementations](#client-implementations)
 * [Authentication](#authentication)
 * [Error codes](#error-codes)
