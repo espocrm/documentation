@@ -14,6 +14,8 @@
 * `Ctrl + <` – previous primary filter;
 * `Ctrl + >` – next primary filter;
 * `Ctrl + Middle-Click` – quick view (when applied on a record link);
+* `Ctrl + Arrow Left` – previous page;
+* `Ctrl + Arrow Right` – next page;
 
 !!! note "Tip"
 
