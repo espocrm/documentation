@@ -2,6 +2,7 @@
 
 * [number\format](#numberformat)
 * [number\abs](#numberabs)
+* [number\power](#numberpower)
 * [number\round](#numberround)
 * [number\floor](#numberfloor)
 * [number\ceil](#numberceil)
@@ -29,6 +30,12 @@ Converts numeric VALUE into string formatted according to a specific format or d
 `number\abs(VALUE)`
 
 Absolute value. Returns null if VALUE is not numeric.
+
+## number\power
+
+`number\power(VALUE, EXP)`
+
+Raising VALUE to EXP. VALUE and EXP should be int or float. Returns int or float. 
 
 ## number\round
 
