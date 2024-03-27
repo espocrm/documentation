@@ -35,7 +35,7 @@ Absolute value. Returns null if VALUE is not numeric.
 
 `number\power(VALUE, EXP)`
 
-Raising VALUE to EXP. VALUE and EXP should be int or float. Returns int or float. 
+Raising VALUE to EXP. VALUE and EXP should be int or float. Returns int or float. (as of v8.2)
 
 ## number\round
 
