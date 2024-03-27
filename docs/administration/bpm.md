@@ -68,6 +68,8 @@ The execution of the process is visualized with colors highlighting flow nodes:
 
 **Only one Process** for the same target record and Flowchart can be active **at the same time**. It means that if you have multiple Start Events, once one of them is triggered (the process is started), other Start Events will be ignored while the Process is active. 
 
+Usually Processes start their execution flow from a Start Event (green colored circle). One Process Flowchart can have multiple Start Events.
+
 ### Manipulating
 
 A Process can be **stopped manually** by a user who has 'edit' access to the Process. You can do it from the dropdown menu next to the *Edit* button.
