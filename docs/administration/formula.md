@@ -242,6 +242,7 @@ Out-of-the-box functions are listed below.
 
 * [number\format](formula/number.md#numberformat)
 * [number\abs](formula/number.md#numberabs)
+* [number\power](formula/number.md#numberpower)
 * [number\round](formula/number.md#numberround)
 * [number\floor](formula/number.md#numberfloor)
 * [number\ceil](formula/number.md#numberceil)
