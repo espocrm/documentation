@@ -3,7 +3,7 @@
 ## Execution in idle
 
 When a process is initiated by a user interaction (e.g. after record created), it starts to execute in the web server
-process until the flow reaches a catching event, *send message task* or *user task*, that will switch execution to idle mode (process will continue
+process until the flow reaches a catching event, *Send Message Task* or *User Task*, that will switch execution to idle mode (process will continue
 to run by cron/daemon). 
 
 If you have script tasks that take some time to run it's reasonable to force to switch execution to idle mode.
@@ -12,7 +12,7 @@ You can add it right after a start event.
 
 ## Unsetting process variables
 
-All variables defined in a *Script Task* will be stored in the process. If you don't need a specific variable to be used further in the process, it's reasonable to unset it in the end of the script.
+All variables defined in a *Script Task* and *Execute Formula Script* action will be stored in the Process. If you don't need a specific variable to be used further in the process, it's reasonable to unset it in the end of the script.
 
 ```
 $tempVariable = null;
@@ -22,7 +22,7 @@ Also consider to unset sensitive data immediately after usage.
 
 ## Cleaning up ended processes
 
-Ended processes are *not* cleaned up automatically as a process may hold information important for a business. You may utilize a scheduled workflow rule that will be handle removal of ended processes.
+Ended Processes are *not* cleaned up automatically as a Process may hold information important for a business. You may utilize a scheduled Workflow rule that will handle removal of ended Processes.
 
 ## Self-removal
 
