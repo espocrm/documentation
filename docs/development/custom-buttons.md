@@ -195,6 +195,7 @@ Create a handler `client/custom/src/test-handler.js`:
 define('custom:test-handler', [], () => {
 
     return class {
+
         constructor(view) {
             this.view = view;
         }
