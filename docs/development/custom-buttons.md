@@ -209,10 +209,11 @@ define('custom:test-handler', [], () => {
             // const currentUser = this.view.getUser();
         }
 
+        /**
+         * @param {{entityType: string, action: string, params: Record}} data
+         */
         test(data) {           
-            console.log(data); // data to be sent to the back-end
-            
-            // here you can show a modal or send an ajax request
+            // Here you can show a modal or send an ajax request.
             // this.view.createView( ... )
             // Espo.Ajax.postRequest( ...)
         }
