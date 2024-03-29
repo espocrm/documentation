@@ -69,9 +69,9 @@ Create a file `client/custom/src/my-action-handler.js`:
 define('custom:my-action-handler', ['action-handler'], (Dep) => {
 
     return class extends Dep {
+
         actionSomeName(data, e) {
-            Espo.Ajax
-                .getRequest('Lead/' + this.view.model.id)
+            Espo.Ajax.getRequest('Lead/' + this.view.model.id)
                 .then(response => {
                     console.log(response);
                 });
@@ -132,38 +132,33 @@ As of v7.2 it's possible to define a `checkVisibilityFunction` parameter. The va
 Create a file `client/custom/src/my-action-handler.js`:
 
 ```js
-define('custom:my-action-handler', ['action-handler'], function (Dep) {
+define('custom:my-action-handler', ['action-handler'], (Dep) => {
 
-   return Dep.extend({
+   return class extends Dep {
 
-        actionTest: function (data, e) {
-            Espo.Ajax
-                .getRequest('Lead/' + this.view.model.id)
+        actionTest(data, e) {
+            Espo.Ajax.getRequest('Lead/' + this.view.model.id)
                 .then(response => {
                     console.log(response);
                 });
-        },
+        }
 
-        initTest: function () {
+        initTest() {
             this.controlActionVisibility();
             
-            this.view.listenTo(
-                this.view.model,
-                'change:status',
-                this.controlActionVisibility.bind(this)
-            );
-        },
+            this.view.listenTo(this.view.model, 'change:status', () => this.controlActionVisibility());
+        }
 
-        controlActionVisibility: function () {
-            if (~['Converted', 'Dead', 'Recycled'].indexOf(this.view.model.get('status'))) {
+        controlActionVisibility() {
+            if (['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'))) {
                 this.view.hideActionItem('test');
                 
                 return;
             }
 
             this.view.showActionItem('test');
-        },
-   });
+        }
+    }
 });
 ```
 
