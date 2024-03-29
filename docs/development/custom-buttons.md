@@ -37,7 +37,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 Parameters:
 
 * `acl` – Defines that a user needs the *edit* access level to see the button. You can omit this parameter.
-* `checkVisibilityFunction` – A handler method that will be used to determine whether an item is visible. As of v8.1.
+* `checkVisibilityFunction` – A handler method that will be used to determine whether an item is visible. The method should return a boolean value. As of v8.1.
 * `actionFunction` – An action method in the handler. As of v8.1.
 
 In order to add dropdown action, you need to use the `dropdown` key instead of *buttons*.
