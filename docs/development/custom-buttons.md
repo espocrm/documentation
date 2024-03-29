@@ -182,7 +182,8 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
     "massActionDefs": {
         "test": {
             "handler": "custom:test-handler",
-            "initFunction": "initTest"
+            "initFunction": "initTest",
+            "actionFunction": "test"
         }
     }
 }
@@ -191,35 +192,31 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 Create a handler `client/custom/src/test-handler.js`:
 
 ```js
-define('custom:test-handler', [], function () {
+define('custom:test-handler', [], () => {
 
-    var TestHandler = function (view) {
-        this.view = view;
-    };
+    return class {
+        constructor(view) {
+            this.view = view;
+        }
 
-    _.extend(TestHandler.prototype, {
-
-        initTest: function () {
+        initTest() {
             // called when the list view is loaded
 
             // here you can remove the action on a specific condition
             // this.view.removeMassAction('test');
             
-            // var acl = this.view.getAcl();
-            // var currentUser = this.view.getUser();
-        },
+            // const acl = this.view.getAcl();
+            // const currentUser = this.view.getUser();
+        }
 
-        actionTest: function (data) {           
+        test(data) {           
             console.log(data); // data to be sent to the back-end
             
-            // here you can show a modal or send ajax request
+            // here you can show a modal or send an ajax request
             // this.view.createView( ... )
             // Espo.Ajax.postRequest( ...)
-        },
-
-    });
-
-    return TestHandler;
+        }
+    }
 });
 
 ```
