@@ -12,11 +12,13 @@ You can add it right after a start event.
 
 ## Unsetting process variables
 
-All variables defined in *script task* will be stored in the process. If you don't need a specific variable to be used further in the process, it's reasonable to unset it in the end of the script.
+All variables defined in a *Script Task* will be stored in the process. If you don't need a specific variable to be used further in the process, it's reasonable to unset it in the end of the script.
 
 ```
 $tempVariable = null;
 ```
+
+Also consider to unset sensitive data immediately after usage.
 
 ## Cleaning up ended processes
 
