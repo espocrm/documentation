@@ -23,10 +23,10 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
                     "style": "default",
                     "acl": "edit",
                     "aclScope": "Lead",
-                    "data": {
-                        "handler": "custom:my-action-handler"
-                    },
-                    "initFunction": "initSomeName"
+                    "handler": "custom:my-action-handler"
+                    "initFunction": "initMyAction",
+                    "actionFunction": "myAction"
+                    "checkVisibilityFunction": "isMyActionVisible"
                 }
             ]
         }
@@ -36,6 +36,8 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 
 Parameters:
 
+* `handler` – A handler.
+* `initFunction` – A handler method to run on initialization. Omit if not needed. 
 * `acl` – Defines that a user needs the *edit* access level to see the button. You can omit this parameter.
 * `checkVisibilityFunction` – A handler method that will be used to determine whether an item is visible. The method should return a boolean value. As of v8.1.
 * `actionFunction` – An action method in the handler. As of v8.1.
@@ -70,27 +72,17 @@ define('custom:my-action-handler', ['action-handler'], (Dep) => {
 
     return class extends Dep {
 
-        actionSomeName(data, e) {
+        initMyAction() {}
+
+        myAction(data, e) {
             Espo.Ajax.getRequest('Lead/' + this.view.model.id)
                 .then(response => {
                     console.log(response);
                 });
-        }
+        }       
 
-        initSomeName() {
-            this.controlButtonVisibility();
-            
-            this.view.listenTo(this.view.model, 'change:status', () => this.controlButtonVisibility());
-        }
-
-        controlButtonVisibility() {
-            if (['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'))) {
-                this.view.hideHeaderActionItem('someName');
-                
-                return;
-            }
-
-            this.view.showHeaderActionItem('someName');
+        isMyActionVisible() {
+            return ['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
         }
     }
 });
