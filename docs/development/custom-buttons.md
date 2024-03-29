@@ -17,9 +17,9 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
             "buttons": [
                 "__APPEND__",
                 {
-                    "label": "Some Label",
-                    "name": "someName",
-                    "action": "someName",
+                    "label": "My Action",
+                    "name": "myAction",
+                    "action": "myAction",
                     "style": "default",
                     "acl": "edit",
                     "aclScope": "Lead",
@@ -75,10 +75,15 @@ define('custom:my-action-handler', ['action-handler'], (Dep) => {
         initMyAction() {}
 
         myAction(data, e) {
+            this.view.disableMenuItem('myAction');
+
             Espo.Ajax.getRequest('Lead/' + this.view.model.id)
                 .then(response => {
                     console.log(response);
-                });
+
+                    this.view.enableMenuItem('myAction');
+                })
+                .catch(() => this.view.enableMenuItem('myAction'));
         }       
 
         isMyActionVisible() {
