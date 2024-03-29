@@ -38,7 +38,7 @@ Parameters:
 
 * `handler` – A handler.
 * `initFunction` – A handler method to run on initialization. Omit if not needed. 
-* `acl` – Defines that a user needs the *edit* access level to see the button. You can omit this parameter.
+* `acl` – Defines what access level is required to see the button. You can omit this parameter.
 * `checkVisibilityFunction` – A handler method that will be used to determine whether an item is visible. The method should return a boolean value. As of v8.1.
 * `actionFunction` – An action method in the handler. As of v8.1.
 
@@ -106,18 +106,22 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
             "label": "Test Action",
             "name": "test",
             "acl": "edit",
-            "data": {
-                "handler": "custom:my-action-handler"
-            },
-            "initFunction": "initTest"
+            "handler": "custom:my-action-handler"
+            "initFunction": "initTest",
+            "checkVisibilityFunction": "isTestVisible",
+            "actionFunction": "test"
         }
     ]
 }
 ```
 
-The parameter *acl* set to *edit* means that a user need an *edit* access level to see the action. You can omit it.
+Parameters:
 
-As of v7.2 it's possible to define a `checkVisibilityFunction` parameter. The values should be a handler method name that returns a boolean value. The method determines whether the action is visible. It will be called every time the record is synced with the backend and will hide or show the action depending on a value returned by the method. The `initFunction` is not needed in this case. 
+* `handler` – A handler.
+* `initFunction` – A handler method to run on initialization. Omit if not needed. 
+* `acl` – Defines what access level is required to see the button. You can omit this parameter.
+* `checkVisibilityFunction` – A handler method that will be used to determine whether an item is visible. The method should return a boolean value. As of v8.1.
+* `actionFunction` – An action method in the handler. As of v8.1.
 
 ### Handler class
 
@@ -128,27 +132,17 @@ define('custom:my-action-handler', ['action-handler'], (Dep) => {
 
    return class extends Dep {
 
-        actionTest(data, e) {
+        initTest() {}
+
+        test(data, e) {
             Espo.Ajax.getRequest('Lead/' + this.view.model.id)
                 .then(response => {
                     console.log(response);
                 });
-        }
+        }       
 
-        initTest() {
-            this.controlActionVisibility();
-            
-            this.view.listenTo(this.view.model, 'change:status', () => this.controlActionVisibility());
-        }
-
-        controlActionVisibility() {
-            if (['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'))) {
-                this.view.hideActionItem('test');
-                
-                return;
-            }
-
-            this.view.showActionItem('test');
+        isTestVisible() {
+            return ['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
         }
     }
 });
