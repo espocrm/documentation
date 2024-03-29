@@ -66,38 +66,33 @@ Available views (object keys in definitions):
 Create a file `client/custom/src/my-action-handler.js`:
 
 ```js
-define('custom:my-action-handler', ['action-handler'], function (Dep) {
+define('custom:my-action-handler', ['action-handler'], (Dep) => {
 
-   return Dep.extend({
-
-        actionSomeName: function (data, e) {
+    return class extends Dep {
+        actionSomeName(data, e) {
             Espo.Ajax
                 .getRequest('Lead/' + this.view.model.id)
                 .then(response => {
                     console.log(response);
                 });
-        },
+        }
 
-        initSomeName: function () {
+        initSomeName() {
             this.controlButtonVisibility();
             
-            this.view.listenTo(
-                this.view.model,
-                'change:status',
-                this.controlButtonVisibility.bind(this)
-            );
-        },
+            this.view.listenTo(this.view.model, 'change:status', () => this.controlButtonVisibility());
+        }
 
-        controlButtonVisibility: function () {
-            if (~['Converted', 'Dead', 'Recycled'].indexOf(this.view.model.get('status'))) {
+        controlButtonVisibility() {
+            if (['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'))) {
                 this.view.hideHeaderActionItem('someName');
                 
                 return;
             }
 
             this.view.showHeaderActionItem('someName');
-        },
-   });
+        }
+    }
 });
 ```
 
