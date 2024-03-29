@@ -87,7 +87,7 @@ define('custom:my-action-handler', ['action-handler'], (Dep) => {
         }       
 
         isMyActionVisible() {
-            return ['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
+            return !['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
         }
     }
 });
@@ -147,7 +147,7 @@ define('custom:my-action-handler', ['action-handler'], (Dep) => {
         }       
 
         isTestVisible() {
-            return ['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
+            return !['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
         }
     }
 });
