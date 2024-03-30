@@ -12,7 +12,7 @@ Workflows allow to create custom service actions. This example will show how thi
 namespace Espo\Custom\ServiceActions;
  
 use Espo\ORM\Entity;
-use Espo\Modules\Advanced\Tools\Workflow\Action\Actions\RunAction\ServiceAction;
+use Espo\Modules\Advanced\Tools\Workflow\Action\RunAction\ServiceAction;
 
 class TestAction implements ServiceAction
 {
