@@ -2,18 +2,23 @@
 
 Workflows allow to create custom service actions. This example will show how this can be done for a Call entity.
 
-## Step 1. Create service class
+*As of Advanced Pack v3.2.3.*
+
+## Step 1. Create a class
 
 ```php
 <?php
  
-namespace Espo\Custom\Services;
+namespace Espo\Custom\ServiceActions;
  
-use \Espo\ORM\Entity;
- 
-class TestService extends \Espo\Core\Services\Base
+use Espo\ORM\Entity;
+use Espo\Modules\Advanced\Tools\Workflow\Action\Actions\RunAction\ServiceAction;
+
+class TestAction implements ServiceAction
 {
-    public function testServiceAction($workflowId, Entity $entity, $additionalParameters = null)
+    // Pass dependencies via constructor.
+
+    public function run(Entity $entity, mixed $data): void
     {
         // your code here
     }
@@ -22,21 +27,21 @@ class TestService extends \Espo\Core\Services\Base
 
 ## Step 2. Define the run service method in metadata
 
-Create/edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/Workflow.json`
+Create/edit the file `custom/Espo/Custom/Resources/metadata/app/workflow.json`
 
 ```json
 {
     "serviceActions": {
         "Call":{
-            "testServiceAction": {
-                "serviceName": "TestService",
-                "methodName": "testServiceAction"
+            "testAction": {
+                "className": "Espo\Custom\ServiceActions\TestAction"
             }
         }
     }
 }
 ```
-Note: You can also create metadata file Workflow.json file in your module directory.
+
+Note: You can also create the metadata file *workflow.json* file in your module directory.
 
 ## Step 3. Add a label
 
@@ -45,21 +50,22 @@ Add or edit (if file exists) the file `custom/Espo/Custom/Resources/i18n/en_US/W
 ```json
 {
     "serviceActions": {
-        "testServiceAction": "Label for TestServiceAction"
+        "testAction": "My Test Action"
     }
 }
 ```
+
 Or if you have the same method name for several entity types, you can define different translation for them.
 
 ```json
 {
     "serviceActions": {
-        "CallTestServiceAction": "Label for Call TestServiceAction",
-        "TaskTestServiceAction": "Label for Task TestServiceAction"
+        "CallTestAction": "My Test Action for Call",
+        "TaskTestAction": "My Test Action for Task"
     }
 }
 ```
-Note: You can also create language file Workflow.json file in your module directory.
+Note: You can also create a language file Workflow.json file in your module directory.
 
 ## Step 4. Add usage tips (optional)
 
@@ -68,21 +74,22 @@ Add or edit the file `custom/Espo/Custom/Resources/i18n/en_US/Workflow.json`.
 ```json
 {
     "serviceActionsHelp": {
-        "testServiceAction": "This is a description of testServiceAction action"
+        "testAction": "A description."
     }
 }
 ```
+
 Or if you have the same method name for several entity types, you can define different tips xts for them.
 
 ```json
 {
     "serviceActionsHelp": {
-        "CallTestServiceAction": "This is a description of TestServiceAction for Call entity",
-        "TaskTestServiceAction": "This is a description of TestServiceAction for Task entity"
+        "CallTesAction": "...",
+        "TaskTestAction": "..."
     }
 }
 ```
 
 ## Step 5. Clear cache
 
-Administration panel > Clear Cache. Now the service action is available for Workflows in the Run Service Action form.
+Administration panel > Clear Cache. Now the service action is available for Workflows in the *Run Service Action* form.
