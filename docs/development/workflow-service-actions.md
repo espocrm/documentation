@@ -34,7 +34,7 @@ Create/edit the file `custom/Espo/Custom/Resources/metadata/app/workflow.json`
     "serviceActions": {
         "Call":{
             "testAction": {
-                "className": "Espo\Custom\ServiceActions\TestAction"
+                "className": "Espo\\Custom\\ServiceActions\\TestAction"
             }
         }
     }
