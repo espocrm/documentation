@@ -18,9 +18,11 @@ class TestAction implements ServiceAction
 {
     // Pass dependencies via constructor.
 
-    public function run(Entity $entity, mixed $data): void
+    public function run(Entity $entity, mixed $data): mixed
     {
         // your code here
+
+        return null;
     }
 }
 ```
