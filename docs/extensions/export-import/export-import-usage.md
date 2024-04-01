@@ -126,7 +126,16 @@ Define a list of active users. The value can be a list of `ID` or `User Name`. O
 Available values:
 
 * `a string`, e.g. `"admin"`,
-* `a string which is separated by a comma`, e.g. `"admin, user2"`.
+* `a string which is separated by a comma`, e.g. `"admin, 65d34ab18e81e286e"`.
+
+#### `--user-skip-list`
+
+Define a list of users to be skipped. The value can be a list of `ID` or `User Name`. Example: `--user-skip-list="admin"`.
+
+Available values:
+
+* `a string`, e.g. `"admin"`,
+* `a string which is separated by a comma`, e.g. `"admin, 65d34ab18e81e286e"`.
 
 #### `--user-password`
 
