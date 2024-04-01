@@ -47,6 +47,14 @@ A field type.
 
 The field will be marked as not-storable, a DB column won't be created.
 
+### orderDisabled
+
+*boolean*
+
+*As of v8.3.*
+
+Disables the ability to sort by the field.
+
 ### readOnly
 
 *boolean*
