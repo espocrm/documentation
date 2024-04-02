@@ -11,7 +11,7 @@ In this article:
 
 ## Install EspoCRM with Docker
 
-One of the ways to install EspoCRM is by using its official Docker Image. The EspoCRM Container Package contains the Docker image, which incorporates all the required files and dependencies to launch EspoCRM in development or production environments. You can use Docker to run EspoCRM in an isolated environment built with Docker containers. 
+One of the ways to install EspoCRM is by using its official Docker Image. The EspoCRM Container Package contains the Docker image, which incorporates all the required files and dependencies to launch EspoCRM in development or production environments. You can use Docker to run EspoCRM in an isolated environment built with Docker containers.
 
 EspoCRM image requires to run MySQL server:
 
@@ -75,7 +75,7 @@ services:
   mysql:
     image: mysql:8
     container_name: mysql
-    command: --default-authentication-plugin=mysql_native_password    
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: espocrm
@@ -89,6 +89,7 @@ services:
     image: espocrm/espocrm
     container_name: espocrm
     environment:
+      ESPOCRM_DATABASE_PLATFORM: Mysql
       ESPOCRM_DATABASE_HOST: mysql
       ESPOCRM_DATABASE_USER: espocrm
       ESPOCRM_DATABASE_PASSWORD: database_password
@@ -111,7 +112,7 @@ services:
 
   espocrm-websocket:
     image: espocrm/espocrm
-    container_name: espocrm-websocket    
+    container_name: espocrm-websocket
     environment:
       ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
       ESPOCRM_CONFIG_WEB_SOCKET_URL: "ws://localhost:8081"
@@ -170,13 +171,17 @@ In order to enter the container and view the files, make a rebuild, etc., use th
 $ docker exec -it espocrm bash
 ```
 
-### Installation Environments 
+### Installation Environments
 
 This is one-time environment variables which are using only for the fresh installation. If you need to define configuration options on the container startup, see the Config Environments.
 
+- `ESPOCRM_DATABASE_PLATFORM`
+
+Database platform. Possible values: `Mysql` or `Postgresql`. The default value is `Mysql`.
+
 - `ESPOCRM_DATABASE_HOST`
 
-MySQL host name for EspoCRM. The default value is `mysql`.
+Database host name for EspoCRM. The default value is `mysql`.
 
 - `ESPOCRM_DATABASE_NAME`
 
