@@ -130,7 +130,7 @@ volumes:
   espocrm:
 ```
 
-More about *Installation Enviroments* you can find [here](#installation-environments).
+More about *Installation Environments* you can find [here](#installation-environments).
 
 4\. Build EspoCRM project from directory.
 
@@ -175,9 +175,13 @@ $ docker exec -it espocrm bash
 
 This is one-time environment variables which are using only for the fresh installation. If you need to define configuration options on the container startup, see the [Config Environments](#config-environments).
 
+### ESPOCRM_DATABASE_PLATFORM
+
+Database platform. The possible values: `Mysql` or `Postgresql`. The default value is `Mysql`.
+
 ### ESPOCRM_DATABASE_HOST
 
-MySQL host name for EspoCRM. The default value is `mysql`.
+Database host name for EspoCRM. The default value is `mysql`.
 
 ### ESPOCRM_DATABASE_NAME
 
