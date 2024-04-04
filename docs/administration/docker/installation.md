@@ -171,38 +171,113 @@ In order to enter the container and view the files, make a rebuild, etc., use th
 $ docker exec -it espocrm bash
 ```
 
-### Installation Environments
+## Installation Environments
 
-This is one-time environment variables which are using only for the fresh installation. If you need to define configuration options on the container startup, see the Config Environments.
+This is one-time environment variables which are using only for the fresh installation. If you need to define configuration options on the container startup, see the [Config Environments](#config-environments).
 
-- `ESPOCRM_DATABASE_PLATFORM`
+### ESPOCRM_DATABASE_HOST
 
-Database platform. Possible values: `Mysql` or `Postgresql`. The default value is `Mysql`.
+MySQL host name for EspoCRM. The default value is `mysql`.
 
-- `ESPOCRM_DATABASE_HOST`
-
-Database host name for EspoCRM. The default value is `mysql`.
-
-- `ESPOCRM_DATABASE_NAME`
+### ESPOCRM_DATABASE_NAME
 
 Database name for EspoCRM. The default value is `espocrm`.
 
-- `ESPOCRM_DATABASE_USER`
+### ESPOCRM_DATABASE_USER
 
 Database user for EspoCRM. The default value is `root`.
 
-- `ESPOCRM_DATABASE_PASSWORD`
+### ESPOCRM_DATABASE_PASSWORD
 
 Database password for EspoCRM. The default value is `password`.
 
-- `ESPOCRM_ADMIN_USERNAME`
+### ESPOCRM_ADMIN_USERNAME
 
 User name for an administrator of EspoCRM. The default value is `admin`.
 
-- `ESPOCRM_ADMIN_PASSWORD`
+### ESPOCRM_ADMIN_PASSWORD
 
 User password for an administrator of EspoCRM. The default value is `password`.
 
-- `ESPOCRM_SITE_URL`
+### ESPOCRM_SITE_URL
 
 The URL of EspoCRM. This option is very important for normal operating of EspoCRM. Examples: `http://172.20.0.100:8080`, `http://my-crm.local`.
+
+### Other optional options
+
+The list of possible values and their default values can be found in EspoCRM Administrator panel > Settings.
+
+-	`ESPOCRM_LANGUAGE`
+-	`ESPOCRM_DATE_FORMAT`
+-	`ESPOCRM_TIME_FORMAT`
+-	`ESPOCRM_TIME_ZONE`
+-	`ESPOCRM_WEEK_START`
+-	`ESPOCRM_DEFAULT_CURRENCY`
+-	`ESPOCRM_THOUSAND_SEPARATOR`
+-	`ESPOCRM_DECIMAL_MARK`
+
+## Upgrading
+
+In order to upgrade the container created by the `docker-compose.yml`:
+
+1. Open your EspoCRM container directory.
+2. Run the command:
+
+```
+docker compose pull && docker compose up -d
+```
+
+Within a few minutes the container will be upgraded to the latest version.
+
+## Config Environments
+
+These environment variables are using to define configuration parameters of the EspoCRM every time on the container startup. The parameters that can be changed are defined in the `data/config.php` or `data/config-internal.php`.
+
+### Naming
+
+Config environment variables should be converted from the camel-case format. For example:
+The `exportDisabled` config option should be converted to `ESPOCRM_CONFIG_EXPORT_DISABLED`.
+
+### Logger
+
+There are additional options to change the `logger`:
+
+- `ESPOCRM_CONFIG_LOGGER_LEVEL: "DEBUG"`,
+- `ESPOCRM_CONFIG_LOGGER_MAX_FILE_NUMBER: 30`
+- `ESPOCRM_CONFIG_LOGGER_PATH: "data/logs/espo.log"`
+
+For more details, visit [documentation](../log.md).
+
+### Allowed types:
+
+#### String
+```
+ESPOCRM_CONFIG_WEB_SOCKET_URL: "wss://my-espocrm.com:8080"
+```
+
+#### Integer
+```
+ESPOCRM_CONFIG_EMAIL_MESSAGE_MAX_SIZE: 10
+```
+
+#### Boolean
+```
+ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
+```
+
+#### Null
+```
+ESPOCRM_CONFIG_CURRENCY_DECIMAL_PLACES: "null"
+```
+
+## Image Variants
+
+The `espocrm` images come in many flavors, each designed for a specific use case.
+
+- `espocrm:apache`
+- `espocrm:fpm`
+- `espocrm:fpm-alpine`
+- `espocrm:<version>`
+- `espocrm:<version>-apache`
+- `espocrm:<version>-fpm`
+- `espocrm:<version>-fpm-alpine`
