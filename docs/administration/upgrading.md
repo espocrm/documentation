@@ -24,7 +24,9 @@ This will check the next available version, download it and install. Once the up
 
 It's recommended to upgrade whenever the new version is out with the possible exception for new minor or major releases (the last number is zero) as they are more likely to have bugs. If you skip a few minor or major versions before deciding to upgrade, it's more likely that the upgrade will run unsmoothly.
 
-Upgrading between minor or major versions should not be considered as a no-brainer. Incompatibility issues are possible if you have extensions or manual customizations.
+!!! important
+
+    Upgrading between minor or major versions should not be considered as a no-brainer. Incompatibility issues are possible if you have extensions or manual customizations. Recommended to make a backup before proceeding to upgrade.
 
 Versioning (X.Y.Z):
 
