@@ -22,7 +22,7 @@ This will check the next available version, download it and install. Once the up
 
     If the next Espo version requires a higher PHP version, upgrade won't be processed, a message will be displayed.
 
-It's recommended to upgrade whenever the new version is out with the possible exception for new minor or major releases (the last number is zero) as they are more likely to have bugs. If you skip a few minor or major versions before deciding to upgrade, it's more likely that the upgrade will run unsmoothly.
+It's recommended to upgrade whenever the new version is out. If you skip a few minor or major versions before deciding to upgrade, it's more likely that the upgrade will run unsmoothly. For minor or major releases it may be reasonable to wait for a few days before upgrading, as a very fresh release is likely to have yet undiscovered bugs.
 
 !!! warning
 
