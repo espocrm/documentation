@@ -2,12 +2,15 @@
 
 In this article:
 
-- [Install EspoCRM with Docker](#install-espocrm-with-docker)
-- [Install EspoCRM with Docker Compose](#install-espocrm-with-docker-compose)
-- [Install EspoCRM with Traefik](#install-espocrm-with-traefik)
-- [Enter the EspoCRM container](#enter-the-espocrm-container)
-- [Upgrading](#upgrading-espocrm-in-docker-compose-environment)
-- [Shutdown and cleanup](#shutdown-and-cleanup-in-docker-compose-environment)
+- [Installing with Docker](#install-espocrm-with-docker)
+- [Installing with Docker Compose](#install-espocrm-with-docker-compose)
+- [Installing with Traefik](#install-espocrm-with-traefik)
+- [Upgrading](#upgrading)
+- [Shutdown and cleanup](#shutdown-and-cleanup-containers)
+- [Running a shell](#running-a-shell)
+- [Environments](#installation-environments)
+- [Config Environments](#config-environments)
+- [Image Variants](#image-variants)
 
 ## Install EspoCRM with Docker
 
@@ -144,7 +147,7 @@ $ docker compose up -d
 
 You can read the instructions for installing EspoCRM in conjunction with Traefik in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/traefik/).
 
-### Upgrading EspoCRM in Docker Compose environment
+### Upgrading
 
 In order to upgrade the container created by the `docker-compose.yml`:
 
@@ -157,13 +160,13 @@ In order to upgrade the container created by the `docker-compose.yml`:
 
 Within a few minutes the container will be upgraded to the latest version.
 
-### Shutdown and cleanup in Docker Compose environment
+### Shutdown and cleanup containers
 
 The `docker compose down` command removes the containers and default network, but preserves EspoCRM database.
 
 The `docker compose down --volumes` removes the containers, default network, and the EspoCRM database.
 
-### Enter the EspoCRM container
+### Running a shell
 
 In order to enter the container and view the files, make a rebuild, etc., use the following command (`espocrm` is your container name):
 
@@ -219,19 +222,6 @@ The list of possible values and their default values can be found in EspoCRM Adm
 -	`ESPOCRM_DEFAULT_CURRENCY`
 -	`ESPOCRM_THOUSAND_SEPARATOR`
 -	`ESPOCRM_DECIMAL_MARK`
-
-## Upgrading
-
-In order to upgrade the container created by the `docker-compose.yml`:
-
-1. Open your EspoCRM container directory.
-2. Run the command:
-
-```
-docker compose pull && docker compose up -d
-```
-
-Within a few minutes the container will be upgraded to the latest version.
 
 ## Config Environments
 
