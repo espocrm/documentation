@@ -236,7 +236,7 @@ The `exportDisabled` config option should be converted to `ESPOCRM_CONFIG_EXPORT
 
 There are additional options to change the `logger`:
 
-- `ESPOCRM_CONFIG_LOGGER_LEVEL: "DEBUG"`,
+- `ESPOCRM_CONFIG_LOGGER_LEVEL: "DEBUG"`
 - `ESPOCRM_CONFIG_LOGGER_MAX_FILE_NUMBER: 30`
 - `ESPOCRM_CONFIG_LOGGER_PATH: "data/logs/espo.log"`
 
