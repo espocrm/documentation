@@ -27,3 +27,7 @@ A command class. Should implement `Espo\Core\Console\Command` interface.
 *boolean*
 
 Whether the command is listed when running `bin/command`.
+
+## noSystemUser
+
+Do not load the system user.
