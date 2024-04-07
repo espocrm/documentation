@@ -14,6 +14,11 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
     // Extending from the base `view` class.
     return class extends View {
 
+        // Optionally, define an extended constructor.
+        constructor(options) {
+            supert.constructor(options);
+        }
+
         // A template path, see its content.
         // The `custom` prefix indicates that the base path is `client/custom/res/templates`.
         // See a separate article about templates.
