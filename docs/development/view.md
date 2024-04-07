@@ -344,7 +344,7 @@ Method should is called internally when rendering. Should return a key => value 
 ```js
 templateContent = `
     <div data-name="someName">{{{someKeyName}}}</div>
-`;
+`
 
 setup() {
     this.createView('someKeyName', 'custom:test/my-custom-child-view', {}); 
