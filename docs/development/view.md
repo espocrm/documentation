@@ -175,20 +175,20 @@ Sometimes we need to get some data loaded asynchronously before the view is rend
 The `wait` method can receive a promise:
 
 ```js
-    setup: function () {
+    setup() {
         this.wait(
             Promise.all([
                 this.model.fetch(),
                 this.model.collection.fetch(),
             ])
         );
-    },
+    }
 ```
 
 The model factory returns a promise, so we can pass it to the `view` method:
 
 ```js
-    setup: function () {
+    setup() {
         this.wait(
             this.getModelFactory().create('Case')
                 .then(model => {
@@ -200,24 +200,23 @@ The model factory returns a promise, so we can pass it to the `view` method:
                     console.log(data);
                 })
         );
-    },
+    }
 ```
 
 Wait until a model is fetched. The `fetch` method returns a promise.
 
 ```js
-    setup: function () {
+    setup() {
         this.wait(
             this.model.fetch()
         );
-    },
-
+    }
 ```
 
 Wait for multiple independent promises:
 
 ```js
-    setup: function () {
+    setup() {
         this.wait(
             this.model.fetch()
         );
@@ -225,24 +224,24 @@ Wait for multiple independent promises:
         this.wait(
             Espo.Ajax.getRequest('SomeUrl')
         );
-    },
+    }
 ```
 
 ```js
-    setup: function () {
+    setup() {
         this.wait(
             Promise.all([
                 this.model.fetch(),
                 Espo.Ajax.getRequest('SomeUrl'),
             ])
         );
-    },
+    }
 ```
 
 A simple way to wait:
 
 ```js
-    setup: function () {
+    setup() {
         // This holds off the rendering.
         this.wait(true);
 
@@ -251,7 +250,7 @@ A simple way to wait:
                 // This cancels waiting and proceeds to rendering.
                 this.wait(false);                
             });
-    },
+    }
 
 ```
 
@@ -379,7 +378,7 @@ this.addHandler('mousedown', 'selector', (event, target) => { ... });
 ## Events
 
 ```js
-    setup: function () {
+    setup() {
         // Use this way only when the view subscribes to self.
         this.on(eventName, callback); // subscribe to self
         this.once(eventName, callback); // subscribe once
@@ -393,7 +392,7 @@ this.addHandler('mousedown', 'selector', (event, target) => { ... });
         // Triggering event.
         this.trigger(eventName);  
         this.trigger(eventName, objectWithEventData); // passing data        
-    },
+    }
 ```
 
 ### Built-in events
