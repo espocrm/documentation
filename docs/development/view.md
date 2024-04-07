@@ -16,7 +16,7 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
 
         // Optionally, define an extended constructor.
         constructor(options) {
-            supert.constructor(options);
+            super.constructor(options);
         }
 
         // A template path, see its content.
