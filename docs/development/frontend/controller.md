@@ -69,44 +69,41 @@ Note that it's also possible to specify a specific controller class in `controll
 
 In controller:
 ```js
-        actionTest: function (options) {
-            if (!options.id) {
-                throw new Espo.Exceptions.NotFound();
-            }
+    actionTest(options) {
+        if (!options.id) {
+            throw new Espo.Exceptions.NotFound();
+        }
 
-            let id = options.id;
+        const id = options.id;
 
-            // we need to define view in client/custom/src/views/account/test.js
-            let viewName = 'custom:views/account/test'; 
+        // we need to define the view in client/custom/src/views/account/test.js
+        const viewName = 'custom:views/account/test'; 
 
-            // this will render view in the main container element #main
-            // id will be passed to the view
-            this.main(viewName, {
-                id: id,
-            });
-        },
+        // this will render view in the main container element #main
+        // id will be passed to the view
+        this.main(viewName, {id: id});
+    }
 ```
 
 Create a view `client/custom/src/views/account/test.js`:
 
 ```js
-define('custom:views/account/test', ['view'], function (Dep) {
+define('custom:views/account/test', ['view'], (Dep) => {
 
-    return Dep.extend({
+    return class extends Dep {
 
-        templateContent: 'Id: {{id}}, name: {{name}}',
+        templateContent = 'Id: {{id}}, name: {{name}}'
 
-        data: function () {
+        data() {
             return {
                 id: this.options.id,
                 name: this.model.get('name'),
             }
-        },
+        }
 
-        setup: function () {
+        setup() {
             this.wait(
-                this.getModelFactory()
-                    .create('Account')
+                this.getModelFactory().create('Account')
                     .then(model => {
                         this.model = model;
                         model.id = this.options.id;
@@ -114,8 +111,7 @@ define('custom:views/account/test', ['view'], function (Dep) {
                         return model.fetch();
                     })
             );
-        },        
-    });
+        }       
+    }
 });
-
 ```
