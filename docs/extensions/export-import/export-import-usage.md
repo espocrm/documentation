@@ -56,15 +56,15 @@ An export / import path. The default value is `./data/export-import`. Example: `
 
 #### `--skip-data`
 
-Skip exporting / importing data. By default the data will be exported / imported.
+Skip exporting / importing data. By default, the data will be exported / imported.
 
 #### `--skip-customization`
 
-Skip exporting / importing all customization made for the instance. By default the customization will be exported / imported.
+Skip exporting / importing all customization made for the instance. By default, the customization will be exported / imported.
 
 #### `--skip-config`
 
-Skip exporting / importing configuration data. By default the configuration data will be exported / imported.
+Skip exporting / importing configuration data. By default, the configuration data will be exported / imported.
 
 #### `--skip-internal-config`
 
@@ -94,7 +94,7 @@ This option enables exporting / importing all customization, ignoring the `--ent
 
 #### `--skip-related-entities`
 
-Skip exporting / importing data and customization for related entities. This option is used in conjunction with `--entity-list`. By default this option is `off`.
+Skip exporting / importing data and customization for related entities. This option is used in conjunction with `--entity-list`. By default, this option is `off`.
 
 #### `--import-type`
 
@@ -150,7 +150,7 @@ Use [`--user-password`](#user-password) in order to set a user password.
 
 #### `--update-currency`
 
-To update all currency fields. This option depends on [`currency`](#currency). If the `currency` option is not defined, the default currency will be used instead. By default this option is `off`.
+To update all currency fields. This option depends on [`currency`](#currency). If the `currency` option is not defined, the default currency will be used instead. By default, this option is `off`.
 
 #### `--currency`
 
@@ -158,11 +158,11 @@ Currency symbol. If not defined, the default currency will be used instead. Exam
 
 #### `--update-created-at`
 
-Current time for the createdAt field. By default this option is `off`.
+Current time for the createdAt field. By default, this option is `off`.
 
 #### `--entity-hard-list`
 
-This option allows to export or import data for entities which are disabled by default in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
+This option allows to export or import data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
 
 Available values:
 
