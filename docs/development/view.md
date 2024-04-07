@@ -9,24 +9,24 @@ A view file `client/custom/src/views/test/my-custom-view.js`:
 // Names should be in a lower case. A hyphen to be used for word separation.
 // The `custom:` prefix indicates to the loader that the base path is `client/custom/src`.
 // A `my-module:` prefix would correspond to `client/custom/modules/my-module/src`.
-define('custom:views/test/my-custom-view', ['view'], function (View) {
+define('custom:views/test/my-custom-view', ['view'], (View) => {
 
     // Extending from the base `view` class.
-    // You can use ES6 classes as well. Example below.
-    return View.extend({
+    return class extends View {
 
         // A template path, see its content.
         // The `custom` prefix indicates that the base path is `client/custom/res/templates`.
-        template: 'custom:test/my-custom-view',
+        // See a separate article about templates.
+        template = 'custom:test/my-custom-view'
 
         // Alternatively a template content can be defined right here.
         // Use // language=Handlebars to highlight syntax in JetBrains IDEs.
-        //templateContent: `<div class="some-test-container">{{{someKeyName}}}</div>`,
+        // templateContent = `<div class="some-test-container">{{{someKeyName}}}</div>`
 
         // Initializing. Called on view creation, the view is not yet rendered.
-        setup: function () {
+        setup() {
             // Calling the parent `setup` method, can be omitted.
-            View.prototype.setup.call(this);
+            super.setup();
             
             // Instantiate some property.
             this.someParam1 = 'test 1';
@@ -76,14 +76,14 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             // Subscribe to a DOM event. `cid` contains an ID unique among all views.
             // Requires explicit unsubscribing on view removal.
             $(window).on('some-event.' + this.cid, () => {});
-        },
+
+            // Translating a label.
+            const translatedLabel = this.translate('myLabel', 'someCategory', 'MyScope');
+        }
 
         // Called after contents is added to the DOM.
-        afterRender: function () {
-            // The view container (JQuery DOM element).
-            console.log(this.$el); 
-            
-            // The view container (DOM element). As of v8.0.
+        afterRender() {            
+            // The view container (DOM element).
             console.log(this.element); 
             
             // Accessing a child view.
@@ -97,40 +97,40 @@ define('custom:views/test/my-custom-view', ['view'], function (View) {
             
             // Initializing a reference to some DOM element.
             this.$someElement = this.$el.find('.some-element');
-        },
+        }
         
         // Data to be passed to the template.
-        data: function () {
+        data() {
             return {
                 someParam2: 'test 2',
             };
-        },
+        }
         
         // Called when the view is removed.
         // Useful for destroying event listeners initialized for the view.
-        onRemove: function () {
+        onRemove() {
             $(window).off('some-event.' + this.cid);
-        },
+        }
         
         // A custom method.
-        someMethod1: function (value) {
+        someMethod1(value) {
             // Create and render a child view.
             this.createView('testKey', 'custom:test/my-another-custom-child-view', {
                 el: this.getSelector() + ' .another-test-container', 
                 value: value,
             })
             .then(view => view.render());
-        },
+        }
         
-        someMethod2: function () {
+        someMethod2() {
             // To proceed only when the view is rendered.
             // Useful when the method can be invoked by the caller before the view is rendered.
             this.whenRendered().then(() => {
                 // Do something with DOM.
             });
-        },
-    });
-});
+        }
+    }
+}
 ```
 
 Template file `client/custom/res/templates/test/my-custom-view.tpl`:
@@ -162,30 +162,6 @@ Note: When you extend a view that already has its *events* and you want to add m
 ```
 
 See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view.js) of the view class.
-
-As of v7.2 it's possible to use **es6 classes** with fields when extending a view:
-
-```js
-define(['view'], View => {
-
-    /**
-     * A custom view class extended from the base view class `view`.
-     *
-     * The following JSDoc tags enables code completion in PhpStorm/WebStorm.
-     * @extends module:view.Class
-     * @memberOf module:custom:views/my-view
-     */
-    class Class extends View {    
-        someProperty = 'value'
-        
-        setup() {
-            super.setup();
-        }
-    }
-    
-    return Class;
-});
-```
 
 ## Waiting for some data loaded before rendering
 
