@@ -23,7 +23,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
                     "style": "default",
                     "acl": "edit",
                     "aclScope": "Lead",
-                    "handler": "custom:my-action-handler"
+                    "handler": "custom:my-action-handler",
                     "initFunction": "initMyAction",
                     "actionFunction": "myAction"
                     "checkVisibilityFunction": "isMyActionVisible"
