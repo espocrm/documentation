@@ -1,5 +1,18 @@
 # Translation
 
+## Usage
+
+In templates:
+```
+{{ translate 'your_field' scope='EntityNameOrScope' category='fields'  }}
+{{ translateOption this.myField scope='EntityNameOrScope' field='your_field' }}
+```
+In views:
+```js
+this.translate('your_field', 'options', 'EntityNameOrScope')[this.myField]
+this.getLanguage().translateOption(this.myField, 'your_field', 'EntityNameOrScope')
+```
+
 ## PO file
 
 ### Generating PO file
