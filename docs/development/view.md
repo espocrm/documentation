@@ -21,7 +21,7 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
 
         // A template path, see its content.
         // The `custom` prefix indicates that the base path is `client/custom/res/templates`.
-        // See a separate article about templates.
+        // See the separate article about templates.
         template = 'custom:test/my-custom-view'
 
         // Alternatively a template content can be defined right here.
