@@ -30,4 +30,8 @@ Whether the command is listed when running `bin/command`.
 
 ## noSystemUser
 
+*boolean*
+
+*As of v8.3.*
+
 Do not load the system user.
