@@ -50,3 +50,7 @@ class MyJob implements Job
 * q1 – for general use; run every minute.
 
 Portion size is controller by [config parameters](../administration/config-params.md#jobs-daemon).
+
+### Groups
+
+A group name can be any string with max length of 128 characters. Jobs with the same group name are processed one by one.
