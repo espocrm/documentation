@@ -45,6 +45,10 @@ class MyJob implements Job
 
 ### Queues
 
+Jobs within a queue are processed one by one.
+
+Queues available out of the box:
+
 * e0 – intended for email sending; run as often as possible;
 * q0 – for general use; run as often as possible;
 * q1 – for general use; run every minute.
