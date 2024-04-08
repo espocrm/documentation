@@ -48,3 +48,5 @@ class MyJob implements Job
 * e0 – intended for email sending; run as often as possible;
 * q0 – for general use; run as often as possible;
 * q1 – for general use; run every minute.
+
+Portion size is controller by [config parameters](../administration/config-params.md#jobs-daemon).
