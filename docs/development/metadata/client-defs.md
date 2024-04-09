@@ -711,6 +711,12 @@ A scope access to which is required for the action.
 
 An acl action access to which is required for the action.
 
+### groupIndex
+
+*number*
+
+A group index. 0 – is the first group. Groups are separated by a divider. As of v8.3.0.
+
 ## modalDetailActionList
 
 *Object[]*
