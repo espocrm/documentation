@@ -56,7 +56,7 @@ You need to specify the *Group Claim*, the [claim](https://en.wikipedia.org/wiki
 
 ## Debugging
 
-Set the debug mode for the [log](log.md). More information will be printed to the log. It can be useful to see what values is sent in JWT tokens (printed to the log), especially when configuring the team mapping.
+Set the *DEBUG* or *INFO* mode for the [log](log.md). More information will be printed to the log. It can be useful to see what values is sent in JWT tokens (printed to the log), especially when configuring the team mapping.
 
 ## Additionsl config parameters
 
