@@ -285,6 +285,12 @@ A label translation path.
 *"edit"|"delete"*
 
 Required access.
+
+### groupIndex
+
+*integer*
+
+A group index. Starts from 0. As of v8.3.0.
     
 ## menu
 
