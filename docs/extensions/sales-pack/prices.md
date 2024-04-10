@@ -119,4 +119,4 @@ In the similar fashion, it's possible to import Supplier Prices.
 
 !!! note "Tip"
 
-It's possible to export Product Prices from Espo, update prices in a spreadsheet software using formula and then, import new prices back into Espo.
+    It's possible to export Product Prices from Espo, update prices in a spreadsheet software using formula and then, import new prices back into Espo.
