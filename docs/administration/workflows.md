@@ -209,6 +209,10 @@ It's possible to define formula to calculate field values. Note: Variables defin
 
 There is the ability to delete the record with the following formula code: `deleted = true`;
 
+!!! tip
+
+    If there can be many related records, it's reasonable to process updating these records in idle. For this, utilize Trigger Another Workflow action with a small or zero delay. Define Update Related Record action in the sequentinal Workflow rule.
+
 ### Link with another Record
 
 Relates the target record with another specific record. E.g. add specific team to the record.
