@@ -633,7 +633,7 @@ Mass actions available when selecting all results.
 
 *Object.<string, mixed\>*
 
-Definitions for mass actions.
+Definitions for mass actions. See [more](../custom-buttons.md#mass-action-in-list-view).
 
 ### handler
 
