@@ -10,6 +10,7 @@ In this article:
 * [Price Books](#price-books)
 * [Supplier Prices](#supplier-prices)
 * [Import](#import)
+* [Mass update](#mass-update)
 
 ## Price Books
 
@@ -120,3 +121,19 @@ In the similar fashion, it's possible to import Supplier Prices.
 !!! tip
 
     It's possible to export Product Prices from Espo, update prices in a spreadsheet software using formula and then, import new prices back into Espo.
+
+## Mass update
+
+*As of v2.3.*
+
+It's possible to update prices for multiple records from the list view. Select specific records or all search results, then click **Actions** and **Update Price**. It will propose to enter a markup or discount, add a surcharge amount.
+
+Mass price update is supported for:
+
+* Products
+* Product Prices
+* Supplier Product Prices
+
+The Product Prices list view can be reached by: Products tab > top-right menu > Price Books > top-right menu > Product Prices.
+
+The Supplier Product Prices list view can be reached by: Products tab > top-right menu > Suppliers > top-right menu > Supplier Product Prices.
