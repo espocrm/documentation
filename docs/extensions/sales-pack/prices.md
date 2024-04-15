@@ -130,7 +130,7 @@ It's possible to update prices for multiple records from the list view. Select s
 
 Mass price update is supported for:
 
-* Products
+* Products (Cost, List and Unit price)
 * Product Prices
 * Supplier Product Prices
 
