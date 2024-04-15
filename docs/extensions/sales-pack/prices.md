@@ -124,7 +124,7 @@ In the similar fashion, it's possible to import Supplier Prices.
 
 ## Mass update
 
-*As of v2.3.*
+*As of Sales Pack v2.3.*
 
 It's possible to update prices for multiple records from the list view. Select specific records or all search results, then click **Actions** and **Update Price**. It will propose to enter a markup or discount, add a surcharge amount.
 
