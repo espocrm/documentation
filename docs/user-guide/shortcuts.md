@@ -33,7 +33,7 @@
 * `Ctrl + Enter` –  save and exit;
 * `Esc` – cancel;
 * `Ctrl + S` – save and continue editing;
-* `Ctrl + Alt + Enter` –  save and create new (from create view);
+* `Ctrl + Alt + Enter` –  save and create new (from the create view);
 
 ## Calendar
 
