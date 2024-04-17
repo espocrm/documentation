@@ -37,6 +37,7 @@ If you click **Edit** on the entity view, you will be able to change parameters 
 * Labels – singular and plural names of the entity.
 * Default order in which records are sorted by in list views.
 * Stream – whether Stream feature is enabled for this entity.
+* Stars – the ability to star records; stars can be used by users to bookmark specific records.
 * Disabled – check if you don't need this entity in your system.
 * Text Filter Fields – what fields to search in for the main text filter and global search.
 * Status field – which field (of enum type) will be used for a record status; required for kanban view.
