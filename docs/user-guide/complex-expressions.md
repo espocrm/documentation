@@ -220,7 +220,7 @@ Current date and time.
 
 #### TZ
 
-Time zone converion.
+Time zone conversion.
 
 E.g. `TZ:(createdAt, -10.5)` will apply -10:30 offset.
 
