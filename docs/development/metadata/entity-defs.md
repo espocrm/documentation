@@ -172,6 +172,14 @@ A validation list to be bypassed for the field.
 
 A list of input sanitizers. Should implement `Espo\Core\FieldSanitize\Sanitizer` interface.
 
+### sanitizerSuppressClassNameList
+
+*class-string[]*
+
+*As of v8.3.*
+
+A list of input sanitizers to be by-passed.
+
 ### customizationDisabled
 
 *boolean*
