@@ -45,7 +45,7 @@ The build will be created in the `build` directory.
 
 #### Javascript transpiling
 
-Building with *grunt* includes the transpiling step. Though you can run it manually with the following commands.
+Building with *grunt* includes the transpiling step. You can also run it manually with the following commands.
 
 Transpile all:
 
