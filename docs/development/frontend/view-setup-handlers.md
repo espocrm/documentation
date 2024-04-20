@@ -53,7 +53,7 @@ define('custom:some-handler', [], () => {
     class Handler {
         
         /**
-         * @param {module:view} view
+         * @param {import('view').default} view
          */
         constructor(view) {
             this.view = view;
