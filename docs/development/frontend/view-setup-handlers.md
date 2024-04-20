@@ -39,13 +39,15 @@ The following types are supported:
 * record/edit
 * record/kanban
 
-Important: The `__APPEND__` element is needed in the beginning of arrays to establish extending of existing items that can be defined by other modules.
+!!! important
+
+The `__APPEND__` element is needed in the beginning of arrays to establish extending of existing items that can be defined by other modules.
 
 Handler example:
 
 ```js
 
-define('custom:some-handler', [], function () {
+define('custom:some-handler', [], () => {
 
     class Handler {
         
