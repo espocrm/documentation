@@ -30,14 +30,15 @@ Handlers are processed in the `setup` method of the view.
 
 The following types are supported:
 
-* list
-* detail
-* edit
-* record/list
-* record/search
-* record/detail
-* record/edit
-* record/kanban
+* list – main list view;
+* detail – main detail view;
+* edit – main edit view;
+* record/list – list record view;
+* record/search – search view;
+* record/detail – detail record view;
+* record/edit – detail record view;
+* record/kanban – kanban record view;
+* login – the login view; only in Global scope; as of v8.3.0;
 
 !!! important
 
