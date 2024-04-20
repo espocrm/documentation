@@ -41,7 +41,7 @@ The following types are supported:
 
 !!! important
 
-The `__APPEND__` element is needed in the beginning of arrays to establish extending of existing items that can be defined by other modules.
+    The `__APPEND__` element is needed in the beginning of arrays to establish extending of existing items that can be defined by other modules.
 
 Handler example:
 
