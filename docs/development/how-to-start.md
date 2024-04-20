@@ -53,7 +53,7 @@ Transpile all:
 node js/transpile
 ```
 
-Transpile a specific file (can be useful for a file watcher in the IDE):
+Transpile a specific file (can be useful for a file watcher in an IDE):
 
 ```
 node js/transpile -f $FilePathRelativeToProjectRoot$
