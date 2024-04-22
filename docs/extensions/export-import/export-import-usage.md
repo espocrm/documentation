@@ -160,6 +160,15 @@ Currency symbol. If not defined, the default currency will be used instead. Exam
 
 Current time for the createdAt field. By default, this option is `off`.
 
+#### `--entity-skip-list`
+
+This option allows to skip exporting / importing data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
+
+Available values:
+
+* `a string`, e.g. `"Account"`,
+* `a string which is separated by a comma`, e.g. `"Account, Contact"`.
+
 #### `--entity-hard-list`
 
 This option allows to export or import data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
