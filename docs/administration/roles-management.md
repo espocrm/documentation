@@ -144,6 +144,10 @@ Allows to send stream messages to other users. (as of v8.0)
 
 Allows to view the audit log. (as of v8.2)
 
+### Mention Permission
+
+Allows to mention other users in the Stream. (as of v8.3)
+
 ## Field Level Security
 
 Allows to control access for specific fields.
