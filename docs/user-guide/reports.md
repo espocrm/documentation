@@ -283,13 +283,15 @@ The Max number of records that can be sent in an email by default is 3000. You c
 
 *As of v2.5.0.*
 
-Note: A user needs to have access to the *Template* scope in Roles.
+!!! note
 
-Note: You need to have at least one PDF Template record for the Report entity type. The template can be created at Administration > PDF Templates.
+    A user needs to have access to the *Template* scope in Roles.
+
+    You need to have at least one PDF Template record for the Report entity type. The template can be created at Administration > PDF Templates.
 
 To print a Report: on the Report detail view on the *Report* panel, from the dropdown next to the *Edit* button, click *Print to PDF*.
 
-In PDF table, `{{reportTable}}` is used to print a report results table.
+In a PDF template, `{{reportTable}}` helper is used to print a report results table.
 
 Example:
 
