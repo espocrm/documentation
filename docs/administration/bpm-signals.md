@@ -114,7 +114,7 @@ The list of out-of-the-box signals that are broadcasted in the system.
 * `@delete` – record removed (can't be used in BPM);
 * `@relate.LINK_NAME` – record related with another record (only for *many-to-many*); the foreign ID is passed in an `id` parameter;
 * `@relate.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*);
-* `@unrelate.LINK_NAME` – record unrelated from another record (only for *many-to-many*); the foreign ID is passed in an `id` parameter;
+* `@unrelate.LINK_NAME` – record unrelated from another record; the foreign ID is passed in an `id` parameter;
 * `@unrelate.LINK_NAME.FOREIGN_ID`
 
 #### Contacts/Leads:
