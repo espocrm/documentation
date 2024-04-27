@@ -43,6 +43,7 @@ In this article:
   * [Json](#json)
   * [Ext](#ext)
   * [Util](#util)
+  * [Log](#log)
 * [Values](#values)
 * [Variables](#variables)
 * [Comments](#comments)
@@ -362,6 +363,15 @@ Out-of-the-box functions are listed below.
 
 * [util\generateId](formula/util.md#utilgenerateid)
 * [util\generateRecordId](formula/util.md#utilgeneraterecordid)
+
+### Log
+
+[log](formula/log.md)
+
+* [log\info](formula/log.md#loginfo)
+* [log\notice](formula/log.md#lognotice)
+* [log\warning](formula/log.md#logwarning)
+* [log\error](formula/log.md#logerror)
 
 ## Values
 
