@@ -94,6 +94,7 @@ nav:
           - 'json': 'administration/formula/json.md'
           - 'ext': 'administration/formula/ext.md'
           - 'util': 'administration/formula/util.md'
+          - 'log': 'administration/formula/log.md'
         - 'Import': 'administration/import.md'
         - 'Portal': 'administration/portal.md'
         - 'Currency': 'administration/currency.md'
