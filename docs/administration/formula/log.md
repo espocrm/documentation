@@ -1,5 +1,7 @@
 # Formula > Functions > Log
 
+*As of v8.3.*
+
 * [log\info](#loginfo)
 * [log\notice](#lognotice)
 * [log\warning](#logwarning)
