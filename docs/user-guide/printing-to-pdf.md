@@ -16,8 +16,6 @@ Printing to PDF provides the ability to generate PDF documents with record data.
 
 By default, the max number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
 
-Note that page numbering gets reset for each record. You need to use the placeholder `{pageAbsoluteNumber}` to print absolute page numbers in the footer.
-
 ### Access control
 
 Access to PDF printing is controlled by Roles. Admin can set a *read* access level for the *Template* entity type.
@@ -91,8 +89,6 @@ Administrator can add Templates tab at Administration > User Interface. An acces
 Placeholders are only available in footer (and header if it's set to be printed on each page).
 
 * `{pageNumber}` – the current number of the page
-* `{totalPageNumber}` – the total number of pages (TCPDF only)
-* `{pageAbsoluteNumber}` – the absolute number of the page, when printing multiple records (TCPDF only)
 
 ### Page breaking
 
