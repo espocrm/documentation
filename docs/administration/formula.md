@@ -355,6 +355,10 @@ Out-of-the-box functions are listed below.
 * [ext\pdf\generate](formula/ext.md#extpdfgenerate)
 * [ext\user\sendAccessInfo](formula/ext.md#extusersendaccessinfo)
 * [ext\calendar\userIsBusy](formula/ext.md#extcalendaruserisbusy)
+* [ext\acl\checkEntity](formula/ext.md#extaclcheckentity)
+* [ext\acl\checkScope](formula/ext.md#extaclcheckscope)
+* [ext\acl\getLevel](formula/ext.md#extaclgetlevel)
+* [ext\acl\getPermissionLevel](formula/ext.md#extaclgetpermissionlevel)
 
 
 ### Util
