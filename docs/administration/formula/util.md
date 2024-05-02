@@ -2,6 +2,8 @@
 
 * [util\generateId](#utilgenerateid)
 * [util\generateRecordId](#utilgeneraterecordid)
+* [util\base64Encode](#utilbase64encode)
+* [util\base64Decode](#utilbase64decode)
 
 ## util\generateId
 
@@ -24,3 +26,15 @@ Generates an ID that can be used as an ID for an entity. Returns a string.
     ```
     $recordId = util\generateRecordId();
     ```
+
+## util\base64Encode
+
+*As of v8.3.*
+
+Base64 encode.
+
+## util\base64Decode
+
+*As of v8.3.*
+
+Base64 decode.
