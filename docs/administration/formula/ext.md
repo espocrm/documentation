@@ -8,6 +8,10 @@
 * [ext\pdf\generate](#extpdfgenerate)
 * [ext\user\sendAccessInfo](#extusersendaccessinfo)
 * [ext\calendar\userIsBusy](#extcalendaruserisbusy)
+* [ext\acl\checkEntity](#extaclcheckentity)
+* [ext\acl\checkScope](#extaclcheckscope)
+* [ext\acl\getLevel](#extaclgetlevel)
+* [ext\acl\getPermissionLevel](#extaclgetpermissionlevel)
 
 ## ext\account\findByEmailAddress
 
@@ -165,3 +169,37 @@ If ENTITY_TYPE and ID specified, then this record will be ignored when checking.
         // throw exception
     }
     ```
+
+## ext\acl\checkEntity
+
+*As of v8.3.*
+
+`ext\acl\checkEntity(USER_ID, ENTITY_TYPE, ID, [ACTION])`
+
+Returns TRUE if a user has access to an entity. Optional ACTION should be one of the values: Create, Read, Edit, Delete, Stream.
+
+
+## ext\acl\checkScope
+
+*As of v8.3.*
+
+`ext\acl\checkScope(USER_ID, SCOPE, [ACTION])`
+
+Returns TRUE if a user has access to a SCOPE. Optional ACTION should be one of the values: Create, Read, Edit, Delete, Stream.
+
+
+## ext\acl\getLevel
+
+*As of v8.3.*
+
+`ext\acl\getLevel(USER_ID, SCOPE, ACTION)`
+
+Returns an access level. ACTION should be one of the values: Create, Read, Edit, Delete, Stream.
+
+## ext\acl\getPermissionLevel
+
+*As of v8.3.*
+
+`ext\acl\getPermissionLevel(USER_ID, PERMISSION)`
+
+Returns a permission level.
