@@ -367,6 +367,8 @@ Out-of-the-box functions are listed below.
 
 * [util\generateId](formula/util.md#utilgenerateid)
 * [util\generateRecordId](formula/util.md#utilgeneraterecordid)
+* [util\base64Encode](formula/util.md#utilbase64encode)
+* [util\base64Decode](formula/util.md#utilbase64decode)
 
 ### Log
 
