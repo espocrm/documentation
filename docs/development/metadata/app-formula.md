@@ -19,9 +19,9 @@ Example:
         {
             "name": "myNamespace\\myFunction",
             "insertText": "myNamespace\\myFunction(STRING)",
-            "returnType": "string"
+            "returnType": "string",
+            "unsafe": false
         }
     ]
-
 }
 ```
