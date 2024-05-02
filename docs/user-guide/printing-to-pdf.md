@@ -430,6 +430,10 @@ Available types:
 
 ### Tables
 
+!!! note
+
+    Not recommebded as of v8.2. Use HTML tags with the *iterate* attribute when need looping through arrays.
+
 You can use a regular *table* tag or special *tableTag* helper. The latter way is preferable when using *{{#each}}* helper inside a table.
 
 !!! example
