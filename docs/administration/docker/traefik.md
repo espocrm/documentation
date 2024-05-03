@@ -40,7 +40,6 @@ services:
   mysql:
     image: mysql:latest
     container_name: mysql
-    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: espocrm
