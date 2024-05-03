@@ -19,7 +19,7 @@ One of the ways to install EspoCRM is by using its official Docker Image. The Es
 EspoCRM image requires to run MySQL server:
 
 ```
-$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8 --default-authentication-plugin=mysql_native_password
+$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8
 ```
 
 - `mysql` — name of MySQL container,
@@ -78,7 +78,6 @@ services:
   mysql:
     image: mysql:8
     container_name: mysql
-    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: espocrm
