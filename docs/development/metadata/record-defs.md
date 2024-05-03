@@ -175,6 +175,7 @@ Parameters:
 * mandatoryAttributeList – *string[]* – mandatory attributes to be selected when find related; as of v8.2;
 * countDisabled – bool – disable total count; as of 8.2;
 * massLink – bool – allows mass linking; as of 8.2;
+* linkOnlyNotLinked – bool – allow linking only if a record is not linked with any;  as of 8.3;
 
 ## createInputFilterClassNameList
 
