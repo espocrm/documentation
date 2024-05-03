@@ -82,7 +82,7 @@ The admin can log in as another regular user. The user detail view > the dropdow
 
 Limitations:
 
-* WebSocked is disabled when logged in as another user.
+* WebSocket is disabled when logged in as another user.
 * Requires re-entering admin password to log in as another user.
 * Recommended to open the login link in an incognito/private window to avoid losing a current login session.
 
