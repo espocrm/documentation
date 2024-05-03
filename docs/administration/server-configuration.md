@@ -63,7 +63,7 @@ EspoCRM supports MySQL (5.7, 8.0) and MariaDB (10.1 and greater). These are no s
 
 EspoCRM also experimentally supports PostgreSQL 15. Though it's planned to become official soon.
 
-### MySQL 8 support
+### MySQL 8.0 support
 
 MySQL 8.0.4 has changed a default authentication method to `caching_sha2_password` which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to `mysql_native_password` method. For a user it can be done with the query:
 
