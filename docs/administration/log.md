@@ -14,6 +14,7 @@ In `data/config-internal.php`:
     'maxFileNumber' => 30,
     'printTrace' => true, // to print an exception backtrace,
     'sql' => true, // log SQL queries
+    'databaseHandler' => true, // enables log in admin UI
   ],
 ```
 
@@ -24,6 +25,14 @@ Prints a backtrace when an exception is occurred. Note that in some cases an exc
 !!! warning
 
     It is not recommended to enable trace printing on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this problem is supposed to be solved.
+
+## Admin UI
+
+*As of v8.3.*
+
+To make log records available in the admin UI, set 'databaseHandler' parameter to true.
+
+Note that some log entries may be not available from the UI. For example, those that happened during upgrade or before database connection was established.
 
 ## SQL queries
 
