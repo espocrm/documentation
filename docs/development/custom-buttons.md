@@ -25,7 +25,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
                     "aclScope": "Lead",
                     "handler": "custom:my-action-handler",
                     "initFunction": "initMyAction",
-                    "actionFunction": "myAction"
+                    "actionFunction": "myAction",
                     "checkVisibilityFunction": "isMyActionVisible"
                 }
             ]
