@@ -14,3 +14,9 @@ Purchase Orders can be printed to PDF and sent in an email.
 
 Multiple [Receipt Orders](receipt-orders.md) can be created from a Purchase Order.
 
+
+## Default tax
+
+You need to have a Tax record created in your CRM. Taxes can be accessed at: Purchase Order list view > dropdown in the top-right corner > Taxes.
+
+Administrator can specify a default Tax record at Administration > Entity Manager > Purchase Order > fields > Tax > Default.
