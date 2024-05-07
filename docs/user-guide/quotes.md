@@ -161,8 +161,6 @@ You need to have a Tax record created in your CRM. Taxes can be accessed at Quot
 
 Administrator can specify a default Tax record at Administration > Entity Manager > Quote > fields > Tax > Default.
 
-Note: For older versions of Sales Pack & EspoCRM, you need also to specify the default tax rate value at Administration > Entity Manager > Quote > fields > Tax Rate > Default.
-
 ## Copying values from product to quote item
 
 Field values can be transferred from a product to a quote item upon product selection. Field names you want to be copied should coincide in Product and Quote Item enities.
