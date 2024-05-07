@@ -395,8 +395,12 @@ this.addHandler('mousedown', 'selector', (event, target) => { ... });
     }
 ```
 
+Multiple events can be specified separated by a whitespace.
+
 ### Built-in events
 
 * `after:render` – after the view is rendered;
 * `remove` – when the view is removed (destroyed); use it for cleaning up.
+
+  
 
