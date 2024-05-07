@@ -25,7 +25,7 @@ class MyContains implements Func
         $haystack = $arguments[0];
         $needle = $arguments[1];
 
-        if (count($args) > 2) {
+        if (count($arguments) > 2) {
             $offset = $arguments[2];
             
             return strpos($haystack, $needle, $offset) !== false;
