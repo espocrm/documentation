@@ -99,6 +99,7 @@ The list of parameters along with their default values. This is not a full list 
 * noteDeleteThresholdPeriod – `'1 month'` – how much time is available for deleting stream posts;
 * streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
 * recordFollowersLoadLimit – `6` – how much records loaded in the *Followers* field;
+* notePinnedMaxCount – `5` – max number of pinned notes per record;
 
 ### Clean-up
 
