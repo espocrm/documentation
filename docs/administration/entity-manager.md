@@ -9,6 +9,10 @@ The Entity Manager tool is available from the Administration panel. It provides 
 
 All customizations made via the Entity Manager are stored in the `custom` directory. You can make customizations on a separate instance, then copy the *custom* directory to your production instance and run rebuild (from the administration panel or CLI).
 
+!!! note
+
+    When creating a new entity type, a field or relationship in an existing entity type, the system will add a prefix *c* to the name (meaning custom). The purpose of it is to prevent naming conflicts with future versions. This behavior can be disabled with the config parameter `customPrefixDisabled`. Disable it at your own risk.
+
 In this article:
 
 * [Creating new entity type](#creating-new-entity-type)
