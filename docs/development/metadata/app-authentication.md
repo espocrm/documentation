@@ -2,7 +2,17 @@
 
 ## beforeLoginHookClassNameList
 
-Array of hook class names. Fired before logging in before credentials are checked. Should implement `Espo\Core\Authentication\Hook\BeforeLogin` interface.
+Array of hook class names. Fired before logging in before credentials are checked. Can throw an exception. Should implement `Espo\Core\Authentication\Hook\BeforeLogin` interface.
+
+!!! important
+
+    Need to have `__APPEND__` item in the beginning of the array when extending.
+
+## onLoginHookClassNameList
+
+*As of v8.3.*
+
+Array of hook class names. Fired before when a user is found, credentials are fine. Can throw an exception. Should implement `Espo\Core\Authentication\Hook\OnLogin` interface.
 
 !!! important
 
