@@ -1,4 +1,4 @@
-# Configuring a Virtual Host on Nginx for EspoCRM
+# Configuring Virtual Host on Nginx for EspoCRM
 
 In this guide we will show how to configure a virtual host on Nginx for EspoCRM on Ubuntu server.
 
