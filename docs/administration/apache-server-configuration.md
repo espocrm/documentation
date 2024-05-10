@@ -17,8 +17,8 @@ sudo service apache2 restart
 
 On a **production** environment the following configuration is recommended:
 
-* The document root should be set to `/path/to/espo/public/`.
-* An alias `/client/` => `/path/to/espo/client/` should be added.
+* The document root should be set to `/path_to_espo/public/`.
+* An alias `/client/` => `/path_to_espo/client/` should be added.
 
 Apache config example:
 
