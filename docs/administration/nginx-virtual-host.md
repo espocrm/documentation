@@ -12,8 +12,6 @@ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.co
 
 Now, open this file (`/etc/nginx/sites-available/espocrm.conf`) and modify the code following the format printed below (some settings may be different based on your configuration).
 
-### EspoCRM v7
-
 ```
 server {
     listen 80 default_server;
