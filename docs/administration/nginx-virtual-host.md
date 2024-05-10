@@ -10,7 +10,7 @@ To create this file, open a terminal and run the command:
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-Now, open this file (`/etc/nginx/sites-available/espocrm.conf`) and modify the code following the format printed below (some settings may be different based on your configuration).
+Now, open this file (`/etc/nginx/sites-available/espocrm.conf`) and modify the code following the format printed below (some settings may be different depending on your configuration).
 
 ```
 server {
@@ -89,7 +89,7 @@ Create a symbolic link:
 
 ```
 sudo ln -s /etc/nginx/sites-available/espocrm.conf /etc/nginx/sites-enabled/
-````
+```
 
 Run this command to check if everything is fine:
 
