@@ -147,7 +147,7 @@ WEBSERVER_USER can be one of the following “www”, “www-data”, “apache�
 
 See in a separate [article](cron-on-windows.md) how to set up Cron on Windows.
 
-## Configuration instructions based on your server
+## Configuration instructions for specific web servers
 
 * [Apache server configuration](apache-server-configuration.md)
 * [Nginx server configuration](nginx-server-configuration.md)
