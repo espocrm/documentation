@@ -29,7 +29,7 @@ Go to your hosting administration panel (e.g. *cPanel*), or use CLI, and create 
 
 ### 4. Run EspoCRM installation wizard
 
-In the browser, open an URL that corresponds to the location where EspoCRM files were extracted (e.g. `http://yourdomain.com/espo` or `http://yourdomain.com` if you extracted to the root).
+In the browser, open an URL that corresponds to the location where EspoCRM files were extracted (e.g. `https://yourdomain.com/espo` or `https://yourdomain.com` if you extracted to the root).
 
 If you see the screen below, you have the *file permission* issue.
 You need to execute the displayed command in the terminal via SSH to set the correct permissions.
