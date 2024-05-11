@@ -76,7 +76,7 @@ nav:
             - 'Dynamic Logic': 'administration/dynamic-logic.md'
             - 'API Before-Save script': 'administration/api-before-save-script.md'
         - 'Users': 'administration/users-management.md'
-        - 'Roles management': 'administration/roles-management.md'
+        - 'Roles': 'administration/roles-management.md'
         - 'Email administration': 'administration/emails.md'
         - 'Formula script': 'administration/formula.md'
         - 'Formula functions':
