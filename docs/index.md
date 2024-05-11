@@ -51,6 +51,7 @@
   * [Webhooks](administration/webhooks.md)
   * [Passwords](administration/passwords.md)
   * [Security](administration/security.md)
+  * [Phone numbers](administration/phone-numbers.md)
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
   * [Multiple assigned users](administration/multiple-assigned-users.md)
