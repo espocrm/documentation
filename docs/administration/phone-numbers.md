@@ -1,5 +1,5 @@
 # Phone Numbers
-https://github.com/espocrm/documentation/blob/master/docs/administration/phone-numbers.md
+
 ## Internaltional phone numbers
 
 The internaltional phone numbers functionality can be enabled or disabled at Administration > Settings. When enabled, all phone number values are stored in the international format, e.g. *+111111111111*.
