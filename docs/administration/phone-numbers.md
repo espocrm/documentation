@@ -7,7 +7,7 @@ The internaltional phone numbers functionality can be enabled or disabled at Adm
 Features:
 
 * A user is able to select country code when entering a number in a phone number field.
-* The appropriate formatting is applied when a phone number is displayed.
+* Appropriate formatting is applied when a phone number is displayed.
 * Validation is applied when saving a phone number, not allowing to save a not valid number.
 
 It is possible to define preferred country codes at Administration > Settings. This will avoid the need to enter the same country code when operating in a specific region.
