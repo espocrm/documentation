@@ -12,6 +12,6 @@ Features:
 
 It is possible to define preferred country codes at Administration > Settings. This will avoid the need to enter the same country code when operating in a specific region.
 
-When importing records, there is the ability to specify a regional telephone code, so that import values in a regional format will be automatically converted to international. The same functionality exists for the Lead Capture feature.
+When importing records, there is the ability to specify a regional telephone code, so that values in a regional format will be automatically converted to international. The same functionality exists for the Lead Capture feature.
 
 ![Phone numbers](../_static/images/administration/phone-numbers/phone-numbers.png)
