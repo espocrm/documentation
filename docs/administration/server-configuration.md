@@ -158,4 +158,4 @@ See in a separate [article](cron-on-windows.md) how to set up Cron on Windows.
 * [Jobs](jobs.md)
 * [WebSocket](websocket.md)
 * [Performance tweaking](performance-tweaking.md)
-* [Installation by script](installation-by-scrip.md)
+* [Installation by script](installation-by-script.md)
