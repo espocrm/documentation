@@ -46,7 +46,7 @@ services:
       MYSQL_USER: espouser
       MYSQL_PASSWORD: database_password
     volumes:
-      - ./mysql:/var/lib/mysql
+      - mysql:/var/lib/mysql
     restart: always
 
   espocrm:
@@ -60,7 +60,7 @@ services:
       ESPOCRM_ADMIN_PASSWORD: password
       ESPOCRM_SITE_URL: "https://your_domain.com"
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     restart: always
     labels:
       - traefik.enable=true                                           
@@ -73,7 +73,7 @@ services:
     image: espocrm/espocrm:latest
     container_name: espocrm-daemon
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     restart: always
     entrypoint: docker-daemon.sh
 
@@ -86,7 +86,7 @@ services:
      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     restart: always
     entrypoint: docker-websocket.sh
     labels:
