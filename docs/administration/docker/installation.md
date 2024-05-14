@@ -286,6 +286,7 @@ In MySQL 8.4 there were changes in the authentication procedure, so you may enco
 1\. Change *authentication plugin* to `caching_sha2_password` for your MySQL users:
 
 Notes: 
+
 - Replace the `YOUR_ROOT_PASSWORD` with your MySQL root password.
 - Replace the `YOUR_ESPOCRM_DB_PASSWORD` with your MySQL espocrm user password.
 
