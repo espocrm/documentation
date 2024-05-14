@@ -279,23 +279,29 @@ The `espocrm` images come in many flavors, each designed for a specific use case
 
 ## Troubleshooting
 
-### Switch from MySQL 8.3 to MySQL 8.4
+### Switching to MySQL 8.4
 
-In MySQL 8.4 there were some changes in the authentication procedure, so you may encounter authentication related errors while upgrading EspoCRM. In this case, it is recommended to take the following steps:
+In MySQL 8.4 there were changes in the authentication procedure, so you may encounter authentication related errors while upgrading EspoCRM. In this case, it is recommended to take the following steps:
 
-1. Change authentication to `caching_sha2_password`:
+1\. Change *authentication plugin* to `caching_sha2_password` for your MySQL users:
+
+Notes: 
+- Replace the `YOUR_ROOT_PASSWORD` with your MySQL root password.
+- Replace the `YOUR_ESPOCRM_DB_PASSWORD` with your MySQL espocrm user password.
+
 ```
-sudo docker exec -i espocrm-mysql mysql --user=root --password="rootpass" -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'rootpass';"
-sudo docker exec -i espocrm-mysql mysql --user=root --password="rootpass" -e "ALTER USER 'root'@'%' IDENTIFIED WITH caching_sha2_password BY 'rootpass';"
-sudo docker exec -i espocrm-mysql mysql --user=root --password="userpass" -e "ALTER USER 'espocrm'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'userpass';"
-sudo docker exec -i espocrm-mysql mysql --user=root --password="userpass" -e "ALTER USER 'espocrm'@'%' IDENTIFIED WITH caching_sha2_password BY 'userpass';"
+sudo docker exec -i mysql mysql --user=root -p -e "
+  ALTER USER IF EXISTS 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ROOT_PASSWORD';
+  ALTER USER IF EXISTS 'root'@'%' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ROOT_PASSWORD';
+  ALTER USER IF EXISTS 'espocrm'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ESPOCRM_DB_PASSWORD';
+  ALTER USER IF EXISTS 'espocrm'@'%' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ESPOCRM_DB_PASSWORD';"
 ```
-2. Remove from *docker-compose.yml* file the following line: `command: --default-authentication-plugin=mysql_native_password`.
-3. Restart and build `espocrm-mysql` container:
+
+2\. Remove from *docker-compose.yml* file the following line: `command: --default-authentication-plugin=mysql_native_password`.
+   
+3\. Restart and build `mysql` container:
+   
 ```
-cd /var/www/espocrm && sudo docker stop espocrm-mysql  && sudo docker rm espocrm-mysql  && docker compose up -d --build "$@"
-```
-4. Upgrade EspoCRM:
-```
-sudo /var/www/espocrm/command.sh upgrade
+sudo docker stop mysql && sudo docker rm mysql
+docker compose up -d --build
 ```
