@@ -528,3 +528,30 @@ sudo ./command.sh apply-domain
 ```
 
 Note: You have to clear your browser cache for this change to take effect.
+
+## Migration from MySQL to MariaDB
+
+1. Export the MySQL database from the corresponding Docker container:
+```
+sudo docker exec -i espocrm-mysql /usr/bin/mysqldump -uroot -prootpassword espocrm > db.sql
+```
+2. Export `data` and `custom` folders from *espocrm* Docker container:
+```
+mkdir data
+sudo docker cp espocrm:/var/www/html/data/config.php ./data/config.php
+sudo docker cp espocrm:/var/www/html/data/config-internal.php ./data/config-internal.php
+sudo docker cp espocrm:/var/www/html/data/upload ./data/upload
+sudo docker cp espocrm:/var/www/html/custom .
+```
+3. Install clean EspoCRM by script:
+```
+wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+sudo bash install.sh --db-root-password=rootpassword --db-password=password --admin-password=password --clean
+```
+4. Replace `data` and `custom` folders in the */var/www/espocrm/data/espocrm* directory with the previously exported ones.
+5. Replace `'host' => 'espocrm-mysql'` line with `'host' => 'espocrm-db'` one in the */var/www/espocrm/data/espocrm/config-internal.php* file.
+6. Import previously exported database to MariaDB container:
+```
+sudo /var/www/espocrm/command.sh import-sql db.sql
+```
+7. Log in to your instance and check if everything is working well.
