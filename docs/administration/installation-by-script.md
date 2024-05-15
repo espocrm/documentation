@@ -312,17 +312,17 @@ If you need a high-security connection, you have to use your own SSL/TLS certifi
 
 Post installation steps:
 
-1. Go to your server directory `/var/www/espocrm/data/nginx/ssl/cert/`.
+1\. Go to your server directory `/var/www/espocrm/data/nginx/ssl/cert/`.
 
-2. Replace the following certificates with your own:
+2\. Replace the following certificates with your own:
 
-    - fullchain.pem
-    - privkey.pem
+- fullchain.pem
+- privkey.pem
 
-  **Important!**
-  Your own certificates have to substitute the existing certificates and must have the same names.
+**Important!**
+Your own certificates have to substitute the existing certificates and must have the same names.
 
-3. Restart nginx server:
+3\. Restart nginx server:
 
 ```
 /var/www/espocrm/restart.sh espocrm-nginx
