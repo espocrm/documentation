@@ -5,7 +5,7 @@ Binotel Integration is available as part of [VoIP Integration extension](https:/
 
 ## How to setup Binotel Integration for an administrator
 
-1. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) -> VoIP » Binotel.
+1\. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) -> VoIP » Binotel.
 
 ![Binotel integration config](../../_static/images/extensions/voip-integration/binotel-admin-setup.png)
 
@@ -24,7 +24,7 @@ E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through a call popup.
 
-2. Contact Binotel support to add an URL (see “Post URL” field) to handle incoming/outgoing calls (API CALL Settings and API PUSH):
+2\. Contact Binotel support to add an URL (see “Post URL” field) to handle incoming/outgoing calls (API CALL Settings and API PUSH):
 **http://espocrm.local/?entryPoint=Binotel&connector=Binotel&key=hh9v0zr529**
 
 

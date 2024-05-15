@@ -175,18 +175,25 @@ Then go to Administrator panel > Clear cache.
 The call recording should be configured on the Asterisk side, the URL of that recording will be saved in EspoCRM.
 
 The setup process:
-1. Configure a call recording on the Asterisk side.
-2. Login to EspoCRM under the administrator and go to the Asterisk connector (Administration > VoIP Settings > Asterisk AMI).
-3. Enable the "Listen recorded calls" option and configure the "URL to recorded calls" field.
+
+1\. Configure a call recording on the Asterisk side.
+
+2\. Login to EspoCRM under the administrator and go to the Asterisk connector (Administration > VoIP Settings > Asterisk AMI).
+
+3\. Enable the "Listen recorded calls" option and configure the "URL to recorded calls" field.
+
 Possible parameters:
+
 * "{VOIP_UNIQUEID}" - uniqueid of a call;
 * "{Y}" - year of a call;
 * "{m}" - month of a call;
 * "{d}" - day of a call.
+
 Example:
 If we have a link in a format: "http://11.11.11.11/2019/11/25/1568202771.6.mp3", then the "URL to recorded calls" should be the following:
 `http://11.11.11.11/{Y}/{m}/{d}/{VOIP_UNIQUEID}.mp3`
-4. Display a call recording field in a layout of Call entity.
+
+4\. Display a call recording field in a layout of Call entity.
 
 For displaying a call recording field in EspoCRM, go to Administration > Layout Manager > select Calls entity and add the field "Recording" for Detail layout. See the screenshot:
 
