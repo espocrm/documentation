@@ -529,29 +529,59 @@ sudo ./command.sh apply-domain
 
 Note: You have to clear your browser cache for this change to take effect.
 
-## Migration from MySQL to MariaDB
+## Installer migration from v1 to v2
 
-1. Export the MySQL database from the corresponding Docker container:
+1\. Export the MySQL database from the corresponding Docker container:
+   
 ```
-sudo docker exec -i espocrm-mysql /usr/bin/mysqldump -uroot -prootpassword espocrm > db.sql
+mkdir -p /var/www/backup
+cd /var/www/backup
+sudo docker exec -i espocrm-mysql /usr/bin/mysqldump -uroot -pYOUR_ROOT_PASSWORD espocrm > db.sql
 ```
-2. Export `data` and `custom` folders from *espocrm* Docker container:
+
+Notes:
+
+- Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
+
+2\. Copy `data` and `custom` folders from *espocrm* directory:
+   
 ```
-mkdir data
-sudo docker cp espocrm:/var/www/html/data/config.php ./data/config.php
-sudo docker cp espocrm:/var/www/html/data/config-internal.php ./data/config-internal.php
-sudo docker cp espocrm:/var/www/html/data/upload ./data/upload
-sudo docker cp espocrm:/var/www/html/custom .
+cp -a /var/www/espocrm/data/espocrm/data /var/www/backup/data
+cp -a /var/www/espocrm/data/espocrm/custom /var/www/backup/custom
 ```
-3. Install clean EspoCRM by script:
+
+3\. Install a fresh EspoCRM by a script:
+   
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
-sudo bash install.sh --db-root-password=rootpassword --db-password=password --admin-password=password --clean
+sudo bash install.sh --db-root-password=YOUR_ROOT_PASSWORD --db-password=YOUR_ESPOCRM_DB_PASSWORD --admin-password=YOUR_ADMIN_PASSWORD --clean
 ```
-4. Replace `data` and `custom` folders in the */var/www/espocrm/data/espocrm* directory with the previously exported ones.
-5. Replace `'host' => 'espocrm-mysql'` line with `'host' => 'espocrm-db'` one in the */var/www/espocrm/data/espocrm/config-internal.php* file.
-6. Import previously exported database to MariaDB container:
+
+Notes:
+
+- Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
+- Replace the YOUR_ESPOCRM_DB_PASSWORD with your MySQL espocrm user password.
+- Replace the YOUR_ADMIN_PASSWORD with your EspoCRM admin user password.
+
+4\. Replace `data` and `custom` folders in the */var/www/espocrm/data/espocrm* directory with the previously exported ones.
+
 ```
-sudo /var/www/espocrm/command.sh import-sql db.sql
+cp -a /var/www/backup/data /var/www/espocrm/data/espocrm/data
+cp -a /var/www/backup/custom /var/www/espocrm/data/espocrm/custom
 ```
-7. Log in to your instance and check if everything is working well.
+
+5\. Replace `'host' => 'espocrm-mysql'` line with `'host' => 'espocrm-db'` one in the */var/www/espocrm/data/espocrm/config-internal.php* file.
+
+6\. Import previously exported database to MariaDB container:
+
+```
+sudo /var/www/espocrm/command.sh import-sql /var/www/backup/db.sql
+```
+
+7\. Make a rebuild:
+
+```
+sudo /var/www/espocrm/command.sh rebuild
+```
+
+8\. Log in to your instance and check if everything is working well.
