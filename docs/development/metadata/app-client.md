@@ -72,10 +72,11 @@ Example:
 
 *string*
 
-A favicon image path. The default value: `client/img/favicon.ico`.
+A favicon image. SVG or PNG The default value: `client/img/favicon.svg`.
 
-## favicon196
+## faviconAlternate
 
 *string*
 
-A big favicon image path. The default value: `client/img/favicon196x196.png`.
+An alternate 16px ICO favicon image. The default value: `client/img/favicon.ico`.
+
