@@ -29,7 +29,7 @@ To build a proper *config.php* file and populate database you can run installati
 
 You also need to enable [developer mode](#configuration-for-development).
 
-After building you will be able to run the instance in your browser right from the project root directory, considering that your web server is properly configured.
+After building, you will be able to run the instance in your browser right from the project root directory, considering that your web server is properly configured.
 
 ### Building
 
