@@ -10,4 +10,4 @@ Counties marked as preferred will be displayed first (on empty input).
 
 Countries can also be [imported](import.md) from a CSV file.
 
-A default predefined country list with English names can be optionally loaded. Administration > Address Countries > top-right menu > Populate with default country list. 
+A default predefined country list with English names can be optionally loaded. To do this, follow: Administration > Address Countries > top-right menu > Populate with default country list. 
