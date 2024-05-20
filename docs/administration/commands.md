@@ -2,7 +2,7 @@
 
 !!! note
 
-    You can `php command.php` instead of `bin/command`. May be reasonable if there's no execute permission for *bin/command*.
+    You can run `php command.php` instead of `bin/command`. May be reasonable if there's no execute permission for *bin/command*.
 
 ## List of available commands
 
