@@ -22,7 +22,7 @@ php clear_cache.php
 php rebuild.php
 ```
 
-Clears cache, rebuilds database.
+Clears cache, rebuilds database and other things.
 
 ### Hard rebuild
 
