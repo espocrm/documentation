@@ -14,7 +14,7 @@ In `data/config-internal.php`:
     'maxFileNumber' => 30,
     'printTrace' => true, // to print an exception backtrace,
     'sql' => true, // log SQL queries
-    'databaseHandler' => true, // enables log in admin UI
+    'databaseHandler' => true, // the log will be available in the UI
   ],
 ```
 
