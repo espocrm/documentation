@@ -77,7 +77,7 @@ Note: Crontab should be configured under web-server user, e.g. `crontab -e -u ww
 
 #### Problem #2. Crontab is configured, but Scheduled Jobs are not working
 
-To make sure there are no errors when cron is running, try to run the cron command in a terminal:
+To make sure there are no errors when cron is running, try to run the cron command in the terminal:
 
 1\. Login via SSH to your server.
 
