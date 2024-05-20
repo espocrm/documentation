@@ -60,7 +60,7 @@ In `data/config-internal.php` (or `data/config.php`):
 
 ## Check system requirements
 
-At Administration > System Requirements. It's important that you have all required extensions installed.
+At Administration > System Requirements. It's important that you have all required PHP extensions installed.
 
 
 ## Scheduled jobs are not working
