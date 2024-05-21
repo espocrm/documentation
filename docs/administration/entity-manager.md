@@ -53,7 +53,7 @@ If you click **Edit** on the entity view, you will be able to change parameters 
 
 ## Fields
 
-By clicking the **Fields**, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
+By clicking the **Fields** button, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
 
 [More detail](fields.md) about fields.
 
