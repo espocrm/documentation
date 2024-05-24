@@ -26,6 +26,7 @@ In this article:
 * [Client implementations](#client-implementations)
 * [Authentication](#authentication)
 * [Error codes](#error-codes)
+* [Date and time values](#date-and-time-values)
 
 API functions:
 
@@ -133,3 +134,9 @@ Usually occurs when you **don't have access** to a specific record or action. Se
 ### 404 Not found
 
 Usually occurs when a requested **record doesn't exist**.
+
+## Date and time values
+
+Date format: *YYYY-MM-DD*. Datetime format: *YYYY-MM-DD HH:mm:ss*.
+
+All datetime values are represented in UTC timezone, regardless of settings.
