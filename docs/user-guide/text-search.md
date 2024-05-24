@@ -46,7 +46,7 @@ Full-text search is always applied in the **Global Search** (for entity types wi
 
 Full-text search is also applied when you search in the list view. Though it can be skipped for some search queries. Yet, it's possible to force a full-text usage by prepending `ft:` to the search query.
 
-For InnoDB tables the following operators are available:
+The following operators are available:
 
 * `+` A leading plus sign indicates that this word must be present.
 * `-` A leading minus sign indicates that this word must not be present.
