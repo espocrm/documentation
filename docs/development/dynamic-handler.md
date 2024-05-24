@@ -76,7 +76,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], (Dep) => {
 });
 ```
 
-Clear cache after all.
+Then, clear cache.
 
 !!! note
 
