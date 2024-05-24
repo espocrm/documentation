@@ -22,7 +22,7 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], (Dep) => {
 
     return class extends Dep {
 
-        // called on initialization
+        // Called on initialization.
         init() {
             this.controlFields();
 
@@ -65,11 +65,9 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], (Dep) => {
             }
 
             this.recordView.hideField('sicCode');
-
             this.recordView.setFieldNotRequired('type');
             this.recordView.setFieldNotReadOnly('teams');
             this.recordView.setFieldOptionList('type', ['Test']);
-
             this.recordView.hidePanel('activities');
         }
     }
