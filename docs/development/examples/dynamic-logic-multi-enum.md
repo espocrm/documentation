@@ -21,12 +21,7 @@ define('custom:my-dynamic-handler', ['dynamic-handler'], (Dep) => {
 
         init() {
             this.controlFields();
-
-            this.recordView.listenTo(
-                this.model,
-                'change:continents',
-                this.controlFields.bind(this),
-            );
+            this.recordView.listenTo(this.model, 'change:continents', () => this.controlFields());
         },
 
         controlFields() {
