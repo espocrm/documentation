@@ -95,6 +95,23 @@ In metadata > YourEntityType > clientDefs:
 }
 ```
 
+## Record view methods
+
+The list of record view methods that may be useful in a dynamic handler.
+
+* hideField
+* showField
+* setFieldReadOnly
+* setFieldNotReadOnly
+* setFieldRequired
+* setFieldNotRequired
+* setFieldOptionList
+* resetFieldOptionList
+* showPanel
+* hidePanel
+* stylePanel
+* unstylePanel
+
 ## See also
 
 * [Example for multi-enum fields](examples/dynamic-logic-multi-enum.md)
