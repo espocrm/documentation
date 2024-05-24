@@ -59,11 +59,9 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], (Dep) => {
                 this.recordView.setFieldRequired('type');
                 this.recordView.setFieldReadOnly('teams');
 
-                // set options for enum/array/multi-enum/checklist fields
-                this.recordView.setFieldOptionList('type', [
-                    'Test',
-                    'Hello',
-                ]);
+                // set options
+                // actual for enum/array/multi-enum/checklist/varchar fields types
+                this.recordView.setFieldOptionList('type', ['Test', 'Hello']);
 
                 this.recordView.showPanel('activities');
                 
