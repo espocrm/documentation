@@ -2,7 +2,7 @@
 
 Dynamic Handler provides the ability to manipulate the form (detail/edit views) appearance.
 
-Note, that you can make forms dynamic with [Dynamic Logic](../administration/dynamic-logic.md) feature. Dynamic Handler is intended for more complex tasks where Dynamic Logic can be useless.
+Note that you can make forms dynamic with [Dynamic Logic](../administration/dynamic-logic.md) feature. Dynamic Handler is intended for more complex tasks where Dynamic Logic can be useless.
 
 An example for Account entity type.
 
