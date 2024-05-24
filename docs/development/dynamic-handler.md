@@ -4,7 +4,7 @@ Dynamic Handler provides the ability to manipulate the form (detail/edit views) 
 
 Note that you can make forms dynamic with [Dynamic Logic](../administration/dynamic-logic.md) feature. Dynamic Handler is intended for more complex tasks where Dynamic Logic can be useless.
 
-An example for Account entity type.
+An example for the *Account* entity type.
 
 Create a file `custom/Espo/Custom/Resources/metadata/clientDefs/Account.json`:
 
@@ -18,12 +18,12 @@ Create a file `client/custom/src/account-dynamic-handler.js`:
 
 ```js
 
-define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
+define('custom:account-dynamic-handler', ['dynamic-handler'], (Dep) => {
 
-    return Dep.extend({
+    return class extends Dep {
 
         // called on initialization
-        init: function () {
+        init() {
             this.controlFields();
 
             // Invoke controlFields method every time assignedUserId gets changed.
@@ -49,9 +49,9 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
                     }
                 }
             );
-        },
+        }
 
-        controlFields: function () {        
+        controlFields() {        
             // if assigned user is not empty
             if (this.model.get('assignedUserId')) {                
                 this.recordView.showField('sicCode');
@@ -74,15 +74,12 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], function (Dep) {
 
             this.recordView.setFieldNotRequired('type');
             this.recordView.setFieldNotReadOnly('teams');
-            this.recordView.setFieldOptionList('type', [
-                'Test',
-            ]);
+            this.recordView.setFieldOptionList('type', ['Test']);
 
             this.recordView.hidePanel('activities');
-        },
-    });
+        }
+    }
 });
-
 ```
 
 Clear cache after all.
