@@ -34,21 +34,17 @@ define('custom:account-dynamic-handler', ['dynamic-handler'], (Dep) => {
             );
             
             // Changing another attribute on status change.
-            this.recordView.listenTo(
-                this.model,
-                'change:status',
-                (model, value, options) => {
-                    if (!options.ui) {
-                        // Skip if the change was initiated not by a user interaction.
-                        // Important.
-                        return;
-                    }
-                    
-                    if (value === 'Some Status') {
-                        setTimeout(() => this.model.set('someField', 'someValue'), 1);
-                    }
+            this.recordView.listenTo(this.model, 'change:status', (model, value, options) => {
+                if (!options.ui) {
+                    // Skip if the change was initiated not by a user interaction.
+                    // Important.
+                    return;
                 }
-            );
+                
+                if (value === 'Some Status') {
+                    setTimeout(() => this.model.set('someField', 'someValue'), 1);
+                }
+            });
         }
 
         controlFields() {        
