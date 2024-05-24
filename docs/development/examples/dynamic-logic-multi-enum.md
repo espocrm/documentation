@@ -15,11 +15,11 @@ In this example we have two multi-enum fields `continents` and `countries`. We w
 2\. Create a file `client/custom/src/my-dynamic-handler.js`:
 
 ```js
-define('custom:my-dynamic-handler', ['dynamic-handler'], function (Dep) {
+define('custom:my-dynamic-handler', ['dynamic-handler'], (Dep) => {
 
-    return Dep.extend({
+    return class extends Dep {
 
-        init: function () {
+        init() {
             this.controlFields();
 
             this.recordView.listenTo(
@@ -29,29 +29,29 @@ define('custom:my-dynamic-handler', ['dynamic-handler'], function (Dep) {
             );
         },
 
-        controlFields: function () {
-            let selectedContinentList = this.recordView.model.get('continents') || [];
+        controlFields() {
+            const selectedContinentList = this.recordView.model.get('continents') || [];
 
-            let continentList = ['Africa', 'Asia', 'Europe', 'America'];
+            const continentList = ['Africa', 'Asia', 'Europe', 'America'];
 
-            let countryMap = {
+            const countryMap = {
                 'Africa': ['Nigeria', 'Ethiopia'],
                 'Asia': ['India', 'Pakistan'],
                 'Europe': ['United Kingdom', 'France'],
                 'America': ['United States', 'Canada', 'Brazil'],
             };
 
-            let countryList = [];
+            const countryList = [];
 
-            for (let continent of selectedContinentList) {
+            for (const continent of selectedContinentList) {
                 countryList = countryList.concat(
                     countryMap[continent] || []
                 );
             }
 
             this.recordView.setFieldOptionList('countries', countryList);
-        },
-    });
+        }
+    }
 });
 ```
 
