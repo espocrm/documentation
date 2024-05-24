@@ -22,7 +22,7 @@ define('custom:my-dynamic-handler', ['dynamic-handler'], (Dep) => {
         init() {
             this.controlFields();
             this.recordView.listenTo(this.model, 'change:continents', () => this.controlFields());
-        },
+        }
 
         controlFields() {
             const selectedContinentList = this.recordView.model.get('continents') || [];
