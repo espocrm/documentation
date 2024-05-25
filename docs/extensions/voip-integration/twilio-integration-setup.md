@@ -1,6 +1,6 @@
 # Twilio Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, please click [here](https://www.espocrm.com/features/voip-integration/).
+VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
 
 There are two ways in which you can set up Twillio integration:
 
@@ -38,11 +38,11 @@ There are two ways in which you can set up Twillio integration:
 
 ## How to configure routing of Twilio phone numbers
 
-After you have successfully filled in the connection details, EspoCRM will import all active Twilio phone numbers (please wait a few minutes the first time).
+After you have successfully filled in the connection details, EspoCRM will import all active Twilio phone numbers (wait a few minutes the first time).
 
 1. **Configure Routing**
 
-    To configure Twilio phone number routing, please go to Administration > VoIP Routing and select the phone number.
+    To configure Twilio phone number routing, go to Administration > VoIP Routing and select the phone number.
 
     ![Twilio Routers](../../_static/images/extensions/voip-integration/twilio-routing.png)
 
@@ -123,6 +123,6 @@ Make sure that your users have the access to the entity 'Calls'.
 
 ## More Twilio settings for users
 
-Each user can set “Do Not Disturb” mode for incoming lines. To do it, please go to the home page (click on a logo) and add a “VoIP Settings” dashlet (“+” button).
+Each user can set “Do Not Disturb” mode for incoming lines. To do it, go to the home page (click on a logo) and add a “VoIP Settings” dashlet (“+” button).
 
 ![Twilio dashlet](../../_static/images/extensions/voip-integration/twilio-dashlet.png)
