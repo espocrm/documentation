@@ -8,7 +8,7 @@ Open a file manager or login via SSH to archive all available files from the Esp
 
 ### Step 2. Backup your database
 
-The data stored in the database (MySQL, MariaDB) should be backed up. Please, follow this [recommendation](backup-and-restore.md#step-2-backup-database).
+The data stored in the database (MySQL, MariaDB or PostgreSQL) should be backed up. Please, follow this [recommendation](backup-and-restore.md#step-2-backup-database).
 
 ### Step 3. Copy files and database backups to another server
 
