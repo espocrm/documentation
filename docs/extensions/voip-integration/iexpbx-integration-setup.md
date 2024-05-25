@@ -1,6 +1,6 @@
 # iexPBX Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service, Starface server and iexPBX server. For more details about the features, please click [here](https://www.espocrm.com/features/voip-integration/).
+VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service, Starface server and iexPBX server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
 
 ## How to setup iexPBX Integration for an administrator
 
