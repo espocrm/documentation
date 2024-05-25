@@ -1,6 +1,6 @@
 # Starface Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, please click [here](https://www.espocrm.com/features/voip-integration/).
+VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
 
 ## Supported Starface servers
 
@@ -54,7 +54,7 @@ For docker containers, see [here](#setting-up-cron-for-docker-container).
 
 ## How to setup Starface Integration for users
 
-Each user who wants to use Starface integration, should setup his access in the User’s Profile, under “VoIP Settings”. Please note that login and password should be to the Starface web interface, not to the SIP credentials. Also, the user can change some VoIP settings on this window.
+Each user who wants to use Starface integration, should setup his access in the User’s Profile, under “VoIP Settings”. Note that login and password should be to the Starface web interface, not to the SIP credentials. Also, the user can change some VoIP settings on this window.
 
 ![VoIP settings](../../_static/images/extensions/voip-integration/starface-user-settings.png)
 
