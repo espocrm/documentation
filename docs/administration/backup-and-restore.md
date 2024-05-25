@@ -72,7 +72,7 @@ where `/var/www/html` is the web-server directory.
 
 ### Step 2. Set required permissions
 
-The files should be owned by the web-server user and have correct permissions. Please set required permissions by following this [instruction](server-configuration.md#required-permissions-for-unix-based-systems).
+The files should be owned by the web-server user and have correct permissions. Set required permissions by following this [instruction](server-configuration.md#required-permissions-for-unix-based-systems).
 
 ### Step 3. Import database dump
 
