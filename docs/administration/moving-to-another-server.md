@@ -29,13 +29,13 @@ Set proper permissions and file ownership, see [here](server-configuration.md#r
 
 ### Step 7. Import your database backup
 
-First, you have to create a new database with a user in MySQL. To import your database from the backup, follow these [instructions](backup-and-restore.md#step-3-import-database-dump).
+First, you have to create a new database with a user in MySQL/MariaDB/PostgreSQL. To import your database from the backup, follow these [instructions](backup-and-restore.md#step-3-import-database-dump).
 
 ### Step 8. Correct EspoCRM configurations
 
-After successfully importing and configuring the server, please correct EspoCRM configurations in the files `data/config-internal.php` and  `data/config.php`:
+After successfully importing and configuring the server, correct EspoCRM config parameters in the files `data/config-internal.php` and  `data/config.php`.
 
-database connection settings:
+Database connection settings:
 
 ```php
 'database' => [
@@ -48,13 +48,13 @@ database connection settings:
 ],
 ```
 
-*siteUrl* - if your domain name (URL) is changed:
+*siteUrl* – if your domain name (URL) has changed:
 
 ```php
 'siteUrl' => 'https://new-link.com',
 ```
 
-default file owner (only if the new web server has a different user/group):
+Default file owner (only if the new web server has a different user/group):
 
 ```php
 'defaultPermissions' => [
