@@ -100,7 +100,7 @@ Config file path: `/etc/nginx/sites-available/YOUR_SITE`. If you don’t have th
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
-For more information on how to configure the new virtual host on Nginx, please read this [guidelines](nginx-virtual-host.md).
+For more information on how to configure the new virtual host on Nginx, read this [guidelines](nginx-virtual-host.md).
 
 Run this command in the terminal to check if everything is fine:
 
@@ -116,4 +116,4 @@ sudo service nginx restart
 
 ## See also
 
-To configure a new Virtual Host on Nginx, please read this [guidelines](nginx-virtual-host.md).
+To configure a new Virtual Host on Nginx, read this [guidelines](nginx-virtual-host.md).
