@@ -31,7 +31,7 @@ In this article:
 
 ## Asterisk: The popup window is not displayed
 
-To be able to make / receive calls with the popup window, please check these items:
+To be able to make / receive calls with the popup window, check these items:
 
 1. If Asterisk server is properly [configured](asterisk-integration-setup.md#step-1).
 2. If cron job is [configured](asterisk-integration-setup.md#step-2).
@@ -43,7 +43,7 @@ Now, you can make calls from SIP client or from EspoCRM.
 ## Asterisk: Click to call is not working
 
 VoIP Integration extension is sending a request to Asterisk server when you click on a phone number.
-Please make sure the following parameters are correct (Administration > VoIP Settings > VoIP » Asterisk AMI):
+Make sure the following parameters are correct (Administration > VoIP Settings > VoIP » Asterisk AMI):
 1. `Dialout Channel` - it determines the channel for outgoing calls. It can be "PJSIP/###" (Asterisk 13+) or "SIP/###", where ### is a user’s extension (internal number). The extension "###" will be substituted automatically depending on the user.
 
   ![Dialout Channel](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-1.png)
@@ -52,7 +52,7 @@ Please make sure the following parameters are correct (Administration > VoIP Set
 
   ![Dialout Channel](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-2.png)
 
-3. `User Dial Context` - each user can define his own Dial Context in his user's profile. Please make sure this option is empty or defined correctly.
+3. `User Dial Context` - each user can define his own Dial Context in his user's profile. Make sure this option is empty or defined correctly.
 
   ![Dialout Channel](../../_static/images/extensions/voip-integration/troubleshooting-click-to-call-3.png)
 
