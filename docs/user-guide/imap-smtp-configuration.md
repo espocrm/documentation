@@ -70,7 +70,7 @@ To setup SMTP account, do the following:
     * Use the [Google Integration](https://www.espocrm.com/extensions/google-integration/) extension that provides a secure authentication via Oauth2.
     * Use a generated [App Password](https://support.google.com/accounts/answer/185833). Requires enabling 2-step verification for your Google account.
 
-For more information, please follow the [link](https://support.google.com/mail/answer/7126229?hl=en).
+For more information, follow the [link](https://support.google.com/mail/answer/7126229?hl=en).
 
 ## Outlook
 
