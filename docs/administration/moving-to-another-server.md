@@ -1,6 +1,6 @@
 # Moving EspoCRM to another server
 
-Follow these steps to move EspoCRM to another server:
+Follow these steps to move EspoCRM to another server.
 
 ### Step 1. Backup files
 
