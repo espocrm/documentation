@@ -66,7 +66,7 @@ In this file should be defined a phoneNumber field (a field with "type": "phone"
 }
 ```
 
-Please make sure that your JSON data is correct after changes.
+Make sure that your JSON data is correct after changes.
 
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
@@ -75,7 +75,7 @@ To take effect, clear a system cache (Administration > Clear Cache) and reload a
 
 **Important**: the added entity must be of the `Person` type.
 
-To add some custom entities to Permitted Entities, please create/modify the file `/custom/Espo/Custom/Resources/metadata/integrations/<CONNECTOR_NAME>.json` with the code:
+To add some custom entities to Permitted Entities, create/modify the file `/custom/Espo/Custom/Resources/metadata/integrations/<CONNECTOR_NAME>.json` with the code:
 
 (e.g. for Asterisk connector it's the file `/custom/Espo/Custom/Resources/metadata/integrations/Asterisk.json`)
 
@@ -92,12 +92,12 @@ To add some custom entities to Permitted Entities, please create/modify the file
 }
 ```
 
-Please make sure that your JSON data is correct after changes.
+Make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
 ## Add custom entities to Quick Create Entities
 
-To add some custom entities to Quick Create Entities, please create/modify the file `/custom/Espo/Custom/Resources/metadata/integrations/<CONNECTOR_NAME>.json` with the code:
+To add some custom entities to Quick Create Entities, create/modify the file `/custom/Espo/Custom/Resources/metadata/integrations/<CONNECTOR_NAME>.json` with the code:
 
 (e.g. for Asterisk connector it's the file `/custom/Espo/Custom/Resources/metadata/integrations/Asterisk.json`)
 
@@ -114,13 +114,13 @@ To add some custom entities to Quick Create Entities, please create/modify the f
 }
 ```
 
-Please make sure that your JSON data is correct after changes.
+Make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
 
 ## Adding a call name to a call popup
 
-To display a Call name field in a call popup, please create/modify the file `custom/Espo/Custom/Resources/metadata/app/popupNotifications.json` with the code:
+To display a Call name field in a call popup, create/modify the file `custom/Espo/Custom/Resources/metadata/app/popupNotifications.json` with the code:
 
 ```
 {
@@ -141,7 +141,7 @@ To display a Call name field in a call popup, please create/modify the file `cus
 
 * default order is 10.
 
-Please make sure that your JSON data is correct after changes.
+Make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
 ## Format phone number
