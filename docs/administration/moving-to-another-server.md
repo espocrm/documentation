@@ -48,7 +48,7 @@ Database connection settings:
 ],
 ```
 
-*siteUrl* – if your domain name (URL) has changed:
+Site URL, if your domain name (URL) has changed:
 
 ```php
 'siteUrl' => 'https://new-link.com',
