@@ -111,4 +111,4 @@ If you added a local domain, you have to configure it on your local computer (no
 192.168.1.1 espocrm.local  # specify the IP address of your Nginx server
 ```
 
-For Windows, please follow these [instructions](http://support.microsoft.com/kb/923947).
+For Windows, follow these [instructions](http://support.microsoft.com/kb/923947).
