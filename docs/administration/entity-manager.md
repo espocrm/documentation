@@ -24,7 +24,7 @@ In this article:
 
 ## Creating new entity type
 
-Click the **Create Entity** button on the Entity Manager main page (Administration > Entity Manager). Specify the name, labels and select the type. If you select the *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check the **Stream** if you want to have a stream panel (users will be able to follow records).
+Click the **Create Entity** button on the Entity Manager main page (Administration > Entity Manager). Specify the name, labels and select the type. If you select the *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check the **Stream** if you want to have the Stream panel (users will be able to follow records).
 
 Types:
 
