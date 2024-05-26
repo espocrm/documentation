@@ -28,13 +28,9 @@ The main layout for the list view. It defines columns and their parameters.
 
 Available parameters for columns are listed below.
 
-#### Width (%)
+#### Width
 
-Width of a column in percent, empty means auto-width.
-
-#### Width (px)
-
-Width of a column in pixels. The field shows up only if *Width (%)* is empty.
+A column width in percent or pixels. Empty means auto-width.
 
 #### Link
 
