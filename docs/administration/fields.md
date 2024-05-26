@@ -40,7 +40,7 @@ Field types not available for creating directly:
 
 * Label – a name of the field displayed on the UI;
 * Required – whether the field is mandatory; user won't be able to save a record w/o filling the field;
-* Audited – field changes will be stored in stream;
+* Audited – field changes will be stored in stream and available in the Audit Log;
 * Read-only – a field value can't be specified, but can be calculated by formula or workflow rule;
 * Read-only After Create – a field value can be specified only when creating a record, after that the field will became read-only; 
 * Default – a value pre-filled when creating a new record;
