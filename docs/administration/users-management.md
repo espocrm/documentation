@@ -20,9 +20,9 @@ Types of users:
 
 ### Admin
 
-Admin has full access to the system. Admin users can create and remove other users, manage access roles, teams, portals, etc.
+An *admin* user has full access to the system. Admin users can create and remove other users, manage access roles, teams, portals, etc.
 
-There can be multiple admin users in the system. The admin can create another admin users at Administration > Users.
+There can be multiple admin users in the system. An admin can create another admin users.
 
 ### Regular
 
