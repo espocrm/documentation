@@ -1,6 +1,6 @@
 # Layout Management
 
-The layout manager provides the ability to customize the appearance of detail, edit, list views as well as search filters and fields for mass-update forms. Layouts for a specific entity type can be accessed from Administration > Entity Manager.
+The Layout Manager provides the ability to customize the appearance of detail, edit, list views as well as search filters and fields for mass-update forms. Layouts for a specific entity type can be accessed from Administration > Entity Manager.
 
 * [Layouts](#layouts)
 * [Different layouts for teams & portals](#different-layouts-for-teams-portals)
