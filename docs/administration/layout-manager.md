@@ -56,7 +56,9 @@ Edit panel parameters by clicking a pancil icon on the panel. It's possible to s
 
 To enable detail view tabs, you need to check the *Tab-break* for panels. Enable it for panels you want to be first in a tab. All following panels will be in the same tab till the next closest tab-break panel. Specify a *Tab Label* for tab-break panels.
 
-Note: The *Hidden* panel parameter is not fully compatible with tabs. It's not recommended to have both tab-breaks and hidden panels on the same layout.
+!!! note
+
+    The *Hidden* panel parameter is not fully compatible with tabs. It's not recommended to have both tab-breaks and hidden panels on the same layout.
 
 ### List (Small)
 
