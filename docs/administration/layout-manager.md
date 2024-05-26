@@ -129,15 +129,15 @@ Some entity types contain additional layouts: Convert Lead, List for Account and
 
 *Layout Sets* provide the ability to have different layouts for teams & portals.
 
-Admin can create a layout set record where they will define specific layouts that will differ from standard ones (defined in the Layout Manager). Layout sets are available at Administration > Layout Sets.
+An admin can create a Layout Set record where they will define specific layouts that will differ from standard ones (which are defined in the Entity Manager). Layout sets are available at Administration > Layout Sets.
 
-A *Team* and *Portal* have the *Layout Set* link fields.
+A Team and Portal have the *Layout Set* link fields.
 
-For internal users (regular & admin), a Layout Set is applied through the *Default Team* (User > Default Team > Layout Set). The team should have the Layout Set specified. That team should be set as a default team for the user.
+For internal users (*regular* & *admin*), a Layout Set is applied through the *Default Team* (User > Default Team > Layout Set). The Team should have the Layout Set specified. That team should be set as a *Default Team* for the User.
 
-For portal users, the Layout Set is applied through the *Portal* record.
+For *portal* users, the Layout Set is applied through the *Portal* record.
 
-A Layout Set can also be specified for a specific user through the *Layout Set* field (as of v8.0). Only regular and admin users have this field available. 
+A Layout Set can also be specified for a specific User in the *Layout Set* field. Only *regular* and *admin* users have this field available. 
 
 !!! note
 
@@ -147,4 +147,4 @@ A Layout Set can also be specified for a specific user through the *Layout Set* 
 
 *As of v8.0.*
 
-The administrator can create custom list layouts. These layouts can then be selected for specific relationship panels (at Administration > Entity Manager > {Entity Type} > Relationships).
+An admin can create custom list layouts. These layouts can then be selected for specific relationship panels (at Administration > Entity Manager > {Entity Type} > Relationships).
