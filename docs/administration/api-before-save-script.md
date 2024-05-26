@@ -22,7 +22,7 @@ Can be used for custom validation, duplicate checking and access control. Availa
 
 ### recordService\skipDuplicateCheck
 
-Returns *true* if a *skipDuplicateCheck* HTTP header is passed (when a user warned about a duplicate but opts to save the record anyway).
+Returns *true* if a *skipDuplicateCheck* HTTP header is passed (when a user is warned about a duplicate but opts to save the record anyway).
 
 !!! example
 
