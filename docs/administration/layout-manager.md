@@ -70,9 +70,9 @@ The detail view for quick create, quick view and quick edit forms.
 
 ### Bottom Panels
 
-Relationship panels and Stream panel displayed on the detail view at the bottom. Panels can be re-ordered, grouped by tabs.
+Panels displayed in the bottom of the detail view. These are Relationship panels, the Stream panel and other panales defined for a concrete entity type. Panels can be re-ordered and grouped by tabs.
 
-Parameters are listed below.
+Available parameters are listed below.
 
 #### Style
 
@@ -97,7 +97,7 @@ The list of fields available in the Mass Update form.
 
 ### Side Panels
 
-Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides the ability to hide or re-order the list of panels: Activities, History, Tasks and others. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
+Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides the ability to hide or re-order panels. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
 
 Parameters are listed below.
 
