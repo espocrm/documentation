@@ -4,11 +4,11 @@
 
 In order to restrict access for some users, you need to use Roles. An administrator can manage roles in at Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
 
-One user can have multiple roles. Those roles can be selected for a specific user (*Roles* field of User record) and/or be inherited from Teams that the user belongs to.
+One User can have multiple Roles. Those Roles can be selected for a specific User (*Roles* field of User record) and/or be inherited from Teams that the user belongs to.
 
-If a user has multiple roles, then those roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This allows to flexibly manage access level control.
+If a User has multiple Roles, then those Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This allows to flexibly manage access level control.
 
-It's possible to see what permissions are applied to a certain user by clicking *Access* button on the user's detail view.
+It's possible to see what permissions are applied to a certain User by clicking *Access* button on the user's detail view.
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
@@ -18,15 +18,15 @@ It's possible to see what permissions are applied to a certain user by clicking 
 
 ## Permissions by default
 
-By default, users have minimal access. You need to assign roles to grant users specific access levels.
+By default, Users have minimal access levels restricting almost everything. You need to assign Roles to grant Users specific access levels.
 
 ## Actions
 
-* Create – the ability to create records
-* Read – the ability to view records (on the list and detail views)
-* Edit – the ability to update records
-* Delete – the ability to remove records
-* Stream – the ability to see a record's stream
+* Create – ability to create records;
+* Read – ability to view records (on the list and detail views);
+* Edit – ability to update records;
+* Delete – ability to remove records;
+* Stream – ability to see a record's stream.
 
 ## Levels
 
@@ -40,9 +40,9 @@ Listed from more permissive to less permissive.
 
 ## Example
 
-We have a team 'Sales'. That team has a single role 'Salesman' (the *Roles* field of the Team). All users from this team will obtain the 'Salesman' role (as all team roles are automatically applied to users of the team).
+We have a Team 'Sales'. That Team has a single Role 'Salesman' (the *Roles* field of the Team). All Users from this Team will obtain the 'Salesman' Role (as all team roles are automatically applied to users of the team).
 
-The 'Salesman' role is defined in the following way:
+The 'Salesman' Role is defined in the following way:
 
 Lead:
 
@@ -64,15 +64,15 @@ delete – no
 stream – team
 ```
 
-Users of the 'Sales' team:
+Users of the 'Sales' Team:
 
-* Can create new leads/opportunities.
-* Are able to read only those leads/opportunities that are related to the 'Sales' team (through the *Teams* field of a record).
-* Are able to edit only those leads/opportunities that they are assigned to.
-* Can't remove any lead/opportunity.
-* Have access to the stream of leads/opportunities that are related to the 'Sales' team.
+* Can create new Leads/Opportunities.
+* Are able to read only those Leads/Opportunities that are related to the 'Sales' Team (through the *Teams* field of a record).
+* Are able to edit only those Leads/Opportunities that they are assigned to.
+* Can't remove any Lead/Opportunity.
+* Have access to the Stream of Leads/Opportunities that are related to the 'Sales' Team.
 
-We want to give more rights to a certain user who holds a sales manager position in the company. This employee needs to have the ability to read/edit/delete all records related to the 'Sales' team. We need to add that user to the 'Sales' team. We also need to create a new role 'Sales Manager' and select this role for that user (the *Roles* field of the User).
+We want to give more rights to a certain User who holds a Sales Manager position in the company. This employee needs to have the ability to read/edit/delete all records related to the 'Sales' Team. We need to add that user to the 'Sales' Team. We also need to create a new role 'Sales Manager' and select this Role for that User (the *Roles* field of the User).
 
 The 'Sales Manager' role is defined in the following way:
 
@@ -96,7 +96,7 @@ delete – team
 stream – team
 ```
 
-Our sales manager user will be able to manage all leads/opportunities related to the 'Sales' team. Under the hood this user have two roles ('Salesman' and 'Sales Manager') merged into one in a way that a more permissive level suppresses less permissive.
+Our sales manager User will be able to manage all Leads/Opportunities related to the 'Sales' Team. Under the hood this User have two roles ('Salesman' and 'Sales Manager') merged into one in a way that a more permissive level suppresses less permissive.
 
 ## Special Permissions
 
