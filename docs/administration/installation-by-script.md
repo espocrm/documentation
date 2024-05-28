@@ -57,7 +57,7 @@ Installation with an own SSL/TLS certificate. Ex. `--ssl --owncertificate`. See 
 
 #### `--domain`
 
-Define your domain. Ex. `--domain=my-domain.com`.
+Define your domain. Ex. `--domain=my-domain.com` or `--domain=192.168.1.10`.
 
 #### `--email`
 
@@ -66,6 +66,18 @@ Email address for Let's Encrypt certificate. Ex. `--email=email@my-domain.com`.
 #### `--clean`
 
 Clean the existing EspoCRM installation and start a new one. This option can be used if you have already installed EspoCRM. Ex. `--clean`.
+
+#### `--public-ip`
+
+Note: For HTTP mode only.
+
+Indicate a public IP address that will be used for EspoCRM installation. Ex. `--public-ip`.
+
+#### `--private-ip`
+
+Note: For HTTP mode only.
+
+Indicate a private (local) IP address that will be used for EspoCRM installation. Ex. `--private-ip`.
 
 #### `--db-root-password`
 
@@ -532,7 +544,7 @@ Note: You have to clear your browser cache for this change to take effect.
 ## Installer migration from v1 to v2
 
 1\. Export the MySQL database from the corresponding Docker container:
-   
+
 ```
 mkdir -p /var/www/backup
 cd /var/www/backup
@@ -544,14 +556,14 @@ Notes:
 - Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
 
 2\. Copy `data` and `custom` folders from *espocrm* directory:
-   
+
 ```
 cp -a /var/www/espocrm/data/espocrm/data /var/www/backup/data
 cp -a /var/www/espocrm/data/espocrm/custom /var/www/backup/custom
 ```
 
 3\. Install a fresh EspoCRM by a script:
-   
+
 ```
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --db-root-password=YOUR_ROOT_PASSWORD --db-password=YOUR_ESPOCRM_DB_PASSWORD --admin-password=YOUR_ADMIN_PASSWORD --clean
