@@ -2,11 +2,11 @@
 
 ## Overview
 
-In order to restrict access for some users, you need to use Roles. Administrator can manage roles in Administration panel. Each role defines access to certain areas (scopes) which is applied to users who own that role.
+In order to restrict access for some users, you need to use Roles. An administrator can manage roles in at Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
 
-One user can have multiple roles. Those roles can be selected for a specific user (*Roles* field of User record) and/or be inherited from teams that the user belongs to.
+One user can have multiple roles. Those roles can be selected for a specific user (*Roles* field of User record) and/or be inherited from Teams that the user belongs to.
 
-If a user has multiple roles, then they will be merged so that the permissive rule will have a higher priority. That allows administrator to manage access level control easily and flexibly.
+If a user has multiple roles, then those roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This allows to flexibly manage access level control.
 
 It's possible to see what permissions are applied to a certain user by clicking *Access* button on the user's detail view.
 
