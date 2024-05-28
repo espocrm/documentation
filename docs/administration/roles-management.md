@@ -102,27 +102,27 @@ Our sales manager User will be able to manage all Leads/Opportunities related to
 
 ### Assignment Permission
 
-Set this parameter to restrict the ability to re-assign records to another user and/or teams. If you set `team`, then it will be possible to assign only to users from own team(s). If `no`, users won't be able to re-assign at all.
+Set this parameter to restrict the ability to re-assign records to another User and/or Teams. If you set *team*, then it will be possible to assign only to Users from own Teams. If `no`, Users won't be able to re-assign at all.
 
-It also defines whether a user is able to post to stream of other users/teams.
+It also defines whether a User is able to post to the Stream of other Users and other Teams.
 
 ### User Permission
 
-Allows to restrict the ability for users to view activities, calendar and stream of other users.
+Allows to restrict the ability for Users to view Activities, Calendar and Stream of other Users.
 
 ### Portal Permission
 
-Defines access to portal information, the ability to post messages to portal users.
+Defines access to portal information, the ability to post messages to Portal Users.
 
-Users with the Portal Permission can manage followers of a specific record (as of v7.0). Only portal users can be managed.
+Users with the Portal Permission can manage followers of a specific record. Only Portal Users can be managed.
 
 ### Group Email Account Permission
 
-Defines access to group email accounts, the ability to send emails from group SMTP.
+Defines access to Group Email Accounts, the ability to send emails from a group SMTP.
 
 ### Export Permission
 
-Defines whether user have the ability to export records.
+Defines whether a User have the ability to export records.
 
 ### Mass Update Permission
 
@@ -134,27 +134,27 @@ Allows to erase personal data.
 
 ### Follower Management Permission
 
-Allows to manage followers of specific records. Users will be able to add and remove followers. Can be restricted to users of own teams. (as of v7.0)
+Allows to manage followers of specific records. Users will be able to add and remove followers. Can be restricted to Users of own Teams.
 
 ### Message Permission
 
-Allows to send stream messages to other users. (as of v8.0)
+Allows to send stream messages to other Users. (as of v8.0)
 
 ### Audit Permission
 
-Allows to view the audit log. (as of v8.2)
+Allows to view the Audit Log. (as of v8.2)
 
 ### Mention Permission
 
-Allows to mention other users in the Stream. (as of v8.3)
+Allows to mention other Users in the Stream. (as of v8.3)
 
 ## Field Level Security
 
 Allows to control access for specific fields.
 
-By default, user can read all fields if one can read the record. A user can edit any field if one can edit the record. You can restrict access to specific fields using Field Level Security.
+By default, a User can read all fields if they can read the record. A User can edit any field if one can edit the record. You can restrict access to specific fields using the Field Level Security.
 
-In the edit view of a role record in Field Level section, click plus icon next to the specific scope, then select the needed field. Then, you will be able to specify the access level for `read` and `edit` actions. There are two options: `yes` and `no`.
+In the edit view of a Role record in the Field Level section, click plus icon next to a specific scope, then select a needed field. Then, you will be able to specify the access level for *read* and *edit* actions. There are two options: *yes* and *no*.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)
 
