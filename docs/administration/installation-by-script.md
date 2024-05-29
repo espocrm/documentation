@@ -290,6 +290,46 @@ Applying a domain change described [here](#change-a-domain-name).
 sudo /var/www/espocrm/command.sh apply-domain
 ```
 
+### Enable automatic certificate renewal
+
+Note: This item is relevant only for the Let's Encrypt mode.
+
+Enable automatic certificate renewal. This should be done after moving to another server only.
+
+```
+sudo /var/www/espocrm/command.sh cert-cron-add
+```
+
+### Disable automatic certificate renewal
+
+Note: This item is relevant only for the Let's Encrypt mode.
+
+Disable automatic certificate renewal. This command should be run after changing the installation mode (ex. to own SSL certificate).
+
+```
+sudo /var/www/espocrm/command.sh cert-cron-remove
+```
+
+### Add a cronjob for VoIP Integration connector
+
+Add a cronjob for a VoIP Integration extension after configuring the connector (ex. Asterisk).
+
+```
+sudo /var/www/espocrm/command.sh voip-cron-add CONNECTOR
+```
+
+where `CONNECTOR` is your connector ID, ex. `Asterisk`.
+
+### Remove a cronjob for VoIP Integration connector
+
+Remove a cronjob for a VoIP Integration extension after disabling the connector (ex. Asterisk).
+
+```
+sudo /var/www/espocrm/command.sh voip-cron-remove CONNECTOR
+```
+
+where `CONNECTOR` is your connector ID, ex. `Asterisk`.
+
 ## Data
 
 ### Structure
