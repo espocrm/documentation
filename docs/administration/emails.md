@@ -8,41 +8,40 @@
 
 EspoCRM has the ability to monitor IMAP mailboxes. Emails can be fetched by Group Email Accounts and Personal Email Accounts. Group Email Accounts represent group mailboxes: the most common case is a support-team mailbox. Personal Email Accounts represent personal mailboxes of users.
 
-As an email is coming, the system tries to link it with the appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not listed in To or CC of the email.
+As an email is coming, the system tries to link it with an appropriate record (Accounts, Lead, Opportunity, Case). Users who follow that record will receive notification about a new email in the system, even if they are not listed in To or CC of the email.
 
 !!! warning "Important"
 
-    Email records **are not duplicated** in the system if they are fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to use **moving to trash** instead. It's recommended to restrict *delete* access for users in Roles.
+    Email records **are not duplicated** in the system even regardless of being fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to **move to trash** instead. It's also recommended to restrict *delete* access for users in Roles.
 
 ## Access control
 
-Access to imported emails is controlled by roles. It means that if a particular email was imported from a mailbox of some user, other users will be able to see that email if they have access to that email.
+Access to imported emails is controlled by Roles. It means that if a particular email was imported from a mailbox of some user, other users will be able to see that email if they have access to that email.
 
-By default, users don't have access to any emails. If a user has read access level set to  *own*, they will be able to see emails where their email address is either in *From*, *To* or *CC* fields.
+By default, users don't have access to any emails. If a user has a *read* access level set to *own*, they will be able to see emails where their email address is either in the *From*, *To* or *CC* fields.
 
 There are 4 access levels: No, Own, Team, All.
 
 ## Group Email Accounts
 
-Group email accounts can be accessed at Administration > Group Email Accounts.
+Group Email Accounts can be accessed at Administration > Group Email Accounts.
 
 Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails.
 
 *Teams* field (of group email account record) determines which teams incoming emails will be assigned to. 
 
-If the group email account has SMTP and it's checked as **shared**, then users will be able to use this account to send emails. Access to the account for sending is controlled by Roles through *Group Email Account* permission. If the permission level is set to `Teams`, then users of the teams selected in *Teams* field of the group email account will be able to use the group email account.
+If a group email account has SMTP enabled and it's checked as **shared**, then users will be able to use this account when sending emails. Access to the account for sending is controlled by Roles through the *Group Email Account* permission. If the permission level is set to *teams*, then users of the teams selected in the *Teams* field of the Group Email Account will be able to use that Group Email Account.
 
-There is the ability to make the system send an **auto-reply** for incoming emails.
+There is the ability to make the system to send an **auto-reply** for emails incoming to a Group Email Account.
 
-### Making group email account system default
+### Making Group Email Account system default
 
 There's the ability to make a specific group email account to be used as a system default, meaning that all notifications and system emails will be sent from that account.
 
-1. Create and configure group email account (at Administration > Group Email Accounts).
+1. Create and configure a Group Email Account (at Administration > Group Email Accounts).
 2. Navigate to Administration > Outbound Emails.
-3. Specify the email address  in the *Email Address* field. The email address exactly the same as in the created group email account.
-4. Make sure that the *Server* field is set empty (on the *SMTP* panel).
-
+3. Specify the email address in the *Email Address* field. The email address should be exactly the same as in the created Group Email Account.
+4. Make sure that the *Server* field value is empty (on the *SMTP* panel).
 
 ### Email-to-Case
 
