@@ -32,7 +32,7 @@ Only administrator can setup Group Email Accounts. Group Email Accounts can be u
 
 If a group email account has SMTP enabled and it's checked as **shared**, then users will be able to use this account when sending emails. Access to the account for sending is controlled by Roles through the *Group Email Account* permission. If the permission level is set to *teams*, then users of the teams selected in the *Teams* field of the Group Email Account will be able to use that Group Email Account.
 
-There is the ability to make the system to send an **auto-reply** for emails incoming to a Group Email Account.
+There is the ability to make the system send an **auto-reply** for emails incoming to a Group Email Account.
 
 ### Making Group Email Account system default
 
@@ -45,28 +45,30 @@ There's the ability to make a specific group email account to be used as a syste
 
 ### Email-to-Case
 
-There is an option to make the system create a new case record from each email incoming to a specific group email account. Cases can be distributed to users of a specific team. There are three available distribution rules: *direct assignment*, *round-robin* and *less-busy*. 
+There is an option to make the system create a new Case record from each email incoming to a specific Group Email Account. Cases can be distributed to users of a specific Team. There are three available distribution rules: *Direct Assignment*, *Round-Robin* and *Less-Busy*. 
 
-Note: Only the first email in the thread creates a new case. Every subsequent email will be linked to the existing case record and note will be added to the Stream panel.
+!!! note
 
-When a user wants to send a reply to the customer, they need to make sure that the case is selected as a **parent** of the email that is being sent. It will add the group email address to *Reply-To* field of the email. So the customer's reply will be sent to the group address rather than to the user’s one.
+    Only the first email in the thread creates a new Case. Every subsequent email will be linked to the existing Case record and a Note will be added to the Stream.
+
+When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a **parent** of the email that is being sent. It will add the group email address to the *Reply-To* field of the email. So the customer's reply will be sent to the group address rather than to the user’s one.
 
 ## Personal Email Accounts
 
 Regular users can set up their own email accounts that need to be monitored (at Emails tab > top right dropdown menu > Personal Email Accounts).
 
-The administrator also can manage personal email accounts of users (at Administration > Personal Email Accounts).
+The administrator also can manage Personal Email Accounts of users (at Administration > Personal Email Accounts).
 
 !!! warning "Important"
 
-    By default, regular users don’t have **access** to personal email accounts. Administrator needs to allow access to *Personal Email Accounts* scope in Roles.
+    By default, regular users don’t have **access** to Personal Email Accounts. The Administrator needs to allow access to the *Personal Email Accounts* scope in Roles.
 
 !!! warning "Important"
 
-    This is required to have the email functionality working properly. User records need to have their email address (or multiple addresses) set in the *Email* field. Only administrator can change the *Email* field for users. It's supposed that the user's email address is the same as the email address of the user's personal email account.
+    This is required to have the email functionality working properly. User records need to have their email address (or multiple addresses) set in the *Email* field. Only the administrator can change the *Email* field for users. It's supposed that the user's email address is the same as the email address of the user's Personal Email Account.
 
 ## Email Filters
 
-Email Filters allow filtering of incoming emails according to specified criteria. E.g. if you don't want notification messages sent by some application to be imported to EspoCRM, you can create a filter to make EspoCRM skip them.
+Email Filters allow filtering of incoming emails according to specified criteria. For example, if you don't want notification messages sent by some application to be imported to EspoCRM, you can create a filter to make EspoCRM skip them.
 
-Admin can create **global filters**, applied to all email accounts. Users can create filters for their own personal email account and for the entire inbox.
+The admininstrator can create **global filters**, applied to all email accounts. Users can create filters for their own Personal Email Account and for their entire Inbox.
