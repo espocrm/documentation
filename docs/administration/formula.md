@@ -591,11 +591,11 @@ For non-developers, it's possible to apply a [List Report](../user-guide/reports
     
     Where *5c41a0a396f66725d* is an ID of the Report Filter record which you can obtain from the URL.
 
+## Using formula in Workflows
+
+You can utilize formula in Workflow conditions and actions. See the [Workflows documentation](workflows.md) for more information.
+
 ## See also
 
 * [Formula scripts examples](formula-scripts-examples.md)
 * [Custom functions](../development/new-function-in-formula.md)
-
-## Using formula in Workflows
-
-You can utilize formula in Workflow conditions and actions. See the [Workflows documentation](workflows.md) for more information.
