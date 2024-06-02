@@ -599,5 +599,4 @@ For non-developers, it's possible to apply a [List Report](../user-guide/reports
 
 ## Using formula in Workflows
 
-You can utilize formula in workflow conditions and actions. See [workflows documentation](workflows.md) for more information.
-
+You can utilize formula in Workflow conditions and actions. See the [Workflows documentation](workflows.md) for more information.
