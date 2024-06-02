@@ -428,7 +428,7 @@ The following comparison operators are available:
 
 !!! important
 
-    Strict comparison is used. If you compare int `1` to float `1.0` with `==` operator they are treated as not equal. You need to compare values of same types or check whether a value falls in range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
+    A strict comparison is used. If you compare an int `1` to a float `1.0` with `==` operator, they are treated as not equal. You need to compare values of same types or check whether a value falls within a range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
 
 
 ## Examples
@@ -541,7 +541,6 @@ Attribute as an argument:
 ```
 someFunction(attributeName);
 ```
-
 
 ## Function arguments
 
