@@ -47,10 +47,10 @@ In this article:
 * [Values](#values)
 * [Variables](#variables)
 * [Comments](#comments)
-* [Function arguments](#function-arguments)
 * [Comparison](#comparison)
 * [Examples](#examples)
 * [Explanation](#explanation)
+* [Function arguments](#function-arguments)
 * [Using formula in Workflows](#using-formula-in-workflows)
 
 ## Syntax
@@ -164,11 +164,11 @@ while (CONDITION1) {
 
 ## Attributes
 
-[Attributes](terms-and-naming.md#attribute) represent field values of a target entity. You can insert available attributes by clicking on the plus button.
+[Attributes](terms-and-naming.md#attribute) represent field values of a target entity. You can insert available attributes by clicking the plus button.
 
 It's possible to access attributes of related entities with the following format `linkName.attributeName`.
 
-The attribute element type was introduced to be able to write like this:
+The attribute element type was introduced in the language to be able to write like this:
 
 ```
 description = 'test';
@@ -182,7 +182,7 @@ entity\setAttribute('description', 'test');
 
 ## Functions
 
-Format of function use: `groupName\functionName(argument1, argument2, ..., argumentN)`.
+Format of function usage: `groupName\functionName(argument1, argument2, ..., argumentN)`.
 
 Out-of-the-box functions are listed below.
 
@@ -390,6 +390,7 @@ Out-of-the-box functions are listed below.
 ## Variables
 
 Variables starts with the dollar sign.
+
 ```
 // Assign the value to the variable.
 $someVariableName = 'Test';
@@ -413,53 +414,6 @@ Section comment:
     comment
 */
 ```
-
-## Function arguments
-
-#### LINK
-
-A name of the relationship. Available link names can be found at Administration > Entity Manager > {Entity Type} > Relationships.
-
-Link names must be wrapped in quotes when used as function arguments.
-
-More info about links [here](terms-and-naming.md#link).
-
-#### ATTRIBUTE
-
-Attribute name usually is the same as a system field name. Fields are listed at Administration > Entity Manager > {Entity Type} > Fields.
-
-Field types having multiple attributes:
-
-* Link: *fieldId*, *fieldName*.
-* Link-Multiple: *fieldIds*, *fieldNames*.
-* Link-Parent: *fieldId*, *fieldType*, *fieldName*.
-* Currency: *field*, *fieldCurrency*.
-
-Where *field* is the name of the field.
-
-Attribute names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
-
-More info about attributes [here](terms-and-naming.md#attribute).
-
-#### ENTITY_TYPE
-
-ENTITY_TYPE list is available at Administration > Entity Manager.
-
-Entity type names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
-
-More info about entity types [here](terms-and-naming.md#entity-type).
-
-#### FILTER
-
-A name of a filter pre-defined in the system. Developers can define own [filters](../development/metadata/select-defs.md#primaryfilterclassnamemap).
-
-For non-developers, it's possible to apply a [list report](../user-guide/reports.md#list-reports) as a filter. First, you need to create a [report filter](../user-guide/reports.md#report-filters) (at Administration page). Then, you can use the filter name `reportFilter{filterId}` in functions `record\count`, `record\findOne`, `record\findRelatedOne`, `record\findRelatedMany`, `entity\sumRelated`, `entity\coundRelated`.
-
-!!! example
-
-    `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`
-    
-    Where *5c41a0a396f66725d* is an ID of the Report Filter record which you can obtain from the URL.
 
 ## Comparison
 
@@ -587,6 +541,56 @@ Attribute as an argument:
 ```
 someFunction(attributeName);
 ```
+
+
+## Function arguments
+
+Below are explanations of function arguments which are met in the documentation.
+
+#### LINK
+
+A name of the relationship. Available link names can be found at Administration > Entity Manager > {Entity Type} > Relationships.
+
+Link names must be wrapped in quotes when used as function arguments.
+
+More info about links [here](terms-and-naming.md#link).
+
+#### ATTRIBUTE
+
+Attribute name usually is the same as a system field name. Fields are listed at Administration > Entity Manager > {Entity Type} > Fields.
+
+Field types having multiple attributes:
+
+* Link: *fieldId*, *fieldName*.
+* Link-Multiple: *fieldIds*, *fieldNames*.
+* Link-Parent: *fieldId*, *fieldType*, *fieldName*.
+* Currency: *field*, *fieldCurrency*.
+
+Where *field* is the name of the field.
+
+Attribute names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
+
+More info about attributes [here](terms-and-naming.md#attribute).
+
+#### ENTITY_TYPE
+
+The list of entity types is available at Administration > Entity Manager.
+
+Entity type names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
+
+More info about entity types [here](terms-and-naming.md#entity-type).
+
+#### FILTER
+
+A name of a filter pre-defined in the system. Developers can define own [filters](../development/metadata/select-defs.md#primaryfilterclassnamemap).
+
+For non-developers, it's possible to apply a [List Report](../user-guide/reports.md#list-reports) as a filter. First, you need to create a [Report Filter](../user-guide/reports.md#report-filters) (at Administration page). Then, you can use the filter name `reportFilter{filterId}` in functions `record\count`, `record\findOne`, `record\findRelatedOne`, `record\findRelatedMany`, `entity\sumRelated`, `entity\coundRelated`.
+
+!!! example
+
+    `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`
+    
+    Where *5c41a0a396f66725d* is an ID of the Report Filter record which you can obtain from the URL.
 
 ## See also
 
