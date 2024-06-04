@@ -166,7 +166,7 @@ while (CONDITION1) {
 
 [Attributes](terms-and-naming.md#attribute) represent field values of a target entity. You can insert available attributes by clicking the plus button.
 
-It's possible to access attributes of related entities with the following format `linkName.attributeName`.
+It's possible to access attributes of related entities with the following expression `linkName.attributeName`.
 
 The attribute element type was introduced in the language to be able to write like this:
 
@@ -389,7 +389,7 @@ Out-of-the-box functions are listed below.
 
 ## Variables
 
-Variables starts with the dollar sign.
+Variables starts with a dollar sign.
 
 ```
 // Assign the value to the variable.
