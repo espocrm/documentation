@@ -66,7 +66,7 @@ There are 6 language elements in formula script:
 * variables (e.g. `$temp`)
 * attributes (values of the current entity, e.g. `contactId`, `status`)
 
-Separate expressions must be delimited by the character `;`.
+Separate expressions must be delimited by a `;` character.
 
 !!! example
 
