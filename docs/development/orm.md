@@ -123,7 +123,7 @@ Multiple:
 
 ```php
 <?php
-$entity->set([
+$entity->setMultiple([
     'name' => 'Test Name',
     'assignedUserId' => '1',
 ]);
