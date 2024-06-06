@@ -69,3 +69,11 @@ If a user have access to the field (of a scope), they will have access to a meta
 *string[]*
 
 Not supported. TBD.
+
+## additionalBuilderClassNameList
+
+*class-string<Espo\Core\Utils\Metadata\AdditionalBuilder\>*
+
+*As of v8.4.*
+
+Additional builders. Allows adding conditional metadata.
