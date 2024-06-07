@@ -121,10 +121,10 @@ this.getMetadata().get(['entityDefs', 'Account', 'fields', 'name', 'type']);
 
 Metadata is stored in JSON files that can be located in different places:
 
-* `application/Espo/Resources/metadata`
-* `application/Espo/Modules/{ModuleName}/Resources/metadata`
-* `custom/Espo/Modules/{ModuleName}/Resources/metadata`
-* `custom/Espo/Custom/Resources/metadata`
+* `application/Espo/Resources/metadata` – core;
+* `application/Espo/Modules/{ModuleName}/Resources/metadata` – internal modules;
+* `custom/Espo/Modules/{ModuleName}/Resources/metadata` – custom modules;
+* `custom/Espo/Custom/Resources/metadata` – instance specific customizations, customizations made via the admin UI are stored here.
 
 When you access data by a path `clientDefs.Account.views.edit` the first lexeme `clientDefs` corresponds to a dir name, the second `Account` – to a file name `Account.json`. All the following lexemes correspond to a path in the JSON object.
 
