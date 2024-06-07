@@ -8,7 +8,7 @@
 `POST Attachment`
 
 * Method: *POST*
-* Action: `Attachment`
+* Endpoint: `Attachment`
 * Headers: `Content-Type: application/json`
 
 Payload attributes:
