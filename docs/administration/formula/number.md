@@ -14,7 +14,7 @@
 
 `number\format(VALUE, [DECIMALS], [DECIMAL_MARK], [THOUSAND_SEPARATOR])`
 
-Converts numeric VALUE into string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK or THOUSAND_SEPARATOR are omitted, then system defaults are used.
+Converts a numeric VALUE into a string formatted according to a specific format or default application settings. If DECIMALS, DECIMAL_MARK or THOUSAND_SEPARATOR are omitted, then system defaults are used.
 
 !!! example
 
@@ -47,13 +47,13 @@ Returns the rounded value of VALUE to specified PRECISION (number of digits afte
 
 `number\floor(VALUE)`
 
-Returns the next lowest integer value by rounding down value if necessary.
+Returns the next lowest integer value by rounding down the value if necessary.
 
 ## number\ceil
 
 `number\ceil(VALUE)`
 
-Returns the next highest integer value by rounding up value if necessary.
+Returns the next highest integer value by rounding up the value if necessary.
 
 ## number\randomInt
 
