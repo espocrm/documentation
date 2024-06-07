@@ -100,7 +100,7 @@ Main methods of the Record service class:
 !!! note
     
     Record services can be extended in the `Espo\Modules\{MyModule}\Services` namespace. But it's recommended to avoid extending.
-    The framework allows customization by means of composition. See metadata > recordDefs.
+    The framework allows customization by means of composition. See metadata > [recordDefs](metadata/recordDefs.md).
 
 ### Accessing record service
 
