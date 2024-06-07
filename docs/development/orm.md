@@ -215,7 +215,7 @@ $type = $entity->getRelationType('relationName');
 $paramValue = $entity->getRelationParam('relationName', 'paramName')
 ```
 
-Relation types:
+Relation types avaible in constants:
 
 * `Entity::MANY_MANY`
 * `Entity::HAS_MANY`
@@ -230,31 +230,9 @@ Relation types:
 <?php
 $collection = $entityManager
     ->getRDBRepository($entityType)
-    ->where([ // where clause
+    ->where([
         'type' => 'Customer',
     ])
-    ->find();
-```
-
-Descending order:
-
-```php
-<?php
-$collection = $entityManager
-    ->getRDBRepository($entityType)
-    ->limit(0, 10)
-    ->order('createdAt', true)
-    ->find();
-```
-
-Ascending order:
-
-```php
-<?php
-$collection = $entityManager
-    ->getRDBRepository($entityType)
-    ->limit(0, 10)
-    ->order('createdAt')
     ->find();
 ```
 
@@ -441,7 +419,6 @@ $entityManager
     ]);
 ```
 
-
 ### Check whether related
 
 ```php
@@ -459,7 +436,7 @@ Typed repository:
 ```php
 <?php
 use Espo\Modules\Crm\Entities\Account;
-// Returns Collection<Account>.
+// returns Collection<Account>
 $accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
 ```
 
