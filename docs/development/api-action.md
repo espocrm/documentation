@@ -64,6 +64,10 @@ Clearing cache is required after changes in routing files.
 
 *As of v7.4.*
 
+!!! note
+
+    This is a preferable method for custom API actions.
+
 A route can define an action class with the *actionClassName* parameter. Action classes should implement the interface `Espo\Core\Api\Action`.
 
 Example:
