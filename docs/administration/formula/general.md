@@ -9,7 +9,7 @@
 
 `list(VALUE-1 [, ... VALUE-N])` 
 
-Returns array. Values are passed as arguments to the function.
+Returns array. Values are passed as arguments of the function.
 
 !!! example
 
