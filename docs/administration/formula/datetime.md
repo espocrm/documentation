@@ -25,19 +25,19 @@ Date and date-time values are represented as strings. E.g. `'2021-01-01'`, `'202
 
 `datetime\today()`
 
-Returns today's date (w/o time).
+Returns a today's date (w/o time).
 
 ## datetime\now
 
 `datetime\now()`
 
-Returns current datetime.
+Returns a current datetime.
 
 ## datetime\format
 
 `datetime\format(VALUE, [TIMEZONE], [FORMAT])`
 
-Converts date or datetime VALUE into a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then default time zone will be used. If FORMAT is omitted, then default format will be used.
+Converts a date or datetime VALUE to a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then the default timezone will be used. If FORMAT is omitted, then the default format will be used.
 
 !!! example
 
@@ -93,7 +93,7 @@ Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'yea
 
 `datetime\addMinutes(VALUE, MINUTES)`
 
-Adds MINUTES to datetime VALUE. MINUTES can be negative. Returns a modified STRING value.
+Adds MINUTES to a datetime VALUE. MINUTES can be negative. Returns a modified STRING value.
 
 !!! example
 
@@ -103,13 +103,13 @@ Adds MINUTES to datetime VALUE. MINUTES can be negative. Returns a modified STRI
 
 `datetime\addHours(VALUE, HOURS)`
 
-Adds HOURS to datetime VALUE. HOURS can be negative. Returns a modified STRING value.
+Adds HOURS to a datetime VALUE. HOURS can be negative. Returns a modified STRING value.
 
 ## datetime\addDays
 
 `datetime\addDays(VALUE, DAYS)`
 
-Adds DAYS to date or datetime VALUE. DAYS can be negative.
+Adds DAYS to a date or datetime VALUE. DAYS can be negative.
 
 !!! example
 
@@ -119,7 +119,7 @@ Adds DAYS to date or datetime VALUE. DAYS can be negative.
 
 `datetime\addWeeks(VALUE, WEEKS)`
 
-Adds WEEKS to date or datetime VALUE. WEEKS can be negative. Returns a modified STRING value.
+Adds WEEKS to a date or datetime VALUE. WEEKS can be negative. Returns a modified STRING value.
 
 !!! example
 
@@ -129,7 +129,7 @@ Adds WEEKS to date or datetime VALUE. WEEKS can be negative. Returns a modified 
 
 `datetime\addMonths(VALUE, MONTHS)`
 
-Adds MONTHS to date or datetime VALUE. MONTHS can be negative. Returns a modified STRING value.
+Adds MONTHS to a date or datetime VALUE. MONTHS can be negative. Returns a modified STRING value.
 
 !!! example
 
@@ -143,7 +143,7 @@ Adds MONTHS to date or datetime VALUE. MONTHS can be negative. Returns a modifie
 
     `datetime\addYears(dateStart, 1)`
 
-Adds YEARS to date or datetime VALUE. YEARS can be negative. Returns a modified STRING value.
+Adds YEARS to a date or datetime VALUE. YEARS can be negative. Returns a modified STRING value.
 
 ## datetime\closest
 
@@ -152,7 +152,7 @@ Adds YEARS to date or datetime VALUE. YEARS can be negative. Returns a modified 
 Returns the closest date or datetime to VALUE based on passed arguments.
 
 TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. 
-IS_PAST means to find the closest in the past. If TIMEZONE is omitted, then default timezone is used.
+IS_PAST means to find the closest in the past. If TIMEZONE is omitted, then the default timezone is used.
 
 !!! example
 
