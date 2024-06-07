@@ -8,36 +8,7 @@ Services are entry points for business logic. You can write business logic right
 
 You can create a service class in any namespace you like (inside your module). Use the dependency injection to require this class in your custom controller (your class will be passed to the constructor of your controller).
 
-## Record service
-
-The Record Service is a layer to access records via API. It handles CRUD (and some others) operations over entities (records). It applies validation and access checks before saving or reading.
-
-The base class `Espo\Core\Record\Service`.
-
-If there's a service class with a name that matches the name of the entity type, then that service class will be used as a record service class. It's supposed that that class extends base `Espo\Services\Record` class. Example: `Espo\Services\User` is treated as a Record service for the *User* entity type. Note: You need to clear cache after creating a custom record service class.
-
-Main methods of the Record service class:
-
-* read – get an entity
-* create – create an entity
-* update – update an entity
-* delete – delete an entity
-* find – get a list of entities, used by list view
-* findLinked – get a list of related entities, used by relationship panels
-* loadAdditionalFields – to load additional fields for an entity before returning it, for detail view
-
-### Accessing record service
-
-Record services can be accessed from the record service container `Espo\Core\Record\ServiceContainer`.
-
-```php
-<?php
-$service = $this->recordServiceContainer->get($entityType);
-```
-
-If a record service class with the name of an entity type exists in `Espo\Custom\Services` namespace, it will be used instead of the default one.
-
-## Creating new service class
+## Creating service class
 
 Controller `custom/Espo/Custom/Controllers/SomeController.php`:
 
@@ -108,4 +79,34 @@ class MyService
         $this->entityManager->saveEntity($opportunity);
     }
 }
+```
+
+## Record service
+
+The Record Service is a layer to access records via API. It handles CRUD (and some others) operations over entities (records). It applies validation and access checks before saving or reading.
+
+The base class `Espo\Core\Record\Service`.
+
+Main methods of the Record service class:
+
+* read – get an entity
+* create – create an entity
+* update – update an entity
+* delete – delete an entity
+* find – get a list of entities, used by list view
+* findLinked – get a list of related entities, used by relationship panels
+* loadAdditionalFields – to load additional fields for an entity before returning it, for detail view
+
+!!! note
+    
+    Record services can be extended in the `Espo\Modules\{MyModule}\Services` namespace. But it's recommended to avoid extending.
+    The framework allows customization by means of composition. See metadata > recordDefs.
+
+### Accessing record service
+
+Record services can be accessed from the record service container `Espo\Core\Record\ServiceContainer`.
+
+```php
+<?php
+$service = $this->recordServiceContainer->get($entityType);
 ```
