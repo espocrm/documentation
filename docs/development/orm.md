@@ -345,6 +345,8 @@ $entity = $entityManager
     ->findOne();
 ```
 
+Note that you can also fetch one-to-one and many-to-ane relations the same way.
+
 ### Find related
 
 ```php
@@ -441,6 +443,24 @@ $isRelated = $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->isRelated($opportunity);
+```
+
+## Repository
+
+Typed repository: 
+
+```php
+<?php
+use Espo\Modules\Crm\Entities\Account;
+// Returns Collection<Account>.
+$accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
+```
+
+```php
+<?php
+// The proper type of a returned entity is inferred (in static analysis and IDE that supports generic types).
+$account = $entityManager->getRDBRepositoryByClass(Account::class)
+    ->getById($id);
 ```
 
 ## Select Query Parameters
