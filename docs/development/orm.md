@@ -345,8 +345,6 @@ $entity = $entityManager
     ->findOne();
 ```
 
-Note that you can also fetch one-to-one and many-to-ane relations the same way.
-
 ### Find related
 
 ```php
@@ -362,6 +360,15 @@ $opportunity = $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->order('createdAt', 'DESC')
+    ->findOne();
+```
+
+Belongs-To or Has-One:
+
+```php
+$account = $entityManager
+    ->getRDBRepository('Task')
+    ->getRelation($task, 'account')
     ->findOne();
 ```
 
