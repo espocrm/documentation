@@ -38,7 +38,7 @@ $entity->setValueObject($field, $valueObject);
 $entity->setValueObject($field, null);
 ```
 
-Getter:
+Getter and setter:
 
 ```php
 <?php
