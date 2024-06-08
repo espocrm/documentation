@@ -40,7 +40,7 @@ $entity->setValueObject($field, null);
 Getter:
 
 ```php
-use Espo\Core\Fields\Date;
+use Espo\Core\Field\Date;
 
 class MyEntity extends Entity
 {
