@@ -347,6 +347,8 @@ $entity = $entityManager
 
 ### Find related
 
+Has-Many:
+
 ```php
 <?php
 $opportunityCollection = $entityManager
