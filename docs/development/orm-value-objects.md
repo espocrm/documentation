@@ -3,7 +3,7 @@
 *As of v7.0.*
 
 * Value objects are immutable.
-* Value objects are available in the namespace `Espo\Core\Field`.
+* Default value objects are available in the namespace `Espo\Core\Field`.
 * It's possible to register custom value object for a specific field type or for a specific field.
 
 When defining getters and setters in an Entity class, it's recommended to use value objects for such field types:
