@@ -32,6 +32,7 @@ BaseEntity's methods *getValueObject* and *setValueObject* will work for field t
 
 ```php
 <?php
+
 $valueObject = $entity->getValueObject($field);
 $entity->setValueObject($field, $valueObject);
 $entity->setValueObject($field, null);
@@ -40,6 +41,8 @@ $entity->setValueObject($field, null);
 Getter:
 
 ```php
+<?php
+namespace Espo\Modules\MyModule\Entities;
 use Espo\Core\Field\Date;
 
 class MyEntity extends Entity
