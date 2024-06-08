@@ -16,7 +16,6 @@ model.set({
     attributeName2: value2,
 });
 
-
 // Options.
 model.set(attributes, {
     'silent': true, // suppresses 'change' events
