@@ -45,6 +45,9 @@ class MyEntity extends Entity
 {
     public function getDateDue(): ?Date
     {
+        // It's also possible to use getValueObject
+        // but the following method is more type safe.
+
         $rawValue = $this->get('dateDue');
 
         if ($rawValue === null) {
