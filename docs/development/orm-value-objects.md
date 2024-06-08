@@ -4,7 +4,7 @@
 
 * Value objects are immutable.
 * Value objects are available in `Espo\Core\Field\`.
-* It's possible to define custom value object for a field type or for a specific field.
+* It's possible to register custom value object for a specific field type or for a specific field.
 
 When defining getters and setters in an Entity class, it's recommended to use value objects for such field types:
 
@@ -146,3 +146,17 @@ $contact = LinkMultipleItem
 
 $contacts = LinkMultiple::create([$contact->getId()]);
 ```
+
+## Registering
+
+Registering a custom value object type for a specific field type.
+
+For a field type you need to define 2 parameters in metadata > fields > {fieldType}:
+
+* `valueFactoryClassName` – implementation of `Espo\ORM\Value\ValueFactory` interface;
+* `attributeExtractorClassName` – implementation of `Espo\ORM\Value\AttributeExtractor` interface.
+
+It's also possible to register a value object for a specific field in metadata > entityDefs > {entityType} > fields > {fieldName}:
+
+* `valueFactoryClassName`;
+* `attributeExtractorClassName`.
