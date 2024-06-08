@@ -58,7 +58,9 @@ Custom routes can be defined in following places:
 * *method* specifies an HTTP method. The mostly used methods are: *get*, *post*, *put*, *delete*.
 * *actionClassName* defines an action class name.
 
-A route can be processed either by an action class or by a controller.
+A route can contain placeholds (for example, `:id`). An action value will be passed to an Action in the Request object.
+
+A route can be processed either by an Action class or by a Controller.
 
 Clearing cache is required after changes in routing files.
 
@@ -91,7 +93,11 @@ class MyAction implements Action
 
     public function process(Request $request): Response
     {
-        $data = $this->service->get();
+        // A route parameter value is passed in an URI, if defined in a route.
+        // E.g. `/Hello/:id`.
+        $id = $request->getRouteParams('id');
+
+        $data = $this->service->get($id);
 
         return ResponseComposer::json($data);
     }
