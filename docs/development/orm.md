@@ -1037,6 +1037,8 @@ $entityManager->getLocker()->commit();
 
 *As of v7.0.*
 
+An access point to read ORM metadata: entity, field, relation and index definitions.
+
 ```php
 <?php
 $defs = $entityManager->getDefs();
