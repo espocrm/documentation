@@ -1,10 +1,12 @@
 # API actions
 
+This article would be useful for those who needs to create a custom API action.
+
 ## Routing
 
-You can define a specific route to access your custom API action (endpoint).
+You can define a specific route to access your API action (endpoint).
 
-Default routes are defined here `application/Espo/Resources/routes.json`.
+Default routes are defined here: `application/Espo/Resources/routes.json`.
 
 Custom routes can be defined in following places:
 
@@ -52,9 +54,9 @@ Custom routes can be defined in following places:
 ]
 ```
 
-The parameter *noAuth* makes an endpoint not requiring authentication.
-
-The parameter *method* specifies an HTTP method. The mostly used methods are: *get*, *post*, *put*, *delete*.
+* *noAuth* makes an endpoint not requiring authentication.
+* *method* specifies an HTTP method. The mostly used methods are: *get*, *post*, *put*, *delete*.
+* *actionClassName* defines an action class name.
 
 A route can be processed either by an action class or by a controller.
 
@@ -97,6 +99,8 @@ class MyAction implements Action
 ```
 
 ## Custom controller
+
+Alternative to an Action class. A Controller contain multiple methods for different actions.
 
 ### In Custom folder
 
