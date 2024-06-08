@@ -100,6 +100,12 @@ Example:
 }
 ```
 
+## listViewModeList
+
+*string[]*
+
+A list view mode list. E.g. *list*, *kanban*.
+
 ## saveErrorHandlers
 
 Save error handlers. See [here](../frontend/save-error-handlers.md).
@@ -151,7 +157,6 @@ Disable the *convert-currency* mass-action and action.
 *boolean*
 
 Disable the record merge functionality.
-
 
 ## filterList
 
