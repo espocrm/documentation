@@ -6,16 +6,49 @@
 * Value objects are available in `Espo\Core\Field\`.
 * It's possible to define custom value object for a field type or for a specific field.
 
+When defining getters and setters in an Entity class, it's recommended to use value objects for such field types:
+
+* Date
+* Datetime
+* DatetimeOptional
+* Address
+* Currency
+
 Methods in BaseEntity:
 
 ```php
 <?php
-
 $valueObject = $entity->getValueObject($field);
-
 $entity->setValueObject($field, $valueObject);
+$entity->setValueObject($field, null);
+```
 
-$entity->setValueObject($field, null); // null can be set
+Getter:
+
+```php
+use Espo\Core\Fields\Date;
+
+class MyEntity extends Entity
+{
+    public function getDateDue(): ?Date
+    {
+        $rawValue = $this->get('dateDue');
+
+        if ($rawValue === null) {
+            return null;
+        }
+
+        return Date::fromString($rawValue);
+    }
+
+    public function setDateDue(?Date $dateDue): self
+    {
+        $this->setValueObject('dateDue', $dateDue);
+
+        return $this;
+    }
+}
+
 ```
 
 ## Supported field types
@@ -89,53 +122,14 @@ $opportunityEntity->setCloseDate(
 
 ```php
 <?php
-
-$account = $entity->getAccount(); // Link value object
-
-$accountId = $account->getId();
-$accountName = $account->getName();
+$parentLink = LinkParent::create($entityType, $id);
 ```
 
 ```php
 <?php
-
-$entity->setParent(
-    LinkParent::create($entityType, $id)
-);
-```
-
-```php
-<?php
-
-$contacts = $entity->getContacts(); // Link-Multiple value object
-
-$entity->setContacts(
-    $contacts->withRemovedById($id)
-);
-```
-
-```php
-<?php
-
 $contact = LinkMultipleItem
     ::create($contact->getId())
     ->withColumnValue('role', 'Decision Maker');
 
-$entity->setContacts(
-    LinkMultiple::create([$contact->getId()]);
-);
+$contacts = LinkMultiple::create([$contact->getId()]);
 ```
-
-## Defining
-
-Defining a custom value object type for a specific field type.
-
-For a field type you need to define 2 parameters in metadata > fields > {fieldType}:
-
-* `valueFactoryClassName` – implementation of `Espo\ORM\Value\ValueFactory` interface;
-* `attributeExtractorClassName` – implementation of `Espo\ORM\Value\AttributeExtractor` interface.
-
-It's also possible to define a value object for a specific field in metadata > entityDefs > {entityType} > fields > {fieldName}:
-
-* `valueFactoryClassName`;
-* `attributeExtractorClassName`.
