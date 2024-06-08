@@ -106,6 +106,14 @@ Example:
 
 A list view mode list. E.g. *list*, *kanban*.
 
+## viewModeIconClassMap
+
+*object.<string, string\>*
+
+*As of v8.3.*.
+
+View mode icon classes. mode => class map.
+
 ## saveErrorHandlers
 
 Save error handlers. See [here](../frontend/save-error-handlers.md).
