@@ -8,13 +8,26 @@
 
 When defining getters and setters in an Entity class, it's recommended to use value objects for such field types:
 
-* Date
-* Datetime
-* DatetimeOptional
-* Address
-* Currency
+* date
+* datetime
+* datetimeOptional
+* address
+* currency
 
-Methods in BaseEntity:
+All field types with registered valus object:
+
+* date
+* datetime
+* datetimeOptional
+* address
+* currency
+* email
+* phone
+* link
+* linkParent
+* linkMultiple
+
+BaseEntity methods in *getValueObject* and *setValueObject* will work for field types a value object is registered for.
 
 ```php
 <?php
