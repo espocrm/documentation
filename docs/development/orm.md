@@ -8,7 +8,7 @@ A *Repository* class serves for fetching and storing records. Base classes: `Esp
 
 An *Entity* class represents a single record. Each entity type has it's own entity class. Base class: `Espo\Core\ORM\Entity`, interface: `Espo\ORM\Entity`.
 
-An *EntityCollection* is a collection of entities. It's returned by *find* operations. An *SthCollection* is a collection of entities, consuming much less memory than EntityCollection.
+An *EntityCollection* is a collection of entities. It's returned by *find* operations. An *SthCollection* is a collection of entities, consuming much less memory than EntityCollection. Collections are iterable.
 
 ## See also
 
