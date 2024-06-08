@@ -102,6 +102,10 @@ $entityManager->removeEntity($entity);
 $attributeValue = $entity->get('attributeName');
 ```
 
+!!! note
+
+    As EspoCRM supports custom fields and relationships which are added dynamically without the need to compile, attribute accessor methods *get*, *set* and *has* were introduced. For type safety, consider creating getters and setters for needed attributes in your custom entity class. Use these methods in your business logic code.
+
 ### Has attribute value
 
 Checks whether an attribute is set. Note: If it's set to `NULL` it will return `true`.
