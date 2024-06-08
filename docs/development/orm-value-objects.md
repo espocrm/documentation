@@ -14,7 +14,7 @@ When defining getters and setters in an Entity class, it's recommended to use va
 * address
 * currency
 
-All field types with registered valus object:
+All field types with registered value object:
 
 * date
 * datetime
@@ -27,7 +27,7 @@ All field types with registered valus object:
 * linkParent
 * linkMultiple
 
-BaseEntity's methods *getValueObject* and *setValueObject* will work for field types a value object is registered for.
+BaseEntity's methods *getValueObject* and *setValueObject* will work for field types with registered value object.
 
 ```php
 <?php
