@@ -44,6 +44,13 @@ class SomeClass
 $entity = $entityManager->getNewEntity($entityType)
 ```
 
+Or type hinted:
+
+```php
+<?php
+$entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getNew();
+```
+
 Note: It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
 
 ### Fetch existing entity
@@ -51,6 +58,13 @@ Note: It creates a new instance but doesn't store it in DB. The entity doesn't h
 ```php
 <?php
 $entity = $entityManager->getEntityById($entityType, $id);
+```
+
+Or type hinted:
+
+```php
+<?php
+$entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getById($id);
 ```
 
 ### Store entity
@@ -85,6 +99,7 @@ Options:
 <?php
 $entity = $entityManager->createEntity($entityType, [
     'name' => 'Test',
+    'status' => 'Hello',
 ]);
 ```
 
@@ -104,7 +119,7 @@ $attributeValue = $entity->get('attributeName');
 
 !!! note
 
-    As EspoCRM supports custom fields and relationships which are added dynamically without the need to compile, attribute accessor methods *get*, *set* and *has* were introduced. For type safety, consider creating getters and setters for needed attributes in your custom entity class. Use these methods in your business logic code.
+    As EspoCRM supports custom fields and relationships which are added dynamically without the need to compile, attribute accessor methods *get*, *set* and *has* were introduced. For type safety, consider creating getters and setters for needed attributes in your custom Entity class. Use these methods in your business logic code.
 
 ### Has attribute value
 
@@ -141,16 +156,16 @@ $entity->setMultiple([
 $entity->clear('attributeName');
 ```
 
-It will unset the attribute. If you save the entity after that, it will not change the value to NULL in database.
+This will unset the attribute. If you save the Entity after that, it will not change the value to NULL in database.
 
 ### Fetched attributes
 
-You can check whether an attribute was changed.
+Check whether an attribute was changed.
 
 ```php
 <?php
 // a value that was set once the record was fetched from DB
-$value = $entity->getFetched('attributeName')
+$value = $entity->getFetched('attributeName');
 
 // check whether an attribute was changed since the last syncing with DB
 $attributeChanged = $entity->isAttributeChanged('attributeName');
@@ -180,13 +195,13 @@ Each entity type has its own set of defined attributes. You cannot set an arbitr
 
 ```php
 <?php
-// whether attribute is defined for entity
+// whether attribute is defined in an entity
 $hasAttribute = $entity->hasAttribute('attributeName');
-
+// get a list of all available attributes
 $attributeList = $entity->getAttributeList();
-
+// get an attribute type
 $attributeType = $entity->getAttributeType('attributeName');
-
+// get a specific attribute parameter
 $paramValue = $entity->getAttributeParam('attributeName', 'attributeParam');
 ```
 
@@ -212,10 +227,11 @@ Note: As of v7.0 it's recommended to use *ORM Defs* to get entity definitions. S
 
 ```php
 <?php
+// get a list of all relations
 $relationList = $entity->getRelationList();
-
+// get a relation type
 $type = $entity->getRelationType('relationName');
-
+// get a relation parameter
 $paramValue = $entity->getRelationParam('relationName', 'paramName')
 ```
 
@@ -315,6 +331,8 @@ $collection = $entityManager
     ->find();
 ```
 
+You can use getRDBRepositoryByClass for type safety. 
+
 ### Find the first one
 
 ```php
@@ -366,6 +384,8 @@ Filtering by a relation column:
     ])
     ->find();
 ```
+
+*optedOut* is a column in the middle table.
 
 ### Relate entities
 
@@ -435,7 +455,7 @@ $isRelated = $entityManager
 
 ## Repository
 
-Typed repository: 
+Get a repository by a class:
 
 ```php
 <?php
@@ -446,9 +466,16 @@ $accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
 
 ```php
 <?php
-// The proper type of a returned entity is inferred (in static analysis and IDE that supports generic types).
+// The proper type of a returned Entity is inferred (in static analysis and IDE that supports generic types).
 $account = $entityManager->getRDBRepositoryByClass(Account::class)
     ->getById($id);
+```
+
+Get a repository by an entity type:
+
+```php
+<?php
+$repository = $entityManager->getRDBRepository($entityType);
 ```
 
 ## Select Query Parameters
@@ -464,7 +491,7 @@ Supported comparison operators: `>`, `<`, `>=`, `<=`, `=`, `!=`.
 $opportunityList = $entityManager
     ->getRDBRepository('Opportunity')
     ->where([
-      'amount>=' => 100
+        'amount>=' => 100
     ])
     ->find();
 ```
@@ -529,21 +556,7 @@ $opportunityList = $entityManager
     ->findOne();
 ```
 
-#### Sub-query operator
-
-```php
-<?php
-// $subQuery is the instance of Espo\ORM\Query\Select
-
-$collection = $entityManager
-    ->getRDBRepository($entityType)
-    ->where([
-        'id=s' => $subQuery->getRaw(),
-    ])
-    ->find();
-```
-
-Or:
+#### Sub-query
 
 ```php
 <?php
@@ -609,7 +622,7 @@ $contactList = $entityManager
     ->distinct()
     ->join('opportunities')
     ->where([
-        'opportunities.stage' => 'Closed Won',
+        'opportunities.stage' => 'Closed Won'
     ])
     ->find();
 ```
@@ -658,7 +671,7 @@ $meetingList = $entityManager
         ],
     )
     ->where([
-        'meetingUser.userId' => $user->getId(),
+        'meetingUser.userId' => $user->getId()
     ])
     ->find();
 ```
@@ -688,8 +701,9 @@ $query = $entityManager
     ->find();
 ```
 
-Important: When joining by a table name (upper case is used), `'deleted' => false` filter is not applied implicitly. You need to provide it explicitly.
+!!! important
 
+    When joining by a table name (upper case is used), `'deleted' => false` filter is not applied implicitly. You need to provide it explicitly.
 
 ### Group By
 
@@ -702,9 +716,9 @@ $query = $entityManager
     ->select(['MONTH:(closeDate)', 'SUM:(amountConverted)']) // complex expressions
     ->groupBy('MONTH:(closeDate)') // complex expression
     ->where([
-        'stage' => 'Closed Won',
+        'stage' => 'Closed Won'
     ])
-    ->order(1) // ordering by the first column
+    ->order('MONTH:(closeDate)')
     ->build();
 
 $pdoStatement = $entityManager
@@ -776,7 +790,7 @@ $deleteQuery = $entityManager
     ->delete()
     ->from('SomeTable')
     ->where([
-        'someColumn' => 'someValue',
+        'someColumn' => 'someValue'
     ])
     ->build();
 
@@ -849,7 +863,7 @@ $updateQuery = $entityManager
     ->set(['column:' => 'joinAlias.foreignColumn'])
     ->join('AnotherTable', 'joinAlias', ['joinAlias.foreignId:' => 'id'])
     ->where([
-        'someColumn' => 'someValue',
+        'someColumn' => 'someValue'
     ])
     ->build();
 
