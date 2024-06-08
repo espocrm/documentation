@@ -27,7 +27,7 @@ All field types with registered valus object:
 * linkParent
 * linkMultiple
 
-BaseEntity methods in *getValueObject* and *setValueObject* will work for field types a value object is registered for.
+BaseEntity's methods *getValueObject* and *setValueObject* will work for field types a value object is registered for.
 
 ```php
 <?php
