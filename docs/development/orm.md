@@ -51,7 +51,8 @@ Or type hinted:
 <?php
 use Espo\Modules\MyModule\Entities\MyEntity;
 
-// Will infer a proper MyEntity type (for static analysis and IDEs supporting generic types).
+// Will infer a proper MyEntity type.
+// For static analysis and IDEs supporting generic types.
 $entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getNew();
 ```
 
@@ -210,7 +211,8 @@ $accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
 
 ```php
 <?php
-// The proper type of a returned Entity is inferred (in static analysis and IDE that supports generic types).
+// The proper type of a returned Entity is inferred.
+// For static analysis and IDEs that support generic types.
 $account = $entityManager->getRDBRepositoryByClass(Account::class)
     ->getById($id);
 ```
