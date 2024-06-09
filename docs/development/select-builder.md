@@ -81,6 +81,14 @@ Or you can pass it to the QueryExecutor:
 $sth = $entityManager->getQueryExecutor()->execute($query);
 ```
 
+## Search Params
+
+Search parameters. Usually passed from the frontend. A SearchParams object contains a primary filter, bool filters, text filter, where conditions, offset, limit, order and what columns to select.
+
+Class: `Espo\Core\Select\SearchParams`.
+
+A SearchParams object can be fetched from a Request object by using `Espo\Core\Record\SearchParamsFetcher`.
+
 ## See also
 
 * [metadata selectDefs](metadata/select-defs.md)
