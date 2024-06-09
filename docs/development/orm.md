@@ -445,6 +445,36 @@ $isRelated = $entityManager
     ->isRelated($opportunity);
 ```
 
+## Collections
+
+Collections contains Entities. An *EntityCollection* is a regular collection of entities. An *SthCollection* is a collection of entities, consuming much less memory. It's reasonable when working with large query results. It does not allocate memory for all results but only for a current entity (e.g. when iterating).
+
+Iteration:
+
+```php
+<?php
+foreach ($collection as $entity) {
+    // Do something with entity.
+}
+```
+
+Get all values:
+
+```php
+<?php
+$valueMapList = $collection->getValueMapList(); // stdClass[]
+```
+
+Factory:
+
+```php
+<?php
+$collection = $entityManager->getCollectionFactory()->create(); // EntityCollection
+$collection[] = $entity;
+
+$sthCollection = $entityManager->getCollectionFactory()->createFromQuery($selectQuery); // SthCollection
+```
+
 ## Select Query Parameters
 
 ### Where clause
