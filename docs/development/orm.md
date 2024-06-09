@@ -49,10 +49,13 @@ Or type hinted:
 
 ```php
 <?php
+// Will infer a proper MyEntity type (for static analysis and IDEs supporting generic types).
 $entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getNew();
 ```
 
-Note: It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
+!!! note
+
+    It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
 
 ### Fetch existing entity
 
