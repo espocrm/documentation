@@ -20,6 +20,7 @@
 * [Hooks](hooks.md)
 * [ACL](acl.md)
 * Misc
+  * [Autoload](autoload.md)
   * [Template helpers (PDF)](template-custom-helper.md)
   * [Formula functions](new-function-in-formula.md)
   * [Scheduled jobs](scheduled-job.md)
@@ -30,7 +31,7 @@
   * [Email sending](email-sending.md)
   * [Calculated fields](calculated-fields.md)
   * [Config parameters](custom-config-parameters.md)
-  * [Autoload](autoload.md)
+  * [Attachments](attachments.md)
 
 ### Frontend
 

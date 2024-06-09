@@ -286,6 +286,7 @@ nav:
           - 'Hooks': 'development/hooks.md'
           - 'ACL': 'development/acl.md'
           - 'Misc':
+              - 'Autoload': 'development/autoload.md'
               - 'Template helpers (PDF)': 'development/template-custom-helper.md'
               - 'Formula functions': 'development/new-function-in-formula.md'
               - 'Scheduled jobs': 'development/scheduled-job.md'
@@ -296,8 +297,8 @@ nav:
               - 'Email sending': 'development/email-sending.md'
               - 'Calculated fields': 'development/calculated-fields.md'
               - 'Config parameters': 'development/custom-config-parameters.md'
-              - 'Autoload': 'development/autoload.md'
               - 'Value Objects': 'development/orm-value-objects.md'
+              - 'Attachments': 'development/attachments.md'
         - 'Frontend':
           - 'View': 'development/view.md'
           - 'Templates': 'development/frontend/templates.md'
