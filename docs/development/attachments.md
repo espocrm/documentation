@@ -48,7 +48,7 @@ class MyService
 * role – a role, e.g. Attachment, Inline Attachment, Export File.
 * sourceId – an original attachment reference; multiple attachments can refer to one file.
 
-## File Storage Manager
+## File storage manager
 
 The class: `Espo\Core\FileStorage\Manager`.
 
