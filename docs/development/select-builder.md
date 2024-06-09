@@ -91,5 +91,5 @@ A SearchParams object can be fetched from a Request object by using `Espo\Core\R
 
 ## See also
 
-* [metadata selectDefs, definitions of Select framework](metadata/select-defs.md)
+* [Definitions of Select framework, metadata > selectDefs](metadata/select-defs.md)
 
