@@ -35,7 +35,7 @@ class SomeClass
 }
 ```
 
-## Usage
+## Working with entities
 
 ### Create new entity
 
