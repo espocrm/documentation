@@ -187,6 +187,31 @@ $entityManager->getRDBRepository($entityType)->deleteFromDb($id);
 
 This will delete a record permanently.
 
+## Repository
+
+Get a repository by a class:
+
+```php
+<?php
+use Espo\Modules\Crm\Entities\Account;
+// returns Collection<Account>
+$accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
+```
+
+```php
+<?php
+// The proper type of a returned Entity is inferred (in static analysis and IDE that supports generic types).
+$account = $entityManager->getRDBRepositoryByClass(Account::class)
+    ->getById($id);
+```
+
+Get a repository by an entity type:
+
+```php
+<?php
+$repository = $entityManager->getRDBRepository($entityType);
+```
+
 ### Find
 
 ```php
@@ -276,7 +301,7 @@ $collection = $entityManager
 
 You can use getRDBRepositoryByClass for type safety. 
 
-### Find the first one
+Finding the first one:
 
 ```php
 <?php
@@ -287,6 +312,9 @@ $entity = $entityManager
     ])
     ->findOne();
 ```
+
+## Relations
+
 
 ### Find related
 
@@ -396,31 +424,6 @@ $isRelated = $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->isRelated($opportunity);
-```
-
-## Repository
-
-Get a repository by a class:
-
-```php
-<?php
-use Espo\Modules\Crm\Entities\Account;
-// returns Collection<Account>
-$accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
-```
-
-```php
-<?php
-// The proper type of a returned Entity is inferred (in static analysis and IDE that supports generic types).
-$account = $entityManager->getRDBRepositoryByClass(Account::class)
-    ->getById($id);
-```
-
-Get a repository by an entity type:
-
-```php
-<?php
-$repository = $entityManager->getRDBRepository($entityType);
 ```
 
 ## Select Query Parameters
