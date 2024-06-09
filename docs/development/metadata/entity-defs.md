@@ -598,12 +598,11 @@ Collection parameters.
 
 The default order-by field.
 
-### orderBy
+### order
 
 *"asc"|"desc"*
 
 The default order direction.
-
 
 ### textFilterFields
 
