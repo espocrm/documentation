@@ -207,9 +207,6 @@ Example:
 <?php
 namespace Espo\Modules\MyModule\Controllers;
 
-use Espo\Core\ORM\Entity;
-use Espo\Core\Field\LinkMultiple;
-
 use Espo\Core\Controllers\Record;
 
 // Just extend the standard CRUD controller.
