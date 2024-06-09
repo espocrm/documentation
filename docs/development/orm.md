@@ -187,63 +187,6 @@ $entityManager->getRDBRepository($entityType)->deleteFromDb($id);
 
 This will delete a record permanently.
 
-### Attributes
-
-Note: As of v7.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
-
-Each entity type has its own set of defined attributes. You cannot set an arbitrary attribute name.
-
-```php
-<?php
-// whether attribute is defined in an entity
-$hasAttribute = $entity->hasAttribute('attributeName');
-// get a list of all available attributes
-$attributeList = $entity->getAttributeList();
-// get an attribute type
-$attributeType = $entity->getAttributeType('attributeName');
-// get a specific attribute parameter
-$paramValue = $entity->getAttributeParam('attributeName', 'attributeParam');
-```
-
-Attribute types:
-
-* `Entity::ID`
-* `Entity::VARCHAR`
-* `Entity::INT`
-* `Entity::FLOAT`
-* `Entity::TEXT`
-* `Entity::VARCHAR`
-* `Entity::FOREIGN`
-* `Entity::FOREIGN_ID`
-* `Entity::FOREIGN_TYPE`
-* `Entity::DATE`
-* `Entity::DATETIME`
-* `Entity::JSON_ARRAY`
-* `Entity::JSON_OBJECT`
-
-### Relations
-
-Note: As of v7.0 it's recommended to use *ORM Defs* to get entity definitions. See below about ORM Defs.
-
-```php
-<?php
-// get a list of all relations
-$relationList = $entity->getRelationList();
-// get a relation type
-$type = $entity->getRelationType('relationName');
-// get a relation parameter
-$paramValue = $entity->getRelationParam('relationName', 'paramName')
-```
-
-Relation types avaible in constants:
-
-* `Entity::MANY_MANY`
-* `Entity::HAS_MANY`
-* `Entity::BELONGS_TO`
-* `Entity::HAS_ONE`
-* `Entity::BELONGS_TO_PARENT`
-* `Entity::HAS_CHILDREN`
-
 ### Find
 
 ```php
@@ -1125,3 +1068,28 @@ See all available methods in:
 * `Espo\ORM\Defs\RelationDefs`
 * `Espo\ORM\Defs\FieldDefs`
 * `Espo\ORM\Defs\IndexDefs`
+
+Attribute types:
+
+* `Entity::ID`
+* `Entity::VARCHAR`
+* `Entity::INT`
+* `Entity::FLOAT`
+* `Entity::TEXT`
+* `Entity::VARCHAR`
+* `Entity::FOREIGN`
+* `Entity::FOREIGN_ID`
+* `Entity::FOREIGN_TYPE`
+* `Entity::DATE`
+* `Entity::DATETIME`
+* `Entity::JSON_ARRAY`
+
+Relation types:
+
+* `Entity::MANY_MANY`
+* `Entity::HAS_MANY`
+* `Entity::BELONGS_TO`
+* `Entity::HAS_ONE`
+* `Entity::BELONGS_TO_PARENT`
+* `Entity::HAS_CHILDREN`
+* `Entity::JSON_OBJECT`
