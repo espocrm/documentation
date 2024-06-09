@@ -3,7 +3,7 @@
 *As of v7.0.*
 
 * Value objects are immutable.
-* Values objects contain modification methods that return a cloned instance.
+* Value objects contain modification methods that return a cloned instance.
 * Default value objects are available in the namespace `Espo\Core\Field`.
 * It's possible to register custom value object for a specific field type or for a specific field.
 
