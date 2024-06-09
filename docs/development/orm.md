@@ -341,6 +341,7 @@ $opportunity = $entityManager
 Belongs-To or Has-One:
 
 ```php
+<?php
 $account = $entityManager
     ->getRDBRepository('Task')
     ->getRelation($task, 'account')
