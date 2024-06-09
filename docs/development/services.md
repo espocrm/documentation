@@ -4,9 +4,9 @@
 
     Not to be confused with [*Container services*](di.md).
 
-Services are entry points for business logic. You can write business logic right in a service class or delegate it inside the service to another classes. Controllers are supposed to have little code. Usually, a controller action calls some service method.
+Services are entry points for business logic. They are just regular PHP classes. You can write business logic right in a service class or delegate it inside the service to another classes. Controllers and Action classes are supposed to have little code. Usually, they call service methods.
 
-You can create a service class in any namespace you like (inside your module). Use the dependency injection to require this class in your custom controller (your class will be passed to the constructor of your controller).
+You can create a service class in any namespace you like (inside your module). Use the dependency injection to require this class in your Controller or Action class (your class will be passed to a constructor).
 
 ## Creating service class
 
