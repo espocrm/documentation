@@ -83,7 +83,7 @@ use Espo\Core\ORM\Repository\Option\SaveOption;
 $entityManager->saveEntity($entity, [SaveOption::SILENT => true]);
 ```
 
-Options:
+Available options:
 
 * skipHooks – skip all hooks; workflows, formula will be ignored;
 * silent – workflows will be ignored, modified fields won't be change;
@@ -92,6 +92,8 @@ Options:
 * skipModifiedBy – modifiedBy won't be set with current user;
 * createdById – override createdBy;
 * modifiedById – override modifiedBy.
+
+Options in constants available here: `Espo\Core\ORM\Repository\Option\SaveOption`.
 
 ### Create and store entity
 
