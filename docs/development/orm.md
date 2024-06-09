@@ -14,6 +14,7 @@ An *EntityCollection* is a collection of entities. It's returned by *find* opera
 
 * [Complex expressions](../user-guide/complex-expressions.md)
 * [Value objects](orm-value-objects.md)
+* [Custom entity type](metadata/custom-entity-type.md)
 * [Entity definitions](metadata/entity-defs.md)
 
 ## Injecting Entity Manager
