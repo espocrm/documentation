@@ -21,6 +21,7 @@
 * [ACL](acl.md)
 * Misc
   * [Autoload](autoload.md)
+  * [Entity type](custom-entity-type.md)
   * [Template helpers (PDF)](template-custom-helper.md)
   * [Formula functions](new-function-in-formula.md)
   * [Scheduled jobs](scheduled-job.md)

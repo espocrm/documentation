@@ -287,6 +287,7 @@ nav:
           - 'ACL': 'development/acl.md'
           - 'Misc':
               - 'Autoload': 'development/autoload.md'
+              - 'Entity type': 'development/custom-entity-type.md'
               - 'Template helpers (PDF)': 'development/template-custom-helper.md'
               - 'Formula functions': 'development/new-function-in-formula.md'
               - 'Scheduled jobs': 'development/scheduled-job.md'
