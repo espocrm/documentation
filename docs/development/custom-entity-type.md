@@ -72,7 +72,7 @@ Example:
         }
     },
     "collection": {
-        "textFilterFields": "name",
+        "textFilterFields": ["name"],
         "orderBy": "createdAt",
         "order": "desc"
     }
