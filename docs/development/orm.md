@@ -49,6 +49,8 @@ Or type hinted:
 
 ```php
 <?php
+use Espo\Modules\MyModule\Entities\MyEntity;
+
 // Will infer a proper MyEntity type (for static analysis and IDEs supporting generic types).
 $entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getNew();
 ```
@@ -68,6 +70,8 @@ Or type hinted:
 
 ```php
 <?php
+use Espo\Modules\MyModule\Entities\MyEntity;
+
 $entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getById($id);
 ```
 
@@ -305,8 +309,6 @@ $collection = $entityManager
     ->find();
 ```
 
-You can use getRDBRepositoryByClass for type safety. 
-
 Finding the first one:
 
 ```php
@@ -319,8 +321,18 @@ $entity = $entityManager
     ->findOne();
 ```
 
-## Relations
+You can use *getRDBRepositoryByClass* for type safety.
 
+```php
+<?php
+use Espo\Modules\Crm\Entities\Account;
+
+$entity = $entityManager
+    ->getRDBRepositoryByClass(Account::class)
+    ->findOne();
+```
+
+## Relations
 
 ### Find related
 
