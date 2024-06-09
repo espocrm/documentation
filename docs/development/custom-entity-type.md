@@ -12,7 +12,7 @@ After all needed files are created, you need to run rebuild (Administration > Re
 
 ### entityDefs
 
-[Reference](metadata/entityDefs.md)
+[Reference](metadata/entity-defs.md)
 
 File: `custom/Espo/Modules/MyModule/Resources/metadata/entityDefs/MyEntity.json`
 
@@ -76,7 +76,7 @@ Example:
 
 ### scopes
 
-[Reference](metadata/entityDefs.md)
+[Reference](metadata/scopes.md)
 
 File: `custom/Espo/Modules/MyModule/Resources/metadata/scopes/MyEntity.json`
 
@@ -94,7 +94,7 @@ Example:
 
 ### clientDefs
 
-[Reference](metadata/clientDefs.md)
+[Reference](metadata/client-defs.md)
 
 File: `custom/Espo/Modules/MyModule/Resources/metadata/clientDefs/MyEntity.json`
 
