@@ -776,7 +776,7 @@ $queryBuilder->where(
 );
 ```
 
-It's possible to add custom functions (as of v7.0.8). An implementation class name for a custom function should be defined in metadata by the path app > orm > functionConverterClassNameMap_Mysql. The class should implement `Espo\ORM\QueryComposer\Part\FunctionConverter` interface.
+It's possible to add custom functions (as of v7.0.8). An implementation class name for a custom function should be defined in metadata by a path app > orm > platforms > Mysql > functionConverterClassNameMap. The class should implement `Espo\ORM\QueryComposer\Part\FunctionConverter` interface.
 
 ## Query builder
 
