@@ -70,6 +70,11 @@ Example:
         "name": {
             "columns": ["name"]
         }
+    },
+    "collection": {
+        "textFilterFields": "name",
+        "orderBy": "createdAt",
+        "order": "desc"
     }
 }
 ```
