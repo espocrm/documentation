@@ -127,6 +127,7 @@ namespace Espo\Modules\MyModule\Entities;
 
 use Espo\Core\ORM\Entity;
 use Espo\Core\Field\LinkMultiple;
+use Espo\Core\Field\DateTime;
 
 class MyEntity extends Entity
 {
@@ -189,6 +190,14 @@ class MyEntity extends Entity
     public function setTeams(LinkMultiple $teams): self
     {
         $this->setValueObject('teams', $teams);
+
+        return $this;
+    }
+
+    public function getCreatedAt(): DateTime
+    {
+        /** @var DateTime */
+        $this->getValueObject('createdAt');
 
         return $this;
     }
