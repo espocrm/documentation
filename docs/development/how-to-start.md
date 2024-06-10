@@ -2,6 +2,10 @@
 
 *(for developers)*
 
+When you need to customize Espo for some business, it's recommended to create an installable extension (see Option B).
+
+In this article:
+
 * [Option A. Using git repository](#option-a-using-git-repository)
 * [Option B. Extension development](#option-b-extension-development)
 * [Configuration for development](#configuration-for-development)
@@ -83,9 +87,9 @@ The package will be created in the `build` directory.
 
 ## Option B. Extension development
 
-By utilizing [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. Template tools allows you to run your extension an in Espo instance for testing.
+By utilizing [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. The ext-template tools allows you to run your extension in an Espo instance for testing purposes. See more info in the ext-template repository's readme. 
 
-You can [install](autoload.md) additional composer libraries in your extension.
+It is possible to [install](autoload.md) additional composer libraries in your extension.
 
 ## Configuration for development
 
@@ -107,7 +111,6 @@ You can force using some additional cache in the developer mode. Can be reasonab
 'useCacheInDeveloperMode' => true,
 ```
 
-
 ## Where to put customizations
 
 ### Option A. Custom dirs
@@ -120,3 +123,4 @@ You can force using some additional cache in the developer mode. Can be reasonab
 * `custom/Espo/Modules/{YourModuleName}/` – for metadata and all files pertaining to backend
 * `client/custom/modules/{your-module-name}/` – for client files
 
+This method is the only appropriate method when developing an extension. The ext-template's initialization created needed folders automatically.
