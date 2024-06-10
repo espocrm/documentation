@@ -2,7 +2,7 @@
 
 *(for developers)*
 
-When you need to customize Espo for some business, it's recommended to create an installable extension (see Option B).
+When you need to customize Espo for some business, it's recommended to craft an installable extension (see Option B).
 
 In this article:
 
