@@ -22,4 +22,4 @@ Consider decreasing *Auth Token Max Idle Time*. Additionally, you can also speci
 
 ## Restrict upgrade via UI
 
-Restrict the ability to upgrade and upload extensions via the UI. Set `'adminUpgradeDisabled' => true` in `data/config-internal.php` (as of v8.1, before, it could be done with the `restrictedMode` parameter).
+Restrict the ability to upgrade and upload extensions via the UI. Set `'adminUpgradeDisabled' => true` in `data/config-internal.php`.
