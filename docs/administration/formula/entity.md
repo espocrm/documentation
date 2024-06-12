@@ -139,7 +139,7 @@ Checks whether a target entity is related with another entity represented by LIN
 
 `entity\sumRelated(LINK, FIELD, [FILTER])`
 
-Sums related records by a specified FIELD with an optional FILTER.
+Sums related records by a specified FIELD with an optional FILTER. Returns a *float* value.
 
 !!! example
 
