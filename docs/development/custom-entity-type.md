@@ -91,6 +91,7 @@ Example:
 
 ```json
 {
+    "module": "MyModule",
     "entity": true,
     "object": true,
     "acl": true
