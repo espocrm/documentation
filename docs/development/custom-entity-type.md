@@ -93,7 +93,9 @@ Example:
 {
     "entity": true,
     "object": true,
-    "acl": true
+    "acl": true,
+    "tab": true,
+    "importable": true
 }
 ```
 
