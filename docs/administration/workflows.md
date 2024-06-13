@@ -2,12 +2,12 @@
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-The Workflows tool automates your business processes in an easy way. You can access workflows from Administration panel. To create a Workflow rule you need to define:
+The Workflows tool automates your business processes in an easy way. You can access Workflows from Administration panel. To create a Workflow rule you need to define:
 
-* Target Entity – what entity type the workflow is applied to;
+* Target Entity – what entity type the Workflow is applied to;
 * Trigger Type – how the Workflow will be triggered;
 * Conditions – conditions need to be met to trigger the Workflow;
-* Actions – what to do if the workflow is triggered.
+* Actions – what to do if the Workflow is triggered.
 
 In this article:
 
@@ -80,21 +80,21 @@ Scheduling is specified in a crontab notation.
 How it works:
 
 1. You need to create a *List* Report showing records that met specific criteria. You can specify any columns for the Report, it doesn't matter.
-2. Then create a workflow rule with the *Scheduled* trigger type, select the Report. Specify the scheduling.
-3. Specify one or multiple actions in the workflow.
+2. Then create a Workflow rule with the *Scheduled* trigger type, select the Report. Specify the scheduling.
+3. Specify one or multiple actions in the Workflow.
 
 The Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the Report and take all records from the Report result. Then, it will apply the action (or multiple actions) for every record.
 
 !!! example "Example, a use case"
 
-    Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a workflow to run once a day.
+    Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a Workflow to run once a day.
 
 ### Sequential
 
 Is supposed to be run by another Workflow. Provides the ability to make a complex logic.
 
-1. Create a workflow with the *Sequential* trigger type.
-2. Create another workflow with another trigger type. Add an action *Trigger another Workflow* and select the Workflow from the step 1.
+1. Create a Workflow with the *Sequential* trigger type.
+2. Create another Workflow with another trigger type. Add an action *Trigger another Workflow* and select the Workflow from the step 1.
 
 !!! note
 
@@ -108,16 +108,16 @@ Triggered when a specified signal is escalated in the system. Only object signal
 
 ## Conditions
 
-You can specify conditions that must be met to trigger the workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
+You can specify conditions that must be met to trigger the Workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
 
 ### UI condition builder
 
 Some available condition types:
 
 * _equals_ – the field equals to a specific value or a value of another field;
-* _was equal_ – the field was equal to a specific value before the workflow was triggered;
+* _was equal_ – the field was equal to a specific value before the Workflow was triggered;
 * _not equals_ – the field does not equal to a specific value or a value of another field;
-* _was not equal_ – the field was not equal to specific value before the workflow was triggered;
+* _was not equal_ – the field was not equal to specific value before the Workflow was triggered;
 * _empty_ – the field value is empty;
 * _not empty_ – the field value is not empty;
 * _changed_ – the field was changed;
@@ -191,7 +191,7 @@ It's possible to define **formula** to calculate field values. You can utilize *
 
 !!! note
 
-    It's not recommended to rely on an *Update Target Record* action triggering another after-update workflow. In some cases it won't work. It's better to define additional actions in the same workflow or trigger a sequential workflow.
+    It's not recommended to rely on an *Update Target Record* action triggering another after-update Workflow. In some cases it won't work. It's better to define additional actions in the same Workflow or trigger a *Sequential* Workflow.
 
 !!! warning "Important"
 
@@ -211,7 +211,7 @@ There is the ability to delete the record with the following formula code: `dele
 
 !!! tip
 
-    If there can be many related records, it's reasonable to process updating these records in idle. For this, utilize Trigger Another Workflow action with a small or zero delay. Define Update Related Record action in the sequentinal Workflow rule.
+    If there can be many related records, it's reasonable to process updating these records in idle. For this, utilize *Trigger Another Workflow* action with a small or zero delay. Define an *Update Related Record* action in the *Sequentinal* Workflow rule.
 
 ### Link with another Record
 
@@ -223,16 +223,16 @@ Unrelates the target record from another specific record. E.g. remove a specific
 
 ### Apply Assignment Rule
 
-Assigns the target record to user by distribution rule. There are two available rules: Round-Robin and Least-Busy.
+Assigns the target record to a User by a distribution rule. There are two available rules: *Round-Robin* and *Least-Busy*.
 
-* Round-Robin - users are chosen from the top to the bottom of a list (team) and then starting again.
-* Least-Busy - the user who has fewer assigned records will be chosen for assignment.
+* Round-Robin – Users are chosen from the top to the bottom of a list (team) and then starting again.
+* Least-Busy – the User who has fewer assigned records will be chosen for assignment.
 
-*List Report* - determines what records will be taken into account to calculate the number of assigned records for Least-Busy distribution. E.g. we need to take only records with active status for Cases.
+*List Report* – determines what records will be taken into account to calculate the number of assigned records for *Least-Busy* distribution. E.g. we need to take only records with active status for Cases.
 
-*Target Team* - Users of the selected team will take part in the assignment process.
+*Target Team* – Users of the selected team will take part in the assignment process.
 
-*Target User Position* - Allows to restrict the list of users that will take part in the assignment process. Users that have the selected position (in team) will take part. If the field is set to *All*, then all team members will take part.
+*Target User Position* – Allows to restrict the list of users that will take part in the assignment process. Users that have the selected position (in team) will take part. If the field is set to *All*, then all team members will take part.
 
 ### Create Notification
 
@@ -249,11 +249,11 @@ Forces specific users to follow the target record or a specified related record.
 
 ### Trigger another Workflow
 
-Allows to make sequential workflows. It's possible to diverge workflows by condition: you can setup the workflow to trigger two workflows with different conditions defined in those workflows.
+Allows to make *Sequential* Workflows. It's possible to diverge Workflows by condition: you can setup a Workflow to trigger two Workflows with different conditions defined in those Workflows.
 
-It's possible to delay executing of a sequential workflow. In the sequential workflow, you can define the condition that checks whether specific fields were changed since the parent workflow was triggered by using _Changed_ and _Was Equal_ condition types.
+It's possible to delay executing of a *Sequential* Workflow. In a *Sequential* Workflow, you can define the condition that checks whether specific fields were changed since the parent Workflow was triggered by using _Changed_ and _Was Equal_ condition types.
 
-Target for a triggered workflow can be substituted with a related record.
+A *Target* for a triggered Workflow can be substituted with a related record.
 
 !!! note
 
@@ -261,7 +261,7 @@ Target for a triggered workflow can be substituted with a related record.
 
 !!! note
 
-    It's possible to trigger only workflow rules of 'Sequential' type.
+    It's possible to trigger only Workflow rules of *Sequential* type.
 
 ### Run Service Action
 
@@ -326,11 +326,11 @@ Available placeholders:
 
 #### Handling HTTP response
 
-A response body of a sent HTTP request will be available in formula with a function `workflow\lastHttpResponseBody()`. It can be accessed in a following workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
+A response body of a sent HTTP request will be available in formula with a function `workflow\lastHttpResponseBody()`. It can be accessed in a following Workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
 
 !!! example
 
-    A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same workflow rule and specify a formula script:
+    A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same Workflow rule and specify a formula script:
 
     ```
     $id = json\retrieve(workflow\lastHttpResponseBody(), 'id');
@@ -343,7 +343,7 @@ A response body of a sent HTTP request will be available in formula with a funct
 
 ### Execute Formula Script
 
-Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next workflow actions or BPM process.
+Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next Workflow actions or BPM process.
 
 ## Using formula in actions
 
@@ -367,13 +367,13 @@ Returns an attribute value of the target entity. Useful when the scope is switch
 
 `workflow\targetEntity\attributeFetched(ATTRIBUTE_NAME)`
 
-Returns a previous attribute value of the target entity (before the workflow was triggered).
+Returns a previous attribute value of the target entity (before the Workflow was triggered).
 
 #### workflow\trigger
 
 `workflow\trigger(ENTITY_TYPE, ID, WORKFLOW_ID)`
 
-Triggers another workflow rule.
+Triggers another Workflow rule.
 
 #### workflow\signalParam
 
