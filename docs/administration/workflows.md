@@ -2,11 +2,11 @@
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-The Workflows tool automates your business processes in an easy way. You can access workflows from Administration panel. To create a workflow rule you need to define:
+The Workflows tool automates your business processes in an easy way. You can access workflows from Administration panel. To create a Workflow rule you need to define:
 
 * Target Entity – what entity type the workflow is applied to;
-* Trigger Type – how the workflow will be triggered;
-* Conditions – conditions need to be met to trigger the workflow;
+* Trigger Type – how the Workflow will be triggered;
+* Conditions – conditions need to be met to trigger the Workflow;
 * Actions – what to do if the workflow is triggered.
 
 In this article:
@@ -40,7 +40,7 @@ Triggered only when an existing record is updated. If specified conditions are m
 
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
 
-For workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If Case's status is changed, then execute some actions.
+For Workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If a Case's status is changed, then do some actions.
 
 ### Manual
 
@@ -52,17 +52,17 @@ The ability to define:
 
 * an element type (a button or a dropdown item);
 * a label text;
-* teams allowed to run the workflow;
+* teams allowed to run the Workflow;
 * dynamic-logic conditions that make a button/menu-item available;
-* access to the record required to be able to run the workflow (read, edit, admin).
+* access to the record required to be able to run the Workflow (read, edit, admin).
 
 Limitations:
 
-* portal users are not allowed to run manual workflows.
+* Portal Users are not allowed to run *Manual* Workflows.
 
 ### Scheduled
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified list report. Hence you need also to create a list report.
+Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified *List* Report. Hence you need also to create a *List* Report.
 
 Scheduling is specified in a crontab notation.
 
@@ -79,11 +79,11 @@ Scheduling is specified in a crontab notation.
 
 How it works:
 
-1. You need to create a list report showing records that met specific criteria. You can specify any columns for the report, it doesn't matter.
-2. Then create a workflow rule with *Scheduled* trigger type, select the report. Specify the scheduling.
+1. You need to create a *List* Report showing records that met specific criteria. You can specify any columns for the Report, it doesn't matter.
+2. Then create a workflow rule with the *Scheduled* trigger type, select the Report. Specify the scheduling.
 3. Specify one or multiple actions in the workflow.
 
-Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the report and take all records from the report result. Then, it will apply the action (or multiple actions) for every record.
+The Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the Report and take all records from the Report result. Then, it will apply the action (or multiple actions) for every record.
 
 !!! example "Example, a use case"
 
@@ -91,10 +91,10 @@ Workflow rule will be running (in idle) according to the specified scheduling. O
 
 ### Sequential
 
-Supposed to be run by another workflow. Provides the ability to make a complex logic.
+Is supposed to be run by another Workflow. Provides the ability to make a complex logic.
 
-1. Create a workflow with sequential trigger type.
-2. Create another workflow with another trigger type. Add action *Trigger another Workflow* and select the workflow from the step 1.
+1. Create a workflow with the *Sequential* trigger type.
+2. Create another workflow with another trigger type. Add an action *Trigger another Workflow* and select the Workflow from the step 1.
 
 !!! note
 
