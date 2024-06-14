@@ -187,6 +187,10 @@ Database platform. The possible values: `Mysql` or `Postgresql`. The default val
 
 Database host name for EspoCRM. The default value is `mysql`.
 
+#### ESPOCRM_DATABASE_PORT
+
+Database port for EspoCRM. The default value is empty.
+
 #### ESPOCRM_DATABASE_NAME
 
 Database name for EspoCRM. The default value is `espocrm`.
