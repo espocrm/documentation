@@ -29,11 +29,11 @@ Once you select a CSV file, you will be able to see how it will be parsed in the
 
 Parameters:
 
-* *Header Row* − whether the CSV file has the first row with field names.
-* *Execute in idle* − is recommended if you have a **big number of records** to be imported; import will be processed **via cron**; the status will be set to 'Complete' when the import process is finished.
+* *Header Row* − whether a CSV file has the first row with field names.
+* *Execute in idle* − is recommended if you import a **big number of records**; import will be processed **via cron**; the status will be set to *Complete* when the import process is finished.
 * *Skip searching for duplicates* − will **make the import faster**.
-* *Silent mode* − the majority of after-save scripts will be skipped; stream records won't be created, workflows will be skipped; checking will **make the import faster**.
-* *Run Manually* − you will need to run manually from CLI. Command will be shown after setting up the import.
+* *Silent mode* − the majority of after-save scripts will be skipped; Stream notes won't be created, workflows will be skipped; checking will **make the import faster**.
+* *Run Manually* − you will need to start the import manually from CLI. The command will be shown after setting up the import.
 * *Telephone country code* − phone numbers in a regional format will be converted to the internation format according the selected country. (as of v8.1)
 
 Click the **Next** button to preceed to the _Step 2_.
@@ -42,7 +42,7 @@ Click the **Next** button to preceed to the _Step 2_.
 
 ## Step 2
 
-Setup the field mapping: how fields correspond to columns of the CSV file. Not mapped columns will be ignored.
+Setup the field mapping: how fields correspond to columns of a CSV file. Not mapped columns will be ignored.
 
 In the cases of *Create & Update* and *Update Only*, you need to check fields by which records that should be updated will be found. For example, if you check *update by* 'Name' field, then records with the matching Name will be updated.
 
