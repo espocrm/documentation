@@ -66,7 +66,11 @@ Once the records are imported and you are sure that imported data is fine, you c
 
 #### Revert import
 
-*Revert Import* will remove all imported records permanently. Updates caused by import won't be reverted.
+*Revert Import* will remove all imported records permanently.
+
+!!! important
+
+    Updates caused by import are not reverted.
 
 #### Remove duplicates
 
@@ -78,13 +82,13 @@ This will create a new import with the same parameters and field mapping.
 
 ## Importing into Target List
 
-When you import Contacts, Leads or Accounts, you can add them to some target list. On the Step 2, you need to add *Target List* field on *Default Values* panel and select a needed target list record. You can also use 'Update only' or 'Create & Update' import type to link existing records with a target list.
+When you import Contacts, Leads or Accounts, you can add them to some Target List. On the Step 2, you need to add the *Target List* field in the *Default Values* panel and select a needed Target List record. You can also use *Update only* or *Create & Update* import type to link existing records with a Target List.
 
 ## Relations
 
-It's possible to automatically relate imported records by a foreign name. For example, when you import Opportunities, if you have Account names in the CSV but don't have Account IDs, Accounts with corresponding names will be automatically related with imported records. Note that this functionality is only available for many-to-one relationships.
+It's possible to automatically relate imported records by a foreign name. For example, when you import Opportunities, if you have Account names in a CSV but don't have Account IDs, Accounts with corresponding names will be automatically related with imported records. Note that this functionality is only available for many-to-one relationships.
 
-It's also possible to automatically relate imported records by a *Foreign* field other than the Name. The Foreign field should have *Relate on Import* parameter enabled. Available as of v8.2.
+It's also possible to automatically relate imported records by a *Foreign* field other than the Name. The Foreign field should have *Relate on Import* parameter enabled. The feature is available as of v8.2.
 
 ## Console commands
 
@@ -94,7 +98,7 @@ Run import:
 php command.php import --id={import-id}
 ```
 
-The import must be created via UI (with *Run Manually* checked) before.
+The import must be created via the UI before. It should have *Run Manually* parameter checked.
 
 Resume failed import (from the last processed row):
 
@@ -120,9 +124,9 @@ php command.php import --file=path/to/csv --params-id={import-id}
 
 *As of v7.2.*
 
-All rows that failed to import will be available in the Errors panel on the Import result view. It's possible to view the reason of the failure (in most cases it's a validation), the index of the failed row and values. To view error details, click the *View* action from the dropdown.
+All rows that failed to import will be available in the Errors panel on the Import result view. It's possible to view the reason of the failure (usually it's validation), the index of the failed row and values. To view error details, click the *View* action from the dropdown.
 
-There's the ability to export all failed rows back to CSV (in order to fix them and then re-import).
+There's the ability to export all failed rows back to a CSV (in order to fix them and then re-import).
 
 ### Integrity-Constraint-Violation
 
