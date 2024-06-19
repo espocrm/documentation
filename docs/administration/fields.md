@@ -332,7 +332,8 @@ A field of a related record. Read-only.
 Parameters:
 
 * Link – defines where the field will be taken from.
-* Field – a field of a related record.
+* Field – a field of a related record;
+* Relate on Import – when importing, it will automatically relate a record with a matching foreign record.
 
 ## Email
 
@@ -350,14 +351,26 @@ Parameters:
 
 A record related through *Belongs-To* (*many-to-one* or *one-to-one*) relationship.
 
+Parameters:
+
+* Create Button – display *Create* button;
+* Autocomplete on empty input – show suggestions even if no characters are entered in the input.
+
 ## Link-Parent
 
 A record related through *Belongs-To-Parent* relationship. Can be of different entity types.
 
 Parameters:
 
-* Entity List – a list of entity types available to be related through the field.
+* Entity List – a list of entity types available to be related through the field;
+* Autocomplete on empty input – show suggestions even if no characters are entered in the input.
 
 ## Link-Multiple
 
 A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) relationship. Not all relationships have a link-multiple field. Only those do, where *Link-Multiple* parameter(s) is enabled.
+
+Parameters:
+
+* Max Item Count – the max number of recods;
+* Create Button – display *Create* button;
+* Autocomplete on empty input – show suggestions even if no characters are entered in the input.
