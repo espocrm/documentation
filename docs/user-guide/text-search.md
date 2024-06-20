@@ -8,7 +8,7 @@ In this article:
 
 See also:
 
-* [Seach types in EspoCRM: What you should know](https://www.espocrm.com/tips/search-types/)
+* [Search types in EspoCRM: What you should know](https://www.espocrm.com/tips/search-types/)
 
 ## List view text search
 
@@ -58,7 +58,7 @@ The following operators are available:
 
 The MySQL option `ft_min_word_len` defines a minimum word length available for full-text search. By default, it's set to `4`. You might want to set it to `3` to be able to search shorter words.
 
-If you change this paramater in MySQL, you also need to run rebuild in Espo.
+If you change this parameter in MySQL, you also need to run rebuild in Espo.
 
 ### Stopwords
 
