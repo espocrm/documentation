@@ -80,7 +80,7 @@ In the end, we need to pack all these files into a ZIP archive.
 
 You can use this [template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
 
-## Recomendations
+## Recommendations
 
 
 !!! note
