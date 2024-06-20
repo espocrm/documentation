@@ -33,7 +33,7 @@ server {
     root /path-to-espo/public/portal; # path to `public/portal` dir
 
     location /client {
-        root /path-to-espo; # no trailng slash needed
+        root /path-to-espo; # no trailing slash needed
         autoindex off;
 
         location ~* ^.+.(js|css|png|jpg|jpeg|gif|ico|tpl)$ {
