@@ -45,7 +45,7 @@ Field types not available for creating directly:
 * Read-only After Create – a field value can be specified only when creating a record, after that the field will became read-only; 
 * Default – a value pre-filled when creating a new record;
 * Disable Inline Edit – may be useful when using Dynamic Logic;
-* Tooltip Text – information about the field for users (Markfown is supported).
+* Tooltip Text – information about the field for users (Markdown is supported).
 
 !!! note
 
@@ -305,7 +305,7 @@ An auto-incrementing number of string type with a possible prefix and specific l
 
 Parameters:
 
-* Prefex – a text that will be preprended to a number;
+* Prefix – a text that will be preprended to a number;
 * Next Number – a number that will be applied to the next created record;
 * Pad Length – a length of the numeric part; if less, then will be padded with zero digits, e.g. `00001`;
 * Copy to clipboard button.
@@ -371,6 +371,6 @@ A set of records related through *Has-Many* (*many-to-many* or *one-to-many*) re
 
 Parameters:
 
-* Max Item Count – the max number of recods;
+* Max Item Count – the max number of records;
 * Create Button – display *Create* button;
 * Autocomplete on empty input – show suggestions even if no characters are entered in the input.
