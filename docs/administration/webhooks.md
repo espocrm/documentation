@@ -122,8 +122,8 @@ Example for PHP:
 $signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey, true));
 ```
 
-* *webhookId* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks;
-* *secretKey* can be obtained from a response upon a webhook creation or at Admninistration > Webhooks;
+* *webhookId* can be obtained from a response upon a webhook creation or at Administration > Webhooks;
+* *secretKey* can be obtained from a response upon a webhook creation or at Administration > Webhooks;
 * *payload* is a payload of a request
 
 
@@ -142,6 +142,6 @@ Can be set manually in `data/config.php`.
 
 ## Debugging
 
-Queues are stored in two database tables: `webhook_queue_item` and `webhook_event_queue_item`. Webhook Queue Items are avaliabe from the UI at Administration > Webhooks > menu in the top-right corner > Webhook Queue Items.
+Queues are stored in two database tables: `webhook_queue_item` and `webhook_event_queue_item`. Webhook Queue Items are available from the UI at Administration > Webhooks > menu in the top-right corner > Webhook Queue Items.
 
 You can enable [debug mode](troubleshooting.md#debug-mode) to see more details in the log.
