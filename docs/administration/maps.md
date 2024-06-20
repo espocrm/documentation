@@ -24,7 +24,7 @@ Administration > Entity Manager > {Entity Type} >  {needed address field} (e.g. 
 
 ## Printing in PDF
 
-*googleMapsImage* helper is availabe for printing Google Maps in PDF.
+*googleMapsImage* helper is available for printing Google Maps in PDF.
 
 Usage (in PDF Template):
 
