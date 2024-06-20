@@ -606,7 +606,7 @@ Enables mass select.
 
 ### createAttributeMap
 
-*Object.<strring, string\>*
+*Object.<string, string\>*
 
 Attributes to carry over to a related record when creating. Mapping Parent => Related.
 
