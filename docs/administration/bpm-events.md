@@ -59,7 +59,7 @@ Can be also used as an entry point of a sub-process.
 
 ### Conditional Start Event
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', 'After record saved'. Conditions are defined in the same way as in the Worfklows tool. See [here](workflows.md#conditions).
+A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', 'After record saved'. Conditions are defined in the same way as in the Workflows tool. See [here](workflows.md#conditions).
 
 ![Conditional Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-1.png)
 
@@ -73,7 +73,7 @@ A starting point of the process. It initiates processes by scheduling. You need 
 
 ![Timer Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-1.png)
 
-Can be also used to start an event sub-process. In this case, it is scheduled to be triggered at a time defined by event paramaters.
+Can be also used to start an event sub-process. In this case, it is scheduled to be triggered at a time defined by event parameters.
 
 ![Timer Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-2.png)
 
@@ -130,7 +130,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 Starts a sub-process compensation handler. Can be used only in an event sub-process.
 
-When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that actvity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
+When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
 
 ![Compensation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-compensation.png)
 
@@ -146,7 +146,7 @@ In case of a multi-instance sub-process, the compensation handler is processed f
 
 ### Conditional Intermediate Event (Catching)
 
-This event stops the flow until specified criteria is met. Conditions are defined in the same way as in the Worfklow tool. See [here](workflows.md#conditions). Note that BPM tool intruduces [additonal functions](bpm.md#additional-formula-functions) that can be used in formula.
+This event stops the flow until specified criteria is met. Conditions are defined in the same way as in the Workflow tool. See [here](workflows.md#conditions). Note that BPM tool introduces [additional functions](bpm.md#additional-formula-functions) that can be used in formula.
 
 ![Conditional Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional.png)
 
@@ -213,7 +213,7 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 
 *As of v2.14.*
 
-Behaves the same as the [compensation end event](#compensation-end-event) with the only difference that it continues flow exection to the next element.
+Behaves the same as the [compensation end event](#compensation-end-event) with the only difference that it continues flow execution to the next element.
 
 Can be useful to process compensations in a specific order.
 
@@ -291,7 +291,7 @@ From the event sub-process:
 
 ![Compensation End Event, event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-1.png)
 
-When the activity ID is omitted, all visible completed activites are compensated in the order reverse to their instantiation.
+When the activity ID is omitted, all visible completed activities are compensated in the order reverse to their instantiation.
 
 Compensation is supposed to perform undo actions when something went wrong. Usually, compensation is triggered from error handlers.
 
@@ -323,7 +323,7 @@ The error code and the exception message can be obtained further in the flow wit
 
 ### Conditional Intermediate Event (Boundary)
 
-Triggered when specific conditions are met. Note that non interrupting event can be triggered multiple times, when coditions get met, then get not met, and met again.
+Triggered when specific conditions are met. Note that non interrupting event can be triggered multiple times, when conditions get met, then get not met, and met again.
 
 ![Conditional Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional-boundary.png)
 
@@ -367,7 +367,7 @@ Triggered once compensation is initiated for an activity it is attached to. Must
 
 !!! note
 
-    Compensation can be applied only for activities that were successfuly completed.
+    Compensation can be applied only for activities that were successfully completed.
 
 When it's a sub-process being compensated, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use the compensation event sub-process inside the sub-process instead.
 
