@@ -13,7 +13,7 @@ Out-of-the-box the WebSocket covers the following features:
 
     You need to have *zmq* php extension installed.
 
-Enable **Use WebSocket** parameter at Administation > Settings.
+Enable **Use WebSocket** parameter at Administration > Settings.
 
 ## Daemon
 
@@ -105,7 +105,7 @@ location /wss {
 
 !!! note
 
-    By default, Nginix has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example, we set it to 12h.
+    By default, Nginx has *proxy_read_timeout* parameter set to 60 (seconds). You need to increase the value to avoid the connection being terminated too soon. In the example, we set it to 12h.
 
 ## Checking whether it works
 
