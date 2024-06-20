@@ -64,7 +64,7 @@ Starts a process.
 * `bpm\broadcastSignal(SIGNAL_NAME)` – broadcast a regular signal
 * `bpm\broadcastSignal(SIGNAL_NAME, ENTITY_TYPE, ENTITY_ID)` – broadcast an object signal
 
-It can be useful to broadcast a custom signal from a worfklow rule and then catch it inside a running process. A workflow rule will perform some condition checking and only after than will broadcast a signal.
+It can be useful to broadcast a custom signal from a workflow rule and then catch it inside a running process. A workflow rule will perform some condition checking and only after than will broadcast a signal.
 
 
 !!! example "Example, regular signal"
