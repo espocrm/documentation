@@ -33,9 +33,9 @@ If you are an administrator, the only option is to disable 2FA globally by setti
 
 ## Authentication via email
 
-When the Email 2FA is used, after a user entered valid username and password a code is sent to their email address. Then the user needs to enter that code to log in to Espo.
+When the Email 2FA is used, after a user entered a valid username and password, a code will be sent to their email address. Then the user needs to enter that code to log in to Espo.
 
-It's highly recommended for users to use a non-primary email address for 2FA. A user should have at least two email addresses (set by admin).
+It's highly recommended for users to use a non-primary email address for 2FA. A user should have at least two email addresses (they can be added only by admin).
 
 ### Enabling for user
 
