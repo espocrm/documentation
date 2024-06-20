@@ -80,7 +80,7 @@ In this article:
   * [relationships](metadata/app-relationships.md)
   * [scheduledJobs](metadata/app-scheduled-jobs.md)
   * [select](metadata/app-select.md)
-  * [smsProviders](metadata/app-sms-prividers.md)
+  * [smsProviders](metadata/app-sms-providers.md)
   * [templateHelpers](metadata/app-template-helpers.md)
   * [templates](metadata/app-templates.md)
   * [webSocket](metadata/app-web-socket.md)
