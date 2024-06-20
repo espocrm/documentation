@@ -17,7 +17,7 @@ Whether your system suits for the new version. Sometimes we drop support of old 
 
 ## 1. Run rebuild.
 
-Make sure no error occured. If any error occured it means your Espo instance is faulty and need to be fixed before upgrade.
+Make sure no error occurred. If any error occurred it means your Espo instance is faulty and need to be fixed before upgrade.
 
 ## 2. Download an upgrade package. Unzip it.
 
