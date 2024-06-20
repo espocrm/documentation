@@ -163,7 +163,7 @@ Administrator can specify a default Tax record at Administration > Entity Manage
 
 ## Copying values from product to quote item
 
-Field values can be transferred from a product to a quote item upon product selection. Field names you want to be copied should coincide in Product and Quote Item enities.
+Field values can be transferred from a product to a quote item upon product selection. Field names you want to be copied should coincide in Product and Quote Item entities.
 
 You can select which fields you need to be copied at Administration > Entity Manager > Quote Item > Fields > Product > Fields to Copy.
 
