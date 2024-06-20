@@ -34,9 +34,9 @@ Parameters:
 * *Skip searching for duplicates* − will **make the import faster**.
 * *Silent mode* − the majority of after-save scripts will be skipped; Stream notes won't be created, workflows will be skipped; checking will **make the import faster**.
 * *Run Manually* − you will need to start the import manually from CLI. The command will be shown after setting up the import.
-* *Telephone country code* − phone numbers in a regional format will be converted to the internation format according the selected country. (as of v8.1)
+* *Telephone country code* − phone numbers in a regional format will be converted to the international format according the selected country. (as of v8.1)
 
-Click the **Next** button to preceed to the _Step 2_.
+Click the **Next** button to proceed to the _Step 2_.
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/import/step-1.png)
 
