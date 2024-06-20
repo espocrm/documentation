@@ -27,7 +27,7 @@ Alias /api/v1/ /path_to_espo/public/api/v1/
 </IfModule>
 ```
 
-* Replace `/path_to_espo/` with the absolule path of your EspoCRM instance (e.g. it can be `/var/www/html/`).
+* Replace `/path_to_espo/` with the absolute path of your EspoCRM instance (e.g. it can be `/var/www/html/`).
 * Replace `{PORTAL_ID}` with the ID of your portal. The portal record ID can be obtained from the address bar of your web browser when you open the detail view of the portal record. E.g. in `https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24`, *16b9hm41c069e6j24* is the portal record ID.
 
 What this configuration does:
@@ -35,7 +35,7 @@ What this configuration does:
 * Sets the *public/portal* directory as a root directory.
 * Creates an alias to redirect */client/* requests to the *client* directory which is located outside of our webserver root.
 * Creates an alias to redirect */api/v1/* requests to the respective directory.
-* Disables *.htaccess* in the Espo root dirctory (as it's not needed).
+* Disables *.htaccess* in the Espo root directory (as it's not needed).
 * Enables *.htaccess* in the *public* directory (which defines rewrite rules for API requests).
 * Enables *mod_rewrite*.
 * Makes the portal ID to be passed in an environment variable to let Espo know what portal to start (as there can be multiple portals in Espo).
