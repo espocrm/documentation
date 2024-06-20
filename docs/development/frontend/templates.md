@@ -29,11 +29,11 @@ Inside `{{#each}}` blocks you can change a context to parent with `../`.
 
 ### HTML escaping
 
-Values returned by the `{{expression}}` are HTML-escaped. You can suppress escaping by using tripple braces.
+Values returned by the `{{expression}}` are HTML-escaped. You can suppress escaping by using triple braces.
 
 ```
-{{text}} – escasped
-{{{text}}} – unescasped
+{{text}} – escaped
+{{{text}}} – unescaped
 ```
 
 Expressions rendering child views should be unescaped.
@@ -128,7 +128,7 @@ Compares two values for inequality.
 
 ### get
 
-Gets an attibute value from a model.
+Gets an attribute value from a model.
 
 ```
 {{get model 'name'}}
