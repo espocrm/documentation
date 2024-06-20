@@ -22,7 +22,7 @@ Array of classes to load additional fields for an entity.
 
 Must implement `Espo\Core\FieldProcessing\Loader` interface.
 
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extending.
 
 ## listLoaderClassNameList
 
@@ -30,7 +30,7 @@ Array of classes to load additional fields for an entity for the list view.
 
 Must implement `Espo\Core\FieldProcessing\Loader` interface.
 
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extending.
 
 ## saverClassNameList
 
@@ -38,7 +38,7 @@ Array of classes to save additional fields.
 
 Must implement `Espo\Core\FieldProcessing\Saver` interface.
 
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening.
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extending.
 
 ## selectApplierClassNameList
 
@@ -46,7 +46,7 @@ Array of classes for additional handling of a select query.
 
 Must implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
 
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extening (not needed anymore as of v7.2).
+**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extending (not needed anymore as of v7.2).
 
 ## loadAdditionalFieldsAfterUpdate
 
@@ -168,10 +168,10 @@ Example:
 Parameters:
 
 * selectAccessControlDisabled – disable access control when listing related records; only access to a parent record will be checked; as of v8.0;
-* linkRequiredAccess – access to a current record that is needed to be able to link and unlink records (`create`, `read`, `edit`, `delete`, `stream`); applied only in the back-end, for the front-end specify clientDefes > {EntityType} > relationshipPanels > {link} > selectRequiredAccess (*edit* by default);
+* linkRequiredAccess – access to a current record that is needed to be able to link and unlink records (`create`, `read`, `edit`, `delete`, `stream`); applied only in the back-end, for the front-end specify clientDefs > {EntityType} > relationshipPanels > {link} > selectRequiredAccess (*edit* by default);
 * linkRequiredForeignAccess – access to a foreign record that is needed to be able to link and unlink (*edit* by default);
 * linkForeignAccessCheckDisabled – disable foreign record access check when linking; as of v7.4;
-* linkCheckDisabled – disable a link-check functionality linking when through link-multiple fieldl; as of v7.4.4;
+* linkCheckDisabled – disable a link-check functionality linking when through link-multiple field; as of v7.4.4;
 * mandatoryAttributeList – *string[]* – mandatory attributes to be selected when find related; as of v8.2;
 * countDisabled – bool – disable total count; as of 8.2;
 * massLink – bool – allows mass linking; as of 8.2;
