@@ -72,7 +72,7 @@ Administrator can specify a default Tax record at Administration > Entity Manage
 
 ## Copying values from product to invoice item
 
-Field values can be transferred from a product to an invoice item upon product selection. Field names you want to be copied should coincide in Product and Invoice Item enities.
+Field values can be transferred from a product to an invoice item upon product selection. Field names you want to be copied should coincide in Product and Invoice Item entities.
 
 You can select which fields you need to be copied at Administration > Entity Manager > Invoice Item > Fields > Product > Fields to Copy.
 
