@@ -82,7 +82,7 @@ Provides access checking functions for a current user. A wrapper for *aclManager
 
 Class: `Espo\Core\Select\SelectBuilderFactory`
 
-The layer over ORM. Provides the ability to apply filters, access control. Converts search parameters recived from the front-end to ORM query.
+The layer over ORM. Provides the ability to apply filters, access control. Converts search parameters received from the front-end to ORM query.
 
 ## fieldUtil
 
