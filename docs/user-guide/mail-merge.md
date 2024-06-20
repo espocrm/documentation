@@ -14,4 +14,4 @@ It will generate a single PDF document (or multiple PDFs zipped, depending on a 
 
 !!! note
 
-    By default, records with empty *Address* field are skiped.
+    By default, records with empty *Address* field are skipped.
