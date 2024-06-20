@@ -88,7 +88,7 @@ Functions:
 
 * COUNT – number of records;
 * SUM – summation, applied to Currency, Int and Float fields;
-* MIN – mimimal value;
+* MIN – minimal value;
 * MAX – maximal value;
 * AVG – average value.
 
@@ -153,13 +153,13 @@ Pie:
 
 It's possible to export grid report results to XLSX (Excel) and CSV formats. Both a results table and chart are exported to XLSX.
 
-Note that non-aggregared columns (in grid reports) are not exported to XLSX.
+Note that non-aggregated columns (in grid reports) are not exported to XLSX.
 
 ### Access
 
 By checking *Apply ACL* the report result will not include records that the current user doesn't have access to.
 
-If a regular user does not have edit access to the *Apply ACL* field (via role field level securiry), all reports they create will get *Apply ACL* automatically checked (as of v2.13.5).
+If a regular user does not have edit access to the *Apply ACL* field (via role field level security), all reports they create will get *Apply ACL* automatically checked (as of v2.13.5).
 
 ## Joint Grid reports
 
@@ -336,7 +336,7 @@ Report filters can be utilized in [formula functions](../administration/formula.
 * `record\findRelatedOne`
 * `record\findRelatedMany`
 * `entity\sumRelated`
-* `entity\coundRelated`
+* `entity\countRelated`
 
 ## Report Panels
 
