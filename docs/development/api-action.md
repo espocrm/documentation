@@ -58,7 +58,7 @@ Custom routes can be defined in following places:
 * *method* specifies an HTTP method. The mostly used methods are: *get*, *post*, *put*, *delete*.
 * *actionClassName* defines an action class name.
 
-A route can contain placeholds (for example, `:id`). An action value will be passed to an Action in the Request object.
+A route can contain placeholders (for example, `:id`). An action value will be passed to an Action in the Request object.
 
 A route can be processed either by an Action class or by a Controller.
 
