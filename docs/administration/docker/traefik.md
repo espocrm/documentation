@@ -31,7 +31,7 @@ services:
       - --certificatesresolvers.esporesolver.acme.storage=/letsencrypt/acme.json
     ports:
       - "80:80"        # http
-      - "8080:8080"    # :8080 Dasboard
+      - "8080:8080"    # :8080 Dashboard
       - "443:443"      # https
     volumes:
       - ./letsencrypt:/letsencrypt                       # volume for certificates (TLS)
