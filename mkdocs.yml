@@ -275,7 +275,7 @@ nav:
               - 'relationships': 'development/metadata/app-relationships.md'
               - 'scheduledJobs': 'development/metadata/app-scheduled-jobs.md'
               - 'select': 'development/metadata/app-select.md'
-              - 'smsProviders': 'development/metadata/app-sms-prividers.md'
+              - 'smsProviders': 'development/metadata/app-sms-providers.md'
               - 'templateHelpers': 'development/metadata/app-template-helpers.md'
               - 'templates': 'development/metadata/app-templates.md'
               - 'webSocket': 'development/metadata/app-web-socket.md'
