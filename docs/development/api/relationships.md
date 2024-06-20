@@ -18,7 +18,7 @@ GET parameters:
 * `where` - (array) filters
 * `orderBy` - (string) attribute to sort by
 * `order` - (string: 'asc' | 'desc') sort direction
-* `select` - (string) list of attributes to be returned, sepratated by comma; if not specified, then all fields will be returned
+* `select` - (string) list of attributes to be returned, separated by comma; if not specified, then all fields will be returned
 
 You can find more info about search params [here](../api-search-params.md).
 
