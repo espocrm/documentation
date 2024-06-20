@@ -211,7 +211,7 @@ There is the ability to delete the record with the following formula code: `dele
 
 !!! tip
 
-    If there can be many related records, it's reasonable to process updating these records in idle. For this, utilize *Trigger Another Workflow* action with a small or zero delay. Define an *Update Related Record* action in the *Sequentinal* Workflow rule.
+    If there can be many related records, it's reasonable to process updating these records in idle. For this, utilize *Trigger Another Workflow* action with a small or zero delay. Define an *Update Related Record* action in the *Sequential* Workflow rule.
 
 ### Link with another Record
 
