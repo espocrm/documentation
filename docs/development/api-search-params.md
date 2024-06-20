@@ -4,7 +4,7 @@ Filters and other search parameters can be used with API functions that returns 
 
 * [Examples](#examples)
   * [PHP](#php)
-  * [Javacript](#javascript-nodejs)
+  * [Javascript](#javascript-nodejs)
   * [Python](#python)
 * [Params](#params)
 * [Where items](#where-items)
