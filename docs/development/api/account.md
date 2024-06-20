@@ -150,7 +150,7 @@ Requires *stream* access to Account record.
 
 ## Relationships
 
-Note: [link](../../administration/terms-and-naming.md#link) names can be obtained at Administration > Enity Manager > click *relationsips* on *Account* row > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
+Note: [link](../../administration/terms-and-naming.md#link) names can be obtained at Administration > Entity Manager > click *relationships* on *Account* row > 4th column. Actual types: parent-to-children, one-to-many, many-to-many.
 
 The list of links available out-of-the-box:
 
@@ -179,7 +179,7 @@ Requires *read* access to Account record and *read* access to the scope of the r
 
 ### POST Account/{id}/{link}
 
-Relate an existing account with a specific record (or multiple records) throuh a specific *link*.
+Relate an existing account with a specific record (or multiple records) through a specific *link*.
 
 Requires *edit* access to Account record and *edit* access to the scope of the related entity type.
 
@@ -188,7 +188,7 @@ Payload parameters are available [here](relationships.md#link).
 
 ### DELETE Account/{id}/{link}
 
-Unlinks a specific record, linked throgh a specific link, from an account.
+Unlinks a specific record, linked through a specific link, from an account.
 
 Requires *edit* access to Account record and *edit* access to the scope of the related entity type.
 
