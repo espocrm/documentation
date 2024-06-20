@@ -40,7 +40,7 @@ Table of content:
 * [Lookup](#lookup)
 * [Expressions](#expressions)
 * [Images](#images)
-* [Date & time formattng](#date-time-formatting)
+* [Date & time formatting](#date-time-formatting)
 * [Number formatting](#number-formatting)
 * [Currency symbol](#currency-symbol)
 * [Text field](#text-field)
@@ -77,7 +77,7 @@ A code view mode can be enabled by clicking *\</\>* button. It allows to edit ra
 
 ### Charset issues
 
-If some charecters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
+If some characters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
 
 
 ### Access to templates
@@ -368,7 +368,7 @@ The max number of records is 100. It can be changed with a config parameter *htm
     {{/each}}
     ```
 
-    Where *contacts* is a relationship name. You can obtain relationship names at Administraiton > Entity Manager.
+    Where *contacts* is a relationship name. You can obtain relationship names at Administration > Entity Manager.
 
 
 !!! example
@@ -432,7 +432,7 @@ Available types:
 
 !!! note
 
-    Not recommebded as of v8.2. Use HTML tags with the *iterate* attribute when need looping through arrays.
+    Not recommended as of v8.2. Use HTML tags with the *iterate* attribute when need looping through arrays.
 
 You can use a regular *table* tag or special *tableTag* helper. The latter way is preferable when using *{{#each}}* helper inside a table.
 
