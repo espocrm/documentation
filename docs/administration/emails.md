@@ -71,4 +71,4 @@ The administrator also can manage Personal Email Accounts of users (at Administr
 
 Email Filters allow filtering of incoming emails according to specified criteria. For example, if you don't want notification messages sent by some application to be imported to EspoCRM, you can create a filter to make EspoCRM skip them.
 
-The admininstrator can create **global filters**, applied to all email accounts. Users can create filters for their own Personal Email Account and for their entire Inbox.
+The administrator can create **global filters**, applied to all email accounts. Users can create filters for their own Personal Email Account and for their entire Inbox.
