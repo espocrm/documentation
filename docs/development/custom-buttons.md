@@ -44,7 +44,7 @@ Parameters:
 
 In order to add dropdown action, you need to use the `dropdown` key instead of *buttons*.
 
-Avaible `style` values:
+Available `style` values:
 
 * default
 * success
