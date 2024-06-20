@@ -6,7 +6,7 @@ With the [BPM tool](bpm.md) it's possible to create drip email campaigns.
 
 A drip email campaign for an individual target (lead or contact) will be represented as single BPM Process. A process can be started automatically or manually.
 
-You need to create *Process Flowchart* (at Administraition > Flowcharts) and choose *Lead* (or *Contact*) target type.
+You need to create *Process Flowchart* (at Administration > Flowcharts) and choose *Lead* (or *Contact*) target type.
 
 ### Starting on lead subscription
 
@@ -16,7 +16,7 @@ You need to use *Signal Start Event* with a specific signal name. Put it on the 
 
 ### Starting once lead gets related with target list
 
-Can be useful if you don't utilize Lead Capture tool but use some other logic. You need to do the same steps as in the privious section but use the signal name `@relate.targetLists.TARGET_LIST_ID`, where *TARGET_LIST_ID* is an ID of the target list record (can be obtained from its URL).
+Can be useful if you don't utilize Lead Capture tool but use some other logic. You need to do the same steps as in the previous section but use the signal name `@relate.targetLists.TARGET_LIST_ID`, where *TARGET_LIST_ID* is an ID of the target list record (can be obtained from its URL).
 
 ### Starting manually
 
@@ -32,11 +32,11 @@ You also can use [Gateways](bpm-gateways.md) to diverge a flow upon certain cond
 
 ## Handling opting-out
 
-Once a target (recipient of an email) clicked on the unsibscribe link, the system broadcasts a signal `optOut.Lead.some-lead-id`, where *some-lead-id* is an actual ID of the lead record.
+Once a target (recipient of an email) clicked on the unsubscribe link, the system broadcasts a signal `optOut.Lead.some-lead-id`, where *some-lead-id* is an actual ID of the lead record.
 
 We want the whole process to be terminated once lead is opted out.
 
-For this, you need to add *Event Sub-Process*. Put *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `optOut.Lead.{$id}`. You also need to check the parameter *Is Interuppting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.
+For this, you need to add *Event Sub-Process*. Put *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `optOut.Lead.{$id}`. You also need to check the parameter *Is Interrupting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.
 
 Here, inside the sub-process, you can also add *Task* that will do some manipulations with the target record (*Lead*).
 
