@@ -1,4 +1,4 @@
-# Securiry recommendations
+# Security recommendations
 
 ## Don't use admin user
 
