@@ -53,7 +53,7 @@ Add a formula script to Before Save Script at Entity Manager. You can also use t
 
 ```
 amountConvertedLocked = amountConverted;
-amountConvertedLockedCurruncy = 'USD';
+amountConvertedLockedCurrency = 'USD';
 ```
 
 You can re-calculate formula for all existing records with mass action on the list view.
