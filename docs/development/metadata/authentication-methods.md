@@ -4,7 +4,7 @@ Path: authenticationMethods > {MethodName}.
 
 ## api
 
-*booean*
+*boolean*
 
 Defines that the method is to be used for pure API request, not from the front-end.
 
