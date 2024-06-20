@@ -23,7 +23,7 @@ Options:
 * remove – false will prevent removing current models;
 * more – load next portion of records (show-more).
 
-You can pass custom options and check them in 'change' event listenters.
+You can pass custom options and check them in 'change' event listeners.
 
 ### clone
 

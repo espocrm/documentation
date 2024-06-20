@@ -31,7 +31,7 @@ Parameters passed within a topic. E.g. the topic name `myGroupName.myCustomName.
 
 *string*
 
-A console [command](../../administration/commands.md) that will be used to check whether a topic is allowed for a user when they attempting to subscribe. Patameter placeholders starts with the colon `:`. The `userId` parameter contains a user ID. If access checking is not needed, omit this parameter.
+A console [command](../../administration/commands.md) that will be used to check whether a topic is allowed for a user when they attempting to subscribe. Parameter placeholders starts with the colon `:`. The `userId` parameter contains a user ID. If access checking is not needed, omit this parameter.
 
 ## messagers
 

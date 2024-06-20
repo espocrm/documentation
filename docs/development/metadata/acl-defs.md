@@ -8,7 +8,7 @@ Defines access control parameters for a specific scope (or entity type).
 
 An access checking class. Should implement `Espo\Core\Acl\AccessChecker` interface.
 
-Can optionally impelement more interfaces that define what actions can be checked.
+Can optionally implement more interfaces that define what actions can be checked.
 
 Interfaces for access checking:
 
@@ -37,7 +37,7 @@ Default class: `Espo\Core\Acl\DefaultAccessChecker`.
 
 An ownership checking class.
 
-Should implement one of the following intefaces:
+Should implement one of the following interfaces:
 
 * `Espo\Core\Acl\OwnershipOwnChecker`  – whether a user is an owner of an entity;
 * `Espo\Core\Acl\OwnershipTeamChecker` – whether an entity belongs to a user team.

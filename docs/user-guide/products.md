@@ -77,7 +77,7 @@ If enabled, it will be possible to use fractional quantity values for a product.
 
 ### Is Inventory
 
-Actual if the *Inventory Transactions* feature is enabled in the system. If the *Is Inventory* paramater is disabled in a product, its quantity won't be tracked. Can be reasonable for service products.
+Actual if the *Inventory Transactions* feature is enabled in the system. If the *Is Inventory* parameter is disabled in a product, its quantity won't be tracked. Can be reasonable for service products.
 
 ### Inventory Number Type
 
@@ -85,7 +85,7 @@ Can be empty, Batch or Serial. See more about inventory numbers [here](../extens
 
 ### Removal strategy
 
-Available if *Inventory Number Type* is not empty. Determines how Inventory Numbers will be sorted when a user picks a number for a deliery or transfer order.
+Available if *Inventory Number Type* is not empty. Determines how Inventory Numbers will be sorted when a user picks a number for a delivery or transfer order.
 
 Available options:
 

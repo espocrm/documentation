@@ -74,4 +74,4 @@ The correct values are:
 - Account Canonical Form: `Principal` or `Username`. 
 - Username Attribute: `sAMAccountName`
 
-The full Active Directory configuration, see in the [documentaion](ldap-authorization-for-ad.md).
+The full Active Directory configuration, see in the [documentation](ldap-authorization-for-ad.md).

@@ -1,7 +1,7 @@
 # REST API
 
 EspoCRM is a single page application so the frontend uses REST API to connect with the backend. 
-All operations you perform using the UI, you can implement via API calls using your programing language. 
+All operations you perform using the UI, you can implement via API calls using your programming language. 
 You can learn how the API works if you trace what's going in the network tab in your browser console (press F12 key to open the console).
 
 Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format. Whenever you send the JSON payload, add the header: `Content-Type: application/json`.
@@ -18,7 +18,7 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
 !!! note
 
-    API client implementations (available below) do most of work for you: add needed headers, handle autentication, parameters, etc.
+    API client implementations (available below) do most of work for you: add needed headers, handle authentication, parameters, etc.
 
 In this article:
 
@@ -59,7 +59,7 @@ It's recommended to create a separate **API User** with specific permissions (de
 
 See in the [tutorial](api-tutorial.md) **how to get started**.
 
-Client imlementations require specifying the Site URL. It's an URL that you open in the browser to use EspoCRM.
+Client implementations require specifying the Site URL. It's an URL that you open in the browser to use EspoCRM.
 
 ## Authentication
 

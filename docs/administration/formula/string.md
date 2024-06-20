@@ -63,7 +63,7 @@ Whether STRING contains NEEDLE.
 
 `string\pos(STRING, NEEDLE)`
 
-Returns possition of NEEDLE in STRING, *false* if not found.
+Returns position of NEEDLE in STRING, *false* if not found.
 
 !!! example
 

@@ -47,7 +47,7 @@ Price Rules can be added to a specific Price Book. One Rule can modify the base 
 
 Determines when the Rule will be applied.
 
-* Product Category – applies to all Products of a speicific Category, including sub-categories;
+* Product Category – applies to all Products of a specific Category, including sub-categories;
 * All – applies to all Products;
 * Conditional – when a specific condition is met.
 

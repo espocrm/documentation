@@ -35,7 +35,7 @@ Alias /client/ /path_to_espo/client/
 </Directory>
 ```
 
-Note that `/path_to_espo` should be changed to the absolute path of the EspoCRM instance on your server. It can be `/var/www/html` if you exctracted EspoCRM package to the default Apache root directory.
+Note that `/path_to_espo` should be changed to the absolute path of the EspoCRM instance on your server. It can be `/var/www/html` if you extracted EspoCRM package to the default Apache root directory.
 
 The location of the Apache config is usually `/etc/apache2/apache2.conf` (on Ubuntu) but can be different.
 

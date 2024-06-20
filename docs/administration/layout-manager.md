@@ -52,7 +52,7 @@ The row can contain 1, 2, 3 or 4 cells. To add a row with single cell, you need 
 
 ![Detail](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/layout-manager/detail.png)
 
-Edit panel parameters by clicking a pancil icon on the panel. It's possible to specify a label, color (style), conditions making a panel visible, group panels in tabs (as of v7.2).
+Edit panel parameters by clicking a pencil icon on the panel. It's possible to specify a label, color (style), conditions making a panel visible, group panels in tabs (as of v7.2).
 
 To enable detail view tabs, you need to check the *Tab-break* for panels. Enable it for panels you want to be first in a tab. All following panels will be in the same tab till the next closest tab-break panel. Specify a *Tab Label* for tab-break panels.
 
@@ -70,7 +70,7 @@ The detail view for quick create, quick view and quick edit forms.
 
 ### Bottom Panels
 
-Panels displayed in the bottom of the detail view. These are Relationship panels, the Stream panel and other panales defined for a concrete entity type. Panels can be re-ordered and grouped by tabs.
+Panels displayed in the bottom of the detail view. These are Relationship panels, the Stream panel and other panels defined for a concrete entity type. Panels can be re-ordered and grouped by tabs.
 
 Available parameters are listed below.
 
@@ -119,7 +119,7 @@ Available for entity types with the enabled Kanban view.
 
 ### Side Panel Fields
 
-The list of fields displayed in the top side panel. By default, there are *Assinged User* and *Teams* fields.
+The list of fields displayed in the top side panel. By default, there are *Assigned User* and *Teams* fields.
 
 ### Additional layouts
 

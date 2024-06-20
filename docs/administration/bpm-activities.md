@@ -132,7 +132,7 @@ If you specify a *Reply-to* address, a sent email will contain it in a *Reply-to
 
 It's possible to use process variables to specify email address (recipient or sender) with *Specific email address* option, e.g. `{$$emailAddress}`, where *emailAddress* is a variable defined in the process before.
 
-Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitue field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}`.
+Email Template is used to generate the email. You can use regular placeholders (both in body and subject) to substitute field values of the target record. You can also use process variables (defined in Script Task) in the template with placeholders like `{$$variableName}`.
 
 You can catch a reply on the sent email with *Message Intermediate Event* further in the process.
 
@@ -175,13 +175,13 @@ You can utilize *Report Panels* feature to display process tasks on the record d
 
 #### Using created relationship
 
-It's possible to create Children-to-Parent relationship between some entity type and User Task, then User Tasks will be available in *Relationships* layout of that entity type. Go to Administration > Entity Manager > BpmnUserTask > Relatinships > edit Children-to-Parent, check your entity type at *Foreign Fields*.
+It's possible to create Children-to-Parent relationship between some entity type and User Task, then User Tasks will be available in *Relationships* layout of that entity type. Go to Administration > Entity Manager > BpmnUserTask > Relationships > edit Children-to-Parent, check your entity type at *Foreign Fields*.
 
 ### Resolution
 
-It's possible to check the resolution of the passed user task in diverging gateways or conditional events, making ramification in the process flow depending on the resolution. User Task resolution is avaible in conditions of geteways and conditional events.
+It's possible to check the resolution of the passed user task in diverging gateways or conditional events, making ramification in the process flow depending on the resolution. User Task resolution is available in conditions of gateways and conditional events.
 
-The resulution (as well as any user task field) can be also accessed further in the flow with formula:
+The resolution (as well as any user task field) can be also accessed further in the flow with formula:
 
 ```
 $resolution = bpm\createdEntity\attribute('USER_TASK_ELEMENT_ID', 'resolution');

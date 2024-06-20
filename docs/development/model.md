@@ -22,7 +22,7 @@ model.set(attributes, {
 });
 ```
 
-You can pass custom options and check them in 'change' event listenters.
+You can pass custom options and check them in 'change' event listeners.
 
 ### get
 
@@ -75,7 +75,7 @@ Populate default values.
 
 ### setDefs
 
-Sets field and link defs. May be needed if a model instantiared explicitly, not by the factory.
+Sets field and link defs. May be needed if a model instantiated explicitly, not by the factory.
 
 ```js
 model.setDefs({

@@ -110,7 +110,7 @@ class MyService1
 
 ## Injectable factory
 
-The Injectable Factory is a core class that creates objects resolving and injecting needed dependencies. Contollers, Entry Points, Hooks etc. all are created by the Injectable Factory (automatically by the framework).
+The Injectable Factory is a core class that creates objects resolving and injecting needed dependencies. Controllers, Entry Points, Hooks etc. all are created by the Injectable Factory (automatically by the framework).
 
 The Injectable Factory is available as a service in the Container. That means that *injectableFactory* can be required as a dependency to be used directly.
 
@@ -356,7 +356,7 @@ $binder->bindFactory(SomeInterface::class, SomeFactory::class);
 
 ### Binding to callback
 
-A callback will be used for creatring a specific instance. The callback can have its own dependencies.
+A callback will be used for creating a specific instance. The callback can have its own dependencies.
 
 ```php
 <?php

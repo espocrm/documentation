@@ -24,7 +24,7 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you connected succesfully, but *Google Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Google Contacts* scope.
+**Important**: If you connected successfully, but *Google Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Google Contacts* scope.
 
 Check *Google Calendar* checkbox. You can select *Google Contacts Groups*, to which EspoCRM records will be pushed.
 

@@ -1,8 +1,8 @@
 # Phone Numbers
 
-## Internaltional phone numbers
+## International phone numbers
 
-The internaltional phone numbers functionality can be enabled or disabled at Administration > Settings. When enabled, all phone number values are stored in the international format, e.g. *+111111111111*.
+The international phone numbers functionality can be enabled or disabled at Administration > Settings. When enabled, all phone number values are stored in the international format, e.g. *+111111111111*.
 
 Features:
 

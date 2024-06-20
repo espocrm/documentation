@@ -70,7 +70,7 @@ By utilizing [Reports tool](reports.md) it's possible to view sales statistics b
 
 ### Revenue forecast
 
-Available with Reports from Adavanced Pack.
+Available with Reports from Advanced Pack.
 
 1. Create a new grid report for Opportunity entity type.
 2. Add 'MONTH: Close Date' to Group By field.

@@ -73,7 +73,7 @@ When inventory is delivered to a customer, Serial numbers should be selected for
 
 ### Removal Strategy
 
-The Removal Strategy is defined in a Product record. It determines how Inventory Numbers will be sorted when a user picks a number for a deliery or transfer order.
+The Removal Strategy is defined in a Product record. It determines how Inventory Numbers will be sorted when a user picks a number for a delivery or transfer order.
 
 Available options:
 

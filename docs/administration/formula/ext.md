@@ -64,7 +64,7 @@ the address of some group email account, then SMTP setting of the group email ac
 
 `ext\email\applyTemplate(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
 
-Applies an email template to an existng email record. Parent record can be passed optionally.
+Applies an email template to an existing email record. Parent record can be passed optionally.
 
 !!! example
 
@@ -128,7 +128,7 @@ Generates PDF file and returns attachment ID. If failed, then returns NULL. TEMP
     ext\email\send($emailId);
     ```
 
-Note, that this won't work for new records in before-create script because a record is not yet created. It will work in Workfows.
+Note, that this won't work for new records in before-create script because a record is not yet created. It will work in Workflows.
 
 ## ext\user\sendAccessInfo
 

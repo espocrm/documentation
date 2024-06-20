@@ -43,7 +43,7 @@ The list of out-of-the-box signals which are broadcasted in the system upon spec
 * `update.ENTITY_TYPE.ID` – record update, e.g. `update.Lead.aaabbbccc007`;
 * `delete.ENTITY_TYPE.ID` – record removed;
 * `relate.ENTITY_TYPE.ID.LINK_NAME` – record related with another record (only for *many-to-many*);
-* `relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*);
+* `relate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – record related with another record, id of related record is specified (only for *many-to-many*);
 * `unrelate.ENTITY_TYPE.ID.LINK_NAME` – record unrelated from another record (only for *many-to-many*);
 * `unrelate.ENTITY_TYPE.ID.LINK_NAME.FOREIGN_ID` – (only for *many-to-many*);
 * `createRelated.ENTITY_TYPE.ID.LINK_NAME` – created related record, one-to-many relationship, e.g. Opportunity created for Account;
@@ -70,7 +70,7 @@ The list of out-of-the-box signals which are broadcasted in the system upon spec
 #### Contacts/Leads/Accounts/Users
 
 * `clickUrl.ENTITY_TYPE.ID` – recipient opened a tracking url , see [here](bpm-tracking-urls.md)
-* `clickUrl.ENTITY_TYPE.ID.CAMPAIGN_TRACKING_URL_ID` – recipient opened a specfic tracking url
+* `clickUrl.ENTITY_TYPE.ID.CAMPAIGN_TRACKING_URL_ID` – recipient opened a specific tracking url
 
 #### Other
 

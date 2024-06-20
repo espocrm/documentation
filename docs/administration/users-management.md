@@ -32,13 +32,13 @@ The admin can manage regular users at Administration > Users.
 
 ### Portal
 
-Portal users can access only the [portal](portal.md) (or multiple portals). A portal user usually is linked with a specific Contact and Account. Access perimissions are defined by Portal Roles.
+Portal users can access only the [portal](portal.md) (or multiple portals). A portal user usually is linked with a specific Contact and Account. Access permissions are defined by Portal Roles.
 
 Portal users can by managed at Administration > Portal Users.
 
 ### API
 
-API users serve for accessing the system via [API](../development/api.md). Access perimissions are defined by [Roles](roles-management.md).
+API users serve for accessing the system via [API](../development/api.md). Access permissions are defined by [Roles](roles-management.md).
 
 API users can by managed at Administration > API Users.
 

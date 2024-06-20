@@ -296,7 +296,7 @@ Ordering by a value list:
 <?php
 $collection = $entityManager
     ->getRDBRepository('Opportunity')
-    ->order('LIST:stage:Prospectring,Qualification,Proposal')
+    ->order('LIST:stage:Prospecting,Qualification,Proposal')
     ->find();
 ```
 
@@ -653,7 +653,7 @@ $contactList = $entityManager
     ->find();
 ```
 
-Joining any table (a table name should start with an apper case letter):
+Joining any table (a table name should start with an upper case letter):
 
 ```php
 <?php

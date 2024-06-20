@@ -47,7 +47,7 @@ Return TRUE if ATTRIBUTE of the record was not changed.
 
 `entity\attribute(ATTRIBUTE)`
 
-An ATTRIBUTE value of a target record. It's also possibe to fetch an attribute of a related record.
+An ATTRIBUTE value of a target record. It's also possible to fetch an attribute of a related record.
 
 `$test = entity\attribute('name')` is equivalent to `$test = name`.
 

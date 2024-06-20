@@ -104,9 +104,9 @@ If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
 !!! examples
 
-    `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'stage=', 'Closed Won')`
+    `record\findRelatedOne('Account', accountId, 'opportunities', 'createdAt', 'desc', 'stage=', 'Closed Won')`
 
-    `record\findRelatedOne('Account', accountId, 'oppotunities', 'createdAt', 'desc', 'open')`
+    `record\findRelatedOne('Account', accountId, 'opportunities', 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter.
 More [info](../formula.md#filter).
@@ -125,9 +125,9 @@ If NULL is passed for ORDER_BY and ORDER then a default order will be applied.
 
 !!! examples
 
-    `record\findRelatedMany('Account', accountId, 'oppotunities', 10, 'createdAt', 'desc', 'stage=', 'Closed Won')`
+    `record\findRelatedMany('Account', accountId, 'opportunities', 10, 'createdAt', 'desc', 'stage=', 'Closed Won')`
 
-    `record\findRelatedMany('Account', accountId, 'oppotunities', 3, 'createdAt', 'desc', 'open')`
+    `record\findRelatedMany('Account', accountId, 'opportunities', 3, 'createdAt', 'desc', 'open')`
 
 FILTER is a name of a filter pre-defined in the system. It's also possible to apply a [list report](../../user-guide/reports.md) as a filter. More [info](../formula.md#filter).
 

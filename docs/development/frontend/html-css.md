@@ -276,7 +276,7 @@ Floating:
 Cancelling margins:
 
 * `no-margin` – cancels margins for an element contained in a panel and other containers;
-* `no-side-margin` – cancels seide margins for an element contained in a panel and other containers;
+* `no-side-margin` – cancels side margins for an element contained in a panel and other containers;
 
 Margins:
 

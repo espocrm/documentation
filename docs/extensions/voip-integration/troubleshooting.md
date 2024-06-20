@@ -17,7 +17,7 @@ In this article:
 4. Provide screenshots with:
   1. Administration > Integrations > VoIP integration configs;
   2. Administration > VoIP Routing > Your VoIP number;
-  3. Defined phone numbers in the user profile (if a user can't make or recieve a call).
+  3. Defined phone numbers in the user profile (if a user can't make or receive a call).
 5. Describe details of this call:
   1. Time of the call;
   2. Caller phone number;

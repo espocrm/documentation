@@ -34,7 +34,7 @@ For Ubuntu server, the apache error log is located at `/var/log/apache2/error.lo
 
 In some cases it can be reasonable to enable debug mode for the logger. It will print more information into the log.
 
-To enable debug mode for the loghger, edit the file `data/config-internal.php` (or `data/config.php`) and set the value of the *logger.level* parameter to `DEBUG`:
+To enable debug mode for the logger, edit the file `data/config-internal.php` (or `data/config.php`) and set the value of the *logger.level* parameter to `DEBUG`:
 
 ```
 'logger' => [
@@ -47,7 +47,7 @@ Don't forget to revert the mode back after the problem is solved (to `WARNING` o
 
 ### Backtrace printing
 
-Enablind trace printing will print a backtrace to the log for every thrown exception. Can be very useful for debuging occurred errors.
+Enabling trace printing will print a backtrace to the log for every thrown exception. Can be very useful for debugging occurred errors.
 
 In `data/config-internal.php` (or `data/config.php`):
 
@@ -115,7 +115,7 @@ php rebuild.php
 
 [Check logs](#check-logs) for errors. Googling an error message may help figure out the cause of the problem.
 
-Often the problem is caused by a webserver PHP version being lower than the minimin required.
+Often the problem is caused by a webserver PHP version being lower than the minimum required.
 
 File permissions can be set to not proper values on some shared hostings after upgrade. 
 

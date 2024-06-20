@@ -19,7 +19,7 @@ Create a file `custom/Espo/Custom/Resources/metadata/entityDefs/YourEntityType.j
 }
 ```
 
-`SUB:(field1, field2)` is a [complex expression](../user-guide/complex-expressions.md). In this example the expression substracts one field from another.
+`SUB:(field1, field2)` is a [complex expression](../user-guide/complex-expressions.md). In this example the expression subtracts one field from another.
 
 Clear cache.
 

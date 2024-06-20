@@ -684,7 +684,7 @@ Disable hooks.
 
 ## repositoryClassName
 
-*class-string<Espo\ORM\Repository\Repositroy\>*
+*class-string<Espo\ORM\Repository\Repository\>*
 
 *As of v8.2.*
 

@@ -264,7 +264,7 @@ Called internally after render. Put manipulation with DOM here.
 
 ### onRemove
 
-Called intenally on view removal. Reasonable for unsubscribing.
+Called internally on view removal. Reasonable for unsubscribing.
 
 ### createView
 
@@ -320,7 +320,7 @@ this.assignView('someKey', new SomeView(options), 'some-selector');
 
 Re-renders a view. Usually, called from inside the view. Returns a promise resolved once rendering is finished.
 
-Argumets:
+Arguments:
 
 * *force* – *boolean* – force rendering if the view was not rendered before.
 

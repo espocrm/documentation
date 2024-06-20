@@ -83,7 +83,7 @@ Note: For older versions of Sales Pack & EspoCRM, you need also to specify the d
 
 ## Copying values from product to sales order item
 
-Field values can be transferred from a product to a sales order item upon product selection. Field names you want to be copied should coincide in Product and Sales Order Item enities.
+Field values can be transferred from a product to a sales order item upon product selection. Field names you want to be copied should coincide in Product and Sales Order Item entities.
 
 You can select which fields you need to be copied at Administration > Entity Manager > Sales Order Item > Fields > Product > Fields to Copy.
 
@@ -92,7 +92,7 @@ You can select which fields you need to be copied at Administration > Entity Man
 The following service actions are available in Workflows and BPM tools:
 
 * Add Sales Order Items
-* Convery Currency
+* Convert Currency
 * Send in Email
 
 ## See also

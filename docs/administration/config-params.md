@@ -34,7 +34,7 @@ The list of parameters along with their default values. This is not a full list 
 
 * siteUrl – URL of EspoCRM instance;
 * useCache – `true`;
-* isDeveloperMode – `false` – enables developer mode; not to be used on instances installed from a package; only for an intance that is run right from a repository;
+* isDeveloperMode – `false` – enables developer mode; not to be used on instances installed from a package; only for an instance that is run right from a repository;
 * useCacheInDeveloperMode – `false` – to use front-end cache in developer mode; front-end is not cached by default in developer mode;
 * maintenanceMode – `false` – only administrators will have access to the system;
 * disableCron – `false`;

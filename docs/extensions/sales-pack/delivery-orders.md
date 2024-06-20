@@ -6,7 +6,7 @@ Delivery Orders are used to document products being shipped to customers.
 
 If the Warehouses feature is enabled, every Delivery Order record should be associated with a Warehouse.
 
-Multiple Delivery Orders can be created from a single [Sales Order](../../user-guide/sales-orders.md). It may be reasonable when the delivery is split into parts or shippied from different warehouses. The Sales Order should have status *Ready* or *Complete* to be able to create a Delivery Order from it.
+Multiple Delivery Orders can be created from a single [Sales Order](../../user-guide/sales-orders.md). It may be reasonable when the delivery is split into parts or shipped from different warehouses. The Sales Order should have status *Ready* or *Complete* to be able to create a Delivery Order from it.
 
 The following Delivery Order statuses are available:
 

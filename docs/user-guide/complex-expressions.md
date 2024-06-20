@@ -296,7 +296,7 @@ Converts a value to a binary string.
 
 `EQUAL:(BINARY:('test'), 'Test')` returns false.
 
-Avalilable since v5.7.0.
+Available since v5.7.0.
 
 #### REPLACE
 
