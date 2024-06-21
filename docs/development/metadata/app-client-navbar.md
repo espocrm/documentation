@@ -72,55 +72,55 @@ Example:
 }
 ```
 
-## labelTranslation
+### labelTranslation
 
 *string*
 
 A label translation path.
 
-## link
+### link
 
 *string*
 
 A link (href).
 
-## order
+### order
 
 *integer*
 
 An order position.
 
-## groupIndex
+### groupIndex
 
 *integer*
 
 A group index. Groups are separated by a divider.
 
-## disabled
+### disabled
 
 *boolean*
 
 An item will be hidden.
 
-## handler
+### handler
 
 *string*
 
 A handler class.
 
-## actionFunction
+### actionFunction
 
 *string*
 
 An action function in the handler.
 
-## configCheck
+### configCheck
 
 *string*
 
 A config path to check. Path items are separated by a dot. If a config value is not empty, then the action is allowed. The `!` prefix reverses the check.
 
-## accessDataList
+### accessDataList
 
 *Object[]*
 
