@@ -36,6 +36,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 
 Parameters:
 
+* `name` ~ A name. Important if a handler is used.
 * `handler` – A handler.
 * `initFunction` – A handler method to run on initialization. Omit if not needed. 
 * `acl` – Defines what access level is required to see the button. You can omit this parameter.
@@ -122,6 +123,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 
 Parameters:
 
+* `name` ~ A name. Important if a handler is used.
 * `handler` – A handler.
 * `initFunction` – A handler method to run on initialization. Omit if not needed. 
 * `acl` – Defines what access level is required to see the button. You can omit this parameter.
