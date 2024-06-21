@@ -4,6 +4,12 @@
 
 Navbar definitions.
 
+## items
+
+*Object*
+
+Navbar items (in the top right corner).
+
 Example:
 
 ```json
@@ -18,12 +24,6 @@ Example:
     }
 }
 ```
-
-## items
-
-*Object*
-
-Navbar items (in the top right corner).
 
 ### view
 
@@ -49,5 +49,79 @@ An order position.
 
 Whether is disabled.
 
+## items
 
+*Object*
 
+*As of v8.4.*
+
+Menut items (in the top right corner).
+
+Example:
+
+```json
+{
+    "menuItems": {
+        "myItem": {
+            "order": 0,
+            "groupIndex": 5,
+            "link": "#MyItem",
+            "labelTranslation": "Global.labels.My Item"
+        }
+    }
+}
+```
+
+## labelTranslation
+
+*string*
+
+A label translation path.
+
+## link
+
+*string*
+
+A link (href).
+
+## order
+
+*integer*
+
+An order position.
+
+## groupIndex
+
+*integer*
+
+A group index. Groups are separated by a divider.
+
+## disabled
+
+*boolean*
+
+An item will be hidden.
+
+## handler
+
+*string*
+
+A handler class.
+
+## actionFunction
+
+*string*
+
+An action function in the handler.
+
+## configCheck
+
+*string*
+
+A config path to check. Path items are separated by a dot. If a config value is not empty, then the action is allowed. The `!` prefix reverses the check.
+
+## accessDataList
+
+*Object[]*
+
+Access rules. See definitions in JSON schema: metadata/clientDefs.json#/definitions/accessDataList.
