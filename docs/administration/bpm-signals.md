@@ -83,7 +83,7 @@ You can use placeholders when you define a signal name that will be broadcasted 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – formula variable
 
-E.g. `mySignal.{$status}.{$id}` – *status* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySigal.New.someIdValue`.
+E.g. `mySignal.{$status}.{$id}` – *status* and *id* are attributes of the target record. Placeholders will be replaced with attribute values, so the actual signal name will look like `mySignal.New.someIdValue`.
 
 ## Object signals
 
@@ -113,7 +113,7 @@ The list of out-of-the-box signals that are broadcasted in the system.
 * `@update` – record updated;
 * `@delete` – record removed (can't be used in BPM);
 * `@relate.LINK_NAME` – record related with another record (only for *many-to-many*); the foreign ID is passed in an `id` parameter;
-* `@relate.LINK_NAME.FOREIGN_ID` – record related with another record, id of related recod is specified (only for *many-to-many*);
+* `@relate.LINK_NAME.FOREIGN_ID` – record related with another record, id of related record is specified (only for *many-to-many*);
 * `@unrelate.LINK_NAME` – record unrelated from another record; the foreign ID is passed in an `id` parameter;
 * `@unrelate.LINK_NAME.FOREIGN_ID`
 
@@ -129,7 +129,7 @@ The list of out-of-the-box signals that are broadcasted in the system.
 #### Contacts/Leads/Accounts/Users
 
 * `@clickUrl` – recipient opened a tracking url
-* `@clickUrl.CAMPAIGN_TRACKING_URL_ID` – recipient opened a specfic tracking url
+* `@clickUrl.CAMPAIGN_TRACKING_URL_ID` – recipient opened a specific tracking url
 
 #### Meetings/Calls/Events
 
