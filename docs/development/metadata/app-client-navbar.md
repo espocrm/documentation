@@ -118,7 +118,7 @@ An action function in the handler.
 
 *string*
 
-A config path to check. Path items are separated by a dot. If a config value is not empty, then the action is allowed. The `!` prefix reverses the check.
+A config path to check. Path items are separated by a dot. If a config value is not empty, then the action is allowed. The `!` prefix negates the check result.
 
 ### accessDataList
 
