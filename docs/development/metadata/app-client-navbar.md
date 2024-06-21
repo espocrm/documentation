@@ -1,10 +1,10 @@
 # app > clientNavbar
 
-*As of v8.1.*
-
 Navbar definitions.
 
 ## items
+
+*As of v8.1.*
 
 *Object.<string, Object\>*
 
