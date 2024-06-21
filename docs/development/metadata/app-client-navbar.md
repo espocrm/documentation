@@ -4,9 +4,9 @@ Navbar definitions.
 
 ## items
 
-*As of v8.1.*
-
 *Object.<string, Object\>*
+
+*As of v8.1.*
 
 Navbar items (in the top right corner).
 
