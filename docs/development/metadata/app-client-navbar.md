@@ -49,7 +49,7 @@ An order position.
 
 Whether is disabled.
 
-## items
+## menuItems
 
 *Object*
 
