@@ -6,7 +6,7 @@ Navbar definitions.
 
 ## items
 
-*Object*
+*Object.<string, Object\>*
 
 Navbar items (in the top right corner).
 
@@ -51,7 +51,7 @@ Whether is disabled.
 
 ## menuItems
 
-*Object*
+*Object.<string, Object\>*
 
 *As of v8.4.*
 
