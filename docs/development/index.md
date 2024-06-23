@@ -22,6 +22,7 @@
 * Misc
   * [Autoload](autoload.md)
   * [Entity type](custom-entity-type.md)
+  * [Container services](container-services.md)
   * [Template helpers (PDF)](template-custom-helper.md)
   * [Formula functions](new-function-in-formula.md)
   * [Scheduled jobs](scheduled-job.md)
