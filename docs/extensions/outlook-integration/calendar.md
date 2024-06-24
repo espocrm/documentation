@@ -8,8 +8,8 @@ Outlook Calendar Sync is available in the [extension](https://www.espocrm.com/ex
 
 Features:
 
-* Meetings, Calls, custom entities of Event type can be synced from EspoCRM to Outlook.
-* Attendees are synced from Outlook to EspoCRM as Contacts, Leads, and Users.
+* Meetings, Calls, custom entities of Event type can be synced from Espo to Outlook.
+* Attendees are synced from Outlook to Espo as Contacts, Leads, and Users.
 
 Three modes of sync are supported:
 
