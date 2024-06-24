@@ -11,17 +11,18 @@ Features:
 * Meetings, Calls, custom entities of Event type can be synced from EspoCRM to Outlook.
 * Attendees are synced from Outlook to EspoCRM as Contacts, Leads, and Users.
 
+Three modes of sync are supported:
+
+* Outlook to EspoC
+* Espo to Outlook
+* Both
+
 Limitations:
 
 * Attendees are not synced from EspoCRM to Outlook.
 * Outlook recurring activities are not synced to EspoCRM.
 * *Description* field is not synced back from Outlook to Espo if an event was created in Espo.
-
-Three modes of sync are supported:
-
-* Outlook to EspoCRM
-* EspoCRM to Outlook
-* Both
+* Events created in Espo won't be removed in Espo on removal in Outlook. A measure to overcome a bug in Outlook that could cause unwanted event removals.
 
 ## Setting up for users
 
