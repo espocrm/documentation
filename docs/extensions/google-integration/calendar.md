@@ -6,11 +6,11 @@ Note: Before proceeding to this article it's recommended to [set up the integrat
 
 Features:
 
-* The ability to monitor multiple calendars
-* Syncing since specified date
-* Syncing attendees
-* The ability to choose what event types to sync
-* Private events are not synced
+* The ability to monitor multiple calendars.
+* Syncing since specified date.
+* Syncing attendees.
+* The ability to choose what event types to sync.
+* Private events are not synced.
 
 ## Setting-up for users
 
