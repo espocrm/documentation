@@ -13,7 +13,7 @@ Features:
 
 Three modes of sync are supported:
 
-* Outlook to EspoC
+* Outlook to Espo
 * Espo to Outlook
 * Both
 
