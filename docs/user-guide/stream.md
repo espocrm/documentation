@@ -12,6 +12,8 @@ The *Stream* panel is available on the record detail view in the bottom. Posts, 
 
 The administrator can move the Stream panel down so that it will appear under other panels or put it into a tab. This can be done at Administration > Entity Manager > {Entity Type} > Layouts > Bottom panels.
 
+Stream Notes can be pinned. A user need to have *edit* access for a record to be able to pin or unpin Stream Notes.
+
 ## User Stream
 
 Users can see their Stream in the **Stream** dashlet as well as under the Stream tab. By default, the Stream tab is not added to the navbar.
