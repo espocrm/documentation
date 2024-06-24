@@ -14,7 +14,7 @@ Features:
 
 ## Setting-up for users
 
-Assuming, that the administrator has already set up the integration.
+Assuming that the administrator has already set up the integration.
 
 Go to your user detail view (the menu on the very top-right corner > click on your user name). Then click *External Account* button.
 
