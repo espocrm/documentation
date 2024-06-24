@@ -22,6 +22,7 @@ Limitations:
 * Attendees are not synced from Espo to Outlook.
 * Outlook recurring activities are not synced to Espo.
 * *Description* field is not synced back from Outlook to Espo if an event was created in Espo.
+* *Description* field is not synced back from Espo to Outlook if an event was created in Outlook.
 * Events created in Espo won't be removed in Espo on removal in Outlook. A measure to overcome a bug in Outlook that could cause unwanted event removals.
 
 ## Setting up for users
