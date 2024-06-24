@@ -8,9 +8,9 @@ There are two types of the Stream in EspoCRM: Record Stream and User Stream.
 
 ## Record Stream
 
-The *Stream* panel is available on the record detail view in the bottom. Posts, updates and new additions related to the current record are displayed here.
+The *Stream* panel is available on the record detail view in the bottom. Posts, updates and new additions related to the current record are displayed here. Stream records are called Notes in EspoCRM.
 
-The administrator can move the Stream panel down so that it will appear under other panels or put it into a tab. This can be done at Administration > Entity Manager > {Entity Type} > Layouts > Bottom panels.
+The administrator can move the Stream panel down so that it will appear under other panels or put the panel into a tab. This can be done at Administration > Entity Manager > {Entity Type} > Layouts > Bottom Panels.
 
 Stream Notes can be pinned. A user need to have *edit* access for a record to be able to pin or unpin Stream Notes.
 
