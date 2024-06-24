@@ -52,7 +52,7 @@
 
 ## Emails
 
-* `Ctrl + Delete` – move selected emails to Trash (as of v7.3);
+* `Ctrl + Delete` – move selected emails to Trash;
 * `Ctrl + Backspace` – move selected emails to Archive (as of v8.3);
-* `Ctrl + I` – mark selected emails as Important or Not Important (as of v7.3);
-* `Ctrl + M` – move selected emails to a specific folder (as of v7.3);
+* `Ctrl + I` – mark selected emails as Important or Not Important;
+* `Ctrl + M` – move selected emails to a specific folder;
