@@ -956,6 +956,22 @@ $clonedQuery = $entityManager
     ->build();
 ```
 
+Generate raw SQL:
+```php
+<?php
+$selectQuery = $entityManager
+    ->getQueryBuilder()
+    ->select(['column1', 'column2', 'someExpression'])
+    ->from('SomeTable')    
+    ->order('column1', 'DESC')
+    ->limit(0, 10)
+    ->build();
+
+$sql = $entityManager
+    ->getQueryComposer()
+    ->compose($selectQuery);
+```
+
 ## Mass insert
 
 Mass insert with Mapper:
