@@ -63,3 +63,7 @@ If you change this parameter in MySQL, you also need to run rebuild in Espo.
 ### Stopwords
 
 MySQL has a list of [stopwords](https://dev.mysql.com/doc/refman/8.0/en/fulltext-stopwords.html) that are ignored by full-text search. E.g. *hello*.
+
+### Autocomplete
+
+When full-text search is enabled, autocomplete in link fields may not show suggestions until you type a full word. To have suggestions work for word parts, you can enable the parameter that will append the wildcard operator automatically for autocompletion queries. Administration > Settings > Append wildcard in quick search.
