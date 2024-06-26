@@ -42,6 +42,12 @@ Administrator can disable export function for all non-admin users at Administrat
 
 Also it's possible to control an access to export function via ACL Roles with Export Permission parameter.
 
+## XLSX
+
+### Lite mode
+
+The *Lite* mode consumes much less memory. Recommended if a big number of records is exported.
+
 ## CSV delimiter
 
 Users can specify the delimiter for CSV export at Preferences.
