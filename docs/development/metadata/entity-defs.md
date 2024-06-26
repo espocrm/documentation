@@ -697,3 +697,17 @@ A repository.
 *As of v8.2.*
 
 An entity. Usually should extend `Espo\Core\ORM\Entity`.
+
+## noDeletedAttribute
+
+*boolean*
+
+Disables soft-deletes.
+
+## deleteId
+
+*boolean*
+
+*As of v8.4.*
+
+Adds an additional *deleteId* field that will be written with an random ID when a record is soft-deleted. Useful when need a unique index. Add *deleteId* column to the index.
