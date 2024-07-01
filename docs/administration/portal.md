@@ -4,13 +4,13 @@ A Portal provides the ability to access specific CRM data and functions for your
 
 To create a Portal, follow Administration > Portals > *Create Portal*.
 
-* *Is Active*. If not checked, the portal won't be available for anybody.
-* *Is Default*. Means that the portal will be available by shorter url: `https://YOUR_ESPO_URL/portal`.
-* *Roles*. Specify one or multiple portal roles that will be applied to users logged into the portal. More information about the portal roles is below.
-* *Tab List*. Tabs which will be shown in the navigation bar.
-* *Dashboard Layout*. Specify dashlets that will be displayed on the home page of the portal. Note that portal users can't configure their dashboard.
-* *URL*. Read-only field that displays the link you can access the portal with.
-* *Layout Set*. Provides the ability to use different layouts from the portal. See more [info](layout-manager.md#different-layouts-for-teams-portals).
+* *Is Active*. If not checked, the Portal won't be available for anybody.
+* *Is Default*. Means that the Portal will be available by shorter URL: `https://YOUR_ESPO_URL/portal`.
+* *Roles*. Specify one or multiple Portal Roles that will be applied to Users logged into the Portal. More information about the Portal Roles is below.
+* *Tab List*. Tabs which will be shown in the navigation bar in the Portal.
+* *Dashboard Layout*. Specify dashlets that will be displayed on the home page of the Portal. Note that Portal Users can't configure their dashboard.
+* *URL*. Read-only field that displays the link you can access the Portal with.
+* *Layout Set*. Provides the ability to use different layouts from the Portal. See more [info](layout-manager.md#different-layouts-for-teams-portals).
 
 ## Portal Users
 
@@ -18,7 +18,7 @@ Administrators can create portal users.
 
 1. Administration > Portal Users.
 2. Click *Create Portal User* button.
-3. Select Contact the portal user will be linked with or *Proceed w/o Contact*
+3. Select Contact the Portal User will be linked with or *Proceed w/o Contact*
 4. Fill needed fields on the form and click *Save*.
 
 Portal user should be linked to Portal record to be able to access that portal.
