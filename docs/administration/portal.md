@@ -1,8 +1,8 @@
 # Portal
 
-Portal provides the ability to access specific CRM data and functions for your customers and partners. Administrators can create multiple portals. Each portal can have its own settings, dashboard, user list, access control settings.
+A Portal provides the ability to access specific CRM data and functions for your customers and partners. Administrators can create multiple Portals. Each Portal can have its own settings, dashboard, user list and access control settings.
 
-To create portal follow Administration > Portals, click Create Portal button.
+To create a Portal, follow Administration > Portals > *Create Portal*.
 
 * *Is Active*. If not checked, the portal won't be available for anybody.
 * *Is Default*. Means that the portal will be available by shorter url: `https://YOUR_ESPO_URL/portal`.
