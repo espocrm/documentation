@@ -55,7 +55,7 @@ Whether is disabled.
 
 *As of v8.4.*
 
-Menut items (in the top right corner).
+Menu items (in the top right corner).
 
 Example:
 
