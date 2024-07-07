@@ -235,6 +235,14 @@ Indicates that the field value is not accessed directly but through some additio
 
 To disable the ability to import the field.
 
+### massUpdateDisabled
+
+*boolean*
+
+*As of v8.4.*
+
+To mass-update for the field.
+
 ### exportDisabled
 
 *boolean*
