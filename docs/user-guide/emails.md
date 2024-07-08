@@ -164,7 +164,7 @@ It only applies to emails with the non-empty parent field.
 
 ## Manual import
 
-It's possible to manually import specific emails. For example, if a customer sent an email to a employee's private email address, it may be reasonable to log that email in the CRM manually.
+It's possible to manually import specific emails. For example, if a customer sent an email to an employee's private email address, it may be reasonable to log that email in the CRM manually.
 
 The are two ways of importing emails:
 
