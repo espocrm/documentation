@@ -13,6 +13,7 @@ In this article:
 * [Group email folders](#group-email-folders)
 * [Email filters](#email-filters)
 * [Email templates](#email-templates)
+* [Manual import](#manual-import)
 
 ## IMAP accounts
 
@@ -160,3 +161,14 @@ The list of available additional placeholders:
 Email templates also support Handlebars engine. It's the same template system used for [PDF templates](printing-to-pdf.md#templates) with double-brace placeholders, like `{{name}}`.
 
 It only applies to emails with the non-empty parent field.
+
+## Manual import
+
+It's possible to manually import specific emails. For example, if a customer sent an email to a employee's private email address, it may be reasonable to log that email in the CRM manually.
+
+The are two ways of importing emails:
+
+* Archive – create an email manually by specifying all fields on a form;
+* Import EML (as of v8.4).
+
+The ability to import emails requires a user to have access to the Import scope (set in Roles).
