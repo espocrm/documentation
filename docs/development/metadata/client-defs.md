@@ -46,7 +46,7 @@ The default value: `'acl-portal'`. Path `client/src/acl-portal.js`.
 
 *As of v8.4.*
 
-Default attributes preparator for a model. Should extend `handlers/model/defaults-preparator`.
+Default attributes preparator for a model when creating a new record. Should extend `handlers/model/defaults-preparator`.
 
 ## createDisabled
 
