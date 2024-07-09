@@ -40,6 +40,14 @@ Defines a client acl class for portals. Optional.
 
 The default value: `'acl-portal'`. Path `client/src/acl-portal.js`.
 
+## modelDefaultsPreparator
+
+*string*
+
+*As of v8.4.*
+
+Default attributes preparator for a model. Should extend `handlers/model/defaults-preparator`.
+
 ## createDisabled
 
 *boolean*
