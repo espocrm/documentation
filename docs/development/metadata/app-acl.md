@@ -39,6 +39,7 @@ Example:
 * If set to *false*, then users won't have access to the scope.
 * True enables access to scopes w/o actions (scopes that have `"acl": "boolean"` in metadata > scopes).
 * A string value makes the framework to use roles from another scope and apply it to our scope. It can be useful to have roles only for one parent scope, when child scopes uses roles of the parent scope. E.g. *WorkingTimeCalendar* is a parent, *WorkingTimeRange* is a child. In Roles the admin defines only access levels to *WorkingTimeCalendar*, *WorkingTimeRange* will have the same access levels.
+* A string value in the format `boolean:{scope}` will convert a foreign scope data to a boolean value. As of v8.4.
 
 ### scopeFieldLevel
 
