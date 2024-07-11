@@ -578,7 +578,7 @@ A list layout name for the select dialog.
 
 *string*
 
-*As of v8.2.0*
+*As of v8.2.*
 
 A field to order by when selecting records.
 
@@ -586,7 +586,7 @@ A field to order by when selecting records.
 
 *"asc"|"desc"*
 
-*As of v8.2.0*
+*As of v8.2.*
 
 An direction to order by when selecting records.
 
@@ -617,6 +617,38 @@ Enables mass select.
 *Object.<string, string\>*
 
 Attributes to carry over to a related record when creating. Mapping Parent => Related.
+
+### buttonList
+
+*Record[]*
+
+*As of v8.4.*
+
+Header buttons.
+
+Parameters:
+
+* name
+* label
+* handler
+* actionFunction
+* acl
+
+### actionList
+
+*Record[]*
+
+*As of v8.4.*
+
+Header dropdown items.
+
+Parameters:
+
+* name
+* label
+* handler
+* actionFunction
+* acl
 
 ## additionalLayouts
 
