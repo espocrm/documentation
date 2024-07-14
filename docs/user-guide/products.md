@@ -34,7 +34,7 @@ The Product Category is a separate entity type, hence the access to it is contro
 
 Before being able to create products with variants, you need to create some product attributes. Product Attributes are available at Products > the top-right menu > Product Attributes.
 
-Every product attribute is supposed to have a specific set of options. You can add options from the Product Attribute detail view.
+Every product attribute is supposed to have a specific set of options. Add needed options on the Product Attribute detail view.
 
 Examples of attributes with their options:
 
