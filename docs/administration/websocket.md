@@ -53,18 +53,18 @@ Command to start the service:
 
 ## SSL support
 
-You need to set up a proxy that will forward SSL request to our websocket server and vice-versa.
+You need to set up a proxy that will forward SSL requests to our websocket server and vice-versa.
 
 ### Apache
 
-You need to have proxy and proxy_wstunnel modules installed.
+You need to have *proxy* and *proxy_wstunnel* modules installed.
 
 ```
 sudo a2enmod proxy
 sudo a2enmod proxy_wstunnel
 ```
 
-In your apache config inside VirtualHost section for SSL (`<VirtualHost _default_:443>`) add the following:
+In your Apache config inside the *VirtualHost* section for SSL (`<VirtualHost _default_:443>`), add the following:
 
 ```
     <IfModule proxy_module>
@@ -78,7 +78,7 @@ In your apache config inside VirtualHost section for SSL (`<VirtualHost _default
 
 ### Nginx
 
-Add to server.conf:
+Add to *server.conf*:
 
 ```
 map $http_upgrade $connection_upgrade {
