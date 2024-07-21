@@ -346,6 +346,13 @@ Has-Many:
 
 ```php
 <?php
+// All.
+$opportunityCollection = $entityManager
+    ->getRDBRepository('Account')
+    ->getRelation($account, 'opportunities')
+    ->find();
+
+// Filter.
 $opportunityCollection = $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
@@ -353,6 +360,7 @@ $opportunityCollection = $entityManager
     ->where($whereClause)
     ->find();
 
+// First one.
 $opportunity = $entityManager
     ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
