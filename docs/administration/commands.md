@@ -42,7 +42,7 @@ Recommended to have a database backup before running hard rebuild.
 bin/command set-password [username]
 ```
 
-where `[username]` is a user name, e.g. `admin`.
+Where `[username]` is a user name, e.g. `admin`.
 
 ## Upgrade
 
@@ -50,7 +50,7 @@ where `[username]` is a user name, e.g. `admin`.
 bin/command upgrade
 ```
 
-Upgrades EspoCRM instance to the next available version. The upgrade package is downloaded automatically. It may take a few steps to upgrade to the latest version, so you will need to run the same command a few times.
+Upgrades EspoCRM instance to the next available version. The upgrade package is downloaded automatically. It may take a few steps to upgrade to the latest version, so you will need to run the same command multiple times.
 
 See additional parameters [here](upgrading.md#additional-parameters).
 
@@ -86,7 +86,7 @@ bin/command extension -l
 bin/command run-job JobName
 ```
 
-where *JobName* is an internal name of the job you want to run.
+Where *JobName* is an internal name of the job you want to run.
 
 !!! example
 
@@ -109,7 +109,7 @@ bin/command version
 bin/command set-password {username}
 ```
 
-where `{username}` is a user name, e.g. `admin`.
+Where `{username}` is a user name, e.g. `admin`.
 
 ## Creating admin user
 
@@ -119,13 +119,13 @@ where `{username}` is a user name, e.g. `admin`.
 bin/command create-admin-user {username}
 ```
 
-where `{username}` is a user name, e.g. `admin`.
+Where `{username}` is a user name, e.g. `admin`.
 
 Can be useful when you need to run an Espo instance from a repository without the need to go through UI installation.
 
 ## Import
 
-See [here](import.md#console-commands).
+See more detail [here](import.md#console-commands).
 
 ## App info
 
@@ -143,7 +143,7 @@ With this command you can get some information about the application (container 
 bin/command update-app-timestamp
 ```
 
-Updates the app timestamp to the current time. When an Espo instance is updated or an extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, e.g. when writing custom JS.
+Updates the app timestamp to the current time. When an Espo instance is updated or an extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, for example, when writing custom JavaScript code.
 
 ## Rebuild category paths
 
@@ -151,4 +151,4 @@ Updates the app timestamp to the current time. When an Espo instance is updated 
 bin/command rebuild-category-paths {EntityType}
 ```
 
-Rebuilds category paths. E.g. for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
+Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
