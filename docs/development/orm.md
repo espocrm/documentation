@@ -336,6 +336,10 @@ $entity = $entityManager
 
 ## Relations
 
+!!! note
+
+    As of v8.4, the *getRelation* method is avaialble in the *EntityManager*. `$entityManager->getRelation($entity, 'relationName');
+
 ### Find related
 
 Has-Many:
