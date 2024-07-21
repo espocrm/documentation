@@ -30,7 +30,7 @@ Prints a backtrace when an exception is occurred. Note that in some cases an exc
 
 *As of v8.3.*
 
-To make log records available in the admin UI, set 'databaseHandler' parameter to true.
+To make log records available in the admin UI, set *databaseHandler* parameter to true.
 
 Note that some log entries may be not available from the UI. For example, those that happened during upgrade or before database connection was established.
 
