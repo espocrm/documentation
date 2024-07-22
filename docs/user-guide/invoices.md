@@ -118,7 +118,7 @@ To include a buyer's electronic address in electronic invoices, you need to spec
 
 ### Country codes
 
-The EN 16931 standard requires countries to be represented as ISO 3166-1 alpha-2 codes. But in Espo, the *Address* field allows a country to be an arbitrary string. As of EspoCRM v8.3 it's possible to [map](../../administration/addresses.md) country names to ISO 3166-1 alpha-2 codes. This mapping is used when E-Invoices are generated.
+The EN 16931 standard requires countries to be represented as ISO 3166-1 alpha-2 codes. But in Espo, the *Address* field allows a country to be an arbitrary string. As of EspoCRM v8.3 it's possible to [map](../administration/addresses.md) country names to ISO 3166-1 alpha-2 codes. This mapping is used when E-Invoices are generated.
 
 Note that it's possible to automatically populate country records with English names.
 
