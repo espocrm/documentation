@@ -19,6 +19,7 @@ In the article:
 * [Default tax](#default-tax)
 * [Copying values from product to invoice item](#copying-values-from-product-to-invoice-item)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
+* [E-Invoicing](#e-invoicing)
 
 ## Converting from Opportunity, Quote or Sales Order
 
@@ -83,6 +84,45 @@ The following service actions are available in Workflows and BPM tools:
 * Add Invoice Items
 * Convert Currency
 * Send in Email
+
+## E-Invoicing
+
+*As of Sales Pack v2.4.*
+
+Invoices can be exported to EN 16931 electronic invoices in a UBL format. The following CIUS specifications are supported:
+
+* XRechnung
+* PEPPOL BIS Billing 3.0
+* CIUS-RO e-Factura
+* CIUS-IT
+* CIUS-AT-GOV
+* CIUS-AT-NAT
+* CIUS-ES-FACE
+* NLCIUS
+
+To export an Invoice to a UBL file, click **E-Invoice** from the dropdown menu next to the **Edit** button on the Invoice detail view. The UBL file can be also attached along with a PDF when sending an Invoice in email.
+
+!!! note
+
+    An E-Invoice can exported only if it is valid. It must include certain mandatory fields depending on the specification.
+
+### Settings
+
+E-Invoicing settings are available at Administration > Sales Pack Settings > Electronic Invoicing. Here you can specify the system **Default Format** to prevent the need to select the format each time you are exporting an invoice.
+
+Specify **Seller Information** fields that will be included in electronic invoices. Fields, such as Company Name, Company Address, Electronic Address, VAT Number, etc.
+
+### Account
+
+To include a buyer's electronic address in electronic invoices, you need to specify the electronic address in an Account record. The Sales Pack comes with two additional fields in the Account entity type: Electronic Address Scheme and Electronic Address Identifier. Add these fields to the *Detail* layout at Administration > Entity Manager > Account > Layouts > Detail. Then, you will be able to set these fields in Accounts.
+
+### Country codes
+
+The EN 16931 standard requires countries to be represented as ISO 3166-1 alpha-2 codes. But in Espo, the *Address* field allows a country to be an arbitrary string. As of EspoCRM v8.3 it's possible to [map](../../administration/addresses.md) country names to ISO 3166-1 alpha-2 codes. This mapping is used when E-Invoices are generated.
+
+Note that it's possible to automatically populate country records with English names.
+
+Example: If you run business from Germany, your customer is also in Germany and you use the word *Germany* when storing the country in Espo, you need to create a *Germany* Addess Country record with a *DE* code.
 
 ## See also
 
