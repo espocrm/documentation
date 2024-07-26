@@ -24,7 +24,7 @@ Prints a backtrace when an exception is occurred. Note that in some cases an exc
 
 !!! warning
 
-    It is not recommended to enable trace printing on the production environment, as it may expose sensitive data to the log. In PHP 8.2 this problem is supposed to be solved.
+    It is not recommended to enable trace printing on the production environment, as it may expose sensitive data to the log.
 
 ## Admin UI
 
