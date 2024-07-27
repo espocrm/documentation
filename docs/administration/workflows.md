@@ -171,7 +171,11 @@ It's possible to add an **opt-out** link to an email body.
 
 The system will create a new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate the records.
 
-There is the ability to define **formula** to calculate field values. Note: Variables defined within formula won't be passed back, they are only available within a current script.
+There is the ability to define **formula** to calculate field values.
+
+!!! note
+
+    Variables defined within the formula script won't be passed back, they are only available within a current script.
 
 ### Create Related Record
 
@@ -187,7 +191,7 @@ It's possible to define **formula** to calculate field values. You can utilize *
 
 !!! note
 
-    Variables defined within formula won't be passed back, they are only available within the current script.
+    Variables defined within the formula won't be passed back, they are only available within the current script.
 
 !!! note
 
