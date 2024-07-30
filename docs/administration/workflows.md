@@ -129,11 +129,11 @@ Formula provides the ability to define conditions of any complexity. To read abo
 
 !!! note
 
-    There should not be any `;` delimiter used in formula code when it determines a condition. It should be one expression that returns a value (TRUE of FALSE).
+    There should not be any `;` delimiter used in formula code when it determines a condition. It should be one expression that returns a value (TRUE or FALSE).
 
 !!! example
 
-    Expression with the logical AND):
+    Expression with the logical AND:
 
     ```
     status == 'New' && assignedUserId == null
