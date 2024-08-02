@@ -36,7 +36,7 @@ Examples:
 * A working Saturday. Create a one-day Exception with the type *Working*.
 * A working day with a shortened time schedule. Create a one-day Exception with the type *Working*, with a custom *Schedule*.
 
-Non-working days having a different background color:
+Non-working days have a different background color on the Calendar:
 
 ![Calendar](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/working-time-calendar/1.png)
 
@@ -44,7 +44,7 @@ Non-working timeslots:
 
 ![Calendar agenda](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/working-time-calendar/2.png)
 
-The Timeline has non-working ranges with a different background color:
+The Timeline displays non-working ranges with a different background color:
 
 ![Timeline](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/working-time-calendar/3.png)
 
