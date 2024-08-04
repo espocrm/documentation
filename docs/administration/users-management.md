@@ -34,13 +34,13 @@ The admin can manage regular users at Administration > Users.
 
 Portal users can access only the [portal](portal.md) (or multiple portals). A portal user usually is linked with a specific Contact and Account. Access permissions are defined by Portal Roles.
 
-Portal users can by managed at Administration > Portal Users.
+Portal users can be managed at Administration > Portal Users.
 
 ### API
 
 API users serve for accessing the system via [API](../development/api.md). Access permissions are defined by [Roles](roles-management.md).
 
-API users can by managed at Administration > API Users.
+API users can be managed at Administration > API Users.
 
 ### System
 
@@ -48,23 +48,23 @@ The system user serves for system purposes. It's not possible to log in under th
 
 ## Sending access info
 
-When a user (regular, admin or portal) is being created by an admin, it's possible to send an access info email to the user. On the create form you need to fill in the *Email* field, then the checkbox 'Send access info' will show up. It will initiate the access email sending after user creation. The access info email contains the link to the system and the username.
+When a user (regular, admin or portal) is being created by an admin, it's possible to send an access info email to the user. On the create form, you need to fill in the *Email* field, then the checkbox 'Send access info' will show up. It will initiate the access email sending after user creation. The access info email contains the link to the system and the username.
 
-If the admin does not specify a **password** for the new user, it will prompt the user to specify their password once they follow the link in the access email. If the password is specified by the admin, it will be sent plain in the email. It's not recommended that the password is specified by the admin because of security reasons.
+If the admin does not specify a **password** for a new user, it will prompt the user to specify their password once they follow the link in the access email. If the password is specified by the admin, it will be sent plain in the email. It's **not recommended** that the password is specified by the admin because of security reasons.
 
-The email **template** for access info emails can be changed at Administration > Template Manager > Access info.
+The email template for access info emails can be changed at Administration > Template Manager > Access info.
 
 ## Password recovery
 
-Users can recover their access if they forgot their password by clicking *Forgot Password?* on the login screen. The user needs to enter their email address and the password. If the entered data is correct, an email with a unique link will be sent to the user. This link has an expiration period.
+Users can recover their access if they forgot their password by clicking **Forgot Password?** on the login screen. The user needs to enter their email address and the password. If the entered data is correct, an email with a unique link will be sent to the user. This link has an expiration period.
 
 Password recovery (for all, regular or admin users) can be disabled at Administration > Authentication.
 
-For security reasons it's recommended to check *Prevent email address exposure on password recovery form* at Administration > Authentication.
+For security reasons, it's recommended to check **Prevent email address exposure on password recovery form** at Administration > Authentication.
 
 See the [config parameters](config-params.md#passwords) for password recovery.
 
-The email **template** for password recovery can be changed at Administration > Template Manager > Password Change Link.
+The email template for password recovery can be changed at Administration > Template Manager > Password Change Link.
 
 The admin can send a password change link for a specific user at the user detail view > the dropdown next to the Edit button > Send Password Change Link.
 
