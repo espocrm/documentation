@@ -1,6 +1,6 @@
 # WebSocket
 
-The WebSocket enables interaction between a server and a client (browser) w/o the latter making polling requests. Example: When a new notification is received, the server sends the information to the browser in real time.
+The WebSocket enables interaction between a server and a client (browser) without the latter making polling requests. Example: When a new notification is received, the server sends the information to the browser in real time.
 
 Out-of-the-box the WebSocket covers the following features:
 
