@@ -78,7 +78,7 @@ The list of out-of-the-box signals which are broadcasted in the system upon spec
 
 ### Placeholders
 
-You can use placeholders when you define a signal name that will be broadcasted by the throwing event in the BPM process.
+When defining a signal name in Signal Events in a BPM Flowchart, you can use placeholders:
 
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – formula variable
