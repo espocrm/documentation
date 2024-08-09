@@ -42,7 +42,7 @@ server {
         root /path-to-espo; # path to espocrm root dir
         autoindex off;
 
-        location ~* ^.+.(js|css|png|jpg|svg|svgz|jpeg|gif|ico|tpl)$ {
+        location ~* ^.+\.(js|css|png|jpg|svg|svgz|jpeg|gif|ico|tpl)$ {
             access_log off;
             expires max;
         }
