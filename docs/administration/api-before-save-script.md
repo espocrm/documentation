@@ -38,7 +38,7 @@ Returns *true* if a *skipDuplicateCheck* HTTP header is passed (when a user is w
 
 `recordService\throwDuplicateConflict(RECORD_IDS)` – receives a list of IDs.
 
-Throw a duplicate conflict exception. This will show a modal dialog warning the user that the saved record
+Throws a duplicate conflict exception. This will show a modal dialog warning the user that the saved record
 might be a duplicate.
 
 !!! example
