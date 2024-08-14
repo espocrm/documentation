@@ -43,7 +43,7 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 !!! note
 
-    Diverging and converging gateways must be balanced.
+    Diverging and converging gateways must be balanced. The number of flows outgoing from a diverging gateway should equal the number of flows incoming to a converging gateway. If between these gateways a flows splits into parallel flows, these flows should be converged before the outer converging gateway. And so on.
 
 !!! note
 
@@ -63,7 +63,7 @@ In case of converging it waits until all incoming flows come and then continues 
 
 !!! note
 
-    Diverging and converging gateways must be balanced.
+    Diverging and converging gateways must be balanced. The number of flows outgoing from a diverging gateway should equal the number of flows incoming to a converging gateway. If between these gateways a flows splits into parallel flows, these flows should be converged before the outer converging gateway. And so on.
 
 !!! note
 
