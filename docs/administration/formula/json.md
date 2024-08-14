@@ -16,7 +16,7 @@ If PATH is omitted, it will return the whole JSON parsed (as of v8.0.4).
     Retrieving *id* from `{"id": "SOME_ID"}`:
 
     ```
-    $value = json\retrieve($someJsonString, 'id');`
+    $value = json\retrieve($someJsonString, 'id');
     ```
 
 !!! example
@@ -24,7 +24,7 @@ If PATH is omitted, it will return the whole JSON parsed (as of v8.0.4).
     Retrieving *id* from `[{"id": "SOME_ID"}]`:
 
     ```
-    $value = json\retrieve($someJsonString, '0.id');`
+    $value = json\retrieve($someJsonString, '0.id');
     ```
 
 ## json\encode
