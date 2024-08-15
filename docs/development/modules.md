@@ -28,3 +28,9 @@ Requires clearing cache after changes.
 ## Composer
 
 You can create a `composer.json` in your module directory to include 3rd party libraries. To let Espo know about these libraries, you need to create an [autoload configuration file](autoload.md) in your module.
+
+## JS modules
+
+When referencing ES (or AMD) modules located in an Espo module, use the path: `module/{your-module}/*`. Example: `module/my-module/views/fields/my-field`.
+
+When using [ext-template](https://github.com/espocrm/ext-template), the path to your Espo module will be automatically written in *jsconfig.json*. That will allow an IDE to properly locate module files. 
