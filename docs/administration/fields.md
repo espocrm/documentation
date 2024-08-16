@@ -260,13 +260,13 @@ Parameters:
 
 ## Wysiwyg
 
-Similar to Text field, but with HTML support.
+Similar to the Text field, but with HTML support.
 
 Parameters:
 
 * Height (px) – a height of the field (in the edit view mode); if empty – then  height is flexible;
 * Min Height (px) – a min height of the field (in the edit view mode);
-* Use Iframe – if checked, then HTML will be placed into IFRAME element.
+* Use Iframe – if checked, then an HTML content will be placed in an IFRAME element.
 
 ## File
 
