@@ -52,6 +52,10 @@ Portal roles can be applied to:
 3. Enable access to Knowledge Base, set: *create – no, read – account, edit – no, delete – no*.
 4. Edit your portal record (Administration > Portals). Select your portal role in Roles field and then save.
 
+!!! note
+
+    When creating custom relationships for built-in entity types, a *c* prefix is automatically added to link names. It means that links named *account*, *contact*, *accounts* and *contacts* won't override *contact* and *account* level access for built-in entity types due the added prefix. Though it's possible to disable prefix addition with the config parameter *customPrefixDisabled*. You can set it to true temporarily just to create needed relationships.
+
 ## Access to Portal
 
 You can find the URL for your portal in the *URL* field of the portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access by different url. For this case, you need to fill in 'Custom URL' field.
