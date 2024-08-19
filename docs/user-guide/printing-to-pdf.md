@@ -39,6 +39,7 @@ Table of content:
 * [Each iterator](#each-iterator)
 * [Lookup](#lookup)
 * [Expressions](#expressions)
+* [Logical expressions](#logical-expressions)
 * [Images](#images)
 * [Date & time formatting](#date-time-formatting)
 * [Number formatting](#number-formatting)
@@ -100,6 +101,27 @@ In places where you need to have an explicit page break, add:
 
 ### Condition checking
 
+#### Conditional rendering attribute x-if
+
+*As of v8.4.*
+
+```
+<table>
+    <tr x-if="{{equal status 'Active'}}">
+        <td></td>
+    </tr>
+</table>
+```
+
+Helpers:
+
+* if
+* unless
+* ifEqual
+* ifNotEqual
+* equal
+* notEqual
+
 #### if
 
 ```
@@ -156,6 +178,30 @@ Opposite to *if*.
 #### ifNotEqual
 
 Opposite to *ifEqual*.
+
+#### equal
+
+*As of v8.4.*
+
+Returns boolean.
+
+```
+{{#if (equal status 'Active')}}
+    ...
+{{/if}}
+```
+
+#### notEqual
+
+*As of v8.4.*
+
+Returns boolean.
+
+```
+{{#if (notEqual status 'Active')}}
+    ...
+{{/if}}
+```
 
 ### Each iterator
 
@@ -257,6 +303,32 @@ In array:
 * `{{anyTag~}}` – remove all next spacing;
 * `{{{helper}}}` – prevent escaping;
 * `{{helper1 (helper2  arg1 arg2) arg2 arg3}}` – sub-expression passed as an argument;
+
+### Logical expressions
+
+*As of 8.4.*
+
+Helpers:
+
+* and
+* or
+* not
+
+To be used in sub-expressions.
+
+Examples:
+
+```
+{{#if (or (equal status 'Draft') (equal status 'Active'))}}
+    ...
+{{/if}}
+```
+
+```
+{{#if (and value1 value2 value3)}}
+    ...
+{{/if}}
+```
 
 ### Images
 
