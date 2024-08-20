@@ -49,7 +49,6 @@ Table of content:
 * [Multi-enum & Array fields](#multi-enum-array-fields)
 * [Checklist field](#multi-enum-array-fields)
 * [Barcode field](#barcode-field)
-* [Tables](#tables)
 * [Raw values](#raw-values)
 * [Maps](#maps)
 * [Custom helpers](#custom-helpers)
@@ -232,21 +231,6 @@ Object (map):
    {{@key}} – key
 {{/each}}
 ```
-
-Printing tables (not recommended as of v8.2):
-
-```
-{{#tableTag}}
-  {{#each contacts}}
-      {{#trTag}}
-          {{#tdTag}}{{name}}{{/tdTag}}
-          {{#tdTag}}{{amount}}{{/tdTag}}
-      {{/trTag}}
-  {{/each}}
-{{/tableTag}}
-```
-
-`itemList` is a *jsonArray* field (available in Quote, Sales Order, Invoices entity types).
 
 !!! note
 
@@ -498,35 +482,6 @@ Available types:
 * ITF14
 * pharmacode
 * QRcode
-
-
-### Tables
-
-!!! note
-
-    Not recommended as of v8.2. Use HTML tags with the *iterate* attribute when need looping through arrays.
-
-You can use a regular *table* tag or special *tableTag* helper. The latter way is preferable when using *{{#each}}* helper inside a table.
-
-!!! example
-
-    The following example prints all account's opportunities in a table format.
-
-    In code view:
-
-    ```
-    {{#tableTag width="80%" border="0.5pt" cellpadding="4"}}
-    {{#each opportunities}}
-    {{#trTag}}
-      {{#tdTag width="40%"}}{{name}}{{/tdTag}}
-      {{#tdTag width="30%"}}{{assignedUserName}}{{/tdTag}}
-      {{#tdTag width="30%" align="right"}}{{stage}}{{/tdTag}}
-    {{/trTag}}
-    {{/each}}
-    {{/tableTag}}
-    ```
-
-    Where *trTag* is a table row, *tdTag* is a table cell.
 
 ### Raw values
 
