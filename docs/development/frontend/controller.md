@@ -15,24 +15,24 @@ Create a file `custom/Espo/Custom/Resources/metadata/clientDefs/Account.json`:
 Create a file `client/custom/src/controllers/account.js`:
 
 ```js
-define('custom:controllers/account', ['controllers/record'], function (Dep) {
+define(['controllers/record'], (Dep) => {
 
-    return Dep.extend({
+    return class extends Dep {
 
-        actionHello: function (options) {
+        actionHello(options) {
             console.log('action: hello');
             console.log(options);
-        },
+        }
 
-        actionTest: function (options) {
+        actionTest(options) {
             if (!options.id) {
                 throw new Espo.Exceptions.NotFound();
             }
 
             console.log('action: test');
             console.log(options);
-        },
-    });
+        }
+    }
 });
 ```
 
