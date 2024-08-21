@@ -353,17 +353,16 @@ setup() {
     this.createView('someKeyName', 'custom:test/my-custom-child-view', {}); 
 }
 
-actionShowModal() {
-    this.createView('dialog', 'custom:test/my-modal-view', {selector: '> [data-name="someName]'})
-        .then(view => {
-            view.render();
-            
-            this.listenToOnce(view, 'some-event', eventData => {
-                console.log(eventData);
-                
-                this.clearView('dialog');
-            });
-        });
+async actionShowModal() {
+    const view = await this.createView('dialog', 'custom:test/my-modal-view', {selector: '[data-name="someName]'})
+    
+    this.listenToOnce(view, 'some-event', eventData => {
+        console.log(eventData);
+        
+        this.clearView('dialog');
+    });
+
+    await view.render();
 }
 ```
 
