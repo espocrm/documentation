@@ -15,9 +15,9 @@ Create a file `custom/Espo/Custom/Resources/metadata/clientDefs/Account.json`:
 Create a file `client/custom/src/controllers/account.js`:
 
 ```js
-define(['controllers/record'], (Dep) => {
+define(['controllers/record'], (RecordController) => {
 
-    return class extends Dep {
+    return class extends RecordController {
 
         actionHello(options) {
             console.log('action: hello');
