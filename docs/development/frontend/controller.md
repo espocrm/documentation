@@ -97,7 +97,7 @@ define('custom:views/account/test', ['view'], (View) => {
 
         data() {
             return {
-                id: this.options.id,
+                id: this.model.id,
                 name: this.model.attributes.name,
             }
         }
