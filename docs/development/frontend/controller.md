@@ -92,26 +92,26 @@ define('custom:views/account/test', ['view'], (Dep) => {
 
     return class extends Dep {
 
-        templateContent = 'Id: {{id}}, name: {{name}}'
+        // language=Handlebars
+        templateContent = `Id: {{id}}, name: {{name}}`
 
         data() {
             return {
                 id: this.options.id,
-                name: this.model.get('name'),
+                name: this.model.attributes.name,
             }
         }
 
         setup() {
-            this.wait(
-                this.getModelFactory().create('Account')
-                    .then(model => {
-                        this.model = model;
-                        model.id = this.options.id;
+            this.wait(this.loadModel());
+        }
 
-                        return model.fetch();
-                    })
-            );
-        }       
+        async loadModel() {
+            this.model = await this.getModelFactory().create('Account');
+            this.model = this.options.id;
+
+            await this.model.fetch();
+        }
     }
 });
 ```
