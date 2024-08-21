@@ -24,7 +24,7 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
         // See the separate article about templates.
         template = 'custom:test/my-custom-view'
 
-        // Alternatively a template content can be defined right here.
+        // Alternatively, a template content can be defined right inside the class.
         // Use // language=Handlebars to highlight syntax in JetBrains IDEs.
         // templateContent = `<div class="some-test-container">{{{someKeyName}}}</div>`
 
