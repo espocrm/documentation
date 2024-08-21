@@ -121,7 +121,7 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
         someMethod1(value) {
             // Create and render a child view.
             this.createView('testKey', 'custom:test/my-another-custom-child-view', {
-                el: this.getSelector() + ' .another-test-container', 
+                selector: '.another-test-container', 
                 value: value,
             })
             .then(view => view.render());
@@ -251,8 +251,11 @@ A simple way to wait:
                 this.wait(false);                
             });
     }
-
 ```
+
+!!! note
+
+    Feel free to use the async/await syntax instead of explicit promises.
 
 ### setup
 
