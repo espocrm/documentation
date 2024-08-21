@@ -69,7 +69,7 @@ Note that it's also possible to specify a specific controller class in `controll
 
 In controller:
 ```js
-    actionTest(options) {
+    actionTest: function(options) {
         if (!options.id) {
             throw new Espo.Exceptions.NotFound();
         }
@@ -82,7 +82,7 @@ In controller:
         // this will render view in the main container element #main
         // id will be passed to the view
         this.main(viewName, {id: id});
-    }
+    },
 ```
 
 Create a view `client/custom/src/views/account/test.js`:
