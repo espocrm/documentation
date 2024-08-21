@@ -175,82 +175,82 @@ Sometimes we need to get some data loaded asynchronously before the view is rend
 The `wait` method can receive a promise:
 
 ```js
-    setup() {
-        this.wait(
-            Promise.all([
-                this.model.fetch(),
-                this.model.collection.fetch(),
-            ])
-        );
-    }
+setup() {
+    this.wait(
+        Promise.all([
+            this.model.fetch(),
+            this.model.collection.fetch(),
+        ])
+    );
+}
 ```
 
 The model factory returns a promise, so we can pass it to the `view` method:
 
 ```js
-    setup() {
-        this.wait(
-            this.getModelFactory().create('Case')
-                .then(model => {
-                    model.id = this.model.id;
+setup() {
+    this.wait(
+        this.getModelFactory().create('Case')
+            .then(model => {
+                model.id = this.model.id;
 
-                    return model.fetch();
-                })
-                .then(data => {
-                    console.log(data);
-                })
-        );
-    }
+                return model.fetch();
+            })
+            .then(data => {
+                console.log(data);
+            })
+    );
+}
 ```
 
 Wait until a model is fetched. The `fetch` method returns a promise.
 
 ```js
-    setup() {
-        this.wait(
-            this.model.fetch()
-        );
-    }
+setup() {
+    this.wait(
+        this.model.fetch()
+    );
+}
 ```
 
 Wait for multiple independent promises:
 
 ```js
-    setup() {
-        this.wait(
-            this.model.fetch()
-        );
-        
-        this.wait(
-            Espo.Ajax.getRequest('SomeUrl')
-        );
-    }
+setup() {
+    this.wait(
+        this.model.fetch()
+    );
+    
+    this.wait(
+        Espo.Ajax.getRequest('SomeUrl')
+    );
+}
 ```
 
 ```js
-    setup() {
-        this.wait(
-            Promise.all([
-                this.model.fetch(),
-                Espo.Ajax.getRequest('SomeUrl'),
-            ])
-        );
-    }
+setup() {
+    this.wait(
+        Promise.all([
+            this.model.fetch(),
+            Espo.Ajax.getRequest('SomeUrl'),
+        ])
+    );
+}
 ```
 
 A simple way to wait:
 
 ```js
-    setup() {
-        // This holds off the rendering.
-        this.wait(true);
+setup() {
+    // This holds off the rendering.
+    this.wait(true);
 
-        Espo.Ajax.getRequest('Some/Request')
-            .then(response => {
-                // This cancels waiting and proceeds to rendering.
-                this.wait(false);                
-            });
-    }
+    Espo.Ajax.getRequest('Some/Request')
+        .then(response => {
+            // This cancels waiting and proceeds to rendering.
+            this.wait(false);                
+        });
+}
 ```
 
 !!! note
@@ -380,21 +380,21 @@ this.addHandler('mousedown', 'selector', (event, target) => { ... });
 ## Events
 
 ```js
-    setup() {
-        // Use this way only when the view subscribes to self.
-        this.on(eventName, callback); // subscribe to self
-        this.once(eventName, callback); // subscribe once
-        this.off(eventName, callback); // unsubscribe
-        
-        // Use this way to subscribe to another object. Prevents memory leaking.
-        this.listenTo(object, eventName, callback); // subscribe to another object
-        this.listenToOnce(object, eventName, callback); 
-        this.stopListening(object, eventName); // unsubscribe
-        
-        // Triggering event.
-        this.trigger(eventName);  
-        this.trigger(eventName, objectWithEventData); // passing data        
-    }
+setup() {
+    // Use this way only when the view subscribes to self.
+    this.on(eventName, callback); // subscribe to self
+    this.once(eventName, callback); // subscribe once
+    this.off(eventName, callback); // unsubscribe
+    
+    // Use this way to subscribe to another object. Prevents memory leaking.
+    this.listenTo(object, eventName, callback); // subscribe to another object
+    this.listenToOnce(object, eventName, callback); 
+    this.stopListening(object, eventName); // unsubscribe
+    
+    // Triggering event.
+    this.trigger(eventName);  
+    this.trigger(eventName, objectWithEventData); // passing data        
+}
 ```
 
 Multiple events can be specified separated by a whitespace.
