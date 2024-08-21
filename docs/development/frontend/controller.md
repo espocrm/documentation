@@ -88,9 +88,9 @@ In controller:
 Create a view `client/custom/src/views/account/test.js`:
 
 ```js
-define('custom:views/account/test', ['view'], (Dep) => {
+define('custom:views/account/test', ['view'], (View) => {
 
-    return class extends Dep {
+    return class extends View {
 
         // language=Handlebars
         templateContent = `Id: {{id}}, name: {{name}}`
