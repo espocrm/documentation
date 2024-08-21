@@ -92,11 +92,11 @@ model.setDefs({
 
 A record ID.
 
-### name
+### entityType
 
 *string*
 
-A name. Usually, it is an entity type.
+An entity type.
 
 ### urlRoot
 
@@ -104,56 +104,64 @@ A name. Usually, it is an entity type.
 
 A root API URL.
 
+### attributes
+
+*Record*
+
+Attribute values.
+
+```
+const name = model.attributes.name;
+```
+
 ## Instantiating
 
 Model-factory is available in views. The model-factory allows to create a model instance of a specific entity type.
 
 ```js
-define('custom:views/some-custom-view', ['view'], function (Dep) {
+define('custom:views/some-custom-view', ['view'], (View) => {
 
-    return Dep.extend({
+    return class extends View {
     
-        setup: function () {
-            const entityType = 'Account';
-            
-            // use wait to hold off rendering until model is loaded            
-            this.wait(
-                this.getModelFactory().create(entityType)
-                    .then(model => {
-                        const entityType = model.entityType; // entityType property is set by the factory
+        setup() {            
+            // Use wait to hold off rendering until model is loaded.     
+            this.wait(this.loadModel());
+        }
 
-                        this.model = model;                    
-                        model.id = this.options.id;
-
-                        return model.fetch(); // this will make API call using an appropriate URL
-                    })
-                    .then(() => {
-                        // here you can do some stuff with model
-                    })
-            );
-        },
-    });
-});
+        async loadModel() {
+            this.model = await this.getModelFactory().create('Account');
+    
+            // entityType is set by the factory.
+            //const entityType = this.model.entityType;
+    
+            this.model.id = this.options.id;
+    
+            await model.fetch(); 
+        }
+    }
+}
 ```
 
 Instantiating w/o factory:
 
 ```js
-define('custom:views/some-custom-view', ['view', 'model'], function (Dep, Model) {
+define('custom:views/some-custom-view', ['view', 'model'], (View, Model) => {
 
-    return Dep.extend({
+    return class extends View {
     
-        setup: function () {
-            const model = new Model;
-            
-            model.urlRoot = 'MyModel'; // URL will be used when fetching and saving
+        setup() {
+            const model = new Model();
+
+            // URL will be used when fetching and saving.
+            model.urlRoot = 'MyModel'; 
             model.id = 'someId';
             
             this.wait(
-                model.fetch(); // this makes a `GET MyModel/someId` API call
+                // This performs `GET MyModel/someId` API call.
+                model.fetch(); 
             );
-        },
-    });
+        }
+    }
 });
 ```
 
