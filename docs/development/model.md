@@ -102,7 +102,13 @@ An entity type.
 
 *string*
 
-A root API URL.
+A root API URL to use for syncing with the backend. For non-new records, an ID part will be appended.
+
+### url
+
+*string*
+
+An API URL to use for syncing with the backend. If specified, urlRoot will be omitted.
 
 ### attributes
 
@@ -110,7 +116,7 @@ A root API URL.
 
 Attribute values.
 
-```
+```js
 const name = model.attributes.name;
 ```
 
@@ -139,7 +145,7 @@ define('custom:views/some-custom-view', ['view'], (View) => {
             await model.fetch(); 
         }
     }
-}
+})
 ```
 
 Instantiating w/o factory:
@@ -162,7 +168,7 @@ define('custom:views/some-custom-view', ['view', 'model'], (View, Model) => {
             );
         }
     }
-});
+})
 ```
 
 ## Events
