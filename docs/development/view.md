@@ -329,20 +329,7 @@ Arguments:
 
 ### render
 
-Render a view. Should be called if the view is called not in the *setup* method (after the view is already ready or rendered). Returns a promise resolved once rendering is finished.
-
-### whenRendered
-
-Returns the promise resolving when the view is rendered.
-
-```js
-this.whenRendered().then(() => doSomethingWithDom());
-```
-
-### data
-
-Method should is called internally when rendering. Should return a key => value data (*Object.<string, mixed>*) that will be passed to a template.
-
+Renders a view. Should be called if the view is called not in the *setup* method (after the view is already ready or rendered). Returns a promise resolved once rendering is finished.
 
 ```js
 templateContent = `
@@ -365,6 +352,19 @@ async actionShowModal() {
     await view.render();
 }
 ```
+
+### whenRendered
+
+Returns the promise resolving when the view is rendered.
+
+```js
+this.whenRendered().then(() => doSomethingWithDom());
+```
+
+### data
+
+The method is called internally when rendering. Should return a key => value data (*Object.<string, mixed>*) that will be passed to a template.
+
 
 ### addHandler
 
@@ -403,6 +403,3 @@ Multiple events can be specified separated by a whitespace.
 
 * `after:render` – after the view is rendered;
 * `remove` – when the view is removed (destroyed); use it for cleaning up.
-
-  
-
