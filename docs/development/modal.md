@@ -7,30 +7,29 @@ Example of a modal dialog with a form.
 Modal view: `client/custom/src/views/modals/my-dialog.js`
 
 ```js
-define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep, Model) {
+define('custom:views/modals/my-dialog', ['views/modal', 'model'], (ModalView, Model) => {
 
-    return Dep.extend({
+    return class extends ModalView {
 
-        className: 'dialog dialog-record',
+        className = 'dialog dialog-record'
 
-        // template content can be defined right here or externally
-        templateContent: `
+        // language=Handlebars
+        templateContent = `
             <div class="record no-side-margin">{{{record}}}</div>
         `,
 
-        // template content can be defined in external file client/custom/res/templates/my-dialog.tpl 
-        // template: 'custom:modals/my-dialog',
+        // If true, clicking on the backdrop will close the dialog.
+        // Can be 'static', true or false.
+        backdrop = true 
 
-        // if true, clicking on the backdrop will close the dialog
-        backdrop: true, // 'static', true, false
-
-        setup: function () {
+        setup() {
             // action buttons
             this.buttonList = [
                 {
                     name: 'doSomething', // handler for 'doSomething' action is bellow
                     html: this.translate('Some Action', 'labels', 'MyScope'), // button label 
                     style: 'danger',
+                    onClick: () => this.actionDoSomething(),
                 },
                 {
                     name: 'cancel',
@@ -38,13 +37,12 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                 },
             ];
             
-            let title = this.options.title || ''; // assuming it's passed by our parent view
+            const title = this.options.title || ''; // assuming it's passed from our parent view
 
             this.headerText = title;             
             // this.headerHtml = this.getHelper().escapeString(title);
 
             this.formModel = new Model();
-            this.formModel.name = 'None'; // dummy name, important
 
             // define fields
             this.formModel.setDefs({
@@ -63,7 +61,7 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
             this.createView('record', 'views/record/edit-for-modal', {
                 scope: 'None', // dummy name
                 model: this.formModel,
-                el: this.getSelector() + ' .record',                
+                selector: '.record',                
                 detailLayout: [ // form layout
                     {
                         rows: [
@@ -81,31 +79,35 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], function (Dep,
                     },
                 ],
             });
-        },
+        }
 
-        actionDoSomething: function () {
-            // fetch data from form to model and validate
-            let isValid = this.getView('record').processFetch();
+        async actionDoSomething() {
+            /** @type {import('views/record/edit').default} */
+            const recordView = this.getView('record');
+
+            const isValid = recordView.processFetch();
 
             if (!isValid) { 
                 return;
             }
+
+            Espo.Ui.notify(' ... ');
             
-            // make POST request
-            Espo.Ajax
-                .postRequest('MyScope/action/doSomething', {
-                    id: this.options.id, // passed from the parent view
-                    someString: this.formModel.get('someString'),
-                    someCheckbox: this.formModel.get('someCheckbox'),
-                })
-                .then(response => {
-                    Espo.Ui.success(this.translate('Done'));
-                    // event 'done' will be caught by the parent view
-                    this.trigger('done', response);
-                    this.close();
-                });
-        },
-    });
+            const response = await Espo.Ajax.postRequest('MyScope/action/doSomething', {
+                id: this.options.id, // passed from the parent view
+                someString: this.formModel.attributes.someString,
+                someCheckbox: this.formModel.attributes.someCheckbox,
+            });
+
+            Espo.Ui.success(this.translate('Done'));
+
+            // We assume that the event 'done' will be caught by the parent view.
+            this.trigger('done', response);
+
+            // Close the modal dialog.
+            this.close();
+        }
+    }
 });
 ```
 
