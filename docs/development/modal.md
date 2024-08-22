@@ -27,7 +27,7 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], (ModalView, Mo
             this.buttonList = [
                 {
                     name: 'doSomething', // handler for 'doSomething' action is bellow
-                    html: this.translate('Some Action', 'labels', 'MyScope'), // button label 
+                    text: this.translate('Some Action', 'labels', 'MyScope'), // button label 
                     style: 'danger',
                     onClick: () => this.actionDoSomething(),
                 },
@@ -59,7 +59,6 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], (ModalView, Mo
             });
 
             this.createView('record', 'views/record/edit-for-modal', {
-                scope: 'None', // dummy name
                 model: this.formModel,
                 selector: '.record',                
                 detailLayout: [ // form layout
