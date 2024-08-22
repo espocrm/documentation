@@ -2,7 +2,7 @@
 
 !!! note
 
-    It's recommended to use the [ext-template](#template-repository) repository for extension development.
+    It's recommended to use the [ext-template](https://github.com/espocrm/ext-template) repository for extension development.
 
 Extensions allow you to add extra functionality to EspoCRM. They can be installed at Administrator panel.
 
