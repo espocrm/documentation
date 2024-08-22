@@ -100,10 +100,10 @@ class AfterSave
 `client/custom/src/views/stock/fields/contacts.js`
 
 ```js
-define('custom:views/stock/fields/contacts', ['views/fields/link-multiple-with-primary'], function (Dep) {   
-    return Dep.extend({
-        primaryLink: 'contact',
-    });
+define('custom:views/stock/fields/contacts', ['views/fields/link-multiple-with-primary'], (Dep) => {   
+    return class extends Dep {
+        primaryLink = 'contact'
+    }
 });
 ```
 
