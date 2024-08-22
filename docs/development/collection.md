@@ -172,7 +172,7 @@ With a factory:
 ```js
 define('custom:views/some-custom-view', ['view'], (View) => {
 
-    return class extends View
+    return class extends View {
 
         setup() {
             this.wait(this.loadCollection());
