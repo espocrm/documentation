@@ -1,5 +1,9 @@
 # Making extension package
 
+!!! note
+
+    It's recommended to use the [ext-template](#template-repository) repository for extension development.
+
 Extensions allow you to add extra functionality to EspoCRM. They can be installed at Administrator panel.
 
 The file structure of the package:
@@ -81,7 +85,6 @@ In the end, we need to pack all these files into a ZIP archive.
 You can use this [template repository](https://github.com/espocrm/ext-template) to create a git repository for your extension.
 
 ## Recommendations
-
 
 !!! note
 
