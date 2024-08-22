@@ -2,7 +2,7 @@
 
 ## Record views
 
-EspoCRM framework provides flexible abilities to define custom views for certain entity types. They must be defined in `clientDefs` category of metadata.
+EspoCRM framework provides abilities to define custom views for certain entity types. They must be defined in `clientDefs` category of metadata.
 
 `custom/Espo/Custom/Resources/metadata/clientDefs/YourEntityType.json`
 
@@ -103,8 +103,8 @@ The views 'views/list/record' contains rows of records.
 It's worth to mention that you need to inherit your view class from specific class for your entity if one already exists.
 
 ```javascript
-define('custom:views/email/record/detail', ['views/email/record/detail'], function (Dep) {
-
+define('custom:views/email/record/detail', ['views/email/record/detail'], (EmailDetailRecordView) => {
+    return class extends EmailDetailRecordView {}
 });
 ```
 
