@@ -15,25 +15,24 @@ Create a file `custom/Espo/Custom/Resources/metadata/fields/address.json`.
 Create a file `client/custom/src/views/fields/address.js`.
 
 ```js
-define('custom:views/fields/address', ['views/fields/address'], function (Dep) {
+define(['views/fields/address'], (AddressFiedView) => {
 
-   return Dep.extend({
-   
-        detailTemplate: 'custom:fields/address/detail', // omit if you don't need custom template
-        editTemplate: 'custom:fields/address/edit', // omit if you don't need custom template
-        listTemplate: 'custom:fields/address/list', // omit if you don't need custom template
-        listLinkTemplate: 'custom:fields/address/list-link', // omit if you don't need custom template
+   return class extends AddressFiedView {
+
+        //detailTemplateContent = ' ... '
+        //editTemplateContent = ' ... '
+        //listTemplateContent = ' ... '
+        //listLinkTemplateContent = ' .. '
   
-        setup: function () {
-            Dep.prototype.setup.call(this);
-            // some initialization
-        },
+        setup() {
+            super.setup();
+        }
 
-        afterRender: function () {
-            Dep.prototype.afterRender.call(this);
+        afterRender() {
+            super.afterRender();
             // your customizations executed after the field is rendered
-        },
-    });
+        }
+    }
 });
 ```
 
@@ -76,19 +75,19 @@ Create (or edit if exists) a file `custom/Espo/Custom/Resources/metadata/entityD
 File `client/custom/src/views/meeting/fields/name.js`:
 
 ```js
-define('custom:views/meeting/fields/name', ['views/fields/varchar'], function (Dep) {
+define(['views/fields/varchar'], (VarcharFieldView) => {
 
-   return Dep.extend({
+   return class extends VarcharFieldView {
   
-        setup: function () {
-            Dep.prototype.setup.call(this);
+        setup() {
+            super.setup();
             // some initialization
-        },
+        }
 
-        afterRender: function () {
-            Dep.prototype.afterRender.call(this);
+        afterRender() {
+            super.afterRender();
             // your customizations executed after the field is rendered
-        },
-    });
+        }
+    }
 });
 ```
