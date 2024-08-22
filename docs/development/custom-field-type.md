@@ -22,11 +22,12 @@ Create a file `client/custom/src/views/fields/{field-type}.js`:
 define(['views/fields/base'], (BaseFieldView) => {
     
     return class extends BaseFieldView {
-    
-        //detailTemplateContent = ` ... `
-        //listTemplateContent = ` ... `
-        //editTemplateContent = ` ... ` 
-        //searchTemplateContent = ` ... `
+
+        // Templates for all view modes.
+        detailTemplateContent = ` ... `
+        listTemplateContent = ` ... `
+        editTemplateContent = ` ... ` 
+        searchTemplateContent = ` ... `
         
         setup() {}
         
@@ -35,12 +36,9 @@ define(['views/fields/base'], (BaseFieldView) => {
 });
 ```
 
-Create detail, list, edit, search  templates (*.tpl extension) in a `client/custom/res/templates/fields/{field-type}/` directory.
+See out-of-the-box field types for examples:
 
-Use out-of-the-box field types as examples:
-
-- `client/src/views/fields/` — views
-- `client/res/templates/fields/` — templates
+* `client/src/views/fields/` — views
 
 ### Translation
 
