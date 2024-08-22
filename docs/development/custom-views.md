@@ -28,24 +28,24 @@ EspoCRM framework provides flexible abilities to define custom views for certain
 The view 'views/record/detail' contains all panels with fields, relations and other data you can see on detail view. It doesn't contain header and buttons in the top-right corner.
 
 ```javascript
-define('custom:views/your-entity-type/record/detail', ['views/record/detail'], function (Dep) {
+define('custom:views/your-entity-type/record/detail', ['views/record/detail'], (DetailRecordView) => {
 
-    return Dep.extend({
+    return class extends DetailRecordView {
 
         // custom template, omit if you don't need it
-        template: 'custom:your-entity-type/record/detail', 
+        // template = 'custom:your-entity-type/record/detail'
         
         // custom central view, omit if you don't need it
-        middleView: 'custom:views/your-entity-type/record/detail-middle', 
+        // middleView = 'custom:views/your-entity-type/record/detail-middle'
         
         // custom side column view, omit if you don't need it
-        sideView: 'custom:views/your-entity-type/record/detail-side', 
+        // sideView = 'custom:views/your-entity-type/record/detail-side'
         
         // custom bottom view, omit if you don't need it
-        bottomView: 'custom:views/your-entity-type/record/detail-bottom', 
+        // bottomView = 'custom:views/your-entity-type/record/detail-bottom'
 
-        setup: function() {
-            Dep.prototype.setup.call(this);
+        setup() {
+            super.setup();
 
             this.hideField('someField');
             this.showField('someField');
@@ -65,15 +65,12 @@ define('custom:views/your-entity-type/record/detail', ['views/record/detail'], f
                 this.hidePanel('activities');
                 this.showPanel('history');
             });
-        },
+        }
 
-        afterRender: function() {
-            Dep.prototype.afterRender.call(this);
-
-            // Custom code to be invoked right after rendering, when DOM is available.
-            this.$el.find('label[data-name="myField"]').addClass('hidden');
-        },
-    });
+        afterRender() {
+            super.afterRender();
+        }
+    }
 });
 
 ```
@@ -133,20 +130,20 @@ Example for Address field of Account entity type.
 `client/custom/src/views/account/fields/address.js`
 
 ```js
-define('custom:views/fields/address', ['views/fields/address'], function (Dep) {
+define('custom:views/fields/address', ['views/fields/address'], (AddressFieldView) => {
 
-   return Dep.extend({
+   return class extends AddressFieldView {
   
-        setup: function () {
-            Dep.prototype.setup.call(this);
+        setup() {
+            super.setup();
             // some initialization
-        },
+        }
 
-        afterRender: function () {
-            Dep.prototype.afterRender.call(this);
+        afterRender() {
+            super.afterRender();
             // your customizations executed after the field is rendered
-        },
-    });
+        }
+    }
 });
 ```
 
