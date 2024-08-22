@@ -36,16 +36,16 @@ The values of parameters *aclScope* and *acl* mean, that the panel will be visib
 Create a file `client/custom/src/views/account/panels/my-test-panel.js`:
 
 ```js
-define('custom:views/account/panels/my-test-panel', ['views/record/panels/side'], function (Dep) {
+define(['views/record/panels/side'], (SidePanelView) => {
 
-    return Dep.extend({
+    return class extends SidePanelView {
 
-        templateContent: '<div>{{viewObject.someKey}}</div>',
+        templateContent = '<div>{{viewObject.someKey}}</div>'
 
-        setup: function () {
+        setup() {
             this.someKey = 'Hello';
-        },
-    });
+        }
+    }
 });
 
 ```
