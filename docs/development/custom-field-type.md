@@ -19,29 +19,19 @@ Use out-of-the-box field types as examples: `application/Espo/Resources/metadata
 Create a file `client/custom/src/views/fields/{field-type}.js`:
 
 ```js
-define('custom:views/fields/{field-type}', ['views/fields/base'], function (Dep) {
+define('custom:views/fields/{field-type}', ['views/fields/base'], (BaseFieldView) => {
     
-    /**
-     * JSDoc enabling code completion in PhpStorm/Webstorm.
-     *
-     * @class
-     * @name Class
-     * @extends modules:views/fields/base.Class
-     * @memberOf modules:custom:views/fields/{field-type}
-     */
-    return Dep.extend(/** @lends modules:custom:views/fields/{field-type}.Class# */{
+    return class extends BaseFieldView {
     
-        detailTemplate: 'custom:fields/{field-type}/detail',        
-        listTemplate: 'custom:fields/{field-type}/list',        
-        editTemplate: 'custom:fields/{field-type}/edit',        
-        searchTemplate: 'custom:fields/{field-type}/search',
+        //detailTemplateContent = ` ... `
+        //listTemplateContent = ` ... `
+        //editTemplateContent = ` ... ` 
+        //searchTemplateContent = ` ... `
         
-        setup: function () {        
-        },
+        setup() {}
         
-        afterRender: function () {        
-        },
-    });
+        afterRender() {}
+    }
 });
 ```
 
