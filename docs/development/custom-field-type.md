@@ -19,7 +19,7 @@ Use out-of-the-box field types as examples: `application/Espo/Resources/metadata
 Create a file `client/custom/src/views/fields/{field-type}.js`:
 
 ```js
-define('custom:views/fields/{field-type}', ['views/fields/base'], (BaseFieldView) => {
+define(['views/fields/base'], (BaseFieldView) => {
     
     return class extends BaseFieldView {
     
