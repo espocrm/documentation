@@ -34,7 +34,7 @@ Clone a collection. Models are kept identical. Returns a collection instance.
 Get a model from a collection by an id.
 
 ```js
-let model = collection.get(id);
+const model = collection.get(id);
 ```
 
 ### at
@@ -42,7 +42,7 @@ let model = collection.get(id);
 Get a model by its position in a collection.
 
 ```js
-let model = collection.at(index);
+const model = collection.at(index);
 ```
 
 ### forEach
@@ -170,46 +170,40 @@ A where clause.
 With a factory:
 
 ```js
-define('custom:views/some-custom-view', ['view'], function (Dep) {
+define('custom:views/some-custom-view', ['view'], (View) => {
 
-    return Dep.extend({
+    return class extends View
 
-        setup: function () {
-            let entityType = 'Account';
+        setup() {
+            this.wait(this.loadCollection());
+        }
 
-            this.wait(
-                this.getCollectionFactory().create(entityType)
-                    .then(collection => {
-                        this.collection = collection;
+        async loadCollection() {
+            this.collection = await this.getCollectionFactory().create('Account');
 
-                        return collection.fetch();
-                    })
-                    .then(() => {
-
-                    })
-            );
-        },
-    });
+            await this.collection.fetch();
+        }
+    }
 });
 ```
 
 Without factory:
 
 ```js
-define('custom:views/some-custom-view', ['view', 'collection'], function (Dep, Collection) {
+define('custom:views/some-custom-view', ['view', 'collection'], (View, Collection) => {
 
-    return Dep.extend({
+    return class extends View {
 
-        setup: function () {
-            let collection = new Collection;
-
-            collection.url = 'MyEntityType/someEndPoint'; // URL will be used when fetching
+        setup() {
+            const collection = new Collection();
+            // The URL will be used when fetching from the backend.
+            collection.url = 'MyEntityType/someEndPoint'; 
 
             this.wait(
                 collection.fetch()
             );
-        },
-    });
+        }
+    }
 });
 ```
 
