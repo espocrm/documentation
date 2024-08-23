@@ -77,14 +77,13 @@ For more information, follow the [link](https://support.google.com/mail/answer/7
 1. Go to your *Outlook Account*.
 2. Click ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png).
 3. On the navigation panel, select *Mail > Forwarding and IMAP*.
-4. Check *Let devices and apps use IMAP*. Here you can also view your IMAP and SMTP settings.
-5. Click *Save* button.
+4. *Sign in* if required.
+5. Check *Let devices and apps use IMAP*. Here you can also view your IMAP and SMTP settings.
+6. Click *Save* button.
 
 !!! important
 
     The TLS encryption method may not work for IMAP, use the SSL method in this case.
-
-![Outlook configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/5.png)
 
 !!! note
 
