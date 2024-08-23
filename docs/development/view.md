@@ -19,14 +19,13 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
             super.constructor(options);
         }
 
-        // A template path, see its content.
-        // The `custom` prefix indicates that the base path is `client/custom/res/templates`.
-        // See the separate article about templates.
-        template = 'custom:test/my-custom-view'
+        // A template. See the separate article about templates.
+        // language=Handlebars
+        templateContent = `<div class="some-test-container">{{{someKeyName}}}</div>`
 
-        // Alternatively, a template content can be defined right inside the class.
-        // Use // language=Handlebars to highlight syntax in JetBrains IDEs.
-        // templateContent = `<div class="some-test-container">{{{someKeyName}}}</div>`
+        // Alternatively, a template can be defined in a separate file.
+        // The `custom` prefix indicates that the base path is `client/custom/res/templates`.        
+        //template = 'custom:test/my-custom-view'
 
         // Initializing. Called on view creation, the view is not yet rendered.
         setup() {
