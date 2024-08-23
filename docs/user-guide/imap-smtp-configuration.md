@@ -75,7 +75,7 @@ For more information, follow the [link](https://support.google.com/mail/answer/7
 ## Outlook
 
 1. Go to your *Outlook Account*.
-2. Click ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png).
+2. Open Settings ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png).
 3. On the navigation panel, select *Mail > Forwarding and IMAP*.
 4. *Sign in* if required.
 5. Check *Let devices and apps use IMAP*. Here you can also view your IMAP and SMTP settings.
