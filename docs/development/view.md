@@ -21,7 +21,13 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
 
         // A template. See the separate article about templates.
         // language=Handlebars
-        templateContent = `<div class="some-test-container">{{{someKeyName}}}</div>`
+        templateContent = `
+            <div class="some-test-container">{{{someKeyName}}}</div>            
+            <p>{{viewObject.someParam1}}</p>
+            <p>{{someParam2}}</p>
+            <p><a class="action" data-action="test">Test Action</a></p>            
+            <div class="another-test-container"></div>
+        `
 
         // Alternatively, a template can be defined in a separate file.
         // The `custom` prefix indicates that the base path is `client/custom/res/templates`.        
@@ -137,33 +143,7 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
 }
 ```
 
-Template file `client/custom/res/templates/test/my-custom-view.tpl`:
-
-```html
-<div class="some-test-container">{{{someKeyName}}}</div>
-
-<p>{{viewObject.someParam1}}</p>
-<p>{{someParam2}}</p>
-<p>
-    <a class="action" data-action="test">Test Action</a>
-</p>
-
-<div class="another-test-container"></div>
-```
-
 See more about [templates](frontend/templates.md).
-
-Note: When you extend a view that already has its *events* and you want to add more events, do it the following way:
-
-```js    
-    setup() {
-        super.setup();
-        
-        this.events['click a[data-action="test"]'] = (e) => {
-        
-        };
-    }
-```
 
 See [the source file](https://github.com/yurikuzn/bull/blob/master/src/bull.view.js) of the view class.
 
