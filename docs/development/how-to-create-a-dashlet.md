@@ -54,17 +54,17 @@ There you can find how default dashlets defined: `application/Espo/Modules/Crm/R
 Create a view file `client/custom/src/views/dashlets/my-dashlet.js`:
 
 ```js
-define('custom:views/dashlets/my-dashlet', ['views/dashlets/abstract/base'],  function (Dep) {
-    return Dep.extend({
-        name: 'MyDashlet',
-        template: 'custom:dashlets/my-dashlet',
-    })
-});
-```
+define(['views/dashlets/abstract/base'], (BaseView) => {
 
-Create a template file `client/custom/res/templates/dashlets/my-dashlet.tpl`
-```
-   <iframe src=""></iframe>
+    return class extends BaseView {
+        name = 'MyDashlet'
+
+        templateContent = `
+            <p>My Dashlet</p>
+            <iframe src=""></iframe>
+        `
+    }
+});
 ```
 
 ## Translation
