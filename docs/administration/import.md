@@ -42,11 +42,11 @@ Click the **Next** button to proceed to the _Step 2_.
 
 ## Step 2
 
-Setup the field mapping: how fields correspond to columns of a CSV file. Not mapped columns will be ignored.
+Set up the field mapping: how fields correspond to columns of a CSV file. Not mapped columns will be ignored.
 
 In the cases of *Create & Update* and *Update Only*, you need to check fields by which records that should be updated will be found. For example, if you check *update by* 'Name' field, then records with the matching Name will be updated.
 
-Add **Default Values** you want new and updated records to set with. For example, you can specify 'Assigned User' and 'Teams' that will be applied by default.
+Add **Default Values** that you want new and updated records to set with. For example, you can specify 'Assigned User' and 'Teams' that will be applied by default.
 
 After the import is done, you will be able to **revert** created records. You will be able to see which records were recognized as duplicate and which were updated. Duplicate means that there was a similar record in the system. You can remove all imported duplicates at once or remove only specific ones.
 
@@ -82,7 +82,7 @@ This will create a new import with the same parameters and field mapping.
 
 ## Importing into Target List
 
-When you import Contacts, Leads or Accounts, you can add them to some Target List. On the Step 2, you need to add the *Target List* field in the *Default Values* panel and select a needed Target List record. You can also use *Update only* or *Create & Update* import type to link existing records with a Target List.
+When you import Contacts, Leads or Accounts, you can add them to a specific Target List. On the Step 2, you need to add the *Target List* field in the *Default Values* panel and select a needed Target List record. You can also use *Update only* or *Create & Update* import type to link existing records with a specific Target List.
 
 ## Relations
 
