@@ -2,7 +2,7 @@
 
 Provides the ability to import records from CSV files.
 
-An administrator can access the Import tool at Administration > Import. By default, regular users don't have access to Import. It can granted with Roles. The administrator  can also add the *Import* tab to the navbar at Administration > User Interface > Tab List.
+An administrator can access the Import tool at Administration > Import. By default, regular users don't have access to Import but it can be granted in Roles. The administrator can also add the *Import* tab to the navbar at Administration > User Interface > Tab List.
 
 In this article:
 
