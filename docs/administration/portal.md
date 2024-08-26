@@ -21,11 +21,11 @@ Administrators can create portal users.
 3. Select Contact the Portal User will be linked with or *Proceed w/o Contact*
 4. Fill needed fields on the form and click *Save*.
 
-Portal user should be linked to Portal record to be able to access that portal.
+A Portal User should be linked to a Portal record in order to be able to access that Portal.
 
-Portal users can have one or multiple additional *Portal Roles*. These roles will be merged with roles specified for a portal.
+Portal Users can have one or multiple additional *Portal Roles*. These roles will be merged with roles specified for a Portal.
 
-Portal users can have a specific *Dashboard Layout*. It allows certain users to have a specific layout that differs from the default portal layout.
+Portal Users can have a specific *Dashboard Layout*. It allows certain users to have a specific layout that differs from the default Portal's layout.
 
 ## Portal Roles
 
