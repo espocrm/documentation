@@ -40,17 +40,17 @@ Portal roles are similar to regular roles in EspoCRM but with a few distinctions
 
 Portal roles can be applied to:
 
-* Portal ‒ all users of the portal will receive this role (multiple roles are merged);
+* Portal ‒ all users of the portal will receive this role (multiple roles applied to one Portal are merged into one);
 * Portal User ‒ to grant certain users specific permissions.
 
 ### Example
 
-*Portal users should be able to create cases, view cases related to their account; they should be able to view knowledge base.*
+*Portal Users should be able to create Cases, view Cases related to their Account; they also should be able to view Knowledge Base.*
 
 1. Open Create Portal Role form (Administration > Portal Roles > Create Role).
 2. Enable access to Cases, set: *create – yes, read – account, edit – no, delete – no, stream – account*.
 3. Enable access to Knowledge Base, set: *create – no, read – account, edit – no, delete – no*.
-4. Edit your portal record (Administration > Portals). Select your portal role in Roles field and then save.
+4. Edit the Portal record (Administration > Portals). Select your portal role in Roles field and then save.
 
 !!! note
 
@@ -58,7 +58,7 @@ Portal roles can be applied to:
 
 ## Access to Portal
 
-You can find the URL for your portal in the *URL* field of the portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access by different url. For this case, you need to fill in 'Custom URL' field.
+You can find the URL for your Portal in the *URL* field of the Portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access the Portal by a different URL. For this case, you need to fill in 'Custom URL' field.
 
 * [Apache configuration](portal/apache-configuration.md)
 * [Nginx configuration](portal/nginx-configuration.md)
