@@ -12,7 +12,7 @@ The Purchase Order has the *Supplier* field. Upon selecting a supplier, the Purc
 
 Purchase Orders can be printed to PDF and sent in an email.
 
-Multiple [Receipt Orders](receipt-orders.md) can be created from one Purchase Order. If you have created a Receipt Order that only partially covers items of a Purchase Order, the next created Receipt Order will contain only those items that are absent in the previous Receipt Order (or multiple Receipt Orders). Though you can add any extra items to the Receipt Order if you need.
+Multiple [Receipt Orders](receipt-orders.md) can be created from one Purchase Order. If you have created a Receipt Order which only partially covers items of a Purchase Order, the next created Receipt Order will contain only those items that are absent in the previous Receipt Order (or multiple Receipt Orders). Though you can add any extra items to the Receipt Order if you need.
 
 
 ## Default tax
