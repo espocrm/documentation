@@ -66,7 +66,7 @@ Permissions that need to be enabled:
 
 ![Permissions](../../_static/images/extensions/outlook-integration/setting-up/10.png)
 
-After adding the above listed API permissions, click Grant Admin Consent for (your organization).
+After adding the above listed API permissions, click Grant Admin Consent for (your organization). **Important**: It may be necessary to Grant Admin Consent again if new users are added to the Microsoft 365 tenant even if the app registration shows admin consent has been granted to the tenant. Attempting to connect a new user to the Outlook Extension in EspoCRM may result in a 403 error from Microsoft Graph, which includes a message about invalid credentials. However, the same error applies to both situations: invalid credentials and lack of admin consent.
 
 
 ## Access control
