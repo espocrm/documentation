@@ -2,7 +2,7 @@
 
 ## Entity type
 
-It's a type of data. E.g. Account, Contact, Opportunity, Task, Knowledge Base.
+An entity type is a type of data, an object. For example, Account, Contact, Opportunity, Task, Knowledge Base.
 
 Entity types are named in UpperCamelCase (start with a capital letter).
 
@@ -12,7 +12,7 @@ Entities have their fields and links.
 
 ## Field
 
-A field is a unit of data. Entities have their own set of fields. E.g. name, status, createdAt, assignedUser.
+A field is a unit of data. Entities have their own set of fields. For example, name, status, createdAt, assignedUser.
 
 Fields are named in lowerCamelCase (start with a lowercase letter).
 
@@ -24,7 +24,7 @@ The list of available field types can be found [here](fields.md).
 
 ## Attribute
 
-Most fields have only one attribute named the same as the field. E.g. the `createdAt` field has an attribute `createdAt`. Some fields have multiple attributes.
+Most fields have only one attribute named the same as the field. For example, the `createdAt` field has an attribute `createdAt`. Some fields have multiple attributes.
 
 Attributes are named in lowerCamelCase (start with a lowercase letter).
 
@@ -41,7 +41,7 @@ where *field* is the name of the field.
 
 ## Link
 
-A link represents a relationship with another entity. Entities have their set of links.
+A link represents a relationship with another entity.
 
 Links are named in lowerCamelCase (start with a lowercase letter).
 
