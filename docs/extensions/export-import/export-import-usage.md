@@ -143,9 +143,9 @@ A user password for all imported users. Example: `--user-password="PASSWORD"`.
 
 For resetting the password, use `bin/command set-password [username]`.
 
-#### `--clear-password`
+#### `--skip-password`
 
-Clear all exported / imported passwords. Example: `--clear-password"`.
+Skip exporting passwords and changing passwords for existing users. Example: `--skip-password"`.
 Use [`--user-password`](#user-password) in order to set a user password.
 
 #### `--update-currency`
@@ -190,10 +190,16 @@ Available values:
 
 ## More usage
 
-### Exporting data without passwords
+### Export: skip exporting passwords
 
 ```
-bin/command export-import export --format=json --path="./data/export-import" --clear-password
+bin/command export-import export --format=json --path="./data/export-import" --skip-password
+```
+
+### Import: keep passwords for existing users
+
+```
+bin/command export-import import --format=json --path="./data/export-import" --skip-internal-config --skip-password
 ```
 
 ### Customization only
