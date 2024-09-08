@@ -77,4 +77,4 @@ server {
 ```
 
 * Replace `path-to-espo` with the absolute path to your EspoCRM instance.
-* Replace `{PORTAL_ID}` with the ID of your Portal. The Portal record ID can be obtained from the address bar of your web browser when you open the detail view of the Portal record. For example, in *https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24*, 16b9hm41c069e6j24 is the Portal record ID.
+* Replace `{PORTAL_ID}` with the ID of your Portal. The Portal record ID can be obtained from the address bar of your web browser when you open the detail view of the Portal record. For example, in `https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24`, 16b9hm41c069e6j24 is the Portal record ID.
