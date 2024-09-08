@@ -1,8 +1,6 @@
 # Configuring Portal in Nginx
 
-It's possible to be able to access to the portal by a different URL. You need to set the Custom URL field in the portal record. For example, you can use your domain name `portal.my-company.com` to access the portal.
-
-## For EspoCRM v7
+It's possible to be able to access to the Portal by a different URL. You need to set the Custom URL field in the Portal record. For example, you can use your domain name `portal.my-company.com` to access the Portal.
 
 Config example:
 
@@ -78,90 +76,5 @@ server {
 }
 ```
 
-* Change `path-to-espo` to the absolute path of your EspoCRM instance.
-* Change `{PORTAL_ID}` to the ID of your portal. Portal record ID can be obtained from the address bar of your web browser when you open the detail view of the portal record. Like: https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24. 16b9hm41c069e6j24 is the portal record ID.
-
-## For EspoCRM v6 and older
-
-
-* Custom URL: `portal-host-name.com`
-* Portal ID: `5a8a9b9328e6a955b`
-
-#### crm.portal.conf
-```
-server {
-    listen 80;
-    listen [::]:80;
-
-    server_name portal-host-name.com; # Replace portal-host-name to your domain name
-    root /var/www/html/espocrm; # Specify your EspoCRM document root
-
-    index index.php index.html index.htm;
-
-    # SSL configuration
-    #
-    # listen 443 ssl;
-    # listen [::]:443 ssl;
-    # include snippets/snakeoil.conf;
-
-    # Specify your PHP (php-cgi or php-fpm) based on your configuration
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-
-        # With php7.3-cgi alone:
-        # fastcgi_pass 127.0.0.1:9000;
-
-        # With php7.3-fpm:
-        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
-        fastcgi_param ESPO_PORTAL_IS_CUSTOM_URL "true";
-        include snippets/fastcgi-php.conf;
-    }
-
-    # Add rewrite rules
-    location /client {
-        rewrite ^/client/(.*) /client/$1 break;
-    }
-
-    location / {
-        proxy_pass http://portal-host-name.com/portal/5a8a9b9328e6a955b/;
-    }
-
-    location /api/v1/ {
-        if (!-e $request_filename){
-            rewrite ^/api/v1/(.*)$ /api/v1/index.php last; break;
-        }
-    }
-
-    location /api/v1/portal-access {
-        if (!-e $request_filename){
-            rewrite ^/api/v1/(.*)$ /api/v1/portal-access/index.php last; break;
-        }
-    }
-
-    location /portal/ {
-        try_files $uri $uri/ /portal/index.php?$query_string;
-    }
-
-    location ^~ (data|api)/ {
-        if (-e $request_filename){
-            return 403;
-        }
-    }
-    
-    location ^~ /data/ {
-        deny all;
-    }
-    location ^~ /application/ {
-        deny all;
-    }
-    location ^~ /custom/ {
-        deny all;
-    }
-    location ^~ /vendor/ {
-        deny all;
-    }
-    location ~ /\.ht {
-        deny all;
-    }
-}
-```
+* Replace `path-to-espo` with the absolute path to your EspoCRM instance.
+* Replace `{PORTAL_ID}` with the ID of your Portal. The Portal record ID can be obtained from the address bar of your web browser when you open the detail view of the Portal record. For example, in *https://my-espocrm-url.com/#Portal/16b9hm41c069e6j24*, 16b9hm41c069e6j24 is the Portal record ID.
