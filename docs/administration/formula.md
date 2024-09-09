@@ -55,9 +55,7 @@ In this article:
 
 ## Syntax
 
-EspoCRM formula is written in a simple language designed specifically for EspoCRM.
-
-There are 6 language elements in formula script:
+There are 6 language elements in Formula script:
 
 * operators (e.g. `+`, `-`, `*`)
 * control structures (`if`, `while`)
