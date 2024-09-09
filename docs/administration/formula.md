@@ -434,11 +434,11 @@ The following comparison operators are available:
 !!! example
 
     ```
-    ifThen(
-      entity\isNew() && assignedUserId == null,
-      assignedUserId = 'managerId'; status = 'Assigned'
-    );
-
+    if (entity\isNew()) {
+        assignedUserId = null;
+        status = 'Assigned';
+    }
+    
     someDateField = ifThen(
       entity\isNew() && closeDate == null && stage == 'Closed Won',
       datetime\today()
