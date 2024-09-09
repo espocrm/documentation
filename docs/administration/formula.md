@@ -172,7 +172,7 @@ The attribute element type was introduced in the language to be able to write li
 description = 'test';
 ```
 
-If we didn't have attributes we would need to write more verbose:
+If we didn't have attributes, we would need to write more verbose:
 
 ```
 entity\setAttribute('description', 'test');
