@@ -122,9 +122,9 @@ Example for PHP:
 $signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey, true));
 ```
 
-* *webhookId* can be obtained from a response upon a webhook creation or at Administration > Webhooks;
-* *secretKey* can be obtained from a response upon a webhook creation or at Administration > Webhooks;
-* *payload* is a payload of a request
+* *webhookId* can be obtained from the response upon webhook creation or at Administration > Webhooks;
+* *secretKey* can be obtained from the response upon webhook creation or at Administration > Webhooks;
+* *payload* is a payload of the request.
 
 
 ## Config parameters
