@@ -31,17 +31,17 @@ Example for the *Amount* field of the *Opportunity*. Set *Default* value at Admi
 
 ### Currency Converted field
 
-All fields of *Currency* type are paired with a special read-only field of *Currency Converted* type. When you create a new Currency field, Converted field is created automatically. This field represents a value converted to *Default Currency* based on current currency rates. This field is used for sorting by currency field, filtering, comparison, reporting.
+All fields of *Currency* type are paired with a special read-only field of *Currency Converted* type. When you create a new Currency field, a Converted field is created automatically. This field represents a value converted to *Default Currency* based on current currency rates. This field is used for sorting by currency field, filtering, comparison, reporting. The field is read-only.
 
 !!! note
 
     When currency rates are changed, the value of Currency Converted field is also changed. Technically the value is not stored, but calculated on-fly. This can cause an issue that your reports get changed every time currency rates are changed.
 
-To store a converted value based on current rates you can:
+To preserve converted values based on current rates you can:
 
 1. Convert currency manually. With mass action from the list view or action on the detail view.
 2. Convert currency automatically with Workflows tool. Convert Currency service action is available for Opportunities, Quotes, Sales Orders, Invoices. E.g. you can setup a workflow that will update currencies for all closed opportunities each week.
-3. Utilize formula to store a current converted value in a separate read-only field. You can use either a regular Before Save Script or Workflow tool.
+3. Utilize Formula to store a current converted value in a separate read-only field. You can use either a regular Before Save Script or Workflow tool.
 
 ### Storing current converted value (locked)
 
@@ -49,18 +49,18 @@ Let's assume that you have a currency field named *amount*, and the default curr
 
 Create a new field of *Currency* type, name it *amountConvertedLocked*, make it read-only,
 
-Add a formula script to Before Save Script at Entity Manager. You can also use this formula in Workflow rule.
+Add a Formula script to Before Save Script in the Entity Manager. You can also use this formula in a Workflow rule.
 
 ```
 amountConvertedLocked = amountConverted;
 amountConvertedLockedCurrency = 'USD';
 ```
 
-You can re-calculate formula for all existing records with mass action on the list view.
+You can re-calculate formula for all existing records with a mass action from the list view.
 
 ### Convert currency manually
 
-It's possible to convert manually all currency fields of a record.
+It's possible to manually convert all currency fields of a record.
 
 1. Mass action on the list view. Select which records you want to update (you can select all results). In *Actions* dropdown, click *Convert Currency*.
 2. Action on the detail view. Available in the dropdown next to *Edit* button.
@@ -71,7 +71,7 @@ It's possible to convert manually all currency fields of a record.
 
 ## Currency rates API
 
-API User needs to have *Currency* scope enabled in roles.
+The API User needs to have *Currency* scope enabled in Roles.
 
 Request to get all rates: `GET api/v1/CurrencyRate`.
 
@@ -139,10 +139,11 @@ For existing fields, can be enabled manually in metadata > entityDefs:
     }
 }
 ```
+
 Rebuild is required after modifying an existing field. Can take long if the table is big. Run from CLI in this case.
 
 If the parameters *precision* and *scale* are not defined, values 13, 4 are used.
 
-In app, amount values will be represented as strings (rather than floats). 
+In the application, amount values will be represented as strings (rather than floats). 
 
-In templates (PDF, email), need to use the *numberFormat* helper to print currency values.
+In templates (PDF, email), you need to use the *numberFormat* helper to print currency values.
