@@ -4,7 +4,9 @@
 
 These instructions are supplementary to the [server configuration](server-configuration.md) guidelines. All configuration settings listed here are made on Windows Server 2019.
 
-**Note:** [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) must be installed on the IIS server.
+!!! note
+
+    [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) must be installed on the IIS server.
 
 To сonfigure IIS server for EspoCRM, do the following steps.
 
