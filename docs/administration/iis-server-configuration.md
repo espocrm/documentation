@@ -4,6 +4,8 @@
 
 These instructions are supplementary to the [server configuration](server-configuration.md) guidelines. All configuration settings listed here are made on Windows Server 2019.
 
+**Note:** [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) must be installed on the IIS server.
+
 To сonfigure IIS server for EspoCRM, do the following steps.
 
 ## Step 1. Physical Path adjusting
@@ -71,5 +73,15 @@ To сonfigure IIS server for EspoCRM, do the following steps.
 3.3. Locate the *"PHP_via_FastCGI"* section, add all HTTP methods modifying `verb="GET,HEAD,POST"` value to `verb="GET,HEAD,POST,PUT,DELETE,PATCH"`.
 
 3.4. Save the *ApplicationHost.config* file.
+
+## Step 4. Permissions
+
+4.1. Open your EspoCRM instance directory, right-click on it > *Properties* > *Security* > *Edit*.
+
+4.2. For user names **IIS_IUSRS**, check all available boxes in the *Allow* column.
+
+![Permissions](../_static/images/administration/iis/permissions.png)
+
+4.3. Click on *Apply* and *OK*.
 
 **Reboot your IIS server after all the steps are done.**
