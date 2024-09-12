@@ -75,6 +75,7 @@ In this article:
   * [popupNotifications](metadata/app-popup-notifications.md)
   * [portalContainerServices](metadata/app-portal-container-services.md)
   * [rebuild](metadata/app-rebuild.md)
+  * [record](metadata/app-record.md)
   * [recordId](metadata/app-record-id.md)
   * [regExpPatterns](metadata/app-reg-exp-patterns.md)
   * [relationships](metadata/app-relationships.md)
