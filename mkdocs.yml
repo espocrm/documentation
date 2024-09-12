@@ -270,6 +270,7 @@ nav:
               - 'popupNotifications': 'development/metadata/app-popup-notifications.md'
               - 'portalContainerServices': 'development/metadata/app-portal-container-services.md'
               - 'rebuild': 'development/metadata/app-rebuild.md'
+              - 'record': 'development/metadata/app-record.md'
               - 'recordId': 'development/metadata/app-record-id.md'
               - 'regExpPatterns': 'development/metadata/app-reg-exp-patterns.md'
               - 'relationships': 'development/metadata/app-relationships.md'
