@@ -186,6 +186,33 @@ Available values:
 * `a string`, e.g. `"database"`,
 * `a string which is separated by a comma`, e.g. `"database, siteUrl"`.
 
+#### `--entity-import-type-create`
+
+This option allows to define a custom `create` import type for specified entity types. Example: `--entity-import-type-create="ENTITY_TYPE"`.
+
+Available values:
+
+* `a string`, e.g. `"User"`,
+* `a string which is separated by a comma`, e.g. `"Account, Contact"`.
+
+#### `--entity-import-type-update`
+
+This option allows to define a custom `update` import type for specified entity types. Example: `--entity-import-type-update="ENTITY_TYPE"`.
+
+Available values:
+
+* `a string`, e.g. `"User"`,
+* `a string which is separated by a comma`, e.g. `"Account, Contact"`.
+
+#### `--entity-import-type-create-and-update`
+
+This option allows to define a custom `createAndUpdate` import type for specified entity types. Example: `--entity-import-type-create-and-update="ENTITY_TYPE"`.
+
+Available values:
+
+* `a string`, e.g. `"User"`,
+* `a string which is separated by a comma`, e.g. `"Account, Contact"`.
+
 ## More usage
 
 ### Export: skip exporting passwords
