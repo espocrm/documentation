@@ -328,6 +328,8 @@ Available placeholders:
 * *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}` (see [info](formula.md#attribute) about attributes);
 * *{$$variable}* – a value of a variable (available only in BPM process); e.g. `{$$myVariableName}`.
 
+Additionally, in headers, App Secrets can be added with a placeholder *{#secrets.name}*  (as of v3.4.7).
+
 #### Handling HTTP response
 
 A response body of a sent HTTP request will be available in formula with a function `workflow\lastHttpResponseBody()`. It can be accessed in a following Workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
