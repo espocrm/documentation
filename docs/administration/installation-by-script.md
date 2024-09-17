@@ -206,7 +206,7 @@ sudo /var/www/espocrm/command.sh restore "BACKUP_ARCHIVE"
 
 An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2024-01-01_142051.tar.gz"`.
 
-#### Troubleshooting
+#### Restore troubleshooting
 
 In order to fix the `Error response from daemon: network external not found`, run:
 
@@ -582,6 +582,10 @@ sudo ./command.sh apply-domain
 Note: You have to clear your browser cache for this change to take effect.
 
 ## Installer migration from v1 to v2
+
+!!! note
+
+    If your MySQL container is not running or restarting, check the [Troubleshooting](#troubleshooting) section.
 
 1\. Export the MySQL database from the corresponding Docker container:
 
