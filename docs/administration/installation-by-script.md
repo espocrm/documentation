@@ -652,3 +652,37 @@ sudo /var/www/espocrm/command.sh rebuild
 ```
 
 10\. Log in to your instance and check if everything is working well.
+
+## Troubleshooting
+
+If after upgrading the EspoCRM instance with the [upgrade](#espocrm-upgrade) command you get error 500 in your instance and there is nothing in the logs that could be related to this error, one of the reasons could be a MySQL version upgrade (upgrades automatically). 
+
+!!! warning
+
+    Make sure that your instance is using MySQL database and not MariaDB one. If it is MariaDB, then the error solution will not work for you in case of using MariaDB database.
+
+To solve this problem and gain access to the instance, follow these steps:
+
+1\. Stop the services:
+
+```
+sudo /var/www/espocrm/command.sh stop
+```
+
+2\. In */var/www/espocrm/docker-compose.yaml* file, remove the following line:
+
+```
+command: --default-authentication-plugin=mysql_native_password
+```
+
+3\. Insert the following line in the same place and save changes:
+
+```
+command: --mysql-native-password=ON
+```
+
+4\. Build and start the services:
+
+```
+sudo /var/www/espocrm/command.sh build
+```
