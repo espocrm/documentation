@@ -586,7 +586,7 @@ Note: You have to clear your browser cache for this change to take effect.
 1\. Export the MySQL database from the corresponding Docker container:
 
 ```
-mkdir -p /var/www/backup
+sudo mkdir -p /var/www/backup
 cd /var/www/backup
 sudo docker exec -i espocrm-mysql /usr/bin/mysqldump -uroot -pYOUR_ROOT_PASSWORD espocrm > db.sql
 ```
@@ -598,13 +598,14 @@ Notes:
 2\. Copy `data` and `custom` folders from *espocrm* directory:
 
 ```
-cp -a /var/www/espocrm/data/espocrm/data /var/www/backup/data
-cp -a /var/www/espocrm/data/espocrm/custom /var/www/backup/custom
+sudo cp -a /var/www/espocrm/data/espocrm/data /var/www/backup/data
+sudo cp -a /var/www/espocrm/data/espocrm/custom /var/www/backup/custom
 ```
 
 3\. Install a fresh EspoCRM by a script:
 
 ```
+cd ~
 wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --db-root-password=YOUR_ROOT_PASSWORD --db-password=YOUR_ESPOCRM_DB_PASSWORD --admin-password=YOUR_ADMIN_PASSWORD --clean
 ```
@@ -614,26 +615,40 @@ Notes:
 - Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
 - Replace the YOUR_ESPOCRM_DB_PASSWORD with your MySQL espocrm user password.
 - Replace the YOUR_ADMIN_PASSWORD with your EspoCRM admin user password.
-
-4\. Replace `data` and `custom` folders in the */var/www/espocrm/data/espocrm* directory with the previously exported ones.
+  
+4\. Stop the services:
 
 ```
-cp -a /var/www/backup/data /var/www/espocrm/data/espocrm/data
-cp -a /var/www/backup/custom /var/www/espocrm/data/espocrm/custom
+sudo /var/www/espocrm/command.sh stop
 ```
 
-5\. Replace `'host' => 'espocrm-mysql'` line with `'host' => 'espocrm-db'` one in the */var/www/espocrm/data/espocrm/config-internal.php* file.
+5\. Replace `data` and `custom` folders in the */var/www/espocrm/data/espocrm* directory with the previously exported ones.
 
-6\. Import previously exported database to MariaDB container:
+```
+sudo rm -rf /var/www/espocrm/data/espocrm/data
+sudo rm -rf /var/www/espocrm/data/espocrm/custom
+sudo cp -a /var/www/backup/data /var/www/espocrm/data/espocrm
+sudo cp -a /var/www/backup/custom /var/www/espocrm/data/espocrm
+```
+
+6\. Replace `'host' => 'espocrm-mysql'` line with `'host' => 'espocrm-db'` one in the */var/www/espocrm/data/espocrm/data/config-internal.php* file.
+
+7\. Start the services:
+
+```
+sudo /var/www/espocrm/command.sh start
+```
+
+8\. Import previously exported database to MariaDB container:
 
 ```
 sudo /var/www/espocrm/command.sh import-sql /var/www/backup/db.sql
 ```
 
-7\. Make a rebuild:
+9\. Make a rebuild:
 
 ```
 sudo /var/www/espocrm/command.sh rebuild
 ```
 
-8\. Log in to your instance and check if everything is working well.
+10\. Log in to your instance and check if everything is working well.
