@@ -208,7 +208,11 @@ Unlinks two records.
 
 `record\create(ENTITY_TYPE, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
 
-Creates a new record of entity type with attributes specified as key-value pairs. Returns id of the created record, or NULL if failure.
+or
+
+`record\create(ENTITY_TYPE, OBJECT)` (as of v8.5)
+
+Creates a new record of entity type with attributes specified as key-value pairs or in an object. Returns id of the created record, or NULL if failure.
 
 !!! example
 
@@ -218,7 +222,11 @@ Creates a new record of entity type with attributes specified as key-value pairs
 
 `record\update(ENTITY_TYPE, ID, ATTRIBUTE1, VALUE1, [ATTRIBUTE2, VALUE2 ...])`
 
-Updates an existing record with attributes specified as key-value pairs.
+or
+
+`record\update(ENTITY_TYPE, ID, OBJECT)` (as of v8.5)
+
+Updates an existing record with attributes specified as key-value pairs or an object.
 
 !!! example
 
