@@ -496,6 +496,12 @@ A field to be used as a name of a foreign record. Needed when a foreign entity t
 
 Linking and unlinking will be logged in the Stream.
 
+### readOnly
+
+*boolean*
+
+Read-only links cannot be edited via link and unlink requests. But they can be edited via the link-multiple field.
+
 ### layoutRelationshipsDisabled
 
 *boolean*
