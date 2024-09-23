@@ -10,6 +10,9 @@ Multiple assigned users can be enabled for custom entity types and for some buil
 
     Existing assigned users set in the *Assigned User* field won't be transferred to the new *Assigned Users* field after enabling multiple assigned users.
 
+
+The maximun number of assigned users allowed per record can configured set at: Administration > Entity Manager > {Entity Type} > Fields > Assigned Users > Max Count. By default, it's set to 10.
+
 ## The old way, prior v8.5
 
 !!! important
