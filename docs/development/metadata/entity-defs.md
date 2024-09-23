@@ -500,7 +500,7 @@ Linking and unlinking will be logged in the Stream.
 
 *boolean*
 
-Read-only links cannot be edited via link and unlink requests. But they can be edited via the link-multiple field.
+Read-only links cannot be edited via link and unlink requests. Not possible to relate or unrelate records via the relationship panel. Read-only links can still be edited via the link and link-multiple fields.
 
 ### layoutRelationshipsDisabled
 
