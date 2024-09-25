@@ -56,7 +56,7 @@ An administrator can configure the *Attachments* field at Administration > Entit
 
 ### Quote reply
 
-As of v8.5.*
+*As of v8.5.*
 
 By clicking 'Quote Reply' on a stream post, it will paste quoted contents into the text field. If a part of a post is selected, only the selected part will be quoted.
 
