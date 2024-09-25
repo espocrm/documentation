@@ -54,6 +54,12 @@ An administrator can configure the *Attachments* field at Administration > Entit
 * Max file size;
 * Accept – which file types to accept.
 
+### Quote reply
+
+As of v8.5.*
+
+By clicking 'Quote Reply' on a stream post, it will paste quoted contents into the text field. If a part of a post is selected, only the selected part will be quoted.
+
 ## Posts to users
 
 Users can create posts to certain Users, to certain Teams, to all Users and to self. Access for this feature is controlled by the *Message Permission* in Roles.
