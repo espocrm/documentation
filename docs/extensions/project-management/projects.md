@@ -26,7 +26,7 @@ A Project has Activities and History panels. Meetings, Calls, and Emails can be 
 
 ## Boards
 
-A Project Board defines board Columns for a Project. The *Board* field is mandatory in a Project. It can be assigned only when you create a Project. Multiple Projects can use the same Project Board.
+A Project Board defines board Columns for a Project. The *Board* field is mandatory in a Project. It can be set only when you create a Project. Multiple Projects can use the same Project Board.
 
 Each Column is mapped to a specific Status value. Multiple Columns can be mapped to the same status. For example, the *In Progress* and *Review* columns are mapped to the status *Started*.
 
