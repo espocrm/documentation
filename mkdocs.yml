@@ -175,6 +175,8 @@ nav:
               - 'Receipt Orders': 'extensions/sales-pack/receipt-orders.md'
               - 'Suppliers': 'extensions/sales-pack/suppliers.md'
             - 'Inventory Management': 'extensions/sales-pack/inventory-management.md'
+        - 'Project Management':
+            - 'Projects': 'extensions/project-management/projects.md'
         - 'Google Integration':
             - 'Setting-up': 'extensions/google-integration/setting-up.md'
             - 'Calendar': 'extensions/google-integration/calendar.md'
