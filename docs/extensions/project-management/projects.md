@@ -40,7 +40,7 @@ Available statuses:
 
 A Task in a Project is usually assigned to a specific Column. When a Column is changed, the Task's status is automatically changed to a mapped status.
 
-The *Default* Project Board is available out of the box. You can create new Project Boards. When you create a Project Board, default Columns are automatically added. You can rename Columns or add new ones.
+The *Default* Project Board is available out of the box. You can create new Project Boards. When you create a Project Board, default Columns are automatically added. You can rename the Columns or add new ones.
 
 ## Access control
 
