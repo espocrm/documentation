@@ -1,6 +1,6 @@
 # Projects
 
-The Projects functionality is available in the Project Management extension.
+The Projects functionality is available in the [Project Management](https://www.espocrm.com/extensions/project-management/) extension.
 
 In this arcticle:
 
