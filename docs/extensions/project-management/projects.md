@@ -203,4 +203,6 @@ If you select two Tasks, you can manage their dependency:
 
 The order in which you select two tasks determines the direction of the dependency.
 
+When creating a task or milestone while another task is selected, it will create a dependent task in the same group right after the selected task.
+
 The Gantt view can be disabled for a specific project in its Settings.
