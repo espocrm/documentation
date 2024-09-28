@@ -211,7 +211,7 @@ If you select two Tasks, you can manage their dependency:
 * remove an existing dependency;
 * change the type of an existing dependency.
 
-The order in which you select two tasks determines the direction of the dependency.
+The order in which you select two tasks determines the direction of the dependency. You can also click on a dependency path to select two tasks which this path connects.
 
 When creating a task or milestone while another task is selected, it will create a dependent task in the same group right after the selected task.
 
