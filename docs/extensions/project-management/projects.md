@@ -215,4 +215,6 @@ The order in which you select two tasks determines the direction of the dependen
 
 When creating a task or milestone while another task is selected, it will create a dependent task in the same group right after the selected task.
 
+If the default [Working Time Calendar](../../user-guide/working-time-calendar.md) is set in the system, non-working days will be highlighted with a darker background.
+
 The Gantt view can be disabled for a specific project in its Settings.
