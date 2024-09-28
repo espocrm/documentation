@@ -139,6 +139,16 @@ The Assignee of a Task is a User who is responsible for performing the Task. A T
 
 A Task can have a Date Start and Date End. Both are non-mandatory fields.
 
+### Points
+
+Is meant to represent the relative complexity of the Task, amount of work needed to complete the Task.
+
+Note that if the team won't use Points, the administrator can hide the field in the Entity Manager.
+
+### Hours
+
+May represent how many hours is required to complete the Task.
+
 ### Sub-tasks
 
 A Task can have sub-tasks. A task that has sub-tasks can be completed only when all sub-tasks are completed or canceled.
