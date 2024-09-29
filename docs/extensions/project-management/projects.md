@@ -203,6 +203,8 @@ The Gantt view visualizes the timeline of a project. It shows:
 * milestones;
 * tasks dependencies.
 
+![Gantt view](../../_static/images/extensions/project-management/gantt.png)
+
 You can drag Tasks to change their timeline and resize to change their duration. By holding the CTRL/⌘ key, you can select multiple Tasks and drag them together.
 
 If you select two Tasks, you can manage their dependency:
