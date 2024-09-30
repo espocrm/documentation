@@ -12,7 +12,7 @@ In this article, both Office 365 and Outlook.com will be referred to as *Outlook
 
 Assuming that the administrator has already set up the integration.
 
-Create a Personal or Group Email Account. Specify IMAP and SMTP parameters for Outlook (IMAP host: `outlook.office365.com` or `imap-mail.outlook.com`; SMTP host: `smtp.office365.com`). Leave the *Password* fields empty for both IMAP and SMTP. Then, save the record.
+Create a Personal or Group Email Account. The the you create, specify IMAP and SMTP parameters for Outlook. IMAP host: `outlook.office365.com` or `imap-mail.outlook.com`;  SMTP host: `smtp.office365.com`. Leave the *Password* fields empty for both IMAP and SMTP. Then, save the record.
 
 After that, the *Outlook* panel should appear on the right. You need to click *Connect* button. A popup will show up asking for a user consent.
 
