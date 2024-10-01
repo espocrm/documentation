@@ -24,6 +24,8 @@ Each Project has a Stream. It can be used to post information or attach files. P
 
 A Project has Activities and History panels. Meetings, Calls, and Emails can be related to a Project.
 
+A Project can be cloned along with its Groups and Tasks. Optionally, it's possible to include: Members, Task Owners, Task Assignees and Attachments. The Date Start should be set in the source Project. When cloning, the user needs to set a new Date Start for the Project. Dates of cloned Tasks will be calculated based on the difference between the source and cloned Projects.
+
 ## Boards
 
 A Project Board defines board Columns for a Project. The *Board* field is mandatory in a Project. It can be set only when you create a Project. Multiple Projects can use the same Project Board.
