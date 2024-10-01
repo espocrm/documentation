@@ -41,7 +41,9 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you connected successfully, but *Outlook Calendar* checkbox didn't show up, that means that the administrator did not grant you access to *Outlook Calendar* scope.
+!!! important
+
+    If you connected successfully, but *Outlook Calendar* checkbox didn't show up, that means that the administrator did not grant you access to *Outlook Calendar* scope.
 
 Check *Outlook Calendar* checkbox and configure sync parameters.
 
