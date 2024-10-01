@@ -1,6 +1,8 @@
 # Google Integration. Contacts
 
-**Note**: Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
+!!! note
+
+    Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
 
 Features:
 
@@ -10,7 +12,7 @@ Features:
 
 ## Setting-up for users
 
-Assuming, that the administrator has already set up the integration.
+Assuming that the administrator has already set up the integration.
 
 Go to your user detail view (the menu on the very top-right corner > click on your user name). Then, click *External Account* button.
 
@@ -24,7 +26,9 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you connected successfully, but *Google Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Google Contacts* scope.
+!!! important
+
+    If you connected successfully, but *Google Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Google Contacts* scope.
 
 Check *Google Calendar* checkbox. You can select *Google Contacts Groups*, to which EspoCRM records will be pushed.
 
