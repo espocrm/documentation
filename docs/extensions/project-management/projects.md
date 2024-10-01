@@ -26,7 +26,7 @@ A Project has Activities and History panels. Meetings, Calls, and Emails can be 
 
 ### Cloning
 
-A Project can be cloned along with its Groups and Tasks. Optionally, it's possible to include: 
+A Project can be cloned along with its Groups and Tasks. Optionally, it's possible to also include: 
 
 * Members
 * Task Owners
@@ -35,7 +35,7 @@ A Project can be cloned along with its Groups and Tasks. Optionally, it's possib
 
 The Date Start should be set in the source Project. When cloning, the user needs to set a new Date Start for the Project. Dates of cloned Tasks will be calculated based on the difference between the source and cloned Projects.
 
-To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project.
+To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project. To clone a Project, open the detail view and click the *Clone* action from the dropdown next to the *Edit* button.
 
 If you clone a Project and then decide to remove it, it won't be possible until you remove all related Tasks.
 
