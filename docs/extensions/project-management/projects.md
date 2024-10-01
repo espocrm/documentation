@@ -13,6 +13,7 @@ In this arcticle:
 * [Plan view](#plan-view)
 * [Board view](#board-view)
 * [Gantt view](#gantt-view)
+* [Project cloning](#project-cloning)
 
 ## Projects
 
@@ -23,21 +24,6 @@ A project owner can manage the project team by adding or removing members (Users
 Each Project has a Stream. It can be used to post information or attach files. Project updates are automatically posted in the Stream.
 
 A Project has Activities and History panels. Meetings, Calls, and Emails can be related to a Project.
-
-### Cloning
-
-A Project can be cloned along with its Groups and Tasks. Optionally, it's possible to also include: 
-
-* Members
-* Task Owners
-* Task Assignees
-* Attachments
-
-The Date Start should be set in the source Project. When cloning, the user needs to set a new Date Start for the Project. Dates of cloned Tasks will be calculated based on the difference between the source and cloned Projects.
-
-To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project. To clone a Project, open the detail view and click the *Clone* action from the dropdown next to the *Edit* button.
-
-If you clone a Project and then decide to remove it, it won't be possible until you remove all related Tasks.
 
 ## Boards
 
@@ -235,3 +221,18 @@ When creating a task or milestone while another task is selected, it will create
 If the default [Working Time Calendar](../../user-guide/working-time-calendar.md) is set in the system, non-working days will be highlighted with a darker background.
 
 The Gantt view can be disabled for a specific project in its Settings.
+
+## Project cloning
+
+A Project can be cloned along with its Groups and Tasks. Optionally, it's possible to also include: 
+
+* Members
+* Task Owners
+* Task Assignees
+* Attachments
+
+The Date Start should be set in the source Project. When cloning, the user needs to set a new Date Start for the Project. Dates of cloned Tasks will be calculated based on the difference between the source and cloned Projects.
+
+To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project. To clone a Project, open the detail view and click the *Clone* action from the dropdown next to the *Edit* button.
+
+If you clone a Project and then decide to remove it, it won't be possible until you remove all related Tasks.
