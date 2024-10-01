@@ -37,6 +37,8 @@ The Date Start should be set in the source Project. When cloning, the user needs
 
 To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project.
 
+If you clone a Project and then decide to remove it, it won't be possible until you remove all related Tasks.
+
 ## Boards
 
 A Project Board defines board Columns for a Project. The *Board* field is mandatory in a Project. It can be set only when you create a Project. Multiple Projects can use the same Project Board.
