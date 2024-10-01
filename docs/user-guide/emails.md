@@ -104,7 +104,7 @@ It's possible to use an **external email client** (the default one on your compu
 
 ## Email Folders
 
-Users can create their personal email folders to put some emails in for convenience. To create or edit folders follow: the Emails list view > dropdown in the top-right corner > Folders. `Skip Notification` means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters, it's possible to put emails in folders automatically by specific criteria.
+Users can create their Personal Email Folders to put some emails in for convenience. To create or edit folders, follow: the Emails list view > dropdown in the top-right corner > Folders. *Skip Notification* means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters, it's possible to put emails in folders automatically by specific criteria.
 
 !!! note
 
@@ -114,7 +114,7 @@ Users can create their personal email folders to put some emails in for convenie
 
 *As of v7.3.*
 
-Group email folders are shared for teams. Admin can create group email folders and specify which teams have access to a particular folder.
+Group Email Folders are shared for teams. Admin can create group email folders and specify which teams have access to a particular folder.
 
 If an email is moved from a group folder to a personal folder or the Inbox, it will unlink the email from that group folder. If a user moves an email from a group folder to the Trash or Archive, the email won't be unlinked from the group folder, meaning that other users will still see that email in the group folder.
 
@@ -126,26 +126,28 @@ The field-level-security (in Roles) can be used to restrict the ability to chang
 
 ## Email Filters
 
-Administrator can create global email filters to skip not desirable emails. They are available at Administration > Email Filters.
+Administrator can create global Email Filters to skip not desirable emails. They are available at Administration > Email Filters.
 
-Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails > dropdown in top-right corner > Filters.
+Regular user can create Email Filters for their Personal Email Accounts or for their entire inbox. They are available at: Emails > dropdown in top-right corner > Filters.
 
 There are two types of filters:
 
-* Skip – email will be put in *Trash* or not imported if filter is related to Personal Email Account;
-* Put in Folder – imported emails will be put into specified user's folder automatically.
+* Skip – email will be put in *Trash* or not imported if the filter is related to a Personal Email Account;
+* Put in Folder – imported emails will be put into a specified user's folder automatically.
 
 ## Email Templates
 
-Email templates are available at Emails > dropdown in top-right corner > Email Templates. They can be used both for mass email sending and for regular emails. `One-off` checkbox means that email template supposed to be used only once, what is usual for email marketing.
+Email Templates are available at: Emails > dropdown in top-right corner > Email Templates. They can be used both for Mass Email sending and for regular emails. *One-off* checkbox means that the email template is supposed to be used only once, what is usual for email marketing.
 
 It's possible to use placeholders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of a Parent record.
 
-You can use additional reserved placeholders in template body: `{optOutUrl}` and `{optOutLink}`.
+You can use additional reserved placeholders in the template body: `{optOutUrl}` and `{optOutLink}`.
+
 ```
 <a href="{optOutUrl}">Unsubscribe</a>
 ```
-This is unsubscribe link for mass email.
+
+This is an unsubscribe link for Mass Email.
 
 The list of available additional placeholders:
 
@@ -158,7 +160,7 @@ The list of available additional placeholders:
 
 ### Handlebars support
 
-Email templates also support the Handlebars templating engine. It's the same template system used for [PDF templates](printing-to-pdf.md#templates) with double-brace placeholders, like `{{name}}`.
+Email Templates also support the Handlebars templating engine. It's the same template system used for [PDF templates](printing-to-pdf.md#templates) with double-brace placeholders, like `{{name}}`.
 
 The Handlebars engine is only applied when an Email has a non-empty *Parent* field.
 
