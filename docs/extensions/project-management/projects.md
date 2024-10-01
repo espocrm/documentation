@@ -24,7 +24,18 @@ Each Project has a Stream. It can be used to post information or attach files. P
 
 A Project has Activities and History panels. Meetings, Calls, and Emails can be related to a Project.
 
-A Project can be cloned along with its Groups and Tasks. Optionally, it's possible to include: Members, Task Owners, Task Assignees and Attachments. The Date Start should be set in the source Project. When cloning, the user needs to set a new Date Start for the Project. Dates of cloned Tasks will be calculated based on the difference between the source and cloned Projects.
+### Cloning
+
+A Project can be cloned along with its Groups and Tasks. Optionally, it's possible to include: 
+
+* Members
+* Task Owners
+* Task Assignees
+* Attachments
+
+The Date Start should be set in the source Project. When cloning, the user needs to set a new Date Start for the Project. Dates of cloned Tasks will be calculated based on the difference between the source and cloned Projects.
+
+To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project.
 
 ## Boards
 
