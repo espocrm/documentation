@@ -65,23 +65,23 @@ For connecting your Gmail account (IMAP and SMTP) you have two options:
 ## Working with emails
 
 Emails are fetched by cron (in the background) every few minutes (period can specified by Administrator).
-You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.
+You can see all your emails at Emails tab. There are the following default folders: Inbox, Sent, Draft, Archive and Trash.
 
 *Status* field:
 
-* *Sent* – was sent via CRM
-* *Archived* – fetched from IMAP account or archived manually
-* *Draft* – email was created as a draft
+* *Sent* – was sent via CRM;
+* *Imported* – fetched from IMAP account or archived manually;
+* *Draft* – email was created as a draft.
 
-When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn't recognized, then user can link it manually by filling in *Parent* field.
+When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunityo, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
 
-If an email came from a new potential client, user can **convert** it **to Lead** (from the top-right menu).
+If an email came from a new potential client, the user can **convert** it **to Lead** (from the top-right menu).
 
 It's possible to **create a Task or Case** from an email record (from the top-right menu).
 
-If email addresses (from, to, cc) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User etc). If some email address is new, you can **create contact** right from there.
+If email addresses (From, To, CC) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User, etc.). If some email address is new, you can **create contact** right from there.
 
-All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.
+All emails related to specific record are shown in the History panel of that record. If some email is related, for example, to an opportunity but the opportunity is related to an account, it will be shown both in the opportunity and the account.
 
 When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. Administrator may not grant *delete* access for users to prevent losing emails.
 
@@ -104,7 +104,7 @@ It's possible to use an **external email client** (the default one on your compu
 
 ## Email Folders
 
-Users can create their personal email folders to put some emails in for convenience. To create or edit folders follow: the Emails list view > dropdown in the top-right corner > Folders. `Skip Notification` means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters it's possible to put emails in folders automatically by specific criteria.
+Users can create their personal email folders to put some emails in for convenience. To create or edit folders follow: the Emails list view > dropdown in the top-right corner > Folders. `Skip Notification` means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters, it's possible to put emails in folders automatically by specific criteria.
 
 !!! note
 
