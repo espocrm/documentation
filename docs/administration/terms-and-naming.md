@@ -45,7 +45,7 @@ A link represents a relationship with another entity.
 
 Links are named in lowerCamelCase (start with a lowercase letter).
 
-**The list of available links** for a specific entity type can be obtained at: Administration > Entity Manager > needed entity type > Links > 4th column.
+**The list of available links** for a specific entity type can be obtained at: Administration > Entity Manager > {Entity Type} > Relationships.
 
 Each relationship between two entity types is a pair of two links on both sides.
 
