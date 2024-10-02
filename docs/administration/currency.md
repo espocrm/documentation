@@ -40,8 +40,8 @@ All fields of *Currency* type are paired with a special read-only field of *Curr
 To preserve converted values based on current rates you can:
 
 1. Convert currency manually. With mass action from the list view or action on the detail view.
-2. Convert currency automatically with Workflows tool. Convert Currency service action is available for Opportunities, Quotes, Sales Orders, Invoices. E.g. you can setup a workflow that will update currencies for all closed opportunities each week.
-3. Utilize Formula to store a current converted value in a separate read-only field. You can use either a regular Before Save Script or Workflow tool.
+2. Convert currency automatically with the Workflows tool. Convert Currency service action is available for Opportunities, Quotes, Sales Orders, Invoices. E.g. you can setup a workflow that will update currencies for all closed opportunities each week.
+3. Utilize Formula to store a current converted value in a separate read-only field. You can use either a regular Before Save Script or the Workflow tool.
 
 ### Storing current converted value (locked)
 
@@ -49,7 +49,7 @@ Let's assume that you have a currency field named *amount*, and the default curr
 
 Create a new field of *Currency* type, name it *amountConvertedLocked*, make it read-only,
 
-Add a Formula script to Before Save Script in the Entity Manager. You can also use this formula in a Workflow rule.
+Add a Formula script to *Before Save Script* in the Entity Manager. You can also use this formula in a Workflow rule.
 
 ```
 amountConvertedLocked = amountConverted;
