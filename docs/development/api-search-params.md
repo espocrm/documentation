@@ -278,6 +278,15 @@ For link-multiple fields. Whether is linked or not linked with any record.
     "attribute": "someDateField"
 }
 ```
+Please note: Some of these parameters are intended for Date fields. If applied to DateTime fields, the time portion (HH:mm:ss) will automatically be set to 00:00:00 (i.e., midnight).
+
+```json
+{
+    "type": "today",
+    "attribute": "createdAt"
+}
+```
+Since `createdAt` is a `DateTime` field, this condition will only return the entities created today at midnight.
 
 ### lastXDays, nextXDays, olderThanXDays, afterXDays, 
 
