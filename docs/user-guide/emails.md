@@ -17,7 +17,7 @@ In this article:
 
 ## IMAP accounts
 
-*(Email receiving)*
+*The section concerns email receiving.*
 
 !!! note
 
@@ -37,7 +37,7 @@ For regular users, access to Personal Email Accounts must be allowed in Roles.
 
 ## SMTP accounts
 
-*(Email sending)*
+*The section concerns email sending.*
 
 Users can set SMTP settings in their Personal Email Accounts. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts. 
 
