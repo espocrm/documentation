@@ -29,16 +29,16 @@ Portal Users can have a specific *Dashboard Layout*. It allows certain users to 
 
 ## Portal Roles
 
-Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
+Portal Roles are similar to regular Roles in EspoCRM but with a few distinctions.
 
 * not-set ‒ Denies access.
 * own ‒ Records created by the user. E.g. a portal user created some case and this case is owned by this user.
 * account ‒ Records related to the account the portal user is related to. Relation (link) should be named `account` or `accounts`.
 * contact ‒ Records related to the contact the portal user is related to. Relation (link) should be named `contact` or `contacts`.
 
-*Assigned User* and *Teams* fields are read-only for portal users.
+The *Assigned User* and *Teams* fields are read-only for portal users.
 
-Portal roles can be applied to:
+Portal Roles can be applied to:
 
 * Portal ‒ all users of the portal will receive this role (multiple roles applied to one Portal are merged into one);
 * Portal User ‒ to grant certain users specific permissions.
@@ -47,7 +47,7 @@ Portal roles can be applied to:
 
 *Portal Users should be able to create Cases, view Cases related to their Account; they also should be able to view Knowledge Base.*
 
-1. Open Create Portal Role form (Administration > Portal Roles > Create Role).
+1. Open the *Create Portal Role* form (Administration > Portal Roles > Create Role).
 2. Enable access to Cases, set: *create – yes, read – account, edit – no, delete – no, stream – account*.
 3. Enable access to Knowledge Base, set: *create – no, read – account, edit – no, delete – no*.
 4. Edit the Portal record (Administration > Portals). Select your portal role in Roles field and then save.
