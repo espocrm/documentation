@@ -1,6 +1,6 @@
 # Guidelines on using emails
 
-EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.
+EspoCRM provides the ability to fetch emails from IMAP mailboxes. This makes possible to use EspoCRM as an email client along with the CRM-specific features.
 
 In this article:
 
@@ -23,31 +23,27 @@ In this article:
 
     You need to have [cron](../administration/server-configuration.md#setting-up-crontab) properly configured in your system to have inbound emails working.
 
-User can setup IMAP account on Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+A regular user can setup an IMAP account on the Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
-Specify what folders to monitor in *Monitored Folders* field. By default it's set to INBOX. 
+Specify what folders to monitor in *Monitored Folders* field. By default, it's set to INBOX. 
 
-If you use an **external email client** for sending emails, you can add *Sent* folder to monitored ones. Emails sent from the external client will be imported to Espo. Note, that your external client needs to be configured to store sent emails on IMAP server.
+If you use an **external email client** for email sending, you can add *Sent* folder to monitored ones. Emails sent from the external client will be imported to Espo. Note that your external client needs to be configured to store sent emails on the IMAP server.
 
 *Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
 
-There is an ability to specify *Folder* in Personal Email Account. Incoming emails will be put in that folder.
+There is the ability to specify *Folder* in a Personal Email Account. Incoming emails will be put in that Email Folder folder. Note that Emails Folders are personal for users.
 
-!!! note
-
-    For regular users, access to personal email accounts must be allowed in Roles.
+For regular users, access to Personal Email Accounts must be allowed in Roles.
 
 ## SMTP accounts
 
 *(Email sending)*
 
-Users can setup SMTP settings in their Personal Email Accounts. Personal email accounts available at Emails tab > top-right menu > Personal Email Accounts. 
+Users can set SMTP settings in their Personal Email Accounts. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts. 
 
-!!! note
+For regular users, access to Personal Email Accounts must be allowed in Roles.
 
-    For regular users, access to personal email accounts must be allowed in Roles.
-
-Administrator also can allow to use the main system SMTP account as well as Group Email Accounts (mark as Shared).
+An administrator can also allow to use the main system SMTP account as well as Group Email Accounts (needs to mark as Shared).
 
 Users can have multiple SMTP accounts.
 
@@ -57,17 +53,26 @@ Users can have multiple SMTP accounts.
 
 ## Gmail accounts
 
-For connecting your Gmail account (IMAP and SMTP) you have two options:
+To connect your Gmail account (IMAP and SMTP) you have two options:
 
 1. Enable access for less secure application at your Google account settings.
 2. Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
 
 ## Working with emails
 
-Emails are fetched by cron (in the background) every few minutes (period can specified by Administrator).
-You can see all your emails at Emails tab. There are the following default folders: Inbox, Sent, Draft, Archive and Trash.
+Emails are fetched by Cron (in the background) every few minutes (period can specified by the administrator).
+You can see all your emails on the page accessed through the *Emails* tab.
 
-*Status* field:
+There are the following default folders available:
+
+* All – all emails in the system the user has access to; the user can see even emails of other users here (if Roles allow);
+* Inbox – incoming emails sent to the user are automatically placed here;
+* Sent – emails sent by the user;
+* Draft – emails composed by the user but not yet sent; 
+* Archive – inbox emails that the user exclicitly moved to the Archice;
+* Trash – inbox emails that the user exclicitly moved to the Trash.
+
+The Email's *Status* field has the following values:
 
 * *Sent* – was sent via CRM;
 * *Imported* – fetched from IMAP account or archived manually;
