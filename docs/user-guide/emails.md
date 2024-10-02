@@ -109,7 +109,7 @@ It's possible to use an **external email client** (the default one on your compu
 
 ## Email Folders
 
-Users can create their Personal Email Folders to put some emails in for convenience. To create or edit folders, follow: the Emails list view > dropdown in the top-right corner > Folders. *Skip Notification* means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters, it's possible to put emails in folders automatically by specific criteria.
+Users can create their personal Email Folders to put some emails in for convenience. To create or edit folders, follow: the Emails list view > dropdown in the top-right corner > Folders. *Skip Notification* means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters, it's possible to put emails in folders automatically by specific criteria.
 
 !!! note
 
