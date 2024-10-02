@@ -61,7 +61,8 @@ To connect your Gmail account (IMAP and SMTP) you have two options:
 ## Working with emails
 
 Emails are fetched by Cron (in the background) every few minutes (period can specified by the administrator).
-You can see all your emails on the page accessed through the *Emails* tab.
+
+A user can see emails on the page accessed through the *Emails* tab.
 
 There are the following default folders available:
 
@@ -71,6 +72,8 @@ There are the following default folders available:
 * Draft – emails composed by the user but not yet sent; 
 * Archive – inbox emails that the user exclicitly moved to the Archice;
 * Trash – inbox emails that the user exclicitly moved to the Trash.
+
+Additionally, there are also user's Email Folders and Group Email Folders listed.
 
 The Email's *Status* field has the following values:
 
@@ -91,6 +94,16 @@ All emails related to specific record are shown in the History panel of that rec
 When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. Administrator may not grant *delete* access for users to prevent losing emails.
 
 On the list view it's possible to **drag & drop** emails into folders by dragging by a subject link (as of v7.3).
+
+### Inbox
+
+Emails related to a user through the *Users* relationship are referred as their Inbox emails. Only Inbox emails can be moved to Archive, Trash or a personal Email Folder by a user. Only Inbox emails can be marked as read, not read or important by a user.
+
+!!! important
+
+    The same Email record can be located in the Inbox of multiple users.
+
+The administrator can view and manage users an email is related to by clicking *View Users* action from the dropdown next to the *Edit* button.
 
 ## Sending emails
 
