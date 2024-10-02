@@ -26,6 +26,8 @@ Each product record can belong to some product category. Product Categories are 
 
 The Product Category is a separate entity type, hence the access to it is controlled by Roles.
 
+![Categories](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/categories.png)
+
 ## Variants
 
 *As of Sales Pack v2.0.*
