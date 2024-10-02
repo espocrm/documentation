@@ -8,11 +8,11 @@ The *Product* entity type is available for customization in the Entity Manager. 
 
 A product record has three price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*.
 
-![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
-
 Product fields can be printed in a PDF. More detail [here](quotes.md#templates).
 
 Products can be added as line items in an Opportunity. By default, this feature is disabled. The Administrator needs to add the *Items* panel at Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
+
+![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
 
 In this article:
 
