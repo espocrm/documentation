@@ -2,7 +2,7 @@
 
 The Products feature is available in the [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
 
-![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
+![Products list view](../_static/images/user-guide/products/products.png){width="614"}
 
 Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, Purchase Orders.
 
@@ -26,7 +26,7 @@ Each product record can belong to some product category. Product Categories are 
 
 The Product Category is a separate entity type, hence the access to it is controlled by Roles.
 
-![Categories](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/categories.png)
+![Categories](../_static/images/user-guide/products/categories.png)
 
 ## Variants
 
