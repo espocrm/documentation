@@ -180,8 +180,6 @@ A specific color can be assigned to a Group.
 
 When a new Task is added to a Group, it is placed either at the top or the bottom depending on the parameter Group's parameter *New Task Placement*.
 
-It's possible to reorder groups on the Plan view.
-
 ## Plan view
 
 Here, you can see Tasks in Groups. You can add new Groups, remove Groups, and reorder Groups. Here, you can also create, edit, and remove Tasks.
