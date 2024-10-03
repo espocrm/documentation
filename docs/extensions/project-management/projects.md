@@ -25,6 +25,8 @@ Each Project has a Stream. It can be used to post information or attach files. P
 
 A Project has Activities and History panels. Meetings, Calls, and Emails can be related to a Project.
 
+![Project](../../_static/images/extensions/project-management/project.png)
+
 ## Boards
 
 A Project Board defines board Columns for a Project. The *Board* field is mandatory in a Project. It can be set only when you create a Project. Multiple Projects can use the same Project Board.
