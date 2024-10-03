@@ -1,6 +1,6 @@
 # Products
 
-The Products feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
+The Products feature is available in the [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
 
 ![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
 
