@@ -25,7 +25,7 @@ Each Project has a Stream. It can be used to post information or attach files. P
 
 A Project has Activities and History panels. Meetings, Calls, and Emails can be related to a Project.
 
-![Project](../../_static/images/extensions/project-management/project.png)
+![Project](../../_static/images/extensions/project-management/project.png){width="594"}
 
 ## Boards
 
