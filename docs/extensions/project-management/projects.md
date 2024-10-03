@@ -172,6 +172,8 @@ A milestone is a significant point in a project's timeline that marks the comple
 
 A Project has a unique set of Groups. A project Owner or Editor can manage Groups of the Project: add, remove, and edit.
 
+To add a new Group to the Project, open the *Plan* view, click *Create Group* from the dropdown next to the *Edit* button. To reorder existing groups, click *Reorder Groups* from the same dropdown, then use dragging to reorder listed groups.
+
 Tasks are ordered within their Group. It's possible to reorder Tasks and move Tasks from one Group to another.
 
 A specific color can be assigned to a Group.
