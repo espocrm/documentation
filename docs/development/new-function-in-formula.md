@@ -19,7 +19,7 @@ class MyContains implements Func
     public function process(EvaluatedArgumentList $arguments): mixed
     {
         if (count($arguments) < 2) {
-            throw TooFewArguments::create(1);
+            throw TooFewArguments::create(2);
         }
 
         $haystack = $arguments[0];
