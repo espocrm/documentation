@@ -188,6 +188,8 @@ By using drag-and-drop, it's possible to reorder Tasks within a Group or move Ta
 
 To reorder Groups, click *Reorder Groups* from the dropdown menu, use drag-and-drop, and then apply changes.
 
+![Plan](../../_static/images/extensions/project-management/plan.png)
+
 ## Board view
 
 On the Board view, tasks are visualized as sticky notes. This tool is also known as a Kanban board.
