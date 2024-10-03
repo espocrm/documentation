@@ -198,6 +198,8 @@ Columns of the board are defined by the Project Board assigned to the Project.
 
 The Board view displays tasks from only one Group at a time. You can switch between Groups to view tasks from different ones.
 
+![Board](../../_static/images/extensions/project-management/board.png)
+
 ## Gantt view
 
 The Gantt view visualizes the timeline of a project. It shows:
@@ -206,7 +208,7 @@ The Gantt view visualizes the timeline of a project. It shows:
 * milestones;
 * tasks dependencies.
 
-![Gantt view](../../_static/images/extensions/project-management/gantt.png)
+![Gantt](../../_static/images/extensions/project-management/gantt.png)
 
 You can drag Tasks to change their timeline and resize to change their duration. By holding the CTRL/⌘ key, you can select multiple Tasks and drag them together.
 
