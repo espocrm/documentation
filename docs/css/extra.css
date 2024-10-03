@@ -8,6 +8,13 @@
     border-style: none;
 }
 
+.md-typeset > p > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 label.md-nav__link:not(.md-nav__container):focus,
 label.md-nav__link:not(.md-nav__container):hover {
     color: var(--md-typeset-color);
