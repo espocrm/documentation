@@ -2,6 +2,8 @@
 
 The Products feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
+![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
+
 Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, Purchase Orders.
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
@@ -11,8 +13,6 @@ A product record has three price fields: *Cost*, *List* and *Unit*. There is the
 Product fields can be printed in a PDF. More detail [here](quotes.md#templates).
 
 Products can be added as line items in an Opportunity. By default, this feature is disabled. The Administrator needs to add the *Items* panel at Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
-
-![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
 
 In this article:
 
