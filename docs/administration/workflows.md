@@ -155,7 +155,7 @@ Formula provides the ability to define conditions of any complexity. To read abo
 * [Make Followed](#make-followed)
 * [Trigger another Workflow](#trigger-another-workflow)
 * [Run Service Action](#run-service-action)
-* [Start BPM Process](#start-BPM-process)
+* [Start BPM Process](#start-bpm-process)
 * [Send HTTP Request](#send-http-request)
 * [Execute Formula Script](#execute-formula-script)
 
