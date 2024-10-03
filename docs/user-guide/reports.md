@@ -49,7 +49,7 @@ The example of list report results:
 
 ![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/list.png)
 
-Additional features where list reports can be utilized:
+Where list reports can be also utilized:
 
 * Scheduled workflows – to do some scheduled actions over records that met criteria specified by a list report.
 * Scheduled BPM processes – to start BPM processes for records that met some criteria.
