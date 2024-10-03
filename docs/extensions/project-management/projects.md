@@ -226,7 +226,7 @@ When creating a task or milestone while another task is selected, it will create
 
 If the default [Working Time Calendar](../../user-guide/working-time-calendar.md) is set in the system, non-working days will be highlighted with a darker background.
 
-The Gantt view can be disabled for a specific project in its Settings.
+The Gantt view can be disabled for a specific Project in its Settings.
 
 ## Project cloning
 
