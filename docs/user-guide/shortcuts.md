@@ -56,3 +56,4 @@
 * `Ctrl + Backspace` – move selected emails to Archive (as of v8.3);
 * `Ctrl + I` – mark selected emails as Important or Not Important;
 * `Ctrl + M` – move selected emails to a specific folder;
+* `Ctrl + Q` – mark all emails as read; mark selected emails as read (as of v8.5);
