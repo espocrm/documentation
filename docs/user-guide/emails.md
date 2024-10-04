@@ -29,7 +29,7 @@ Specify what folders to monitor in *Monitored Folders* field. By default, it's s
 
 If you use an **external email client** for email sending, you can add *Sent* folder to monitored ones. Emails sent from the external client will be imported to Espo. Note that your external client needs to be configured to store sent emails on the IMAP server.
 
-*Fetch Since* allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.
+*Fetch Since* allows you to choose the date emails should be imported from. Set it to some date prior today if you need to archive old emails.
 
 There is the ability to specify *Folder* in a Personal Email Account. Incoming emails will be put in that Email Folder folder. Note that Emails Folders are personal for users.
 
@@ -78,7 +78,7 @@ Additionally, there are also user's Email Folders and Group Email Folders listed
 The Email's *Status* field has the following values:
 
 * *Sent* – was sent via CRM;
-* *Imported* – fetched from IMAP account or archived manually;
+* *Imported* – fetched from IMAP account or imported manually;
 * *Draft* – email was created as a draft.
 
 When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunityo, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
@@ -188,7 +188,7 @@ It's possible to manually import specific emails. For example, if a customer sen
 
 The are two ways of importing emails:
 
-* Archive – create an email manually by specifying all fields on a form;
+* Archive Email – create an email manually by specifying all fields on a form;
 * Import EML (as of v8.4).
 
 The ability to import emails requires a user to have access to the Import scope (set in Roles).
