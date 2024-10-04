@@ -34,9 +34,9 @@ The Product Category is a separate entity type, hence the access to it is contro
 
 ### Product Attributes
 
-Before being able to create Products with variants, you need to create some Product Attributes. Product Attributes are available at: Products > the top-right menu > Product Attributes.
+Before being able to create products with variants, you need to create some Product Attributes. Product attributes are available at: Products > the top-right menu > Product Attributes.
 
-Every Product Attribute is supposed to have a specific set of options. Add needed options on the Product Attribute detail view.
+Every product attribute is supposed to have a specific set of options. Add needed options on the Product Attribute detail view.
 
 Examples of attributes with their options:
 
@@ -47,7 +47,7 @@ Examples of attributes with their options:
 
 A Template Product serves as a root for variants. Product variants inherit properties of its template, some properties can be overridden in variants.
 
-To create a Product with variants you need to create a Template Product. Click **Create Product** from the **Products** page, select *Template* **Type**. Then, in the **Template** tab, add needed attributes. For every attribute, select options needed options. Then **Save** the Product.
+To create a product with variants you need to create a template product. Click **Create Product** from the **Products** page, select *Template* **Type**. Then, in the **Template** tab, add needed attributes. For every attribute, select options needed options. Then **Save** the Product.
 
 After that, you need to generate variants. From the template product detail view, open the **Variants** tab in the bottom, click **Generate**. It will generate all possible combinations according to attributes and options of the product template.
 
