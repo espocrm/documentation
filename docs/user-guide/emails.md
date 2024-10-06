@@ -1,6 +1,6 @@
 # Guidelines on using emails
 
-EspoCRM provides the ability to fetch emails from IMAP mailboxes. This makes possible to use EspoCRM as an email client along with the CRM-specific features.
+EspoCRM is designed to be able to work with emails right from within the system without the necessity to use an email client separately. Though users may still opt to use an email client and have both sent and received emails synced to Espo.
 
 In this article:
 
