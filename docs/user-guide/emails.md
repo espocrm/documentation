@@ -180,7 +180,7 @@ The list of available additional placeholders:
 
 Email Templates also support the Handlebars templating engine. It's the same template system used for [PDF templates](printing-to-pdf.md#templates) with double-brace placeholders, like `{{name}}`.
 
-The Handlebars engine is only applied when an Email has a non-empty *Parent* field.
+The Handlebars engine is only applied when an Email has a non-empty *Parent* field. The regular email template placeholder values are not available for Handlebars helpers.
 
 ## Manual import
 
