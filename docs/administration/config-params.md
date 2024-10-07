@@ -66,6 +66,7 @@ The list of parameters along with their default values. This is not a full list 
 * adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (as of v7.0);
 * activitiesCreateButtonMaxCount – `3` – a max number of create buttons to display on the Activities page (as of v7.2);
 * listViewSettingsDisabled – `false` – disable list view settings (as of v8.1);
+* tabQuickSearch – `true` – tab quick search in the navbar (as of v8.5);
 
 ### Access control
 
