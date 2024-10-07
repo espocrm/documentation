@@ -134,7 +134,7 @@ Users can create their personal Email Folders to put some emails in for convenie
 
 Group Email Folders are shared for teams. Admin can create group email folders and specify which teams have access to a particular folder.
 
-If an email is moved from a group folder to a personal folder or the Inbox, it will unlink the email from that group folder. If a user moves an email from a group folder to the Trash or Archive, the email won't be unlinked from the group folder, meaning that other users will still see that email in the group folder.
+If an email is moved from a group folder to a personal folder or the Inbox, it will unlink the email from that group folder.
 
 There's the ability to automatically put inbound emails imported through a group email account to a specific group folder. It's also possible to move emails matching an email filter to a specific group folder (the filter should be related to a group email account).
 
