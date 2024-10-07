@@ -55,7 +55,7 @@ Create [full-text search](../user-guide/text-search.md#full-text-search) indexes
 
 You can use a [preloading](https://www.php.net/manual/en/opcache.preloading.php). The file `preload.php` is available at the root directory.
 
-Using preloading is not likely to bring a significant performance boost. The database usually is a bottleneck in applications like CRM.
+Using preloading is not likely to bring a significant performance boost. The database usually is the bottleneck in applications like CRM.
 
 !!! important
 
