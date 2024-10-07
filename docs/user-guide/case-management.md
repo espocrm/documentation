@@ -11,9 +11,7 @@ In this article:
 
 ## Overview
 
-Cases provide the issue tracking ability. It's a principal aspect of customer service in EspoCRM. 'Ticket' term also can be used for cases.
-
-The Case entity can be associated with one Account and/or with multiple Contacts.
+Cases provide the issue tracking ability. It's a principal aspect of customer service in EspoCRM. The term 'ticket' can also be used for cases.
 
 New cases are supposed to be created by the following scenarios:
 
@@ -23,13 +21,15 @@ New cases are supposed to be created by the following scenarios:
 * Automatically when a new email came to a specific mailbox
 * Automatically by a Workflow rule
 
-When the new case is created by a portal user it's not assigned to any user. By utilizing [Workflows](../administration/workflows.md) administrator can create rule that will notify certain users about a new case in the system. Workflows also provide an ability to apply assignment rule to new cases, i.e. *Round-Robin* and *Least-Busy* rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
+When the new Case is created by a Portal User, it's not assigned to any user. By utilizing the [Workflows](../administration/workflows.md) tool, an administrator can create a rule that will notify certain users about a new Case in the system. Workflows also provide the ability to apply assignment rule to new cases. *Round-Robin* and *Least-Busy* rules are available. For more complex business flows it's recommended to utilize the [BPM tool](../administration/bpm.md).
 
-To prevent overlooking of new cases, users can add Case entity type to the *Global Auto-follow* list at Preferences. Then they will automatically follow every new case.
+To prevent overlooking of new cases, users can add the Case entity type to the *Global Auto-follow* list in the user's Preferences. Then the user will automatically follow every new case.
 
 !!! note
 
     If there is no portal user associated with a linked contact, then the customer won't receive email notifications about updates in the Stream. You need to use emails for communication with the customer.
+
+The Case entity type can be associated with one Account and/or with multiple Contacts. It also can be associated with a Lead record. Note that by default the Lead field is not available on the Detail layout. An administrator can add it at: Administration > Entity Manager > Case > Layouts > Detail.
 
 ## Stream
 
@@ -39,21 +39,21 @@ CRM users can make *internal posts* that won't be visible in a customer portal. 
 
 ## Email-to-Case
 
-Administrator can set up Group Email Account that will create a new case on each new inbound email. For more information [see here](../administration/emails.md).
+An administrator can set up a Group Email Account that will create a new Case on each new incoming email. For more information [see here](../administration/emails.md).
 
-Users can create a case from an email manually. On the email detail view click the dropdown in the top-right corner, then *Create Case*.
+Users can create Cases from Email manually. On the Email detail view, click the dropdown in the top-right corner, then *Create Case*.
 
-When a user want to send a reply to the customer, they need to make sure that the case is selected as a *Parent* of the email that is being sent. It will add the group email address to *Reply-To* field of the email. So the customer's reply will be sent to the group address rather than to the user’s one.
+When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a *Parent* of the Email that is being composed. It will add the group email address to the *Reply-To* field of the email. So the customer's reply will be sent to the group address rather than to the user’s one.
 
 ## Knowledge Base
 
-Users can relate knowledge base articles to the case record. See more info about knowledge base [here](knowledge-base.md).
+Users can relate Knowledge Base Articles to a Case record. See more info about knowledge base [here](knowledge-base.md).
 
 ## Customer Portal
 
-Administrator can create a [portal](../administration/portal.md) where customers will be able to create cases. Permission to create cases can be granted in a portal role.
+An administrator can create a [Portal](../administration/portal.md) where customers will be able to create Cases. Permission to create cases can be granted in a Portal Role.
 
-Since portal users automatically follow cases they created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's possible to make replies to go to Group Email Account. For this you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with a Group Email Account (use Update Target Record action, set *Group Email Account* field). 
+Since Portal Users automatically follow Cases they have created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's also possible to make email replies to go to a Group Email Account. For this, you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with a Group Email Account (use rgw Update Target Record action, set *Group Email Account* field). 
 
 ## See also
 
