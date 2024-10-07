@@ -112,7 +112,6 @@ The list of parameters along with their default values. This is not a full list 
 * cleanupNotificationsPeriod – `'2 months'` – notifications;
 * cleanupAttachmentsPeriod – `'15 days'` – attachments with roles 'Export File', 'Mail Merge', 'Mass Pdf';
 * cleanupOrphanAttachments – `false` – cleaning up attachments that were uploaded but not linked with any record; *cleanupAttachmentsPeriod* is used; an experimental parameter;
-* cleanupAttachmentsFromPeriod – `'3 months'` – attachments related to records that were marked as deleted (*deleted = 1*);
 * cleanupBackupPeriod – `'2 months'` – backup of files created during upgrades;
 * cleanupDeletedRecordsPeriod – `'3 months'` – complete deletion of records that were marked as deleted (*deleted = 1*);
 * cleanupSubscribers – `true` – cleaning up stream subscribers for not-actual records (as of v7.3);
