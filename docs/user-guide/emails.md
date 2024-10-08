@@ -111,20 +111,20 @@ Email folders in Espo are not connected with IMAP folders, there's no two-way sy
 
 ## Sending emails
 
-You can compose new email by a few ways:
+You can compose a new email in a few ways:
 
-* *Compose Email* button on Emails list view;
+* using the *Compose Email* button on the Emails list view;
 * replying on another email;
 * clicking on an email address of some record;
-* *Compose Email* action of Activities panel.
+* using the *Compose Email* action from the Activities panel on the detail view of a particular record.
 
-There is the ability to **select template** of your email.
+There is the ability to select a template for an email you compose.
 
-You can setup **email signature** in Preferences.
+You can set up the email signature in the Preferences. This signature will be used for all emails you compose.
 
-It's possible to use an **external email client** (the default one on your computer or device). For this check *Use an external email client* in Preferences.
+It's possible to use an **external email client**: the default one on your computer or device. For this, check *Use an external email client* in the Preferences.
 
-## Email Folders
+## Email folders
 
 Users can create their personal Email Folders to put some emails in for convenience. To create or edit folders, follow: the Emails list view > dropdown in the top-right corner > Folders. *Skip Notification* means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters, it's possible to put emails in folders automatically by specific criteria.
 
@@ -132,7 +132,7 @@ Users can create their personal Email Folders to put some emails in for convenie
 
     Email folders in EspoCRM have nothing to do with IMAP folders.
 
-## Group Email Folders
+## Group email folders
 
 *As of v7.3.*
 
@@ -146,7 +146,7 @@ Users that have access to a group folder can put there any email (only read leve
 
 The field-level-security (in Roles) can be used to restrict the ability to change (edit) the group folder.
 
-## Email Filters
+## Email filters
 
 Administrator can create global Email Filters to skip not desirable emails. They are available at Administration > Email Filters.
 
@@ -157,19 +157,19 @@ There are two types of filters:
 * Skip – email will be put in *Trash* or not imported if the filter is related to a Personal Email Account;
 * Put in Folder – imported emails will be put into a specified user's folder automatically.
 
-## Email Templates
+## Email templates
 
 Email Templates are available at: Emails > dropdown in top-right corner > Email Templates. They can be used both for Mass Email sending and for regular emails. *One-off* checkbox means that the email template is supposed to be used only once, what is usual for email marketing.
 
-It's possible to use placeholders in email template's body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of a Parent record.
+It's possible to use placeholders in an email template's body and subject, for example, {Account.name}, {Person.emailAddress}. They will be replaced with values of a Parent record.
 
-You can use additional reserved placeholders in the template body: `{optOutUrl}` and `{optOutLink}`.
+You can use additional reserved placeholders in the template body: `{optOutUrl}` and `{optOutLink}`. Available additional placeholders are listed in a side panel when you compose an email template.
+
+An example of an unsubscribe link for Mass Email:
 
 ```
 <a href="{optOutUrl}">Unsubscribe</a>
 ```
-
-This is an unsubscribe link for Mass Email.
 
 The list of available additional placeholders:
 
