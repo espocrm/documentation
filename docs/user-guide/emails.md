@@ -99,7 +99,7 @@ The administrator can view and manage users an email is related to by clicking *
 
 ### Concept
 
-Espo does not work exactly like a regular personal email client. Espo is a central place where emails from multiple email accounts of multiple people are gathered.
+Espo does not work exactly like a regular personal email client. Espo is a central place where emails from multiple email accounts are gathered.
 
 The same email record can appear in the inboxes of multiple users, for example, when they were both recipients of the email.
 
