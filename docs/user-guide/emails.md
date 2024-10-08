@@ -48,7 +48,7 @@ Users can have multiple SMTP accounts.
 
 !!! important
 
-    Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
+    Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only the admin can define user's email addresses (by default).
 
 ## Working with emails
 
@@ -124,7 +124,7 @@ Users can create their personal Email Folders to put some emails in for convenie
 
 *As of v7.3.*
 
-Group Email Folders are shared for teams. Admin can create group email folders and specify which teams have access to a particular folder.
+Group Email Folders are shared for teams. An administrator can create group email folders and specify which teams have access to a particular folder.
 
 If an email is moved from a group folder to a personal folder or the Inbox, it will unlink the email from that group folder.
 
