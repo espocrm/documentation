@@ -83,13 +83,13 @@ The Email's *Status* field has the following values:
 
 When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunityo, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
 
-If an email came from a new potential client, the user can **convert** it **to Lead** (from the top-right menu).
+If an email came from a new potential client, the user can convert it to a Lead (from the top-right menu).
 
-It's possible to **create a Task or Case** from an email record (from the top-right menu).
+It's possible to create a Task or Case from an email record (from the top-right menu).
 
-If email addresses (From, To, CC) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User, etc.). If some email address is new, you can **create contact** right from there.
+If email addresses (From, To, CC) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User, etc.). If some email address is new, you can create a Contact right from there.
 
-All emails related to specific record are shown in the History panel of that record. If some email is related, for example, to an opportunity but the opportunity is related to an account, it will be shown both in the opportunity and the account.
+All emails related to a specific record are shown in the History panel of that record. If some email is related, for example, to an opportunity but the opportunity is related to an account, it will be shown both in the opportunity and the account.
 
 When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. Administrator may not grant *delete* access for users to prevent losing emails.
 
