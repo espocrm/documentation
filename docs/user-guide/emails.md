@@ -101,7 +101,9 @@ The administrator can view and manage users an email is related to by clicking *
 
 Espo does not work exactly like a regular personal email client. Espo is a central place where emails from multiple email accounts of multiple people are gathered.
 
-The same email record can appear in the inboxes of multiple users, for example, when they were both recipients of the email. A user with high privileges can see an email even if it was not addressed to them. This allows the monitoring of subordinates' communication within the organization. 
+The same email record can appear in the inboxes of multiple users, for example, when they were both recipients of the email. A user with high privileges can see an email even if it was not addressed to them. This allows the monitoring of subordinates' communication within the organization.
+
+When then the same email is imported from multiple email accounts, only one email record will be stored in Espo. Emails are recognized as duplicates by their *Message-ID*.
 
 Email folders in Espo are not connected with IMAP folders, there's no two-way sync between them by design.
 
