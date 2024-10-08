@@ -6,7 +6,6 @@ In this article:
 
 * [IMAP accounts](#imap-accounts)
 * [SMTP accounts](#smtp-accounts)
-* [Gmail accounts](#gmail-accounts)
 * [Working with emails](#working-with-emails)
 * [Sending emails](#sending-emails)
 * [Email folders](#email-folders)
@@ -50,13 +49,6 @@ Users can have multiple SMTP accounts.
 !!! important
 
     Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only admin can define user's email addresses (by default).
-
-## Gmail accounts
-
-To connect your Gmail account (IMAP and SMTP) you have two options:
-
-1. Enable access for less secure application at your Google account settings.
-2. Use [Google Integration](https://www.espocrm.com/extensions/google-integration/) that provides a secure authentication via Oauth2.
 
 ## Working with emails
 
