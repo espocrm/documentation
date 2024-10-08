@@ -97,6 +97,14 @@ Emails related to a user through the *Users* relationship are referred as their 
 
 The administrator can view and manage users an email is related to by clicking *View Users* action from the dropdown next to the *Edit* button.
 
+### Concept
+
+Espo does not work exactly like a regular personal email client. Espo is a central place where emails from multiple email accounts of multiple people are gathered.
+
+The same email record can appear in the inboxes of multiple users, for example, when they were both recipients of the email. A user with high privileges can see an email even if it was not addressed to them. This allows the monitoring of subordinates' communication within the organization. 
+
+Email folders in Espo are not connected with IMAP folders, there's no two-way sync between them by design.
+
 ## Sending emails
 
 You can compose new email by a few ways:
