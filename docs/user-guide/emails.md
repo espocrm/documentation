@@ -105,7 +105,7 @@ The same email record can appear in the inboxes of multiple users, for example, 
 
 A user with high privileges can see an email even if it was not addressed to them. This allows the monitoring of subordinates' communication within the organization.
 
-When then the same email is imported from multiple email accounts, only one email record will be stored in Espo. Emails are recognized as duplicates by their *Message-ID*.
+When the same email is imported from multiple email accounts, only one email record will be stored in Espo. Emails are recognized as duplicates by their *Message-ID*.
 
 Email folders in Espo are not connected with IMAP folders, there's no two-way sync between them by design.
 
