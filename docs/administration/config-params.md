@@ -116,6 +116,8 @@ The list of parameters along with their default values. This is not a full list 
 * cleanupDeletedRecordsPeriod – `'2 months'` – complete deletion of records that were marked as deleted (*deleted = 1*);
 * cleanupSubscribers – `true` – cleaning up stream subscribers for not-actual records (as of v7.3);
 * cleanupSubscribersPeriod – `'2 months'` – period for cleaning up subscribers for not-actual records (as of v7.3);
+* cleanupAudit – `true` – to perform cleanup of the audit log;
+* cleanupAuditPeriod – `3 month` – how long audit log records stay before cleanup;
 
 ### Passwords
 
