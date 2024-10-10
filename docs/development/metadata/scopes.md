@@ -226,6 +226,14 @@ Disable the ability to order items for users.
 
 Whether the entity may contain personal data.
 
+## preserveAuditLog
+
+*boolean*
+
+*As of v8.5.*
+
+Disables audit log cleanup. 
+
 ## exportFormatList
 
 *string[]*
