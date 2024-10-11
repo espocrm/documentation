@@ -86,3 +86,8 @@ some text
 ___
 ```
 
+## Image
+
+```
+![alt text](https://domain/file.png)
+```
