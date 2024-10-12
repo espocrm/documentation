@@ -20,7 +20,9 @@ An Email record can be assigned to a particular user. By default, the Assigned U
 
 Access to imported emails is controlled by Roles. It means that if a particular email was imported from a mailbox of some user, other users will be able to see that email if they have access to that email.
 
-By default, users don't have access to any emails. If a user has a *read* access level set to *own*, they will be able to see emails where their email address is either in the *From*, *To* or *CC* fields.
+If a user has a *read* access level set to *own*, they will be able to see emails that are related to them through the the Users or Assigned Users relationship. Note than an email is automatically gets related with a user if the user's email address is either in the *From*, *To* or *CC*.
+
+email address 
 
 There are 4 access levels: No, Own, Team, All.
 
