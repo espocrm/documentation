@@ -107,7 +107,8 @@ Parameters:
 * Number of rows of textarea – a max number of rows before scroll bar appears (for the edit view mode);
 * Cut Height (px) – a max height of a text, if longer, then it will be cut (for the detail view mode);
 * Display raw text (no markdown) – to disable markdown support;
-* Preview – the ability to preview a Markdown text.
+* Preview – the ability to preview a Markdown text;
+* Attachment Field – an Attachment-Multiple field to connect the Text field with.
 
 ![Text](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/text.png)
 
