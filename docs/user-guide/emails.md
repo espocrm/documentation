@@ -69,9 +69,9 @@ Additionally, there are also user's Email Folders and Group Email Folders listed
 
 The Email's *Status* field has the following values:
 
-* *Sent* – was sent via CRM;
-* *Imported* – fetched from IMAP account or imported manually;
-* *Draft* – email was created as a draft.
+* *Sent* – sent by means of the CRM;
+* *Imported* – fetched from an IMAP account or imported manually;
+* *Draft* – created as a draft and not yet sent.
 
 When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunityo, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
 
