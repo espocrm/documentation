@@ -89,5 +89,11 @@ ___
 ## Image
 
 ```
-![alt text](https://domain/file.png)
+![Alt text](https://domain/file.png)
+```
+
+Using an uploaded attachment:
+
+```
+![Alt text](?entryPoint=image&id=00000000)
 ```
