@@ -7,6 +7,7 @@ In this article:
 * [Email-to-Case](#email-to-case)
 * [Knowledge Base](#knowledge-base)
 * [Customer Portal](#customer-portal)
+* [Access to child records](#access-to-child-records)
 
 
 ## Overview
@@ -53,7 +54,13 @@ Users can relate Knowledge Base Articles to a Case record. See more info about k
 
 An administrator can create a [Portal](../administration/portal.md) where customers will be able to create Cases. Permission to create cases can be granted in a Portal Role.
 
-Since Portal Users automatically follow Cases they have created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's also possible to make email replies to go to a Group Email Account. For this, you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with a Group Email Account (use rgw Update Target Record action, set *Group Email Account* field). 
+Since Portal Users automatically follow Cases they have created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's also possible to make email replies to go to a Group Email Account. For this, you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with a Group Email Account (use rgw Update Target Record action, set *Group Email Account* field).
+
+## Access to child records
+
+User access to child records of a Case, such as Emails, Meetings and Calls, is not determined by access to the Case record. For example, a Case can be assigned to a User but a related Email is not related to that User resulting in the User not being able to view the Email.
+
+By utilizing the Workflow tool, it's possible to write a rule that will automatically add the Assigned User of a Case to all child records. The same is also possible with the Teams fields.
 
 ## See also
 
