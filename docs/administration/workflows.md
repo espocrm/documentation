@@ -201,7 +201,7 @@ It's possible to define **formula** to calculate field values. You can utilize *
 
     Formula within this an *Update Target Record* action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function *entity\addLinkMultipleId*. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
+For Link-Multiple, Array, Multi-Enum and Checklist fields it's possible to add or remove items without loosing set items. For example, adding a specific Team while preserving existing Teams.
 
 There is the ability to **delete** the record with the following formula code: `deleted = true`;
 
