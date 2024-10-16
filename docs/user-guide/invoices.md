@@ -19,6 +19,7 @@ In the article:
 * [Default tax](#default-tax)
 * [Copying values from product to invoice item](#copying-values-from-product-to-invoice-item)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
+* [Locking](#locking)
 * [E-Invoicing](#e-invoicing)
 
 ## Converting from Opportunity, Quote or Sales Order
@@ -123,6 +124,12 @@ The EN 16931 standard requires countries to be represented as ISO 3166-1 alpha-2
 Note that it's possible to automatically populate country records with English names.
 
 Example: If you run business from Germany, your customer is also in Germany and you use the word *Germany* when storing the country in Espo, you need to create a *Germany* Addess Country record with a *DE* code.
+
+## Locking
+
+An Invoice can locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure which exactly fields at: Administration > Entity Manager > Invoice > Edit.
+
+If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.
 
 ## See also
 
