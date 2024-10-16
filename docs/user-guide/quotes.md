@@ -172,7 +172,7 @@ You can select which fields you need to be copied at Administration > Entity Man
 
 A Quote can locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure which exactly fields at: Administration > Entity Manager > Quote > Edit.
 
-If the settings parameter *Forbid order unlocking* is checked, once a Quote is locked, it can be unlocked only by an administrator.
+If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.
 
 ## Automation with Workflows or BPM
 
