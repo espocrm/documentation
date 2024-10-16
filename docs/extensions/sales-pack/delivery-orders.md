@@ -22,3 +22,9 @@ It's possible to lock a Delivery Order. Locking disables the ability to change t
 Access to Delivery Orders is controlled by Roles.
 
 It's possible to print a Delivery Order to PDF and send the PDF in an email.
+
+## Locking
+
+A Delivery Order can locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure which exactly fields at: Administration > Entity Manager > Delivery Order > Edit.
+
+If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.
