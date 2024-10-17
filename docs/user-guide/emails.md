@@ -83,7 +83,7 @@ If email addresses (From, To, CC) of the email record are known to the system, i
 
 All emails related to a specific record are shown in the History panel of that record. If some email is related, for example, to an opportunity but the opportunity is related to an account, it will be shown both in the opportunity and the account.
 
-When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. Administrator may not grant *delete* access for users to prevent losing emails.
+When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. An administrator may not grant *delete* access for users to prevent losing emails.
 
 On the list view it's possible to **drag & drop** emails into folders by dragging by a subject link (as of v7.3).
 
@@ -95,7 +95,9 @@ Emails related to a user through the *Users* relationship are referred as their 
 
     The same Email record can be located in the Inbox of multiple users.
 
-The administrator can view and manage users an email is related to by clicking *View Users* action from the dropdown next to the *Edit* button.
+An administrator can view and manage users an email is related to by clicking *View Users* action from the dropdown next to the *Edit* button.
+
+As of v8.5. Regular users can view users an email is related to: Email detail view > dropdown next to *Edit* > View Users. If a user has *edit* access to a particular Email, they can also add other users to the Email so that it will appear in the Inbox of those users. Additing users requires the assignment permission.
 
 ### Concept
 
