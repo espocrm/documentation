@@ -650,6 +650,12 @@ Parameters:
 * actionFunction
 * acl
 
+### viewModalView
+
+*string*
+
+A modal view for viewing relationships in a modal dialog.
+
 ## additionalLayouts
 
 Additional layouts for a scope.
