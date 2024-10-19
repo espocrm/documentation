@@ -24,6 +24,10 @@ The list of available field types can be found [here](fields.md).
 
 ## Attribute
 
+* An attribute usually corresponds to a database column, provided that the attribute is storable.
+* In the REST API, JSON object keys correspond to attributes.
+* Attributes are used for accessing entity values in Formula Script.
+
 Most fields have only one attribute named the same as the field. For example, the *createdAt* field has the attribute *createdAt*. Some fields have multiple attributes.
 
 Field types that have multiple attributes and their attribute naming:
@@ -38,10 +42,6 @@ Field types that have multiple attributes and their attribute naming:
 where *field* is the name of the field.
 
 Attributes are named in lowerCamelCase (start with a lowercase letter).
-
-* An attribute usually corresponds to a database column, provided that the attribute is storable.
-* In the REST API, JSON object keys correspond to attributes.
-* Attributes are used for accessing entity values in Formula Script.
 
 ## Link
 
