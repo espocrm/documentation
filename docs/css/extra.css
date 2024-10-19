@@ -4,6 +4,10 @@
     --md-accent-fg-color-light: #cc95aa;
 }
 
+.md-grid {
+    max-width: 62rem;
+}
+
 .md-typeset .admonition {
     border-style: none;
 }
@@ -13,7 +17,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 
 label.md-nav__link:not(.md-nav__container):focus,
 label.md-nav__link:not(.md-nav__container):hover {
