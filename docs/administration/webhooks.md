@@ -34,7 +34,7 @@ A Webhook ID (*id*) and a secret key (*secretKey*) will be sent back in a respon
 
 ### Administration
 
-Administrator can manage webhooks at Administration > Webhooks. It's possible to remove, edit or create webhooks there.
+An administrator can manage webhooks at Administration > Webhooks. It's possible to remove, edit or create webhooks there.
 
 ## Events
 
