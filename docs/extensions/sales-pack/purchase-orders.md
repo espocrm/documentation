@@ -22,11 +22,11 @@ In the article:
 
 ## Printing to PDF
 
-Purchase Orders can be printed to PDF. This action is available in the dropdown next to Edit button on the record detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
+Purchase Orders can be printed to PDF. This action is available in the dropdown next to Edit button on the record detail view. Then, you will be prompted to select a template. More info about printing to PDF is available in the [artice](../../user-guide/printing-to-pdf.md).
 
 ### Templates
 
-See the documentation [for quote templates](quotes.md#templates).
+See the documentation [for quote templates](../../user-guide/quotes.md#templates).
 
 ## Default tax
 
