@@ -33,7 +33,7 @@ An opportunity represents a potential or closed deal. Opportunity with *Closed W
 
 ### Stage
 
-Following opportunity stages are available by default:
+The following opportunity stages are available by default:
 
 * Prospecting
 * Qualification
@@ -42,15 +42,17 @@ Following opportunity stages are available by default:
 * Closed Won
 * Closed Lost
 
-Administrator can define custom stages depending on business flow of the company: Administration > Entity Manager > Opportunity > Fields > Stage. It's also possible to define custom probabilities for each stage.
+An administrator can define custom stages depending on business flow of the company: Administration > Entity Manager > Opportunity > Fields > Stage. It's also possible to define custom probabilities for each stage.
 
 ### Probability
 
-Opportunity probability is an estimated percentage chance that the sale will be won. *Closed Won* status has 100% probability, *Closed Lost* – zero. Other stages has their default probabilities. Probabilities can be utilized in revenue forecasting.
+The Opportunity probability is an estimated percentage chance that the sale will be won. *Closed Won* status has the 100% probability, *Closed Lost* – zero. Other stages has their default probabilities. The default probabilities can be modified in the Entity Manager.
+
+Probabilities can be utilized in revenue forecasting.
 
 ## Currency
 
-Administrator can define available currencies and their rates at Administration > Currency.
+An administrator can define available currencies and their rates at Administration > Currency.
 
 It's possible to convert currency of existing opportunities:
 
@@ -78,9 +80,9 @@ Available with Reports from Advanced Pack.
 4. Add 'Close Date' to Runtime Filters field.
 5. Select 'Bar (vertical)' chart type.
 
-This report will show revenue forecast based on probabilities of opportunities.
+This report will show the revenue forecast based on probabilities of opportunities.
 
-Users, who have an access to this report, will be able to add it on their dashboards.
+Users who have an access to this report will be able to add it on their dashboards.
 
 ## See also
 
