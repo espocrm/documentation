@@ -14,17 +14,17 @@ Parameters:
 
 ### Double Opt-in (confirmed opt-in)
 
-If double opt-in is enabled, then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. The email will be sent automatically once data is received through API.
+If double opt-in is enabled, then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. The email will be sent automatically once data is received through the API.
 
-Create an Email Template that will be used for a double opt-in. You can use following placeholders in a template body:
+Create an Email Template that will be used for the double opt-in. You can use the following placeholders in a template body:
 
-* `{optInUrl}` - confirmation URL;
-* `{optInLink}` - confirmation link;
-* `{optInDate}` - date when a subscription request was submitted;
-* `{optInTime}` - time when a subscription request was submitted;
-* `{optInDateTime}` - date and time when a subscription request was submitted.
+* `{optInUrl}` – confirmation URL;
+* `{optInLink}` – confirmation link;
+* `{optInDate}` – date when a subscription request was submitted;
+* `{optInTime}` – time when a subscription request was submitted;
+* `{optInDateTime}` – date and time when a subscription request was submitted.
 
-A confirmation link will be added automatically if you haven’t inserted a placeholder in the email template.
+A confirmation link will be added automatically if you haven’t inserted the confirmation link placeholder in the email template.
 
 !!! note
 
@@ -32,7 +32,7 @@ A confirmation link will be added automatically if you haven’t inserted a plac
 
 ## Posting API request
 
-Your web site needs to make a POST request to send the form data to your CRM. A request **doesn't require any authorization**. You just need to use a specific URL with an API Key. The information about the request is available in the side panel on the Lead Capture detail view.
+Your web site needs to make a POST request to send form data to your CRM. The request **doesn't require any authorization**. You just need to use a specific URL with an API Key. The information about the request is available in the side panel on the Lead Capture detail view.
 
 Required headers:
 
@@ -149,10 +149,9 @@ The `Access-Control-Allow-Origin` header (see [CORS](https://en.wikipedia.org/wi
 
 By utilizing the [Workflow](workflows.md) or the [BPM](bpm.md) tools, you can create an assignment rule that will distribute leads among team users. *Round-Robin* and *Least-Busy* rules are available.
 
-To apply the rule only for leads that are coming through the lead-capture form, you can use a condition that checks the *Campaign* field (assuming that you have created the separate campaign record for the lead capture form).
+To apply the rule only for leads that are coming through the lead capture form, you can use a condition that checks the *Campaign* field (assuming that you have created a separate campaign record for the lead capture form).
 
-You can also utilize a formula script (Administration > Entity Manager > Lead > Formula) to set some additional fields.
-
+You can also utilize a Formula script (Administration > Entity Manager > Lead > Formula) to set some additional fields.
 
 ## Hooks
 
