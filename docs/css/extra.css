@@ -16,6 +16,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    border-radius: 5px;
+    box-shadow: var(--md-shadow-z1);
 }
 
 label.md-nav__link:not(.md-nav__container):focus,
