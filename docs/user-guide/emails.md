@@ -142,7 +142,7 @@ If an email is moved from a group folder to a personal folder or the Inbox, it w
 
 There's the ability to automatically put inbound emails imported through a group email account to a specific group folder. It's also possible to move emails matching an email filter to a specific group folder (the filter should be related to a group email account).
 
-Users that have access to a group folder can put there any email (only read level access to the email is required). If an email is located in a group folder the user does not have access to, they won't be able to move that email to another folder.
+Users that have access to a group folder can put there emails that they have edit access to. If an email is located in a group folder, a user does not have edit access to, they won't be able to move that email to another folder.
 
 The field-level-security (in Roles) can be used to restrict the ability to change (edit) the group folder.
 
