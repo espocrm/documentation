@@ -2,7 +2,7 @@
 
 The Projects functionality is available in the [Project Management](https://www.espocrm.com/extensions/project-management/) extension.
 
-In this arcticle:
+In this article:
 
 * [Projects](#projects)
 * [Boards](#boards)
