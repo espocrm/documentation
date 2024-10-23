@@ -62,8 +62,8 @@ There are the following default folders available:
 * Inbox – incoming emails sent to the user are automatically placed here;
 * Sent – emails sent by the user;
 * Draft – emails composed by the user but not yet sent; 
-* Archive – inbox emails that the user exclicitly moved to the Archice;
-* Trash – inbox emails that the user exclicitly moved to the Trash.
+* Archive – inbox emails that the user explicitly moved to the Archive;
+* Trash – inbox emails that the user explicitly moved to the Trash.
 
 Additionally, there are also user's Email Folders and Group Email Folders listed.
 
@@ -73,7 +73,7 @@ The Email's *Status* field has the following values:
 * *Imported* – fetched from an IMAP account or imported manually;
 * *Draft* – created as a draft and not yet sent.
 
-When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunityo, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
+When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
 
 If an email came from a new potential client, the user can convert it to a Lead (from the top-right menu).
 
@@ -97,7 +97,7 @@ Emails related to a user through the *Users* relationship are referred as their 
 
 An administrator can view and manage users an email is related to by clicking *View Users* action from the dropdown next to the *Edit* button.
 
-As of v8.5. Regular users can view users an email is related to: Email detail view > dropdown next to *Edit* > View Users. If a user has *edit* access to a particular Email, they can also add other users to the Email so that it will appear in the Inbox of those users. Additing users requires the assignment permission.
+As of v8.5. Regular users can view users an email is related to: Email detail view > dropdown next to *Edit* > View Users. If a user has *edit* access to a particular Email, they can also add other users to the Email so that it will appear in the Inbox of those users. Adding users requires the assignment permission.
 
 ### Concept
 
