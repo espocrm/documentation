@@ -1,6 +1,6 @@
 # app > record
 
-Record frameword definitions.
+Record framework definitions.
 
 ## selectApplierClassNameList
 
