@@ -36,8 +36,8 @@ Your web site needs to make a POST request to send form data to your CRM. The re
 
 Required headers:
 
-* Content-Type: application/json
-* Accept: application/json
+* `Content-Type: application/json`
+* `Accept: application/json`
 
 ### PHP
 
