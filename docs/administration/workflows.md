@@ -332,7 +332,7 @@ Additionally, in headers, App Secrets can be added with a placeholder *{#secrets
 
 A payload example:
 
-```json
+```
     {
         "int": {$$myIntegerVariable},
         "bool": {$$myBooleanVariable},
