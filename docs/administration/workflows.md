@@ -330,6 +330,16 @@ Available placeholders:
 
 Additionally, in headers, App Secrets can be added with a placeholder *{#secrets.name}*  (as of v3.4.7).
 
+A payload example:
+
+```json
+    {
+        "int": {$$myIntegerVariable},
+        "bool": {$$myBooleanVariable},
+        "string": "{$$myStringVariable}"
+    }
+```
+
 #### Handling HTTP response
 
 A response body of a sent HTTP request will be available in formula with a function `workflow\lastHttpResponseBody()`. It can be accessed in a following Workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
