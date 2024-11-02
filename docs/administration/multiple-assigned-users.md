@@ -2,7 +2,7 @@
 
 ## The new way
 
-*As of v8.5.*
+*As of v9.0.*
 
 Multiple assigned users can be enabled for custom entity types and for some built-in entity type. Enable at: Administration > Entity Manager > {Entity Type} > Edit > check *Multiple Assigned Users* and save.
 
@@ -13,7 +13,7 @@ Multiple assigned users can be enabled for custom entity types and for some buil
 
 The maximum number of assigned users allowed per record can configured set at: Administration > Entity Manager > {Entity Type} > Fields > Assigned Users > Max Item Count. By default, it's set to 10.
 
-## The old way, prior v8.5
+## The old way, prior 9.0
 
 !!! important
 
