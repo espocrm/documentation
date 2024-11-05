@@ -22,7 +22,7 @@ In this article:
 
     You need to have [cron](../administration/server-configuration.md#setting-up-crontab) properly configured in your system to have inbound emails working.
 
-A regular user can setup an IMAP account on the Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+A regular user can set up an IMAP account on the Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
 Specify what folders to monitor in *Monitored Folders* field. By default, it's set to INBOX. 
 
