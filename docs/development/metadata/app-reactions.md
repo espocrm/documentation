@@ -1,12 +1,12 @@
 # app > reactions
 
-Path: metadata > app > reactinos.
+Path: metadata > app > reactions.
 
 *As of v9.0.*
 
 ## list
 
-A list of reactinos.
+A list of reactions.
 
 *Record[]*
 
