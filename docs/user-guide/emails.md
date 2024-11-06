@@ -48,7 +48,7 @@ Users can have multiple SMTP accounts.
 
 !!! important
 
-    Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only the admin can define user's email addresses (by default).
+    Email addresses that user can use to send emails from must be defined in *Emails* field of the *User* record. Only the admin can define user's email addresses (by default).
 
 ## Working with emails
 
