@@ -272,6 +272,7 @@ nav:
               - 'pdfEngines': 'development/metadata/app-pdf-engines.md'
               - 'popupNotifications': 'development/metadata/app-popup-notifications.md'
               - 'portalContainerServices': 'development/metadata/app-portal-container-services.md'
+              - 'reactions': 'development/metadata/app-reactions.md'
               - 'rebuild': 'development/metadata/app-rebuild.md'
               - 'record': 'development/metadata/app-record.md'
               - 'recordId': 'development/metadata/app-record-id.md'
