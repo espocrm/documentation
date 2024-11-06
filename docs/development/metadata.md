@@ -74,6 +74,7 @@ In this article:
   * [pdfEngines](metadata/app-pdf-engines.md)
   * [popupNotifications](metadata/app-popup-notifications.md)
   * [portalContainerServices](metadata/app-portal-container-services.md)
+  * [reactions](metadata/app-reactions.md)
   * [rebuild](metadata/app-rebuild.md)
   * [record](metadata/app-record.md)
   * [recordId](metadata/app-record-id.md)
