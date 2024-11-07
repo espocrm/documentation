@@ -108,7 +108,10 @@ It also defines whether a User is able to post to the Stream of other Users and 
 
 ### User Permission
 
-Allows to restrict the ability for Users to view Activities, Calendar and Stream of other Users.
+Allows to view:
+
+* Activities, Calendar and Stream of other Users;
+* Which access to a specific record other Users have.
 
 ### Portal Permission
 
