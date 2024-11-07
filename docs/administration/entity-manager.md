@@ -56,7 +56,7 @@ If you click **Edit** on the entity view, you will be able to change parameters 
 
 !!! note
 
-    Some parameters are not available for certain entity type.
+    Some parameters are not available for certain entity types.
 
 ## Fields
 
