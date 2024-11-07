@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    loadNavpane();
+    loadNavpanel();
 });
 
-function loadNavpane() {
+function loadNavpanel() {
     var width = window.innerWidth;
     if (width <= 1200) {
         return;
