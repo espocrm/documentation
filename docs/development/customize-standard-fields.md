@@ -15,9 +15,9 @@ Create a file `custom/Espo/Custom/Resources/metadata/fields/address.json`.
 Create a file `client/custom/src/views/fields/address.js`.
 
 ```js
-define(['views/fields/address'], (AddressFiedView) => {
+define(['views/fields/address'], (AddressFieldView) => {
 
-   return class extends AddressFiedView {
+   return class extends AddressFieldView {
 
         //detailTemplateContent = ' ... '
         //editTemplateContent = ' ... '
