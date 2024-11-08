@@ -1,7 +1,5 @@
 # Multiple Assigned Users
 
-## The new way
-
 *As of v9.0.*
 
 Multiple assigned users can be enabled for custom entity types and for some built-in entity type. Enable at: Administration > Entity Manager > {Entity Type} > Edit > check *Multiple Assigned Users* and save.
