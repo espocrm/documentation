@@ -121,7 +121,7 @@ It also defines whether a User is able to post to the Stream of other Users and 
 Allows to view:
 
 * Activities, Calendar and Stream of other Users;
-* Which access to a specific record other Users have.
+* which access to a specific record other Users have.
 
 ### Portal Permission
 
