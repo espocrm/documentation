@@ -1,6 +1,6 @@
 # Reports
 
-Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+The Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
 There are two types of reports: List and Grid.
 
@@ -25,21 +25,21 @@ See also:
 
 ## List Reports
 
-List report displays the list of records that meet the specified criteria.
+A List report displays the list of records that meet the specified criteria.
 
-To create a new list report, click on *Reports* tab and then click *Create Report* button. Choose needed Entity Type, then click *Create* button at *List Report* section.
+To create a new list report, click on the *Reports* tab and then click *Create Report* button. Choose the needed Entity Type, then, click *Create* button at *List Report* section.
 
 At *Columns* field, pick the fields you would like to be displayed. Below, you can specify display parameters for every column:
 
 * Width – width in percents;
-* Align – left or right;
+* Align – how to align data: left or right;
 * Link – a value will be displayed as a link leading to the record detail view;
-* Export Only – a column won't be displayed in report results on UI, but it will be available in export;
+* Export Only – a column won't be displayed in report results on the UI, but it will be available in export;
 * Not Sortable – a column cannot be ordered by, some fields are not available for sorting.
 
-Choose the needed sorting at *List Order* field.
+Choose the needed sorting in *List Order* field.
 
-At _Filters_ section, you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
+At *Filters* section, you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
 
 *Runtime Filters* allow you to specify different filters before you run the report.
 
@@ -58,31 +58,29 @@ Where list reports can be also utilized:
 * Panels on the detail view – to display related records that met some criteria on the side panel, more info [below](#report-panels).
 * Applying assignment rule – to assign records that met specific criteria by workflow or BPM.
 
-
 ## Grid Reports
 
 Grid reports show summarized values, can be grouped by one or two fields and displayed as a chart.
 
-To create a new grid report, click on *Reports* tab and then click *Create Report* button. Choose a needed *Entity Type*, then click the *Create* button at the *Grid Report* section.
+To create a new grid report, click on the *Reports* tab and then click *Create Report* button. Choose the needed *Entity Type*, then, click the *Create* button at the *Grid Report* section.
 
-When choosing an *Entity Type* for a grid report, consider the following. The *Entity Type* contains the field that will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
+When choosing an *Entity Type* for a grid report, consider the following. The *Entity Type* should contain the field that data will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
 
 The example of grid report results that shows revenue grouped by User:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
-
 ### Group By
 
-At *Group By* field, pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, and day for date fields. If you group by two fields your report will be considered as three-dimensional.
+In the *Group By* field, pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, and day for date fields.
 
-You can leave *Group By* field empty.
+You can also leave the *Group By* field empty.
 
 There is the ability to specify a custom [complex expression](complex-expressions.md) (with functions) for grouping. The complex expression is translated into an SQL statement.
 
 ### Columns
 
-At *Columns* field, select one or more **aggregate** functions applied to a specific field.
+In the *Columns* field, select one or more **aggregate** functions applied to a specific field.
 
 Functions:
 
@@ -92,9 +90,9 @@ Functions:
 * MAX – maximal value;
 * AVG – average value.
 
-If the report is grouped by a link field then it's possible to add fields from the linked record w/o aggregate functions. The example is the report for Opportunities grouped by Campaign with Campaign.Budget column.
+If a report is grouped by a link field, then it's possible to add fields from a linked record w/o aggregate functions. In the example, the report for Opportunities is grouped by Campaign with Campaign.Budget column.
 
-It's possible to add **non-aggregated columns**. In this case records will be displayed for each group. Note that if your report deals with a big number of records, it can run much slower.
+It's possible to add **non-aggregated columns**. In this case, records will be displayed for each group. Note that if your report deals with a big number of records, it can run much slower.
 
 Non-grouping grid report with non-aggregated columns:
 
@@ -108,7 +106,7 @@ There is the ability to specify custom [complex expressions](complex-expressions
 
 ### Order by
 
-*Order by* field defines how report data will be sorted.
+The *Order by* field defines how report data will be sorted.
 
 ### Filters
 
@@ -118,11 +116,13 @@ At *Filters* section, you can specify criteria to limit data displayed in the re
 
 *Runtime Filters* allow you to specify different filters before you run the report.
 
-Note: Specifying a runtime filter can be also useful for dashlets and report panels.
+!!! note
+
+    Specifying a runtime filter can be also useful for dashlets and report panels.
 
 ### Charts
 
-Grid report allows displaying results in a chart form.
+Grid report allows displaying results in chart form.
 
 There are following chart types available:
 
@@ -153,17 +153,17 @@ Pie:
 
 It's possible to export grid report results to XLSX (Excel) and CSV formats. Both a results table and chart are exported to XLSX.
 
-Note that non-aggregated columns (in grid reports) are not exported to XLSX.
+Note that non-aggregated columns in grid reports are not exported to XLSX.
 
 ### Access
 
-By checking *Apply ACL* the report result will not include records that the current user doesn't have access to.
+By checking *Apply ACL*, the report result will not include records that the current user does not have access to.
 
-If a regular user does not have edit access to the *Apply ACL* field (via role field level security), all reports they create will get *Apply ACL* automatically checked (as of v2.13.5).
+If a regular user does not have edit access to the *Apply ACL* field (via field level security in Roles), all reports they create will have the *Apply ACL* automatically checked (as of v2.13.5).
 
 ## Joint Grid reports
 
-Joint Grid reports combine multiple grid reports of different entity types. Sub-reports must be grouped by 1 or 0 fields.
+Joint Grid reports combine multiple grid reports of different entity types. Sub-reports selected for a joint report must be grouped by either 1 or 0 fields.
 
 If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
 
@@ -177,7 +177,7 @@ You can create a new Joint Grid report from the dropdown menu in the top-right c
 
 For charts, colors of columns must be specified in sub-reports.
 
-Runtime filters are not supported in joint reports. Only regular filters (specified in each sub-report) can be used.
+Runtime filters are not supported in joint reports. Only regular filters specified in each sub-report can be used.
 
 Non-aggregate columns are not supported in joint reports.
 
