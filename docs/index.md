@@ -91,6 +91,7 @@
 ### Extensions
 
 * Advanced Pack
+  * [Overview](extensions/advanced-pack/overview.md)
   * [Reports](user-guide/reports.md)
   * [Workflows](administration/workflows.md)
   * [Business Process Management (BPM)](administration/bpm.md)
