@@ -13,6 +13,7 @@ In this article:
 * [Email filters](#email-filters)
 * [Email templates](#email-templates)
 * [Manual import](#manual-import)
+* [See also](#see-also)
 
 ## IMAP accounts
 
@@ -196,3 +197,7 @@ The are two ways of importing emails:
 * Import EML (as of v8.4).
 
 The ability to import emails requires a user to have access to the Import scope (set in Roles).
+
+## See also
+
+* [Shortcut keys](https://docs.espocrm.com/user-guide/shortcuts/#emails)
