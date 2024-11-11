@@ -41,7 +41,7 @@ Choose the needed sorting in *List Order* field.
 
 At *Filters* section, you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
 
-*Runtime Filters* allow you to specify different filters before you run the report.
+*Runtime Filters* allow you to specify criteria before running a report.
 
 You can **export** list report results to XLSX (Excel) and CSV formats.
 
@@ -114,7 +114,7 @@ At *Filters* section, you can specify criteria to limit data displayed in the re
 
 ### Runtime Filters
 
-*Runtime Filters* allow you to specify different filters before you run the report.
+*Runtime Filters* allow you to specify criteria before running a report.
 
 !!! note
 
@@ -185,7 +185,7 @@ Non-aggregate columns are not supported in joint reports.
 
 ### Field filter
 
-Field filters are simple to use. They allow to filter by specific fields of a target entity type as well as fields of related records. E.g. you can filter Opportunities by a field of Account entity type.
+Field filters are simple to use. They allow to filter by specific fields of a target entity type as well as fields of related records. For example, you can filter Opportunities by a field of the Account entity type.
 
 ![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-field.png)
 
@@ -209,8 +209,6 @@ Note: It's recommended to avoid using NOT IN group when possible, by using filte
 
 ### IN group
 
-*As of v2.1.*
-
 IN is similar to AND group but utilizes a sub-query.
 
 The example of usage: Filtering accounts that have opportunities of both 'Closed Won' and 'Negotiation' stages.
@@ -219,30 +217,29 @@ The example of usage: Filtering accounts that have opportunities of both 'Closed
 
 ### Complex Expression
 
-For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
+For more advanced use. You can apply a database function to a certain database column and compare it with a result calculated by a [formula](../administration/formula.md) expression.
 
 Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
 
-Note: Functions intended to interact with the entity record will not work here because the formula is not applied to a specific record.
+Note: Formula functions intended to interact with the entity record will not work here because the formula is not applied to a specific record.
 
-Applying function to attribute and comparing with the result of formula:
+Applying function to a column and comparing with a result of formula:
 
 ![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
 
-Comparing the result of custom complex expression & the result of formula:
+Comparing the result of the custom complex expression and the result of the formula expression:
 
 ![Complex Expression filter](../_static/images/user-guide/reports/filter-complex-expression.png)
 
-
 * Complex expression is translated into an SQL statement and becomes a part of an SQL query.
-* Formula is executed by PHP and the result value is substituted into an SQL query.
-* Comparison operator is substituted into an SQL query between complex expression statement and formula result value.
+* Formula is executed before running the report and the result value is substituted into an SQL query.
+* Comparison operator is substituted into an SQL query between the complex expression statement and the formula result value.
 
 More info about complex expressions is available [here](complex-expressions.md).
 
 ### Having group
 
-Having group provides an ability to filter records with using aggregate functions COUNT, SUM, MAX, MIN, AVG.
+The Having group provides the ability to filter records with using aggregate functions COUNT, SUM, MAX, MIN, AVG.
 
 Some use cases:
 
@@ -251,23 +248,21 @@ Some use cases:
 
 ## Displaying on dashboard
 
-You can display any report on dashboard. In order to do it, you need to add Report dashlet and then pick the needed report at the dashlet options.
-
-Grid reports can be displayed as a chart, a chart with totals or only totals.
+You can display any report on the dashboard. In order to do it, you need to add the Report dashlet to the dashboard and then pick the needed report from the dashlet options.
 
 For grid reports it's possible to display:
 
 * Chart
 * Chart & Total
 * Total
-* Table (as of v2.7.0)
+* Table
 
 For list reports it's possible to display:
 
 * List
 * Total (number or records)
 
-List reports can be displayed as a list or a total number of records.
+For list reports, you can either display the list or records or only the total number of records.
 
 Dashlet with only totals displayed:
 
@@ -275,13 +270,11 @@ Dashlet with only totals displayed:
 
 ## Email sending
 
-It's possible to make the system send report results to certain users on a regular basis according to specified time. This must be configured for certain reports individually.
+It's possible to set up the system send report results to certain users on a regular basis according to specified time. This must be configured for certain reports individually.
 
-The Max number of records that can be sent in an email by default is 3000. You can increase it by adding a parameter to data/config.php: `'reportSendingListMaxCount' => 5000`.
+The Max number of records that can be sent in an email by default is set to 3000. You can increase it by adding the parameter to data/config.php: `'reportSendingListMaxCount' => 5000`.
 
 ## Printing to PDF
-
-*As of v2.5.0.*
 
 !!! note
 
@@ -311,11 +304,11 @@ Available attributes:
 
 ## Syncing with Target Lists
 
-It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on the detail view of any target list at *Sync with Reports* panel.
+It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available in the detail view of any target list in the *Sync with Reports* panel.
 
 ## Report Filters
 
-Report Filters are the list view filters based on reports.
+The Report Filters feature alows to create custom primary filters for list views. Created filters can also be used in specific formula functions.
 
 An administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
 
@@ -340,7 +333,7 @@ Report filters can be utilized in [formula functions](../administration/formula.
 
 ## Report Panels
 
-Report Panels are the detail view panels showing report results. 
+The Report Panels feature allows to create custom detail view panels showing report results.
 
 An administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have access to the panel.
 
@@ -366,9 +359,9 @@ The report panel shows results related to the record that is viewed. The first f
 
 ## Portal access
 
-Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Reports* field on the Report detail view. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
+Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Reports* field in the Report detail view. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
 
-It's possible to add a report dashlet on the portal dashboard.
+It's possible to add a report dashlet to the portal dashboard.
 
 !!! note
 
