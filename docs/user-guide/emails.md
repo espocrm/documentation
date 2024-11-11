@@ -13,6 +13,7 @@ In this article:
 * [Email filters](#email-filters)
 * [Email templates](#email-templates)
 * [Manual import](#manual-import)
+* [See also](#see-also)
 
 ## IMAP accounts
 
@@ -22,7 +23,7 @@ In this article:
 
     You need to have [cron](../administration/server-configuration.md#setting-up-crontab) properly configured in your system to have inbound emails working.
 
-A regular user can setup an IMAP account on the Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
+A regular user can set up an IMAP account on the Personal Email Accounts page (Emails tab > top-right menu > Personal Email Accounts).
 
 Specify what folders to monitor in *Monitored Folders* field. By default, it's set to INBOX. 
 
@@ -48,7 +49,7 @@ Users can have multiple SMTP accounts.
 
 !!! important
 
-    Email addresses, user can use to send emails from, must be defined in *Emails* field of *User* record. Only the admin can define user's email addresses (by default).
+    Email addresses that user can use to send emails from must be defined in *Emails* field of the *User* record. Only the admin can define user's email addresses (by default).
 
 ## Working with emails
 
@@ -62,8 +63,8 @@ There are the following default folders available:
 * Inbox – incoming emails sent to the user are automatically placed here;
 * Sent – emails sent by the user;
 * Draft – emails composed by the user but not yet sent; 
-* Archive – inbox emails that the user exclicitly moved to the Archice;
-* Trash – inbox emails that the user exclicitly moved to the Trash.
+* Archive – inbox emails that the user explicitly moved to the Archive;
+* Trash – inbox emails that the user explicitly moved to the Trash.
 
 Additionally, there are also user's Email Folders and Group Email Folders listed.
 
@@ -73,7 +74,7 @@ The Email's *Status* field has the following values:
 * *Imported* – fetched from an IMAP account or imported manually;
 * *Draft* – created as a draft and not yet sent.
 
-When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunityo, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
+When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
 
 If an email came from a new potential client, the user can convert it to a Lead (from the top-right menu).
 
@@ -97,7 +98,7 @@ Emails related to a user through the *Users* relationship are referred as their 
 
 An administrator can view and manage users an email is related to by clicking *View Users* action from the dropdown next to the *Edit* button.
 
-As of v8.5. Regular users can view users an email is related to: Email detail view > dropdown next to *Edit* > View Users. If a user has *edit* access to a particular Email, they can also add other users to the Email so that it will appear in the Inbox of those users. Additing users requires the assignment permission.
+As of v8.5. Regular users can view users an email is related to: Email detail view > dropdown next to *Edit* > View Users. If a user has *edit* access to a particular Email, they can also add other users to the Email so that it will appear in the Inbox of those users. Adding users requires the assignment permission.
 
 ### Concept
 
@@ -142,7 +143,7 @@ If an email is moved from a group folder to a personal folder or the Inbox, it w
 
 There's the ability to automatically put inbound emails imported through a group email account to a specific group folder. It's also possible to move emails matching an email filter to a specific group folder (the filter should be related to a group email account).
 
-Users that have access to a group folder can put there any email (only read level access to the email is required). If an email is located in a group folder the user does not have access to, they won't be able to move that email to another folder.
+Users that have access to a group folder can put there emails that they have edit access to. If an email is located in a group folder, a user does not have edit access to, they won't be able to move that email to another folder.
 
 The field-level-security (in Roles) can be used to restrict the ability to change (edit) the group folder.
 
@@ -196,3 +197,7 @@ The are two ways of importing emails:
 * Import EML (as of v8.4).
 
 The ability to import emails requires a user to have access to the Import scope (set in Roles).
+
+## See also
+
+* [Shortcut keys](https://docs.espocrm.com/user-guide/shortcuts/#emails)

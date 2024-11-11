@@ -1,5 +1,15 @@
 # Roles Management
 
+In this article:
+
+* [Overview](#overview)
+* [Permissions by default](#permissions-by-default)
+* [Actions](#actions)
+* [Levels](#levels)
+* [Example](#example)
+* [Special Permissions](#special-permissions)
+* [Collaborators](#collaborators)
+
 ## Overview
 
 In order to restrict access for some users, you need to use Roles. An administrator can manage roles in at Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
@@ -108,7 +118,10 @@ It also defines whether a User is able to post to the Stream of other Users and 
 
 ### User Permission
 
-Allows to restrict the ability for Users to view Activities, Calendar and Stream of other Users.
+Allows to view:
+
+* Activities, Calendar and Stream of other Users;
+* which access to a specific record other Users have.
 
 ### Portal Permission
 
@@ -157,6 +170,32 @@ By default, a User can read all fields if they can read the record. A User can e
 In the edit view of a Role record in the Field Level section, click plus icon next to a specific scope, then select a needed field. Then, you will be able to specify the access level for *read* and *edit* actions. There are two options: *yes* and *no*.
 
 ![2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/field-level-secutiry.png)
+
+## Collaborators
+
+*As of v9.0.*
+
+The Collaborators feature can be enabled for an entity type in the Entity Manager. Once enabled:
+
+* A link-multiple field *Collaborators* will be automatically created.
+* A bool filter *Shared* will be added.
+
+Users added as collaborators to a record will have *read* and *stream* access, provided their access level, as defined by Roles, is other than *no*.
+
+Assignees are automatically added to collaborators. This ensures that when a record is reassigned to another user, the previous assignee remains a collaborator unless explicitly removed.
+
+A user who creates a record is automatically pre-filled as a collaborator. This ensures that a user with 'own' read access will still have access to a record after assigning it to another user.
+
+Access:
+
+* Assignment Permission is required to be able to add a user to collaborators. 
+* Edit access to a record is required to be able to add collaborators.
+
+Limitations:
+
+* Portal users cannot be added as collaborators.
+
+The Collaborators parameter is available for custom entities created via the Entity Manager and for the standard following entity types: Task, Cas, Account, Contact, Lead, Opportunitie, Document, Knowledge Base Article and Target List.
 
 ## See also
 

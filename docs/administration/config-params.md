@@ -101,6 +101,7 @@ The list of parameters along with their default values. This is not a full list 
 * streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
 * recordFollowersLoadLimit – `6` – how much records loaded in the *Followers* field;
 * notePinnedMaxCount – `5` – max number of pinned notes per record;
+* streamReactionsCheckMaxSize – `50` – when refreshing a user's stream, how many posts will be checked for new reactions; as of 9.0;
 
 ### Clean-up
 

@@ -1,9 +1,9 @@
 # Configuring EspoCRM for B2C (Business-to-Client)
 
-By default, EspoCRM is configured for use in B2B business. But you can easily setup it for B2C.
+By default, EspoCRM is configured for use in B2B business. It's possible to set it up solely for B2C.
 
-* Check 'B2C Mode' at Administration > Settings.
-* Remove *Account* tab from the navigation menu (Administration > User Interface).
-* Remove *Account* fields from your layouts (Administration > Layout Manager).
-* Disable access to *Account* scope for all your roles (Administration > Roles).
-* Remove Account from picklists of all parent fields (Administration > Entity Manager > {Meeting/Call/Task/Email} > Fields > Parent).
+* Check *B2C Mode* at Administration > Settings.
+* Remove the *Account* tab from the navigation menu: Administration > User Interface.
+* Remove the *Account* fields from your layouts: Administration > Layout Manager.
+* Disable access to the *Account* scope in Roles if you allowed it before.
+* Remove the *Account* from picklists of all parent fields: Administration > Entity Manager > {Meeting/Call/Task/Email} > Fields > Parent.

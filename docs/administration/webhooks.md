@@ -2,7 +2,7 @@
 
 Webhooks allow other applications to subscribe to specific events happening in EspoCRM and receive data related to those events. Webhooks are supposed to be created via API by other applications. The webhook has a specific *Event* and *URL*. Every time the event occurs, the system will send POST request with some payload to the specified URL.
 
-Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have access to all entity types for which webhooks are planned to be created.
+Webhooks can be created only by API Users (via an API request) and Administrators. An API User has to have *Webhooks* scope enabled in Roles. An API User has also to have access to all entity types for which webhooks are intended to be created.
 
 * [Subscription](#subscription)
 * [Events](#events)
@@ -25,7 +25,10 @@ Webhooks can be created only by API Users (via API request) and Administrators. 
 }
 ```
 
-A Webhook ID (*id*) and a secret key (*secretKey*) will be sent back in a response.
+A Webhook ID and a secret key will be sent back in a response:
+
+* `id` – an ID of created webhook,
+* `secretKey` – a generated secret key.
 
 
 ### Deleting request
@@ -44,13 +47,13 @@ An administrator can manage webhooks at Administration > Webhooks. It's possible
 
 ### ENTITY_TYPE.create
 
-Triggered when a record is created. All record attributes will be sent in payload.
+Triggered when a record is created. All record attributes will be sent in a payload.
 
 Example: `Account.create`
 
 ### ENTITY_TYPE.update
 
-Triggered when a record is updated. Only updated record attributes will be sent in payload.
+Triggered when a record is updated. Only updated record attributes will be sent in a payload.
 
 Example: `Account.update`
 
@@ -62,7 +65,7 @@ Example: `Account.delete`
 
 ### ENTITY_TYPE.fieldUpdate.FIELD
 
-Triggered when a specific field is updated. New field attributes will be sent in payload.
+Triggered when a specific field is updated. New field attributes will be sent in a payload.
 
 Example: `Account.fieldUpdate.assignedUserId`
 
@@ -75,7 +78,7 @@ Example: `Account.fieldUpdate.assignedUserId`
 
 Every webhook request (sent by EspoCRM to a specified URL) is of POST type. A content type is *application/json*.
 
-Events related to the same hook are sent in batches. Request payload is always an array (even if only one record is sent).
+Events related to the same hook are sent in batches. The request payload is always an array (even if only one record is sent).
 
 One event occurred:
 

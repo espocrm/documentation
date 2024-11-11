@@ -313,7 +313,7 @@ Supported request methods:
 * PATCH
 * DELETE
 
-Payload can be taken from a formula variable (as of v2.15) or specified in a JSON format.
+A payload can be taken from a formula variable (as of v2.15) or specified in a JSON format.
 
 Additional headers can be specified.
 
@@ -329,6 +329,16 @@ Available placeholders:
 * *{$$variable}* – a value of a variable (available only in BPM process); e.g. `{$$myVariableName}`.
 
 Additionally, in headers, App Secrets can be added with a placeholder *{#secrets.name}*  (as of v3.4.7).
+
+A payload example:
+
+```
+{
+    "int": {$$myIntegerVariable},
+    "bool": {$$myBooleanVariable},
+    "string": "{$$myStringVariable}"
+}
+```
 
 #### Handling HTTP response
 
@@ -346,6 +356,8 @@ A response body of a sent HTTP request will be available in formula with a funct
 !!! note
 
     Within a BPM process the last response body is available only within the task that contains the Send HTTP Request action. The variable won't be passed further along the process flow.
+
+In the context of BPM, it's possible to catch response errors with an Error Boundary Event. The error code can be obtained by using `bpm\caughtErrorCode` function.
 
 ### Execute Formula Script
 

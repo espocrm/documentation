@@ -10,7 +10,7 @@ EspoCRM has the built-in functionality for sending SMS, but it's not shipped wit
 * Verimor
 * GatewayAPI
 
-It's possible to send SMS from formula-script or from PHP code out-of-the-box. The [VoIP Integration](https://www.espocrm.com/extensions/voip-integration/) provides the ability to send SMS through the UI (only for the Twilio provider).
+Out of the box, it's possible to send SMS from a Formula script or from a PHP code. The [VoIP Integration](https://www.espocrm.com/extensions/voip-integration/) provides also the ability to send SMS through the UI (only for the Twilio provider).
 
 In this article:
 
@@ -23,7 +23,7 @@ In this article:
 
 Download the extension package from the [GitHub repository](https://github.com/espocrm/ext-sms-providers/releases) (under the Assets section). Then upload and install the package in Espo at Administration > Extensions.
 
-After the SMS Providers extension is installed, go to Administration > SMS and select the *SMS Provider* you want to use from the drop-down list. Also, in the *SMS From Number* field, enter the number with the country code (e.g. +11111111111) from which you will be sending SMS messages.
+After the SMS Providers extension is installed, go to Administration > SMS and select the *SMS Provider* you want to use from the dropdown list. Also, in the *SMS From Number* field, enter the number with the country code (e.g. +11111111111) from which you will be sending SMS messages.
 
 Next, go to Administration > Integrations, select your provider, and set up needed credentials and parameters.
 
@@ -56,7 +56,7 @@ ext\sms\send($smsId);
 
 ## Two-Factor Authentication
 
-[SMS 2FA](2fa.md#authentication-via-sms) is supported out-of-the-box, but you need to have an implementation for your SMS provider (SMS Providers extension).
+[SMS 2FA](2fa.md#authentication-via-sms) is supported out of the box, but you need to have an implementation for your SMS provider (see the SMS Providers extension).
 
 Note that the *Phone* field of the user, for whom you want to set up the Two-Factor Authentication, must be filled in with at least one number.
 
@@ -65,7 +65,6 @@ Note that the *Phone* field of the user, for whom you want to set up the Two-Fac
 3. On the detail view of the user, click on the *Access* button and check the box *Enable 2-Factor Authentication*. Also, choose *SMS* 2FA Method in the drop down list. Click the *Apply* button.
 4. Enter the Administrator password, select a phone number that will be used for 2FA in the *Phone* dropdown list, and click the *Send Code* button.
 5. Enter the code that will be sent to the selected phone number and click the *Apply* button.
-
 
 ## VoIP integration for Twilio
 
@@ -77,7 +76,7 @@ At Administration > VoIP Routers > the phone number required for sending and rec
 
 Also, you need to enable Twilio messaging geographic permissions: 
 
-1. Login to your Twilio account. 
+1. Log in to your Twilio account. 
 2. Navigate to Programmable SMS > Settings > [Geo Permissions](https://www.twilio.com/console/sms/settings/geo-permissions). 
 3. Enable needed countries.
 

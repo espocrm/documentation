@@ -104,6 +104,8 @@ Mass Email system parameters are available at Administration > Outbound Emails >
 * Email Open Tracking − whether to track email opening (not working with most of email providers);
 * Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path) − for more reliable bounced email precessing.
 
+Configure how often the sending job is run at: Administration > Scheduled Jobs > Send Mass Emails > Scheduling.
+
 ## Troubleshooting
 
 Only for the administrator.

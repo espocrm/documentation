@@ -78,7 +78,7 @@ A record view. Optional. Needed if you defined the URL like `#Admin/{myName}`. T
 
 ### tabQuickSearch
 
-*boolaen*
+*boolean*
 
 *As of v8.5.*
 

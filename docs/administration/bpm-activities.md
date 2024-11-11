@@ -14,7 +14,7 @@ Activities represent automated tasks, manual tasks and sub-processes. Depicted a
 
 ## Task
 
-A task can execute different actions. Available actions are listed bellow.
+A task can execute different actions. Available actions are listed below.
 
 The BPM task utilizes Workflow tool actions, the list of available actions is almost the same. See more details about [workflow actions](workflows.md#actions).
 

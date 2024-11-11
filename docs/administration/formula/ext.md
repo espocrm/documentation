@@ -61,6 +61,8 @@ the address of some group email account, then SMTP setting of the group email ac
     ext\email\send($id);
     ```
 
+Multiple email addresses can be specified by using a `;` character as a delimiter.
+
 ## ext\email\applyTemplate
 
 `ext\email\applyTemplate(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`

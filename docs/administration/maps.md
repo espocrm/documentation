@@ -10,9 +10,9 @@ To use Google Maps, you need to specify the API Key (at Administration > Integra
 
 ## Showing map for address field
 
-### As a field on detail view
+### As a field in detail view
 
-Every *Address* field has its corresponding *Map* field. All you need is to put it to the *Detail* layout. Administration > Entity Manager > {Entity Type} > Layouts > Detail > Drag & Drop Map field. Make the cell wide using the minus sign. 
+Every *Address* field has a corresponding *Map* field. You need to add it to the *Detail* layout. Administration > Entity Manager > {Entity Type} > Layouts > Detail > Drag & Drop Map field. You can make the cell wide using the minus sign. 
 
 You can also configure the height of your field. Administration > Entity Manager > {Entity Type} > Fields > find the map field and click on it > edit the height and save.
 
