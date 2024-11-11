@@ -1,6 +1,6 @@
 # Reports
 
-Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+The Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
 There are two types of reports: List and Grid.
 
@@ -9,7 +9,7 @@ In this article:
 * [List reports](#list-reports)
 * [Grid reports](#grid-reports)
 * [Joint Grid reports](#joint-grid-reports)
-* [Filters](#filters_1)
+* [Filters](#filters)
 * [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
 * [Printing to PDF](#printing-to-pdf)
@@ -25,23 +25,23 @@ See also:
 
 ## List Reports
 
-List report displays the list of records that meet the specified criteria.
+A List report displays the list of records that meet the specified criteria.
 
-To create a new list report, click on *Reports* tab and then click *Create Report* button. Choose needed Entity Type, then click *Create* button at *List Report* section.
+To create a new list report, click on the *Reports* tab and then click *Create Report* button. Choose the needed Entity Type, then, click *Create* button at *List Report* section.
 
 At *Columns* field, pick the fields you would like to be displayed. Below, you can specify display parameters for every column:
 
 * Width – width in percents;
-* Align – left or right;
+* Align – how to align data: left or right;
 * Link – a value will be displayed as a link leading to the record detail view;
-* Export Only – a column won't be displayed in report results on UI, but it will be available in export;
+* Export Only – a column won't be displayed in report results on the UI, but it will be available in export;
 * Not Sortable – a column cannot be ordered by, some fields are not available for sorting.
 
-Choose the needed sorting at *List Order* field.
+Choose the needed sorting in *List Order* field.
 
-At _Filters_ section, you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
+At *Filters* section, you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
 
-*Runtime Filters* allow you to specify different filters before you run the report.
+*Runtime Filters* allow you to specify criteria before running a report.
 
 You can **export** list report results to XLSX (Excel) and CSV formats.
 
@@ -58,31 +58,29 @@ Where list reports can be also utilized:
 * Panels on the detail view – to display related records that met some criteria on the side panel, more info [below](#report-panels).
 * Applying assignment rule – to assign records that met specific criteria by workflow or BPM.
 
-
 ## Grid Reports
 
 Grid reports show summarized values, can be grouped by one or two fields and displayed as a chart.
 
-To create a new grid report, click on *Reports* tab and then click *Create Report* button. Choose a needed *Entity Type*, then click the *Create* button at the *Grid Report* section.
+To create a new grid report, click on the *Reports* tab and then click *Create Report* button. Choose the needed *Entity Type*, then, click the *Create* button at the *Grid Report* section.
 
-When choosing an *Entity Type* for a grid report, consider the following. The *Entity Type* contains the field that will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
+When choosing an *Entity Type* for a grid report, consider the following. The *Entity Type* should contain the field that data will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
 
 The example of grid report results that shows revenue grouped by User:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
-
 ### Group By
 
-At *Group By* field, pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, and day for date fields. If you group by two fields your report will be considered as three-dimensional.
+In the *Group By* field, pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, and day for date fields.
 
-You can leave *Group By* field empty.
+You can also leave the *Group By* field empty.
 
 There is the ability to specify a custom [complex expression](complex-expressions.md) (with functions) for grouping. The complex expression is translated into an SQL statement.
 
 ### Columns
 
-At *Columns* field, select one or more **aggregate** functions applied to a specific field.
+In the *Columns* field, select one or more **aggregate** functions applied to a specific field.
 
 Functions:
 
@@ -92,9 +90,9 @@ Functions:
 * MAX – maximal value;
 * AVG – average value.
 
-If the report is grouped by a link field then it's possible to add fields from the linked record w/o aggregate functions. The example is the report for Opportunities grouped by Campaign with Campaign.Budget column.
+If a report is grouped by a link field, then it's possible to add fields from a linked record w/o aggregate functions. In the example, the report for Opportunities is grouped by Campaign with Campaign.Budget column.
 
-It's possible to add **non-aggregated columns**. In this case records will be displayed for each group. Note that if your report deals with a big number of records, it can run much slower.
+It's possible to add **non-aggregated columns**. In this case, records will be displayed for each group. Note that if your report deals with a big number of records, it can run much slower.
 
 Non-grouping grid report with non-aggregated columns:
 
@@ -108,7 +106,7 @@ There is the ability to specify custom [complex expressions](complex-expressions
 
 ### Order by
 
-*Order by* field defines how report data will be sorted.
+The *Order by* field defines how report data will be sorted.
 
 ### Filters
 
@@ -116,13 +114,15 @@ At *Filters* section, you can specify criteria to limit data displayed in the re
 
 ### Runtime Filters
 
-*Runtime Filters* allow you to specify different filters before you run the report.
+*Runtime Filters* allow you to specify criteria before running a report.
 
-Note: Specifying a runtime filter can be also useful for dashlets and report panels.
+!!! note
+
+    Specifying a runtime filter can be also useful for dashlets and report panels.
 
 ### Charts
 
-Grid report allows displaying results in a chart form.
+Grid report allows displaying results in chart form.
 
 There are following chart types available:
 
@@ -153,17 +153,17 @@ Pie:
 
 It's possible to export grid report results to XLSX (Excel) and CSV formats. Both a results table and chart are exported to XLSX.
 
-Note that non-aggregated columns (in grid reports) are not exported to XLSX.
+Note that non-aggregated columns in grid reports are not exported to XLSX.
 
 ### Access
 
-By checking *Apply ACL* the report result will not include records that the current user doesn't have access to.
+By checking *Apply ACL*, the report result will not include records that the current user does not have access to.
 
-If a regular user does not have edit access to the *Apply ACL* field (via role field level security), all reports they create will get *Apply ACL* automatically checked (as of v2.13.5).
+If a regular user does not have edit access to the *Apply ACL* field (via field level security in Roles), all reports they create will have the *Apply ACL* automatically checked (as of v2.13.5).
 
 ## Joint Grid reports
 
-Joint Grid reports combine multiple grid reports of different entity types. Sub-reports must be grouped by 1 or 0 fields.
+Joint Grid reports combine multiple grid reports of different entity types. Sub-reports selected for a joint report must be grouped by either 1 or 0 fields.
 
 If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
 
@@ -177,7 +177,7 @@ You can create a new Joint Grid report from the dropdown menu in the top-right c
 
 For charts, colors of columns must be specified in sub-reports.
 
-Runtime filters are not supported in joint reports. Only regular filters (specified in each sub-report) can be used.
+Runtime filters are not supported in joint reports. Only regular filters specified in each sub-report can be used.
 
 Non-aggregate columns are not supported in joint reports.
 
@@ -185,7 +185,7 @@ Non-aggregate columns are not supported in joint reports.
 
 ### Field filter
 
-Field filters are simple to use. They allow to filter by specific fields of a target entity type as well as fields of related records. E.g. you can filter Opportunities by a field of Account entity type.
+Field filters are simple to use. They allow to filter by specific fields of a target entity type as well as fields of related records. For example, you can filter Opportunities by a field of the Account entity type.
 
 ![Field filter](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-field.png)
 
@@ -209,8 +209,6 @@ Note: It's recommended to avoid using NOT IN group when possible, by using filte
 
 ### IN group
 
-*As of v2.1.*
-
 IN is similar to AND group but utilizes a sub-query.
 
 The example of usage: Filtering accounts that have opportunities of both 'Closed Won' and 'Negotiation' stages.
@@ -219,30 +217,29 @@ The example of usage: Filtering accounts that have opportunities of both 'Closed
 
 ### Complex Expression
 
-For more advanced use. You can apply function for certain database column and compare it with the result of [formula](../administration/formula.md) expression.
+For more advanced use. You can apply a database function to a certain database column and compare it with a result calculated by a [formula](../administration/formula.md) expression.
 
 Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
 
-Note: Functions intended to interact with the entity record will not work here because the formula is not applied to a specific record.
+Note: Formula functions intended to interact with the entity record will not work here because the formula is not applied to a specific record.
 
-Applying function to attribute and comparing with the result of formula:
+Applying function to a column and comparing with a result of formula:
 
 ![Complex Expression filter](../_static/images/user-guide/reports/filter-complex.png)
 
-Comparing the result of custom complex expression & the result of formula:
+Comparing the result of the custom complex expression and the result of the formula expression:
 
 ![Complex Expression filter](../_static/images/user-guide/reports/filter-complex-expression.png)
 
-
 * Complex expression is translated into an SQL statement and becomes a part of an SQL query.
-* Formula is executed by PHP and the result value is substituted into an SQL query.
-* Comparison operator is substituted into an SQL query between complex expression statement and formula result value.
+* Formula is executed before running the report and the result value is substituted into an SQL query.
+* Comparison operator is substituted into an SQL query between the complex expression statement and the formula result value.
 
 More info about complex expressions is available [here](complex-expressions.md).
 
 ### Having group
 
-Having group provides an ability to filter records with using aggregate functions COUNT, SUM, MAX, MIN, AVG.
+The Having group provides the ability to filter records with using aggregate functions COUNT, SUM, MAX, MIN, AVG.
 
 Some use cases:
 
@@ -251,23 +248,21 @@ Some use cases:
 
 ## Displaying on dashboard
 
-You can display any report on dashboard. In order to do it, you need to add Report dashlet and then pick the needed report at the dashlet options.
-
-Grid reports can be displayed as a chart, a chart with totals or only totals.
+You can display any report on the dashboard. In order to do it, you need to add the Report dashlet to the dashboard and then pick the needed report from the dashlet options.
 
 For grid reports it's possible to display:
 
 * Chart
 * Chart & Total
 * Total
-* Table (as of v2.7.0)
+* Table
 
 For list reports it's possible to display:
 
 * List
 * Total (number or records)
 
-List reports can be displayed as a list or a total number of records.
+For list reports, you can either display the list or records or only the total number of records.
 
 Dashlet with only totals displayed:
 
@@ -275,13 +270,11 @@ Dashlet with only totals displayed:
 
 ## Email sending
 
-It's possible to make the system send report results to certain users on a regular basis according to specified time. This must be configured for certain reports individually.
+It's possible to set up the system send report results to certain users on a regular basis according to specified time. This must be configured for certain reports individually.
 
-The Max number of records that can be sent in an email by default is 3000. You can increase it by adding a parameter to data/config.php: `'reportSendingListMaxCount' => 5000`.
+The Max number of records that can be sent in an email by default is set to 3000. You can increase it by adding the parameter to data/config.php: `'reportSendingListMaxCount' => 5000`.
 
 ## Printing to PDF
-
-*As of v2.5.0.*
 
 !!! note
 
@@ -311,11 +304,11 @@ Available attributes:
 
 ## Syncing with Target Lists
 
-It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available on the detail view of any target list at *Sync with Reports* panel.
+It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available in the detail view of any target list in the *Sync with Reports* panel.
 
 ## Report Filters
 
-Report Filters are the list view filters based on reports.
+The Report Filters feature alows to create custom primary filters for list views. Created filters can also be used in specific formula functions.
 
 An administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
 
@@ -340,7 +333,7 @@ Report filters can be utilized in [formula functions](../administration/formula.
 
 ## Report Panels
 
-Report Panels are the detail view panels showing report results. 
+The Report Panels feature allows to create custom detail view panels showing report results.
 
 An administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have access to the panel.
 
@@ -366,9 +359,9 @@ The report panel shows results related to the record that is viewed. The first f
 
 ## Portal access
 
-Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Reports* field on the Report detail view. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
+Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Reports* field in the Report detail view. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
 
-It's possible to add a report dashlet on the portal dashboard.
+It's possible to add a report dashlet to the portal dashboard.
 
 !!! note
 
