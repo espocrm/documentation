@@ -9,7 +9,7 @@ In this article:
 * [List reports](#list-reports)
 * [Grid reports](#grid-reports)
 * [Joint Grid reports](#joint-grid-reports)
-* [Filters](#filters_1)
+* [Filters](#filters)
 * [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
 * [Printing to PDF](#printing-to-pdf)
