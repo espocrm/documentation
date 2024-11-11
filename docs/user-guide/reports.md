@@ -1,8 +1,12 @@
 # Reports
 
-The Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
+The Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/). It provides analytic capabilities and to additional functionalities: report panels and custom list view filters.
 
-There are two types of reports: List and Grid.
+There are three types of reports:
+
+* List
+* Grid
+* Joint Grid
 
 In this article:
 
