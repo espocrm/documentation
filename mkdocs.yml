@@ -145,6 +145,7 @@ nav:
             - 'Optimistic concurrency control': 'user-guide/optimistic-concurrency-control.md'
     - 'Extensions':
         - 'Advanced Pack':
+            - 'Overview': 'extensions/advanced-pack/overview.md'
             - 'Reports': 'user-guide/reports.md'
             - 'Workflows': 'administration/workflows.md'
             - 'BPM':
