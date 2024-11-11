@@ -317,7 +317,7 @@ It's possible to have target lists synced with list report results. It's conveni
 
 Report Filters are the list view filters based on reports.
 
-Administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
+An administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
 
 !!! note
 
@@ -342,7 +342,7 @@ Report filters can be utilized in [formula functions](../administration/formula.
 
 Report Panels are the detail view panels showing report results. 
 
-Administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have access to the panel.
+An administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have access to the panel.
 
 Both Grid and List reports can be used.
 
