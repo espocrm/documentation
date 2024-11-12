@@ -123,7 +123,7 @@ The EN 16931 standard requires countries to be represented as ISO 3166-1 alpha-2
 
 Note that it's possible to automatically populate country records with English names.
 
-Example: If you run business from Germany, your customer is also in Germany and you use the word *Germany* when storing the country in Espo, you need to create a *Germany* Address Country record with a *DE* code.
+Example: If you run business from Germany, your customer is also in Germany and you use the word *Germany* when storing the country in Espo, you need to create the *Germany* Address Country record with the *DE* code.
 
 ## Locking
 
