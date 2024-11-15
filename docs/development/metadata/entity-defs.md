@@ -604,7 +604,7 @@ Disable merging related records when duplicate records are being merged.
 
 ### deferredLoad
 
-*(available for belongsTo and belongsToParrnt)*
+*(available for belongsTo and belongsToParent)*
 
 *As of v9.0.0.*
 
