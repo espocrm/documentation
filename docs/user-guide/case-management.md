@@ -32,6 +32,10 @@ To prevent overlooking of new cases, users can add the Case entity type to the *
 
 The Case entity type can be associated with one Account and/or with multiple Contacts. It also can be associated with a Lead record. Note that by default the Lead field is not available on the Detail layout. An administrator can add it at: Administration > Entity Manager > Case > Layouts > Detail.
 
+!!! tip
+
+    Cases are not necessarily limited to customer service purposes. You can also use them to track non-support-related topics.
+
 ## Stream
 
 Case record has a stream that can be utilized for a communication between customer and service.
