@@ -22,7 +22,7 @@ Also consider to unset sensitive data immediately after usage.
 
 ## Cleaning up ended processes
 
-Ended Processes are *not* cleaned up automatically as a Process may hold information important for a business. You may utilize a scheduled Workflow rule that will handle removal of ended Processes.
+Ended Processes are *not* cleaned up automatically, as they may hold information important to the business. You may utilize a scheduled Workflow rule that will handle removal of ended Processes.
 
 ## Self-removal
 
