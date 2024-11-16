@@ -8,7 +8,8 @@ In this article:
 * [Knowledge Base](#knowledge-base)
 * [Customer Portal](#customer-portal)
 * [Access to child records](#access-to-child-records)
-
+* [Collaborators](#collaborators)
+* [See also](#see-also)
 
 ## Overview
 
@@ -65,6 +66,14 @@ Since Portal Users automatically follow Cases they have created, they will recei
 User access to child records of a Case, such as Emails, Meetings and Calls, is not determined by access to the Case record. For example, a Case can be assigned to a User but a related Email is not related to that User resulting in the User not being able to view the Email.
 
 By utilizing the Workflow tool, it's possible to write a rule that will automatically add the Assigned User of a Case to all child records. The same is also possible with the Teams fields.
+
+## Collaborators
+
+*As of v9.0.0.*
+
+The collaborators feature can be enabled for Cases at Administration > Entity Manager > Cases > Edit.
+
+Users added as collaborators to a Case will have read and stream access, provided their access level, as defined by Roles, is other than no.
 
 ## See also
 
