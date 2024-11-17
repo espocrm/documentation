@@ -16,14 +16,15 @@ In this article:
 
     You need to have cron properly configured in your system to have inbound emails working.
 
-IMAP allows to retrieve your emails from an email client. To setup the IMAP account, do the following steps:
-1. Select *Emails Tab > top-right menu > Personal Email Accounts*.
+IMAP allows to retrieve your emails from a mail sercer. To set up an IMAP account, do the following steps:
+
+1. Go to Emails Tab > top-right menu > Personal Email Accounts.
 2. Click on *Create Personal Email Account*.
-3. In the *Main* section, specify your *Email Address*. The *Name* of personal email account is generated automatically, but you may change it. *Fetch since* allows to choose the date from which emails should be archived. In case you want to archive old emails, set it to some prior date to the day from which they should be fetched.
+3. In the *Main* section, specify your Email Address. The *Name* of the personal email account is generated automatically, but you can change it. *Fetch since* allows to choose a date from which emails will be imported. If you want to archive old emails, set it to some past date.
 
 ![Create personal email account](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/1.png)
 
-4. In the *IMAP* section, enter your *Host* name, your *Email Client Username* and *Email Client Password* in the fields shown. Tick of *SLL* for a secure connection. The IMAP *Port* will be generated automatically.
+4. In the *IMAP* section, enter your *Host* name, your *Username* and *Password*. Tick *SSL* for a secure connection. The IMAP *Port* will be generated automatically.
 
 ![IMAP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/2.png)
 
