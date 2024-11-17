@@ -94,7 +94,9 @@ For more information, follow the [link](https://support.google.com/mail/answer/7
 
 Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.html).
 
-See the articles for the service you use:
+## See also
+
+See the articles for specific providers:
 
 * [Gmail](https://support.google.com/accounts/answer/185833)
 * [Yahoo](https://in.help.yahoo.com/kb/SLN15241.html)
