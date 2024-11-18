@@ -39,7 +39,7 @@ Portal Roles are similar to regular Roles in EspoCRM but with a few distinctions
 For custom entity types, to be able to use *account* and *contact* access levels, you need (as of v9.0):
 
 1. To have a relationship between your entity type and Account/Contact.
-2. To select these relations in the ACL Account Link and ACL Contact Link parameters at Administration > Entity Manager > {Entity Type} > Edit.
+2. To select these relations in the *ACL Account Link* and *ACL Contact Link* parameters at Administration > Entity Manager > {Entity Type} > Edit.
 
 The *Assigned User* and *Teams* fields are read-only for portal users.
 
