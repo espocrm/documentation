@@ -100,8 +100,8 @@ Mass Email system parameters are available at Administration > Outbound Emails >
 
 * Max number of emails sent per hour – to avoid sending rate exceeding; the actual number of emails sent per hour will be always less than this limit; the more often the job is run per hour, the more close to the limit number the number of sent emails will be;
 * Max number of emails sent per batch – how many emails to send per job run per one Mass Email (as of v8.1);
-* Disable mandatory opt-out link − by default opt-out link is added even if it's absent in Email Template, you can disable this behaviour;
-* Email Open Tracking − whether to track email opening (not working with most of email providers);
+* Disable mandatory opt-out link − by default opt-out link is added even if it's absent in an Email Template, you can disable this behaviour;
+* Email Open Tracking − whether to track email opening (currently, not working reliably with most email providers);
 * Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path) − for more reliable bounced email precessing.
 
 Configure how often the sending job is run at: Administration > Scheduled Jobs > Send Mass Emails > Scheduling.
@@ -114,19 +114,19 @@ Only for the administrator.
 
 1. Check if _Send Test_ works. If doesn't work, then check if system SMTP settings are correct.
 2. Check if you have setup cron for your system.
-3. Check if you have 'Send Mass Emails' Scheduled Job and it's 'Active' (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in the log.
+3. Check if you have *Send Mass Emails* Scheduled Job and it is *Active* (Administration > Scheduled Jobs > Send Mass Emails). Check if there is something in the log.
 
-#### What if Tracking URLs has wrong url that does not lead to your crm
+#### What if Tracking URLs have wrong URL that does not lead to your CRM
 
-Check out the **Site URL** parameter at Administration > Settings. The value must be the URL of your EspoCRM instance, this URL must be accessible externally.
+Check the *Site URL* parameter at Administration > Settings. The value must be the URL of your EspoCRM instance. This URL must be also accessible externally.
 
 #### Bounced emails are not being logged
 
-Bounced emails can be handled by a group email account only. Make sure that you have a group email account that monitors the mailbox bounced emails are sent to.
+Bounced emails can be handled by a Group Email Account only. Make sure that you have a Group Email Account that monitors the mailbox bounced emails are being sent to.
 
 Also some mail server providers can deviate from standards, so bounced emails can be not distinguished.
 
-Enable **VERP** at Administration > Outbound Emails > Mass Email. Note that your SMTP provider needs to support it. 
+Enable *VERP* at Administration > Outbound Emails > Mass Email. This improves bounce recognition significantly. Note that it will work only if your SMTP provider supports VERP. 
 
 ## See also
 
