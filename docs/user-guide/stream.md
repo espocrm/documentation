@@ -24,11 +24,11 @@ It's possible to view all activity for a specific user. It will display all note
 
 ## Notifications
 
-You will receive notifications about updates in your Stream that were done by another users.
+A user receives notifications about updates in their Stream that were done by other users.
 
 ## Posts
 
-You can create a post related to a certain record. You are also able to attach multiple files and images to the post. Images can be pasted from the clipboard.
+You can create a post related to a certain record. You are also able to attach multiple files and images to a post. Images can be pasted from the clipboard.
 
 ### Mentions
 
@@ -36,11 +36,11 @@ If you want to mention somebody in your post, you need to type `@` symbol and st
 
 !!! note
 
-    The user who was mentioned in the post needs to have access to the Stream of the record where they were mentioned. Otherwise, the user won't receive the notification about the post.
+    The user who was mentioned in the post needs to have access to the Stream of the record where they were mentioned. Otherwise, the user won't receive a notification about the post.
 
 !!! note
 
-    The user needs to have a proper *Assignment Permission* (set in Roles) to be able to mention a specific user. If the assignment permission is set to `no`, then the user won't be able to mention anyone. If set to `team`, then they will be able to mention only users of their team (or teams). If set to `all`, then they will be able to mention anyone. Portal users are not able to mention users.
+    The user needs to have a proper *Mention Permission* (set in Roles) to be able to mention a specific user. If the assignment permission is set to `no`, then the user won't be able to mention anyone. If set to `team`, then they will be able to mention only users of their teams. If set to `all`, then they will be able to mention anyone. Portal users are not able to mention users.
 
 ### Attachments
 
