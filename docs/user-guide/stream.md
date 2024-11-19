@@ -1,26 +1,24 @@
 # Stream
 
-The Stream in EspoCRM is a feed where you can see updates and new additions for records you follow. You are also can post messages to your own Stream and to the Stream of another Users.
+Stream in EspoCRM is a feed where you can see posts and updates of records you follow. You can also post messages to your own Stream and to the Stream of other Users.
 
-By default, the following entity types have the Stream enabled: Accounts, Contacts, Leads, Opportunities, Cases, Tasks. Administrators can **enable** or **disable** the Stream for a certain entity type in the [Entity Manager](../administration/entity-manager.md).
-
-There are two types of the Stream in EspoCRM: Record Stream and User Stream.
+By default, the following entity types have the Stream enabled: Accounts, Contacts, Leads, Opportunities, Cases, Meetings, and Tasks. Administrators can enable or disable  Stream for a certain entity type at Administration > Entity Manager > {Entity Type} > Edit.
 
 ## Record Stream
 
-The *Stream* panel is available on the record detail view in the bottom. Posts, updates and new additions related to the current record are displayed here. Stream records are called Notes in EspoCRM.
+The *Stream* panel is available on the record detail view in the bottom. Posts, updates and new additions related to the current record are displayed here. A single Stream record internally is called *Note*.
 
-The administrator can move the Stream panel down so that it will appear under other panels or put the panel into a tab. This can be done at Administration > Entity Manager > {Entity Type} > Layouts > Bottom Panels.
+An administrator can move the Stream panel down so that it will appear under other panels or put the panel into a tab. This can be done at Administration > Entity Manager > {Entity Type} > Layouts > Bottom Panels.
 
-Stream Notes can be pinned. A user need to have *edit* access for a record to be able to pin or unpin Stream Notes.
+Stream posts can be pinned. A user needs to have *edit* access to a record to be able to pin or unpin Stream posts.
 
 ## User Stream
 
-Users can see their Stream in the **Stream** dashlet as well as under the Stream tab. By default, the Stream tab is not added to the navbar.
+Users can view their own Stream in the *Stream* dashlet as well on a separate Stream page.
 
-Users can see the Stream of another users on the user's detail view if they have access defined by the *User Permission* in Roles.
+Users can see Stream of another users on the user's detail view if they have access defined by the *User Permission* in Roles.
 
-In the user's Stream you can see posts and updates of records that the user follows. You can also see posts addressed to that user.
+In the user's Stream, you can see posts and updates of records that the user follows. You can also see posts addressed to that user.
 
 It's possible to view all activity for a specific user. It will display all notes that either created directly by the user or created as a result of that users' actions. Available from the dropdown menu on the Stream panel on the User's detail view. As of v8.2.
 
