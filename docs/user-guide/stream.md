@@ -44,7 +44,7 @@ If you want to mention somebody in your post, you need to type `@` symbol and st
 
 ### Attachments
 
-By default, users can attach files of any types to stream posts.
+Users can attach files stream posts.
 
 An administrator can configure the *Attachments* field at Administration > Entity Manager > Note > Fields > attachments (as of v7.2). The following parameters are available:
 
