@@ -33,7 +33,7 @@ An Opportunity represents a potential deal or closed sale.
 
 !!! note
 
-    Opportunities with the *Closed Won* stage are taken into account in the default sales dashlets. Using Opportunities to calculate revenue is an option  that may be suitable for small businesses.
+    Opportunities with the *Closed Won* stage are taken into account in the default sales dashlets. Using Opportunities to calculate revenue is an option that may be suitable for small businesses.
 
 ### Stage
 
@@ -46,21 +46,23 @@ The following opportunity stages are available by default:
 * Closed Won
 * Closed Lost
 
-An administrator can define custom stages depending on business flow of the company: Administration > Entity Manager > Opportunity > Fields > Stage. It's also possible to define custom probabilities for each stage.
+An administrator can define custom stages depending on the business workflow of the company: Administration > Entity Manager > Opportunity > Fields > Stage. It's also possible to define custom probability values for each stage.
 
 ### Probability
 
-The Opportunity probability is an estimated percentage chance that the sale will be won. *Closed Won* status has the 100% probability, *Closed Lost* – zero. Other stages has their default probabilities. The default probabilities can be modified in the Entity Manager.
+The Opportunity probability is an estimated percentage chance that the sale will be won. The *Closed Won* status has a 100% probability, the *Closed Lost* – zero. Other stages has their specific probabilities between 0% and 100%. The probabilities can be modified in the Entity Manager.
 
-Probabilities can be utilized in revenue forecasting.
+!!! note
+
+    Probabilities can be utilized in revenue forecasting.
 
 ## Currency
 
 An administrator can define available currencies and their rates at Administration > Currency.
 
-It's possible to convert currency of existing opportunities:
+It's possible to convert currency of existing Opportunities:
 
-* on the list view: select needed records and then click *Convert Currency* in the *Actions* dropdown,
+* on the list view: select needed records and then click *Convert Currency* in the *Actions* dropdown;
 * on the detail view: click the dropdown next to the *Edit* button, then *Convert Currency*.
 
 ## Sales analytics
@@ -72,7 +74,7 @@ The following charts are available on the dashboard by default:
 * Opportunities by Stage
 * Sales Pipeline
 
-By utilizing [Reports tool](reports.md) it's possible to view sales statistics based on specific criteria. Report charts can be displayed on the dashboard.
+By utilizing the [Reports tool](reports.md), it's possible to view sales statistics based on specific criteria. Report charts can be displayed on the dashboard.
 
 ### Revenue forecast
 
@@ -84,9 +86,9 @@ Available with Reports from Advanced Pack.
 4. Add 'Close Date' to Runtime Filters field.
 5. Select 'Bar (vertical)' chart type.
 
-This report will show the revenue forecast based on probabilities of opportunities.
+This report will show the revenue forecast based on probabilities of Opportunities.
 
-Users who have an access to this report will be able to add it on their dashboards.
+Users who have access to this report will be able to add it on their dashboards.
 
 ## See also
 
