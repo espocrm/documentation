@@ -23,13 +23,17 @@ To prevent overlooking of new Leads, users can add the *Lead* entity type to the
 
 ### Converting
 
-To convert the lead, you need to click *Convert* button on the lead detail view. Then you can check to what record types you want to convert: Account, Contact, Opportunity.
+To convert a Lead, you need to click *Convert* button on the Lead detail view. Then, you can check to what record types you want to convert: Account, Contact, and/or Opportunity.
 
-Converted lead won't be removed from the system. It will have status *Converted*, records it was converted to, will be available on *Converted To* panel on the right.
+A converted Lead won't be removed from the system. It will have status *Converted*, records it was converted to, will be available in the *Converted To* panel on the right.
 
 ## Opportunities
 
-An opportunity represents a potential or closed deal. Opportunity with *Closed Won* stage are taken into account in sales revenue calculation (dashlets & reports).
+An Opportunity represents a potential deal or closed sale.
+
+!!! note
+
+    Opportunities with the *Closed Won* stage are taken into account in the default sales dashlets. Using Opportunities to calculate revenue is an option  that may be suitable for small businesses.
 
 ### Stage
 
