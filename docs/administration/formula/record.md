@@ -210,7 +210,7 @@ Unlinks two records.
 
 or
 
-`record\create(ENTITY_TYPE, OBJECT)` (as of v8.5)
+`record\create(ENTITY_TYPE, OBJECT)` (as of v9.0)
 
 Creates a new record of entity type with attributes specified as key-value pairs or in an object. Returns id of the created record, or NULL if failure.
 
@@ -224,7 +224,7 @@ Creates a new record of entity type with attributes specified as key-value pairs
 
 or
 
-`record\update(ENTITY_TYPE, ID, OBJECT)` (as of v8.5)
+`record\update(ENTITY_TYPE, ID, OBJECT)` (as of v9.0)
 
 Updates an existing record with attributes specified as key-value pairs or an object.
 
