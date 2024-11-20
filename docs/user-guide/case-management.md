@@ -4,9 +4,9 @@ In this article:
 
 * [Overview](#overview)
 * [Stream](#stream)
-* [Email-to-Case](#email-to-case)
-* [Knowledge Base](#knowledge-base)
-* [Customer Portal](#customer-portal)
+* [Email-to-case](#email-to-case)
+* [Knowledge base](#knowledge-base)
+* [Customer portal](#customer-portal)
 * [Access to child records](#access-to-child-records)
 * [Collaborators](#collaborators)
 * [See also](#see-also)
@@ -43,7 +43,7 @@ A Case record has a Stream that can be used for communication between the custom
 
 CRM users can mark stream posts as *internal*. Such posts are not visible in the customer portal and the customer is notified about them. To make a post internal, click the *lock* icon next to the *Post* button befor posting.
 
-## Email-to-Case
+## Email-to-case
 
 An administrator can set up a Group Email Account that will create a new Case on each incoming email. For more information, [see here](../administration/emails.md).
 
@@ -51,15 +51,17 @@ Users can create Cases from Emails manually. On the Email detail view, click the
 
 When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a *Parent* of the Email that is being composed. This will force automatical addition of the group email address to the *Reply-To* field of the email. Then, when the customer replies on that email, it will be sent to the group email address rather than to the user’s one.
 
-## Knowledge Base
+## Knowledge base
 
 Users can relate Knowledge Base Articles to a Case record. See more info about the Knowledge Base [here](knowledge-base.md).
 
-## Customer Portal
+## Customer portal
 
 An administrator can create a [Portal](../administration/portal.md) where customers will be able to create Cases. Permission to create Cases can be granted in a Portal Role.
 
 Since Portal Users automatically follow Cases they have created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's also possible to make email replies to go to a Group Email Account. For this, you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with the Group Email Account (use the Update Target Record action, set the *Group Email Account* field).
+
+Cases marked is *Internal* are not available in portals. Internal cases be useful when referencing a Contact is needed but the customer should not have access to the Case. As of v9.0.
 
 ## Access to child records
 
