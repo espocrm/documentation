@@ -61,7 +61,7 @@ An administrator can create a [Portal](../administration/portal.md) where custom
 
 Since Portal Users automatically follow Cases they have created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's also possible to make email replies to go to a Group Email Account. For this, you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with the Group Email Account (use the Update Target Record action, set the *Group Email Account* field).
 
-Cases marked is *Internal* are not available in portals. Internal cases be useful when referencing a Contact is needed but the customer should not have access to the Case. As of v9.0.
+Cases marked is *Hidden from Portal* are not available in portals. It can be useful when referencing a Contact is needed but the customer should not have access to the Case. As of v9.0.
 
 ## Access to child records
 
