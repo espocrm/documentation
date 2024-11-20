@@ -57,9 +57,9 @@ Users can relate Knowledge Base Articles to a Case record. See more info about t
 
 ## Customer Portal
 
-An administrator can create a [Portal](../administration/portal.md) where customers will be able to create Cases. Permission to create cases can be granted in a Portal Role.
+An administrator can create a [Portal](../administration/portal.md) where customers will be able to create Cases. Permission to create Cases can be granted in a Portal Role.
 
-Since Portal Users automatically follow Cases they have created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's also possible to make email replies to go to a Group Email Account. For this, you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with a Group Email Account (use rgw Update Target Record action, set *Group Email Account* field).
+Since Portal Users automatically follow Cases they have created, they will receive email notifications about new messages in the case's stream. Notifications are sent from the system email account. So when a customer replies to a notification, it will be sent to the system email address. It's also possible to make email replies to go to a Group Email Account. For this, you need to utilize the Workflow tool (or Formula) to make all new cases be automatically linked with the Group Email Account (use the Update Target Record action, set the *Group Email Account* field).
 
 ## Access to child records
 
