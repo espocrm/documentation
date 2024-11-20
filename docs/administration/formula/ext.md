@@ -85,7 +85,7 @@ Applies an email template to an existing email record. Parent record can be pass
 
 ## ext\markdown\transform
 
-*As of v8.5.*
+*As of v9.0.*
 
 `ext\markdown\transform(STRING)`
 
