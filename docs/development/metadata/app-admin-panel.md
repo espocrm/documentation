@@ -80,6 +80,6 @@ A record view. Optional. Needed if you defined the URL like `#Admin/{myName}`. T
 
 *boolean*
 
-*As of v8.5.*
+*As of v9.0.*
 
 Makes available in the navbar tab quick search.
