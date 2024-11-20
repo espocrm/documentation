@@ -9,17 +9,17 @@ In this article:
 
 ## Leads
 
-A Lead represents a person or organization that currently is not a customer, but has a potential to be. Creating a new lead record usually is a first step of the sale process. As more information about the lead is gathered it's supposed that lead will be converted into a Account, Contact and Opportunity.
+A Lead represents a person or organization that  is not currently a customer but has the potential to be. Creating a new Lead record is usually the first step in the sale process. As more information about the Lead is gathered,  the Lead is expected to be converted into a Account, Contact, and/or Opportunity.
 
-New leads are supposed to be created by the following scenarios:
+New Leads are typically created in the following scenarios:
 
-* Manually by CRM users;
-* Through the API (e.g. through the web form);
-* Automatically by a Workflow rule.
+* manually by CRM users;
+* through the API (e.g. through a web form);
+* automatically by a Workflow rule.
 
-By utilizing [Workflows](../administration/workflows.md), administrator can set up the system to apply a specific assignment rule to new leads, i.e. *Round-Robin* and *Least-Busy* rules. For more complex business flows it's recommended to utilize [BPM tool](../administration/bpm.md).
+By utilizing the [Workflows](../administration/workflows.md) tool, an administrator can set up the system to apply a specific assignment rule to new Leads. *Round-Robin* and *Least-Busy* rules are available. For more complex business flows, it's recommended to utilize the [BPM tool](../administration/bpm.md).
 
-To prevent overlooking of new leads, users can add *Lead* entity type to the *Global Auto-follow* list at Preferences. Then they will automatically follow every new lead.
+To prevent overlooking of new Leads, users can add the *Lead* entity type to the *Global Auto-follow* list in Preferences. Then, they will automatically follow every new Lead created in the system they have access to.
 
 ### Converting
 
