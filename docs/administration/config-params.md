@@ -203,6 +203,8 @@ The list of parameters along with their default values. This is not a full list 
 * wysiwygCodeEditorDisabled – `false` – disable the Wysiwyg field code editor; as of v8.2;
 * customPrefixDisabled – `false` – disable adding a *c* prefix to custom entity types, fields and links; as of v8.2; disabling can cause naming conflicts in the future;
 * starsLimit – 500 – max number of stars a user can give per entity type;
+* phoneNumberMaxCount – 10 – max number of phone numbers per record;
+* emailAddressMaxCount – 10 – max number of email addresses per record;
 
 ## Config files
 
