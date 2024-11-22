@@ -1,5 +1,7 @@
 # Mail Merge (mass snail mailing)
 
+The Main Marge feature provides the ability to mass generate snail mails for printing.
+
 1\. You need to have a Target List populated with recipients. You can access Target Lists by navigating to the Campaigns tab and clicking the Target Lists button in the top-right corner.
 
 2\. Create a PDF Template for an entity type you want to send mails to. If the Target List contains records of different entity types (e.g. both Contacts and Leads) you need to create separate templates for each one.
