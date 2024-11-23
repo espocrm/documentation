@@ -9,7 +9,7 @@ In this article:
 
 ## Lead capture
 
-By utilizing the Lead Capture feature, an administrator can create an entry point for capturing leads through API. Follow Administration > Lead Capture to create the entry point.
+By utilizing the Lead Capture feature, an administrator can create an entry point for capturing leads through API or web forms. Follow Administration > Lead Capture to create a Lead Capture record.
 
 Parameters:
 
