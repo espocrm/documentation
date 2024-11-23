@@ -9,7 +9,7 @@ In this article:
 
 ## Lead capture
 
-By utilizing the Lead Capture feature, an administrator can create an entry point for capturing leads through API or web forms. Follow Administration > Lead Capture to create a Lead Capture record.
+By utilizing the Lead Capture feature, an administrator can create entry points for capturing Leads through API and web forms. Follow Administration > Lead Capture to create a Lead Capture record.
 
 Parameters:
 
@@ -77,7 +77,9 @@ Supported field types:
 
 ## API request
 
-Your web site needs to make a POST request to send form data to your CRM. The request **doesn't require any authorization**. You just need to use a specific URL with an API Key. The information about the request is available in the side panel on the Lead Capture detail view.
+You can use API requests to send Leads directly without using the built-in web-form.
+
+Your web site needs to make a POST request to send form data to your Espo. The request doesn't require any authorization. You just need to use a specific URL with an API Key in it. The information about the request is available in the side panel on the Lead Capture detail view.
 
 Required headers:
 
