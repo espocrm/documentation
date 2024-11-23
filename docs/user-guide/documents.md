@@ -18,4 +18,4 @@ It's possible to create a Document from an Email attachment. On the Email detail
 
 ## Uploading documents in attachments
 
-It's possible to upload existing Documents directly in Attachment-Multiple fields. This ability can be enabled at: Administration > Entity Manager > {Entity Type} > Fields > {your Attachment-Multiple field}. Add *Documents* to the Source List.
+It's possible to upload existing Documents directly in Attachment-Multiple fields. This ability can be enabled for a specific field at: Administration > Entity Manager > {Entity Type} > Fields > {your Attachment-Multiple field}. Add *Documents* to the Source List.
