@@ -132,8 +132,11 @@
   * [Customization](extensions/voip-integration/customization.md)
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
 * Export Import
-  * [Usage](extensions/export-import/export-import-usage.md)
-  
+  * [Overview](extensions/export-import/overview.md)
+  * [Export](extensions/export-import/export.md)
+  * [Import](extensions/export-import/import.md)
+  * [Compare](extensions/export-import/compare.md)
+
 ---
 
 ### See also

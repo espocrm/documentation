@@ -151,7 +151,7 @@ nav:
             - 'BPM':
               - 'Overview': 'administration/bpm.md'
               - 'Gateways': 'administration/bpm-gateways.md'
-              - 'Events': 'administration/bpm-events.md'              
+              - 'Events': 'administration/bpm-events.md'
               - 'Activities': 'administration/bpm-activities.md'
               - 'Misc':
                 - 'Examples': 'administration/bpm-examples.md'
@@ -199,7 +199,10 @@ nav:
             - 'Customization': 'extensions/voip-integration/customization.md'
             - 'Troubleshooting' : 'extensions/voip-integration/troubleshooting.md'
         - 'Export Import':
-            - 'Usage': 'extensions/export-import/export-import-usage.md'
+            - 'Overview': 'extensions/export-import/overview.md'
+            - 'Export': 'extensions/export-import/export.md'
+            - 'Import': 'extensions/export-import/import.md'
+            - 'Compare': 'extensions/export-import/compare.md'
     - 'Developer':
         - 'Index': 'development/index.md'
         - 'Getting started': 'development/how-to-start.md'
@@ -208,7 +211,7 @@ nav:
         - 'Tests': 'development/tests.md'
         - 'Translation': 'development/translation.md'
         - 'Coding rules': 'development/coding-rules.md'
-        - 'Backend':          
+        - 'Backend':
           - 'Dependency injection': 'development/di.md'
           - 'Metadata': 'development/metadata.md'
           - 'Metadata reference':
@@ -311,7 +314,7 @@ nav:
           - 'View': 'development/view.md'
           - 'Templates': 'development/frontend/templates.md'
           - 'Model': 'development/model.md'
-          - 'Collection': 'development/collection.md'          
+          - 'Collection': 'development/collection.md'
           - 'HTML & CSS': 'development/frontend/html-css.md'
           - 'Ajax requests': 'development/frontend/ajax.md'
           - 'Controller & routing': 'development/frontend/controller.md'
@@ -328,7 +331,7 @@ nav:
               - 'Buttons & actions on record views': 'development/custom-buttons.md'
               - 'Panels on record view': 'development/frontend/record-panels.md'
               - 'Custom CSS file': 'development/custom-css.md'
-              - 'Dashlets': 'development/how-to-create-a-dashlet.md'              
+              - 'Dashlets': 'development/how-to-create-a-dashlet.md'
               - 'Link-multiple field with primary record': 'development/link-multiple-with-primary.md'
               - 'Campaigns':
                 -  'Custom unsubscribe page': 'development/campaign-unsubscribe-template.md'
