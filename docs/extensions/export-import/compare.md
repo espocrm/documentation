@@ -92,7 +92,7 @@ Skip configuration comparison of the instance. By default, all configuration dat
 **Note:** not yet implemented.
 
 Skip comparison of internal configuration data which are stored at `config-internal.php`.
-Use [`--user-password`](#user-password) in order to set a user password since the `passwordSalt` will not be exported / imported.
+Use [`--user-password`](import.md/#-user-password) in order to set a user password since the `passwordSalt` will not be exported / imported.
 
 #### `--entity-list`
 

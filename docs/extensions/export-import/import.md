@@ -35,7 +35,7 @@ Skip importing configuration data. By default, all configuration data will be im
 #### `--skip-internal-config`
 
 Skip importing internal configuration data which are stored at `config-internal.php`.
-Use [`--user-password`](#user-password) in order to set a user password since the `passwordSalt` will not be imported.
+Use [`--user-password`](#-user-password) in order to set a user password since the `passwordSalt` will not be imported.
 
 #### `--entity-list`
 
@@ -108,11 +108,11 @@ For resetting the password, use `bin/command set-password [username]`.
 #### `--skip-password`
 
 Skip changing passwords for existing users. Example: `--skip-password"`.
-Use [`--user-password`](#user-password) in order to set a user password.
+Use [`--user-password`](#-user-password) in order to set a user password.
 
 #### `--update-currency`
 
-To update all currency fields. This option depends on [`currency`](#currency). If the `currency` option is not defined, the default currency will be used instead. By default, this option is `off`.
+To update all currency fields. This option depends on [`currency`](#-currency). If the `currency` option is not defined, the default currency will be used instead. By default, this option is `off`.
 
 #### `--currency`
 

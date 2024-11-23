@@ -35,7 +35,7 @@ Skip exporting configuration data. By default, all configuration data will be ex
 #### `--skip-internal-config`
 
 Skip exporting internal configuration data which are stored at `config-internal.php`.
-Use [`--user-password`](#user-password) in order to set a user password since the `passwordSalt` will not be exported.
+Use [`--user-password`](import.md/#-user-password) in order to set a user password since the `passwordSalt` will not be exported.
 
 #### `--entity-list`
 
@@ -78,7 +78,7 @@ Available values:
 #### `--skip-password`
 
 Skip exporting passwords and changing passwords for existing users. Example: `--skip-password"`.
-Use [`--user-password`](#user-password) in order to set a user password.
+Use [`--user-password`](import.md/#-user-password) in order to set a user password.
 
 #### `--entity-skip-list`
 
