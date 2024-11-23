@@ -52,7 +52,7 @@ Parameters:
 * Allowed hosts for form embedding (for IFRAME)
 * Use Captcha
 
-Captcha can be configured under Administration > Integrations ReCAPTCHA v3 is implemented.
+Captcha can be configured under Administration > Integrations. ReCAPTCHA v3 is implemented.
 
 Supported field types:
 
