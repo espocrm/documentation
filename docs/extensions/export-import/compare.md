@@ -6,13 +6,11 @@ The export feature is available in [Export Import](https://github.com/espocrm/ex
 
 In order to use the compare feature, you need to have an exported data (e.g. from a backup).
 
-This extension works via console (CLI). Commands should be executed from the `root directory of your EspoCRM instance`.
+This extension works via console (CLI). Commands should be executed from the `root directory` of your EspoCRM instance.
 
 ```bash
 bin/command export-import compare --format=json --path="./data/export-import" --result-path="./data/export-import-result" --compare-type="all" --entity-list="Account" --skip-related-entities --pretty-print --info
 ```
-
-Each can be used with additional options. See examples below.
 
 ## Result
 
@@ -25,7 +23,7 @@ For each entity, the following statuses may be shown:
 * `Total`: total number of compared records.
 * `Created`: number of created records.
 * `Modified`: number of modified records.
-* `Skipped (both modified)`: number of modified records that have already been modified by another user or workflow. This is where records can be checked manually. To enable this folder, use `--info` and `--from-date` options.
+* `Skipped (both modified)`: number of modified records that have already been modified by another user or workflow. This is where records can be checked manually. To enable this folder, use [`--info`](#-info) and [`--from-date`](#-from-date) options.
 * `Unmodified`: number of unmodified records.
 * `Deleted`: number of deleted records.
 
@@ -44,7 +42,7 @@ This folder will contain data in a separate sub-folders:
 ```
 
 * `changed` folder contains the changed data.
-* `skipped` folder contains the both modified data that is skipped based on modifications found in the `modifiedAt` attribute, `Stream`, `Action History` and `Workflow Log`. To enable this folder, use `--info` and `--from-date` options.
+* `skipped` folder contains the both modified data that is skipped based on modifications found in the `modifiedAt` attribute, `Stream`, `Action History` and `Workflow Log`. To enable this folder, use [`--info`](#-info) and [`--from-date`](#-from-date) options.
 
 ## Available options
 
@@ -231,12 +229,16 @@ bin/command export-import compare --format=json --path="./data/backup-data/expor
 
     Before you start this process, make sure that you have a backup of your production data.
 
+!!! tip
+
+    It is recommended to restore only specified entities.
+
 1. Follow the 1-5 steps described in [Complete process for comparison](#complete-process-for-comparison) section.
 
 2. Run the comparison command on your production instance:
 
 ```bash
-bin/command export-import compare --format=json --path="./data/backup-data/export-import" --result-path="./data/export-import-result" --compare-type=updated --from-date="2025-01-01 01:00:00" --pretty-print --info
+bin/command export-import compare --format=json --path="./data/backup-data/export-import" --result-path="./data/export-import-result" --compare-type=updated --from-date="2025-01-01 01:00:00" --pretty-print --info  --entity-list="Account, Contact" --skip-related-entities
 ```
 
 3. If the comparison result is OK, then you can import the data to your production instance:

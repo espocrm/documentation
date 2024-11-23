@@ -4,7 +4,7 @@ The import feature is available in [Export Import](https://github.com/espocrm/ex
 
 ## Usage
 
-This extension works via console (CLI). Commands should be executed from the `root directory of your EspoCRM instance`.
+This extension works via console (CLI). Commands should be executed from the `root directory` of your EspoCRM instance.
 
 ```
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate
