@@ -4,7 +4,7 @@ EspoCRM provides the ability to store documents. By default, the Document entity
 
 ## Folders
 
-Folders allow to group documents. Document Folders are presented as a hierarchical tree structure. Each folder can contain sub-folders.
+Folders allow to group Documents. Document Folders are presented as a hierarchical tree structure. Each folder can contain sub-folders.
 
 The Document Folder is a separate entity type. Access to it can be controlled by Roles.
 
