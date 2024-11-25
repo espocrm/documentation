@@ -46,81 +46,119 @@ class MyService {
 
 ## Built-in services
 
-### router
-
-`router`
-
 ### storage
 
 `storage`
+
+A local browser storage. Stored values preserved when re-visiting the site from the same device.
 
 ### session-storage
 
 `session-storage`
 
+A session browser storage. Stored values are not preserved when re-visiting the site.
+
 ### settings
 
 `models/settings`
+
+Config parameters.
 
 ### preferences
 
 `models/preferences`
 
+User preferences parameters.
+
 ### user
 
 `models/user`
+
+A current user.
 
 ### language
 
 `language`
 
+Provides label translation functions.
+
 ### metadata
 
 `metadata`
+
+Application metadata.
 
 ### model-factory
 
 `model-factory`
 
+Creates models for specific entity types.
+
 ### collection-factory
 
 `collection-factory`
+
+Creates collections for specific entity types.
 
 ### field-manager
 
 `field-manager`
 
+An util related to record fields.
+
 ### acl-manager
 
 `acl-manager`
+
+Access control checking functions.
 
 ### date-time
 
 `date-time`
 
+A date-time util.
+
 ### theme-manager
 
 `theme-manager`
+
+Theme related functions.
 
 ### number-util
 
 `number-util`
 
+A number util. For working with numbers.
+
 ### view-helper
 
 `view-helper`
+
+A view helper. Markdown, sanitizing, etc.
 
 ### layout-manager
 
 `layout-manager`
 
+A record layout provider.
+
+### router
+
+`router`
+
+Navigation and routing functions. The confirm leave-out functionality.
+
 ### web-socket-manager
 
 `web-socket-manager`
 
+Web-socket functions.
+
 ### broadcast-channel
 
 `broadcast-channel`
+
+For communication between browser tabs.
 
 
 
