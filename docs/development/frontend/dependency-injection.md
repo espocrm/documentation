@@ -104,7 +104,7 @@ Creates collections for specific entity types.
 
 `field-manager`
 
-An util related to record fields.
+A util related to record fields.
 
 ### acl-manager
 
