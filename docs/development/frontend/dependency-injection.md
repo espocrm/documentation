@@ -166,5 +166,9 @@ Web-socket functions.
 
 For communication between browser tabs.
 
+### page-title
 
+`page-title`
+
+A page title util.
 
