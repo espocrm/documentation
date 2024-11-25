@@ -46,3 +46,81 @@ class MyService {
 
 ## Built-in services
 
+### router
+
+`router`
+
+### storage
+
+`storage`
+
+### session-storage
+
+`session-storage`
+
+### settings
+
+`models/settings`
+
+### preferences
+
+`models/preferences`
+
+### user
+
+`models/user`
+
+### language
+
+`language`
+
+### metadata
+
+`metadata`
+
+### model-factory
+
+`model-factory`
+
+### collection-factory
+
+`collection-factory`
+
+### field-manager
+
+`field-manager`
+
+### acl-manager
+
+`acl-manager`
+
+### date-time
+
+`date-time`
+
+### theme-manager
+
+`theme-manager`
+
+### number-util
+
+`number-util`
+
+### view-helper
+
+`view-helper`
+
+### layout-manager
+
+`layout-manager`
+
+### web-socket-manager
+
+`web-socket-manager`
+
+### broadcast-channel
+
+`broadcast-channel`
+
+
+
