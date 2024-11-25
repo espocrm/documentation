@@ -1,6 +1,6 @@
 # Compare changes
 
-The export feature is available in [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
+The export feature is available in the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
 
 ## Usage
 
@@ -201,7 +201,7 @@ This example will show how to compare your production data with data from a back
 
 1. Restore your backup to a temporary instance. For example you have a backup from `2025-01-01 01:00:00`.
 
-2. Install [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
+2. Install the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
 
 3. Run the export command to create a dump of your previous data:
 
@@ -209,7 +209,7 @@ This example will show how to compare your production data with data from a back
 bin/command export-import export --format=json --path="./data/export-import"
 ```
 
-4. Install [Export Import](https://github.com/espocrm/ext-export-import/releases) extension on your production instance.
+4. Install the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension on your production instance.
 
 5. Copy the exported data from the step 3 to your production server.
 

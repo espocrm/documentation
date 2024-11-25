@@ -15,7 +15,7 @@ In this article:
 
     You need to have cron properly configured in your system to have inbound emails working.
 
-IMAP allows to retrieve your emails from a mail sercer. To set up an IMAP account, do the following steps:
+IMAP allows to retrieve your emails from a mail server. To set up an IMAP account, do the following steps:
 
 1. Go to Emails Tab > top-right menu > Personal Email Accounts.
 2. Click on *Create Personal Email Account*.

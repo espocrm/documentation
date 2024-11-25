@@ -1,6 +1,6 @@
 # Export
 
-The export feature is available in [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
+The export feature is available in the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
 
 ## Usage
 
@@ -45,7 +45,7 @@ Use [`--user-password`](import.md/#-user-password) in order to set a user passwo
     - The defined list will be imported only with data of `Many-to-One`, `One-to-One Right`, `Children-to-Parent` relationships.
     - The `Many-to-Many`, `One-to-Many`, `One-to-One Left`, `Parent-to-Children` relationships for related entities should be defined in the list additionally.
 
-A list of Entity Type. If omitted, then all entity types are applied. Example: `--entity-list="ENTITY_TYPE1, ENTITY_TYPE2"`
+A list of Entity Types. If omitted, then all entity types are applied. Example: `--entity-list="ENTITY_TYPE1, ENTITY_TYPE2"`
 
 Supported values:
 

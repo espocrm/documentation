@@ -41,7 +41,7 @@ A confirmation link will be added automatically if you haven’t inserted the co
 
 *As of v9.0.*
 
-The Web Form can be enabled for a particular Lead Capture record. A form can be displayed either on a separate page or embedded in an IFRAME. When enabled, an form URL will be displayed in the panel on the right.
+The Web Form can be enabled for a particular Lead Capture record. A form can be displayed either on a separate page or embedded in an IFRAME. When enabled, a form URL will be displayed in the panel on the right.
 
 Parameters:
 
