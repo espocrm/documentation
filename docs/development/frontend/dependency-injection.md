@@ -88,6 +88,12 @@ Label translation functions.
 
 Application metadata.
 
+### app-params
+
+`app-params`
+
+Application parameters.
+
 ### model-factory
 
 `model-factory`
@@ -100,17 +106,17 @@ Creates models for specific entity types.
 
 Creates collections for specific entity types.
 
-### field-manager
-
-`field-manager`
-
-A util related to record fields.
-
 ### acl-manager
 
 `acl-manager`
 
 Access control checking functions.
+
+### field-manager
+
+`field-manager`
+
+A util related to record fields.
 
 ### date-time
 
