@@ -18,7 +18,7 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
 !!! note
 
-    API client implementations (available below) do most of work for you: add needed headers, handle authentication, parameters, etc.
+    The API client implementations (available below) automatically adds needed headers and handles authentication.
 
 In this article:
 
