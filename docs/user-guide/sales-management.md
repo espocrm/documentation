@@ -9,7 +9,7 @@ In this article:
 
 ## Leads
 
-A Lead represents a person or organization that  is not currently a customer but has the potential to be. Creating a new Lead record is usually the first step in the sale process. As more information about the Lead is gathered,  the Lead is expected to be converted into a Account, Contact, and/or Opportunity.
+A Lead represents a person or organization that  is not currently a customer but has the potential to be. Creating a new Lead record is usually the first step in the sale process. As more information about the Lead is gathered,  the Lead is expected to be converted into an Account, Contact, and/or Opportunity.
 
 New Leads are typically created in the following scenarios:
 
