@@ -131,7 +131,7 @@ $signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $sec
 
 !!! important
 
-    Prior to v9.0, the signature was passed in the *X-Signature* header and constructed in a slightly different manner. X-Signature is still plassed after v9.0 and will be available until v11.0. If your script checks *X-Signature*, you need to fix it to *Signature*.
+    Prior to v9.0, the signature was passed in the *X-Signature* header and constructed in a slightly different manner. *X-Signature* will still be passed after v9.0 and will be available until v11.0. If your script checks *X-Signature*, you need to fix it to *Signature*.
 
 
 ## Config parameters
