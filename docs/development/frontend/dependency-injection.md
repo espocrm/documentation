@@ -80,7 +80,7 @@ A current user.
 
 `language`
 
-Provides label translation functions.
+Label translation functions.
 
 ### metadata
 
