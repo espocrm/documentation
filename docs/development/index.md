@@ -44,6 +44,7 @@
 * [HTML & CSS](frontend/html-css.md)
 * [Ajax requests](frontend/ajax.md)
 * [Controller & routing](frontend/controller.md)
+* [Dependency injection](frontend/dependency-injection.md)
 * [Modal dialogs](modal.md)
 * [Confirmation dialogs](confirm-dialog.md)
 * [Custom views (for records and fields)](custom-views.md)
