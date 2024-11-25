@@ -80,6 +80,12 @@ Available values:
 Skip exporting passwords and changing passwords for existing users. Example: `--skip-password"`.
 Use [`--user-password`](import.md/#-user-password) in order to set a user password.
 
+#### `--from-date`
+
+Export data from a specific date and time. All data before this date will be ignored. Applies only to entities with a `modifiedAt` field.
+The date should be in UTC and in the format *YYYY-MM-DD HH:mm:ss*.
+By default this option is `off`. Example: `--from-date="2025-01-01 00:00:00"`
+
 #### `--entity-skip-list`
 
 This option allows to skip exporting data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
@@ -191,6 +197,12 @@ If there are certain actions in the workflow, it's important to add the followin
 
 ```
 bin/command export-import export --format=json --path="./data/export-import" --entity-list="Workflow, WorkflowCategory, WorkflowCategoryPath" --skip-config --skip-customization --skip-related-entities
+```
+
+#### Export workflows created or changed since a specific date
+
+```
+bin/command export-import export --format=json --path="./data/export-import" --entity-list="Workflow, WorkflowCategory, WorkflowCategoryPath" --skip-config --skip-customization --skip-related-entities --from-date="2025-01-01 00:00:00"
 ```
 
 #### Export workflows with custom entities
