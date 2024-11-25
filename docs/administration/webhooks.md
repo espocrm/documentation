@@ -117,17 +117,21 @@ When EspoCRM is trying to send a webhook request and an error occurs, EspoCRM wi
 
 ## Signature checking
 
-It's possible to check the authenticity of a webhook request by comparing the signature passed in the *X-Signature* header with a value calculated on the server that receives the request.
+It's possible to check the authenticity of a webhook request by comparing the signature passed in the *Signature* header with a value calculated on the server that receives the request.
 
 Example for PHP:
 
 ```php
-$signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey, true));
+$signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey));
 ```
 
 * *webhookId* can be obtained from the response upon webhook creation or at Administration > Webhooks;
 * *secretKey* can be obtained from the response upon webhook creation or at Administration > Webhooks;
 * *payload* is a payload of the request.
+
+!!! important
+
+    Prior to v9.0, the signature was passed in the *X-Signature* header and constructed in a slightly different manner. X-Signature is still plassed after v9.0 and will be available until v11.0. If your script checks *X-Signature*, you need to fix it to *Signature*.
 
 
 ## Config parameters
