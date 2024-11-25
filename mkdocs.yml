@@ -318,6 +318,7 @@ nav:
           - 'HTML & CSS': 'development/frontend/html-css.md'
           - 'Ajax requests': 'development/frontend/ajax.md'
           - 'Controller & routing': 'development/frontend/controller.md'
+          - 'Dependency injection': 'development/frontend/dependency-injection.md'
           - 'Modal dialogs': 'development/modal.md'
           - 'Confirmation dialogs': 'development/confirm-dialog.md'
           - 'Custom views': 'development/custom-views.md'
