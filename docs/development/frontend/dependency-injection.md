@@ -6,6 +6,12 @@
 
     Using dependency injection in the frontend requires transpiling step. Hence, you need to use the [ext-template](https://github.com/espocrm/ext-template) repository for customization development.
 
+In this article:
+
+* [Injecting](#injecting)
+* [Registering](#registering)
+* [Built-in services](#built-in-services)
+
 ## Injecting
 
 To inject a service into a class, apply *@inject* decorator with a needed class to a class property. Note that the injected class must be registered as a service.
