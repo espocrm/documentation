@@ -30,7 +30,7 @@ The Global Search performs search in multiple entity types simultaneously.
 
 The list of entity types used in the Global Search can be configured under Administration > Settings > Global Search Entity List.
 
-The field list which is used in filtering can be configured under Administration > Entity Manager > {Entity Type > Edit > Text Filter Fields.
+The field list which is used in filtering can be configured under Administration > Entity Manager > {Entity Type} > Edit > Text Filter Fields.
 
 ![Global Search](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/text-search/2.png)
 
