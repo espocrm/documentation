@@ -195,7 +195,7 @@ Limitations:
 
 * Portal users cannot be added as collaborators.
 
-The Collaborators parameter is available for custom entities created via the Entity Manager and for the standard following entity types: Task, Cas, Account, Contact, Lead, Opportunitie, Document, Knowledge Base Article and Target List.
+The Collaborators parameter is available for custom entities created via the Entity Manager and for the standard following entity types: Task, Case, Account, Contact, Lead, Opportunity, Document, Knowledge Base Article and Target List.
 
 ## See also
 
