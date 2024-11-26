@@ -1,6 +1,6 @@
 # Export
 
-EspoCRM has the ability to export records to XLSX (Excel) and CSV formats.
+Espo has the ability to export records to XLSX (Excel) and CSV formats.
 
 * [How to export](#how-to-export)
 * [Access control](#access-control)
@@ -38,9 +38,9 @@ After clicking the Export button the export, two scenarios are possible.
 
 ## Access control
 
-Administrator can disable export function for all non-admin users at Administration > Settings > Disable Export.
+An administrator can disable export function for all non-admin users under Administration > Settings > Disable Export.
 
-Also it's possible to control an access to export function via ACL Roles with Export Permission parameter.
+Also it's possible to control access to export function via Roles with the *Export Permission* parameter.
 
 ## XLSX
 
@@ -50,7 +50,7 @@ The *Lite* mode consumes much less memory. Recommended if a big number of record
 
 ## CSV delimiter
 
-Users can specify the delimiter for CSV export at Preferences.
+Users can specify the delimiter for CSV export in Preferences.
 
 The default delimiter for the system can be changed manually in `data/config.php`, parameter `exportDelimiter`.
 

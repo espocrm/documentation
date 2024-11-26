@@ -17,7 +17,7 @@ VoIP Integration extension supports* the following Starface servers:
 * Starface 6.3
 * Starface 6.2
 
-\*these servers were tested with VoIP Integration extension.
+\* These servers were tested with the VoIP Integration extension.
 
 ## How to setup Starface Integration for an administrator
 

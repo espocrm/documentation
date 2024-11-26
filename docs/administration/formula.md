@@ -349,6 +349,7 @@ Out-of-the-box functions are listed below.
 * [ext\currency\convert](formula/ext.md#extcurrencyconvert)
 * [ext\email\send](formula/ext.md#extemailsend)
 * [ext\email\applyTemplate](formula/ext.md#extemailapplytemplate)
+* [ext\markdown\transform](formula/ext.md#extmarkdowntransform)
 * [ext\sms\send](formula/ext.md#extsmssend)
 * [ext\pdf\generate](formula/ext.md#extpdfgenerate)
 * [ext\user\sendAccessInfo](formula/ext.md#extusersendaccessinfo)

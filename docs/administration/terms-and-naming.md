@@ -2,21 +2,21 @@
 
 ## Entity type
 
-An entity type is a type of data, an object. For example, Account, Contact, Opportunity, Task, Knowledge Base.
+An *entity type* is a type of data, an object. For example, Account, Contact, Opportunity, Task, Knowledge Base.
 
 Entity types are named in UpperCamelCase (start with a capital letter).
 
-**The list of available entity types** can be obtained at: Administration > Entity Manager > *Name* column.
+The list of available entity types can be obtained at: Administration > Entity Manager > *Name* column.
 
 Entities have their fields and links.
 
 ## Field
 
-A field is a unit of data. Entities have their own set of fields. For example, name, status, createdAt, assignedUser.
+A *field* is a unit of data. Entities have their own set of fields. For example, name, status, createdAt, assignedUser.
 
-Fields are named in lowerCamelCase (start with a lowercase letter).
+Fields are named in lowerCamelCase (starting with a lowercase letter).
 
-**The list of available fields** for a specific entity type can be obtained at: Administration > Entity Manager > needed entity type > Fields > *Name* column.
+The list of available fields for a specific entity type can be obtained at: Administration > Entity Manager > needed entity type > Fields > *Name* column.
 
 Each field can have one or few attributes (depending on the field type).
 
@@ -24,9 +24,11 @@ The list of available field types can be found [here](fields.md).
 
 ## Attribute
 
-Most fields have only one attribute named the same as the field. For example, the `createdAt` field has an attribute `createdAt`. Some fields have multiple attributes.
+* An attribute usually corresponds to a database column, provided that the attribute is storable.
+* In the REST API, JSON object keys correspond to attributes.
+* Attributes are used for accessing entity values in Formula Script.
 
-Attributes are named in lowerCamelCase (start with a lowercase letter).
+Most fields have only one attribute named the same as the field. For example, the *createdAt* field has the attribute *createdAt*. Some fields have multiple attributes.
 
 Field types that have multiple attributes and their attribute naming:
 
@@ -39,13 +41,15 @@ Field types that have multiple attributes and their attribute naming:
 
 where *field* is the name of the field.
 
+Attributes are named in lowerCamelCase (start with a lowercase letter).
+
 ## Link
 
-A link represents a relationship with another entity.
+A *link* represents a relationship with another entity.
 
 Links are named in lowerCamelCase (start with a lowercase letter).
 
-**The list of available links** for a specific entity type can be obtained at: Administration > Entity Manager > needed entity type > Links > 4th column.
+**The list of available links** for a specific entity type can be obtained at: Administration > Entity Manager > {Entity Type} > Relationships.
 
 Each relationship between two entity types is a pair of two links on both sides.
 

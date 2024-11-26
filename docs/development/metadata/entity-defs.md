@@ -496,6 +496,12 @@ A field to be used as a name of a foreign record. Needed when a foreign entity t
 
 Linking and unlinking will be logged in the Stream.
 
+### readOnly
+
+*boolean*
+
+Read-only links cannot be edited via link and unlink requests. Not possible to relate or unrelate records via the relationship panel. Read-only links can still be edited via the link and link-multiple fields.
+
 ### layoutRelationshipsDisabled
 
 *boolean*
@@ -595,6 +601,14 @@ Indexes for a middle table. Definition is the same as for entity indexes.
 *(available for hasMany, hasChildren)*
 
 Disable merging related records when duplicate records are being merged.
+
+### deferredLoad
+
+*(available for belongsTo and belongsToParent)*
+
+*As of v9.0.0.*
+
+When getting a related entity from an entity, it will be returned without loaded values. Values will be loaded on accessing. For belongsToParent there's a downside that it can return an entity even if it's deleted.
 
 ## collection
 

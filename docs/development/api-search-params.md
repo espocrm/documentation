@@ -279,6 +279,17 @@ For link-multiple fields. Whether is linked or not linked with any record.
 }
 ```
 
+For date-time fields:
+
+```json
+{
+    "type": "today",
+    "attribute": "someDateTimeField",
+    "dateTime": true,
+    "timeZone": "Europe/Kyiv"
+}
+```
+
 ### lastXDays, nextXDays, olderThanXDays, afterXDays, 
 
 ```json

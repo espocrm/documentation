@@ -155,7 +155,7 @@ Formula provides the ability to define conditions of any complexity. To read abo
 * [Make Followed](#make-followed)
 * [Trigger another Workflow](#trigger-another-workflow)
 * [Run Service Action](#run-service-action)
-* [Start BPM Process](#start-BPM-process)
+* [Start BPM Process](#start-bpm-process)
 * [Send HTTP Request](#send-http-request)
 * [Execute Formula Script](#execute-formula-script)
 
@@ -201,7 +201,7 @@ It's possible to define **formula** to calculate field values. You can utilize *
 
     Formula within this an *Update Target Record* action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
 
-If you need to add new items to the Link-Multiple field w/o loosing existing data (e.g. Teams), you need to utilize formula function *entity\addLinkMultipleId*. Example: `entity\addLinkMultipleId('teams', 'teamId')`.
+For Link-Multiple, Array, Multi-Enum and Checklist fields it's possible to add or remove items without loosing set items. For example, adding a specific Team while preserving existing Teams.
 
 There is the ability to **delete** the record with the following formula code: `deleted = true`;
 
@@ -313,7 +313,7 @@ Supported request methods:
 * PATCH
 * DELETE
 
-Payload can be taken from a formula variable (as of v2.15) or specified in a JSON format.
+A payload can be taken from a formula variable (as of v2.15) or specified in a JSON format.
 
 Additional headers can be specified.
 
@@ -327,6 +327,18 @@ Available placeholders:
 
 * *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}` (see [info](formula.md#attribute) about attributes);
 * *{$$variable}* – a value of a variable (available only in BPM process); e.g. `{$$myVariableName}`.
+
+Additionally, in headers, App Secrets can be added with a placeholder *{#secrets.name}*  (as of v3.4.7).
+
+A payload example:
+
+```
+{
+    "int": {$$myIntegerVariable},
+    "bool": {$$myBooleanVariable},
+    "string": "{$$myStringVariable}"
+}
+```
 
 #### Handling HTTP response
 
@@ -344,6 +356,8 @@ A response body of a sent HTTP request will be available in formula with a funct
 !!! note
 
     Within a BPM process the last response body is available only within the task that contains the Send HTTP Request action. The variable won't be passed further along the process flow.
+
+In the context of BPM, it's possible to catch response errors with an Error Boundary Event. The error code can be obtained by using `bpm\caughtErrorCode` function.
 
 ### Execute Formula Script
 

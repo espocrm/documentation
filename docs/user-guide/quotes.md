@@ -19,6 +19,7 @@ In the article:
 * [Automatic numbering](#automatic-numbering)
 * [Default tax](#default-tax)
 * [Copying values from product to quote item](#copying-values-from-product-to-quote-item)
+* [Locking](#locking)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
 
 ## Converting from Opportunity
@@ -166,6 +167,12 @@ Administrator can specify a default Tax record at Administration > Entity Manage
 Field values can be transferred from a product to a quote item upon product selection. Field names you want to be copied should coincide in Product and Quote Item entities.
 
 You can select which fields you need to be copied at Administration > Entity Manager > Quote Item > Fields > Product > Fields to Copy.
+
+## Locking
+
+A Quote can locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure which exactly fields at: Administration > Entity Manager > Quote > Edit.
+
+If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.
 
 ## Automation with Workflows or BPM
 

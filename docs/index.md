@@ -91,6 +91,7 @@
 ### Extensions
 
 * Advanced Pack
+  * [Overview](extensions/advanced-pack/overview.md)
   * [Reports](user-guide/reports.md)
   * [Workflows](administration/workflows.md)
   * [Business Process Management (BPM)](administration/bpm.md)
@@ -109,7 +110,8 @@
     * [Receipt Orders](extensions/sales-pack/receipt-orders.md)
     * [Suppliers](extensions/sales-pack/suppliers.md)
   * [Inventory Management](extensions/sales-pack/inventory-management.md)
-
+* Project Management
+  * [Projects](extensions/project-management/projects.md)
 * Google Integration
   * [Setting-up](extensions/google-integration/setting-up.md)
   * [Calendar](extensions/google-integration/calendar.md)
@@ -130,8 +132,11 @@
   * [Customization](extensions/voip-integration/customization.md)
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
 * Export Import
-  * [Usage](extensions/export-import/export-import-usage.md)
-  
+  * [Overview](extensions/export-import/overview.md)
+  * [Export](extensions/export-import/export.md)
+  * [Import](extensions/export-import/import.md)
+  * [Compare](extensions/export-import/compare.md)
+
 ---
 
 ### See also

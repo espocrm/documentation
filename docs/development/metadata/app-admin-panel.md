@@ -13,7 +13,8 @@ Defines what to display on the Administration page.
                 "url": "#SomeUrl",
                 "label": "Some Item Label",
                 "iconClass": "fas fa-cogs",
-                "description":"descriptionLanguageKey"
+                "description":"descriptionLanguageKey",
+                "tabQuickSearch": true
             },
             {
                 "url": "#Admin/mySettingsPage",
@@ -74,3 +75,11 @@ A translation key for a description text. A translation page: Admin > descriptio
 *string*
 
 A record view. Optional. Needed if you defined the URL like `#Admin/{myName}`. The record view displays settings fields. See [more](../custom-config-parameters.md).
+
+### tabQuickSearch
+
+*boolean*
+
+*As of v9.0.*
+
+Makes available in the navbar tab quick search.

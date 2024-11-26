@@ -13,6 +13,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - mdx_truly_sane_lists
+  - attr_list
   - codehilite:
       guess_lang: false
       use_pygments: true
@@ -144,12 +145,13 @@ nav:
             - 'Optimistic concurrency control': 'user-guide/optimistic-concurrency-control.md'
     - 'Extensions':
         - 'Advanced Pack':
+            - 'Overview': 'extensions/advanced-pack/overview.md'
             - 'Reports': 'user-guide/reports.md'
             - 'Workflows': 'administration/workflows.md'
             - 'BPM':
               - 'Overview': 'administration/bpm.md'
               - 'Gateways': 'administration/bpm-gateways.md'
-              - 'Events': 'administration/bpm-events.md'              
+              - 'Events': 'administration/bpm-events.md'
               - 'Activities': 'administration/bpm-activities.md'
               - 'Misc':
                 - 'Examples': 'administration/bpm-examples.md'
@@ -175,6 +177,8 @@ nav:
               - 'Receipt Orders': 'extensions/sales-pack/receipt-orders.md'
               - 'Suppliers': 'extensions/sales-pack/suppliers.md'
             - 'Inventory Management': 'extensions/sales-pack/inventory-management.md'
+        - 'Project Management':
+            - 'Projects': 'extensions/project-management/projects.md'
         - 'Google Integration':
             - 'Setting-up': 'extensions/google-integration/setting-up.md'
             - 'Calendar': 'extensions/google-integration/calendar.md'
@@ -195,7 +199,10 @@ nav:
             - 'Customization': 'extensions/voip-integration/customization.md'
             - 'Troubleshooting' : 'extensions/voip-integration/troubleshooting.md'
         - 'Export Import':
-            - 'Usage': 'extensions/export-import/export-import-usage.md'
+            - 'Overview': 'extensions/export-import/overview.md'
+            - 'Export': 'extensions/export-import/export.md'
+            - 'Import': 'extensions/export-import/import.md'
+            - 'Compare': 'extensions/export-import/compare.md'
     - 'Developer':
         - 'Index': 'development/index.md'
         - 'Getting started': 'development/how-to-start.md'
@@ -204,7 +211,7 @@ nav:
         - 'Tests': 'development/tests.md'
         - 'Translation': 'development/translation.md'
         - 'Coding rules': 'development/coding-rules.md'
-        - 'Backend':          
+        - 'Backend':
           - 'Dependency injection': 'development/di.md'
           - 'Metadata': 'development/metadata.md'
           - 'Metadata reference':
@@ -269,6 +276,7 @@ nav:
               - 'pdfEngines': 'development/metadata/app-pdf-engines.md'
               - 'popupNotifications': 'development/metadata/app-popup-notifications.md'
               - 'portalContainerServices': 'development/metadata/app-portal-container-services.md'
+              - 'reactions': 'development/metadata/app-reactions.md'
               - 'rebuild': 'development/metadata/app-rebuild.md'
               - 'record': 'development/metadata/app-record.md'
               - 'recordId': 'development/metadata/app-record-id.md'
@@ -306,10 +314,11 @@ nav:
           - 'View': 'development/view.md'
           - 'Templates': 'development/frontend/templates.md'
           - 'Model': 'development/model.md'
-          - 'Collection': 'development/collection.md'          
+          - 'Collection': 'development/collection.md'
           - 'HTML & CSS': 'development/frontend/html-css.md'
           - 'Ajax requests': 'development/frontend/ajax.md'
           - 'Controller & routing': 'development/frontend/controller.md'
+          - 'Dependency injection': 'development/frontend/dependency-injection.md'
           - 'Modal dialogs': 'development/modal.md'
           - 'Confirmation dialogs': 'development/confirm-dialog.md'
           - 'Custom views': 'development/custom-views.md'
@@ -323,7 +332,7 @@ nav:
               - 'Buttons & actions on record views': 'development/custom-buttons.md'
               - 'Panels on record view': 'development/frontend/record-panels.md'
               - 'Custom CSS file': 'development/custom-css.md'
-              - 'Dashlets': 'development/how-to-create-a-dashlet.md'              
+              - 'Dashlets': 'development/how-to-create-a-dashlet.md'
               - 'Link-multiple field with primary record': 'development/link-multiple-with-primary.md'
               - 'Campaigns':
                 -  'Custom unsubscribe page': 'development/campaign-unsubscribe-template.md'

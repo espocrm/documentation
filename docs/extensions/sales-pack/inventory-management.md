@@ -38,7 +38,7 @@ Note that usually users are not supposed to create transactions manually. Transa
 
 The following quantity values are available for a Product:
 
-* Available – all items excluding soft-reserved;
+* Available – all items excluding reserved and soft-reserved;
 * On Hand – all excluding reserved;
 * Soft-Reserved – selected for a Sales Order, or selected for a draft Delivery or Transfer;
 * Reserved – selected for a Delivery or Transfer;

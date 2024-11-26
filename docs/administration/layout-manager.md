@@ -32,6 +32,10 @@ Available parameters for columns are listed below.
 
 A column width in percent or pixels. Empty means auto-width.
 
+!!! note
+
+    It's recommended to have one column without width specified.
+
 #### Link
 
 If checked, then a field value will be displayed as a link pointing to the detail view of the record. Usually, it is used for *Name* fields.

@@ -72,7 +72,7 @@ Not supported. TBD.
 
 ## additionalBuilderClassNameList
 
-*class-string<Espo\Core\Utils\Metadata\AdditionalBuilder\>*
+*class-string<Espo\Core\Utils\Metadata\AdditionalBuilder\>[]*
 
 *As of v8.4.*
 

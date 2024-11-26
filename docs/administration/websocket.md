@@ -67,13 +67,13 @@ sudo a2enmod proxy_wstunnel
 In your Apache config inside the *VirtualHost* section for SSL (`<VirtualHost _default_:443>`), add the following:
 
 ```
-    <IfModule proxy_module>
-          ProxyRequests Off
-          <Location /wss>
-               ProxyPass ws://your-domain:8080
-               ProxyPassReverse ws://your-domain:8080
-	  </Location>
-    </IfModule>
+<IfModule proxy_module>
+  ProxyRequests Off
+  <Location /wss>
+       ProxyPass ws://your-domain:8080
+       ProxyPassReverse ws://your-domain:8080
+  </Location>
+</IfModule>
 ```
 
 ### Nginx

@@ -1,14 +1,14 @@
 # Products
 
-The Products feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
+The Products feature is available in the [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
+
+![Products list view](../_static/images/user-guide/products/products.png){width="614"}
 
 Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, Purchase Orders.
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
 
 A product record has three price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*.
-
-![Products list view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/products/products.png)
 
 Product fields can be printed in a PDF. More detail [here](quotes.md#templates).
 
@@ -26,13 +26,15 @@ Each product record can belong to some product category. Product Categories are 
 
 The Product Category is a separate entity type, hence the access to it is controlled by Roles.
 
+![Categories](../_static/images/user-guide/products/categories.png)
+
 ## Variants
 
 *As of Sales Pack v2.0.*
 
 ### Product Attributes
 
-Before being able to create products with variants, you need to create some product attributes. Product Attributes are available at Products > the top-right menu > Product Attributes.
+Before being able to create products with variants, you need to create some Product Attributes. Product attributes are available at: Products > the top-right menu > Product Attributes.
 
 Every product attribute is supposed to have a specific set of options. Add needed options on the Product Attribute detail view.
 
@@ -43,13 +45,13 @@ Examples of attributes with their options:
 
 ### Template Products
 
-A template product serves as a root for variants. Product variants inherit properties of its template, some properties can be overridden in variants.
+A Template Product serves as a root for variants. Product variants inherit properties of its template, some properties can be overridden in variants.
 
-To create a product with variants you need to create a Template product. Click **Create Product** from the **Products** page, select *Template* **Type**. Then, in the **Template** tab, add needed attributes. For every attribute, select options needed options. Then **Save** the product.
+To create a product with variants you need to create a template product. Click **Create Product** from the **Products** page, select *Template* **Type**. Then, in the **Template** tab, add needed attributes. For every attribute, select options needed options. Then **Save** the Product.
 
 After that, you need to generate variants. From the template product detail view, open the **Variants** tab in the bottom, click **Generate**. It will generate all possible combinations according to attributes and options of the product template.
 
-You can remove variants that you don't need. E.g. a Red shirt is not produced in XS size, hence, you need to remove the XS-Red variant.
+You can remove variants that you don't need. E.g. a Red shirt is not produced in an XS size, hence, you need to remove the XS-Red variant.
 
 You can re-generate variants. It will create all missing combinations.
 

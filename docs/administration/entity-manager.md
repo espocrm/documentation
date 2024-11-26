@@ -50,6 +50,13 @@ If you click **Edit** on the entity view, you will be able to change parameters 
 * Disable record count – the total number won't be displayed on the list view; can decrease loading time when the DB table is big.
 * Color – a specific color for a quick recognition.
 * Icon – the picked icon will be displayed in the side navbar.
+* Preserve Audit Log – disables cleanup of the audit log; this parameter is applicable only if Stream is disabled; as if Stream is enabled, audit log records are not being deleted.
+* Collaborators – the ability to share records with specific users.
+* Multiple Assigned Users – the ability to assign multiple users to a record.
+
+!!! note
+
+    Some parameters are not available for certain entity types.
 
 ## Fields
 

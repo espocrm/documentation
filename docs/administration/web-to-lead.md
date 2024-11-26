@@ -1,8 +1,15 @@
 # Web-to-Lead
 
-## Lead Capture
+In this article:
 
-By utilizing the Lead Capture feature administrator can create an entry point for capturing leads through API. Follow Administration > Lead Capture to create the entry point.
+* [Lead capture](#lead-capture)
+* [Web form](#web-form)
+* [API request](#api-request)
+* [Lead assignment distribution](#lead-assignment-distribution)
+
+## Lead capture
+
+By utilizing the Lead Capture feature, an administrator can create entry points for capturing Leads through API and web forms. Follow Administration > Lead Capture to create a Lead Capture record.
 
 Parameters:
 
@@ -14,35 +21,74 @@ Parameters:
 
 ### Double Opt-in (confirmed opt-in)
 
-If double opt-in is enabled, then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. The email will be sent automatically once data is received through API.
+If double opt-in is enabled, then your subscribers will need to confirm their intention to opt-in by clicking on a link in an email. The email will be sent automatically once data is received through the API.
 
-Create Email Template that will be used for a double opt-in. You can use following placeholders in a template body:
+Create an Email Template that will be used for the double opt-in. You can use the following placeholders in a template body:
 
-* `{optInUrl}` - confirmation URL;
-* `{optInLink}` - confirmation link;
-* `{optInDate}` - date when a subscription request was submitted;
-* `{optInTime}` - time when a subscription request was submitted;
-* `{optInDateTime}` - date and time when a subscription request was submitted.
+* `{optInUrl}` – confirmation URL;
+* `{optInLink}` – confirmation link;
+* `{optInDate}` – date when a subscription request was submitted;
+* `{optInTime}` – time when a subscription request was submitted;
+* `{optInDateTime}` – date and time when a subscription request was submitted.
 
-A confirmation link will be added automatically if you haven’t inserted a placeholder in the email template.
+A confirmation link will be added automatically if you haven’t inserted the confirmation link placeholder in the email template.
 
 !!! note
 
-    When sending empty values (for Varchar, URL, Email, Phone fields), use *null* rather than an empty string.
+    When sending empty values, use *null* rather than an empty string.
 
-## Posting API request
+## Web form
 
-Your web site needs to make a POST request to send the form data to your CRM. A request **doesn't require any authorization**. You just need to use a specific URL with an API Key. The information about the request is available in the side panel on Lead Capture detail view.
+*As of v9.0.*
+
+The Web Form can be enabled for a particular Lead Capture record. A form can be displayed either on a separate page or embedded in an IFRAME. When enabled, a form URL will be displayed in the panel on the right.
+
+Parameters:
+
+* Text to display on form
+* Text to display after form submission
+* URL to redirect to after form submission
+* Language used on form
+* Allowed hosts for form embedding (for IFRAME)
+* Use Captcha
+
+Captcha can be configured under Administration > Integrations. ReCAPTCHA v3 is implemented.
+
+Supported field types:
+
+* Varchar
+* Email
+* Phone
+* Text
+* Person Name
+* Enum
+* Multi-Enum
+* Array
+* Checklist
+* Integer
+* Float
+* Currency
+* Date
+* Date-Time
+* Boolean
+* URL
+* URL-Multiple
+* Address
+
+## API request
+
+You can use API requests to send Leads directly without using the built-in web-form.
+
+Your web site needs to make a POST request to send form data to your Espo. The request doesn't require any authorization. You just need to use a specific URL with an API Key in it. The information about the request is available in the side panel on the Lead Capture detail view.
 
 Required headers:
 
-* Content-Type: application/json
-* Accept: application/json
-
+* `Content-Type: application/json`
+* `Accept: application/json`
 
 ### PHP
 
-You can use [API client](https://github.com/espocrm/php-espo-api-client).
+You can use the [API client](https://github.com/espocrm/php-espo-api-client).
 
 !!! example
 
@@ -94,7 +140,7 @@ You can use [API client](https://github.com/espocrm/php-espo-api-client).
     </div>
 
     <script type="text/javascript">
-        let webToLeadFormElement = document.getElementById('web-to-lead-form');
+        const webToLeadFormElement = document.getElementById('web-to-lead-form');
         let webToLeadFormIsSubmitted = false;
 
         webToLeadFormElement.addEventListener('submit', event => {
@@ -107,25 +153,24 @@ You can use [API client](https://github.com/espocrm/php-espo-api-client).
             webToLeadFormIsSubmitted = true;
             webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
 
-            let payloadData = {
+            const payloadData = {
                 firstName: webToLeadFormElement.firstName.value || null,
                 lastName: webToLeadFormElement.lastName.value || null,
                 emailAddress: webToLeadFormElement.emailAddress.value || null,
             };
 
-            // A needed URL can be found on the Lead Capture detail view.
-            let url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
+            // The URL can be found on the Lead Capture detail view.
+            const url = 'https://URL_OF_YOUR_CRM/api/v1/LeadCapture/API_KEY';
 
-            let xhr = new XMLHttpRequest();
+            const xhr = new XMLHttpRequest();
 
             xhr.open('POST', url, true);
-
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.setRequestHeader('Accept', 'application/json');
 
             xhr.onreadystatechange = () => {
                 if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                    let containerElement = document.getElementById('web-to-lead-form-container');
+                    const containerElement = document.getElementById('web-to-lead-form-container');
 
                     containerElement.innerHTML = 'Sent';
                 }
@@ -151,10 +196,9 @@ The `Access-Control-Allow-Origin` header (see [CORS](https://en.wikipedia.org/wi
 
 By utilizing the [Workflow](workflows.md) or the [BPM](bpm.md) tools, you can create an assignment rule that will distribute leads among team users. *Round-Robin* and *Least-Busy* rules are available.
 
-To apply the rule only for leads that are coming through the lead-capture form, you can use a condition that checks the *Campaign* field (assuming that you have created the separate campaign record for the lead-capture form).
+To apply the rule only for leads that are coming through the lead capture form, you can use a condition that checks the *Campaign* field (assuming that you have created a separate campaign record for the lead capture form).
 
-You can also utilize formula (Administration > Entity Manager > Lead > Formula) to set some additional fields.
-
+You can also utilize a Formula script (Administration > Entity Manager > Lead > Formula) to set some additional fields.
 
 ## Hooks
 

@@ -4,6 +4,7 @@
 * [ext\currency\convert](#extcurrencyconvert)
 * [ext\email\send](#extemailsend)
 * [ext\email\applyTemplate](#extemailapplytemplate)
+* [ext\markdown\transform](#extmarkdowntransform)
 * [ext\sms\send](#extsmssend)
 * [ext\pdf\generate](#extpdfgenerate)
 * [ext\user\sendAccessInfo](#extusersendaccessinfo)
@@ -60,6 +61,8 @@ the address of some group email account, then SMTP setting of the group email ac
     ext\email\send($id);
     ```
 
+Multiple email addresses can be specified by using a `;` character as a delimiter.
+
 ## ext\email\applyTemplate
 
 `ext\email\applyTemplate(EMAIL_ID, EMAIL_TEMPLATE_ID, [PARENT_TYPE, PARENT_ID])`
@@ -80,11 +83,21 @@ Applies an email template to an existing email record. Parent record can be pass
     ext\email\send($emailId);
     ```
 
+## ext\markdown\transform
+
+*As of v9.0.*
+
+`ext\markdown\transform(STRING)`
+
+Transforms a markdown text to an HTML. Returns STRING.
+
 ## ext\sms\send
+
+*As of v7.0.*
 
 `ext\sms\send(SMS_ID)`
 
-Sends an SMD. SMS_ID is an ID of an SMS record. Returns TRUE if sent, false if not sent. (Available as of v7.0)
+Sends an SMD. SMS_ID is an ID of an SMS record. Returns TRUE if sent, false if not sent.
 
 !!! example
 

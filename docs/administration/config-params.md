@@ -66,6 +66,7 @@ The list of parameters along with their default values. This is not a full list 
 * adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (as of v7.0);
 * activitiesCreateButtonMaxCount – `3` – a max number of create buttons to display on the Activities page (as of v7.2);
 * listViewSettingsDisabled – `false` – disable list view settings (as of v8.1);
+* tabQuickSearch – `true` – tab quick search in the navbar (as of v8.5);
 
 ### Access control
 
@@ -100,6 +101,7 @@ The list of parameters along with their default values. This is not a full list 
 * streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
 * recordFollowersLoadLimit – `6` – how much records loaded in the *Followers* field;
 * notePinnedMaxCount – `5` – max number of pinned notes per record;
+* streamReactionsCheckMaxSize – `50` – when refreshing a user's stream, how many posts will be checked for new reactions; as of 9.0;
 
 ### Clean-up
 
@@ -109,13 +111,14 @@ The list of parameters along with their default values. This is not a full list 
 * cleanupAuthLogPeriod – `'2 months'` – auth log;
 * cleanupAppLogPeriod – `'30 days'` – app log (as of v8.3);
 * cleanupNotificationsPeriod – `'2 months'` – notifications;
-* cleanupAttachmentsPeriod – `'15 days'` – attachments with roles 'Export File', 'Mail Merge', 'Mass Pdf';
+* cleanupAttachmentsPeriod – `'15 days'` – attachments with roles 'Export File', 'Mail Merge', 'Mass Pdf' and attachments relate for deleted records;
 * cleanupOrphanAttachments – `false` – cleaning up attachments that were uploaded but not linked with any record; *cleanupAttachmentsPeriod* is used; an experimental parameter;
-* cleanupAttachmentsFromPeriod – `'3 months'` – attachments related to records that were marked as deleted (*deleted = 1*);
 * cleanupBackupPeriod – `'2 months'` – backup of files created during upgrades;
-* cleanupDeletedRecordsPeriod – `'3 months'` – complete deletion of records that were marked as deleted (*deleted = 1*);
+* cleanupDeletedRecordsPeriod – `'2 months'` – complete deletion of records that were marked as deleted (*deleted = 1*);
 * cleanupSubscribers – `true` – cleaning up stream subscribers for not-actual records (as of v7.3);
 * cleanupSubscribersPeriod – `'2 months'` – period for cleaning up subscribers for not-actual records (as of v7.3);
+* cleanupAudit – `true` – to perform cleanup of the audit log;
+* cleanupAuditPeriod – `3 month` – how long audit log records stay before cleanup;
 
 ### Passwords
 
@@ -200,6 +203,8 @@ The list of parameters along with their default values. This is not a full list 
 * wysiwygCodeEditorDisabled – `false` – disable the Wysiwyg field code editor; as of v8.2;
 * customPrefixDisabled – `false` – disable adding a *c* prefix to custom entity types, fields and links; as of v8.2; disabling can cause naming conflicts in the future;
 * starsLimit – 500 – max number of stars a user can give per entity type;
+* phoneNumberMaxCount – 10 – max number of phone numbers per record;
+* emailAddressMaxCount – 10 – max number of email addresses per record;
 
 ## Config files
 

@@ -14,11 +14,13 @@ As an email is coming, the system tries to link it with an appropriate record (A
 
     Email records **are not duplicated** in the system, even regardless of being fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to **move to trash** instead. It's also recommended to restrict *delete* access for users in Roles.
 
+An Email record can be assigned to a particular user. By default, the Assigned User field is not available on the layout. The administrator can add it at: Administration > Entity Manager > Side Panel Fields.
+
 ## Access control
 
 Access to imported emails is controlled by Roles. It means that if a particular email was imported from a mailbox of some user, other users will be able to see that email if they have access to that email.
 
-By default, users don't have access to any emails. If a user has a *read* access level set to *own*, they will be able to see emails where their email address is either in the *From*, *To* or *CC* fields.
+If a user has a *read* access level set to *own*, they will be able to see emails that are related to them through at least one of the following links: Users, Assigned Users, Assigned User, Created By. Note than an email is automatically gets related with a user through the Users links if the user's email address is either in the *From*, *To* or *CC*.
 
 There are 4 access levels: No, Own, Team, All.
 

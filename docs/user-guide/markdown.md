@@ -86,3 +86,14 @@ some text
 ___
 ```
 
+## Image
+
+```
+![Alt text](https://domain/file.png)
+```
+
+Using an uploaded attachment:
+
+```
+![Alt text](?entryPoint=image&id=00000000)
+```

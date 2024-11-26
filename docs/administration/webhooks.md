@@ -2,7 +2,7 @@
 
 Webhooks allow other applications to subscribe to specific events happening in EspoCRM and receive data related to those events. Webhooks are supposed to be created via API by other applications. The webhook has a specific *Event* and *URL*. Every time the event occurs, the system will send POST request with some payload to the specified URL.
 
-Webhooks can be created only by API Users (via API request) and Administrators. API User has to have *Webhooks* scope enabled in *Roles*. API User has also to have access to all entity types for which webhooks are planned to be created.
+Webhooks can be created only by API Users (via an API request) and Administrators. An API User has to have *Webhooks* scope enabled in Roles. An API User has also to have access to all entity types for which webhooks are intended to be created.
 
 * [Subscription](#subscription)
 * [Events](#events)
@@ -25,7 +25,10 @@ Webhooks can be created only by API Users (via API request) and Administrators. 
 }
 ```
 
-A Webhook ID (*id*) and a secret key (*secretKey*) will be sent back in a response.
+A Webhook ID and a secret key will be sent back in a response:
+
+* `id` – an ID of created webhook,
+* `secretKey` – a generated secret key.
 
 
 ### Deleting request
@@ -34,7 +37,7 @@ A Webhook ID (*id*) and a secret key (*secretKey*) will be sent back in a respon
 
 ### Administration
 
-Administrator can manage webhooks at Administration > Webhooks. It's possible to remove, edit or create webhooks there.
+An administrator can manage webhooks at Administration > Webhooks. It's possible to remove, edit or create webhooks there.
 
 ## Events
 
@@ -44,13 +47,13 @@ Administrator can manage webhooks at Administration > Webhooks. It's possible to
 
 ### ENTITY_TYPE.create
 
-Triggered when a record is created. All record attributes will be sent in payload.
+Triggered when a record is created. All record attributes will be sent in a payload.
 
 Example: `Account.create`
 
 ### ENTITY_TYPE.update
 
-Triggered when a record is updated. Only updated record attributes will be sent in payload.
+Triggered when a record is updated. Only updated record attributes will be sent in a payload.
 
 Example: `Account.update`
 
@@ -62,7 +65,7 @@ Example: `Account.delete`
 
 ### ENTITY_TYPE.fieldUpdate.FIELD
 
-Triggered when a specific field is updated. New field attributes will be sent in payload.
+Triggered when a specific field is updated. New field attributes will be sent in a payload.
 
 Example: `Account.fieldUpdate.assignedUserId`
 
@@ -75,7 +78,7 @@ Example: `Account.fieldUpdate.assignedUserId`
 
 Every webhook request (sent by EspoCRM to a specified URL) is of POST type. A content type is *application/json*.
 
-Events related to the same hook are sent in batches. Request payload is always an array (even if only one record is sent).
+Events related to the same hook are sent in batches. The request payload is always an array (even if only one record is sent).
 
 One event occurred:
 
@@ -114,17 +117,21 @@ When EspoCRM is trying to send a webhook request and an error occurs, EspoCRM wi
 
 ## Signature checking
 
-It's possible to check the authenticity of a webhook request by comparing the signature passed in the *X-Signature* header with a value calculated on the server that receives the request.
+It's possible to check the authenticity of a webhook request by comparing the signature passed in the *Signature* header with a value calculated on the server that receives the request.
 
 Example for PHP:
 
 ```php
-$signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey, true));
+$signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $secretKey));
 ```
 
 * *webhookId* can be obtained from the response upon webhook creation or at Administration > Webhooks;
 * *secretKey* can be obtained from the response upon webhook creation or at Administration > Webhooks;
 * *payload* is a payload of the request.
+
+!!! important
+
+    Prior to v9.0, the signature was passed in the *X-Signature* header and constructed in a slightly different manner. *X-Signature* will still be passed after v9.0 and will be available until v11.0. If your script checks *X-Signature*, you need to fix it to *Signature*.
 
 
 ## Config parameters

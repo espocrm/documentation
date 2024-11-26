@@ -1,6 +1,8 @@
 # Outlook Integration. Contacts
 
-**Note**: Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
+!!! note
+
+    Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
 
 Outlook Contacts Integration  is available in the [extension](https://www.espocrm.com/extensions/outlook-integration/). Compatible with EspoCRM 5.6.3 and higher.
 
@@ -11,7 +13,7 @@ Provides the ability to push EspoCRM contacts and leads to Outlook Contacts (Peo
 
 ## Setting up for users
 
-Assuming, that the administrator has already set up the integration.
+Assuming that the administrator has already set up the integration.
 
 Go to your user detail view (the menu on the very top-right corner > click on your user name). Then, click *External Account* button.
 
@@ -25,7 +27,9 @@ A popup will show up asking for a user consent.
 
 If everything went fine, a green label *Connected* should show up.
 
-**Important**: If you connected successfully, but *Outlook Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Outlook Contacts* scope.
+!!! important
+
+    If you connected successfully, but *Outlook Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Outlook Contacts* scope.
 
 Check *Outlook Contacts* checkbox and configure parameters and then click *Save*.
 

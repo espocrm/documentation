@@ -12,7 +12,7 @@ To create a Portal, follow Administration > Portals > *Create Portal*.
 * *URL*. Read-only field that displays the link you can access the Portal with.
 * *Layout Set*. Provides the ability to use different layouts from the Portal. See more [info](layout-manager.md#different-layouts-for-teams-portals).
 
-## Portal Users
+## Portal users
 
 Administrators can create portal users.
 
@@ -27,18 +27,23 @@ Portal Users can have one or multiple additional *Portal Roles*. These roles wil
 
 Portal Users can have a specific *Dashboard Layout*. It allows certain users to have a specific layout that differs from the default Portal's layout.
 
-## Portal Roles
+## Portal roles
 
-Portal roles are similar to regular roles in EspoCRM but with a few distinctions.
+Portal Roles are similar to regular Roles in EspoCRM but with a few distinctions.
 
 * not-set ‒ Denies access.
 * own ‒ Records created by the user. E.g. a portal user created some case and this case is owned by this user.
-* account ‒ Records related to the account the portal user is related to. Relation (link) should be named `account` or `accounts`.
-* contact ‒ Records related to the contact the portal user is related to. Relation (link) should be named `contact` or `contacts`.
+* account ‒ Records related to the account the portal user is related to.
+* contact ‒ Records related to the contact the portal user is related to.
 
-*Assigned User* and *Teams* fields are read-only for portal users.
+For custom entity types, to be able to use *account* and *contact* access levels, you need (as of v9.0):
 
-Portal roles can be applied to:
+1. To have relationships between your entity type and Account/Contact.
+2. To select these relations in the *ACL Account Link* and *ACL Contact Link* parameters at Administration > Entity Manager > {Entity Type} > Edit.
+
+The *Assigned User* and *Teams* fields are read-only for portal users.
+
+Portal Roles can be applied to:
 
 * Portal ‒ all users of the portal will receive this role (multiple roles applied to one Portal are merged into one);
 * Portal User ‒ to grant certain users specific permissions.
@@ -47,16 +52,12 @@ Portal roles can be applied to:
 
 *Portal Users should be able to create Cases, view Cases related to their Account; they also should be able to view Knowledge Base.*
 
-1. Open Create Portal Role form (Administration > Portal Roles > Create Role).
+1. Open the *Create Portal Role* form (Administration > Portal Roles > Create Role).
 2. Enable access to Cases, set: *create – yes, read – account, edit – no, delete – no, stream – account*.
 3. Enable access to Knowledge Base, set: *create – no, read – account, edit – no, delete – no*.
 4. Edit the Portal record (Administration > Portals). Select your portal role in Roles field and then save.
 
-!!! note
-
-    When creating custom relationships for built-in entity types, a *c* prefix is automatically added to link names. It means that links named *account*, *contact*, *accounts* and *contacts* won't override *contact* and *account* level access for built-in entity types due the added prefix. Though it's possible to disable prefix addition with the config parameter *customPrefixDisabled*. You can set it to true temporarily just to create needed relationships.
-
-## Access to Portal
+## Access to portal
 
 You can find the URL for your Portal in the *URL* field of the Portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access the Portal by a different URL. For this case, you need to fill in 'Custom URL' field.
 
