@@ -1,6 +1,6 @@
 # Printing to PDF
 
-Printing to PDF provides the ability to generate PDF documents with record data. The document content is defined by a Template.
+The Print to PDF feature allows to generate PDF documents with record data. The document content is defined by a Template.
 
 !!! warning "Important"
 
@@ -8,17 +8,17 @@ Printing to PDF provides the ability to generate PDF documents with record data.
 
 ### Printing single record
 
-*Print to PDF* is available on the detail view under the dropdown next to the 'Edit' button.
+The *Print to PDF* action is available on the detail view under the dropdown next to the *Edit* button.
 
 ### Printing multiple records
 
-*Print to PDF* is available on the list view as a mass action. You need to select needed records and click *Print to PDF* from *Actions* menu. It will generate a single merged PDF file (or multiple PDFs zipped, depending on a used engine) for multiple records.
+*Print to PDF* is available in the list view as a mass action. You need to select needed records and click *Print to PDF* from the *Actions* menu. It will generate a single merged PDF file or multiple PDFs zipped (depending on a used engine) for multiple records.
 
-By default, the max number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
+By default, the maximum number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
 
 ### Access control
 
-Access to PDF printing is controlled by Roles. Admin can set a *read* access level for the *Template* entity type.
+Access to PDF printing is controlled by Roles. An ddministrator can set a *read* access level for the *Template* entity type.
 
 ### Engines
 
@@ -53,9 +53,9 @@ Table of content:
 * [Maps](#maps)
 * [Custom helpers](#custom-helpers)
 
-Available at Administration > PDF Templates.
+Available undser Administration > PDF Templates.
 
-For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button `</>`.
+For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button *\</\>*.
 
 You can print fields of the record as well as fields of related records by utilizing placeholders (Handlebars like) in your template.
 
@@ -69,11 +69,11 @@ You can print fields of the record as well as fields of related records by utili
 
     If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
-You can specify a **document title** in the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
+You can specify a document title in the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
 
 ### Code view
 
-A code view mode can be enabled by clicking *\</\>* button. It allows to edit raw HTML and make sure a layout is not messed up.
+A code view mode can be enabled by clicking *\</\>* button. It allows to edit raw HTML and make sure the layout is not messed up.
 
 ### Charset issues
 
