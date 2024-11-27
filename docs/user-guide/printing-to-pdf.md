@@ -77,16 +77,16 @@ A code view mode can be enabled by clicking *\</\>* button. It allows to edit ra
 
 ### Charset issues
 
-If some characters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
+If some characters are not displayed in generated PDF files, it can be usually solved by changing the font in the template. For the Arabic language, use 'AlArabiya' font, for Chinese, use 'CID-0 cs'.
 
 
 ### Access to templates
 
-Administrator can add Templates tab at Administration > User Interface. An access to templates must be defined in Roles (*Templates* scope).
+An administrator can add the *Templates* tab under Administration > User Interface. Access to templates must be defined in Roles (the *Templates* scope).
 
 ### Page numbering
 
-Placeholders are only available in footer (and header if it's set to be printed on each page).
+Placeholders are only available in footer (and also header if the header is set to be printed on each page).
 
 * `{pageNumber}` – the current number of the page
 
@@ -323,7 +323,7 @@ Examples:
 * *imageFieldNameId* is a name of image field, concatenated with *Id*
 * *width* and *height* can be omitted
 
-Another way to print images for older versions. Add in code view:
+Another legacy way to print images:
 
 ```
 <img src="{{file imageFieldNameId}}">
@@ -368,21 +368,23 @@ Specific language:
 
 ### Number formatting
 
-To display float numbers w/o fractional part (as integer) use the following expression:
+To display float numbers without a fractional part (as integer), use the following expression:
+
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
-`quantity` is a field name.
+Where `quantity` is a field name.
 
 Custom formatting for currency values:
+
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
 
 Value `10000.5` will be printer as `10 000,50`.
 
-Note that `_RAW` part is appended to a field name.
+Note that `_RAW` is appended to the field name.
 
 ### Currency symbol
 
@@ -394,11 +396,11 @@ where `amount` is a field name (of *currency* type).
 
 ### Text field
 
-To display text fields (multi-line) use triple braces
+To display text fields (multi-line) use triple braces:
 
 ```{{{description}}}```.
 
-Print markdown (as of v8.1):
+Print Markdown (as of v8.1):
 
 ```
 {{markdownText fieldName_RAW}}
@@ -410,7 +412,7 @@ Print markdown (as of v8.1):
 
 It's possible to loop through a link collection.
 
-The max number of records is 100. It can be changed with a config parameter *htmlizerLinkLimit*.
+The maximum number of records is 100. It can be changed with a config parameter *htmlizerLinkLimit*.
 
 !!! example
 
@@ -463,7 +465,7 @@ Option 3: {{checkboxTag fieldName option='Option 3' color='blue'}}
 
 Where *barcodeField* is the name of your barcode field.
 
-Parameters *fontsize*, *text*, *padding* are supported only in the TCPDF engine.
+Parameters *fontsize*, *text*, and *padding* are supported only in the TCPDF engine.
 
 (TCPDF only)
 
@@ -485,7 +487,7 @@ Available types:
 
 ### Raw values
 
-To access a raw value of a specific attribute you need to add a suffix  `_RAW` to the attribute name. The raw value is a not formatted value. Raw date-time values are in UTC timezone.
+To access a raw value of a specific attribute, you need to add a suffix  `_RAW` to the attribute name. The raw value is a not formatted value. Raw date-time values are strings with values in the UTC timezone.
 
 !!! example
 
