@@ -125,7 +125,6 @@ To display a Call name field in a call popup, create/modify the file `custom/Esp
 ```
 {
     "voipNotification": {
-
         "additionalFields": {
             "callName" : {
                 "display": true,
