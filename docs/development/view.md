@@ -134,7 +134,7 @@ define('custom:views/test/my-custom-view', ['view'], (View) => {
         
         someMethod2() {
             // To proceed only when the view is rendered.
-            // Useful when the method can be invoked by the caller before the view is rendered.
+            // Useful when the method can be invoked by a caller before the view is rendered.
             this.whenRendered().then(() => {
                 // Do something with DOM.
             });
