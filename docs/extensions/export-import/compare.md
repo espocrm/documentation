@@ -199,21 +199,21 @@ Available values:
 
 This example will show how to compare your production data with data from a backup.
 
-1. Restore your backup to a temporary instance. For example you have a backup from `2025-01-01 01:00:00`.
+1\. Restore your backup to a temporary instance. For example you have a backup from `2025-01-01 01:00:00`.
 
-2. Install the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
+2\. Install the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension.
 
-3. Run the export command to create a dump of your previous data:
+3\. Run the export command to create a dump of your previous data:
 
 ```bash
 bin/command export-import export --format=json --path="./data/export-import"
 ```
 
-4. Install the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension on your production instance.
+4\. Install the [Export Import](https://github.com/espocrm/ext-export-import/releases) extension on your production instance.
 
-5. Copy the exported data from the step 3 to your production server.
+5\. Copy the exported data from the step 3 to your production server.
 
-6. Run the comparison command on your production instance:
+6\. Run the comparison command on your production instance:
 
 ```bash
 bin/command export-import compare --format=json --path="./data/backup-data/export-import" --result-path="./data/export-import-result" --compare-type=all --from-date="2025-01-01 01:00:00" --pretty-print --info
@@ -221,7 +221,7 @@ bin/command export-import compare --format=json --path="./data/backup-data/expor
 
 * `--from-date` - the date and time in UTC from which the comparison will be made.
 
-7. Check the result in the `./data/export-import-result` directory. See [Result](#result) section.
+7\. Check the result in the `./data/export-import-result` directory. See [Result](#result) section.
 
 ### Restoring data
 
@@ -233,15 +233,15 @@ bin/command export-import compare --format=json --path="./data/backup-data/expor
 
     It is recommended to restore only specified entities.
 
-1. Follow the 1-5 steps described in [Complete process for comparison](#complete-process-for-comparison) section.
+1\. Follow the 1-5 steps described in [Complete process for comparison](#complete-process-for-comparison) section.
 
-2. Run the comparison command on your production instance:
+2\. Run the comparison command on your production instance:
 
 ```bash
 bin/command export-import compare --format=json --path="./data/backup-data/export-import" --result-path="./data/export-import-result" --compare-type=updated --from-date="2025-01-01 01:00:00" --pretty-print --info  --entity-list="Account, Contact" --skip-related-entities
 ```
 
-3. If the comparison result is OK, then you can import the data to your production instance:
+3\. If the comparison result is OK, then you can import the data to your production instance:
 
 ```bash
 bin/command export-import import --format=json --path="./data/export-import-result/changed/prev" --import-type=update
