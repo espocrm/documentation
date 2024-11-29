@@ -44,7 +44,7 @@ Functions:
 
 #### IF
 
-E.g. `IF:(a, '1', '0')` – if 'a' is true then return '1'; return '0' otherwise.
+E.g. `IF:(a, '1', '0')` – if *a* is true, then return '1'; return '0' otherwise.
 
 #### SWITCH
 
