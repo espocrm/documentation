@@ -355,7 +355,7 @@ It is possible to add custom functions. An implementation class name for a custo
 
 ## Attribute names
 
-Attribute names usually are same as a system field names. Fields are listed at Administration > Entity Manager > ... > Fields.
+Attribute names usually are same as system field names. Fields are listed under Administration > Entity Manager > {Entity Type} > Fields.
 
 Attribute names should be in lowerCamelCase.
 
