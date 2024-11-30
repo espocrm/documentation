@@ -375,3 +375,4 @@ It's possible to add a report dashlet to the portal dashboard.
 ## See also
 
 * [Complex expressions](complex-expressions.md)
+* [Billing transactions](https://www.espocrm.com/blog/tutorial-billing-transactions/)
