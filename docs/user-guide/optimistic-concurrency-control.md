@@ -2,19 +2,19 @@
 
 *As of v7.0.*
 
-Prevents overriding data written (by another user) in between record fetching and saving. 
+Optimistic Concurrency Control prevents data from being overwritten by other users between the time it is fetched and saved.
 
-If a user tried to save the record has been already modified by another user, a modal dialog will be shown prompting to resolve the conflict. For each changed field it's possible to choose the following values:
+If a user tries to save a record that has already been modified by another user, a modal dialog will appear, prompting to resolve the conflict. For each changed field, it's possible to choose from the following values:
 
 * Current – the value the user attempted to write;
 * Actual – the value currently stored in the database;
 * Original – the value retrieved before modification.
 
-The conflict does not occur if users modified different fields.
+The conflict won't occur if users modify different fields.
 
-The administrator can enable the Optimistic concurrency control for an entity type at Administration > Entity Manager > Edit > Optimistic concurrency control.
+An administrator can enable the Optimistic Concurrency Control for an entity type under Administration > Entity Manager > {Entity Type} > Edit > Optimistic Concurrency Control.
 
-By default it's enabled for:
+By default, it's enabled for:
 
 * Knowledge Base
 * Email Templates
