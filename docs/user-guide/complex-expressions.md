@@ -50,8 +50,7 @@ E.g. `IF:(a, '1', '0')` – if *a* is true, then return '1'; return '0' otherwis
 
 *As of v7.4.*
 
-An equivalent of 'CASE WHEN ... THEN ... ELSE ... END'. Even arguments define 'WHEN' conditions, following odd arguments
-define 'THEN' values. The last unmatched argument defines 'ELSE'.
+An equivalent of 'CASE WHEN ... THEN ... ELSE ... END'. Arguments on even-numbered positions define 'WHEN' conditions, while following arguments define corresponding 'THEN' values. The last unmatched argument defines 'ELSE'.
 
 E.g. `SWITCH:(EQUAL:(monthNumber, 1), 'Jan', EQUAL:(monthNumber, 2), 'Feb', EQUAL:(monthNumber, 3), 'Mar', 'Other')`.
 
@@ -59,7 +58,7 @@ E.g. `SWITCH:(EQUAL:(monthNumber, 1), 'Jan', EQUAL:(monthNumber, 2), 'Feb', EQUA
 
 *As of v7.4.*
 
-An equivalent of 'CASE ... WHEN ... THEN ... ELSE ... END'. Odd arguments define keys, following even arguments
+An equivalent of 'CASE ... WHEN ... THEN ... ELSE ... END'. Arguments on odd-numbered positions define keys, while following arguments
 define mapped values. The last unmatched argument defines 'ELSE'.
 
 E.g. `MAP:(monthNumber, 1, 'Jan', 2, 'Feb', 3, 'Mar', 'Other')`.
@@ -70,7 +69,7 @@ E.g. `MAP:(monthNumber, 1, 'Jan', 2, 'Feb', 3, 'Mar', 'Other')`.
 
 Pattern matching.
 
-E.g. `LIKE:(name, 'Cloud%'`) will give true for 'name' equal to 'Cloud Basic' and 'Cloud Enterprise'.
+E.g. `LIKE:(name, 'Cloud%'`) will give true when 'name' is equal to 'Cloud Basic' or 'Cloud Enterprise'.
 
 #### NOT_LIKE
 
@@ -270,7 +269,7 @@ Concatenate. E.g. `CONCAT:(firstName, ' ', lastName)`.
 
 #### LEFT
 
-Returns a specified number of characters from the left of the string. E.g. `LEFT:(someTextColumn, 1000)`. As of v6.1.0.
+Returns a specified number of characters from the left of the string. E.g. `LEFT:(someTextColumn, 1000)`.
 
 #### LOWER
 
@@ -296,15 +295,11 @@ Converts a value to a binary string.
 
 `EQUAL:(BINARY:('test'), 'Test')` returns false.
 
-Available since v5.7.0.
-
 #### REPLACE
 
 Replaces all the occurrences of a substring within a string.
 
 `REPLACE:('haystack', 'needle', 'replaceWith')`
-
-Available since v6.0.0.
 
 ### Math
 
