@@ -2,12 +2,12 @@
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-The Workflows tool automates your business processes in an easy way. You can access Workflows from Administration panel. To create a Workflow rule you need to define:
+The Workflows tool automates your business processes in an easy way. You can access Workflows from Administration panel. To create a Workflow rule, you need to define:
 
-* Target Entity – what entity type the Workflow is applied to;
-* Trigger Type – how the Workflow will be triggered;
-* Conditions – conditions need to be met to trigger the Workflow;
-* Actions – what to do if the Workflow is triggered.
+* Target Entity – what entity type the rule is applied to;
+* Trigger Type – how the rule will be triggered;
+* Conditions – conditions need to be met to trigger the rule;
+* Actions – what to do if the rule is triggered.
 
 In this article:
 
@@ -40,7 +40,7 @@ Triggered only when an existing record is updated. If specified conditions are m
 
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
 
-For Workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If a Case's status is changed, then do some actions.
+For Workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was changed. For example, if a Case's status is changed, then do some actions.
 
 ### Manual
 
@@ -62,7 +62,7 @@ Limitations:
 
 ### Scheduled
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified *List* Report. Hence you need also to create a *List* Report.
+Triggered according to a defined scheduling. You can set up it to run every day, every week, etc. Actions will be applied for records returned by a specified *List* Report. Hence, you need also to create a *List* Report.
 
 Scheduling is specified in a crontab notation.
 
@@ -79,15 +79,15 @@ Scheduling is specified in a crontab notation.
 
 How it works:
 
-1. You need to create a *List* Report showing records that met specific criteria. You can specify any columns for the Report, it doesn't matter.
-2. Then create a Workflow rule with the *Scheduled* trigger type, select the Report. Specify the scheduling.
-3. Specify one or multiple actions in the Workflow.
+1. You need to create a *List* Report showing records that met specific criteria. You can specify any columns for the Report, it doesn't matter in this context.
+2. Then, create a Workflow rule with the *Scheduled* trigger type, select the Report you creted before. Specify the needed scheduling.
+3. Specify one or multiple actions in the Workflow rule.
 
-The Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the Report and take all records from the Report result. Then, it will apply the action (or multiple actions) for every record.
+The Workflow rule will be running in idle according to the specified scheduling. On each run, it will run the Report and obtain all records from the Report result. Then, it will apply the action (or multiple actions) for every record.
 
 !!! example "Example, a use case"
 
-    Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a Workflow to run once a day.
+    Send a notification email to customers who have their license expiring in 1 week. You will need a report listing contacts who have their license expiring exactly in 7 days. Set up a Workflow to run once a day.
 
 ### Sequential
 
