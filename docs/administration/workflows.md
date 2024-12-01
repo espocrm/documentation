@@ -91,10 +91,10 @@ The Workflow rule will be running in idle according to the specified scheduling.
 
 ### Sequential
 
-Is supposed to be run by another Workflow. Provides the ability to make a complex logic.
+Is supposed to be run by another Workflow. Provides the ability to create complex logic.
 
-1. Create a Workflow with the *Sequential* trigger type.
-2. Create another Workflow with another trigger type. Add an action *Trigger another Workflow* and select the Workflow from the step 1.
+1. Create a Workflow rule with the *Sequential* trigger type.
+2. Create another Workflow rule with another trigger type. Add an action *Trigger another Workflow* and select the Workflow rule from the step 1.
 
 !!! note
 
@@ -102,13 +102,13 @@ Is supposed to be run by another Workflow. Provides the ability to make a comple
 
 ### Signal
 
-Triggered when a specified signal is escalated in the system. Only object signals can be used. See [more info](bpm-signals.md) about signals.
+Triggered when a specified signal is escalated in the system. Only object signals can be used here. See [more info](bpm-signals.md) about signals.
 
 ----
 
 ## Conditions
 
-You can specify conditions that must be met to trigger the Workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
+You can specify conditions that must be met to trigger a Workflow rule. There are two ways how conditions can be specified: with the UI condition builder and with a Formula script.
 
 ### UI condition builder
 
