@@ -8,9 +8,9 @@ The BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/
 
 ### Difference from Workflows tool
 
-The Workflows tool is intended for automation of simple business rules, w/o sequential flow items, when there is no need to display the flow graphically.
+The Workflows tool is intended for automation of simple business rules, without sequential flow items, when there is no need to display the flow graphically.
 
-The BPM tool is intended for more complex business flows, where there can be diverging and converging flows, execution delays, user interactions. The flowchart view makes the business process more comprehensible for a human, a log allows to see how the process was held.
+The BPM tool is intended for more complex business logic, where there can be diverging and converging flows, execution delays, user interactions. The flowchart view makes the business process more comprehensible for a human, the log allows to see how the process was held.
 
 In this article:
 
@@ -20,6 +20,7 @@ In this article:
 * [Conditions](#conditions)
 
 ## See also
+
 * [Examples](bpm-examples.md)
 * [Signals](bpm-signals.md)
 * [Compensation](bpm-compensation.md)
