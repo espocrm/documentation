@@ -146,7 +146,7 @@ In case of a multi-instance sub-process, the compensation handler is processed f
 
 ### Conditional Intermediate Event (Catching)
 
-This event stops the flow until specified criteria is met. Conditions are defined in the same way as in the Workflow tool. See [here](workflows.md#conditions). Note that BPM tool introduces [additional functions](bpm.md#additional-formula-functions) that can be used in formula.
+This event stops the flow until specified criteria is met. Event conditions are defined in the same way as conditions in the Workflow tool. See [here](workflows.md#conditions). Note that BPM tool introduces [additional functions](bpm.md#additional-formula-functions) that can be used in a Formula script.
 
 ![Conditional Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional.png)
 
@@ -154,9 +154,9 @@ This event stops the flow until specified criteria is met. Conditions are define
 
 This event stops the flow and waits as long as it is specified by the event's parameters.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return a Date-Time value (in UTC timezone). Once this time comes, the flow will be proceeded to the next element.
+For more complex timer settings you can utilize a [Formula](formula.md) script. Formula scripts should return a Date-Time value (date-time string in the UTC timezone). Once this time arrives, the flow is proceeded to the next element.
 
-By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
+By utilizing datetime\closest Formula function, it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
 
 ![Timer Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-timer.png)
 
