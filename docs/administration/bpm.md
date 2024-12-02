@@ -73,9 +73,9 @@ Usually Processes start their execution flow from a Start Event (green colored c
 
 ### Manipulating
 
-A Process can be **stopped manually** by a user who has 'edit' access to the Process. You can do it from the dropdown menu next to the *Edit* button.
+A Process can be **stopped manually** by a user who has edit access to that Process. You can do it from the dropdown menu next to the *Edit* button.
 
-It's possible to **manually reject or interrupt** pending and active flow nodes. You can do it from the *Log* panel on the Process detail view in the dropdown menu of a specific Flow Node. Note that in some cases, after rejecting a Flow Node the Process becomes suspended and won't ever end by itself. You will need to either manually stop it or start a flow from any node to continue executing.
+It's possible to **manually reject or interrupt** pending and active flow nodes. You can do it from the *Log* panel on the Process detail view in the dropdown menu of a specific Flow Node. Note that in some cases after rejecting a Flow Node the Process becomes suspended and won't ever end by itself. You will need to either manually stop it or start a flow from any node to continue executing.
 
 It's possible to **manually start a flow from any element** of an already started Process. You need to click on a specific flowchart element on the Process detail view and then click the button *Start flow from here*.
 
@@ -83,7 +83,7 @@ Ended, stopped and interrupted Processes can be *reactivated* (from the dropdown
 
 ### Access control
 
-Only admin users can create or edit Flowcharts. With Roles it's possible to allow regular users to view Flowcharts, view or edit Processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view Process Flowchart details. 
+Only admininstrators can create or edit Flowcharts. With Roles it's possible to allow regular users to view Flowcharts, and view or edit Processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view Process Flowchart details. 
 
 ## Flowchart Elements
 
@@ -115,13 +115,13 @@ Represented as a solid arrow. It indicates the order in which process elements w
 
 Conditional events, exclusive and inclusive diverging gateways have conditions that determine the flow of the process.
 
-Through the UI there is the ability to check conditions for the following records:
+Through the UI, there is the ability to check conditions for the following records:
 
 * Target record;
 * Records related to the target through many-to-one and children-to-parent relationships;
-* Records created by the process via tasks;
-* User task records, which allows checking the resolution.
+* Records created by the Process via tasks;
+* User Task records, what allows checking a task resolution.
 
-It's also possible to define conditions with [formula](formula.md) expressions. Example: `status == 'New' && assignedUserId == null`. 
+It's also possible to define conditions with [Formula](formula.md) expressions. Example: `status == 'New' && assignedUserId == null`. 
 
 Conditions in the BPM tool are the same as in the Workflow tool. See more details about [workflow's conditions](workflows.md#conditions).
