@@ -49,7 +49,7 @@ All available events:
 
 ### Start Event
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has access to create processes. This can be done either from the processes list view or from the detail view of a target record.
+Doesn't have parameters. It's a starting point of the process. A Start Event can be initiated manually by a user who has access to create processes. This can be done either from the processes list view or from the detail view of a target record.
 
 ![Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-1.png)
 
@@ -59,21 +59,21 @@ Can be also used as an entry point of a sub-process.
 
 ### Conditional Start Event
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', 'After record saved'. Conditions are defined in the same way as in the Workflows tool. See [here](workflows.md#conditions).
+A starting point of a process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', and 'After record saved'. Event conditions are defined in the same way as conditions in the Workflows tool. See [here](workflows.md#conditions).
 
 ![Conditional Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-1.png)
 
-Can be used to start an event sub-process.
+Can be also used to start an event sub-process.
 
 ![Conditional Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-2.png)
 
 ### Timer Start Event
 
-A starting point of the process. It initiates processes by scheduling. You need to select a list report (which returns records for initiating processes) and specify execution scheduling (in crontab notation).
+A starting point of a process. It initiates processes by scheduling. You need to select a list report (which returns records, each one will initiate a separate process) and specify execution scheduling (in the crontab notation).
 
 ![Timer Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-1.png)
 
-Can be also used to start an event sub-process. In this case, it is scheduled to be triggered at a time defined by event parameters.
+Can be also used to start an event sub-process. In this case, it is scheduled to be triggered at time defined by event parameters.
 
 ![Timer Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-2.png)
 
@@ -81,9 +81,9 @@ Can be also used to start an event sub-process. In this case, it is scheduled to
 
 Can be used to start processes and event sub-processes.
 
-When it is used to start a process, only *object signals* can be used.
+When it's used to start a process, only *object signals* can be used.
 
-When it is used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
+When it's used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
 
 !!! note
 
@@ -101,26 +101,26 @@ See [more info](bpm-signals.md) about signals.
 
 Can only be used to start an event sub-process. It's triggered once an error event is thrown within the same process.
 
-If *Error Code* is specified, it will be triggered only when an error with the same code occurs. If *Error Code* is empty, it will catch any error.
+If the *Error Code* is specified, the event will be triggered only when an error with the same code occurs. If the *Error Code* is empty, it will catch any error.
 
-It can't be non interrupting, because a process gets terminated once an error event is thrown.
+It cannot be non-interrupting, because the process gets terminated once an error event is thrown.
 
 ![Error Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-error.png)
 
-It's possible to view an error code and message in the flow log (as of v2.14).
+It's possible to view an error code and message in the flow log.
 
-The error code and the exception message can be obtained further in the flow with formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage` (as of v2.14).
+The error code and the exception message can be obtained further in the flow with Formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage`.
 
 !!! note
 
-    When an error event sub-process is defined inside a regular sub-process, it may be reasonable to re-throw the error in the end
+    When an error event sub-process is defined inside a regular sub-process, it can be reasonable to re-throw the error in the end
     of the event sub-process with the Error End Event. It will propagate the error to the top level.
 
 ### Escalation Start Event
 
 Can be used only to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
 
-If Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If Escalation Code is empty, it will catch any escalation.
+If the Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If the Escalation Code is empty, it will catch any escalation.
 
 ![Escalation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-escalation.png)
 
@@ -130,7 +130,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 Starts a sub-process compensation handler. Can be used only in an event sub-process.
 
-When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
+When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then, it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
 
 ![Compensation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-compensation.png)
 
