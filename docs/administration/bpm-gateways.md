@@ -37,7 +37,7 @@ In case of diverging, it can direct to one or multiple parallel flows (paths), d
 
     There must be at least two outgoing flows to be able to specify diverging criteria.
 
-If there is a necessity to merge parallel flows produced by a diverging inclusive gateway, you need to use a converging inclusive gateway. It will wait for all incoming flows and only then continue to the outgoing element.
+If there is a necessity to merge parallel flows produced by a diverging inclusive gateway, you need to use a converging inclusive gateway. It will wait for all incoming flows and only then will continue to the outgoing element.
 
 ![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
 
@@ -55,9 +55,9 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 Can diverge or converge flows.
 
-In case of diverging it splits flow into multiple parallel flows. There are no parameters for this gateway type.
+In case of diverging, it splits the flow into multiple parallel flows. There are no parameters for this gateway type.
 
-In case of converging it waits until all incoming flows come and then continues to the next outgoing element.
+In case of converging, it waits until all incoming flows come and only then continues to the next outgoing element.
 
 ![parallel gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-parallel.png)
 
