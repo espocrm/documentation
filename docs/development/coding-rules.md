@@ -231,9 +231,12 @@ class SomeClass
 }
 ```
 
-### 7\. Not more that 2 levels of indentation per method.
+### 7\. Avoid deep levels of indentation.
+
+More than 2 per method is too much.
 
 ❗ Bad:
+
 ```php
 <?php
 // ...
@@ -330,7 +333,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-    public function process(string $city, string $country, string $postalCode): void
+    public function process(string $city, string $country, string $postalCode, string $state): void
     {}
 ```
 
