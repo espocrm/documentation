@@ -7,6 +7,7 @@ In this article:
 * [Password recovery](#password-recovery)
 * [User inactivating](#user-inactivating)
 * [Logging in as another user](#logging-in-as-another-user)
+* [Teams](#teams)
 
 ## User types
 
@@ -87,3 +88,11 @@ Limitations:
 * Recommended to open the login link in an incognito/private window to avoid losing a current login session.
 
 The functionality can be disabled in the config: `'authAnotherUserDisabled' => true`.
+
+## Teams
+
+A user can be related to one or multiple teams. Only the administrator can manage user's teams.
+
+Teams can provide additional access control capabilities. For example, a user added to a specific team, gets the ability to view records related to that team. Or, a user added to a team (e.g. called 'Managers') gets the ability to create and edit records of specific type and full read access.
+
+A user can have the Default Team. All records created by the user will be related to that team by default.
