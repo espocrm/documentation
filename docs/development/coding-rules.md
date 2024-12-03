@@ -194,7 +194,7 @@ $string = $this->sanitizeString($string);
 ```php
 <?php
 // On this platform we omit doing this due to ...
-if ($this->plarform === self::SOME) {
+if ($this->platform === self::SOME) {
     return;
 }
 ```
