@@ -157,7 +157,7 @@ $contacts = LinkMultiple::create([$contact->getId()]);
 
 !!! note
 
-    Registering own values types might be excessive as it's possible to manually handle value object creation and consumption in getter and setters of an entity.
+    Registering own value object types might be excessive as it's possible to manually handle value object creation and consumption in getter and setters of an entity.
 
 Registering a custom value object type for a specific field type.
 
