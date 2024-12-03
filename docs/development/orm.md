@@ -338,7 +338,7 @@ $entity = $entityManager
 
 !!! note
 
-    As of v8.4, the *getRelation* method is available in the *EntityManager*. `$entityManager->getRelation($entity, 'relationName');
+    As of v8.4, the *getRelation* method is available in the *EntityManager*. `$entityManager->getRelation($entity, 'relationName');` Before, it could be accessed from a repository.
 
 ### Find related
 
@@ -348,13 +348,11 @@ Has-Many:
 <?php
 // All.
 $opportunityCollection = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->find();
 
 // Filter.
 $opportunityCollection = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->limit(0, 10)
     ->where($whereClause)
@@ -362,7 +360,6 @@ $opportunityCollection = $entityManager
 
 // First one.
 $opportunity = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->order('createdAt', 'DESC')
     ->findOne();
@@ -373,7 +370,6 @@ Belongs-To or Has-One:
 ```php
 <?php
 $account = $entityManager
-    ->getRDBRepository('Task')
     ->getRelation($task, 'account')
     ->findOne();
 ```
@@ -383,11 +379,8 @@ Filtering by a relation column:
 ```php
 <?php
  $leads = $entityManager
-    ->getRDBRepository('TargetList')
     ->getRelation($targetList, 'leads')
-    ->where([
-        '@relation.optedOut' => false,
-    ])
+    ->where(['@relation.optedOut' => false])
     ->find();
 ```
 
@@ -398,21 +391,17 @@ Filtering by a relation column:
 ```php
 <?php
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->relate($opportunity);
 
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->relateById($opportunityId);
 
+// With relationship column setting.
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
-    ->relate($contact, [
-        'role' => 'CEO', // relationship column
-    ]);
+    ->relate($contact, ['role' => 'CEO']);
 ```
 
 ### Unrelate entities
@@ -420,12 +409,10 @@ $entityManager
 ```php
 <?php
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->unrelate($opportunity);
 
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->unrelateById($opportunityId);
 ```
@@ -435,14 +422,10 @@ $entityManager
 ```php
 <?php
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
-    ->updateColumns($contact, [
-        'role' => 'CEO', // relationship column
-    ]);
+    ->updateColumns($contact, ['role' => 'CEO']);
 
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
     ->updateColumnsById($contactId, [
         'role' => 'CEO', // relationship column
@@ -454,7 +437,6 @@ $entityManager
 ```php
 <?php
 $isRelated = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->isRelated($opportunity);
 ```
