@@ -224,30 +224,29 @@ Can be useful to ensure processing of multiple compensations in a specific order
 
 ### End Event
 
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there isn't anything running in parallel, then process ends.
+Ends the current flow. It doesn't end flows running in parallel. When the flow reaches an end event and there isn't anything running in parallel, then the process ends.
 
 ![End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end.png)
 
 ### Terminate End Event
 
-Ends all flows. Process is subsequently ended.
+Ends all flows. The process is subsequently ended.
 
 ![Terminate End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-terminate.png)
 
-
 ### Error End Event
 
-Terminates the process and triggers an error. Error Code can be specified. Error can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+Terminates the process and triggers an error. The Error Code can be specified. The error can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Error End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
 !!! note
 
-    Uncaught errors are propagated to the parent process. As of v2.14.
+    Uncaught errors are propagated to the parent process.
 
 ### Escalation End Event
 
-Ends the flow and triggers an escalation. Escalation Code can be specified. Escalation can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+Ends the flow and triggers an escalation. The Escalation Code can be specified. The escalation can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Escalation End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-escalation.png)
 
@@ -261,7 +260,7 @@ If the first character of the signal name is `@`, it will broadcast an object si
 
 !!! note
 
-    Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+    Signals are not limited by a process scope. A signal triggered in one BPM process can be caught in another process.
 
 !!! note
 
@@ -298,34 +297,32 @@ Compensation is supposed to perform undo actions when something went wrong. Usua
 
 ## Boundary Events
 
-Boundary events can be attached to activities (usually sub-processes). Boundary event can interrupt an activity (if param *Is Interrupting* is checked). Non interrupting boundary event can be triggered multiple times.
-
+Boundary events can be attached to activities (usually sub-processes). Boundary event can interrupt an activity (if the *Is Interrupting* parameter is checked). Non-interrupting boundary event can be triggered multiple times.
 
 ### Error Intermediate Event (Boundary)
 
-It's triggered once an error event is thrown withing the activity (sub-process) it's attached to.
+It's triggered once an error event is thrown within the activity (sub-process) it's attached to.
 
-It can't be non interrupting, because the activity gets terminated once an error event is thrown.
+It cannot be non-interrupting, because the activity gets terminated once an error event is thrown.
 
-If Error Code is specified, it will be triggered only when an error with the same code occurs. If Error Code is empty, it will catch any error.
+If the Error Code is specified, it will be triggered only when an error with the same code occurs. If the Error Code is empty, it will catch any error.
 
 ![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
-It's possible to view an error code and message in the flow log (as of v2.14).
+It's possible to view the error code and the exception message in the flow log.
 
-The error code and the exception message can be obtained further in the flow with formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage` (as of v2.14).
+The error code and the exception message can be obtained further in the flow with Formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage`.
 
 !!! note
 
-    If the error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403). As of v2.8.6.
+    If the error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403).
 
 
 ### Conditional Intermediate Event (Boundary)
 
-Triggered when specific conditions are met. Note that non interrupting event can be triggered multiple times, when conditions get met, then get not met, and met again.
+Triggered when specific conditions are met. Note that same non-interrupting events can be triggered multiple times. First, when conditions get fulfilled, then, when conditions get unfulfilled, and so on.
 
 ![Conditional Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional-boundary.png)
-
 
 ### Timer Intermediate Event (Boundary)
 
@@ -338,15 +335,14 @@ Triggered after a specific period of time. The timer starts once the activity st
 
 It's triggered once an escalation event is thrown within the activity (sub-process) it's attached to.
 
-If Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If Escalation Code is empty, it will catch any escalation.
-
+If the Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If the Escalation Code is empty, it will catch any escalation.
 
 ![Escalation Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-escalation.png)
 
 
 ### Signal Intermediate Event (Boundary)
 
-It's triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily in the same process.
+It's triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily from the same process.
 
 Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with the target's ID.
 
