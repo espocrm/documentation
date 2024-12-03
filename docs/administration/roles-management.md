@@ -12,7 +12,7 @@ In this article:
 
 ## Overview
 
-In order to restrict access for some users, you need to use Roles. An administrator can manage roles in at Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
+In order to restrict access for some users, you need to use Roles. An administrator can manage roles in under Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
 
 One User can have multiple Roles. Those Roles can be selected for a specific User (*Roles* field of User record) and/or be inherited from Teams that the user belongs to.
 
