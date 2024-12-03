@@ -441,6 +441,61 @@ $isRelated = $entityManager
     ->isRelated($opportunity);
 ```
 
+### Managing from within Entity class
+
+*As of v9.0.*
+
+A developer can add getter and setters to an Entity class which will allow to read and set related records.
+
+In an Entity class:
+
+```php
+<?php
+class MyEntity extends Entity
+{
+    public function getAccount(): ?Account
+    {
+        return $this->relations->getOne('account');
+    }
+
+    public function setAccount(?Account $account): self
+    {
+        $this->relations->set('account', $account);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<Attachment>
+     */
+    public function getAttachments(): Collection
+    {
+        return $this->relations->getMany('attachments');
+    }
+
+    // Setting multiple is not supported.
+}
+```
+
+Usage:
+
+```php
+<?php
+$entity->setAccount($account);
+
+$account = $entity->getAccount();
+
+// The same instance is returned. Useful to prevent re-fetching in different hooks.
+assert($account === $entity->getAccount());
+
+$em->saveEntity($entity);
+```
+
+* Only available from inside the Entity class.
+* Getting is available for many and one relationships.
+* Settings is available only for one relationships.
+
+
 ## Collections
 
 Collections contains Entities. An *EntityCollection* is a regular collection of entities. An *SthCollection* is a collection of entities, consuming much less memory. It's reasonable when working with large query results. It does not allocate memory for all results but only for a current entity (e.g. when iterating).
