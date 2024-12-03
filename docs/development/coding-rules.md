@@ -193,7 +193,7 @@ $string = $this->sanitizeString($string);
 
 ```php
 <?php
-// On this platform we omit doing this due to ...
+// On this platform we omit doing this due to the risk of processor explosion.
 if ($this->platform === self::SOME) {
     return;
 }
