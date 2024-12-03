@@ -31,7 +31,7 @@ class MyClass
 {
     public function __constructor(
         private EntityManager $entityManager,
-        private Metadata $metadata
+        private Metadata $metadata,
     ) {}
 }
 ```
@@ -96,7 +96,7 @@ class MyClass
 
 Also avoid the `mixed` type for parameters.
 
-### 4\. Never return TRUE or FALSE to indicate a success or failure. Throw an exception if failure, return NULL for empty result.
+### 4\. Never return TRUE or FALSE to indicate success or failure. Throw an exception if failure, return NULL for empty result.
 
 ✔️ Good:
 
@@ -187,6 +187,16 @@ $string = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 ```php
 <?php
 $string = $this->sanitizeString($string);
+```
+
+✔️ Good (explaining some non-obvious cases):
+
+```php
+<?php
+// On this platform we omit doing this due to ...
+if ($this->plarform === self::SOME) {
+    return;
+}
 ```
 
 ### 6\. Import classes in the beginning of the file.
