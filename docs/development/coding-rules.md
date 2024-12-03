@@ -292,7 +292,7 @@ More than 2 per method is too much.
 
 ### 8\. Use early returns.
 
-❗ Bad:
+❗ Not good:
 
 ```php
 <?php
