@@ -60,21 +60,21 @@ Unrelates the target record from another specified record.
 
 #### Apply Assignment Rule
 
-Assigns the record to some user by a specific rule. Can be applied to the target record, the process record or any record created by the process. See [more](workflows.md#apply-assignment-rule).
+Assigns the record to a user based on a specific assignment rule. Can be applied to the target record, the process record, or any record created by the process. See [more](workflows.md#apply-assignment-rule).
 
 #### Create Notification
 
-Creates in-app notification for specific users. See [more](workflows.md#create-notification).
+Creates an in-app notification for specific users. See [more](workflows.md#create-notification).
 
-Process variables can be used in a message with the placeholder `{$$variable}`.
+Process variables can be included in a message with such placeholders: `{$$variable}`, where `$variable` is a variable defined in the process.
 
 #### Make Followed
 
-Makes specific users to follow the target record, the process record or any record created by the process.
+Makes specific users to follow the target record, the process record, or any record created by the process.
 
 #### Trigger Another Workflow Rule
 
-Runs a workflow rule of the sequential type, target record can be switched a related or a record created by the process.
+Runs a workflow rule of the sequential type. The target record of the called rule can be the same or be switched to a related record or a record created by the process.
 
 #### Run Service Action
 
@@ -86,11 +86,11 @@ Calls an external API endpoint. See [more](workflows.md#send-http-request).
 
 #### Execute Formula Script
 
-Executes a specific formula script.
+Executes a specific Formula script.
 
 ### Formula usage
 
-When using formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`.
+When using Formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`.
 
 !!! example
 
@@ -107,7 +107,7 @@ When using formula in a task that creates or updates another record, the current
 
 !!! warning
 
-    In the context of *update record* actions it's recommended to use formula only for setting attributes. Use *Script Task* for any other logic.
+    In the context of *update record* actions, it's recommended to use Formula only for setting attributes. Use *Script Task* for any other logic.
 
 ----
 
