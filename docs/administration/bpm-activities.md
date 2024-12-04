@@ -1,6 +1,6 @@
 # BPM Activities
 
-Activities represent automated tasks, manual tasks and sub-processes. Depicted as a gray rectangle.
+Activities encompass automated tasks, manual tasks, and sub-processes. On a flowchart, they are depicted as gray rectangles.
 
 * [Task](#task)
 * [Send Message Task](#send-message-task)
@@ -16,13 +16,13 @@ Activities represent automated tasks, manual tasks and sub-processes. Depicted a
 
 A task can execute different actions. Available actions are listed below.
 
-The BPM task utilizes Workflow tool actions, the list of available actions is almost the same. See more details about [workflow actions](workflows.md#actions).
+The BPM task utilizes actions from the Workflow tool. The list of available actions is almost the same as in Workflows. See more details about [Workflow actions](workflows.md#actions).
 
 ### Actions
 
 #### Create Record
 
-Creates a new record of any entity type.
+Creates a new record of a specific entity type.
 
 #### Create Related Record
 
@@ -30,13 +30,13 @@ Creates a new record related to the target record.
 
 #### Update Target Record
 
-Updates the target record. You can utilize formula here.
+Updates the target record. You can also utilize Formula script to set fields with calculated values.
 
-It's possible to delete the record with the formula expression: `deleted = 1`.
+It's possible to delete the record with the Formula expression: `deleted = 1`.
 
 #### Update Related Record
 
-Updates the record (or multiple records) related to the target record. You can utilize formula here.
+Updates a record (or multiple records) related to the target record. You can also utilize Formula script to set fields with calculated values.
 
 #### Update Created Record
 
