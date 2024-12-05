@@ -245,19 +245,19 @@ With the Script Task, you can define actions that are impossible to do with the 
 
 ## Sub-Process
 
-An isolated process that executes within a current process. The sub-process has it's own flowchart. It starts once the flow reaches its activity element.
+A sub-process is an isolated process that executes within a parent process. A sub-process has it's own flowchart. It starts once the flow reaches its activity element in the parent process.
 
 A sub-process should have one (and only one) regular Start Event.
 
-A sub-process can be interrupted by an interrupting boundary event. When the sub-process is successfully ended (not interrupted, not ended with an error), the flow of the parent process proceeds to the next element.
+A sub-process can be interrupted by an interrupting boundary event. When a sub-process is successfully ended (not interrupted and not ended with an error), the flow of the parent process proceeds to the next element.
 
-It's possible to **pass a different target record** to the sub-process (to switch the target record to another). After you placed the sub-process element on the flowchart, click it to edit, then specify a target. It allows to easily access fields of created records or records related to the target record. E.g. to send a notification to the assigned user of the opportunity that was created within the process.
+It's possible to **pass a different target record** to a sub-process (to switch the target record to another). After you placed the Sub-Process element on a flowchart, click it to edit, then specify the target. It allows to easily access fields of created records or records related to the target record. For example, to send a notification to the assigned user of the opportunity that was created within the process.
 
-It's possible to define a target record using a formula expression. You need to select the target *Record: {EntityType}* and specify a formula expression in the *Target ID Expression* field. The expression should evaluate to the ID of the record. Available as of v2.10.
+It's possible to define a target record using a Formula expression. You need to select the target *Record: {EntityType}* and specify a formula expression in the *Target ID Expression* field. The expression should evaluate to the ID of the record.
 
-When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in the *Return Variables* parameter. Note: Variable names should be specified without *$* character.
+When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in the *Return Variables* parameter. Note: Specify variable names without a leading *$* character.
 
-When a sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes the information about created records to the parent process.
+When a sub-process is initiated, it receives an information about all records that have been created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes the information about created records to the parent process.
 
 ![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/sub-process.png)
 
@@ -267,9 +267,9 @@ When a sub-process is initiated, it receives an information about all records cr
 
 The *Collection Expression* should evaluate to a list of values. Each value will instantiate a separate sub-process. The value will be available in the variable `$inputItem`.
 
-In the case of the **sequential** multi-instance sub-process, sub processes will be executed one by one. Otherwise they execute in parallel.
+In case of a **sequential** multi-instance sub-process, sub processes will be executed one by one. Otherwise, they execute in parallel.
 
-It's possible to have multiple sub-processes for different targets. By using the formula function *record\findRelatedMany* it's possible to have sub-processes for related records. The result of the function is the list of IDs. You need to set the *Target ID Expression* to the value `$inputItem`.
+It's possible to have multiple sub-processes for different targets. By using the Formula function *record\findRelatedMany*, it's possible to have sub-processes for related records. The result of the function is the list of IDs. You need to set the *Target ID Expression* to `$inputItem`.
 
 The result of a multi-instance sub-process can be returned to a specific variable defined by the *Return Collection Variable* field. It will contain an array of objects. Each object will contain return-variables of each sub-process instance.
 
