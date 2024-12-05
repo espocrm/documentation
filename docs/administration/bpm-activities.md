@@ -257,7 +257,7 @@ It's possible to define a target record using a Formula expression. You need to 
 
 When a sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process. Variables of the sub-process are isolated from its parent process. You can specify which variables will be copied to the parent process upon the completion in the *Return Variables* parameter. Note: Specify variable names without a leading *$* character.
 
-When a sub-process is initiated, it receives an information about all records that have been created by the parent process at that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes the information about created records to the parent process.
+When a sub-process is initiated, it receives an information about all records that have been created by the parent process by that moment. The sub-process can access those records. The parent process can access records created by the sub-process only after the sub-process is completed. Once the sub-process is completed, it passes the information about created records to the parent process.
 
 ![Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/sub-process.png)
 
@@ -281,15 +281,15 @@ The max number of sub-process instances is defined by the config parameter `bpmn
 
 ## Event Sub-Process
 
-An Event Sub-Process has neither ingoing, nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
+An Event Sub-Process has neither ingoing nor outgoing flows. It is triggered by its Start Event. The start event can be of any type: Conditional, Timer, Signal, Message, Error, Escalation.
 
-It possible to **pass a different target record** to an event sub-process. The event sub-process can *interrupt* its parent process. Whether the sub-process is interrupting is determined by the *Is Interrupting* parameter of its start event.
+It is possible to **pass a different target record** to an event sub-process. An event sub-process can *interrupt* its parent process. Whether the sub-process is interrupting is determined by the *Is Interrupting* parameter of its start event.
 
 When an event sub-process is initiated, all formula **variables are copied** from the parent process to the sub-process.
 
-When an event sub-process is initiated, it receives an information about all records created by the parent process at that moment. The sub-process can access those records. Records created by the event sub-process won't be accessible by the parent process.
+When an event sub-process is initiated, it receives an information about all records that have been created by the parent process by that moment. The sub-process can access those records. Records created by the event sub-process won't be accessible by the parent process.
 
-Non-interrupting event sub-process can be executed **multiple times**. E.g. a condition occurred multiple times.
+Non-interrupting event sub-process can be executed **multiple times**. For example, when a condition occurred multiple times.
 
 ![Event Sub-Process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-sub-process.png)
 
@@ -297,6 +297,6 @@ Non-interrupting event sub-process can be executed **multiple times**. E.g. a co
 
 ## Call Activity
 
-Executes a sub-process defined by a flowchart stored separately. Provides the ability to re-use the same flowchart in different processes. The Call Activity sub-process works the same way as a regular sub-process.
+Executes a sub-process defined by a flowchart stored separately. Provides the ability to re-use the same flowchart in different processes. The Call Activity sub-process works the same way as a regular Sub-Process.
 
-It possible to pass a different target record to the sub-process.
+It is possible to pass a different target record to a sub-process.
