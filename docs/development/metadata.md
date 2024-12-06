@@ -40,6 +40,7 @@ In this article:
   * [cleanup](metadata/app-cleanup.md)
   * [client](metadata/app-client.md) – front-end client
   * [clientNavbar](metadata/app-client-navbar.md) – front-end navbar
+  * [clientRecord](metadata/app-client-record.md)
   * [clientRoutes](metadata/app-client-routes.md) – front-end routes
   * [complexExpression](metadata/app-complex-expression.md)
   * [config](metadata/app-config.md)
