@@ -2,11 +2,11 @@
 
 *As of Advanced Pack v2.14.*
 
-Compensation mechanism is supposed to perform undo actions when something went wrong. Only successfully completed activities can be compensated. Both tasks and sub-processes can be compensated.
+The Compensation mechanism is supposed to perform undo actions when something went wrong. Only successfully completed activities can be compensated. Both tasks and sub-processes can be compensated.
 
-Compensation is initiated by triggering a Compensation Event (usually from an error handler). The throwing compensation event can specify an activity's ID that needs to be compensated. If the ID is omitted, all *visible* *compensable* activities will be compensated in the order reverse to their instantiation.
+A compensation is initiated by triggering a Compensation Event (usually from an error handler). The throwing compensation event can specify an activity's ID that needs to be compensated. If the ID is omitted, all *visible* *compensable* activities will be compensated in the order reverse to their instantiation.
 
-By utilizing intermediate throwing compensation events it is possible to establish a specific order in which compensations will be executed.
+By utilizing intermediate throwing compensation events, it is possible to establish a specific order in which compensations will be executed.
 
 !!! note
 
@@ -23,7 +23,7 @@ Boundary compensation:
 
 When a sub-process is compensated with the boundary event, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use the Compensation Event Sub-Process inside the sub-process.
 
-When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
+When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then, it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
 
 Compensation event sub-process:
 
@@ -31,7 +31,7 @@ Compensation event sub-process:
 
 An activity is considered **visible** from the throwing Event when:
 
-* It is contained in normal flow at the same level of the process/sub-process.
+* It is contained in a normal flow at the same level of the process/sub-process.
 * It is contained in the parent process/sub-process of an event sub-process in which the Event is contained.
 
 In the same level:
@@ -42,11 +42,9 @@ From the event sub-process:
 
 ![Compensation End Event, event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-compensation-1.png)
 
-
 Compensation events:
 
 * [Boundary](bpm-events.md#compensation-intermediate-event-boundary)
 * [Start](bpm-events.md#compensation-start-event) 
 * [Intermediate throwing](bpm-events.md#compensation-intermediate-event-throwing)
 * [End](bpm-events.md#compensation-end-event)
-
