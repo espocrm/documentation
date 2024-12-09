@@ -38,7 +38,7 @@ We want the whole process to be terminated once a Lead is opted out.
 
 For this, you need to add the *Event Sub-Process*. Put a *Signal Start Event* inside the sub-process rectangle and specify the signal name with the value `optOut.Lead.{$id}`. You also need to check the parameter *Is Interrupting* for this event. By setting this parameter, we indicate that the whole parent process should be interrupted once the event is catched.
 
-Here, inside the sub-process, you can also add a *Task* that will do some manipulations with the target record (*Lead*).
+Here, inside the sub-process, you can also add a *Task* that will do some manipulations with the target record (Lead).
 
 ## Example
 
