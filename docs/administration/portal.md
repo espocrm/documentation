@@ -59,7 +59,9 @@ Portal Roles can be applied to:
 
 ## Access to portal
 
-You can find the URL for your Portal in the *URL* field of the Portal record. It's also possible to use server configuration tools (such as mod_rewrite) to be able to access the Portal by a different URL. For this case, you need to fill in 'Custom URL' field.
+You can find the URL for your Portal in the *URL* field of the Portal record.
+
+It's possible to use server configuration tools (such as mod_rewrite) to be able to access the portal by a different URL. For this case, you need to fill in the *Custom URL* field. Note that using a different subdomain is recommended way. Prefer it over accessing the portal through the */portal* directory.
 
 * [Apache configuration](portal/apache-configuration.md)
 * [Nginx configuration](portal/nginx-configuration.md)
