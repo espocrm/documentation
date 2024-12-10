@@ -28,23 +28,23 @@ You can get a downloadable example [here](bpm-examples.md#downloadable-examples)
 
 *Available as of Advanced Pack 2.7.0 and EspoCRM 6.1.3.*
 
-Useful when an URL must be unique for a specific process. E.g. send an email for a feedback on provided customer support, the email contains unique links to rate quality of support.
+Useful when the URL must be unique for a specific process. E.g. send an email for a feedback on provided customer support, the email contains unique links to rate quality of support.
 
-A **signal**  `clickUniqueUrl.UNIQUE_ID` will be broadcasted when URL is opened by a recipient, where *UNIQUE_ID* will be a generated ID.
+The signal  `clickUniqueUrl.UNIQUE_ID` will be broadcasted when the URL is opened by a recipient, where *UNIQUE_ID* is a generated ID.
 
-Use code `{trackingUrl:TRACKING_URL_ID.{$$variableName}}` in an **email template** instead of a URL: , where *variableName* is a name of the variable where generated ID is stored, *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar). The code will be automatically substituted with a proper URL when email is sent.
+Use code `{trackingUrl:TRACKING_URL_ID.{$$variableName}}` in an email template instead of a *URL:* , where *variableName* is a name of the variable where the generated ID is stored, *TRACKING_URL_ID* is an ID of the Tracking URL record (can be obtained from the address bar). The code will be automatically substituted with a proper URL when the email is sent.
 
 Steps:
 
 1\. Create Tracking URL at Campaigns > top-right menu > Tracking URLs.
 
 
-2\. In BPM: Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it to a variable:
+2\. In BPM: Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it in a variable:
 
 ```
 $uniqueId = util\generateId();
 ```
 
-3\. In BPM: Add a *Send Message* task. Use an email template with a link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. Replace `TRACKING_URL_ID` with the ID of the *Tracking URL* record. This link is supposed to be clicked by a recipient.
+3\. In BPM: Add a *Send Message* task. Use an email template with the link `{trackingUrl:TRACKING_URL_ID.{$$uniqueId}}`. Replace `TRACKING_URL_ID` with the ID of the *Tracking URL* record. This link is supposed to be clicked by a recipient.
 
 4\. In BPM: Use a *Signal Catching* event with the signal `clickUniqueUrl.{$$uniqueId}`.
