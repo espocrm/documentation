@@ -207,7 +207,9 @@ AND means that all conditions in the group must be met.
 
 NOT IN provides the ability to filter records that don't meet specified criteria. E.g. listing accounts that don't have any opportunity with 'Closed Won' or 'Closed Lost' status.
 
-Note: It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively affect a report performance in some cases.
+!!! note
+
+    It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively affect a report performance in some cases.
 
 ![NOT IN group](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-not.png)
 
@@ -223,9 +225,13 @@ The example of usage: Filtering accounts that have opportunities of both 'Closed
 
 For more advanced use. You can apply a database function to a certain database column and compare it with a result calculated by a [formula](../administration/formula.md) expression.
 
-Note: If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
+!!! note
 
-Note: Formula functions intended to interact with the entity record will not work here because the formula is not applied to a specific record.
+    If you need to compare just with a simple string value you should put it into single quotes `'some string'`.
+
+!!! note
+
+    Formula functions intended to interact with the entity record will not work here because the formula is not applied to a specific record.
 
 Applying function to a column and comparing with a result of formula:
 
@@ -240,6 +246,20 @@ Comparing the result of the custom complex expression and the result of the form
 * Comparison operator is substituted into an SQL query between the complex expression statement and the formula result value.
 
 More info about complex expressions is available [here](complex-expressions.md).
+
+!!! example
+
+    Filter record that were created after less than 12 month from the creation of a related account. For example, it can be used to show sales only from new customers.
+    
+    ```
+    LESS_THAN:(
+        TIMESTAMPDIFF_MONTH:(
+            account.createdAt,
+            createdAt
+        ),
+        12
+    )
+    ```
 
 ### Having group
 
