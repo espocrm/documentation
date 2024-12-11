@@ -33,7 +33,7 @@ A List report displays the list of records that meet the specified criteria.
 
 To create a new list report, click on the *Reports* tab and then click *Create Report* button. Choose the needed Entity Type, then, click *Create* button at *List Report* section.
 
-At *Columns* field, pick the fields you would like to be displayed. Below, you can specify display parameters for every column:
+In the *Columns* field, pick the fields you would like to be displayed. Below, you can specify display parameters for every column:
 
 * Width – width in percents;
 * Align – how to align data: left or right;
@@ -73,6 +73,10 @@ When choosing an *Entity Type* for a grid report, consider the following. The *E
 The example of grid report results that shows revenue grouped by User:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
+
+!!! tip
+
+    When dealing with long tables with many columns, you can use Shift + Mouse Wheel to scroll horizontally. It can also be helpful to use the Result View, which displays the report data in full width.
 
 ### Group By
 
