@@ -26,7 +26,7 @@ There are 3 types of attendees: Users, Contacts, and Leads. For each attendee, i
 
 There is the ability to send **invitation emails** to attendees by clicking the button in the top-right corner. Attendees will be able to set their acceptance status by clicking on a corresponding link in the email. The template for invitation emails can be changed at Administration > Template Manager > Invitation.
 
-For events with the *Not Held* status, it's possible to send cancellation emails from the top-right menu (as of v7.3).
+When an event has status *Not Held*, it's possible to send a cancellation email to attendees. It can be done from the top-right menu on the Meeting (or Call) detail view.
 
 ### Reminders
 
