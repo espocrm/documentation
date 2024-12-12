@@ -133,13 +133,17 @@ Example in JSON: `["id", "name"]`.
 
 !!! note
 
-    An alias `attributeSelect` can be used instead to prevent false positive firewall blocking. As of v9.0.
+    An alias GET parameter `attributeSelect` can be used instead to prevent false positive firewall blocking. As of v9.0.
 
 ### where
 
 *Array*
 
 Search criteria. Can contain nested arrays and objects. See more [below](#where-items) more detail.
+
+!!! note
+
+    An alias GET parameter `whereGroup` can be used instead to prevent false positive firewall blocking. As of v9.0.
 
 ### primaryFilter
 
