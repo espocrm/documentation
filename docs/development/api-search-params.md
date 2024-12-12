@@ -133,7 +133,7 @@ Example in JSON: `["id", "name"]`.
 
 !!! note
 
-    An alias `attributeSelect` can be used instead to prevent false positive firewall blockings. As of v9.0.
+    An alias `attributeSelect` can be used instead to prevent false positive firewall blocking. As of v9.0.
 
 ### where
 
