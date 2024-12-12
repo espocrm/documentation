@@ -131,6 +131,10 @@ Example: `id,name,status,assignedUserId`.
 
 Example in JSON: `["id", "name"]`.
 
+!!! note
+
+    An alias `attributeSelect` can be used instead to prevent false positive firewall blockings. As of v9.0.
+
 ### where
 
 *Array*
