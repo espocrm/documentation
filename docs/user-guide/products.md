@@ -4,7 +4,7 @@ The Products feature is available in the [Sales Pack](https://www.espocrm.com/ex
 
 ![Products list view](../_static/images/user-guide/products/products.png){width="614"}
 
-Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, Purchase Orders.
+Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, and Purchase Orders.
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
 
