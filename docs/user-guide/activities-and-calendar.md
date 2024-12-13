@@ -54,7 +54,7 @@ Which entity types will be taken into account when showing busy time ranges can 
 
 ## Calendar
 
-Calendar displays Meetings, Calls, and  Tasks. It's also possible to show custom entities of the Event type.
+Calendar displays Meetings, Calls, and Tasks. It's also possible to show custom entities of the Event type.
 
 Supported views:
 
