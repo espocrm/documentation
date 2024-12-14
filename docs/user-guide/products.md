@@ -8,11 +8,11 @@ Products can be added as line items in Opportunities, Quotes, Sales Orders, Invo
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
 
-A product record has three price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*.
+A product record has 3 price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*.
 
 Product fields can be printed in a PDF. More detail [here](quotes.md#templates).
 
-Products can be added as line items in an Opportunity. By default, this feature is disabled. The Administrator needs to add the *Items* panel at Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
+The ability to add products as line items in an Opportunity is disabled by default. The Administrator needs to add the *Items* panel under Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
 
 In this article:
 
