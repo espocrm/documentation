@@ -125,3 +125,13 @@ A util for a default language of the system.
 Class: `Espo\Core\Utils\Language`
 
 A util for *en_US* language.
+
+## formulaManager
+
+Class: `Espo\Core\Formula\Manager`
+
+To run Formula scripts.
+
+## streamService
+
+Class: `Espo\Tools\Stream\Service`
