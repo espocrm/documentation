@@ -34,7 +34,7 @@ The Product Category is a separate entity type, hence the access to it is contro
 
 ### Product Attributes
 
-Before being able to create products with variants, you need to create some Product Attributes. Product attributes are available at: Products > the top-right menu > Product Attributes.
+Before being able to create products with variants, you need to create some Product Attributes. Product attributes are available under: Products > the top-right menu > Product Attributes.
 
 Every product attribute is supposed to have a specific set of options. Add needed options on the Product Attribute detail view.
 
@@ -51,7 +51,7 @@ To create a product with variants you need to create a template product. Click *
 
 After that, you need to generate variants. From the template product detail view, open the **Variants** tab in the bottom, click **Generate**. It will generate all possible combinations according to attributes and options of the product template.
 
-You can remove variants that you don't need. E.g. a Red shirt is not produced in an XS size, hence, you need to remove the XS-Red variant.
+You can remove variants that you don't need. E.g. a Red shirt is not produced in the XS size, hence, you need to remove the XS-Red variant.
 
 You can re-generate variants. It will create all missing combinations.
 
