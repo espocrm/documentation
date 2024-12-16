@@ -16,9 +16,9 @@ In this article:
 
 *As of Sales Pack v2.0.*
 
-The Price Books feature allows to have different prices for one product. A Price Book record contains prices for multiple products. Moreover, it can contain different prices for a single product: actual for a specific date period or quantity.
+The Price Books feature allows to have different prices for one product. A Price Book record contains prices for multiple products. Moreover, it can contain different prices for a single product, applied for a specific date period or a specific item quantity.
 
-The Price Books feature is disabled by default. It can be enabled at Administration > Sales Pack (Settings). Access to Price Books is controlled by Roles.
+The Price Books feature is disabled by default. It can be enabled under Administration > Sales Pack (Settings). Access to Price Books is controlled by Roles.
 
 The Price Books list view can be accessed at Products > the top-right menu > Price Books.
 
@@ -32,7 +32,7 @@ The **Default Price Book** can be specified at Administration > Sales Pack (Sett
 
 When a product is added to an order and there's no price found in a related Price Book or there's no related Price Book, the Default Price Book will be used. If there's no Default Price Book, the price from the Product record will be used.
 
-When a user changes the quantity of an order line, the system will look up the new unit price for that quantity. If there's such, it will prompt the user to apply the new unit price. The user can reject and leave the previous price.
+When a user changes the quantity in an order item, the system will look up the new unit price for that quantity. If there's such, it will prompt the user to apply the new unit price. The user can reject and leave the previous price.
 
 ### Rules
 
@@ -42,7 +42,6 @@ Price Rules can be added to a specific Price Book. One Rule can modify the base 
 
 ![Rule](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/extensions/sales-pack/price-rule.png)
 
-
 #### Target
 
 Determines when the Rule will be applied.
@@ -51,7 +50,7 @@ Determines when the Rule will be applied.
 * All – applies to all Products;
 * Conditional – when a specific condition is met.
 
-The admin user can add Conditions at Administration > Price Rule Conditions. Created conditions then will be available on the Price Rule form. Conditions are defined with a [Formula](../../administration/formula.md) expression. The expression should return true or false.
+The administrator can add Conditions at Administration > Price Rule Conditions. Created conditions then will be available on the Price Rule form. Conditions are defined with a [Formula](../../administration/formula.md) expression. The expression should return true or false.
 
 Special functions available for conditions:
 
@@ -103,7 +102,7 @@ The rule will be applied only if the quantity of items being sold exceeds the sp
 
 A *Supplier* record can have prices for specific products. These prices are used when adding products to a Purchase Order associated with that Supplier.
 
-A Supplier record can contain different prices for a single product: actual for a specific date period or quantity.
+A Supplier record can contain different prices for a single product: applied for a specific date period or a specific item quantity.
 
 If there's no supplier price found for a product, the *Cost Price* of the product will be used instead.
 
