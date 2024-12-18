@@ -83,11 +83,35 @@ $sth = $entityManager->getQueryExecutor()->execute($query);
 
 ## Search Params
 
-Search parameters. Usually passed from the frontend. A SearchParams object contains a primary filter, bool filters, text filter, where conditions, offset, limit, order and what columns to select.
+Search parameters. Usually passed from the frontend. A SearchParams object contains a primary filter, bool filters, text filter, where conditions, offset, limit, order and what columns to select. When a frontend collection is fetched, search parameters are passed in the request.
 
 Class: `Espo\Core\Select\SearchParams`.
 
-A SearchParams object can be fetched from a Request object by using `Espo\Core\Record\SearchParamsFetcher`.
+A SearchParams object can be fetched from a Request object by using `Espo\Core\Record\SearchParamsFetcher`. Usually it's done in API action classes.
+
+```php
+<?php
+namespace Espo\Custom\Api;
+
+use Espo\Core\Api\Action;
+use Espo\Core\Api\Request;
+use Espo\Core\Api\Response;
+use Espo\Core\Record\SearchParamsFetcher;
+
+class MyAction extends Action
+{
+    public function __construct(
+        private SearchParamsFetcher $searchParamsFetcher,
+    ) {}
+
+    public function process(Request $request): Response
+    {
+        $searchParams = $searchParams = $this->searchParamsFetcher->fetch($request);
+
+        // ...
+    }
+}
+```
 
 ## See also
 
