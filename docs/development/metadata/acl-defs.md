@@ -54,8 +54,8 @@ The same as `ownershipCheckerClassName` but for the portal.
 
 Can implement additional interfaces:
 
-* `Espo\Core\Portal\AclOwnershipAccountChecker`
-* `Espo\Core\Portal\AclOwnershipContactChecker`
+* `Espo\Core\Portal\Acl\OwnershipAccountChecker`
+* `Espo\Core\Portal\Acl\OwnershipContactChecker`
 
 ## assignmentCheckerClassName
 
