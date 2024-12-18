@@ -180,6 +180,8 @@ The Collaborators feature can be enabled for an entity type in the Entity Manage
 * A link-multiple field *Collaborators* will be automatically created.
 * A bool filter *Shared* will be added.
 
+The administrator needs to add the *Collaborators* to the layout: Administration > Entity Manager > {Entity Type} > Layouts > Side Panel Fields.
+
 Users added as collaborators to a record will have *read* and *stream* access, provided their access level, as defined by Roles, is other than *no*.
 
 Assignees are automatically added to collaborators. This ensures that when a record is reassigned to another user, the previous assignee remains a collaborator unless explicitly removed.
