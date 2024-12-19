@@ -6,7 +6,7 @@ A Sales Order represents a group of products or services with their quantities a
 
 You can add the Sales Orders panel to the Account detail view to be able to see related sales orders. At Administration > Layout Manager > Accounts > Bottom Panels.
 
-You can add the Sales Orders panel to the Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
+You can add the Sales Orders panel to the Opportunity detail view at Administration > Layout Manager > Opportunities > Bottom Panels.
 
 In the article:
 
