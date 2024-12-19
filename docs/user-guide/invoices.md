@@ -4,7 +4,7 @@ The Invoices feature is available in [Sales Pack](https://www.espocrm.com/extens
 
 An Invoice record represents a group of products or services with their quantities and prices.
 
-You can add the *Invoices* panel to Account detail view to be able to see related sales orders. At Administration > Layout Manager > Accounts > Relationships.
+You can add the *Invoices* panel to the Account detail view to be able to see related sales orders. Administration > Layout Manager > Accounts > Bottom Panels.
 
 You can add the Invoices panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
 
