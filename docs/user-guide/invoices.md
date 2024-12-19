@@ -6,7 +6,7 @@ An Invoice record represents a group of products or services with their quantiti
 
 You can add the *Invoices* panel to the Account detail view to be able to see related sales orders. Administration > Layout Manager > Accounts > Bottom Panels.
 
-You can add the Invoices panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships.
+You can add the Invoices panel to Opportunity detail view at Administration > Layout Manager > Opportunities > Bottom Panels.
 
 In the article:
 
@@ -24,9 +24,9 @@ In the article:
 
 ## Converting from Opportunity, Quote or Sales Order
 
-Method 1. Create a new invoice, on the form specify the needed opportunity/quote/sales order. Data will be copied from the opportunity/quote/sales order to the created invoice.
+Method 1. Create a new Invoice, on the form, specify the needed opportunity/quote/sales order. Data will be copied from the opportunity/quote/sales order to the created invoice.
 
-Method 2. Create a new invoice from Invoices relationship panel on the detail view of the opportunity/quote/sales order.
+Method 2. Create a new Invoice from Invoices relationship panel on the detail view of the opportunity/quote/sales order.
 
 ## Total Values Layout
 
@@ -34,21 +34,21 @@ The layout of total value fields (in the bottom on detail view) can be modified 
 
 ## Invoice Items
 
-Invoice has a list of items. Each item can represent a certain product or a service with description, quantity, tax rate, list price and unit price fields. It's possible to sort items manually.
+An Invoice has the list of items. Each item can represent a certain product or a service with the description, quantity, tax rate, list price, and unit price fields. It's possible to sort items manually.
 
-There is an ability to add custom fields for Invoice Item entity using Entity Manager.
+There is the ability to add custom fields for Invoice Item entity type using the Entity Manager.
 
 ### Invoice Items Layout
 
-The layout of invoice items can be modified at Administration > Layout Manager > Invoice Items > List (Item).
+The layout of Invoice Items can be modified at Administration > Layout Manager > Invoice Items > List (Item).
 
 ### Discount Rate
 
-It's possible to specify a discount in percents. To have this ability, administrator should add 'Discount (%)' field to the List (Item) layout.
+It's possible to specify a discount in percents. To have this ability, an administrator should add the *Discount (%)* field to the *List (Item)* layout.
 
 ## Printing to PDF
 
-Invoices can be printed to PDF. This action is available in the dropdown next to Edit button on the invoice’s detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
+Invoices can be printed to PDF. This action is available in the dropdown next to Edit button on the Invoice detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
 
 ### Templates
 
@@ -56,11 +56,11 @@ See the documentation [for quote templates](quotes.md#templates).
 
 ## Sending invoice in email
 
-Invoice PDF can be send in email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
+An Invoice PDF can be send in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
 
 ## Automatic numbering
 
-By default, the *Number* field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Invoice > Fields > number. It's also possible to make the number field read-only.
+By default, the *Number* field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Invoice > Fields > Number. It's also possible to make the number field read-only.
 
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Invoice > Fields > numberA.
 
@@ -70,7 +70,7 @@ By default, there is no *Name* field on the *Detail* layout. The *Number* is use
 
 You need to have a Tax record created in your CRM. Taxes can be accessed at Quotes list view > dropdown in the top-right corner > Taxes.
 
-Administrator can specify a default Tax record at Administration > Entity Manager > Invoices > fields > Tax > Default.
+An administrator can specify a default Tax record at Administration > Entity Manager > Invoices > fields > Tax > Default.
 
 ## Copying values from product to invoice item
 
@@ -80,7 +80,7 @@ You can select which fields you need to be copied at Administration > Entity Man
 
 ## Automation with Workflows or BPM
 
-The following service actions are available in Workflows and BPM tools:
+The following service actions are available in the Workflows and BPM tools:
 
 * Add Invoice Items
 * Convert Currency
