@@ -4,7 +4,7 @@ The Quotes feature is available in [Sales Pack](https://www.espocrm.com/extensio
 
 A Quote is a specific group of products or services with their quantities and prices that you quote to customers.
 
-The Quote entity type has a relationship with Opportunity type. You can add the *Quotes* panel to the Opportunity detail view at Administration > Layout Manager > Opportunities > Relationships. When creating a new quote linked to an opportunity, it transfers opportunity items to the quote.
+The Quote entity type has a relationship with Opportunity type. You can add the *Quotes* panel to the Opportunity detail view at Administration > Layout Manager > Opportunities > Bottom Panels. When creating a new quote linked to an opportunity, it transfers opportunity items to the quote.
 
 You can add the Quotes panel to the Account detail view to be able to see related quotes: Administration > Layout Manager > Accounts > Relationships.
 
