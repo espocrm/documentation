@@ -6,7 +6,7 @@ A Quote is a specific group of products or services with their quantities and pr
 
 The Quote entity type has a relationship with Opportunity type. You can add the *Quotes* panel to the Opportunity detail view at Administration > Layout Manager > Opportunities > Bottom Panels. When creating a new quote linked to an opportunity, it transfers opportunity items to the quote.
 
-You can add the Quotes panel to the Account detail view to be able to see related quotes: Administration > Layout Manager > Accounts > Relationships.
+You can add the Quotes panel to the Account detail view to be able to see related quotes: Administration > Layout Manager > Accounts > Bottom Panels.
 
 In the article:
 
