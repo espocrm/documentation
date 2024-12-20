@@ -85,6 +85,8 @@ The Global Stream is available on a separate page where users can see all Stream
 
     If a user does not have *all* access level for all entity types, there are possible scenarios leading to an empty or not complete result list being displayed. It's a server load optimization measure when it would take too much of resources to find the first records the user has access to. Consider adding some search filters in such cases.
 
+The full-text search is applied when using the text filter.  
+
 ## See also
 
 * [Activity Stream – Keep up with changes](https://www.espocrm.com/tips/activity-stream/)
