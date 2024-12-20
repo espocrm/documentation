@@ -12,8 +12,6 @@ Common hooks for all entity types (called from the ORM Repository class):
 - *afterUnrelate* – when two records are unrelated through a many-to-many relationship;
 - *afterMassRelate*
 
-
-
 ## Creating hook
 
 * create a file `custom/Espo/Custom/Hooks/{EntityType}/{HookName}.php` (you can also use a module directory);
@@ -174,3 +172,8 @@ $this->hookManager->process($entityType, $hookType, $entity, $options);
 
     A hook name can't start with `set`. It's reserved for a dependency injection.
 
+## Tips
+
+Avoild saving the same record in beforeSave hooks.
+
+In afterSave hooks, re-saving the same record usually should be avoided as it can disrupt following hooks. If saving is needed, consider passing SKIP_ALL, KEEP_NEW and KEEP_DIRTY save options to the *saveEntity* method or run an update query instead (using the query builder).
