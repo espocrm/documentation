@@ -77,15 +77,15 @@ You can filter what to show in the Stream: *All*, *Posts* or *Updates*. Filters 
 
 The Global Stream is available on a separate page where users can see all Stream notes, not only related to records they follow. Users can perform search: by specific fields or by a text filter. Notes that user don't have access to are not listed.
 
-* Access to the Global Stream is controlled by Roles.
-* A separate navbar tab is available.
-* Can be also reached from the Stream page.
+The Global Stream can be useful when you need to search for a specific post. The full-text search is applied when using the text filter.  
+
+Access to the Global Stream is controlled by Roles.
+
+The separate navbar Global Stream tab is available. It can be also reached from the Stream page.
 
 !!! note
 
     If a user does not have *all* access level for all entity types, there are possible scenarios leading to an empty or not complete result list being displayed. It's a server load optimization measure when it would take too much of resources to find the first records the user has access to. Consider adding some search filters in such cases.
-
-The full-text search is applied when using the text filter.  
 
 ## See also
 
