@@ -15,6 +15,8 @@ Filters and other search parameters can be used with API functions that returns 
 ### PHP
 
 ```php
+<?php
+
 $url = 'Lead';
 
 $where = [
@@ -66,7 +68,7 @@ $response = $client->request('GET', $url, $params);
 
 ```js
 // every param is optional
-var params = {
+const params = {
     maxSize: 5,
     primaryFilter: 'open',
     where: [
@@ -80,11 +82,7 @@ var params = {
 };
 
 client.request('GET', 'Case', params)
-    .then(
-        (response) => {
-            console.log(response);
-        }
-    )
+    .then(response => console.log(response))
 ```
 
 ### Python
@@ -100,6 +98,7 @@ params = {
         },
     ],
 }
+
 result = client.request('GET', 'Account', params)
 ```
 
@@ -107,7 +106,7 @@ result = client.request('GET', 'Account', params)
 
 Parameters are passed as query parameters (in GET request).
 
-As of v7.0.0 it's possible to pass all parameters in JSON format in one query parameter `searchParams`.
+It's also possible to pass all search parameters in JSON format in one query parameter `searchParams`.
 
 ### offset
 
