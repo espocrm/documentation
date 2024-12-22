@@ -88,7 +88,7 @@ You can select which fields you need to be copied: Administration > Entity Manag
 
 ## Locking
 
-A Sales Order can locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure which exactly fields at: Administration > Entity Manager > Sales Order > Edit.
+A Sales Order can be locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure the field list at: Administration > Entity Manager > Sales Order > Edit.
 
 If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.
 
