@@ -32,7 +32,7 @@ See the documentation [for quote templates](../../user-guide/quotes.md#templates
 
 You need to have a Tax record created in your CRM. Taxes can be accessed at: Purchase Order list view > dropdown in the top-right corner > Taxes.
 
-Administrator can specify a default Tax record at Administration > Entity Manager > Purchase Order > fields > Tax > Default.
+An administrator can specify a default Tax record at Administration > Entity Manager > Purchase Order > fields > Tax > Default.
 
 ## Locking
 
