@@ -21,6 +21,7 @@ In this article:
 * [List view filters based on reports](#report-filters)
 * [Reports panels](#report-panels)
 * [Portal access](#portal-access)
+* [Formula functions](#formula-functions)
 
 See also:
 
@@ -395,6 +396,15 @@ It's possible to add a report dashlet to the portal dashboard.
 
     For grid reports which are meant be available in the portal, it's usually reasonable to enable [Apply ACL](#access).
 
+## Formula functions
+
+### report\export
+
+`report\export(REPORT_ID, [USER_ID])`
+
+*As of v3.6.*
+
+Generates an XLSX export file and returns an attachment ID. An optional USER_ID allows to apply access restrictions for a specific user. Note that generated attachments have the role `Export File`, hence they will be automatically deleted by the cleanup job. To prevent deletion, you can change the role to `Attachment`.
 
 ## See also
 
