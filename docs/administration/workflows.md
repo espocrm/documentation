@@ -171,6 +171,8 @@ It's possible to specify multiple email addresses by separating them with a semi
 
 It's possible to use a formula variable when specifying an email address. Example: `{$$variable}`. As of v3.6.
 
+Additional attachments can be added an email using the *Attachmnents Variable* parameter. Specify a Formula variable name that contains an attachment ID or an array of attachment IDs. You can generate needed attachments in a Formula script in a previous action. As of v3.6.
+
 ### Create Record
 
 The system will create a new record of any entity type. If there is a relationship between the target entity type and the entity type of records being created, it's possible to relate them.
