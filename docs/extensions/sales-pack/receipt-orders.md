@@ -2,11 +2,11 @@
 
 *As of Sales Pack v2.0.*
 
-Receipt Orders are used to document product received from suppliers or returned customers.
+Receipt Orders are used to document product receivals from suppliers or from customers who returned their orders.
 
 If the Warehouses feature is enabled, every Receipt Order record should be associated with a Warehouse.
 
-Multiple Receipt Orders can be created from a single [Purchase Order](purchase-orders.md). It may be reasonable when the receipt is split into parts or shipped to different warehouses. The Purchase Order should have status *Released* or *Complete* to be able to create a Receipt Order from it.
+Multiple Receipt Orders can be created from a single [Purchase Order](purchase-orders.md). It may be reasonable when a receipt is split into parts or shipped to different warehouses. A Purchase Order should have status *Released* or *Complete* to be able to create a Receipt Order from it.
 
 Receipt Orders can be created from a [Return Order](return-orders.md).
 
