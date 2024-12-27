@@ -2,7 +2,7 @@
 
 *As of Sales Pack v2.0.*
 
-Suppliers can be accessed at Products > the top right menu > Suppliers or Purchase Orders > the top right menu > Suppliers. It's also possible add a navbar tab.
+Suppliers can be accessed at Products > the top right menu > Suppliers or Purchase Orders > the top right menu > Suppliers. It's also possible add the Suppliers navbar tab.
 
 Access to Suppliers is controlled by Roles.
 
