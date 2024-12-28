@@ -118,7 +118,7 @@ A list view mode list. E.g. *list*, *kanban*.
 
 *object.<string, string\>*
 
-*As of v8.3.*.
+*As of v8.3.*
 
 View mode icon classes. mode => class map.
 
