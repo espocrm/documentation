@@ -4,7 +4,7 @@
 
 The Inventory Management feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
-The Inventory Management feature allows to track product quantities, location in warehouses, transfers between warehouses, a purchase and sales history. It allows to validate product availability before selling it to a customer.
+The Inventory Management feature allows to track product quantities, locations in warehouses, transfers between warehouses, and a history of purchase and sales. It allows to validate product availability before selling it to a customer.
 
 The Inventory Management feature is disabled by default. To enable it, you need to enable **Inventory Transactions** at Administration > Sales Pack (Settings).
 
@@ -20,11 +20,11 @@ In this article:
 
 ## Inventory Transactions
 
-The transactional model is used for the inventory management. A single transaction record determines some action with a specific inventory item and items. It contains the following fields:
+The transactional model is used for the inventory management. A single transaction record determines some action with a specific inventory item. It contains the following fields:
 
 * Number – auto-increment number;
 * Product;
-* Quantity – a positive or negative value; positive indicates a movement in, negative – out;
+* Quantity – a positive or negative value; positive indicates a movement in – negative, movement out;
 * Parent – a record that generated the transaction; e.g. Receipt Order, Delivery Order;
 * Type – transfer, reserve, or soft-reserve;
 * Warehouse – what warehouse the transaction is related to;
@@ -32,7 +32,7 @@ The transactional model is used for the inventory management. A single transacti
 
 Access to Inventory Transactions is controlled by Roles. The administrator can allow specific users to read and/or create transactions.
 
-Note that usually users are not supposed to create transactions manually. Transactions are created automatically when a status of an order record is changed.
+Note that usually users are not supposed to create transactions manually. Transactions are created automatically when the status of an order record is changed.
 
 ## Quantity
 
