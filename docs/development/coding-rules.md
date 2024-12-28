@@ -54,6 +54,23 @@ $account = $this->entityManager
     ->findOne();
 ```
 
+✔️ Good:
+
+```php
+<?php
+use Espo\ORM\Query\SelectBuilder;
+use Espo\Modules\Crm\Entities\Account;
+
+$query = SelectBuilder::create()
+    ->select(['id', 'name'])
+    ->from(Account::ENTITY_TYPE)
+    ->order('createdAt')
+    ->build();
+
+$sth = $this->entityManager->getQueryExecutor()->execute($query);
+$rows = $sth->fetchAll();
+```
+
 ### 3\. Specify types for method parameters. Also specify a method return type.
 
 ❗ Bad:
