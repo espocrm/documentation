@@ -6,6 +6,10 @@
 
     On Mac OS, the CMD key (⌘) is the equivalent of the Ctrl.
 
+## General
+
+* `Ctrl + Middle-Click` – open a record in a quick view modal (when applied on a record link);
+
 ## Record list
 
 * `Ctrl + Enter` – apply search filter;
@@ -13,7 +17,6 @@
 * `Ctrl + /` – focus on search-bar;
 * `Ctrl + <` – previous primary filter;
 * `Ctrl + >` – next primary filter;
-* `Ctrl + Middle-Click` – quick view (when applied on a record link);
 * `Ctrl + Arrow Left` – previous page;
 * `Ctrl + Arrow Right` – next page;
 
