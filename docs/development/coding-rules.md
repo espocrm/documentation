@@ -71,7 +71,7 @@ $sth = $this->entityManager->getQueryExecutor()->execute($query);
 $rows = $sth->fetchAll();
 ```
 
-### 3\. Specify types for method parameters. Also specify a method return type.
+### 3\. Specify types for method parameters. Also specify the method return type.
 
 ❗ Bad:
 
