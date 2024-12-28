@@ -65,6 +65,7 @@ $query = SelectBuilder::create()
     ->select(['id', 'name'])
     ->from(Account::ENTITY_TYPE)
     ->order('createdAt')
+    ->limit(0, 10)
     ->build();
 
 $sth = $this->entityManager->getQueryExecutor()->execute($query);
