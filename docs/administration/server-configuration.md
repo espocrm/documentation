@@ -73,8 +73,7 @@ EspoCRM also experimentally supports PostgreSQL 15. Though it's planned to becom
 
 The files and directories should have the following permissions:
 
-* `data`, `custom`, `client/custom` – should be writable all files, directories and subdirectories (664 for files, 775 for directories, including all subdirectories and files);
-* `application/Espo/Modules`, `client/modules` – should be writable the current directory (775 for the current directory, 644 for files, 755 for directories and subdirectories);
+* `data`, `custom`, `client/custom` – all files, directories and subdirectories should be writable (664 for files, 775 for directories, including all subdirectories and files);
 * `bin/command` – should be executable (754);
 * all other files and directories should be readable (644 for files, 755 for directories).
 
