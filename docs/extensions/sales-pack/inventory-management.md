@@ -51,7 +51,7 @@ It's possible to track specific products by Inventory Numbers. There are two typ
 
 Access to Inventory Numbers is controlled by Roles.
 
-From the Inventory Number detail view it's possible to view the **History**: receipts, deliveries, transfers between warehouses and adjustments.
+From the Inventory Number detail view it's possible to view the **History**: receipts, deliveries, transfers between warehouses, and adjustments.
 
 It's possible to view quantity for a specific Inventory Number.
 
