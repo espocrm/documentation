@@ -93,9 +93,9 @@ It's possible to move inventory between Warehouses with Transfer Orders.
 
 ## Transfer Orders
 
-Actual only if the Warehouses feature is enabled. Access to Transfer Orders is controlled by Roles.
+Transfer Orders can be utilized only if the Warehouses feature is enabled. Access to Transfer Orders is controlled by Roles.
 
-Transfer Orders allow moving inventory between Warehouses.
+Transfer Orders allow moving inventory between Warehouses. When a Transfer Order record has the *In Progress* status, its items are counted as In Transit. They do not belong to any warehouse while in this state.
 
 ## Inventory Adjustments
 
