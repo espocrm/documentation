@@ -30,7 +30,11 @@ When an event has status *Not Held*, it's possible to send a cancellation email 
 
 ### Reminders
 
-There are two types of reminders: Popup and Email. Reminders will be applied to an *Assigned User* and users specified in the *Users* field.
+There are two types of reminders: Popup and Email. Reminders specified on the form will be applied to the current user, assuming this used is a participant. Other participant will have their default reminders automatically applied.
+
+!!! note
+
+    When creating a Meeting or Call, only the reminder options that will occur in the future are listed. For example, if you create a meeting scheduled to occur in 15 minutes, you won't be able to set a reminder for '1 hour before'. This option just won't be available in the list. You change the Date Start to a later time, the option will appear. 
 
 ### Default duration
 
