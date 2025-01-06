@@ -34,7 +34,9 @@ There are two types of reminders: Popup and Email. Reminders specified on the fo
 
 !!! note
 
-    When creating a Meeting or Call, only the reminder options that will occur in the future are listed. For example, if you create a meeting scheduled to occur in 15 minutes, you won't be able to set a reminder for '1 hour before'. This option won't be available in the list. If you change the Date Start to a later time, the option will appear. 
+    When creating a Meeting or Call, only the reminder options that will occur in the future are listed. For example, if you create a meeting scheduled to occur in 15 minutes, you won't be able to set a reminder for '1 hour before'. This option won't be available in the list. If you change the Date Start to a later time, the option will appear.
+
+Arbitrary period values can entered in the reminder field by typing a number.
 
 ### Default duration
 
@@ -46,7 +48,9 @@ The Date Start and Date Due fields are not required. Dates can be specified with
 
 ### Reminders
 
-*Reminders* field is hidden if the *Date Due* field is empty. It will show up once it's filled in.
+The *Reminders* field is hidden if the *Date Due* field is empty. It will show up once it's filled in.
+
+Arbitrary period values can entered in the reminder field by typing a number.
 
 ### Scheduler
 
