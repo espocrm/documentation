@@ -120,8 +120,18 @@ It also defines whether a User is able to post to the Stream of other Users and 
 
 Allows to view:
 
-* Activities, Calendar and Stream of other Users;
+* Stream of other Users;
 * which access to a specific record other Users have.
+
+!!! note
+
+    Allow this permission only for privilaged users.
+
+### User Calendar Permission
+
+*As of v9.0.*
+
+Alloes to view Calendars of other users.
 
 ### Portal Permission
 
