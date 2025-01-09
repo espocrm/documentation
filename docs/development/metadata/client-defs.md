@@ -424,6 +424,7 @@ Example:
             "removeDisabled": false,
             "orderBy": "someField",
             "orderDirection": "asc",
+            "mandatoryAttributeList": ["status"],
             "createRequiredAccess": "read",
             "selectRequiredAccess": "edit",
             "selectPrimaryFilterName": "filterName",
@@ -537,6 +538,14 @@ An order-by field.
 *string*
 
 `"asc"` or `"desc"`.
+
+### mandatoryAttributeList
+
+*string[]*
+
+*As of v9.0.*
+
+Mandatory attributes to be selected in the list.
 
 ### selectHandler
 
