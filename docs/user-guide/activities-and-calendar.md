@@ -30,15 +30,15 @@ There is the ability to send **invitation emails** to attendees by clicking the 
 
 When an event has status *Not Held*, it's possible to send a cancellation email to attendees. It can be done from the top-right menu on the Meeting (or Call) detail view.
 
-Available template placeholders and template data values:
+Available template placeholders and data values:
 
-* recordUrl – a URL to the Espo meeting record;
-* acceptLink – a URL to accept the meeting;
-* declineLink – a URL to decline the meeting;
-* tentativeLink – a URL to set as tentative;
-* entityType – an translated entity type (Meeting or Call);
-* entityTypeLowerFirst – an translated entity type starting with a lower case letter (meeting or call);
-* isUser – whether the recipient is a User, a boolean value.
+* `recordUrl` – a URL to the Espo meeting record;
+* `acceptLink` – a URL to accept the meeting;
+* `declineLink` – a URL to decline the meeting;
+* `tentativeLink` – a URL to set as tentative;
+* `entityType` – an translated entity type (Meeting or Call);
+* `entityTypeLowerFirst` – an translated entity type starting with a lower case letter (meeting or call);
+* `isUser` – whether the recipient is a User, a boolean value.
 
 ### Reminders
 
