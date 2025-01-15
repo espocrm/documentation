@@ -37,8 +37,8 @@ Available template placeholders and data values:
 * `acceptLink` – a URL to accept the meeting;
 * `declineLink` – a URL to decline the meeting;
 * `tentativeLink` – a URL to set as tentative;
-* `entityType` – an translated entity type (Meeting or Call);
-* `entityTypeLowerFirst` – an translated entity type starting with a lower case letter (meeting or call);
+* `entityType` – a translated entity type (Meeting or Call);
+* `entityTypeLowerFirst` – a translated entity type starting with a lower case letter (meeting or call);
 * `isUser` – whether the recipient is a User, a boolean value.
 
 ### Reminders
