@@ -77,6 +77,8 @@ The collaborators feature can be enabled for Cases at Administration > Entity Ma
 
 Users added as collaborators to a Case will have read and stream access, provided their access level, as defined by Roles, is other than no.
 
+When a user creates a Case, they will be automatically added as a collaborator, even if the Case is assigned to another user. The assignee becomes a collaborator too.
+
 ## See also
 
 * [Notifying contacts about new post in Case with Workflows](https://www.espocrm.com/blog/notifying-contacts-about-new-post-in-case-with-workflows/)
