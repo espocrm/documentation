@@ -24,9 +24,21 @@ In this article:
 
 There are 3 types of attendees: Users, Contacts, and Leads. For each attendee, it's possible to specify acceptance status: Accepted, Tentative or Declined.
 
+#### Invitations
+
 There is the ability to send **invitation emails** to attendees by clicking the button in the top-right corner. Attendees will be able to set their acceptance status by clicking on a corresponding link in the email. The template for invitation emails can be changed at Administration > Template Manager > Invitation.
 
 When an event has status *Not Held*, it's possible to send a cancellation email to attendees. It can be done from the top-right menu on the Meeting (or Call) detail view.
+
+Available template placeholders and template data values:
+
+* recordUrl – a URL to the Espo meeting record;
+* acceptLink – a URL to accept the meeting;
+* declineLink – a URL to decline the meeting;
+* tentativeLink – a URL to set as tentative;
+* entityType – an translated entity type (Meeting or Call);
+* entityTypeLowerFirst – an translated entity type starting with a lower case letter (meeting or call);
+* isUser – whether the recipient is a User, a boolean value.
 
 ### Reminders
 
