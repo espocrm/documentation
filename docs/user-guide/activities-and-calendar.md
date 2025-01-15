@@ -39,7 +39,8 @@ Available template placeholders and data values:
 * `tentativeLink` – a URL to set as tentative;
 * `entityType` – a translated entity type (Meeting or Call);
 * `entityTypeLowerFirst` – a translated entity type starting with a lower case letter (meeting or call);
-* `isUser` – whether the recipient is a User, a boolean value.
+* `isUser` – whether the recipient is a User, a boolean value;
+* `timeZone` – a time zone name applied to date-time placeholder values (as of v9.0).
 
 ### Reminders
 
