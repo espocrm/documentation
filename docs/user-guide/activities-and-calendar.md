@@ -86,7 +86,7 @@ The collaborators feature can be enabled for Tasks at Administration > Entity Ma
 
 Users added as collaborators to a Task will have read and stream access, provided their access level, as defined by Roles, is other than no.
 
-When a user creates a Task, they will be automatically added as a collaborator, even if the task is assigned to another user. The assignee becomes a collaborator too.
+When a user creates a Task, they will be automatically added as a collaborator, even if the Task is assigned to another user. The assignee becomes a collaborator too.
 
 ## Calendar
 
