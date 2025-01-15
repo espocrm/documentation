@@ -32,6 +32,7 @@ When an event has status *Not Held*, it's possible to send a cancellation email 
 
 Available template placeholders and data values:
 
+* `inviteeName` – a name of the recipient;
 * `recordUrl` – a URL to the Espo meeting record;
 * `acceptLink` – a URL to accept the meeting;
 * `declineLink` – a URL to decline the meeting;
