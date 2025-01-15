@@ -56,6 +56,14 @@ Arbitrary period values can entered in the reminder field by typing a number.
 
 Default duration can be changed by the administrator at Administration > Entity Manager > Meetings / Calls > Fields > Duration > Default. It must be specified in seconds.
 
+### Scheduler
+
+The scheduler panel provides the ability to view free & busy time ranges for user attendees when creting or editing an event. Available for Meetings, Calls, and custom entities of the Event type.
+
+The scheduler panel can be added or removed at Administration > Entity Manager > Layouts > {Entity Type} > Bottom Panels.
+
+Which entity types will be taken into account when showing busy time ranges can be configured at Administration > Settings > Free/Busy Entity List.
+
 ## Tasks
 
 The Date Start and Date Due fields are not required. Dates can be specified with or without time parts.
@@ -64,15 +72,19 @@ The Date Start and Date Due fields are not required. Dates can be specified with
 
 The *Reminders* field is hidden if the *Date Due* field is empty. It will show up once it's filled in.
 
+!!! note
+
+    When the Date Due does not have a time part, the end of the day will be used as the base time for a reminder.
+
 Arbitrary period values can entered in the reminder field by typing a number.
 
-### Scheduler
+### Collaborators
 
-The scheduler panel provides the ability to view free & busy time ranges for user attendees when creting or editing an event. Available for Meetings, Calls, and custom entities of the Event type.
+*As of v9.0.*
 
-The scheduler panel can be added or removed at Administration > Entity Manager > Layouts > {Entity Type} > Bottom Panels.
+The collaborators feature can be enabled for Tasks at Administration > Entity Manager > Task > Edit.
 
-Which entity types will be taken into account when showing busy time ranges can be configured at Administration > Settings > Free/Busy Entity List.
+Users added as collaborators to a Task will have read and stream access, provided their access level, as defined by Roles, is other than no.
 
 ## Calendar
 
