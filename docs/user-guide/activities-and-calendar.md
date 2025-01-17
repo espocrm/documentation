@@ -88,6 +88,8 @@ Users added as collaborators to a Task will have read and stream access, provide
 
 When a user creates a Task, they will be automatically added as a collaborator, even if the Task is assigned to another user. The assignee becomes a collaborator too.
 
+The list view filter *Shared* shows Tasks where the current user is a collaborator. The *My Activities* dashlet has a parameter *Include Shared*.
+
 ## Calendar
 
 Calendar displays Meetings, Calls, and Tasks. It's also possible to show custom entities of the Event type.
