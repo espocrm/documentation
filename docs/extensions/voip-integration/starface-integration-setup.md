@@ -21,8 +21,6 @@ VoIP Integration extension supports* the following Starface servers:
 
 ## How to setup Starface Integration for an administrator
 
-#### Step 1:
-
 Fill in the connection details of your Starface server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
 
 ![Starface integration config](../../_static/images/extensions/voip-integration/starface-admin-setup.png)
@@ -41,16 +39,6 @@ Fill in the connection details of your Starface server. To do this, go to the Ad
 * **Automatically save a call** – Automatically save incoming/outgoing calls in the system without having to press "Save" button.
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
-
-#### Step 2:
-
-Setup a cron job (scheduled task) to handle Starface Events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right block. For linux-based OS, it is:
-
-```
-* * * * * cd /var/www/html/espocrm; /usr/bin/php -f command.php voip Starface > /dev/null 2>&1
-```
-
-For docker containers, see [here](#setting-up-cron-for-docker-container).
 
 ## How to setup Starface Integration for users
 
@@ -71,6 +59,3 @@ Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 
-## Setting up cron for Docker container
-
-To display pop-up windows for calls and correct working of the Starface VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#starface-crontab-line).
