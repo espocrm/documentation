@@ -26,9 +26,11 @@ There are 3 types of attendees: Users, Contacts, and Leads. For each attendee, i
 
 #### Invitations
 
-There is the ability to send **invitation emails** to attendees by clicking the button in the top-right corner. Attendees will be able to set their acceptance status by clicking on a corresponding link in the email. The template for invitation emails can be changed at Administration > Template Manager > Invitation.
+There is the ability to send **invitation emails** to attendees by clicking the button in the top-right corner. Attendees will be able to set their acceptance status by clicking on a corresponding link in the email. 
 
 When an event has status *Not Held*, it's possible to send a cancellation email to attendees. It can be done from the top-right menu on the Meeting (or Call) detail view.
+
+The template for invitation emails can be changed at Administration > Template Manager > Invitation.
 
 Available template placeholders and data values:
 
@@ -40,7 +42,10 @@ Available template placeholders and data values:
 * `entityType` – a translated entity type (Meeting or Call);
 * `entityTypeLowerFirst` – a translated entity type starting with a lower case letter (meeting or call);
 * `isUser` – whether the recipient is a User, a boolean value;
+* `dateStartFull` – a meeting start date/time in full format (as of v9.0);
 * `timeZone` – a time zone name applied to date-time placeholder values (as of v9.0).
+
+You can also use Meeting's (or Call's) fields as placeholders.
 
 ### Reminders
 
