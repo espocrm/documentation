@@ -1,6 +1,6 @@
 # Binotel Integration Setup
 
-Binotel Integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Asterisk server through Asterisk Manager Interface (AMI), Starface and Binotel server, read more details [here](https://www.espocrm.com/features/binotel-integration/).
+Binotel integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Binotel server and other VoIP providers, read more details [here](https://www.espocrm.com/features/binotel-integration/).
 
 
 ## How to setup Binotel Integration for an administrator
@@ -43,6 +43,6 @@ Each user who uses telephony should setup his user extension in User’s Profile
 
 ## Access control for users
 
-Make sure that your users have the access to the entity 'Calls'. 
+Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)

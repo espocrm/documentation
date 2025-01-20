@@ -1,11 +1,14 @@
 # Starface Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
+Starface integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Starface server and other VoIP providers, read more details [here](https://www.espocrm.com/features/starface-integration-setup/).
 
 ## Supported Starface servers
 
 VoIP Integration extension supports* the following Starface servers:
 
+* Starface 9.0
+* Starface 8.1
+* Starface 8.0
 * Starface 7.3
 * Starface 7.2
 * Starface 7.1

@@ -1,6 +1,6 @@
 # 3CX Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with a 3CX server, an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
+3CX integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with 3CX server and other VoIP providers, read more details [here](https://www.espocrm.com/features/3cx-integration/).
 
 ## How to setup 3CX Integration for an administrator
 
