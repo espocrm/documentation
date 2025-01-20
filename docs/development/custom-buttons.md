@@ -112,7 +112,7 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
             "label": "Test Action",
             "name": "test",
             "acl": "edit",
-            "handler": "custom:my-action-handler"
+            "handler": "custom:my-action-handler",
             "initFunction": "initTest",
             "checkVisibilityFunction": "isTestVisible",
             "actionFunction": "test"
