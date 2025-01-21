@@ -1,6 +1,6 @@
 # Twilio Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
+Twilio integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Twilio service and other VoIP providers, read more details [here](https://www.espocrm.com/features/twilio-integration/).
 
 There are two ways in which you can set up Twilio integration:
 
@@ -57,7 +57,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
 * **Voicemail Greeting Text** – a voicemail greeting message. Note: the “Voicemail Greeting Audio” has higher priority.
 * **Voicemail Notifications** – Types of notification for a new voicemail message.
 * **Farewell at the end of the call**
-* **Display the router's phone number as a caller** – display the office phone number (VoIP Router phone number) as caller. 
+* **Display the router's phone number as a caller** – display the office phone number (VoIP Router phone number) as caller.
 * **Team Users** – a list of users to configure receiving incoming/outgoing calls, SMS and MMS.
 
 
@@ -76,7 +76,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
 ## How to setup Twilio Integration for users
 
 Each user has to add his phone number which will be used to handle incoming calls. It can be added in the User’s Profile.
-**Note**: If you are using a Twilio SIP, then instead of the phone number, you have to specify the SIP number in the format: “user1@espo.sip.us1.twilio.com”.
+**Note**: If you are using a Twilio SIP, then instead of the phone number, you have to specify the SIP number in the format: “agent1@YOUR_DOMAIN.sip.twilio.com”.
 
 ![Phone numbers formats](../../_static/images/extensions/voip-integration/twilio-user-phone.png)
 
@@ -92,7 +92,7 @@ All other configuration settings should be made by your administrator. The user 
 
 ## Access control for users
 
-Make sure that your users have the access to the entity 'Calls'. 
+Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 

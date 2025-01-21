@@ -13,11 +13,3 @@ This line should be added under `root` or other docker user.
 ```
 * * * * * /usr/bin/docker exec --user WEBSERVER_USER -i ESPOCRM_DOCKER-CONTAINER /bin/bash -c "cd /var/www/html; php -f command.php voip Asterisk" > /dev/null 2>&1
 ```
-
-### Starface crontab line
-
-This line should be added under `root` or other docker user.
-
-```
-* * * * * /usr/bin/docker exec --user WEBSERVER_USER -i ESPOCRM_DOCKER-CONTAINER /bin/bash -c "cd /var/www/html; php -f command.php voip Starface" > /dev/null 2>&1
-```

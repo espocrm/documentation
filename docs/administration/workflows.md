@@ -2,12 +2,12 @@
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-The Workflows tool automates your business processes in an easy way. You can access Workflows from Administration panel. To create a Workflow rule you need to define:
+The Workflows tool automates your business processes in an easy way. You can access Workflows from Administration panel. To create a Workflow rule, you need to define:
 
-* Target Entity – what entity type the Workflow is applied to;
-* Trigger Type – how the Workflow will be triggered;
-* Conditions – conditions need to be met to trigger the Workflow;
-* Actions – what to do if the Workflow is triggered.
+* Target Entity – what entity type the rule is applied to;
+* Trigger Type – how the rule will be triggered;
+* Conditions – conditions need to be met to trigger the rule;
+* Actions – what to do if the rule is triggered.
 
 In this article:
 
@@ -40,7 +40,7 @@ Triggered only when an existing record is updated. If specified conditions are m
 
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
 
-For Workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was 'changed'. E.g. If a Case's status is changed, then do some actions.
+For Workflow rules with this trigger type, it's a common practice to have a condition that checks whether some field was changed. For example, if a Case's status is changed, then do some actions.
 
 ### Manual
 
@@ -62,7 +62,7 @@ Limitations:
 
 ### Scheduled
 
-Triggered according to the defined scheduling. You can setup it to run every day, every week, etc. Actions will be applied for records returned by a specified *List* Report. Hence you need also to create a *List* Report.
+Triggered according to a defined scheduling. You can set up it to run every day, every week, etc. Actions will be applied for records returned by a specified *List* Report. Hence, you need also to create a *List* Report.
 
 Scheduling is specified in a crontab notation.
 
@@ -79,22 +79,22 @@ Scheduling is specified in a crontab notation.
 
 How it works:
 
-1. You need to create a *List* Report showing records that met specific criteria. You can specify any columns for the Report, it doesn't matter.
-2. Then create a Workflow rule with the *Scheduled* trigger type, select the Report. Specify the scheduling.
-3. Specify one or multiple actions in the Workflow.
+1. You need to create a *List* Report showing records that met specific criteria. You can specify any columns for the Report, it doesn't matter in this context.
+2. Then, create a Workflow rule with the *Scheduled* trigger type, select the Report you creted before. Specify the needed scheduling.
+3. Specify one or multiple actions in the Workflow rule.
 
-The Workflow rule will be running (in idle) according to the specified scheduling. On each run, it will execute the Report and take all records from the Report result. Then, it will apply the action (or multiple actions) for every record.
+The Workflow rule will be running in idle according to the specified scheduling. On each run, it will run the Report and obtain all records from the Report result. Then, it will apply the action (or multiple actions) for every record.
 
 !!! example "Example, a use case"
 
-    Send a notification email to customers who have their license expiring in 1 week. You will need a report showing contacts who have their license expiring exactly in 7 days. Setup a Workflow to run once a day.
+    Send a notification email to customers who have their license expiring in 1 week. You will need a report listing contacts who have their license expiring exactly in 7 days. Set up a Workflow to run once a day.
 
 ### Sequential
 
-Is supposed to be run by another Workflow. Provides the ability to make a complex logic.
+Is supposed to be run by another Workflow. Provides the ability to create complex logic.
 
-1. Create a Workflow with the *Sequential* trigger type.
-2. Create another Workflow with another trigger type. Add an action *Trigger another Workflow* and select the Workflow from the step 1.
+1. Create a Workflow rule with the *Sequential* trigger type.
+2. Create another Workflow rule with another trigger type. Add an action *Trigger another Workflow* and select the Workflow rule from the step 1.
 
 !!! note
 
@@ -102,13 +102,13 @@ Is supposed to be run by another Workflow. Provides the ability to make a comple
 
 ### Signal
 
-Triggered when a specified signal is escalated in the system. Only object signals can be used. See [more info](bpm-signals.md) about signals.
+Triggered when a specified signal is escalated in the system. Only object signals can be used here. See [more info](bpm-signals.md) about signals.
 
 ----
 
 ## Conditions
 
-You can specify conditions that must be met to trigger the Workflow. There are two ways how conditions can be specified: with the UI condition builder and with formula.
+You can specify conditions that must be met to trigger a Workflow rule. There are two ways how conditions can be specified: with the UI condition builder and with a Formula script.
 
 ### UI condition builder
 
@@ -161,37 +161,39 @@ Formula provides the ability to define conditions of any complexity. To read abo
 
 ### Send Email
 
-System will send an email using a specified email template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified. The email can be sent immediately or delayed for a specific interval.
+System will send an email using a specified Email Template. A recipient’s email address can be taken from the target record, any related record, the current user, followers, team users or specified explicitly. The email can be sent immediately or delayed for a specific interval.
 
-If you specify *From* address with the address of an existing Group Email Account, then SMTP parameters of that account will be used for sending.
+If you specify the *From* address with an address of an existing Group Email Account, then SMTP parameters of that account will be used for sending.
 
 It's possible to add an **opt-out** link to an email body.
 
+It's possible to specify multiple email addresses by separating them with a semicolon.
+
+It's possible to use a formula variable when specifying an email address. Example: `{$$variable}`. As of v3.6.
+
+Additional attachments can be added to an email using the *Attachmnents Variable* parameter. Specify a Formula variable name that contains an attachment ID or an array of attachment IDs. You can generate needed attachments in a Formula script in a previous action. As of v3.6.
+
 ### Create Record
 
-The system will create a new record of any entity type. If there is a relationship between the target record and creating record, it's possible to relate the records.
+The system will create a new record of any entity type. If there is a relationship between the target entity type and the entity type of records being created, it's possible to relate them.
 
-There is the ability to define **formula** to calculate field values.
+There is the ability to define a Formula script to calculate field values.
 
 !!! note
 
-    Variables defined within the formula script won't be passed back, they are only available within a current script.
+    Variables defined within the Formula script won't be availble in following actions (or the BPM process). They are only available within the current script.
 
 ### Create Related Record
 
-System will create the record related to the target record.
+The system will create the record related to a target record.
 
-It's possible to define formula to calculate field values. Note: Variables defined within formula won't be passed back, they are only available within a current script.
+It's possible to define a Formula script to calculate field values. Note: Variables defined within the Formula script will be only available within the current script.
 
 ### Update Target Record
 
-Allows changing of specific fields of the target record.
+Allows to change specific fields of a target record.
 
-It's possible to define **formula** to calculate field values. You can utilize *Update Target Record* action for executing formula script without actually updating any fields.
-
-!!! note
-
-    Variables defined within the formula won't be passed back, they are only available within the current script.
+It's possible to define a Formula script to calculate field values. Note: Variables defined within the Formula script will be only available within the current script.
 
 !!! note
 
@@ -199,40 +201,40 @@ It's possible to define **formula** to calculate field values. You can utilize *
 
 !!! warning "Important"
 
-    Formula within this an *Update Target Record* action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
+    Formula within an *Update Target Record* action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
 
-For Link-Multiple, Array, Multi-Enum and Checklist fields it's possible to add or remove items without loosing set items. For example, adding a specific Team while preserving existing Teams.
+For Link-Multiple, Array, Multi-Enum, and Checklist fields it's possible to add or remove items without loosing set items. For example, adding a specific Team while preserving existing Teams.
 
 There is the ability to **delete** the record with the following formula code: `deleted = true`;
 
 ### Update Related Record
 
-Allows changing of specific fields of the related record or records. 
+Allows to change specific fields of a related record (or records). 
 
-It's possible to define formula to calculate field values. Note: Variables defined within formula won't be passed back, they are only available within a current script.
+It's possible to define Formula script to calculate field values. Note: Variables defined within formula won't be passed back.
 
 There is the ability to delete the record with the following formula code: `deleted = true`;
 
 !!! tip
 
-    If there can be many related records, it's reasonable to process updating these records in idle. For this, utilize *Trigger Another Workflow* action with a small or zero delay. Define an *Update Related Record* action in the *Sequential* Workflow rule.
+    If there can be many related records, it's reasonable to process updating these records in idle. For this, utilize the *Trigger Another Workflow* action with a small or zero delay. Define an *Update Related Record* action in a *Sequential* Workflow rule.
 
 ### Link with another Record
 
-Relates the target record with another specific record. E.g. add specific team to the record.
+Relates the target record with another specific record. For example, add specific team to the record.
 
 ### Unlink from another Record
 
-Unrelates the target record from another specific record. E.g. remove a specific team from the record.
+Unrelates the target record from another specific record. For example. remove a specific team from the record.
 
 ### Apply Assignment Rule
 
-Assigns the target record to a User by a distribution rule. There are two available rules: *Round-Robin* and *Least-Busy*.
+Assigns the target record to a User using a specific distribution rule. There are two available rules: *Round-Robin* and *Least-Busy*.
 
-* Round-Robin – Users are chosen from the top to the bottom of a list (team) and then starting again.
+* Round-Robin – Users are chosen from the top to the bottom of a list and then starting again.
 * Least-Busy – the User who has fewer assigned records will be chosen for assignment.
 
-*List Report* – determines what records will be taken into account to calculate the number of assigned records for *Least-Busy* distribution. E.g. we need to take only records with active status for Cases.
+*List Report* – determines what records will be taken into account to calculate the number of assigned records for *Least-Busy* distribution. For example, we need to take into account only active Cases.
 
 *Target Team* – Users of the selected team will take part in the assignment process.
 
@@ -240,7 +242,7 @@ Assigns the target record to a User by a distribution rule. There are two availa
 
 ### Create Notification
 
-Notify specific users with the message.
+Notify specific users with a message.
 
 It's possible to use placeholders in the message template:
 
@@ -253,7 +255,7 @@ Forces specific users to follow the target record or a specified related record.
 
 ### Trigger another Workflow
 
-Allows to make *Sequential* Workflows. It's possible to diverge Workflows by condition: you can setup a Workflow to trigger two Workflows with different conditions defined in those Workflows.
+Allows to make *Sequential* Workflows. It's possible to diverge Workflows by condition: you can set up a Workflow to trigger two Workflows with different conditions defined in those Workflows.
 
 It's possible to delay executing of a *Sequential* Workflow. In a *Sequential* Workflow, you can define the condition that checks whether specific fields were changed since the parent Workflow was triggered by using _Changed_ and _Was Equal_ condition types.
 
@@ -299,7 +301,7 @@ Developers can write their own service actions. See [more detail](../development
 
 ### Start BPM Process
 
-Starts a BPM process. You can specify which target record will be used for the process.
+Starts a BPM process. You can specify what target record will be used for the process.
 
 ### Send HTTP Request
 
@@ -313,7 +315,7 @@ Supported request methods:
 * PATCH
 * DELETE
 
-A payload can be taken from a formula variable (as of v2.15) or specified in a JSON format.
+A payload can be taken from a formula variable or specified in a JSON format.
 
 Additional headers can be specified.
 
@@ -346,7 +348,7 @@ A response body of a sent HTTP request will be available in formula with a funct
 
 !!! example
 
-    A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add *Update Target Record* action in the same Workflow rule and specify a formula script:
+    A POST request returns a JSON body `{"id": "SOME_ID"}`. We need to store that ID. Add a *Update Target Record* action in the same Workflow rule with the formula script:
 
     ```
     $id = json\retrieve(workflow\lastHttpResponseBody(), 'id');
@@ -355,13 +357,13 @@ A response body of a sent HTTP request will be available in formula with a funct
 
 !!! note
 
-    Within a BPM process the last response body is available only within the task that contains the Send HTTP Request action. The variable won't be passed further along the process flow.
+    In the context of a BPM process, the last response body is available only within a Task that contains the Send HTTP Request action. The variable won't be passed further along the process flow.
 
-In the context of BPM, it's possible to catch response errors with an Error Boundary Event. The error code can be obtained by using `bpm\caughtErrorCode` function.
+In the context of a BPM process, it's possible to catch response errors with an Error Boundary Event. The error code can be obtained by using `bpm\caughtErrorCode` function.
 
 ### Execute Formula Script
 
-Executes a [formula](formula.md) script. Variables defined within a script will be passed back. They will be available in the next Workflow actions or BPM process.
+Executes a [formula](formula.md) script. Variables defined within the script will be passed back. They will be available in the next Workflow actions or the BPM process.
 
 ## Using formula in actions
 

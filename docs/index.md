@@ -123,17 +123,22 @@
   * [Contacts](extensions/outlook-integration/contacts.md)
   * [Email](extensions/outlook-integration/email.md)
 * VoIP Integration
-  * [Asterisk server](extensions/voip-integration/asterisk-integration-setup.md)
-  * [Binotel service](extensions/voip-integration/binotel-integration-setup.md)
-  * [Starface server](extensions/voip-integration/starface-integration-setup.md)
+  * [Overview](extensions/voip-integration/overview.md)
+  * [3CX PBX](extensions/voip-integration/3cx-integration-setup.md)
   * [Twilio service](extensions/voip-integration/twilio-integration-setup.md)
+  * [Asterisk server](extensions/voip-integration/asterisk-integration-setup.md)
+  * [Starface server](extensions/voip-integration/starface-integration-setup.md)
+  * [Binotel service](extensions/voip-integration/binotel-integration-setup.md)
   * [IexPBX server](extensions/voip-integration/iexpbx-integration-setup.md)
   * [Docker container](extensions/voip-integration/docker-container.md)
   * [Customization](extensions/voip-integration/customization.md)
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
 * Export Import
-  * [Usage](extensions/export-import/export-import-usage.md)
-  
+  * [Overview](extensions/export-import/overview.md)
+  * [Export](extensions/export-import/export.md)
+  * [Import](extensions/export-import/import.md)
+  * [Compare](extensions/export-import/compare.md)
+
 ---
 
 ### See also

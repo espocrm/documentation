@@ -230,7 +230,7 @@ Whether the entity may contain personal data.
 
 *boolean*
 
-*As of v8.5.*
+*As of v9.0.*
 
 Disables audit log cleanup. 
 

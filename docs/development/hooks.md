@@ -12,8 +12,6 @@ Common hooks for all entity types (called from the ORM Repository class):
 - *afterUnrelate* – when two records are unrelated through a many-to-many relationship;
 - *afterMassRelate*
 
-
-
 ## Creating hook
 
 * create a file `custom/Espo/Custom/Hooks/{EntityType}/{HookName}.php` (you can also use a module directory);
@@ -27,7 +25,11 @@ Common hooks for all entity types (called from the ORM Repository class):
 
 ## Hook order
 
-If you have several hooks, related to one Entity Type and with the same hook type, and running order is important, you can set a `public static int $order` property with an integer value.
+If you have several hooks related to the same entity type, you can set the order property with an integer value.
+
+```
+public static int $order = 10;
+```
 
 Ascending order is applied – a hook with the smallest order number runs first.
 
@@ -73,7 +75,10 @@ class MyHook
     public function __construct(
         // Define needed dependencies.
     ) {}
-    
+
+    /**
+     * @param array<string, mixed> $options
+     */
     public function beforeSave(Entity $entity, array $options): void
     {
         if ($entity->isNew() && !$entity->get('accountName')) { 
@@ -122,6 +127,7 @@ If you need to apply a hook for all entities, you can use common hooks. To do th
 #### Examples
 
 `custom/Espo/Custom/Hooks/TargetList/MyHook.php`
+
 ```php
 <?php
 namespace Espo\Custom\Hooks\TargetList;
@@ -140,6 +146,7 @@ class MyHook
 ```
 
 `custom/Espo/Custom/Hooks/Meeting/MyHook.php`
+
 ```php
 <?php
 namespace Espo\Custom\Hooks\Meeting;
@@ -174,3 +181,8 @@ $this->hookManager->process($entityType, $hookType, $entity, $options);
 
     A hook name can't start with `set`. It's reserved for a dependency injection.
 
+## Tips
+
+Avoid saving the same record in beforeSave hooks.
+
+In afterSave hooks, re-saving the same record usually should be avoided as it can disrupt following hooks. If saving is needed, consider passing SKIP_ALL, KEEP_NEW and KEEP_DIRTY save options to the *saveEntity* method or run an update query instead (using the query builder).

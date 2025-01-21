@@ -1,11 +1,14 @@
 # Starface Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
+Starface integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Starface server and other VoIP providers, read more details [here](https://www.espocrm.com/features/starface-integration-setup/).
 
 ## Supported Starface servers
 
 VoIP Integration extension supports* the following Starface servers:
 
+* Starface 9.0
+* Starface 8.1
+* Starface 8.0
 * Starface 7.3
 * Starface 7.2
 * Starface 7.1
@@ -20,8 +23,6 @@ VoIP Integration extension supports* the following Starface servers:
 \* These servers were tested with the VoIP Integration extension.
 
 ## How to setup Starface Integration for an administrator
-
-#### Step 1:
 
 Fill in the connection details of your Starface server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
 
@@ -42,16 +43,6 @@ Fill in the connection details of your Starface server. To do this, go to the Ad
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
 
-#### Step 2:
-
-Setup a cron job (scheduled task) to handle Starface Events (incoming/outgoing calls, hangup, etc.). It is very important to set it up to run every minute. The line that needs to be added is displayed in the right block. For linux-based OS, it is:
-
-```
-* * * * * cd /var/www/html/espocrm; /usr/bin/php -f command.php voip Starface > /dev/null 2>&1
-```
-
-For docker containers, see [here](#setting-up-cron-for-docker-container).
-
 ## How to setup Starface Integration for users
 
 Each user who wants to use Starface integration, should setup his access in the User’s Profile, under “VoIP Settings”. Note that login and password should be to the Starface web interface, not to the SIP credentials. Also, the user can change some VoIP settings on this window.
@@ -71,6 +62,3 @@ Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 
-## Setting up cron for Docker container
-
-To display pop-up windows for calls and correct working of the Starface VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#starface-crontab-line).

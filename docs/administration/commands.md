@@ -34,7 +34,7 @@ bin/command rebuild --hard
 
 Hard database rebuild. It will drop unused columns, decrease exceeding column lengths, fix index names, set proper collations. It won't drop unused tables (consider removing them manually).
 
-If a parameter `-y` is specified, it won't prompt for confirmation before running hard rebuild (as of v8.5).
+If a parameter `-y` is specified, it won't prompt for confirmation before running hard rebuild (as of v9.0).
 
 Recommended to have a database backup before running hard rebuild.
 

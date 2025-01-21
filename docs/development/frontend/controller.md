@@ -1,18 +1,54 @@
-# Client controller & routing 
+# Client controller & routing
 
-## Custom controller
+## Custom route
 
-Define a custom controller for the needed entity type (Account in our example).
-
-Create a file `custom/Espo/Custom/Resources/metadata/clientDefs/Account.json`:
+Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
 
 ```json
 {
-    "controller": "custom:controllers/account"
+    "Account/test/:id": {
+        "params": {
+            "controller": "custom:controllers/my-controller",
+            "action": "test"
+        },
+        "order": 1
+    }
 }
 ```
 
-Create a file `client/custom/src/controllers/account.js`:
+Create a client controller `client/custom/src/controllers/my-controller`:
+
+```js
+define(['controller'], (Controller) => {
+
+    return class extends RecordController {
+
+        actionTest(options) {
+            console.log(options);
+        }
+    }
+});
+```
+
+Clear cache.
+
+If you open the URL `your-espo-url#Account/test/myId`  in the browser, it will execute the *actionTest* method. The *options* argument will be the object `{id: 'myId'}`.
+
+## Custom controller
+
+A scope controller.
+
+Define a custom controller for the needed entity type (MyEntityType in our example).
+
+Create a file `custom/Espo/Custom/Resources/metadata/clientDefs/MyEntityType.json`:
+
+```json
+{
+    "controller": "custom:controllers/my-entity-type"
+}
+```
+
+Create a file `client/custom/src/controllers/my-entity-type.js`:
 
 ```js
 define(['controllers/record'], (RecordController) => {
@@ -38,32 +74,10 @@ define(['controllers/record'], (RecordController) => {
 
 Clear cache.
 
-If you open in the browser URL `your-espo-url#Account/hello` it will execute *actionHello* method.
+If you open in the browser URL `your-espo-url#MyEntityType/hello` it will execute *actionHello* method.
 
-`#Account/hello` – *options* variable value is an empty object
-`#Account/hello/p1=one&p2=two` – *options* variable value is an object `{p1: 'one', p2: 'two'}`
-
-## Custom route
-
-Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
-
-```json
-{
-    "Account/test/:id": {
-        "params": {
-            "controller": "Account",
-            "action": "test"
-        },
-        "order": 1
-    }
-}
-```
-
-Clear cache.
-
-If you open in the browser URL `your-espo-url#Account/test/myId` it will execute *actionTest* method. Argument *options* will be the object `{id: 'myId'}`.
-
-Note that it's also possible to specify a specific controller class in `controller` instead of a scope name. As of v8.2.
+`#MyEntityType/hello` – *options* variable value is an empty object
+`#MyEntityType/hello/p1=one&p2=two` – *options* variable value is an object `{p1: 'one', p2: 'two'}`
 
 ## Rendering view
 

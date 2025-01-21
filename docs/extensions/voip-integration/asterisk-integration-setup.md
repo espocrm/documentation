@@ -1,11 +1,13 @@
 # Asterisk Integration Setup
 
-VoIP Integration extension allows EspoCRM to integrate with an Asterisk server through Asterisk Manager Interface (AMI), Twilio service and Starface server. For more details about the features, click [here](https://www.espocrm.com/features/voip-integration/).
+Asterisk integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Asterisk server through Asterisk Manager Interface (AMI) and other VoIP providers, read more details [here](https://www.espocrm.com/features/asterisk-integration-setup/).
 
 ## Supported Asterisk servers
 
 VoIP Integration extension supports* the following Asterisk servers:
 
+* Asterisk 22
+* Asterisk 21
 * Asterisk 20
 * Asterisk 19
 * Asterisk 18
@@ -14,10 +16,6 @@ VoIP Integration extension supports* the following Asterisk servers:
 * Asterisk 15
 * Asterisk 14
 * Asterisk 13
-* Asterisk 12
-* Asterisk 11
-* Asterisk 10
-* Asterisk 1.8
 
 \* these servers were tested with VoIP Integration extension.
 

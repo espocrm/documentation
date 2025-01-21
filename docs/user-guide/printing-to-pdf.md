@@ -1,6 +1,6 @@
 # Printing to PDF
 
-Printing to PDF provides the ability to generate PDF documents with record data. The document content is defined by a Template.
+The Print to PDF feature allows to generate PDF documents with record data. The document content is defined by a Template.
 
 !!! warning "Important"
 
@@ -8,17 +8,17 @@ Printing to PDF provides the ability to generate PDF documents with record data.
 
 ### Printing single record
 
-*Print to PDF* is available on the detail view under the dropdown next to the 'Edit' button.
+The *Print to PDF* action is available on the detail view under the dropdown next to the *Edit* button.
 
 ### Printing multiple records
 
-*Print to PDF* is available on the list view as a mass action. You need to select needed records and click *Print to PDF* from *Actions* menu. It will generate a single merged PDF file (or multiple PDFs zipped, depending on a used engine) for multiple records.
+*Print to PDF* is available in the list view as a mass action. You need to select needed records and click *Print to PDF* from the *Actions* menu. It will generate a single merged PDF file or multiple PDFs zipped (depending on a used engine) for multiple records.
 
-By default, the max number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
+By default, the maximum number of records is limited to 50. The limit is defined by the config parameter `massPrintPdfMaxCount`.
 
 ### Access control
 
-Access to PDF printing is controlled by Roles. Admin can set a *read* access level for the *Template* entity type.
+Access to PDF printing is controlled by Roles. An ddministrator can set a *read* access level for the *Template* entity type.
 
 ### Engines
 
@@ -53,9 +53,9 @@ Table of content:
 * [Maps](#maps)
 * [Custom helpers](#custom-helpers)
 
-Available at Administration > PDF Templates.
+Available undser Administration > PDF Templates.
 
-For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button `</>`.
+For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button *\</\>*.
 
 You can print fields of the record as well as fields of related records by utilizing placeholders (Handlebars like) in your template.
 
@@ -69,24 +69,24 @@ You can print fields of the record as well as fields of related records by utili
 
     If an attribute name coincides with a name of some helper, you can use the following form: `{{this.attributeName}}`.
 
-You can specify a **document title** in the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
+You can specify a document title in the *Title* field (as of v7.0). `{$name}` placeholder is available to substitute an entity name.
 
 ### Code view
 
-A code view mode can be enabled by clicking *\</\>* button. It allows to edit raw HTML and make sure a layout is not messed up.
+A code view mode can be enabled by clicking *\</\>* button. It allows to edit raw HTML and make sure the layout is not messed up.
 
 ### Charset issues
 
-If some characters are not displayed in generated PDF files, it usually can be solved by changing a font in a template. For Arabic language use 'AlArabiya' font, for Chinese – 'CID-0 cs'.
+If some characters are not displayed in generated PDF files, it can be usually solved by changing the font in the template. For the Arabic language, use 'AlArabiya' font, for Chinese, use 'CID-0 cs'.
 
 
 ### Access to templates
 
-Administrator can add Templates tab at Administration > User Interface. An access to templates must be defined in Roles (*Templates* scope).
+An administrator can add the *Templates* tab under Administration > User Interface. Access to templates must be defined in Roles (the *Templates* scope).
 
 ### Page numbering
 
-Placeholders are only available in footer (and header if it's set to be printed on each page).
+Placeholders are only available in footer (and also header if the header is set to be printed on each page).
 
 * `{pageNumber}` – the current number of the page
 
@@ -323,7 +323,7 @@ Examples:
 * *imageFieldNameId* is a name of image field, concatenated with *Id*
 * *width* and *height* can be omitted
 
-Another way to print images for older versions. Add in code view:
+Another legacy way to print images:
 
 ```
 <img src="{{file imageFieldNameId}}">
@@ -368,21 +368,23 @@ Specific language:
 
 ### Number formatting
 
-To display float numbers w/o fractional part (as integer) use the following expression:
+To display float numbers without a fractional part (as integer), use the following expression:
+
 ```
 {{numberFormat quantity_RAW decimals=0}}
 ```
 
-`quantity` is a field name.
+Where `quantity` is a field name.
 
 Custom formatting for currency values:
+
 ```
 {{numberFormat unitPrice_RAW decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 ```
 
 Value `10000.5` will be printer as `10 000,50`.
 
-Note that `_RAW` part is appended to a field name.
+Note that `_RAW` is appended to the field name.
 
 ### Currency symbol
 
@@ -394,11 +396,11 @@ where `amount` is a field name (of *currency* type).
 
 ### Text field
 
-To display text fields (multi-line) use triple braces
+To display text fields (multi-line) use triple braces:
 
 ```{{{description}}}```.
 
-Print markdown (as of v8.1):
+Print Markdown (as of v8.1):
 
 ```
 {{markdownText fieldName_RAW}}
@@ -410,7 +412,7 @@ Print markdown (as of v8.1):
 
 It's possible to loop through a link collection.
 
-The max number of records is 100. It can be changed with a config parameter *htmlizerLinkLimit*.
+The maximum number of records is 100. It can be changed with a config parameter *htmlizerLinkLimit*.
 
 !!! example
 
@@ -463,7 +465,7 @@ Option 3: {{checkboxTag fieldName option='Option 3' color='blue'}}
 
 Where *barcodeField* is the name of your barcode field.
 
-Parameters *fontsize*, *text*, *padding* are supported only in the TCPDF engine.
+Parameters *fontsize*, *text*, and *padding* are supported only in the TCPDF engine.
 
 (TCPDF only)
 
@@ -485,7 +487,7 @@ Available types:
 
 ### Raw values
 
-To access a raw value of a specific attribute you need to add a suffix  `_RAW` to the attribute name. The raw value is a not formatted value. Raw date-time values are in UTC timezone.
+To access a raw value of a specific attribute, you need to add a suffix  `_RAW` to the attribute name. The raw value is a not formatted value. Raw date-time values are strings with values in the UTC timezone.
 
 !!! example
 

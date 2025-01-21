@@ -2,11 +2,11 @@
 
 *As of Sales Pack v2.0.*
 
-Receipt Orders are used to document product received from suppliers or returned customers.
+Receipt Orders are used to document product receivals from suppliers or from customers who returned their orders.
 
 If the Warehouses feature is enabled, every Receipt Order record should be associated with a Warehouse.
 
-Multiple Receipt Orders can be created from a single [Purchase Order](purchase-orders.md). It may be reasonable when the receipt is split into parts or shipped to different warehouses. The Purchase Order should have status *Released* or *Complete* to be able to create a Receipt Order from it.
+Multiple Receipt Orders can be created from a single [Purchase Order](purchase-orders.md). It may be reasonable when a receipt is split into parts or shipped to different warehouses. A Purchase Order should have status *Released* or *Complete* to be able to create a Receipt Order from it.
 
 Receipt Orders can be created from a [Return Order](return-orders.md).
 
@@ -29,6 +29,6 @@ It's possible to import Serial numbers from a CSV file within a Receipt Order.
 
 ## Locking
 
-A Receipt Order can locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure which exactly fields at: Administration > Entity Manager > Receipt Order > Edit.
+A Receipt Order can be locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure the field list at: Administration > Entity Manager > Receipt Order > Edit.
 
 If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.

@@ -2,7 +2,7 @@
 
 The [BPM tool](bpm.md) provides additional formula functions.
 
-Formula script can be utilized in conditions, script tasks, various task actions. Some functions can be used in a workflow (broadcastSignal, startProcess).
+A Formula script can be utilized in conditions, script tasks, and various task actions. Some functions can be used in a workflow (broadcastSignal, startProcess).
 
 * [bpm\targetEntity\attribute](##bpmtargetentityattribute)
 * [bpm\createdEntity\attribute](#bpmcreatedentityattribute)
@@ -29,7 +29,6 @@ Available records:
 * records created within *Task* activities;
 * user tasks;
 * sent messages.
-
 
 ALIAS_ID can be obtained:
 
@@ -64,8 +63,7 @@ Starts a process.
 * `bpm\broadcastSignal(SIGNAL_NAME)` – broadcast a regular signal
 * `bpm\broadcastSignal(SIGNAL_NAME, ENTITY_TYPE, ENTITY_ID)` – broadcast an object signal
 
-It can be useful to broadcast a custom signal from a workflow rule and then catch it inside a running process. A workflow rule will perform some condition checking and only after than will broadcast a signal.
-
+It can be useful to broadcast a custom signal from a workflow rule and then catch it inside a running process. A workflow rule will perform some condition checking and only after that will broadcast the signal.
 
 !!! example "Example, regular signal"
 
@@ -97,10 +95,8 @@ It can be useful to broadcast a custom signal from a workflow rule and then catc
 
 Returns the code of a caught error. Error codes are of the string type. Can be used after a catching Error Event.
 
-
 ### bpm\caughtErrorMessage
 
 *As of v2.14.*
 
 Returns the message of a caught exception. Can be used after a catching Error Event.
-

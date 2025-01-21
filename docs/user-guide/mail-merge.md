@@ -1,16 +1,20 @@
 # Mail Merge (mass snail mailing)
 
-1\. You need to have a target list populated with recipients. Target lists can be reached by Campaigns tab > Target Lists button in the top-right corner.
+The Main Marge feature provides the ability to mass generate snail mails for printing.
 
-2\. Create a PDF template for an entity type you want to send mails to. If the target list contains records of different entity types (e.g. Contacts and Leads) you need to create templates for each one.
+1\. You need to have a Target List populated with recipients. You can access Target Lists by navigating to the Campaigns tab and clicking the Target Lists button in the top-right corner.
 
-Note: Administration can create template at Administration > PDF Templates. Templates tab is hidden by default, but can be added by an Administrator.
+2\. Create a PDF Template for an entity type you want to send mails to. If the Target List contains records of different entity types (e.g. both Contacts and Leads) you need to create separate templates for each one.
 
-3\. Create a campaign of 'Mail' type. Specify the target list for this campaign. Specify the templates you created before.
+!!! note
 
-4\. On the campaign detail view click on the dropdown next to the *Edit* button and then click *Generate Mail Merge PDF*. Select an entity type and click *Proceed* button.
+    An Administrator can create a template at Administration > PDF Templates. The Templates tab is hidden by default, but can be added by the administrator at Administration > User Interface.
 
-It will generate a single PDF document (or multiple PDFs zipped, depending on a used engine) for multiple records that you can print.
+3\. Create a campaign of the *Mail* type. Specify the Target List for this Campaign. Specify the templates you created before.
+
+4\. On the Campaign detail view, click the dropdown next to the *Edit* button and then click *Generate Mail Merge PDF*. Select an entity type and click *Proceed* button.
+
+It will generate a single PDF document (or multiple PDFs zipped, depending on the used engine) for multiple records that you can print.
 
 !!! note
 

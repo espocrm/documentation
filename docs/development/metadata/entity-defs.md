@@ -602,6 +602,14 @@ Indexes for a middle table. Definition is the same as for entity indexes.
 
 Disable merging related records when duplicate records are being merged.
 
+### deferredLoad
+
+*(available for belongsTo and belongsToParent)*
+
+*As of v9.0.0.*
+
+When getting a related entity from an entity, it will be returned without loaded values. Values will be loaded on accessing. For belongsToParent there's a downside that it can return an entity even if it's deleted.
+
 ## collection
 
 Collection parameters.

@@ -205,6 +205,12 @@ Output filters.
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
 
+## earlyBeforeCreateHookClassNameList
+
+*As of v9.0.*
+
+An array of hooks. Applied for API calls, before validation. Should implement `Espo\Core\Record\Hook\CreateHook` or `Espo\Core\Record\Hook\SaveHook` interface.
+
 ## beforeCreateHookClassNameList
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface. As of v8.1, can also implement `Espo\Core\Record\Hook\SaveHook`.
@@ -214,6 +220,12 @@ An array of hooks (applied for API calls). Should implement the `Espo\Core\Recor
 *As of v8.2.*
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` or `Espo\Core\Record\Hook\SaveHook`.
+
+## earlyBeforeUpdateHookClassNameList
+
+*As of v9.0.*
+
+An array of hooks. Applied for API calls, before validation. Should implement `Espo\Core\Record\Hook\UpdateHook` or `Espo\Core\Record\Hook\SaveHook` interface.
 
 ## beforeUpdateHookClassNameList
 

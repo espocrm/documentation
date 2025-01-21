@@ -123,4 +123,4 @@ You can force using some additional cache in the developer mode. Can be reasonab
 * `custom/Espo/Modules/{YourModuleName}/` – for metadata and all files pertaining to backend
 * `client/custom/modules/{your-module-name}/` – for client files
 
-This method is the only appropriate method when developing an extension. The ext-template's initialization created needed folders automatically.
+This method is the only appropriate method when developing an extension. The ext-template's initialization created needed folders automatically. The important advantage of using ext-template is the ability to use ESM modules in the frontend, which significantly improves the development experience.

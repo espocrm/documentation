@@ -8,9 +8,9 @@ Features:
 * Working day exceptions (e.g. working weekends, days with a non-standard schedule);
 * Non-working day exceptions (leaves, holidays, etc.).
 
-Admin users and regular users that have access to the Working Time Calendar scope (via Roles) can manage working time calendars.
+Admin users and regular users who have access to the Working Time Calendar scope can manage Working Time Calendars.
 
-Working Time Calendars can be accessed from:
+Working Time Calendars can be accessed under:
 
 * Calendar page > top-right dropdown menu > Working Time Calendars;
 * Administration > Working Time Calendars (in the Data panel).
@@ -57,4 +57,4 @@ The Timeline displays non-working ranges with a different background color:
 * `ext\workingTime\hasWorkingTime(FROM, TO)` – whether a date range contains any working time;
 * `ext\workingTime\isWorkingDay(DATE_OR_DATETIME)` – whether a date falls into a working day.
 
-Functions can be applied for the default calendar, user calendar or team calendar. An entity type ( `'User'` or `'Team'`) and an entity ID can be passed to all workingTime functions as the last two arguments.
+Functions can be applied for the default calendar, user calendar, or team calendar. An entity type ( `'User'` or `'Team'`) and an entity ID can be passed to all workingTime functions as the last two arguments.

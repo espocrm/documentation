@@ -8,7 +8,6 @@ In this article:
 * [Gmail](#gmail)
 * [Outlook](#outlook)
 * [Yahoo](#yahoo)
-* [App passwords](#app-passwords)
 
 ## IMAP configuration
 
@@ -16,34 +15,36 @@ In this article:
 
     You need to have cron properly configured in your system to have inbound emails working.
 
-IMAP allows to retrieve your emails from an email client. To setup the IMAP account, do the following steps:
-1. Select *Emails Tab > top-right menu > Personal Email Accounts*.
+IMAP allows to retrieve your emails from a mail server. To set up an IMAP account, do the following steps:
+
+1. Go to Emails Tab > top-right menu > Personal Email Accounts.
 2. Click on *Create Personal Email Account*.
-3. In the *Main* section, specify your *Email Address*. The *Name* of personal email account is generated automatically, but you may change it. *Fetch since* allows to choose the date from which emails should be archived. In case you want to archive old emails, set it to some prior date to the day from which they should be fetched.
+3. In the *Main* section, specify your Email Address. The *Name* of the personal email account is generated automatically, but you can change it. *Fetch since* allows to choose a date from which emails will be imported. If you want to archive old emails, set it to some past date.
 
 ![Create personal email account](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/1.png)
 
-4. In the *IMAP* section, enter your *Host* name, your *Email Client Username* and *Email Client Password* in the fields shown. Tick of *SLL* for a secure connection. The IMAP *Port* will be generated automatically.
+4. In the *IMAP* section, enter your *Host* name, your *Username* and *Password*. Tick off *SSL* for a secure connection. The IMAP *Port* will be generated automatically.
 
 ![IMAP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/2.png)
 
-5. Specify what folders to monitor in *Monitored Folders* field. By default, it is set to INBOX. If you use some external email client to send emails, you can add Sent folder to archive those emails.
-6. *Put in Folder* field allows to specify the folder in which the incoming emails will be put.
-7. Click on *Test Connection* to check whether everything was specified correctly.  If a connection is successful, click *Save* on the top of the page.
+5. Specify what folders to monitor in the *Monitored Folders* field. By default, it is set to INBOX. If you use some external email client to send emails, you can add the Sent folder to archive those emails.
+6. *Put in Folder* field allows to specify an Espo email folder in which incoming emails will be put.
+7. Click on *Test Connection* to check whether everything was set correctly. If the connection is successful, click *Save*.
 
 ## SMTP configuration
 
-SMTP allows to send email messages out. Users can setup SMTP settings in Preferences as well as in their Personal Email Accounts. An administrator can also allow to use System SMTP (make it shared).
+SMTP is for sending emails. Users can setup SMTP settings their Personal Email Accounts. An administrator can also allow to use the System SMTP (by marking it shared).
 
-Users can have multiple SMTP accounts. However, email addresses a user can use to send emails from are defined by email addresses of User record.
+Users can have multiple SMTP accounts. However, email addresses a user can use to send emails from are defined by email addresses of the User record (Administartion > Users).
 
-To setup SMTP account, do the following:
+To set up an SMTP account, do the following:
 
-1. Navigate either to *Personal Email Accounts page (Emails Tab > top-right menu > Personal Email Accounts)* or to *Preferences > SMTP* settings.
-2. Tick off *Use SMTP* box.
-3. Enter your *SMTP Host* name, in SMTP security field select *TLS* for a secure connection. A proper *SMTP Port* will be set automatically.
-4. Tick *SMTP Auth* box and enter your *Email Client Username* and *Email Client Password* in the fields shown.
-5. Click on *Send Test Email* to check whether everything was specified correctly. If the connection is successful, you will receive test email on the specified email address.
+1. Navigate to the *Personal Email Accounts* page: Emails Tab > top-right menu > Personal Email Accounts.
+2. Tick off the *Use SMTP* box.
+3. Enter your *SMTP Host* name, in SMTP security field select *TLS* or *SSL* for a secure connection. A proper *SMTP Port* will be set automatically.
+4. Tick off the *SMTP Auth* box and enter your *Username* and *Password*.
+5. Click on the *Send Test Email* button to send a test email to a specified email address.
+6. Save.
 
 ![SMTP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/3.png)
 
@@ -65,7 +66,7 @@ To setup SMTP account, do the following:
 
 !!! note
 
-    There are two ways in which you can setup IMAP and SMTP for Gmail account:
+    There are two ways in which you can set up IMAP and SMTP for Gmail account:
 
     * Use the [Google Integration](https://www.espocrm.com/extensions/google-integration/) extension that provides a secure authentication via Oauth2.
     * Use a generated [App Password](https://support.google.com/accounts/answer/185833). Requires enabling 2-step verification for your Google account.
@@ -93,11 +94,9 @@ For more information, follow the [link](https://support.google.com/mail/answer/7
 
 Configuration details are available [here](https://help.yahoo.com/kb/SLN4075.html).
 
-## App passwords
+## See also
 
-For security reasons it's not recommended to use account passwords when connecting to services like email. That's why major services provides the ability to generate a different password that will be used only in a specific application for a single purpose.
-
-See the articles for the service you use:
+See the articles for specific providers:
 
 * [Gmail](https://support.google.com/accounts/answer/185833)
 * [Yahoo](https://in.help.yahoo.com/kb/SLN15241.html)

@@ -31,7 +31,7 @@ class MyClass
 {
     public function __constructor(
         private EntityManager $entityManager,
-        private Metadata $metadata
+        private Metadata $metadata,
     ) {}
 }
 ```
@@ -54,7 +54,25 @@ $account = $this->entityManager
     ->findOne();
 ```
 
-### 3\. Specify types for method parameters. Also specify a method return type.
+✔️ Good:
+
+```php
+<?php
+use Espo\ORM\Query\SelectBuilder;
+use Espo\Modules\Crm\Entities\Account;
+
+$query = SelectBuilder::create()
+    ->select(['id', 'name'])
+    ->from(Account::ENTITY_TYPE)
+    ->order('createdAt')
+    ->limit(0, 10)
+    ->build();
+
+$sth = $this->entityManager->getQueryExecutor()->execute($query);
+$rows = $sth->fetchAll();
+```
+
+### 3\. Specify types for method parameters. Also specify the method return type.
 
 ❗ Bad:
 
@@ -96,7 +114,7 @@ class MyClass
 
 Also avoid the `mixed` type for parameters.
 
-### 4\. Never return TRUE or FALSE to indicate a success or failure. Throw an exception if failure, return NULL for empty result.
+### 4\. Never return TRUE or FALSE to indicate success or failure. Throw an exception if failure, return NULL for empty result.
 
 ✔️ Good:
 
@@ -189,6 +207,16 @@ $string = filter_var($string, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 $string = $this->sanitizeString($string);
 ```
 
+✔️ Good (explaining some non-obvious cases):
+
+```php
+<?php
+// On the SOME platform we omit doing this due to the risk of processor explosion.
+if ($this->platform === self::SOME) {
+    return;
+}
+```
+
 ### 6\. Import classes in the beginning of the file.
 
 ❗ Bad:
@@ -231,9 +259,12 @@ class SomeClass
 }
 ```
 
-### 7\. Not more that 2 levels of indentation per method.
+### 7\. Avoid deep levels of indentation.
+
+More than 2 per method is too much.
 
 ❗ Bad:
+
 ```php
 <?php
 // ...
@@ -279,7 +310,7 @@ class SomeClass
 
 ### 8\. Use early returns.
 
-❗ Bad:
+❗ Not good:
 
 ```php
 <?php
@@ -330,7 +361,7 @@ Less is better. Four is too much.
 ```php
 <?php
 // ...
-    public function process(string $city, string $country, string $postalCode): void
+    public function process(string $city, string $country, string $postalCode, string $state): void
     {}
 ```
 

@@ -12,7 +12,7 @@ In this article:
 
 ## Overview
 
-In order to restrict access for some users, you need to use Roles. An administrator can manage roles in at Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
+In order to restrict access for some users, you need to use Roles. An administrator can manage roles in under Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
 
 One User can have multiple Roles. Those Roles can be selected for a specific User (*Roles* field of User record) and/or be inherited from Teams that the user belongs to.
 
@@ -120,8 +120,18 @@ It also defines whether a User is able to post to the Stream of other Users and 
 
 Allows to view:
 
-* Activities, Calendar and Stream of other Users;
+* Stream of other Users;
 * which access to a specific record other Users have.
+
+!!! note
+
+    Allow this permission only for privilaged users.
+
+### User Calendar Permission
+
+*As of v9.0.*
+
+Alloes to view Calendars of other users.
 
 ### Portal Permission
 
@@ -180,6 +190,8 @@ The Collaborators feature can be enabled for an entity type in the Entity Manage
 * A link-multiple field *Collaborators* will be automatically created.
 * A bool filter *Shared* will be added.
 
+The administrator needs to add the *Collaborators* to the layout: Administration > Entity Manager > {Entity Type} > Layouts > Side Panel Fields.
+
 Users added as collaborators to a record will have *read* and *stream* access, provided their access level, as defined by Roles, is other than *no*.
 
 Assignees are automatically added to collaborators. This ensures that when a record is reassigned to another user, the previous assignee remains a collaborator unless explicitly removed.
@@ -195,7 +207,7 @@ Limitations:
 
 * Portal users cannot be added as collaborators.
 
-The Collaborators parameter is available for custom entities created via the Entity Manager and for the standard following entity types: Task, Cas, Account, Contact, Lead, Opportunitie, Document, Knowledge Base Article and Target List.
+The Collaborators parameter is available for custom entities created via the Entity Manager and for the standard following entity types: Task, Case, Account, Contact, Lead, Opportunity, Document, Knowledge Base Article and Target List.
 
 ## See also
 

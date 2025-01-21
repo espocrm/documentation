@@ -1,8 +1,15 @@
 # Web-to-Lead
 
-## Lead Capture
+In this article:
 
-By utilizing the Lead Capture feature, an administrator can create an entry point for capturing leads through API. Follow Administration > Lead Capture to create the entry point.
+* [Lead capture](#lead-capture)
+* [Web form](#web-form)
+* [API request](#api-request)
+* [Lead assignment distribution](#lead-assignment-distribution)
+
+## Lead capture
+
+By utilizing the Lead Capture feature, an administrator can create entry points for capturing Leads through API and web forms. Follow Administration > Lead Capture to create a Lead Capture record.
 
 Parameters:
 
@@ -30,9 +37,49 @@ A confirmation link will be added automatically if you haven’t inserted the co
 
     When sending empty values, use *null* rather than an empty string.
 
-## Posting API request
+## Web form
 
-Your web site needs to make a POST request to send form data to your CRM. The request **doesn't require any authorization**. You just need to use a specific URL with an API Key. The information about the request is available in the side panel on the Lead Capture detail view.
+*As of v9.0.*
+
+The Web Form can be enabled for a particular Lead Capture record. A form can be displayed either on a separate page or embedded in an IFRAME. When enabled, a form URL will be displayed in the panel on the right.
+
+Parameters:
+
+* Text to display on form
+* Text to display after form submission
+* URL to redirect to after form submission
+* Language used on form
+* Allowed hosts for form embedding (for IFRAME)
+* Use Captcha
+
+Captcha can be configured under Administration > Integrations. ReCAPTCHA v3 is implemented.
+
+Supported field types:
+
+* Varchar
+* Email
+* Phone
+* Text
+* Person Name
+* Enum
+* Multi-Enum
+* Array
+* Checklist
+* Integer
+* Float
+* Currency
+* Date
+* Date-Time
+* Boolean
+* URL
+* URL-Multiple
+* Address
+
+## API request
+
+You can use API requests to send Leads directly without using the built-in web-form.
+
+Your web site needs to make a POST request to send form data to your Espo. The request doesn't require any authorization. You just need to use a specific URL with an API Key in it. The information about the request is available in the side panel on the Lead Capture detail view.
 
 Required headers:
 

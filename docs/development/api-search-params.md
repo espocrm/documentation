@@ -15,6 +15,8 @@ Filters and other search parameters can be used with API functions that returns 
 ### PHP
 
 ```php
+<?php
+
 $url = 'Lead';
 
 $where = [
@@ -66,7 +68,7 @@ $response = $client->request('GET', $url, $params);
 
 ```js
 // every param is optional
-var params = {
+const params = {
     maxSize: 5,
     primaryFilter: 'open',
     where: [
@@ -80,11 +82,7 @@ var params = {
 };
 
 client.request('GET', 'Case', params)
-    .then(
-        (response) => {
-            console.log(response);
-        }
-    )
+    .then(response => console.log(response))
 ```
 
 ### Python
@@ -100,6 +98,7 @@ params = {
         },
     ],
 }
+
 result = client.request('GET', 'Account', params)
 ```
 
@@ -107,7 +106,7 @@ result = client.request('GET', 'Account', params)
 
 Parameters are passed as query parameters (in GET request).
 
-As of v7.0.0 it's possible to pass all parameters in JSON format in one query parameter `searchParams`.
+It's also possible to pass all search parameters in JSON format in one query parameter `searchParams`.
 
 ### offset
 
@@ -131,11 +130,19 @@ Example: `id,name,status,assignedUserId`.
 
 Example in JSON: `["id", "name"]`.
 
+!!! note
+
+    An alias GET parameter `attributeSelect` can be used instead to prevent false positive firewall blocking. As of v9.0.
+
 ### where
 
 *Array*
 
 Search criteria. Can contain nested arrays and objects. See more [below](#where-items) more detail.
+
+!!! note
+
+    An alias GET parameter `whereGroup` can be used instead to prevent false positive firewall blocking. As of v9.0.
 
 ### primaryFilter
 
@@ -164,9 +171,9 @@ A direction of order: 'desc' or 'asc'.
 
 ## Where items
 
-*Where* parameter is an array if items, that can contain nested items. The data should be URL-encoded. API clients provided in the documentation handle encoding.
+A *Where* parameter is an array if items, that can contain nested items.
 
-Examples below are given in JSON format for readability. 
+Examples below are given in JSON format. 
 
 ### equals, notEquals
 

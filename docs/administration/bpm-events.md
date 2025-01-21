@@ -1,13 +1,13 @@
 # BPM Events
 
-Events represent something that happens during a business process. They also start, end and interrupt the process flow. Depicted as a circle.
+Events represent something that happens during a business process. They also start, end and interrupt a process flow. Depicted as a circle.
 
 Events can be divided into the following groups:
 
 * Start – green circle. They are entry points of processes and sub-processes.
 * Intermediate – blue circle. Occur between start and end events in a process. Can throw or catch.
 * End – red circle. Define final points of process flows.
-* Boundary – blue circle attached to an activity. They allow to interact with running activities. Technically, there are intermediate catching events.
+* Boundary – blue circle attached to an activity. They allow to interact with running activities. Technically, they are intermediate catching events.
 
 All available events:
 
@@ -49,7 +49,7 @@ All available events:
 
 ### Start Event
 
-Doesn't have parameters. It's a starting point of the process. Start Event can be initiated manually by a user who has access to create processes. This can be done either from the processes list view or from the detail view of a target record.
+Doesn't have parameters. It's a starting point of the process. A Start Event can be initiated manually by a user who has access to create processes. This can be done either from the processes list view or from the detail view of a target record.
 
 ![Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-1.png)
 
@@ -59,21 +59,21 @@ Can be also used as an entry point of a sub-process.
 
 ### Conditional Start Event
 
-A starting point of the process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', 'After record saved'. Conditions are defined in the same way as in the Workflows tool. See [here](workflows.md#conditions).
+A starting point of a process. It's supposed to be triggered automatically when specified conditions are met. There are three types of triggers: 'After record created', 'After record updated', and 'After record saved'. Event conditions are defined in the same way as conditions in the Workflows tool. See [here](workflows.md#conditions).
 
 ![Conditional Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-1.png)
 
-Can be used to start an event sub-process.
+Can be also used to start an event sub-process.
 
 ![Conditional Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-2.png)
 
 ### Timer Start Event
 
-A starting point of the process. It initiates processes by scheduling. You need to select a list report (which returns records for initiating processes) and specify execution scheduling (in crontab notation).
+A starting point of a process. It initiates processes by scheduling. You need to select a list report (which returns records, each one will initiate a separate process) and specify execution scheduling (in the crontab notation).
 
 ![Timer Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-1.png)
 
-Can be also used to start an event sub-process. In this case, it is scheduled to be triggered at a time defined by event parameters.
+Can be also used to start an event sub-process. In this case, it is scheduled to be triggered at time defined by event parameters.
 
 ![Timer Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-timer-2.png)
 
@@ -81,9 +81,9 @@ Can be also used to start an event sub-process. In this case, it is scheduled to
 
 Can be used to start processes and event sub-processes.
 
-When it is used to start a process, only *object signals* can be used.
+When it's used to start a process, only *object signals* can be used.
 
-When it is used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
+When it's used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
 
 !!! note
 
@@ -101,26 +101,26 @@ See [more info](bpm-signals.md) about signals.
 
 Can only be used to start an event sub-process. It's triggered once an error event is thrown within the same process.
 
-If *Error Code* is specified, it will be triggered only when an error with the same code occurs. If *Error Code* is empty, it will catch any error.
+If the *Error Code* is specified, the event will be triggered only when an error with the same code occurs. If the *Error Code* is empty, it will catch any error.
 
-It can't be non interrupting, because a process gets terminated once an error event is thrown.
+It cannot be non-interrupting, because the process gets terminated once an error event is thrown.
 
 ![Error Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-error.png)
 
-It's possible to view an error code and message in the flow log (as of v2.14).
+It's possible to view an error code and message in the flow log.
 
-The error code and the exception message can be obtained further in the flow with formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage` (as of v2.14).
+The error code and the exception message can be obtained further in the flow with Formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage`.
 
 !!! note
 
-    When an error event sub-process is defined inside a regular sub-process, it may be reasonable to re-throw the error in the end
+    When an error event sub-process is defined inside a regular sub-process, it can be reasonable to re-throw the error in the end
     of the event sub-process with the Error End Event. It will propagate the error to the top level.
 
 ### Escalation Start Event
 
 Can be used only to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
 
-If Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If Escalation Code is empty, it will catch any escalation.
+If the Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If the Escalation Code is empty, it will catch any escalation.
 
 ![Escalation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-escalation.png)
 
@@ -130,7 +130,7 @@ If Escalation Code is specified, it will be triggered only when an escalation wi
 
 Starts a sub-process compensation handler. Can be used only in an event sub-process.
 
-When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
+When the parent process initiates compensation for the sub-process activity, if there's no boundary compensation event attached to that activity, it will check whether the sub-process contains an event sub-process with a compensation start event (called Compensation Handler). Then, it executes the compensation handler. The compensation handler usually is supposed to explicitly throw compensation events to compensate activities of the sub-process.
 
 ![Compensation Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-compensation.png)
 
@@ -146,23 +146,23 @@ In case of a multi-instance sub-process, the compensation handler is processed f
 
 ### Conditional Intermediate Event (Catching)
 
-This event stops the flow until specified criteria is met. Conditions are defined in the same way as in the Workflow tool. See [here](workflows.md#conditions). Note that BPM tool introduces [additional functions](bpm.md#additional-formula-functions) that can be used in formula.
+This event stops the flow until specified criteria is met. Event conditions are defined in the same way as conditions in the Workflow tool. See [here](workflows.md#conditions). Note that BPM tool introduces [additional functions](bpm.md#additional-formula-functions) that can be used in a Formula script.
 
 ![Conditional Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional.png)
 
 ### Timer Intermediate Event (Catching)
 
-This event stops the flow and waits as long as it is specified by the event's parameters.
+This event stops the flow and waits as long as it's determined by event's parameters.
 
-For more complex timer settings you can utilize [formula](formula.md). Formula scripts should return a Date-Time value (in UTC timezone). Once this time comes, the flow will be proceeded to the next element.
+For more complex timer settings you can utilize a [Formula](formula.md) script. Formula scripts should return a Date-Time value (date-time string in the UTC timezone). Once this time arrives, the flow is proceeded to the next element.
 
-By utilizing datetime\closest formula function it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
+By utilizing *datetime\closest* Formula function, it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
 
 ![Timer Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-timer.png)
 
 ### Signal Intermediate Event (Catching)
 
-Stops the flow until a specific signal catched. Placeholders can be used in a signal name.
+Stops the flow until a specific signal is catched. Placeholders can be used in a signal name.
 
 !!! note
 
@@ -174,7 +174,7 @@ See [more info](bpm-signals.md) about signals.
 
 Broadcasts a specified signal. Placeholders can be used in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record.
 
-If the first character of the signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
+If the first character of a signal name is `@`, it will broadcast an object signal along with the current target record. This signal type can be used only to initiate a new process or trigger a workflow rule.
 
 ![Signal Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-signal-throw.png)
 
@@ -194,20 +194,19 @@ Stops the flow until an email is received.
 
 Only emails sent not by internal users can trigger the event.
 
-It's possible to utilize the event in pair with *Send Message* task. The event will wait until the sent email is replied. Specify that email in *Replied To* parameter.
+It's possible to utilize the event in pair with the *Send Message* task. The event will wait until the sent email is replied. Specify that email in the *Replied To* parameter.
 
-*Related To* parameter requires that email was related (via Parent field) to a specific record.
+The *Related To* parameter requires that the email was related (via the Parent field) to a specific record.
 
-There is the ability to specify formula conditions that the email should satisfy to trigger the event. You can utilize it to skip auto-response emails or to catch emails containing a specific ID. Formula example: `string\contains(body, $id)`.
+There is the ability to specify Formula conditions that the email should satisfy to trigger the event. You can utilize it to skip auto-response emails or to catch emails containing a specific ID. Formula example: `string\contains(body, $id)`.
 
 ![Message Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-message.png)
 
 ### Escalation Intermediate Event (Throwing)
 
-Throws an escalation. Escalation Code can be specified. Escalation can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+Throws an escalation. The Escalation Code can be specified. An escalation can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Escalation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-escalation.png)
-
 
 ### Compensation Intermediate Event (Throwing)
 
@@ -215,7 +214,7 @@ Throws an escalation. Escalation Code can be specified. Escalation can be catche
 
 Behaves the same as the [compensation end event](#compensation-end-event) with the only difference that it continues flow execution to the next element.
 
-Can be useful to process compensations in a specific order.
+Can be useful to ensure processing of multiple compensations in a specific order.
 
 ![Compensation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-compensation.png)
 
@@ -225,30 +224,29 @@ Can be useful to process compensations in a specific order.
 
 ### End Event
 
-Ends the current flow. It doesn't end flows running in parallel. When the flow reaches the end event and there isn't anything running in parallel, then process ends.
+Ends the current flow. It doesn't end flows running in parallel. When the flow reaches an end event and there isn't anything running in parallel, then the process ends.
 
 ![End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end.png)
 
 ### Terminate End Event
 
-Ends all flows. Process is subsequently ended.
+Ends all flows. The process is subsequently ended.
 
 ![Terminate End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-terminate.png)
 
-
 ### Error End Event
 
-Terminates the process and triggers an error. Error Code can be specified. Error can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+Terminates the process and triggers an error. The Error Code can be specified. The error can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Error End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
 !!! note
 
-    Uncaught errors are propagated to the parent process. As of v2.14.
+    Uncaught errors are propagated to the parent process.
 
 ### Escalation End Event
 
-Ends the flow and triggers an escalation. Escalation Code can be specified. Escalation can be catched by a boundary event (if it's thrown within a sub-process) or by event sub-process.
+Ends the flow and triggers an escalation. The Escalation Code can be specified. The escalation can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Escalation End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-escalation.png)
 
@@ -262,7 +260,7 @@ If the first character of the signal name is `@`, it will broadcast an object si
 
 !!! note
 
-    Signals are not limited by a process scope. Signal triggered in one BPM process can be caught in another process.
+    Signals are not limited by a process scope. A signal triggered in one BPM process can be caught in another process.
 
 !!! note
 
@@ -299,34 +297,32 @@ Compensation is supposed to perform undo actions when something went wrong. Usua
 
 ## Boundary Events
 
-Boundary events can be attached to activities (usually sub-processes). Boundary event can interrupt an activity (if param *Is Interrupting* is checked). Non interrupting boundary event can be triggered multiple times.
-
+Boundary events can be attached to activities (usually sub-processes). Boundary event can interrupt an activity (if the *Is Interrupting* parameter is checked). Non-interrupting boundary event can be triggered multiple times.
 
 ### Error Intermediate Event (Boundary)
 
-It's triggered once an error event is thrown withing the activity (sub-process) it's attached to.
+It's triggered once an error event is thrown within the activity (sub-process) it's attached to.
 
-It can't be non interrupting, because the activity gets terminated once an error event is thrown.
+It cannot be non-interrupting, because the activity gets terminated once an error event is thrown.
 
-If Error Code is specified, it will be triggered only when an error with the same code occurs. If Error Code is empty, it will catch any error.
+If the Error Code is specified, it will be triggered only when an error with the same code occurs. If the Error Code is empty, it will catch any error.
 
 ![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
-It's possible to view an error code and message in the flow log (as of v2.14).
+It's possible to view the error code and the exception message in the flow log.
 
-The error code and the exception message can be obtained further in the flow with formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage` (as of v2.14).
+The error code and the exception message can be obtained further in the flow with Formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage`.
 
 !!! note
 
-    If the error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403). As of v2.8.6.
+    If the error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403).
 
 
 ### Conditional Intermediate Event (Boundary)
 
-Triggered when specific conditions are met. Note that non interrupting event can be triggered multiple times, when conditions get met, then get not met, and met again.
+Triggered when specific conditions are met. Note that same non-interrupting events can be triggered multiple times. First, when conditions get fulfilled, then, when conditions get unfulfilled, and so on.
 
 ![Conditional Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional-boundary.png)
-
 
 ### Timer Intermediate Event (Boundary)
 
@@ -339,15 +335,14 @@ Triggered after a specific period of time. The timer starts once the activity st
 
 It's triggered once an escalation event is thrown within the activity (sub-process) it's attached to.
 
-If Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If Escalation Code is empty, it will catch any escalation.
-
+If the Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If the Escalation Code is empty, it will catch any escalation.
 
 ![Escalation Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-escalation.png)
 
 
 ### Signal Intermediate Event (Boundary)
 
-It's triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily in the same process.
+It's triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily from the same process.
 
 Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with the target's ID.
 

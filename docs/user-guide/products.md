@@ -4,15 +4,15 @@ The Products feature is available in the [Sales Pack](https://www.espocrm.com/ex
 
 ![Products list view](../_static/images/user-guide/products/products.png){width="614"}
 
-Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, Purchase Orders.
+Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, and Purchase Orders.
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
 
-A product record has three price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*.
+A product record has 3 price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*.
 
 Product fields can be printed in a PDF. More detail [here](quotes.md#templates).
 
-Products can be added as line items in an Opportunity. By default, this feature is disabled. The Administrator needs to add the *Items* panel at Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
+The ability to add products as line items in an Opportunity is disabled by default. The Administrator needs to add the *Items* panel under Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
 
 In this article:
 
@@ -34,7 +34,7 @@ The Product Category is a separate entity type, hence the access to it is contro
 
 ### Product Attributes
 
-Before being able to create products with variants, you need to create some Product Attributes. Product attributes are available at: Products > the top-right menu > Product Attributes.
+Before being able to create products with variants, you need to create some Product Attributes. Product attributes are available under: Products > the top-right menu > Product Attributes.
 
 Every product attribute is supposed to have a specific set of options. Add needed options on the Product Attribute detail view.
 
@@ -51,7 +51,7 @@ To create a product with variants you need to create a template product. Click *
 
 After that, you need to generate variants. From the template product detail view, open the **Variants** tab in the bottom, click **Generate**. It will generate all possible combinations according to attributes and options of the product template.
 
-You can remove variants that you don't need. E.g. a Red shirt is not produced in an XS size, hence, you need to remove the XS-Red variant.
+You can remove variants that you don't need. E.g. a Red shirt is not produced in the XS size, hence, you need to remove the XS-Red variant.
 
 You can re-generate variants. It will create all missing combinations.
 

@@ -338,7 +338,7 @@ $entity = $entityManager
 
 !!! note
 
-    As of v8.4, the *getRelation* method is available in the *EntityManager*. `$entityManager->getRelation($entity, 'relationName');
+    As of v8.4, the *getRelation* method is available in the *EntityManager*. `$entityManager->getRelation($entity, 'relationName');` Before, it could be accessed from a repository.
 
 ### Find related
 
@@ -348,13 +348,11 @@ Has-Many:
 <?php
 // All.
 $opportunityCollection = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->find();
 
 // Filter.
 $opportunityCollection = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->limit(0, 10)
     ->where($whereClause)
@@ -362,7 +360,6 @@ $opportunityCollection = $entityManager
 
 // First one.
 $opportunity = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->order('createdAt', 'DESC')
     ->findOne();
@@ -373,7 +370,6 @@ Belongs-To or Has-One:
 ```php
 <?php
 $account = $entityManager
-    ->getRDBRepository('Task')
     ->getRelation($task, 'account')
     ->findOne();
 ```
@@ -383,11 +379,8 @@ Filtering by a relation column:
 ```php
 <?php
  $leads = $entityManager
-    ->getRDBRepository('TargetList')
     ->getRelation($targetList, 'leads')
-    ->where([
-        '@relation.optedOut' => false,
-    ])
+    ->where(['@relation.optedOut' => false])
     ->find();
 ```
 
@@ -398,21 +391,17 @@ Filtering by a relation column:
 ```php
 <?php
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->relate($opportunity);
 
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->relateById($opportunityId);
 
+// With relationship column setting.
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
-    ->relate($contact, [
-        'role' => 'CEO', // relationship column
-    ]);
+    ->relate($contact, ['role' => 'CEO']);
 ```
 
 ### Unrelate entities
@@ -420,12 +409,10 @@ $entityManager
 ```php
 <?php
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->unrelate($opportunity);
 
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->unrelateById($opportunityId);
 ```
@@ -435,14 +422,10 @@ $entityManager
 ```php
 <?php
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
-    ->updateColumns($contact, [
-        'role' => 'CEO', // relationship column
-    ]);
+    ->updateColumns($contact, ['role' => 'CEO']);
 
 $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'contacts')
     ->updateColumnsById($contactId, [
         'role' => 'CEO', // relationship column
@@ -454,10 +437,64 @@ $entityManager
 ```php
 <?php
 $isRelated = $entityManager
-    ->getRDBRepository('Account')
     ->getRelation($account, 'opportunities')
     ->isRelated($opportunity);
 ```
+
+### Managing from within Entity class
+
+*As of v9.0.*
+
+A developer can add getter and setters to an Entity class which will allow to read and set related records.
+
+In an Entity class:
+
+```php
+<?php
+class MyEntity extends Entity
+{
+    public function getAccount(): ?Account
+    {
+        return $this->relations->getOne('account');
+    }
+
+    public function setAccount(?Account $account): self
+    {
+        $this->relations->set('account', $account);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<Attachment>
+     */
+    public function getAttachments(): Collection
+    {
+        return $this->relations->getMany('attachments');
+    }
+
+    // Setting multiple is not supported.
+}
+```
+
+Usage:
+
+```php
+<?php
+$entity->setAccount($account);
+
+$account = $entity->getAccount();
+
+// The same instance is returned. Useful to prevent re-fetching in different hooks.
+assert($account === $entity->getAccount());
+
+$em->saveEntity($entity);
+```
+
+* Only available from inside the Entity class.
+* Getting is available for many and one relationships.
+* Settings is available only for one relationships.
+
 
 ## Collections
 

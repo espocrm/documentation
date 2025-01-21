@@ -29,9 +29,9 @@ A Project has Activities and History panels. Meetings, Calls, and Emails can be 
 
 ## Boards
 
-A Project Board defines board Columns for a Project. The *Board* field is mandatory in a Project. It can be set only when you create a Project. Multiple Projects can use the same Project Board.
+A Project Board defines board Stages for a Project. The *Board* field is mandatory in a Project. It can be set only when you create a Project. Multiple Projects can use the same Project Board.
 
-Each Column is mapped to a specific Status value. Multiple Columns can be mapped to the same status. For example, the *In Progress* and *Review* columns are mapped to the status *Started*.
+Each Stage is mapped to a specific Status value. Multiple Stages can be mapped to the same status. For example, the *In Progress* and *Review* stages are mapped to the status *Started*.
 
 Available statuses:
 
@@ -41,9 +41,9 @@ Available statuses:
 * Canceled
 * Deferred
 
-A Task in a Project is usually assigned to a specific Column. When a Column is changed, the Task's status is automatically changed to a mapped status.
+A Task in a Project is usually assigned to a specific Stage. When a Stage is changed, the Task's status is automatically changed to a mapped status.
 
-The *Default* Project Board is available out of the box. You can create new Project Boards. When you create a Project Board, default Columns are automatically added. You can rename the Columns or add new ones.
+The *Default* Project Board is available out of the box. You can create new Project Boards. When you create a Project Board, default Stages are automatically added. You can rename the Stages or add new ones.
 
 ## Access control
 
@@ -63,7 +63,7 @@ Built-in roles:
 
 * Owner – can edit the Project; can manage members; can create and edit Tasks;
 * Editor – can edit the Project; can create and edit Tasks;
-* Member – can view Tasks assigned to them; can move assigned Tasks between Columns; can edit Tasks they own.
+* Member – can view Tasks assigned to them; can move assigned Tasks between Stages; can edit Tasks they own.
 
 The admin can create custom Project Roles. The Project Roles list view is available at: the Project list view > the dropdown menu in the top-right corner > Roles.
 
@@ -76,14 +76,14 @@ A Project Role defines the following Task related actions and levels:
 * Read – all/own – what Tasks can view;
 * Stream – all/own – access to the Tasks's Stream;
 * Edit – all/assigned/own – what Tasks can edit;
-* Column Edit – all/assigned/own – what Tasks can move on the board;
+* Stage Edit – all/assigned/own – what Tasks can move on the board;
 * Delete – all/own/no – what Tasks can delete.
 
 ## Tasks
 
 In the Project Management tool, a Task is represented by the *Project Task* entity type.
 
-A Project can have multiple Tasks. Tasks can belong to different Groups. Tasks can be re-ordered within a Group. Tasks are also placed in specific Columns of the Board.
+A Project can have multiple Tasks. Tasks can belong to different Groups. Tasks can be re-ordered within a Group. Tasks are also placed in specific Stages of the Board.
 
 Tasks can have Sub-tasks.
 
@@ -97,15 +97,15 @@ Available Task statuses:
 * Canceled
 * Deferred
 
-The Status field is read-only: it cannot be edited explicitly. The status is updated automatically after changing the Column value (moving the Task on the Board) and when completing or canceling the Task.
+The Status field is read-only: it cannot be edited explicitly. The status is updated automatically after changing the Stage value (moving the Task on the Board) and when completing or canceling the Task.
 
-### Column
+### Stage
 
-The *Column* field indicates in which column a Task is placed on the Board. It also defines the Status of the Task.
+The *Stage* field indicates in which Stage a Task is placed on the Board. It also defines the Status of the Task.
 
-The available Columns in a Project are defined by the assigned Project Board.
+The available Stages in a Project are defined by the assigned Project Board.
 
-A project member with the *Member* role has access to update the Column field.
+A project member with the *Member* role has access to update the Stage field.
 
 ### Group
 
@@ -194,9 +194,9 @@ To reorder Groups, click *Reorder Groups* from the dropdown menu, use drag-and-d
 
 On the Board view, tasks are visualized as sticky notes. This tool is also known as a Kanban board.
 
-It's possible to drag tasks from one column to another and reorder tasks within a column.
+It's possible to drag tasks from one column to another and reorder tasks within a column. Columns represent task's Stages.
 
-Columns of the board are defined by the Project Board assigned to the Project.
+Stages of the board are defined by the Project Board assigned to the Project.
 
 The Board view displays tasks from only one Group at a time. You can switch between Groups to view tasks from different ones.
 
