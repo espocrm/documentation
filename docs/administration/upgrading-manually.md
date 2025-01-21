@@ -5,6 +5,7 @@
 !!! note
 
     The minimal version you can upgrade from using this method is 7.1.0.
+    The minimal version you can upgrade to using this method is 8.3.0.
 
 !!! note
 
@@ -13,6 +14,8 @@
 !!! important
 
     This methods does not perform before-upgrade checks that the regullar upgrade method does. After replacing the files manually, it's possible that your system won't work due to reasons like PHP version incompativility or customization incomatibility. The method is preferred for more experienced users.
+
+Check all the [recommendations](https://docs.espocrm.com/administration/upgrading/#recommendations) before performing upgrade.
 
 ### 1. Replace files.
 
