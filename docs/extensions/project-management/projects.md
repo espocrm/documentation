@@ -14,6 +14,7 @@ In this article:
 * [Board view](#board-view)
 * [Gantt view](#gantt-view)
 * [Project cloning](#project-cloning)
+* [Shortcut keys](#shortcut-keys)
 
 ## Projects
 
@@ -242,3 +243,7 @@ The Date Start should be set in the source Project. When cloning, the user needs
 To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project. To clone a Project, open the detail view and click the *Clone* action from the dropdown next to the *Edit* button.
 
 If you clone a Project and then decide to remove it, it won't be possible until you remove all related Tasks.
+
+## Shortcut keys
+
+* `Ctrl + Backspace` – complete selected Tasks from the Plan view (as of v1.2);
