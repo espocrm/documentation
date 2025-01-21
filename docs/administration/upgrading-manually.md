@@ -6,6 +6,9 @@
 
     The minimal version you can upgrade from using this method is 7.1.0.
 
+!!! note
+
+    This method assumes that all installed third party extensions have their files placed in the `custom` and `client/custom` directories.
 
 !!! important
 
@@ -13,10 +16,15 @@
 
 ### 1. Replace files.
 
+Replace all application files with files with files from a new version package. You need to delete all existing source files except the directories listed below.
+
+The directories you must NOT delete:
+
+* `data`
+* `custom`
+* `client/custom`
+
 ### 2. Run migration.
-
-
-1. Replace all app files with files with files from a new version package.
 
 Run the command:
 
