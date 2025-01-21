@@ -41,7 +41,7 @@ It will run needed prepare and after-upgrade scripts, run rebuild. The version p
 
 ## Option 2. Upgrade package
 
-Manually replicating upgrade with an upgrade package.
+Manually replicating upgrade with an upgrade package. This is another option to upgrade, not related to the section above.
 
 !!! important
 
