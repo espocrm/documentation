@@ -6,7 +6,7 @@ iexPBX integration is available as part of [VoIP Integration extension](https://
 
 #### Step 1:
 
-Fill in the connection details of your iexPBX server. To do this, go to the Administration (System panel) -> VoIP » iexPBX.
+Fill in the connection details of your iexPBX server. To do this, go to the Administration (System panel) > Integrations > VoIP · iexPBX.
 
 ![iexPBX integration config](../../_static/images/extensions/voip-integration/iexpbx-admin-setup.png)
 
@@ -17,13 +17,16 @@ Fill in the connection details of your iexPBX server. To do this, go to the Admi
 * **Access Key to EspoCRM** – the key to access to EspoCRM to handle incoming/outgoing calls.
 * **Default Country** – the country is used to format phone numbers.
 * **Dial Format for outgoing calls** – a phone number format for outgoing (click-to-call) calls.
+* **Call Recording** – if you want to have possibility to listen recorded calls. This option should also be enabled in your telephony server.
 * **List of ignored numbers** – list of numbers which will be ignored. Popup window will not be displayed. Use numbers in the following formats: +14844608117 (full number match) or #4844608117# (regular expression).
 * **Permitted Entities** – entities that will be displayed in the popup window and will be used to identify a caller by his phone number.
-* **Hide a Lead** – Hide a Lead in a call popup when Account / Contact are available.
+* **Apply global ACL for caller lookup** – apply global ACL rules (Administration > Roles) for caller lookup. This information is displayed in the popup window. If unchecked, no ACL restrictions are used.
+* **Hide a Lead** – hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display only Accounts related to Contacts.
-* **Automatically save a call** – Automatically save incoming/outgoing calls in the system without having to press "Save" button.
+* **Automatically save a call** – automatically save incoming/outgoing calls in the system without having to press "Save" button.
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
+* **Experimental features** – test experimental features.
 
 #### Step 2:
 
