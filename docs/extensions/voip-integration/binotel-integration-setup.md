@@ -5,7 +5,7 @@ Binotel integration is available as part of [VoIP Integration extension](https:/
 
 ## How to setup Binotel Integration for an administrator
 
-1\. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) -> VoIP » Binotel.
+1\. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) > Integrations > VoIP · Binotel.
 
 ![Binotel integration config](../../_static/images/extensions/voip-integration/binotel-admin-setup.png)
 
