@@ -22,7 +22,7 @@ VoIP Integration extension supports* the following Asterisk servers:
 ## How to setup Asterisk Integration for an administrator
 
 #### Step 1:
-Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) > VoIP » Asterisk AMI.
+Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) > VoIP · Asterisk AMI.
 
 ![Asterisk integration config](../../_static/images/extensions/voip-integration/asterisk-admin-setup.png)
 
@@ -31,7 +31,6 @@ Fill in the connection details of your Asterisk server. To do this, go to the Ad
 * **Port** – a port for connection through AMI interface.
 * **Username** – AMI username.
 * **Password** – AMI user password.
-* **Version of the Asterisk server** – a version of your Asterisk server.
 * **Protocol** – protocol for connection to Asterisk server (TCP, UDP, TLS).
 * **Dialout Channel** – channel format for outgoing calls. It can be “PJSIP/###” (Asterisk 13+) or “SIP/###”, where ### is a user’s extension (internal number). The extension “###” will be substituted automatically depending on the user.
 * **Dial Context** – context for dial actions.
@@ -41,16 +40,18 @@ Fill in the connection details of your Asterisk server. To do this, go to the Ad
 * **Dial Format for outgoing calls** – a phone number format for outgoing (click-to-call) calls.
 * **List of ignored numbers** – list of numbers which will be ignored. Popup window will not be displayed. Use numbers in the following formats: +14844608117 (full number match) or #4844608117# (regular expression).
 * **Permitted Entities** – entities that will be displayed in popup window and will be used to identify a caller by his phone number.
+* **Apply global ACL for caller lookup** – apply global ACL rules (Administration > Roles) for caller lookup. This information is displayed in the popup window. If unchecked, no ACL restrictions are used.
 * **Hide a Lead** – Hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display only Accounts related to Contacts.
 * **Automatically save a call** – Automatically save incoming/outgoing calls in the system without having to press "Save" button.
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Access Key to EspoCRM** – an access key of EspoCRM to post data from Asterisk server.
 * **Listen recorded calls** – possibility to listen recorded calls in EspoCRM.
-* **URL to recorded calls** – a pattern of recorded call URLs.
 * **Lines** – a prefix of phone numbers. E.g. UK phone number 702031112233 will be formatted like “7” – a line and “02031112233” – a phone number.
 * **Quick Create Entities** – entities which can be created through the call popup window.
 * **Active Queue Numbers** – a list of queue phone numbers which should be determined by EspoCRM.
+* **Display a popup only after answering the call** – do not show incoming call popups until the user answers a call.
+* **Experimental features** – test experimental features.
 
 #### Step 2:
 
