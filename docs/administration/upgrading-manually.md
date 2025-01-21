@@ -27,6 +27,8 @@ The directories you must NOT delete:
 * `custom`
 * `client/custom`
 
+Make sure [file permissions](server-configuration.md#required-permissions-for-unix-based-systems) are correct.
+
 ### 2. Run migration.
 
 Run the command:
