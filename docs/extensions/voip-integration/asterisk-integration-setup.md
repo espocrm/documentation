@@ -22,7 +22,7 @@ VoIP Integration extension supports* the following Asterisk servers:
 ## How to setup Asterisk Integration for an administrator
 
 #### Step 1:
-Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) > VoIP · Asterisk AMI.
+Fill in the connection details of your Asterisk server. To do this, go to the Administration (System panel) > Integrations > VoIP · Asterisk AMI.
 
 ![Asterisk integration config](../../_static/images/extensions/voip-integration/asterisk-admin-setup.png)
 
