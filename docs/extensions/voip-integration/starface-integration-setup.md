@@ -24,24 +24,27 @@ VoIP Integration extension supports* the following Starface servers:
 
 ## How to setup Starface Integration for an administrator
 
-Fill in the connection details of your Starface server. To do this, go to the Administration (System panel) -> VoIP » STARFACE.
+Fill in the connection details of your Starface server. To do this, go to the Administration (System panel) > Integrations > VoIP · STARFACE.
 
 ![Starface integration config](../../_static/images/extensions/voip-integration/starface-admin-setup.png)
 
 * **Name** – name of your connection.
-* **Host** – IP or domain name of your Starface Server.
+* **Host of Starface server** – IP or domain name of your Starface Server.
 * **Port** – port for connection by AMI interface.
 * **Protocol** – protocol that is used for connection of Starface server (HTTP, HTTPS).
 * **Version of your Starface server** – version of your Starface server. This is an important option since Starface 6.4.2 is used a new authorization protocol.
+* **Access Key to EspoCRM** – the key to access to EspoCRM to handle incoming/outgoing calls.
 * **Default Country** – the country is used to format phone numbers.
 * **Dial Format for outgoing calls** – a phone number format for outgoing (click-to-call) calls.
 * **List of ignored numbers** – list of numbers which will be ignored. Popup window will not be displayed. Use numbers in the following formats: +14844608117 (full number match) or #4844608117# (regular expression).
 * **Permitted Entities** – entities that will be displayed in the popup window and will be used to identify a caller by his phone number.
+* **Apply global ACL for caller lookup** – apply global ACL rules (Administration > Roles) for caller lookup. This information is displayed in the popup window. If unchecked, no ACL restrictions are used.
 * **Hide a Lead** – Hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display only Accounts related to Contacts.
 * **Automatically save a call** – Automatically save incoming/outgoing calls in the system without having to press "Save" button.
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
+* **Experimental features** – test experimental features.
 
 ## How to setup Starface Integration for users
 

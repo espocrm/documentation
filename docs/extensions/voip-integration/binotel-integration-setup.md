@@ -5,24 +5,27 @@ Binotel integration is available as part of [VoIP Integration extension](https:/
 
 ## How to setup Binotel Integration for an administrator
 
-1\. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) -> VoIP » Binotel.
+1\. Fill in the connection details of your Binotel server. For this go to the Administration (System panel) > Integrations > VoIP · Binotel.
 
 ![Binotel integration config](../../_static/images/extensions/voip-integration/binotel-admin-setup.png)
 
 * **Name** – name of your Binotel connector.
 * **Authorization Key** – authorization Key to the Binotel server.
 * **Authorization Secret** – authorization Secret to the Binotel server.
-* **Use SSL** – Use SSL for connection to the server Binotel.
+* **Binotel API Version** – the version of the Binotel API which is used for integration.
 * **Access Key** – the key to access to EspoCRM to handle incoming/outgoing calls.
 * **Default Country** – The country is used to format phone numbers. E.g. 02011112222 for United Kingdom will be formatted to +442011112222.
 * **Dial Format for outgoing calls** – Phone number format for outgoing (click-to-call) calls.
 E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031112233".
 * **List of ignored numbers** – list of numbers, which will be ignored and popup window will not be displayed. Use numbers in the following formats: +14844608117 (full number match) or #4844608117# (regular expression).
 * **Permitted Entities** – entities that will be displayed in popup window and will be used to identify a caller by his phone number.
+* **Apply global ACL for caller lookup** – apply global ACL rules (Administration > Roles) for caller lookup. This information is displayed in the popup window. If unchecked, no ACL restrictions are used.
 * **Hide a Lead** – Hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display an account related to the contact in the popup window.
+* **Automatically save a call** – automatically save incoming/outgoing calls in the system without having to press "Save" button.
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through a call popup.
+* **Experimental features** – test experimental features.
 
 2\. Contact Binotel support to add an URL (see “Post URL” field) to handle incoming/outgoing calls (API CALL Settings and API PUSH):
 **http://espocrm.local/?entryPoint=Binotel&connector=Binotel&key=hh9v0zr529**
