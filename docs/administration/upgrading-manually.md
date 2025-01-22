@@ -51,7 +51,7 @@ If your environment is configured properly, the regular upgrade process via CLI 
 
 In some cases it can be more reasonable to install a fresh instance, then copy your `custom` directory, `data/upload` directory, install all needed extensions.
 
-The following actions are the same as those that the automatic upgrade script performs when you run *upgrade* command.
+The following actions are the same as those that the automatic upgrade script performs when you run the *upgrade* command.
 
 ## 0. Check system requirements of the new version.
 
