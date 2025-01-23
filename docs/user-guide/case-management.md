@@ -41,7 +41,7 @@ The Case entity type can be associated with one Account and/or multiple Contacts
 
 A Case record has a Stream that can be used for communication between the customer and the support team.
 
-CRM users can mark stream posts as *internal*. Such posts are not visible in the customer portal and the customer is notified about them. To make a post internal, click the *lock* icon next to the *Post* button befor posting.
+CRM users can mark stream posts as *internal*. Such posts are not visible in the customer portal and the customer is notified about them. To make a post internal, click the *lock* icon next to the *Post* button before posting.
 
 ## Email-to-case
 

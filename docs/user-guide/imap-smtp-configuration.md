@@ -35,7 +35,7 @@ IMAP allows to retrieve your emails from a mail server. To set up an IMAP accoun
 
 SMTP is for sending emails. Users can setup SMTP settings their Personal Email Accounts. An administrator can also allow to use the System SMTP (by marking it shared).
 
-Users can have multiple SMTP accounts. However, email addresses a user can use to send emails from are defined by email addresses of the User record (Administartion > Users).
+Users can have multiple SMTP accounts. However, email addresses a user can use to send emails from are defined by email addresses of the User record (Administration > Users).
 
 To set up an SMTP account, do the following:
 

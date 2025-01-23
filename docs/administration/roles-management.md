@@ -131,7 +131,7 @@ Allows to view:
 
 *As of v9.0.*
 
-Alloes to view Calendars of other users.
+Allows to view Calendars of other users.
 
 ### Portal Permission
 

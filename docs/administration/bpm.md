@@ -83,7 +83,7 @@ Ended, stopped and interrupted Processes can be *reactivated* (from the dropdown
 
 ### Access control
 
-Only admininstrators can create or edit Flowcharts. With Roles it's possible to allow regular users to view Flowcharts, and view or edit Processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view Process Flowchart details. 
+Only administrators can create or edit Flowcharts. With Roles it's possible to allow regular users to view Flowcharts, and view or edit Processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view Process Flowchart details. 
 
 ## Flowchart Elements
 

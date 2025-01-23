@@ -27,7 +27,7 @@ In this article:
 * Can be broadcasted and caught within a running process.
 * Cannot be used to start a process or a workflow rule.
 
-In BPM processeses, the *Signal Intermediate Events* can catch and throw only regular signals.
+In BPM processes, the *Signal Intermediate Events* can catch and throw only regular signals.
 
 ### Built-in signals
 
@@ -101,7 +101,7 @@ Example: A process triggers signal *@approve*. A target record of the *Lead* ent
 
 ### Built-in signals
 
-Below is the list of avaialble out-of-the-box signals that are broadcasted in the system.
+Below is the list of available out-of-the-box signals that are broadcasted in the system.
 
 !!! note
 
