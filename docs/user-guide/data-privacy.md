@@ -17,6 +17,6 @@ Accounts:
 
 * Email
 
-To view or erase persoanal data for a specific record, go to the detail view, then click *View Personal Data* from the dropdown next to the *Edit* button. From there, it's possible to erase certain fields (if the User has edit access).
+To view or erase personal data for a specific record, go to the detail view, then click *View Personal Data* from the dropdown next to the *Edit* button. From there, it's possible to erase certain fields (if the User has edit access).
 
 Regular uses have the ability to view or erase personal data only if they have *Data Privacy* permission (defined in Roles).
