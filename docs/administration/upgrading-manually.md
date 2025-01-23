@@ -13,7 +13,7 @@
 
 !!! important
 
-    This methods does not perform before-upgrade checks that the regular upgrade method does. After replacing the files manually, it's possible that your system won't work due to reasons like PHP version incompativility or customization incomatibility. The method is preferred for more experienced users.
+    This methods does not perform before-upgrade checks that the regular upgrade method does. After replacing the files manually, it's possible that your system won't work due to reasons like PHP version incompatibility or customization incompatibility. The method is preferred for more experienced users.
 
 Check all the [recommendations](https://docs.espocrm.com/administration/upgrading/#recommendations) before performing upgrade.
 
