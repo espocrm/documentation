@@ -80,7 +80,7 @@ Scheduling is specified in a crontab notation.
 How it works:
 
 1. You need to create a *List* Report showing records that met specific criteria. You can specify any columns for the Report, it doesn't matter in this context.
-2. Then, create a Workflow rule with the *Scheduled* trigger type, select the Report you creted before. Specify the needed scheduling.
+2. Then, create a Workflow rule with the *Scheduled* trigger type, select the Report you created before. Specify the needed scheduling.
 3. Specify one or multiple actions in the Workflow rule.
 
 The Workflow rule will be running in idle according to the specified scheduling. On each run, it will run the Report and obtain all records from the Report result. Then, it will apply the action (or multiple actions) for every record.
@@ -171,7 +171,7 @@ It's possible to specify multiple email addresses by separating them with a semi
 
 It's possible to use a formula variable when specifying an email address. Example: `{$$variable}`. As of v3.6.
 
-Additional attachments can be added to an email using the *Attachmnents Variable* parameter. Specify a Formula variable name that contains an attachment ID or an array of attachment IDs. You can generate needed attachments in a Formula script in a previous action. As of v3.6.
+Additional attachments can be added to an email using the *Attachments Variable* parameter. Specify a Formula variable name that contains an attachment ID or an array of attachment IDs. You can generate needed attachments in a Formula script in a previous action. As of v3.6.
 
 ### Create Record
 
@@ -181,7 +181,7 @@ There is the ability to define a Formula script to calculate field values.
 
 !!! note
 
-    Variables defined within the Formula script won't be availble in following actions (or the BPM process). They are only available within the current script.
+    Variables defined within the Formula script won't be available in following actions (or the BPM process). They are only available within the current script.
 
 ### Create Related Record
 
