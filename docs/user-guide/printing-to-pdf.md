@@ -18,7 +18,7 @@ By default, the maximum number of records is limited to 50. The limit is defined
 
 ### Access control
 
-Access to PDF printing is controlled by Roles. An ddministrator can set a *read* access level for the *Template* entity type.
+Access to PDF printing is controlled by Roles. An administrator can set a *read* access level for the *Template* entity type.
 
 ### Engines
 
@@ -53,7 +53,7 @@ Table of content:
 * [Maps](#maps)
 * [Custom helpers](#custom-helpers)
 
-Available undser Administration > PDF Templates.
+Available under Administration > PDF Templates.
 
 For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button *\</\>*.
 
