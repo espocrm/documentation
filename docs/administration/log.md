@@ -15,6 +15,7 @@ In `data/config-internal.php`:
     'printTrace' => true, // to print an exception backtrace,
     'sql' => true, // log SQL queries
     'databaseHandler' => true, // the log will be available in the UI
+    'databaseHandlerLevel' => 'NOTICE', // overrides the level for the database handler
   ],
 ```
 
