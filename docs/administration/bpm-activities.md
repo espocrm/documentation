@@ -136,7 +136,7 @@ An Email Template is used to generate the email. You can use regular placeholder
 
 You can catch a reply to a sent email with Message Intermediate Event further in the process.
 
-Additional attachments can be added to an email using the *Attachmnents Variable* parameter. Specify a Formula variable name that contains an attachment ID or an array of attachment IDs. You can generate needed attachments in a Formula script in a previous action. As of v3.6.
+Additional attachments can be added to an email using the *Attachments Variable* parameter. Specify a Formula variable name that contains an attachment ID or an array of attachment IDs. You can generate needed attachments in a Formula script in a previous action. As of v3.6.
 
 ### Opting-out
 
