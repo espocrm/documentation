@@ -33,7 +33,9 @@
 * [Users](administration/users-management.md)
 * [Roles](administration/roles-management.md)
 * [Email administration](administration/emails.md)
-* [Formula Script](administration/formula.md)
+* Formula
+  * [Formula script](administration/formula.md)
+  * [Functions](administration/formula-functions.md)
 * [Import](administration/import.md)
 * [Portal](administration/portal.md)
 * [Currency](administration/currency.md)
