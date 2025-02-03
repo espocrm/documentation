@@ -50,7 +50,6 @@ Functions:
 * [string\replace](formula/string.md#stringreplace)
 * [string\split](formula/string.md#stringsplit)
 
-
 ## Datetime
 
 [datetime](formula/datetime.md)
@@ -171,7 +170,6 @@ Functions:
 * [language\translate](formula/language.md#languagetranslate)
 * [language\translateOption](formula/language.md#languagetranslateOption)
 
-
 ## Json
 
 [json](formula/json.md)
@@ -196,7 +194,6 @@ Functions:
 * [ext\acl\checkScope](formula/ext.md#extaclcheckscope)
 * [ext\acl\getLevel](formula/ext.md#extaclgetlevel)
 * [ext\acl\getPermissionLevel](formula/ext.md#extaclgetpermissionlevel)
-
 
 ## Util
 
