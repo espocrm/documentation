@@ -4,7 +4,7 @@ The [BPM tool](bpm.md) provides additional formula functions.
 
 A Formula script can be utilized in conditions, script tasks, and various task actions. Some functions can be used in a workflow (broadcastSignal, startProcess).
 
-* [bpm\targetEntity\attribute](##bpmtargetentityattribute)
+* [bpm\targetEntity\attribute](#bpmtargetentityattribute)
 * [bpm\createdEntity\attribute](#bpmcreatedentityattribute)
 * [bpm\processEntity\attribute](#bpmprocessentityattribute)
 * [bpm\startProcess](#bpmstartprocess)
