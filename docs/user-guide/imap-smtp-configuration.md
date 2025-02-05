@@ -54,7 +54,7 @@ To set up an SMTP account, do the following:
 2. Navigate to *App > G Suite > Gmail > Advanced settings*.
 3. Select the organizational unit in the *organizations section*.
 4. Under the POP and IMAP Access, uncheck the *Disable POP and IMAP access for all users box* checkbox.
-5. Each user has to enable IMAP access as described for [Gmail Account](#setup-for-gmail-account).
+5. Each user has to enable IMAP access as described for [Gmail Account](#gmail).
 
 ## Gmail
 

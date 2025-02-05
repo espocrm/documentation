@@ -4,11 +4,11 @@ Follow these steps to move EspoCRM to another server.
 
 ### Step 1. Backup files
 
-Open a file manager or login via SSH to archive all available files from the EspoCRM directory. See [more details](backup-and-restore.md#step-1-backup-files).
+Open a file manager or login via SSH to archive all available files from the EspoCRM directory. See [more details](backup-and-restore.md#step-1-back-up-files).
 
 ### Step 2. Backup your database
 
-The data stored in the database (MySQL, MariaDB or PostgreSQL) should be backed up. Follow this [recommendation](backup-and-restore.md#step-2-backup-database).
+The data stored in the database (MySQL, MariaDB or PostgreSQL) should be backed up. Follow this [recommendation](backup-and-restore.md#step-2-back-up-database).
 
 ### Step 3. Copy files and database backups to another server
 

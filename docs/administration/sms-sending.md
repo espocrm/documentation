@@ -29,7 +29,7 @@ Next, go to Administration > Integrations, select your provider, and set up need
 
 ## Sending with formula
 
-It's possible to send SMS from a formula-script with the [ext\sms\send](formula.md#extsmssend) function.
+It's possible to send SMS from a formula-script with the [ext\sms\send](formula/ext.md#extsmssend) function.
 
 ### With Workflow
 

@@ -17,7 +17,7 @@ In this article:
 * [Recommendations & requirements](#recommendations-requirements)
 * [Required permissions for Unix-based systems](#required-permissions-for-unix-based-systems)
 * [Setting up crontab](#setting-up-crontab)
-* [Configuration instructions based on your server](#configuration-instructions-based-on-your-server)
+* [Configuration instructions based on your server](#configuration-instructions-for-specific-web-servers)
 * [See also](#see-also)
 
 

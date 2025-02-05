@@ -50,7 +50,6 @@ Functions:
 * [string\replace](formula/string.md#stringreplace)
 * [string\split](formula/string.md#stringsplit)
 
-
 ## Datetime
 
 [datetime](formula/datetime.md)
@@ -169,8 +168,7 @@ Functions:
 [language](formula/language.md)
 
 * [language\translate](formula/language.md#languagetranslate)
-* [language\translateOption](formula/language.md#languagetranslateOption)
-
+* [language\translateOption](formula/language.md#languagetranslateoption)
 
 ## Json
 
@@ -183,7 +181,7 @@ Functions:
 
 [ext](formula/ext.md)
 
-* [ext\account\findByEmailAddress](formula/ext.md##extaccountfindbyemailaddress)
+* [ext\account\findByEmailAddress](formula/ext.md#extaccountfindbyemailaddress)
 * [ext\currency\convert](formula/ext.md#extcurrencyconvert)
 * [ext\email\send](formula/ext.md#extemailsend)
 * [ext\email\applyTemplate](formula/ext.md#extemailapplytemplate)
@@ -196,7 +194,6 @@ Functions:
 * [ext\acl\checkScope](formula/ext.md#extaclcheckscope)
 * [ext\acl\getLevel](formula/ext.md#extaclgetlevel)
 * [ext\acl\getPermissionLevel](formula/ext.md#extaclgetpermissionlevel)
-
 
 ## Util
 

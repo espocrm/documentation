@@ -88,7 +88,7 @@ Sync is run by the scheduled job *Outlook Calendar Sync*. By default, it is exec
 
 Check whether the scheduled job is running Administration > Scheduled Jobs > Outlook Calendar Sync > Log.
 
-Check EspoCRM log at `data/logs` directory. You can also set the [log mode](../../administration/troubleshooting.md#enabling-debug-mode-for-a-logger) to `DEBUG` level to obtain more info from the log.
+Check EspoCRM log at `data/logs` directory. You can also set the [log mode](../../administration/troubleshooting.md#debug-mode) to `DEBUG` level to obtain more info from the log.
 
 ## Office 365 configuration
 

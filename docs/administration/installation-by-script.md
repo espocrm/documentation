@@ -49,7 +49,7 @@ Installation with SSL/TLS certificate. Ex. `--ssl`. See [installation modes](#in
 
 #### `--letsencrypt`
 
-Installation with a Let's Encrypt free certificate. Ex. `--ssl --letsencrypt`. See [installation modes](#1-lets-encrypt-free-certificate).
+Installation with a Let's Encrypt free certificate. Ex. `--ssl --letsencrypt`. See [installation modes](#1-lets-encrypt-certificate).
 
 #### `--owncertificate`
 
