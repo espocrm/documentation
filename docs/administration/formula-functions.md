@@ -168,7 +168,7 @@ Functions:
 [language](formula/language.md)
 
 * [language\translate](formula/language.md#languagetranslate)
-* [language\translateOption](formula/language.md#languagetranslateOption)
+* [language\translateOption](formula/language.md#languagetranslateoption)
 
 ## Json
 
@@ -181,7 +181,7 @@ Functions:
 
 [ext](formula/ext.md)
 
-* [ext\account\findByEmailAddress](formula/ext.md##extaccountfindbyemailaddress)
+* [ext\account\findByEmailAddress](formula/ext.md#extaccountfindbyemailaddress)
 * [ext\currency\convert](formula/ext.md#extcurrencyconvert)
 * [ext\email\send](formula/ext.md#extemailsend)
 * [ext\email\applyTemplate](formula/ext.md#extemailapplytemplate)
