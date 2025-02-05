@@ -117,6 +117,10 @@ Specify **Seller Information** fields that will be included in electronic invoic
 
 To include a buyer's electronic address in electronic invoices, you need to specify the electronic address in an Account record. The Sales Pack comes with two additional fields in the Account entity type: Electronic Address Scheme and Electronic Address Identifier. Add these fields to the *Detail* layout at Administration > Entity Manager > Account > Layouts > Detail. Then, you will be able to set these fields in Accounts.
 
+### Invoice
+
+A standard you use may require the Buyer Reference. The Buyer Reference field exists in the Invoice entity type, an administrator can add it to the Datail layout.
+
 ### Country codes
 
 The EN 16931 standard requires countries to be represented as ISO 3166-1 alpha-2 codes. But in Espo, the *Address* field allows a country to be an arbitrary string. As of EspoCRM v8.3 it's possible to [map](../administration/addresses.md) country names to ISO 3166-1 alpha-2 codes. This mapping is used when E-Invoices are generated.
