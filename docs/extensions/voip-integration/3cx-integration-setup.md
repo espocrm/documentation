@@ -4,7 +4,7 @@
 
 ## How to setup 3CX Integration for an administrator
 
-Fill in the connection details of your 3CX server. To do this, go to the Administration (System panel) -> VoIP · 3cx.
+Fill in the connection details of your 3CX server. To do this, go to the Administration (System panel) > Integrations > VoIP · 3cx.
 
 ![3CX integration config](../../_static/images/extensions/voip-integration/3cx-admin-setup.png)
 

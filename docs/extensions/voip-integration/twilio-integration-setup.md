@@ -11,7 +11,7 @@ There are two ways in which you can set up Twilio integration:
 
 1. Login to your Twilio account. If you have never used Twilio before, then create the account and purchase a phone number if needed.
 2. Login as Administrator in EspoCRM.
-3. Navigate to the Administration > VoIP Settings > VoIP » Twilio.
+3. Navigate to the Administration (System panel) > Integrations > VoIP · Twilio.
 4. Tick off Enabled box.
 5. Fill in the connection details of your Twilio account.
 
@@ -30,11 +30,15 @@ There are two ways in which you can set up Twilio integration:
 * **Enabled SIP Domains** – the list of enabled Twilio SIP domains which are used in EspoCRM.
 * **List of ignored numbers** – list of numbers which will be ignored. Popup window will not be displayed. Use numbers in the following formats: +14844608117 (full number match) or #4844608117# (regular expression).
 * **Permitted Entities** – entities that will be displayed in the popup window and will be used to identify a caller by his phone number.
+* **Apply global ACL for caller lookup** – apply global ACL rules (Administration > Roles) for caller lookup. This information is displayed in the popup window. If unchecked, no ACL restrictions are used.
 * **Hide a Lead** – Hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display only Accounts related to Contacts.
 * **Automatically save a call** – automatically save incoming/outgoing calls without having to press “Save” button.
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
+* **Call Transfer Entities** – the list of entities used for call transfer.
+* **Transfer Timeout** – the number of seconds the customer has to wait for an agent to answer the transferred call.
+* **Experimental features** – test experimental features.
 
 ## How to configure routing of Twilio phone numbers
 
@@ -42,7 +46,7 @@ After you have successfully filled in the connection details, EspoCRM will impor
 
 1. **Configure Routing**
 
-    To configure Twilio phone number routing, go to Administration > VoIP Routing and select the phone number.
+    To configure Twilio phone number routing, go to Administration > VoIP Trunks and select the phone number.
 
     ![Twilio Routers](../../_static/images/extensions/voip-integration/twilio-routing.png)
 
@@ -59,7 +63,6 @@ After you have successfully filled in the connection details, EspoCRM will impor
 * **Farewell at the end of the call**
 * **Display the router's phone number as a caller** – display the office phone number (VoIP Router phone number) as caller.
 * **Team Users** – a list of users to configure receiving incoming/outgoing calls, SMS and MMS.
-
 
 2. **Grant access for Twilio Team members**
 
