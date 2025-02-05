@@ -152,7 +152,7 @@ Functions:
 * [array\removeAt](formula/array.md#arrayremoveat)
 * [array\unique](formula/array.md#arrayunique)
 
-## object
+## Object
 
 [object](formula/object.md)
 
