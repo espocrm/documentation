@@ -134,7 +134,13 @@ More information about file permissions can be found [here](server-configuration
 
 ## MySQL error: The server requested authentication method unknown to the client
 
-MySQL 8.0.4 has changed default authentication method to `caching_sha2_password` which is not supported by PHP. This issue can be solved by this [solution](server-configuration.md#mysql-8-support).
+MySQL 8.0.4 has changed a default authentication method to `caching_sha2_password` which is not supported by PHP (at the time of writing). For MySQL 8 it should be changed to `mysql_native_password` method. For a user it can be done with the query:
+
+```
+CREATE USER username@localhost identified with mysql_native_password by 'password';
+```
+
+where username is your MySQL user, password is your MySQL user password.
 
 ## Emails are not being fetched
 
