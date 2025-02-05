@@ -30,8 +30,6 @@ define(['views/fields/base'], (BaseFieldView) => {
         searchTemplateContent = ` ... `
         
         setup() {}
-        
-        afterRender() {}
     }
 });
 ```
