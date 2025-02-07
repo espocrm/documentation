@@ -138,12 +138,12 @@ Class: `Espo\Tools\Stream\Service`
 
 ## applicationConfig
 
-*As if v9.1.*
+*As of v9.1.*
 
 Class: `Espo\Core\Utils\Config\ApplicationConfig`
 
 ## systemConfig
 
-*As if v9.1.*
+*As of v9.1.*
 
 Class: `Espo\Core\Utils\Config\SystemConfig`
