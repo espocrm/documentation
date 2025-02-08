@@ -121,13 +121,13 @@ To include a buyer's electronic address in electronic invoices, you need to spec
 
 A standard you use may require the Buyer Reference, Purchare Order Reference. The corresponding fields exists in the Invoice entity type, an administrator can add them to the Datail layout.
 
-Additional fields that are mapped to an E-Invoce:
+Additional fields that are mapped to E-Invoce:
 
 * Buyer Reference
 * Purchare Order Reference
 * Note
 
-If you have a requirement to add fields that are not present in Espo out-of-the-box, a developer can implement a custom e-invoice preparator to map custom fields to an e-invoice.
+If you have a requirement to add fields that are not present in Espo out-of-the-box, a developer can implement a custom e-invoice preparator to map custom fields to e-invoice.
 
 ### Country codes
 
