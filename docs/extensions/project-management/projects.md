@@ -139,6 +139,8 @@ The Task's Owner is a User who oversees the Task. A User who created a Task auto
 
 The Assignee of a Task is a User who is responsible for performing the Task. A Task can be unassigned.
 
+Only members of the Project can be selected as assignees.
+
 ### Timeline
 
 A Task can have a Date Start and Date End. Both are non-mandatory fields.
