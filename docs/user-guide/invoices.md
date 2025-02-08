@@ -119,7 +119,7 @@ To include a buyer's electronic address in electronic invoices, you need to spec
 
 ### Invoice
 
-A standard you use may require the Buyer Reference. The Buyer Reference field exists in the Invoice entity type, an administrator can add it to the Datail layout.
+A standard you use may require the Buyer Reference and Purchare Order Reference. The corresponding fields exists in the Invoice entity type, an administrator can add them to the Datail layout.
 
 ### Country codes
 
