@@ -56,7 +56,7 @@ See the documentation [for quote templates](quotes.md#templates).
 
 ## Sending invoice in email
 
-An Invoice PDF can be send in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
+An Invoice PDF can be sent in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
 
 ## Automatic numbering
 
@@ -119,12 +119,12 @@ To include a buyer's electronic address in electronic invoices, you need to spec
 
 ### Invoice
 
-A standard you use may require the Buyer Reference, Purchare Order Reference. The corresponding fields exists in the Invoice entity type, an administrator can add them to the Datail layout.
+A standard you use may require the Buyer Reference, Purchase Order Reference. The corresponding fields exist in the Invoice entity type, an administrator can add them to the Detail layout.
 
 Additional fields that are mapped to E-Invoce:
 
 * Buyer Reference
-* Purchare Order Reference
+* Purchase Order Reference
 * Note
 
 If you have a requirement to add fields that are not present in Espo out-of-the-box, a developer can implement a custom e-invoice preparator to map custom fields to e-invoice.
