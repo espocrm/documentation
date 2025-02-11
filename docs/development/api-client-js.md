@@ -3,8 +3,6 @@
 * [Usage](#usage)
 * [Module](#module)
 
-Note: Does not support EspoCRM versions lower than 7.0.0.
-
 ## Usage
 
 ```js
@@ -19,8 +17,8 @@ const client = new Client(
 
 // POST example
 
-let payload = {
-    name: 'some name'
+const payload = {
+    name: 'Some name',
 };
 
 client
@@ -29,21 +27,21 @@ client
         // success
         console.log(response);
     })
-    .catch(reresponses => {
+    .catch(response => {
         // error
         console.log(response.statusCode, response.statusMessage);
     });
 
 // GET example
 
-let params = {
+const params = {
     maxSize: 5,
     where: [
         {
             type: 'equals',
             attribute: 'type',
             value: 'Customer',
-        }
+        },
     ],
     select: ['id', name'],
 };
@@ -53,7 +51,7 @@ client
     .then(response => {
         console.log(response);
     })
-    .catch(reresponses => {
+    .catch(response => {
         // error
         console.log(response.statusCode, response.statusMessage);
     });
