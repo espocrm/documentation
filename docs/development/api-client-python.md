@@ -1,6 +1,8 @@
 # API Client Implementation in Python
 
-Note: You need to have *requests* package installed with: `pip install requests`.
+!!! note
+
+    You need to have *requests* package installed with: `pip install requests`.
 
 ## Class
 
