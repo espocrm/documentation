@@ -52,6 +52,7 @@ See also:
 * [Rust](api-client-rust.md)
 * [Java](api-client-java.md)
 * [Go](api-client-go.md)
+* [Zig](api-client-zig.md)
 
 ## Setting up
 
