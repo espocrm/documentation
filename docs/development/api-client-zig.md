@@ -8,6 +8,10 @@
 - [Making an update PUT request](#making-an-update-request)
 - [Making a delete DELETE request](#making-a-delete-request)
 
+!!! note
+
+    This is an unofficial (3rd party) client.
+
 For the source code, refer to [GitHub](https://github.com/definitepotato/espocrmz).
 
 # Getting Started
