@@ -1,9 +1,14 @@
 # API Client implementation in Rust
+
 * [Installation](#installation)
 * [HMAC authorization](#hmac-authorization)
 * [API Key authorization](#api-key-authorization)
 * [Basic authorization](#basic-authorization)
 * [Making a request](#making-a-request)
+
+!!! note
+
+    This is an unofficial (3rd party) client.
 
 For the full documentation, refer to [docs.rs](https://docs.rs/espocrm-rs/latest/espocrm_rs/).
 For the source code, refer to [GitHub](https://github.com/TobiasDeBruijn/espocrm-rs).
