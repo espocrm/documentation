@@ -3,6 +3,10 @@
 - [Installing](#installing)
 - [Usage](#usage)
 
+!!! note
+
+    This is an unofficial (3rd party) client.
+
 For the source code, refer to the GitHub repository [here](https://github.com/TobiasDeBruijn/espocrm-java).
 
 ## Installing
