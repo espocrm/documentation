@@ -85,28 +85,26 @@ class Client {
 
         let url = this._buildUrl(action);
 
-        let headers = {};
+        const headers = {};
 
         if (this.apiKey && this.secretKey) {
             let string = method + ' /' + action;
 
             const crypto = require('crypto');
 
-            let b2 = crypto
+            const b2 = crypto
                 .createHmac('sha256', this.secretKey)
                 .update(string)
                 .digest();
 
-            let b1 = Buffer.from(this.apiKey + ':');
+            const b1 = Buffer.from(this.apiKey + ':');
 
-            let authPart = Buffer.concat([b1, b2]).toString('base64');
+            const authPart = Buffer.concat([b1, b2]).toString('base64');
 
             headers['X-Hmac-Authorization'] = authPart;
-        }
-        else if (this.apiKey) {
+        } else if (this.apiKey) {
             headers['X-Api-Key'] = this.apiKey;
-        }
-        else {
+        } else {
             throw new Error('Api-Key is not set.');
         }
 
@@ -117,8 +115,7 @@ class Client {
                 const querystring = require('querystring');
 
                 url += '?' + querystring.stringify({searchParams: JSON.stringify(data)});
-            }
-            else {
+            } else {
                 postData = JSON.stringify(data);
 
                 headers['Content-Type'] = 'application/json';
@@ -127,7 +124,7 @@ class Client {
         }
 
         return new Promise((resolve, reject) => {
-            let o = {
+            const o = {
                 headers: headers,
                 method: method,
             };
@@ -158,8 +155,7 @@ class Client {
 
                     try {
                         data = JSON.parse(data);
-                    }
-                    catch (e) {
+                    } catch (e) {
                         console.error(`Error: Could not parse response`);
                         reject({});
 
@@ -172,6 +168,7 @@ class Client {
 
             req.on('error', e => {
                 console.error(`Error: ${e.message}`);
+
                 reject(e);
             });
 
