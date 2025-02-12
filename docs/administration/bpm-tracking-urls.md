@@ -2,7 +2,7 @@
 
 ## Non-unique URL
 
-It's possible to add links into email body and catch when a recipient clicked on it. It provides the ability to automate an interaction with customers.
+It's possible to add links into email body and catch when a recipient clicked on it. It provides the ability to automate interactions with customers.
 
 A Tracking URL can be created at Campaigns > top-right menu > Tracking URLs. Create a URL and obtain a generated placeholder (example: `{trackingUrl:5d8206aa9d76df4c8}`). Use that placeholder as a URL of the link in your email template.
 
