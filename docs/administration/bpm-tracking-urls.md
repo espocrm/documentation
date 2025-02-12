@@ -8,7 +8,7 @@ A Tracking URL can be created at Campaigns > top-right menu > Tracking URLs. Cre
 
 Further in the process flow, you will be able to catch the URL click with the *Signal Intermediate Event (Catching)*.
 
-A signal that is broadcasted once the tracking URL with the ID 'TRACKING_URL_ID' is clicked by a person represented in the system as the entity of the 'ENTITY_TYPE' with the ID 'ID' will have the name: `clickUrl.ENTITY_TYPE.ID.TRACKING_URL_ID`. See the example below.
+When the tracking URL is clicked, the system broadasts the singal `clickUrl.ENTITY_TYPE.ID.TRACKING_URL_ID`. Where *ENTITY_TYPE* is an entity type of the person stored in the CRM, *ID* is a record ID of the person, *TRACKING_URL_ID* is an ID of the tracking URL record. See the example below.
 
 Process flowchart example:
 
