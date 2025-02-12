@@ -140,7 +140,7 @@ Additional attachments can be added to an email using the *Attachments Variable*
 
 ### Opting-out
 
-It's possible to add opt-out link to an email body. Opting out can be caught within a process with Catching Signal Event with the signal name `optOut.ENTITY_TYPE.{$id}`, where *ENTITY_TYPE* should be replaced with an entity type (e.g. Lead), *{$id}* is a placeholder standing for the target record ID. Signal name usage example: `optOut.Lead.{$id}`.
+It's possible to add opt-out link to an email body. Opting out can be caught within the process with Catching Signal Event with the signal name `optOut.ENTITY_TYPE.{$id}`, where *ENTITY_TYPE* should be replaced with an entity type (e.g. Lead), *{$id}* is a placeholder standing for the target record ID. Signal name usage example: `optOut.Lead.{$id}`.
 
 ### Tracking URLs
 
@@ -247,7 +247,7 @@ With the Script Task, you can define actions that are impossible to do with the 
 
 ## Sub-Process
 
-A sub-process is an isolated process that executes within a parent process. A sub-process has it's own flowchart. It starts once the flow reaches its activity element in the parent process.
+A sub-process is an isolated process that executes within the parent process. A sub-process has it's own flowchart. It starts once the flow reaches its activity element in the parent process.
 
 A sub-process should have one (and only one) regular Start Event.
 
