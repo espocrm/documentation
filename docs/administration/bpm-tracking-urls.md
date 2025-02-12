@@ -6,7 +6,7 @@ It's possible to add links into email body and catch when a recipient clicked on
 
 A Tracking URL can be created at Campaigns > top-right menu > Tracking URLs. Create a URL and obtain the generated placeholder (example: `{trackingUrl:5d8206aa9d76df4c8}`). Use that placeholder as a URL of the link in your email template.
 
-Further in the process flow, you will be able to catch the URL click with *Signal Intermediate Event (Catching)*.
+Further in the process flow, you will be able to catch the URL click with the *Signal Intermediate Event (Catching)*.
 
 A signal that is broadcasted once the tracking URL with the ID 'TRACKING_URL_ID' is clicked by a person represented in the system as the entity of the 'ENTITY_TYPE' with the ID 'ID' will have the name: `clickUrl.ENTITY_TYPE.ID.TRACKING_URL_ID`. See the example below.
 
