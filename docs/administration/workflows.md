@@ -102,7 +102,7 @@ Is supposed to be run by another Workflow. Provides the ability to create comple
 
 ### Signal
 
-Triggered when a specified signal is escalated in the system. Only object signals can be used here. See [more info](bpm-signals.md) about signals.
+Triggered when a specified signal is broadcast in the system. Only object signals can be used here. See [more info](bpm-signals.md) about signals.
 
 ----
 
