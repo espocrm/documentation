@@ -38,7 +38,7 @@ Each user who wants to use 3CX integration, should setup his access in the User�
 * **Your VoIP password** – your password of the 3CX server.
 * **Display call notifications** – an option to enable/disable incoming/outgoing call notifications.
 * **Silent notifications** – mute notification sound.
-* **Use internal click-to-call** – an option to enable/disable the internal click-to-call feature. It is a feature to make outgoing calls through the Starface server. If the checkbox is unchecked, then an external application will handle “tel:” links.
+* **Use internal click-to-call** – an option to enable/disable the internal click-to-call feature. It is a feature to make outgoing calls through the 3CX server. If the checkbox is unchecked, then an external application will handle “tel:” links.
 * **User Dial Context** – Dial Context for a User. If it is empty, a Dial Context of a connector will be used.
 
 ## Access control for users
