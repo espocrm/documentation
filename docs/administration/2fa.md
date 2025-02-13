@@ -29,7 +29,7 @@ Next time when you log in to Espo, you will need to enter your username and pass
 
 If you are not an administrator, you need to contact the administrator to ask them to disable 2FA for your user account.
 
-If you are an administrator, the only option is to disable 2FA globally by setting `'auth2FA' => false` in the condif file `data/config.php`.
+If you are an administrator, the only option is to disable 2FA globally by setting `'auth2FA' => false` in the condig file `data/config.php`.
 
 ## Authentication via email
 
