@@ -53,4 +53,4 @@ After that, you need to click *Save*.
 
 ## Misc
 
-If you Espo entity type has a custom *Varchar* field named `location`,  it will be synced with Outlook Calendar. As of v1.4.0.
+If your Espo entity type has a custom *Varchar* field named `location`,  it will be synced with Outlook Calendar. As of v1.4.0.
