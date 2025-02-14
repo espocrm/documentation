@@ -115,13 +115,13 @@ There is the ability to specify custom [complex expressions](complex-expressions
 
 ### Order by
 
-The *Order by* field defines how report data will be sorted.
+The *Order By* field defines how report data will be sorted.
 
-### Filters
+### Filters section
 
 At *Filters* section, you can specify criteria to limit data displayed in the report results. You can use logical operators 'OR' and 'AND' here. More info [below](#filters_1).
 
-### Runtime Filters
+### Runtime filters
 
 *Runtime Filters* allow you to specify criteria before running a report.
 
