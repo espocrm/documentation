@@ -1,6 +1,6 @@
 # Reports
 
-The Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/). It provides analytic capabilities and two additional functionalities: report panels and custom list view filters.
+The Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/). It provides the analytic capabilities and two additional functionalities: report panels and custom list view filters.
 
 There are three types of reports:
 
