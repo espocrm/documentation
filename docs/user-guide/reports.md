@@ -172,9 +172,9 @@ If a regular user does not have edit access to the *Apply ACL* field (via field 
 
 ## Joint Grid reports
 
-Joint Grid reports combine multiple grid reports of different entity types. Sub-reports selected for a joint report must be grouped by either 1 or 0 fields.
+Joint Grid reports combine multiple grid reports. The combined reports can be aginst different entity types. Sub-reports selected for a joint report must be grouped by either only one field or have no grouping.
 
-If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
+If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use the Joint Report type to combite them into one.
 
 Some usage examples:
 
@@ -184,7 +184,7 @@ Some usage examples:
 
 You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
 
-For charts, colors of columns must be specified in sub-reports.
+For charts, colors of columns must be specified in the sub-reports.
 
 Runtime filters are not supported in joint reports. Only regular filters specified in each sub-report can be used.
 
