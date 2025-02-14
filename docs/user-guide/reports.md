@@ -214,7 +214,7 @@ NOT IN provides the ability to filter records that don't meet specified criteria
 
 !!! note
 
-    It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively affect a report performance in some cases.
+    It's recommended to avoid using NOT IN group when possible, by using filters 'Not Equals', 'None of', etc. instead. NOT IN group uses a sub-query that can negatively affect report performance in some cases.
 
 ![NOT IN group](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/filter-not.png)
 
