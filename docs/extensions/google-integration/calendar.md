@@ -62,4 +62,4 @@ After that, you need to click *Save*.
 
 ## Misc
 
-If in EspoCRM your entity type has a *Text* or *Varchar* field named `location`  it will be synced with the Google Calendar's location.
+If you Espo entity type has a  *Varchar* or *Text* field named `location`,  it will be synced with the Google Calendar's location.
