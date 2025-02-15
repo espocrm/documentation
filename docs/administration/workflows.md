@@ -22,7 +22,7 @@ In this article:
 
 * [After record created](#after-record-created)
 * [After record updated](#after-record-updated)
-* [After record saved](#after-record-saved)
+* [After record create or updated](#after-record-created-or-updated)
 * [Manual](#manual)
 * [Scheduled](#scheduled)
 * [Sequential](#sequential)
@@ -36,7 +36,7 @@ Triggered only when a new record is created. If specified conditions are met, th
 
 Triggered only when an existing record is updated. If specified conditions are met, then actions will be executed.
 
-### After record saved
+### After record created or updated
 
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
 
