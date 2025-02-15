@@ -166,9 +166,9 @@ Note that non-aggregated columns in grid reports are not exported to XLSX.
 
 ### Access
 
-By checking *Apply ACL*, the report result will not include records that the current user does not have access to.
+By checking *Apply access control*, the report result will not include records that the current user does not have access to.
 
-If a regular user does not have edit access to the *Apply ACL* field (via field level security in Roles), all reports they create will have the *Apply ACL* automatically checked (as of v2.13.5).
+If a regular user does not have edit access to the *Apply access control* field (via field level security in Roles), all reports they create will have the *Apply access control* automatically checked (as of v2.13.5).
 
 ## Joint Grid reports
 
