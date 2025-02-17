@@ -8,7 +8,7 @@ In this article:
 * [Add click-to-call feature to a custom entity](#add-click-to-call-feature-to-a-custom-entity)
 * [Add custom entities to Permitted Entities](#add-custom-entities-to-permitted-entities)
 * [Add custom entities to Quick Create Entities](#add-custom-entities-to-quick-create-entities)
-* [Event information in Permitted / Quick Create Entity](#event-information-in-permitted--quick-create-entity)
+* [Event information in Permitted / Quick Create Entity](#event-information-in-permitted-quick-create-entity)
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
 * [Format phone number](#format-phone-number)
 * [Call recording for Asterisk](#call-recording-for-asterisk)
