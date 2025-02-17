@@ -140,6 +140,8 @@
   * [Export](extensions/export-import/export.md)
   * [Import](extensions/export-import/import.md)
   * [Compare](extensions/export-import/compare.md)
+  * [Run by code](extensions/export-import/run-by-code.md)
+  * [Customization](extensions/export-import/customization.md)
 
 ---
 

@@ -26,3 +26,8 @@ You need to install the Export Import extension on your EspoCRM instance. Downlo
 * [Export](export.md)
 * [Import](import.md)
 * [Compare changes](compare.md)
+
+## Additional information
+
+* [Run by code](run-by-code.md)
+* [Customization](customization.md)
