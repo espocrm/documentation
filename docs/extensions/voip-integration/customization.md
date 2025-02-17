@@ -8,7 +8,7 @@ In this article:
 * [Add click-to-call feature to a custom entity](#add-click-to-call-feature-to-a-custom-entity)
 * [Add custom entities to Permitted Entities](#add-custom-entities-to-permitted-entities)
 * [Add custom entities to Quick Create Entities](#add-custom-entities-to-quick-create-entities)
-* [Fetching information from the Call to Quick Create Entity](#fetching-information-from-the-call-to-quick-create-entity)
+* [Event information in Permitted / Quick Create Entity](#event-information-in-permitted--quick-create-entity)
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
 * [Format phone number](#format-phone-number)
 * [Call recording for Asterisk](#call-recording-for-asterisk)
@@ -44,9 +44,9 @@ By default the Message entity tab should be added into the tab list.
 
 ![Message tab](../../_static/images/extensions/voip-integration/message-tab.png)
 
-## Grant access to Calls 
+## Grant access to Calls
 
-Don't forget to give users access to the entity '**Calls**', so that they could make and accept calls. Go to the needed **User** > **Roles**. 
+Don't forget to give users access to the entity '**Calls**', so that they could make and accept calls. Go to the needed **User** > **Roles**.
 
 Select the role or create a new one. Turn on '**Enabled**' access to the entity '**Calls**' and click '**Save**'.
 
@@ -118,11 +118,13 @@ To add some custom entities to Quick Create Entities, create/modify the file `/c
 Make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
-## Fetching information from the Call to Quick Create Entity 
+## Event information in Permitted / Quick Create Entity
 
-If Quick Create Entity is a '**Task**' entity, and need to fetch `phoneNumber` from the '**Call**' in the `description` field:
+There is a way to get event information while creating a `Permitted` / `Quick Create` entity.
 
-1. In *custom/Espo/Custom/Resources/metadata/entityDefs/Task.json* add the field:
+For example, if we need to fetch a `phoneNumber` into the `description` field for a **Task** entity:
+
+1. Add the field in `custom/Espo/Custom/Resources/metadata/entityDefs/Task.json`:
 
 ```
 {
@@ -135,15 +137,16 @@ If Quick Create Entity is a '**Task**' entity, and need to fetch `phoneNumber` f
 }
 ```
 
-2. Make rebuild and grant the necessary permissions: https://docs.espocrm.com/administration/server-configuration/#permissions.
-3. In Administration > Entity Manager > Task > Formula > Before Save Custom Script add the following formula:
+2. Make rebuild and grant the [necessary permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
+
+3. Add the following formula in `Administration` > `Entity Manager` > `Task` > `Formula` > `Before Save Custom Script`:
 
 ```
 $voipEventData = json\encode(voipEventData);
 description = json\retrieve($voipEventData, 'phoneNumber');
 ```
 
-In addition to `phoneNumber` you can get the following data from *voipEventData*: `id`, `status`, `type`, `assignedUserId` etc.
+In addition to `phoneNumber`, additional data such as `id`, `status`, `type`, `assignedUserId`, etc., can be fetched from `voipEventData`. All data can be viewed after adding the `voipEventData` field to a layout.
 
 ## Adding a call name to a call popup
 
