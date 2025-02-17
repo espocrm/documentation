@@ -129,7 +129,6 @@ If Quick Create Entity is a '**Task**' entity, and need to fetch `phoneNumber` f
     "fields": {
         "voipEventData": {
             "type": "jsonObject",
-            "clientReadOnly": true,
             "notStorable": true
         }
     }
@@ -143,6 +142,8 @@ If Quick Create Entity is a '**Task**' entity, and need to fetch `phoneNumber` f
 $voipEventData = json\encode(voipEventData);
 description = json\retrieve($voipEventData, 'phoneNumber');
 ```
+
+In addition to `phoneNumber` you can get the following data from *voipEventData*: `id`, `status`, `type`, `assignedUserId` etc.
 
 ## Adding a call name to a call popup
 
