@@ -58,7 +58,7 @@ Where list reports can be also utilized:
 
 * Scheduled workflows – to do some scheduled actions over records that met criteria specified by a list report.
 * Scheduled BPM processes – to start BPM processes for records that met some criteria.
-* Sync with target lists – to add records that met some criteria to target lists, more info [below](#syncing-with-target-lists). 
+* Sync with target lists – to add records that met some criteria to target lists, more info [below](#syncing-with-target-lists).
 * List view filters – to filter records on the list view according to the criteria specified in the list report, more info [below](#report-filters).
 * Panels on the detail view – to display related records that met some criteria on the side panel, more info [below](#report-panels).
 * Applying assignment rule – to assign records that met specific criteria by workflow or BPM.
@@ -119,7 +119,7 @@ The *Order By* field defines how report data will be sorted.
 
 ### Filters section
 
-At *Filters* section, you can specify criteria to limit data displayed in the report results. You can use logical operators 'OR' and 'AND' here. More info [below](#filters_1).
+At *Filters* section, you can specify criteria to limit data displayed in the report results. You can use logical operators 'OR' and 'AND' here. More info [below](#filters).
 
 ### Runtime filters
 
@@ -255,7 +255,7 @@ More info about complex expressions is available [here](complex-expressions.md).
 !!! example
 
     Filter record that were created after less than 12 month from the creation of a related account. For example, it can be used to show sales only from new customers.
-    
+
     ```
     LESS_THAN:(
         TIMESTAMPDIFF_MONTH:(
