@@ -5,6 +5,7 @@ In this article:
 - [Installing with Docker](#install-espocrm-with-docker)
 - [Installing with Docker Compose](#install-espocrm-with-docker-compose)
 - [Installing with Traefik](#install-espocrm-with-traefik)
+- [Installing with Caddy](#install-espocrm-with-caddy)
 - [Upgrading](#upgrading)
 - [Shutdown and cleanup](#shutdown-and-cleanup-containers)
 - [Running a shell](#running-a-shell)
@@ -147,6 +148,10 @@ $ docker-compose up -d
 ### Install EspoCRM with Traefik
 
 You can read the instructions for installing EspoCRM in conjunction with Traefik in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/traefik/).
+
+### Install EspoCRM with Caddy
+
+You can read the instructions for installing EspoCRM in conjunction with Caddy in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/caddy/).
 
 ### Upgrading
 
