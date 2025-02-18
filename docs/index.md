@@ -13,6 +13,7 @@
     * [Installation by script](administration/installation-by-script.md)
     * [Installation with Docker](administration/docker/installation.md)
     * [Installation with Traefik](administration/docker/traefik.md)
+    * [Installation with Caddy](administration/docker/caddy.md)
   * [Upgrading](administration/upgrading.md)
   * [Extensions](administration/extensions.md)
   * [Jobs](administration/jobs.md)
