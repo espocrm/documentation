@@ -1,6 +1,6 @@
 # Caddy and EspoCRM
 
-The [Caddy web server](https://caddyserver.com/) is an open-source, HTTP/2-enabled web server written in Go.
+The Caddy web server is an open-source, HTTP/2-enabled web server written in Go.
 
 To connect Caddy and EspoCRM, you can use the Docker Compose environment. Also, you must have your own domain.
 
