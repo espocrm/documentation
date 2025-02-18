@@ -4,8 +4,9 @@ The Caddy web server is an open-source, HTTP/2-enabled web server written in Go.
 
 To connect Caddy and EspoCRM, you can use the Docker Compose environment. Also, you must have your own domain.
 
-1. Create a folder that will contain your EspoCRM files and database.
-2. Create here a `docker-compose.yml` file:
+1\. Create a folder that will contain your EspoCRM files and database.
+
+2\. Create here a `docker-compose.yml` file:
 
 #### docker-compose.yml
 
@@ -20,10 +21,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./certs:/etc/caddy/certs                   # optional: if you have self-signed certificates
-      - ./Caddyfile:/etc/caddy/Caddyfile 
+      - ./certs:/etc/caddy/certs            # optional: if you have self-signed certificates
+      - ./Caddyfile:/etc/caddy/Caddyfile
     environment:
-      - ACME_AGREE=true                            # to automatically obtain certificates
+      - ACME_AGREE=true                     # to automatically obtain certificates
 
   espocrm-db:
     image: mariadb:latest
@@ -54,7 +55,7 @@ services:
     depends_on:
       - espocrm-db
     expose:
-      - 80 
+      - 80
 
   espocrm-daemon:
     image: espocrm/espocrm
@@ -88,7 +89,7 @@ volumes:
   espocrm-db:
 ```
 
-3. Create here a `Caddyfile` text file:
+3\. Create here a `Caddyfile` text file:
 
 #### Caddyfile
 
@@ -102,8 +103,9 @@ espocrm-example.com {
         header_up X-Forwarded-For {remote}
         header_up X-Forwarded-Proto {scheme}
     }
-# Optional for Self-Signed SSL Certificate
-    tls /etc/caddy/certs/myserver.crt /etc/caddy/certs/myserver.key
+
+    # Optional for Self-Signed SSL Certificate
+    # tls /etc/caddy/certs/myserver.crt /etc/caddy/certs/myserver.key
 }
 ```
 
