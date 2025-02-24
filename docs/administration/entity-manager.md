@@ -64,9 +64,11 @@ By clicking the **Fields** button, you will be moved to a separate page. There, 
 
 [More detail](fields.md) about fields.
 
-!!! note
+!!! important
 
     After you created a new field, you may also need to put this field on [layouts](layout-manager.md) (Administration > Layout Manager).
+
+    You also need to add the field to the Search Filters layout to be able to search by the field on the list view.
 
 ## Relationships
 
