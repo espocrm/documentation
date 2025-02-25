@@ -9,6 +9,7 @@ In this article:
 * [Target lists](#target-lists)
 * [Campaign log](#campaign-log)
 * [Bounce emails](#bounce-emails)
+* [Informational emails](#informational-emails)
 * [Settings](#settings)
 * [Troubleshooting](#troubleshooting)
 
@@ -91,6 +92,21 @@ A bounce email is an automatic email message from an email system reporting that
 There are two types of bounced emails: hard and soft. The hard-bounce will mark the recipient email address as invalid so no more emails will be sent to it in future. Soft-bounces will be only logged in the campaign log.
 
 Bounced emails can be handled only by a *Group Email Account*. 
+
+## Informational emails
+
+*As of v9.1.*
+
+Informational emails are not related to marketing. For example, they may provide details about a license update or a notice about scheduled service maintenance.
+
+For sending informational emails (non-marketing), choose the *Informational Email* campaign type.
+
+How it differs from the regular Email type:
+
+* Mass emails are sent to all targets regardless of their opt-out status.
+* Opt-out link is not included.
+* Tracking URLs do not function.
+* Open tracking does not function.
 
 ## Settings
 
