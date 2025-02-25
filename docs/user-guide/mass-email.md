@@ -99,7 +99,7 @@ Bounced emails can be handled only by a *Group Email Account*.
 
 Informational emails are not related to marketing. For example, they may provide details about a license update or a notice about scheduled service maintenance.
 
-For sending informational emails (non-marketing), choose the *Informational Email* campaign type.
+For sending informational emails, choose the *Informational Email* type when creating a new Campaign.
 
 How it differs from the regular Email type:
 
