@@ -122,7 +122,7 @@ define('custom:views/account/test', ['view'], (View) => {
 
         async loadModel() {
             this.model = await this.getModelFactory().create('Account');
-            this.model = this.options.id;
+            this.model.id = this.options.id;
 
             await this.model.fetch();
         }
