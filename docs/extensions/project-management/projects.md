@@ -80,6 +80,8 @@ A Project Role defines the following Task related actions and levels:
 * Stage Edit – all/assigned/own – what Tasks can move on the board;
 * Delete – all/own/no – what Tasks can delete.
 
+Only Editor and Owner members have access to the Stream of the Project.
+
 ## Tasks
 
 In the Project Management tool, a Task is represented by the *Project Task* entity type.
