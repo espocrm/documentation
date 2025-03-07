@@ -62,8 +62,8 @@ A project owner or a user with *Edit* access can manage project members. Each me
 
 Built-in roles:
 
-* Owner – can edit the Project; can manage members; can create and edit Tasks;
-* Editor – can edit the Project; can create and edit Tasks;
+* Owner – can edit the Project; can manage members; can create and edit Tasks; has access to the Stream of the Project;
+* Editor – can edit the Project; can create and edit Tasks; has access to the Stream of the Project;
 * Member – can view Tasks assigned to them; can move assigned Tasks between Stages; can edit Tasks they own.
 
 The admin can create custom Project Roles. The Project Roles list view is available at: the Project list view > the dropdown menu in the top-right corner > Roles.
@@ -79,8 +79,6 @@ A Project Role defines the following Task related actions and levels:
 * Edit – all/assigned/own – what Tasks can edit;
 * Stage Edit – all/assigned/own – what Tasks can move on the board;
 * Delete – all/own/no – what Tasks can delete.
-
-Only Editor and Owner members have access to the Stream of the Project.
 
 ## Tasks
 
