@@ -57,9 +57,22 @@ Special functions available for conditions:
 * `ext\priceRule\accountAttribute` – returns an Account attribute value, e.g. `ext\priceRule\accountAttribute('type')`;
 * `ext\priceRule\productAttribute` – returns a Product attribute value, e.g. `ext\priceRule\productAttribute('id')`.
 
-Use case 1. A rule applied to Accounts with type Partner.
+**Use case 1:** A rule applied to Accounts with type Partner.
 
-Use case 2. A rule applied to Accounts that have already purchased the same product before.
+```
+ext\priceRule\accountAttribute('type') == 'Partner'
+```
+
+**Use case 2:** A rule applied to Accounts that have already purchased the same product before.
+
+```
+record\exists(
+    'SalesOrderItem',
+    'productId', ext\priceRule\productAttribute('id'),
+    'accountId', ext\priceRule\accountAttribute('id'),
+    'salesOrderStatus', 'Completed' 
+)
+```
 
 #### Based On
 
