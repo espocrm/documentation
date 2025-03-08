@@ -279,6 +279,14 @@ Duplicates attributes of a field. Some fields can require some processing when a
 
 Do not carry over a field value when duplicating an entity.
 
+### optimisticConcurrencyControlIgnore
+
+*boolean*
+
+*As of v9.1.*
+
+Ignore optimistic concurrency control.
+
 ### select
 
 *Object*
