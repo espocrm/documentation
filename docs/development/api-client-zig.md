@@ -26,7 +26,7 @@ Add this to your build.zig.zon
 .dependencies = .{
     .espocrmz = .{
         .url = "https://github.com/definitepotato/espocrmz/archive/refs/heads/master.tar.gz",
-        //the correct hash will be suggested by zig
+        .hash = "the correct hash will be suggested by zig at build time",
     }
 }
 ```
@@ -77,7 +77,7 @@ defer _ = gpa.deinit();
 const allocator = gpa.allocator();
 
 var params = espocrm.Parameters.init();
-_ = params.maxSize(10).order(espocrm.Parameters.Order.Asc);
+_ = params.setMaxSize(10).setOrder(espocrm.Parameters.Order.Asc);
 const params_encoded = try params.encode(allocator);
 
 const result = try client.listEntities(allocator, "Contact", params, &[_]espocrm.Where{
