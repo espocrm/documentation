@@ -106,7 +106,11 @@ result = client.request('GET', 'Account', params)
 
 Parameters are passed as query parameters (in GET request).
 
-It's also possible to pass all search parameters in JSON format in one query parameter `searchParams`.
+It's also possible to pass all search parameters in JSON format in a single query parameter `searchParams`:
+
+```
+?searchParams={JSON_ENCODED_SEARCH_PARAMETERS}
+```
 
 ### offset
 
