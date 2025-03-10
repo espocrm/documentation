@@ -70,6 +70,22 @@ Available scalar types:
 * float – `1000.5`
 * boolean – `true` or `false`
 
+### Implicit return
+
+*As of v9.1.*
+
+The last evaluated expression is returned.
+
+Example:
+
+```
+$a = 1;
+$b = $a + 1;
+$b;
+```
+
+This script is treated as an expression and the value of the variable $b is returned. Can be useful when Formula is used to evaluate a condition or determine a value.
+
 ## Operators
 
 * `=` – assignment,
