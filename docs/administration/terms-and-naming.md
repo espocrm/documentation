@@ -16,7 +16,7 @@ A *field* is a unit of data. Entities have their own set of fields. For example,
 
 Fields are named in lowerCamelCase (starting with a lowercase letter).
 
-The list of available fields for a specific entity type can be obtained at: Administration > Entity Manager > needed entity type > Fields > *Name* column.
+The list of available fields for a specific entity type can be obtained at: Administration > Entity Manager > {Entity Type} > Fields > *Name* column.
 
 Each field can have one or few attributes (depending on the field type).
 
@@ -39,9 +39,11 @@ Field types that have multiple attributes and their attribute naming:
 * Person Name: *firstName*, *lastName*, *middleName*, *salutationName*
 * Address: *fieldStreet*, *fieldCity*, *fieldPostalCode*, *fieldCountry*, *fieldState*
 
-where *field* is the name of the field.
+Where *field* is a name of the field.
 
 Attributes are named in lowerCamelCase (start with a lowercase letter).
+
+The list of available attributes for a specific field can be obtained at: Administration > Entity Manager > {Entity Type} > View Details from the dropdown of the field.
 
 ## Link
 
