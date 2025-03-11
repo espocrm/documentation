@@ -115,6 +115,8 @@
   * [Inventory Management](extensions/sales-pack/inventory-management.md)
 * Project Management
   * [Projects](extensions/project-management/projects.md)
+* Meeting Scheduler
+  * [Meeting Scheduler](extensions/meeting-scheduler/index.md)
 * Google Integration
   * [Setting-up](extensions/google-integration/setting-up.md)
   * [Calendar](extensions/google-integration/calendar.md)
@@ -136,6 +138,8 @@
   * [Docker container](extensions/voip-integration/docker-container.md)
   * [Customization](extensions/voip-integration/customization.md)
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
+* Zoom Integration
+  * [Zoom Integration](extensions/zoom-integration/index.md)
 * Export Import
   * [Overview](extensions/export-import/overview.md)
   * [Export](extensions/export-import/export.md)
