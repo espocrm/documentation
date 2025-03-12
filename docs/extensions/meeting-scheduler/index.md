@@ -1,5 +1,9 @@
 # Meeting Scheduler
 
+*Requires EspoCRM v9.0.*
+
+Available in the [Meeting Scheduler](https://www.espocrm.com/extensions/meeting-scheduler/) extension.
+
 With the Meeting Scheduler tool you can create online pages where contacts can book meetings with CRM users. Contacts can choose from time slots when the host is available. The scheduler configuration can help avoid meeting overload. You can also set up automated meeting distribution among multiple hosts.
 
 !!! note
