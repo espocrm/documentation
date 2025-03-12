@@ -43,7 +43,7 @@ Required scopes:
 * `meeting:update:meeting:admin`
 * `meeting:delete:meeting:admin`
 
-There are Development and Production modes for Zoom apps. They use different credentials. It's recommended to the the Production mode unless for testing purposes.
+There are Development and Production modes for Zoom apps. They use different credentials. It's recommended to use the Production mode unless for testing purposes.
 
 If you use the Production mode, you will also need to fill in the required fields:
 
@@ -56,7 +56,7 @@ Then, the Zoom App will be marked as *Ready for beta test* in the right panel. O
 
 !!! note
 
-    There is not need to publish the Zoom App.
+    There is no need to publish the Zoom App.
 
 
 After connecting to Zoom in Espo, on the same page, select users who are supposed to receive Espo meetings in their Zoom accounts.
@@ -77,7 +77,7 @@ To push the meeting, click *Push to Zoom* from the dropdown next to the *Edit* b
 
 Once a Zoom meeting is created, the Join URL field in the Espo meeting will be set to the Zoom's URL.
 
-If you edit an already pushed meeting in Espo, it will be maked as out-of-sync. You can push it again so that it will become synced with Zoom.
+If you edit an already pushed meeting in Espo, it will be marked as out-of-sync. You can push it again so that it will become synced with Zoom.
 
 If an Espo meeting has status *Not Held*, you can delete the corresponding Zoom meeting by clicking *Delete from Zoom*.
 
