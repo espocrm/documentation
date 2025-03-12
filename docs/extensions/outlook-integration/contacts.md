@@ -4,9 +4,9 @@
 
     Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
 
-Outlook Contacts Integration  is available in the [extension](https://www.espocrm.com/extensions/outlook-integration/). Compatible with EspoCRM 5.6.3 and higher.
+Outlook Contacts Integration  is available in the [extension](https://www.espocrm.com/extensions/outlook-integration/).
 
-Provides the ability to push EspoCRM contacts and leads to Outlook Contacts (People) into a specific folder. Fields being pushed: First Name, Last Name, Email Address, Phone Number, and Account Name.
+Provides the ability to push EspoCRM contacts and leads to Outlook Contacts (People). The following fields are pushed: First Name, Last Name, Email Address, Phone Number, and Account Name.
 
 * [Setting up for users](#setting-up-for-users)
 * [Pushing to Outlook](#pushing-to-outlook)
@@ -32,6 +32,8 @@ If everything went fine, a green label *Connected* should show up.
     If you connected successfully, but *Outlook Contacts* checkbox didn't show up, that means that the administrator did not grant you access to *Outlook Contacts* scope.
 
 Check *Outlook Contacts* checkbox and configure parameters and then click *Save*.
+
+Optionally, you can select a contact folder. Contacts will be pushed to that folder.
 
 ## Pushing to Outlook
 
