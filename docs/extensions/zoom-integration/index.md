@@ -1,5 +1,9 @@
 # Zoom Integration
 
+*Requires EspoCRM v9.0.*
+
+Available in the [Zoom Integration](https://www.espocrm.com/extensions/zoom-integration/) extension.
+
 The Zoom integration allows to create Zoom meetings from Espo.
 
 In this article:
