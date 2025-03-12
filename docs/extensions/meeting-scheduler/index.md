@@ -19,7 +19,7 @@ In this article:
 
 ## Access
 
-Access to Meeting Schedulers and Meeting Requests are controller by roles.
+Access to Meeting Schedulers and Meeting Requests are controlled by roles.
 
 An administrator can allow regular users to create and edit scheduler pages by setting needed access levels for the Meeting Scheduler scope.
 
@@ -43,7 +43,7 @@ If a scheduler is not set as Active, the scheduling page will be unaccessible.
 
 #### Date Start, Date End
 
-The Date Start and Date End fields allows to set a period during which the scheduling page is functional.
+The Date Start and Date End fields allow to set a period during which the scheduling page is functional.
 
 #### Description
 
@@ -81,11 +81,11 @@ A meeting won't be created until the request is approved by the host. The primar
 
 #### Do not require approval if Contact exists
 
-If a meeting request is created by an initee that already exists in the CRM as a Contact, then the approval step will be skipped. The email address is used to find a matching Contact.
+If a meeting request is created by an invitee that already exists in the CRM as a Contact, then the approval step will be skipped. The email address is used to find a matching Contact.
 
 #### Do not reserve if unapproved
 
-Ih checked, then while a request is created but still is unapproved, it won't affect the host's availability. Multiple requests on the same time slots are possible in this case.
+If checked, then while a request is created but still is unapproved, it won't affect the host's availability. Multiple requests on the same time slots are possible in this case.
 
 #### Require confirmation by invitee
 
@@ -93,11 +93,11 @@ A meeting won't be created until the request is confirmed by the invitee. The in
 
 #### Do not require approval if Contact exists
 
-If a meeting request is created by an initee that already exists in the CRM as a Contact, then the confirmation step will be skipped. The email address is used to find a matching Contact.
+If a meeting request is created by an invitee that already exists in the CRM as a Contact, then the confirmation step will be skipped. The email address is used to find a matching Contact.
 
 #### Do not reserve if unconfirmed
 
-Ih checked, then while a request is created but still is unconfirmed, it won't affect the host's availability. Multiple requests on the same time slots are possible in this case.
+If checked, then while a request is created but still is unconfirmed, it won't affect the host's availability. Multiple requests on the same time slots are possible in this case.
 
 #### Confirmation window
 
@@ -105,7 +105,7 @@ A period during which the invitee can confirm the request. After its expiration,
 
 #### Send email invitation
 
-If checked, then an email invitation will be sent to the invitee upon meeting creation. The email invitations functionality is an out-of-the-box feature of EspoCRM. The email template can be configured under Administation > Template Manager > Invitation · Meeting.
+If checked, then an email invitation will be sent to the invitee upon meeting creation. The email invitations functionality is an out-of-the-box feature of EspoCRM. The email template can be configured under Administration > Template Manager > Invitation · Meeting.
 
 The invitee can accept or decline the meeting from the invitation email.
 
@@ -115,7 +115,7 @@ Specify the external service that will be used for online meetings. See below ab
 
 #### Forbid free email domains
 
-If checked, an ivitee won't be able to specify an email address of free email providers. Such as gmail.com, outlook.com, etc. They will be asked to use their work email address.
+If checked, an invitee won't be able to specify an email address of free email providers. Such as gmail.com, outlook.com, etc. They will be asked to use their work email address.
 
 #### Blocklists
 
@@ -147,11 +147,11 @@ Here you configure the scheduling page (form). The form URL will be generated af
 
 #### Language used on form
 
-Choose the language that will be used on the schedling form. You can edit labels for the needed language under Administration > Label Manager > Meeting Scheduler, Meeting Request.
+Choose the language that will be used on the scheduling form. You can edit labels for the needed language under Administration > Label Manager > Meeting Scheduler, Meeting Request.
 
 #### Allowed hosts for form embedding
 
-It's possible to include the scheduling form in an inline frame element (iframe) on a website. You need to specify the host of then website you are going to include the form on.
+It's possible to include the scheduling form in an inline frame element (iframe) on a website. You need to specify the host of the website you are going to include the form on.
 
 #### Form Captcha
 
@@ -232,19 +232,19 @@ An attendee's answers to the questions will be available in the Meeting Request 
 
 One-time links are useful when you don't want to share your main scheduler page to avoid unwanted meetings. You can send a one-time link to a specific customer, allowing them to book a meeting with you.
 
-* Once a link is consumed, it's not availble anymore.
+* Once a link is consumed, it's not available anymore.
 * Optionally, you can set an expiration date and time for a link.
-* A link can be associated with a specific Contact or Lead. In this case the created meeting will be automacially associated with that contact regardless of what email address the attendee specified. On the scheduling form, the email address will be pre-filled with the contact's email address.
+* A link can be associated with a specific Contact or Lead. In this case the created meeting will be automatically associated with that contact regardless of what email address the attendee specified. On the scheduling form, the email address will be pre-filled with the contact's email address.
 
 Note that one-time links function even if the Form URL is deactivated.
 
 ## Requests
 
-Once an invitee filled in the scheduling form a Meeting Request is created. The request is assigned to the primary host of the meeting. If neither approval no confirmation are required, the request will be set as Completed. Otherwise, it will be set as Pending.
+Once an invitee filled in the scheduling form a Meeting Request is created. The request is assigned to the primary host of the meeting. If neither approval nor confirmation are required, the request will be set as Completed. Otherwise, it will be set as Pending.
 
 Requests can be approved and canceled by the request assignee, the scheduler assignee, and users who have edit access to the scheduler.
 
-Meetings requests can be access from navbar. The My Meeting Requests dashlet can be added on the dashboard.
+Meetings requests can be accessed from navbar. The My Meeting Requests dashlet can be added on the dashboard.
 
 Unconfirmed requests expire. The expiry period is defined by the scheduler's configuration.
 
@@ -254,7 +254,7 @@ On the Meeting Request detail view you can view the attendee's answers to the qu
 
 !!! note
 
-    Host distribution can configured only by users who have the Meeting Scheduler Hosts scope enabled in their roles.
+    Host distribution can be configured only by users who have the Meeting Scheduler Hosts scope enabled in their roles.
 
 There are two distribution methods available:
 
