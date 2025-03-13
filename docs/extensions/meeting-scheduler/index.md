@@ -35,6 +35,8 @@ The Meeting Scheduler Hosts scope allows users to configure schedulers that dist
 
 You can access the Meeting Schedulers list view from the navbar. There, you can create a new Meeting Scheduler.
 
+It's also possible to access Meeting Schedulers from the Meeting's list view.
+
 ### General
 
 #### Name
