@@ -310,7 +310,7 @@ When a meeting is created through the scheduler, a Zoom meeting is automatically
 
 ## Microsoft Teams integration
 
-The integration with Microsoft Teams is implemented in the [Outook Integration](../zoom-integration/index.md) extension.
+The integration with Microsoft Teams is implemented in the [Outook Integration](https://www.espocrm.com/extensions/outlook-integration/) extension.
 
 With the extension installed, the Microsoft is available as an option in the *Online Location* field of a Meeting Scheduler record. To be able to select the Microsoft location, users need to have access to the *Outlook Calendar* scope in their roles. They also need to be connected to Outlook in their External Account settings and to have the Calendar checkbox enabled. Note that the sync direction can be set to any value including *None*.
 
