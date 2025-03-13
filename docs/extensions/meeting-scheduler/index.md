@@ -20,6 +20,7 @@ In this article:
 * [Requests](#requests)
 * [Round-robin host distribution](#round-robin-host-distribution)
 * [Zoom integration](#zoom-integration)
+* [Microsoft Teams integration)(#microsoft-teams-integration)
 
 ## Access
 
@@ -303,6 +304,15 @@ Use this parameter if you don't want having hosts who received substantially mor
 
 The Zoom integration is available as a separate [extension](../zoom-integration/index.md).
 
-With the Zoom integration installed, the Zoom is available as an option in the *Online Location* field of a Meeting Scheduler record. To be able to select the Zoom location, users need to have access to the *Zoom Meetings* scope in their roles.
+With the Zoom integration installed, Zoom is available as an option in the *Online Location* field of a Meeting Scheduler record. To be able to select the Zoom location, users need to have access to the *Zoom Meetings* scope in their roles.
 
-When a meeting is created through the scheduler, a Zoom meeting is automatically created in the meeting assignee's Zoom account.
+When a meeting is created through the scheduler, a Zoom meeting is automatically created in the meeting assignee's Zoom account. The Join URL is stored in the Espo meeting.
+
+## Microsoft Teams integration
+
+The integration with Microsoft Teams is implemented in the [Outook Integration](../zoom-integration/index.md) extension.
+
+With the extension installed, the Microsoft is available as an option in the *Online Location* field of a Meeting Scheduler record. To be able to select the Microsoft location, users need to have access to the *Outlook Calendar* scope in their roles. They also need to be connected to Outlook in their External Account settings and to have the Calendar checkbox enabled. Note that the sync direction can be set to any value including *None*.
+
+When a meeting is created through the scheduler, a Microsoft meeting is automatically created in the meeting assignee's calendar. The Join URL is stored in the Espo meeting.
+
