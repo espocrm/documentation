@@ -20,7 +20,7 @@ In this article:
 * [Requests](#requests)
 * [Round-robin host distribution](#round-robin-host-distribution)
 * [Zoom integration](#zoom-integration)
-* [Microsoft Teams integration)(#microsoft-teams-integration)
+* [Microsoft Teams integration](#microsoft-teams-integration)
 
 ## Access
 
