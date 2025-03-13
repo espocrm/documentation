@@ -6,13 +6,10 @@ Available in the [Meeting Scheduler](https://www.espocrm.com/extensions/meeting-
 
 With the Meeting Scheduler tool you can create online pages where contacts can book meetings with CRM users. Contacts can choose from time slots when the host is available. The scheduler configuration can help avoid meeting overload. You can also set up automated meeting distribution among multiple hosts.
 
-!!! note
-
-    An attendee is required to fill in the email address when booking a meeting.
-
 In this article:
 
 * [Access](#access)
+* [General](#general)
 * [Setting up](#setting-up)
 * [Overrides](#overrides)
 * [Questions](#questions)
@@ -31,6 +28,14 @@ An administrator can allow regular users to create and edit scheduler pages by s
 There's a possible configuration where a Meeting Scheduler is managed by one user but requests are distributed to other users. To be able to access Meeting Requests where a user is a host, the user should have the Meeting Scheduler scope enabled. Setting the action levels for the scope is not required – they all can be set to 'no'.
 
 The Meeting Scheduler Hosts scope allows users to configure schedulers that distribute meetings to other users.
+
+## General
+
+The system uses the parameter *Free/Busy Entity List* when determing busy time slots. This parameter is available under: Administration > Settings.
+
+!!! note
+
+    An attendee is required to fill in the email address when booking a meeting.
 
 ## Setting up
 
