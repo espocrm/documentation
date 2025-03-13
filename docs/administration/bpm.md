@@ -60,6 +60,8 @@ Processes can be started:
 * Manually – To start process manually, a user needs to click the *Start Process* button on the Processes list view, or on the record detail view from the dropdown in the top-right corner.
 * By a Workflow rule – using the *Start BPM Process* action in a rule. It allows to pass the workflow's target record or a related record as a target for the new process.
 
+By using a Workflow with the manual trigger, it's possible to have a button on the detail view that will start a particular process.
+
 The execution of a Process is visualized with colors highlighting statuses of flow nodes:
 
 * green – processed;
