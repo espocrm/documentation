@@ -87,6 +87,12 @@ The shortest amount of time that must pass between the moment a meeting is sched
 
 How far in the future a meeting can be scheduled.
 
+#### Daily limit
+
+*As of v1.1.*
+
+Maximum number of meetings that can be scheduled in a day. If more than the specified number are scheduled via the form, the day will be excluded from availability.
+
 #### Require approval by host
 
 A meeting won't be created until the request is approved by the host. The primary host can approve requests.
