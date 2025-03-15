@@ -57,7 +57,7 @@ The email template for access info emails can be changed at Administration > Tem
 
 ## Password recovery
 
-Users can recover their access if they forgot their password by clicking **Forgot Password?** on the login screen. The user needs to enter their email address and the password. If the entered data is correct, an email with a unique link will be sent to the user. This link has an expiration period.
+Users can recover their access if they forgot their password by clicking **Forgot Password?** on the login screen. The user needs to enter their username and email address. If the entered data is correct, an email with a unique link will be sent to the user. This link has an expiration period.
 
 Password recovery (for all, regular or admin users) can be disabled at Administration > Authentication.
 
