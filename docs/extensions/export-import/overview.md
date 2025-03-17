@@ -13,8 +13,8 @@ How it can be used:
 
 * as a part of a continuous delivery pipeline (e.g. to transfer roles, workflows, BPM flowcharts from dev to production);
 * for demo data;
-* when migrating to another instance.
-* for tracking changes.
+* when migrating to another instance;
+* to track changes;
 * to restore updated or deleted records.
 
 ## Installing
