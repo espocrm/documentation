@@ -21,7 +21,7 @@ How it can be used:
 
 You need to install the Export Import extension on your EspoCRM instance. Download the latest release package from the [GitHub repository](https://github.com/espocrm/ext-export-import/releases). Follow [instructions](https://docs.espocrm.com/administration/extensions/#installing) to install the extension.
 
-## Features:
+## Features
 
 * [Export](export.md)
 * [Import](import.md)
