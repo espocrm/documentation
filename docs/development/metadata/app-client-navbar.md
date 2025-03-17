@@ -49,6 +49,14 @@ An order position.
 
 Whether is disabled.
 
+### accessDataList
+
+*Object[]*
+
+*As of v9.1.*
+
+Access rules. See definitions in JSON schema: metadata/clientDefs.json#/definitions/accessDataList.
+
 ## menuItems
 
 *Object.<string, Object\>*
