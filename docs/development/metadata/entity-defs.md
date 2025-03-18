@@ -287,6 +287,18 @@ Do not carry over a field value when duplicating an entity.
 
 Ignore optimistic concurrency control.
 
+### additionalAttributeList
+
+*string[]*
+
+Additional attributes for a field. Attribute name will be derived by concatenation with the field name.
+
+### dependeeAttributeList
+
+*string[]*
+
+Dependee attributes.
+
 ### select
 
 *Object*
