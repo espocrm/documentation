@@ -67,13 +67,13 @@ Create a new file:
 `client/custom/src/quote-calculation-handler.js`
 
 ```js
-define('custom:quote-calculation-handler', ['sales:quote-calculation-handler'], function (Dep) {
+define('custom:quote-calculation-handler', ['sales:quote-calculation-handler'], (Dep) => {
 
-    return Dep.extend({
+    return class extends Dep {
 	
         // Define custom calculations here.
         // Use client/modules/sales/quote-calculation-handler.js as an example.
-    });
+    }
 });
 ```
 
