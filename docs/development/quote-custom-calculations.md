@@ -67,7 +67,7 @@ Create a new file:
 `client/custom/src/quote-calculation-handler.js`
 
 ```js
-define('custom:quote-calculation-handler', ['sales:quote-calculation-handler'], (Dep) => {
+define(['sales:quote-calculation-handler'], (Dep) => {
 
     return class extends Dep {
 	
