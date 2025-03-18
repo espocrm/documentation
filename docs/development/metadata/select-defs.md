@@ -128,3 +128,12 @@ Example:
     }
 }
 ```
+
+## additionalApplierClassNameList
+
+*As of v9.1.*
+
+*class-string<Espo\Core\Select\Applier\AdditionalApplier\>[]*
+
+Additional appliers. Used for additional handling of a select query.
+
