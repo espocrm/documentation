@@ -17,6 +17,7 @@ Create a new file:
 `custom/Espo/Custom/Hooks/Quote/CalculateItems.php`
 
 ```php
+<?php
 namespace Espo\Custom\Hooks\Quote;
 
 use Espo\ORM\Entity;
@@ -70,9 +71,48 @@ Create a new file:
 define(['sales:quote-calculation-handler'], (Dep) => {
 
     return class extends Dep {
-	
+
         // Define custom calculations here.
         // Use client/modules/sales/quote-calculation-handler.js as an example.
+
+        /**
+         * Calculate.
+         *
+         * @param {import('model').default} model An order.
+         */
+        calculate(model) {
+            super.calculate(model);
+        }
+
+        /**
+         * Calculate item.
+         *
+         * @param {import('model').default} model An item.
+         * @param {string} [field] A field that was changed.
+         */
+        calculateItem(model, field) {
+            super.calculateItem(model, field);
+        }
+
+        /**
+         * Select product.
+         *
+         * @param {import('model').default} model
+         * @param {import('model').default} product
+         */
+        selectProduct(model, product) {
+            super.selectProduct(model, product);
+        }
+
+        /**
+         * Get select product attributes.
+         *
+         * @param {import('model').default} model
+         * @return {string[]}
+         */
+        getSelectProductAttributeList(model) {
+            super.getSelectProductAttributeList(model);
+        }
     }
 });
 ```
