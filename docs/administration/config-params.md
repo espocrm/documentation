@@ -204,6 +204,7 @@ The list of parameters along with their default values. This is not a full list 
 * starsLimit – 500 – max number of stars a user can give per entity type;
 * phoneNumberMaxCount – 10 – max number of phone numbers per record;
 * emailAddressMaxCount – 10 – max number of email addresses per record;
+* iframeSandboxExcludeDomainList – array of domains that do not require adding `sandbox="allow-scripts"` in the Iframe dashlet; as of v9.0.7;
 
 ## Config files
 
