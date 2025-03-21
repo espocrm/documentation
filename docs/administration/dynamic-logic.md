@@ -12,9 +12,6 @@ checked automatically when data in the form is changed.
 For *Enum*, *Array*, *Multi-Enum*, *Checklist* fields it's, possible to define different sets of options that will be
 available for the field depending on which condition is met. Note that the order of option list is taken into account.
 
-For *Varchar* and *Text* fields, it's possible to define a regular expression to check whether a value matches a specific
-pattern.
-
 Dynamic logic can control:
 
 * Visibility − if the field is visible or not;
@@ -33,7 +30,14 @@ Conditions are configured through user interface, no coding required.
     * When defining enum options that depend on the current value of the field, you need to include the current value to the option set.
     * In some cases it may be reasonable to disable the inline-edit functionality for a specific field as it may interfere with the dynamic logic.
     * Dynamic Logic operates fields on the form, it has no effect on buttons and menu items in the UI.
-    * Dynamic Logic is not applied on the list view.    
+    * Dynamic Logic is not applied on the list view.
+
+### Regular expression
+
+For *Varchar* and *Text* fields, it's possible to define a regular expression to check whether a value matches a specific
+pattern.
+
+An expression should start and end with a slash character. Example: `/^\d{5}-\d{6}-\d{2}$/`
 
 ## Panels
 
