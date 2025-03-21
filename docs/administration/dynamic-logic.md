@@ -37,7 +37,9 @@ Conditions are configured through user interface, no coding required.
 For *Varchar* and *Text* fields, it's possible to define a regular expression to check whether a value matches a specific
 pattern.
 
-An expression should start and end with a slash character. Example: `/^\d{5}-\d{6}-\d{2}$/`
+An expression should start and end with a slash character.
+
+Example: `/^\d{5}-\d{6}-\d{2}$/`
 
 ## Panels
 
