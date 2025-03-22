@@ -306,6 +306,7 @@ nav:
           - 'Services': 'development/services.md'
           - 'Hooks': 'development/hooks.md'
           - 'ACL': 'development/acl.md'
+          - 'Entry points': 'entry-points.md'
           - 'Misc':
               - 'Autoload': 'development/autoload.md'
               - 'Entity type': 'development/custom-entity-type.md'
