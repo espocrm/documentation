@@ -18,6 +18,7 @@ Assuming that our module is named *ModuleName*.
 Create a file `custom/Espo/Custom/Modules/ModuleName/EntryPoints/MyEntryPoint.php`:
 
 ```php
+<?php
 namespace Espo\Modules\ModuleName\EntryPoints;
 
 use Espo\Core\Api\Request;
@@ -50,6 +51,7 @@ The entry point will run on calling `https://your-site-url?entryPoint=myEntryPoi
 It's possible to render the frontend and call a specific controller action from an entry point.
 
 ```php
+<?php
 namespace Espo\Modules\ModuleName\EntryPoints;
 
 use Espo\Core\Api\Request;
