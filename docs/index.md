@@ -75,11 +75,11 @@
 * [Case management](user-guide/case-management.md)
 * [Activities & Calendar](user-guide/activities-and-calendar.md)
 * [Mail Merge (mass snail mailing)](user-guide/mail-merge.md)
-* [Knowledge Base](user-guide/knowledge-base.md)
+* [Knowledge base](user-guide/knowledge-base.md)
 * [Documents](user-guide/documents.md)
 * [Export](user-guide/export.md)
 * [Text search](user-guide/text-search.md)
-* [Working Time Calendar](user-guide/working-time-calendar.md)
+* [Working time calendar](user-guide/working-time-calendar.md)
 * Misc
   * [Shortcut keys](user-guide/shortcuts.md)
   * [Printing to PDF](user-guide/printing-to-pdf.md)
@@ -152,5 +152,5 @@
 
 ### See also
 
-* [Developer Documentation](development/index.md)
-* [Hints & Tips](https://www.espocrm.com/tips/)
+* [Developer documentation](development/index.md)
+* [Hints & tips](https://www.espocrm.com/tips/)
