@@ -19,6 +19,7 @@
 * [Services](services.md)
 * [Hooks](hooks.md)
 * [ACL](acl.md)
+* [Entry points](entry-points.md)
 * Misc
   * [Autoload](autoload.md)
   * [Entity type](custom-entity-type.md)
