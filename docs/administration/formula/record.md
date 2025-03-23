@@ -69,6 +69,8 @@ Returns a first found ID of a record that matches specific criteria.
 
     `record\findOne('Opportunity', 'createdAt', 'desc', 'open')`
 
+    `record\findOne('AppSecret', null, null, 'name', 'SECRET_NAME')`
+
 ## record\findMany
 
 *As of v8.0*.
