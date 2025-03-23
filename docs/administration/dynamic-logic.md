@@ -41,6 +41,8 @@ An expression should start and end with a slash character.
 
 Example: `/^\d{5}-\d{6}-\d{2}$/`
 
+You can also specify regular expression flags after the ending slash.
+
 ## Panels
 
 In the Layout Manager, you can specify conditions making a specific panel visible. Edit the panel to configure the dynamic logic.
