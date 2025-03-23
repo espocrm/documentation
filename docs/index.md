@@ -61,6 +61,7 @@
   * [Multiple assigned users](administration/multiple-assigned-users.md)
   * [File storage](administration/file-storage.md)
   * [SMS sending](administration/sms-sending.md)
+  * [App secrets](administration/app-secrets.md)
 
 ---
 
