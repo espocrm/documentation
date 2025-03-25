@@ -13,6 +13,7 @@
 * [ext\acl\checkScope](#extaclcheckscope)
 * [ext\acl\getLevel](#extaclgetlevel)
 * [ext\acl\getPermissionLevel](#extaclgetpermissionlevel)
+* [ext\oauth\getAccessToken](#extoauthgetaccesstoken)
 
 ## ext\account\findByEmailAddress
 
@@ -216,3 +217,11 @@ Returns an access level. ACTION should be one of the values: Create, Read, Edit,
 `ext\acl\getPermissionLevel(USER_ID, PERMISSION)`
 
 Returns a permission level.
+
+## ext\oauth\getAccessToken
+
+*As of v9.1.0.*
+
+Get an OAuth access token for a specific OAuth Account. The ID of OAuth Account record can be obtained for its URL.
+
+`ext\acl\getPermissionLevel(ID)`
