@@ -326,7 +326,7 @@ Triggered when specific conditions are met. Note that same non-interrupting even
 
 !!! note 
 
-    The Boundary Conditional Event is not synced with the flow. Condition checking is run in in-idle which may cause some delay. A flowchart design should not rely on a boundary condition event being checked immediately.
+    The Boundary Conditional Event is not synced with the flow. Condition checking is run in idle which may cause some delay. A flowchart design should not rely on a boundary condition event being checked immediately.
 
 ### Timer Intermediate Event (Boundary)
 
