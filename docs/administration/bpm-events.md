@@ -67,6 +67,10 @@ Can be also used to start an event sub-process.
 
 ![Conditional Start Event for event sub-process](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-conditional-2.png)
 
+!!! note
+
+    When used to start an event sub-process, the Boundary Start Event is not synced with the flow. Condition checking is run in idle which may cause some delay. A flowchart design should not rely on a condition event being checked immediately.
+
 ### Timer Start Event
 
 A starting point of a process. It initiates processes by scheduling. You need to select a list report (which returns records, each one will initiate a separate process) and specify execution scheduling (in the crontab notation).
