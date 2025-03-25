@@ -324,6 +324,10 @@ Triggered when specific conditions are met. Note that same non-interrupting even
 
 ![Conditional Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-conditional-boundary.png)
 
+!!! note 
+
+    The Boundary Conditional Event is not synced with the flow. Condition checking is run in in-idle which may cause some delay. A flowchart design should not rely on a boundary condition event being checked immediately.
+
 ### Timer Intermediate Event (Boundary)
 
 Triggered after a specific period of time. The timer starts once the activity starts.
