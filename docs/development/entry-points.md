@@ -2,7 +2,7 @@
 
 Entry points offer distinct access routes to the application, each serving different functions apart from the REST API.
 
-Entry points are accessed by the following URL: `https://your-site-url?entryPoint={entryPointName}`. Note than *entryPointName* must start with a lower case letter.
+Entry points are accessed by the following URL: `https://your-site-url?entryPoint={entryPointName}`. Note that *entryPointName* must start with a lower case letter.
 
 Usage examples:
 
