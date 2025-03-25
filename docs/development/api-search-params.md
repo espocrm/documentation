@@ -122,7 +122,7 @@ An offset for pagination.
 
 *Integer*
 
-How much records to return.
+How many records to return.
 
 ### select
 
