@@ -194,6 +194,7 @@ Functions:
 * [ext\acl\checkScope](formula/ext.md#extaclcheckscope)
 * [ext\acl\getLevel](formula/ext.md#extaclgetlevel)
 * [ext\acl\getPermissionLevel](formula/ext.md#extaclgetpermissionlevel)
+* [ext\oauth\getAccessToken](formula/ext.md#extoauthgetaccesstoken)
 
 ## Util
 
