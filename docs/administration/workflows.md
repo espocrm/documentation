@@ -344,7 +344,9 @@ A payload example:
 
 #### Handling HTTP response
 
-A response body of a sent HTTP request will be available in formula with a function `workflow\lastHttpResponseBody()`. It can be accessed in a following Workflow action. JSON attributes can be retrieved with a function `json\retrieve`.
+A response body of an HTTP request will be available in formula with the function `workflow\lastHttpResponseBody()`. It can be accessed in the following workflow actions within the workflow rule. For example, in an Execute Formula Script action.
+
+JSON attributes can be retrieved with the function `json\retrieve`.
 
 !!! example
 
