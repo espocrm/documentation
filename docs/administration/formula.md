@@ -231,6 +231,36 @@ Decrementing an integer variable:
 $a--;
 ```
 
+### Accessing by key
+
+*As of v9.1.*
+
+Arrays:
+
+```
+$list = list();
+
+$list[0] = '0';
+$list[1] = '1';
+$list[0 + 2] = '2';
+
+$v = $list[2];
+```
+
+Objects:
+
+```
+$o = object\create();
+
+$o['a'] = 'a';
+
+$v = $o['a'];
+```
+
+Accessing by a non-existent key results in an error.
+
+Limitation: Null coalescing does not prevent the error when accessing by a non-existent key.
+
 ## Comments
 
 Line comment:
