@@ -42,7 +42,7 @@ Adds one or more elements to the end of an array and returns the new array.
 
 !!! note
 
-    Alternatively, it's possible to use `[]` syntax: `$list[] = $value;`. As of v9.1.
+    Alternatively, it's possible to use *[]* syntax: `$list[] = $value;`. As of v9.1.
 
 ## array\length
 
@@ -66,7 +66,7 @@ Returns a value by INDEX.
 
 !!! note
 
-    Alternatively, it's possible to use `[]` syntax: `$value = $list[$index];`. As of v9.1.
+    Alternatively, it's possible to use *[]* syntax: `$value = $list[$index];`. As of v9.1.
 
 ## array\join
 
