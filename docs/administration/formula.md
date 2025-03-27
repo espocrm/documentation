@@ -215,6 +215,20 @@ If a variable is an array, it's possible to append a value to it with the follow
 $list[] = 'value';
 ```
 
+### Incrementing and decrementing
+
+Incrementing an integer variable:
+
+```
+$a++;
+```
+
+Decrementing an integer variable:
+
+```
+$a--;
+```
+
 ## Comments
 
 Line comment:
