@@ -87,6 +87,21 @@ You can also leave the *Group By* field empty.
 
 There is the ability to specify a custom [complex expression](complex-expressions.md) (with functions) for grouping. The complex expression is translated into an SQL statement.
 
+There are numerous ways to utilize complex expressions. For example, the MAP function can be used to group data by region instead of by country.
+
+Example:
+
+```
+MAP:(
+    account.billingAddressCountry,
+    'United States', 'United States',
+    'Germany', 'Europe',
+    'France', 'Europe',
+    'Italy', 'Europe',
+    'Other'
+)
+```
+
 ### Columns
 
 In the *Columns* field, select one or more **aggregate** functions applied to a specific field.
