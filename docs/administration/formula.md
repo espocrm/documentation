@@ -257,7 +257,7 @@ $o['a'] = 'a';
 $v = $o['a'];
 ```
 
-Accessing by a non-existent key results in an error.
+Reading by a non-existent key results in an error.
 
 Limitation: Null coalescing does not prevent the error when accessing by a non-existent key.
 
