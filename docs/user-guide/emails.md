@@ -125,6 +125,12 @@ You can set up the email signature in the Preferences. This signature will be us
 
 It's possible to use an **external email client**: the default one on your computer or device. For this, check *Use an external email client* in the Preferences.
 
+### Scheduled send
+
+When composing an email, it's possible to schedule it to be sent at a specific time. The email is saved to Drafts. The scheduled time can be changed after save.
+
+The scheduled send is available from the dropdown menu next to the Send button.
+
 ## Email folders
 
 Users can create their personal Email Folders to put some emails in for convenience. To create or edit folders, follow: the Emails list view > dropdown in the top-right corner > Folders. *Skip Notification* means that you won't be notified about incoming emails that get to the specific folder. By utilizing Email Filters, it's possible to put emails in folders automatically by specific criteria.
