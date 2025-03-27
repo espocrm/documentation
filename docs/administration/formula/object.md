@@ -11,19 +11,27 @@
 
 `object\create()`
 
-Creates and returns an empty object (key-value map). (as of v7.1)
+Creates and returns an empty object (key-value map).
 
 ## object\get
 
 `object\get(OBJECT, KEY)`
 
-Retrieves a value by a KEY from an OBJECT. Returns NULL if KEY is not set. (as of v7.1)
+Retrieves a value by a KEY from an OBJECT. Returns NULL if KEY is not set.
+
+!!! note
+
+    Alternatively, it's possible to use *[]* syntax: `$value = $object['key'];`. As of v9.1.
 
 ## object\set
 
 `object\set(OBJECT, KEY, VALUE)`
 
-Sets a value by a KEY. (as of v7.1)
+Sets a value by a KEY.
+
+!!! note
+
+    Alternatively, it's possible to use *[]* syntax: `$object['key'] = $value;`. As of v9.1.
 
 !!! example
 
@@ -36,7 +44,7 @@ Sets a value by a KEY. (as of v7.1)
 
 `object\clear(OBJECT, KEY)`
 
-Unsets a value by a KEY. (as of v7.1)
+Unsets a value by a KEY.
 
 !!! example
 
@@ -48,7 +56,7 @@ Unsets a value by a KEY. (as of v7.1)
 
 `object\has(OBJECT, KEY)`
 
-Checks whether an OBJECT has a value set by a KEY. Returns a boolean. (as of v7.1)
+Checks whether an OBJECT has a value set by a KEY. Returns a boolean.
 
 
 ## object\cloneDeep
