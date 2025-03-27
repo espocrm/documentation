@@ -259,10 +259,7 @@ $v = $o['a'];
 
 Reading by a non-existent key results in an error.
 
-Limitations:
-
-* Null coalescing does not prevent the error when accessing by a non-existent key.
-* Nested accessing is not supported.
+Limitation: Null coalescing does not prevent the error when accessing by a non-existent key.
 
 ## Comments
 
