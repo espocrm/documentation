@@ -217,6 +217,8 @@ $list[] = 'value';
 
 ### Incrementing and decrementing
 
+*As of v9.1.*
+
 Incrementing an integer variable:
 
 ```
