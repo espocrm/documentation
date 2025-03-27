@@ -40,6 +40,10 @@ Adds one or more elements to the end of an array and returns the new array.
     someMultiEnumField = array\push(someMultiEnumField, 'New Value 1', 'New Value 2');
     ```
 
+!!! note
+
+    Alternatively, it's possible to use `[]` syntax: `$list[] = $value;`. As of v9.1.
+
 ## array\length
 
 `array\length(LIST)`
@@ -59,6 +63,10 @@ Returns the number of elements in LIST.
 `array\at(LIST, INDEX)`
 
 Returns a value by INDEX.
+
+!!! note
+
+    Alternatively, it's possible to use `[]` syntax: `$value = $list[$index];`. As of v9.1.
 
 ## array\join
 
