@@ -205,6 +205,16 @@ $someVariableName = 'Test';
 description = $test;
 ```
 
+### Array appending
+
+*As of v9.1.*
+
+If a variable is an array, it's possible to append a value to it with the following syntax:
+
+```
+$list[] = 'value';
+```
+
 ## Comments
 
 Line comment:
