@@ -6,13 +6,13 @@ Where it is used:
 
 * [Before-save script](entity-manager.md#before-save-custom-script)
 * [API before-save script](api-before-save-script.md)
-* Formula sandbox
-* [Workflows](workflows.md) tool (conditions and actions)
+* [Workflows](workflows.md) tool (in conditions and actions)
 * [BPM](bpm.md) tool
+* Formula sandbox
 
 Formula scripts are meant to be written directly within the Espo application UI, with no need for environment configuration or building steps. Even users with little or no programming experience can experiment with writing simple scripts, allowing them to fine-tune their system to better suit their needs.
 
-The Formula Sandbox provides the ability to test formula scripts. It's available in the Administration panel. You can use the function `output\printLine` to print values for debugging purposes.
+The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox. You can use the function `output\printLine` to print values for debugging purposes. You can also utilize the sandbox to run one-time scripts, for example, to modify some data in your system.
 
 In this article:
 
