@@ -140,7 +140,7 @@ An admininstrator can run **Recalculate Formula** action for specific records fr
 
 *As of v7.5.*
 
-A [formula](formula.md) script called on create and update API requests before a record is saved. See more [detail](api-before-save-script.md).
+A [formula](formula.md) script called on create and update API requests, before the record is saved. See more [detail](api-before-save-script.md).
 
 ## Copying to another instance
 
