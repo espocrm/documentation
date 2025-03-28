@@ -12,17 +12,7 @@ Where it is used:
 
 Formula scripts are meant to be written directly within the Espo application UI, with no need for environment configuration or building steps. Even users with little or no programming experience can experiment with writing simple scripts, allowing them to fine-tune their system to better suit their needs.
 
-In the Entity Manager, it's possible to define a script for a specific entity type. This script will be executed every time before the record is saved. This provides the ability to automatically set specific fields with values derived from calculation. In addition, some functions can perform actions, for example, email sending and record creation.
-
-To edit the formula script for a specific entity type, follow Administration > Entity Manager > a needed entity type > Formula.
-
-!!! note
-
-    It can be reasonable to set fields that are supposed to be calculated by formula as read-only (Administration > Entity Manager > {Entity Type} > Fields).
-
-An admininstrator can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
-
-**Formula Sandbox** provides the ability to test formula scripts. It's available in the Administration panel. You can use the function `output\printLine` to print values.
+The Formula Sandbox provides the ability to test formula scripts. It's available in the Administration panel. You can use the function `output\printLine` to print values for debugging purposes.
 
 In this article:
 
