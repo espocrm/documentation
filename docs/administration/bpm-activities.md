@@ -107,8 +107,7 @@ When using Formula in a task that creates or updates another record, the current
 
 !!! warning
 
-    In the context of *update record* actions, it's recommended to use Formula only for setting attributes. Use *Script Task* for any other logic.
-
+    In the context of create and update record actions, it's recommended to use Formula only for setting attributes. Use the *Script Task* or *Execute Formula Script* action for any other logic.
 
 If the parameter *Isolate Variables* is checked, Formula variables defined within the task won't be exposed outside of the task. The *Return Variables* parameter allows to specify variables that will be exposed.
 
