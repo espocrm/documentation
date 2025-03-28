@@ -2,7 +2,14 @@
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-The Workflows tool automates your business processes in an easy way. You can access Workflows from the Administration panel. When creating a Workflow rule you need to set:
+The Workflows tool automates your business processes in an easy way. Here's a list of possible use cases:
+
+* Automatically modify records when specific conditions are met. 
+* Define assignment rules for efficient task distribution.
+* Add a button on the record detail view to trigger business logic actions.
+* Integrate Espo with external systems through an API for data exchange.
+
+You can access Workflows from the Administration panel. When creating a Workflow rule you need to set:
 
 * Target Entity Type – the entity type the rule is applied to;
 * Trigger Type – how the rule will be triggered;
