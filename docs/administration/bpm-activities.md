@@ -241,7 +241,7 @@ If the parameter *Isolate Variables* is checked, Formula variables defined withi
 
 !!! note
 
-    If you didn't check the *Isolate Variables* parameter, be aware that all defined variables will remain available throughout the process and even after it's finished.  Since some variables may contain sensitive data or consume disk space, it might be reasonable to unset them at the end of the script.
+    If you didn't check the *Isolate Variables* parameter, be aware that all defined variables will remain available throughout the process and even after it finishes. Since some variables may contain sensitive data or consume disk space, it might be reasonable to unset them at the end of the script.
 
     ```
     $tmpVariable = null;
