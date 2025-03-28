@@ -237,13 +237,17 @@ With the Script Task, you can define actions that are impossible to do with the 
 * Create a new user and send generated password ([see](formula-scripts-examples.md#creating-new-user))
 * Send email with generated PDF in attachment ([see](formula-scripts-examples.md#sending-email-with-generated-pdf-in-attachment))
 
+If the parameter *Isolate Variables* is checked, Formula variables defined within the task won't be exposed outside of the task. The *Return Variables* parameter allows to specify variables that will be exposed.
+
 !!! note
 
-    It's recommended to **clear temporary variables**, that won't be needed further in the process, in the end of the script.
+    If you didn't check the *Isolate Variables* parameter, be aware that all defined variables will remain available throughout the process and even after it's finished.  Since some variables may contain sensitive data or consume disk space, it might be reasonable to unset them at the end of the script.
 
     ```
     $tmpVariable = null;
     ```
+
+    Though, checking the Isolate Variables parameter is recommended.
 
 ----
 
