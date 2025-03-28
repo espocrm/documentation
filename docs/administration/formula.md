@@ -161,13 +161,18 @@ It's possible to access attributes of related entities with the following expres
 The attribute element type was introduced in the language to be able to write like this:
 
 ```
+// Setting an attribute.
 description = 'test';
+
+// Getting an attribute.
+$variable = description;
 ```
 
 If we didn't have attributes, we would need to write more verbose:
 
 ```
 entity\setAttribute('description', 'test');
+$variable = entity\getAttribute('description');
 ```
 
 ## Functions
