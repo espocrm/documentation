@@ -10,7 +10,7 @@ Where it is used:
 * [Workflows](workflows.md) tool (conditions and actions)
 * [BPM](bpm.md) tool
 
-Formula scripts are meant to be written directly within the Espo application UI, with no need for environment configuration or building steps. Even users with limited programming knowledge can experiment with writing simple scripts, allowing them to fine-tune their system to better suit their needs.
+Formula scripts are meant to be written directly within the Espo application UI, with no need for environment configuration or building steps. Even users with little or no programming experience can experiment with writing simple scripts, allowing them to fine-tune their system to better suit their needs.
 
 In the Entity Manager, it's possible to define a script (formula) for a specific entity type. This script will be executed every time before the record is saved. It provides the ability to automatically set specific fields (attributes) with values derived from calculation. In addition, some functions can perform actions (e.g. email sending, record creating).
 
