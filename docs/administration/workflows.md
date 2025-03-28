@@ -2,12 +2,13 @@
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
 
-The Workflows tool automates your business processes in an easy way. Here's a list of possible use cases:
+The Workflows tool automates your business processes in an easy way. Possible use cases of what can be achieved:
 
 * Automatically modify records when specific conditions are met. 
 * Define assignment rules for efficient task distribution.
-* Add a button on the record detail view to trigger business logic actions.
+* Add buttons on the record detail view to trigger business logic actions.
 * Integrate Espo with external systems through an API for data exchange.
+* And many more.
 
 You can access Workflows from the Administration panel. When creating a Workflow rule you need to set:
 
