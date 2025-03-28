@@ -305,7 +305,7 @@ Starts a BPM process. You can specify what target record will be used for the pr
 
 ### Send HTTP Request
 
-Provides the ability to call an external API.
+Provides the ability to call an external API. Can be utilized to integrate Espo with other systems.
 
 Supported request methods:
 
@@ -315,7 +315,7 @@ Supported request methods:
 * PATCH
 * DELETE
 
-A payload can be taken from a formula variable or specified in a JSON format.
+A payload can be specified in a JSON format or taken from a formula variable.
 
 Additional headers can be specified.
 
@@ -327,18 +327,20 @@ Placeholders can be used in:
 
 Available placeholders:
 
-* *{$attribute}* – a value of an attribute (field) of a target record; e.g. `{$description}`, `{$assignedUserId}` (see [info](formula.md#attribute) about attributes);
-* *{$$variable}* – a value of a variable (available only in BPM process); e.g. `{$$myVariableName}`.
+* *{$attribute}* – a value of an [attribute](terms-and-naming.md#attribute.md) of a target record;
+* *{$$variable}* – a value of a formula variable;
+* *{#secrets.name}* – an App Secret; available only in headers; as of v3.4.7.
 
-Additionally, in headers, App Secrets can be added with a placeholder *{#secrets.name}*  (as of v3.4.7).
-
-A payload example:
+Example of payload with placeholders:
 
 ```
 {
-    "int": {$$myIntegerVariable},
-    "bool": {$$myBooleanVariable},
-    "string": "{$$myStringVariable}"
+    "espoRecordId": "{$id}",
+    "name": "{$name}",
+    "userId": "{$assignedUserId}",  
+    "intValue": {$$myIntegerVariable},
+    "boolValue": {$$myBooleanVariable},
+    "stringValue": "{$$myStringVariable}"
 }
 ```
 
