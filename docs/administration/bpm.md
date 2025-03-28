@@ -12,7 +12,7 @@ The Workflows tool is intended for automation of simple business rules, without 
 
 The BPM tool is intended for more complex business logic, where there can be diverging and converging flows, execution delays, user interactions. The flowchart view makes the business process more comprehensible for a human, the log allows to see how the process was held.
 
-The BPM tool has all the capabilities of the Workflows tool.
+The BPM tool has all the capabilities of the Workflows tool. If you've used the Workflows tool before, your knowledge will be useful for getting into BPM, as they share a number of features.
 
 In this article:
 
