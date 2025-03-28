@@ -325,8 +325,6 @@ Supported request methods:
 * PATCH
 * DELETE
 
-A payload can be specified in a JSON format or taken from a formula variable.
-
 Additional headers can be specified.
 
 Placeholders can be used in:
@@ -341,6 +339,12 @@ Available placeholders:
 * *{$$variable}* – a value of a formula variable;
 * *{#secrets.name}* – an App Secret; available only in headers; as of v3.4.7.
 
+#### Payload
+
+A payload can be specified in a JSON format or taken from a formula variable.
+
+When specified in JSON, it's possible to use placeholders.
+
 Example of payload with placeholders:
 
 ```
@@ -353,6 +357,8 @@ Example of payload with placeholders:
     "stringValue": "{$$myStringVariable}"
 }
 ```
+
+Alternatively, you can craft a payload in formula script, store it in a variable and then use this variable as a payload. The variable value can be an object, array, string or a scalar.
 
 #### Handling HTTP response
 
