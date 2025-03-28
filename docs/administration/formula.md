@@ -312,8 +312,8 @@ The following comparison operators are available:
     }
     
     someDateField = ifThen(
-      entity\isNew() && closeDate == null && stage == 'Closed Won',
-      datetime\today()
+        entity\isNew() && closeDate == null && stage == 'Closed Won',
+        datetime\today()
     );
     ```
 
@@ -333,14 +333,11 @@ The following comparison operators are available:
 !!! example
 
     ```
-    ifThenElse(
-      entity\isNew() && status == 'Planned' && dateStart == null,
-      dateStart = datetime\addDays(datetime\now(), 10),
-      ifThen(
-        status == 'Held' && dateStart == null,
-        dateStart = datetime\now()
-      )
-    );
+    if (entity\isNew() && status == 'Planned' && dateStart == null) {
+        dateStart = datetime\addDays(datetime\now(), 10);
+    } else if (status == 'Held' && dateStart == null) {
+        dateStart = datetime\now();
+    }
     ```
 
 ## Explanation
