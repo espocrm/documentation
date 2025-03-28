@@ -113,7 +113,7 @@ If the parameter *Isolate Variables* is checked, Formula variables defined withi
 
 !!! note
 
-    If you didn't check the *Isolate Variables* parameter, be aware that all variables defined in Execute Formula Script actions will remain available throughout the process and even after it finishes. Since some variables may contain sensitive data or consume disk space, it might be reasonable to unset them at the end of the script. Checking the Isolate Variables parameter is recommended.   
+    If you didn't check the *Isolate Variables* parameter, be aware that all variables defined in Execute Formula Script actions will remain available throughout the process and even after it finishes. Since some variables may contain sensitive data or consume disk space, checking the Isolate Variables parameter is recommended.   
 
 ----
 
