@@ -456,7 +456,11 @@ You can utilize formula in Workflow conditions and actions. See the [Workflows d
 
 ## Sandbox
 
-The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox. You can use the function `output\printLine` to print values for debugging purposes. You can also utilize the sandbox to run one-time scripts, for example, to modify some data in your system.
+The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox. 
+
+Use the function `output\printLine` to print values for debugging purposes. 
+
+You can also utilize the sandbox to run one-time scripts, for example, to modify some data in your system.
 
 ## See also
 
