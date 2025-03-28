@@ -2,7 +2,7 @@
 
 Formula Script is a simple scripting language designed specially for EspoCRM. It's a tool that provides the ability to manipulate data and automatically perform operations.
 
-Where it is used:
+Where it can be used:
 
 * [Before-save script](entity-manager.md#before-save-custom-script)
 * [API before-save script](api-before-save-script.md)
