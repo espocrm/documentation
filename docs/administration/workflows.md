@@ -26,6 +26,7 @@ In this article:
 * [Actions](#actions)
 * [Using formula in actions](#using-formula-in-actions)
 * [Formula functions](#formula-functions)
+* [Config parameters](#config-parameters)
 * [See also](#see-also)
 
 ## Trigger types
@@ -422,6 +423,10 @@ Triggers another Workflow rule.
 `workflow\signalParam(PARAM)`
 
 Get a signal param.
+
+## Config parameters
+
+* `workflowSendRequestTimeout` – `7` – a timeout for the Send HTTP Request action;
 
 ## See also
 
