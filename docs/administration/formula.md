@@ -28,6 +28,7 @@ In this article:
 * [Function arguments](#function-arguments)
 * [Using formula in Workflows](#using-formula-in-workflows)
 * [Sandbox](#sandbox)
+* [See also](#see-also)
 
 ## Syntax
 
@@ -177,9 +178,15 @@ $variable = entity\getAttribute('description');
 
 ## Functions
 
-Format of function usage: `groupName\functionName(argument1, argument2, ..., argumentN)`.
+Format of function usage:
 
-See the list of [out-of-the-box functions](formula-functions.md).
+```
+groupName\functionName(argument1, argument2, ..., argumentN)
+```
+
+See the full list of [built-in functions](formula-functions.md).
+
+Developers can also create [custom functions](../development/new-function-in-formula.md).
 
 ## Values
 
