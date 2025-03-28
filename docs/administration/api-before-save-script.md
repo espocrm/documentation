@@ -2,9 +2,9 @@
 
 *As of v7.5.*
 
-A [formula](formula.md) script that is executed on POST and PUT API requests to an entity endpoint before a record is saved.
-It's executed only when a record is created or updated via API (this also includes actions made through the UI as EspoCRM is a single page application – the frontend communicates with the backend via API). It's not executed when a record is saved from within the system (e.g. in hooks, workflow actions, custom code).
-Can be used for custom validation, duplicate checking and access control. Available at Administration > Entity Manager > {Entity} > Formula.
+A [formula](formula.md) script that is invoked on POST and PUT API requests to an entity endpoint before the record is saved.
+It's executed only when the record is created or updated via the API (this also includes actions made through the UI as EspoCRM is a single page application – the frontend communicates with the backend via API). It's not executed when a record is saved from within the system (e.g. in hooks, workflow actions, custom code).
+Can be used for custom validation, duplicate checking and access control. Available at Administration > Entity Manager > {Entity type} > Formula.
 
 !!! note
 
