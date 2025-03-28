@@ -327,7 +327,7 @@ Placeholders can be used in:
 
 Available placeholders:
 
-* *{$attribute}* – a value of an [attribute](terms-and-naming.md#attribute.md) of a target record;
+* *{$attribute}* – a value of an [attribute](terms-and-naming.md#attribute) of a target record;
 * *{$$variable}* – a value of a formula variable;
 * *{#secrets.name}* – an App Secret; available only in headers; as of v3.4.7.
 
