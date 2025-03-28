@@ -16,7 +16,9 @@ A *field* is a unit of data. Entities have their own set of fields. For example,
 
 Fields are named in lowerCamelCase (starting with a lowercase letter).
 
-The list of available fields for a specific entity type can be obtained at: Administration > Entity Manager > {Entity Type} > Fields > *Name* column.
+!!! info
+
+    The list of available fields for a specific entity type can be obtained at: Administration > Entity Manager > {Entity Type} > Fields > *Name* column.
 
 Each field can have one or few attributes (depending on the field type).
 
@@ -27,6 +29,10 @@ The list of available field types can be found [here](fields.md).
 * An attribute usually corresponds to a database column, provided that the attribute is storable.
 * In the REST API, JSON object keys correspond to attributes.
 * Attributes are used for accessing entity values in Formula Script.
+
+!!! info
+
+    The list of available attributes for a specific field can be obtained at: Administration > Entity Manager > {Entity Type} > View Details from the dropdown of the field.
 
 Most fields have only one attribute named the same as the field. For example, the *createdAt* field has the attribute *createdAt*. Some fields have multiple attributes.
 
@@ -43,15 +49,15 @@ Where *field* is a name of the field.
 
 Attributes are named in lowerCamelCase (start with a lowercase letter).
 
-The list of available attributes for a specific field can be obtained at: Administration > Entity Manager > {Entity Type} > View Details from the dropdown of the field.
-
 ## Link
 
 A *link* represents a relationship with another entity.
 
 Links are named in lowerCamelCase (start with a lowercase letter).
 
-**The list of available links** for a specific entity type can be obtained at: Administration > Entity Manager > {Entity Type} > Relationships.
+!!! info
+
+    The list of available links for a specific entity type can be obtained at: Administration > Entity Manager > {Entity Type} > Relationships.
 
 Each relationship between two entity types is a pair of two links on both sides.
 
