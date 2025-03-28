@@ -14,8 +14,8 @@ You can access Workflows from the Administration panel. Only administrators can 
 
 When creating a Workflow rule you need to set:
 
-* Target Entity Type – the entity type the rule is applied to;
-* Trigger Type – how the rule will be triggered;
+* Target entity type – the entity type the rule is applied to;
+* Trigger type – how the rule will be triggered;
 * Conditions – conditions need to be met to trigger the rule;
 * Actions – what actions to perform when the rule is triggered.
 
