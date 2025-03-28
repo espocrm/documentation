@@ -8,11 +8,9 @@ Where it can be used:
 * [API before-save script](api-before-save-script.md)
 * [Workflows](workflows.md) tool (in conditions and actions)
 * [BPM](bpm.md) tool
-* Formula sandbox
+* [Formula sandbox](#sandbox)
 
 Formula scripts are meant to be written directly within the Espo application UI, with no need for environment configuration or building steps. Even users with little or no programming experience can experiment with writing simple scripts, allowing them to fine-tune their system to better suit their needs.
-
-The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox. You can use the function `output\printLine` to print values for debugging purposes. You can also utilize the sandbox to run one-time scripts, for example, to modify some data in your system.
 
 In this article:
 
@@ -29,6 +27,7 @@ In this article:
 * [Explanation](#explanation)
 * [Function arguments](#function-arguments)
 * [Using formula in Workflows](#using-formula-in-workflows)
+* [Sandbox](#sandbox)
 
 ## Syntax
 
@@ -454,6 +453,10 @@ For non-developers, it's possible to apply a [List Report](../user-guide/reports
 ## Using formula in Workflows
 
 You can utilize formula in Workflow conditions and actions. See the [Workflows documentation](workflows.md) for more information.
+
+## Sandbox
+
+The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox. You can use the function `output\printLine` to print values for debugging purposes. You can also utilize the sandbox to run one-time scripts, for example, to modify some data in your system.
 
 ## See also
 
