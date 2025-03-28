@@ -377,7 +377,9 @@ In the context of a BPM process, it's possible to catch response errors with an 
 
 ### Execute Formula Script
 
-Executes a [formula](formula.md) script. Variables defined within the script will be passed back. They will be available in the next Workflow actions or the BPM process.
+Executes a [formula](formula.md) script.
+
+Variables defined within the script will be passed back. They will be available in the following Workflow actions within the rule. When used in a BPM process, the defined variables will be available further in the flow.
 
 ## Using formula in actions
 
