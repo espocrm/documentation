@@ -10,7 +10,9 @@ The Workflows tool automates your business processes in an easy way. Possible us
 * Integrate Espo with external systems through an API for data exchange.
 * And many more.
 
-You can access Workflows from the Administration panel. When creating a Workflow rule you need to set:
+You can access Workflows from the Administration panel. Only administrators can view or configure workflows.
+
+When creating a Workflow rule you need to set:
 
 * Target Entity Type – the entity type the rule is applied to;
 * Trigger Type – how the rule will be triggered;
