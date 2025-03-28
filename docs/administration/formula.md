@@ -26,7 +26,6 @@ In this article:
 * [Examples](#examples)
 * [Explanation](#explanation)
 * [Function arguments](#function-arguments)
-* [Using formula in Workflows](#using-formula-in-workflows)
 * [Sandbox](#sandbox)
 * [See also](#see-also)
 
@@ -461,10 +460,6 @@ For non-developers, it's possible to apply a [List Report](../user-guide/reports
     `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`
     
     Where *5c41a0a396f66725d* is an ID of the Report Filter record which you can obtain from the URL.
-
-## Using formula in Workflows
-
-You can utilize formula in Workflow conditions and actions. See the [Workflows documentation](workflows.md) for more information.
 
 ## Sandbox
 
