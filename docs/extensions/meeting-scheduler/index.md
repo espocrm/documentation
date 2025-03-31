@@ -31,7 +31,7 @@ The Meeting Scheduler Hosts scope allows users to configure schedulers that dist
 
 ## General
 
-The system uses the parameter *Free/Busy Entity List* when determing busy time slots. This parameter is available under: Administration > Settings.
+The system uses the parameter *Free/Busy Entity List* when determining busy time slots. This parameter is available under: Administration > Settings.
 
 !!! note
 
