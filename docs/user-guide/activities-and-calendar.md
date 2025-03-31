@@ -63,7 +63,7 @@ Default duration can be changed by the administrator at Administration > Entity 
 
 ### Scheduler
 
-The scheduler panel provides the ability to view free & busy time ranges for user attendees when creting or editing an event. Available for Meetings, Calls, and custom entities of the Event type.
+The scheduler panel provides the ability to view free & busy time ranges for user attendees when creating or editing an event. Available for Meetings, Calls, and custom entities of the Event type.
 
 The scheduler panel can be added or removed at Administration > Entity Manager > Layouts > {Entity Type} > Bottom Panels.
 
