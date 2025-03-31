@@ -134,7 +134,7 @@ To edit the formula script for a specific entity type, follow Administration > E
 
     It can be reasonable to set fields that are supposed to be calculated by formula as read-only (Administration > Entity Manager > {Entity Type} > Fields).
 
-An admininstrator can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
+An administrator can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
 ### API before-save script
 
