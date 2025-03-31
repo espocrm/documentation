@@ -1,6 +1,6 @@
 # Knowledge Base
 
-The Knowledge Base provides the ability to create articles. Articles may contain information about your products, guideleness for clients, or help for internal users to improve their productivity.
+The Knowledge Base provides the ability to create articles. Articles may contain information about your products, guidelines for clients, or help for internal users to improve their productivity.
 
 To make an article available in the Portal, you need to set its status to *Published* and select the needed portal in the *Portals* field. Make sure that the Portal Role allows an access to the Knowledge Base scope and the navigation menu tab is added in the Portal.
 

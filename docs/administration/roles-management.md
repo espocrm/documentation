@@ -125,7 +125,7 @@ Allows to view:
 
 !!! note
 
-    Allow this permission only for privilaged users.
+    Allow this permission only for privileged users.
 
 ### User Calendar Permission
 

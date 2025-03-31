@@ -3,12 +3,12 @@
 set -e
 
 function printExitError() {
-    local messsage="$1"
+    local message="$1"
 
     local red='\033[0;31m'
     local default='\033[0m'
 
-    printf "\n${red}ERROR${default}: ${messsage}\n"
+    printf "\n${red}ERROR${default}: ${message}\n"
     exit 1
 }
 

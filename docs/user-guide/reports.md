@@ -352,7 +352,7 @@ It's possible to have target lists synced with list report results. It's conveni
 
 ## Report Filters
 
-The Report Filters feature alows to create custom primary filters for list views. Created filters can also be used in specific formula functions.
+The Report Filters feature allows to create custom primary filters for list views. Created filters can also be used in specific formula functions.
 
 An administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
 
