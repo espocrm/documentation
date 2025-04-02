@@ -41,7 +41,7 @@ To set up an SMTP account, do the following:
 
 1. Navigate to the *Personal Email Accounts* page: Emails Tab > top-right menu > Personal Email Accounts.
 2. Tick off the *Use SMTP* box.
-3. Enter your *SMTP Host* name, in SMTP security field select *TLS* or *SSL* for a secure connection. A proper *SMTP Port* will be set automatically.
+3. Enter your *SMTP Host* name, in the SMTP security field select *STARTTLS* or *SSL/TLS* for a secure connection. The proper *SMTP Port* will be set automatically.
 4. Tick off the *SMTP Auth* box and enter your *Username* and *Password*.
 5. Click on the *Send Test Email* button to send a test email to a specified email address.
 6. Save.
