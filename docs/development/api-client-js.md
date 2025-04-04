@@ -64,7 +64,17 @@ File `espocrm-api-client.js`:
 ```js
 class Client {
 
-    constructor (url, apiKey, secretKey, options) {
+    /**
+     *
+     * @param {string} url
+     * @param {string} apiKey
+     * @param {string|null} [secretKey]
+     * @param {{
+     *     port?: number,
+     *     timeout?: number,
+     * }} [options]
+     */
+    constructor(url, apiKey, secretKey = null, options = {}) {
         this.url = url;
         this.apiKey = apiKey;
         this.secretKey = secretKey;
@@ -73,13 +83,20 @@ class Client {
             this.url = this.url.substr(0, this.url.length -1);
         }
 
-        this.options = options || {};
+        this.options = options;
 
         this.urlPath = '/api/v1/';
         this.isHttps = url.toLowerCase().indexOf('https') === 0;
     }
 
-    request (method, action, data) {
+    /**
+     *
+     * @param {'GET'|'POST'|'PUT'|'DELETE'|'PATCH'|'OPTIONS'} method
+     * @param {string} action
+     * @param {Record} [data]
+     * @return {Promise}
+     */
+    request(method, action, data) {
         method = method || 'GET';
         method = method.toUpperCase();
 
@@ -88,18 +105,14 @@ class Client {
         const headers = {};
 
         if (this.apiKey && this.secretKey) {
-            let string = method + ' /' + action;
-
             const crypto = require('crypto');
 
-            const b2 = crypto
-                .createHmac('sha256', this.secretKey)
-                .update(string)
-                .digest();
+            const string = method + ' /' + action;
 
-            const b1 = Buffer.from(this.apiKey + ':');
+            const authString = this.apiKey + ':' +
+                crypto.createHmac('sha256', this.secretKey).update(string).digest('hex');
 
-            const authPart = Buffer.concat([b1, b2]).toString('base64');
+            const authPart = Buffer.from(authString).toString('base64');
 
             headers['X-Hmac-Authorization'] = authPart;
         } else if (this.apiKey) {
@@ -180,7 +193,7 @@ class Client {
         });
     }
 
-    _buildUrl (action) {
+    _buildUrl(action) {
         return this.url + this.urlPath + action;
     }
 }
@@ -188,5 +201,4 @@ class Client {
 if (module && module.exports) {
     module.exports = Client;
 }
-
 ```
