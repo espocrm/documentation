@@ -25,6 +25,9 @@ Example:
             },
             "readOnly": {
                 "conditionGroup": []
+            },
+            "invalid": {
+                "conditionGroup": []
             }
         }
     },
