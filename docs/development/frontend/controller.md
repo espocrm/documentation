@@ -21,7 +21,7 @@ Create a client controller `client/custom/src/controllers/my-controller`:
 ```js
 define(['controller'], (Controller) => {
 
-    return class extends RecordController {
+    return class extends Controller {
 
         actionTest(options) {
             console.log(options);
