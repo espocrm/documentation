@@ -2,7 +2,7 @@
 
 Path: metadata > logicDefs > {Scope}
 
-Dynamic logic definitions for an entity type.
+[Dynamic logic](../../administration/dynamic-logic.md) definitions for an entity type.
 
 *As of v9.1.*
 
@@ -22,6 +22,9 @@ Example:
             },
             "readOnly": {
                 "conditionGroup": []
+            },
+            "readOnly": {
+                "conditionGroup": []
             }
         }
     },
@@ -31,6 +34,24 @@ Example:
                 "conditionGroup": []
             }
         }
+    },
+    "options": {
+        "fieldName": [
+            {
+                "optionList": [
+                    "Value 1",
+                    "Value 2"
+                ],
+                "conditionGroup": []
+            },
+            {
+                "optionList": [
+                    "Value 3",
+                    "Value 4"
+                ],
+                "conditionGroup": []
+            }
+        ]
     }
 }
 ```
