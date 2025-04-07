@@ -21,6 +21,7 @@ In this article:
 * [clientDefs](metadata/client-defs.md) – front-end defs for entity types
 * [entityAcl](metadata/entity-acl.md) – access restriction for specific fields and links for entity types
 * [pdfDefs](metadata/pdf-defs.md) – PDF generation defs for entity types
+* [logicDefs](metadata/logic-defs.md) – dynamic logic for entity types
 * [notificationDefs](metadata/notification-defs.md) – notification defs for entity types
 * [streamDefs](metadata/stream-defs.md) – stream defs for entity types
 * [fields](metadata/fields.md) – field types
