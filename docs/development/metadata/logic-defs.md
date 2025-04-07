@@ -6,7 +6,7 @@ Dynamic logic definitions for an entity type.
 
 *As of v9.1.*
 
-*Before v9.1, it was defined in clientDefs > dynamicLogic.
+*Before v9.1, it was defined in clientDefs > dynamicLogic.*
 
 Example:
 
