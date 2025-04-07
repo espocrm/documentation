@@ -235,6 +235,7 @@ nav:
             - 'clientDefs': 'development/metadata/client-defs.md'
             - 'entityAcl': 'development/metadata/entity-acl.md'
             - 'pdfDefs': 'development/metadata/pdf-defs.md'
+            - 'logicDefs': 'development/metadata/logic-defs.md'
             - 'notificationDefs': 'development/metadata/notification-defs.md'
             - 'streamDefs': 'development/metadata/stream-defs.md'
             - 'fields': 'development/metadata/fields.md'
