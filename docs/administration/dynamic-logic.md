@@ -17,7 +17,7 @@ Dynamic logic can control:
 * Visibility − if the field is visible or not;
 * Required − if the field is required or not;
 * Read-only − if the field read-only or not;
-* Options − conditions that determine which options are available (for Enum, Array, Multi-Enum, Checklist fields);
+* Options − conditions that determine options available for enum fields;
 * Invalidity − conditions making the field invalid.
 
 Conditions are configured through user interface, no coding required.
@@ -31,6 +31,38 @@ Conditions are configured through user interface, no coding required.
     * In some cases it may be reasonable to disable the inline-edit functionality for a specific field as it may interfere with the dynamic logic.
     * Dynamic Logic operates fields on the form, it has no effect on buttons and menu items in the UI.
     * Dynamic Logic is not applied on the list view.
+
+### Field logic
+
+#### Visible
+
+Is applied only in the frontend.
+
+#### Required
+
+Is applied only in the frontend and in the backend (as of v9.1).
+
+#### Read-only
+
+Is applied only in the frontend. Conditions are checked against the current state of a record. If we change a record without saving it, it changes the current state.
+
+#### Read-only saved-state
+
+*As of v9.1.*
+
+Dynamic logic conditions checked against the saved state of a record. The logic is not applied when editing a record.
+
+* Is not applied when a record is created.
+* Applied in both the frontend and the backend.
+* Applied in mass-update.
+
+Use-case: Make a field Resolution read-only when Status = Completed. It won't be possible to write the Resolution field while the Status is saved as Completed. Even if we change the Status on the form, the Resolution field will still be read-only. But if we manage to change and save the Status, it will be possible to write the Resolution field .
+
+#### Options
+
+A mapping of conditions against option lists. Specific conditions determine what options will be available in an enum field.
+
+For Enum, Array, Multi-Enum and Checklist fields.
 
 ### Regular expression
 
