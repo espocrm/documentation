@@ -26,6 +26,9 @@ Example:
             "readOnly": {
                 "conditionGroup": []
             },
+            "readOnlySaved": {
+                "conditionGroup": []
+            }
             "invalid": {
                 "conditionGroup": []
             }
