@@ -50,7 +50,7 @@ Is applied only in the frontend. Conditions are checked against the current stat
 
 *As of v9.1.*
 
-Dynamic logic conditions checked against the saved state of a record. The logic is not applied when editing a record.
+Dynamic logic conditions checked against the saved state of a record. The logic is not applied while editing a record without saving.
 
 * Is not applied when a record is created.
 * Applied in both the frontend and the backend.
