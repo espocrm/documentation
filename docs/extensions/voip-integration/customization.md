@@ -124,7 +124,7 @@ There is a way to get event information while creating a `Permitted` / `Quick Cr
 
 For example, if we need to fetch a `phoneNumber` into the `description` field for a **Task** entity:
 
-1. Add the field in `custom/Espo/Custom/Resources/metadata/entityDefs/Task.json`:
+1\. Add the field in `custom/Espo/Custom/Resources/metadata/entityDefs/Task.json`:
 
 ```
 {
@@ -137,9 +137,9 @@ For example, if we need to fetch a `phoneNumber` into the `description` field fo
 }
 ```
 
-2. Make rebuild and grant the [necessary permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
+2\. Make rebuild and grant the [necessary permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
 
-3. Add the following formula in `Administration` > `Entity Manager` > `Task` > `Formula` > `Before Save Custom Script`:
+3\. Add the following formula in `Administration` > `Entity Manager` > `Task` > `Formula` > `Before Save Custom Script`:
 
 ```
 $voipEventData = json\encode(voipEventData);
