@@ -77,7 +77,7 @@ Available values:
 
 #### `--skip-password`
 
-Skip exporting passwords and changing passwords for existing users. Example: `--skip-password"`.
+Skip exporting passwords and changing passwords for existing users. Example: `--skip-password`.
 Use [`--user-password`](import.md/#-user-password) in order to set a user password.
 
 #### `--from-date`
