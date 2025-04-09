@@ -145,7 +145,8 @@ The list of parameters along with their default values. This is not a full list 
 * clientSecurityHeadersDisabled – `false` – disable security headers (as of v7.2);
 * clientCspDisabled –  `false` – disable Content-Security-Policy header for the client page (as of v7.2);
 * clientCspScriptSourceList – a script source white-list for the Content-Security-Policy header (as of v7.2);
-* clientStrictTransportSecurityHeaderDisabled – disable `Strict-Transport-Security` header, actual if a webserver adds it (as of v7.3);
+* clientStrictTransportSecurityHeaderDisabled –  `false` – disables `Strict-Transport-Security` header, actual if a webserver adds it (as of v7.3);
+* clientCspFormActionDisabled –  `false` – disables addition of `form-action 'self'` in the CSP header (as of v9.0.8);
 
 ### Jobs & Daemon
 
