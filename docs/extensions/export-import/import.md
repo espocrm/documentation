@@ -107,7 +107,7 @@ For resetting the password, use `bin/command set-password [username]`.
 
 #### `--skip-password`
 
-Skip changing passwords for existing users. Example: `--skip-password"`.
+Skip changing passwords for existing users. Example: `--skip-password`.
 Use [`--user-password`](#-user-password) in order to set a user password.
 
 #### `--update-currency`
