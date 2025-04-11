@@ -52,7 +52,7 @@ If the *Never* option is not available, choose *In 2 years*. In this case you wi
 
 !!! note
 
-    This step is required for Microsoft 65 users. For Outlook.com, it usually works without this step, but it might be needed either.
+    This step is required for Microsoft 365 users. For Outlook.com, it usually works without this step, but it might be needed either.
 
 Click *Api Permissions* on the left panel. Click *Add a permission*. Click *Microsoft Graph*. Click *Delegated permissions*. Then, use search to find the needed permissions and enable them.
 
