@@ -90,8 +90,8 @@ Check whether the scheduled job is running Administration > Scheduled Jobs > Out
 
 Check EspoCRM log at `data/logs` directory. You can also set the [log mode](../../administration/troubleshooting.md#debug-mode) to `DEBUG` level to obtain more info from the log.
 
-## Office 365 configuration
+## Microsoft 365 configuration
 
 ### Enabling SMTP
 
-For Office 365 you might need to enable SMTP AUTH for specific mailboxes. See how to do it in the [Microsoft documentation](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission#use-the-microsoft-365-admin-center-to-enable-or-disable-smtp-auth-on-specific-mailboxes).
+For Microsoft 365, you might need to enable SMTP AUTH for specific mailboxes. See how to do it in the [Microsoft documentation](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission#use-the-microsoft-365-admin-center-to-enable-or-disable-smtp-auth-on-specific-mailboxes).
