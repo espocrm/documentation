@@ -24,7 +24,7 @@ After that, you can test IMAP connection and sent a test email to make sure ever
 
 !!! note
 
-    If during IMAP testing TLS doesn't work, try the SSL option.
+    If during IMAP testing STARTTLS doesn't work, try the SSL/TLS option.
 
 ## Recommendations
 
