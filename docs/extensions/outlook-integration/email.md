@@ -4,9 +4,9 @@
 
     Before proceeding to this article it's recommended to [set up the integration](setting-up.md).
 
-OAuth IMAP and SMTP authentication is available in the [Outlook Integration](https://www.espocrm.com/extensions/outlook-integration) extension. It provides a secure authentication for Office 365 and Outlook.com accounts. With this extension, you won’t need to store your Outlook password in EspoCRM.
+OAuth IMAP and SMTP authentication is available in the [Outlook Integration](https://www.espocrm.com/extensions/outlook-integration) extension. It provides a secure authentication for Microsoft 365 and Outlook.com accounts. With this extension, you won’t need to store your Outlook password in EspoCRM.
 
-In this article, both Office 365 and Outlook.com will be referred to as *Outlook*.
+In this article, both Microsoft 365 and Outlook.com will be referred to as *Outlook*.
 
 ## Setting-up email account
 
