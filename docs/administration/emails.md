@@ -24,7 +24,7 @@ If a user has a *read* access level set to *own*, they will be able to see email
 
 There are 4 access levels: No, Own, Team, All.
 
-## Group Email Accounts
+## Group email accounts
 
 Group Email Accounts can be accessed at Administration > Group Email Accounts.
 
@@ -36,14 +36,13 @@ If a Group Email Account has the SMTP enabled and it's checked as **shared**, th
 
 There is the ability to make the system send an **auto-reply** for emails incoming to a Group Email Account.
 
-### Making Group Email Account system default
+### System email account
 
-There's the ability to make a specific Group Email Account to be used as a system default, meaning that all notifications and system emails will be sent from that account.
+One Group Email Account needs to be picked as the system default account. All notifications and system emails will be sent from that account.
 
 1. Create and configure a Group Email Account (at Administration > Group Email Accounts).
 2. Navigate to Administration > Outbound Emails.
-3. Specify the email address in the *Email Address* field. The email address should be exactly the same as in the created Group Email Account.
-4. Make sure that the *Server* field value is empty (on the *SMTP* panel).
+3. Specify the email address in the *System Email Address* field. The email address must be exactly the same as in the created Group Email Account (the list of available accounts will be shown in an autocomplete dropdown).
 
 ### Email-to-Case
 
