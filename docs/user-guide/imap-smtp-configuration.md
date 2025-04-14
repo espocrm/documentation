@@ -75,6 +75,8 @@ For more information, follow the [link](https://support.google.com/mail/answer/7
 
 ## Outlook
 
+To be able to connect to Outlook.com or Microsoft 365 email accounts, you need to install the [Outlook Integration](https://www.espocrm.com/extensions/outlook-integration/) extension.
+
 1. Go to your *Outlook Account*.
 2. Open Settings ![Settings](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/4.png).
 3. On the navigation panel, select *Mail > Forwarding and IMAP*.
@@ -84,11 +86,7 @@ For more information, follow the [link](https://support.google.com/mail/answer/7
 
 !!! important
 
-    The TLS encryption method may not work for IMAP, use the SSL method in this case.
-
-!!! note
-
-    If you have **2FA** enabled for your Microsoft account, you need to create app password and use it in Espo instead of your main password. More info [here](https://support.microsoft.com/en-us/help/12409/microsoft-account-app-passwords-and-two-step-verification).
+    If the STARTTLS encryption method does not work for IMAP, try the SSL/TLS method.
 
 ## Yahoo
 
