@@ -109,7 +109,8 @@ The list of parameters along with their default values. This is not a full list 
 * cleanupActionHistoryPeriod – `'15 days'` – action history records;
 * cleanupAuthTokenPeriod – `'1 month'` – auth tokens;
 * cleanupAuthLogPeriod – `'2 months'` – auth log;
-* cleanupAppLogPeriod – `'30 days'` – app log (as of v8.3);
+* cleanupAppLog – `true` – app log cleanup (as of v9.1);
+* cleanupAppLogPeriod – `'30 days'` – app log cleanup period (as of v8.3);
 * cleanupNotificationsPeriod – `'2 months'` – notifications;
 * cleanupAttachmentsPeriod – `'15 days'` – attachments with roles 'Export File', 'Mail Merge', 'Mass Pdf' and attachments relate for deleted records;
 * cleanupOrphanAttachments – `false` – cleaning up attachments that were uploaded but not linked with any record; *cleanupAttachmentsPeriod* is used; an experimental parameter;
