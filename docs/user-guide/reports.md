@@ -65,7 +65,7 @@ Where list reports can be also utilized:
 
 ## Grid Reports
 
-Grid reports show summarized values, can be grouped by one or two fields and displayed as a chart.
+Grid reports display summarized values, can be grouped by one or two fields, and support chart visualization.
 
 To create a new grid report, click on the *Reports* tab and then click *Create Report* button. Choose the needed *Entity Type*, then, click the *Create* button at the *Grid Report* section.
 
