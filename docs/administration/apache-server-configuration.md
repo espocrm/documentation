@@ -81,6 +81,8 @@ Add the following code:
 
 You need to change `/PATH_TO_ESPO/` to the full path to your EspoCRM instance. It can be `/var/www/html/`.
 
+Note: On production, it's reasonable to use  `/PATH_TO_ESPO/public/` path instead.
+
 Then restart Apache:
 
 ```
