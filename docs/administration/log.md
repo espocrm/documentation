@@ -58,31 +58,31 @@ There is the ability to specify which handlers to use in Espo.
 In `data/config.php`:
 
 ```
-  'logger' => [
-    'level' => 'NOTICE',
-    'handlerList' => [
-      [
-        'className' => 'Espo\\Core\\Log\\Handler\\EspoRotatingFileHandler',
-        'params' => [
-          'filename' => 'data/logs/espo.log',
-        ],
-        'level' => 'NOTICE',
-        'formatter' => [
-          'className' => 'Monolog\\Formatter\\LineFormatter',
-          'params' => [
-            'dateFormat' => 'Y-m-d H:i:s',
-          ],
-        ],
+'logger' => [
+  'level' => 'NOTICE',
+  'handlerList' => [
+    [
+      'className' => 'Espo\\Core\\Log\\Handler\\EspoRotatingFileHandler',
+      'params' => [
+        'filename' => 'data/logs/espo.log',
       ],
-      [
-        'loaderClassName' => 'Espo\\Core\\Log\\EspoRotatingFileHandlerLoader',
+      'level' => 'NOTICE',
+      'formatter' => [
+        'className' => 'Monolog\\Formatter\\LineFormatter',
         'params' => [
-          'filename' => 'data/logs/test-warning.log',
+          'dateFormat' => 'Y-m-d H:i:s',
         ],
-        'level' => 'WARNING',
       ],
     ],
+    [
+      'loaderClassName' => 'Espo\\Core\\Log\\EspoRotatingFileHandlerLoader',
+      'params' => [
+        'filename' => 'data/logs/test-warning.log',
+      ],
+      'level' => 'WARNING',
+    ],
   ],
+],
 ```
 
 Note that it's possible to have multiple handlers.
