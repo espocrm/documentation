@@ -9,14 +9,14 @@ By default, log files are created in `{ESPO_ROOT}/data/logs/` directory.
 In `data/config-internal.php`:
 
 ```
-  'logger' => [
-    'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR
-    'maxFileNumber' => 30,
-    'printTrace' => true, // to print an exception backtrace,
-    'sql' => true, // log SQL queries
-    'databaseHandler' => true, // the log will be available in the UI
-    'databaseHandlerLevel' => 'NOTICE', // overrides the level for the database handler
-  ],
+'logger' => [
+  'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR
+  'maxFileNumber' => 30,
+  'printTrace' => true, // to print an exception backtrace,
+  'sql' => true, // log SQL queries
+  'databaseHandler' => true, // the log will be available in the UI
+  'databaseHandlerLevel' => 'NOTICE', // overrides the level for the database handler
+],
 ```
 
 ## Trace printing
