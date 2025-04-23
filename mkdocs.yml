@@ -255,6 +255,7 @@ nav:
               - 'cleanup': 'development/metadata/app-cleanup.md'
               - 'client': 'development/metadata/app-client.md'
               - 'clientNavbar': 'development/metadata/app-client-navbar.md'
+              - 'clientIcons': 'development/metadata/app-client-icons.md'
               - 'clientRecord': 'development/metadata/app-client-record.md'
               - 'clientRoutes': 'development/metadata/app-client-routes.md'
               - 'complexExpression': 'development/metadata/app-complex-expression.md'
