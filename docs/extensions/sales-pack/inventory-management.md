@@ -34,6 +34,14 @@ Access to Inventory Transactions is controlled by Roles. The administrator can a
 
 Note that usually users are not supposed to create transactions manually. Transactions are created automatically when the status of an order record is changed.
 
+The following entity types automatically create inventory transaction records:
+
+* Delivery Order – items are removed from stock or reserved;
+* Receipt Order – items are added to stock;
+* Transfer Order – items are moved between warehuses or reserved before before the move;
+* Inventory Adjustment – items added or removed;
+* Sales Order – items are soft-reserved before delivery is created.
+
 ## Quantity
 
 The following quantity values are available for a Product:
