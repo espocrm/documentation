@@ -38,7 +38,7 @@ The following entity types automatically create inventory transaction records:
 
 * Delivery Order – items are removed from stock or reserved;
 * Receipt Order – items are added to stock;
-* Transfer Order – items are moved between warehuses or reserved before before the move;
+* Transfer Order – items are moved between warehouses or reserved before the move;
 * Inventory Adjustment – items added or removed;
 * Sales Order – items are soft-reserved before delivery is created.
 
