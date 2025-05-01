@@ -299,6 +299,14 @@ Additional attributes for a field. Attribute name will be derived by concatenati
 
 Dependee attributes.
 
+### loaderClassName
+
+*class-string<Espo\Core\FieldProcessing\Loader>*
+
+*As of v9.1.*
+
+Loads the field value. Can be used to load non-storable fields (not stored in the entity table).
+
 ### select
 
 *Object*
