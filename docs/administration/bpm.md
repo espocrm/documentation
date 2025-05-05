@@ -71,7 +71,7 @@ The execution of a Process is visualized with colors highlighting statuses of fl
 
 ![Process execution](../_static/images/administration/bpm/process-execution.png)
 
-**Only one Process** for the same target record and Flowchart can be active **at the same time**. It means that if you have multiple Start Events, once one of them is triggered (the process is started), other Start Events will be ignored while the Process is active. 
+**Only one Process** for the same target record and Flowchart can be active at the same time. It means that if you have multiple Start Events, once one of them is triggered (the process is started), other Start Events will be ignored while the Process is active. 
 
 Usually Processes start their execution flow from a Start Event (green colored circle). One Process Flowchart can have multiple Start Events.
 
