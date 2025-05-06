@@ -73,7 +73,7 @@ By utilizing the Workflow tool, it's possible to write a rule that will automati
 
 *As of v9.0.0.*
 
-The collaborators feature can be enabled for Cases at Administration > Entity Manager > Case > Edit.
+The collaborators feature can be enabled for Cases at Administration > Entity Manager > Case > Edit. Then, the *Collaborators* field will be automatically created for the Case entity type. You can add this field to the *Side Panel Fields* layout.
 
 Users added as collaborators to a Case will have read and stream access, provided their access level, as defined by Roles, is other than no.
 
