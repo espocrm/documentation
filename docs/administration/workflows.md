@@ -430,7 +430,7 @@ Get a signal param.
 
 *As of v3.9.*
 
-Returns the ID of the last record that has been created within the workflow rule by a *Create Record* or *Created Related Record* action. Available only within a workflow rule and within a BPM's Task action.
+Returns the ID of the last record that has been created within the workflow rule by a *Create Record* or *Created Related Record* action. Available only within a workflow rule and within a BPM's Task activity.
 
 ## Config parameters
 
