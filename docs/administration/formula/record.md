@@ -214,7 +214,7 @@ or
 
 `record\create(ENTITY_TYPE, OBJECT)` (as of v9.0)
 
-Creates a new record of entity type with attributes specified as key-value pairs or in an object. Returns id of the created record, or NULL if failure.
+Creates a new record of entity type with attributes specified as key-value pairs or in an object. Returns the ID of the created record.
 
 !!! example
 
