@@ -71,7 +71,7 @@ Limitations:
 
 * Portal Users are not allowed to run *Manual* Workflows.
 
-To show a custom result message use the formula function [workflow\alert](workflows.md#workflowalert).
+To show a custom result message use the function [workflow\alert](workflows.md#workflowalert) in an Execute Formula Script action.
 
 ### Scheduled
 
