@@ -424,6 +424,14 @@ Triggers another Workflow rule.
 
 Get a signal param.
 
+#### workflow\lastCreatedEntityId
+
+`workflow\lastCreatedEntityId()`
+
+*As of v3.9.*
+
+Returns the ID of the last record that has been created within the workflow rule by a *Create Record* or *Created Related Record* action.
+
 ## Config parameters
 
 * `workflowSendRequestTimeout` – `7` – a timeout for the Send HTTP Request action;
