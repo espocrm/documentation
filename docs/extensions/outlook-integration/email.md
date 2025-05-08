@@ -37,3 +37,15 @@ Recommendations for setting up an email account if you encounter errors when con
 3. Go to email account and connect to Outlook.
 4. Click Test Connection button, check if successful.
 6. Click Send Test Email button, check if successful.
+
+## Graph API
+
+*As of v1.6.*
+
+Requires EspoCRM v9.1 or greater.
+
+An administrator can enable sending emails via Graph API. Under Administration > Integrations > Outlook, check *Send emails via Graph API*.
+
+!!! important
+
+    When the Graph API is enabled for sending, it's not possible to use the same Espo email account record for both sending emails and receiving emails. Separate email accounts for the same email address should be created. One – for sending, another – for receiving (IMAP). Then, connect both accounts to Microsoft using the *Connect* button.
