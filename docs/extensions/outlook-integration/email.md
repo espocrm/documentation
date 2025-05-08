@@ -48,4 +48,4 @@ An administrator can enable sending emails via Graph API. Under Administration >
 
 !!! important
 
-    When the Graph API is enabled for sending, it's not possible to use the same Espo email account record for both sending emails and receiving emails. Separate email accounts for the same email address should be created. One – for sending, another – for receiving (IMAP). Then, connect both accounts to Microsoft using the *Connect* button.
+    When the Graph API is enabled for sending, it's not possible to use the same Espo email account record for both sending emails and receiving emails. Separate email accounts for the same email address should be created. One – for sending, another – for receiving (classic IMAP). Then, connect both accounts to Microsoft using the *Connect* button.
