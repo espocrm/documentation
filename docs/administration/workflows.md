@@ -71,6 +71,8 @@ Limitations:
 
 * Portal Users are not allowed to run *Manual* Workflows.
 
+To show a custom result message use the formula function [workflow\alert](workflows.md#workflowalert).
+
 ### Scheduled
 
 Triggered according to a defined scheduling. You can set up it to run every day, every week, etc. Actions will be applied for records returned by a specified *List* Report. Hence, you need also to create a *List* Report.
