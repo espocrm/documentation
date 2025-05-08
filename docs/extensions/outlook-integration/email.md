@@ -6,6 +6,8 @@
 
 OAuth IMAP and SMTP authentication is available in the [Outlook Integration](https://www.espocrm.com/extensions/outlook-integration) extension. It provides a secure authentication for Microsoft 365 and Outlook.com accounts. With this extension, you won’t need to store your Outlook password in EspoCRM.
 
+Optionally, the extension allows the use of the Microsoft Graph API for sending emails.
+
 In this article, both Microsoft 365 and Outlook.com will be referred to as *Outlook*.
 
 ## Setting-up email account
