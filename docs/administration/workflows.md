@@ -432,6 +432,14 @@ Get a signal param.
 
 Returns the ID of the last record that has been created within the workflow rule by a *Create Record* or *Created Related Record* action. Available only within a workflow rule and within a BPM's Task activity.
 
+#### workflow\alert
+
+`workflow\alert(MESSAGE, [AUTO_CLOSE], [TYPE])`
+
+*As of v3.9.*
+
+Sets an alert message to show for the user after a manual workflow in run. AUTO_CLOSE is boolean. TYPE can be `"warning"`, `"danger"`, `"success"`, `"info"`.
+
 ## Config parameters
 
 * `workflowSendRequestTimeout` – `7` – a timeout for the Send HTTP Request action;
