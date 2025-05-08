@@ -378,7 +378,7 @@ JSON attributes can be retrieved with the function `json\retrieve`.
 
 !!! note
 
-    In the context of a BPM process, the last response body is available only within a Task that contains the Send HTTP Request action. The response won't be passed further along the process flow. But if you assign a response value to a variable, the variable will be passed further.
+    In the context of a BPM process, the last response body is available only within a Task that contains the Send HTTP Request action. The response won't be passed further along the process flow. But if you assign the response value to a variable, the variable will be passed further.
 
 In the context of a BPM process, it's possible to catch response errors with an Error Boundary Event. The error code can be obtained by using `bpm\caughtErrorCode` function.
 
