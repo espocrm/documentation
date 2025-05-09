@@ -89,6 +89,12 @@ services:
     volumes:
       - mysql:/var/lib/mysql
     restart: always
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 20s
+      start_period: 10s
+      timeout: 10s
+      retries: 3
 
   espocrm:
     image: espocrm/espocrm
@@ -104,6 +110,9 @@ services:
     volumes:
       - espocrm:/var/www/html
     restart: always
+    depends_on:
+      espocrm-db:
+        condition: service_healthy
     ports:
       - 8080:80
 

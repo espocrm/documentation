@@ -40,6 +40,12 @@ services:
     container_name: espocrm-db
     command: --max-allowed-packet=64MB
     restart: always
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 20s
+      start_period: 10s
+      timeout: 10s
+      retries: 3
     environment:
       MARIADB_ROOT_PASSWORD: root_password
       MARIADB_DATABASE: espocrm
@@ -59,6 +65,9 @@ services:
       ESPOCRM_ADMIN_PASSWORD: password
       ESPOCRM_SITE_URL: "https://{ESPOCRM_DOMAIN}"
     restart: always
+    depends_on:
+      espocrm-db:
+        condition: service_healthy
     volumes:
       - ./espocrm:/var/www/html
     labels:
