@@ -74,8 +74,6 @@ $ cd espocrm-docker/
 3\. Create a **`docker-compose.yml`** file:
 
 ```
-version: '3.8'
-
 services:
 
   espocrm-db:
