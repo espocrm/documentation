@@ -140,7 +140,7 @@ services:
       - 8081:8080
 
 volumes:
-  mysql:
+  espocrm-db:
   espocrm:
 ```
 
