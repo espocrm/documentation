@@ -26,14 +26,14 @@ sudo bash install.sh
 ## Installation with SSL/TLS certificate
 
 ```
-wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl
 ```
 
 ## Installation without prompts
 
 ```
-wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh -y --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
@@ -391,21 +391,21 @@ All the actions can be applied to already installed EspoCRM instance.
 ### From HTTP to Own SSL/TLS certificate
 
 ```
-wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --owncertificate --domain=my-espocrm.com
 ```
 
 ### From HTTP to Let's Encrypt certificate
 
 ```
-wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
 ### From Own SSL/TLS certificate to Let's Encrypt certificate
 
 ```
-wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
@@ -426,7 +426,7 @@ mv /var/www/espocrm /var/www/espocrm-old
 3\. Run the installer in the required mode, e.g. `Let's Encrypt certificate` mode:
 
 ```
-wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
@@ -610,7 +610,7 @@ sudo cp -a /var/www/espocrm/data/espocrm/custom /var/www/backup/custom
 
 ```
 cd ~
-wget https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
+wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --db-root-password=YOUR_ROOT_PASSWORD --db-password=YOUR_ESPOCRM_DB_PASSWORD --admin-password=YOUR_ADMIN_PASSWORD --clean
 ```
 
