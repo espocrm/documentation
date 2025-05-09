@@ -78,24 +78,30 @@ version: '3.8'
 
 services:
 
-  mysql:
-    image: mysql:8
-    container_name: mysql
+  espocrm-db:
+    image: mariadb:latest
+    container_name: espocrm-db
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: espocrm
-      MYSQL_USER: espocrm
-      MYSQL_PASSWORD: database_password
+      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_DATABASE: espocrm
+      MARIADB_USER: espocrm
+      MARIADB_PASSWORD: database_password
     volumes:
-      - mysql:/var/lib/mysql
+      - espocrm-db:/var/lib/mysql
     restart: always
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 20s
+      start_period: 10s
+      timeout: 10s
+      retries: 3
 
   espocrm:
     image: espocrm/espocrm
     container_name: espocrm
     environment:
       ESPOCRM_DATABASE_PLATFORM: Mysql
-      ESPOCRM_DATABASE_HOST: mysql
+      ESPOCRM_DATABASE_HOST: espocrm-db
       ESPOCRM_DATABASE_USER: espocrm
       ESPOCRM_DATABASE_PASSWORD: database_password
       ESPOCRM_ADMIN_USERNAME: admin
@@ -104,6 +110,9 @@ services:
     volumes:
       - espocrm:/var/www/html
     restart: always
+    depends_on:
+      espocrm-db:
+        condition: service_healthy
     ports:
       - 8080:80
 
