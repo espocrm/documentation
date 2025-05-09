@@ -19,7 +19,7 @@ In this article:
 
 One of the ways to install EspoCRM is by using its official Docker Image. The EspoCRM Container Package contains the Docker image, which incorporates all the required files and dependencies to launch EspoCRM in development or production environments. You can use Docker to run EspoCRM in an isolated environment built with Docker containers.
 
-EspoCRM image requires to run MariaDB server:
+EspoCRM image requires to run MariaDB or MySQL server:
 
 ```
 $ docker run --name mariadb -e MARIADB_ROOT_PASSWORD=password -d mariadb:latest
