@@ -3,7 +3,6 @@
 * [list](#list)
 * [ifThenElse](#ifthenelse)
 * [ifThen](#ifthen)
-* [while](#while)
 
 ## list
 
