@@ -4,9 +4,13 @@ EspoCRM supports Google Maps out of the box.
 
 ## Google Maps
 
-### Api Key
+### API Key
 
 To use Google Maps, you need to specify the API Key (at Administration > Integration > Google Maps). Geocoding API, Maps JavaScript API, Maps Static API must be enabled in Google Maps Platform.
+
+### Map ID
+
+Create a Map ID under Google Cloud Console > Map Management.
 
 ## Showing map for address field
 
