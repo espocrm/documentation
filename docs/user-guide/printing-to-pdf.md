@@ -232,9 +232,9 @@ Object (map):
 {{/each}}
 ```
 
-!!! note
+!!! important
 
-    Using `<tr>` and `<td>` tags along with `{{#each}}` helper is not recommended as it breaks markup of a *contenteditable* element.
+    Using `<tr>` and `<td>` tags along with `{{#each}}` helper should be avoided as it breaks the markup of the *contenteditable* element. Use the *iterate* attribute instead.
 
 With *iterate* attribute (as of v8.2):
 
