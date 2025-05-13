@@ -444,6 +444,10 @@ Sets an alert message to show for the user after a manual workflow in run. AUTO_
 
 Markdown is supported. It allows to to display a link for the user.
 
+!!! note
+
+    The alert function only works in the context of the manual workflow. It won't work if called from a BPM processes started by the manual worfklow. It won't work if called from another workflow initiated by the manual workflow.
+
 ## Config parameters
 
 * `workflowSendRequestTimeout` – `7` – a timeout for the Send HTTP Request action;
