@@ -66,6 +66,8 @@ See the documentation [for quote templates](quotes.md#templates).
 
 A Sales Order PDF can be send in an email as an attachment. Open a sales order record, click the dropdown next to the Edit button and then click Email PDF.
 
+To have the Sales Order entity selected as the email's parent, an administrator should add the Sales Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+
 ## Automatic numbering
 
 By default, the *Number* field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Sales Order > Fields > number. It's also possible to make the number field read-only.
