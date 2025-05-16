@@ -58,6 +58,8 @@ See the documentation [for quote templates](quotes.md#templates).
 
 An Invoice PDF can be sent in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
 
+To have the Invoice entity selected as the email's parent, an administrator should add the Invoice entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+
 ## Automatic numbering
 
 By default, the *Number* field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Invoice > Fields > Number. It's also possible to make the number field read-only.
