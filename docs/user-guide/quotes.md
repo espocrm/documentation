@@ -166,6 +166,8 @@ All fields can be found at Administration > Entity Manager > Quote Items > Field
 
 Quote PDF can be sent in an email as an attachment. Open a quote record, click the dropdown next to Edit button, and then click Email PDF.
 
+To have the Quote entity selected as the email's parent, an administrator should add the Quote entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+
 ## Automatic numbering
 
 By default, the *Number* field is auto-incremented. You can disable auto-increment at Administration > Entity Manager > Quote > Fields > number. It's also possible to make the number field read-only.
