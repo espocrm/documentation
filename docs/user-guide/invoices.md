@@ -14,7 +14,7 @@ In the article:
 * [Total Values Layout](#total-values-layout)
 * [Invoice Items](#invoice-items)
 * [Printing to PDF](#printing-to-pdf)
-* [Sending invoice in email](#sending-invoice-in-email)
+* [Sending in email](#sending-in-email)
 * [Automatic numbering](#automatic-numbering)
 * [Default tax](#default-tax)
 * [Copying values from product to invoice item](#copying-values-from-product-to-invoice-item)
