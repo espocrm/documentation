@@ -54,7 +54,7 @@ Invoices can be printed to PDF. This action is available in the dropdown next to
 
 See the documentation [for quote templates](quotes.md#templates).
 
-## Sending invoice in email
+## Sending in email
 
 An Invoice PDF can be sent in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
 
