@@ -17,6 +17,7 @@ Multiple [Receipt Orders](receipt-orders.md) can be created from one Purchase Or
 In the article:
 
 * [Printing to PDF](#printing-to-pdf)
+* [Sending in email](#sending-in-email)
 * [Default tax](#default-tax)
 * [Locking](#locking)
 
@@ -27,6 +28,12 @@ Purchase Orders can be printed to PDF. This action is available in the dropdown 
 ### Templates
 
 See the documentation [for quote templates](../../user-guide/quotes.md#templates).
+
+## Sending in email
+
+A Purchase Order PDF can be sent in an email as an attachment. Open a Purchase Order record, click the dropdown next to Edit button, and then click Email PDF.
+
+To have the Purchase Order entity selected as the email's parent, an administrator should add the Purchase Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
 
 ## Default tax
 
