@@ -9,3 +9,13 @@ If the Warehouses feature is enabled, a Receipt Order record can be associated w
 Access to Return Orders is controlled by Roles.
 
 It's possible to print a Return Order to PDF and send the PDF in an email.
+
+## Printing to PDF
+
+Delivery Orders can be printed to PDF. This action is available in the dropdown next to Edit button on the Delivery Ordder detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
+
+## Sending in email
+
+A Return Order PDF can be sent in an email as an attachment. Open a Return Order record, click the dropdown next to Edit button and then click Email PDF.
+
+To have the Return Order entity selected as the email's parent, an administrator should add the Return Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
