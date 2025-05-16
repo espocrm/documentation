@@ -15,7 +15,7 @@ In the article:
 * [Total Values Layout](#total-values-layout)
 * [Sales Order Items](#sales-order-items)
 * [Printing to PDF](#printing-to-pdf)
-* [Sending sales order in email](#sending-sales-order-in-email)
+* [Sending in email](#sending-sales-order-in-email)
 * [Automatic numbering](#automatic-numbering)
 * [Default tax](#default-tax)
 * [Copying values from product to sales order item](#copying-values-from-product-to-sales-order-item)
@@ -62,7 +62,7 @@ Sales Orders can be printed to PDF. This action is available in the dropdown nex
 
 See the documentation [for quote templates](quotes.md#templates).
 
-## Sending sales order in email
+## Sending in email
 
 A Sales Order PDF can be send in an email as an attachment. Open a sales order record, click the dropdown next to the Edit button and then click Email PDF.
 
