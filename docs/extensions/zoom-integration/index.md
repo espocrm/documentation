@@ -17,7 +17,7 @@ In this article:
 
 You need to have one general Zoom account (organization account). This account will be connected to Espo. Espo users need to have their Zoom accounts linked to the general Zoom account. The Espo administrator will select which users can use Zoom integration.
 
-When an Espo meeting is pushed to Zoom, it's created in a Zoom account of the user assigned to meeting. If the user does not have a Zoom account, it won't be possible to push the meeting.
+When an Espo meeting is pushed to Zoom, it's created in a Zoom account of the user assigned to the meeting. If the user does not have a Zoom account, it won't be possible to push the meeting.
 
 ## Connecting Zoom accounts
 
