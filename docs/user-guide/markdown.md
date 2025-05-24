@@ -97,3 +97,21 @@ Using an uploaded attachment:
 ```
 ![Alt text](?entryPoint=image&id=00000000)
 ```
+
+### Table
+
+```
+| Month    | Amount   |
+| -------- | -------- |
+| January  | $200     |
+| February | $100     |
+```
+
+Alignment:
+
+```
+| Left     | Center   | Right    |
+| -------- | :------: | -------: |
+| January  | Good     | $200     | 
+| February | Normal   | $100     |
+```
