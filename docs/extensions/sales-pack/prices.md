@@ -34,7 +34,7 @@ When a product is added to an order and there's no price found in a related Pric
 
 When a user changes the quantity in an order item, the system will look up the new unit price for that quantity. If there's such, it will prompt the user to apply the new unit price. The user can reject and leave the previous price.
 
-It is possible to apply the selected Price Book to already added line items. The **Apply Price Book** action is available from the dropdown menu next to the plus button that adds line items.
+It is possible to apply a Price Book to already added line items. The **Apply Price Book** action is available from the dropdown menu next to the plus button that adds line items.
 
 ### Rules
 
