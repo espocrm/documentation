@@ -18,7 +18,6 @@ In the article:
 
 * [Printing to PDF](#printing-to-pdf)
 * [Sending in email](#sending-in-email)
-* [Default tax](#default-tax)
 * [Locking](#locking)
 
 ## Printing to PDF
@@ -34,12 +33,6 @@ See the documentation [for quote templates](../../user-guide/quotes.md#templates
 A Purchase Order PDF can be sent in an email as an attachment. Open a Purchase Order record, click the dropdown next to Edit button, and then click Email PDF.
 
 To have the Purchase Order entity selected as the email's parent, an administrator should add the Purchase Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
-
-## Default tax
-
-You need to have a Tax record created in your CRM. Taxes can be accessed at: Purchase Order list view > dropdown in the top-right corner > Taxes.
-
-An administrator can specify a default Tax record at Administration > Entity Manager > Purchase Order > fields > Tax > Default.
 
 ## Locking
 
