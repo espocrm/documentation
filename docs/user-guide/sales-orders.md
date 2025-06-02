@@ -17,7 +17,6 @@ In the article:
 * [Printing to PDF](#printing-to-pdf)
 * [Sending in email](#sending-in-email)
 * [Automatic numbering](#automatic-numbering)
-* [Default tax](#default-tax)
 * [Copying values from product to sales order item](#copying-values-from-product-to-sales-order-item)
 * [Locking](#locking)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
@@ -75,12 +74,6 @@ By default, the *Number* field is auto-incremented. You can disable auto-increme
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Sales Order > Fields > numberA.
 
 By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Sales Order > Layouts > Detail.
-
-## Default tax
-
-To have the default tax, you need to have a Tax record created in your CRM. Taxes can be accessed at: the Quotes list view > dropdown in the top-right corner > Taxes.
-
-An administrator can specify the default Tax record at Administration > Entity Manager > Sales Order > fields > Tax > Default.
 
 ## Copying values from product to sales order item
 
