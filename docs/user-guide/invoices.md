@@ -11,12 +11,11 @@ You can add the Invoices panel to Opportunity detail view at Administration > La
 In the article:
 
 * [Converting from Opportunity, Quote or Sales Order](#converting-from-opportunity-quote-or-sales-order)
-* [Total Values Layout](#total-values-layout)
+* [Total values layout](#total-values-layout)
 * [Invoice Items](#invoice-items)
 * [Printing to PDF](#printing-to-pdf)
 * [Sending in email](#sending-in-email)
 * [Automatic numbering](#automatic-numbering)
-* [Default tax](#default-tax)
 * [Copying values from product to invoice item](#copying-values-from-product-to-invoice-item)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
 * [Locking](#locking)
@@ -67,12 +66,6 @@ By default, the *Number* field is auto-incremented. You can disable auto-increme
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Invoice > Fields > numberA.
 
 By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Invoice > Layouts > Detail.
-
-## Default tax
-
-You need to have a Tax record created in your CRM. Taxes can be accessed at Quotes list view > dropdown in the top-right corner > Taxes.
-
-An administrator can specify a default Tax record at Administration > Entity Manager > Invoices > fields > Tax > Default.
 
 ## Copying values from product to invoice item
 
