@@ -19,6 +19,8 @@ Fill in the connection details of your 3CX server. To do this, go to the Adminis
 * **Hide call popup window** – automatically process call pop-ups without displaying them.
 * **Hide a Lead** – hide a Lead in a call popup when Account / Contact are available.
 * **Display Accounts related to Contacts** – display only Accounts related to Contacts.
+* **Listen recorded calls** – if you want to have possibility to listen recorded calls. This option should also be enabled in your telephony server.
+* **Upload recording?** – enables uploading recordings into EspoCRM.
 * **Automatically save a call** – automatically save incoming/outgoing calls in the system without having to press "Save" button.
 * **Automatically open the caller information** – automatically open the caller information for incoming/outgoing calls.
 * **Quick Create Entities** – entities which can be created through the call popup window.
@@ -46,3 +48,7 @@ Each user who wants to use 3CX integration, should setup his access in the User�
 Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
+
+## Summary and Transcript fields
+
+To access Summary and Transcript fields, you need to drag these fields to the Call layout in EspoCRM. Go to Administration > Layout Manager > Calls and drag the corresponding fields to the layout you need.
