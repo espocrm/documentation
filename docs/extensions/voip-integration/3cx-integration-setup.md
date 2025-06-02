@@ -48,3 +48,7 @@ Each user who wants to use 3CX integration, should setup his access in the Userâ
 Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
+
+## Summary and Transcript fields
+
+To access Summary and Transcript fields, you need to drag these fields to the Call layout in EspoCRM. Go to Administration > Layout Manager > Calls and drag the corresponding fields to the layout you need.
