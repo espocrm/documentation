@@ -15,7 +15,7 @@ In the article:
 * [Total Values Layout](#total-values-layout)
 * [Sales Order Items](#sales-order-items)
 * [Printing to PDF](#printing-to-pdf)
-* [Sending in email](#sending-sales-order-in-email)
+* [Sending in email](#sending-in-email)
 * [Automatic numbering](#automatic-numbering)
 * [Default tax](#default-tax)
 * [Copying values from product to sales order item](#copying-values-from-product-to-sales-order-item)
