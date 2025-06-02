@@ -17,6 +17,7 @@ In this article:
 * [Adding a custom EventListener](#custom-eventlistener)
 * [Adding a custom WebhookHandler](#custom-webhookhandler)
 * [Adding a custom CidManager](#custom-cidmanager)
+* [Adding a custom Call attribute](#custom-call-attribute)
 * [Additional info](#additional-info)
 
 
@@ -321,6 +322,24 @@ class CidManager extends \Espo\Modules\Voip\Providers\YOUR_PROVIDER\CidManager
 
 After saving, clear a local cache (Administration > Clear Cache).
 
+## Custom Call Attribute
+
+Note: This method is specifically designed to work with 3CX integration only.
+
+To add a custom attribute for the Call entity, create or edit a file located at `custom/Espo/Custom/Resources/metadata/app/voip.json` with the code:
+
+```json
+{
+    "callAttributes": {
+        "3cx": [
+            "__APPEND__",
+            "cAttribute"
+        ]
+    }
+}
+```
+
+After saving, clear a local cache (Administration > Clear Cache).
 
 ## Additional info
 
