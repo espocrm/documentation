@@ -1,6 +1,6 @@
 # Mail Merge (mass snail mailing)
 
-The Main Marge feature provides the ability to mass generate snail mails for printing.
+The Mail Merge feature provides the ability to mass generate snail mails for printing.
 
 1\. You need to have a Target List populated with recipients. You can access Target Lists by navigating to the Campaigns tab and clicking the Target Lists button in the top-right corner.
 
