@@ -109,6 +109,9 @@ In places where you need to have an explicit page break, add:
     <tr x-if="{{equal status 'Active'}}">
         <td></td>
     </tr>
+    <tr x-if="{{or (equal status 'Active') (equal status 'Pending')}}">
+        <td></td>
+    </tr>
 </table>
 ```
 
