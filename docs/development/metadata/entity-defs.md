@@ -445,6 +445,12 @@ Example:
 }
 ```
 
+## massUpdateActionList
+
+*string[]*
+
+Actions for mass update.
+
 ## links
 
 A link-name => parameters map.
