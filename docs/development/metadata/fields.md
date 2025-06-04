@@ -258,3 +258,9 @@ An input sanitizer.
 *As of v8.2.*
 
 Input sanitizers.
+
+## massUpdateActionList
+
+*string[]*
+
+Actions for mass update.
