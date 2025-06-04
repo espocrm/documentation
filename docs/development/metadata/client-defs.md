@@ -623,6 +623,14 @@ Row actions.
 
 Re-fetch records when the parent model is saved or refreshed by WebSocket.
 
+### syncBackWithModel
+
+*boolean*
+
+*As of v9.1.6.*
+
+Re-fetch the parent model when the relationship is updated. Ignored if WebSocked is enabled.
+
 ### massSelect
 
 *bool*
