@@ -23,7 +23,6 @@ For *Lead* entity type.
 
 ```json
 {
-
     "indexes": {
         "myIndexNameOne": {
             "columns": ["columnName"]   
