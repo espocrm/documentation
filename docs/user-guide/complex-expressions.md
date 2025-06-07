@@ -38,6 +38,7 @@ Functions:
 * [String](#string)
 * [Math](#math)
 * [Logical](#logical)
+* [Misc](#misc)
 
 
 ### Conditional
@@ -348,6 +349,14 @@ E.g. `AND:(a, b, c)` corresponds to SQL statement `a AND b AND c`.
 #### NOT
 
 E.g. `NOT:(a)` corresponds to SQL statement `NOT a`.
+
+### Misc
+
+#### ANY_VALUE
+
+*As of v9.1.6.*
+
+Obtains an arbitrary row from an aggregated group.
 
 ### Custom functions
 
