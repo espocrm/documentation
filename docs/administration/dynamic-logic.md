@@ -56,7 +56,7 @@ Dynamic logic conditions checked against the saved state of the record. The logi
 * Applied in both the frontend and the backend.
 * Applied in mass-update.
 
-Use-case: Make a field Resolution read-only when Status = Completed. It won't be possible to write the Resolution field while the Status is saved as Completed. Even if we change the Status on the form, the Resolution field will still be read-only. But if we manage to change and save the Status, it will be possible to write the Resolution field .
+Use-case: Make a field Resolution read-only when Status = Completed. It won't be possible to write the Resolution field while the Status is saved as Completed. Even if we change the Status on the form, the Resolution field will still be read-only. But if we change and save the Status, it will be possible to write the Resolution field.
 
 #### Options
 
