@@ -44,13 +44,13 @@ Is applied only in the frontend and in the backend (as of v9.1).
 
 #### Read-only
 
-Is applied only in the frontend. Conditions are checked against the current state of a record. If we change a record without saving it, it changes the current state.
+Is applied only in the frontend. Conditions are checked against the current state of the record. If we change a record without saving it, it changes the current state.
 
 #### Read-only saved-state
 
 *As of v9.1.*
 
-Dynamic logic conditions checked against the saved state of a record. The logic is not applied while editing a record without saving.
+Dynamic logic conditions checked against the saved state of the record. The logic is not applied while editing a record without saving.
 
 * Is not applied when a record is created.
 * Applied in both the frontend and the backend.
