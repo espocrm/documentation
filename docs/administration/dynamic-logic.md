@@ -91,4 +91,4 @@ It's also possible to define conditions on which a specific color will be applie
 
 To determine whether a record is being created, check whether the ID is empty. It can be useful to hide some fields when the record not yet created or to show some panel with instructions described in a panel note.
 
-For dynamic logic that is applied only in the frontend, you may consider additionally using an API Before-Save script for validation purposes.
+For dynamic logic that is applied only in the frontend, you may consider additionally using an API Before-Save script for a validation purpose.
