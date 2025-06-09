@@ -74,3 +74,9 @@ Setup a [crontab](server-configuration.md#setting-up-crontab).
     it should be configured under your web-server user.
 
 Now, your EspoCRM instance is running on the new server.
+
+## Misc
+
+### MariaDB to MySQL migration
+
+When migrating from MariaDB to MySQL, a database dump incompatibility arises. The problem is that MariaDB supports default values for TEXT column but MySQL does not. To solve this problem, you can manually remove default values for text columns in the dump file. Usually, there are not many.
