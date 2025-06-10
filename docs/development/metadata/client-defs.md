@@ -72,6 +72,14 @@ Hides the search panel on the list view in portals.
 
 Disables text search.
 
+## forceListViewSettings
+
+*boolean*
+
+*As of v9.2.0.*
+
+Force list view settings for non-object entity types.
+
 ## views
 
 Custom view classes for list, detail, edit.
