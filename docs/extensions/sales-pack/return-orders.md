@@ -12,7 +12,7 @@ It's possible to print a Return Order to PDF and send the PDF in an email.
 
 ## Printing to PDF
 
-Delivery Orders can be printed to PDF. This action is available in the dropdown next to Edit button on the Delivery Ordder detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
+Return Orders can be printed to PDF. This action is available in the dropdown next to Edit button on the Delivery Ordder detail view. Then, you will be prompted to select a template.
 
 ## Sending in email
 
