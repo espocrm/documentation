@@ -54,4 +54,4 @@ An administrator can enable sending emails via Graph API. Under Administration >
 
 !!! note
 
-    We recommended to use the standard SMTP for email sending. Use Graph API only if necessary. Please note that we do not offer support for configuring email sending through the Graph API.
+    We recommended to use the standard SMTP for email sending. Use Graph API only if necessary.
