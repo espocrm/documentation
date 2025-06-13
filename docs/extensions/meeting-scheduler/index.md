@@ -25,7 +25,7 @@ Access to Meeting Schedulers and Meeting Requests are controlled by roles.
 
 An administrator can allow regular users to create and edit scheduler pages by setting needed access levels for the Meeting Scheduler scope.
 
-There's a possible configuration where a Meeting Scheduler is managed by one user but requests are distributed to other users. To be able to access Meeting Requests where a user is a host, the user should have the Meeting Scheduler scope enabled. Setting the action levels for the scope is not required – they all can be set to 'no'.
+There's a possible configuration where a Meeting Scheduler is managed by one user but requests are distributed to other users. To be able to access Meeting Requests where the user is a host, the user should have the Meeting Scheduler scope enabled. Setting the action levels for the scope is not required – they all can be set to 'no'.
 
 The Meeting Scheduler Hosts scope allows users to configure schedulers that distribute meetings to other users.
 
