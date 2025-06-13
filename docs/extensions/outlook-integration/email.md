@@ -44,7 +44,7 @@ Recommendations for setting up an email account if you encounter errors when con
 
 Requires EspoCRM v9.1 or greater.
 
-*Mail.Send* API permission should be enabled for the Azure application in the Api Permissions tab.  
+*Mail.Send* API permission should be enabled for the Azure application in the API Permissions tab.  
 
 An administrator can enable sending emails via Graph API. Under Administration > Integrations > Outlook, check *Send emails via Graph API*.
 
