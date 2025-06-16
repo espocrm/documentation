@@ -99,3 +99,24 @@ a.md-nav__link:not(.md-nav__container):hover {
 .md-nav__list {
     user-select: none;
 }
+
+.md-typeset table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: .8rem;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+    font-size: .8rem;
+
+    tr {
+        td, th {
+            border: .05rem solid var(--md-typeset-table-color);
+            padding: 0.6em 0.8em;
+        }
+    }
+}
