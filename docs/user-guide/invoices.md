@@ -53,11 +53,17 @@ Invoices can be printed to PDF. This action is available in the dropdown next to
 
 See the documentation [for quote templates](quotes.md#templates).
 
+### Tax number
+
+The Sales Pack adds the *Tax Number* field to the Account entity type. Use this field to store VAT numbers. Note that including the VAT number on the invoice is mandatory in many jurisdictions.
+
 ## Sending in email
 
 An Invoice PDF can be sent in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
 
-To have the Invoice entity selected as the email's parent, an administrator should add the Invoice entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+The default email template can be set by the administrator: Administration > Sales Pack Settings > Email Templates.
+
+To have the Invoice entity selected as the email's parent, the administrator should add the Invoice entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
 
 ## Automatic numbering
 
@@ -110,7 +116,13 @@ Specify **Seller Information** fields that will be included in electronic invoic
 
 ### Account
 
-To include a buyer's electronic address in electronic invoices, you need to specify the electronic address in an Account record. The Sales Pack comes with two additional fields in the Account entity type: Electronic Address Scheme and Electronic Address Identifier. Add these fields to the *Detail* layout at Administration > Entity Manager > Account > Layouts > Detail. Then, you will be able to set these fields in Accounts.
+The Sales Pack adds additional fields to the Account entity type. The following fields of the Account are included in the E-Invoice:
+
+* Tax Number – to store VAT number;
+* Electronic Address Scheme
+* Electronic Address Identifier
+
+Add these fields to the Account's *Detail* layout under: Administration > Entity Manager > Account > Layouts > Detail.
 
 ### Invoice
 

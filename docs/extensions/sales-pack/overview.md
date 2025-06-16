@@ -10,6 +10,7 @@ Features:
   * [Quotes](../../user-guide/quotes.md)
   * [Sales Orders](../../user-guide/sales-orders.md)
   * [Invoices](../../user-guide/invoices.md)
+  * [Credit Notes](credit-notes.md)
   * [Delivery Orders](delivery-orders.md)
   * [Return Orders](return-orders.md)
 * Purchases
@@ -17,3 +18,5 @@ Features:
   * [Receipt Orders](receipt-orders.md)
   * [Suppliers](suppliers.md)
 * [Inventory Management](inventory-management.md)
+* [Payments](payments.md)
+* [Taxes](taxes.md)

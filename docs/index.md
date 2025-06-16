@@ -107,6 +107,7 @@
     * [Quotes](user-guide/quotes.md)
     * [Sales Orders](user-guide/sales-orders.md)
     * [Invoices](user-guide/invoices.md)
+    * [Credit Notes](extensions/sales-pack/credit-notes.md)
     * [Delivery Orders](extensions/sales-pack/delivery-orders.md)
     * [Return Orders](extensions/sales-pack/return-orders.md)
   * Purchases
@@ -114,6 +115,8 @@
     * [Receipt Orders](extensions/sales-pack/receipt-orders.md)
     * [Suppliers](extensions/sales-pack/suppliers.md)
   * [Inventory Management](extensions/sales-pack/inventory-management.md)
+  * [Payments](extensions/sales-pack/payments.md)
+  * [Taxes](extensions/sales-pack/taxes.md)
 * Project Management
   * [Projects](extensions/project-management/projects.md)
 * Meeting Scheduler

@@ -32,7 +32,9 @@ See the documentation [for quote templates](../../user-guide/quotes.md#templates
 
 A Purchase Order PDF can be sent in an email as an attachment. Open a Purchase Order record, click the dropdown next to Edit button, and then click Email PDF.
 
-To have the Purchase Order entity selected as the email's parent, an administrator should add the Purchase Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+The default email template can be set by the administrator: Administration > Sales Pack Settings > Email Templates.
+
+To have the Purchase Order entity selected as the email's parent, the administrator should add the Purchase Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
 
 ## Locking
 

@@ -31,4 +31,6 @@ If the settings parameter *Forbid order unlocking* is checked, once a record is 
 
 A Delivery Order PDF can be sent in an email as an attachment. Open an Delivery Order record, click the dropdown next to Edit button and then click Email PDF.
 
-To have the Delivery Order entity selected as the email's parent, an administrator should add the Delivery Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+The default email template can be set by the administrator: Administration > Sales Pack Settings > Email Templates.
+
+To have the Delivery Order entity selected as the email's parent, the administrator should add the Delivery Order entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.

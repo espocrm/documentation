@@ -17,6 +17,7 @@ In this article:
 * [Inventory Adjustments](#inventory-adjustments)
 * [Transfer Orders](#transfer-orders)
 * [Transaction compressing](#transaction-compressing)
+* [Formula functions](#formula-functions)
 
 ## Inventory Transactions
 
@@ -148,3 +149,36 @@ bin/command inventory-detach
 ```
 
 It's also possible create a scheduled job that automatically locks old Receipt Orders, Delivery Orders and Transfer Orders.
+
+
+## Formula functions
+
+*As of Sales Pack v3.0.*
+
+### ext\product\quantity
+
+`ext\product\quantity(PRODUCT_ID, [WAREHOUSE_ID])`
+
+### ext\product\quantityOnHand
+
+`ext\product\quantityOnHand(PRODUCT_ID, [WAREHOUSE_ID])`
+
+### ext\product\quantityReserved
+
+`ext\product\quantityReserved(PRODUCT_ID, [WAREHOUSE_ID])`
+
+### ext\product\quantityInTransit
+
+`ext\product\quantityInTransit(PRODUCT_ID)`
+
+### ext\inventoryNumber\quantityOnHand
+
+`ext\inventoryNumber\quantityOnHand(INVENTORY_NUMBER_ID, [WAREHOUSE_ID])`
+
+### ext\inventoryNumber\quantityReserved
+
+`ext\inventoryNumber\quantityReserved(INVENTORY_NUMBER_ID, [WAREHOUSE_ID])`
+
+### ext\inventoryNumber\quantityInTransit
+
+`ext\inventoryNumber\quantityInTransit(INVENTORY_NUMBER_ID)`

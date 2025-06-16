@@ -165,7 +165,9 @@ All fields can be found at Administration > Entity Manager > Quote Items > Field
 
 A Quote PDF can be sent in an email as an attachment. Open a quote record, click the dropdown next to Edit button, and then click Email PDF.
 
-To have the Quote entity selected as the email's parent, an administrator should add the Quote entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+The default email template can be set by the administrator: Administration > Sales Pack Settings > Email Templates.
+
+To have the Quote entity selected as the email's parent, the administrator should add the Quote entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
 
 ## Automatic numbering
 
