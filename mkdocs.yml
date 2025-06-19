@@ -174,7 +174,7 @@ nav:
               - 'Quotes': 'user-guide/quotes.md'
               - 'Sales orders': 'user-guide/sales-orders.md'
               - 'Invoices': 'user-guide/invoices.md'
-              - 'Credit notes': 'extensions/sales-pack/return-orders.md'
+              - 'Credit notes': 'extensions/sales-pack/credit-notes.md'
               - 'Delivery orders': 'extensions/sales-pack/delivery-orders.md'
               - 'Return orders': 'extensions/sales-pack/return-orders.md'
             - 'Purchases':
