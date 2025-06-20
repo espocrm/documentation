@@ -20,7 +20,6 @@ In the article:
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
 * [Locking](#locking)
 * [E-Invoicing](#e-invoicing)
-* [Payments](#payments)
 
 ## Converting from Opportunity, Quote or Sales Order
 
