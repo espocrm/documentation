@@ -55,7 +55,7 @@ Table of content:
 
 Available under Administration > PDF Templates.
 
-For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button *\</\>*.
+For more precise editing it's recommended to use Code View mode. To switch to Code View click on the button *</\>*.
 
 You can print fields of the record as well as fields of related records by utilizing placeholders (Handlebars like) in your template.
 
@@ -73,7 +73,12 @@ You can specify a document title in the *Title* field (as of v7.0). `{$name}` pl
 
 ### Code view
 
-A code view mode can be enabled by clicking *\</\>* button. It allows to edit raw HTML and make sure the layout is not messed up.
+A code view mode can be enabled by clicking *</\>* button. It allows to edit raw HTML and make sure the layout is not messed up.
+
+When editing a template in the code view and using template helpers, you need to keep the HTML code valid. Otherwise, the markup will break. Follow the guideliness:
+
+1. Do not mix helpers with table tags such as TR, TD. Use the special *iterate* attribute instead.
+2. Avoid helpers inside a tag declaration. Bad: `<div {{#if true}} class="test" {{/if}}>`. Good: `<div class=" {{#if true}} test {{/if}} ">`.
 
 ### Charset issues
 
