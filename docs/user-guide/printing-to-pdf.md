@@ -78,7 +78,7 @@ A code view mode can be enabled by clicking *</\>* button. It allows to edit raw
 When editing a template in the code view and using template helpers, you need to keep the HTML code valid. Otherwise, the markup will break. Follow the guideliness:
 
 1. Do not mix helpers with table tags such as TR, TD. Use the special *iterate* attribute instead.
-2. Avoid helpers inside a tag declaration. Bad: `<div {{#if true}} class="test" {{/if}}>`. Good: `<div class=" {{#if true}} test {{/if}} ">`.
+2. Avoid helpers inside tags. Bad: `<div {{#if true}} class="test" {{/if}}>`. Good: `<div class=" {{#if true}} test {{/if}} ">`.
 
 ### Charset issues
 
