@@ -376,3 +376,4 @@ nav:
             - 'Rust': 'development/api-client-rust.md'
             - 'Java': 'development/api-client-java.md'
             - 'Go': 'development/api-client-go.md'
+            - 'Zig': 'development/api-client-zig.md'
