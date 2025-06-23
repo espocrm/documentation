@@ -20,7 +20,7 @@ The max number of sub-process instances (within a multi-instance sub-process) is
 
 ## Running in parallel
 
-*As of v3.10.0.*
+*As of v3.10.*
 
 Can be enabled by setting the config parameter `bpmnRunInParallel` to `true`. Running jobs in parallel has to be enabled.
 
