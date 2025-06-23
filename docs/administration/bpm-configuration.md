@@ -17,3 +17,11 @@ The config parameter `bpmnProceedPendingMaxSize` (`20000` by default) limits max
 ## Multi-instance sub-process limit
 
 The max number of sub-process instances (within a multi-instance sub-process) is defined by the config parameter `bpmnSubProcessInstanceMaxCount`. The default value is `20`.
+
+## Running in parallel
+
+*As of v3.10.0.*
+
+Can be enabled by setting the config parameter `bpmnRunInParallel` to `true`. Running jobs in parallel has to be enabled.
+
+For scheduled processes, to process them in parallel, use a Timer Intermediate Event right after the Start Timer event.
