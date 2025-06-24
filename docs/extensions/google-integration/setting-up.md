@@ -33,7 +33,7 @@ Then, click *+ ENABLE APIS AND SERVICES*.
 On the API Library page, use search to find the relevant APIs:
 
 * Google Calendar API (for Calendar sync);
-* People API (for Contacts pushing);
+* Google People API (for Contacts pushing);
 * Gmail API (for secure connection to Gmail).
 
 Enable the APIs that you need to use in your CRM. Note that some APIs can be already enabled.
