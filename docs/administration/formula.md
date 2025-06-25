@@ -448,6 +448,13 @@ More info about entity types [here](terms-and-naming.md#entity-type).
 
 #### FILTER
 
+Can be:
+
+* primary filter name (as string)
+* where item (as object; as of v9.2)
+
+##### Primary filter
+
 A name of a filter pre-defined in the system. Developers can define own [filters](../development/metadata/select-defs.md#primaryfilterclassnamemap).
 
 For non-developers, it's possible to apply a [List Report](../user-guide/reports.md#list-reports) as a filter. First, you need to create a [Report Filter](../user-guide/reports.md#report-filters) (at Administration page). Then, you can use the filter name `reportFilter{filterId}` in functions `record\count`, `record\findOne`, `record\findRelatedOne`, `record\findRelatedMany`, `entity\sumRelated`, `entity\countRelated`.
@@ -457,6 +464,37 @@ For non-developers, it's possible to apply a [List Report](../user-guide/reports
     `entity\sumRelated('opportunities', 'amountConverted', 'reportFilter5c41a0a396f66725d')`
     
     Where *5c41a0a396f66725d* is an ID of the Report Filter record which you can obtain from the URL.
+
+##### Where item
+
+*As of v9.2.*
+
+The syntax is the same as for the *where* parameter API requests.
+
+!!! example
+
+    ```
+        $where = object\create();
+        $where['type'] = 'or';
+        $where['value'] = list(
+            (
+                $it = object\create();
+                $it['type'] = 'equals';
+                $it['attribute'] = 'type';
+                $it['value'] = 'Customer';
+                $it;
+            ),
+            (
+                $it = object\create();
+                $it['type'] = 'equals';
+                $it['attribute'] = 'type';
+                $it['value'] = 'Partner';
+                $it;
+            )
+        );        
+        
+        $output = record\findMany('Account', 10, null, null, $where);
+    ```
 
 ## Sandbox
 
