@@ -22,6 +22,10 @@
 
 Check whether a record with specified criteria exists.
 
+`record\exists(ENTITY_TYPE, [FILTER])`
+
+With filter applied. As of v9.2. More [info](../formula.md#filter) about filters. 
+
 !!! examples
 
     `record\exists('Lead', 'emailAddress=', fromAddress)`
@@ -40,7 +44,7 @@ Returns a count of records with specified criteria.
 
 `record\count(ENTITY_TYPE, [FILTER])`
 
-Returns a count of records with an optional FILTER applied. More [info](../formula.md#filter).
+Returns a count of records with an optional FILTER applied. More [info](../formula.md#filter) about filters.
 
 !!! examples
 
