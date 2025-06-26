@@ -42,7 +42,7 @@ Must implement `Espo\Core\FieldProcessing\Saver` interface.
 
 ## selectApplierClassNameList
 
-Array of classes for additional handling of a select query.
+Array of classes for additional handling of a select query. Use for joining additional fields. Do not use for access control logic.
 
 Must implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
 
