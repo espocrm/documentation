@@ -689,6 +689,14 @@ Parameters:
 
 A modal view for viewing relationships in a modal dialog.
 
+### allResultDisabled
+
+*boolean*
+
+*As of v9.2.*
+
+Disable the ability to select all result. Important for non-standard relationship panels.
+
 ## additionalLayouts
 
 Additional layouts for a scope.
