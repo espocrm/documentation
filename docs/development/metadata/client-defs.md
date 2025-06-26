@@ -695,7 +695,7 @@ A modal view for viewing relationships in a modal dialog.
 
 *As of v9.2.*
 
-Disable the ability to select all result. Important for non-standard relationship panels.
+Disable the ability to select all results. Important for non-standard relationship panels.
 
 ## additionalLayouts
 
