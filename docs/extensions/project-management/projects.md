@@ -7,6 +7,7 @@ In this article:
 * [Projects](#projects)
 * [Boards](#boards)
 * [Access control](#access-control)
+* [Members](#members)
 * [Tasks](#tasks)
 * [Milestones](#milestones)
 * [Groups](#groups)
@@ -79,6 +80,10 @@ A Project Role defines the following Task related actions and levels:
 * Edit – all/assigned/own – what Tasks can edit;
 * Stage Edit – all/assigned/own – what Tasks can move on the board;
 * Delete – all/own/no – what Tasks can delete.
+
+## Members
+
+The Members panel is available on the Project's detail view, in the buttom under the the Teams tab. Here, the project owner can add or remove members as well as change their roles.
 
 ## Tasks
 
