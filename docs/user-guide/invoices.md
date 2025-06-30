@@ -128,7 +128,7 @@ Add these fields to the Account's *Detail* layout under: Administration > Entity
 
 A standard you use may require the Buyer Reference, Purchase Order Reference. The corresponding fields exist in the Invoice entity type, an administrator can add them to the Detail layout.
 
-Additional fields that are mapped to E-Invoce:
+Additional fields that are mapped to E-Invoice:
 
 * Buyer Reference
 * Purchase Order Reference

@@ -89,7 +89,7 @@ Access to payment requests is controlled by Roles.
 
 To send a payment link in an email, click *Send in Email* from the dropdown next to the *Edit* button on the Payment Request detail view.
 
-An administrator can select the detault email template for payment requests: Administration > Sales Pack Settings > Email Templates > Payment Request Email Template.
+An administrator can select the default email template for payment requests: Administration > Sales Pack Settings > Email Templates > Payment Request Email Template.
 
 Use the placeholder `{PaymentRequest.paymentUrl}` in the email template for a link. Note that the link will automatically appended to the email body if there's no URL placeholder in the email template.
 

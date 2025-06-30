@@ -64,7 +64,7 @@ Item rules are ordered. The first rule that matches is applied, and the subseque
 
 Only an administrator can manage tax classes. Regular users can read tax classes if they have access enabled in Roles. Regular users are able to associate products with tax classes provided they have access to the Tax Class scope.
 
-An administrator can access tax classes via: Administation > Tax Classes.
+An administrator can access tax classes via: Administration > Tax Classes.
 
 A single product can belong to one or more tax classes. While one class per product is usually sufficient, multiple classes may be necessary when the product's tax treatment differs across jurisdictions.
 
@@ -78,7 +78,7 @@ Tax rules enable automatic association of a created order with the appropriate T
 
 Separate rule sets are used for sales and purchases.
 
-Only an administrator can manage tax rules. An administrator can access tax rules via: Administation > Tax Rules. Purchase rules: Administation > Purchase Tax Rules.
+Only an administrator can manage tax rules. An administrator can access tax rules via: Administration > Tax Rules. Purchase rules: Administration > Purchase Tax Rules.
 
 One tax rule defines a Tax record and conditions. These conditions are evaluated against the Account record the order is related to.
 
@@ -114,7 +114,7 @@ Let's assume our company is based in Germany and sells domestically, within the 
 We would need to create the following tax records:
 
 * Zero – to cover Intra-EU B2B and Outside EU;
-* Germany – to cover Domestic and Intra-EU B2C before thresold exceeded;
+* Germany – to cover Domestic and Intra-EU B2C before threshold exceeded;
 * Separate records for each EU country we are going to sell to.
 
 We would need to create the following tax rules.
@@ -129,7 +129,7 @@ This rule will map Accounts from EU countries with the VAT number to the *Zero* 
 
 !!! note
 
-    You can use a custom field to deignate an account as EU based and set the value with formula. It will make defining the rule conditions simpler.
+    You can use a custom field to designate an account as EU based and set the value with formula. It will make defining the rule conditions simpler.
 
 3\. Intra-EU B2C below threshold.
 
