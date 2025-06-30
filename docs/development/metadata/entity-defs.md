@@ -291,7 +291,13 @@ Ignore optimistic concurrency control.
 
 *string[]*
 
-Additional attributes for a field. Attribute name will be derived by concatenation with the field name.
+Additional attributes for a field. Attribute name will be derived by concatenating the specified name with the field name.
+
+### fullNameAdditionalAttributeList
+
+*string[]*
+
+Additional attributes for a field. As of v9.2.
 
 ### dependeeAttributeList
 
