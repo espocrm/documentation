@@ -83,7 +83,7 @@ A Project Role defines the following Task related actions and levels:
 
 ## Members
 
-The Members panel is available on the Project's detail view, in the buttom under the the Teams tab. Here, the project owner can add or remove members as well as change their roles.
+The Members panel is available on the Project's detail view, in the button under the the Teams tab. Here, the project owner can add or remove members as well as change their roles.
 
 ## Tasks
 
