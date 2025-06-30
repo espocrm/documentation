@@ -47,6 +47,10 @@ Triggered only when a new record is created. If specified conditions are met, th
 
 Triggered only when an existing record is updated. If specified conditions are met, then actions will be executed.
 
+!!! important
+
+    Be aware of potential loops. A built-in safeguard prevents looping in basic cases. However, loops can still occur – for example, when using a formula to update records.
+
 ### After record created or updated
 
 Triggered when a new record is created or an existing record is updated. If specified conditions are met, then actions will be executed.
