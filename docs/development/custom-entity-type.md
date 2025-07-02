@@ -200,9 +200,7 @@ class MyEntity extends Entity
     public function getCreatedAt(): DateTime
     {
         /** @var DateTime */
-        $this->getValueObject('createdAt');
-
-        return $this;
+        return $this->getValueObject('createdAt');
     }
 }
 ```
