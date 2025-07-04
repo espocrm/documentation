@@ -12,7 +12,7 @@ In this article:
 * [Adding a call name to a call popup](#adding-a-call-name-to-a-call-popup)
 * [Format phone number](#format-phone-number)
 * [Call recording for Asterisk](#call-recording-for-asterisk)
-* [Adding a custom call recording URL handler](#custom-call-recording-url-handler)
+* [Adding a custom call recording handler](#custom-call-recording-handler)
 * [Adding a custom ApiClient](#custom-apiclient)
 * [Adding a custom EventListener](#custom-eventlistener)
 * [Adding a custom WebhookHandler](#custom-webhookhandler)
@@ -231,27 +231,39 @@ For displaying a call recording field in EspoCRM, go to Administration > Layout 
 
 After that, clear a local cache (Administration > Clear Cache).
 
-## Custom call recording URL handler
+## Custom call recording handler
 
-If the standard functionality is not enough for your URL recording, there is a possibility to create a custom call recording URL handler. For this, create a file located at `custom/Espo/Custom/Modules/Voip/Providers/Asterisk/Scripts/Recording.php` with the code:
+If the standard functionality doesn't meet your recording processing needs, you can implement a custom call recording handler. For example, here's how you can customize it for the `Asterisk` connector:
 
-```
+1\. Create a file located at `custom/Espo/Custom/Modules/Voip/Providers/Asterisk/Recording.php` with the code:
+
+```php
 <?php
 
-namespace Espo\Custom\Modules\Voip\Providers\Asterisk\Scripts;
+namespace Espo\Custom\Modules\Voip\Providers\Asterisk;
 
-use Espo\Modules\Voip\Entities\VoipEvent as VoipEventEntity;
+use Espo\Modules\Voip\Entities\VoipEvent;
 
-class Recording extends \Espo\Modules\Voip\Providers\Asterisk\Scripts\Recording
+class Recording extends \Espo\Modules\Voip\Providers\Asterisk\Recording
 {
-    public function generateUrl(VoipEventEntity $voipEventEntity)
+    public function process(VoipEvent $voipEvent, string $triggeredBy): void
     {
         // YOUR CUSTOM CODE
     }
 }
 ```
 
-After saving, clear a local cache (Administration > Clear Cache).
+2\. Create / edit a file `custom/Espo/Custom/Resources/metadata/app/voip.json`:
+
+```json
+{
+    "recordingProcessorClassNameMap": {
+        "Asterisk": "Espo\\Custom\\Modules\\Voip\\Providers\\Asterisk\\Recording"
+    }
+}
+```
+
+3\. After saving, clear a local cache (Administration > Clear Cache).
 
 ## Custom ApiClient
 
