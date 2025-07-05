@@ -241,5 +241,4 @@ You can use *Mass Action* framework to handle mass actions in the back-end. Avai
 
 ## See more
 
-As of Advanced Pack v2.12 it's possible to create detail view buttons and dropdown items that run workflow actions. A button can be configured to be visible only if specific conditions are met.
-
+In Advanced Pack it's possible to create detail view buttons and dropdown items that run workflow actions. A button can be configured to be visible only if specific conditions are met.
