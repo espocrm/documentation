@@ -19,7 +19,6 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
                 {
                     "label": "My Action",
                     "name": "myAction",
-                    "action": "myAction",
                     "style": "default",
                     "acl": "edit",
                     "aclScope": "Lead",
@@ -36,10 +35,11 @@ Create a file (if it doesn't exist) `custom/Espo/Custom/Resources/metadata/clien
 
 Parameters:
 
-* `name` ~ A name. Important if a handler is used.
+* `name` – A name. Mandatory if a handler is used.
 * `handler` – A handler.
 * `initFunction` – A handler method to run on initialization. Omit if not needed. 
 * `acl` – Defines what access level is required to see the button. You can omit this parameter.
+* `aclScope` – What scope to check access to. If omitted, the current scope is used.
 * `checkVisibilityFunction` – A handler method that will be used to determine whether an item is visible. The method should return a boolean value. As of v8.1.
 * `actionFunction` – An action method in the handler. As of v8.1.
 
@@ -75,20 +75,26 @@ define('custom:my-action-handler', ['action-handler'], (Dep) => {
 
         initMyAction() {}
 
-        myAction(data, e) {
+        async myAction(data, e) {
             this.view.disableMenuItem('myAction');
 
-            Espo.Ajax.getRequest('Lead/' + this.view.model.id)
-                .then(response => {
-                    console.log(response);
+            let response;
 
-                    this.view.enableMenuItem('myAction');
-                })
-                .catch(() => this.view.enableMenuItem('myAction'));
+            try {
+                response = await Espo.Ajax.getRequest('Lead/' + this.view.model.id);
+            } catch (e) {
+                this.view.enableMenuItem('myAction');
+
+                return;
+            }
+
+            console.log(response);
+
+            this.view.enableMenuItem('myAction');
         }       
 
         isMyActionVisible() {
-            return !['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
+            return !['Converted', 'Dead', 'Recycled'].includes(this.view.model.attributes.status);
         }
     }
 });
