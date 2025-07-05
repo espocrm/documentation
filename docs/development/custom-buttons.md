@@ -69,7 +69,7 @@ Available views (object keys in definitions):
 Create a file `client/custom/src/my-action-handler.js`:
 
 ```js
-define('custom:my-action-handler', ['action-handler'], (Dep) => {
+define(['action-handler'], (Dep) => {
 
     return class extends Dep {
 
@@ -141,21 +141,20 @@ Parameters:
 Create a file `client/custom/src/my-action-handler.js`:
 
 ```js
-define('custom:my-action-handler', ['action-handler'], (Dep) => {
+define(['action-handler'], (Dep) => {
 
    return class extends Dep {
 
         initTest() {}
 
-        test(data, e) {
-            Espo.Ajax.getRequest('Lead/' + this.view.model.id)
-                .then(response => {
-                    console.log(response);
-                });
+        async test() {
+            const response = await Espo.Ajax.getRequest('Lead/' + this.view.model.id);
+
+             console.log(response);
         }       
 
         isTestVisible() {
-            return !['Converted', 'Dead', 'Recycled'].includes(this.view.model.get('status'));
+            return !['Converted', 'Dead', 'Recycled'].includes(this.view.model.attributes.status);
         }
     }
 });
