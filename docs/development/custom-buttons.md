@@ -150,7 +150,7 @@ define(['action-handler'], (Dep) => {
         async test() {
             const response = await Espo.Ajax.getRequest('Lead/' + this.view.model.id);
 
-             console.log(response);
+            console.log(response);
         }       
 
         isTestVisible() {
