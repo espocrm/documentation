@@ -75,7 +75,7 @@ define('custom:my-action-handler', ['action-handler'], (Dep) => {
 
         initMyAction() {}
 
-        async myAction(data, e) {
+        async myAction() {
             this.view.disableMenuItem('myAction');
 
             let response;
