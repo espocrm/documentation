@@ -32,9 +32,9 @@ See also:
 
 A List report displays the list of records that meet the specified criteria.
 
-To create a new list report, click on the *Reports* tab and then click *Create Report* button. Choose the needed Entity Type, then, click *Create* button at *List Report* section.
+To create a new list report, click on the *Reports* tab and then click the *Create Report* button. Then, select the type to which your report will apply.
 
-In the *Columns* field, pick the fields you would like to be displayed. Below, you can specify display parameters for every column:
+In the *Columns* field, select the fields you would like to have displayed in the report. Underneath, you can configure how each column is displayed with the following parameters:
 
 * Width – width in percents;
 * Align – how to align data: left or right;
@@ -42,13 +42,13 @@ In the *Columns* field, pick the fields you would like to be displayed. Below, y
 * Export Only – a column won't be displayed in report results on the UI, but it will be available in export;
 * Not Sortable – a column cannot be ordered by, some fields are not available for sorting.
 
-Choose the needed sorting in *List Order* field.
+Choose the needed sorting in the *List Order* field.
 
-At *Filters* section, you can specify criteria that determines what records will be listed in your report. You can use logical operators 'OR' and 'AND' here.
+In the *Filters* section, you can specify criteria that determine what records will be included in your report. You can use logical operators 'OR' and 'AND' here.
 
-*Runtime Filters* allow you to specify criteria before running a report.
+*Runtime Filters* lets you narrow down the results each time you run the report, without needing to edit the report itself. It's useful when the report structure stays the same, but you want to change the criteria dynamically – like choosing a specific date range, customer, or status before generating the results.
 
-You can **export** list report results to XLSX (Excel) and CSV formats.
+You can *export* list report results to XLSX (spreadsheet) and CSV formats.
 
 The example of list report results:
 
