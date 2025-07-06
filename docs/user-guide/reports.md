@@ -122,29 +122,29 @@ Grouping grid report with non-aggregated columns:
 
 ![Grid list grouped](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid-list-1.png)
 
-There is the ability to specify custom [complex expressions](complex-expressions.md) for columns. The complex expression is translated into an SQL statement.
+There is the ability to craft [complex expressions](complex-expressions.md) for columns. Complex expressions are internally translated into SQL statements.
 
 ### Order by
 
-The *Order By* field defines how report data will be sorted.
+The *Order By* field defines how the report results will be sorted.
 
 ### Filters section
 
-At *Filters* section, you can specify criteria to limit data displayed in the report results. You can use logical operators 'OR' and 'AND' here. More info [below](#filters).
+In the *Filters* section, you can specify criteria to limit data displayed in the report results. You can use logical operators 'OR' and 'AND' here. See more info [below](#filters).
 
 ### Runtime filters
 
-*Runtime Filters* allow you to specify criteria before running a report.
+*Runtime Filters* lets you narrow down the results each time you run the report, without needing to edit the report itself.
 
 !!! note
 
-    Specifying a runtime filter can be also useful for dashlets and report panels.
+    Specifying a runtime filter can be also useful for dashlets and report panels. It allows to have filters applied to a particular dashlet or panel.
 
 ### Charts
 
 Grid report allows displaying results in chart form.
 
-There are following chart types available:
+There are the following chart types available:
 
 * Bar (Horizontal);
 * Bar (Vertical);
@@ -171,7 +171,7 @@ Pie:
 
 ### Export
 
-It's possible to export grid report results to XLSX (Excel) and CSV formats. Both a results table and chart are exported to XLSX.
+It's possible to export grid report results to XLSX (spreadsheet) and CSV formats. Both a results table and chart are exported to XLSX.
 
 Note that non-aggregated columns in grid reports are not exported to XLSX.
 
@@ -179,7 +179,7 @@ Note that non-aggregated columns in grid reports are not exported to XLSX.
 
 By checking *Apply access control*, the report result will not include records that the current user does not have access to.
 
-If a regular user does not have edit access to the *Apply access control* field (via field level security in Roles), all reports they create will have the *Apply access control* automatically checked (as of v2.13.5).
+If a regular user does not have edit access to the *Apply access control* field (via field level security in Roles), all reports they create will have the *Apply access control* automatically checked.
 
 ## Joint Grid reports
 
