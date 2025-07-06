@@ -32,7 +32,7 @@ See also:
 
 A List report displays the list of records that meet the specified criteria.
 
-To create a new list report, click on the *Reports* tab and then click the *Create Report* button. Then, select the type to which your report will apply.
+To create a new list report, click on the *Reports* tab and then click the *Create Report* button. Then, select the entity type to which your report will apply.
 
 In the *Columns* field, select the fields you would like to have displayed in the report. Underneath, you can configure how each column is displayed with the following parameters:
 
@@ -50,7 +50,7 @@ In the *Filters* section, you can specify criteria that determine what records w
 
 You can *export* list report results to XLSX (spreadsheet) and CSV formats.
 
-The example of list report results:
+An example of list report results:
 
 ![List report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/list.png)
 
@@ -67,11 +67,11 @@ Where list reports can be also utilized:
 
 Grid reports display summarized values, can be grouped by one or two fields, and support chart visualization.
 
-To create a new grid report, click on the *Reports* tab and then click *Create Report* button. Choose the needed *Entity Type*, then, click the *Create* button at the *Grid Report* section.
+To create a new grid report, click on the *Reports* tab and then click the *Create Report* button. Then, select the entity type to which your report will apply.
 
-When choosing an *Entity Type* for a grid report, consider the following. The *Entity Type* should contain the field that data will be aggregated by. E.g. if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
+When choosing the *Entity Type* for a grid report, consider the following. The *Entity Type* should contain the field that data will be aggregated by. For example, if you need to sum by the opportunity amount, choose the Opportunity entity type. If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use a Joint Report to join them into one.
 
-The example of grid report results that shows revenue grouped by User:
+An example of grid report results showing revenue grouped by a user:
 
 ![Grid report example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/reports/grid.png)
 
@@ -81,13 +81,9 @@ The example of grid report results that shows revenue grouped by User:
 
 ### Group By
 
-In the *Group By* field, pick one or two fields you want your report data be grouped by. It's possible to apply grouping by year, month, week, and day for date fields.
+In the *Group By* field, pick one or two fields you want your report data be grouped by. For date fields, it's possible to apply grouping by year, quarter, month, week, and day. If you leave the Group By field empty, the report will not apply any grouping.
 
-You can also leave the *Group By* field empty.
-
-There is the ability to specify a custom [complex expression](complex-expressions.md) (with functions) for grouping. The complex expression is translated into an SQL statement.
-
-Complex expressions offer various use cases. For instance, the MAP function can be used to group data by region rather than by country
+There is the ability to craft a [complex expression](complex-expressions.md) for grouping. Complex expressions are internally translated into SQL statements. Complex expressions offer various use cases. For instance, the MAP function can be used to group data by region rather than by country.
 
 Example:
 
@@ -114,7 +110,7 @@ Functions:
 * MAX – maximal value;
 * AVG – average value.
 
-If a report is grouped by a link field, then it's possible to add fields from a linked record w/o aggregate functions. In the example, the report for Opportunities is grouped by Campaign with Campaign.Budget column.
+If a report is grouped by a link field, then it's possible to include fields from the linked record without an aggregate function applied to it. In the example below, the report for Opportunities with grouping by Campaign with Campaign.Budget column included.
 
 It's possible to add **non-aggregated columns**. In this case, records will be displayed for each group. Note that if your report deals with a big number of records, it can run much slower.
 
