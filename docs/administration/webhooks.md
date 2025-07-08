@@ -30,7 +30,7 @@ Parameters:
 * `URL` – string – an endpoint;
 * `skipOwn` – boolean – to skip if the event was initiated by the user owning the webhook (as of v9.2).
 
-A Webhook ID and a secret key will be sent back in a response:
+A Webhook ID and a secret key will be sent back in the response:
 
 * `id` – an ID of created webhook,
 * `secretKey` – a generated secret key,
