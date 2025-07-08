@@ -28,8 +28,8 @@ Webhooks can be created only by API Users (via an API request) and Administrator
 A Webhook ID and a secret key will be sent back in a response:
 
 * `id` – an ID of created webhook,
-* `secretKey` – a generated secret key.
-
+* `secretKey` – string – a generated secret key,
+* `skipOwn` – boolean – to skip if the event was initiated by the user owning the webhook (as of v9.2).
 
 ### Deleting request
 
