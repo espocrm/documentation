@@ -64,4 +64,3 @@ Can be set manually in `data/config.php`.
 
 * oidcAuthorizationMaxAge – integer;
 * oidcJwksCachePeriod – string  (default: `'10 minutes'`);
-* oidcAuthorizationPrompt –  `'none'` | `'consent'` | `'login'` | `'select_account'` (default: `'consent'`); available from the UI as of v8.3.
