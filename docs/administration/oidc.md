@@ -11,7 +11,7 @@ EspoCRM supports authentication over OIDC protocol. A user can log in to multipl
 Additional features:
 
 * User creation. Optional.
-* Team mapping. Espo teams against groups/teams/roles of the identity provider.
+* Team mapping. Espo teams against identity provider's groups (instead of 'group', the provider may use claim names like 'team', 'role', or another equivalent designation).
 * User profile and user teams sync. Optional, on every login.
 * The ability to choose a claim that will be used for a username.
 * Fallback login method. The ability to use the default Espo method. Can be enabled for admins or for both regular users and admins.
