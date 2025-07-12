@@ -346,19 +346,17 @@ Available attributes:
 
 It's possible to have target lists synced with list report results. It's convenient for mass email when you would like to send emails only to contacts that meet some criteria at the moment of sending. This feature is available in the detail view of any target list in the *Sync with Reports* panel.
 
-## Report Filters
+## Report filters
 
-The Report Filters feature allows to create custom primary filters for list views. Created filters can also be used in specific formula functions.
+The Report Filters feature allows you to create custom primary filters for list views. These filters can also be used in specific formula functions.
 
-An administrator can create custom list view filters based on specific reports. Available at: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
+An administrator can create custom list view filters based on specific reports. Available under: Administration > Report Filters. It's possible to specify teams that will have access to the filter.
 
 !!! note
 
     The layout, that is specified in the report, is not applied to the list view when the filter is selected.
 
 ![Report filter](../_static/images/user-guide/reports/report-filter.png)
-
-It's possible to create filters **for specific teams**.
 
 Report filters can utilized in *Record List* dashlets (as a primary filter).
 
@@ -371,9 +369,9 @@ Report filters can be utilized in [formula functions](../administration/formula.
 * `entity\sumRelated`
 * `entity\countRelated`
 
-## Report Panels
+## Report panels
 
-The Report Panels feature allows to create custom detail view panels showing report results.
+The Report Panels feature allows you to create custom detail view panels that display report results.
 
 An administrator can create custom side and bottom panels for the detail view of the specific entity type. It's possible to specify teams that will have access to the panel.
 
@@ -391,15 +389,15 @@ For list reports it's possible to display:
 * List
 * Total (number or records)
 
-The order of side panels can be customized at Layout Manager > Side Panels (Detail).
+The order of side panels can be customized under: Administration > Entity Manager > {Entity Type} > Layouts > Side Panels (Detail).
 
-The order of bottom panels can be customized at Layout Manager > Bottom Panels.
+The order of bottom panels can be customized under: Administration > Entity Manager > {Entity Type} > Layouts > Bottom Panels.
 
-The report panel shows results related to the record that is viewed. The first found relationship is used. If the report has an appropriate runtime filter, then it will be used to filter report results. The runtime filter must be a field of a link, link-multiple or link-parent type.
+The report panel displays results related to the record that is viewed. The first found relationship is used. If a report has an appropriate runtime filter, then it will be used to filter report results. The runtime filter must be a field of a Link, Link-multiple or Link-parent type. "For example, if a report is for Opportunity and has a runtime filter Account, that filter will be automatically applied when the report panel is added to the Account detail view.
 
 ## Portal access
 
-Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Reports* field in the Report detail view. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
+Specific reports can be allowed for specific portals. For this, you need to add the portal in the *Portals* field of the Report. The Portal Role assigned to the portal should have defined access to the *Reports* scope with the *Read* action set to *all*.
 
 It's possible to add a report dashlet to the portal dashboard.
 
