@@ -38,7 +38,7 @@ Returns a current datetime.
 
 `datetime\format(VALUE, [TIMEZONE], [FORMAT])`
 
-Converts a date or datetime VALUE to a string formatted according to the application settings or a given timezone and format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then the default timezone will be used. If FORMAT is omitted, then the default format will be used.
+Converts a date or datetime VALUE to a string formatted according to the application settings or a given timezone and ISO format. TIMEZONE and FORMAT can be omitted. If TIMEZONE is omitted, then the default timezone will be used. If FORMAT is omitted, then the default format will be used.
 
 !!! example
 
