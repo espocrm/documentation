@@ -46,7 +46,7 @@ An order position.
 
 *As of v9.2.*
 
-Mappings of entity types to links. Used for placholders.
+Mappings of entity types to links. Used for placeholders.
 
 Example:
 
