@@ -18,7 +18,7 @@ Working Time Calendars can be accessed under:
 A working Time Calendar record can be:
 
 * Selected as a system default (Administration > System > Working Time Calendar);
-* Selected for a team (will be applied to user through the *Default Team*);
+* Selected for a team – will apply to users who have that team set in the *Default Team*;
 * Selected for a specific user.
 
 A Working Time Calendar record defines:
