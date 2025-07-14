@@ -12,6 +12,7 @@ Date and date-time values are represented as strings. E.g. `'2021-01-01'`, `'202
 * [datetime\minute](#datetimeminute)
 * [datetime\dayOfWeek](#datetimedayofweek)
 * [datetime\diff](#datetimediff)
+* [datetime\addSeconds](#datetimeaddseconds)
 * [datetime\addMinutes](#datetimeaddminutes)
 * [datetime\addHours](#datetimeaddhours)
 * [datetime\addDays](#datetimeadddays)
@@ -88,6 +89,14 @@ Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIME
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)`
 
 Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes', 'seconds'. Returns `null` if failure. The result will be negative if VALUE_1 < VALUE_2.
+
+## datetime\addSeconds
+
+*As of v9.2.0.*
+
+`datetime\addMinutes(VALUE, SECONDS)`
+
+Adds SECONDS to a datetime VALUE. SECONDS can be negative. Returns a modified STRING value.
 
 ## datetime\addMinutes
 
