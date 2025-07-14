@@ -64,6 +64,7 @@ Functions:
 * [datetime\minute](formula/datetime.md#datetimeminute)
 * [datetime\dayOfWeek](formula/datetime.md#datetimedayofweek)
 * [datetime\diff](formula/datetime.md#datetimediff)
+* [datetime\addSeconds](formula/datetime.md#datetimeaddseconds)
 * [datetime\addMinutes](formula/datetime.md#datetimeaddminutes)
 * [datetime\addHours](formula/datetime.md#datetimeaddhours)
 * [datetime\addDays](formula/datetime.md#datetimeadddays)
