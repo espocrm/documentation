@@ -87,7 +87,7 @@ Returns day of the week (0-6). `-1` if VALUE is empty. `0` - for Sunday. If TIME
 
 `datetime\diff(VALUE_1, VALUE_2, INTERVAL_TYPE)`
 
-Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes'. Returns `null` if failure. The result will be negative if VALUE_1 < VALUE_2.
+Returns the difference between two dates or datetimes. INTERVAL_TYPE can be 'years', 'months', 'days', 'hours', 'minutes', 'seconds'. Returns `null` if failure. The result will be negative if VALUE_1 < VALUE_2.
 
 ## datetime\addMinutes
 
