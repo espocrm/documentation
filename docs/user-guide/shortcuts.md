@@ -60,3 +60,8 @@
 * `Ctrl + I` – mark selected emails as Important or Not Important;
 * `Ctrl + M` – move selected emails to a specific folder;
 * `Ctrl + Q` – mark all emails as read; mark selected emails as read (as of v9.0);
+
+## Text formatting
+
+* `Ctrl + B` – bold;
+* `Ctrl + I` – italic;
