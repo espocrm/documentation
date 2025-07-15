@@ -242,7 +242,7 @@ Relates the target record with another specific record. For example, add specifi
 
 ### Unlink from another Record
 
-Unrelates the target record from another specific record. For example. remove a specific team from the record.
+Unrelates the target record from another specific record. For example, remove a specific team from the record.
 
 ### Apply Assignment Rule
 
