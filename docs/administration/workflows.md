@@ -12,7 +12,7 @@ The Workflows tool automates your business processes in an easy way. Possible us
 
 You can access Workflows from the Administration panel. Only administrators can view or configure workflows.
 
-When creating a Workflow rule you need to set:
+When creating a Workflow rule, you need to set:
 
 * Target entity type – the entity type the rule is applied to;
 * Trigger type – how the rule will be triggered;
