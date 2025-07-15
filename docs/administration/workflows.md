@@ -127,6 +127,8 @@ Triggered when a specified signal is broadcast in the system. Only object signal
 
 You can specify conditions that must be met to trigger a Workflow rule. There are two ways how conditions can be specified: with the UI condition builder and with a Formula script.
 
+In formula, it's possible to have multiple expressions separated by a semicolon. The evaluation of the last expression will be returned as the result.
+
 ### UI condition builder
 
 Some available condition types:
