@@ -254,3 +254,4 @@ If you clone a Project and then decide to remove it, it won't be possible until 
 ## Shortcut keys
 
 * `Ctrl + Backspace` – complete selected Tasks from the Plan view (as of v1.2);
+* `Ctrl + Quote` – self-assign selected Tasks from the Plan view; only unassigned tasks are affected (as of v1.3);
