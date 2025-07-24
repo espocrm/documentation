@@ -138,6 +138,8 @@ The default dependency type can be set at: Administration > Entity Manager > Pro
 
 The label color indicates the predecessor's task status. Gray – Not Started, Blue – Started, Green – Completed.
 
+The task dependency feature can be enabled or disabled in the Project settings.
+
 ### Owner
 
 The Task's Owner is a User who oversees the Task. A User who created a Task automatically becomes the Task's Owner.
@@ -148,19 +150,34 @@ The Assignee of a Task is a User who is responsible for performing the Task. A T
 
 Only members of the Project can be selected as assignees.
 
+### Collaborators
+
+The Collaborators feature can be enabled per project in the Project settings. Users who are collaborators can view the Task and post in its Stream.
+
 ### Timeline
 
 A Task can have a Date Start and Date End. Both are non-mandatory fields.
 
+### Priority
+
+Available priority values:
+
+- Low
+- Normal
+- High
+- Urgent
+
+The Priority field can be enabled or disabled in the Project settings.
+
 ### Points
 
-Is meant to represent the relative complexity of the Task, amount of work needed to complete the Task.
+Is meant to represent the relative complexity of the Task, amount of work needed to complete the Task. The field can be enabled or disabled in the Project settings.
 
 Note that if the team won't use Points, the administrator can hide the field in the Entity Manager.
 
 ### Hours
 
-May represent how many hours is required to complete the Task.
+May represent how many hours is required to complete the Task. The field can be enabled or disabled in the Project settings.
 
 ### Sub-tasks
 
