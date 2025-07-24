@@ -15,6 +15,7 @@ In this article:
 * [Board view](#board-view)
 * [Gantt view](#gantt-view)
 * [Project cloning](#project-cloning)
+* [Dashlet](#dashlet)
 * [Shortcut keys](#shortcut-keys)
 
 ## Projects
@@ -291,6 +292,18 @@ The Date Start should be set in the source Project. When cloning, the user needs
 To be able to clone a Project, the user should have *create* access to the Project scope and *edit* access to the source Project. To clone a Project, open the detail view and click the *Clone* action from the dropdown next to the *Edit* button.
 
 If you clone a Project and then decide to remove it, it won't be possible until you remove all related Tasks.
+
+## Dashlet
+
+Users can add the Project Task dashlet to their dashboard. They can add multiple such dashlets, each with different options.
+
+Dashlet options:
+
+- Next X Days – the number of future days from which to display tasks;
+- Include Owned – to list tasks where ther current user is the owner;
+- Include Shared – to list tasks where the current user is in collaborators;
+- Exclude Assigned to Me – to exclude tasks assigned to the current user;
+- Limit by Group Type – to list only tasks from specific group types; for example, exclude Backlog tasks;
 
 ## Shortcut keys
 
