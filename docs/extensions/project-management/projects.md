@@ -178,7 +178,7 @@ A milestone is a significant point in a project's timeline that marks the comple
 
 ## Groups
 
-A Project has a unique set of Groups. A project Owner or Editor can manage Groups of the Project: add, remove, and edit.
+A Project has a unique set of Groups. A project Owner or Editor can manage Groups of the Project – add, remove, and edit.
 
 To add a new Group to the Project, open the *Plan* view, click *Create Group* from the dropdown next to the *Edit* button. To reorder existing groups, click *Reorder Groups* from the same dropdown, then use dragging to reorder listed groups.
 
@@ -187,6 +187,24 @@ Tasks are ordered within their Group. It's possible to reorder Tasks and move Ta
 A specific color can be assigned to a Group.
 
 When a new Task is added to a Group, it is placed either at the top or the bottom depending on the parameter Group's parameter *New Task Placement*.
+
+### Group type
+
+A specific type is assigned to every group. The following types are available:
+
+- Triage
+- Backlog
+- Work
+- Phase
+- Sprint
+
+The *Work* type is set by default.
+
+The Project Task dashlet allows to limit tasks by specific group types. For example, one may want to list only tasks from the Work and Sprint groups, or display only Triage tasks in a separate dashlet.
+
+Group types are also useful for automation. For example, a workflow rule can be triggered when a task is moved to a Sprint group. A single rule can be applied across all projects.
+
+Other 
 
 ## Plan view
 
