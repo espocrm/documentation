@@ -200,7 +200,7 @@ A specific type is assigned to every group. The following types are available:
 
 The *Work* type is set by default.
 
-Only Work, Phase and Sprint groups are displayed on the Gantt view.
+Only *Work*, *Phase* and *Sprint* groups are displayed on the Gantt view.
 
 The Project Task dashlet allows to limit tasks by specific group types. For example, one may want to list only tasks from the Work and Sprint groups, or display only Triage tasks in a separate dashlet.
 
