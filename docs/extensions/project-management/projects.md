@@ -200,11 +200,13 @@ A specific type is assigned to every group. The following types are available:
 
 The *Work* type is set by default.
 
+Only Work, Phase and Sprint groups are displayed on the Gantt view.
+
 The Project Task dashlet allows to limit tasks by specific group types. For example, one may want to list only tasks from the Work and Sprint groups, or display only Triage tasks in a separate dashlet.
 
 Group types are also useful for automation. For example, a workflow rule can be triggered when a task is moved to a Sprint group. A single rule can be applied across all projects.
 
-Other 
+Another application of group types is dynamic logic. For example, the Assignee field can be automatically required if a task is linked to a group of the Work type.
 
 ## Plan view
 
