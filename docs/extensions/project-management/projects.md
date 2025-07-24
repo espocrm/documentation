@@ -206,7 +206,9 @@ The Project Task dashlet allows to limit tasks by specific group types. For exam
 
 Group types are also useful for automation. For example, a workflow rule can be triggered when a task is moved to a Sprint group. A single rule can be applied across all projects.
 
-Another application of group types is dynamic logic. For example, the Assignee field can be automatically required if a task is linked to a group of the Work type.
+Another application of group types is Dynamic Logic. For example, the Assignee field can be automatically required if a task is linked to a group of the Work type.
+
+The Project Task entity type has a foreign field *Group Type*, which holds the type value of the related Group. It can be used in conditions of the Dynamic Logic.
 
 ## Plan view
 
