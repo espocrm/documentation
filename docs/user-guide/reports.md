@@ -183,9 +183,11 @@ If a regular user does not have edit access to the *Apply access control* field 
 
 ## Joint Grid reports
 
-Joint Grid reports combine multiple grid reports. The combined reports can be against different entity types. Sub-reports selected for a joint report must be grouped by either only one field or have no grouping.
+Joint Grid reports combine multiple grid reports. A combined report can bring together data from reports that target different entity types.
 
-If you need to aggregate by fields from different entity types, consider creating separate grid reports for each entity type and then use the Joint Report type to combine them into one.
+In a Joint report, sub-reports must use either one grouping field or none.
+
+If you need to aggregate by fields from different entity types, consider creating separate Grid reports for each entity type and then use the Joint report type to combine them into one.
 
 Some usage examples:
 
@@ -193,13 +195,13 @@ Some usage examples:
 * Revenue by month / Campaign Budget by month;
 * Revenue by user / Lead count by User.
 
-You can create a new Joint Grid report from the dropdown menu in the top-right corner on the Reports list view.
+You can create a new Joint Grid report from the dropdown menu in the top-right corner in the Reports list view.
 
-For charts, colors of columns must be specified in the sub-reports.
+Colors of chart columns are determined by chart colors set in the respective sub-reports.
 
-Runtime filters are not supported in joint reports. Only regular filters specified in each sub-report can be used.
+Runtime filters are not supported in Joint reports. Only regular filters specified in each sub-report can be used.
 
-Non-aggregate columns are not supported in joint reports.
+Non-aggregate columns are not supported in Joint reports.
 
 ## Filters
 
