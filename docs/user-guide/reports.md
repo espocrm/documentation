@@ -183,9 +183,9 @@ If a regular user does not have edit access to the *Apply access control* field 
 
 ## Joint Grid reports
 
-Joint Grid reports combine multiple grid reports. A combined report can bring together data from reports that target different entity types.
+Joint Grid reports combine multiple Grid reports. A combined report can bring together data from reports that target different entity types.
 
-In a Joint report, sub-reports must use either one grouping field or none.
+Grid reports selected for a Joint report must use either one grouping field or none.
 
 If you need to aggregate by fields from different entity types, consider creating separate Grid reports for each entity type and then use the Joint report type to combine them into one.
 
