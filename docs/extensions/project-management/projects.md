@@ -307,5 +307,5 @@ Dashlet options:
 
 ## Shortcut keys
 
-* `Ctrl + Backspace` – complete selected Tasks from the Plan view (as of v1.2);
-* `Ctrl + Quote` – self-assign selected Tasks from the Plan view; only unassigned tasks are affected (as of v1.3);
+* `Ctrl + Backspace` – complete selected Tasks from the Plan view;
+* `Ctrl + Quote` – self-assign selected Tasks from the Plan view; only unassigned tasks are affected;
