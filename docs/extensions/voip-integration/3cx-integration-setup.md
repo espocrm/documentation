@@ -52,3 +52,18 @@ Make sure that your users have the access to the entity 'Calls'.
 ## Summary and Transcript fields
 
 To access Summary and Transcript fields, you need to drag these fields to the Call layout in EspoCRM. Go to Administration > Layout Manager > Calls and drag the corresponding fields to the layout you need.
+
+## How to update 3CX Integration
+
+After you upgrade the [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/), you need additionally update the *EspoCRM-3cx.xml* template.
+
+1. To do this, go to the Administration (System panel) > Integrations > VoIP · 3cx і and download the new version of the *EspoCRM-3cx.xml* template.
+
+<img width="1701" height="1439" alt="3cx-admin-update" src="https://github.com/user-attachments/assets/523a1c56-be35-42e7-a6a4-2f43ed94555c" />
+
+2. Go to the 3CX Management Console > Settings > CRM Integration and delete old template.
+
+<img width="1367" height="659" alt="3cx-integrations-crm" src="https://github.com/user-attachments/assets/9d976ee0-efa4-444d-aba7-4fefce41dfc7" />
+
+3. Click the `+ Add Template` button, and upload the new version of the *EspoCRM-3cx.xml* template.
+4. Save the changes and restart the 3CX server.
