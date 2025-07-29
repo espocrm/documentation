@@ -2,6 +2,14 @@
 
 3CX integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with 3CX server and other VoIP providers, read more details [here](https://www.espocrm.com/features/3cx-integration/).
 
+!!! note
+
+    Due to the way 3CX handles call events, the call pop-up in EspoCRM will only appear after the call has ended. This is a limitation of the 3CX PBX platform itself and not of EspoCRM. Once the call is complete, you’ll see the contact information and call details window in CRM as expected.
+
+!!! note
+
+    For the integration to work correctly, EspoCRM instance must be accessible by the 3CX server. The integration operates in Webhook mode, which requires EspoCRM to be reachable over the internet. If your CRM is hosted on a local or private network, or if external access is restricted, the integration will not function.
+
 ## How to setup 3CX Integration for an administrator
 
 Fill in the connection details of your 3CX server. To do this, go to the Administration (System panel) > Integrations > VoIP · 3cx.
