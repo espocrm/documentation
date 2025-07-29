@@ -25,7 +25,7 @@ Ended Processes are *not* cleaned up automatically, as they may hold information
 
 ## Self-removal
 
-You can set up a BPM process to remove itself. Add *Task* > *Update Process Record*. Add in Formula: `deleted = 1;`.
+You can set up a BPM process to remove itself. Add *Task* > *Update Process Record*. Add in Formula: `deleted = true;`.
 
 ## Displaying processes on record detail view
 
