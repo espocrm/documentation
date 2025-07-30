@@ -171,7 +171,9 @@ You can use placeholders in *Name* and *Instructions* fields:
 * `{$attribute}` – attribute of target record
 * `{$$variable}` – process variable (defined by Script Task)
 
-Users can also add the Process User Tasks **dashlet** on their dashboard to see their active process user tasks.
+Users can also add the Process User Tasks dashlet on their dashboard to see their active process user tasks.
+
+An administrator can add custom action types in Entity Manager. The resolution options available for a particular action type is controlled by dynamic logic. The logic can be edited as well.
 
 ### Displaying on detail view
 
