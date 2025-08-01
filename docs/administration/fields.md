@@ -225,10 +225,11 @@ A list of values, similar to Multi-Enum field.
 Parameters:
 
 * Options – a list of values (key => label pairs); if no options specified, then a user will be able to add any options;
-* Options Reference – options from another field to re-use (as of v7.5);
+* Options Reference – options from another field to re-use;
 * Empty string value is not allowed – if not checked, a user can add an empty string as an item;
 * Max Item Count – a validation: how many items can be added;
 * Display as List – each value will be displayed in a new line;
+* Items Editable – items can be edited; applicable only if no options are specified for the field; as of v9.2;
 * Pattern – a regular expression to check a field value against.
 
 ![Array](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/array.png)
