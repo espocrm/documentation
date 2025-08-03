@@ -27,19 +27,19 @@ There can be multiple admin users in the system. An admin can create another adm
 
 ### Regular
 
-Regular users have access only to scopes allowed by [Roles](roles-management.md). Regular users can edit their own user (if allowed by roles) except the following fields: User Name, Emails, Teams, Roles, Is Active.
+A regular user has access only to scopes allowed by [Roles](roles-management.md) assigned to the user. A regular users can edit their own user record (if allowed by roles) except the following fields: User Name, Type, Emails, Teams, Roles, Is Active.
 
-The admin can manage regular users at Administration > Users.
+An admin user can manage regular users at Administration > Users.
 
 ### Portal
 
-Portal users can access only the [portal](portal.md) (or multiple portals). A portal user usually is linked with a specific Contact and Account. Access permissions are defined by Portal Roles.
+Portal users have access only to the [portal](portal.md) (or multiple portals). A portal user is usually associated with a specific Contact and Account. Access permissions are defined by Portal Roles.
 
 Portal users can be managed at Administration > Portal Users.
 
 ### API
 
-API users serve for accessing the system via [API](../development/api.md). Access permissions are defined by [Roles](roles-management.md).
+API users serve for accessing the system via the [API](../development/api.md). Access permissions are defined by [Roles](roles-management.md).
 
 API users can be managed at Administration > API Users.
 
