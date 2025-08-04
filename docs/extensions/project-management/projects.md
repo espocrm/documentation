@@ -300,7 +300,7 @@ Users can add the Project Task dashlet to their dashboard. They can add multiple
 Dashlet options:
 
 - Next X Days – the number of future days from which to display tasks;
-- Include Owned – to list tasks where ther current user is the owner;
+- Include Owned – to list tasks where the current user is the owner;
 - Include Shared – to list tasks where the current user is in collaborators;
 - Exclude Assigned to Me – to exclude tasks assigned to the current user;
 - Limit by Group Type – to list only tasks from specific group types; for example, exclude Backlog tasks;
