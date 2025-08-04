@@ -58,7 +58,7 @@ The following quantity values are available for a Product:
 
     In some cases, the total available quantity displayed for a product may be less than the sum of available quantities across individual warehouses. This occurs because Sales Orders soft-reserve inventory. Since the Sales Order entity is not linked to a specific warehouse, the reservation is applied globally and does not directly reduce the quantities shown for each warehouse.
 
-    You can disable soft-reservation for Sales Orders by removing the *Ready* status from the Soft-Reserve status list. The parameter is available under: Administrtion > Entity Manager > Sales Order > Edit.
+    You can disable soft-reservation for Sales Orders by removing the *Ready* status from the Soft-Reserve status list. The parameter is available under: Administration > Entity Manager > Sales Order > Edit.
 
 ## Inventory Numbers
 
