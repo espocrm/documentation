@@ -115,3 +115,10 @@ Alignment:
 | January  | Good     | $200     | 
 | February | Normal   | $100     |
 ```
+
+### Checklist
+
+```
+- [x] Item 1
+- [ ] Item 2
+```
