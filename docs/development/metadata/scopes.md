@@ -196,6 +196,14 @@ Status values that determine that a record should be shown in the Activities pan
 
 Status values that determine that a record should be shown in the History panel.
 
+## calendarOneDay
+
+*boolean*
+
+*As of v9.2.*
+
+Display as one-day events in the calendar. Applicable only if the *calendar* parameter is enabled.
+
 ## languageIsGlobal
 
 *boolean*
