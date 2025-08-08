@@ -6,7 +6,7 @@ Integration definitions.
 
 ## fields
 
-*Object.<string, Object>*
+*Object.<string, Object\>*
 
 Field definitions for the integration (to be available at Administration > Integrations).
 
@@ -33,6 +33,8 @@ Example:
     },
 }
 ```
+
+A label can be also specified with the *labelTranslation* parameter as of v9.2.
 
 ## allowUserAccounts
 
