@@ -327,7 +327,7 @@ A group index. Starts from 0. As of v8.3.0.
 
 *As of v9.1.*
 
-An entity attribute to be used to display the record name on views. As of v9.1.
+An entity attribute to be used to display the record name on views.
     
 ## menu
 
