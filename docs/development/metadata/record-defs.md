@@ -266,3 +266,11 @@ An array of hooks (applied for API calls).  Should implement the `Espo\Core\Reco
 *As of v8.2.*
 
 An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
+
+## deletedRestorerClassName
+
+*class-string<Espo\Core\Record\Deleted\Restorer\>*
+
+*As of v9.2.*
+
+A deleted record restorer.
