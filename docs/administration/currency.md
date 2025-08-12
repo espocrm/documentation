@@ -11,13 +11,15 @@ In this article:
 
 ## Settings & rates
 
-An administrator can configure currency-related parameters and rates at Administration > Currency.
+An administrator can configure currency-related parameters and rates at Administration > Currency. 
 
-You can specify which currencies will be available in the system in *Currency List* parameter.
+It's possible to specify which currencies will be available in the system in the *Currency List* parameter.
 
-*Default Currency* – which currency will be pre-set when creating a new record. Currency values are converted to the default currency when filtering records by a currency field, sorting by a currency field, making a grid report with a currency field.
+Parameters:
 
-*Base Currency* – which currency to use as a base to specify rates.
+* Currency List – The currencies available in the system.
+* Default Currency – The currency that is pre-set when creating a new record. Currency values are converted to the default currency when filtering records by a currency field, sorting by a currency field, making a grid report with a currency field.
+* Base Currency – The currency used as a base when specifying currency rates.
 
 ![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/currency-settings.png)
 
@@ -25,7 +27,7 @@ You can specify which currencies will be available in the system in *Currency Li
 
 It's possible to set an exclusive default currency for a specific field.
 
-Example for the *Amount* field of the *Opportunity*. Set *Default* value at Administration > Entity Manager > Opportunity > fields > amountCurrency.
+For example, for the *Amount* field of the *Opportunity*, set the *Default* value at Administration > Entity Manager > Opportunity > fields > amountCurrency.
 
 ## Currency conversion
 
