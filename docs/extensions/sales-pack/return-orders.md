@@ -8,8 +8,6 @@ If the Warehouses feature is enabled, a Receipt Order record can be associated w
 
 Access to Return Orders is controlled by Roles.
 
-It's possible to print a Return Order to PDF and send the PDF in an email.
-
 ## Printing to PDF
 
 Return Orders can be printed to PDF. This action is available in the dropdown next to Edit button on the Delivery Order detail view. Then, you will be prompted to select a template.
