@@ -213,6 +213,6 @@ The list of parameters along with their default values. This is not a full list 
 
 * `data/config.php` – the main config; can be written by the application or manually;
 * `data/config-internal.php` – for storing sensitive parameters that should never make their way to the front-end; can be written by the application or manually;
-* `data/config-override.php` – overrides parameters of the main config, supposed to be written only manually; as of v8.2;
+* `data/config-override.php` – overrides parameters of the main config, supposed to be written only manually; you can read environment variables in there; as of v8.2;
 * `data/config-override-internal.php` – overrides parameters of the main config, supposed to be written only manually; for storing sensitive parameters; as of v8.2.
 
