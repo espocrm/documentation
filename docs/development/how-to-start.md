@@ -17,8 +17,8 @@ Using the main EspoCRM repository.
 
 1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository (or a forked one) to your local computer.
 2. Change to the project's root directory: `cd path/to/espocrm`.
-3. Install [Composer](https://getcomposer.org/doc/00-intro.md) (v2.0 or greater).
-4. Install npm (v8.0 or greater).
+3. Install [Composer](https://getcomposer.org/doc/00-intro.md) if not installed (v2.0 or greater).
+4. Install npm if not installed (v8.0 or greater).
 5. Install [Grunt](https://gruntjs.com/installing-grunt).
 6. Run `composer install` if Composer is installed globally (or, `php composer.phar install`, if locally).
 7. Run `npm ci`.
