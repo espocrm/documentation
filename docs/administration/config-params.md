@@ -169,7 +169,7 @@ The list of parameters along with their default values. This is not a full list 
 ### Mass Email
 
 * massEmailMaxAttemptCount – `3` – how many attempts to send an email will be made (can be helpful when SMTP server is gone away);
-* massEmailSiteUrl – to override the default site url (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking urls; you will need to configure your server to handle requests to the specified URL);
+* massEmailSiteUrl – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking URLs; you will need to configure your server to handle requests to the specified URL);
 
 ### Kanban
 
@@ -207,6 +207,7 @@ The list of parameters along with their default values. This is not a full list 
 * phoneNumberMaxCount – 10 – max number of phone numbers per record;
 * emailAddressMaxCount – 10 – max number of email addresses per record;
 * iframeSandboxExcludeDomainList – array of domains that do not require adding `sandbox="allow-scripts"` in the Iframe dashlet; as of v9.0.7;
+* leadCaptureSiteUrl – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you want to expose the lead capture; you will need to configure your server to handle requests to the specified URL); as of v9.2;
 
 ## Config files
 
