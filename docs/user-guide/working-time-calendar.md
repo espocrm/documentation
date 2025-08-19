@@ -29,6 +29,10 @@ A Working Time Calendar record defines:
 
 A Working Time Exception record applies custom working time for a specific day range for specific users or for a whole calendar. It can define non-working days or working days with a custom time schedule.
 
+!!! note
+
+    In Exceptions, the Date End is inclusive.
+
 Examples:
 
 * Holidays for a whole team. Create an Exception record related to the Working Time Calendar with the type *Non-working*.
