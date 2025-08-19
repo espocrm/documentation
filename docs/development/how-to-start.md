@@ -23,7 +23,7 @@ Using the main EspoCRM repository.
 6. Run `composer install` if Composer is installed globally (or, `php composer.phar install`, if locally).
 7. Run `npm ci`.
 
-Then you can build by running `grunt`.
+Then, you can build by running `grunt`.
 
 To build a proper *config.php* file and populate database you can run installation. Open `http(s)://{YOUR_CRM_URL}/install` location in the browser. It's assumed that your webserver is properly [configured](../administration/server-configuration.md).
 
