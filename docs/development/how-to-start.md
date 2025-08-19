@@ -15,7 +15,7 @@ In this article:
 
 Using the main EspoCRM repository.
 
-1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository to your local computer.
+1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository (or a forked one) to your local computer.
 2. Change to the project's root directory: `cd path/to/espocrm`.
 3. Install [Composer](https://getcomposer.org/doc/00-intro.md) (v2.0 or greater).
 4. Install npm (v8.0 or greater).
