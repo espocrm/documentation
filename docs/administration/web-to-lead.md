@@ -6,6 +6,8 @@ In this article:
 * [Web form](#web-form)
 * [API request](#api-request)
 * [Lead assignment distribution](#lead-assignment-distribution)
+* [Hooks](#hooks)
+* [Exposing entry point](#exposing-entry-point)
 
 ## Lead capture
 
@@ -204,6 +206,24 @@ You can also utilize a Formula script (Administration > Entity Manager > Lead > 
 
 It's possible to catch a lead capture event with built-in [hooks](../development/hooks.md#additional-default-hooks). Requires coding.
 
+## Exposing entry point
+
+*As of v9.2.*
+
+If there's no access to your CRM from the internet, you need to configure your server to handle requests to specific entry points to have the lead capture functioning.
+
+Set the config parameter `leadCaptureSiteUrl` with the base URL that will be exposed.
+
+You need to handle the following requests:
+
+- GET `{siteUrl}?entryPoint=leadCaptureForm&id={id}`
+- GET `{siteUrl}?entryPoint=confirmOptIn&id={id}`
+- POST `{siteUrl}/api/v1/LeadCapture/{apiKey}`
+- OPTIONS `{siteUrl}/api/v1/LeadCapture/{apiKey}`
+- POST `{siteUrl}/api/v1/LeadCapture/form/{id}`
+
 ## See also
 
 * [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
+
+
