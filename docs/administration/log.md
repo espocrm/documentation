@@ -31,9 +31,13 @@ Prints a backtrace when an exception is occurred. Note that in some cases an exc
 
 *As of v8.3.*
 
-To make log records available in the admin UI, set *databaseHandler* parameter to true.
+It may be convenient to check the logs right from the application UI. The log is available under: Administration > App Log. By default, it's disabled – no log entries are created.
 
-Note that some log entries may be not available from the UI. For example, those that happened during upgrade or before database connection was established.
+To make log records available in the admin UI, set the *databaseHandler* parameter to true. 
+
+!!! note
+
+    Some log entries may be not available from the UI. For example, those that happened during upgrade or before database connection was established.
 
 ## SQL queries
 
