@@ -1,4 +1,4 @@
-# Roles Management
+# Role Management
 
 In this article:
 
@@ -29,6 +29,14 @@ It's possible to see what permissions are applied to a certain User by clicking 
 ## Permissions by default
 
 By default, Users have minimal access levels restricting almost everything. You need to assign Roles to grant Users specific access levels.
+
+### Baseiline role
+
+*As of v9.2.*
+
+It's possible to designate one role as a baseline. This role will be applied for all internal users. Other roles assigned to a user will grant permissions on top of the baseline.
+
+The baseline role can be set under: Administration > Settings > Access.
 
 ## Actions
 
