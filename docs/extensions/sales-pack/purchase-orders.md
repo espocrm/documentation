@@ -4,15 +4,15 @@
 
 The Purchase Orders feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
-Purchase Orders are issued to suppliers. They indicate what products the company needs to buy from the supplier, their quantities and arranged prices.
+Purchase Orders are issued to suppliers. They specify the products the company needs to purchase from the supplier, along with their quantities and agreed prices.
 
 Access to Purchase Orders is controlled by Roles.
 
-The Purchase Order has the *Supplier* field. Upon selecting a supplier, the Purchase Order address fields will be automatically populated. The selected supplier also determines prices that will be applied for products in the order.
+The Purchase Order has the *Supplier* field. Upon selecting the supplier, the Purchase Order's address fields will be automatically populated. The selected supplier also determines prices that will be applied for products in the order.
 
 Purchase Orders can be printed to PDF and sent in an email.
 
-Multiple [Receipt Orders](receipt-orders.md) can be created from one Purchase Order. If there's one created Receipt Order that only partially covers the items of a Purchase Order, the next created Receipt Order will contain only those items that are absent in the previous Receipt Order (or multiple Receipt Orders). Though you can add any extra items to the Receipt Order if you need.
+Multiple [Receipt Orders](receipt-orders.md) can be created from one Purchase Order. If Receipt Orders created for a Purchase Order do not fully cover all its items, the next created Receipt Order will include the missing items. You can also add extra items to the Receipt Order if needed.
 
 In the article:
 
