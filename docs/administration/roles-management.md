@@ -30,7 +30,7 @@ It's possible to see what permissions are applied to a certain User by clicking 
 
 By default, Users have minimal access levels restricting almost everything. You need to assign Roles to grant Users specific access levels.
 
-### Baseiline role
+### Baseline role
 
 *As of v9.2.*
 
