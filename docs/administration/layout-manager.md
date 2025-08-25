@@ -127,6 +127,10 @@ Available for entity types with the enabled Kanban view.
 
 The list of fields displayed in the top side panel. By default, there are *Assigned User* and *Teams* fields.
 
+!!! warning
+
+    Avoid having the same field added in both the Side Panel Fields layout and the Detail layout. It won't function properly.
+
 ### Additional layouts
 
 Some entity types contain additional layouts: Convert Lead, List for Account and others.
