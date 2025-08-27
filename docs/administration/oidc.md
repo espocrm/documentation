@@ -37,7 +37,7 @@ Details:
 
 ## Team mapping
 
-If your identity provider users have groups, it's reasonable to map them against Espo teams. When an Espo user is created (upon signing in first time) or synced, corresponding teams will be assigned to that user according to the configured team mapping.
+If your identity provider users have groups, it's reasonable to map them against Espo teams. When an Espo user is created (upon signing in the first time) or synced, corresponding teams will be assigned to that user according to the configured team mapping.
 
 Note that instead of 'group', the provider may use terms like 'team', 'role', or another equivalent designation.
 
