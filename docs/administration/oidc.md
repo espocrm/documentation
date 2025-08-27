@@ -8,16 +8,16 @@ EspoCRM supports authentication over OIDC protocol. A user can log in to multipl
 
     EspoCRM cannot be used as an identity provider. This article is about configuring EspoCRM to use a 3rd party identity provider for authentication.
 
-Additional features:
+Features:
 
-* User creation. Optional.
-* Team mapping. Espo teams against identity provider's groups.
-* User profile and user teams sync. Optional, on every login.
-* The ability to choose a claim that will be used for a username.
+* User creation. Optional. If a user does not exist in Espo, it will be created upon the first login.
+* Team mapping. Espo teams are mapped against identity provider's groups. The Espo user is automatically associated with the corresponding teams.
+* User profile and user teams sync. Optional. On every login, the user profile data is automatically synced with the provider's data.
+* The ability to choose a claim that will be used as a username.
 * Fallback login method. The ability to use the default Espo method. Can be enabled for admins or for both regular users and admins.
-* For admins, the OIDC method can be disabled, so that only the fallback method is allowed.
-* Logout redirect. To clear an identity provider session when a user is logging out from Espo.
-* Backchannel logout. The ability to forcibly log out a user from Espo. `api/v1/backchannelLogout` endpoint.
+* For admins, the OIDC method can be disabled so that only the fallback method is allowed.
+* Logout redirect. When a user is logging out from Espo, the identity provider session is cleared. 
+* Backchannel logout. The ability to forcibly log out a user from Espo. Available under `api/v1/backchannelLogout` API endpoint.
 
 Details:
 
