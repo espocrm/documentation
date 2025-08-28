@@ -95,7 +95,7 @@ It is possible to [install](autoload.md) additional composer libraries in your e
 
 EspoCRM instance configuration for development. Config parameters should be set in `data/config.php`.
 
-A developer mode, disables cache.
+The developer mode:
 
 ```php
 'isDeveloperMode' => true,
