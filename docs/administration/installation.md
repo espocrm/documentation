@@ -24,9 +24,11 @@ Extract the archive to your public web server directory (e.g. `public_html`, `ww
 
     If you have only FTP access, you need to extract the archive before uploading to your web server.
 
-### 3. Create MySQL database for EspoCRM
+### 3. Create database for EspoCRM
 
-Go to your hosting administration panel (e.g. *cPanel*), or use CLI, and create a new database and database user.
+Using your hosting administration panel, or CLI, create a new database and a database user.
+
+Grant privileges to the database user. The user must have permission to modify the database schema and full access to read and write data.
 
 ### 4. Run EspoCRM installation wizard
 
