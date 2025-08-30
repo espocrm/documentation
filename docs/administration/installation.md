@@ -28,7 +28,7 @@ Extract the archive to your public web server directory (e.g. `public_html`, `ww
 
 Using your hosting administration panel, or CLI, create a new database and a database user.
 
-Grant privileges to the database user. The user must have permission to modify the database schema and full access to read and write data.
+Grant privileges to the database user. The user must have permission to modify the database schema and full access to read and write data. Alternatively, you can also use the root user if it's a local setup.
 
 ### 4. Run EspoCRM installation wizard
 
