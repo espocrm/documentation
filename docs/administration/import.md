@@ -42,13 +42,13 @@ Click the **Next** button to proceed to the _Step 2_.
 
 ## Step 2
 
-Set up the field mapping: how fields correspond to columns of a CSV file. Not mapped columns will be ignored.
+Set up the field mapping – how fields correspond to columns in the CSV file. Not mapped columns will be ignored.
 
-In the cases of *Create & Update* and *Update Only*, you need to check fields by which records that should be updated will be found. For example, if you check *update by* 'Name' field, then records with the matching Name will be updated.
+If the import mode is *Create & Update* or *Update Only*, you also need to check the fields that will be used to find the records to update. For example, if you tick *update by* the Name field, then records where the Name matches the value in the CSV file will be updated.
 
-Add **Default Values** that you want new and updated records to set with. For example, you can specify 'Assigned User' and 'Teams' that will be applied by default.
+Add **Default Values** that you want new and updated records to set with. For example, you can specify values for the Assigned User and Teams fields to be applied by default.
 
-After the import is done, you will be able to **revert** created records. You will be able to see which records were recognized as duplicate and which were updated. Duplicate means that there was a similar record in the system. You can remove all imported duplicates at once or remove only specific ones.
+After import is done, you will have the ability to **revert** created records. You will be able to see which records were recognized as duplicates and which were updated. Duplicate means that there was a similar record in the system. You can remove all imported duplicates at once or remove only specific ones.
 
 !!! important
 
