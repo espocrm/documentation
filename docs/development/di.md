@@ -143,12 +143,12 @@ class SomeFactory
 
 *A recommended way.*
 
-Constructor parameter names are used to detect dependencies.
+Binding and constructor parameter names are used to detect service dependencies.
 
 Resolving process:
 
 * Tries to resolve by binding (see below about binding); exits if success;
-* Tries to resolve by a parameter name, assuming that parameter name matches a service name and the type hint matches the service class; exits if success;
+* Tries to resolve by a parameter name, assuming that the parameter name matches the service name and the type hint matches the service class; exits if success;
 * Creates a new instance if the type hint is a class.
 
 If a dependency is not a service, a new instance will be created every time the dependency is requested. See below.
@@ -177,7 +177,7 @@ class SomeClass
 
 !!! warning
 
-    *Not recommended. The setter injection mechanism was introduced for the ability to add dependencies to extended classes where it's not possible to change the constructor signature.*
+    Not recommended. The setter injection mechanism was introduced for the ability to add dependencies to extended classes where it's not possible to change the constructor signature.
 
 Can be used along with the constructor injection. If a class implements *Aware* interface, the factory will use a corresponding setter function to inject a dependency. Setter traits can be utilized for adding setter functions into your class.
 
