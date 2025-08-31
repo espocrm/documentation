@@ -175,7 +175,7 @@ class SomeClass
 
 ### Setter method injection
 
-*Not recommended. Was introduced for the ability to add dependencies to extended classes where it's not possible to change a constructor signature.*
+*Not recommended. Was introduced for the ability to add dependencies to extended classes where it's not possible to change the constructor signature.*
 
 Can be used along with the constructor injection. If a class implements *Aware* interface, the factory will use a corresponding setter function to inject a dependency. Setter traits can be utilized for adding setter functions into your class.
 
