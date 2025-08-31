@@ -168,14 +168,16 @@ class SomeClass
      */
     public function __construct(
         private EntityManager $entityManager,
-        private SomeClass $some
+        private SomeClass $some,
     ) {}
 }
 ```
 
 ### Setter method injection
 
-*Not recommended. Was introduced for the ability to add dependencies to extended classes where it's not possible to change the constructor signature.*
+!!! warning
+
+    *Not recommended. The setter injection mechanism was introduced for the ability to add dependencies to extended classes where it's not possible to change the constructor signature.*
 
 Can be used along with the constructor injection. If a class implements *Aware* interface, the factory will use a corresponding setter function to inject a dependency. Setter traits can be utilized for adding setter functions into your class.
 
