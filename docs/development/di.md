@@ -110,7 +110,7 @@ class MyService1
 
 ## Injectable factory
 
-The Injectable Factory is a core class that creates objects resolving and injecting needed dependencies. Controllers, Entry Points, Hooks etc. all are created by the Injectable Factory (automatically by the framework).
+The Injectable Factory is a core class that creates objects resolving and injecting needed dependencies. Controllers, Entry Points, Hooks etc. – all are created by the Injectable Factory (automatically by the framework).
 
 The Injectable Factory is available as a service in the Container. That means that *injectableFactory* can be required as a dependency to be used directly.
 
@@ -129,7 +129,9 @@ use Espo\Modules\MyModule\Something;
  */
 class SomeFactory
 {
-    public function __construct(private InjectableFactory $injectableFactory) {}
+    public function __construct(
+        private InjectableFactory $injectableFactory,
+    ) {}
 
     public function create(): Something
     {
@@ -196,8 +198,8 @@ class MyClass implements Di\EntityManagerAware, Di\MetadataAware
 
     public function someMethod(): void
     {
-        $entityManager = $this->entityManager;
-        $metadata = $this->metadata;
+        // $this->entityManager;
+        // $this->metadata;
     }
 }
 ```
