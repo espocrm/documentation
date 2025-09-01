@@ -53,7 +53,7 @@ Command to start the service:
 
 ### Max file descriptor number
 
-With the default [event loop](https://github.com/reactphp/event-loop?tab=readme-ov-file#loop-implementations) implementation, the WebSocket server opens a file descriptor for each connection. By default, the maximum number of file descriptors per process may be relatively low (commonly 1024). You can increase this limit in the service configuration.
+The default [event loop](https://github.com/reactphp/event-loop?tab=readme-ov-file#loop-implementations) implementation of the WebSocket server relies on file descriptors. By default, the maximum number of file descriptors per process may be set relatively low (commonly 1024). You can increase this limit in the service configuration.
 
 Increasing the file descriptor limit for sysytemd:
 
