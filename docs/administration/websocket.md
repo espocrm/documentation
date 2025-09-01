@@ -51,6 +51,17 @@ Command to start the service:
 
 `systemctl start espocrm-websocket.service`
 
+### Max file descriptor number
+
+The WebSocket server opens a file descriptor for each connection. By default, the maximum number of file descriptors per process may be relatively low (e.g., 1024). You can increase this limit in the service configuration.
+
+Increasing the file descriptor limit for sysytemd:
+
+```
+LimitNOFILESoft=65535
+LimitNOFILE=65535
+```
+
 ## SSL support
 
 You need to set up a proxy that will forward SSL requests to our websocket server and vice-versa.
