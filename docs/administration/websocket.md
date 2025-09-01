@@ -51,16 +51,11 @@ Command to start the service:
 
 `systemctl start espocrm-websocket.service`
 
-### Max file descriptor number
+### Event loop implementations
 
-The default [event loop](https://github.com/reactphp/event-loop?tab=readme-ov-file#loop-implementations) implementation of the WebSocket server relies on file descriptors. By default, the maximum number of file descriptors per process may be set relatively low (commonly 1024). You can increase this limit in the service configuration.
+The default [event loop](https://github.com/reactphp/event-loop?tab=readme-ov-file#loop-implementations) implementation of the WebSocket server relies on file descriptors. By default, the maximum number of file descriptors per process may be set relatively low (commonly 1024).
 
-Increasing the file descriptor limit for sysytemd:
-
-```
-LimitNOFILESoft=65535
-LimitNOFILE=65535
-```
+For production, it's reasonable to install [ext-event](https://pecl.php.net/package/event) extension, or any other recommended by ReactPHP. With the extension installed, it will automatically choose the appropriate event loop implementation.
 
 ## SSL support
 
