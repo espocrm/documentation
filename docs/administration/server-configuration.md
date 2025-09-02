@@ -49,7 +49,7 @@ post_max_size = 50M
 upload_max_filesize = 50M
 ```
 
-Optional php extensions that may be needed:
+Optional PHP extensions that could be useful:
 
 * [zmq](http://php.net/manual/en/book.zmq.php) – for WebSocket;
 * [pcntl](http://php.net/manual/en/book.pcntl.php) – for parallel job processing and daemon (Unix-like systems only);
