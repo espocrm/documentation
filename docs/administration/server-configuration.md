@@ -59,15 +59,13 @@ upload_max_filesize = 50M
 
 ### Database requirements
 
-EspoCRM supports MySQL and MariaDB. These are no special peculiarities. All default settings are fine for EspoCRM.
-
-EspoCRM also experimentally supports PostgreSQL 15. Though it's planned to become official soon.
+EspoCRM supports MySQL,  MariaDB and PostgreSQL. There are no special requirements — the default settings work fine for EspoCRM.
 
 ## Required permissions for Unix-based systems
 
 !!! note
 
-    In most cases, permissions are set properly after extracting EspoCRM instance from a zip package. You need only to set ownership.
+    In most cases, permissions are set properly after extracting EspoCRM instance from the zip package. You may only need to set file ownership.
 
 ### Permissions
 
