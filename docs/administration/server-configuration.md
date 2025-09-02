@@ -45,7 +45,7 @@ Optional PHP extensions that could be useful:
 * [pcntl](http://php.net/manual/en/book.pcntl.php) – for parallel job processing and daemon (Unix-like systems only);
 * [posix](http://php.net/manual/en/book.posix.php) – for Unix-like systems;
 * [ldap](http://php.net/manual/en/book.ldap.php) – for LDAP authentication;
-* [ev](https://www.php.net/manual/en/book.ev.php) – for WebSocket if a large number of connections is expected.
+* [ev](https://www.php.net/manual/en/book.ev.php) – for WebSocket, if a large number of connections is expected.
 
 Recommended minimum values in php.ini:
 
