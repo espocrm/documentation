@@ -172,4 +172,4 @@ extension=zmq
 
 The default [event loop](https://github.com/reactphp/event-loop?tab=readme-ov-file#loop-implementations) implementation of the WebSocket server relies on file descriptors. By default, the maximum number of file descriptors per process may be set relatively low (commonly 1024).
 
-For production, it's reasonable to install [ext-event](https://pecl.php.net/package/event) extension, or any other recommended by ReactPHP. With the extension installed, it will automatically choose the appropriate event loop implementation.
+For production, it's reasonable to install [ext-ev](https://pecl.php.net/package/ev) extension, or any other recommended by ReactPHP. With the extension installed, it will automatically choose the appropriate event loop implementation.
