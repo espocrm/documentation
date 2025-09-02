@@ -39,16 +39,6 @@ EspoCRM requires PHP with the following extensions:
 * [exif](https://php.net/manual/en/book.exif.php) – for a proper orientation of uploaded images;
 * [bcmath](https://www.php.net/manual/en/book.bc.php) – arbitrary precision mathematics;
 
-php.ini settings:
-
-```
-max_execution_time = 180
-max_input_time = 180
-memory_limit = 256M
-post_max_size = 50M
-upload_max_filesize = 50M
-```
-
 Optional PHP extensions that could be useful:
 
 * [zmq](http://php.net/manual/en/book.zmq.php) – for WebSocket;
@@ -57,6 +47,15 @@ Optional PHP extensions that could be useful:
 * [ldap](http://php.net/manual/en/book.ldap.php) – for LDAP authentication;
 * [ev](https://www.php.net/manual/en/book.ev.php) – for WebSocket if a large number of connections is expected.
 
+Recommended minimum values in php.ini:
+
+```
+max_execution_time = 180
+max_input_time = 180
+memory_limit = 256M
+post_max_size = 50M
+upload_max_filesize = 50M
+```
 
 ### Database requirements
 
