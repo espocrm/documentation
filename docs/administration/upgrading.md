@@ -12,7 +12,7 @@ Command to run:
 php command.php upgrade
 ```
 
-This will check the next available version, download it and install. Once the upgrade is complete, it will prompt to run the command again, if a newer version is available.
+This command will check whether the next version is available, download it and install. Once the upgrade is complete, it will prompt to run the command again if a newer version is available.
 
 !!! note
 
