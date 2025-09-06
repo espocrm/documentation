@@ -58,6 +58,9 @@ Select 'Web application' in *Application type* field. Add your site URL in *Auth
 
 **6\.** Find *Client ID* and *Client secret*. Copy them to EspoCRM integration panel and save.
 
+!!! note
+
+    The Site URL should be configured properly in EspoCRM – it should be the URL address used to access your CRM instance. Otherwise, the integration will not work. The parameter is available under: Administration > Settings > Site URL.
 
 ## Access control
 
