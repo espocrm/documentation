@@ -68,6 +68,9 @@ Permissions that need to be enabled:
 
 After adding the above listed API permissions, click Grant Admin Consent for (your organization).
 
+!!! note
+
+    The Site URL should be configured properly in EspoCRM – it should be the URL address used to access your CRM instance. Otherwise, the integration will not work. The parameter is available under: Administration > Settings > Site URL.
 
 ## Access control
 
