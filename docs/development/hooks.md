@@ -44,7 +44,7 @@ Order values of existing hooks:
 
 *As of v7.4.*
 
-There are interfaces for built-in hooks. It's recommended that your hooks implement these interfaces. This makes easier for a developer to obtain needed data (passed to the hook) as each interface has a unique method signature. The list of interfaces:
+There are interfaces for built-in hooks. It's recommended that your hooks implement these interfaces. This makes it easier for a developer to obtain needed data (passed to the hook) as each interface has a unique method signature. The list of interfaces:
 
 * `Espo\Core\Hook\Hook\BeforeSave`
 * `Espo\Core\Hook\Hook\AfterSave`
