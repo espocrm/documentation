@@ -53,11 +53,11 @@ If *sql* is set to true, and the log level is *NOTICE* or higher, than only fail
 
 ## Handlers
 
-EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging.
-The library is shipped with a set of handlers.
-There is the ability to specify which handlers to use in Espo.
+EspoCRM uses [Monolog](https://github.com/Seldaek/monolog) library for logging. The library is shipped with many handlers. Developer can also create custom handlers.
 
-In `data/config.php`:
+It's possible to configure the list of handlers Espo should use for logging.
+
+In `data/config-internal.php`:
 
 ```
 'logger' => [
@@ -87,10 +87,7 @@ In `data/config.php`:
 ],
 ```
 
-Note that it's possible to have multiple handlers.
-
-It's possible to specify either a handler class name or loader class name.
-A loader class instantiates a handler class. 
+Handlers can be defined with a handler class name or a loader class name. A loader class instantiates a handler class.
 This allows to initialize constructor parameters for a handler. It can be helpful if you need to pass some object to the handler constructor.
 A loader class must implement `Espo\Core\Log\HandlerLoader` interface. It's possible to pass dependencies (via DI mechanism) to the loader.
 
