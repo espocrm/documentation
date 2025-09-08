@@ -87,9 +87,9 @@ In `data/config-internal.php`:
 ],
 ```
 
-Handlers can be defined with a handler class name or a loader class name. A loader class instantiates a handler class.
-This allows to initialize constructor parameters for a handler. It can be helpful if you need to pass some object to the handler constructor.
-A loader class must implement `Espo\Core\Log\HandlerLoader` interface. It's possible to pass dependencies (via DI mechanism) to the loader.
+Handlers can be defined with a handler class name or a loader class name. The loader class instantiates a handler class.
+This allows to initialize constructor parameters for the handler. It can be helpful if you need to pass some parameters to the handler's constructor and these parameters cannot be resolved with the DI mechanism.
+The loader class must implement `Espo\Core\Log\HandlerLoader` interface. It's possible to pass dependencies to the loader via the DI mechanism.
 
 !!! note
 
