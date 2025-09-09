@@ -108,7 +108,7 @@ Let's assume our company is based in Germany and sells domestically, within the 
 | **Domestic** (same country) | Use seller's local VAT rate |
 | **Intra-EU B2B** (customer is VAT registered) | Reverse charge (0% VAT) |
 | **Intra-EU B2C** (not VAT registered) and total cross-border B2C sales < €10,000 | Use seller's local VAT |
-| **Intra-EU B2C**, and threshold exceeded | Use customer's country VAT |
+| **Intra-EU B2C** and threshold exceeded | Use customer's country VAT |
 | **Outside EU** (export) | Exempt (0% VAT) |
 
 We would need to create the following tax records:
