@@ -27,6 +27,8 @@ A tax record can be applied to:
 
 Line items added to an order automatically receive the tax rate according to the Tax record assigned to the order. It's also possible to re-calculate tax rates for already added items.
 
+Tax records can be automatically assigned to new orders using [Tax Rules](#tax-rules).
+
 A Tax record defines:
 
 * Rate
