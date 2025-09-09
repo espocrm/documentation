@@ -25,9 +25,9 @@ A tax record can be applied to:
 * Return orders
 * Purchase orders
 
-Line items added to an order receive their tax rate according to the selected tax record. It's also possible to re-calculate tax rates for already added items.
+Line items added to an order automatically receive the tax rate according to the Tax record assigned to the order. It's also possible to re-calculate tax rates for already added items.
 
-A tax record defines:
+A Tax record defines:
 
 * Rate
 * Shipping tax mode
