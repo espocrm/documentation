@@ -80,7 +80,7 @@ Tax rules enable automatic association of a created order with the appropriate T
 
 Separate rule sets are used for sales and purchases.
 
-Only an administrator can manage tax rules. An administrator can access tax rules via: Administration > Tax Rules. Purchase rules: Administration > Purchase Tax Rules.
+Only an administrator can manage tax rules. An administrator can access tax rules via: Administration > Tax Rules. Purchase rules via: Administration > Purchase Tax Rules.
 
 One tax rule defines a Tax record and conditions. These conditions are evaluated against the Account record the order is related to.
 
