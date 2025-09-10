@@ -18,7 +18,7 @@ Common hooks for all entity types (called from the ORM Repository class):
 * declare a hook action method with a name the same as a hook name (e.g. *beforeSave*);
 * clear cache in Administration.
 
-!!! note
+!!! warning
 
     {HookName} must be unique within {EntityType}. If there are two hooks (in different modules) with the same name
     for the same entity type, only one will be applied (honoring order).
