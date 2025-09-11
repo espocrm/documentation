@@ -2,7 +2,7 @@
 
 Metadata is intended for storing application data such as fields, relationships, front-end controllers, views, panels, dashlets etc.
 
-[JSON Schema](https://github.com/espocrm/espocrm/tree/master/schema/metadata) provides autocompletion for IDEs (it works in PhpStorm and VSCode with no setup required).
+[JSON Schema](https://github.com/espocrm/espocrm/tree/master/schema/metadata) provides autocompletion for IDEs. It works in PhpStorm and VSCode with no setup required.
 
 In this article:
 
