@@ -11,7 +11,7 @@ A template of a [view](../view.md) is used to render an HTML. Before rendering, 
 
 1\. Define the JS file that will be loaded with the Espo page.
 
-Create `custom/Espo/Custom/Resources/metadata/app/client.js`:
+Create `custom/Espo/Custom/Resources/metadata/app/client.json`:
 
 ```json
 {
