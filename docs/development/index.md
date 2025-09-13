@@ -61,6 +61,7 @@
   * [Including custom CSS file](custom-css.md)
   * [Custom dashlets](how-to-create-a-dashlet.md)  
   * [Link-multiple field with primary record](link-multiple-with-primary.md)
+  * [Monkey patching](frontend/monkey-patching.md)
   * Campaigns
     * [Custom unsubscribe page](campaign-unsubscribe-template.md)
 

@@ -353,6 +353,7 @@ nav:
               - 'Custom CSS file': 'development/custom-css.md'
               - 'Dashlets': 'development/how-to-create-a-dashlet.md'
               - 'Link-multiple field with primary record': 'development/link-multiple-with-primary.md'
+              - 'Monkey patching': 'development/frontend/monkey-patching.md'
               - 'Campaigns':
                 -  'Custom unsubscribe page': 'development/campaign-unsubscribe-template.md'
         - 'API':
