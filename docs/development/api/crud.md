@@ -42,6 +42,8 @@ Returns:
 }
 ```
 
+Note that if the record count is disabled for the entity type, -1 or -2 will be returned instead of the actual total number of records. -1 means that there are more records – pagination can be used to retrieve the next portion.
+
 See [more info](../api-search-params.md) about search parameters.
 
 Additional headers:
