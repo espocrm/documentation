@@ -40,7 +40,7 @@ Create `client/custom/my-patch.js`:
  */
 require(['views/login'], View => {
 
-    const defaultAfterRender = View.prototype.defaultAfterRender;
+    const defaultAfterRender = View.prototype.afterRender;
 
     // Extending the `afterRender` method.
     View.prototype.afterRender = function () {
