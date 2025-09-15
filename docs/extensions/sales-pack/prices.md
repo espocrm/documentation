@@ -80,8 +80,8 @@ record\exists(
 
 What to use as a base price.
 
-* Unit – the unit price defined in the Price Book or defined in the Product record; Price Book rules are not applied;
-* Price Book – is obtained from the same Price Book; rules are applied;
+* Unit – the price defined in the Price Book or the unit price defined in the Product record; Price Book rules are not taken into account;
+* Price Book – the price is obtained from the same Price Book with rules are applied;
 * Supplier – the price of the Supplier;
 * Cost – the cost specified in the Product record.
 
