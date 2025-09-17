@@ -36,6 +36,10 @@ When a user changes the quantity in an order item, the system will look up the n
 
 It is possible to apply a Price Book to already added line items. The **Apply Price Book** action is available from the dropdown menu next to the plus button that adds line items.
 
+### Timeline
+
+The Date Start and Date End fields determine when the price is applicable. The Date End is inclusive. Both the Date Start and the Date End fields are optional.
+
 ### Rules
 
 *As of Sales Pack v2.2.*
@@ -110,6 +114,10 @@ To make prices to end with *9.99*, specify *-0.01* surcharge and use pricing fac
 #### Min. Quantity
 
 The rule will be applied only if the quantity of items being sold exceeds the specified value.
+
+#### Timeline
+
+The Date Start and Date End fields determine when the rule is applicable. The Date End is inclusive. Both the Date Start and the Date End fields are optional.
 
 ## Supplier Prices
 
