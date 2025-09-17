@@ -40,7 +40,7 @@ It is possible to apply a Price Book to already added line items. The **Apply Pr
 
 If specified, the price applies only if the item quantity exceeds the value.
 
-### Timeline
+### Effective dates
 
 The Date Start and Date End fields determine when the price is applicable. The Date End is inclusive. Both the Date Start and the Date End fields are optional.
 
@@ -119,7 +119,7 @@ To make prices to end with *9.99*, specify *-0.01* surcharge and use pricing fac
 
 If specified, the rule applies only if the item quantity exceeds the value.
 
-#### Timeline
+#### Effective dates
 
 The Date Start and Date End fields determine when the rule is applicable. The Date End is inclusive. Both the Date Start and the Date End fields are optional.
 
