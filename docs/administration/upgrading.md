@@ -26,7 +26,7 @@ It's recommended to upgrade whenever the new version is out. If you skip a few m
 
 !!! warning
 
-    Upgrading between minor or major versions should not be considered as a no-brainer. Incompatibility issues are possible if you have extensions or manual customizations.  It is recommended to make a backup before proceeding to upgrade.
+    Upgrading between minor or major versions is not always a hands-off process. Incompatibility issues are possible if you have extensions or manual customizations. It is recommended to make a backup before proceeding to upgrade.
 
 Versioning (X.Y.Z):
 
