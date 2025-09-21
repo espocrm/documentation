@@ -21,7 +21,7 @@ In this article:
 
 ## Inventory Transactions
 
-The transactional model is used for the inventory management. A single transaction record determines some action with a specific inventory item. It contains the following fields:
+The transactional model is used for the inventory management. Each transaction record represents an action performed on a specific inventory item. It includes the following fields:
 
 * Number – auto-increment number;
 * Product;
