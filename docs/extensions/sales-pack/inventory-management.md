@@ -25,11 +25,11 @@ The transactional model is used for the inventory management. Each transaction r
 
 * Number – auto-increment number;
 * Product;
-* Quantity – a positive or negative value; positive indicates a movement in – negative, movement out;
-* Parent – a record that generated the transaction; e.g. Receipt Order, Delivery Order;
+* Quantity – a positive or negative value: positive for a movement in, negative for movement out;
+* Parent – a record that is generated the transaction; e.g. Receipt Order, Delivery Order;
 * Type – transfer, reserve, or soft-reserve;
 * Warehouse – what warehouse the transaction is related to;
-* Inventory Number – needed when the product is tracked by a number.
+* Inventory Number – used for products tracked by number.
 
 Access to Inventory Transactions is controlled by Roles. The administrator can allow specific users to read and/or create transactions.
 
