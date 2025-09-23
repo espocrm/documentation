@@ -83,7 +83,9 @@ $entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getById($id)
 $entityManager->saveEntity($entity);
 ```
 
-With options:
+#### Save options
+
+Save with options:
 
 ```php
 <?php
@@ -94,7 +96,7 @@ $entityManager->saveEntity($entity, [SaveOption::SILENT => true]);
 
 Available options:
 
-* skipAll – skip all additional processing;
+* skipAll – skip all additional processing; use with caution;
 * skipHooks – skip all hooks; workflows, formula will be ignored;
 * silent – workflows will be ignored, modified fields won't be change;
 * skipCreatedBy – createdBy won't be set with current user;
