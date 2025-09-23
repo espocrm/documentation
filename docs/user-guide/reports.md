@@ -173,7 +173,9 @@ Pie:
 
 It's possible to export grid report results to XLSX (spreadsheet) and CSV formats. Both a results table and chart are exported to XLSX.
 
-Note that non-aggregated columns in grid reports are not exported to XLSX.
+!!! important
+
+    Non-aggregated columns in Grid reports are not exported to XLSX.
 
 ### Access
 
