@@ -73,7 +73,7 @@ A Direct Debit Mandate can be created for an Account.
 
 To generate a payment XML file, you need to create a Payment Request with the method set to *SEPA Direct Debit*. Then, the button will be available on the Payment Request detail view.
 
-The bank credentials and mandate data are included in an E-invoice if the method is set for the invoice.
+When *SEPA Direct Debit* is selected as the Invoice's payment method, the generated E-invoice file includes the bank credentials and mandate data.
 
 ## Payment requests
 
