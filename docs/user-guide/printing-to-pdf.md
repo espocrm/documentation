@@ -52,6 +52,7 @@ Table of content:
 * [Raw values](#raw-values)
 * [Maps](#maps)
 * [Custom helpers](#custom-helpers)
+* [Tips](#tips)
 
 Available under Administration > PDF Templates.
 
@@ -514,3 +515,7 @@ It's possible to print Google Maps image in PDF. See [here](../administration/ma
 ### Custom helpers
 
 See [here](../development/template-custom-helper.md).
+
+### Tips
+
+See [here](printing-to-pdf-tips.md).
