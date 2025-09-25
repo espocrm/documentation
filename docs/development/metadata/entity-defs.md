@@ -229,6 +229,14 @@ To disable the ability to add the field to text filters (in the Entity Manager t
 
 Indicates that the field value is not accessed directly but through some additional logic. The filed won't be available in PDF Templates, Email Templates and some other tools.
 
+### filtersEnabled
+
+*boolean*
+
+*As of v9.2.*
+
+Indicates that the field can be used in filters regardless directAccessDisabled being true. To be used only with directAccessDisabled.
+
 ### importDisabled
 
 *boolean*
