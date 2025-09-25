@@ -278,13 +278,19 @@ Access a parent scope:
 In object (map):
 
 ```
-{{lookup subject key}}
+{{lookup map key}}
 ```
 
-In array:
+In an array:
 
 ```
-{{lookup teamsId index}}
+{{lookup teamsIds index}}
+```
+
+Link-multiple example:
+
+```
+<p iterate="{{teamsIds}}">{{lookup ../teamsNames this}}</p>
 ```
 
 ### Expressions
