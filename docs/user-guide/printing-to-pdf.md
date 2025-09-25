@@ -295,7 +295,7 @@ Link-multiple example:
 
 ### Expressions
 
-* `{{subject.key}}` – lookup in objects;
+* `{{object.key}}` – lookup in objects;
 * `{{array.[0]}}` – lookup in arrays;
 * `{{~anyTag}}` – remove all previous spacing;
 * `{{anyTag~}}` – remove all next spacing;
