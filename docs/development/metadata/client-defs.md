@@ -569,11 +569,15 @@ Mandatory attributes to be selected in the list.
 
 A select handler for providing filters when selecting related records. Should have a method *getFilters* returning a promise.
 
+Optionally, extend from `handlers/select-related`.
+
 ### createHandler
 
 *string*
 
 A create handler. Provides attributes when creating a new related record. Should have a method *getAttributes* returning a promise.
+
+Optionally, extend from `handlers/create-related`.
 
 ### selectFieldHandler
 
