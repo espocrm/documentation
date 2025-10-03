@@ -131,7 +131,7 @@ This rule will map Accounts from EU countries with the VAT number to the *Zero* 
 
 !!! note
 
-    You can use a custom field to designate an account as EU based and set the value with formula. It will make defining the rule conditions simpler.
+    You can use a custom field to designate an Account as EU based and set the value with formula. It will make defining the rule conditions simpler.
 
 3\. Intra-EU B2C below threshold.
 
