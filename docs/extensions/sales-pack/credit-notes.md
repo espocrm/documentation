@@ -4,7 +4,7 @@
 
 Credit Notes document adjustments made to previously issued invoices, such as returns or post-sale discounts.
 
-Credit notes can be created from an invoice. If *On Invoice* is checked, the credit note will reduce the invoice's amount due. Otherwise, the credit note is treated as eligible for a refund payment.
+Credit notes can be created from an invoice.
 
 In the article:
 
