@@ -45,7 +45,7 @@ class MyHelper implements Helper
 
 Clear cache.
 
-Then in a template you can use:
+Then, in a template, you can use:
 
 ```
 {{myHelper 'some text' color='#bd318e'}}
