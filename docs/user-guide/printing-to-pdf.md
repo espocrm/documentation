@@ -519,4 +519,6 @@ It's possible to print Google Maps image in PDF. See [here](../administration/ma
 
 ### Custom helpers
 
-See [here](../development/template-custom-helper.md).
+See how to create custom helpers [here](../development/template-custom-helper.md).
+
+Helpers can be useful when the same part is used throughout many templates, for example, a header or footer. Printing of such parts can be delegated to a helper.
