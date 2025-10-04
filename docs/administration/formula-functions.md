@@ -196,6 +196,7 @@ Functions:
 * [ext\acl\getLevel](formula/ext.md#extaclgetlevel)
 * [ext\acl\getPermissionLevel](formula/ext.md#extaclgetpermissionlevel)
 * [ext\oauth\getAccessToken](formula/ext.md#extoauthgetaccesstoken)
+* [ext\appSecret\get](formula/ext.md#extappsecretget)
 
 ## Util
 
