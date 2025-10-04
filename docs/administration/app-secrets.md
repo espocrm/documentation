@@ -11,13 +11,7 @@ Secrets are stored as instances of the *AppSecret* entity type. It's possible to
 Example:
 
 ```
-$secretValue = null;
-
-$secretId = record\findOne('AppSecret', null, null, 'name', 'SECRET_NAME');
-
-if ($secretId) {
-    $secretValue = record\attribute('AppSecret', $secretId, 'value');
-}
+$secretValue = ext\appSecret\get($secretName);
 ```
 
 ## Using in Workflows
