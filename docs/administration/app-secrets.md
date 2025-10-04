@@ -8,6 +8,8 @@ Secrets are stored as instances of the *AppSecret* entity type. It's possible to
 
 ## Reading in Formula
 
+*As of v9.2.3.*
+
 Example:
 
 ```
