@@ -14,6 +14,7 @@
 * [ext\acl\getLevel](#extaclgetlevel)
 * [ext\acl\getPermissionLevel](#extaclgetpermissionlevel)
 * [ext\oauth\getAccessToken](#extoauthgetaccesstoken)
+* [ext\appSecret\get](#extappsecretget)
 
 ## ext\account\findByEmailAddress
 
@@ -222,6 +223,14 @@ Returns a permission level.
 
 *As of v9.1.0.*
 
+`ext\acl\getPermissionLevel(ID)`
+
 Get an OAuth access token for a specific OAuth Account. The ID of OAuth Account record can be obtained for its URL.
 
-`ext\acl\getPermissionLevel(ID)`
+## ext\appSecret\get
+
+*As of v9.2.3.*
+
+`ext\appSecret\get($secretName)`
+
+Get an App Secret.
