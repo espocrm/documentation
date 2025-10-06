@@ -89,6 +89,10 @@ Go to the [download upgrade page](https://www.espocrm.com/download/upgrades/) an
 
 Go to Administration > Upgrade. Upload and install upgrade packages one by one.
 
+## Breaking changes
+
+Espo upgrades should not break customizations made via the UI. But customizations made via code may break. To review breaking changes before upgrading, check release notes or GitHub issues marked with the *change* tag.
+
 ## See also
 
 * [Upgrading manually](upgrading-manually.md)
