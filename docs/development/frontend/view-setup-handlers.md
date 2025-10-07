@@ -68,7 +68,7 @@ define('custom:some-handler', [], () => {
         }
     }
 
-    // Establish event support.
+    // Establish event support. If needed.
     Object.assign(Handler.prototype, Backbone.Events);
 
     return Handler;
