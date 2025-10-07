@@ -11,7 +11,7 @@ This will prevent a user from waiting until scripts are finished. In worst cases
 
 ## Unsetting process variables
 
-All variables defined in a *Script Task* and *Execute Formula Script* action will be stored in the Process. If you don't need a specific variable to be used further in the process, it's reasonable to unset it in the end of the script.
+Variables defined in a *Script Task* and *Execute Formula Script* action will be stored in the Process (unless *Isolate Variables* is checked). If you don't need a specific variable to be used further in the process, it's reasonable to unset it in the end of the script.
 
 ```
 $tempVariable = null;
