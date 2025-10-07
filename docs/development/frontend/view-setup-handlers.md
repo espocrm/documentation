@@ -63,6 +63,8 @@ define('custom:some-handler', [], () => {
             this.listenTo(this.view, 'after:render', () => {
                 // Do something with view after render.
             });
+
+            this.view.listenTo(this.view.model, 'change', () => {});
         }
     }
 
