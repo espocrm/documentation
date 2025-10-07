@@ -160,6 +160,7 @@ new password. This function is useful when creating a new user via formula. (as 
         'userName', $userName,
         'firstName', $firstName,
         'lastName', $lastName,
+        'emailAddress', $emailAddress,
         'type', 'portal',
         'portalsIds', list($portalId)
     );
