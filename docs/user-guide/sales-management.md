@@ -19,6 +19,8 @@ New Leads are typically created in the following scenarios:
 
 By utilizing the [Workflows](../administration/workflows.md) tool, an administrator can set up the system to apply a specific assignment rule to new Leads. *Round-Robin* and *Least-Busy* rules are available. For more complex business flows, it's recommended to utilize the [BPM tool](../administration/bpm.md).
 
+Users can also create a Lead from an Email – from the top-right dropdown menu.
+
 To prevent overlooking of new Leads, users can add the *Lead* entity type to the *Global Auto-follow* list in Preferences. Then, they will automatically follow every new Lead created in the system they have access to.
 
 ### Converting
