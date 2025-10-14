@@ -54,11 +54,11 @@ Custom routes can be defined in following places:
 ]
 ```
 
-* *noAuth* makes an endpoint not requiring authentication.
+* *noAuth* makes the endpoint not requiring authentication.
 * *method* specifies an HTTP method. The mostly used methods are: *get*, *post*, *put*, *delete*.
 * *actionClassName* defines an action class name.
 
-A route can contain placeholders (for example, `:id`). An action value will be passed to an Action in the Request object.
+A route can contain placeholders (for example, `:id`). The value will be passed to the Action in the Request object.
 
 A route can be processed either by an Action class or by a Controller.
 
@@ -72,7 +72,7 @@ Clearing cache is required after changes in routing files.
 
     This is a preferable method for custom API actions.
 
-A route can define an action class with the *actionClassName* parameter. Action classes should implement the interface `Espo\Core\Api\Action`.
+A route can define an action class with the *actionClassName* parameter. Action classes should implement the `Espo\Core\Api\Action` interface.
 
 Example:
 
@@ -106,7 +106,7 @@ class MyAction implements Action
 
 ## Custom controller
 
-Alternative to an Action class. A Controller contain multiple methods for different actions.
+Alternative to an Action class. A Controller can contain multiple methods for different actions.
 
 ### In Custom folder
 
