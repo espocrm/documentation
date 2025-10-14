@@ -84,6 +84,7 @@ use Espo\Core\Api\Action;
 use Espo\Core\Api\Request;
 use Espo\Core\Api\Response;
 use Espo\Core\Api\ResponseComposer;
+use RuntimeException;
 
 use Espo\Modules\MyModule\Service;
 
@@ -95,7 +96,7 @@ class MyAction implements Action
     {
         // A route parameter value is passed in an URI, if defined in a route.
         // E.g. `/Hello/:id`.
-        $id = $request->getRouteParams('id');
+        $id = $request->getRouteParams('id') ?? throw new RuntimeException();
 
         $data = $this->service->get($id);
 
