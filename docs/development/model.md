@@ -216,11 +216,20 @@ Defined in the application.
 
 ### after:relate
 
-Once relationship panel updated. Available on detail/edit views.
+Once relationship panel updated. Available on the detail view.
+
+### after:relate:{link}
+
+Once a specific relationship panel updated. Available on the detail view.
 
 ### update-all
 
-This event is not fired. But you can fire it to update all relationship panels. Available on detail/edit views.
+This event is not fired. But you can fire it to refresh all relationship panels. Available on the detail view.
+
+### update-related:{link}
+
+Fire this event to refresh a specific relationship panel. Available on the detail view.
+
 
 ## Other
 
