@@ -52,7 +52,7 @@ There is an option to make the system create a new Case record from each email i
 
     Only the first email in the thread creates a new Case. Every subsequent email will be linked to the existing Case record and a Note will be added to the Stream.
 
-When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a **parent** of the email that is being sent. It will add the group email address to the *Reply-To* field of the email. So a customer's reply will be sent to the group address rather than to the user’s one.
+When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a **parent** of the email that is being sent. It will add the group email address to the *Reply-To* field of the email. So the customer's reply will be sent to the group address rather than to the user’s one.
 
 ## Personal email accounts
 
