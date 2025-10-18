@@ -12,6 +12,12 @@ An administrator can move the Stream panel down so that it will appear under oth
 
 Stream posts can be pinned. A user needs to have *edit* access to a record to be able to pin or unpin Stream posts.
 
+### Access
+
+Access to the Stream is controlled by Roles and can be configured per entity type. For example, it's possible to configure that users have access to the Stream of records related to their team.
+
+With the Collaborators feature enabled, users who are record collaborators can access the Stream of the record.
+
 ## User Stream
 
 Users can view their own Stream in the *Stream* dashlet as well on a separate Stream page.
