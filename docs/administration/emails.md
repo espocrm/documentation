@@ -12,7 +12,7 @@ As an email is coming, the system tries to link it with an appropriate record (A
 
 !!! warning "Important"
 
-    Email records **are not duplicated** in the system, even regardless of being fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to **move to trash** instead. It's also recommended to restrict *delete* access for users in Roles.
+    Email records **are not duplicated** in the system, even if they are fetched by different email accounts. If you remove an email record from the CRM, it will be removed for all users. It's recommended to **move to trash** instead. It's also recommended to restrict *delete* access for users in Roles.
 
 An Email record can be assigned to a particular user. By default, the Assigned User field is not available on the layout. The administrator can add it at: Administration > Entity Manager > Side Panel Fields.
 
