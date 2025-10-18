@@ -10,6 +10,8 @@ A product record has 3 price fields: *Cost*, *List* and *Unit*. There is the abi
 
 Products can be associated with tax classes. This enables automated tax application based on defined tax rules.
 
+With the Inventory Management feature enabled, you can track the availability of each product item.
+
 Products can be printed to PDF. See more detail [here](quotes.md#templates).
 
 The ability to add products as line items of an Opportunity is disabled by default. The Administrator needs to add the *Items* panel under Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
