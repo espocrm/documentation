@@ -39,7 +39,7 @@ For regular users, access to Personal Email Accounts must be allowed in Roles.
 
 *The section concerns email sending.*
 
-Users can set SMTP settings in their Personal Email Accounts. Personal Email Accounts available at Emails tab > top-right menu > Personal Email Accounts. 
+Users can set SMTP settings in their Personal Email Accounts. Personal Email Accounts are available under: Emails tab > top-right menu > Personal Email Accounts. 
 
 For regular users, access to Personal Email Accounts must be allowed in Roles.
 
