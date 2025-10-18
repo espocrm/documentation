@@ -16,7 +16,7 @@ Stream posts can be pinned. A user needs to have *edit* access to a record to be
 
 Access to the Stream is controlled by Roles and can be configured per entity type. For example, it's possible to configure that users have access to the Stream of records related to their team.
 
-With the [Collaborators](../administration/roles-management.md#collaborators) feature enabled, users who are record collaborators can access the Stream of the record.
+With the [Collaborators](../administration/roles-management.md#collaborators) feature enabled, users who are record collaborators can access the Stream of the record, provided their access level, as defined by Roles, is other than *no*.
 
 ## User Stream
 
