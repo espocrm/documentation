@@ -192,6 +192,12 @@ Disables the ability to customize the field in the Entity Manager tool.
 
 Parameters available in the Entity Manager tool when editing the field. Specify an empty array to disable all parameters.
 
+### fieldManagerAdditionalParamList
+
+*object[]*
+
+Additional field parameters available in the Entity Manager.
+
 ### layoutAvailabilityList
 
 *string[]*
