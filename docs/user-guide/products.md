@@ -20,9 +20,9 @@ In this article:
 
 ## Categories
 
-Each product record can belong to some product category. Product Categories are presented as a hierarchical tree structure. Each category can have sub-categories.
+Each product can be linked to a category. Categories can be arranged in a hierarchical tree structure, where each category may include subcategories.
 
-The Product Category is a separate entity type, hence the access to it is controlled by Roles.
+The Product Category is a separate entity type. Access to it is controlled by Roles.
 
 ![Categories](../_static/images/user-guide/products/categories.png)
 
