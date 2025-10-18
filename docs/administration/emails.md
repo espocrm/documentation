@@ -54,7 +54,7 @@ There is an option to make the system create a new Case record from each email i
 
 When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a **parent** of the email that is being sent. It will add the group email address to the *Reply-To* field of the email. So a customer's reply will be sent to the group address rather than to the user’s one.
 
-## Personal Email Accounts
+## Personal email accounts
 
 Regular users can set up their own email accounts that need to be monitored (at Emails tab > top right dropdown menu > Personal Email Accounts).
 
@@ -68,7 +68,7 @@ The administrator also can manage Personal Email Accounts of users (at Administr
 
     This is required to have the email functionality working properly. User records need to have their email address (or multiple addresses) set in the *Email* field. Only the administrator can change the *Email* field for users. It's supposed that the user's email address is the same as the email address of the user's Personal Email Account.
 
-## Email Filters
+## Email filters
 
 Email Filters allow filtering of incoming emails according to specified criteria. For example, if you don't want notification messages sent by some application to be imported to EspoCRM, you can create a filter to make EspoCRM skip them.
 
