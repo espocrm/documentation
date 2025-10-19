@@ -26,6 +26,7 @@ In this article:
 See also:
 
 * [Complex expressions](complex-expressions.md)
+* [Quick tour](https://app.supademo.com/demo/cmca8j4uc1gy18qszrhdt68jy)
 
 
 ## List Reports
