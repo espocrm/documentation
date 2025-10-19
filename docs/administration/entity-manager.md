@@ -24,6 +24,10 @@ In this article:
 * [Formula](#formula)
 * [Copying to another instance](#copying-to-another-instance)
 
+See also:
+
+* [Quick tour](https://app.supademo.com/demo/cmc39h2hnlaf0sn1ru3j5yul5)
+
 ## Creating new entity type
 
 Click the **Create Entity** button on the Entity Manager main page (Administration > Entity Manager). Specify the name, labels and select the type. If you select the *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check the **Stream** if you want to have the Stream panel (users will be able to follow records).
