@@ -12,6 +12,13 @@ To create a Portal, follow Administration > Portals > *Create Portal*.
 * *URL*. Read-only field that displays the link you can access the Portal with.
 * *Layout Set*. Provides the ability to use different layouts from the Portal. See more [info](layout-manager.md#different-layouts-for-teams-portals).
 
+In this article:
+
+* [Portal users](#portal-users)
+* [Portal roles](#portal-rolues)
+* [Access to portal](#access-to-portal)
+* [See also](#see-also)
+
 ## Portal users
 
 Administrators can create portal users.
@@ -68,4 +75,5 @@ It's possible to use server configuration tools (such as mod_rewrite) to be able
 
 ## See also
 
+* [Quick tour](https://www.espocrm.com/features/customer-portal/)
 * [ACL customization](../development/acl.md#custom-acl-for-entity-type)
