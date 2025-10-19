@@ -8,6 +8,7 @@ In this article:
 * [Lead assignment distribution](#lead-assignment-distribution)
 * [Hooks](#hooks)
 * [Exposing entry point](#exposing-entry-point)
+* [See also](#see-also)
 
 ## Lead capture
 
@@ -224,6 +225,7 @@ You need to handle the following requests:
 
 ## See also
 
-* [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
+* [Quick tour](https://app.supademo.com/demo/cme8qhb2r3w9lh3pyo4d2hh6k)
+* [Drip email campaign with BPM](bpm-drip-email-campaign.md)
 
 
