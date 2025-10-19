@@ -10,12 +10,12 @@ To create a Portal, follow Administration > Portals > *Create Portal*.
 * *Tab List*. Tabs which will be shown in the navigation bar in the Portal.
 * *Dashboard Layout*. Specify dashlets that will be displayed on the home page of the Portal. Note that Portal Users can't configure their dashboard.
 * *URL*. Read-only field that displays the link you can access the Portal with.
-* *Layout Set*. Provides the ability to use different layouts from the Portal. See more [info](layout-manager.md#different-layouts-for-teams-portals).
+* *Layout Set*. Provides the ability to use different layouts from the Portal. See [more](layout-manager.md#different-layouts-for-teams-portals).
 
 In this article:
 
 * [Portal users](#portal-users)
-* [Portal roles](#portal-rolues)
+* [Portal roles](#portal-roles)
 * [Access to portal](#access-to-portal)
 * [See also](#see-also)
 
@@ -75,5 +75,5 @@ It's possible to use server configuration tools (such as mod_rewrite) to be able
 
 ## See also
 
-* [Quick tour](https://www.espocrm.com/features/customer-portal/)
+* [Quick tour](https://app.supademo.com/demo/cmgajngej3dxj2noml5li5gm3)
 * [ACL customization](../development/acl.md#custom-acl-for-entity-type)
