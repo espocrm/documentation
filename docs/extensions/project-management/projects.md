@@ -230,6 +230,12 @@ Another application of group types is Dynamic Logic. For example, the Assignee f
 
 The Project Task entity type has a foreign field *Group Type*, which holds the type value of the related Group. It can be used in conditions of the Dynamic Logic.
 
+### Calendar
+
+*Requires EspoCRM v9.2.*
+
+Project Tasks can be displayed on the Calendar in read-only mode. For this, an administrator should enable Project Tasks under: Administration > Settings > Genaral > Calendar Entity List. 
+ 
 ## Plan view
 
 Here, you can see Tasks in Groups. You can add new Groups, remove Groups, and reorder Groups. Here, you can also create, edit, and remove Tasks.
