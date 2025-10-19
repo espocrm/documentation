@@ -27,7 +27,7 @@ In this article:
 * [Signals](bpm-signals.md)
 * [Compensation](bpm-compensation.md)
 * [BPM specific formula functions](bpm-formula.md)
-* [Drip Email Campaign with BPM](bpm-drip-email-campaign.md)
+* [Drip email campaign with BPM](bpm-drip-email-campaign.md)
 * [Tracking URLs with BPM](bpm-tracking-urls.md)
 * [Tips](bpm-tips.md)
 * [Configuration](bpm-configuration.md)
