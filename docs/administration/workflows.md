@@ -460,6 +460,7 @@ Markdown is supported. It allows to to display a link for the user.
 
 ## See also
 
+* [Quick tour](https://app.supademo.com/demo/cmf4988mv261h39ozgxi1un4e)
 * [Birthday notifications in EspoCRM](https://www.espocrm.com/blog/birthday-notifications-in-espocrm/)
 * [Adding custom service action for Workflows](../development/workflow-service-actions.md)
 * [Automated Email-to-Lead with Workflows](https://www.espocrm.com/blog/automated-email-to-lead-with-workflows/)
