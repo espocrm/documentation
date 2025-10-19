@@ -31,6 +31,7 @@ In this article:
 * [Tracking URLs with BPM](bpm-tracking-urls.md)
 * [Tips](bpm-tips.md)
 * [Configuration](bpm-configuration.md)
+* [Quick tour](https://app.supademo.com/demo/cmflay16uf28039ozjxxlw5sn)
 
 ## Process Flowcharts
 
