@@ -6,6 +6,17 @@ The Print to PDF feature allows to generate PDF documents with record data. The 
 
     You need to have at least one Template for the entity type of the record you want to print.
 
+In this article:
+
+* [Overview](#overview)
+* [Templates](#templates)
+
+See also:
+
+* [Quick tour](https://app.supademo.com/demo/cmejvg02x0ly25gz3si01kay7)
+
+## Overview
+
 ### Printing single record
 
 The *Print to PDF* action is available on the detail view under the dropdown next to the *Edit* button.
