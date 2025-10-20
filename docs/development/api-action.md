@@ -20,6 +20,16 @@ Custom routes can be defined in following places:
 ```json
 [
     {
+        "route": "/MyAction",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\MyModule\\Api\\GetMyAction"
+    },
+    {
+        "route": "/MyScope/:id/something",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\MyModule\\Api\\PostMyScopeSomething"
+    },
+    {
         "route": "/Hello/test/:id",
         "method": "get",
         "params": {
@@ -45,11 +55,6 @@ Custom routes can be defined in following places:
             "action": "test"
         },
         "noAuth": true
-    },
-    {
-        "route": "/MyAction",
-        "method": "get",
-        "actionClassName": "Espo\\Modules\\MyModule\\Api\\MyAction"
     }
 ]
 ```
@@ -70,7 +75,7 @@ Clearing cache is required after changes in routing files.
 
 !!! note
 
-    This is a preferable method for custom API actions.
+    This is the preferable method.
 
 A route can define an action class with the *actionClassName* parameter. Action classes should implement the `Espo\Core\Api\Action` interface.
 
@@ -88,13 +93,13 @@ use RuntimeException;
 
 use Espo\Modules\MyModule\Service;
 
-class MyAction implements Action
+class GetMyAction implements Action
 {
     public function __construct(private Service $service) {}
 
     public function process(Request $request): Response
     {
-        // A route parameter value is passed in an URI, if defined in a route.
+        // A route parameter value is passed in an URI, if defined in the route.
         // E.g. `/Hello/:id`.
         $id = $request->getRouteParams('id') ?? throw new RuntimeException();
 
