@@ -95,7 +95,10 @@ use Espo\Modules\MyModule\Service;
 
 class GetMyAction implements Action
 {
-    public function __construct(private Service $service) {}
+    public function __construct(
+        // Some class we delegate the logic to.
+        private Service $service,
+    ) {}
 
     public function process(Request $request): Response
     {
