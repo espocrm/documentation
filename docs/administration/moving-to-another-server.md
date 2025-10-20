@@ -4,7 +4,7 @@ Follow these steps to move EspoCRM to another server.
 
 ### Step 1. Backup files
 
-Open a file manager or login via SSH to archive all available files from the EspoCRM directory. See [more details](backup-and-restore.md#step-1-back-up-files).
+Open a file manager or log in via SSH to archive all available files from the EspoCRM directory. See [more details](backup-and-restore.md#step-1-back-up-files).
 
 ### Step 2. Backup your database
 
@@ -19,9 +19,9 @@ Copy the backups of files and your database to a new server.
 To unarchive the backup files, you can use Archive Manager or this [instruction](backup-and-restore.md#step-1-unarchive-backup-files).
 Note: Files need to be placed in the web-server directory.
 
-### Step 5. Configure a server
+### Step 5. Configure the server
 
-Configure a new server based on the recommendations [here](server-configuration.md).
+Configure the new server based on the recommendations [here](server-configuration.md).
 
 ### Step 6. Correct permissions
 
