@@ -8,7 +8,7 @@ You can define a specific route to access your API action (endpoint).
 
 Default routes are defined here: `application/Espo/Resources/routes.json`.
 
-Custom routes can be defined in following places:
+Custom routes can be defined in the following places:
 
 * `custom/Espo/Modules/{ModuleName}/Resources/routes.json`
 * `custom/Espo/Custom/Resources/routes.json`
