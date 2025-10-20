@@ -53,6 +53,10 @@ Out of the box, the following providers are available:
 * SEPA Credit Transfer
 * SEPA Direct Debit
 
+Providers shipped separately:
+
+* [Stripe](../stripe-integration/index.md)
+
 ### Wire Transfer
 
 A generic bank credit transfer. The payment channel record stores bank credentials, which can be presented to a customer on a payment link page.

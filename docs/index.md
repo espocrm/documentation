@@ -144,6 +144,8 @@
   * [Troubleshooting](extensions/voip-integration/troubleshooting.md)
 * Zoom Integration
   * [Zoom Integration](extensions/zoom-integration/index.md)
+* Stripe Integration
+  * [Stripe Integration](extensions/stripe-integration/index.md)
 * Export Import
   * [Overview](extensions/export-import/overview.md)
   * [Export](extensions/export-import/export.md)
