@@ -179,6 +179,10 @@ class MyController
 
 ## Extending existing controller
 
+!!! note
+
+    Not recommended.
+
 Example for the *Account* scope.
 
 Create a file (or modify if it already exists) `custom/Espo/Custom/Controllers/Account.php`.
@@ -193,7 +197,7 @@ use Espo\Core\Api\Response;
 class Account extends \Espo\Modules\Crm\Controllers\Account
 {
     /**
-     *  POST api/v1/Account/action/test
+     * POST api/v1/Account/action/test
      */
     public function postActionTest(Request $request, Response $response): bool
     {
@@ -210,7 +214,7 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
     }
 
     /**
-     *  GET api/v1/Account/action/test
+     * GET api/v1/Account/action/test
      */
     public function getActionTest(Request $request, Response $response): void
     {
