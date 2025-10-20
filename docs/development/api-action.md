@@ -62,8 +62,8 @@ Custom routes can be defined in following places:
 Route parameters:
 
 * *noAuth* makes the endpoint accessible without authentication.
-* *method* specifies an HTTP method. The mostly used methods are: *get*, *post*, *put*, *delete*.
-* *actionClassName* defines an action class name.
+* *method* specifies an HTTP method. The most used methods are: *get*, *post*, *put*, *delete*.
+* *actionClassName* defines an action class name – the entry point of the route.
 
 A route can contain placeholders (for example, `:id`). The value will be passed to the Action in the Request object.
 
