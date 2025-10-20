@@ -17,7 +17,7 @@ In this article:
 
 ## Check logs
 
-This is the most **important step** in finding out the problem. There are two main logs you need to check:
+This is the most **important step** in diagnosing the problem. There are two main logs you need to check:
 
 * EspoCRM [log](log.md);
 * Webserver error log.
@@ -26,15 +26,22 @@ This is the most **important step** in finding out the problem. There are two ma
 
 EspoCRM log files are located in `{ESPO_ROOT}/data/logs/` directory. Most errors are logger there.
 
-#### Apache error log
+#### Webserver error log
 
-For Ubuntu server, the apache error log is located at `/var/log/apache2/error.log`. The location of log files can be different on other systems.
+
+##### Apache
+
+The Apache error log is usually located at `/var/log/apache2/error.log`. The location of the log file can vary in different systems.
+
+##### Nginx
+
+`/var/log/nginx/error.log`
 
 ### Debug mode
 
-In some cases it can be reasonable to enable debug mode for the logger. It will print more information into the log.
+In some cases, it can be reasonable to enable debug mode for the Espo logger. It will print more information to the log.
 
-To enable debug mode for the logger, edit the file `data/config-internal.php` (or `data/config.php`) and set the value of the *logger.level* parameter to `DEBUG`:
+To enable debug mode for the logger, edit the file `data/config-internal.php` and set the value of the *logger.level* parameter to `DEBUG`:
 
 ```
 'logger' => [
