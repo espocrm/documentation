@@ -12,13 +12,13 @@ In this article:
 
 ## Overview
 
-In order to restrict access for some users, you need to use Roles. An administrator can manage roles in under Administration > Roles. Each role defines access to certain areas (scopes) which is applied to users who own that role.
+Roles are used to grant or restrict access for users. An administrator can manage Roles under Administration > Roles. Each Role defines access to specific areas (scopes).
 
-One User can have multiple Roles. Those Roles can be selected for a specific User (*Roles* field of User record) and/or be inherited from Teams that the user belongs to.
+One User can have multiple Roles applied. Roles can be set in the User record (the *Roles* field) and/or be inherited from the User's Teams.
 
-If a User has multiple Roles, then those Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This allows to flexibly manage access level control.
+When a User has multiple Roles, these Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This allows to flexibly manage access level control.
 
-It's possible to see what permissions are applied to a certain User by clicking *Access* button on the user's detail view.
+It's possible to see what permissions are applied to a certain User by clicking the *Access* button on the user's detail view.
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
@@ -58,9 +58,9 @@ Listed from more permissive to less permissive.
 
 ## Example
 
-We have a Team 'Sales'. That Team has a single Role 'Salesman' (the *Roles* field of the Team). All Users from this Team will obtain the 'Salesman' Role (as all team roles are automatically applied to users of the team).
+We have a Team 'Sales'. That Team has a single Role 'Salesperson' (the *Roles* field of the Team). All Users from this Team will obtain the 'Salesperson' Role (as all team roles are automatically applied to users of the team).
 
-The 'Salesman' Role is defined in the following way:
+The 'Salesperson' Role is defined in the following way:
 
 Lead:
 
@@ -114,13 +114,13 @@ delete – team
 stream – team
 ```
 
-Our sales manager User will be able to manage all Leads/Opportunities related to the 'Sales' Team. Under the hood this User have two roles ('Salesman' and 'Sales Manager') merged into one in a way that a more permissive level suppresses less permissive.
+Our sales manager User will be able to manage all Leads/Opportunities related to the 'Sales' Team. Under the hood this User have two roles ('Salesperson' and 'Sales Manager') merged into one in a way that a more permissive level suppresses less permissive.
 
 ## Special Permissions
 
 ### Assignment Permission
 
-Set this parameter to restrict the ability to re-assign records to another User and/or Teams. If you set *team*, then it will be possible to assign only to Users from own Teams. If `no`, Users won't be able to re-assign at all.
+Set this parameter to restrict the ability to re-assign records to another User and/or Teams. If you set to *team*, then it will be possible to assign only to Users from own Teams. If you set to `no`, Users won't be able to re-assign at all.
 
 It also defines whether a User is able to post to the Stream of other Users and other Teams.
 
