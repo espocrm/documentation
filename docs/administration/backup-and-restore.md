@@ -6,7 +6,7 @@ To make a full backup of your EspoCRM instance you need to copy EspoCRM files an
 
 ### Step 1. Back up files
 
-Create an archive of the directory content of installed EspoCRM. The default path for Ubuntu is `/var/www/html`. You can use this command:
+Create an archive of the directory contents of the EspoCRM instance. The default path for Ubuntu is `/var/www/html`. You can use this command:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
@@ -27,7 +27,7 @@ That's all. Now, you have to copy the created backup to a safe place.
 
 ## How to back up EspoCRM with a script
 
-You can use a script to back up all needed data. Login via SSH and run the commands (tested on the Ubuntu server).
+You can use a script to back up all needed data. Log in via SSH and run the commands (tested on the Ubuntu server).
 
 ### Download a script
 
@@ -84,7 +84,7 @@ mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_
 
 ### Step 4. Check/configure crontab
 
-Check if your crontab is configured properly. Run the command below and check if a path to EspoCRM is correct:
+Check if your crontab is configured properly. Run the command below and check if the path to EspoCRM instance is correct:
 
 ```bash
 sudo crontab -l -u www-data
