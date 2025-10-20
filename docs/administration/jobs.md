@@ -29,7 +29,7 @@ If you want a job to be run as often as possible, you need to set the scheduling
 
 ## Setting up
 
-There are two options to set up job processing in the system:
+There are two job processing setup options:
 
 * [Crontab](#cron)
 * [Daemon](#daemon)
@@ -44,7 +44,7 @@ For both, it's **highly recommended** to turn on processing jobs **in parallel**
 
 The Cron is easy to configure, it's supported by most hosting providers. See how to configure cron [here](server-configuration.md#setting-up-crontab).
 
-In Unix systems, the cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation by adding multiple lines in the crontab with delays:
+In Unix systems, the cron is supposed to be run not more often than once a minute. It's possible to overcome this limitation by adding multiple crontab actions with different delays:
 
 ```
 * * * * * /usr/bin/php -f /path/to/espo/cron.php > /dev/null 2>&1
@@ -53,11 +53,11 @@ In Unix systems, the cron is supposed to be run not more often than once a minut
 * * * * * sleep 45; /usr/bin/php -f /path/to/espo/cron.php > /dev/null 2>&1
 ```
 
-The command that runs cron.php may differ depending on your server environment. You need to replace `/path/to/espo/` with the actual path to your instance.
+The command that runs cron.php may vary depending on your server environment. You need to replace `/path/to/espo/` with the actual path to your instance.
 
 ### Daemon
 
-Available only in Unix-like operating systems. Requires *pcntl* and *posix* PHP extensions (usually available by default).
+Daemon setup is available only in Unix-like operating systems. Requires *pcntl* and *posix* PHP extensions (usually available by default).
 
 Command to start the daemon using **nohup**:
 
@@ -108,19 +108,21 @@ systemctl start espocrm-daemon.service
 
     It's **highly recommended** to enable running jobs in parallel processes.
 
-By default, jobs are executed one by one, that may cause situations when one job blocks the execution of the next job for some time (usually, it's not more than one minute). To avoid this, it's possible to run jobs in parallel processes. The parameter is available at Administration > Job Settings.
+By default, jobs are executed one by one, which may cause situations when one job blocks the execution of the next job for some time (usually, it's not more than one minute). To avoid this, it's possible to configure the system to run jobs in parallel processes. The parameter enabling this behavior is available under: Administration > Job Settings.
 
 Requires *pcntl* and *posix* extensions. Some server configurations may restrict the ability to run child processes. Windows is not supported.
 
 ## Parameters
 
-The administrator can set job parameters at Administration > Job Settings.
+The administrator can configure job parameters under: Administration > Job Settings.
 
 #### Jobs Max Portion
 
-It's may be reasonable to increase the **Jobs Max Portion** parameter when the number of users in your CRM is increased. It defines the max number of jobs that can be processed in a single cron or daemon run. By default, it's set to *15*.
+It may be reasonable to increase the **Jobs Max Portion** parameter when the number of users in your CRM is increased. It defines the maximum number of jobs that can be processed in a single cron (or daemon) run. By default, it's set to *15*.
 
-## Running specific job manually in CLI
+## Running jobs in CLI
+
+To run a specific job manually in CLI
 
 Command:
 
@@ -137,7 +139,7 @@ where JobName is an internal name of the job you want to run.
     php command.php run-job ProcessMassEmail
     ```
 
-Jobs available out-of-the-box:
+Jobs available out of the box:
 
 * CheckEmailAccounts – fetches emails for personal email accounts;
 * CheckInboundEmails – fetches emails for group email accounts;
@@ -160,7 +162,7 @@ Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-
 !!! example
 
     ```
-    bin/command run-job CheckEmailAccounts --target-id={id_of_email_account}
+    bin/command run-job CheckEmailAccounts --target-id={email_account_id}
     ```
 
 ## See also
