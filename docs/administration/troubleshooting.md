@@ -122,16 +122,16 @@ php rebuild.php
 
 [Check logs](#check-logs) for errors. Googling an error message may help figure out the cause of the problem.
 
-Often the problem is caused by a webserver PHP version being lower than the minimum required.
+Often the problem is caused by the webserver PHP version being lower than the minimum required version.
 
 File permissions can be set to not proper values on some shared hostings after upgrade. 
 
-Check permissions of the files:
+Check permissions of these files:
 
 * `public/index.php`
 * `public/api/v1/index.php`
 
-They must be 644. If any of those files have permission 664, you need to change it to 644. Use your hosting's control panel or chmod command.
+They must be 644. If any of these files have permission 664, you need to change it to 644. Use your hosting's control panel or *chmod* command.
 
 ```
 chmod 644 /path/to/file
