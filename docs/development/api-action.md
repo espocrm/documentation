@@ -107,6 +107,10 @@ class MyAction implements Action
 
 ## Custom controller
 
+!!! note
+
+    This is not a preferable method.
+
 Alternative to an Action class. A Controller can contain multiple methods for different actions.
 
 ### In Custom folder
