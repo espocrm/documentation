@@ -1,6 +1,6 @@
 # API actions
 
-This article would be useful for those who needs to create a custom API action.
+This article would be useful for those who needs to create a custom [API](api.md) action.
 
 ## Routing
 
@@ -66,6 +66,8 @@ Custom routes can be defined in following places:
 A route can contain placeholders (for example, `:id`). The value will be passed to the Action in the Request object.
 
 A route can be processed either by an Action class or by a Controller.
+
+The API endpoint for a particular route: `https://your-site/api/v1/{route}`.
 
 Clearing cache is required after changes in routing files.
 
