@@ -550,6 +550,14 @@ A field to be used as a name of a foreign record. Needed when a foreign entity t
 
 Linking and unlinking will be logged in the Stream.
 
+### auditView
+
+*string*
+
+*As of v9.2.3.*
+
+A view used for audit. If not specified, the ordinary view is used.
+
 ### readOnly
 
 *boolean*
