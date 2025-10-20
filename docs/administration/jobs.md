@@ -38,7 +38,7 @@ For both, it's **highly recommended** to turn on processing jobs **in parallel**
 
 !!! note
 
-    Parallel processing is not supported on Windows environment.
+    Parallel processing is not supported in a Windows environment.
 
 ### Cron
 
