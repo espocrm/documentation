@@ -250,6 +250,8 @@ class Account extends \Espo\Modules\Crm\Controllers\Account
 
 ## CRUD actions
 
+If a controller is used, the CRUD operations for a record are implemented using the methods shown below.
+
 ```php
 <?php
 namespace Espo\Custom\Controllers;
