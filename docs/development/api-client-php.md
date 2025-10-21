@@ -13,9 +13,9 @@ Before executing this script, create an API user with the needed permissions.
 use Espo\ApiClient\Client;
 
 $client = new Client('https://your-espocrm-site');
-
 $client->setApiKey('API_KEY');
 
+// The second parameter is the path.
 $response = $client->request(Client::METHOD_POST, 'Lead', [
     'firstName' => 'Test',
     'lastName' => 'Hello',
@@ -32,7 +32,7 @@ $response = $client->request(Client::METHOD_GET, 'Opportunity', [
 $parsedBody = $response->getParsedBody();
 
 $fileContents = $client->request(Client::METHOD_GET, "Attachment/file/$attachmentId")
-        ->getBodyPart();
+    ->getBodyPart();
 ```
 
 ### Api Key Authentication
