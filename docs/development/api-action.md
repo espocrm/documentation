@@ -113,7 +113,7 @@ class GetMyAction implements Action
         // Delegate the logic to some class.
         $data = $this->service->get($id);
 
-        // Output the results to JSON.
+        // Output the result to JSON.
         return ResponseComposer::json([
             'someKey' => $data->someKey,
         ]);
