@@ -21,7 +21,7 @@ Common hooks for all entity types (called from the ORM Repository class):
 !!! warning
 
     {HookName} must be unique within {EntityType}. If there are two hooks (in different modules) with the same name
-    for the same entity type, only one will be applied (honoring order).
+    for the same entity type, only one will be applied (honoring module order).
 
 ## Hook order
 
