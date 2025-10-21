@@ -33,7 +33,7 @@ public static int $order = 10;
 
 Ascending order is applied – a hook with the smallest order number runs first.
 
-If the *order* property is omitted, the value *9* is applied for a hook.
+If the *order* property is omitted, the value *9* is applied for the hook.
 
 Order values of existing hooks:
 
