@@ -4,9 +4,9 @@ EspoCRM is a single page application so the frontend uses REST API to connect wi
 All operations you perform using the UI, you can implement via API calls using your programming language. 
 You can learn how the API works if you trace what's going in the network tab in your browser console (press F12 key to open the console).
 
-Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format. Whenever you send the JSON payload, add the header: `Content-Type: application/json`.
+Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format. Whenever you send a JSON payload, add the header: `Content-Type: application/json`.
 
-The path to the API in EspoCRM is: `api/v1/`.
+The root API path is: `api/v1/`.
 
 !!! example "Example of GET API request"
 
@@ -14,7 +14,7 @@ The path to the API in EspoCRM is: `api/v1/`.
     GET https://address_of_your_crm/api/v1/Contact/55643ca033f7ab4c5
     ```
 
-In this documentation we omit the site URL and `api/v1/` path when we show examples of API functions. If you utilize any our client implementation, it will prepend these URL parts automatically.
+In this documentation we omit the site URL and `api/v1/` path when we show examples of API endpoints. If you utilize any of our client implementations, it will prepend these URL parts automatically.
 
 !!! note
 
