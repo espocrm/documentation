@@ -100,14 +100,14 @@ For regular users, the EspoCRM front-end uses the [Basic Authentication](http://
 "Authorization: Basic " + base64Encode(username  + ':' + password)
 ```
 
-It's better to use an auth token instead of a password. In this case you will need to provide the username and the password/token in the `Espo-Authorization` header.
+It's better to use an auth token instead of a password. In this case, you need to provide the username and the password/token in the `Espo-Authorization` header.
 ```
 "Espo-Authorization: " + base64Encode(username + ':' + passwordOrToken)
 ```
 
 1. Obtain an access token with `GET App/user` request with the username and password passed in `Espo-Authorization` header.
 2. Use this token instead of the password in `Espo-Authorization` header for all further requests.
-3. If the request returns the 401 error, that means either that the username or password are wrong, or the token is not valid anymore.
+3. If the request returns 401 error, that means either the username or password are wrong, or the token is not valid anymore.
 
 #### Authentication Token / User Specific Data
 
@@ -140,4 +140,4 @@ Usually occurs when a requested **record doesn't exist**.
 
 Date format: *YYYY-MM-DD*. Datetime format: *YYYY-MM-DD HH:mm:ss*.
 
-All datetime values are represented in UTC timezone, regardless of settings.
+All datetime values are represented in UTC timezone, regardless of the settings.
