@@ -90,39 +90,39 @@ class MyHook
 
 ## Global hooks
 
-If you need to apply a hook for all entities, you can use common hooks. To do this, put your hook class in Common directory, e.g. `custom/Espo/Custom/Hooks/Common/{HookName}.php`.
+If you need to apply a hook for all entities, you can use common hooks. To do this, put your hook class to `Common` directory, for example, `custom/Espo/Custom/Hooks/Common/{HookName}.php`.
 
 ## Additional default hooks
 
 #### TargetList
 
-* *afterOptOut* – when a target clicks an opt-out link, data are passed in the 3rd $data argument
-* *afterCancelOptOut* – when a target subscribes again
-* *afterOptIn* – when a target opts-in through Lead Capture, data are passed in the 3rd $data argument
+* *afterOptOut* – when a target (recipient) clicks an opt-out link, data are passed in the 3rd $data argument;
+* *afterCancelOptOut* – when a target subscribes again;
+* *afterOptIn* – when a target opts-in through Lead Capture, data are passed in the 3rd $data argument;
 
 #### Meeting / Call
 
-* *afterConfirmation* – when an event attendee clicks on accept/decline/tentative link; details are passed in the 3rd $data argument
+* *afterConfirmation* – when an event attendee clicks on accept/decline/tentative link; details are passed in the 3rd argument $data;
 
 #### Contact
 
-* *afterLeadCapture* – when a contact (existing in crm) opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
+* *afterLeadCapture* – when a contact (existing in crm) opts-in through Lead Capture, leadCaptureId is passed in the 3rd argument $data;
 * *afterOptOut*
 * *afterCancelOptOut*
 
 #### Lead
 
-* *afterLeadCapture* – when a lead opts-in through Lead Capture, leadCaptureId is passed in the 3rd $data argument
+* *afterLeadCapture* – when a lead opts-in through Lead Capture, leadCaptureId is passed in the 3rd argument $data;
 * *afterOptOut*
 * *afterCancelOptOut*
 
 #### LeadCapture
 
-* *afterLeadCapture* – when a target (lead or contact) opts-in through Lead Capture, target data are passed in the 3rd $data argument
+* *afterLeadCapture* – when a target (lead or contact) opts-in through Lead Capture, target data are passed in the 3rd argument $data;
 
 #### CampaignTrackingUrl
 
-* *afterClick* - when a target (lead/contact/account) opened a tracking url in email
+* *afterClick* - when a target (lead/contact/account) opened a tracking url in email;
 
 #### Examples
 
