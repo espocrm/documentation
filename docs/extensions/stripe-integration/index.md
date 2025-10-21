@@ -2,12 +2,12 @@
 
 The integration allows your customers to make one-time payments using Stripe. Available in [extension](https://www.espocrm.com/extensions/stripe-integration/).
 
-
 The Stripe integration requires:
 
 - [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension
 - EspoCRM v9.1 or greater
 
+Check this [article](../sales-pack/payments.md) to learn about the payments feature in Sales Pack.
 
 ## Setting up
 
@@ -51,9 +51,7 @@ Create a Payment Channel under Administration > Payment Methods, and select the 
 
 ## Testing in local environment
 
-As webhooks require your Espo instance being accessible to Stripe, testing the integration in a local environment can be a bit tricky.
-
-To test the integration in a local environment, you can use Stripe CLI or a tunnel service (e.g., ngrok).
+As webhooks require your Espo instance being accessible to Stripe, testing the integration in a local environment may need a few tweaks. To test the integration in a local environment, you can use Stripe CLI or a tunnel service (e.g., ngrok).
 
 ### Using Stripe CLI
 
