@@ -81,7 +81,7 @@ Clearing cache is required after changes in routing files.
 
     This is the preferable method.
 
-A route can define an action class with the *actionClassName* parameter. Action classes should implement the `Espo\Core\Api\Action` interface.
+The *actionClassName* parameter in a route definition defines the action class. The action class is an entry point. Action classes should implement the `Espo\Core\Api\Action` interface.
 
 Example:
 
