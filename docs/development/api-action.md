@@ -119,13 +119,17 @@ class GetMyAction implements Action
         // Delegate the logic to some class.
         $data = $this->service->get($id, $someInputValue);
 
-        // Output the result to JSON.
+        // Output the result as JSON.
         return ResponseComposer::json([
             'someKey' => $data->someKey,
         ]);
     }
 }
 ```
+
+---
+
+For most cases, the sections below won't be relevant and can be skipped.
 
 ## Custom controller
 
