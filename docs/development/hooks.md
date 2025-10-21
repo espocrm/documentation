@@ -38,7 +38,7 @@ If the *order* property is omitted, the value *9* is applied for the hook.
 Order values of existing hooks:
 
 * Before-Save formula script: *11*
-* After-Save workflow actions: *99* (advanced pack)
+* After-Save workflow actions: *99* (in Advanced Pack)
 
 ### Interfaces
 
