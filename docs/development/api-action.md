@@ -93,6 +93,8 @@ use Espo\Core\Api\Action;
 use Espo\Core\Api\Request;
 use Espo\Core\Api\Response;
 use Espo\Core\Api\ResponseComposer;
+use Espo\Core\Exceptions\BadRequest;
+
 use RuntimeException;
 
 use Espo\Modules\MyModule\Service;
@@ -110,8 +112,12 @@ class GetMyAction implements Action
         // E.g. `/Hello/:id`.
         $id = $request->getRouteParams('id') ?? throw new RuntimeException();
 
+        // Read payload.
+        $someInputValue = $request->getParsedBody()->someKey ??
+            throw new BadRequest("Key is not passed in payload.");
+
         // Delegate the logic to some class.
-        $data = $this->service->get($id);
+        $data = $this->service->get($id, $someInputValue);
 
         // Output the result to JSON.
         return ResponseComposer::json([
