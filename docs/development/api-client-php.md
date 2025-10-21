@@ -5,7 +5,7 @@ Require [Espo Api Client](https://github.com/espocrm/php-espo-api-client) with C
 ```
 composer require espocrm/php-espo-api-client
 ```
-Before executing this script, create an API user with the correct permissions and rebuild the cache.
+Before executing this script, create an API user with the needed permissions.
 
 ### Usage
 
