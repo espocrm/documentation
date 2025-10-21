@@ -110,9 +110,13 @@ class GetMyAction implements Action
         // E.g. `/Hello/:id`.
         $id = $request->getRouteParams('id') ?? throw new RuntimeException();
 
+        // Delegate the logic to some class.
         $data = $this->service->get($id);
 
-        return ResponseComposer::json($data);
+        // Output the results to JSON.
+        return ResponseComposer::json([
+            'someKey' => $data->someKey,
+        ]);
     }
 }
 ```
