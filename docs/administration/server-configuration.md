@@ -63,7 +63,7 @@ EspoCRM supports MySQL,  MariaDB and PostgreSQL. There are no special requiremen
 
 ### Server recommendations
 
-Prefer using a VPS or a dedicated server for production EspoCRM instances. Shared hosting typically imposes restrictions that can prevent EspoCRM from working correctly. Nevertheless, Espo can run on shared hosting environments quite smoothly.
+Prefer using a VPS or a dedicated server for production EspoCRM instances. Shared hosting typically imposes some limitations. Nevertheless, Espo can run on shared hosting environments quite smoothly.
 
 ## Required permissions for Unix-based systems
 
