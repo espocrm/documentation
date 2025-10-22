@@ -902,7 +902,7 @@ $updateQuery = $entityManager
 $entityManager->getQueryExecutor()->execute($updateQuery);
 ```
 
-Update with join (not implemented for PostgreSQL):
+Update with join (in PostgreSQL, a subquery will be used):
 
 ```php
 <?php
