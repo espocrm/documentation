@@ -23,10 +23,6 @@ In this article:
 
 ## Recommendations & requirements
 
-!!! note
-
-    Prefer using a VPS or a dedicated server for production EspoCRM instances. Shared hosting typically imposes restrictions that can prevent EspoCRM from working correctly.
-
 ### PHP requirements
 
 EspoCRM requires PHP with the following extensions:
@@ -64,6 +60,10 @@ upload_max_filesize = 50M
 ### Database requirements
 
 EspoCRM supports MySQL,  MariaDB and PostgreSQL. There are no special requirements – the default settings work fine for EspoCRM.
+
+### Server recommendations
+
+Prefer using a `VPS` or a `dedicated server` for production EspoCRM instances. Shared hosting typically imposes restrictions that can prevent EspoCRM from working correctly.
 
 ## Required permissions for Unix-based systems
 
