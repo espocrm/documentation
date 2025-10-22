@@ -8,7 +8,7 @@ In this article:
 * [Setting up (cron & daemon)](#setting-up)
 * [Running jobs in parallel processes](#running-jobs-in-parallel-processes)
 * [Parameters](#parameters)
-* [Running specific job manually in CLI](#running-specific-job-manually-in-cli)
+* [Running jobs in CLI](#running-jobs-in-cli)
 
 ## Scheduled jobs
 
