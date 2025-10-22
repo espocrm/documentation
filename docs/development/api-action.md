@@ -111,7 +111,7 @@ class GetMyAction implements Action
     {
         // A route parameter value is passed in an URI, if defined in the route.
         // E.g. `/Hello/:id`.
-        $id = $request->getRouteParams('id') ?? throw new RuntimeException();
+        $id = $request->getRouteParam('id') ?? throw new RuntimeException();
 
         // Read payload.
         $someInputValue = $request->getParsedBody()->someKey ??
