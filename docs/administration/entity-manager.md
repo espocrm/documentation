@@ -120,9 +120,9 @@ The parameter **Link Multiple Field** implies that the field of the *Link-Multip
 
 Examples of link-multiple fields:
 
-* *Teams* field – most entities have this field
-* *Contacts* field in *Opportunity*
-* *Contacts* field in *Case*
+* *Teams* field – most entities have this field;
+* *Contacts* field in *Opportunity*;
+* *Contacts* field in *Case*.
 
 #### Audited
 
