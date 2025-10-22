@@ -113,11 +113,11 @@ Click F12 to open the browser console. See whether there's any error related to 
 
 ## Config params
 
-* webSocketDebugMode – bool – `false` – if you run a server (`php websocket.php`) manually from CLI, you will be able to see debug messages in the terminal;
+* webSocketDebugMode – bool – `false` – if you run a server (`php websocket.php`) manually from CLI, you will be able to see debug messages in the terminal; changing requires WebSocket process restart;
 * webSocketUrl – string – a custom URL for websocket; used only by the client (frontend);
 * webSocketUseSecureServer – bool – `false` – to use SSL w/o a proxy;
-* webSocketZeroMQSubscriberDsn – string – `tcp://127.0.0.1:5555` – an endpoint to bind to for message listening; actual to change when used inside containers;
-* webSocketZeroMQSubmissionDsn – string – `tcp://localhost:5555'` – an endpoint to connect to for message sending; actual to change when used inside containers;
+* webSocketZeroMQSubscriberDsn – string – `tcp://127.0.0.1:5555` – an endpoint to bind to for message listening; to be changed when used inside a container;
+* webSocketZeroMQSubmissionDsn – string – `tcp://localhost:5555'` – an endpoint to connect to for message sending; to be changed when used inside a container;
 * webSocketPort – string – by default '8443' (ssl) or '8080';
 * webSocketSslCertificateFile
 * webSocketSslCertificateLocalPrivateKey
