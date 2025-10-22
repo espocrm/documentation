@@ -23,6 +23,10 @@ In this article:
 
 ## Recommendations & requirements
 
+!!! note
+
+    Prefer using a VPS or a dedicated server for production EspoCRM instances. Shared hosting typically imposes restrictions that can prevent EspoCRM from working correctly.
+
 ### PHP requirements
 
 EspoCRM requires PHP with the following extensions:
@@ -94,7 +98,7 @@ All files should be owned and group-owned by the webserver process. It can be *w
     On Bitnami Stack, files should be owned and group-owned by *daemon* user.
 
     On shared hosts, files should be owned and group-owned by your user account.
-   
+
 
 To set the owner and group-owner, execute these commands in the terminal:
 
