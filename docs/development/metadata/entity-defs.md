@@ -186,6 +186,12 @@ A list of input sanitizers to be by-passed.
 
 Disables the ability to customize the field in the Entity Manager tool.
 
+### dynamicLogicDisabled
+
+*boolean*
+
+Dynamic logic cannot be customized.
+
 ### fieldManagerParamList
 
 *string[]*
