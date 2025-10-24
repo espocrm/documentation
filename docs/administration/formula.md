@@ -474,26 +474,26 @@ The syntax is the same as for the *where* parameter API requests.
 !!! example
 
     ```
-        $where = object\create();
-        $where['type'] = 'or';
-        $where['value'] = list(
-            (
-                $it = object\create();
-                $it['type'] = 'equals';
-                $it['attribute'] = 'type';
-                $it['value'] = 'Customer';
-                $it;
-            ),
-            (
-                $it = object\create();
-                $it['type'] = 'equals';
-                $it['attribute'] = 'type';
-                $it['value'] = 'Partner';
-                $it;
-            )
-        );        
-        
-        $output = record\findMany('Account', 10, null, null, $where);
+    $where = object\create();
+    $where['type'] = 'or';
+    $where['value'] = list(
+        (
+            $it = object\create();
+            $it['type'] = 'equals';
+            $it['attribute'] = 'type';
+            $it['value'] = 'Customer';
+            $it;
+        ),
+        (
+            $it = object\create();
+            $it['type'] = 'equals';
+            $it['attribute'] = 'type';
+            $it['value'] = 'Partner';
+            $it;
+        )
+    );        
+    
+    $output = record\findMany('Account', 10, null, null, $where);
     ```
 
 ## Sandbox
