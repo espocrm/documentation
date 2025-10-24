@@ -175,7 +175,7 @@ A direction of order: 'desc' or 'asc'.
 
 ## Where items
 
-A *Where* parameter is an array if items, that can contain nested items.
+A *Where* parameter is an array if items. Items can contain nested items.
 
 Examples below are given in JSON format. 
 
