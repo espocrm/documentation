@@ -47,6 +47,9 @@ Example:
         "entityDefs.Account.fields.industry.options": {
             "scope": "Lead",
             "field": "industry"
+        },
+        "entityDefs.MyEntityType": {
+            "anyScopeList": ["AnotherEntityType"]
         }
     }
 }
