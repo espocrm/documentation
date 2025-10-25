@@ -33,7 +33,7 @@ Sections of metadata (defined as paths) to be hidden from the front-end for non-
 
 *Object.<string, Object\>\>*
 
-Rules making a metadata sections available for a user when they don't have access to a scope.
+Rules making a metadata sections available for a user when they don't have access to the scope.
 
 Example:
 
@@ -56,19 +56,21 @@ Example:
 
 *string*
 
-If a user have access to the scope, they will have access to a metadata section defined by a key.
+If the user has access to the scope, they will have access to the metadata section defined by the key.
 
 ### field
 
 *string*
 
-If a user have access to the field (of a scope), they will have access to a metadata section defined by a key.
+If the user has access to the field (of a scope), they will have access to the metadata section defined by the key.
 
 ### anyScopeList
 
 *string[]*
 
-Not supported. TBD.
+*As of v9.2.5.*
+
+If the user has access to any of the list scopes, they will have access to the metadata section defined by the key. 
 
 ## additionalBuilderClassNameList
 
