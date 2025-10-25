@@ -23,7 +23,7 @@ Users can also create a Lead from an Email – from the top-right dropdown menu.
 
 To prevent overlooking of new Leads, users can add the *Lead* entity type to the *Global Auto-follow* list in Preferences. Then, they will automatically follow every new Lead created in the system they have access to.
 
-It may be useful to enable Kanban view for Leads. It can be enabled under: Administration > Entity Manager > Lead > Edit > Kanban View.
+It may be useful to enable the Kanban view for Leads. It can be enabled under: Administration > Entity Manager > Lead > Edit > Kanban View.
 
 ### Converting
 
@@ -38,6 +38,8 @@ An Opportunity represents a potential deal or closed sale.
 !!! note
 
     Opportunities with the *Closed Won* stage are taken into account in the default sales dashlets. Using Opportunities to calculate revenue is an option that may be suitable for small businesses.
+
+For Opportunities, the Kanban view is enabled by default. Users can switch between the List and Kanban views.
 
 ### Stage
 
