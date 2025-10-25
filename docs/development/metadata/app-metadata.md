@@ -33,7 +33,7 @@ Sections of metadata (defined as paths) to be hidden from the front-end for non-
 
 *Object.<string, Object\>\>*
 
-Rules making a metadata sections available for a user when they don't have access to the scope.
+Rules making a metadata sections available for the user when they don't have access to the scope.
 
 Example:
 
