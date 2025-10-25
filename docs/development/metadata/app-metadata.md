@@ -62,7 +62,7 @@ If the user has access to the scope, they will have access to the metadata secti
 
 *string*
 
-If the user has access to the field (of a scope), they will have access to the metadata section defined by the key.
+If the user has access to the field (of the scope), they will have access to the metadata section defined by the key.
 
 ### anyScopeList
 
