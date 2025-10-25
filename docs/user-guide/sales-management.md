@@ -23,6 +23,8 @@ Users can also create a Lead from an Email – from the top-right dropdown menu.
 
 To prevent overlooking of new Leads, users can add the *Lead* entity type to the *Global Auto-follow* list in Preferences. Then, they will automatically follow every new Lead created in the system they have access to.
 
+It may be useful to enable Kanban view for Leads. It can be enabled under: Administration > Entity Manager > Lead > Edit > Kanban View.
+
 ### Converting
 
 To convert a Lead, you need to click *Convert* button on the Lead detail view. Then, you can check to what record types you want to convert: Account, Contact, and/or Opportunity.
