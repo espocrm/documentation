@@ -73,7 +73,7 @@ If the user has access to the field (of the scope), they will have access to the
 
 *As of v9.2.5.*
 
-If the user has access to any of the list scopes, they will have access to the metadata section defined by the key. 
+If the user has access to any of the listed scopes, they will have access to the metadata section defined by the key. 
 
 ## additionalBuilderClassNameList
 
