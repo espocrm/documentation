@@ -42,21 +42,21 @@ Types:
 
 ## Entity type parameters
 
-If you click **Edit** on the entity view, you will be able to change parameters of that entity.
+If you click **Edit** on the entity view, you will be able to change parameters of that entity type.
 
-* Labels – singular and plural names of the entity.
-* Default order in which records are sorted by in list views.
-* Stream – whether Stream feature is enabled for this entity.
+* Labels – singular and plural names of the entity type.
+* Default order – how records are sorted in list views by default.
+* Stream – enables the Stream feature for the entity type.
 * Stars – the ability to star records; stars can be used by users to bookmark specific records.
-* Disabled – check if you don't need this entity in your system.
-* Text Filter Fields – what fields to search in for the main text filter and global search.
-* Status field – which field (of enum type) will be used for a record status; required for kanban view.
-* Kanban view – available only if Status Field is specified. Enables Kanban view mode.
-* Full-Text Search – see more [here](../user-guide/text-search.md#full-text-search).
+* Disabled – check if you don't need this entity type in the system.
+* Text Filter Fields – defines which fields are searched by the main text filter and global search.
+* Status Field – specifies which field (of enum type) will be used to represent the record status; required for the Kanban view.
+* Kanban view – enables the Kanban view mode; the parameter is available only if the Status Field is specified. 
+* Full-Text Search – enables full-text search; see more [here](../user-guide/text-search.md#full-text-search).
 * Disable record count – the total number won't be displayed on the list view; can decrease loading time when the DB table is big.
-* Color – a specific color for a quick recognition.
-* Icon – the picked icon will be displayed in the side navbar.
-* Preserve Audit Log – disables cleanup of the audit log; this parameter is applicable only if Stream is disabled; as if Stream is enabled, audit log records are not being deleted.
+* Color – a color for a quick recognition.
+* Icon – pick an icon for the entity type.
+* Preserve Audit Log – disables cleanup of the audit log; this parameter is applicable only if Stream is disabled, since if Stream is enabled, audit log records are not being deleted.
 * Collaborators – the ability to share records with specific users.
 * Multiple Assigned Users – the ability to assign multiple users to a record.
 
