@@ -61,6 +61,14 @@ Arbitrary period values can entered in the reminder field by typing a number.
 
 Default duration can be changed by the administrator at Administration > Entity Manager > Meetings / Calls > Fields > Duration > Default. It must be specified in seconds.
 
+### Scheduler
+
+The scheduler panel provides the ability to view free & busy time ranges for user attendees when creating or editing an event. Available for Meetings, Calls, and custom entities of the Event type.
+
+The scheduler panel can be added or removed at Administration > Entity Manager > Layouts > {Entity Type} > Bottom Panels.
+
+Which entity types will be taken into account when showing busy time ranges can be configured at Administration > Settings > Free/Busy Entity List.
+
 ### Default date
 
 For the Meeting and custom Event entity types, by default, the default values for Date Start and Date End are set to 'now'. You can change it to 'today' (meaning the event will be set as All-Day by default). For this, in the Entity Manager, do the following:
@@ -69,14 +77,6 @@ For the Meeting and custom Event entity types, by default, the default values fo
 2. Set the default values for the Date Start (all day) and Date End (all day) fields to 'Today'.
 3. Set the default value for the Duration field to 86400.
 4. Set the default value for the Is All-Day field to true (check the checkbox).
-
-### Scheduler
-
-The scheduler panel provides the ability to view free & busy time ranges for user attendees when creating or editing an event. Available for Meetings, Calls, and custom entities of the Event type.
-
-The scheduler panel can be added or removed at Administration > Entity Manager > Layouts > {Entity Type} > Bottom Panels.
-
-Which entity types will be taken into account when showing busy time ranges can be configured at Administration > Settings > Free/Busy Entity List.
 
 ## Tasks
 
