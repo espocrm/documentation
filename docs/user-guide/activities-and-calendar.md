@@ -59,7 +59,7 @@ Arbitrary period values can entered in the reminder field by typing a number.
 
 ### Default duration
 
-Default duration can be changed by the administrator at Administration > Entity Manager > Meetings / Calls > Fields > Duration > Default. It must be specified in seconds.
+Default duration can be changed by the administrator at Administration > Entity Manager > Meetings / Calls > Fields > Duration > Default. It is specified in seconds.
 
 ### Scheduler
 
