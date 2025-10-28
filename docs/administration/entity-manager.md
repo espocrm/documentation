@@ -57,7 +57,7 @@ If you click **Edit** on the entity view, you will be able to change parameters 
 * Color – a color for a quick recognition.
 * Icon – pick an icon for the entity type.
 * Preserve Audit Log – disables cleanup of the audit log; this parameter is applicable only if Stream is disabled, since if Stream is enabled, audit log records are not being deleted.
-* Collaborators – the ability to share records with specific users.
+* Collaborators – the ability to [share](roles-management.md#collaborators) records with specific users.
 * Multiple Assigned Users – the ability to assign multiple users to a record.
 
 !!! note
