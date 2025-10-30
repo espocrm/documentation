@@ -12,6 +12,7 @@ The list of field types available for creating:
 * [Currency](#currency) – for currency values, a float number and currency code;
 * [Int](#int) – a whole number;
 * [Float](#float) – a number with a decimal part;
+* [Decimal](#decimal) – a decimal number with fixed-point precision;
 * [Boolean](#boolean) – a checkbox;
 * [Multi-Enum](#multi-enum) – a list of values, multiple values can be selected;
 * [Checklist](#checklist) – a list of checkboxes;
@@ -179,6 +180,15 @@ Parameters:
 * Max – a validation: max acceptable value; if empty, then no validation applied;
 * Decimal Places – how many numbers of decimal part to display in read mode.
 
+## Decimal
+
+*As of v9.3.0.*
+
+A decimal number with fixed point precision. In the application, the value is represented as string. In the database – as DECIMAL.
+
+* Min – a validation: min acceptable value; if empty, then no validation applied;
+* Max – a validation: max acceptable value; if empty, then no validation applied;
+* Decimal Places – how many numbers of decimal part to display in read mode.
 
 ## Boolean
 
