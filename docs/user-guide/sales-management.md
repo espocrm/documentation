@@ -6,6 +6,7 @@ In this article:
 * [Opportunities](#opportunities)
 * [Currency](#currency)
 * [Sales analytics](#sales-analytics)
+* [See also](#see-also)
 
 ## Leads
 
@@ -98,4 +99,5 @@ Users who have access to this report will be able to add it on their dashboards.
 
 ## See also
 
+* [Quick tour on Leads](https://app.supademo.com/demo/cmhc0w8ns14v6fatilwlycmjn)
 * [Who are leads? Lead conversion in 3 steps](https://www.espocrm.com/tips/lead-conversion/)
