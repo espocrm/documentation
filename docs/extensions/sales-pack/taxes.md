@@ -6,17 +6,21 @@ The Tax feature is used to manage VAT and sales taxes.
 
 In this article:
 
-* [Tax record](#tax-records)
+* [Tax profiles](#tax-records)
 * [Tax classes](#tax-classes)
 * [Tax rules](#tax-rules)
 
-## Tax records
+## Tax profiles
 
-You can access the Tax list view via: Products > top-right menu > Taxes. Or use the search bar for quick access.
+!!! note
 
-Access to Taxes is controlled by Roles.
+    Tax Profile was named *Tax* in earlier versions.
 
-A tax record can be applied to:
+You can access the Tax Profile list view via: Products > top-right menu > Taxe Profiles. Or use the search bar for quick access.
+
+Access to Taxe Profiles is controlled by Roles.
+
+A tax profile can be applied to:
 
 * Quotes
 * Sales orders
@@ -25,11 +29,11 @@ A tax record can be applied to:
 * Return orders
 * Purchase orders
 
-Line items added to an order automatically receive the tax rate according to the Tax record assigned to the order. It's also possible to re-calculate tax rates for already added items.
+Line items added to an order automatically receive the tax rate according to the Tax Profile assigned to the order. It's also possible to re-calculate tax rates for already added items.
 
-Tax records can be automatically assigned to new orders using [Tax Rules](#tax-rules).
+Tax Profiles can be automatically assigned to new orders using [Tax Rules](#tax-rules).
 
-A Tax record defines:
+A Tax Profile defines:
 
 * Rate
 * Shipping tax mode
@@ -37,9 +41,9 @@ A Tax record defines:
 
 ### Standard rate
 
-The *Rate* field defines the standard tax rate. When a tax record is selected for an order, all line items will use its standard rate unless a specific item rule applies to a product.
+The *Rate* field defines the standard tax rate. When a tax profile is selected for an order, all line items will use its standard rate unless a specific item rule applies to a product.
 
-It can be reasonable to create a tax record with a zero rate for cases where tax is not applicable (for example, reverse charge scenarios).
+It can be reasonable to create a tax profile with a zero rate for cases where tax is not applicable (for example, reverse charge scenarios).
 
 ### Shipping tax
 
@@ -54,7 +58,7 @@ When items on an invoice have different tax rates, the E-invoice will include se
 
 ### Item rules
 
-A tax record can include item rules. Each item rule defines an override tax rate for a specific Tax Class.
+A tax profile can include item rules. Each item rule defines an override tax rate for a specific Tax Class.
 
 Products can be associated with one or more tax classes.
 
@@ -76,15 +80,15 @@ A single product can belong to one or more tax classes. While one class per prod
 
     Not to be confused with tax's item rules.
 
-Tax rules enable automatic association of a created order with the appropriate Tax record.
+Tax rules enable automatic association of a created order with the appropriate Tax Profile.
 
 Separate rule sets are used for sales and purchases.
 
 Only an administrator can manage tax rules. An administrator can access tax rules via: Administration > Tax Rules. Purchase rules via: Administration > Purchase Tax Rules.
 
-One tax rule defines a Tax record and conditions. These conditions are evaluated against the Account record the order is related to.
+One tax rule defines a Tax Profile and conditions. These conditions are evaluated against the Account record the order is related to.
 
-When an order is created for a specific Account, the Tax record is automatically selected according to the evaluated tax rules.
+When an order is created for a specific Account, the Tax Profile is automatically selected according to the evaluated tax rules.
 
 Tax rules are ordered. The first rule that matches is applied, and the subsequent rules are skipped.
 
@@ -94,8 +98,8 @@ Rules can be set as inactive. This is useful, for example, when VAT is charged o
 
 In most cases, rule conditions would check:
 
-* Country – To select the appropriate tax record for a specific country.
-* Tax Number – If the VAT number is provided, then select the zero-rate tax record. Reverse charge scenario.
+* Country – To select the appropriate tax profile for a specific country.
+* Tax Number – If the VAT number is provided, then select the zero-rate tax profile. Reverse charge scenario.
 
 !!! note
 
@@ -113,7 +117,7 @@ Let's assume our company is based in Germany and sells domestically, within the 
 | **Intra-EU B2C** and threshold exceeded | Use customer's country VAT |
 | **Outside EU** (export) | Exempt (0% VAT) |
 
-We would need to create the following tax records:
+We would need to create the following tax profiles:
 
 * Zero – to cover Intra-EU B2B and Outside EU;
 * Germany – to cover Domestic and Intra-EU B2C before threshold exceeded;
@@ -123,11 +127,11 @@ We would need to create the following tax rules.
 
 1\. Domestic.
 
-This rule will map Accounts from Germany to the *Germany* tax record. In the rule's conditions, add a condition that checks whether the *Country* is set to Germany.
+This rule will map Accounts from Germany to the *Germany* tax profile. In the rule's conditions, add a condition that checks whether the *Country* is set to Germany.
 
 2\. Intra-EU B2B.
 
-This rule will map Accounts from EU countries with the VAT number to the *Zero* tax record. In the rule's conditions, add an OR condition with child conditions for each EU country. Also add a condition checking whether the Tax Number is not empty.
+This rule will map Accounts from EU countries with the VAT number to the *Zero* tax profile. In the rule's conditions, add an OR condition with child conditions for each EU country. Also add a condition checking whether the Tax Number is not empty.
 
 !!! note
 
@@ -135,18 +139,18 @@ This rule will map Accounts from EU countries with the VAT number to the *Zero* 
 
 3\. Intra-EU B2C below threshold.
 
-This rule will map Accounts from EU countries without the VAT number to the *Germany* tax record.
+This rule will map Accounts from EU countries without the VAT number to the *Germany* tax profile.
 
 This rule is supposed to be deactivated once total cross-border B2C sales exceeds €10,000.
 
 4\. Separate Intra-EU B2C rules for each EU country.
 
-Each rule will map to a corresponding tax record of the EU country.
+Each rule will map to a corresponding tax profile of the EU country.
 
 It's important that these rules are placed after the previous rule (the order or rules matters).
 
 5\. Outside EU.
 
-This rule will be the last one. It will map to the *Zero* tax record. It may not define any condition, acting as a default rule.
+This rule will be the last one. It will map to the *Zero* tax profile. It may not define any condition, acting as a default rule.
 
 It's important that this rule is placed at the end.
