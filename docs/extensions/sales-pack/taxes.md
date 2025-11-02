@@ -6,7 +6,7 @@ The Tax feature is used to manage VAT and sales taxes.
 
 In this article:
 
-* [Tax profiles](#tax-records)
+* [Tax profiles](#tax-profiles)
 * [Tax classes](#tax-classes)
 * [Tax rules](#tax-rules)
 
