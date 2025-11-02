@@ -2,12 +2,7 @@
 
 ### Requirements
 
-EspoCRM can run on most hosting providers. Requirements are the following:
-
-* PHP 8.2 - 8.4;
-* MySQL 8.0 (and later) or MariaDB 10.3 (and later); PostgreSQL 15.0 (and later).
-
-See the [server configuration](server-configuration.md) article for more information.
+EspoCRM can run on most hosting providers that support PHP and a MySQL, MariaDB, or PostrgreSQL database. See the [server configuration](server-configuration.md) article for more information.
 
 ### 1. Download EspoCRM installation package
 
