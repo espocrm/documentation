@@ -16,9 +16,9 @@ In this article:
 
     Tax Profile was named *Tax* in earlier versions.
 
-You can access the Tax Profile list view via: Products > top-right menu > Taxe Profiles. Or use the search bar for quick access.
+You can access the Tax Profile list view via: Products > top-right menu > Tax Profiles. Or use the search bar for quick access.
 
-Access to Taxe Profiles is controlled by Roles.
+Access to Tax Profiles is controlled by Roles.
 
 A tax profile can be applied to:
 
