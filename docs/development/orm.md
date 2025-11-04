@@ -202,12 +202,19 @@ This will delete a record permanently.
 
 ## Repository
 
-Get a repository by a class:
+Use the ORM's repositories to fetch and save entities.
+
+!!! note
+
+    It may be reasonable to wrap all interactions with the repository in a higher-level class (usually also called a Repository), so that your business-logic classes does not depend directly on the Entity Manager. This also improves testability.
+
+Get a repository by an entity class:
 
 ```php
 <?php
 use Espo\Modules\Crm\Entities\Account;
-// returns Collection<Account>
+
+// Returns `Collection<Account>`.
 $accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
 ```
 
@@ -223,6 +230,8 @@ Get a repository by an entity type:
 
 ```php
 <?php
+// $entityType can be, for example, 'Opportunity'.
+
 $repository = $entityManager->getRDBRepository($entityType);
 ```
 
@@ -277,7 +286,6 @@ Or:
 
 ```php
 <?php
-<?php
 use Espo\ORM\Query\Part\Expression as Expr;
 
 $collection = $entityManager
@@ -325,7 +333,7 @@ $entity = $entityManager
     ->findOne();
 ```
 
-You can use *getRDBRepositoryByClass* for type safety.
+You can use *getRDBRepositoryByClass* for type safety:
 
 ```php
 <?php
@@ -334,6 +342,44 @@ use Espo\Modules\Crm\Entities\Account;
 $entity = $entityManager
     ->getRDBRepositoryByClass(Account::class)
     ->findOne();
+
+// Static analysis infers the entity's type.
+```
+
+### Get new
+
+Prepare a new entity without saving it:
+
+```php
+<?php
+use Espo\Modules\Crm\Entities\Account;
+
+$account = $entityManager->getRDBRepositoryByClass(Account::class)
+    ->getNew();
+```
+
+### Save
+
+Save an entity:
+
+```php
+<?php
+use Espo\Modules\Crm\Entities\Account;
+
+$entityManager->getRDBRepositoryByClass(Account::class)
+    ->save($account);
+```
+
+### Remove
+
+Remove an entity (soft delete):
+
+```php
+<?php
+use Espo\Modules\Crm\Entities\Account;
+
+$entityManager->getRDBRepositoryByClass(Account::class)
+    ->remove($account);
 ```
 
 ## Relations
