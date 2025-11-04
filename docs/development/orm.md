@@ -206,7 +206,7 @@ Use the ORM's repositories to fetch and save entities.
 
 !!! note
 
-    It may be reasonable to wrap all interactions with the repository in a higher-level class (usually also called a Repository), so that your business-logic classes do not depend directly on the Entity Manager. This also improves testability.
+    It may be reasonable to wrap all interactions with the repository in a higher-level class (usually also called a Repository), so that your business-logic classes do not depend directly on the Entity Manager. This improves testability.
 
 Get a repository by an entity class:
 
