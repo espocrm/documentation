@@ -8,11 +8,11 @@ Entity types are named in UpperCamelCase (start with a capital letter).
 
 The list of available entity types can be obtained at: Administration > Entity Manager > *Name* column.
 
-Entities have their fields and links.
+Entity types contain fields and links in their definitions.
 
 ## Field
 
-A *field* is a unit of data. Entities have their own set of fields. For example, name, status, createdAt, assignedUser.
+A *field* is a unit of data. An entity defines its own set of fields. For example, name, status, createdAt, assignedUser.
 
 Fields are named in lowerCamelCase (starting with a lowercase letter).
 
