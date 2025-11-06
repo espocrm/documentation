@@ -52,7 +52,7 @@
     * [Authorization](administration/ldap-authorization.md)
     * [Active Directory](administration/ldap-authorization-for-ad.md)
     * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
-* Misc
+* Miscellaneous
   * [Webhooks](administration/webhooks.md)
   * [Passwords](administration/passwords.md)
   * [Security](administration/security.md)
@@ -83,9 +83,9 @@
 * [Export](user-guide/export.md)
 * [Text search](user-guide/text-search.md)
 * [Working time calendar](user-guide/working-time-calendar.md)
-* Misc
+* [Printing to PDF](user-guide/printing-to-pdf.md)
+* Miscellaneous
   * [Shortcut keys](user-guide/shortcuts.md)
-  * [Printing to PDF](user-guide/printing-to-pdf.md)
   * [Markdown syntax](user-guide/markdown.md)
   * [Browser support](user-guide/browser-support.md)
   * [Data privacy](user-guide/data-privacy.md)

@@ -114,7 +114,7 @@ nav:
                 - 'Authorization': 'administration/ldap-authorization.md'
                 - 'Active Directory': 'administration/ldap-authorization-for-ad.md'
                 - 'OpenLDAP': 'administration/ldap-authorization-for-openldap.md'
-        - 'Misc':                      
+        - 'Miscellaneous':
             - 'Webhooks': 'administration/webhooks.md'
             - 'Passwords': 'administration/passwords.md'
             - 'Phone numbers': 'administration/phone-numbers.md'
@@ -140,9 +140,9 @@ nav:
         - 'Export': 'user-guide/export.md'
         - 'Text search': 'user-guide/text-search.md'
         - 'Working Time Calendar': 'user-guide/working-time-calendar.md'
-        - 'Misc':
+        - 'Printing to PDF': 'user-guide/printing-to-pdf.md'
+        - 'Miscellaneous':
             - 'Shortcut keys': 'user-guide/shortcuts.md'
-            - 'Printing to PDF': 'user-guide/printing-to-pdf.md'
             - 'Markdown syntax': 'user-guide/markdown.md'
             - 'Browser support': 'user-guide/browser-support.md'
             - 'Data privacy': 'user-guide/data-privacy.md'
@@ -158,7 +158,7 @@ nav:
               - 'Gateways': 'administration/bpm-gateways.md'
               - 'Events': 'administration/bpm-events.md'
               - 'Activities': 'administration/bpm-activities.md'
-              - 'Misc':
+              - 'Miscellaneous':
                 - 'Examples': 'administration/bpm-examples.md'
                 - 'Signals': 'administration/bpm-signals.md'
                 - 'Compensation': 'administration/bpm-compensation.md'
@@ -316,7 +316,7 @@ nav:
           - 'Hooks': 'development/hooks.md'
           - 'ACL': 'development/acl.md'
           - 'Entry points': 'development/entry-points.md'
-          - 'Misc':
+          - 'Miscellaneous':
               - 'Autoload': 'development/autoload.md'
               - 'Entity type': 'development/custom-entity-type.md'
               - 'Container services': 'development/container-services.md'
@@ -350,7 +350,7 @@ nav:
           - 'Fields':
               - 'Custom field type': 'development/custom-field-type.md'
               - 'Customizing existing fields': 'development/customize-standard-fields.md'
-          - 'Misc':
+          - 'Miscellaneous':
               - 'Buttons & actions on record views': 'development/custom-buttons.md'
               - 'Panels on record view': 'development/frontend/record-panels.md'
               - 'Custom CSS file': 'development/custom-css.md'
