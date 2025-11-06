@@ -120,9 +120,9 @@ Our sales manager User will be able to manage all Leads/Opportunities related to
 
 ### Assignment Permission
 
-Set this parameter to restrict the ability to re-assign records to another User and/or Teams. If you set to *team*, then it will be possible to assign only to Users from own Teams. If you set to `no`, Users won't be able to re-assign at all.
+Set this parameter to restrict the ability to re-assign records to another User and/or Teams. If you set the parameter to *team*, users will be able to assign record only to Users from their own Teams. If you set it to *no*, users won't be able to assign at all.
 
-It also defines whether a User is able to post to the Stream of other Users and other Teams.
+This parameter also defines whether the User is able to post to the Stream of other Users and other Teams.
 
 ### User Permission
 
