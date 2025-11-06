@@ -71,7 +71,7 @@ Inventory quantity is tracked on the variant level. When viewing the quantity of
 
 An Inventory Number cannot be associated with a Product Template. It should be associated with a specific Variant.
 
-It's possible to specify Product fields that should be **synced** between Template and Variants. Administration > Entity Manager > Products > Edit > Variant sync fields. These fields will be read-only in Variants. Whenever a field value is changed in a Template, it will be automatically copied to Variants. By default, the *Status* field is selected as synced.
+It's possible to specify Product fields that should be **synced** between Template and Variants. Administration > Entity Manager > Products > Edit > Variant sync fields. These fields will be read-only in Variants. Whenever the field value is changed in the Template, it will be automatically copied to the Variants. By default, the *Status* field is selected as synced.
 
 ## Properties
 
