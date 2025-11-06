@@ -2,11 +2,13 @@
 
 ## Default log
 
-By default, log files are created in `{ESPO_ROOT}/data/logs/` directory.
+By default, the application log files are automatically created in the directory `{ESPO_ROOT}/data/logs/`.
 
 ## Parameters
 
-In `data/config-internal.php`:
+Log parameters are available in the file `data/config-internal.php`.
+
+Parameters example:
 
 ```
 'logger' => [
@@ -14,14 +16,16 @@ In `data/config-internal.php`:
   'maxFileNumber' => 30,
   'printTrace' => true, // to print an exception backtrace,
   'sql' => true, // log SQL queries
-  'databaseHandler' => true, // the log will be available in the UI
+  'databaseHandler' => true, // the log will be available in the admin UI
   'databaseHandlerLevel' => 'NOTICE', // overrides the level for the database handler
 ],
 ```
 
 ## Trace printing
 
-Prints a backtrace when an exception is occurred. Note that in some cases an exception is caught and handled within the application, the trace won't be printed in this case.
+Parameter: `printTrace`.
+
+If enabled, the backtrace will be printed to the log when an exception is occurred. Note that in some cases an exception is caught and handled within the application, the trace won't be printed in this case.
 
 !!! warning
 
@@ -29,9 +33,11 @@ Prints a backtrace when an exception is occurred. Note that in some cases an exc
 
 ## Admin UI
 
+Parameter: `databaseHandler`.
+
 *As of v8.3.*
 
-It may be convenient to check the logs right from the application UI. The log is available under: Administration > App Log. By default, it's disabled – no log entries are created.
+It may be convenient to check the logs right from the application UI. The log is available under: Administration > App Log. By default, this feature is disabled – log entries are not created in the database table.
 
 To make log records available in the admin UI, set the *databaseHandler* parameter to true. 
 
@@ -40,6 +46,8 @@ To make log records available in the admin UI, set the *databaseHandler* paramet
     Some log entries may be not available from the UI. For example, those that happened during upgrade or before database connection was established.
 
 ## SQL queries
+
+Parameter: `sql`.
 
 *As of v7.4.*
 
