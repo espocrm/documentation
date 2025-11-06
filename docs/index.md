@@ -39,6 +39,7 @@
   * [Functions](administration/formula-functions.md)
 * [Import](administration/import.md)
 * [Portal](administration/portal.md)
+* [Web-to-Lead](administration/web-to-lead.md)
 * [Currency](administration/currency.md)
 * [Dashboards](administration/dashboards.md)
 * Authentication
@@ -49,8 +50,7 @@
     * [Active Directory](administration/ldap-authorization-for-ad.md)
     * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
 * Misc
-  * [Terms & naming](administration/terms-and-naming.md)
-  * [Web-to-Lead](administration/web-to-lead.md)
+  * [Terms & naming](administration/terms-and-naming.md)  
   * [Webhooks](administration/webhooks.md)
   * [Passwords](administration/passwords.md)
   * [Security](administration/security.md)
