@@ -22,9 +22,12 @@
   * [Log](administration/log.md)
   * [Console commands](administration/commands.md)
   * [WebSocket](administration/websocket.md)
-  * [Performance tweaking](administration/performance-tweaking.md)
+* Essentials
+  * [Terms & naming](administration/terms-and-naming.md)
   * [Backup and restore](administration/backup-and-restore.md)
+  * [Performance tweaking](administration/performance-tweaking.md)
   * [Moving to another server](administration/moving-to-another-server.md)
+  * [Security](administration/security.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](administration/entity-manager.md)
   * [Fields](administration/fields.md)
@@ -50,7 +53,6 @@
     * [Active Directory](administration/ldap-authorization-for-ad.md)
     * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
 * Misc
-  * [Terms & naming](administration/terms-and-naming.md)  
   * [Webhooks](administration/webhooks.md)
   * [Passwords](administration/passwords.md)
   * [Security](administration/security.md)
