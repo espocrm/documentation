@@ -100,4 +100,5 @@ Users who have access to this report will be able to add it on their dashboards.
 ## See also
 
 * [Quick tour on Leads](https://app.supademo.com/demo/cmhc0w8ns14v6fatilwlycmjn)
+* [Quick tour on Opportunities](https://app.supademo.com/demo/cmhkj43rn1k3xu1hm0zxfmhb6)
 * [Who are leads? Lead conversion in 3 steps](https://www.espocrm.com/tips/lead-conversion/)
