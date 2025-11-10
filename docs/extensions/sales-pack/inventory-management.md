@@ -114,7 +114,7 @@ Transfer Orders allow moving inventory between Warehouses. When a Transfer Order
 
 ## Inventory Adjustments
 
-Inventory Adjustments are used to correct inventory quantity manually. Within a single adjustment, it's possible to specify a new quantity for multiple products.
+Inventory Adjustments are used to correct inventory quantity manually. Within a single adjustment, it's possible to specify a new quantity for multiple products. You can also utilize Inventory Adjustments to enter initial stock quantities.
 
 If the Warehouses feature is enabled, a specific warehouse must be selected for an adjustment.
 
