@@ -43,10 +43,10 @@ $linkList = $aclManager->getScopeForbiddenLinkList($user, 'Account', Table::ACTI
 $hasAccess = $aclManager->checkField($user, $scope, $field, Table::ACTION_EDIT);
 ```
 
-Methods of the *Acl* is the same but w/o the *$user* parameter, as the current user is used.
+The methods of the *Acl* are mostly the same as in *AclManager* but without the *$user* parameter, as the current user is used.
 
 ## Custom ACL for entity type
 
-You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclassname) and [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata. They are used for checking access against a specific record (or a scope).
+You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclassname) and [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata. They are used for checking access against a specific record or scope.
 
-You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). They are used for applying filtering when generating a select query for fetching records from DB.
+You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). They are used for applying filtering when generating a select query for fetching records from the DB.
