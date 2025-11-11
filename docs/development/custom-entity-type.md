@@ -6,7 +6,7 @@ In the example, the entity type will be defined in the `custom/Espo/Modules/MyMo
 
 The entity type name created in the example is `MyEntity`.
 
-After all needed files are created, you need to run rebuild (Administration > Rebuild). It will clear cache and create a database tables.
+After all needed files are created, you need to run rebuild (Administration > Rebuild). It will clear cache and create database tables.
 
 ## Metadata
 
