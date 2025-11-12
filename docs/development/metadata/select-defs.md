@@ -54,7 +54,7 @@ Example:
 
 ## selectAttributesDependencyMap
 
-Selecting a specific attribute will actually select attributes defined by the map.
+When the system asking to select a specific attribute, this mapping will force the framework to also select some other fields along with the requested field.
 
 Example:
 
@@ -62,12 +62,15 @@ Example:
 {
     "selectAttributesDependencyMap": {
         "subject": ["name"],
-        "personStringData": ["fromString", "fromEmailAddressId"]
+        "personStringData": ["fromString", "fromEmailAddressId"],
+        "id": ["order"]
     }
 }
 ```
 
-In the example, when the *subject* attribute is requested, the *name* attribute will be selected. We can have the *subject* field on the list layout but don't have the *name* field. Without this mapping the *name* field won't be fetched when we fetch a collection for the list view. 
+In the example, when the *subject* attribute is requested, the *name* attribute will be selected. We can have the *subject* field on the list layout but don't have the *name* field. Without this mapping the *name* field won't be fetched when we fetch a collection for the list view.
+
+Map to the *id* attribute to make specific attributes to be awlways selected. This works as the *id* attribute is always requested.
 
 ## whereItemConverterClassNameMap
 
