@@ -1,8 +1,8 @@
 # ACL · Access control level
 
-## Checking access
+## Access checking
 
-There are two [container services](di.md/#container-services) which provide the ability to check access to records, scopes and fields:
+There are two [container services](di.md/#container-services) that provide the ability to check access to records, scopes and fields:
 
 * AclManager – `Espo\Core\AclManager` – to check access for any user; the user is passed as a method parameter;
 * Acl – `Espo\Core\Acl` – an *AclManager* wrapper to check access for the current user.
