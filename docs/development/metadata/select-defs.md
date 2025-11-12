@@ -96,6 +96,10 @@ This mapping allows to define a custom field filtering implementation. The *cond
 
 A resolver is responsible for choosing an access filter to apply to a select query. Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
 
+## portalAccessControlFilterResolverClassName
+
+A filter resolver for portals. Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
+
 ## textFilterClassName
 
 A class that processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default, `Espo\Core\Select\Text\DefaultFilter` is used.
