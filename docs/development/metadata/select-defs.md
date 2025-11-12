@@ -88,21 +88,21 @@ Example:
 
 Classes should implement `Espo\Core\Select\Where\ItemConverter` interface.
 
-The key format: `{fieldName}_{conditionItemType}`.
+Mapping keys a formatted as: `{fieldName}_{conditionItemType}`.
 
 This mapping allows to define a custom field filtering implementation. The *conditionItemType* is passed in a [where item](../api-search-params.md#where-items) in the *type* parameter.
 
 ## accessControlFilterResolverClassName
 
-A resolver is responsible for choosing an access filter. Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
+A resolver is responsible for choosing an access filter to apply to a select query. Should implement `Espo\Core\Select\AccessControl\FilterResolver` interface.
 
 ## textFilterClassName
 
-A class that processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default `Espo\Core\Select\Text\DefaultFilter` is used.
+A class that processes the text filter search. Should implement `Espo\Core\Select\Text\Filter` interface. By default, `Espo\Core\Select\Text\DefaultFilter` is used.
 
 ## orderItemConverterClassNameMap
 
-An order converter converts order parameters passed from the frontend to an order data acceptable for ORM. One can implement a custom converter for a specific field. E.g. make an address field be ordered by a city (when a user orders by the address column, it will actually order by city).
+An order converter converts order parameters (passed from the frontend through the REST API) to an order data acceptable for the ORM. One can implement a custom converter for a specific field. For example, to make an address field be ordered by a city (when the user sorts by the address column, it will order by the city under the hood).
 
 Classes should implement `Espo\Core\Select\Order\ItemConverter` interface.
 
@@ -140,5 +140,5 @@ Example:
 
 *class-string<Espo\Core\Select\Applier\AdditionalApplier\>[]*
 
-Additional appliers. Used for additional handling of a select query.
+Additional appliers. Used for additional handling of a select query. They are always applied. The logic inside the applier can apply some filters conditionally.
 
