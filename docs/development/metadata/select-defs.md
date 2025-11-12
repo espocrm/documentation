@@ -2,7 +2,7 @@
 
 Path: metadata > selectDefs > {EntityType}.
 
-Parameters used by the [Select](../select-builder.md) framework that converts search parameters (sent from the front-end) to ORM queries.
+Parameters used by the [Select](../select-builder.md) framework. This framework converts [search parameters](../api-search-params.md) (from the front-end or API) into ORM-compatible queries.
 
 ## accessControlFilterClassNameMap
 
