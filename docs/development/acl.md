@@ -2,13 +2,12 @@
 
 ## Checking access
 
-There are two [container services](di.md/#container-services) that allow to check access to records, scopes and fields:
+There are two [container services](di.md/#container-services) which provide the ability to check access to records, scopes and fields:
 
-* AclManager – `Espo\Core\AclManager` – checks access for any user,
-* Acl – `Espo\Core\Acl` – a wrapper for the *AclManager* for a current user.
+* AclManager – `Espo\Core\AclManager` – to check access for any user; the user is passed as a method parameter;
+* Acl – `Espo\Core\Acl` – an *AclManager* wrapper to check access for the current user.
 
-
-AclManager:
+AclManager usage examples:
 
 ```php
 <?php
@@ -43,10 +42,22 @@ $linkList = $aclManager->getScopeForbiddenLinkList($user, 'Account', Table::ACTI
 $hasAccess = $aclManager->checkField($user, $scope, $field, Table::ACTION_EDIT);
 ```
 
-The methods of the *Acl* are mostly the same as in *AclManager* but without the *$user* parameter, as the current user is used.
+The methods of the *Acl* service class are mostly the same as in *AclManager* but without the *$user* parameter, as the current user is used.
 
 ## Custom ACL for entity type
 
-You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclassname) and [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata. They are used for checking access against a specific record or scope.
+### Access checker
+
+An access checker implements access checking against an entity instance and/or a scope name for a giver user.
+
+For example, it check whether a user: has access to the Account, can edit Accounts, or has access to a specific Account record. 
+
+You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclassname),
+
+### Ownership checker
+
+You can define a custom ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata. 
+
+### Access control filters
 
 You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). They are used for applying filtering when generating a select query for fetching records from the DB.
