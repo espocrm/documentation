@@ -48,7 +48,7 @@ The methods of the *Acl* service class are mostly the same as in *AclManager* bu
 
 ### Access checker
 
-An access checker implements access checking against an entity instance and/or a scope name for a giver user. The *data object is passed to checking method – this object contain role table data for the user.
+An access checker implements access checking against an entity instance and/or a scope name for a giver user. The *data* object is passed to checking method – this object contain role table data for the user.
 
 For example, it check whether a user: has access to the Account, can edit Accounts, or has access to a specific Account record. 
 
