@@ -1,4 +1,4 @@
-# ACL (access control level)
+# ACL · Access control level
 
 ## Checking access
 
