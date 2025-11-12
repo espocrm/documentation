@@ -38,7 +38,7 @@ $attributeList = $aclManager->getScopeForbiddenAttributeList($user, 'Account', T
 $fieldList = $aclManager->getScopeForbiddenFieldList($user, 'Account', Table::ACTION_READ);
 $linkList = $aclManager->getScopeForbiddenLinkList($user, 'Account', Table::ACTION_READ);
 
-// Check access to a specific field. As of v7.3.
+// Check access to a specific field.
 $hasAccess = $aclManager->checkField($user, $scope, $field, Table::ACTION_EDIT);
 ```
 
