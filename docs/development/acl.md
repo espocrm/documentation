@@ -52,17 +52,17 @@ An access checker implements access checking against an entity instance and/or a
 
 For example, it check whether a user: has access to the Account, can edit Accounts, or has access to a specific Account record. 
 
-You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclassname),
+You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclassname) class for a specific scope.
 
 ### Ownership checker
 
 An ownership checker checks how the given user is related to the given entity – whether the user is an owner, the user is in the same team the record is related to, or the portal user belongs to the account the record is related to.
 
-You can define a custom [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata.
+You can define a custom [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) class for a specific scope.
 
 ### Access control filters
 
-You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). 
+You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap). These filters belongs to the [Select framework](select-builder.md), not to the ACL framework.
 
 When the framework build a database query to display record list for the user, it applies an access control filter to it. Which exactly filter is applied depends on user roles. It's also possible to customize the filter application rules with a [resolver](metadata/select-defs.md##accesscontrolfilterresolverclassname).
 
