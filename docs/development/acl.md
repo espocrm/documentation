@@ -48,7 +48,7 @@ The methods of the *Acl* service class are mostly the same as in *AclManager* bu
 
 ### Access checker
 
-An access checker implements access checking against an entity instance and/or a scope name for a giver user.
+An access checker implements access checking against an entity instance and/or a scope name for a giver user. The *data object is passed to checking method – this object contain role table data for the user.
 
 For example, it check whether a user: has access to the Account, can edit Accounts, or has access to a specific Account record. 
 
@@ -56,7 +56,9 @@ You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclass
 
 ### Ownership checker
 
-You can define a custom ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata. 
+An ownership checkers checks how the given user is related to the given entity – whether the user is an owner, the user is in the same team the record is related to, or the portal user belongs to the account the record is related to.
+
+You can define a custom [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata.
 
 ### Access control filters
 
