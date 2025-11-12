@@ -44,7 +44,7 @@ $hasAccess = $aclManager->checkField($user, $scope, $field, Table::ACTION_EDIT);
 
 The methods of the *Acl* service class are mostly the same as in *AclManager* but without the *$user* parameter, as the current user is used.
 
-## Custom ACL for entity type
+## Custom ACL
 
 ### Access checker
 
