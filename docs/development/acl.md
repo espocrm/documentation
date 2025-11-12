@@ -56,10 +56,13 @@ You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclass
 
 ### Ownership checker
 
-An ownership checkers checks how the given user is related to the given entity – whether the user is an owner, the user is in the same team the record is related to, or the portal user belongs to the account the record is related to.
+An ownership checker checks how the given user is related to the given entity – whether the user is an owner, the user is in the same team the record is related to, or the portal user belongs to the account the record is related to.
 
 You can define a custom [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) classes in metadata.
 
 ### Access control filters
 
-You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). They are used for applying filtering when generating a select query for fetching records from the DB.
+You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap) for the [Select framework](select-builder.md). 
+
+When the framework build a database query to display record list for the user, it applies an access control filter to it. Which exactly filter is applied depends on user roles. It's also possible to customize the filter application rules with a [resolver](metadata/select-defs.md##accesscontrolfilterresolverclassname).
+
