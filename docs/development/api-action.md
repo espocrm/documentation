@@ -161,8 +161,6 @@ A Controller is an alternative to an Action class. A Controller can contain mult
 Example of `route.json` with routes mapped to controller actions:
 
 ```json
-
-```json
 [
     {
         "route": "/Hello/test/:id",
