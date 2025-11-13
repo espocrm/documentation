@@ -77,9 +77,9 @@ use Espo\Core\Api\Request;
 use Espo\Core\Api\Response;
 use Espo\Core\Api\ResponseComposer;
 use Espo\Core\Exceptions\BadRequest;
-
 use RuntimeException;
 
+// Your service class.
 use Espo\Modules\MyModule\Service;
 
 class GetMyAction implements Action
