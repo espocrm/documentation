@@ -30,29 +30,11 @@ Custom routes can be defined in the following places:
         "actionClassName": "Espo\\Modules\\MyModule\\Api\\PostMyScopeSomething"
     },
     {
-        "route": "/Hello/test/:id",
-        "method": "get",
-        "params": {
-            "controller": "MyController",
-            "action": "doSomething",
-            "id": ":id"
-        }
-    },
-    {
-        "route": "/HelloWorld/:name",
-        "method": "post",
-        "params": {
-            "controller": "MyController",
-            "action": "helloWorld",
-            "name": ":name"
-        }
-    },
-    {
         "route": "/TestNoAuth",
         "method": "get",
         "params": {
-            "controller": "Test",
-            "action": "test"
+            "myParam1": "MyValue1",
+            "myParam2": "MyValue2"
         },
         "noAuth": true
     }
@@ -132,7 +114,7 @@ class GetMyAction implements Action
 
 You can define arbitrary route parameters in route definitions. The defined parameters will be available in the action class. It may be useful if you want to use the same action class for different routes but don't want to use a placeholder parameter.
 
-`route.json`:
+ `route.json`:
 
 ```json
 [
@@ -168,15 +150,45 @@ Instead of defining a generic route `:entityType/:id/myItems`, we defined two se
 
 For most cases, the sections below won't be relevant and can be skipped.
 
-## Custom controller
+## Controller
 
 !!! note
 
-    This is not a preferable method.
+    Using controllers is not advisable. Prefer actions instead.
 
-Alternative to an Action class. A Controller can contain multiple methods for different actions.
+A Controller is an alternative to an Action class. A Controller can contain multiple methods for different actions.
 
-### In Custom folder
+Example of `route.json` with routes mapped to controller actions:
+
+```json
+
+```json
+[
+    {
+        "route": "/Hello/test/:id",
+        "method": "get",
+        "params": {
+            "controller": "MyController",
+            "action": "doSomething",
+            "id": ":id"
+        }
+    },
+    {
+        "route": "/HelloWorld/:name",
+        "method": "post",
+        "params": {
+            "controller": "MyController",
+            "action": "helloWorld",
+            "name": ":name"
+        }
+    }
+]
+```
+
+### Custom controller
+
+
+#### In Custom folder
 
 Create a file  `custom/Espo/Custom/Controllers/MyController.php`.
 
@@ -190,7 +202,7 @@ class MyController
 
 Clear cache (Administration > Clear Cache).
 
-### In Module folder
+#### In Module folder
 
 Create a file `custom/Espo/Modules/MyModule/Resources/metadata/scopes/MyController.json`.
 
@@ -244,7 +256,7 @@ class MyController
 }
 ```
 
-## Extending existing controller
+### Extending existing controller
 
 !!! note
 
