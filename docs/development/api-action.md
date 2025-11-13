@@ -15,7 +15,7 @@ Custom routes can be defined in the following places:
 
 ### Example
 
-`routes.json`
+`routes.json`:
 
 ```json
 [
@@ -127,6 +127,42 @@ class GetMyAction implements Action
     }
 }
 ```
+
+## Route parameters
+
+You can define arbitrary route parameters in route definitions. The defined parameters will be available in the action class. It may be useful if you want to use the same action class for different routes but don't want to use a placeholder parameter.
+
+`route.json`:
+
+```json
+[
+    {
+        "route": "Account/:id/myItems",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\MyModules\\Api\\GetItems",
+        "params": {
+            "entityType": "Account"
+        }
+    },
+    {
+        "route": "Contact/:id/myItems",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\MyModules\\Api\\GetItems",
+        "params": {
+            "entityType": "Contact"
+        }
+    }
+]
+```
+
+In the action method:
+
+```php
+<?php
+$entityType = $request->getRouteParam('entityType') ?? throw new RuntimeException();
+```
+
+Instead of defining a generic route `:entityType/:id/myItems`, we defined two separate routes for specific record types.
 
 ---
 
