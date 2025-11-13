@@ -234,7 +234,7 @@ The Project Task entity type has a foreign field *Group Type*, which holds the t
 
 *Requires EspoCRM v9.2.*
 
-Project Tasks can be displayed on the Calendar in read-only mode. For this, an administrator should enable Project Tasks under: Administration > Settings > Genaral > Calendar Entity List. 
+Project Tasks can be displayed on the Calendar in read-only mode. For this, an administrator should enable Project Tasks under: Administration > Settings > General > Calendar Entity List. 
  
 ## Plan view
 
