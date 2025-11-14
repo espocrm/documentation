@@ -4,6 +4,7 @@ In this article:
 
 * [Leads](#leads)
 * [Opportunities](#opportunities)
+* [Accounts](#accounts)
 * [Currency](#currency)
 * [Sales analytics](#sales-analytics)
 * [See also](#see-also)
@@ -62,6 +63,19 @@ The Opportunity probability is an estimated percentage chance that the sale will
 !!! note
 
     Probabilities can be utilized in revenue forecasting.
+
+## Accounts
+
+The Account entity type represents companies, organizations, or their departments with which you have business dealings. It's a central entity type in EspoCRM.
+
+An Account has relationships with the following records:
+
+- Contacts
+- Opportunities
+- Cases
+- Documents
+
+Users can subscribe to a particular Account record to see updates that concern that Account.
 
 ## Currency
 
