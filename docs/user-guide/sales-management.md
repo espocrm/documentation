@@ -66,7 +66,7 @@ The Opportunity probability is an estimated percentage chance that the sale will
 
 ## Accounts
 
-The Account entity type represents companies, organizations, or their departments with which you have business dealings. It's a central entity type in EspoCRM.
+Accounts play a central role in EspoCRM. They represent companies and organizations your business works with.
 
 An Account has relationships with the following records:
 
@@ -76,6 +76,8 @@ An Account has relationships with the following records:
 - Documents
 
 Users can subscribe to a particular Account record to see updates that concern that Account.
+
+Account records can be added to Target Lists, which you can use for marketing purposes or for organizing your data.
 
 ## Currency
 
