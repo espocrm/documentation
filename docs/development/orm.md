@@ -1248,7 +1248,7 @@ Relation types:
 
 ## Entity relations
 
-In a custom entity type class, you can define getter and setters for relationships.
+In a custom entity type class, you can define getter and setters for relationships. If you call the same getter multiple times, it will return the same instance. It's useful when the same related entity is accessed in multiple hooks during save. After save, the map will be reset – the getter won't return the same instance as before save.
 
 Get one:
 
