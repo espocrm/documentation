@@ -58,7 +58,7 @@ You can define a custom [access checker](metadata/acl-defs.md#accesscheckerclass
 
 An ownership checker checks how the given user is related to the given entity – whether the user is an owner, the user is in the same team the record is related to, or the portal user belongs to the account the record is related to.
 
-You can define a custom [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) class for a specific scope. Note that portals use a ownership access checker.
+You can define a custom [ownership checker](metadata/acl-defs.md#ownershipcheckerclassname) class for a specific scope. Note that portals use a separate ownership access checker.
 
 ### Access control filters
 
