@@ -83,7 +83,7 @@ $sth = $entityManager->getQueryExecutor()->execute($query);
 
 ## Search Params
 
-Search parameters. Usually passed from the frontend. A SearchParams object contains a primary filter, bool filters, text filter, where conditions, offset, limit, order and what columns to select. When a frontend collection is fetched, search parameters are passed in the request.
+Search parameters. Usually passed from the frontend. The SearchParams object contains a primary filter, bool filters, text filter, where conditions, offset, limit, order, and what columns to select. When a frontend collection is fetched, search parameters are passed in the request.
 
 Class: `Espo\Core\Select\SearchParams`.
 
