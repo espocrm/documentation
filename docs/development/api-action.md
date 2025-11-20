@@ -46,7 +46,7 @@ Route parameters:
 * *noAuth* makes the endpoint accessible without authentication.
 * *method* specifies an HTTP method. The most used methods are: *get*, *post*, *put*, *delete*.
 * *actionClassName* defines an action class name – the entry point of the route.
-* *params* – used for controller implementation, not recommended.
+* *params* – parameters passed to the action implementation, rarely used.
 
 A route can contain placeholders (for example, `:id`). The value will be passed to the Action in the Request object.
 
