@@ -1245,3 +1245,48 @@ Relation types:
 * `Entity::BELONGS_TO_PARENT`
 * `Entity::HAS_CHILDREN`
 * `Entity::JSON_OBJECT`
+
+## Entity relations
+
+In a custom entity type class, you can define getter and setters for relationships.
+
+Get one:
+
+```php
+<?php
+// Returns an Account entity instance.
+// 'account' is a link name.
+public function getAccount(): ?Account
+{
+    /** @var ?Account */
+    return $this->relations->getOne('account');
+}
+```
+
+Set one:
+
+```php
+<?php
+// 'account' is a link name.
+public function setAccount(?Account $account): self
+{
+    // 'account' is a link name.
+    return $this->setRelatedLinkOrEntity('account', $account);
+}
+```
+
+Get many:
+
+```php
+<?php
+/**
+ * @return Traversable<int, Account>
+ */
+public function getAccounts(): Traversable
+{
+    /** @var Traversable<int, Account> */
+    return $this->relations->getMany('accounts');
+}
+```
+
+Note that setting collections (many-to-many, one-to-many) is not supported. Use *getRelation* or *LinkMultiple* value object insted.
