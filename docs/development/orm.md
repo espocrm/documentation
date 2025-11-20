@@ -169,7 +169,7 @@ $entity->setMultiple([
 $entity->clear('attributeName');
 ```
 
-This will unset the attribute. If you save the Entity after that, it will not change the value to NULL in database.
+This will unset the attribute. If you save the Entity after that, it will not change the value to NULL in database. Very rarely used. Not recommended.
 
 ### Fetched attributes
 
@@ -198,7 +198,7 @@ $valueMap = $entity->getValueMap(); // stdClass
 $entityManager->getRDBRepository($entityType)->deleteFromDb($id);
 ```
 
-This will delete a record permanently.
+This will delete the record permanently.
 
 ## Repository
 
