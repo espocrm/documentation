@@ -220,9 +220,10 @@ $accountRepository = $entityManager->getRDBRepositoryByClass(Account::class);
 
 ```php
 <?php
-// The proper type of a returned Entity is inferred.
-// For static analysis and IDEs that support generic types.
-$account = $entityManager->getRDBRepositoryByClass(Account::class)
+// The proper type of the returned Entity can be inferred. Useful
+// for static analysis and IDEs that support generic types.
+$account = $entityManager
+    ->getRDBRepositoryByClass(Account::class)
     ->getById($id);
 ```
 
