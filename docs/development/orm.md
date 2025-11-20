@@ -10,6 +10,8 @@ An *Entity* class represents a single record. Each entity type has its own entit
 
 An *EntityCollection* is a collection of entities. It's returned by *find* operations. An *SthCollection* is a collection of entities, consuming much less memory than EntityCollection. Collections are iterable.
 
+The ORM uses a data-mapper approach. Note that it does not have an identity map – fetching the same record multiple times in a row will return different instances (of the same record).
+
 ## See also
 
 * [Complex expressions](../user-guide/complex-expressions.md)
@@ -1270,7 +1272,6 @@ Set one:
 // 'account' is a link name.
 public function setAccount(?Account $account): self
 {
-    // 'account' is a link name.
     return $this->setRelatedLinkOrEntity('account', $account);
 }
 ```
