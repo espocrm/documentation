@@ -1078,8 +1078,7 @@ $tm->start();
 try {
     // do something
     $tm->commit();
-}
-catch (Throwable $e) {
+} catch (Throwable $e) {
     $tm->rollback(); // this will roll back everything done within the transaction
 }
 ```
@@ -1107,9 +1106,9 @@ $entityManager
     ->getTransactionManager()
     ->run(
         function () {
-            // transaction started implicitly
-            // do something
-            // transaction committed implicitly or rolled back if an exception occurred
+            // Transaction started implicitly.
+            // Do something.
+            // Transaction committed implicitly or rolled back if an exception occurred.
         }
     );
 ```
@@ -1123,10 +1122,10 @@ $entityManager->getTransactionManager()->start();
 $entity = $entityManager
     ->getRDBRepository('SomeTable')
     ->where(['id' => $id])
-    ->forUpdate() // this will lock selected rows until the transaction is finished
+    ->forUpdate() // This will lock the selected rows until the transaction is finished.
     ->findOne();
 
-// do something with entity
+// Do something with the entity.
 
 $entityManager->saveEntity($entity);
 
@@ -1137,12 +1136,12 @@ $entityManager->getTransactionManager()->commit();
 
 ```php
 <?php
-// this will start a transaction implicitly and lock a table
+// This will start a transaction implicitly and lock the table.
 $entityManager->getLocker()->lockExclusive('SomeEntityType');
 
-// do something
+// Do something.
 
-// this will unlock all locked tables
+// This will unlock all locked tables.
 $entityManager->getLocker()->commit();
 ```
 
