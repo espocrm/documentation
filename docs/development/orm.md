@@ -110,6 +110,8 @@ Options in constants available here: `Espo\Core\ORM\Repository\Option\SaveOption
 
 ### Create and store entity
 
+Stores the record in DB and returns an entity instance.
+
 ```php
 <?php
 $entity = $entityManager->createEntity($entityType, [
@@ -120,12 +122,16 @@ $entity = $entityManager->createEntity($entityType, [
 
 ### Remove entity
 
+Soft-deletes the record.
+
 ```php
 <?php
 $entityManager->removeEntity($entity);
 ```
 
 ### Get attribute value
+
+Return the value of a given attribute. An attribute usually corresponds to a column in DB.
 
 ```php
 <?php
@@ -138,7 +144,7 @@ $attributeValue = $entity->get('attributeName');
 
 ### Has attribute value
 
-Checks whether an attribute is set. Note: If it's set to `NULL` it will return `true`.
+Checks whether an attribute is set. Note: If it's set to *null* it returns *true*. An attribute may not be set if the entity was fetched with only a specified attribute list.
 
 ```php
 <?php
@@ -166,12 +172,12 @@ $entity->setMultiple([
 
 ### Clear attribute value
 
+This will unset the attribute. If you save the Entity after that, it will not change the value to NULL in database. Very rarely used. Not recommended.
+
 ```php
 <?php
 $entity->clear('attributeName');
 ```
-
-This will unset the attribute. If you save the Entity after that, it will not change the value to NULL in database. Very rarely used. Not recommended.
 
 ### Fetched attributes
 
@@ -188,23 +194,26 @@ $attributeChanged = $entity->isAttributeChanged('attributeName');
 
 ### Get all attribute values
 
+Returns all attributes with their values.
+
 ```php
 <?php
-$valueMap = $entity->getValueMap(); // stdClass
+// Returns an stdClass instance.
+$valueMap = $entity->getValueMap();
 ```
 
 ### Delete from DB
+
+Deletes the record permanently.
 
 ```php
 <?php
 $entityManager->getRDBRepository($entityType)->deleteFromDb($id);
 ```
 
-This will delete the record permanently.
-
 ## Repository
 
-Use the ORM's repositories to fetch and save entities.
+Use ORM's repositories to fetch and save entities. A repository instance is instantiated per entity type.
 
 !!! note
 
@@ -228,6 +237,8 @@ $account = $entityManager
     ->getRDBRepositoryByClass(Account::class)
     ->getById($id);
 ```
+
+Note: To be able to fetch the repository by an entity type, your [custom entity](custom-entity-type.md#entity-class) needs to have the *ENTITY_TYPE* constant.
 
 Get a repository by an entity type:
 
