@@ -60,7 +60,7 @@ $entity = $entityManager->getRDBRepositoryByClass(MyEntity::class)->getNew();
 
 !!! note
 
-    It creates a new instance but doesn't store it in DB. The entity doesn't have ID yet.
+    It creates a new instance but doesn't store it in DB. The entity doesn't have an ID yet.
 
 ### Fetch existing entity
 
