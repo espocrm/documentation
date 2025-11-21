@@ -1290,4 +1290,4 @@ public function getAccounts(): Traversable
 }
 ```
 
-Note that setting collections (many-to-many, one-to-many) is not supported. Use *getRelation* or *LinkMultiple* value object insted.
+Note that setting collections (many-to-many, one-to-many) is not supported. Use *$entityManager->getRelation* or set the *LinkMultiple* value object insted.
