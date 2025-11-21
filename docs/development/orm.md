@@ -509,35 +509,47 @@ $isRelated = $entityManager
 
 A developer can add getter and setters to an Entity class which will allow to read and set related records.
 
-In an Entity class:
+In a custom entity type class, you can define getter and setters for relationships. If you call the same getter multiple times, it will return the same instance. It's useful when the same related entity is accessed in multiple hooks during save. After save, the map will be reset – the getter won't return the same instance as before save.
+
+Get one:
 
 ```php
 <?php
-class MyEntity extends Entity
+// Returns an Account entity instance.
+// 'account' is a link name.
+public function getAccount(): ?Account
 {
-    public function getAccount(): ?Account
-    {
-        return $this->relations->getOne('account');
-    }
-
-    public function setAccount(?Account $account): self
-    {
-        $this->relations->set('account', $account);
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<Attachment>
-     */
-    public function getAttachments(): Collection
-    {
-        return $this->relations->getMany('attachments');
-    }
-
-    // Setting multiple is not supported.
+    /** @var ?Account */
+    return $this->relations->getOne('account');
 }
 ```
+
+Set one:
+
+```php
+<?php
+// 'account' is a link name.
+public function setAccount(?Account $account): self
+{
+    return $this->setRelatedLinkOrEntity('account', $account);
+}
+```
+
+Get many:
+
+```php
+<?php
+/**
+ * @return Traversable<int, Account>
+ */
+public function getAccounts(): Traversable
+{
+    /** @var Traversable<int, Account> */
+    return $this->relations->getMany('accounts');
+}
+```
+
+Note that setting collections (many-to-many, one-to-many) is not supported. Use *$entityManager->getRelation* or set the *LinkMultiple* value object insted.
 
 Usage:
 
@@ -552,10 +564,6 @@ assert($account === $entity->getAccount());
 
 $em->saveEntity($entity);
 ```
-
-* Only available from inside the Entity class.
-* Getting is available for many and one relationships.
-* Settings is available only for one relationships.
 
 
 ## Collections
@@ -1258,46 +1266,3 @@ Relation types:
 * `Entity::HAS_CHILDREN`
 * `Entity::JSON_OBJECT`
 
-## Entity relations
-
-In a custom entity type class, you can define getter and setters for relationships. If you call the same getter multiple times, it will return the same instance. It's useful when the same related entity is accessed in multiple hooks during save. After save, the map will be reset – the getter won't return the same instance as before save.
-
-Get one:
-
-```php
-<?php
-// Returns an Account entity instance.
-// 'account' is a link name.
-public function getAccount(): ?Account
-{
-    /** @var ?Account */
-    return $this->relations->getOne('account');
-}
-```
-
-Set one:
-
-```php
-<?php
-// 'account' is a link name.
-public function setAccount(?Account $account): self
-{
-    return $this->setRelatedLinkOrEntity('account', $account);
-}
-```
-
-Get many:
-
-```php
-<?php
-/**
- * @return Traversable<int, Account>
- */
-public function getAccounts(): Traversable
-{
-    /** @var Traversable<int, Account> */
-    return $this->relations->getMany('accounts');
-}
-```
-
-Note that setting collections (many-to-many, one-to-many) is not supported. Use *$entityManager->getRelation* or set the *LinkMultiple* value object insted.
