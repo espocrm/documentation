@@ -6,7 +6,7 @@ The *EntityManager* is available as a [*container service*](di.md). It's a centr
 
 A *Repository* class serves for fetching and storing records. Base classes: `Espo\ORM\Repositories\RDBRepository`, `Espo\Core\Repositories\Database`. *RDB* stands for a *relational database*.
 
-An *Entity* class represents a single record. Each entity type has its own entity class. Base class: `Espo\Core\ORM\Entity`, interface: `Espo\ORM\Entity`.
+An *Entity* class represents a single record. Each [entity type](../administration/terms-and-naming.md#entity-type) has its own entity class. Base class: `Espo\Core\ORM\Entity`, interface: `Espo\ORM\Entity`.
 
 An *EntityCollection* is a collection of entities. It's returned by *find* operations. An *SthCollection* is a collection of entities, consuming much less memory than EntityCollection. Collections are iterable.
 
