@@ -100,10 +100,10 @@ Available options:
 
 * skipAll – skip all additional processing;
 * skipHooks – skip all hooks; workflows, formula will be ignored;
-* silent – workflows will be ignored, modified fields won't be change;
-* skipCreatedBy – createdBy won't be set with current user;
-* skipModifiedBy – modifiedBy won't be set with current user;
-* createdById – override createdBy;
+* silent – workflows will be ignored, modifiedAt and modifiedBy fields won't be changed;
+* skipCreatedBy – createdBy won't be set to the current user;
+* skipModifiedBy – modifiedBy won't be set to the current user;
+* createdById – override createdBy with a passed user ID;
 * modifiedById – override modifiedBy.
 
 Options in constants available here: `Espo\Core\ORM\Repository\Option\SaveOption`.
