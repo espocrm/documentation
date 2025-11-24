@@ -144,7 +144,7 @@ $attributeValue = $entity->get('attributeName');
 
 ### Has attribute value
 
-Checks whether an attribute is set. Note: If it's set to *null* it returns *true*. An attribute may not be set if the entity was fetched with only a specified attribute list.
+Checks whether an attribute is set. Note: If it's set to *null*, it will return *true*. An attribute may not be set if the entity was fetched with only a specified attribute list.
 
 ```php
 <?php
