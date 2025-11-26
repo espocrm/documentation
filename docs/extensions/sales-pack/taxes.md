@@ -49,8 +49,8 @@ It can be reasonable to create a tax profile with a zero rate for cases where ta
 
 The *Shipping Tax Mode* defines how tax is applied to the shipping cost. Available modes:
 
-* Proportional – Applies tax to shipping proportionally based on the tax rates of the items in the order. This is the most common mode.
-* Fixed – The default rate is applied.
+* Proportional – Applies tax to shipping proportionally based on the taxes of the items in the order. This is the most common mode.
+* Fixed – The specific tax is applied.
 
 If the shipping tax mode is not specified, no tax will be applied to the shipping cost.
 
