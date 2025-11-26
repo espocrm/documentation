@@ -45,9 +45,9 @@ The *Rate* field defines the standard tax rate. When a tax profile is selected f
 
 It can be reasonable to create a tax profile with a zero rate for cases where tax is not applicable (for example, reverse charge scenarios).
 
-### Shipping tax
+### Shipping tax mode
 
-The *Shipping Tax* defines how tax is applied to the shipping cost. Available modes:
+The *Shipping Tax Mode* defines how tax is applied to the shipping cost. Available modes:
 
 * Proportional – Applies tax to shipping proportionally based on the tax rates of the items in the order. This is the most common mode.
 * Fixed – The default rate is applied.
