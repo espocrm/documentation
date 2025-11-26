@@ -52,4 +52,4 @@ require(['views/login'], View => {
 });
 ```
 
-Note that you can patch multiple clases in one file.
+Note that you can patch multiple classes in one file.
