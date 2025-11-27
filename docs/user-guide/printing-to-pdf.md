@@ -425,7 +425,7 @@ Using a helper (as of v9.3):
 {{currencySymbol 'USD'}}
 ```
 
-Example for a field named *amount*:
+Example for a currency field named *amount*:
 
 ```
 {{currencySymbol amountCurrency}}
