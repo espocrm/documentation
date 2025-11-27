@@ -413,8 +413,22 @@ Note that `_RAW` is appended to the field name.
 
 ### Currency symbol
 
+A ready value prepared for all currency fields:
+
 ```
 {{amountCurrencySymbol}}
+```
+
+Using a helper (as of v9.3):
+
+```
+{{currencySymbol 'USD'}}
+```
+
+Example for a field named *amount*:
+
+```
+{{currencySymbol amountCurrency}}
 ```
 
 where `amount` is a field name (of *currency* type).
