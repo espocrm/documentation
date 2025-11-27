@@ -36,3 +36,22 @@ Example:
     ]
 }
 ```
+
+## precisionMap
+
+*Object<string, number\>*
+
+*As of v9.3.*
+
+
+A currency-code => precision mapping. If not specified, 2 is used as a fallback value.
+
+Example:
+
+```json
+{
+    "precisionMap": {
+        "BHD": 3
+    }
+}
+```
