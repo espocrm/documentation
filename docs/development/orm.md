@@ -44,7 +44,7 @@ class SomeClass
 
 ```php
 <?php
-$entity = $entityManager->getNewEntity($entityType)
+$entity = $entityManager->getNewEntity($entityType);
 ```
 
 Or type hinted:
