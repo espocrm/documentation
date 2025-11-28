@@ -123,7 +123,7 @@ There is the ability to select a template for an email you compose.
 
 You can set up the email signature in the Preferences. This signature will be used for all emails you compose.
 
-It's possible to use an **external email client**: the default one on your computer or device. For this, check *Use an external email client* in the Preferences.
+It's possible to use an **external email client** – the default one on your computer or device. For this, check *Use an external email client* in the Preferences.
 
 ### Scheduled send
 
