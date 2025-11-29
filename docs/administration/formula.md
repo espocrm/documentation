@@ -469,7 +469,7 @@ For non-developers, it's possible to apply a [List Report](../user-guide/reports
 
 *As of v9.2.*
 
-The syntax is the same as for the *where* [parameter](../development/api-search-params.md#where-items) API requests.
+The syntax is the same as for the *where* [parameter](../development/api-search-params.md#where-items) in API requests.
 
 !!! example
 
