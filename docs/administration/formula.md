@@ -348,7 +348,7 @@ Functions accept expressions as arguments.
 someFunction(EXPRESSION1, EXPRESSION2);
 ```
 
-EXPRESSION1 can be:
+Expressions can be:
 
 * scalar value
 * variable
