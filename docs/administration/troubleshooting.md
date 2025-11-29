@@ -5,7 +5,8 @@ In this article:
 * [Check logs](#check-logs)
   * [Debug mode](#debug-mode)
 * [Check system requirements](#check-system-requirements)
-* [Scheduled Jobs are not working](#scheduled-jobs-are-not-working)
+* [File permissions](#file-permissions-issue)
+* [Scheduled jobs are not working](#scheduled-jobs-are-not-working)
 * [Running rebuild from CLI](#running-rebuild-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
 * [MySQL error: The server requested authentication method unknown to the client](#mysql-error-the-server-requested-authentication-method-unknown-to-the-client)
@@ -69,6 +70,9 @@ In `data/config-internal.php` (or `data/config.php`):
 
 At Administration > System Requirements. It's important that you have all required PHP extensions installed.
 
+## File permissions
+
+It's the most common issue. Because of incorrect file permissions (or ownership), the instance might not be able to write certain files (for example, cache files). You can find how to configure file permissions [here](server-configuration.md#permissions).
 
 ## Scheduled jobs are not working
 
