@@ -5,7 +5,7 @@ In this article:
 * [Check logs](#check-logs)
   * [Debug mode](#debug-mode)
 * [Check system requirements](#check-system-requirements)
-* [File permissions](#file-permissions-issue)
+* [File permissions](#file-permissions)
 * [Scheduled jobs are not working](#scheduled-jobs-are-not-working)
 * [Running rebuild from CLI](#running-rebuild-from-cli)
 * [EspoCRM is not loading after upgrade](#espocrm-is-not-loading-after-upgrade)
