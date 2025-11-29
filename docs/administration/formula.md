@@ -415,15 +415,13 @@ Below are explanations of function arguments which are met in the documentation.
 
 #### LINK
 
-A name of the relationship. Available link names can be found at Administration > Entity Manager > {Entity Type} > Relationships.
+A name of the relationship. Available link names can be found at Administration > Entity Manager > {Entity Type} > Relationships. More info about links [here](terms-and-naming.md#link).
 
-Link names must be wrapped in quotes when used as function arguments.
-
-More info about links [here](terms-and-naming.md#link).
+Link names must be wrapped in quotes when used as function arguments. Example: `record\relate('Contact', 'someContactId', 'opportunities', 'someContactId')`.
 
 #### ATTRIBUTE
 
-Attribute name usually is the same as a system field name. Fields are listed at Administration > Entity Manager > {Entity Type} > Fields.
+Attribute name usually is the same as a system field name. Fields are listed at Administration > Entity Manager > {Entity Type} > Fields. More info about attributes [here](terms-and-naming.md#attribute).
 
 Field types having multiple attributes:
 
@@ -434,17 +432,13 @@ Field types having multiple attributes:
 
 Where *field* is the name of the field.
 
-Attribute names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
-
-More info about attributes [here](terms-and-naming.md#attribute).
+Attribute names must be wrapped in quotes when used as function arguments. Example: `record\attribute('Lead', 'someId', 'assignedUserId')`.
 
 #### ENTITY_TYPE
 
-The list of entity types is available at Administration > Entity Manager.
+The list of entity types is available at Administration > Entity Manager. More info about entity types [here](terms-and-naming.md#entity-type).
 
-Entity type names must be wrapped in quotes when used as function arguments. E.g. `record\attribute('Lead', 'someId', 'assignedUserId')`.
-
-More info about entity types [here](terms-and-naming.md#entity-type).
+Entity type names must be wrapped in quotes when used as function arguments. Example: `record\attribute('Lead', 'someId', 'assignedUserId')`.
 
 #### FILTER
 
