@@ -116,7 +116,7 @@ where `www-data` is a web-server user.
 
 ## Running rebuild from CLI
 
-Sometimes you need to run rebuild from the command line interface when the application is not loading.
+Sometimes you need to run rebuild from the command-line interface, usually when the application fails to load or the log shows database-schema errors.
 
 ```bash
 php rebuild.php
