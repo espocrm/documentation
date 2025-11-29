@@ -169,8 +169,6 @@ The following configuration will speed up your email fetching (and other backgro
 
 ## Admin password is lost, can't log in
 
-*As of v5.8.3.*
-
 Run the following command in CLI:
 
 ```
