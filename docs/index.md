@@ -15,8 +15,7 @@
     * [Installation with Traefik](administration/docker/traefik.md)
     * [Installation with Caddy](administration/docker/caddy.md)
   * [Upgrading](administration/upgrading.md)
-  * [Extensions](administration/extensions.md)
-  * [Troubleshooting](administration/troubleshooting.md)
+  * [Extensions](administration/extensions.md)  
   * [Jobs](administration/jobs.md)
   * [Config parameters](administration/config-params.md)
   * [Log](administration/log.md)
@@ -24,6 +23,7 @@
   * [WebSocket](administration/websocket.md)
 * Essentials
   * [Terms & naming](administration/terms-and-naming.md)
+  * [Troubleshooting](administration/troubleshooting.md)
   * [Backup and restore](administration/backup-and-restore.md)
   * [Performance tweaking](administration/performance-tweaking.md)
   * [Moving to another server](administration/moving-to-another-server.md)
