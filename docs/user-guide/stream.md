@@ -2,11 +2,11 @@
 
 Stream in EspoCRM is a feed where you can see posts and updates of records you follow. You can also post messages to your own Stream and to the Stream of other Users.
 
-By default, the following entity types have the Stream enabled: Accounts, Contacts, Leads, Opportunities, Cases, Meetings, and Tasks. Administrators can enable or disable  Stream for a certain entity type at Administration > Entity Manager > {Entity Type} > Edit.
+By default, the following entity types have the Stream enabled: Accounts, Contacts, Leads, Opportunities, Cases, Meetings, and Tasks. An administrator can enable or disable the Stream for a certain entity type under Administration > Entity Manager > {Entity Type} > Edit.
 
 ## Record Stream
 
-The *Stream* panel is available on the record detail view in the bottom. Posts, updates and new additions related to the current record are displayed here. A single Stream record internally is called *Note*.
+The *Stream* panel is available on the record detail view in the bottom. Posts and updates related to the record are displayed here. Each entry in the stream is represented by a *Note* entity.
 
 An administrator can move the Stream panel down so that it will appear under other panels or put the panel into a tab. This can be done at Administration > Entity Manager > {Entity Type} > Layouts > Bottom Panels.
 
@@ -20,17 +20,15 @@ With the [Collaborators](../administration/roles-management.md#collaborators) fe
 
 ## User Stream
 
-Users can view their own Stream in the *Stream* dashlet as well on a separate Stream page.
+Users can view their own Stream in the *Stream* dashlet as well on the separate Stream page.
 
-Users can see Stream of another users on the user's detail view if they have access defined by the *User Permission* in Roles.
-
-In the user's Stream, you can see posts and updates of records that the user follows. You can also see posts addressed to that user.
+Users can see Stream of another users on the user's detail view if they have access defined by the *User Permission* in Roles. In the user's Stream, you can see posts and updates of records that the user follows. You can also see posts addressed to that user.
 
 It's possible to view all activity for a specific user. It will display all notes that either created directly by the user or created as a result of that users' actions. Available from the dropdown menu on the Stream panel on the User's detail view. As of v8.2.
 
 ## Notifications
 
-A user receives notifications about updates in their Stream that were done by other users.
+A user receives notifications about new stream entries in followed records.
 
 ## Posts
 
