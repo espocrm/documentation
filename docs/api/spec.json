@@ -41,7 +41,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Account record.",
+        "description": "Create a new 'Account' record.",
         "responses": {
           "200": {
             "content": {
@@ -257,7 +257,7 @@
         "tags": [
           "Account"
         ],
-        "description": "Read an existing Account record.",
+        "description": "Read an existing 'Account' record.",
         "responses": {
           "200": {
             "content": {
@@ -297,7 +297,7 @@
             "description": "A version number for optimistic concurrency control. Obtained from the 'versionNumber' field."
           }
         ],
-        "description": "Update an existing Account record.",
+        "description": "Update an existing 'Account' record.",
         "responses": {
           "200": {
             "content": {
@@ -324,7 +324,7 @@
         "tags": [
           "Account"
         ],
-        "description": "Remove an existing Account record.",
+        "description": "Remove an existing 'Account' record.",
         "responses": {
           "200": {
             "content": {
@@ -3948,7 +3948,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Call record.",
+        "description": "Create a new 'Call' record.",
         "responses": {
           "200": {
             "content": {
@@ -4150,7 +4150,7 @@
         "tags": [
           "Call"
         ],
-        "description": "Read an existing Call record.",
+        "description": "Read an existing 'Call' record.",
         "responses": {
           "200": {
             "content": {
@@ -4181,7 +4181,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing Call record.",
+        "description": "Update an existing 'Call' record.",
         "responses": {
           "200": {
             "content": {
@@ -4208,7 +4208,7 @@
         "tags": [
           "Call"
         ],
-        "description": "Remove an existing Call record.",
+        "description": "Remove an existing 'Call' record.",
         "responses": {
           "200": {
             "content": {
@@ -5034,7 +5034,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Campaign record.",
+        "description": "Create a new 'Campaign' record.",
         "responses": {
           "200": {
             "content": {
@@ -5247,7 +5247,7 @@
         "tags": [
           "Campaign"
         ],
-        "description": "Read an existing Campaign record.",
+        "description": "Read an existing 'Campaign' record.",
         "responses": {
           "200": {
             "content": {
@@ -5278,7 +5278,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing Campaign record.",
+        "description": "Update an existing 'Campaign' record.",
         "responses": {
           "200": {
             "content": {
@@ -5305,7 +5305,7 @@
         "tags": [
           "Campaign"
         ],
-        "description": "Remove an existing Campaign record.",
+        "description": "Remove an existing 'Campaign' record.",
         "responses": {
           "200": {
             "content": {
@@ -6744,7 +6744,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Case record.",
+        "description": "Create a new 'Case' record.",
         "responses": {
           "200": {
             "content": {
@@ -6943,7 +6943,7 @@
         "tags": [
           "Case"
         ],
-        "description": "Read an existing Case record.",
+        "description": "Read an existing 'Case' record.",
         "responses": {
           "200": {
             "content": {
@@ -6983,7 +6983,7 @@
             "description": "A version number for optimistic concurrency control. Obtained from the 'versionNumber' field."
           }
         ],
-        "description": "Update an existing Case record.",
+        "description": "Update an existing 'Case' record.",
         "responses": {
           "200": {
             "content": {
@@ -7010,7 +7010,7 @@
         "tags": [
           "Case"
         ],
-        "description": "Remove an existing Case record.",
+        "description": "Remove an existing 'Case' record.",
         "responses": {
           "200": {
             "content": {
@@ -8502,7 +8502,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Contact record.",
+        "description": "Create a new 'Contact' record.",
         "responses": {
           "200": {
             "content": {
@@ -8729,7 +8729,7 @@
         "tags": [
           "Contact"
         ],
-        "description": "Read an existing Contact record.",
+        "description": "Read an existing 'Contact' record.",
         "responses": {
           "200": {
             "content": {
@@ -8760,7 +8760,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing Contact record.",
+        "description": "Update an existing 'Contact' record.",
         "responses": {
           "200": {
             "content": {
@@ -8787,7 +8787,7 @@
         "tags": [
           "Contact"
         ],
-        "description": "Remove an existing Contact record.",
+        "description": "Remove an existing 'Contact' record.",
         "responses": {
           "200": {
             "content": {
@@ -11598,7 +11598,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Document record.",
+        "description": "Create a new 'Document' record.",
         "responses": {
           "200": {
             "content": {
@@ -11786,7 +11786,7 @@
         "tags": [
           "Document"
         ],
-        "description": "Read an existing Document record.",
+        "description": "Read an existing 'Document' record.",
         "responses": {
           "200": {
             "content": {
@@ -11817,7 +11817,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing Document record.",
+        "description": "Update an existing 'Document' record.",
         "responses": {
           "200": {
             "content": {
@@ -11844,7 +11844,7 @@
         "tags": [
           "Document"
         ],
-        "description": "Remove an existing Document record.",
+        "description": "Remove an existing 'Document' record.",
         "responses": {
           "200": {
             "content": {
@@ -12873,7 +12873,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Email record.",
+        "description": "Create a new 'Email' record.",
         "responses": {
           "200": {
             "content": {
@@ -13125,7 +13125,7 @@
         "tags": [
           "Email"
         ],
-        "description": "Read an existing Email record.",
+        "description": "Read an existing 'Email' record.",
         "responses": {
           "200": {
             "content": {
@@ -13156,7 +13156,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing Email record.",
+        "description": "Update an existing 'Email' record.",
         "responses": {
           "200": {
             "content": {
@@ -13183,7 +13183,7 @@
         "tags": [
           "Email"
         ],
-        "description": "Remove an existing Email record.",
+        "description": "Remove an existing 'Email' record.",
         "responses": {
           "200": {
             "content": {
@@ -14275,7 +14275,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new KnowledgeBaseArticle record.",
+        "description": "Create a new 'KnowledgeBaseArticle' record.",
         "responses": {
           "200": {
             "content": {
@@ -14467,7 +14467,7 @@
         "tags": [
           "KnowledgeBaseArticle"
         ],
-        "description": "Read an existing KnowledgeBaseArticle record.",
+        "description": "Read an existing 'KnowledgeBaseArticle' record.",
         "responses": {
           "200": {
             "content": {
@@ -14507,7 +14507,7 @@
             "description": "A version number for optimistic concurrency control. Obtained from the 'versionNumber' field."
           }
         ],
-        "description": "Update an existing KnowledgeBaseArticle record.",
+        "description": "Update an existing 'KnowledgeBaseArticle' record.",
         "responses": {
           "200": {
             "content": {
@@ -14534,7 +14534,7 @@
         "tags": [
           "KnowledgeBaseArticle"
         ],
-        "description": "Remove an existing KnowledgeBaseArticle record.",
+        "description": "Remove an existing 'KnowledgeBaseArticle' record.",
         "responses": {
           "200": {
             "content": {
@@ -14816,7 +14816,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Lead record.",
+        "description": "Create a new 'Lead' record.",
         "responses": {
           "200": {
             "content": {
@@ -15043,7 +15043,7 @@
         "tags": [
           "Lead"
         ],
-        "description": "Read an existing Lead record.",
+        "description": "Read an existing 'Lead' record.",
         "responses": {
           "200": {
             "content": {
@@ -15074,7 +15074,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing Lead record.",
+        "description": "Update an existing 'Lead' record.",
         "responses": {
           "200": {
             "content": {
@@ -15101,7 +15101,7 @@
         "tags": [
           "Lead"
         ],
-        "description": "Remove an existing Lead record.",
+        "description": "Remove an existing 'Lead' record.",
         "responses": {
           "200": {
             "content": {
@@ -16766,7 +16766,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Meeting record.",
+        "description": "Create a new 'Meeting' record.",
         "responses": {
           "200": {
             "content": {
@@ -16973,7 +16973,7 @@
         "tags": [
           "Meeting"
         ],
-        "description": "Read an existing Meeting record.",
+        "description": "Read an existing 'Meeting' record.",
         "responses": {
           "200": {
             "content": {
@@ -17004,7 +17004,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing Meeting record.",
+        "description": "Update an existing 'Meeting' record.",
         "responses": {
           "200": {
             "content": {
@@ -17031,7 +17031,7 @@
         "tags": [
           "Meeting"
         ],
-        "description": "Remove an existing Meeting record.",
+        "description": "Remove an existing 'Meeting' record.",
         "responses": {
           "200": {
             "content": {
@@ -17857,7 +17857,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Opportunity record.",
+        "description": "Create a new 'Opportunity' record.",
         "responses": {
           "200": {
             "content": {
@@ -18058,7 +18058,7 @@
         "tags": [
           "Opportunity"
         ],
-        "description": "Read an existing Opportunity record.",
+        "description": "Read an existing 'Opportunity' record.",
         "responses": {
           "200": {
             "content": {
@@ -18098,7 +18098,7 @@
             "description": "A version number for optimistic concurrency control. Obtained from the 'versionNumber' field."
           }
         ],
-        "description": "Update an existing Opportunity record.",
+        "description": "Update an existing 'Opportunity' record.",
         "responses": {
           "200": {
             "content": {
@@ -18125,7 +18125,7 @@
         "tags": [
           "Opportunity"
         ],
-        "description": "Remove an existing Opportunity record.",
+        "description": "Remove an existing 'Opportunity' record.",
         "responses": {
           "200": {
             "content": {
@@ -19613,7 +19613,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new TargetList record.",
+        "description": "Create a new 'TargetList' record.",
         "responses": {
           "200": {
             "content": {
@@ -19793,7 +19793,7 @@
         "tags": [
           "TargetList"
         ],
-        "description": "Read an existing TargetList record.",
+        "description": "Read an existing 'TargetList' record.",
         "responses": {
           "200": {
             "content": {
@@ -19824,7 +19824,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing TargetList record.",
+        "description": "Update an existing 'TargetList' record.",
         "responses": {
           "200": {
             "content": {
@@ -19851,7 +19851,7 @@
         "tags": [
           "TargetList"
         ],
-        "description": "Remove an existing TargetList record.",
+        "description": "Remove an existing 'TargetList' record.",
         "responses": {
           "200": {
             "content": {
@@ -21394,7 +21394,7 @@
             "description": "A record ID of the entity that is being duplicated."
           }
         ],
-        "description": "Create a new Task record.",
+        "description": "Create a new 'Task' record.",
         "responses": {
           "200": {
             "content": {
@@ -21598,7 +21598,7 @@
         "tags": [
           "Task"
         ],
-        "description": "Read an existing Task record.",
+        "description": "Read an existing 'Task' record.",
         "responses": {
           "200": {
             "content": {
@@ -21638,7 +21638,7 @@
             "description": "A version number for optimistic concurrency control. Obtained from the 'versionNumber' field."
           }
         ],
-        "description": "Update an existing Task record.",
+        "description": "Update an existing 'Task' record.",
         "responses": {
           "200": {
             "content": {
@@ -21665,7 +21665,7 @@
         "tags": [
           "Task"
         ],
-        "description": "Remove an existing Task record.",
+        "description": "Remove an existing 'Task' record.",
         "responses": {
           "200": {
             "content": {
@@ -21904,7 +21904,7 @@
         "tags": [
           "User"
         ],
-        "description": "Read an existing User record.",
+        "description": "Read an existing 'User' record.",
         "responses": {
           "200": {
             "content": {
@@ -21935,7 +21935,7 @@
           }
         },
         "parameters": [],
-        "description": "Update an existing User record.",
+        "description": "Update an existing 'User' record.",
         "responses": {
           "200": {
             "content": {
