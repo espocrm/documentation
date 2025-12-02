@@ -20,7 +20,21 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
     The API client implementations (available below) automatically adds needed headers and handles authentication.
 
-API reference:
+In this article:
+
+* [API reference](#api-reference)
+* [Setting up](#setting-up)
+* [Client implementations](#client-implementations)
+* [Authentication](#authentication)
+* [Error codes](#error-codes)
+* [Date and time values](#date-and-time-values)
+
+See also:
+
+* [Search parameters](api-search-params.md)
+* [Usage tutorial](api-tutorial.md)
+
+## API reference
 
 * [API reference](../api/index.html) – a separate API reference documentation covering CRUD operations for main entity types;
 * [CRUD operations](api/crud.md) – an article on create, read, update, delete operations;
@@ -32,18 +46,11 @@ API reference:
 * [Metadata](api/metadata.md) – working with application metadata;
 * [Account](api/account.md) – (to be removed in favor of the API reference)
 
-In this article:
+### OpenAPI specification
 
-* [Setting up](#setting-up)
-* [Client implementations](#client-implementations)
-* [Authentication](#authentication)
-* [Error codes](#error-codes)
-* [Date and time values](#date-and-time-values)
+*As of v9.3.*
 
-See also:
-
-* [Search parameters](api-search-params.md)
-* [Usage tutorial](api-tutorial.md)
+The OpenAPI specification for your Espo instance (including custom entity types and fields) can be obtained by `/api/v1/OpenAPI` endpoint. The endpoint is available for admin users and API users with the *OpenAPI* scope enabled in roles.
 
 ## Client implementations
 
