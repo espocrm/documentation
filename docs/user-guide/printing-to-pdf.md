@@ -286,6 +286,8 @@ Access a parent scope:
 
 ### Lookup
 
+You can use this helper to access object's and array's items.
+
 In object (map):
 
 ```
