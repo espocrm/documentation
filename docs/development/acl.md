@@ -64,5 +64,5 @@ You can define a custom [ownership checker](metadata/acl-defs.md#ownershipchecke
 
 You may also need to define custom [access control filters](metadata/select-defs.md#accesscontrolfilterclassnamemap). These filters belong to the [Select framework](select-builder.md), not to the ACL framework.
 
-When the framework build a database query in order to display a record list for the user, it applies an access control filter to the query. Which exactly filter is applied – depends on the user's roles. It's also possible to customize the filter application rules with a custom [resolver](metadata/select-defs.md##accesscontrolfilterresolverclassname).
+When the framework build a database query in order to display a record list for the user, it applies an access control filter to the query. Which exactly filter is applied – depends on the user's roles. It's also possible to customize the filter application rules with a custom [resolver](metadata/select-defs.md#accesscontrolfilterresolverclassname).
 
