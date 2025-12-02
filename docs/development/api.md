@@ -20,6 +20,18 @@ In this documentation we omit the site URL and `api/v1/` path when we show examp
 
     The API client implementations (available below) automatically adds needed headers and handles authentication.
 
+API reference:
+
+* [API reference](../api/index.html) – a separate API reference documentation covering CRUD operations for main entity types;
+* [CRUD operations](api/crud.md) – an article on create, read, update, delete operations;
+* [Related records](api/relationships.md) – working with links;
+* [Stream](api/stream.md) – working with the Stream;
+* [CurrencyRate](api/currency-rate.md) – currency conversion rates;
+* [Attachment](api/attachment.md) – working with file attachments;
+* [I18n](api/i18n.md) – internationalization;
+* [Metadata](api/metadata.md) – working with application metadata;
+* [Account](api/account.md) – (to be removed in favor of the API reference)
+
 In this article:
 
 * [Setting up](#setting-up)
@@ -27,17 +39,6 @@ In this article:
 * [Authentication](#authentication)
 * [Error codes](#error-codes)
 * [Date and time values](#date-and-time-values)
-
-API functions:
-
-* [CRUD operations](api/crud.md) – create, read, update, delete
-* [Related records](api/relationships.md)
-* [Stream](api/stream.md)
-* [CurrencyRate](api/currency-rate.md)
-* [Attachment](api/attachment.md)
-* [I18n](api/i18n.md)
-* [Metadata](api/metadata.md)
-* [Account](api/account.md)
 
 See also:
 
