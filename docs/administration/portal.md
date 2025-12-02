@@ -75,4 +75,3 @@ It's possible to use server configuration tools (such as mod_rewrite) to be able
 ## See also
 
 * [Quick tour](https://app.supademo.com/demo/cmgajngej3dxj2noml5li5gm3)
-* [ACL customization](../development/acl.md#custom-acl-for-entity-type)
