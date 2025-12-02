@@ -50,7 +50,7 @@ See also:
 
 *As of v9.3.*
 
-The OpenAPI specification for your Espo instance (including custom entity types and fields) can be obtained by `/api/v1/OpenAPI` endpoint. The endpoint is available for admin users and API users with the *OpenAPI* scope enabled in roles.
+The OpenAPI specification for your Espo instance (including custom entity types and fields) can be obtained from the `/api/v1/OpenAPI` endpoint. The endpoint is available for admin users and API users with the *OpenAPI* scope enabled in roles.
 
 ## Client implementations
 
