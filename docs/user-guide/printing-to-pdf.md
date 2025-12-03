@@ -276,11 +276,16 @@ Displaying certain number of items in one row:
 {{/each}}
 ```
 
+!!! important
+
+    The scope is changed inside an iteration block. To access parent scope attributes, use `../`.
+
 Access a parent scope:
 
 ```
 {{#each contacts}}
-    {{../name}}
+    Root record name: {{../name}}
+    Contact name: {{name}}
 {{/each}}
 ```
 
