@@ -269,6 +269,14 @@ To mass-update for the field.
 
 To disable the ability to export the field.
 
+### apiSpecDisabled
+
+*boolean*
+
+*As of v9.3.*
+
+Do not print the field in the OpenAPI spec.
+
 ### isPersonalData
 
 *boolean*
