@@ -36,7 +36,7 @@ See also:
 
 ## API reference
 
-* [API reference](../api/index.html) – a separate API reference documentation covering CRUD operations for main entity types;
+* [API docs](../api/index.html) – a separate API reference documentation covering CRUD operations for main entity types;
 * [CRUD operations](api/crud.md) – an article on create, read, update, delete operations;
 * [Related records](api/relationships.md) – working with links;
 * [Stream](api/stream.md) – working with the Stream;
