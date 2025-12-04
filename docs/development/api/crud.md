@@ -1,4 +1,4 @@
-# API :: CRUD Operations
+# API · CRUD Operations
 
 CRUD stands for create, read, update, delete.
 
