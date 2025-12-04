@@ -1,9 +1,13 @@
-# API :: Attachment
+# API · Attachment
 
 * [Uploading](#uploading)
 * [Downloading](#downloading)
 
 ### Uploading
+
+!!! note
+
+    There's also the ability to upload files in chunks. This method is not covered in this article.
 
 `POST Attachment`
 
@@ -21,8 +25,6 @@ Payload attributes:
 * parentType – entity type attachment is related to (only for fields of *Attachment Multiple* type);
 * field – field name of related record attachment is related through;
 * file – file contents.
-
-Note: *parentId* attribute is available when uploading and will be ignored.
 
 #### Example (File field)
 
