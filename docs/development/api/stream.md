@@ -1,4 +1,4 @@
-# API :: Stream
+# API · Stream
 
 ### List stream records for the current user
 
