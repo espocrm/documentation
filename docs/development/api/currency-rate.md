@@ -1,4 +1,4 @@
-# API :: CurrencyRate
+# API · CurrencyRate
 
 ### Getting rates
 
