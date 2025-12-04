@@ -1,4 +1,4 @@
-# API :: Account
+# API · Account
 
 * [List](#list)
 * [Create](#create)
