@@ -1,10 +1,10 @@
-# API :: Metadata
+# API · Metadata
 
 ## Getting metadata
 
 `GET Metadata`
 
-Returns application metadata. Note that not all metadata is available to be read from outside, some data is stripped from the result.
+Returns application metadata. Note that not all metadata is available for reading from the outside – some data is stripped from the result.
 
 Query params:
 
