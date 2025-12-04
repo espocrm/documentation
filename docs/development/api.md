@@ -1,4 +1,4 @@
-# REST API
+# API Overview
 
 EspoCRM is a single page application so the frontend uses REST API to connect with the backend. 
 All operations you perform using the UI, you can implement via API calls using your programming language. 
