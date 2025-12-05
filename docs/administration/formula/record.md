@@ -179,13 +179,18 @@ Fetches record attributes into an object. Returns NULL if a record does not exis
 
 ## record\relate
 
+Relate two records:
+
 `record\relate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
 
-Relates two records.
+Relate a record with multiple records (passed as an array of IDs):
 
 `record\relate(ENTITY_TYPE, ID, LINK, LIST_OF_IDS)`
 
-Links a record with multiple records.
+Relate with column data (as of v9.3.):
+
+`record\relate(ENTITY_TYPE, ID, LINK, FOREIGN_ID, COLUMN_DATA)`
+
 
 !!! examples
 
@@ -193,8 +198,14 @@ Links a record with multiple records.
 
     `record\relate('Account', $accountId, 'tasks', list('id1', 'id2'))`
 
+    ```
+        $columnData = object\create();
+        $columnData['role'] = 'Tester';
+        record\relate('Account', $accountId, 'contacts', $contactId, $columnData);
+    ```
+
 !!! note
-    It won't work in *Before save script* when applied for the current record. Use an after-save Workflow rule instead.
+    This function won't work in *Before save script* when applied for the current record. Use an after-save Workflow rule instead.
     
 ## record\unrelate
 
