@@ -199,9 +199,9 @@ Relate with column data (as of v9.3.):
     `record\relate('Account', $accountId, 'tasks', list('id1', 'id2'))`
 
     ```
-        $columnData = object\create();
-        $columnData['role'] = 'Tester';
-        record\relate('Account', $accountId, 'contacts', $contactId, $columnData);
+    $columnData = object\create();
+    $columnData['role'] = 'Tester';
+    record\relate('Account', $accountId, 'contacts', $contactId, $columnData);
     ```
 
 !!! note
