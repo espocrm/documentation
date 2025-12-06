@@ -92,7 +92,7 @@ Disables the field.
 
 *boolean*
 
-The field will be hidden from a user on the UI whenever possible.
+The field will be hidden from the user on the UI whenever possible.
 
 ### tooltip
 
@@ -677,6 +677,20 @@ Indexes for a middle table. Definition is the same as for entity indexes.
 *(available for hasMany, hasChildren)*
 
 Disable merging related records when duplicate records are being merged.
+
+### utility
+
+*boolean*
+
+The link will be hidden from the user on the UI whenever possible.
+
+### apiSpecDisabled
+
+*boolean*
+
+*As of v9.3.*
+
+Do not print the link in the OpenAPI spec.
 
 ### deferredLoad
 
