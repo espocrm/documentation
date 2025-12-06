@@ -4392,6 +4392,227 @@
                 }
             }
         },
+        "\/Account\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Account . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Account"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Account . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Account"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Account . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
         "\/Call": {
             "post": {
                 "tags": [
@@ -5296,6 +5517,227 @@
                 },
                 "summary": "Unrelate Call . leads",
                 "description": "Unrelate 'Lead' record related though the 'leads' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/Call\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Call"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Call . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Call"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Call . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Call"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Call . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
                 "responses": {
                     "200": {
                         "description": "Success."
@@ -7512,6 +7954,227 @@
                 },
                 "summary": "Unrelate Campaign . targetLists",
                 "description": "Unrelate 'TargetList' record related though the 'targetLists' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/Campaign\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Campaign"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Campaign . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Campaign"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Campaign . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Campaign"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Campaign . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
                 "responses": {
                     "200": {
                         "description": "Success."
@@ -9778,6 +10441,227 @@
                 },
                 "summary": "Unrelate Case . tasks",
                 "description": "Unrelate 'Task' record related though the 'tasks' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/Case\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Case"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Case . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Case"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Case . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Case"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Case . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
                 "responses": {
                     "200": {
                         "description": "Success."
@@ -13286,6 +14170,227 @@
                 }
             }
         },
+        "\/Contact\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Contact"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Contact . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Contact"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Contact . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Contact"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Contact . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
         "\/Document": {
             "post": {
                 "tags": [
@@ -14718,6 +15823,227 @@
                 }
             }
         },
+        "\/Document\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Document"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Document . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Document"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Document . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Document"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Document . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
         "\/Email": {
             "post": {
                 "tags": [
@@ -15964,6 +17290,227 @@
                 }
             }
         },
+        "\/Email\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Email"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Email . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Email"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Email . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Email"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Email . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
         "\/Email\/{id}\/users": {
             "parameters": [
                 {
@@ -16853,6 +18400,227 @@
                 },
                 "summary": "Unrelate KnowledgeBaseArticle . cases",
                 "description": "Unrelate 'Case' record related though the 'cases' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/KnowledgeBaseArticle\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "KnowledgeBaseArticle"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List KnowledgeBaseArticle . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "KnowledgeBaseArticle"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate KnowledgeBaseArticle . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "KnowledgeBaseArticle"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate KnowledgeBaseArticle . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
                 "responses": {
                     "200": {
                         "description": "Success."
@@ -19056,6 +20824,227 @@
                 }
             }
         },
+        "\/Lead\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Lead"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Lead . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Lead"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Lead . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Lead"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Lead . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
         "\/Meeting": {
             "post": {
                 "tags": [
@@ -19965,6 +21954,227 @@
                 },
                 "summary": "Unrelate Meeting . leads",
                 "description": "Unrelate 'Lead' record related though the 'leads' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/Meeting\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Meeting"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Meeting . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Meeting"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Meeting . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Meeting"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Meeting . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
                 "responses": {
                     "200": {
                         "description": "Success."
@@ -22240,6 +24450,227 @@
                 }
             }
         },
+        "\/Opportunity\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Opportunity"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Opportunity . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Opportunity"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Opportunity . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Opportunity"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Opportunity . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
         "\/TargetList": {
             "post": {
                 "tags": [
@@ -23941,6 +26372,227 @@
                 }
             }
         },
+        "\/TargetList\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "TargetList"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List TargetList . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "TargetList"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate TargetList . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "TargetList"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate TargetList . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
         "\/TargetList\/{id}\/users": {
             "parameters": [
                 {
@@ -24888,6 +27540,418 @@
                     },
                     "400": {
                         "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/Task\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Task"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Task . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Task"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate Task . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Task"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate Task . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/Team": {
+            "get": {
+                "tags": [
+                    "Team"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "X-No-Total",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "true",
+                                "false"
+                            ]
+                        },
+                        "description": "Disable calculation of the total number of records."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List Team",
+                "description": "List Team records.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/Team\/{id}": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Team"
+                ],
+                "summary": "Read Team",
+                "description": "Read an existing 'Team' record.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Team"
+                                }
+                            }
+                        },
+                        "description": "Success."
                     },
                     "403": {
                         "description": "Forbidden. Might be an access control error. Check logs for details."
@@ -26770,6 +29834,227 @@
                 },
                 "summary": "Unrelate User . tasks",
                 "description": "Unrelate 'Task' record related though the 'tasks' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            }
+        },
+        "\/User\/{id}\/teams": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    },
+                    "description": "A record ID."
+                }
+            ],
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "description": "A pagination offset."
+                    },
+                    {
+                        "name": "maxSize",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 200
+                        },
+                        "description": "The maximum number of records to return."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "An attribute (field) to order by."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        },
+                        "description": "An order direction."
+                    },
+                    {
+                        "name": "textFilter",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "A text filter query. Wildcard (*) is supported."
+                    },
+                    {
+                        "name": "boolFilterList",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "onlyMy"
+                                ]
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Bool filters."
+                    },
+                    {
+                        "name": "attributeSelect",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "name",
+                                    "rolesIds",
+                                    "rolesNames",
+                                    "positionList",
+                                    "userRole",
+                                    "layoutSetId",
+                                    "layoutSetName",
+                                    "workingTimeCalendarId",
+                                    "workingTimeCalendarName",
+                                    "createdAt",
+                                    "modifiedAt"
+                                ]
+                            }
+                        },
+                        "style": "form",
+                        "explode": false,
+                        "description": "Attributes to return. Select only the necessary ones to improve performance."
+                    },
+                    {
+                        "name": "whereGroup",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/components\/schemas\/whereItem"
+                            }
+                        },
+                        "style": "deepObject",
+                        "explode": true,
+                        "description": "Where items."
+                    }
+                ],
+                "summary": "List User . teams",
+                "description": "List 'Team' records related through the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Team"
+                                            },
+                                            "description": "Records."
+                                        },
+                                        "total": {
+                                            "type": "number",
+                                            "description": "The total number of records. If the total number is disabled, special values are returned: -1 – there are more records to paginate, -2 – there are no more records."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Relate User . teams",
+                "description": "Relate 'Team' record though the 'teams' link.",
+                "responses": {
+                    "200": {
+                        "description": "Success."
+                    },
+                    "400": {
+                        "description": "Bad request. Might be a validation error. Check logs for details."
+                    },
+                    "403": {
+                        "description": "Forbidden. Might be an access control error. Check logs for details."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "An ID of Team record."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Unrelate User . teams",
+                "description": "Unrelate 'Team' record related though the 'teams' link.",
                 "responses": {
                     "200": {
                         "description": "Success."
@@ -31973,6 +35258,115 @@
                     "name",
                     "assignedUserId"
                 ]
+            },
+            "Team": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "readOnly": true,
+                        "description": "An ID."
+                    },
+                    "name": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 100,
+                        "readOnly": false,
+                        "description": "A one-line string."
+                    },
+                    "rolesIds": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "string"
+                        },
+                        "readOnly": false,
+                        "description": "IDs of records of the Role type."
+                    },
+                    "rolesNames": {
+                        "type": [
+                            "object",
+                            "null"
+                        ],
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "readOnly": true,
+                        "description": "An {ID => record name} map."
+                    },
+                    "positionList": {
+                        "type": "array",
+                        "readOnly": false,
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A multi-enum."
+                    },
+                    "layoutSetId": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "readOnly": false,
+                        "description": "An ID of the record of the LayoutSet type."
+                    },
+                    "layoutSetName": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "readOnly": true,
+                        "description": "A foreign record name."
+                    },
+                    "workingTimeCalendarId": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "readOnly": false,
+                        "description": "An ID of the record of the WorkingTimeCalendar type."
+                    },
+                    "workingTimeCalendarName": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "readOnly": true,
+                        "description": "A foreign record name."
+                    },
+                    "createdAt": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "readOnly": true,
+                        "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$",
+                        "examples": [
+                            "2026-11-29 12:34:56"
+                        ],
+                        "description": "A timestamp in UTC."
+                    },
+                    "modifiedAt": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "readOnly": true,
+                        "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$",
+                        "examples": [
+                            "2026-11-29 12:34:56"
+                        ],
+                        "description": "A timestamp in UTC."
+                    }
+                }
+            },
+            "Team_create": {
+                "$ref": "#\/components\/schemas\/Team",
+                "type": "object"
             },
             "User": {
                 "type": "object",
