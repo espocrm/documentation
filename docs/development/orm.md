@@ -903,62 +903,57 @@ Delete:
 
 ```php
 <?php
-$deleteQuery = $entityManager
-    ->getQueryBuilder()
-    ->delete()
+use Espo\ORM\Query\DeleteBuilder;
+
+$query = DeleteBuilder::create()
     ->from('SomeTable')
     ->where([
         'someColumn' => 'someValue'
     ])
     ->build();
 
-$entityManager
-    ->getQueryExecutor()
-    ->execute($deleteQuery);
+$entityManager->getQueryExecutor()->execute($query);
 ```
 
 Select:
 
 ```php
 <?php
-$selectQuery = $entityManager
-    ->getQueryBuilder()
+use Espo\ORM\Query\SelectBuilder;
+
+$query = SelectBuilder::create()
     ->select(['column1', 'column2', 'someExpression'])
     ->from('SomeTable')    
     ->order('column1', 'DESC')
     ->limit(0, 10)
     ->build();
 
-$pdoStatement = $entityManager
-    ->getQueryExecutor()
-    ->execute($selectQuery);
+$pdoStatement = $entityManager->getQueryExecutor()->execute($query);
 ```
 
 ```php
 <?php
-$selectQuery = $entityManager
-    ->getQueryBuilder()
+use Espo\ORM\Query\SelectBuilder;
+
+$query = SelectBuilder::create()
     ->select('SUM:(someColumn)', 'value')
     ->from('SomeTable')    
     ->select('anotherColumn')
     ->groupBy('anotherColumn')
     ->build();
 
-$row = $entityManager
-    ->getQueryExecutor()
-    ->execute($selectQuery)
-    ->fetch();
-
-$sum = $row['value'];
+$pdoStatement = $entityManager->getQueryExecutor()->execute($query);
+$row = $pdoStatement->fetch();
+$sum = $row['value'] ?? 0.0;
 ```
 
 Update:
 
 ```php
 <?php
-$updateQuery = $entityManager
-    ->getQueryBuilder()
-    ->update()
+use Espo\ORM\Query\UpdateBuilder;
+
+$query = UpdateBuilder::create()
     ->in('SomeTable')
     ->set(['status' => 'Expired'])
     ->where([
@@ -967,16 +962,16 @@ $updateQuery = $entityManager
     ])
     ->build();
 
-$entityManager->getQueryExecutor()->execute($updateQuery);
+$entityManager->getQueryExecutor()->execute($query);
 ```
 
 Update with join (in PostgreSQL, a subquery will be used):
 
 ```php
 <?php
-$updateQuery = $entityManager
-    ->getQueryBuilder()
-    ->update()
+use Espo\ORM\Query\UpdateBuilder;
+
+$query = UpdateBuilder::create()
     ->in('SomeTable')
     ->set(['column:' => 'joinAlias.foreignColumn'])
     ->join('AnotherTable', 'joinAlias', ['joinAlias.foreignId:' => 'id'])
@@ -985,18 +980,16 @@ $updateQuery = $entityManager
     ])
     ->build();
 
-$entityManager
-    ->getQueryExecutor()
-    ->execute($updateQuery);
+$entityManager->getQueryExecutor()->execute($query);
 ```
 
 Insert:
 
 ```php
 <?php
-$insertQuery = $entityManager
-    ->getQueryBuilder()
-    ->insert()
+use Espo\ORM\Query\InsertBuilder;
+
+$query = InsertBuilder::create()
     ->into('SomeTable')
     ->columns(['column1', 'column2'])
     ->values([
@@ -1005,16 +998,16 @@ $insertQuery = $entityManager
     ])
     ->build();
 
-$entityManager->getQueryExecutor()->execute($insertQuery);
+$entityManager->getQueryExecutor()->execute($query);
 ```
 
 Mass insert:
 
 ```php
 <?php
-$insert = $entityManager
-    ->getQueryBuilder()
-    ->insert()
+use Espo\ORM\Query\InsertBuilder;
+
+$query = InsertBuilder::create()
     ->into('SomeTable')
     ->columns(['column'])
     ->values([
@@ -1023,26 +1016,22 @@ $insert = $entityManager
     ])
     ->build();
 
-$entityManager
-    ->getQueryExecutor()
-    ->execute($insert);
+$entityManager->getQueryExecutor()->execute($query);
 ```
 
 Mass insert by populating with a select sub-query:
 
 ```php
 <?php
-$insertQuery = $entityManager
-    ->getQueryBuilder()
-    ->insert()
+use Espo\ORM\Query\InsertBuilder;
+
+$query = InsertBuilder::create()
     ->into('SomeTable')
     ->columns(['column'])
     ->valuesQuery($subQuery)
     ->build();
 
-$entityManager
-    ->getQueryExecutor()
-    ->execute($insertQuery);
+$entityManager->getQueryExecutor()->execute($query);
 ```
 
 Union:
