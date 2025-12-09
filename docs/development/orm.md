@@ -1038,9 +1038,9 @@ Union:
 
 ```php
 <?php
-$unionQuery = $entityManager
-    ->getQueryBuilder()
-    ->union()
+use Espo\ORM\Query\UnionBuilder;
+
+$query = UnionBuilder::create()
     ->all()
     ->query($subQuery1)
     ->query($subQuery2)
@@ -1048,18 +1048,16 @@ $unionQuery = $entityManager
     ->limit(0, 5)
     ->build();
 
-$sth = $entityManager
-    ->getQueryExecutor()
-    ->execute($unionQuery);
+$pdoStatement = $entityManager->getQueryExecutor()->execute($query);
 ```
 
 Cloning and modifying an existing query:
 
 ```php
 <?php
-$clonedQuery = $entityManager
-    ->getQueryBuilder()
-    ->clone($query)
+use Espo\ORM\Query\SelectBuilder;
+
+$clonedQuery = SelectBuilder::clone($query)
     ->limit(0, 10)
     ->build();
 ```
