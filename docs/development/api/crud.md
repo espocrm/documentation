@@ -26,8 +26,8 @@ GET parameters:
 * `maxSize` – *int* – max size.
 * `offset` – *int* – offset.
 * `where` – *array* – filters. An alias `whereGroup` can be used instead to prevent false positive firewall blocking. 
-* `orderBy` – *string* – attribute to sort by;
-* `order` – *"asc"|"desc"* – sort direction;
+* `orderBy` – *string* – attribute to sort by.
+* `order` – *"asc"|"desc"* – sort direction.
 * `select` – *string* – list of [attributes](../../administration/terms-and-naming.md#attribute) to be returned, separated by comma; if not specified, then all attributes will be returned; whitespaces are not allowed. An alias `attributeSelect` can be used instead to prevent false positive firewall blocking.
 
 Example:
