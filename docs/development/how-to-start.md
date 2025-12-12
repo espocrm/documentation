@@ -2,8 +2,6 @@
 
 *(for developers)*
 
-When you need to customize Espo for a specific business, it's recommended to craft an installable extension (see Option A).
-
 In this article:
 
 * [Option A. Extension development](#option-a-extension-development)
@@ -13,7 +11,9 @@ In this article:
 
 ## Option A. Extension development
 
-By utilizing the [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. The ext-template tools allow you to run your extension in an Espo instance for testing purposes. See more info in the ext-template repository's readme. 
+Use this approach to customize Espo for a specific business. 
+
+By utilizing the [ext-template](https://github.com/espocrm/ext-template) repository, you can craft an installable extension for EspoCRM. Your repository will contain only your custom files. The ext-template tools allow you to run your extension in an Espo instance for testing purposes. See more info in the ext-template repository's readme. 
 
 It is possible to [install](autoload.md) additional composer libraries in your extension.
 
