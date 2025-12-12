@@ -6,8 +6,8 @@ When you need to customize Espo for a specific business, it's recommended to cra
 
 In this article:
 
-* [Option A. Extension development](#option-b-extension-development)
-* [Option B. Using git repository](#option-a-using-git-repository)
+* [Option A. Extension development](#option-a-extension-development)
+* [Option B. Using git repository](#option-b-using-git-repository)
 * [Configuration for development](#configuration-for-development)
 * [Where to put customizations](#where-to-put-customizations)
 
