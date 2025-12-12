@@ -2,18 +2,24 @@
 
 *(for developers)*
 
-When you need to customize Espo for a specific business, it's recommended to craft an installable extension (see Option B).
+When you need to customize Espo for a specific business, it's recommended to craft an installable extension (see Option A).
 
 In this article:
 
-* [Option A. Using git repository](#option-a-using-git-repository)
-* [Option B. Extension development](#option-b-extension-development)
+* [Option A. Extension development](#option-b-extension-development)
+* [Option B. Using git repository](#option-a-using-git-repository)
 * [Configuration for development](#configuration-for-development)
 * [Where to put customizations](#where-to-put-customizations)
 
-## Option A. Using git repository
+## Option A. Extension development
 
-Using the main EspoCRM repository.
+By utilizing the [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. The ext-template tools allow you to run your extension in an Espo instance for testing purposes. See more info in the ext-template repository's readme. 
+
+It is possible to [install](autoload.md) additional composer libraries in your extension.
+
+## Option B. Using git repository
+
+Using the main EspoCRM repository. Contributors should use this approach.
 
 1. Clone [https://github.com/espocrm/espocrm](https://github.com/espocrm/espocrm) repository (or a forked one) to your local computer.
 2. Change to the project's root directory: `cd path/to/espocrm`.
@@ -84,12 +90,6 @@ node diff {version_from}
 ```
 
 The package will be created in the `build` directory.
-
-## Option B. Extension development
-
-By utilizing the [ext-template](https://github.com/espocrm/ext-template) repository, you can develop an installable extension for EspoCRM. Your repository will contain only your custom files. The ext-template tools allow you to run your extension in an Espo instance for testing purposes. See more info in the ext-template repository's readme. 
-
-It is possible to [install](autoload.md) additional composer libraries in your extension.
 
 ## Configuration for development
 
