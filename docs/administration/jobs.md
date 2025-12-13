@@ -120,6 +120,10 @@ The administrator can configure job parameters under: Administration > Job Setti
 
 It may be reasonable to increase the **Jobs Max Portion** parameter when the number of users in your CRM is increased. It defines the maximum number of jobs that can be processed in a single cron (or daemon) run. By default, it's set to *15*.
 
+#### Force UTC Time Zone
+
+If not checked, the default time zone (set in Administration > Settings) is used for job scheduling. It's highly recommended to have this parameter unchecked. This parameter was introduced to mitigate migration burden when time zone support was introduced for jobs.
+
 ## Running jobs in CLI
 
 To run a specific job manually in CLI
