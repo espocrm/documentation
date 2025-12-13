@@ -122,7 +122,7 @@ It may be reasonable to increase the **Jobs Max Portion** parameter when the num
 
 #### Force UTC Time Zone
 
-If not checked, the default time zone (set in Administration > Settings) is used for job scheduling. It's highly recommended to have this parameter unchecked. This parameter was introduced to mitigate migration burden when time zone support was introduced for jobs.
+If not checked, the default time zone (set in Administration > Settings) is used for job scheduling. It's highly recommended to have this parameter unchecked. This parameter was introduced to mitigate a migration burden when time zone support was introduced for jobs.
 
 ## Running jobs in CLI
 
