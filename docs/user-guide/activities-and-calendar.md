@@ -146,5 +146,6 @@ For custom entities, by default, the *Assigned User* field determines a user who
 ## See also
 
 * [Working time calendar](working-time-calendar.md)
+* [Calendar & Activities quick tour](https://app.supademo.com/demo/cmj2mit950x3tv3e5ae3xp6fa)
 * [How to manage your calendar](https://www.espocrm.com/tips/calendar/)
 * [Meeting scheduler](../extensions/meeting-scheduler/index.md)
