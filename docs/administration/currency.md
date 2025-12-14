@@ -46,7 +46,7 @@ All fields of *Currency* type are paired with a special read-only field of *Curr
 
 !!! note
 
-    When currency rates are changed, the value of Currency Converted field is also changed. Technically the value is not stored, but calculated on-fly. This can cause an issue that your reports get changed every time currency rates are changed.
+    When currency rates are changed, the value of Currency Converted field is also changed. Technically the value is not stored, but calculated on-fly. This can cause an issue that your reports get changed every time currency rates are changed.   
 
 To preserve converted values based on current rates you can:
 
@@ -54,7 +54,7 @@ To preserve converted values based on current rates you can:
 2. Convert currency automatically with the Workflows tool. Convert Currency service action is available for Opportunities, Quotes, Sales Orders, Invoices. E.g. you can setup a workflow that will update currencies for all closed opportunities each week.
 3. Utilize Formula to store a current converted value in a separate read-only field. You can use either a regular Before Save Script or the Workflow tool.
 
-### Storing current converted value (locked)
+### Storing current converted value
 
 Let's assume that you have a currency field named *amount*, and the default currency is *USD*.
 
@@ -68,6 +68,8 @@ amountLocalCurrency = 'USD';
 ```
 
 You can re-calculate formula for all existing records with a mass action from the list view.
+
+Note that some entity types may have already such a field implemented.
 
 ### Convert currency manually
 
