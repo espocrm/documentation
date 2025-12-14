@@ -21,8 +21,6 @@ Parameters:
 * Default Currency – The currency that is pre-set when creating a new record. Currency values are converted to the default currency when filtering records by a currency field, sorting by a currency field, making a grid report with a currency field.
 * Base Currency – The currency used as a base when specifying currency rates.
 
-![BPM example](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/currency-settings.png)
-
 ### Default currency for specific field
 
 It's possible to set an exclusive default currency for a specific field.
