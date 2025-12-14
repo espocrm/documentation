@@ -49,13 +49,13 @@ To preserve converted values based on current rates you can:
 
 Let's assume that you have a currency field named *amount*, and the default currency is *USD*.
 
-Create a new field of *Currency* type, name it *amountConvertedLocked*, make it read-only,
+Create a new field of *Currency* type, name it *amountLocal*, make it read-only. Note that for non-custom entities the field will be named *cAmountLocal*.
 
-Add a Formula script to *Before Save Script* in the Entity Manager. You can also use this formula in a Workflow rule.
+Add a Formula script to the *Before Save Script* in the Entity Manager. You can also use this formula in a Workflow rule.
 
 ```
-amountConvertedLocked = amountConverted;
-amountConvertedLockedCurrency = 'USD';
+amountLocal = amountConverted;
+amountLocalCurrency = 'USD';
 ```
 
 You can re-calculate formula for all existing records with a mass action from the list view.
@@ -112,7 +112,7 @@ Clear cache at Administration.
 
 ## Conversion via formula
 
-Example (conversion from Default Currency to EUR, for the field named *amount*):
+Example (conversion from the default currency to EUR, for a field named *amount*):
 
 ```
 amountEur = amountConverted * record\attribute('Currency', 'EUR', 'rate');
@@ -120,7 +120,7 @@ amountEur = amountConverted * record\attribute('Currency', 'EUR', 'rate');
 
 The field *amountConverted* contains an automatically calculated value in the default currency. Such fields are automatically created for all currency fields.
 
-See also [ext\currency\convert](formula/ext.md#extcurrencyconvert) function.
+You can also use the [ext\currency\convert](formula/ext.md#extcurrencyconvert) function to convert currency amounts.
 
 ## Decimal data type
 
