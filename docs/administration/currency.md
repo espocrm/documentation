@@ -40,7 +40,7 @@ For example, for the *Amount* field of the *Opportunity*, set the *Default* valu
 
 ## Currency conversion
 
-### Currency Converted field
+### Converted field
 
 All fields of *Currency* type are paired with a special read-only field of *Currency Converted* type. When you create a new Currency field, a Converted field is created automatically. This field represents a value converted to *Default Currency* based on current currency rates. This field is used for sorting by currency field, filtering, comparison, reporting. The field is read-only.
 
