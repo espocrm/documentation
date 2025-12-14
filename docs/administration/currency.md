@@ -11,15 +11,26 @@ In this article:
 
 ## Settings & rates
 
-An administrator can configure currency-related parameters and rates at Administration > Currency. 
-
-It's possible to specify which currencies will be available in the system in the *Currency List* parameter.
+An administrator can configure currency-related parameters and rates at Administration > Currency. It's possible to specify which currencies will be available in the system in the *Currency List* parameter.
 
 Parameters:
 
 * Currency List – The currencies available in the system.
-* Default Currency – The currency that is pre-set when creating a new record. Currency values are converted to the default currency when filtering records by a currency field, sorting by a currency field, making a grid report with a currency field.
-* Base Currency – The currency used as a base when specifying currency rates.
+* Default Currency – The currency that is pre-set when creating a new record. Currency values are converted to the default currency when filtering records by a currency field, sorting by a currency field, generating a Grid report with currency fields.
+* Base Currency – The currency used as a base when specifying currency rates. It is usually the local currency in which the company operates.
+
+### Exchange rates
+
+*As of v9.3.*
+
+Currency exchange rates are available under: Administration > Currency > Currency Rates button in the top-right corner. They can be also reacheched from the Global Search with the search *Currencies* query. The Currencies tab can be added to the navigation bar.
+
+Currency exchange rates can be viewed or edited by:
+
+- Admin users
+- Users with access to the Currency scope
+
+A rate entry has a mandatory *Date* field. The rate with the latest non-future date is used as the current rate.
 
 ### Default currency for specific field
 
