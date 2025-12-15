@@ -14,6 +14,7 @@ In the article:
 * [Generating Invoices from Sales Order](#generating-invoices-from-sales-order)
 * [Total Values Layout](#total-values-layout)
 * [Sales Order Items](#sales-order-items)
+* [Delivery](#delivery)
 * [Printing to PDF](#printing-to-pdf)
 * [Sending in email](#sending-in-email)
 * [Automatic numbering](#automatic-numbering)
@@ -52,6 +53,10 @@ The layout of Sales Order Items can be modified at Administration > Layout Manag
 ### Discount Rate
 
 It's possible to specify a discount in percents. To have this ability, an administrator should add the *Discount (%)* field to the *List (Item)* layout.
+
+## Delivery
+
+A Delivery Order can be created from a Sales Order. A button in the top-right corner will appear when the Sales Order is eligible for delivery. The Sales Order must have at least one Product of *Goods* product type for delivery. 
 
 ## Printing to PDF
 
