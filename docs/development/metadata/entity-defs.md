@@ -341,6 +341,8 @@ Dependee attributes.
 
 Loads the field value. Can be used to load non-storable fields (not stored in the entity table).
 
+Within an API request (Record service), processed after *readLoaderClassNameList*.
+
 ### select
 
 *Object*
