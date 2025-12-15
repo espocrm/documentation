@@ -56,7 +56,7 @@ It's possible to specify a discount in percents. To have this ability, an admini
 
 ## Delivery
 
-A Delivery Order can be created from a Sales Order. A button in the top-right corner will appear when the Sales Order is eligible for delivery. The Sales Order must have at least one Product of *Goods* product type for delivery. 
+A Delivery Order can be created from a Sales Order. A button in the top-right corner will appear when the Sales Order is eligible for delivery. The Sales Order must have at least one Product of *Goods* product type to have the ability to create a delivery. 
 
 ## Printing to PDF
 
