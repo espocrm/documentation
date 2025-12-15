@@ -85,9 +85,11 @@ Two options are available: Goods or Services. If Goods is selected, the product 
 
 If enabled, it will be possible to use fractional quantity values for a product.
 
-### Is Inventory
+### Track Inventory
 
-Actual if the *Inventory Transactions* feature is enabled in the system. If the *Is Inventory* parameter is disabled in a product, its quantity won't be tracked. Can be reasonable for service products.
+Available if the *Inventory Transactions* feature is enabled in the system. If the *Track Inventory* parameter is disabled in a product, its quantity won't be tracked.
+
+Note: In the earlier versions this parameter was called *Is Inventory*.
 
 ### Inventory Number Type
 
