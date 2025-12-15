@@ -75,6 +75,12 @@ It's possible to specify Product fields that should be **synced** between Templa
 
 ## Properties
 
+### Product Type
+
+*As of v4.0.*
+
+Two options are available: Goods or Services. If Goods is selected, the product can be used in deliveries, receipts, and transfers, and it allows inventory tracking.
+
 ### Allow Fractional Quantity
 
 If enabled, it will be possible to use fractional quantity values for a product.
