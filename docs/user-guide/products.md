@@ -75,7 +75,7 @@ It's possible to specify Product fields that should be **synced** between Templa
 
 ## Properties
 
-### Product Type
+### Item Type
 
 *As of v4.0.*
 
