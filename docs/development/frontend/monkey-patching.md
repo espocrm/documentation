@@ -7,8 +7,6 @@
 
     Monkey patching is not considered an upgrade-safe method and should be used as a last resort.
 
-A template of a [view](../view.md) is used to render an HTML. Before rendering, the view passes data to the template. Templates can be stored in separate .tpl files or defined right in a the view's `templateContent` property. [Handlebars](https://handlebarsjs.com) library is used for templating.
-
 1\. Define the JS file that will be loaded with the Espo page.
 
 Create `custom/Espo/Custom/Resources/metadata/app/client.json`:
