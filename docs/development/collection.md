@@ -170,41 +170,39 @@ A where clause.
 With a factory:
 
 ```js
-define('custom:views/some-custom-view', ['view'], (View) => {
 
-    return class extends View {
+export default class extends View {
 
-        setup() {
-            this.wait(this.loadCollection());
-        }
-
-        async loadCollection() {
-            this.collection = await this.getCollectionFactory().create('Account');
-
-            await this.collection.fetch();
-        }
+    setup() {
+        this.wait(this.loadCollection());
     }
-});
+
+    async loadCollection() {
+        this.collection = await this.getCollectionFactory().create('Account');
+
+        await this.collection.fetch();
+    }
+}
 ```
 
 Without factory:
 
 ```js
-define('custom:views/some-custom-view', ['view', 'collection'], (View, Collection) => {
+import View from 'view';
+import Collection from 'collection';
 
-    return class extends View {
+export default class extends View {
 
-        setup() {
-            const collection = new Collection();
-            // The URL will be used when fetching from the backend.
-            collection.url = 'MyEntityType/someEndPoint'; 
+    setup() {
+        const collection = new Collection();
+        // The URL will be used when fetching from the backend.
+        collection.url = 'MyEntityType/someEndPoint'; 
 
-            this.wait(
-                collection.fetch()
-            );
-        }
+        this.wait(
+            collection.fetch()
+        );
     }
-});
+}
 ```
 
 ## Events
