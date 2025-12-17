@@ -189,6 +189,13 @@ this.listenTo(model, 'change', (model, options) => {
         // changed via UI
         // this options is set by field view
     }
+
+    // The 'action' option indicates how the change originated.
+    // Possible values: fetch, save, ui, cancel-edit.
+    console.log(options.action);
+
+    // If you want to change the same model within this handler,
+    // use setTimeout with a zero delay to avoid a potential loop.
 });
 
 this.listenToOnce(model, 'change:someAttribute', (model, value, options) => {
@@ -202,7 +209,11 @@ Model synced with backend.
 
 ```js
 this.listenTo(model, 'sync', (model, response, options) => {
-    // synced with backend (fired after fetch or save)
+    // Synced with backend – fired after fetch or save.
+
+    // The 'action' option indicates how the sync originated.
+    // Possible values: fetch, save, destroy.
+    console.log(options.action);
 });
 ```
 
