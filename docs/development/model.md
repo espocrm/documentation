@@ -41,7 +41,7 @@ const attributes = Espo.Utils.cloneDeep(model.attributes);
 
 ### save
 
-Saves a model (to the back-end).
+Saves the model (to the back-end).
 
 ```js
 // Assuming model.id is set.
@@ -55,7 +55,7 @@ try {
 
 ### fetch
 
-Fetches a model (from the backend). Loads attribute values to the model. Returns a promise.
+Fetches the model (from the backend). Loads attribute values to the model. Returns a promise.
 
 ```js
 // Assuming model.id is set.
