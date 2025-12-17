@@ -2,7 +2,7 @@
 
 *As of v7.3.*
 
-EspoCRM supports authentication over OIDC protocol. A user can log in to multiple systems (that your business uses) with a single account. In other words, users can authenticate to Espo with identity providers that support OpenID Connect.
+EspoCRM supports authentication over the OIDC protocol. A user can log in to multiple systems (that your business uses) with a single account. In other words, users can authenticate to Espo with identity providers that support OpenID Connect.
 
 !!! note
 
