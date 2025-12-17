@@ -9,7 +9,6 @@ A collection is a list of models. See the [class](https://github.com/espocrm/esp
 Fetches a collection (from the back-end). Returns a promise.
 
 ```js
-
 collection.fetch();
 
 collection.fetch({
@@ -69,7 +68,8 @@ Remove a model from a collection. Fires a 'remove' event for a model, and an 'up
 ```js
 collection.remove(id);
 collection.remove(model, {
-    silent: true, // Suppresses events.
+    // Suppresses events.
+    silent: true, 
 });
 ```
 
