@@ -9,14 +9,16 @@ A model instance usually represents a single entity record. See the [class](http
 Sets an attribute or multiple attributes.
 
 ```js
+// Set one attribute.
 model.set('attributeName', value);
 
+// Multiple at once.
 model.setMultiple({
     attributeName1: value1,
     attributeName2: value2,
 });
 
-// Options.
+// With options.
 model.setMultiple(attributes, {
     // suppresses 'change' events
     'silent': true, 
