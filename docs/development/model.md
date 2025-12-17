@@ -21,7 +21,7 @@ model.setMultiple({
 // With options.
 model.setMultiple(attributes, {
     // suppresses 'change' events
-    'silent': true, 
+    silent: true, 
 });
 ```
 
