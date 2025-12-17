@@ -11,14 +11,15 @@ Sets an attribute or multiple attributes.
 ```js
 model.set('attributeName', value);
 
-model.set({
+model.setMultiple({
     attributeName1: value1,
     attributeName2: value2,
 });
 
 // Options.
-model.set(attributes, {
-    'silent': true, // suppresses 'change' events
+model.setMultiple(attributes, {
+    // suppresses 'change' events
+    'silent': true, 
 });
 ```
 
@@ -30,6 +31,7 @@ Gets an attribute.
 
 ```js
 const value = model.get('attributeName');
+// or model.attributes.attributeName;
 
 // all attributes
 const attributes = Espo.Utils.cloneDeep(model.attributes);
@@ -41,13 +43,12 @@ Saves a model (to the back-end).
 
 ```js
 // Assuming model.id is set.
-model.save()
-    .then(() => {
-        // callback on success
-    })
-    .catch(() => {
-        // callback on fail
-    });
+try {
+    await model.save()
+} catch() {
+    // Error occurred.
+    return;
+}
 ```
 
 ### fetch
@@ -55,10 +56,8 @@ model.save()
 Fetches a model (from the backend). Loads attribute values to the model. Returns a promise.
 
 ```js
-// assuming model.id is set
-model.fetch()
-    .then(() => {
-    });
+// Assuming model.id is set.
+async model.fetch();
 ```
 
 ### getClonedAttributes
@@ -73,6 +72,10 @@ const attributes = model.getClonedAttributes();
 
 Populate default values.
 
+```js
+model.populateDefaults();
+```
+
 ### setDefs
 
 Sets field and link defs. May be needed if a model instantiated explicitly, not by the factory.
@@ -81,7 +84,7 @@ Sets field and link defs. May be needed if a model instantiated explicitly, not 
 model.setDefs({
     fields: {},
     links: {},
-};
+});
 ```
 
 ## Properties
@@ -125,50 +128,47 @@ const name = model.attributes.name;
 Model-factory is available in views. The model-factory allows to create a model instance of a specific entity type.
 
 ```js
-define('custom:views/some-custom-view', ['view'], (View) => {
+export default class extends View {
 
-    return class extends View {
-    
-        setup() {            
-            // Use wait to hold off rendering until model is loaded.     
-            this.wait(this.loadModel());
-        }
-
-        async loadModel() {
-            this.model = await this.getModelFactory().create('Account');
-    
-            // entityType is set by the factory.
-            //const entityType = this.model.entityType;
-    
-            this.model.id = this.options.id;
-    
-            await model.fetch(); 
-        }
+    setup() {            
+        // Use wait to hold off rendering until model is loaded.     
+        this.wait(this.loadModel());
     }
-})
+
+    async loadModel() {
+        this.model = await this.getModelFactory().create('Account');
+
+        // entityType is set by the factory.
+        //const entityType = this.model.entityType;
+
+        this.model.id = this.options.id;
+
+        await model.fetch(); 
+    }
+}
 ```
 
 Instantiating w/o factory:
 
 ```js
-define('custom:views/some-custom-view', ['view', 'model'], (View, Model) => {
+import View from 'view';
+import Model from 'model';
 
-    return class extends View {
-    
-        setup() {
-            const model = new Model();
+export default class extends View {
 
-            // URL will be used when fetching and saving.
-            model.urlRoot = 'MyModel'; 
-            model.id = 'someId';
-            
-            this.wait(
-                // This performs `GET MyModel/someId` API call.
-                model.fetch(); 
-            );
-        }
+    setup() {
+        const model = new Model();
+
+        // URL will be used when fetching and saving.
+        model.urlRoot = 'MyModel'; 
+        model.id = 'someId';
+        
+        this.wait(
+            // This performs `GET MyModel/someId` API call.
+            model.fetch(); 
+        );
     }
-})
+}
 ```
 
 ## Events
@@ -250,4 +250,10 @@ Passing model to a child view:
 this.createView('someName', 'custom:views/some-view', {
     model: this.model,
 });
+```
+
+Or:
+
+```js
+const view = new MyView({model});
 ```
