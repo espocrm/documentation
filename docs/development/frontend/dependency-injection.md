@@ -24,6 +24,9 @@ import Settings from 'models/settings';
 
 class MyHelper {
 
+    /**
+     * @type {Settings}
+     */
     @inject(Settings)
     config
 }
