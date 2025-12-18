@@ -66,3 +66,7 @@ The following formula functions are available.
 * `ext\workingTime\isWorkingDay(DATE_OR_DATETIME)` – whether a date falls into a working day.
 
 Functions can be applied for the default calendar, user calendar, or team calendar. An entity type ( `'User'` or `'Team'`) and an entity ID can be passed to all workingTime functions as the last two arguments. For example, `ext\workingTime\isWorkingDay(dateStart', 'User', assignedUserId)`.
+
+## See also
+
+* [Quick tour](https://app.supademo.com/demo/cmj9rq2v70sm3f6zpxmxq1npw)
