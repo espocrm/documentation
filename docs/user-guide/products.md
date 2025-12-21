@@ -63,7 +63,7 @@ You can re-generate variants. It will create all missing combinations.
 
     For the same reason, it's not recommended to add additional attributes to product templates, variants of which are already referenced.
 
-### Misc
+### Miscellaneous
 
 When you select a template product (e.g. in a Quote), a modal dialog will appear prompting to select a specific variant.
 
@@ -109,6 +109,3 @@ Available options:
 
 Available if *Inventory Number Type* is not empty. A number of days that is automatically added to the current date to determine an *Expiration Date* of an Inventory Number when the number is created in the system. Note that the Expiration Date then can be changed by a user.
 
-### Tax-free
-
-The product can be marked as *Tax-free*. It will prevent applying the tax rate upon adding the product to a quote, sales order or invoice.
