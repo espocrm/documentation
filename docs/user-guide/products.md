@@ -2,19 +2,19 @@
 
 The Products feature is available in the [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
 
-Products can be added as line items in Opportunities, Quotes, Sales Orders, Invoices, Delivery Orders, Receipt Orders, and Purchase Orders.
+Products can be added as line items in Quotes, Sales Orders, Invoices, Credit Notes, Delivery Orders, Receipt Orders, Purchase Orders, and Opportunities.
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
 
-A product record has 3 price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*. Prices can also be defined in Price Books.
+A product record has 3 price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*. Prices can also be defined in Price Books. Note that it’s possible – and often advisable – to define prices exclusively in Price Books while leaving the list and unit price fields in the product record empty.
 
-Products can be associated with tax classes. This enables automated tax application based on defined tax rules.
+Products can be associated with Tax Classes, enabling automated tax application based on defined tax rules. Whenever a product is added to a document, the appropriate tax will be applied to the item.
 
-With the Inventory Management feature enabled, you can track the availability of each product item.
+With the Inventory Management feature enabled, you can track the availability of each product item. The *Is Inventory* field must be checked in the product record to enable inventory tracking.
 
 Products can be printed to PDF. See more detail [here](quotes.md#templates).
 
-The ability to add products as line items of an Opportunity is disabled by default. The Administrator needs to add the *Items* panel under Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
+The ability to add products as line items of an Opportunity is disabled by default. An administrator needs to add the *Items* panel under Administration > Entity Manager > Opportunity > Layouts > Bottom panels.
 
 In this article:
 
