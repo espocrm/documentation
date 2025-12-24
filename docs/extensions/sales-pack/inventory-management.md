@@ -86,6 +86,10 @@ When inventory is received, Serial numbers should be assigned to every item for 
 
 When inventory is delivered to a customer, Serial numbers should be selected for products that are tracked by serial.
 
+!!! important
+
+    You can create Batch or Serial numbers for a product only if that product is marked as tracked by Batch or Serial correspondingly.
+
 ### Removal Strategy
 
 The Removal Strategy is defined in a Product record. It determines how Inventory Numbers will be sorted when a user picks a number for a delivery or transfer order.
