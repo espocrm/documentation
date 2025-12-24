@@ -239,7 +239,21 @@ To disable the ability to add the field to text filters (in the Entity Manager t
 
 *boolean*
 
-Indicates that the field value is not accessed directly but through some additional logic. The filed won't be available in PDF Templates, Email Templates and some other tools.
+Indicates that the field value is not accessed or written directly but through some additional logic. The field won't be available in PDF Templates, Email Templates and some other tools.
+
+### directUpdateDisabled
+
+*boolean*
+
+Indicates that updating the field directly is not possible. The parameter is not needed if *directAccessDisabled* is true.
+
+### directUpdateEnabled
+
+*boolean*
+
+*As of v9.3.*
+
+Indicates that updating the field directly is possible. To be used if directAccessDisabled is true to indicate that update is possible.
 
 ### filtersEnabled
 
@@ -254,6 +268,14 @@ Indicates that the field can be used in filters regardless directAccessDisabled 
 *boolean*
 
 To disable the ability to import the field.
+
+### importEnabled
+
+*boolean*
+
+*As of v9.3.*
+
+Indicates that import for the field is allowed even if directAccessDisabled or directUpdateDisabled are true.
 
 ### massUpdateDisabled
 
