@@ -24,21 +24,21 @@ The Price Books list view can be accessed at Products > the top-right menu > Pri
 
 A Price Book can be associated with a specific Account. Note that the administrator needs to add the **Price Book** field to the *Detail* layout of the Account entity type to be able to associate accounts with price books.
 
-The Quote, Sales Order and Invoice have the **Price Book** field. When a new record (order) is created, the Price Book is carried over from a related Account. It's possible to change the Price Book for a specific order.
+The Quote, Sales Order and Invoice have the **Price Book** field. When a new record is created, the Price Book is carried over from the related Account. It's possible to change the Price Book for a specific document.
 
 A Price Book can have a **Parent Price Book** and so on. If there's no price found for a specific product in a Price Book, then the system will look up the price in the Parent Price Book.
 
 The **Default Price Book** can be specified at Administration > Sales Pack (Settings). It will be used to fetch default prices when there's no Price Book associated with an order.
 
-When a product is added to an order and there's no price found in a related Price Book or there's no related Price Book, the Default Price Book will be used. If there's no Default Price Book, the price from the Product record will be used.
+When a product is added to a document as a line item and there's no price found in the related Price Book or there's no related Price Book at all, the Default Price Book will be used. If there's no Default Price Book, the price from the Product record will be used. If there's no price defined in the Product record, the price won't be set for the line item.
 
-When a user changes the quantity in an order item, the system will look up the new unit price for that quantity. If there's such, it will prompt the user to apply the new unit price. The user can reject and leave the previous price.
+When a user changes the quantity in a line item, the system will look up the new unit price for the new quantity. If the new unit price is found, it will prompt the user to apply the new unit price. The user can reject and keep the previous price.
 
 It is possible to apply a Price Book to already added line items. The **Apply Price Book** action is available from the dropdown menu next to the plus button that adds line items.
 
 ### Min. Quantity
 
-If specified, the price applies only if the item quantity exceeds the value.
+If set, the price applies only if the item quantity exceeds the specified value.
 
 ### Effective dates
 
