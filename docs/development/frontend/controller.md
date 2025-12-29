@@ -25,7 +25,7 @@ Example:
 }
 ```
 
-If a controller name starts with a capital letter, then the value is treated as a scope name — the class name will be determined by the *controller* parameter: metadata > clientDefs > {scope} > controller. 
+If a controller name starts with a capital letter, then the value is treated as a scope name – the class name will be determined by the *controller* parameter: metadata > clientDefs > {scope} > controller. 
 
 ## Custom route
 
