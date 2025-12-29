@@ -1,5 +1,32 @@
 # Client controller & routing
 
+## Routes
+
+Client routes are defined in metadata > app > clientRoutes.
+
+Example:
+
+```json
+{
+    "MyEntityType/test/:id": {
+        "params": {
+            "controller": "custom:controllers/my-controller",
+            "action": "test"
+        },
+        "order": 1
+    },
+    "MyEntityType/hello/:id": {
+        "params": {
+            "controller": "MyEntityType",
+            "action": "hello"
+        },
+        "order": 2
+    }
+}
+```
+
+If a controller name starts with a capital letter, then the value is treated as a scope name — the class name will be determined by the *controller* parameter: metadata > clientDefs > {scope} > controller. 
+
 ## Custom route
 
 Create a file `custom/Espo/Custom/Resources/metadata/app/clientRoutes.json`:
