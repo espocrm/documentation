@@ -20,8 +20,8 @@ Common hooks for all entity types (called from the ORM Repository class):
 
 !!! warning
 
-    {HookName} must be unique within {EntityType}. If there are two hooks (in different modules) with the same name
-    for the same entity type, only one will be applied (honoring module order).
+    {HookName} must be unique per entity type. If there are two hooks with the same name
+    for the same entity type (defined in different modules), only the first one will be applied (honoring the module order).
 
 ## Hook order
 
