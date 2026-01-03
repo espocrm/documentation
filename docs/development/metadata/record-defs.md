@@ -40,7 +40,9 @@ Array of classes to save additional fields.
 
 Must implement `Espo\Core\FieldProcessing\Saver` interface.
 
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extending.
+!!! note
+
+The saver classes are applied on the ORM level, not on the Record Service level. Technically they should not belong to the recordDefs but they are left here for backward compatibility.
 
 ## selectApplierClassNameList
 
@@ -48,7 +50,6 @@ Array of classes for additional handling of a select query. Use for joining addi
 
 Must implement `Espo\Core\Select\Applier\AdditionalApplier` interface.
 
-**Important**: Need to have `"__APPEND__"` item in the beginning of the array when extending (not needed anymore as of v7.2).
 
 ## loadAdditionalFieldsAfterUpdate
 
