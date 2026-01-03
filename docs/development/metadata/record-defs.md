@@ -42,7 +42,7 @@ Must implement `Espo\Core\FieldProcessing\Saver` interface.
 
 !!! note
 
-The saver classes are applied on the ORM level, not on the Record Service level. Technically they should not belong to the recordDefs but they are left here for backward compatibility.
+    The saver classes are applied on the ORM level, not on the Record Service level. Technically they should not belong to the recordDefs but they are left here for backward compatibility.
 
 ## selectApplierClassNameList
 
