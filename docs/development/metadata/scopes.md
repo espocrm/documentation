@@ -46,6 +46,14 @@ Whether the entity is available in the Layout Manager tool.
 
 Whether the scope is available as a navbar tab.
 
+## tabPortal
+
+*boolean*
+
+*As of v9.3.*
+
+To allow the navbar tab for the portal even if *aclPortal* is false.
+
 ## tabAclPermission
 
 *?string*
