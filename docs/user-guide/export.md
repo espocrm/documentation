@@ -1,6 +1,6 @@
 # Export
 
-Espo has the ability to export records to XLSX (Excel) and CSV formats.
+Espo has the ability to export records to XLSX (Spreadsheet) and CSV formats.
 
 * [How to export](#how-to-export)
 * [Access control](#access-control)
