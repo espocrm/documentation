@@ -4,6 +4,7 @@ Espo has the ability to export records to XLSX (Spreadsheet) and CSV formats.
 
 * [How to export](#how-to-export)
 * [Access control](#access-control)
+* [Parameters](#parameters)
 * [CSV delimiter](#csv-delimiter)
 * [See also](#see-also)
 
@@ -42,7 +43,7 @@ An administrator can disable export function for all non-admin users under Admin
 
 Also it's possible to control access to export function via Roles with the *Export Permission* parameter.
 
-## XLSX
+## Parameters
 
 ### Lite mode
 
@@ -50,7 +51,7 @@ The *Lite* mode consumes much less memory. Recommended if a big number of record
 
 ## CSV delimiter
 
-Users can specify the delimiter for CSV export in Preferences.
+Users can specify the delimiter for CSV export in their Preferences.
 
 The default delimiter for the system can be changed manually in `data/config.php`, parameter `exportDelimiter`.
 
