@@ -19,6 +19,10 @@ In this article:
 * [Zoom integration](#zoom-integration)
 * [Microsoft Teams integration](#microsoft-teams-integration)
 
+See more:
+
+* [Quick tour](https://app.supademo.com/demo/cmk18ly211ylwgmn8ctdsigqr)
+
 ## Access
 
 Access to Meeting Schedulers and Meeting Requests are controlled by roles.
