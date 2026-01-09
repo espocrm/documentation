@@ -9,6 +9,7 @@ In this article:
 * [Running jobs in parallel processes](#running-jobs-in-parallel-processes)
 * [Parameters](#parameters)
 * [Running jobs in CLI](#running-jobs-in-cli)
+* [Tips](#tips)
 
 ## Scheduled jobs
 
@@ -168,6 +169,14 @@ Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-
     ```
     bin/command run-job CheckEmailAccounts --target-id={email_account_id}
     ```
+
+## Tips
+
+### Running job hanging
+
+If a process that is running a job was terminated manually before completion, the job will ramain in the *Running* status for some time until the system marks it as *Failed*. When such a situation occurs for a scheduled job, it will prevent next runs from being scheduled until the hanging job is resolved. You can manually remove that problem job to resolve the problem. Under Administraction > Jobs, find the job with the status *Running* and remove it. 
+
+The period after the hanging running job changes its status to *Failed* is controlled by the [config parameter](https://docs.espocrm.com/administration/config-params/#jobs-daemon) *jobPeriod*.
 
 ## See also
 
