@@ -172,7 +172,7 @@ Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-
 
 ## Tips
 
-### Running job hanging
+### Jobs stuck in running state
 
 If a process that is running a job was terminated manually before completion, the job will ramain in the *Running* status for some time until the system marks it as *Failed*. When such a situation occurs for a scheduled job, it will prevent next runs from being scheduled until the hanging job is resolved. You can manually remove that problem job to resolve the problem. Under Administraction > Jobs, find the job with the status *Running* and remove it.
 
