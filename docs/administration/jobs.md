@@ -174,7 +174,9 @@ Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-
 
 ### Running job hanging
 
-If a process that is running a job was terminated manually before completion, the job will ramain in the *Running* status for some time until the system marks it as *Failed*. When such a situation occurs for a scheduled job, it will prevent next runs from being scheduled until the hanging job is resolved. You can manually remove that problem job to resolve the problem. Under Administraction > Jobs, find the job with the status *Running* and remove it. 
+If a process that is running a job was terminated manually before completion, the job will ramain in the *Running* status for some time until the system marks it as *Failed*. When such a situation occurs for a scheduled job, it will prevent next runs from being scheduled until the hanging job is resolved. You can manually remove that problem job to resolve the problem. Under Administraction > Jobs, find the job with the status *Running* and remove it.
+
+Note that this situation is more common during development and testing, and rarely occurs in production.
 
 The period after the hanging running job changes its status to *Failed* is controlled by the [config parameter](https://docs.espocrm.com/administration/config-params/#jobs-daemon) *jobPeriod*.
 
