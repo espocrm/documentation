@@ -4,6 +4,10 @@
 
     You can run `php command.php` instead of `bin/command`. May be reasonable if there's no execute permission for *bin/command*. To grant execute permission, run `chmod +x bin/command`.
 
+!!! note
+
+    On Unix-based systems, it is reasonable to run commands under the root (or web server) user.
+
 ## List of available commands
 
 ```
@@ -23,10 +27,6 @@ php rebuild.php
 ```
 
 Clears cache, rebuilds database and other things.
-
-!!! note
-
-    On Unix-based systems, it is reasonable to run rebuild under the root or web server user.
 
 ### Hard rebuild
 
