@@ -24,6 +24,10 @@ php rebuild.php
 
 Clears cache, rebuilds database and other things.
 
+!!! note
+
+    On Unix-based systems, it is reasonable to run rebuild under the root or web server user.
+
 ### Hard rebuild
 
 *As of v7.4.*
