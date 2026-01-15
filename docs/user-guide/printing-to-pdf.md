@@ -280,7 +280,7 @@ Displaying certain number of items in one row:
 
     The scope is changed inside an iteration block. To access parent scope attributes, use `../`.
 
-Access a parent scope:
+Access the parent scope:
 
 ```
 {{#each contacts}}
