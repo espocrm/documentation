@@ -1,6 +1,6 @@
 # Export
 
-Espo has the ability to export records to XLSX (Spreadsheet) and CSV formats.
+The Export feature allows you to extract record data in XLSX (Spreadsheet) and CSV formats.
 
 * [How to export](#how-to-export)
 * [Access control](#access-control)
@@ -57,6 +57,6 @@ The default delimiter for the system can be changed manually in `data/config.php
 
 ## See also
 
-* [Quick tour](https://app.supademo.com/demo/cmk5pysph1o5ok6skq80atm08)
+* [Export feature quick tour](https://app.supademo.com/demo/cmk5pysph1o5ok6skq80atm08)
 * [Export Import extension](../extensions/export-import/overview.md)
 * [Import and export tool for quick data migration](https://www.espocrm.com/tips/import-export/)
