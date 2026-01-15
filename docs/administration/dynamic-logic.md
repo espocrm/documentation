@@ -95,4 +95,4 @@ For dynamic logic that is applied only in the frontend, you may consider additio
 
 ## See also
 
-* [Quick tour](https://app.supademo.com/demo/cmke83sqa1io5qm44yrnnenp8)
+* [Dynamic Logic quick tour](https://app.supademo.com/demo/cmke83sqa1io5qm44yrnnenp8)
