@@ -261,7 +261,13 @@ Indicates that updating the field directly is possible. To be used if directAcce
 
 *As of v9.2.*
 
-Indicates that the field can be used in filters regardless directAccessDisabled being true. To be used only with directAccessDisabled.
+Indicates that the field can be used in filters regardless of directAccessDisabled being set to true. To be used only with directAccessDisabled.
+
+### listColumnEnabled
+
+*boolean*
+
+Indicated that the field can be used in list columns regardless of directAccessDisabled being set to true.
 
 ### importDisabled
 
