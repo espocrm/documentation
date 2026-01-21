@@ -108,7 +108,10 @@ Access to Warehouses is controlled by Roles.
 
 The Receipt Order and Delivery Order have the mandatory *Warehouse* field. When products are delivered to a customer, they can be shipped from multiple warehouses. In this case, you need to create multiple Delivery Orders.
 
-It's possible to move inventory between Warehouses with Transfer Orders.
+Inventory can be moved between Warehouses with Transfer Orders.
+
+Inventory from a specific Warehouse can be exluded from stock availability by disabling the *Available for Stock* field.
+
 
 ## Transfer Orders
 
