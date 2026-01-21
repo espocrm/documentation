@@ -110,7 +110,7 @@ The Receipt Order and Delivery Order have the mandatory *Warehouse* field. When 
 
 Inventory can be moved between Warehouses with Transfer Orders.
 
-Inventory from a specific Warehouse can be exluded from stock availability by disabling the *Available for Stock* field.
+Inventory from a specific Warehouse can be exluded from stock availability by disabling the *Available for Stock* field in the Warehouse record.
 
 
 ## Transfer Orders
