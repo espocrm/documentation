@@ -35,6 +35,8 @@ To convert a Lead, you need to click *Convert* button on the Lead detail view. T
 
 A converted Lead won't be removed from the system. It will have status *Converted*, records it was converted to, will be available in the *Converted To* panel on the right.
 
+Note that Leads cannot be converted to Accounts if the system is set to the B2C mode.
+
 ## Opportunities
 
 An Opportunity represents a potential deal or closed sale.
