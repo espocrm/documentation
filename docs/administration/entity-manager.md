@@ -154,4 +154,6 @@ A [formula](formula.md) script called on create and update API requests, before 
 
 All customizations made through Entity Manager are stored in the `custom/Espo/Custom` folder. You need to copy contents of this folder to another instance and then run rebuild (CLI command `php rebuild.php`).
 
+### Exporting as extension
+
 It's also possible to export customization to an installable extension. On the Entity Manager page, from the dropdown next to *Create Entity* button.
