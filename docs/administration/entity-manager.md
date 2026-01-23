@@ -32,7 +32,7 @@ See also:
 
 ## Creating new entity type
 
-Click the **Create Entity** button on the Entity Manager main page (Administration > Entity Manager). Specify the name, labels and select the type. If you select the *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check the **Stream** if you want to have the Stream panel (users will be able to follow records).
+Click the *Create Entity* button on the Entity Manager main page (Administration > Entity Manager). Specify the name, labels and select the type. If you select the *Person* type, your entity will have Email, Phone, First Name, Last Name and Salutation fields. Check the *Stream* if you want to have the Stream panel (users will be able to follow records).
 
 Types:
 
@@ -44,7 +44,7 @@ Types:
 
 ## Entity type parameters
 
-If you click **Edit** on the entity view, you will be able to change parameters of that entity type.
+If you click *Edit* on the entity view, you will be able to change parameters of that entity type.
 
 * Labels – singular and plural names of the entity type.
 * Default order – how records are sorted in list views by default.
@@ -68,7 +68,7 @@ If you click **Edit** on the entity view, you will be able to change parameters 
 
 ## Fields
 
-By clicking the **Fields** button, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
+By clicking the *Fields* button, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
 
 See [more detail](fields.md) about fields in the separate article.
 
@@ -118,7 +118,7 @@ Linking with multiple entity types through the *Link-Parent* field.
 
 #### Link Multiple field
 
-The parameter **Link Multiple Field** implies that the field of the *Link-Multiple* type will be created along with the relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of the detail view screen.
+The parameter *Link Multiple Field* implies that the field of the *Link-Multiple* type will be created along with the relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of the detail view screen.
 
 Examples of link-multiple fields:
 
@@ -142,7 +142,7 @@ To edit the formula script for a specific entity type, follow Administration > E
 
     It can be reasonable to set fields that are supposed to be calculated by formula as read-only (Administration > Entity Manager > {Entity Type} > Fields).
 
-An administrator can run **Recalculate Formula** action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
+An administrator can run *Recalculate Formula* action for specific records from the list view: select records (or all search results) > click *Actions* dropdown > click *Recalculate Formula*.
 
 ### API before-save script
 
