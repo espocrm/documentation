@@ -134,7 +134,7 @@ If the parameter **Audited** is checked, then updates of the relationship will b
 
 ### Before-save custom script
 
-A [formula](formula.md) script will be executed every time before a record is saved. This provides the ability to automatically set specific fields with values derived from calculation. In addition, some functions can perform actions, for example, email sending and record creation.
+This [formula](formula.md) script will be executed every time before a record is saved. This provides the ability to automatically set specific fields with values derived from calculation. In addition, some functions can perform actions, for example, email sending and record creation.
 
 To edit the formula script for a specific entity type, follow Administration > Entity Manager > a needed entity type > Formula.
 
@@ -148,7 +148,7 @@ An administrator can run *Recalculate Formula* action for specific records from 
 
 *As of v7.5.*
 
-A [formula](formula.md) script called on create and update API requests, before the record is saved. See more [detail](api-before-save-script.md).
+This [formula](formula.md) script is called on create and update API requests, before the record is saved. See more [detail](api-before-save-script.md).
 
 ## Copying customizations to another instance
 
