@@ -1,6 +1,6 @@
 # Entity Manager
 
-The Entity Manager tool is available from the Administration panel. It provides the ability to customize your EspoCRM instance.
+The Entity Manager is an essential part of EspCRM. It allows using the system as a platform for custom business application development, as well as customizing the default CRM features.
 
 With the Entity Manager, you can:
 
@@ -8,6 +8,8 @@ With the Entity Manager, you can:
 * Customize existing entity types: change labels, default order and many other parameters.
 * Configure fields: add new and customize existing ones.
 * Configure relationships: add new, change labels and parameters of existing ones.
+
+The Entity Manager tool is available from the Administration panel.
 
 All customizations made via the Entity Manager are stored in the `custom` directory. You can make customizations on a separate instance, then [move](#copying-to-another-instance) them to another instance.
 
