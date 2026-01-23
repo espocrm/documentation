@@ -70,7 +70,7 @@ If you click **Edit** on the entity view, you will be able to change parameters 
 
 By clicking the **Fields** button, you will be moved to a separate page. There, you will be able to create new fields or update existing ones.
 
-[More detail](fields.md) about fields.
+See [more detail](fields.md) about fields in the separate article.
 
 !!! important
 
