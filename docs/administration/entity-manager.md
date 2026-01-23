@@ -24,7 +24,7 @@ In this article:
 * [Fields](#fields)
 * [Relationships](#relationships)
 * [Formula](#formula)
-* [Copying to another instance](#copying-to-another-instance)
+* [Copying customizations to another instance](#copying-customizations-to-another-instance)
 
 See also:
 
@@ -150,7 +150,7 @@ An administrator can run **Recalculate Formula** action for specific records fro
 
 A [formula](formula.md) script called on create and update API requests, before the record is saved. See more [detail](api-before-save-script.md).
 
-## Copying to another instance
+## Copying customizations to another instance
 
 All customizations made through Entity Manager are stored in the `custom/Espo/Custom` folder. You need to copy contents of this folder to another instance and then run rebuild (CLI command `php rebuild.php`).
 
