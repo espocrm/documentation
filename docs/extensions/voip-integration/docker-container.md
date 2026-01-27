@@ -1,22 +1,16 @@
 # VoIP configuration for Docker containers
 
-## Setting up cron
+## Asterisk
 
-To display pop-up windows for calls and correct working of the Asterisk and Starface VoIP extensions in the [Docker](../../administration/installation-by-script.md) instance, you need to insert an additional line into the [crontab](../../administration/server-configuration.md#setting-up-crontab) or use container in the Docker Compose environment. Keep in mind that you need to choose one thing (crontab line or container). 
+To display call pop-up windows and ensure the Asterisk provider works correctly in the [Docker](../../administration/installation-by-script.md) instance, you need to use either a daemon in the Docker Compose environment or add a line to the [crontab](../../administration/server-configuration.md#setting-up-crontab). Choose one of these approaches (either the daemon or the crontab line).
 
-### Asterisk crontab line
+### Daemon (recommended)
 
-This line should be added under `root` or other docker user.
+!!! note
 
-```
-* * * * * /usr/bin/docker exec --user WEBSERVER_USER -i ESPOCRM_DOCKER-CONTAINER /bin/bash -c "cd /var/www/html; php -f command.php voip Asterisk" > /dev/null 2>&1
-```
+    This configuration is displayed for the [official EspoCRM container](../../administration/docker/installation.md#install-espocrm-with-docker-compose).
 
-WEBSERVER_USER can be one of the following: “www”, “www-data”, “apache”, etc (depends on your web-server).
-
-### Asterisk daemon container
-
-When using EspoCRM in a Docker Compose environment, add the following container to the `docker-compose.yml` file (the previous line for crontab is not needed in this case):
+Add the following container to your `docker-compose.yml` file:
 
 ```
   espocrm-daemon-voip:
@@ -28,3 +22,16 @@ When using EspoCRM in a Docker Compose environment, add the following container 
     entrypoint: []
     command: ["php", "/var/www/html/command.php", "voip", "Asterisk"]
 ```
+
+### Crontab line
+
+!!! important
+
+    This line should be added under `root` or other docker user.
+
+```
+* * * * * /usr/bin/docker exec --user WEBSERVER_USER -i ESPOCRM_DOCKER-CONTAINER /bin/bash -c "cd /var/www/html; php -f command.php voip Asterisk" > /dev/null 2>&1
+```
+
+Replace `WEBSERVER_USER` with one of the following values: `www-data`, `www`, `apache`, etc., depending on your web server.
+
