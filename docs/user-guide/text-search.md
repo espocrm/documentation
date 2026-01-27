@@ -62,7 +62,7 @@ If you change this parameter in MySQL, you also need to run rebuild in Espo.
 
 ### Stopwords
 
-MySQL has the list of [stopwords](https://dev.mysql.com/doc/refman/8.0/en/fulltext-stopwords.html) that are ignored by full-text search. E.g. *hello*.
+[MySQL](https://dev.mysql.com/doc/refman/8.0/en/fulltext-stopwords.html) and [MariaDB](https://mariadb.com/docs/server/ha-and-performance/optimization-and-tuning/optimization-and-indexes/full-text-indexes/full-text-index-stopwords) have the list of stopwords that are ignored by full-text search.
 
 ### Autocomplete
 
