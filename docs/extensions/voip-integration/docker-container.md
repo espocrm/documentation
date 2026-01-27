@@ -13,14 +13,14 @@ To display call pop-up windows and ensure the Asterisk provider works correctly 
 Add the following container to your `docker-compose.yml` file:
 
 ```yml
-  espocrm-daemon-voip:
-    image: espocrm/espocrm:latest
-    container_name: espocrm-daemon-voip
-    volumes:
-      - espocrm:/var/www/html
-    restart: always
-    entrypoint: []
-    command: ["php", "/var/www/html/command.php", "voip", "Asterisk"]
+espocrm-daemon-voip:
+  image: espocrm/espocrm:latest
+  container_name: espocrm-daemon-voip
+  volumes:
+    - espocrm:/var/www/html
+  restart: always
+  entrypoint: []
+  command: ["php", "/var/www/html/command.php", "voip", "Asterisk"]
 ```
 
 ### Crontab line
