@@ -95,4 +95,4 @@ Note: Additional phone numbers are used for incoming calls only. Outgoing calls 
 
 ## Setting up cron for Docker container
 
-To display pop-up windows for calls and correct working of the Asterisk VoIP extension in the Docker instance, you need to insert an additional line into the crontab. More [here](docker-container.md#asterisk-crontab-line).
+To display call pop-up windows and ensure the Asterisk provider works correctly in Docker, use either a daemon in the Docker Compose environment or add a cron job. For more information, see [Docker container setup](docker-container.md#asterisk).

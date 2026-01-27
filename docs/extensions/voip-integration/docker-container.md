@@ -12,7 +12,7 @@ To display call pop-up windows and ensure the Asterisk provider works correctly 
 
 Add the following container to your `docker-compose.yml` file:
 
-```
+```yml
   espocrm-daemon-voip:
     image: espocrm/espocrm:latest
     container_name: espocrm-daemon-voip
@@ -29,7 +29,7 @@ Add the following container to your `docker-compose.yml` file:
 
     This line should be added under `root` or other docker user.
 
-```
+```bash
 * * * * * /usr/bin/docker exec --user WEBSERVER_USER -i ESPOCRM_DOCKER-CONTAINER /bin/bash -c "cd /var/www/html; php -f command.php voip Asterisk" > /dev/null 2>&1
 ```
 
