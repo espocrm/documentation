@@ -36,15 +36,15 @@ The field list which is used in filtering can be configured under Administration
 
 ## Full-text search
 
-Full-text search provides the ability to perform much faster and comprehensive text search.
+Full-text search provides the ability to perform much faster and comprehensive text search. The full-text is performed at the database level.
 
-The Full-text search can be enabled for a specific entity type under Administration > Entity Manager > {Entity Type} > Edit > Full-text search.
+The full-text search can be enabled for a specific entity type under Administration > Entity Manager > {Entity Type} > Edit > Full-text search.
 
-After enabling of Full-text-search, running rebuild is required. If you have many records, it's recommended to run rebuild from CLI: `php rebuild.php`.
+After enabling full-text-search, running rebuild is required. If you have many records, it's recommended to run rebuild from CLI: `php rebuild.php`.
 
-The Full-text search is always applied in the **Global Search** for entity types with enabled full-text search.
+In Global Search, the full-text search is always applied (for entity types with enabled full-text search).
 
-The Full-text search is also applied when you search in the list view. Though it can be skipped for some search queries. Yet, it's possible to force a full-text usage by prepending `ft:` to your search query.
+The full-text search is also applied when you search in the list view. Though it can be skipped for some search queries. Yet, it's possible to force a full-text usage by prepending `ft:` to your search query.
 
 The following operators are available:
 
