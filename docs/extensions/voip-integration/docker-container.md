@@ -25,5 +25,6 @@ When using EspoCRM in a Docker Compose environment, add the following container 
     volumes:
       - espocrm:/var/www/html
     restart: always
+    entrypoint: []
     command: ["php", "/var/www/html/command.php", "voip", "Asterisk"]
 ```
