@@ -13,7 +13,7 @@ By default, EspoCRM has some pre-defined indexes. As your database gets bigger, 
 * You need indexes for fields that are used for a default order.
 * You need indexes for fields that are often used in filters (reports & regular searches).
 
-See article about [how to create indexes](../development/db-indexes.md).
+See the article on [how to create indexes](../development/db-indexes.md).
 
 ## Database choice
 
