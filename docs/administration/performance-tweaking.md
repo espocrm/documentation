@@ -41,7 +41,7 @@ We recommend to set it to `2`.
 
 ### Disabling total count on list view
 
-It is relevant if there are a lot of records of a specific entity type in the database. In this case, it can be reasonable to disable displaying a record count on the list view for that entity type, since the COUNT function may perform very slow in MySQL and MariaDB.
+It is relevant if there are a lot of records of a specific entity type in the database. In this case, it can be reasonable to disable displaying the record count in the list view for that entity type, since the COUNT function may perform very slow in MySQL and MariaDB.
 
 To disable: Administration > Entity Manager > {entity type} > Edit > check *Disable record count*.
 
