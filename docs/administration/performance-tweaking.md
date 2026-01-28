@@ -21,8 +21,6 @@ Filters by teams, relations, multi-enums perform faster in MariaDB and PostgreSQ
 
 ## MySQL and MariaDB parameters
 
-*Also valid for MariaDB.*
-
 #### innodb_buffer_pool_size
 
 It's recommended to set a value that is about 70% of your RAM.
