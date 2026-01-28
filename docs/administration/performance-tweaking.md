@@ -17,7 +17,7 @@ See the article on [how to create indexes](../development/db-indexes.md).
 
 ## Database choice
 
-Filters by teams, relations, multi-enums perform faster on MariaDB.
+Filters by teams, relations, multi-enums perform faster in MariaDB and PostgreSQL than in MySQL (as of the date of we peformed tests).
 
 ## MySQL params
 
