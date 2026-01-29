@@ -457,6 +457,7 @@ Markdown is supported. It allows to to display a link for the user.
 ## Config parameters
 
 * `workflowSendRequestTimeout` – `7` – a timeout for the Send HTTP Request action;
+* `workflowEmailSiteUrl` – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking URLs; you will need to configure your server to handle requests to the specified URL); the parameter is applied for emails sent using workflows and BPM;
 
 ## See also
 
