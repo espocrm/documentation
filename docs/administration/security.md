@@ -6,7 +6,7 @@ Don't use an admin user for everyday work. Use a regular user instead.
 
 ## 2-factor authentication
 
-Enable 2FA for CRM users. Force regular users to set up 2FA. Can be done at Administration > Authentication.
+Enable 2FA for users. Require regular users to set up 2FA with the corresponding parameter. Can be enabled at Administration > Authentication.
 
 ## Disable password recovery for admins
 
