@@ -141,7 +141,7 @@ The list of parameters along with their default values. This is not a full list 
 * authLogDisabled – `false` – disable auth log records (as of v7.4);
 * authApiUserLogDisabled – `false` – disable auth log records for successful connections of API users (as of v7.4);
 * auth2FAEmailCodeLifetimePeriod – `'10 minutes'` – lifetime of email 2FA codes;
-* auth2FASmsCodeLifetimePeriod – `'20 minutes'` – lifetime of SMS 2FA codes;
+* auth2FASmsCodeLifetimePeriod – `'10 minutes'` – lifetime of SMS 2FA codes;
 
 ### Security
 
