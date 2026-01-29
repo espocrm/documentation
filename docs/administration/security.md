@@ -14,7 +14,7 @@ Can be done at Administration > Authentication. If you lost admin access and wan
 
 ## Password strength
 
-Consider configuring password strength parameters (at Administration > Authentication).
+Configurre password strength parameters (at Administration > Authentication). The minimum recommended password length is at least 10 characters. Require digits, and both upper case and lower case letters.
 
 ## Auth token expiration
 
