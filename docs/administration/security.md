@@ -1,20 +1,24 @@
 # Security recommendations
 
+## Password strength
+
+❗ Important.
+
+Configurre password strength parameters (at Administration > Authentication). The minimum recommended password length is at least 10 characters. Require digits, and both upper case and lower case letters.
+
+## 2-factor authentication
+
+❗ Important.
+
+Enable 2FA for users. Require regular users to set up 2FA with the corresponding parameter. Can be enabled at Administration > Authentication.
+
 ## Don't use admin user
 
 Don't use an admin user for everyday work. Use a regular user instead.
 
-## 2-factor authentication
-
-Enable 2FA for users. Require regular users to set up 2FA with the corresponding parameter. Can be enabled at Administration > Authentication.
-
 ## Disable password recovery for admins
 
 Can be done at Administration > Authentication. If you lost admin access and want to recover your password, set 'passwordRecoveryForAdminDisabled' to *false* in `data/config.php`.
-
-## Password strength
-
-Configurre password strength parameters (at Administration > Authentication). The minimum recommended password length is at least 10 characters. Require digits, and both upper case and lower case letters.
 
 ## Auth token expiration
 
