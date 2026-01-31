@@ -93,5 +93,6 @@ The separate navbar Global Stream tab is available. It can be also reached from 
 
 ## See also
 
+* [Stream quick tour](https://app.supademo.com/demo/cmkvg6g2n2z4p12hh6xvxp6nf)
 * [Activity Stream – Keep up with changes](https://www.espocrm.com/tips/activity-stream/)
 * [Following records in EspoCRM](https://www.espocrm.com/tips/follow-records/)
