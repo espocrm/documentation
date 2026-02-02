@@ -23,7 +23,7 @@ Parameters:
 
 *As of v9.3.*
 
-Currency exchange rates are available under: Administration > Currency > Currency Rates button in the top-right corner. They can be also reacheched from the Global Search with the search *Currencies* query. The Currencies tab can be added to the navigation bar.
+Currency exchange rates are available under: Administration > Currency > Currency Rates button in the top-right corner. They can be also reached from the Global Search with the search *Currencies* query. The Currencies tab can be added to the navigation bar.
 
 Currency exchange rates can be viewed or edited by:
 
