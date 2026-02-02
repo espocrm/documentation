@@ -2,7 +2,7 @@
 
 ### Requirements
 
-EspoCRM can run on most hosting providers that support PHP and a MySQL, MariaDB, or PostrgreSQL database. See the [server configuration](server-configuration.md) article for more information.
+EspoCRM can run on most hosting providers that support PHP and a MySQL, MariaDB, or PostgreSQL database. See the [server configuration](server-configuration.md) article for more information.
 
 ### 1. Download EspoCRM installation package
 

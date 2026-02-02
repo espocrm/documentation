@@ -92,7 +92,7 @@ If after upgrade the system does not work properly and you want to quickly rever
 - `public`
 - `vendor`
 
-3\. Copy all files from the downloaded build to the root directory of your instance. Exising files to be replaced.
+3\. Copy all files from the downloaded build to the root directory of your instance. Existing files to be replaced.
 
 4\. Fix [file permissions](server-configuration.md#permissions) if needed.
 
