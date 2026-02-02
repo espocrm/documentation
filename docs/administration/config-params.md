@@ -151,7 +151,7 @@ The list of parameters along with their default values. This is not a full list 
 *As of v9.3.*
 
 * authUsernameFailedAttemptsLimitEnabled – `false` – enables brute force prevention measure delays;
-* authMaxUsernameFailedAttemptNumber – `30` – if the number of failed login attempts withina specific period exceeds the specified number, then the system will do a delay;
+* authMaxUsernameFailedAttemptNumber – `30` – if the number of failed login attempts within a specific period exceeds the specified number, then the system will do a delay;
 * authUsernameFailedAttemptsPeriod – `'60 seconds'` – period taken into account;
 * authUsernameFailedAttemptsDelay – `2` – delay in seconds;
 
