@@ -75,7 +75,7 @@ php upgrade.php /path/to/upgrade/package.zip
 
 !!! warning
 
-    This is not recommended way to upgrade. It may cause problems as the upgrade will be processed in a single web server process.
+    This is not a recommended way to upgrade. It may cause problems as the upgrade will be processed in a single web server process.
 
 #### Step 1. Check your current version
 
