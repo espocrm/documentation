@@ -145,7 +145,7 @@ The list of parameters along with their default values. This is not a full list 
 * authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
 * authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
 * authFailedCodeAttemptsPeriod – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
-* 
+
 #### Brute force prevention for user name
 
 *As of v9.3.*
