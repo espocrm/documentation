@@ -95,8 +95,6 @@ All files should be owned and group-owned by the webserver process. It can be *w
 
 !!! note
 
-    On Bitnami Stack, files should be owned and group-owned by *daemon* user.
-
     On shared hosts, files should be owned and group-owned by your user account.
 
 
