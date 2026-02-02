@@ -136,7 +136,10 @@ The list of parameters along with their default values. This is not a full list 
 
 * authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
 * authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
-* authFailedCodeAttemptsPeriod `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
+* authFailedCodeAttemptsPeriod – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
+* authUsernameFailedAttemptsLimitEnabled – `false` – enables brute force prevention measure delays (as of v9.3);
+* authMaxUsernameFailedAttemptNumber – `30` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system will do a delay (for *authUsernameFailedAttemptsLimitEnabled*);
+* authUsernameFailedAttemptsDelay – `2` – delay in seconds (for *authUsernameFailedAttemptsLimitEnabled*);
 * authAnotherUserDisabled – `false` – disable the ability to log in as another user for admins (as of v7.3);
 * authLogDisabled – `false` – disable auth log records (as of v7.4);
 * authApiUserLogDisabled – `false` – disable auth log records for successful connections of API users (as of v7.4);
