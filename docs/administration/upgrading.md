@@ -93,6 +93,29 @@ Go to Administration > Upgrade. Upload and install upgrade packages one by one.
 
 Espo upgrades should not break customizations made via the UI. But customizations made via code may break. To review breaking changes before upgrading, check release notes or GitHub issues marked with the *change* tag.
 
+## Quick revert
+
+If after upgrade the system does not work properly and you want to quickly revert the previous version, you can use this method. Note that this method is not equivalent to a full backup recovery.
+
+1\. Download the previous version build from the [releases](https://github.com/espocrm/espocrm/releases) on GitHub.
+
+2\. Remove the following folders in your problem instance:
+
+- `application`
+- `html`
+- `public`
+- `vendor`
+
+3\. Copy all files from the downloaded build to the root directory of your instance. Exising files to be replaced.
+
+4\. Fix [file permissions](server-configuration.md#permissions) if needed.
+
+5\. Run rebuild:
+
+```
+php rebuild.php
+```
+
 ## See also
 
 * [Upgrading manually](upgrading-manually.md)
