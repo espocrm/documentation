@@ -2,8 +2,6 @@
 
 ## Upgrade from CLI
 
-*As of v5.6.*
-
 This is the preferable way to upgrade.
 
 Command to run:
@@ -57,18 +55,6 @@ Example of using parameters:
 
 ```
 php command.php upgrade -y --file="EspoCRM-upgrade.zip"
-```
-
-## Legacy way to upgrade
-
-!!! warning
-
-    For EspoCRM versions lower than 5.6.0. Not recommended for versions greater than 5.6.0.
-
-Execute the following command from the EspoCRM root directory:
-
-```
-php upgrade.php /path/to/upgrade/package.zip
 ```
 
 ## Upgrade from UI
