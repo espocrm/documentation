@@ -134,17 +134,25 @@ The list of parameters along with their default values. This is not a full list 
 
 ### Auth
 
-* authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
-* authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
-* authFailedCodeAttemptsPeriod – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
-* authUsernameFailedAttemptsLimitEnabled – `false` – enables brute force prevention measure delays (as of v9.3);
-* authMaxUsernameFailedAttemptNumber – `30` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system will do a delay (for *authUsernameFailedAttemptsLimitEnabled*);
-* authUsernameFailedAttemptsDelay – `2` – delay in seconds (for *authUsernameFailedAttemptsLimitEnabled*);
 * authAnotherUserDisabled – `false` – disable the ability to log in as another user for admins (as of v7.3);
 * authLogDisabled – `false` – disable auth log records (as of v7.4);
 * authApiUserLogDisabled – `false` – disable auth log records for successful connections of API users (as of v7.4);
 * auth2FAEmailCodeLifetimePeriod – `'10 minutes'` – lifetime of email 2FA codes;
 * auth2FASmsCodeLifetimePeriod – `'10 minutes'` – lifetime of SMS 2FA codes;
+
+#### Brute force prevention for IP address
+
+* authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
+* authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
+* authFailedCodeAttemptsPeriod – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
+* 
+#### Brute force prevention for user name
+
+*As of v9.3.*
+
+* authUsernameFailedAttemptsLimitEnabled – `false` – enables brute force prevention measure delays;
+* authMaxUsernameFailedAttemptNumber – `30` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system will do a delay;
+* authUsernameFailedAttemptsDelay – `2` – delay in seconds;
 
 ### Security
 
