@@ -142,8 +142,8 @@ The list of parameters along with their default values. This is not a full list 
 
 #### Brute force prevention for IP address
 
-* authMaxFailedAttemptNumber – `10` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system won't allow to login; 
-* authFailedAttemptsPeriod – `'60 seconds'` – period taken into account for *authMaxFailedAttemptNumber*;
+* authMaxFailedAttemptNumber – `10` – if the number of failed login attempts within a specific period exceeds the specified number, then the system won't allow to login; 
+* authFailedAttemptsPeriod – `'60 seconds'` – period taken into account;
 * authFailedCodeAttemptsPeriod – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
 
 #### Brute force prevention for user name
@@ -151,7 +151,8 @@ The list of parameters along with their default values. This is not a full list 
 *As of v9.3.*
 
 * authUsernameFailedAttemptsLimitEnabled – `false` – enables brute force prevention measure delays;
-* authMaxUsernameFailedAttemptNumber – `30` – if number of failed login attempts (within *authFailedAttemptsPeriod*) exceeds the set number, then the system will do a delay;
+* authMaxUsernameFailedAttemptNumber – `30` – if the number of failed login attempts withina specific period exceeds the specified number, then the system will do a delay;
+* authUsernameFailedAttemptsPeriod – `'60 seconds'` – period taken into account;
 * authUsernameFailedAttemptsDelay – `2` – delay in seconds;
 
 ### Security
