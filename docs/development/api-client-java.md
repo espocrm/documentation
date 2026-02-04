@@ -55,7 +55,7 @@ public class ExampleClass {
         EspoApiClient client = new ClientBuilder()
             .setHost("YOUR ESPOCRM HOST")
             .setApiKey("YOUR ESPOCRM API KEY")
-            .setSecretKey("YOUR ESPOCRM SECRET KEY")
+            .setSecretKey("YOUR ESPOCRM SECRET KEY") // for HMAC method
             .build();
 
         Where[] whereFilter = new Where[] {
@@ -82,4 +82,5 @@ public class ExampleClass {
     }
 }
 ```
+
 
