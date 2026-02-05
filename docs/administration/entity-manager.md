@@ -11,7 +11,7 @@ With the Entity Manager, you can:
 
 The Entity Manager tool is available from the Administration panel.
 
-All customizations made via the Entity Manager are stored in the `custom` directory. You can make customizations on a separate instance, then [move](#copying-to-another-instance) them to another instance.
+All customizations made via the Entity Manager are stored in the `custom` directory. You can make customizations on a separate instance, then [copy](#copying-customizations-to-another-instance) them to another instance.
 
 !!! note
 
