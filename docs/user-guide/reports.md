@@ -39,9 +39,10 @@ In the *Columns* field, select the fields you would like to have displayed in th
 
 * Width – width in percents;
 * Align – how to align data: left or right;
-* Link – a value will be displayed as a link leading to the record detail view;
-* Export Only – a column won't be displayed in report results on the UI, but it will be available in export;
-* Not Sortable – a column cannot be ordered by, some fields are not available for sorting.
+* Link – value will be displayed as a link leading to the record detail view;
+* Export Only – the column won't be displayed in report results on the UI, but it will be available in export;
+* Not Sortable – the column cannot be ordered by, some fields are not available for sorting;
+* Hidden – the column will be hidden but can be optionally shown in the report result view.
 
 Choose the needed sorting in the *List Order* field.
 
