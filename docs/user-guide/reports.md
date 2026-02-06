@@ -188,7 +188,7 @@ It's possible to export grid report results to XLSX (spreadsheet) and CSV format
 
 !!! important
 
-    If a Grid report contains non-aggregated columns, te chart is not printed on the spreadsheet.
+    If a Grid report contains non-aggregated columns, the chart is not printed on the spreadsheet.
 
 ### Access
 
