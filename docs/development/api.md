@@ -52,6 +52,8 @@ See also:
 
 The OpenAPI specification for your Espo instance (including custom entity types and fields) covering the main CRUD operations can be obtained from the `/api/v1/OpenApi` endpoint. The endpoint is available for admin users and API users with the *OpenAPI* scope enabled in roles.
 
+You can also obtain the OpenAPI specification under: Administration > API Users > top-right menu > OpenAPI spec.
+
 ## Client implementations
 
 * [PHP](api-client-php.md)
