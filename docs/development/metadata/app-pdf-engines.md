@@ -33,3 +33,9 @@ Implementations.
 *string[]*
 
 A list of fonts available for the engine.
+
+## additionalParams
+
+*object*
+
+Additional engine-wise parameters.
