@@ -65,6 +65,10 @@ Where list reports can be also utilized:
 * Panels on the detail view – to display related records that met some criteria on the side panel, more info [below](#report-panels).
 * Applying assignment rule – to assign records that met specific criteria by workflow or BPM.
 
+### Results view
+
+The results view can be accessed under: Report detail view > Results View button (top-right corner). Here, the report is displayed in full width. You can show or hide specific columns as well as resize them.
+
 ## Grid Reports
 
 Grid reports display summarized values, can be grouped by one or two fields, and support chart visualization.
