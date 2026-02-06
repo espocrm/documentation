@@ -9,6 +9,7 @@ In this article:
 * [Creating from email attachment](#creating-from-email-attachment)
 * [Uploading in attachments](#uploading-in-attachments)
 * [File types](#file-types)
+* [See also](#see-also)
 
 ## Folders
 
@@ -31,3 +32,7 @@ It's possible to upload existing Documents directly in Attachment-Multiple field
 ## File types
 
 An administrator can configure allowed file types. Under Administration > Entity Manager > Document > Fields > File, specify allowed file types in the "Accept" parameter.
+
+## See also
+
+* [Documents quick tour](https://app.supademo.com/demo/cml9ij9ru1tgyvhwzri4tcrc0)
