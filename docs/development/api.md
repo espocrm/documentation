@@ -1,7 +1,7 @@
 # API Overview
 
-EspoCRM is a single page application so the frontend uses REST API to connect with the backend. 
-All operations you perform using the UI, you can implement via API calls using your programming language. 
+EspoCRM is a single page application so the frontend uses REST API to connect with the backend.
+All operations you perform using the UI, you can implement via API calls using your programming language.
 You can learn how the API works if you trace what's going in the network tab in your browser console (press F12 key to open the console).
 
 Most of API functions return JSON. POST and PUT requests usually need some data passed in the payload in JSON format. Whenever you send a JSON payload, add the header: `Content-Type: application/json`.
@@ -50,7 +50,7 @@ See also:
 
 *As of v9.3.*
 
-The OpenAPI specification for your Espo instance (including custom entity types and fields) covering the main CRUD operations can be obtained from the `/api/v1/OpenAPI` endpoint. The endpoint is available for admin users and API users with the *OpenAPI* scope enabled in roles.
+The OpenAPI specification for your Espo instance (including custom entity types and fields) covering the main CRUD operations can be obtained from the `/api/v1/OpenApi` endpoint. The endpoint is available for admin users and API users with the *OpenAPI* scope enabled in roles.
 
 ## Client implementations
 
