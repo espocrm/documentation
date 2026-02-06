@@ -104,6 +104,13 @@ MAP:(
 )
 ```
 
+A report grouped by two fields is called *2-dimensional*.
+
+The results table for 2-dimentional Grid reports can be displayed in two modes:
+
+- Regular – columns represent the first grouping field of the report, and rows represent the second grouping field.
+- Normalized – unpivoted (flattened), with both grouping fields displayed in rows.
+
 ### Columns
 
 In the *Columns* field, select one or more **aggregate** functions applied to a specific field.
