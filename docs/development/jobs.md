@@ -52,7 +52,7 @@ Queues available out of the box:
 * e0 – intended for email sending; run as often as possible; one-by-one;
 * q0 – for general use; run as often as possible; one-by-one;
 * q1 – for general use; run every minute; one-by-one;
-* m0 – run in-parallel along with the main queue; as of v9.2.
+* m0 – run in-parallel along with the main queue; used to avoid disruption of the main queue; as of v9.2.
 
 Portion size is controller by [config parameters](../administration/config-params.md#jobs-daemon).
 
