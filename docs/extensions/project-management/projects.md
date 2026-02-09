@@ -28,6 +28,14 @@ Each Project has a Stream. It can be used to post information or attach files. P
 
 A Project has Activities and History panels. Meetings, Calls, and Emails can be related to a Project.
 
+### Project categories
+
+*As of v1.4.*
+
+Projects can be organized into categories. Categories follow a hierarchical, tree-like structure.
+
+Access to categories is controlled by Roles, with the Project Category scope. Only administrators can create or edit cateogiries.
+
 ![Project](../../_static/images/extensions/project-management/project.png){width="594"}
 
 ## Boards
@@ -84,7 +92,7 @@ A Project Role defines the following Task related permissions:
 
 It also defines one Project related permission:
 
-* Project Stream – yes/no – can view the Project's stream (since v1.4).
+* Project Stream – yes/no – can view the Project's stream (as of v1.4).
 
 !!! note
 
