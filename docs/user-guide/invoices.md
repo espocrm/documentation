@@ -205,6 +205,14 @@ Note that it's possible to automatically populate country records with English n
 
 Example: If you run business from Germany, your customer is also in Germany and you use the word *Germany* when storing the country in Espo, you need to create the *Germany* Address Country record with the *DE* code.
 
+### EN 16931 tax mapping
+
+Tax codes can be mapped to [UNCL5305](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL5305/) category code.
+Additionally, a mapping entry can specify a tax class. If the tax class is specified, the mapping will be applied
+to a document items with a product associated with that tax class.
+
+Access mapping at: Administration > EN 16931 Tax Mapping.
+
 ## Locking
 
 An Invoice can be locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure the field list at: Administration > Entity Manager > Invoice > Edit.
