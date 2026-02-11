@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Entity Manager
 
 The Entity Manager is an essential part of EspoCRM. It allows using the system as a platform for custom business application development, as well as customizing the default CRM features.

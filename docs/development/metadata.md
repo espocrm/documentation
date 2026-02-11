@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Metadata
 
 Metadata is intended for storing application data such as fields, relationships, front-end controllers, views, panels, dashlets etc.

@@ -1,3 +1,10 @@
+---
+search:
+  boost: 2
+tags:
+  - pdf
+---
+
 # Printing to PDF
 
 The Print to PDF feature allows to generate PDF documents with record data. The document content is defined by a Template.

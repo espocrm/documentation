@@ -1,3 +1,10 @@
+---
+search:
+  boost: 2
+tags:
+  - roles
+---
+
 # Role Management
 
 In this article:

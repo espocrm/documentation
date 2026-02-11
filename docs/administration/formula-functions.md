@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Formula Functions
 
 The format of function usage: `groupName\functionName(argument1, argument2, ..., argumentN)`.

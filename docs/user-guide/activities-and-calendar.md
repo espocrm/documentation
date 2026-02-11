@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Activities & Calendar
 
 There are three types of activities available in EspoCRM by default:

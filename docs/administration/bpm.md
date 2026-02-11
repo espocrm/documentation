@@ -1,3 +1,11 @@
+---
+search:
+  boost: 2
+tags:
+  - automation
+  - bpm
+---
+
 # Business Process Management
 
 The Business Process Management (BPM) tool provides the ability to model and automate business processes in EspoCRM in a no-code/low-code way. The engine executes business processes described in the BPMN 2.0 standard.

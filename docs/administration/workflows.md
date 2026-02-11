@@ -1,3 +1,10 @@
+---
+search:
+  boost: 2
+tags:
+  - automation
+---
+
 # Workflows
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).

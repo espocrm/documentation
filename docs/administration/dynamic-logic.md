@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Dynamic Logic
 
 A dynamic behavior for forms can be achieved by utilizing the Dynamic Logic feature.

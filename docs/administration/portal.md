@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Portal
 
 The Portal feature provides the ability to access specific CRM data and functions for your customers and partners. An administrator can create multiple Portals. Each Portal can have its own settings, dashboard, user list and access control settings.
