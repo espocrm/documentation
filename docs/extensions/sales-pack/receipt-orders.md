@@ -23,7 +23,7 @@ Access to Receipt Orders is controlled by Roles.
 
 It's possible to print a Receipt Order to PDF and send the PDF in an email.
 
-When a Receipt Order contains products that are tracked by Batch or Serial numbers, to be able complete the order, one needs to specify numbers for those products.
+When a Receipt Order contains products that are tracked by Batch or Serial numbers, to be able to complete the order, one needs to specify numbers for those products.
 
 It's possible to import Serial numbers from a CSV file within a Receipt Order.
 

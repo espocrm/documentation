@@ -12,7 +12,11 @@ In the article:
 
 * [Converting from Opportunity, Quote or Sales Order](#converting-from-opportunity-quote-or-sales-order)
 * [Total values layout](#total-values-layout)
-* [Invoice Items](#invoice-items)
+* [Invoice items](#invoice-items)
+* [Allocations](#allocations)
+* [Payment terms](#payment-terms)
+* [Debit notes](#debit-notes)
+* [Rounding](#rounding)
 * [Printing to PDF](#printing-to-pdf)
 * [Sending in email](#sending-in-email)
 * [Automatic numbering](#automatic-numbering)
@@ -27,11 +31,11 @@ Method 1. Create a new Invoice, on the form, specify the needed opportunity/quot
 
 Method 2. Create a new Invoice from Invoices relationship panel on the detail view of the opportunity/quote/sales order.
 
-## Total Values Layout
+## Total values layout
 
 The layout of total value fields (in the bottom on detail view) can be modified at Administration > Layout Manager > Invoices > Bottom Total.
 
-## Invoice Items
+## Invoice items
 
 An Invoice has the list of items. Each item can represent a certain product or a service with the description, quantity, tax rate, list price, and unit price fields. It's possible to sort items manually.
 
@@ -44,6 +48,63 @@ The layout of Invoice Items can be modified at Administration > Layout Manager >
 ### Discount Rate
 
 It's possible to specify a discount in percents. To have this ability, an administrator should add the *Discount (%)* field to the *List (Item)* layout.
+
+## Allocations
+
+Inbound payments, credit notes, and write-offs can be allocated to an invoice. Allocations reduce the amount due of an invoice.
+
+Applied allocations can be viewed in the Allocations panel of an invoice. To view details of a specific allocation, click View from the dropdown.
+
+## Payment terms
+
+*As of Sales Pack v4.0.*
+
+Payment term profiles can be managed at Administration > Payment Terms Profiles. The default payment term profile can be set at Administration > Sales Pack Settings. This profile will be pre-filled upon invoice creation.
+
+A payment term profile defines items that correspond to payment installments. Each item defines a portion in percents and the number of days. Portions of all items must add up to 100. The number of days is used to calculate the Date Due of the installment by adding the value to the Date Invoiced.
+
+!!! example "Examples"
+
+    - Net 30. Use one item with 100% portion and 30 days.
+    - CIA 25 / Net 20. 25% immediately and the rest after 20 days. Use two items: 25% with 0 days and 75% with 25 days.
+
+Payment installments of a created invoice are available in the Installments panel in the Invoice detail view. The status of each installment updates automatically when a payment is allocated to the invoice. It can be one of the following: Unsettled, Partially Settled, or Settled.
+
+A payment term profile can be assigned for a specific Account. The assigned to an account profile will be used when an invoice is created for that account. Note that the Payment Term Profile field is not added to the Account detail view by default. You need to add it at Administration > Entity Manager > Account > Layouts > Detail.
+
+## Debit notes
+
+*As of Sales Pack v4.0.*
+
+An invoice can be issued as a debit note. In the system, a debit note is an invoice record with the Type field set to *Debit Note*.
+
+A debit note can be created at: Invoices tab > top right menu > Create Debit Note.
+
+By default, debit notes use separate numbering. To use the same numbering, check *Do not use separate numbering for Debit Notes* at Administration > Sales Pack Settings.
+
+To configure the debit note number prefix or change the next number, go to Administration > Entity Manager > Invoice > Fields > Number for Debit Notes (auto-incremented).
+
+In a PDF Template, use `{{type}}` placeholder to print the type of the invoice document: Invoice or Debit Note.
+
+## Rounding
+
+*As of Sales Pack v4.0.*
+
+A rounding can be applied to an invoice. The invoice rounding is mandatory in some countries.
+
+The rounding is applied before the grand total. The rounding method is controlled by a Rounding Profile assigned to the invoice.
+
+Rounding profiles can be managed at Administration > Rounding Profiles. A rounding profile defines a rounding factor.
+
+Rounding factor examples:
+
+- 1 – round to a whole number
+- 0.5 – round to 50 cents
+- 0.01 – round to 1 cent
+
+The default rounding profile can be set at Administration > Sales Pack Settings. This profile will be pre-filled upon invoice creation.
+
+When a credit note is created for an invoice, it inherits the rounding profile from the invoice.
 
 ## Printing to PDF
 

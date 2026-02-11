@@ -2,7 +2,7 @@
 
 *As of Sales Pack v3.0.*
 
-The Tax feature is used to manage VAT and sales taxes.
+With the Tax feature you can manage taxes, such as VAT, GST, sales tax, excise, and other taxes.
 
 In this article:
 
@@ -10,15 +10,21 @@ In this article:
 * [Tax classes](#tax-classes)
 * [Tax rules](#tax-rules)
 
+See also:
+
+* [Tax codes](tax-codes.md)
+
 ## Tax profiles
 
 !!! note
 
     Tax Profile was named *Tax* in earlier versions.
 
-You can access the Tax Profile list view via: Products > top-right menu > Tax Profiles. Or use the search bar for quick access.
+A tax profile defines how taxes are applied to a document.
 
-Access to Tax Profiles is controlled by Roles.
+You can access tax profiles at: Products > top-right menu > Tax Profiles. Or use the global search for quick access.
+
+Access to tax profiles is controlled by Roles.
 
 A tax profile can be applied to:
 
@@ -28,33 +34,40 @@ A tax profile can be applied to:
 * Credit notes
 * Return orders
 * Purchase orders
+* Bills
+* Bill credits
 
-Line items added to an order automatically receive the tax rate according to the Tax Profile assigned to the order. It's also possible to re-calculate tax rates for already added items.
+Line items added to a document automatically receive the tax rate according to the Tax Profile assigned to the document. It's also possible to re-calculate tax rates for already added items.
 
-Tax Profiles can be automatically assigned to new orders using [Tax Rules](#tax-rules).
+Tax profiles can be automatically assigned to new documents using [Tax Rules](#tax-rules).
 
-A Tax Profile defines:
+A tax profile defines:
 
-* Rate
+* Tax code
 * Shipping tax mode
+* Shipping tax code
 * Item rules
 
-### Standard rate
+If tax codes are not enabled, a tax profile specifies a rate value instead of the tax code.
 
-The *Rate* field defines the standard tax rate. When a tax profile is selected for an order, all line items will use its standard rate unless a specific item rule applies to a product.
+### Tax code
 
-It can be reasonable to create a tax profile with a zero rate for cases where tax is not applicable (for example, reverse charge scenarios).
+The Tax Code field defines the standard (default) tax. When a tax profile is selected for a document, all line items will use its default tax code unless a specific item rule applies to the item's product.
 
 ### Shipping tax mode
 
 The *Shipping Tax Mode* defines how tax is applied to the shipping cost. Available modes:
 
-* Proportional – Applies tax to shipping proportionally based on the taxes of the items in the order. This is the most common mode.
-* Fixed – The specific tax is applied.
+* Proportional – Applies tax to shipping proportionally based on the taxes of the items in the document. This is the most common mode.
+* Fixed – A specific tax is applied.
 
 If the shipping tax mode is not specified, no tax will be applied to the shipping cost.
 
 When items on an invoice have different tax rates, the E-invoice will include separate shipping charge entries with their respective VAT rates.
+
+### Shipping tax code
+
+Determines the tax code to apply to the shipping cost. Available only if the shipping tax mode is set to Fixed.
 
 ### Item rules
 
@@ -62,7 +75,7 @@ A tax profile can include item rules. Each item rule defines an override tax rat
 
 Products can be associated with one or more tax classes.
 
-For zero-rate products, define a zero rate in the rule.
+For zero-rate products, define a tax code with a zero rate.
 
 Item rules are ordered. The first rule that matches is applied, and the subsequent rules are skipped.
 
@@ -78,13 +91,13 @@ A single product can belong to one or more tax classes. While one class per prod
 
 !!! note
 
-    Not to be confused with tax's item rules.
+    Not to be confused with item rules of the tax profile.
 
-Tax rules enable automatic association of a created order with the appropriate Tax Profile.
+Tax rules enable automatic association of a created document with the appropriate Tax Profile.
 
-Separate rule sets are used for sales and purchases.
+For sales and purchases separate rule sets are used.
 
-Only an administrator can manage tax rules. An administrator can access tax rules via: Administration > Tax Rules. Purchase rules via: Administration > Purchase Tax Rules.
+Only an administrator can manage tax rules. An administrator can access tax rules at: Administration > Tax Rules. Purchase rules can be accessed at: Administration > Purchase Tax Rules.
 
 One tax rule defines a Tax Profile and conditions. These conditions are evaluated against the Account record the order is related to.
 
@@ -109,19 +122,22 @@ In most cases, rule conditions would check:
 
 Let's assume our company is based in Germany and sells domestically, within the EU, and worldwide simultaneously.
 
-| Condition             | Tax rule to apply           |
-| --------------------- | --------------------------- |
-| **Domestic** (same country) | Use seller's local VAT rate |
-| **Intra-EU B2B** (customer is VAT registered) | Reverse charge (0% VAT) |
-| **Intra-EU B2C** (not VAT registered) and total cross-border B2C sales < €10,000 | Use seller's local VAT |
-| **Intra-EU B2C** and threshold exceeded | Use customer's country VAT |
-| **Outside EU** (export) | Exempt (0% VAT) |
+| Condition                                                                        | Tax rule to apply           |
+|----------------------------------------------------------------------------------|-----------------------------|
+| **Domestic** (same country)                                                      | Use seller's local VAT rate |
+| **Intra-EU B2B** (customer is VAT registered)                                    | Reverse charge (0% VAT)     |
+| **Intra-EU B2C** (not VAT registered) and total cross-border B2C sales < €10,000 | Use seller's local VAT      |
+| **Intra-EU B2C** and threshold exceeded                                          | Use customer's country VAT  |
+| **Outside EU** (export)                                                          | Exempt (0% VAT)             |
 
 We would need to create the following tax profiles:
 
 * Zero – to cover Intra-EU B2B and Outside EU;
+* Reverse charge – to cover all Intra-EU B2B;
 * Germany – to cover Domestic and Intra-EU B2C before threshold exceeded;
-* Separate records for each EU country we are going to sell to.
+* Separate records for each EU country we are going to sell to (B2C).
+
+For each tax profile, we will create and select a unique tax code. 
 
 We would need to create the following tax rules.
 
@@ -131,11 +147,15 @@ This rule will map Accounts from Germany to the *Germany* tax profile. In the ru
 
 2\. Intra-EU B2B.
 
-This rule will map Accounts from EU countries with the VAT number to the *Zero* tax profile. In the rule's conditions, add an OR condition with child conditions for each EU country. Also add a condition checking whether the Tax Number is not empty.
+This rule will map Accounts from EU countries with the VAT number to the *Reverse charge* tax profile. In the rule's conditions, add an OR condition with child conditions for each EU country. Also add a condition checking whether the Tax Number is not empty.
 
 !!! note
 
     You can use a custom field to designate an Account as EU based and set the value with formula. It will make defining the rule conditions simpler.
+
+!!! note
+
+    It may be reasonable to create separate reverse charge tax profile for each country for reporting reasons.
 
 3\. Intra-EU B2C below threshold.
 

@@ -25,6 +25,8 @@ When the payment amount is received, the status of the Payment record should be 
 
 If a payment exceeds the invoices' outstanding amount, the surplus can be allocated later to future invoices of the customer.
 
+The Party Type field has two options: Customer and Supplier. A payment with the Customer party type can be allocated to invoices or credit notes, depending on its direction. A payment with the Supplier party type can be allocated to bills or bill credits.
+
 ## Payment methods
 
 A Payment Method must be specified for each Payment record.

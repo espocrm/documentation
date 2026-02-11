@@ -7,12 +7,13 @@ Product sales prices can be determined by:
 
 In this article:
 
-* [Price Books](#price-books)
-* [Supplier Prices](#supplier-prices)
+* [Price books](#price-books)
+* [Supplier prices](#supplier-prices)
+* [Tax inclusive pricing](#tax-inclusive-pricing)
 * [Import](#import)
 * [Mass update](#mass-update)
 
-## Price Books
+## Price books
 
 *As of Sales Pack v2.0.*
 
@@ -123,7 +124,17 @@ If specified, the rule applies only if the item quantity exceeds the value.
 
 The Date Start and Date End fields determine when the rule is applicable. The Date End is inclusive. Both the Date Start and the Date End fields are optional.
 
-## Supplier Prices
+## Tax inclusive pricing
+
+*As of Sales Pack v4.0.*
+
+Tax inclusive pricing can be enabled for a price book. When a tax inclusive price book is selected for a document, all unit prices are treated as tax inclusive.
+
+If the default price book is set as tax inclusive, documents without a selected price book will use tax inclusive pricing. In other words, if you want to use tax inclusive pricing by default, your default price book should be set to tax inclusive.
+
+Tax inclusive pricing is available only for sales, it's not available for purchases.
+
+## Supplier prices
 
 *As of Sales Pack v2.0.*
 
