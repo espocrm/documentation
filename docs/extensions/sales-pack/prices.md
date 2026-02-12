@@ -17,13 +17,13 @@ In this article:
 
 *As of Sales Pack v2.0.*
 
-The Price Books feature allows to have different prices for one product. A Price Book record contains prices for multiple products. Moreover, it can contain different prices for a single product, applied for a specific date period or a specific item quantity.
+The Price Books feature allows to have different prices for one product. A price book record contains prices for multiple products. One price book can contain different prices for a single product, applied for a specific effective date period or a specific item quantity.
 
-The Price Books feature is disabled by default. It can be enabled under Administration > Sales Pack (Settings). Access to Price Books is controlled by Roles.
+The Price Books feature can be enabled or disabled under Administration > Sales Pack (Settings). Access to Price Books is controlled by Roles.
 
 The Price Books list view can be accessed at Products > the top-right menu > Price Books.
 
-A Price Book can be associated with a specific Account. Note that the administrator needs to add the **Price Book** field to the *Detail* layout of the Account entity type to be able to associate accounts with price books.
+A price book can be associated with a specific Account. Note that the administrator needs to add the **Price Book** field to the *Detail* layout of the Account entity type to be able to associate accounts with price books.
 
 The Quote, Sales Order and Invoice have the **Price Book** field. When a new record is created, the Price Book is carried over from the related Account. It's possible to change the Price Book for a specific document.
 
