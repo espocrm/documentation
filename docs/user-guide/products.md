@@ -6,7 +6,7 @@ Products can be added as line items in Quotes, Sales Orders, Invoices, Credit No
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
 
-A product record has 3 price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*. Prices can also be defined in Price Books. Note that it’s possible – and often advisable – to define prices exclusively in Price Books while leaving the list and unit price fields in the product record empty.
+A product record has 3 price fields: *Cost*, *List* and *Unit*. The list and unit prices are available only if product-level prices are enabled (in settings). There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*. Prices can also be defined in Price Books. Note that it’s possible – and often advisable – to define prices exclusively in Price Books while leaving the list and unit price fields in the product record empty.
 
 Products can be associated with Tax Classes, enabling automated tax application based on defined tax rules. Whenever a product is added to a document, the appropriate tax will be applied to the item.
 

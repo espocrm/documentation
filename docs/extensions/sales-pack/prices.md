@@ -2,8 +2,11 @@
 
 Product sales prices can be determined by:
 
-* price values in a Product record;
-* Price Books.
+* price books (enabled by default);
+* product-level prices.
+
+Both price sources can be enabled or disabled under Administration > Sales Pack (Settings). Both sources can be enabled
+simultaneously. In this case, the product-level price is used as a fallback.
 
 In this article:
 
@@ -31,7 +34,7 @@ A Price Book can have a **Parent Price Book** and so on. If there's no price fou
 
 The **Default Price Book** can be specified at Administration > Sales Pack (Settings). It will be used to fetch default prices when there's no Price Book associated with an order.
 
-When a product is added to a document as a line item and there's no price found in the related Price Book or there's no related Price Book at all, the Default Price Book will be used. If there's no Default Price Book, the price from the Product record will be used. If there's no price defined in the Product record, the price won't be set for the line item.
+When a product is added to a document as a line item and there's no price found in the related Price Book or there's no related Price Book, the Default Price Book will be used. If there's no Default Price Book, and product-level prices are enabled, the price from the Product record will be used. Otherwise, the price won't be set for the line item, and the user will need to set it manually.
 
 When a user changes the quantity in a line item, the system will look up the new unit price for the new quantity. If the new unit price is found, it will prompt the user to apply the new unit price. The user can reject and keep the previous price.
 
@@ -142,7 +145,7 @@ A *Supplier* record can have prices for specific products. These prices are used
 
 A Supplier record can contain different prices for a single product: applied for a specific date period or a specific item quantity.
 
-If there's no supplier price found for a product, the *Cost Price* of the product will be used instead.
+If there's no supplier price found for a product, and product-level prices are enabled (in settings), then the *Cost Price* of the product will be used as a unit price.
 
 ## Import
 
