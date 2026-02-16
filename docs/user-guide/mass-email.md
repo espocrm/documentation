@@ -2,6 +2,7 @@
 
 In this article:
 
+* [Email accounts](#email-accounts)
 * [How to send mass email](#how-to-send-mass-email)
 * [Test sending](#test-sending)
 * [Opt-out](#opt-out)
@@ -13,12 +14,16 @@ In this article:
 * [Settings](#settings)
 * [Troubleshooting](#troubleshooting)
 
+## Email accounts
+
+The system email account (the group email account designed as system at Administration > Outbound Emails) is used for mass emails by default. Group email accounts with *Is for Mass Email* checked can be also used. An email account can be selected when creating a Mass Email record.
+
 ## How to send mass email
 
 You need to have at least one **Target List** with target records and an **Email Template** in your CRM.
 
 1. Create a new Campaign of type *Email* or *Newsletter*. Select one or a few target lists in the Target Lists field.
-2. After the Campaign record is created, create a Mass Email for this campaign: click the plus icon on the Mass Email panel. Specify the Date Start (when emails should be sent) and select an Email Template. Make sure the Status is set to *Pending*.
+2. After the Campaign record is created, create a Mass Email for this campaign detail view: click the plus icon in the Mass Email panel. Specify the Date Start (when emails should be sent) and select an email template. Make sure the Status is set to *Pending*.
 
 If everything is set up right, emails should go out. They will be sent in portions. You can change the portion size at Administration > Outbound Emails. The administrator can change the **scheduling** at Administration > Scheduled Jobs > Send Mass Emails.
 
