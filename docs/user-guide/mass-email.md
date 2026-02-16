@@ -16,7 +16,7 @@ In this article:
 
 ## Email accounts
 
-The system email account (the group email account designated as system at Administration > Outbound Emails) is used for mass emails by default. Group email accounts with *Is for Mass Email* checked can be also used. An email account can be selected when creating a Mass Email record.
+The system email account (the group email account designated as system at Administration > Outbound Emails) is used for mass emails by default. Group email accounts with *Is for Mass Email* checked can also be used. An email account can be selected when creating a Mass Email record.
 
 ## How to send mass email
 
