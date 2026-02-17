@@ -13,15 +13,15 @@ In this article:
 
 ## Payment entries
 
-A Payment record captures a single payment transaction, either inbound or outbound.
+A Payment entry captures a single payment transaction, either inbound or outbound.
 
 Access to Payments is controlled by Roles. Payments can be created from the Payments list view. Payments can also be created from the Invoice and Credit Note detail views.
 
 An inbound payment can be allocated to one or more Invoices. An outbound payment can be allocated to one or more Credit Notes.
 
-When a payment amount is received, the payment record is supposed to be set to the *Paid* status. After the payment amount is fully allocated, it has to be set to *Completed*.
+When a payment amount is received, the payment entry is supposed to be set to the *Paid* status. After the payment amount is fully allocated, it has to be set to *Completed*.
 
-When the payment amount is received, the status of the Payment record should be set to *Paid*. Once the full amount has been allocated, the status has to be updated to *Completed*.
+When the payment amount is received, the status of the payment entry should be set to *Paid*. Once the full amount has been allocated, the status has to be updated to *Completed*.
 
 If a payment exceeds the invoices' outstanding amount, the surplus can be allocated later to future invoices of the customer.
 
@@ -29,9 +29,9 @@ The Party Type field has two options: Customer and Supplier. A payment with the 
 
 ## Payment methods
 
-
-A Payment Method must be specified for each Payment record. By default, there's no any payment method in the system.
-An administrator needs to create them. Some payment method examples: Wire Transfer, Cash, Stripe.
+A Payment Method must be specified for each Payment entry. By default, there's no any payment method in the system, hence
+an administrator needs to create at least one payment method.
+Payment method examples: Wire Transfer, Cash, Stripe.
 
 Only an administrator can manage Payment Methods. Regular users can read payment methods if their Role grants access.
 
