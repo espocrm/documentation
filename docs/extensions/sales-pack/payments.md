@@ -29,15 +29,15 @@ The Party Type field has two options: Customer and Supplier. A payment with the 
 
 ## Payment methods
 
-A Payment Method must be specified for each Payment record.
+
+A Payment Method must be specified for each Payment record. By default, there's no any payment method in the system.
+An administrator needs to create them. Some payment method examples: Wire Transfer, Cash, Stripe.
 
 Only an administrator can manage Payment Methods. Regular users can read payment methods if their Role grants access.
 
-By default, there's no any payment method in the system. An administrator needs to create them.
+A payment method can be marked as eligible for inbound, outbound, or both payment directions.
 
-Some payment method examples: Wire Transfer, Cash, Stripe.
-
-You can add text instructions for a specific payment method. These instructions will appear on the payment link page.
+You can add text instructions for a specific inbound payment method. These instructions will appear on the payment link page.
 
 Multiple payment methods can be associated with a single Invoice, with one designated as primary.
 
@@ -45,7 +45,7 @@ Multiple payment methods can be associated with an Account, with one designated 
 
 ## Payment channels
 
-A payment method can be associated with a specific Payment Channel, which encapsulates the credentials and settings for a particular payment provider.
+An inbound payment method can be associated with a specific Payment Channel, which encapsulates the credentials and settings for a particular payment provider.
 
 Only an administrator can manage payment channels. Regular users cannot view payment channel records.
 
@@ -83,7 +83,7 @@ When *SEPA Direct Debit* is selected as the Invoice's payment method, the genera
 
 ## Payment requests
 
-Payment Requests can be used to create unique payment links. Payment links can be send to customers. No Espo user account is required to access these links.
+Payment Requests can be used to create unique payment links. Payment links can be sent to customers. No Espo user account is required to access these links.
 
 Payment instructions and bank credentials can be displayed on the payment link page. In the case of an automated payment channel like Stripe, the customer can make a payment from the payment link.
 
@@ -97,7 +97,7 @@ To send a payment link in an email, click *Send in Email* from the dropdown next
 
 An administrator can select the default email template for payment requests: Administration > Sales Pack Settings > Email Templates > Payment Request Email Template.
 
-Use the placeholder `{PaymentRequest.paymentUrl}` in the email template for a link. Note that the link will automatically appended to the email body if there's no URL placeholder in the email template.
+Use the placeholder `{PaymentRequest.paymentUrl}` in the email template for a link. Note that the link will automatically be appended to the email body if there's no URL placeholder in the email template.
 
 Note that you can also access the payment URL from a Formula script.
 
