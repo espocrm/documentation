@@ -2,14 +2,14 @@
 
 *As of Sales Pack v4.0.*
 
-Write-offs allow settling an outstanding balance without receiving or issuing a payment. They are commonly used for minor discrepancies, rounding differences, or amounts deemed uncollectible.
+Write-offs allow settling an outstanding balance without receiving or issuing a payment. They are commonly used for minor discrepancies, rounding differences, or immaterial amounts deemed uncollectible.
 
 Write-offs are allocated to invoices the same way as payments or credit notes.
 
-!!! note
+!!! warning
 
-    Since write-offs do not include line-items, they should not be used when a reduction in tax liability is required.
-    In such cases, credit notes should be used instead.
+    As write-offs do not include line-items, they should not be used when a reduction in tax liability is required.
+    They also should not be used to cancel an entire invoice. In such cases, credit notes should be used instead.
 
 Access to Write-offs is controlled by Roles.
 
