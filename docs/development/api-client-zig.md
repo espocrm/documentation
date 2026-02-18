@@ -44,7 +44,7 @@ exe.root_module.addImport("espocrmz", espocrmz.module("espocrmz"));
 You can then import the library into your code like this
 
 ```zig
-const espocrm = @import("espocrmz").Client;
+const espocrm = @import("espocrmz");
 ```
 
 ## Basic Usage
@@ -52,47 +52,47 @@ const espocrm = @import("espocrmz").Client;
 ### Using API Key Authentication:
 
 ```zig
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-defer _ = gpa.deinit();
-const allocator = gpa.allocator();
-const client = Client.init("https://espocrm.example.com", .{ .api_key = "Your API Key here" });
+const allocator = std.heap.page_allocator;
+
+const client: espocrm.Client = .init(
+    "https://espocrm.example.com",
+    .{ .api_key = "Your API Key here" },
+);
 ```
 
 ### Making a Read request:
 
 ```zig
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-defer _ = gpa.deinit();
-const allocator = gpa.allocator();
+const allocator = std.heap.page_allocator;
 
-const result = try client.readEntity("Contact", "78abc123def456", allocator);
-defer allocator.free(result);
+const result = try client.readEntity(
+    allocator,
+    "Contact",
+    "78abc123def456",
+);
+defer result.deinit();
 ```
 
 ### Making a List request:
 
 ```zig
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-defer _ = gpa.deinit();
-const allocator = gpa.allocator();
-
 var params = espocrm.Parameters.init();
 _ = params.setMaxSize(10).setOrder(espocrm.Parameters.Order.Asc);
 const params_encoded = try params.encode(allocator);
+
+const allocator = std.heap.page_allocator;
 
 const result = try client.listEntities(allocator, "Contact", params, &[_]espocrm.Where{
   .{ .filter_type = espocrm.FilterOption.Equals, .filter_attribute = "name", .filter_value = "Alice" },
   .{ .filter_type = espocrm.FilterOption.GreaterThan, .filter_attribute = "age", .filter_value = "42" },
 });
-defer allocator.free(result);
+defer result.deinit();
 ```
 
 ### Making a Create request:
 
 ```zig
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-defer _ = gpa.deinit();
-const allocator = gpa.allocator();
+const allocator = std.heap.page_allocator;
 
 const new_contact =
   \\{
@@ -101,16 +101,18 @@ const new_contact =
   \\}
 ;
 
-const result = try espocrm.createEntity(allocator, "Contact", new_contact);
-defer allocator.free(result);
+const result = try espocrm.createEntity(
+    allocator,
+    "Contact",
+    new_contact,
+);
+defer result.deinit();
 ```
 
 ### Making an Update request:
 
 ```zig
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-defer _ = gpa.deinit();
-const allocator = gpa.allocator();
+const allocator = std.heap.page_allocator;
 
 const update_info =
   \\{
@@ -118,17 +120,22 @@ const update_info =
   \\}
 ;
 
-const result = try client.updateEntity(allocator, "Contact", "67abe33f5883bd9e", update_info);
-defer allocator.free(result);
+const result = try client.updateEntity(
+    allocator,
+    "Contact",
+    "67abe33f5883bd9e",
+    update_info
+);
+defer result.deinit();
 ```
 
 ### Making a Delete request:
 
 ```zig
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-defer _ = gpa.deinit();
-const allocator = gpa.allocator();
-
-const result = try client.deleteEntity(allocator, "Contact", "67abe33f5883bd9e");
-defer allocator.free(result);
+const result = try client.deleteEntity(
+    allocator,
+    "Contact",
+    "67abe33f5883bd9e"
+);
+defer result.deinit();
 ```
