@@ -26,7 +26,7 @@ The command above implies that the path to your instance is `/var/www/html`, whi
 To back up all your data, you have to know the database name and credentials for access. You can find the database name in the configuration file `/ESPOCRM_DIRECTORY/data/config-internal.php` under the section *database*. You can use this command to back up your database:
 
 ```bash
-mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
+mysqldump --user=DATABASE_USER --password=DATABASE_PASSWORD DATABASE_NAME > "db.sql"
 ```
 
 #### Step 3. Copy the backup
@@ -56,7 +56,7 @@ The files should be owned by the web-server user and have correct permissions. S
 Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config-internal.php`. To import your database from the dump, run the command below in a terminal:
 
 ```bash
-mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
+mysql --user=DATABASE_USER --password=DATABASE_PASSWORD DATABASE_NAME < db.sql
 ```
 
 #### Step 4. Check/configure crontab
@@ -110,14 +110,14 @@ After successful creation, you will get a path to the created backup.
 
 ## Docker Installation
 
-### Docker environment backup via script
+### Docker environment restore manually
 
 #### Step 1. Download the Backup Docker Container script
 
 You need to download the *Backup Docker Container* and place it in the folder where the `docker-compose.yml` file is located.
 
 ```bash
-LINK FOR DOWNLOADING
+wget https://raw.githubusercontent.com/espocrm/documentation/stable/docs/_static/scripts/backup-docker-container.sh
 ```
 
 #### Step 2. Run the Backup Docker Container script
@@ -135,7 +135,7 @@ mkdir ./BACKUP_DIR
 sudo bash backup-docker-container.sh CONTAINER_NAME ./BACKUP_DIR
 ```
 
-### Docker environment backup manually
+### Manually bakup
 
 Run the following commands:
 
@@ -143,12 +143,12 @@ Run the following commands:
 mkdir ./BACKUP_DIR
 
 # DB
-sudo docker exec espocrm-db mariadb-dump \
-  -u database_user --password=database_password CONTAINER_NAME \
-  > ./BACKUP_DIR/db.sql
-
-# Files
-sudo docker exec CONTAINER_NAME tar czf - /var/www/html > ./BACKUP_DIR/files.tar.gz
+sudo docker exec CONTAINER_NAME mariadb-dump \
+  -u DATABASE_USER --password=DATABASE_PASSWORD DATABASE_NAME \
+  > ./BACKUP_DIR/db.sql 
+ 
+# Files 
+sudo docker exec CONTAINER_NAME tar czf - /var/www/html > ./BACKUP_DIR/files.tar.gz 
 ```
 
 ### Docker environment restore manually
@@ -156,15 +156,15 @@ sudo docker exec CONTAINER_NAME tar czf - /var/www/html > ./BACKUP_DIR/files.tar
 Run the following commands:
 
 ```bash
-# DB
-sudo docker exec -i espocrm-db mariadb \
-  -u database_user --password=database_password CONTAINER_NAME \
-  < ./BACKUP_DIR/db.sql
-
-# Files
-sudo docker exec CONTAINER_NAME sh -c "rm -rf /var/www/html/*"
-cat ./BACKUP_DIR/files.tar.gz | sudo docker exec -i CONTAINER_NAME tar xzf - -C /
-
-# Restart
+# DB 
+sudo docker exec -i CONTAINER_NAME mariadb \
+  -u DATABASE_USER --password=DATABASE_PASSWORD DATABASE_NAME \
+  < ./BACKUP_DIR/db.sql 
+ 
+# Files 
+sudo docker exec CONTAINER_NAME sh -c "rm -rf /var/www/html/*" 
+cat ./BACKUP_DIR/files.tar.gz | sudo docker exec -i CONTAINER_NAME tar xzf - -C / 
+ 
+# Restart 
 sudo docker restart CONTAINER_NAME
 ```
