@@ -1,18 +1,25 @@
 # Backup and Restore
 
-## How to back up EspoCRM manually
+This article presents methods for EspoCRM backup and restore installed in various environments:
+
+* [Bare Metal Installation](#bare-metal-installation)
+* [Docker Installation](#docker-installation)
+
+## Bare Metal Installation
+
+### Manually backup
 
 To make a full backup of your EspoCRM instance you need to copy EspoCRM files and dump the database. Here are the instructions on how to do it on an Ubuntu server with MySQL or MariaDB.
 
-### Step 1. Back up files
+#### Step 1. Back up files
 
-Create an archive of the directory contents of the EspoCRM instance. The default path for Ubuntu is `/var/www/html`. You can use this command:
+Create an archive of the directory content of installed EspoCRM. The default path for Ubuntu is `/var/www/html`. You can use this command:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
 ```
 
-### Step 2. Back up database
+#### Step 2. Back up database
 
 To back up all your data, you have to know the database name and credentials for access. You can find the database name in the configuration file `/ESPOCRM_DIRECTORY/data/config-internal.php` under the section *database*. You can use this command to back up your database:
 
@@ -20,22 +27,65 @@ To back up all your data, you have to know the database name and credentials for
 mysqldump --user=YOUR_USER --password=YOUR_PASSWORD YOUR_DATABASE_NAME > "db.sql"
 ```
 
-### Step 3. Copy the backup
+#### Step 3. Copy the backup
 
 That's all. Now, you have to copy the created backup to a safe place.
 
+### Manually restore 
 
-## How to back up EspoCRM with a script
+You can restore the EspoCRM instance from the backup created as described above.
 
-You can use a script to back up all needed data. Log in via SSH and run the commands (tested on the Ubuntu server).
+#### Step 1. Unarchive backup files
 
-### Download a script
+To unarchive files, you can use *Archive Manager* or run the below command. Files need to be placed in the web-server directory.
+
+```bash
+tar -xzf "files.tar.gz" -C /var/www/html
+```
+
+where `/var/www/html` is the web-server directory.
+
+#### Step 2. Set required permissions
+
+The files should be owned by the web-server user and have correct permissions. Set required permissions by following this [instruction](server-configuration.md#required-permissions-for-unix-based-systems).
+
+#### Step 3. Import database dump
+
+Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config-internal.php`. To import your database from the dump, run the command below in a terminal:
+
+```bash
+mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
+```
+
+#### Step 4. Check/configure crontab
+
+Check if your crontab is configured properly. Run the command below and check if a path to EspoCRM is correct:
+
+```bash
+sudo crontab -l -u www-data
+```
+
+where `www-data` is your web-server user.
+
+If you have to make any changes, use this command:
+
+```bash
+sudo crontab -l -u www-data
+```
+
+More details about configuring crontab see [here](server-configuration.md#setting-up-crontab).
+
+### Backup with a script
+
+You can use a script to back up all needed data. Login via SSH and run the commands (tested on the Ubuntu server).
+
+#### Step 1. Download a script
 
 ```bash
 wget https://raw.githubusercontent.com/espocrm/documentation/stable/docs/_static/scripts/backup.sh
 ```
 
-### Run the script
+#### Step 2. Run the script
 
 ```bash
 bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
@@ -56,46 +106,63 @@ Note: If your MySQL user doesn't have needed rights to dump your database, you w
 
 After successful creation, you will get a path to the created backup.
 
-## Restore EspoCRM from a backup
+## Docker Installation
 
-You can restore the EspoCRM instance from the backup created as described above.
+### Docker environment backup via script
 
-### Step 1. Unarchive backup files
+#### Step 1. Download the Backup Docker Container script
 
-To unarchive files, you can use *Archive Manager* or run the below command. Files need to be placed in the web-server directory.
-
-```bash
-tar -xzf "files.tar.gz" -C /var/www/html
-```
-
-where `/var/www/html` is the web-server directory.
-
-### Step 2. Set required permissions
-
-The files should be owned by the web-server user and have correct permissions. Set required permissions by following this [instruction](server-configuration.md#required-permissions-for-unix-based-systems).
-
-### Step 3. Import database dump
-
-Database dump should be imported to the same database with the same user credentials, otherwise the correction should be made in the configuration file `ESPOCRM_DIRECTORY/data/config-internal.php`. To import your database from the dump, run the command below in a terminal:
+You need to download the *Backup Docker Container* and place it in the folder where the `docker-compose.yml` file is located.
 
 ```bash
-mysql --user=YOUR_DATABASE_USER --password=YOUR_DATABASE_PASSWORD YOUR_DATABASE_NAME < db.sql
+LINK FOR DOWNLOADING
 ```
 
-### Step 4. Check/configure crontab
+#### Step 2. Run the Backup Docker Container script
 
-Check if your crontab is configured properly. Run the command below and check if the path to EspoCRM instance is correct:
+Run one of the following commands at your choice:
 
 ```bash
-sudo crontab -l -u www-data
+sudo bash backup-docker-container.sh
 ```
 
-where `www-data` is your web-server user.
-
-If you have to make any changes, use this command:
+or
 
 ```bash
-sudo crontab -l -u www-data
+mkdir ./BACKUP_DIR
+sudo bash backup-docker-container.sh CONTAINER_NAME ./BACKUP_DIR
 ```
 
-More details about configuring crontab see [here](server-configuration.md#setting-up-crontab).
+### Docker environment backup manually
+
+Run the following commands:
+
+```bash
+mkdir ./BACKUP_DIR
+
+# DB
+sudo docker exec espocrm-db mariadb-dump \
+  -u database_user --password=database_password CONTAINER_NAME \
+  > ./BACKUP_DIR/db.sql
+
+# Files
+sudo docker exec CONTAINER_NAME tar czf - /var/www/html > ./BACKUP_DIR/files.tar.gz
+```
+
+### Docker environment restore manually
+
+Run the following commands:
+
+```bash
+# DB
+sudo docker exec -i espocrm-db mariadb \
+  -u database_user --password=database_password CONTAINER_NAME \
+  < ./BACKUP_DIR/db.sql
+
+# Files
+sudo docker exec CONTAINER_NAME sh -c "rm -rf /var/www/html/*"
+cat ./BACKUP_DIR/files.tar.gz | sudo docker exec -i CONTAINER_NAME tar xzf - -C /
+
+# Restart
+sudo docker restart CONTAINER_NAME
+```
