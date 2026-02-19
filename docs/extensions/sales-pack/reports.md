@@ -6,9 +6,26 @@
 
     The Sales Pack reports are integrated with the Reports feature of the Advanced Pack. You need the Advanced Pack extension installed to be able to use the reports.
   
+
 To create a report, follow: Reports tab > top-right menu > Create Internal Report. Select the needed report, after that you can to tweak the report's parameters and run preview. After the report is saved, it will be available in the system as a regular report record. You can assign the report to a specific team for access control purposes.
 
 All reports use the base currency (which is the company's local currency). If you change the base currency in the system, the report will not show the result for previous transactions (which use the previous local currency).
+
+Reports:
+
+- [Customer balances](#customer-balances)
+- [Customer aging](#customer-aging)
+- [Supplier balances](#supplier-balances)
+- [Sales tax summary](#sales-tax-summary)
+- [Purchase tax summary](#purchase-tax-summary)
+- [Sales list by tax code](#sales-list-by-tax-code)
+- [Sales revenue](#sales-revenue)
+- [Sales by customer](#sales-by-customer)
+- [Sales by product](#sales-by-product)
+- [Sales by category](#sales-by-category)
+- [Purchase expenditure](#purchase-expenditure)
+- [Purchases by product](#purchases-by-product)
+- [Ledger summary](#ledger-summary)
 
 ## Customer balances
 
@@ -93,3 +110,15 @@ In the result table, clicking a group displays the bills and bill credits that c
 
 Breaks down purchase expenditure by product. Product categories can be selected in the report parameters.
 
+## Ledger summary
+
+This report generates a consolidated journal entry for a selected date period. The result can be exported to CSV for further
+import into an accounting software.
+
+For example, a company may export the operational summary at the end of an accounting period and import it into its
+General Ledger as a single journal entry. In this setup, Espo functions as an operational billing system 
+and serves as the source of truth for billing transactions.
+
+For each account category, a GL account number can be specified. This simplifies the import mapping process.
+
+Payment methods and tax codes can be split into separate lines, each can be assigned to a specific account number.
