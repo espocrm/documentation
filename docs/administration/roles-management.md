@@ -9,6 +9,7 @@ In this article:
 * [Example](#example)
 * [Special Permissions](#special-permissions)
 * [Collaborators](#collaborators)
+* [See also](#see-also)
 
 ## Overview
 
@@ -219,5 +220,6 @@ The Collaborators parameter is available for custom entities created via the Ent
 
 ## See also
 
+* [Roles quick tour](https://app.supademo.com/embed/cmls03z6a1dl01189pv9nrmb9)
 * [Security roles management in EspoCRM](https://www.espocrm.com/tips/security-roles/)
 * [Multiple assigned users](multiple-assigned-users.md)
