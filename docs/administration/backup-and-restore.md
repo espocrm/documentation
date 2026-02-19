@@ -1,6 +1,6 @@
 # Backup and Restore
 
-This article presents methods for EspoCRM backup and restore installed in various environments:
+This article outlines backup and restore methods for EspoCRM in various environments:
 
 * [Bare Metal Installation](#bare-metal-installation)
 * [Docker Installation](#docker-installation)
@@ -13,11 +13,13 @@ To make a full backup of your EspoCRM instance you need to copy EspoCRM files an
 
 #### Step 1. Back up files
 
-Create an archive of the directory content of installed EspoCRM. The default path for Ubuntu is `/var/www/html`. You can use this command:
+Create an archive of the entire directory contents of the EspoCRM instance. You can use the following command:
 
 ```bash
 tar -czf "files.tar.gz" -C /var/www/html .
 ```
+
+The command above implies that the path to your instance is `/var/www/html`, which is usual default path on Linux servers. Modify it if needed.
 
 #### Step 2. Back up database
 
