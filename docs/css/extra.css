@@ -4,6 +4,11 @@
     --md-accent-fg-color-light: #cc95aa;
 }
 
+* {
+    animation: none !important;
+    transition: none !important;
+}
+
 .md-grid {
     max-width: 62rem;
 }
@@ -93,7 +98,8 @@ a.md-nav__link:not(.md-nav__container):hover {
 }
 
 .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav {
-    display: none;
+    font-size: 0.65rem;
+    //display: none;
 }
 
 .md-nav__list {

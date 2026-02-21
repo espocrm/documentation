@@ -19,7 +19,7 @@ markdown_extensions:
       use_pygments: true
   - toc:
       permalink: true
-      toc_depth: 4
+      toc_depth: 3
 
 theme:
     name: material
