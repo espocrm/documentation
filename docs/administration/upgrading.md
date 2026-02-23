@@ -52,9 +52,9 @@ It's recommended to run upgrade either under the webserver user (usually *www-da
 
 Available parameters (only for advanced users):
 
+- `--file="EspoCRM-upgrade.zip"` − install a specific [upgrade package](https://www.espocrm.com/download/upgrades/) (path to file);
 - `-y` − run w/o user confirmation;
-- `-s` − run an upgrade in a single process;
-- `--file="EspoCRM-upgrade.zip"` − install a specific [upgrade package](https://www.espocrm.com/download/upgrades/) (path to file).
+- `-s` − run an upgrade in a single process (dangerous, not recommended to use).
 
 Example of using parameters:
 

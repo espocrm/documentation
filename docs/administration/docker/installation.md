@@ -147,7 +147,7 @@ More about *Installation Environments* you can find [here](#installation-environ
 4\. Build EspoCRM project from directory.
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
 ```
 
 5\. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open http://localhost:8080 in a web browser.
@@ -301,7 +301,7 @@ In MySQL 8.4 there were changes in the authentication procedure, so you may enco
 
 1\. Change *authentication plugin* to `caching_sha2_password` for your MySQL users:
 
-Notes: 
+Notes:
 
 - Replace the `YOUR_ROOT_PASSWORD` with your MySQL root password.
 - Replace the `YOUR_ESPOCRM_DB_PASSWORD` with your MySQL espocrm user password.
@@ -315,9 +315,9 @@ sudo docker exec -i mysql mysql --user=root -p -e "
 ```
 
 2\. Remove from *docker-compose.yml* file the following line: `command: --default-authentication-plugin=mysql_native_password`.
-   
+
 3\. Restart and build `mysql` container:
-   
+
 ```
 sudo docker stop mysql && sudo docker rm mysql
 docker compose up -d --build

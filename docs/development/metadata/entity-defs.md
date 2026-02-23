@@ -714,6 +714,12 @@ Disable merging related records when duplicate records are being merged.
 
 The link will be hidden from the user on the UI whenever possible.
 
+### disabled
+
+*boolean*
+
+Disables the link.
+
 ### apiSpecDisabled
 
 *boolean*

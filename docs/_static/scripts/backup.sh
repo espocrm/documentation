@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# This script creates a backup of an EspoCRM installation, including both the database and files.
+#
+# EspoCRM - Open Source CRM application.
+# Copyright (C) 2014-2026 EspoCRM, Inc.
+# Website: https://www.espocrm.com
+
 set -e
 
 function printExitError() {
@@ -46,7 +52,7 @@ else
 fi
 
 if [ ! -d "$BACKUP_PATH" ]; then
-    printExitError "The directory '$BACKUP_PATH' does not exist"
+    mkdir -p "$BACKUP_PATH" || printExitError "Unable to create the directory '$BACKUP_PATH'"
 fi
 
 if [ ! -w "$BACKUP_PATH" ]; then
@@ -82,6 +88,22 @@ fi
 BACKUP_NAME=$(basename "$PATH_TO_ESPO")
 BACKUP_ARCHIVE_NAME="$(date +'%Y-%m-%d_%H%M%S').tar.gz"
 
+echo ">>> Backing up database ..."
+
+# Detect database type and set appropriate dump command
+if command -v mariadb-dump &> /dev/null; then
+    DUMP_CMD="mariadb-dump"
+    echo ">>> Detected MariaDB"
+elif mysqldump --version 2>&1 | grep -qi "mariadb"; then
+    DUMP_CMD="mariadb-dump"
+    echo ">>> Detected MariaDB"
+elif command -v mysqldump &> /dev/null; then
+    DUMP_CMD="mysqldump"
+    echo ">>> Detected MySQL"
+else
+    printExitError "Neither MariaDB nor MySQL database found"
+fi
+
 cd "$BACKUP_PATH" || {
     printExitError "Permission denied on $BACKUP_PATH"
 }
@@ -89,15 +111,16 @@ cd "$BACKUP_PATH" || {
 mkdir -p "$BACKUP_NAME"
 cd "$BACKUP_NAME"
 
-# Create database backup
-mysqldump --user="$DB_USER" --password="$DB_PASS" "$DB_NAME" > "db.sql" || {
-    echo "Enter MySQL user:"
+# --- Database backup ---
+
+"$DUMP_CMD" --user="$DB_USER" --password="$DB_PASS" "$DB_NAME" > "db.sql" || {
+    echo "Enter database user:"
     read DB_USER
 
-    echo "Enter MySQL password:"
+    echo "Enter database password:"
     read DB_PASS
 
-    mysqldump --user="$DB_USER" --password="$DB_PASS" "$DB_NAME" > "db.sql" || {
+    "$DUMP_CMD" --user="$DB_USER" --password="$DB_PASS" "$DB_NAME" > "db.sql" || {
         printExitError "Unable to create a backup for the database '$DB_NAME'"
     }
 }
@@ -105,14 +128,25 @@ mysqldump --user="$DB_USER" --password="$DB_PASS" "$DB_NAME" > "db.sql" || {
 tar -czf "db.tar.gz" "db.sql"
 rm "db.sql"
 
-# Archive files
+echo ">>> Database backup done."
+
+# --- Files backup ---
+
+echo ">>> Backing up files..."
+
 tar -czf "files.tar.gz" -C "$PATH_TO_ESPO" .
 
-# Create a full backup archive
+echo ">>> Files backup done."
+
+# --- Bundle into single archive ---
+
+echo ">>> Creating final archive..."
+
 cd ..
 tar czf "$BACKUP_ARCHIVE_NAME" "$BACKUP_NAME"/
 
 # Remove temporary files
 rm -rf "$BACKUP_NAME"
 
+echo ""
 echo "Backup is created at '$BACKUP_PATH/$BACKUP_ARCHIVE_NAME'."

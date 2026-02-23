@@ -507,4 +507,5 @@ You can also utilize the sandbox to run one-time scripts, for example, to modify
 
 * [Formula functions](formula-functions.md)
 * [Formula scripts examples](formula-scripts-examples.md)
+* [Formula quick tour](https://app.supademo.com/demo/cmljmuit94td75351htrpagg2)
 * [Custom functions](../development/new-function-in-formula.md)
