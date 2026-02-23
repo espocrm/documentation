@@ -2,7 +2,7 @@
 
 *As of Sales Pack v4.0.*
 
-Write-offs allow settling an outstanding balance without receiving or issuing a payment. They are commonly used for minor discrepancies, rounding differences, or immaterial amounts deemed uncollectible.
+Write-offs allow settling an outstanding invoice balance without receiving or issuing a payment. They are commonly used for minor discrepancies, rounding differences, or immaterial amounts deemed uncollectible.
 
 Write-offs are allocated to invoices the same way as payments or credit notes.
 
