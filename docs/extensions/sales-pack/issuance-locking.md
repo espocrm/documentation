@@ -2,7 +2,7 @@
 
 *As of Sales Pack v4.0.*
 
-The issuance locking mode enforces stricter rules on transaction behavior. You may need to have it enabled for a compliance purpose, or if you want to Espo as a billing software. Without locking enabled, balance reports cannot guarantee correct results.
+The issuance locking mode enforces stricter rules on transaction behavior. You may need to have it enabled for a compliance purpose, or if you want to Espo as a billing software. Without issuance locking enabled, balance reports cannot guarantee correct results.
 
 !!! note
 

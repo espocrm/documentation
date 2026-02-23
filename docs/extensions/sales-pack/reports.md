@@ -27,6 +27,10 @@ Reports:
 - [Purchases by product](#purchases-by-product)
 - [Ledger summary](#ledger-summary)
 
+!!! important
+
+    Reports that concern taxes require the tax codes feature to be enabled.
+
 ## Customer balances
 
 Displays opening balance, debits, credits, and closing balance for each customer. The Date and Accounts filters are available. By clicking a customer, you can view Invoices, Credit Notes, Payments, and Allocations that affect the balance for the selected date range.

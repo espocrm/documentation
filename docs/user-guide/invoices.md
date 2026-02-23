@@ -106,6 +106,8 @@ The default rounding profile can be set at Administration > Sales Pack Settings.
 
 When a credit note is created for an invoice, it inherits the rounding profile from the invoice.
 
+In some cases, when tax-inclusive pricing is used, the discrepancy between the expected amount and the sum of the computed net prices is recorded on the rounding amount line.
+
 ## Printing to PDF
 
 Invoices can be printed to PDF. This action is available in the dropdown next to Edit button on the Invoice detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](printing-to-pdf.md).
