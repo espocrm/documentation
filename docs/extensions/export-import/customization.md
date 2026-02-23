@@ -129,7 +129,8 @@ The same logic as `ExportDifference`, but the initial value gets from another fi
         "createdAt": {
             "placeholderAction": "DateTime\\ExportDifferenceField",
             "placeholderData": {
-                "field": "dateStart"
+                "field": "dateStart",
+                "defaultAction": "DateTime\\Now"
             }
         }
     }
@@ -148,12 +149,20 @@ To get the initial value from a couple fields. The value will be obtained from t
                     "dateStart",
                     "dateEnd",
                     "dateCompleted"
-                ]
+                ],
+                "default": "2026-01-01 01:00:00"
             }
         }
     }
 }
 ```
+
+The `placeholderData` parameter accepts the following options:
+
+- `field` – Specifies the field name from which to retrieve the value. Note: `field` and `fieldList` are mutually exclusive.
+- `fieldList` – An array of field names to check for a value. The first non-empty field will be used.
+- `default` – A fallback value to use when the specified field(s) contain no data. Note: `default` and `defaultAction` are mutually exclusive.
+- `defaultAction` – A fallback placeholder action to execute when the specified field(s) contain no data.
 
 #### CurrentMonth
 
