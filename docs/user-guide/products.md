@@ -75,6 +75,8 @@ It's possible to specify Product fields that should be **synced** between Templa
 
 ## Properties
 
+A product can marked as Sellable, Purchaable, or Subscribable.
+
 ### Item Type
 
 *As of v4.0.*
@@ -109,3 +111,6 @@ Available options:
 
 Available if *Inventory Number Type* is not empty. A number of days that is automatically added to the current date to determine an *Expiration Date* of an Inventory Number when the number is created in the system. Note that the Expiration Date then can be changed by a user.
 
+### Tax Classes
+
+Tax classes allow the system to automatically select an appropriate Tax Code for a product. For example, a product can have a tax class named *Zero-rated*. A tax item rule will map this tax class to a tax code with a zero rate. Then, every time the product is added to a document line, the appopriate tax code will be automaticall set.
