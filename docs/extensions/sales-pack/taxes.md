@@ -71,13 +71,11 @@ Determines the tax code to apply to the shipping cost. Available only if the shi
 
 ### Item rules
 
-A tax profile can include item rules. Each item rule defines an override tax rate for a specific Tax Class.
+A tax profile can include item rules. Each item rule defines an override tax rate for a specific Tax Class. Item rules are ordered. The first rule that matches is applied, and the subsequent rules are skipped.
 
-Products can be associated with one or more tax classes.
+!!! example
 
-For zero-rate products, define a tax code with a zero rate.
-
-Item rules are ordered. The first rule that matches is applied, and the subsequent rules are skipped.
+    A product has a tax class named 'Zero-rated'. A tax item rule maps this tax class to a tax code with a zero rate. Then, every time the product is added to a document line, that tax code will be automatically set.
 
 ## Tax classes
 
