@@ -71,7 +71,7 @@ Special functions available for conditions:
 * `ext\priceRule\accountAttribute` – returns an Account attribute value, e.g. `ext\priceRule\accountAttribute('type')`;
 * `ext\priceRule\productAttribute` – returns a Product attribute value, e.g. `ext\priceRule\productAttribute('id')`.
 
-Formula based conditions make the pricing functionality highly flexible, allowing to implement a wide range of pricing models. Below are use cases how custom conditions can be utilized.
+Formula based conditions make the pricing functionality highly flexible, allowing to implement a wide range of pricing models. See a few simple use cases below.
 
 **Use case 1:** A rule applied to Accounts with type Partner.
 
