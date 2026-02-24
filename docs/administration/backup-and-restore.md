@@ -2,10 +2,10 @@
 
 This article outlines backup and restore methods for EspoCRM in various environments:
 
-* [Bare Metal Installation](#bare-metal-installation)
-* [Docker Installation](#docker-installation)
+* [Bare metal installation](#bare-metal-installation)
+* [Docker installation](#docker-installation)
 
-## Bare Metal Installation
+## Bare metal installation
 
 ### Backup with a script
 
@@ -124,7 +124,7 @@ sudo crontab -l -u www-data
 
 More details about configuring crontab see [here](server-configuration.md#setting-up-crontab).
 
-## Docker Installation
+## Docker installation
 
 ### Backup with a script
 
