@@ -113,4 +113,4 @@ Available if *Inventory Number Type* is not empty. A number of days that is auto
 
 ### Tax Classes
 
-Tax classes allow the system to automatically select an appropriate Tax Code for a product. For example, a product can have a tax class named 'Zero-rated'. A tax item rule will map this tax class to a tax code with a zero rate. Then, every time the product is added to a document line, the appopriate tax code will be automaticall set.
+Tax classes allow the system to automatically select an appropriate Tax Code for a product. For example, a product can have a tax class named 'Zero-rated'. A tax item rule will map this tax class to a tax code with a zero rate. Then, every time the product is added to a document line, that tax code will be automatically set.
