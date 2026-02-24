@@ -2,10 +2,10 @@
 
 This article outlines backup and restore methods for EspoCRM in various environments:
 
-* [Bare metal installation](#bare-metal-installation)
+* [Non-containerized installation](#non-containerized-installation)
 * [Docker installation](#docker-installation)
 
-## Bare metal installation
+## Non-containerized installation
 
 ### Backup with a script
 
