@@ -7,6 +7,8 @@ This article outlines backup and restore methods for EspoCRM in various environm
 
 ## Non-containerized installation
 
+Refers to a traditional installation without using containers.
+
 ### Backup with a script
 
 You can use a script to back up all needed data. Login via SSH and run the commands (tested on the Ubuntu server).
