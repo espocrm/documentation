@@ -66,6 +66,7 @@ If you click *Edit* on the entity view, you will be able to change parameters of
 * Preserve Audit Log – disables cleanup of the audit log; this parameter is applicable only if Stream is disabled, since if Stream is enabled, audit log records are not being deleted.
 * Collaborators – the ability to [share](roles-management.md#collaborators) records with specific users.
 * Multiple Assigned Users – the ability to assign multiple users to a record.
+* Categories – records can be organized into tree-like categories; available for Base and Base Plus types (as of v9.4). 
 
 !!! note
 
