@@ -58,18 +58,20 @@ Price Rules can be added to a specific Price Book. One Rule can modify the base 
 
 #### Target
 
-Determines when the Rule will be applied.
+The Target field determines when the Rule should be applied. The following options are available:
 
 * Product Category – applies to all Products of a specific Category, including sub-categories;
 * All – applies to all Products;
 * Conditional – when a specific condition is met.
 
-The administrator can add Conditions at Administration > Price Rule Conditions. Created conditions then will be available on the Price Rule form. Conditions are defined with a [Formula](../../administration/formula.md) expression. The expression should return true or false.
+An administrator can add custom Conditions at Administration > Price Rule Conditions. Created conditions then will be available on the Price Rule form. Conditions are defined with a [Formula](../../administration/formula.md) expression. An expression should return true or false.
 
 Special functions available for conditions:
 
 * `ext\priceRule\accountAttribute` – returns an Account attribute value, e.g. `ext\priceRule\accountAttribute('type')`;
 * `ext\priceRule\productAttribute` – returns a Product attribute value, e.g. `ext\priceRule\productAttribute('id')`.
+
+Formula based conditions make the pricing functionality highly flexible, allowing to implement a wide range of pricing models. Below are use cases how custom conditions can be utilized.
 
 **Use case 1:** A rule applied to Accounts with type Partner.
 
