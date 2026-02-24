@@ -24,4 +24,4 @@ The max number of sub-process instances (within a multi-instance sub-process) is
 
 Can be enabled by setting the config parameter `bpmnRunInParallel` to `true`. Running jobs [in parallel](jobs.md#running-jobs-in-parallel-processes) must be also enabled.
 
-For scheduled processes, to process them in parallel, use a Timer Intermediate Event right after the Start Timer event.
+For scheduled processes, to process them in parallel, use a Timer Intermediate Event right after the Start Timer event. Scheduled processes are started sequentially even if the *bpmnRunInParallel* parameter is set to true.
