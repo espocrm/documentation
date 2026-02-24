@@ -7,7 +7,7 @@ This article outlines backup and restore methods for EspoCRM in various environm
 
 ## Non-containerized installation
 
-Refers to a traditional installation without using containers.
+Refers to a traditional installation that does not use containers.
 
 ### Backup with a script
 
