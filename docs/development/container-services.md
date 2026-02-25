@@ -144,4 +144,4 @@ Class: `Espo\Core\Utils\Config\SystemConfig`
 
 *As of v9.4.*
 
-Inteface: `Espo\Core\Session\Session`
+Interface: `Espo\Core\Session\Session`
