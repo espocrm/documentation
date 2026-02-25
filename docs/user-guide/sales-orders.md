@@ -82,6 +82,8 @@ The prefix of the next number, the next number itself and the quantity of digits
 
 By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Sales Order > Layouts > Detail.
 
+By default, the *Name* field is synced with *Number*. To be able to specify arbitrary names, you need to disable the *Sync with Number* and *Read-only* parameters at Administration > Entity Manager > Sales Order > Fields > Name.
+
 ## Copying values from product to sales order item
 
 Field values can be transferred from a product to a sales order item upon product selection. Field names you want to be copied should coincide in the Product and the Sales Order Item entity types.
