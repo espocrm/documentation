@@ -198,7 +198,7 @@ have to change some columns to TEXT or BLOBs.*
 2. *ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to 
 TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.*
 
-You can get this error if there are a large number of Varchar fields in an entity type. After this, you cannot create new fields.
+You can get this error if there are too many Varchar fields in an entity type. You cannot create new fields in this case.
 
 To fix this problem, you can try two solutions:
 
@@ -210,13 +210,13 @@ Edit the file `custom/Espo/Custom/Resources/metadata/entityDefs/{EntityType}.jso
 
 #### Step 2. Change columns length in database
 
-Then you need to amend the corresponding columns in your database by changing their length. You can do it manually (via a database admin tool) or run a [hard rebuild](commands.md#hard-rebuild).
+Then you need to amend the corresponding columns in your database by changing their length. You can do it manually (by running a query or via a database admin tool) or run a [hard rebuild](commands.md#hard-rebuild).
 
 #### Step 3. Rebuild
 
 *Not needed if you already run a hard rebuild.*
 
-Log in as an administrator in EspoCRM, go to Administration and click *Rebuild*. You can also do it via [CLI](commands.md/#rebuild).
+Log in as an administrator in EspoCRM, go to Administration and click *Rebuild*. Alternatively, run rebuild via [CLI](commands.md/#rebuild).
 
 ### Solution 2. Change type for some varchar fields from *Varchar* to *Text* 
 
@@ -239,4 +239,4 @@ Note that the *maxLength* value can be different for your field. You just need t
 
 #### Step 2. Rebuild
 
-Login as administrator in EspoCRM, go to Administration and click the Rebuild link or do it via [CLI](commands.md/#rebuild).
+Log in as administrator in EspoCRM, go to Administration and click the Rebuild link. Alternatively, rebuld via [CLI](commands.md/#rebuild).
