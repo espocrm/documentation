@@ -139,3 +139,9 @@ Class: `Espo\Core\Utils\Config\ApplicationConfig`
 *As of v9.1.*
 
 Class: `Espo\Core\Utils\Config\SystemConfig`
+
+## session
+
+*As of v9.4.*
+
+Inteface: `Espo\Core\Session\Session`
