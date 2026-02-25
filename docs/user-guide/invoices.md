@@ -136,6 +136,8 @@ The prefix of the next number, the next number itself and the quantity of digits
 
 By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Invoice > Layouts > Detail.
 
+By default, the *Name* field is synced with *Number*. To be able to specify arbitrary names, you need to disable the *Sync with Number* and *Read-only* parameters at Administration > Entity Manager > Invoice > Fields > Name.
+
 ## Copying values from product to invoice item
 
 Field values can be transferred from a product to an invoice item upon product selection. Field names you want to be copied should coincide in Product and Invoice Item entities.
