@@ -8,6 +8,7 @@ In this article:
 * [User inactivating](#user-inactivating)
 * [Logging in as another user](#logging-in-as-another-user)
 * [Teams](#teams)
+* [See also](#see-also)
 
 ## User types
 
@@ -96,3 +97,7 @@ A user can be related to one or multiple teams. Only the administrator can manag
 Teams can provide additional access control capabilities. For example, a user added to a specific team, gets the ability to view records related to that team. Or, a user added to a team (e.g. called 'Managers') gets the ability to create and edit records of specific type and full read access.
 
 A user can have the Default Team. All records created by the user will be related to that team by default.
+
+## See also
+
+* [Teams quick tour](https://app.supademo.com/demo/cmm0qgpdz1q4p2rl72vtcqtx4)
