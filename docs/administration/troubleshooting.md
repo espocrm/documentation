@@ -239,4 +239,4 @@ Note that the *maxLength* value can be different for your field. You just need t
 
 #### Step 2. Rebuild
 
-Log in as administrator in EspoCRM, go to Administration and click the Rebuild link. Alternatively, rebuld via [CLI](commands.md/#rebuild).
+Log in as administrator in EspoCRM, go to Administration and click the Rebuild link. Alternatively, rebuild via [CLI](commands.md/#rebuild).
