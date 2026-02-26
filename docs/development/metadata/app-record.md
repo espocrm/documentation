@@ -10,7 +10,6 @@ Record framework definitions.
 
 Classes for additional handling of a select query. An entity type is passed to the constructor in `$entityType` parameter.
 
-
 ## createInputFilterClassNameList
 
 *class-string<Espo\Core\Record\Input\Filter\>[]*
@@ -37,76 +36,110 @@ Output filters.
 
 ## beforeReadHookClassNameList
 
+*class-string<Espo\Core\Record\Hook\ReadHook\>[]*
+
 *As of v9.4.*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\ReadHook` interface.
+An array of hooks (applied for API calls).
 
 ## earlyBeforeCreateHookClassNameList
 
+*class-string<Espo\Core\Record\Hook\CreateHook\>[]*
+*class-string<Espo\Core\Record\Hook\SaveHook\>[]*
+
 *As of v9.4.*
 
-An array of hooks. Applied for API calls, before validation. Should implement `Espo\Core\Record\Hook\CreateHook` or `Espo\Core\Record\Hook\SaveHook` interface.
+An array of hooks. Applied for API calls, before validation.
 
 ## beforeCreateHookClassNameList
 
 *As of v9.4.*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` interface. As of v8.1, can also implement `Espo\Core\Record\Hook\SaveHook`.
+*class-string<Espo\Core\Record\Hook\CreateHook\>[]*
+*class-string<Espo\Core\Record\Hook\SaveHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## afterCreateHookClassNameList
 
 *As of v9.4.*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\CreateHook` or `Espo\Core\Record\Hook\SaveHook`.
+*class-string<Espo\Core\Record\Hook\CreateHook\>[]*
+*class-string<Espo\Core\Record\Hook\SaveHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## earlyBeforeUpdateHookClassNameList
 
 *As of v9.4.*
 
-An array of hooks. Applied for API calls, before validation. Should implement `Espo\Core\Record\Hook\UpdateHook` or `Espo\Core\Record\Hook\SaveHook` interface.
+*class-string<Espo\Core\Record\Hook\UpdateHook\>[]*
+*class-string<Espo\Core\Record\Hook\SaveHook\>[]*
+
+An array of hooks. Applied for API calls, before validation.
 
 ## beforeUpdateHookClassNameList
 
 *As of v9.4.*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` interface. As of v8.1, can also implement `Espo\Core\Record\Hook\SaveHook`.
+*class-string<Espo\Core\Record\Hook\UpdateHook\>[]*
+*class-string<Espo\Core\Record\Hook\SaveHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## afterUpdateHookClassNameList
 
 *As of v9.4.*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UpdateHook` or `Espo\Core\Record\Hook\SaveHook`.
+*class-string<Espo\Core\Record\Hook\UpdateHook\>[]*
+*class-string<Espo\Core\Record\Hook\SaveHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## beforeDeleteHookClassNameList
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\DeleteHook` interface.
+*As of v9.4.*
+
+*class-string<Espo\Core\Record\Hook\DeleteHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## afterDeleteHookClassNameList
 
 *As of v8.2.*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\DeleteHook` interface.
+*class-string<Espo\Core\Record\Hook\DeleteHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## beforeLinkHookClassNameList
 
 *As of v9.4.*
 
-An array of hooks (applied for API calls).  Should implement the `Espo\Core\Record\Hook\LinkHook` interface.
+*class-string<Espo\Core\Record\Hook\LinkHook\>[]*
+
+An array of hooks (applied for API calls). 
 
 ## beforeUnlinkHookClassNameList
 
 *As of v9.4.*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook` interface.
+*class-string<Espo\Core\Record\Hook\UnlinkHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## afterLinkHookClassNameList
 
-*As of v8.2.*
+*As of v9.4.*
 
-An array of hooks (applied for API calls).  Should implement the `Espo\Core\Record\Hook\LinkHook` interface.
+*class-string<Espo\Core\Record\Hook\LinkHook\>[]*
+
+An array of hooks (applied for API calls).
 
 ## afterUnlinkHookClassNameList
 
-*As of v8.2.*
+*class-string<Espo\Core\Record\Hook\UnlinkHook\>[]*
 
-An array of hooks (applied for API calls). Should implement the `Espo\Core\Record\Hook\UnlinkHook`
+*As of v9.4.*
+
+An array of hooks (applied for API calls).
