@@ -37,7 +37,7 @@ A Project has Activities and History panels. Meetings, Calls, and Emails can be 
 
 Projects can be organized into categories. Categories follow a hierarchical, tree-like structure.
 
-Access to categories is controlled by Roles, with the Project Category scope. Only administrators can create or edit cateogiries.
+Access to categories is controlled by Roles, with the Project Category scope. Only administrators can create or edit categories.
 
 ## Boards
 
