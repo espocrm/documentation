@@ -16,7 +16,7 @@ Must implement `Espo\Core\Duplicate\WhereBuilder` interface.
 
 Populates default values when creating a record.
 
-Is called after the entity is set with input payload values. Usually, it's reasoable to call the default implementation `Espo\Core\Record\Defaults\DefaultPopulator`.
+Is called after the entity is set with input payload values. Usually, it's reasonable to call the default implementation `Espo\Core\Record\Defaults\DefaultPopulator`.
 
 ## readLoaderClassNameList
 
