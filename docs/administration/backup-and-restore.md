@@ -130,6 +130,10 @@ More details about configuring crontab see [here](server-configuration.md#settin
 
 ### Backup with a script
 
+!!! important
+
+    Script must be run from the host.
+
 #### Step 1. Download a script
 
 ```bash
@@ -148,6 +152,14 @@ or
 
 ```bash
 sudo bash backup-docker-container.sh CONTAINER_NAME ./BACKUP_DIR
+```
+
+#### Script running via Crontab
+
+You can set up automatic backups using [Crontab](server-configuration.md#setting-up-crontab). To do this, you need to add the following line: 
+
+```
+30 1 * * * sudo bash /var/www/html/espo-docker/backup-docker-container.sh CONTAINER_NAME /var/www/html/espo-docker/backups >> /var/www/html/espo-docker/backups/espo-backup.log 2>&1
 ```
 
 ### Manual backup
