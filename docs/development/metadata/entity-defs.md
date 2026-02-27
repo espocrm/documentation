@@ -509,11 +509,17 @@ Example:
 }
 ```
 
-## massUpdateActionList
+### massUpdateActionList
 
 *string[]*
 
 Actions for mass update.
+
+### notLockable
+
+*boolean*
+
+The field is not locked when the record is locked. As of v9.4.
 
 ## links
 
