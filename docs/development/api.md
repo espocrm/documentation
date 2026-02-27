@@ -146,6 +146,10 @@ Usually occurs when you **don't have access** to a specific record or action. Se
 
 Usually occurs when a requested **record doesn't exist**.
 
+### 409 Conflict
+
+An operation cannot be performed becase of a conflict error. For example, cannot edit a locked record, cannot create a duplicate record.
+
 ## Date and time values
 
 Date format: *YYYY-MM-DD*. Datetime format: *YYYY-MM-DD HH:mm:ss*.
