@@ -154,12 +154,12 @@ or
 sudo bash backup-docker-container.sh CONTAINER_NAME ./BACKUP_DIR
 ```
 
-#### Script running via Crontab
+### Automatic backups
 
-You can set up automatic backups using Crontab. To do this, you need to add the following line: 
+Backups can be scheduled on the host by adding the following entry to the crontab:
 
 ```
-30 1 * * * sudo bash /var/www/html/espo-docker/backup-docker-container.sh CONTAINER_NAME /var/www/html/espo-docker/backups >> /var/www/html/espo-docker/backups/espo-backup.log 2>&1
+0 1 * * * sudo bash /opt/scripts/backup-docker-container.sh CONTAINER_NAME /backup/espocrm >> /backup/espocrm/backup.log 2>&1
 ```
 
 ### Manual backup
