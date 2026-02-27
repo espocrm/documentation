@@ -14,7 +14,7 @@ The root API path is: `api/v1/`.
     GET https://address_of_your_crm/api/v1/Contact/55643ca033f7ab4c5
     ```
 
-In this documentation we omit the site URL and `api/v1/` path when we show examples of API endpoints. If you utilize any of our client implementations, it will prepend these URL parts automatically.
+In this documentation we omit the site URL and `api/v1/` path when we show examples of API endpoints. If you utilize any of our client implementations, they prepend these URL parts automatically.
 
 !!! note
 
