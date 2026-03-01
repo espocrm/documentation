@@ -8,7 +8,7 @@ If the Warehouses feature is enabled, every Delivery Order record must be associ
 
 Multiple Delivery Orders can be created from a single [Sales Order](../../user-guide/sales-orders.md). It may be reasonable when a delivery is split into parts or shipped from different warehouses.
 
-An issued delivery order decreases stock quantities.
+When a delivery order is issued, the stock quantities of the included products are reduced.
 
 The Delivery Order statuses:
 
