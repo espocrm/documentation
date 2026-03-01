@@ -15,11 +15,11 @@ In this article:
 
     You need to have cron properly configured in your system to have inbound emails working.
 
-IMAP allows to retrieve your emails from a mail server. To set up an IMAP account, do the following steps:
+IMAP allows you to retrieve your emails from a mail server. To set up an IMAP account, do the following steps:
 
 1. Go to Emails Tab > top-right menu > Personal Email Accounts.
 2. Click on *Create Personal Email Account*.
-3. In the *Main* section, specify your Email Address. The *Name* of the personal email account is generated automatically, but you can change it. *Fetch since* allows to choose a date from which emails will be imported. If you want to archive old emails, set it to some past date.
+3. In the *Main* section, specify your Email Address. The *Name* of the personal email account is generated automatically, but you can change it. *Fetch since* allows you to choose a date from which emails will be imported. If you want to archive old emails, set it to some past date.
 
 ![Create personal email account](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/1.png)
 
@@ -28,7 +28,7 @@ IMAP allows to retrieve your emails from a mail server. To set up an IMAP accoun
 ![IMAP configuration](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/user-guide/imap-smtp-configuration/2.png)
 
 5. Specify what folders to monitor in the *Monitored Folders* field. By default, it is set to INBOX. If you use some external email client to send emails, you can add the Sent folder to archive those emails.
-6. *Put in Folder* field allows to specify an Espo email folder in which incoming emails will be put.
+6. *Put in Folder* field allows you to specify an Espo email folder in which incoming emails will be put.
 7. Click on *Test Connection* to check whether everything was set correctly. If the connection is successful, click *Save*.
 
 ## SMTP configuration
