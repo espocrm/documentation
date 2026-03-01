@@ -2,7 +2,7 @@
 
 The Sales Orders feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
 
-A Sales Order represents a confirmed customer order, and contains a group of products or services with their quantities and prices.
+A Sales Order is a document representing a confirmed customer order, and contains a group of products or services with their quantities and prices.
 
 You can add the Sales Orders panel to the Account detail view to be able to see related sales orders. At Administration > Layout Manager > Accounts > Bottom Panels.
 
