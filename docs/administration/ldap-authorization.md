@@ -30,7 +30,7 @@ Then, go to EspoCRM Authentication settings in the Administrator panel, select t
 * Host – LDAP IP or host name.
 * Port – connection port.
 * Auth – access credentials for the LDAP server:
-* Full User DN – the full system user DN which allows to search other users.
+* Full User DN – the full system user DN which allows searching other users.
     * Password – the password to access the LDAP server.
     * Security – SSL or TSL protocol.
 * Username Attribute – The attribute to identify the user.
