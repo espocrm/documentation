@@ -4,7 +4,7 @@
 
 The Inventory Management feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
-The Inventory Management feature allows to track product quantities, locations in warehouses, transfers between warehouses, and a history of purchase and sales. It allows to validate product availability before selling it to a customer.
+The Inventory Management feature allows tracking of product quantities, warehouse locations, transfers between warehouses, and the history of purchases and sales. It allows validating product availability before selling it to a customer.
 
 The Inventory Management feature is disabled by default. To enable it, you need to enable **Inventory Transactions** at Administration > Sales Pack (Settings).
 
