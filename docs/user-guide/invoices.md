@@ -2,7 +2,7 @@
 
 The Invoices feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
 
-An Invoice record represents a group of products or services with their quantities and prices.
+An Invoice is a billing document issued to a customer that details the products or services provided, including their quantities, prices, applicable taxes, and the total amount due.
 
 You can add the *Invoices* panel to the Account detail view to be able to see related sales orders. Administration > Layout Manager > Accounts > Bottom Panels.
 
