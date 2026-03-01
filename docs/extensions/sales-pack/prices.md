@@ -20,7 +20,7 @@ In this article:
 
 *As of Sales Pack v2.0.*
 
-The Price Books feature allows to have different prices for one product. A price book record contains prices for multiple products. One price book can contain different prices for a single product, applied for a specific effective date period or a specific item quantity.
+The Price Books feature allows you to set different prices for the same product. A price book record contains prices for multiple products. One price book can contain different prices for a single product, applied for a specific effective date period or a specific item quantity.
 
 The Price Books feature can be enabled or disabled under Administration > Sales Pack (Settings). Access to Price Books is controlled by Roles.
 
