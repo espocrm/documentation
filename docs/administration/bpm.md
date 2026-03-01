@@ -18,7 +18,7 @@ The BPM tool is available in [Advanced Pack](https://www.espocrm.com/extensions/
 
 The Workflows tool is intended for automation of simple business rules, without sequential flow items, when there is no need to display the flow graphically.
 
-The BPM tool is intended for more complex business logic, where there can be diverging and converging flows, execution delays, user interactions. The flowchart view makes the business process more comprehensible for a human, the log allows to see how the process was held.
+The BPM tool is intended for more complex business logic, where there can be diverging and converging flows, execution delays, user interactions. The flowchart view makes the business process more comprehensible for a human, the log allows you to see how the process was held.
 
 The BPM tool has all the capabilities of the Workflows tool. If you've used the Workflows tool before, your knowledge will be useful for getting into BPM, as they share a number of features.
 
@@ -67,7 +67,7 @@ Processes can be started:
 
 * Automatically – Upon specific conditions, signal, or scheduling, described in the Flowchart.
 * Manually – To start process manually, a user needs to click the *Start Process* button on the Processes list view, or on the record detail view from the dropdown in the top-right corner.
-* By a Workflow rule – using the *Start BPM Process* action in a rule. It allows to pass the workflow's target record or a related record as a target for the new process.
+* By a Workflow rule – using the *Start BPM Process* action in a rule. It allows you to pass the workflow's target record or a related record as a target for the new process.
 
 By using a Workflow with the manual trigger, it's possible to have a button on the detail view that will start a particular process.
 
