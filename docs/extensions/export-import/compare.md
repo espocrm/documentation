@@ -165,7 +165,7 @@ Available values:
 
 #### `--entity-skip-list`
 
-This option allows to compare data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
+This option allows you to compare data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
 
 Available values:
 
@@ -174,7 +174,7 @@ Available values:
 
 #### `--entity-hard-list`
 
-This option allows to export or import data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
+This option allows you to export or import data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
 
 Available values:
 
@@ -185,7 +185,7 @@ Available values:
 
 **Note:** not yet implemented.
 
-This option allows to compare data for config options which are disabled by default. Ex. `--config-hard-list="CONFIG_OPTION"`.
+This option allows you to compare data for config options which are disabled by default. Ex. `--config-hard-list="CONFIG_OPTION"`.
 The default list is defined in `application/Espo/Modules/ExportImport/Resources/metadata/app/exportImport.json`.
 
 Available values:

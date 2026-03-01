@@ -1,6 +1,6 @@
 # Twilio Integration Setup
 
-Twilio integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Twilio service and other VoIP providers, read more details [here](https://www.espocrm.com/features/twilio-integration/).
+Twilio integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows you to integrate EspoCRM with Twilio service and other VoIP providers, read more details [here](https://www.espocrm.com/features/twilio-integration/).
 
 There are two ways in which you can set up Twilio integration:
 

@@ -1,6 +1,6 @@
 # Starface Integration Setup
 
-Starface integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Starface server and other VoIP providers, read more details [here](https://www.espocrm.com/features/starface-integration-setup/).
+Starface integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows you to integrate EspoCRM with Starface server and other VoIP providers, read more details [here](https://www.espocrm.com/features/starface-integration-setup/).
 
 ## Supported Starface servers
 

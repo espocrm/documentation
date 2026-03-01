@@ -1,6 +1,6 @@
 # Asterisk Integration Setup
 
-Asterisk integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Asterisk server through Asterisk Manager Interface (AMI) and other VoIP providers, read more details [here](https://www.espocrm.com/features/asterisk-integration-setup/).
+Asterisk integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows you to integrate EspoCRM with Asterisk server through Asterisk Manager Interface (AMI) and other VoIP providers, read more details [here](https://www.espocrm.com/features/asterisk-integration-setup/).
 
 ## Supported Asterisk servers
 

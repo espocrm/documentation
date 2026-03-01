@@ -68,7 +68,7 @@ Note that the *Phone* field of the user, for whom you want to set up the Two-Fac
 
 ## VoIP integration for Twilio
 
-The [VoIP integration](https://www.espocrm.com/extensions/voip-integration/) integration allows to send and receive Twilio SMS/MMS through the UI.
+The [VoIP integration](https://www.espocrm.com/extensions/voip-integration/) allows sending and receiving Twilio SMS/MMS through the UI.
 
 !!! important
 

@@ -11,7 +11,7 @@ A dynamic behavior for forms can be achieved by utilizing the Dynamic Logic feat
 
 Dynamic Logic parameters are available for every field (Administration > Entity Manager > {Entity Type} > Fields > {field}.
 
-The Dynamic Logic allows to define conditions making certain fields visible, required or read-only. Conditions will be
+The Dynamic Logic allows you to define conditions making certain fields visible, required or read-only. Conditions will be
 checked automatically when data in the form is changed.
 
 For *Enum*, *Array*, *Multi-Enum*, *Checklist* fields it's, possible to define different sets of options that will be

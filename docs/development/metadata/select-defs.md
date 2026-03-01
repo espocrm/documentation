@@ -90,7 +90,7 @@ Classes should implement `Espo\Core\Select\Where\ItemConverter` interface.
 
 Mapping keys a formatted as: `{fieldName}_{conditionItemType}`.
 
-This mapping allows to define a custom field filtering implementation. The *conditionItemType* is passed in a [where item](../api-search-params.md#where-items) in the *type* parameter.
+This mapping allows you to define a custom field filtering implementation. The *conditionItemType* is passed in a [where item](../api-search-params.md#where-items) in the *type* parameter.
 
 ## accessControlFilterResolverClassName
 

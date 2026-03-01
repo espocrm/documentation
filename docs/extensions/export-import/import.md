@@ -124,7 +124,7 @@ Current time for the `createdAt` field. By default, this option is `off`.
 
 #### `--entity-skip-list`
 
-This option allows to skip importing data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
+This option allows you to skip importing data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
 
 Available values:
 
@@ -133,7 +133,7 @@ Available values:
 
 #### `--entity-hard-list`
 
-This option allows to import data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
+This option allows you to import data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
 
 Available values:
 
@@ -142,7 +142,7 @@ Available values:
 
 #### `--config-hard-list`
 
-This option allows to import data for config options which are disabled by default. Ex. `--config-hard-list="CONFIG_OPTION"`.
+This option allows you to import data for config options which are disabled by default. Ex. `--config-hard-list="CONFIG_OPTION"`.
 The default list is defined in `application/Espo/Modules/ExportImport/Resources/metadata/app/exportImport.json`.
 
 Available values:
@@ -152,7 +152,7 @@ Available values:
 
 #### `--entity-import-type-create`
 
-This option allows to define a custom `create` import type for specified entity types. Example: `--entity-import-type-create="ENTITY_TYPE"`.
+This option allows you to define a custom `create` import type for specified entity types. Example: `--entity-import-type-create="ENTITY_TYPE"`.
 
 Available values:
 
@@ -161,7 +161,7 @@ Available values:
 
 #### `--entity-import-type-update`
 
-This option allows to define a custom `update` import type for specified entity types. Example: `--entity-import-type-update="ENTITY_TYPE"`.
+This option allows you to define a custom `update` import type for specified entity types. Example: `--entity-import-type-update="ENTITY_TYPE"`.
 
 Available values:
 
@@ -170,7 +170,7 @@ Available values:
 
 #### `--entity-import-type-create-and-update`
 
-This option allows to define a custom `createAndUpdate` import type for specified entity types. Example: `--entity-import-type-create-and-update="ENTITY_TYPE"`.
+This option allows you to define a custom `createAndUpdate` import type for specified entity types. Example: `--entity-import-type-create-and-update="ENTITY_TYPE"`.
 
 Available values:
 

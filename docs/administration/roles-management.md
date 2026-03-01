@@ -24,7 +24,7 @@ Roles are used to grant or restrict access for users. An administrator can manag
 
 One User can have multiple Roles applied. Roles can be set in the User record (the *Roles* field) and/or be inherited from the User's Teams.
 
-When a User has multiple Roles, these Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This allows to flexibly manage access level control.
+When a User has multiple Roles, these Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This enables the ability to flexibly manage access level control.
 
 It's possible to see what permissions are applied to a certain User by clicking the *Access* button on the user's detail view.
 

@@ -119,7 +119,7 @@ The same as previous but vice versa. The *Link* field will be created in the for
 
 Linking with multiple entity types through the *Link-Parent* field.
 
-*Foreign Links* checkboxes allows to create Has-Children links in specific parent entity types. For example, if we check *Account* foreign link, it will create a link in the Account entity type. It will allow to add relationship panel in Account.
+*Foreign Links* checkboxes allows you to create Has-Children links in specific parent entity types. For example, if we check *Account* foreign link, it will create a link in the Account entity type. It will allow to add relationship panel in Account.
 
 ### Parameters
 

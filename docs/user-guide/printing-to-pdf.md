@@ -7,7 +7,7 @@ tags:
 
 # Printing to PDF
 
-The Print to PDF feature allows to generate PDF documents with record data. The document content is defined by a Template.
+The Print to PDF feature allows you to generate PDF documents with record data. The document content is defined by a Template.
 
 !!! warning "Important"
 
@@ -92,7 +92,7 @@ You can specify a document title in the *Title* field (as of v7.0). `{$name}` pl
 
 ### Code view
 
-A code view mode can be enabled by clicking *</\>* button. It allows to edit raw HTML and make sure the layout is not messed up.
+A code view mode can be enabled by clicking *</\>* button. It allows you to edit raw HTML and make sure the layout is not messed up.
 
 When editing a template in the code view and using template helpers, you need to keep the HTML code valid. Otherwise, the markup will break. Follow the guidelines:
 

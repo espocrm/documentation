@@ -52,7 +52,7 @@ Users can attach files stream posts.
 
 An administrator can configure the *Attachments* field at Administration > Entity Manager > Note > Fields > attachments (as of v7.2). The following parameters are available:
 
-* Source list – by adding Documents, it allows to attach Documents to stream posts directly;
+* Source list – by adding Documents, it enables the ability to attach Documents to stream posts directly;
 * Max file size;
 * Accept – which file types to accept.
 

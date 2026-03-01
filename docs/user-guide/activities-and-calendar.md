@@ -140,7 +140,7 @@ Users can create custom shared views that will display events of specific teams.
 
     The Shared view displays events of users of a selected team. It doesn't necessary display events assigned to that team (e.g. event is assigned to the team, but doesn't assigned to any user of that team).
 
-The Shared view is also available for the *Timeline* view. It allows to view events of multiple users.
+The Shared view is also available for the *Timeline* view. It allows you to view events of multiple users.
 
 ### Custom entities on calendar
 

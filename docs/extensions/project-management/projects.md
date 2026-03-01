@@ -239,7 +239,7 @@ The *Work* type is set by default.
 
 Only *Work*, *Phase* and *Sprint* groups are displayed on the Gantt chart.
 
-The Project Task dashlet allows to limit tasks by specific group types. For example, one may want to list only tasks from the Work and Sprint groups, or display only Triage tasks in a separate dashlet.
+The Project Task dashlet allows you to limit tasks by specific group types. For example, one may want to list only tasks from the Work and Sprint groups, or display only Triage tasks in a separate dashlet.
 
 Group types are also useful for automation. For example, a workflow rule can be triggered when a task is moved to a Sprint group. A single rule can be applied across all projects.
 

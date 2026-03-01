@@ -55,7 +55,7 @@ As webhooks require your Espo instance being accessible to Stripe, testing the i
 
 ### Using Stripe CLI
 
-Stripe CLI allows to forward Stripe events to your local webserver. You don't need to create webhooks in the Stripe Dashboard for this (though you will need to create them for production).
+Stripe CLI provides the ability to forward Stripe events to your local webserver. You don't need to create webhooks in the Stripe Dashboard for this (though you will need to create them for production).
 
 Download the [Stripe CLI](https://docs.stripe.com/stripe-cli) tool and run it in the terminal.
 
