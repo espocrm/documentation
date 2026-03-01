@@ -8,7 +8,9 @@ If the Warehouses feature is enabled, every Delivery Order record must be associ
 
 Multiple Delivery Orders can be created from a single [Sales Order](../../user-guide/sales-orders.md). It may be reasonable when a delivery is split into parts or shipped from different warehouses.
 
-The following Delivery Order statuses are available:
+An issued delivery order decreases stock quantities.
+
+The Delivery Order statuses:
 
 * Draft – inventory is soft-reserved;
 * Ready – inventory is reserved;
