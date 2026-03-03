@@ -68,6 +68,7 @@ If you click *Edit* on the entity view, you will be able to change parameters of
 * Multiple Assigned Users – the ability to assign multiple users to a record.
 * Categories – records can be organized into tree-like categories; available for Base and Base Plus types (as of v9.4).
 * Lockable – enables record locking (as of v9.4).
+* Transactional Save – enables wrapping saves and removals into DB transactions (as of v9.4).
 
 !!! note
 
