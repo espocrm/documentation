@@ -52,7 +52,7 @@ services:
       MARIADB_USER: espocrm
       MARIADB_PASSWORD: database_password
     volumes:
-      - ./espocrm-db:/var/lib/mysql
+      - espocrm-db:/var/lib/mysql
 
   espocrm:
     image: espocrm/espocrm:latest
@@ -65,11 +65,17 @@ services:
       ESPOCRM_ADMIN_PASSWORD: password
       ESPOCRM_SITE_URL: "https://{ESPOCRM_DOMAIN}"
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:80"]
+      interval: 2s
+      start_period: 60s
+      timeout: 10s
+      retries: 15
     depends_on:
       espocrm-db:
         condition: service_healthy
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     labels:
       - traefik.enable=true                                           
       - traefik.http.routers.espocrm-app.rule=Host(`{ESPOCRM_DOMAIN}`)
@@ -84,12 +90,16 @@ services:
       - espocrm:/var/www/html
     restart: always
     entrypoint: docker-daemon.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
 
   espocrm-websocket:
     image: espocrm/espocrm:latest
     container_name: espocrm-websocket
     environment:
      ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
+     ESPOCRM_CONFIG_WEB_SOCKET_URL: "wss://{ESPOCRM_DOMAIN}/ws"
      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
     volumes:
@@ -102,6 +112,7 @@ services:
       - traefik.http.routers.espocrm-ws.entrypoints=websecure
       - traefik.http.routers.espocrm-ws.tls=true
       - traefik.http.routers.espocrm-ws.tls.certresolver=esporesolver
+      - traefik.http.routers.espocrm-ws.service=espocrm-ws
       - traefik.http.services.espocrm-ws.loadbalancer.server.port=8080
 
 volumes:
