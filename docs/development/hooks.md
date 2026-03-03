@@ -11,6 +11,8 @@ Common hooks for all entity types (called from the ORM Repository class):
 - *afterRelate* – when two records are related through a many-to-many relationship;
 - *afterUnrelate* – when two records are unrelated through a many-to-many relationship;
 - *afterMassRelate*
+- *lateAfterSave* – after a record is saved, after the transaction is committed (as of v9.4);
+- *lateAfterRemove* – after a record is removed, after the transaction is committed (as of v9.4);
 
 ## Creating hook
 
@@ -53,6 +55,8 @@ There are interfaces for built-in hooks. It's recommended that your hooks implem
 * `Espo\Core\Hook\Hook\AfterRelate`
 * `Espo\Core\Hook\Hook\AfterUnrelate`
 * `Espo\Core\Hook\Hook\AfterMassRelate`
+* `Espo\Core\Hook\Hook\LateAfterSave`
+* `Espo\Core\Hook\Hook\LateAfterRemove`
 
 ## Example
 
