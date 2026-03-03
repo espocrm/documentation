@@ -91,6 +91,17 @@ node diff {version_from}
 
 The package will be created in the `build` directory.
 
+### Using custom builds for production
+
+One may want to maintain a forked and customized repository to use it for production. Note that this is not an officially supported approach but it's still viable.
+
+Principles:
+
+1. Merge with upstream.
+2. Build upgrades by yourself.
+3. Production instance should be installed from a build (artifact). It should not be the same as the development repository.
+4. Do not apply upgrades against the development repository, upgrade the production instance.
+
 ## Configuration for development
 
 EspoCRM instance configuration for development. Config parameters should be set in `data/config.php`.
