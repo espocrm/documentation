@@ -1,3 +1,10 @@
+---
+search:
+  boost: 2
+tags:
+  - roles
+---
+
 # Role Management
 
 In this article:
@@ -9,6 +16,7 @@ In this article:
 * [Example](#example)
 * [Special Permissions](#special-permissions)
 * [Collaborators](#collaborators)
+* [See also](#see-also)
 
 ## Overview
 
@@ -16,7 +24,7 @@ Roles are used to grant or restrict access for users. An administrator can manag
 
 One User can have multiple Roles applied. Roles can be set in the User record (the *Roles* field) and/or be inherited from the User's Teams.
 
-When a User has multiple Roles, these Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This allows to flexibly manage access level control.
+When a User has multiple Roles, these Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This enables the ability to flexibly manage access level control.
 
 It's possible to see what permissions are applied to a certain User by clicking the *Access* button on the user's detail view.
 
@@ -179,6 +187,10 @@ Allows to view the Audit Log. (as of v8.2)
 
 Allows to mention other Users in the Stream. (as of v8.3)
 
+### Lock Permission
+
+Allows to lock and unlock records. (as of v9.4)
+
 ## Field Level Security
 
 Allows to control access for specific fields.
@@ -219,5 +231,6 @@ The Collaborators parameter is available for custom entities created via the Ent
 
 ## See also
 
+* [Roles quick tour](https://app.supademo.com/embed/cmls03z6a1dl01189pv9nrmb9)
 * [Security roles management in EspoCRM](https://www.espocrm.com/tips/security-roles/)
 * [Multiple assigned users](multiple-assigned-users.md)

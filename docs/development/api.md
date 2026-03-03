@@ -14,7 +14,7 @@ The root API path is: `api/v1/`.
     GET https://address_of_your_crm/api/v1/Contact/55643ca033f7ab4c5
     ```
 
-In this documentation we omit the site URL and `api/v1/` path when we show examples of API endpoints. If you utilize any of our client implementations, it will prepend these URL parts automatically.
+In this documentation we omit the site URL and `api/v1/` path when we show examples of API endpoints. If you utilize any of our client implementations, they prepend these URL parts automatically.
 
 !!! note
 
@@ -145,6 +145,10 @@ Usually occurs when you **don't have access** to a specific record or action. Se
 ### 404 Not found
 
 Usually occurs when a requested **record doesn't exist**.
+
+### 409 Conflict
+
+An operation cannot be performed becase of a conflict error. For example, cannot edit a locked record, cannot create a duplicate record.
 
 ## Date and time values
 

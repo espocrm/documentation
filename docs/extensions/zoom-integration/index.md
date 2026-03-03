@@ -4,7 +4,7 @@
 
 Available in the [Zoom Integration](https://www.espocrm.com/extensions/zoom-integration/) extension.
 
-The Zoom integration allows to create Zoom meetings from Espo.
+The Zoom integration allows creating Zoom meetings from Espo.
 
 In this article:
 

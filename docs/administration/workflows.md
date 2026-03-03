@@ -1,3 +1,10 @@
+---
+search:
+  boost: 2
+tags:
+  - automation
+---
+
 # Workflows
 
 The Workflows tool is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/).
@@ -448,7 +455,7 @@ Returns the ID of the last record that has been created within the workflow rule
 
 Sets an alert message to show for the user after a manual workflow in run. AUTO_CLOSE is boolean. TYPE can be `"warning"`, `"danger"`, `"success"`, `"info"`.
 
-Markdown is supported. It allows to to display a link for the user.
+Markdown is supported. It enables the ability to display a link for the user.
 
 !!! note
 

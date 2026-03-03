@@ -187,7 +187,7 @@ The text will be displayed on the scheduling page at the top.
 
 If specified, once an invitee submits the form, they will be redirected to the specified URL.
 
-The `meetingSchedulerRequest` URI parameter with the request ID will be appended to the URL. This allows to retrieve the request data (for software developers).
+The `meetingSchedulerRequest` URI parameter with the request ID will be appended to the URL. This allows you to retrieve the request data (for software developers).
 
 #### Text to display after form submission
 

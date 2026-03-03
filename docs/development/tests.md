@@ -44,7 +44,7 @@ Running tests:
 vendor/bin/phpunit tests/integration
 ```
 
-## Static analysys
+## Static analysis
 
 Command to run:
 

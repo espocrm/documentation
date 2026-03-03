@@ -84,11 +84,11 @@ Use [`--user-password`](import.md/#-user-password) in order to set a user passwo
 
 Export data from a specific date and time. All data before this date will be ignored. Applies only to entities with a `modifiedAt` field.
 The date should be in UTC and in the format *YYYY-MM-DD HH:mm:ss*.
-By default this option is `off`. Example: `--from-date="2025-01-01 00:00:00"`
+By default, this option is `off`. Example: `--from-date="2025-01-01 00:00:00"`
 
 #### `--entity-skip-list`
 
-This option allows to skip exporting data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
+This option allows you to skip exporting data for defined entities. Example: `--entity-skip-list="ENTITY_TYPE"`.
 
 Available values:
 
@@ -97,7 +97,7 @@ Available values:
 
 #### `--entity-hard-list`
 
-This option allows to export data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
+This option allows you to export data for entities which are disabled by default, in `exportImportDefs` with the `"exportDisabled": true` or `"importDisabled": true` option. Example: `--entity-hard-list="ENTITY_TYPE"`.
 
 Available values:
 
@@ -106,7 +106,7 @@ Available values:
 
 #### `--config-hard-list`
 
-This option allows to export data for config options which are disabled by default. Ex. `--config-hard-list="CONFIG_OPTION"`.
+This option allows you to export data for config options which are disabled by default. Ex. `--config-hard-list="CONFIG_OPTION"`.
 The default list is defined in `application/Espo/Modules/ExportImport/Resources/metadata/app/exportImport.json`.
 
 Available values:

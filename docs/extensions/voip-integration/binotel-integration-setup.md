@@ -1,6 +1,6 @@
 # Binotel Integration Setup
 
-Binotel integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows to integrate EspoCRM with Binotel server and other VoIP providers, read more details [here](https://www.espocrm.com/features/binotel-integration/).
+Binotel integration is available as part of [VoIP Integration extension](https://www.espocrm.com/extensions/voip-integration/). It allows you to integrate EspoCRM with Binotel server and other VoIP providers, read more details [here](https://www.espocrm.com/features/binotel-integration/).
 
 
 ## How to setup Binotel Integration for an administrator

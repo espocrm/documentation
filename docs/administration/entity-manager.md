@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Entity Manager
 
 The Entity Manager is an essential part of EspoCRM. It allows using the system as a platform for custom business application development, as well as customizing the default CRM features.
@@ -61,6 +66,9 @@ If you click *Edit* on the entity view, you will be able to change parameters of
 * Preserve Audit Log – disables cleanup of the audit log; this parameter is applicable only if Stream is disabled, since if Stream is enabled, audit log records are not being deleted.
 * Collaborators – the ability to [share](roles-management.md#collaborators) records with specific users.
 * Multiple Assigned Users – the ability to assign multiple users to a record.
+* Categories – records can be organized into tree-like categories; available for Base and Base Plus types (as of v9.4).
+* Lockable – enables record locking (as of v9.4).
+* Transactional Save – enables wrapping saves and removals into DB transactions (as of v9.4).
 
 !!! note
 
@@ -112,7 +120,7 @@ The same as previous but vice versa. The *Link* field will be created in the for
 
 Linking with multiple entity types through the *Link-Parent* field.
 
-*Foreign Links* checkboxes allows to create Has-Children links in specific parent entity types. For example, if we check *Account* foreign link, it will create a link in the Account entity type. It will allow to add relationship panel in Account.
+*Foreign Links* checkboxes allows you to create Has-Children links in specific parent entity types. For example, if we check *Account* foreign link, it will create a link in the Account entity type. It will allow to add relationship panel in Account.
 
 ### Parameters
 

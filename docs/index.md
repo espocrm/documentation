@@ -112,13 +112,21 @@
     * [Credit Notes](extensions/sales-pack/credit-notes.md)
     * [Delivery Orders](extensions/sales-pack/delivery-orders.md)
     * [Return Orders](extensions/sales-pack/return-orders.md)
+    * [Write-offs](extensions/sales-pack/write-offs.md)
+    * [Subscriptions](extensions/sales-pack/subscriptions.md)
   * Purchases
+    * [Suppliers](extensions/sales-pack/suppliers.md)
     * [Purchase Orders](extensions/sales-pack/purchase-orders.md)
     * [Receipt Orders](extensions/sales-pack/receipt-orders.md)
-    * [Suppliers](extensions/sales-pack/suppliers.md)
+    * [Bills](extensions/sales-pack/bills.md)
+    * [Bill credits](extensions/sales-pack/bill-credits.md)    
   * [Inventory Management](extensions/sales-pack/inventory-management.md)
   * [Payments](extensions/sales-pack/payments.md)
   * [Taxes](extensions/sales-pack/taxes.md)
+  * [Tax codes](extensions/sales-pack/tax-codes.md)
+  * [Issuance locking](extensions/sales-pack/issuance-locking.md)
+  * [Multi-currency](extensions/sales-pack/multi-currency.md)
+  * [Reports](extensions/sales-pack/reports.md)
 * Project Management
   * [Projects](extensions/project-management/projects.md)
 * Meeting Scheduler

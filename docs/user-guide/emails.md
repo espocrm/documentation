@@ -1,3 +1,8 @@
+---
+search:
+  boost: 3
+---
+
 # Guidelines on using emails
 
 EspoCRM is designed to be able to work with emails right from within the system without the necessity to use an email client separately. Though users may still opt to use an email client and have both sent and received emails synced to Espo.

@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Reports
 
 The Reports feature is available in [Advanced Pack](https://www.espocrm.com/extensions/advanced-pack/). It provides the analytic capabilities and two additional functionalities: report panels and custom list view filters.
@@ -106,7 +111,7 @@ MAP:(
 
 A report grouped by two fields is called *two-dimensional*.
 
-The results table for two-dimentional Grid reports can be displayed in two modes:
+The results table for two-dimensional Grid reports can be displayed in two modes:
 
 - Regular – columns represent the first grouping field, and rows represent the second grouping field.
 - Normalized – unpivoted (flattened), with both grouping fields displayed in rows.
@@ -151,7 +156,7 @@ In the *Filters* section, you can specify criteria to limit data displayed in th
 
 !!! note
 
-    Specifying a runtime filter can be also useful for dashlets and report panels. It allows to have filters applied to a particular dashlet or panel.
+    Specifying a runtime filter can be also useful for dashlets and report panels. It allows you to have filters applied to a particular dashlet or panel.
 
 ### Charts
 
@@ -430,7 +435,7 @@ It's possible to add a report dashlet to the portal dashboard.
 
 *As of v3.6.*
 
-Generates an XLSX export file and returns an attachment ID. An optional USER_ID allows to apply access restrictions for a specific user. Note that generated attachments have the role `Export File`, hence they will be automatically deleted by the cleanup job. To prevent deletion, you can change the role to `Attachment`.
+Generates an XLSX export file and returns an attachment ID. An optional USER_ID allows you to apply access restrictions for a specific user. Note that generated attachments have the role `Export File`, hence they will be automatically deleted by the cleanup job. To prevent deletion, you can change the role to `Attachment`.
 
 ## See also
 

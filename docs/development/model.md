@@ -127,7 +127,7 @@ const name = model.attributes.name;
 
 ## Instantiating
 
-Model-factory is available in views. The model-factory allows to create a model instance of a specific entity type.
+Model-factory is available in views. The model-factory allows you to create a model instance of a specific entity type.
 
 ```js
 export default class extends View {

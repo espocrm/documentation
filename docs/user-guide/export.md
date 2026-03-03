@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Export
 
 The Export feature allows you to extract record data in XLSX (Spreadsheet) and CSV formats.

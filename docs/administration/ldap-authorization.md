@@ -30,7 +30,7 @@ Then, go to EspoCRM Authentication settings in the Administrator panel, select t
 * Host – LDAP IP or host name.
 * Port – connection port.
 * Auth – access credentials for the LDAP server:
-* Full User DN – the full system user DN which allows to search other users.
+* Full User DN – the full system user DN which allows searching other users.
     * Password – the password to access the LDAP server.
     * Security – SSL or TSL protocol.
 * Username Attribute – The attribute to identify the user.
@@ -43,7 +43,7 @@ E.g. for Active Directory: "userPrincipalName" or "sAMAccountName",for OpenLDAP:
 * User ObjectClass – ObjectClass attribute for searching users. E.g. for Active Directory: "person", for OpenLDAP: "inetOrgPerson".
 * Bind Requires Dn – if there is a need to format the username in the DN form.
 * Base Dn – the default base DN which is used for searching users.
-* User Login Filter – the filter which allows to restrict users who are able to use EspoCRM. E.g. `memberOf=cn=espoGroup,cn=espo-users,ou=users,dc=espo,dc=local`.
+* User Login Filter – the filter which allows you to restrict users who are able to use EspoCRM. E.g. `memberOf=cn=espoGroup,cn=espo-users,ou=users,dc=espo,dc=local`.
 * Try Username Split – the option to split a username with the domain.
 * Opt Referrals – if referrals should be followed to the LDAP client.
 * Create User in EspoCRM – this option allows EspoCRM to create a user from the LDAP.

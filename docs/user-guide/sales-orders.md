@@ -2,7 +2,7 @@
 
 The Sales Orders feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/) extension.
 
-A Sales Order represents a group of products or services with their quantities and prices.
+A Sales Order is a document representing a confirmed customer order, and contains a group of products or services with their quantities and prices.
 
 You can add the Sales Orders panel to the Account detail view to be able to see related sales orders. At Administration > Layout Manager > Accounts > Bottom Panels.
 
@@ -81,6 +81,8 @@ By default, the *Number* field is auto-incremented. You can disable auto-increme
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Sales Order > Fields > numberA.
 
 By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Sales Order > Layouts > Detail.
+
+By default, the *Name* field is synced with *Number*. To be able to specify arbitrary names, you need to disable the *Sync with Number* and *Read-only* parameters at Administration > Entity Manager > Sales Order > Fields > Name.
 
 ## Copying values from product to sales order item
 

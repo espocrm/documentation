@@ -13,29 +13,31 @@ In this article:
 
 ## Payment entries
 
-A Payment record captures a single payment transaction, either inbound or outbound.
+A Payment entry captures a single payment transaction, either inbound or outbound.
 
 Access to Payments is controlled by Roles. Payments can be created from the Payments list view. Payments can also be created from the Invoice and Credit Note detail views.
 
 An inbound payment can be allocated to one or more Invoices. An outbound payment can be allocated to one or more Credit Notes.
 
-When a payment amount is received, the payment record is supposed to be set to the *Paid* status. After the payment amount is fully allocated, it has to be set to *Completed*.
+When a payment amount is received, the payment entry is supposed to be set to the *Paid* status. After the payment amount is fully allocated, it has to be set to *Completed*.
 
-When the payment amount is received, the status of the Payment record should be set to *Paid*. Once the full amount has been allocated, the status has to be updated to *Completed*.
+When the payment amount is received, the status of the payment entry should be set to *Paid*. Once the full amount has been allocated, the status has to be updated to *Completed*.
 
 If a payment exceeds the invoices' outstanding amount, the surplus can be allocated later to future invoices of the customer.
 
+The Party Type field has two options: Customer and Supplier. A payment with the Customer party type can be allocated to invoices or credit notes, depending on its direction. A payment with the Supplier party type can be allocated to bills or bill credits.
+
 ## Payment methods
 
-A Payment Method must be specified for each Payment record.
+A Payment Method must be specified for each Payment entry. By default, there's no any payment method in the system, hence
+an administrator needs to create at least one payment method.
+Payment method examples: Wire Transfer, Cash, Stripe.
 
 Only an administrator can manage Payment Methods. Regular users can read payment methods if their Role grants access.
 
-By default, there's no any payment method in the system. An administrator needs to create them.
+A payment method can be marked as eligible for inbound, outbound, or both payment directions.
 
-Some payment method examples: Wire Transfer, Cash, Stripe.
-
-You can add text instructions for a specific payment method. These instructions will appear on the payment link page.
+You can add text instructions for a specific inbound payment method. These instructions will appear on the payment link page.
 
 Multiple payment methods can be associated with a single Invoice, with one designated as primary.
 
@@ -43,7 +45,7 @@ Multiple payment methods can be associated with an Account, with one designated 
 
 ## Payment channels
 
-A payment method can be associated with a specific Payment Channel, which encapsulates the credentials and settings for a particular payment provider.
+An inbound payment method can be associated with a specific Payment Channel, which encapsulates the credentials and settings for a particular payment provider.
 
 Only an administrator can manage payment channels. Regular users cannot view payment channel records.
 
@@ -81,7 +83,7 @@ When *SEPA Direct Debit* is selected as the Invoice's payment method, the genera
 
 ## Payment requests
 
-Payment Requests can be used to create unique payment links. Payment links can be send to customers. No Espo user account is required to access these links.
+Payment Requests can be used to create unique payment links. Payment links can be sent to customers. No Espo user account is required to access these links.
 
 Payment instructions and bank credentials can be displayed on the payment link page. In the case of an automated payment channel like Stripe, the customer can make a payment from the payment link.
 
@@ -95,7 +97,7 @@ To send a payment link in an email, click *Send in Email* from the dropdown next
 
 An administrator can select the default email template for payment requests: Administration > Sales Pack Settings > Email Templates > Payment Request Email Template.
 
-Use the placeholder `{PaymentRequest.paymentUrl}` in the email template for a link. Note that the link will automatically appended to the email body if there's no URL placeholder in the email template.
+Use the placeholder `{PaymentRequest.paymentUrl}` in the email template for a link. Note that the link will automatically be appended to the email body if there's no URL placeholder in the email template.
 
 Note that you can also access the payment URL from a Formula script.
 

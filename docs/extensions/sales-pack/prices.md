@@ -2,27 +2,31 @@
 
 Product sales prices can be determined by:
 
-* price values in a Product record;
-* Price Books.
+* price books (enabled by default);
+* product-level prices.
+
+Both price sources can be enabled or disabled under Administration > Sales Pack (Settings). Both sources can be enabled
+simultaneously. In this case, the product-level price is used as a fallback.
 
 In this article:
 
-* [Price Books](#price-books)
-* [Supplier Prices](#supplier-prices)
+* [Price books](#price-books)
+* [Supplier prices](#supplier-prices)
+* [Tax inclusive pricing](#tax-inclusive-pricing)
 * [Import](#import)
 * [Mass update](#mass-update)
 
-## Price Books
+## Price books
 
 *As of Sales Pack v2.0.*
 
-The Price Books feature allows to have different prices for one product. A Price Book record contains prices for multiple products. Moreover, it can contain different prices for a single product, applied for a specific date period or a specific item quantity.
+The Price Books feature allows you to set different prices for the same product. A price book record contains prices for multiple products. One price book can contain different prices for a single product, applied for a specific effective date period or a specific item quantity.
 
-The Price Books feature is disabled by default. It can be enabled under Administration > Sales Pack (Settings). Access to Price Books is controlled by Roles.
+The Price Books feature can be enabled or disabled under Administration > Sales Pack (Settings). Access to Price Books is controlled by Roles.
 
 The Price Books list view can be accessed at Products > the top-right menu > Price Books.
 
-A Price Book can be associated with a specific Account. Note that the administrator needs to add the **Price Book** field to the *Detail* layout of the Account entity type to be able to associate accounts with price books.
+A price book can be associated with a specific Account. Note that the administrator needs to add the **Price Book** field to the *Detail* layout of the Account entity type to be able to associate accounts with price books.
 
 The Quote, Sales Order and Invoice have the **Price Book** field. When a new record is created, the Price Book is carried over from the related Account. It's possible to change the Price Book for a specific document.
 
@@ -30,7 +34,7 @@ A Price Book can have a **Parent Price Book** and so on. If there's no price fou
 
 The **Default Price Book** can be specified at Administration > Sales Pack (Settings). It will be used to fetch default prices when there's no Price Book associated with an order.
 
-When a product is added to a document as a line item and there's no price found in the related Price Book or there's no related Price Book at all, the Default Price Book will be used. If there's no Default Price Book, the price from the Product record will be used. If there's no price defined in the Product record, the price won't be set for the line item.
+When a product is added to a document as a line item and there's no price found in the related Price Book or there's no related Price Book, the Default Price Book will be used. If there's no Default Price Book, and product-level prices are enabled, the price from the Product record will be used. Otherwise, the price won't be set for the line item, and the user will need to set it manually.
 
 When a user changes the quantity in a line item, the system will look up the new unit price for the new quantity. If the new unit price is found, it will prompt the user to apply the new unit price. The user can reject and keep the previous price.
 
@@ -54,18 +58,20 @@ Price Rules can be added to a specific Price Book. One Rule can modify the base 
 
 #### Target
 
-Determines when the Rule will be applied.
+The Target field determines when the Rule should be applied. The following options are available:
 
 * Product Category – applies to all Products of a specific Category, including sub-categories;
 * All – applies to all Products;
 * Conditional – when a specific condition is met.
 
-The administrator can add Conditions at Administration > Price Rule Conditions. Created conditions then will be available on the Price Rule form. Conditions are defined with a [Formula](../../administration/formula.md) expression. The expression should return true or false.
+An administrator can add custom Conditions at Administration > Price Rule Conditions. Created conditions then will be available on the Price Rule form. Conditions are defined with a [Formula](../../administration/formula.md) expression. An expression should return true or false.
 
 Special functions available for conditions:
 
 * `ext\priceRule\accountAttribute` – returns an Account attribute value, e.g. `ext\priceRule\accountAttribute('type')`;
 * `ext\priceRule\productAttribute` – returns a Product attribute value, e.g. `ext\priceRule\productAttribute('id')`.
+
+Formula based conditions make the pricing functionality highly flexible, allowing to implement a wide range of pricing models. See a few simple use cases below.
 
 **Use case 1:** A rule applied to Accounts with type Partner.
 
@@ -123,7 +129,17 @@ If specified, the rule applies only if the item quantity exceeds the value.
 
 The Date Start and Date End fields determine when the rule is applicable. The Date End is inclusive. Both the Date Start and the Date End fields are optional.
 
-## Supplier Prices
+## Tax inclusive pricing
+
+*As of Sales Pack v4.0.*
+
+Tax inclusive pricing can be enabled for a price book. When a tax inclusive price book is selected for a document, all unit prices are treated as tax inclusive.
+
+If the default price book is set as tax inclusive, documents without a selected price book will use tax inclusive pricing. In other words, if you want to use tax inclusive pricing by default, your default price book should be set to tax inclusive.
+
+Tax inclusive pricing is available only for sales, it's not available for purchases.
+
+## Supplier prices
 
 *As of Sales Pack v2.0.*
 
@@ -131,7 +147,7 @@ A *Supplier* record can have prices for specific products. These prices are used
 
 A Supplier record can contain different prices for a single product: applied for a specific date period or a specific item quantity.
 
-If there's no supplier price found for a product, the *Cost Price* of the product will be used instead.
+If there's no supplier price found for a product, and product-level prices are enabled (in settings), then the *Cost Price* of the product will be used as a unit price.
 
 ## Import
 

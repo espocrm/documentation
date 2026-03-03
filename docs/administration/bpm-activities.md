@@ -109,7 +109,7 @@ When using Formula in a task that creates or updates another record, the current
 
     In the context of create and update record actions, it's recommended to use Formula only for setting attributes. Use the *Script Task* or *Execute Formula Script* action for any other logic.
 
-If the parameter *Isolate Variables* is checked, Formula variables defined within the task won't be exposed outside of the task. The *Return Variables* parameter allows to specify variables that will be exposed.
+If the parameter *Isolate Variables* is checked, Formula variables defined within the task won't be exposed outside of the task. The *Return Variables* parameter allows you to specify variables that will be exposed.
 
 !!! note
 
@@ -243,7 +243,7 @@ With the Script Task, you can define actions that are impossible to do with the 
 * Create a new user and send generated password ([see](formula-scripts-examples.md#creating-new-user))
 * Send email with generated PDF in attachment ([see](formula-scripts-examples.md#sending-email-with-generated-pdf-in-attachment))
 
-If the parameter *Isolate Variables* is checked, Formula variables defined within the task won't be exposed outside of the task. The *Return Variables* parameter allows to specify variables that will be exposed.
+If the parameter *Isolate Variables* is checked, Formula variables defined within the task won't be exposed outside of the task. The *Return Variables* parameter allows you to specify variables that will be exposed.
 
 !!! note
 
@@ -265,7 +265,7 @@ A sub-process should have one (and only one) regular Start Event.
 
 A sub-process can be interrupted by an interrupting boundary event. When a sub-process is successfully ended (not interrupted and not ended with an error), the flow of the parent process proceeds to the next element.
 
-It's possible to **pass a different target record** to a sub-process (to switch the target record to another). After you placed the Sub-Process element on a flowchart, click it to edit, then specify the target. It allows to easily access fields of created records or records related to the target record. For example, to send a notification to the assigned user of the opportunity that was created within the process.
+It's possible to **pass a different target record** to a sub-process (to switch the target record to another). After you placed the Sub-Process element on a flowchart, click it to edit, then specify the target. It allows you to easily access fields of created records or records related to the target record. For example, to send a notification to the assigned user of the opportunity that was created within the process.
 
 It's possible to define a target record using a Formula expression. You need to select the target *Record: {EntityType}* and specify a formula expression in the *Target ID Expression* field. The expression should evaluate to the ID of the record.
 

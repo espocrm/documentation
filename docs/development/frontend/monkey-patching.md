@@ -1,6 +1,6 @@
 # Monkey patching
 
-[Monkey patching](https://en.wikipedia.org/wiki/Monkey_patch) allows to dynamically extend any frontend class.
+[Monkey patching](https://en.wikipedia.org/wiki/Monkey_patch) allows you to dynamically extend any frontend class.
 
 
 !!! warning

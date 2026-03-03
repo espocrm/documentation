@@ -2,7 +2,7 @@
 
 *As of v7.3.*
 
-The Working Time feature allows to define working and non-working days for users, teams, and the entire organization. It provides a weekly schedule with customizable hours per weekday, supports exceptions for special working days (such as weekends or days with adjusted hours), and allows marking holidays or leaves.
+The Working Time feature allows you to define working and non-working days for users, teams, and the entire organization. It provides a weekly schedule with customizable hours per weekday, supports exceptions for special working days (such as weekends or days with adjusted hours), and allows marking holidays or leaves.
 
 Features:
 

@@ -2,7 +2,7 @@
 
 *As of Sales Pack v3.0.*
 
-Credit Notes document adjustments made to previously issued invoices, such as returns or post-sale discounts.
+Credit Notes document adjustments made to previously issued invoices, such as returns, post-sale discounts, or error corrections.
 
 Credit notes can be created from an invoice.
 

@@ -6,7 +6,7 @@ Products can be added as line items in Quotes, Sales Orders, Invoices, Credit No
 
 The *Product* entity type is available for customization in the Entity Manager. You can add custom fields to the Product as well as custom relationships between the Product and other entity types.
 
-A product record has 3 price fields: *Cost*, *List* and *Unit*. There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*. Prices can also be defined in Price Books. Note that it’s possible – and often advisable – to define prices exclusively in Price Books while leaving the list and unit price fields in the product record empty.
+A product record has 3 price fields: *Cost*, *List* and *Unit*. The list and unit prices are available only if product-level prices are enabled (in settings). There is the ability to automatically calculate the *Unit Price* using different formulas according to a selected *Pricing Type*. Prices can also be defined in Price Books. Note that it’s possible – and often advisable – to define prices exclusively in Price Books while leaving the list and unit price fields in the product record empty.
 
 Products can be associated with Tax Classes, enabling automated tax application based on defined tax rules. Whenever a product is added to a document, the appropriate tax will be applied to the item.
 
@@ -75,6 +75,8 @@ It's possible to specify Product fields that should be **synced** between Templa
 
 ## Properties
 
+A product can marked as Sellable, Purchaable, or Subscribable.
+
 ### Item Type
 
 *As of v4.0.*
@@ -109,3 +111,6 @@ Available options:
 
 Available if *Inventory Number Type* is not empty. A number of days that is automatically added to the current date to determine an *Expiration Date* of an Inventory Number when the number is created in the system. Note that the Expiration Date then can be changed by a user.
 
+### Tax Classes
+
+Tax classes allow the system to automatically select an appropriate Tax Code for a product. For example, a product can have a tax class named 'Zero-rated'. A tax item rule will map this tax class to a tax code with a zero rate. Then, every time the product is added to a document line, that tax code will be automatically set.

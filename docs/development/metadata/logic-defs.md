@@ -23,9 +23,6 @@ Example:
             "readOnly": {
                 "conditionGroup": []
             },
-            "readOnly": {
-                "conditionGroup": []
-            },
             "readOnlySaved": {
                 "conditionGroup": []
             }
@@ -67,3 +64,5 @@ Example:
 ## panels
 
 ## options
+
+## cascadingFields

@@ -2,7 +2,7 @@
 
 The Quotes feature is available in [Sales Pack](https://www.espocrm.com/extensions/sales-pack/).
 
-A Quote is a specific group of products or services with their quantities and prices that you quote to customers.
+A quote is a formal pricing document that outlines specific products or services, along with their quantities and associated prices, offered to a customer.
 
 The Quote entity type has a relationship with Opportunity type. You can add the *Quotes* panel to the Opportunity detail view at Administration > Layout Manager > Opportunities > Bottom Panels. When creating a new quote linked to an opportunity, it transfers opportunity items to the quote.
 
@@ -176,6 +176,8 @@ By default, the *Number* field is auto-incremented. You can disable auto-increme
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Quote > Fields > numberA.
 
 By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Quote > Layouts > Detail.
+
+By default, the *Name* field is synced with *Number*. To be able to specify arbitrary names, you need to disable the *Sync with Number* and *Read-only* parameters at Administration > Entity Manager > Quote > Fields > Name.
 
 ## Copying values from product to quote item
 

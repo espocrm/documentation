@@ -1,6 +1,6 @@
 # VoIP Integration extension
 
-The VoIP Integration extension allows to integrate EspoCRM with IP telephony servers/services.
+The VoIP Integration extension allows you to integrate EspoCRM with IP telephony servers/services.
 
 ## Supported servers and services
 

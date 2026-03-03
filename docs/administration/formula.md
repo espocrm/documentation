@@ -1,3 +1,8 @@
+---
+search:
+  boost: 3
+---
+
 # Formula Script
 
 Formula Script is a simple scripting language designed specially for EspoCRM. It's a tool that provides the ability to manipulate data and automatically perform operations.

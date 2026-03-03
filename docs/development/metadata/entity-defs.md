@@ -509,11 +509,17 @@ Example:
 }
 ```
 
-## massUpdateActionList
+### massUpdateActionList
 
 *string[]*
 
 Actions for mass update.
+
+### notLockable
+
+*boolean*
+
+The field is not locked when the record is locked. As of v9.4.
 
 ## links
 
@@ -714,6 +720,12 @@ Disable merging related records when duplicate records are being merged.
 
 The link will be hidden from the user on the UI whenever possible.
 
+### disabled
+
+*boolean*
+
+Disables the link.
+
 ### apiSpecDisabled
 
 *boolean*
@@ -823,6 +835,14 @@ To skip database table creation for the entity type.
 *As of v8.2.*
 
 Disable hooks.
+
+## transactionalSave
+
+*boolean*
+
+*As of v9.4.*
+
+Enables wrapping record saves and removals into DB transactions.
 
 ## repositoryClassName
 

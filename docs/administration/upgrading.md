@@ -1,3 +1,8 @@
+---
+search:
+  boost: 3
+---
+
 # How to upgrade EspoCRM
 
 ## Upgrade from CLI

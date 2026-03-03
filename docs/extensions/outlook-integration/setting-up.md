@@ -11,6 +11,7 @@ Go to the Administration > Integrations > Outlook. Check *Enabled* checkbox.
 
 * You will obtain *Client ID* and *Client Secret* in Azure Active Directory admin center.
 * You will need to copy *Redirect URI* to Azure Active Directory admin center.
+* It is recommended to set `select_account` option as an *Authorization Prompt*.
 
 ![Integration](../../_static/images/extensions/outlook-integration/setting-up/1.png)
 

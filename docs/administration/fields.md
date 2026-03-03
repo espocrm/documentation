@@ -46,7 +46,8 @@ Field types not available for creating directly:
 * Read-only After Create – a field value can be specified only when creating a record, after that the field will became read-only; 
 * Default – a value pre-filled when creating a new record;
 * Disable Inline Edit – may be useful when using Dynamic Logic;
-* Tooltip Text – information about the field for users (Markdown is supported).
+* Tooltip Text – information about the field for users (Markdown is supported);
+* Not Lockable – if enabled, the field is not locked when the record is locked.
 
 !!! note
 
