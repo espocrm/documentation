@@ -836,6 +836,14 @@ To skip database table creation for the entity type.
 
 Disable hooks.
 
+## transactionalSave
+
+*boolean*
+
+*As of v9.4.*
+
+Enables wrapping record saves and removals into DB transactions.
+
 ## repositoryClassName
 
 *class-string<Espo\ORM\Repository\Repository\>*
