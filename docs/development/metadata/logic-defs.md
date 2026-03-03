@@ -23,9 +23,6 @@ Example:
             "readOnly": {
                 "conditionGroup": []
             },
-            "readOnly": {
-                "conditionGroup": []
-            },
             "readOnlySaved": {
                 "conditionGroup": []
             }
