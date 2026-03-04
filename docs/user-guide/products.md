@@ -75,7 +75,7 @@ It's possible to specify Product fields that should be **synced** between Templa
 
 ## Properties
 
-A product can marked as Sellable, Purchaable, or Subscribable.
+A product can marked as Sellable, Purchasable, or Subscribable.
 
 ### Item Type
 
