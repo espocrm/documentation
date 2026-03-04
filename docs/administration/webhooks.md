@@ -10,6 +10,7 @@ Webhooks can be created only by API Users (via an API request) and Administrator
 * [Error handling](#error-handling)
 * [Signature checking](#signature-checking)
 * [Config parameters](#config-parameters)
+* [Local host URLs](#local-host-urls)
 * [Debugging](#debugging)
 
 ## Subscription
@@ -151,6 +152,17 @@ Can be set manually in `data/config.php`.
 * *webhookFailAttemptPeriod* = '10 minutes'
 * *webhookConnectTimeout* = 5 (seconds)
 * *webhookTimeout* = 10 (seconds)
+* *webhookAllowedAddressList*
+
+## Local host URLs
+
+*As of v9.3.2*
+
+By default, internal URLs (like *http://localhost*) are forbidden. To allow, you need to define the needed address in the *webhookAllowedAddressList* config parameter, in the following format *host:port*.
+
+```
+'webhookAllowedAddressList' => ['localhost:80']
+```
 
 ## Debugging
 
