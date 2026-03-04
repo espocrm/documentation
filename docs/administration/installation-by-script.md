@@ -533,9 +533,9 @@ then press `Ctrl + 0` and `Ctrl + X`
 sudo ./command.sh restart espocrm
 ```
 
-## Modify PHP-fpm settings
+## Modify PHP-FPM settings
 
-This can be achieved by mounting the PHP-fpm configuration file and restarting the container.
+This can be achieved by mounting the PHP-FPM configuration file and restarting the container.
 
 1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
@@ -543,11 +543,11 @@ This can be achieved by mounting the PHP-fpm configuration file and restarting t
 cd /var/www/espocrm
 ```
 
-2\. Create the PHP configuration file:
+2\. Create the PHP-FPM configuration file:
 
 ```
-mkdir -p data/php; \
-nano data/php/zzz-custom.conf
+mkdir -p data/php/fpm; \
+nano data/php/fpm/zzz-espocrm.conf
 ```
 
 with the content:
@@ -565,14 +565,14 @@ then press `Ctrl + 0` and `Ctrl + X`
 sudo nano docker-compose.yml
 ```
 
-add `./data/php/zzz-custom.conf:/usr/local/etc/php/conf.d/zzz-custom.conf` option for `espocrm` container as displayed below:
+add `./data/php/fpm/zzz-espocrm.conf:/usr/local/etc/php-fpm.d/zzz-espocrm.conf` option for `espocrm` container as displayed below:
 
 ```
 espocrm:
   ...
   volumes:
     - ./data/espocrm:/var/www/html
-    - ./data/php/zzz-custom.conf:/usr/local/etc/php/conf.d/zzz-custom.conf
+    - ./data/php/fpm/zzz-espocrm.conf:/usr/local/etc/php-fpm.d/zzz-espocrm.conf
   ...
 ```
 
