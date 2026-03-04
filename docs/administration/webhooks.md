@@ -161,7 +161,7 @@ Can be set manually in `data/config.php`.
 By default, internal URLs (like *http://localhost*) are forbidden. To allow, you need to define the needed address in the *webhookAllowedAddressList* config parameter, in the following format *host:port*.
 
 ```
-'webhookAllowedAddressList' => ['localhost:80']
+'webhookAllowedAddressList' => ['localhost:80'],
 ```
 
 ## Debugging
