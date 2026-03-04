@@ -99,7 +99,7 @@ The list of parameters along with their default values. This is not a full list 
 * emailFoldersDisabled – `false` – disables email folders;
 * emailRecipientAddressMaxCount – `100` – max number of addresses allowed in TO, CC, BCC (as of v7.5);
 * emailTemplateHtmlizerDisabled – `false` – disables Handlebars template engine for email templates;
-* emailServerAllowedAddressList – the list of allowed internal addresses in the format *address:port*, e.g. `localhost:587` (as of v9.3.2);
+* emailServerAllowedAddressList – the list of allowed internal addresses in the format *host:port*, e.g. `localhost:587` (as of v9.3.2);
 
 ### Stream
 
