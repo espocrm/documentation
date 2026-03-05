@@ -63,3 +63,11 @@ Field definitions (same as [entityDefs > fields](entity-defs.md#fields)). The de
 !!! note
 
     Only field types that have one attribute are supported. Meaning that you can't use field type like *link*, *linkParent*, *linkMultiple*.
+
+## groupIndex
+
+*integer*
+
+*As of v9.4.*
+
+An index to group related parameters into panels.
