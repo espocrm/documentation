@@ -49,5 +49,5 @@ As issued transactions are not fully protected from editing, it's reasonable to 
 
 ## System-level parameter
 
-To disallow admin users to disable the issuance locking, set `salesForceIssuanceLocking` to true in the config file. Doing so may be necessary for a compliance purpose.
+To disallow admin users to disable the issuance locking, set `salesForceIssuanceLocking` to true in the config file. Doing so may be necessary for a compliance purpose (such as GoBD).
 
