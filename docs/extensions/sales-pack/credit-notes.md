@@ -4,7 +4,9 @@
 
 Credit Notes document adjustments made to previously issued invoices, such as returns, post-sale discounts, or error corrections.
 
-Credit notes can be created from an invoice.
+Credit notes can be created from an invoice or separately.
+
+A credit note can be allocated to one or more invoices. An outbound payment can be allocated to one or more credit notes.
 
 In the article:
 
@@ -15,7 +17,7 @@ In the article:
 
 ## Printing to PDF
 
-Invoices can be printed to PDF. This action is available in the dropdown next to Edit button on the Invoice detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](../../user-guide/printing-to-pdf.md).
+Credit notes can be printed to PDF. This action is available in the dropdown next to Edit button on the Invoice detail view. Then, you will be prompted to select a template. More info about printing to PDF is available [here](../../user-guide/printing-to-pdf.md).
 
 ### Templates
 
