@@ -17,7 +17,7 @@ A Payment entry captures a single payment transaction, either inbound or outboun
 
 Access to Payments is controlled by Roles. Payments can be created from the Payments list view. Payments can also be created from the Invoice and Credit Note detail views.
 
-An inbound payment can be allocated to one or more Invoices. An outbound payment can be allocated to one or more Credit Notes.
+An inbound payment can be allocated to one or more Invoices or Supplier Credits, an outbound payment can be allocated to one or more Credit Notes or Supplier Bills.
 
 When a payment amount is received, the payment entry is supposed to be set to the *Paid* status. After the payment amount is fully allocated, it has to be set to *Completed*.
 
