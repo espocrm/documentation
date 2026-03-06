@@ -89,7 +89,7 @@ Payment Requests can be used to create unique payment links. Payment links can b
 
 Payment instructions and bank credentials can be displayed on the payment link page. In the case of an automated payment channel like Stripe, the customer can make a payment from the payment link.
 
-Payment requests can be created from an Invoice.
+Payment requests can be created from an invoice. The invoice's amount due will be automatically set as the amount of the payment request.
 
 Access to payment requests is controlled by Roles.
 
