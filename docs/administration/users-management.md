@@ -100,4 +100,5 @@ A user can have the Default Team. All records created by the user will be relate
 
 ## See also
 
+* [Users quick tour](https://app.supademo.com/demo/cmmbs4x2c18uy22c4j4oiuzll)
 * [Teams quick tour](https://app.supademo.com/demo/cmm0qgpdz1q4p2rl72vtcqtx4)
