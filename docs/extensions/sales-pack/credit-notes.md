@@ -6,7 +6,9 @@ Credit Notes document adjustments made to previously issued invoices, such as re
 
 Credit notes can be created from an invoice or separately.
 
-A credit note can be allocated to one or more invoices. An outbound payment can be allocated to one or more credit notes.
+A credit note can be allocated to one or more invoices. This reduces the outstanding amount of the invoice.
+
+An outbound payment can be allocated to one or more credit notes. This is typically used when refunding an already paid invoice.
 
 In the article:
 
