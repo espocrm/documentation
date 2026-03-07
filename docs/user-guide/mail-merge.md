@@ -22,4 +22,4 @@ It will generate a single PDF document (or multiple PDFs zipped, depending on th
 
 !!! warning
 
-If a user have access to the Campaign record (for example, a manager assigned the campaign to an employee), they will be able to mass print targets even ones they don't have access to.
+    If a user have access to the Campaign record (for example, a manager assigned the campaign to an employee), they will be able to mass print targets even ones they don't have access to.
