@@ -126,10 +126,10 @@ $metadata->get("entityDefs.Account.fields");
 
 ### Frontend
 
-Metadata object is accessible from all view objects by method `#getMetadata`. It works the same way as the backend's one.
+Metadata object (module ID: `metadata`) is accessible from all view objects by method `#getMetadata`. It's also available via [DI](frontend/dependency-injection.md). It works the same way as the backend's one.
 
 ```js
-this.getMetadata().get(['entityDefs', 'Account', 'fields', 'name', 'type']);
+const fields = this.getMetadata().get(`entityDefs.Account.fields`);
 ```
 
 
