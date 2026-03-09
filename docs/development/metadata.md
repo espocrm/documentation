@@ -150,11 +150,11 @@ All JSON files from these directories **get merged** recursively into a single f
 
 ## Extending
 
-Since metadata is merged recursively, you can easily redefine JSON objects and arrays in the `custom` directory.
+The primary method of customization in EspoCRM is defining custom metadata. A developer creates custom JSON files in the *custom* directory. These files then merged with core metadata. Since metadata is merged recursively, you can extend JSON objects and arrays.
 
-You can **append** values to existing arrays by using the `__APPEND__` string as the first element of an array. This will preserve array values rather than override them.
+You can **append** values to existing arrays by using the `__APPEND__` reserved string value as the first element of the array. This will preserve array values rather than override them.
 
-`custom/Espo/Custom/Resources/metadata/entityDefs/Account.json`:
+Example, `custom/Espo/Custom/Resources/metadata/entityDefs/Account.json`:
 
 ```json
 {
