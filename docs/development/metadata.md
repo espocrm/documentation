@@ -102,7 +102,7 @@ In this article:
 
 The Metadata instance (of `Espo\Core\Utils\Metadata` class) is available as a [container service](di.md).
 
-Path to a needed parameter is specified with an array.
+Path to a needed parameter is specified with an array or string.
 
 ```php
 <?php
@@ -113,10 +113,16 @@ will return the string value `"varchar"`.
 
 ```php
 <?php
-$metadata->get(['entityDefs', 'Account', 'fields']);
+$fields = $metadata->get(['entityDefs', 'Account', 'fields']);
 ```
 will return an associative array with definitions of all fields.
 
+Path defined as string:
+
+```php
+<?php
+$metadata->get("entityDefs.Account.fields");
+```
 
 ### Frontend
 
