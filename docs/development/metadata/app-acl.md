@@ -67,7 +67,7 @@ Example:
 
 ### fieldLevel
 
-*Object.<string, (Object|false)>*
+*Object.<string, (Object|false)\>*
 
 Mandatory access levels for fields for any scope (entity type). E.g. if we define access levels to a field *assignedUsers*, then all fields with the name *assignedUsers* will obtain defined access levels (regardless of an entity type).
 
