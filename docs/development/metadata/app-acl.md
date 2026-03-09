@@ -102,7 +102,7 @@ Access levels applied for regular and API users when access is not defined by Ro
 
 ## valuePermissionList
 
-*string*
+*string[]*
 
 The list of all available [permissions](../../administration/roles-management.md#special-permissions) in the system.
 
