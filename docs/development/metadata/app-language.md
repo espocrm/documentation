@@ -6,7 +6,7 @@ Application languages.
 
 ## list
 
-*string*
+*string[]*
 
 A list of languages available in the application. The name format: `en_US`.
 
