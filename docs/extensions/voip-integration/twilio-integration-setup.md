@@ -40,23 +40,6 @@ There are two ways in which you can set up Twilio integration:
 * **Transfer Timeout** – the number of seconds the customer has to wait for an agent to answer the transferred call.
 * **Experimental features** – test experimental features.
 
-## How to configure SIP Domains
-
-1. Configure a SIP domain in Twilio:
-
-    1. Login to your Twilio account.
-    3. Go to Twilio SIP Domains by clicking in the menu on the left side and select “Programmable Voice” option or just click the link: https://www.twilio.com/console/voice/sip/endpoints.
-    4. The next thing to do is to create a SIP Domain. To do that, select Domains option in the menu on the left side and press “+” button.
-    5. In the next window, you have to set up the domain configuration. Set the domain name (Friendly name), create your custom SIP URL, create Credential list for Voice Authentication, enable SIP Registration (by default its disabled), select Credential lists (created for Voice Authentication) and click Save.
-
-2. Enable this SIP Domain in EspoCRM connector:
-
-    1. Login as Administrator in EspoCRM.
-    2. Navigate to the Administration > VoIP Settings > VoIP » Twilio.
-    3. Select your custom SIP URL from the “Enable SIP Domains” field.
-
-For more detailed instructions, please follow the 3-5 steps of [Detailed, step-by-step Twilio configuration guide](step-by-step-twilio-configuration.md). 
-
 ## How to configure routing of Twilio phone numbers
 
 After you have successfully filled in the connection details, EspoCRM will import all active Twilio phone numbers (wait a few minutes the first time).
@@ -116,13 +99,11 @@ Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 
-## How to test the connection
+## Detailed Twilio SIP Trunk Configuration Guide
+For step-by-step Twilio SIP Trunk implemetation, please refer to the [Step-by-step Twilio SIP Trunk configuration guide](step-by-step-twilio-SIP-configuration.md).
 
-1. Log in to any convenient SIP client (for example, Zoiper, Linphone, Jami or any other) using the credentials created earlier, where the username will be in the `credential_username@SIP_URL.sip.twilio.com` format, the password is the one you specified for this credential.
-2. Make a call from your EspoCRM instance by clicking on the phone number, accept the call in the SIP client and wait for the call to reach the desired number. Two separate numbers should be used to test the connection properly
-
-## Detailed Twilio Configuration Guide
-If any of the steps above are unclear or require additional clarification, please refer to the [Detailed, step-by-step Twilio configuration guide](step-by-step-twilio-configuration.md).
+## Detailed Twilio Call forwarding Configuration Guide
+For step-by-step Twilio Call forwarding implemetation, please refer to the [Step-by-step Twilio Call forwarding configuration guide](step-by-step-twilio-Call-forwarding-configuration.md).
 
 ## More Twilio settings for users
 
