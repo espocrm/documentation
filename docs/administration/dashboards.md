@@ -1,6 +1,6 @@
 # Dashboards
 
-All internal users can manage their dashboards, including adding, removing, and configuring dashlets, as well as adding dashboard tabs.
+All internal users can manage their dashboards, including adding, removing, and configuring dashlets, as well as adding dashboard tabs. Users can lock their dashboard to prevent accidental changes.
 
 An administrator can edit dashboards of other users. On the user detail view, click the *Preferences* item from the dropdown at the top-right corner. There, you can find *Dashboard Layout*.
 
