@@ -134,9 +134,12 @@ By default, the *Number* field is auto-incremented. You can disable auto-increme
 
 The prefix of the next number, the next number itself and the quantity of digits in the number can be configured at Administration > Entity Manager > Invoice > Fields > numberA.
 
+Draft invoices use a separate numbering. When an invoice is issued, it receives its final number. You can disable or enabled this feature at Administration > Sales Pack Settings > Use separate numbering for drafts.
+
 By default, there is no *Name* field on the *Detail* layout. The *Number* is used as a name. You can add the Number field at Administration > Entity Manager > Invoice > Layouts > Detail.
 
 By default, the *Name* field is synced with *Number*. To be able to specify arbitrary names, you need to disable the *Sync with Number* and *Read-only* parameters at Administration > Entity Manager > Invoice > Fields > Name.
+
 
 ## Copying values from product to invoice item
 
