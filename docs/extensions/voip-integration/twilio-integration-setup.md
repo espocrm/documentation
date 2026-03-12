@@ -100,10 +100,10 @@ Make sure that your users have the access to the entity 'Calls'.
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 
 ## Detailed Twilio SIP Trunk Configuration Guide
-For step-by-step Twilio SIP Trunk implemetation, please refer to the [Step-by-step Twilio SIP Trunk configuration guide](step-by-step-twilio-SIP-configuration.md).
+For a step-by-step Twilio SIP Trunk implementation, please refer to the [Step-by-step Twilio SIP Trunk configuration guide](step-by-step-twilio-SIP-configuration.md).
 
 ## Detailed Twilio Call forwarding Configuration Guide
-For step-by-step Twilio Call forwarding implemetation, please refer to the [Step-by-step Twilio Call forwarding configuration guide](step-by-step-twilio-Call-forwarding-configuration.md).
+For a step-by-step Twilio Call forwarding implementation, please refer to the [Step-by-step Twilio Call forwarding configuration guide](step-by-step-twilio-Call-forwarding-configuration.md).
 
 ## More Twilio settings for users
 
