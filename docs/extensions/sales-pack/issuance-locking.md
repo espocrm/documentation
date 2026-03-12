@@ -51,9 +51,9 @@ As issued transactions are not fully protected from editing, it's reasonable to 
 
 The following read-only fields are automatically written on issuance:
 
-- Is Issued
-- Issued At
-- Issued By
+- Is Issued – set to true when issued;
+- Issued At – date and time when the transaction was issued;
+- Issued By – the user that initiated the issuance.
 
 Note that Issued At and Issued By are not avaiable on the Detail layout by default.
 
