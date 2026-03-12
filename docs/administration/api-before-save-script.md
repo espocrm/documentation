@@ -130,7 +130,7 @@ if (entity\isNew() && !recordService\skipDuplicateCheck()) {
 
 ### Validation
 
-Example 1:
+Example:
 
 ```
 if (status == 'Completed' && !dateCompleted) {
@@ -140,7 +140,7 @@ if (status == 'Completed' && !dateCompleted) {
 
 ### Access control
 
-Example 1:
+Example:
 
 ```
 if (
