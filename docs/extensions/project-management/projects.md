@@ -170,7 +170,7 @@ Only members of the Project can be selected as assignees.
 
 ### Collaborators
 
-The Collaborators feature can be enabled per project in the Project settings (dropdown next to Edit > Settings). Users who are collaborators can view the Task and post in its Stream.
+The Collaborators feature can be enabled per project in the Project settings (dropdown next to Edit > Settings). Users who are collaborators can view the Task and post in its Stream. This feature is useful when multiple users perform the same task.
 
 ### Timeline
 
