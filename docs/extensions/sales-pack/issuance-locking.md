@@ -47,6 +47,16 @@ How transactions can be negated for cancellation:
 
 As issued transactions are not fully protected from editing, it's reasonable to use the regular locking once the transaction is completed. The system will automatically lock the record once it is completed.
 
+## Issuance fields
+
+The following read-only fields that are automatically written on issuance:
+
+- Is Issued
+- Issued At
+- Issued By
+
+Note that Issued At and Issued By are not avaiable on the Detail layout by default.
+
 ## System-level parameter
 
 To disallow admin users to disable the issuance locking, set `salesForceIssuanceLocking` to true in the config file. Doing so may be necessary for a compliance purpose (such as GoBD).
