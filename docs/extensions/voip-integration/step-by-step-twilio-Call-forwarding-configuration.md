@@ -8,7 +8,9 @@
 
 ![Twilio buy number](../../_static/images/extensions/voip-integration/detailed-twilio-buyNumber.png) 
 
-3. Go to your instance of EspoCRM, click the three dots in the top-right corner and select your User. Paste the phone number that you just purchased into Phone field.
+3. Go to your instance of EspoCRM, click the three dots in the top-right corner and select your User. Paste your real phone number into Phone field.
+
+![Twilio User personal phone number](../../_static/images/extensions/voip-integration/detailed-twilio-espoUserCallForwarding.png)
 
 4. In your EspoCRM instance, go to Administration > Integrations > VoIP » Twilio and configure everything as follows: [How to configure Twilio Integration for an administrator](twilio-integration-setup.md#how-to-configure-twilio-integration-for-an-administrator)
 
@@ -16,7 +18,11 @@
 
 6. In the EspoCRM instance configure VoIP Router as indicated in the following instructions: [How to configure routing of Twilio phone numbers](twilio-integration-setup.md#how-to-configure-routing-of-twilio-phone-numbers)
 
-7. Make a call from your EspoCRM instance by clicking on the phone number, accept the call on first phone number and wait for the call to reach the desired second number. Two separate numbers should be used to test the connection properly.
+## How to test the connection
+To test the connection, you need two real phone numbers: one that you've just entered in the User phone number field and another that you will call.
+1. Create a Contact record. Paste your second real phone number into the phone number field.
+2. Make a call from your EspoCRM instance by clicking the Contact's phone number. Accept the call on first phone number and wait for the call to reach the second number. 
+Two separate numbers should be used to test the connection properly.
 
 !!! note
         
