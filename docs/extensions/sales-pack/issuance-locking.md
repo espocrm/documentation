@@ -49,7 +49,7 @@ As issued transactions are not fully protected from editing, it's reasonable to 
 
 ## Issuance fields
 
-The following read-only fields that are automatically written on issuance:
+The following read-only fields are automatically written on issuance:
 
 - Is Issued
 - Issued At
