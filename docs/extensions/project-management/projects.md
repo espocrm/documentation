@@ -156,7 +156,7 @@ The default dependency type can be set at: Administration > Entity Manager > Pro
 
 The label color indicates the predecessor's task status. Gray – Not Started, Blue – Started, Green – Completed.
 
-The task dependency feature can be enabled or disabled in the Project settings.
+The task dependency feature can be enabled or disabled in the Project settings (dropdown next to Edit > Settings).
 
 ### Owner
 
@@ -170,7 +170,7 @@ Only members of the Project can be selected as assignees.
 
 ### Collaborators
 
-The Collaborators feature can be enabled per project in the Project settings. Users who are collaborators can view the Task and post in its Stream.
+The Collaborators feature can be enabled per project in the Project settings (dropdown next to Edit > Settings). Users who are collaborators can view the Task and post in its Stream.
 
 ### Timeline
 
@@ -185,11 +185,11 @@ Available priority values:
 - High
 - Urgent
 
-The Priority field can be enabled or disabled in the Project settings.
+The Priority field can be enabled or disabled in the Project settings  (dropdown next to Edit > Settings).
 
 ### Points
 
-Is meant to represent the relative complexity of the Task, amount of work needed to complete the Task. The field can be enabled or disabled in the Project settings.
+Is meant to represent the relative complexity of the Task, amount of work needed to complete the Task. The field can be enabled or disabled in the Project settings (dropdown next to Edit > Settings).
 
 Note that if the team won't use Points, the administrator can hide the field in the Entity Manager.
 
