@@ -19,7 +19,6 @@ Three modes of sync are supported:
 
 Limitations:
 
-* Attendees are not synced from Espo to Outlook.
 * Outlook recurring activities are not synced to Espo.
 * *Description* field is not synced back from Outlook to Espo if an event was created in Espo.
 * *Description* field is not synced back from Espo to Outlook if an event was created in Outlook.
