@@ -397,6 +397,14 @@ JSON attributes can be retrieved with the function `json\retrieve`.
 
 In the context of a BPM process, it's possible to catch response errors with an Error Boundary Event. The error code can be obtained by using `bpm\caughtErrorCode` function.
 
+#### Localhost
+
+By default, the system does not allow internal URLs, including localhost. To enable it, you need to define in the config:
+
+```php
+'workflowSendRequestAllowedAddressList' => ['localhost:80', 'localhost:443'],
+```
+
 ### Execute Formula Script
 
 Executes a [formula](formula.md) script.
@@ -465,6 +473,7 @@ Markdown is supported. It enables the ability to display a link for the user.
 
 * `workflowSendRequestTimeout` – `7` – a timeout for the Send HTTP Request action;
 * `workflowEmailSiteUrl` – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking URLs; you will need to configure your server to handle requests to the specified URL); the parameter is applied for emails sent using workflows and BPM;
+* `workflowSendRequestAllowedAddressList` – a white list of internal URLs which are allowed in the Send HTTP Request action; example: `['localhost:80']`; required if you want to call localhost endpoints; applier for both workflows and BPM.
 
 ## See also
 
