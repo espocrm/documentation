@@ -57,6 +57,8 @@ A Task in a Project is usually assigned to a specific Stage. When a Stage is cha
 
 The *Default* Project Board is available out of the box. You can create new Project Boards. When you create a Project Board, default Stages are automatically added. You can rename the Stages or add new ones.
 
+To access Boards, go to: Projects list view > top-right menu > Boards.
+
 ## Access control
 
 Access control for Projects is managed by Roles and project-level roles.
