@@ -41,16 +41,20 @@ Parameters:
 * `acl` – Defines what access level is required to see the button. You can omit this parameter.
 * `aclScope` – What scope to check access to. If omitted, the current scope is used.
 * `checkVisibilityFunction` – A handler method that will be used to determine whether an item is visible. The method should return a boolean value. As of v8.1.
+* `iconClass` – An icon class name.
+* `labelTranslation` – A label translation path. Alternative to *label*.
 * `actionFunction` – An action method in the handler. As of v8.1.
+* `index` – A position index. Supported only for buttons. Use negative values to add to the beginning. As of 9.4.
 
 In order to add dropdown action, you need to use the `dropdown` key instead of *buttons*.
 
-Available `style` values:
+Available *style* values:
 
-* default
-* success
-* danger
-* warning
+* `default`
+* `success`
+* `danger`
+* `warning`
+* `text` (as of v9.4)
 
 In the parameter `accessDataList`, it's possible to define rules that determine whether an action item is visible to a user. See the `module:utils~AccessDefs` JSDoc type in the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/utils.js).
 
