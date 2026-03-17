@@ -81,4 +81,5 @@ When a user creates a Case, they will be automatically added as a collaborator, 
 
 ## See also
 
+* [Cases quick tour](https://app.supademo.com/demo/cmmklgg7o227kqfzsariqw6tg)
 * [Notifying contacts about new post in Case with Workflows](https://www.espocrm.com/blog/notifying-contacts-about-new-post-in-case-with-workflows/)
