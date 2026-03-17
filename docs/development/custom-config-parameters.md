@@ -59,7 +59,7 @@ Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/adminPanel.js
                 "label": "My Settings",
                 "iconClass": "fas fa-cog",
                 "description": "myDescription",
-                "recordView": "my-module:views/admin/my-settings"
+                "recordView": "modules/my-module/views/admin/my-settings"
             }
         ],
         "order": 101
@@ -111,32 +111,32 @@ Create a file `custom/Espo/Modules/MyModule/Resources/i18n/en_US/Settings.json`:
 Create a file `client/custom/modules/my-module/src/views/admin/my-settings.js`:
 
 ```js
-define('my-module:views/admin/my-settings', ['views/settings/record/edit'], function (Dep) {
+define(['views/settings/record/edit'], (Dep) => {
 
-    return Dep.extend({
+    return class extends Dep {
 
-        detailLayout: [
+        detailLayout = [
             {
                 rows: [
                     [
                         {
-                            name: 'myParameter'
+                            name: 'myParameter',
                         },
-                        false
-                    ]
+                        false,
+                    ],
                 ]
             }
-        ],
+        ]
 
         // Dynamic logic can de defined.
-        dynamicLogicDefs: {},
+        dynamicLogicDefs: {}
 
-        setup: function () {
-            Dep.prototype.setup.call(this);
+        setup() {
+            super.setup();
             
             // Some custom logic can be written here.
-        },
-    });
+        }
+    }
 });
 ```
 
