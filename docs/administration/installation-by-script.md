@@ -559,7 +559,7 @@ pm.max_children = 30
 
 then press `Ctrl + 0` and `Ctrl + X`
 
-3\. Mount the created PHP-fpm configuration file to the container:
+3\. Mount the created PHP-FPM configuration file to the container:
 
 ```
 sudo nano docker-compose.yml
