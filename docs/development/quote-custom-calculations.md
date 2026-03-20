@@ -1,5 +1,9 @@
 # Custom calculations for Quote totals
 
+!!! warning
+
+    This method is not recommended anymore as it's likely to cause problems.
+
 Note: The same mechanism is also available for Sales Orders and Invoices.
 
 ## Problem
