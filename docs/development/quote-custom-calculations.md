@@ -2,7 +2,7 @@
 
 !!! warning
 
-    This method is not recommended anymore as it's likely to cause problems. Since this article was written the functionallity was significantly extended to support financial calculations. Changing the calculated amount in the hook likely will break the calculation logic.
+    This method is not recommended anymore as it's likely to cause problems. Since this article has been written, the functionality has been significantly extended to support more complex financial calculations. Changing the calculated amount in the hook likely will break the calculation logic.
 
 Note: The same mechanism is also available for Sales Orders and Invoices.
 
