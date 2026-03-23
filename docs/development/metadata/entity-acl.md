@@ -21,6 +21,7 @@ Example:
             "nonAdminReadOnly": true
         }
     }
+    "automationWriteForbidden": false
 }
 ```
 
@@ -31,3 +32,11 @@ Available params (all are booleans):
 * onlyAdmin – forbidden for non admin users;
 * readOnly – read-only for all users;
 * nonAdminReadOnly – read-only for non-admin users.
+
+## automationWriteForbidden
+
+*boolean*
+
+*As of v9.4.0.*
+
+Restricts record update and removal in formula.
