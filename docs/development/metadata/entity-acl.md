@@ -33,7 +33,7 @@ Available params (all are booleans):
 * readOnly – read-only for all users;
 * nonAdminReadOnly – read-only for non-admin users.
 
-## automationWriteForbidden
+## systemWriteForbidden
 
 *boolean*
 
