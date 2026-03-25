@@ -148,7 +148,7 @@ Usually occurs when a requested **record doesn't exist**.
 
 ### 409 Conflict
 
-An operation cannot be performed becase of a conflict error. For example, cannot edit a locked record, cannot create a duplicate record.
+An operation cannot be performed because of a conflict error. For example, cannot edit a locked record, cannot create a duplicate record.
 
 ## Date and time values
 
