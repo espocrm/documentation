@@ -55,7 +55,7 @@ The following read-only fields are automatically written on issuance:
 - Issued At – date and time when the transaction was issued;
 - Issued By – the user that initiated the issuance.
 
-Note that Issued At and Issued By are not avaiable on the Detail layout by default.
+Note that Issued At and Issued By are not available on the Detail layout by default.
 
 ## System-level parameter
 
