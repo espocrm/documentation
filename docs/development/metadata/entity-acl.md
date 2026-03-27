@@ -21,7 +21,7 @@ Example:
             "nonAdminReadOnly": true
         }
     }
-    "automationWriteForbidden": false
+    "systemWriteForbidden": false
 }
 ```
 
