@@ -20,6 +20,8 @@ Can be used for custom validation, duplicate checking and access control. Availa
 
     These functions are available only in *API Before-Save Script*. Using them in other places will produce an error.
 
+The MESSAGE will be rendered in Espo in an error alert. It supportse Markdown syntax. The BODY is an HTTP response body, wich may be needed for integrations.
+
 ### recordService\skipDuplicateCheck
 
 Returns *true* if a *skipDuplicateCheck* HTTP header is passed (when a user is warned about a duplicate but opts to save the record anyway).
