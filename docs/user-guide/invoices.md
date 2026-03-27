@@ -41,11 +41,15 @@ An Invoice has the list of items. Each item can represent a certain product or a
 
 There is the ability to add custom fields for Invoice Item entity type using the Entity Manager.
 
-### Invoice Items Layout
+### Invoice Items layout
 
 The layout of Invoice Items can be modified at Administration > Layout Manager > Invoice Items > List (Item).
 
-### Discount Rate
+### List prices
+
+List prices for invoices are disabled by default. You can enable them at Administration > Sales Pack Settinfs > List Prices in Invoices.
+
+### Discount rate
 
 It's possible to specify a discount in percents. To have this ability, an administrator should add the *Discount (%)* field to the *List (Item)* layout.
 
