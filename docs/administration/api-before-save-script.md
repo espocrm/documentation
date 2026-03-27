@@ -20,7 +20,7 @@ Can be used for custom validation, duplicate checking and access control. Availa
 
     These functions are available only in *API Before-Save Script*. Using them in other places will produce an error.
 
-In error throwing functions, the MESSAGE will be rendered in Espo in an error alert, it supports Markdown syntax. The BODY is an HTTP response body, wich may be needed for integrations.
+In error throwing functions, the MESSAGE will be rendered in Espo in an error alert, it supports Markdown syntax. The BODY is an HTTP response body, which may be needed for integrations.
 
 ### recordService\skipDuplicateCheck
 
