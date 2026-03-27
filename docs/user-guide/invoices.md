@@ -47,7 +47,7 @@ The layout of Invoice Items can be modified at Administration > Layout Manager >
 
 ### List prices
 
-List prices for invoices are disabled by default. You can enable them at Administration > Sales Pack Settinfs > List Prices in Invoices.
+List prices for invoices are disabled by default. You can enable them at Administration > Sales Pack Settinfs > List Prices in Invoices, then add the *List Price* field to the Invoice Items layout.
 
 ### Discount rate
 
