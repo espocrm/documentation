@@ -62,16 +62,17 @@ Throws a Bad Request exception.
 !!! example
 
     ```
-    recordService\throwBadRequest('Invalid value.')`
+    recordService\throwBadRequest('Invalid value.');
     ```
 
 !!! example
 
     ```
+    // HTTP response body.
     $obj = object\create();
-    object\set($obj, 'key', 'value');
-
-    recordService\throwBadRequest('Invalid value.', $obj)`
+    $obk['key'] = 'value';
+  
+    recordService\throwBadRequest('Invalid value.', $obj);
     ```
 
 ### recordService\throwForbidden
