@@ -55,3 +55,8 @@ An administrator can enable sending emails via Graph API. Under Administration >
 !!! note
 
     We recommended to use the standard SMTP for email sending. Use Graph API only if necessary.
+
+
+### Using only IMAP or only SMTP
+
+Once you connect the email account to Microsoft, it will use authentication to Microsoft for both IMAP and SMTP. If you want to use the Microsoft authentication only for IMAP or only for SMTP, while using a different host for another protocol, you need to create a separate email account (for the same user and the same email address).
