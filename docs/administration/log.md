@@ -21,6 +21,7 @@ Parameters example:
   'maxFileNumber' => 30,
   'printTrace' => true, // to print an exception backtrace,
   'sql' => true, // log SQL queries
+  'sqlFailed' => true, // log failed SQL queries
   'databaseHandler' => true, // the log will be available in the admin UI
   'databaseHandlerLevel' => 'NOTICE', // overrides the level for the database handler
 ],
@@ -63,6 +64,8 @@ Parameter: `sql`.
 If the parameter *sql* is set to true, all executed SQL queries will be printed to the log. Requires *INFO* or *DEBUG* level. 
 
 If *sql* is set to true, and the log level is *NOTICE* or higher, than only failed queries will be logged. As of v8.2.
+
+If the parameter `sqlFailed` is true, failed queries will be printed.
 
 ## Handlers
 
