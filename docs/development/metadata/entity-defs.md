@@ -144,6 +144,14 @@ A list of additional validators. Should implement `Espo\Core\FieldValidation\Val
 
 Always to perform validation, regardless whether field values are sent.
 
+### validationDependsOnFieldList
+
+*string[]*
+
+*As of v9.4.*
+
+Change of any of the listed fields triggers the validation for the field in question.
+
 ### validationList[]
 
 *string*
