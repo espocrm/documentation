@@ -160,14 +160,32 @@ The field-level-security (in Roles) can be used to restrict the ability to chang
 
 ## Email filters
 
-Administrator can create global Email Filters to skip not desirable emails. They are available at Administration > Email Filters.
+An administrator can create global Email Filters to skip not desirable emails. They are available at Administration > Email Filters.
 
 Regular user can create Email Filters for their Personal Email Accounts or for their entire inbox. They are available at: Emails > dropdown in top-right corner > Filters.
 
-There are two types of filters:
+Available filter parameters:
+
+- From
+- To
+- Subject
+- Body Contains
+- Body Contains All
+
+If any of specified filter parameters does not match for a particular email, then the filter is not applied.
+
+Wildcard (*) can be used in filter parameters.
+
+Available actions:
 
 * Skip – email will be put in *Trash* or not imported if the filter is related to a Personal Email Account;
 * Put in Folder – imported emails will be put into a specified user's folder automatically.
+
+Additional behavior parameters:
+
+- Mark as Read
+- Skip Notification
+
 
 ## Email templates
 
