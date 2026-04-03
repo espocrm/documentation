@@ -151,5 +151,6 @@ Enable *VERP* at Administration > Outbound Emails > Mass Email. This improves bo
 
 ## See also
 
+* [Campaigns quick tour](https://app.supademo.com/demo/cmnim3kjr01wvwn0j4g5jug04)
 * [Custom unsubscribe page](../development/campaign-unsubscribe-template.md)
 * [Drip Email Campaign with BPM](../administration/bpm-drip-email-campaign.md)
