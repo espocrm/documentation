@@ -75,6 +75,29 @@ The administrator also can manage Personal Email Accounts of users (at Administr
 
 ## Email filters
 
-Email Filters allow filtering of incoming emails according to specified criteria. For example, if you don't want notification messages sent by some application to be imported to EspoCRM, you can create a filter to make EspoCRM skip them.
+Email Filters provide the ability to automatically filter incoming emails based to specified criteria. For example, if you don't want notification messages sent by some application to be imported to EspoCRM, you can create a filter to make EspoCRM skip them.
 
 The administrator can create **global** filters applied to all email accounts. Users can create filters for their own Personal Email Account and for their entire Inbox.
+
+Available filter parameters:
+
+- From
+- To
+- Subject
+- Body Contains
+- Body Contains All
+
+If any of specified filter parameters does not match for a particular email, then the filter is not applied.
+
+Wildcard (*) can be used in filter parameters.
+
+Available filter actions:
+
+- Ignore
+- Put in Folder
+
+Additional behavior parameters:
+
+- Mark as Read
+- Skip Notification
+
