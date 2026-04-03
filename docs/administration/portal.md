@@ -9,6 +9,8 @@ The Portal feature provides the ability to access specific CRM data and function
 
 To create a Portal, follow Administration > Portals > *Create Portal*.
 
+Portal fields (parameters):
+
 * *Is Active*. If not checked, the Portal won't be available for anybody.
 * *Is Default*. Means that the Portal will be available by shorter URL: `https://YOUR_ESPO_URL/portal`.
 * *Roles*. Specify one or multiple Portal Roles that will be applied to Users logged into the Portal. More information about the Portal Roles is below.
