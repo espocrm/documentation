@@ -90,14 +90,3 @@ Available filter parameters:
 If any of specified filter parameters does not match for a particular email, then the filter is not applied.
 
 Wildcard (*) can be used in filter parameters.
-
-Available filter actions:
-
-- Ignore
-- Put in Folder
-
-Additional behavior parameters:
-
-- Mark as Read
-- Skip Notification
-
