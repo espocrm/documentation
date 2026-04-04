@@ -68,7 +68,7 @@ By clicking 'Quote Reply' on a stream post, it will paste quoted contents into t
 
 Users can add to reactions to stream posts. A user can add only one reaction to a particular post. The author of a post is notified about a reaction. Users can view who reacted to a particular post.
 
-A user can disable notifications about reactions. If the preferences parameter *Notifications about reactions for non-followed records* is not enabled, the user won't be notified about reactions to their posts in records they do not follow.
+A user can disable notifications about reactions in preferences. If the preferences parameter *Notifications about reactions for non-followed records* is not enabled, the user won't be notified about reactions to their posts in records they do not follow.
 
 An administrator can define which reactions are available in the system. By default, only Like is available. They can disable reactions by leaving the parameter empty.
 
