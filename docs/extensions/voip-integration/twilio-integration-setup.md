@@ -99,30 +99,11 @@ Make sure that your users have the access to the entity 'Calls'.
 
 * [Grant access to Calls](customization.md#grant-access-to-calls)
 
-## How to configure SIP Domains
+## Detailed Twilio SIP Trunk Configuration Guide
+For a step-by-step Twilio SIP Trunk implementation, please refer to the [Step-by-step Twilio SIP Trunk configuration guide](step-by-step-twilio-SIP-configuration.md).
 
-1. Configure a SIP domain in Twilio:
-
-    1. Login to your Twilio account.
-    2. Go to Twilio SIP Domains by clicking in the menu on the left side and select “Programmable Voice” option or just click the link: https://www.twilio.com/console/voice/sip/endpoints.
-
-    ![Twilio SIP Domains](../../_static/images/extensions/voip-integration/twilio-sip-domains.png)
-
-    3. The next thing to do is to create a SIP Domain. To do that, select Domains option in the menu on the left side and press “+” button.
-
-    ![Twilio add SIP domains](../../_static/images/extensions/voip-integration/twilio-add-sip-domain.png)
-
-    4. In the next window, you have to set up the domain configuration. Set the domain name (Friendly name), create your custom SIP URL, create Credential list for Voice Authentication, enable SIP Registration (by default its disabled), select Credential lists (created for Voice Authentication) and click Save.
-
-    ![Twilio SIP configuration](../../_static/images/extensions/voip-integration/twilio-sip-domain-configuration.png)
-
-2. Enable this SIP Domain in EspoCRM connector:
-
-    1. Login as Administrator in EspoCRM.
-    2. Navigate to the Administration > VoIP Settings > VoIP » Twilio.
-    3. Select your custom SIP URL from the “Enable SIP Domains” field.
-
-    ![Twilio enable SIP domain](../../_static/images/extensions/voip-integration/twilio-enable-sip-domain.png)
+## Detailed Twilio Call forwarding Configuration Guide
+For a step-by-step Twilio Call forwarding implementation, please refer to the [Step-by-step Twilio Call forwarding configuration guide](step-by-step-twilio-Call-forwarding-configuration.md).
 
 ## More Twilio settings for users
 
