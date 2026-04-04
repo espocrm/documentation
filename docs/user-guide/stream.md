@@ -62,6 +62,16 @@ An administrator can configure the *Attachments* field at Administration > Entit
 
 By clicking 'Quote Reply' on a stream post, it will paste quoted contents into the text field. If a part of a post is selected, only the selected part will be quoted.
 
+### Reactions
+
+*As of v9.0.*
+
+Users can add to reactions to stream posts. A user can add only one reaction to a particular post. The author of a post is notified about a reaction. Users can view who reacted to a particular post.
+
+A user can disable notifications about reactions. If the preferences parameter *Notifications about reactions for non-followed records* is not enabled, the user won't be notified about reactions to their posts in records they do not follow.
+
+An administrator can define which reactions are available in the system. By default, only Like is available. They can disable reactions by leaving the parameter empty.
+
 ## Posts to users
 
 Users can create posts to certain Users, to certain Teams, to all Users and to self. Access for this feature is controlled by the *Message Permission* in Roles.
