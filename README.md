@@ -21,7 +21,12 @@ Command to build:
 mkdocs build
 ```
 
-On Windows:
+Command to build if using venv:
+```
+.venv/bin/mkdocs build
+```
+
+Command to build on Windows:
 ```
 python -m mkdocs build
 ```
