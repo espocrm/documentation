@@ -26,6 +26,7 @@ Functions:
 * [Ext](#ext)
 * [Util](#util)
 * [Log](#log)
+* [Exception](#exception)
 
 ## General
 
@@ -220,3 +221,9 @@ Functions:
 * [log\notice](formula/log.md#lognotice)
 * [log\warning](formula/log.md#logwarning)
 * [log\error](formula/log.md#logerror)
+
+## Exception
+
+[exception](formula/exception.md)
+
+* [exception\throwInvalid](formula/exception.md#exceptionthrowinvalid)

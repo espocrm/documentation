@@ -6,9 +6,12 @@ A [formula](formula.md) script that is invoked on POST and PUT API requests to a
 It's executed only when the record is created or updated via the API (this also includes actions made through the UI as EspoCRM is a single page application – the frontend communicates with the backend via API). It's not executed when a record is saved from within the system (e.g. in hooks, workflow actions, custom code).
 Can be used for custom validation, duplicate checking and access control. Available at Administration > Entity Manager > {Entity type} > Formula.
 
-!!! note
+!!! warning
 
     API Before-Save Script is not executed when doing mass update.
+
+    You can use `exception\throwInvalid` [function](formula/exception.md#exceptionthrowinvalid) for additional internal
+    validation in the Before-save script. This script executes every time an entity is saved.
 
 !!! note
 

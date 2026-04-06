@@ -102,6 +102,7 @@ nav:
               - 'ext': 'administration/formula/ext.md'
               - 'util': 'administration/formula/util.md'
               - 'log': 'administration/formula/log.md'
+              - 'exception': 'administration/formula/exception.md'
         - 'Import': 'administration/import.md'
         - 'Portal': 'administration/portal.md'
         - 'Web-to-Lead': 'administration/web-to-lead.md'
