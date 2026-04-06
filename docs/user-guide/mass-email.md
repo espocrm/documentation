@@ -23,7 +23,7 @@ The system email account (the group email account designated as system at Admini
 You need to have at least one **Target List** with target records and an **Email Template** in your CRM.
 
 1. Create a new Campaign of type *Email* or *Newsletter*. Select one or a few target lists in the Target Lists field.
-2. After the Campaign record is created, create a Mass Email for this campaign detail view: click the plus icon in the Mass Email panel. Specify the Date Start (when emails should be sent) and select an email template. Make sure the Status is set to *Pending*.
+2. After the Campaign record is created, create a Mass Email for this campaign: from the Campaign detail view, click the plus icon in the Mass Email panel. Specify the Date Start (when emails should be sent) and select an email template. Make sure the Status is set to *Pending*.
 
 If everything is set up right, emails should go out. They will be sent in portions. You can change the portion size at Administration > Outbound Emails. The administrator can change the **scheduling** at Administration > Scheduled Jobs > Send Mass Emails.
 
