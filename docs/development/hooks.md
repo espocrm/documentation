@@ -11,8 +11,8 @@ Common hooks for all entity types (called from the ORM Repository class):
 - *afterRelate* – when two records are related through a many-to-many relationship;
 - *afterUnrelate* – when two records are unrelated through a many-to-many relationship;
 - *afterMassRelate*
-- *lateAfterSave* – after a record is saved, after the transaction is committed (as of v9.4);
-- *lateAfterRemove* – after a record is removed, after the transaction is committed (as of v9.4);
+- *lateAfterSave* – after a record is saved, after the transaction is committed (as of v10.0);
+- *lateAfterRemove* – after a record is removed, after the transaction is committed (as of v10.0);
 
 ## Creating hook
 

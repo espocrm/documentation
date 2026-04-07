@@ -148,7 +148,7 @@ Always to perform validation, regardless whether field values are sent.
 
 *string[]*
 
-*As of v9.4.*
+*As of v10.0.*
 
 Change of any of the listed fields triggers the validation for the field in question.
 
@@ -527,7 +527,7 @@ Actions for mass update.
 
 *boolean*
 
-The field is not locked when the record is locked. As of v9.4.
+The field is not locked when the record is locked. As of v10.0.
 
 ## links
 
@@ -848,7 +848,7 @@ Disable hooks.
 
 *boolean*
 
-*As of v9.4.*
+*As of v10.0.*
 
 Enables wrapping record saves and removals into DB transactions.
 

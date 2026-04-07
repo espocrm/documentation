@@ -6,7 +6,7 @@
 
 `exception\throwInvalid([MESSAGE])`
 
-*As of v9.4.*
+*As of v10.0.*
 
 Throws a validation exception. To be used within a Before-save script (not API before-save script).
 Can be used for internal validation that is performed every time an entity is saved.

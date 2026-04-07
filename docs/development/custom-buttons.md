@@ -54,7 +54,7 @@ Available *style* values:
 * `success`
 * `danger`
 * `warning`
-* `text` (as of v9.4)
+* `text` (as of v10.0)
 
 In the parameter `accessDataList`, it's possible to define rules that determine whether an action item is visible to a user. See the `module:utils~AccessDefs` JSDoc type in the [source file](https://github.com/espocrm/espocrm/blob/master/client/src/utils.js).
 

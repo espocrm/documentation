@@ -142,6 +142,6 @@ Class: `Espo\Core\Utils\Config\SystemConfig`
 
 ## session
 
-*As of v9.4.*
+*As of v10.0.*
 
 Interface: `Espo\Core\Session\Session`

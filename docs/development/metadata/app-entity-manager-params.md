@@ -68,6 +68,6 @@ Field definitions (same as [entityDefs > fields](entity-defs.md#fields)). The de
 
 *integer*
 
-*As of v9.4.*
+*As of v10.0.*
 
 An index to group related parameters into panels.

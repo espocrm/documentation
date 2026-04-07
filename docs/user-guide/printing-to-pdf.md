@@ -21,7 +21,7 @@ In this article:
 See also:
 
 * [Quick tour](https://app.supademo.com/demo/cmejvg02x0ly25gz3si01kay7)
-* [International fonts](https://github.com/espocrm/ext-pdf-fonts) (as of v9.4)
+* [International fonts](https://github.com/espocrm/ext-pdf-fonts) (as of v10.0)
 
 ## Overview
 

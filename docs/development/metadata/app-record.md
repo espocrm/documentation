@@ -14,7 +14,7 @@ Classes for additional handling of a select query. An entity type is passed to t
 
 *class-string<Espo\Core\Record\Input\Filter\>[]*
 
-*As of v9.4.*
+*As of v10.0.*
 
 Create input filters.
 
@@ -22,7 +22,7 @@ Create input filters.
 
 *class-string<Espo\Core\Record\Input\Filter\>[]*
 
-*As of v9.4.*
+*As of v10.0.*
 
 Update input filters.
 
@@ -30,7 +30,7 @@ Update input filters.
 
 *class-string<Espo\Core\Record\Output\Filter\>[]*
 
-*As of v9.4.*
+*As of v10.0.*
 
 Output filters.
 
@@ -38,7 +38,7 @@ Output filters.
 
 *class-string<Espo\Core\Record\Hook\ReadHook\>[]*
 
-*As of v9.4.*
+*As of v10.0.*
 
 An array of hooks (applied for API calls).
 
@@ -47,13 +47,13 @@ An array of hooks (applied for API calls).
 *class-string<Espo\Core\Record\Hook\CreateHook\>[]*
 *class-string<Espo\Core\Record\Hook\SaveHook\>[]*
 
-*As of v9.4.*
+*As of v10.0.*
 
 An array of hooks. Applied for API calls, before validation.
 
 ## beforeCreateHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\CreateHook\>[]*
 *class-string<Espo\Core\Record\Hook\SaveHook\>[]*
@@ -62,7 +62,7 @@ An array of hooks (applied for API calls).
 
 ## afterCreateHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\CreateHook\>[]*
 *class-string<Espo\Core\Record\Hook\SaveHook\>[]*
@@ -71,7 +71,7 @@ An array of hooks (applied for API calls).
 
 ## earlyBeforeUpdateHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\UpdateHook\>[]*
 *class-string<Espo\Core\Record\Hook\SaveHook\>[]*
@@ -80,7 +80,7 @@ An array of hooks. Applied for API calls, before validation.
 
 ## beforeUpdateHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\UpdateHook\>[]*
 *class-string<Espo\Core\Record\Hook\SaveHook\>[]*
@@ -89,7 +89,7 @@ An array of hooks (applied for API calls).
 
 ## afterUpdateHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\UpdateHook\>[]*
 *class-string<Espo\Core\Record\Hook\SaveHook\>[]*
@@ -98,7 +98,7 @@ An array of hooks (applied for API calls).
 
 ## beforeDeleteHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\DeleteHook\>[]*
 
@@ -114,7 +114,7 @@ An array of hooks (applied for API calls).
 
 ## beforeLinkHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\LinkHook\>[]*
 
@@ -122,7 +122,7 @@ An array of hooks (applied for API calls).
 
 ## beforeUnlinkHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\UnlinkHook\>[]*
 
@@ -130,7 +130,7 @@ An array of hooks (applied for API calls).
 
 ## afterLinkHookClassNameList
 
-*As of v9.4.*
+*As of v10.0.*
 
 *class-string<Espo\Core\Record\Hook\LinkHook\>[]*
 
@@ -140,6 +140,6 @@ An array of hooks (applied for API calls).
 
 *class-string<Espo\Core\Record\Hook\UnlinkHook\>[]*
 
-*As of v9.4.*
+*As of v10.0.*
 
 An array of hooks (applied for API calls).

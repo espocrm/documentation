@@ -37,6 +37,6 @@ Available params (all are booleans):
 
 *boolean*
 
-*As of v9.4.0.*
+*As of v10.0.0.*
 
 Restricts record update and removal in formula.

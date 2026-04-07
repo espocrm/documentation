@@ -189,7 +189,7 @@ Allows to mention other Users in the Stream. (as of v8.3)
 
 ### Lock Permission
 
-Allows to lock and unlock records. (as of v9.4)
+Allows to lock and unlock records. (as of v10.0)
 
 ## Field Level Security
 

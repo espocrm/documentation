@@ -258,7 +258,7 @@ For storing links.
 Parameters:
 
 * Max-length – a max acceptable length of text;
-* Require Protocol – if enabled, an URL must contain the protocol part (as of v9.4);
+* Require Protocol – if enabled, an URL must contain the protocol part (as of v10.0);
 * Strip – if checked, then a protocol part and trailing `/` will be stripped;
 * Copy to clipboard button.
 
