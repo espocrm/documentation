@@ -62,6 +62,28 @@ Parameters:
 
 Provides the ability to display a specific text. Markdown is supported. It can be used to display instructions for users.
 
+## Calendar
+
+Displays the user's calendar.
+
+Prameters:
+
+- Mode – the calendar mode.
+- What to display – what activity types to display.
+- Teams – optionally, to display activities of specific teams.
+
+## Stream
+
+Displays the user's stream.
+
+Parameters:
+
+- Don't show own records
+
+## My Inbox
+
+Displays inbound emails.
+
 ## See also
 
 * [Creating custom dashlet](../development/how-to-create-a-dashlet.md)
