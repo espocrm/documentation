@@ -16,7 +16,7 @@ On the dashboard:
 
 The default dashboard layout will be applied to all new users. This layout be changed at Administration > User Interface > Dashboard Layout.
 
-## Dashboard Templates
+## Dashboard templates
 
 Dashboard templates are available for administrators at Administration > Dashboard Templates. They provide the ability to deploy specific dashboard layouts to multiple users. It's also possible to deploy for all users of a specific team.
 
@@ -83,6 +83,40 @@ Parameters:
 ### My Inbox
 
 Displays inbound emails.
+
+### Sales Pipeline
+
+A sales pipeline chart based on Opportunities.
+
+Parameters:
+
+- Date Filter
+- Group by last reached stage
+- Team (optional)
+
+### Sales by Month
+
+A sales by month chart based on Opportunities.
+
+Parameters:
+
+- Date Filter
+
+### Opportunities by Lead Source
+
+A chart.
+
+Parameters:
+
+- Date Filter
+
+### Opportunities by Stage
+
+A chart.
+
+Parameters:
+
+- Date Filter
 
 ## See also
 
