@@ -122,6 +122,7 @@ nav:
             - 'Addresses': 'administration/addresses.md'
             - 'Maps': 'administration/maps.md'
             - 'B2C mode': 'administration/b2c.md'
+            - 'Collaborators': 'administration/collaborators.md'
             - 'Multiple assigned users': 'administration/multiple-assigned-users.md'
             - 'File storage': 'administration/file-storage.md'
             - 'SMS sending': 'administration/sms-sending.md'

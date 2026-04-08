@@ -203,31 +203,14 @@ In the edit view of a Role record in the Field Level section, click plus icon ne
 
 ## Collaborators
 
-*As of v9.0.*
+See more about the Collaborators feature in the [separate article](collaborators.md).
 
-The Collaborators feature can be enabled for an entity type in the Entity Manager. Once enabled:
+Users added as collaborators to a record obtain *read* and *stream* access, provided their access level, as defined by Roles, is other than *no*.
 
-* A link-multiple field *Collaborators* will be automatically created.
-* A bool filter *Shared* will be added.
+Access prerequisites:
 
-The administrator needs to add the *Collaborators* to the layout: Administration > Entity Manager > {Entity Type} > Layouts > Side Panel Fields.
-
-Users added as collaborators to a record will have *read* and *stream* access, provided their access level, as defined by Roles, is other than *no*.
-
-Assignees are automatically added to collaborators. This ensures that when a record is reassigned to another user, the previous assignee remains a collaborator unless explicitly removed.
-
-A user who creates a record is automatically pre-filled as a collaborator. This ensures that a user with 'own' read access will still have access to a record after assigning it to another user.
-
-Access:
-
-* Assignment Permission is required to be able to add a user to collaborators. 
-* Edit access to a record is required to be able to add collaborators.
-
-Limitations:
-
-* Portal users cannot be added as collaborators.
-
-The Collaborators parameter is available for custom entities created via the Entity Manager and for the standard following entity types: Task, Case, Account, Contact, Lead, Opportunity, Document, Knowledge Base Article and Target List.
+- Assignment Permission is required to be able to add a user to collaborators.
+- Edit access to a record is required to be able to add collaborators.
 
 ## See also
 
