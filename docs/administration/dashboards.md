@@ -50,7 +50,7 @@ Parameters:
 - Next X Days – number of days into the future for which activities are displayed.
 - Include Shared – to include tasks where the user is added as s collaborator.
 
-## Iframe
+### Iframe
 
 Provides the ability to display external site in an Iframe.
 
@@ -58,11 +58,11 @@ Parameters:
 
 - URL
 
-## Memo
+### Memo
 
 Provides the ability to display a specific text. Markdown is supported. It can be used to display instructions for users.
 
-## Calendar
+### Calendar
 
 Displays the user's calendar.
 
@@ -72,7 +72,7 @@ Prameters:
 - What to display – what activity types to display.
 - Teams – optionally, to display activities of specific teams.
 
-## Stream
+### Stream
 
 Displays the user's stream.
 
@@ -80,7 +80,7 @@ Parameters:
 
 - Don't show own records
 
-## My Inbox
+### My Inbox
 
 Displays inbound emails.
 
