@@ -26,6 +26,20 @@ On the edit view of the Portal record, you can define its default dashboard layo
 
 When editing a *Portal User*, you can specify the Dashboard Template for that user. This template will override the default template of the Portal.
 
+## Dashlet
+
+This section covers several out-of-the-box dashlets.
+
+### Recort List
+
+This dashlet allows users to display records of any entity type. In the dashlet options it's possible to configure:
+
+- Primary Filter – for example, a user can select *Open* filter to display only open Tasks.
+- Additional Filters (known as Bool filters) – for example, a user can add *Only My* filter to display only records assignmed to them, or *Shared* filter to display records where they added as a collaborator.
+- Order By and Order
+- Layout
+
+
 ## See also
 
 * [Creating custom dashlet](../development/how-to-create-a-dashlet.md)
