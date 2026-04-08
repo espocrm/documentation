@@ -50,6 +50,18 @@ Parameters:
 - Next X Days – number of days into the future for which activities are displayed.
 - Include Shared – to include tasks where the user is added as s collaborator.
 
+## Iframe
+
+Provides the ability to display external site in an Iframe.
+
+Parameters:
+
+- URL
+
+## Memo
+
+Provides the ability to display a specific text. Markdown is supported. It can be used to display instructions for users.
+
 ## See also
 
 * [Creating custom dashlet](../development/how-to-create-a-dashlet.md)
