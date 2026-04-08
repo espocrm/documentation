@@ -101,11 +101,11 @@ Arbitrary period values can entered in the reminder field by typing a number.
 
 *As of v9.0.*
 
-The collaborators feature can be enabled for Tasks at Administration > Entity Manager > Task > Edit.
+The [collaborators](../administration/collaborators.md) feature is enabled for Tasks by default.
 
-Users added as collaborators to a Task will have read and stream access, provided their access level, as defined by Roles, is other than no.
+Users added as collaborators to a Task obtain read and stream access, provided their access level, as defined by Roles, is other than no.
 
-When a user creates a Task, they will be automatically added as a collaborator, even if the Task is assigned to another user. The assignee becomes a collaborator too.
+When a user creates a Task, they are automatically added as a collaborator, even if the Task is assigned to another user. The assignee becomes a collaborator too.
 
 The list view filter *Shared* shows Tasks where the current user is a collaborator. The *My Activities* dashlet has a parameter *Include Shared*.
 
