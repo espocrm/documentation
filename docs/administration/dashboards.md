@@ -32,13 +32,23 @@ This section covers several out-of-the-box dashlets.
 
 ### Recort List
 
-This dashlet allows users to display records of any entity type. In the dashlet options it's possible to configure:
+This dashlet allows users to display records of any entity type.
+
+Parameters:
 
 - Primary Filter – for example, a user can select *Open* filter to display only open Tasks.
 - Additional Filters (known as Bool filters) – for example, a user can add *Only My* filter to display only records assignmed to them, or *Shared* filter to display records where they added as a collaborator.
 - Order By and Order
 - Layout
 
+### My Activities
+
+Displays user's upcoming activities, such as Meetings, Calls, Tasks, and entity types of the Event type.
+
+Parameters:
+
+- Next X Days – number of days into the future for which activities are displayed.
+- Include Shared – to include tasks where the user is added as s collaborator.
 
 ## See also
 
