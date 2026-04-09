@@ -2,7 +2,7 @@
 
 When a record is being saved, it's possible to throw an exception in the backend and then handle it in the frontend.
 
-In the backend the exception should is thrown with the *reason* parameter in the body. It can be done from a before-create or before-update [record hooks](../metadata/record-defs.md#beforereadhookclassnamelist).
+In the backend the exception should be thrown with the *reason* parameter in the body. It can be done from a before-create or before-update [record hooks](../metadata/record-defs.md#beforereadhookclassnamelist).
 
 Only `Conflict` and `Error` exceptions are supported.
 
