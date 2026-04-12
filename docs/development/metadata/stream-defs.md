@@ -11,7 +11,8 @@ Example:
         "enabled": true,
         "dateField": "dateStart",
         "statusList": ["Held", "Not Held"]
-    }
+    },
+    "followAssignedUser": false
 }
 ```
 
@@ -42,3 +43,9 @@ A date (or date-time) field that stores a value after which followers will autom
 *string[]*
 
 A list of statuses records should have to be eligible for the subscribers cleanup. E.g. for the *Meeting*, it's `["Held", "Not Held"]`.
+
+## followAssignedUser
+
+*boolean*
+
+When disaled, assigned users will not automatically follow records. This setting is true by default.
