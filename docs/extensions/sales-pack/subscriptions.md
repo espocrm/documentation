@@ -25,7 +25,7 @@ Terms:
 - Trial period. A free period at the start of the subscription.
 - Pause period. A period during which the subscription is suspended.
 
-Subscriptions use different product prices than one-time purchases. Subscription prices are also defined in price books, but they additionally specify the billing period, such as 1 month or 1 year
+Subscriptions use different product prices than one-time selling pricies. Subscription prices are also defined in price books, but they additionally specify the billing period, such as 1 month or 1 year
 
 !!! note
 
