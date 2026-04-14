@@ -25,6 +25,12 @@ Terms:
 - Trial period. A free period at the start of the subscription.
 - Pause period. A period during which the subscription is suspended.
 
+Subscriptions use different product prices than one-time purchases. Subscription prices are also defined in price books, but they additionally specify the billing period, such as 1 month or 1 year
+
+!!! note
+
+    A product can have both one-time selling prices and subscription prices.
+
 ## Subscription records
 
 A Subscription entry represents one subscription.
@@ -76,6 +82,8 @@ The selected payment method will be applied for invoices. The payment method of 
 ### Price book
 
 Subscriptions can be linked to a Price Book which enables customer-specific pricing. The price book of the related Account is automatically pre-selected.
+
+If the Price Book is not specified, then the default price book is used.
 
 ## Billing plans
 
