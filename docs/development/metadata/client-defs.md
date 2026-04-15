@@ -849,12 +849,6 @@ Scope color in HEX.
 
 Whether the scope has the kanban view mode on the list view.
 
-## allowInternalNotes
-
-*boolean*
-
-If true, it will be possible to post internal posts in the stream. Internal posts are not visible in portals.
-
 ## isExpandedByDefault
 
 *boolean*
