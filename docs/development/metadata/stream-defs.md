@@ -51,3 +51,10 @@ A list of statuses records should have to be eligible for the subscribers cleanu
 
 Assigned users won't follow the record when they get assigned to it. If enabling, consider also enabling `forceAssignmentNotificator` in notificationDefs – otherwise, the assignee won't receive any notification.
 
+## allowInternalNotes
+
+*boolean*
+
+*As of v10.0.*
+
+Allow internal notes.
