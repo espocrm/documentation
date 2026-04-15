@@ -13,10 +13,8 @@ In this article:
 * [Informational emails](#informational-emails)
 * [Settings](#settings)
 * [Troubleshooting](#troubleshooting)
+* [See also](#see-also)
 
-See also:
-
-- [Mass Email tutorial](https://app.supademo.com/demo/cmnre9orw04ewyt0jo7p4lhfu)
 
 ## Email accounts
 
@@ -155,6 +153,7 @@ Enable *VERP* at Administration > Outbound Emails > Mass Email. This improves bo
 
 ## See also
 
+* [Mass Email tutorial](https://app.supademo.com/demo/cmnre9orw04ewyt0jo7p4lhfu)
 * [Campaigns quick tour](https://app.supademo.com/demo/cmnim3kjr01wvwn0j4g5jug04)
 * [Custom unsubscribe page](../development/campaign-unsubscribe-template.md)
 * [Drip Email Campaign with BPM](../administration/bpm-drip-email-campaign.md)
