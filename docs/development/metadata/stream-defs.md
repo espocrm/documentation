@@ -57,4 +57,4 @@ Assigned users won't follow the record when they get assigned to it. If enabling
 
 *As of v10.0.*
 
-Allow internal notes.
+Allow internal notes. If true, it will be possible to post internal posts in the stream. Internal posts are not visible in portals.
