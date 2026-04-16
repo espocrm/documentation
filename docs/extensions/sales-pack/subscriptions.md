@@ -85,6 +85,13 @@ Subscriptions can be linked to a Price Book which enables customer-specific pric
 
 If the Price Book is not specified, then the default price book is used.
 
+### Fields
+
+Additional fields in the Subscription entity type (not avaialble in the Detail layout by default, can be added):
+
+- Buyer Reference – value is copied to create invoices.
+- Purchase Order Reference – value is copied to create invoices.
+
 ## Billing plans
 
 A Billing Plan encapsulates parameters for subscriptions. Each subscription is associated with a single billing plan, while a billing plan can be used by multiple subscriptions.
