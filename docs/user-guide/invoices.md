@@ -23,6 +23,7 @@ In the article:
 * [Copying values from product to invoice item](#copying-values-from-product-to-invoice-item)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
 * [Locking](#locking)
+* [Fields](#fields)
 * [E-Invoicing](#e-invoicing)
 
 ## Converting from Opportunity, Quote or Sales Order
@@ -158,6 +159,14 @@ The following service actions are available in the Workflows and BPM tools:
 * Add Invoice Items
 * Convert Currency
 * Send in Email
+
+## Fields
+
+Additional fields available in the Invoice entity type:
+
+* Buyer Reference
+* Purchase Order Reference (not available in the Detail layout by default, can be added in the Layout Manager)
+* Note – A note exposed to the customer. Unlike the Description field which is for internal use.
 
 ## E-Invoicing
 
