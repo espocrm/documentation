@@ -89,8 +89,8 @@ If the Price Book is not specified, then the default price book is used.
 
 Additional fields in the Subscription entity type (not avaialble in the Detail layout by default, can be added):
 
-- Buyer Reference – value is copied to create invoices.
-- Purchase Order Reference – value is copied to create invoices.
+- Buyer Reference – value is copied to created invoices.
+- Purchase Order Reference – value is copied to created invoices.
 
 ## Billing plans
 
