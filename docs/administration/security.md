@@ -28,6 +28,10 @@ Consider decreasing *Auth Token Max Idle Time*. Additionally, you can also speci
 
 Restrict the ability to upgrade and upload extensions via the UI. Set `'adminUpgradeDisabled' => true` in `data/config-internal.php`.
 
+!!! note
+
+    By default, upgrades and extensions can be installed via the admin UI. Installed extensions can run code, which may pose a security risk.
+
 ## IP address whitelist
 
 Consider specifying an IP address whitelist. Parameters are available at: Administration > Authentication > Access.
