@@ -85,7 +85,7 @@ For the Meeting and custom Event entity types, by default, the default values fo
 
 ### Join URL
 
-The *Join URL* field is available in the Meeting entity type. By-default, it is read-only, but it's possible to make it editable. The field is written by online meeting integrations. The default meeting invitation template include the Join URL placeholder.
+The *Join URL* field is available in the Meeting entity type. By-default, it is read-only, but it's possible to make it editable. The field is written by online meeting integrations. The default meeting invitation template includes the Join URL placeholder.
 
 ## Tasks
 
