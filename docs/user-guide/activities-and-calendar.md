@@ -83,6 +83,10 @@ For the Meeting and custom Event entity types, by default, the default values fo
 3. Set the default value for the Duration field to 86400.
 4. Set the default value for the Is All-Day field to true (check the checkbox).
 
+### Join URL
+
+The *Join URL* field is available in the Meeting entity type. By-default, it is read-only, but it's possible to make it editable. The field is written by online meeting integrations. The default meeting invitation template include the Join URL placeholder.
+
 ## Tasks
 
 The Date Start and Date Due fields are not required. Dates can be specified with or without time parts.
