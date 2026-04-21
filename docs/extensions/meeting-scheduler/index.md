@@ -177,7 +177,7 @@ It's possible to include the scheduling form in an inline frame element (iframe)
 
 #### Form Captcha
 
-Enables ReCaptcha for the form. To be able to use Captcha, you need to configure it under Administration > Integrations.
+Enables reCAPTCHA for the form. To be able to use Captcha, you need to configure it under Administration > Integrations.
 
 #### Text to display on form
 
