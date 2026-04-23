@@ -27,7 +27,9 @@ To prevent overlooking of new Leads, users can add the *Lead* entity type to the
 
 It may be useful to enable the Kanban view for Leads. It can be enabled under: Administration > Entity Manager > Lead > Edit > Kanban View.
 
-Leads can be added to Target Lists, which is useful for marketing purposes
+### Target lists
+
+Leads can be added to Target Lists, which is useful for both marketing and organizing purposes. A user can use the Target Lists filter in the Leads list view to segment leads by the selected target list for further processing.
 
 ### Converting
 
