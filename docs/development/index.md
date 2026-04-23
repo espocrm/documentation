@@ -21,6 +21,7 @@
 * [ACL](acl.md)
 * [Entry points](entry-points.md)
 * Misc
+  * [Coding practices'](coding-practices.md) 
   * [Autoload](autoload.md)
   * [Entity type](custom-entity-type.md)
   * [Container services](container-services.md)

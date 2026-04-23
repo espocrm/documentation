@@ -327,6 +327,7 @@ nav:
           - 'ACL': 'development/acl.md'
           - 'Entry points': 'development/entry-points.md'
           - 'Miscellaneous':
+              - 'Coding practices': 'development/coding-practices.md'
               - 'Autoload': 'development/autoload.md'
               - 'Entity type': 'development/custom-entity-type.md'
               - 'Container services': 'development/container-services.md'
