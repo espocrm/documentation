@@ -200,6 +200,14 @@ Disables the ability to customize the field in the Entity Manager tool.
 
 Dynamic logic cannot be customized.
 
+### dynamicLogicConditionTypeList
+
+*string[]*
+
+*As of v10.0.*
+
+Overrides Dynamic Logic condition types.
+
 ### fieldManagerParamList
 
 *string[]*
