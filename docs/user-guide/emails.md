@@ -230,3 +230,4 @@ The ability to import emails requires a user to have access to the Import scope 
 ## See also
 
 * [Shortcut keys](https://docs.espocrm.com/user-guide/shortcuts/#emails)
+* [Email Templates quick tour](https://app.supademo.com/demo/cmoa0rxu403amv50jd7s9f97i)
