@@ -46,7 +46,7 @@
 * [Currency](administration/currency.md)
 * [Dashboards](administration/dashboards.md)
 * Authentication
-  * [2 factor authentication](administration/2fa.md)
+  * [2-factor authentication](administration/2fa.md)
   * [OpenID Connect](administration/oidc.md)
   * LDAP
     * [Authorization](administration/ldap-authorization.md)
