@@ -199,7 +199,7 @@ Set with type:
 bin/command config:set {param} true --type=bool
 ```
 
-Supported types: `string`, `bool`, `int`, `float`, `json`. If the type is not specified, the input value is treated as string.
+Supported types: `string`, `bool`, `int`, `float`, `json`. If the type is not specified, the input value is treated as string. Always specify the type if the written value must be anything other than string.
 
 Set a value passed in JSON:
 
