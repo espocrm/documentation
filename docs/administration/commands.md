@@ -163,3 +163,54 @@ bin/command rebuild-category-paths {EntityType}
 ```
 
 Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
+
+### Config get
+
+*As of v10.0.*
+
+Print a config parameter value:
+
+```
+bin/command config:get {param}
+```
+
+Print in JSON:
+
+```
+bin/command config:get {param} --json
+```
+
+Note: In the examples, `{param}` is a placeholder, curly braces should not be used.
+
+### Config set
+
+*As of v10.0.*
+
+
+Set a value (implies string type):
+
+```
+bin/command config:set {param} {value}
+```
+
+Set with type:
+
+```
+bin/command config:set {param} true --type=bool
+```
+
+Supported types: `string`, `bool`, `int`, `float`, `json`.
+
+Set a value passed in JSON:
+
+```
+bin/command config:set {param} [\"one\", \"two\"] --type=json
+```
+
+Set a nested parameter:
+
+```
+bin/command config:set database.host localhost
+```
+
+Note: In the examples, `{param}` and `{value}` are placeholders, curly braces should not be used.
