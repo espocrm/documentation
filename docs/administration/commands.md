@@ -164,7 +164,7 @@ bin/command rebuild-category-paths {EntityType}
 
 Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
 
-### Config get
+## Config get
 
 *As of v10.0.*
 
@@ -182,7 +182,7 @@ bin/command config:get {param} --json
 
 Note: In the examples, `{param}` is a placeholder, curly braces should not be used.
 
-### Config set
+## Config set
 
 *As of v10.0.*
 
