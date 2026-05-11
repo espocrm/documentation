@@ -98,6 +98,12 @@ It's possible to define conditional options with Dynamic Logic.
 
 ![Enum detail view](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/fields/enum-detail.png)
 
+!!! note
+
+    An empty option can be used to support a null value. Usually, it should be the first option item. 
+    
+    The default option will be set as the default database value. Hence, if you create a new Enum field, the default value will be automatically set for all existing records. 
+
 ## Text
 
 A multiline text with markdown support.
