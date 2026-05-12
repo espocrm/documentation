@@ -102,7 +102,7 @@ It's possible to define conditional options with Dynamic Logic.
 
     An empty option can be used to support a null value. Usually, it should be the first option item. 
     
-    The default option will be set as the default database value. Hence, if you create a new Enum field, the default value will be automatically set for all existing records. 
+    The default option will be set as the default database value. Hence, if you create a new Enum field without a null option, the default value will be automatically set for all existing records. 
 
 ## Text
 
