@@ -63,7 +63,6 @@ The list of parameters along with their default values. This is not a full list 
 * exportIdleCountThreshold  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
 * leadCaptureAllowOrigin –  `*` – *Access-Control-Allow-Origin* response header value for the lead capture endpoint;
 * ipAddressServerParam – `REMOTE_ADDR` – server parameter to be used for obtaining a request IP address (as of v7.5);
-* restrictedMode – `false` – restricts admin users from changing specific config parameters and some additional limitations (this parameter is not part of the stable public configuration inteface);
 
 ### UI
 
