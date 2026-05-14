@@ -50,8 +50,13 @@ Field types not available for creating directly:
 * Not Lockable – if enabled, the field is not locked when the record is locked.
 
 !!! note
+    
+    For most fields, the default value is set as the database default value. Therefore, when you create a new field with a default value, the database system automatically applies this value to all existing records.
+
+!!! note
 
     When the read-only parameter is enabled for a *link* or *link-multiple* field, it won't be possible to create a related record from the relationship panel. It happens because an ID of the current record is passed in the link field.
+
 
 ## Dynamic Logic
 
@@ -100,9 +105,7 @@ It's possible to define conditional options with Dynamic Logic.
 
 !!! note
 
-    An empty option can be used to support a null value. Usually, it should be the first option item. 
-    
-    The default option will be set as the default database value. Hence, if you create a new Enum field without a null option, the default value will be automatically set for all existing records. 
+    An empty option can be used to support a null value. Usually, it's reasonable to have it first in the list.
 
 ## Text
 
