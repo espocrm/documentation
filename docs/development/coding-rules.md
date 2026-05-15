@@ -471,7 +471,7 @@ class AccountChecker implements Checker
     // if we extended the base class.
     public function __construct(
         private BaseChecker $baseChecker,
-        private SomeDependency $someDependency
+        private SomeDependency $someDependency,
     ) {}
 
     public function check(Entity $entity): bool
