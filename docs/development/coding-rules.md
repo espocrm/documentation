@@ -546,7 +546,7 @@ $data = new Data(
 $someObject->process($data);    
 ```
 
-### 12\. Create domain-level repository classes instead of directly accessing the entity manager in business logic.
+### 12\. Create domain-level repository classes instead of directly accessing the Entity Manager in business logic.
 
 It keep business logic independent from persistence details and facilitates testability.
 
