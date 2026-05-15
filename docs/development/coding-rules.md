@@ -545,3 +545,49 @@ $data = new Data(
    
 $someObject->process($data);    
 ```
+
+### 12\. Create domain-level repository classes instead of directly accessing the entity manager in business logic.
+
+It keep business logic independent from persistence details and facilitates testability.
+
+✔️ Good
+
+```php
+<?php
+namespace Espo\Modules\MyModule\Tools\MyDomain;
+
+class MyService {
+    public function __construct(
+        private MyRepository $repository,
+    ) {}
+
+    public function process(Params $params): void
+    {
+        // Reasonable to return interface Order[]
+        $orders = $this->repository->getOrders($params);
+
+        // ...
+    }
+}
+```
+
+✔️ Good
+
+```php
+<?php
+namespace Espo\Modules\MyModule\Tools\MyDomain;
+
+class MyService {
+    public function __construct(
+        private MyRepository $repository,
+    ) {}
+
+    public function process(Order $order): void
+    {
+        // ...
+
+        // It's preferable that the Order is an interface.
+        $this->repository->save($order);
+    }
+}
+```
