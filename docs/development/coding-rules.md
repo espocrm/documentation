@@ -564,7 +564,7 @@ class MyService
 
     public function process(Params $params): void
     {
-        // Reasonable to return interface Order[]
+        // It's preferable that the Order is an interface.
         $orders = $this->repository->getOrders($params);
 
         // ...
