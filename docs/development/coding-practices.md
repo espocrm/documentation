@@ -12,9 +12,11 @@ Within a module namespace:
 - `Tools\` – domain level code, for business logic;
 - `Tools\{DomainName}\Api\` – API actions (entry points for API);
 - `Tools\{DomainName}\Jobs\` – jobs;
+- `Tools\{DomainName}\Exceptions\` – domain-level exceptions;
 - `Classes\` – framework related implementations;
 
-The *Classes* namespace structure (not strict):
+
+The *Classes* namespace structure (recommendations, not strict rules):
 
 - `Classes\Select\{EntityType}\` – Select framework related implementations;
 - `Classes\Record\{EntityType}\` – Record framework related implementations;
