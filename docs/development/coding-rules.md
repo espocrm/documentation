@@ -556,7 +556,8 @@ It keep business logic independent from persistence details and facilitates test
 <?php
 namespace Espo\Modules\MyModule\Tools\MyDomain;
 
-class MyService {
+class MyService
+{
     public function __construct(
         private MyRepository $repository,
     ) {}
@@ -577,7 +578,8 @@ class MyService {
 <?php
 namespace Espo\Modules\MyModule\Tools\MyDomain;
 
-class MyService {
+class MyService
+{
     public function __construct(
         private MyRepository $repository,
     ) {}
