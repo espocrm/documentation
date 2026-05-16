@@ -107,9 +107,9 @@ cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
 
-### Permission recommendations
+### Permission and ownership recommendations
 
-In production, static application files are typically owned by the deployment user and grouped under the web server user (e.g. *deploy-user:www-data*). Writable directories should usually be both owned and grouped by the web server user.
+In production, static application files are typically owned by the deployment user and group-owned under the web server user (e.g. *deploy-user:www-data*). Writable directories should usually be both owned and group-owned by the web server user.
 
 Example:
 
