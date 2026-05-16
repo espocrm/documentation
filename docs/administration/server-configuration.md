@@ -118,7 +118,7 @@ Example:
 - everything else – `deploy-user:www-data`; directories: `750`, files: `640`;
 - `bin/command` – `deploy-user:deploy-user`; `700` (for running console commands);
 
-Note that this setup implies that upgrades and extensions cannot be instealled via the admin UI (should be installed via CLI).
+Note that this setup implies that upgrades and extensions cannot be installed via the admin UI (should be installed via CLI).
 
 ## Setting up crontab
 
