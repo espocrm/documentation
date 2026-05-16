@@ -114,8 +114,8 @@ In production, static application files are typically owned by the deployment us
 
 Example:
 
-- `data/`, `custom/Espo/Custom/` – `deploy-user:www-data`; directories: `770`, files: `660`;
-- everything else – `deploy-user:deploy-user`; directories: `750`, files: `640`;
+- `data/`, `custom/Espo/Custom/` – `www-data:www-data`; directories: `770`, files: `660`;
+- everything else – `deploy-user:www-data`; directories: `750`, files: `640`;
 
 Note that this setup implies that upgrades and extensinos cannot be instealled via the admin UI (should be installed via CLI).
 
