@@ -73,7 +73,9 @@ Prefer using a VPS or a dedicated server for production EspoCRM instances. Share
 
 ### Permissions
 
-The files and directories should have the following permissions:
+A simple setup.
+
+Set files and directories to the following permissions:
 
 * `data`, `custom`, `client/custom` – all files, directories and subdirectories should be writable (664 for files, 775 for directories, including all subdirectories and files);
 * `bin/command` – should be executable (754);
@@ -91,20 +93,12 @@ chmod 754 bin/command;
 
 ### Ownership
 
-All files should be owned and group-owned by the webserver process. It can be *www-data*, *daemon*, *apache*, *www*, etc.
+The simplest setup is when all files are owned and group-owned by the web server user. It can be *www-data*, *daemon*, *apache*, *www*, etc.
 
 !!! note
 
     On shared hosts, files usually should be owned and group-owned by your user account.
 
-!!! important
-
-    In production, static application files are typically owned by the deployment user and grouped under the web server user (e.g. *deploy-user:www-data*). Writable directories should usually be both owned and grouped by the web server user.
-
-    Example:
-    
-    - `data/`, `custom/Espo/Custom/` – `deploy-user:www-data`; directories: `770`, files: `660`;
-    - everything else – `deploy-user:deploy-user`; directories: `750`, files: `640`;
 
 
 To set the owner and group-owner, execute these commands in the terminal:
@@ -113,6 +107,19 @@ To set the owner and group-owner, execute these commands in the terminal:
 cd <PATH-TO-ESPOCRM-DIRECTORY>
 chown -R <OWNER>:<GROUP-OWNER> .;
 ```
+
+### Permissions recommendations
+
+In production, static application files are typically owned by the deployment user and grouped under the web server user (e.g. *deploy-user:www-data*). Writable directories should usually be both owned and grouped by the web server user.
+
+Example:
+
+- `data/`, `custom/Espo/Custom/` – `deploy-user:www-data`; directories: `770`, files: `660`;
+- everything else – `deploy-user:deploy-user`; directories: `750`, files: `640`;
+
+Note that this setup implies that upgrades and extensinos cannot be instealled via the admin UI (should be installed via CLI).
+
+The writable files
 
 ## Setting up crontab
 
