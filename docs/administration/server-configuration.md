@@ -8,7 +8,7 @@ EspoCRM can be installed on:
   * [IIS](iis-server-configuration.md)
 * PHP 8.3 - 8.5
 * Database
-  * MySQL 8.0 - 8.4
+  * MySQL 8.0 and greater
   * MariaDB 10.3 and greater
   * PostgreSQL 15
 
