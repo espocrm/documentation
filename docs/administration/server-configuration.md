@@ -95,7 +95,16 @@ All files should be owned and group-owned by the webserver process. It can be *w
 
 !!! note
 
-    On shared hosts, files should be owned and group-owned by your user account.
+    On shared hosts, files usually should be owned and group-owned by your user account.
+
+!!! important
+
+    In production, static application files are typically owned by the deployment user and grouped under the web server user (e.g. *deploy-user:www-data*). Writable directories should usually be both owned and grouped by the web server user.
+
+    Example:
+    
+    - `data/`, `custom/Espo/Custom/` – `deploy-user:www-data`; directories: `770`, files: `660`;
+    - everything else – `deploy-user:deploy-user`; directories: `750`, files: `640`;
 
 
 To set the owner and group-owner, execute these commands in the terminal:
