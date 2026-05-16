@@ -116,6 +116,7 @@ Example:
 
 - `data/`, `custom/Espo/Custom/` – `www-data:www-data`; directories: `770`, files: `660`;
 - everything else – `deploy-user:www-data`; directories: `750`, files: `640`;
+- `bin/command` – `deploy-user:deploy-user`; `700` (for running console commands);
 
 Note that this setup implies that upgrades and extensinos cannot be instealled via the admin UI (should be installed via CLI).
 
