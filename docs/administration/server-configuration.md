@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Server Configuration for EspoCRM
 
 EspoCRM can be installed on:
@@ -118,6 +123,8 @@ Example:
 - `bin/command` – `deploy-user:deploy-user`; `700` (for running console commands);
 
 Note that this setup implies that upgrades and extensions cannot be installed via the admin UI (should be installed via CLI).
+
+The last 0 in the directory's octal permissions (the *others* permission) determines that other users cannot access or traverse the directory.
 
 ## Setting up crontab
 
