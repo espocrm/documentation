@@ -139,15 +139,19 @@ Allows to view:
 * Stream of other Users;
 * which access to a specific record other Users have.
 
-!!! note
+!!! warning
 
-    Allow this permission only for privileged users.
+    Allow this permission only to privileged users. A user with this permission is designated as a supervisor and is authorized to view data available to their subordinates, in some cases bypassing record-level access control.
 
 ### User Calendar Permission
 
 *As of v9.0.*
 
 Allows to view Calendars of other users.
+
+!!! warning
+
+    A user with this permission is designated as a calendar supervisor and is authorized to view calendar data available to their subordinates, in some cases bypassing record-level access control.
 
 ### Portal Permission
 
