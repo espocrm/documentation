@@ -242,6 +242,7 @@ Creates a new record of entity type with attributes specified as key-value pairs
     $attributes = object/create();
     $attributes['name'] = 'Hello World';
     attributes['assignedUserId'] = 'user-id';
+    
     record\create('MyEntityType', $attributes);
     ```
 
@@ -267,6 +268,7 @@ It will update the meeting with ID `SOME-MEETING-ID`, and set `status = 'Held'`,
     ```
     $attributes = object/create();
     $attributes['status'] = 'Held';
+    
     record\update('MeEntityType', 'MEETING-ID', $attributes);
     ```
 
