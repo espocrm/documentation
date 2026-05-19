@@ -233,7 +233,17 @@ Creates a new record of entity type with attributes specified as key-value pairs
 
 !!! example
 
-    `$id = record\create('Meeting', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
+    `$id = record\create('MyEntityType', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
+
+
+!!! example
+
+    ```
+    $attributes = object/create();
+    $attributes['name'] = 'Hello World';
+    attributes['assignedUserId'] = 'user-id';
+    record\create('MyEntityType', $attributes);
+    ```
 
 ## record\update
 
@@ -247,9 +257,18 @@ Updates an existing record with attributes specified as key-value pairs or an ob
 
 !!! example
 
-    `record\update('Meeting', 'SOME-MEETING-ID', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
+    `record\update('Meeting', 'SOME-MEETING-ID', 'status', 'Held', 'assignedUserId', 'SOME-USER-ID')`
 
-It will update the meeting with ID `SOME-MEETING-ID`, and will set `emailAddress = 'SOME@ADDRESS.com'`, `assignedUserId = 'SOME-USER-ID'`.
+It will update the meeting with ID `SOME-MEETING-ID`, and set `status = 'Held'`, `assignedUserId = 'SOME-USER-ID'`.
+
+
+!!! example
+
+    ```
+    $attributes = object/create();
+    $attributes['status'] = 'Held';
+    record\update('MeEntityType', 'MEETING-ID', $attributes);
+    ```
 
 ## record\delete
 
