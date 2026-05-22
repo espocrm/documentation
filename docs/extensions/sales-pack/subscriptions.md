@@ -212,6 +212,10 @@ Billing statuses:
 
 If checked, an invoice for the period will be created automatically according the billing plan parameters. The parameter is available only if the billing status is Pending.
 
+#### Invoice date
+
+Date when the invoice will be created automatically. If not set, the Start Date is used.
+
 #### Activate only if paid
 
 If unchecked, the subscription always switches to Active at the start of the period. If checked, switching to Active also requires the billing status to be Settled.
