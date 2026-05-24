@@ -108,6 +108,12 @@ services:
     volumes:
       - espocrm:/var/www/html
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:80"]
+      interval: 2s
+      start_period: 60s
+      timeout: 10s
+      retries: 15
     depends_on:
       espocrm-db:
         condition: service_healthy
@@ -121,6 +127,9 @@ services:
       - espocrm:/var/www/html
     restart: always
     entrypoint: docker-daemon.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
 
   espocrm-websocket:
     image: espocrm/espocrm
@@ -134,6 +143,9 @@ services:
       - espocrm:/var/www/html
     restart: always
     entrypoint: docker-websocket.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
     ports:
       - 8081:8080
 
