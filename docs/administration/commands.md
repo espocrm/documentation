@@ -164,6 +164,15 @@ bin/command rebuild-category-paths {EntityType}
 
 Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
 
+## Populate array values
+
+
+```
+bin/command populate-array-values {EntityType} {field}
+```
+
+Populates entries in the `array_value` table for a specific field based on the column value. In some circumstances, the values may become out of sync, causing search to not work correctly. Concerns Multi-Enum, Array, Checkbox, and URL-Multiple fields.
+
 ## Config get
 
 *As of v10.0.*
