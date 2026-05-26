@@ -99,3 +99,7 @@ Check EspoCRM log at `data/logs` directory. You can also set the [log mode](../.
 ### Enabling SMTP
 
 For Microsoft 365, you might need to enable SMTP AUTH for specific mailboxes. See how to do it in the [Microsoft documentation](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission#use-the-microsoft-365-admin-center-to-enable-or-disable-smtp-auth-on-specific-mailboxes).
+
+### Domain name
+
+If your Espo users have email addresses with a domain name different from the one used in your Microsoft tenant, it is recommended to specify this domain in the Outlook Integration settings.
