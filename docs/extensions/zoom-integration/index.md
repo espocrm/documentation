@@ -77,13 +77,17 @@ To be able to push a meeting to Zoom, a user needs to have:
 * access to the *Zoom Meetings* scope;
 * edit access the meeting.
 
-To push the meeting, click *Push to Zoom* from the dropdown next to the *Edit* button.
+To push an existing meeting, click *Push to Zoom* from the dropdown next to the *Edit* button.
+
+When creating a new meeting, selecting Zoom in the Online Location field will automatically create a Zoom meeting. This method requires EspoCRM v10.0.
 
 Once a Zoom meeting is created, the Join URL field in the Espo meeting will be set to the Zoom's URL.
 
 If you edit an already pushed meeting in Espo, it will be marked as out-of-sync. You can push it again so that it will become synced with Zoom.
 
 If an Espo meeting has status *Not Held*, you can delete the corresponding Zoom meeting by clicking *Delete from Zoom*.
+
+
 
 ### Join URL
 
