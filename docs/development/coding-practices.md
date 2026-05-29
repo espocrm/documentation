@@ -25,7 +25,7 @@ The *Classes* namespace structure (recommendations, not strict rules):
 - `Classes\Jobs\` – scheduled jobs;
 - `Classes\AppParams\` – AppParams implementations;
 - `Classes\Cleanup\` – Cleanup implementations;
-- `Classes\MassAction\` – MassAction implementations;
+- `Classes\MassAction\` – Mass actions implementations;
 - `Classes\Action\` – Action implementations;
-- `Classes\ConsoleCommands\` – Action implementations;
+- `Classes\ConsoleCommands\` – Console command implementations;
 - `Classes\FieldValidators\{EntityType}\{Field}` – field validators;
