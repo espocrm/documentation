@@ -15,7 +15,6 @@ In this article:
 * [Troubleshooting](#troubleshooting)
 * [See also](#see-also)
 
-
 ## Email accounts
 
 The system email account (the group email account designated as system at Administration > Outbound Emails) is used for mass emails by default. Group email accounts with *Is for Mass Email* checked can also be used. An email account can be selected when creating a Mass Email record.
@@ -33,7 +32,7 @@ You can check if emails are sent in the Log panel on the Campaign detail view.
 
 ## Test sending
 
-Click the right-side dropdown in a needed record in the Mass Email panel and then click *Send Test*.
+Click the right-side dropdown in the needed record row in the Mass Email panel and then click *Send Test*.
 
 ## Opt-out
 
@@ -66,6 +65,8 @@ Target Lists contain lists of Accounts, Contacts, Leads and Users records. Custo
 
 Users can populate target lists manually using the *Select* action in the corresponding panel on the Target List detail view. There is the ability to make filtering and then *Select All Results* of the search.
 
+See the [separate article](target-lists.md) about Target Lists.
+
 ### Populating target lists with Reports
 
 The [Reports](reports.md#syncing-with-target-lists) tool provides the ability to populate target lists with records matching specific criteria.
@@ -73,12 +74,6 @@ The [Reports](reports.md#syncing-with-target-lists) tool provides the ability to
 ### Excluding target lists
 
 Specify *Excluding Target Lists* to avoid sending mass emails to certain recipients. If there is a record with an email address that matches the email address of an excluded record, it will be excluded as well.
-
-### Custom entity support
-
-*[As of v7.1.](https://github.com/espocrm/espocrm/issues/2203)*
-
-An administrator needs to create a many-to-many relationship between the Target List and the custom entity (of Person or Company type). Then, add the panel to the *Bottom Panels* layout of the Target List entity type.
 
 ## Campaign log
 

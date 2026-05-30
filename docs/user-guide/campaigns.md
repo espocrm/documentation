@@ -26,6 +26,8 @@ See also:
 
 Target lists can be specified for campaigns Email, Newsletter, Information Email, and Mail campaigns. The *Target Lists* field defines the target audience, while the *Excluding Target Lists* field specifies who to exclude. Contacts in the excluding list are excluded, even if they appear in the campaign's target list.
 
+See the [separate article](target-lists.md) about Target Lists.
+
 ## Log
 
 Log entries display activity history of the campaign. The following events are logged:

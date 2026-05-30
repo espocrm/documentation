@@ -79,6 +79,7 @@
 * [Case management](user-guide/case-management.md)
 * [Activities & calendar](user-guide/activities-and-calendar.md)
 * [Campaigns](user-guide/campaigns.md)
+* [Target lists](user-guide/target-lists.md)
 * [Mail merge (mass snail mailing)](user-guide/mail-merge.md)
 * [Knowledge base](user-guide/knowledge-base.md)
 * [Documents](user-guide/documents.md)
