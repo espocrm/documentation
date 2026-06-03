@@ -18,6 +18,19 @@ Access to the Stream is controlled by Roles and can be configured per entity typ
 
 With the [Collaborators](../administration/roles-management.md#collaborators) feature enabled, users who are record collaborators can access the Stream of the record, provided their access level, as defined by Roles, is other than *no*.
 
+### Stream Updated At field
+
+The *Stream Updated At* field is available for entity types with Stream enabled. When a record's Stream is updated, the current timestamp is written to this field. Only updates of the following note types have an effect:
+
+* Create
+* Post
+* Email received
+* Email sent
+* Status update
+* Audited field update
+* Assignee change
+* Audited relation update
+
 ## User Stream
 
 Users can view their own Stream in the *Stream* dashlet as well on the separate Stream page.
