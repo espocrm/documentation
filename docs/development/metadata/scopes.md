@@ -276,3 +276,8 @@ When a user converts currency of an entity, edit access to all listed fields is 
 
 Force to be available in Last Viewed.
 
+## accountLink
+
+*As of v10.0.*
+
+A link determining the Account the record belongs to.
