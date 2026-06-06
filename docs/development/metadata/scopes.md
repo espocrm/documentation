@@ -280,4 +280,10 @@ Force to be available in Last Viewed.
 
 *As of v10.0.*
 
-A link determining the Account the record belongs to.
+A link determining the Account the record belongs to. The system falls back to 'account' if such a link exists.
+
+## parentLink
+
+*As of v10.0.*
+
+A link determining the parent record. For example, a project is a parent for a task. The system falls back to 'parent' if such a link exists.
