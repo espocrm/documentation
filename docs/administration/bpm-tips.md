@@ -33,3 +33,7 @@ You can utilize the [Report Panels](../user-guide/reports.md#report-panels) feat
 
 1. Create a List report for the Process entity type with the *Target* runtime filter.
 2. Create a report panel (Administration > Report Panels) for your entity type, select the report.
+
+## Starting process with button
+
+To allow users to start a BPM process using a button, create a Workflow rule with the Manual trigger type. Add *Start BPM process* action and select the needed process.
