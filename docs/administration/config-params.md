@@ -5,7 +5,7 @@ search:
 
 # Config parameters
 
-Config parameters can be changed or added manually in the file `data/config.php`. Parameters can also be added to the file `data/config-internal.php`. Use the **internal config** to store sensitive parameters.
+Config parameters can be changed or added manually in the file `data/config.php`. Parameters can also be added to the file `data/config-internal.php`. Use the **internal config** to store sensitive parameters. Do not add the same parameter to both configs.
 
 In this article:
 
