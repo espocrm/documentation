@@ -210,7 +210,9 @@ A Task has a Stream. The Stream can be used for communication between the Projec
 
 ## Milestones
 
-A milestone is a significant point in a project's timeline that marks the completion of a key phase.
+A milestone is a significant point in a project's timeline that marks the completion of a key phase. Milestones utilize the same entity type as Project Tasks. They point to a single date rather than having a start and end date.
+
+A milestone can be created from the Plan view using the dropdown menu in the top-right corner of a group.
 
 ## Groups
 
