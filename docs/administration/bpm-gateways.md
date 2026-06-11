@@ -27,9 +27,9 @@ In case of diverging, it defines a single flow (path) that will be chosen accord
 
     There must be at least two outgoing flows to be able to specify diverging criteria.
 
-In case of converging, it just directs the flow to the outgoing element. It does not block the flow, hence parallel flows won't be merged into a single flow.
-
 ![exclusive gateway divergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-divergent.png)
+
+In case of converging, it just directs the flow to the outgoing element. It does not block the flow, hence parallel flows won't be merged into a single flow.
 
 ![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
 
