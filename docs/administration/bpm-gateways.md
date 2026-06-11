@@ -39,7 +39,7 @@ In case of converging, it just directs the flow to the outgoing element. It does
 
 Can diverge or converge flows.
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), based on accomplishment of criteria of each path's criteria. The default flow is chosen if there are no met conditions. The default flow is marked with a slash sign.
+In case of diverging, it can direct to one or multiple parallel flows (paths), based on the accomplishment of each path's criteria. The default flow is chosen if there are no met conditions. The default flow is marked with a slash sign.
 
 !!! important
 
