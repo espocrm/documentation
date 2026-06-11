@@ -89,7 +89,7 @@ In case of converging, it waits until all incoming flows come and only then cont
 
 Can only diverge flows.
 
-It stops the flow until any of outgoing events gets triggered. The triggered event determines a single flow. Other outgoing events get rejected.
+It suspends the flow until any of the outgoing events is triggered. The triggered event determines the path forward, while all other outgoing events are rejected. In other words, the first wins.
 
 Only intermediate events can be on the other end of outgoing sequence flows.
 
