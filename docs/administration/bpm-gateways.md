@@ -49,9 +49,11 @@ There is the ability to specify the default flow. The default flow is chosen whe
 
     There must be at least two outgoing flows to be able to specify diverging criteria.
 
+![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
+
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway, you need to use a converging inclusive gateway. It will wait for all incoming flows and only then will continue to the outgoing element.
 
-![inclusive gateway](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-inclusive.png)
+
 
 !!! note
 
