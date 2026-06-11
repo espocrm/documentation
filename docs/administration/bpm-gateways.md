@@ -21,7 +21,7 @@ Can diverge or converge flows.
 
 This is the most common type of gateway, used to implement basic conditional logic.
 
-In case of diverging, it directs to a single flow (path), chosen based on the path's criteria. Each path has defined conditions. The first met condition determines the flow, subsequent conditions are skipped. Conditions are evaluated according to the defined order.
+In case of diverging, it directs to a single flow (path), chosen based on the path's criteria. Each path has defined condition. The first met condition determines the flow, subsequent conditions are skipped. Conditions are evaluated according to the defined order.
 
 There is the ability to specify the default flow. The default flow is chosen when no conditions are met. The default flow is marked with a slash sign.
 
