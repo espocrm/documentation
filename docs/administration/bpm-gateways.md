@@ -4,6 +4,8 @@ Gateways diverge and converge flows. Depicted as a yellow diamond. They can be u
 
 When a gateway is diverging, first add all elements it should diverge to, then use the Connect tool to connect the gateway to each element. After the elements are connected, you can define conditions by clicking the gateway (for Exclusive and Inclusive gateways).
 
+Gateways:
+
 * [Exclusive](#exclusive-gateway)
 * [Inclusive](#inclusive-gateway)
 * [Parallel](#parallel-gateway)
