@@ -4,6 +4,8 @@ Gateways diverge and converge flows. Depicted as a yellow diamond. They can be u
 
 When a gateway is diverging, first add all elements it should diverge to, then use the Connect tool to connect the gateway to each element. After the elements are connected, you can define conditions by clicking the gateway (for Exclusive and Inclusive gateways).
 
+
+
 Gateways:
 
 * [Exclusive](#exclusive-gateway)
@@ -17,7 +19,9 @@ Gateways:
 
 Can diverge or converge flows.
 
-In case of diverging, it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is the ability to specify a default flow. The default flow will be chosen if there are no conditions met. The default flow is marked with a slash sign.
+This is the most common type of gateway, used to implement basic conditional logic.
+
+In case of diverging, it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, next conditions are omitted. There is the ability to specify the default flow. The default flow will be chosen if there are no conditions met. The default flow is marked with a slash sign.
 
 !!! important
 
