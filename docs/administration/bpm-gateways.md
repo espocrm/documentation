@@ -2,6 +2,8 @@
 
 Gateways diverge and converge flows. Depicted as a yellow diamond. They can be used to determine a path in which the flow will go depending on specific conditions. They can split a flow into multiple parallel flows and join parallel flows into a single one.
 
+When a gateway is diverging, first add all elements it should diverge to, then use the Connect tool to connect the gateway to each element. After the elements are connected, you can define conditions by clicking the gateway (for Exclusive and Inclusive gateways).
+
 * [Exclusive](#exclusive-gateway)
 * [Inclusive](#inclusive-gateway)
 * [Parallel](#parallel-gateway)
