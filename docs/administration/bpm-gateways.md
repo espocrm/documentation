@@ -19,7 +19,9 @@ Can diverge or converge flows.
 
 This is the most common type of gateway, used to implement basic conditional logic.
 
-In case of diverging, it defines a single flow (path) that will be chosen according specified criteria. The first met condition determines the flow, subsequent conditions are skipped. There is the ability to specify the default flow. The default flow is chosen when no conditions are met. The default flow is marked with a slash sign.
+In case of diverging, it directs to a single flow (path), chosen based on the path's criteria. Each path has defined conditions. The first met condition determines the flow, subsequent conditions are skipped. Conditions are evaluated according to the defined order.
+
+There is the ability to specify the default flow. The default flow is chosen when no conditions are met. The default flow is marked with a slash sign.
 
 !!! important
 
@@ -37,7 +39,9 @@ In case of converging, it just directs the flow to the outgoing element. It does
 
 Can diverge or converge flows.
 
-In case of diverging, it can direct to one or multiple parallel flows (paths), based on the accomplishment of each path's criteria. There is the ability to specify the default flow. The default flow is chosen when no conditions are met. The default flow is marked with a slash sign.
+In case of diverging, it can direct to one or multiple parallel flows (paths), based on the accomplishment of each path's criteria. All conditions that are met determine the outgoing flows. Conditions are evaluated according to the defined order.
+
+There is the ability to specify the default flow. The default flow is chosen when no conditions are met. The default flow is marked with a slash sign.
 
 !!! important
 
@@ -61,7 +65,7 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 Can diverge or converge flows.
 
-In case of diverging, it splits the flow into multiple parallel flows. There are no parameters for this gateway type.
+In case of diverging, it splits the flow into multiple parallel flows. There are no parameters (no conditions) for this gateway type.
 
 In case of converging, it waits until all incoming flows come and only then continues to the next outgoing element.
 
