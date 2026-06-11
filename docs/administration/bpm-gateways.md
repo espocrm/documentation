@@ -17,7 +17,7 @@ Gateways:
 
 ## Exclusive Gateway
 
-Can diverge or converge flows. Cannot produce parallel flows.
+Can diverge or converge flows.
 
 This is the most common type of gateway, used to implement basic conditional logic.
 
@@ -37,7 +37,7 @@ In case of converging, it just directs the flow to the outgoing element. It does
 
 ## Inclusive Gateway
 
-Can diverge or converge flows. Can produce parallel flows.
+Can diverge or converge flows.
 
 In case of diverging, it can direct to one or multiple parallel flows (paths), based on the accomplishment of each path's criteria. The default flow is chosen if there are no met conditions. The default flow is marked with a slash sign.
 
@@ -61,7 +61,7 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 ## Parallel Gateway
 
-Can diverge or converge flows. Can produce parallel flows.
+Can diverge or converge flows.
 
 In case of diverging, it splits the flow into multiple parallel flows. There are no parameters for this gateway type.
 
@@ -81,7 +81,7 @@ In case of converging, it waits until all incoming flows come and only then cont
 
 ## Event Based Gateway
 
-Can only diverge flows. Cannot produce parallel flows.
+Can only diverge flows.
 
 It stops the flow until any of outgoing events gets triggered. The triggered event determines a single flow. Other outgoing events get rejected.
 
