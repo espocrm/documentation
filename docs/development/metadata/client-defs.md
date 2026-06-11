@@ -775,6 +775,14 @@ An acl action access to which is required for the action.
 
 Detail view actions (available from the dropdown next to the *Edit* button).
 
+## editActionList
+
+*Object[]*
+
+*As of v10.0.*
+
+Edit view actions (available from the dropdown next to the *Save* button).
+
 ### name
 
 *string*
@@ -832,6 +840,14 @@ A group index. 0 – is the first group. Groups are separated by a divider. As o
 *Object[]*
 
 Modal detail view actions. Parameters are the same as for *detailActionList*.
+
+## modalEditActionList
+
+*Object[]*
+
+*As of v10.0.*
+
+Modal edit view actions. Parameters are the same as for *detailActionList*.
 
 ## iconClass
 
