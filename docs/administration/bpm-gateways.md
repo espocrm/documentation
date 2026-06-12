@@ -68,7 +68,7 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
 !!! note
 
-    If one of parallel flows has been ended for some reason, then the diverging converging will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
+    If one of parallel flows has been ended for some reason, then the converging gateway will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
 
 ----
 
@@ -88,7 +88,7 @@ In case of converging, it waits until all incoming flows come and only then cont
 
 !!! note
 
-    If one of parallel flows has been ended for some reason, then diverging gateway will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
+    If one of parallel flows has been ended for some reason, then the converging gateway will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
 
 ----
 
