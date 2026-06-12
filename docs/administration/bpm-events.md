@@ -49,7 +49,7 @@ All available events:
 
 ### Start Event
 
-Doesn't have parameters. It's a starting point of the process. A Start Event can be initiated manually by a user who has access to create processes. This can be done either from the processes list view or from the detail view of a target record.
+Doesn't have parameters. It is a starting point of the process. A Start Event can be initiated manually by a user who has access to create processes. This can be done either from the processes list view or from the detail view of a target record.
 
 ![Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-1.png)
 
@@ -85,9 +85,9 @@ Can be also used to start an event sub-process. In this case, it is scheduled to
 
 Can be used to start processes and event sub-processes.
 
-When it's used to start a process, only *object signals* can be used.
+When it is used to start a process, only *object signals* can be used.
 
-When it's used to start an event sub-process, it's possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
+When it is used to start an event sub-process, it is possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
 
 !!! note
 
@@ -103,7 +103,7 @@ See [more info](bpm-signals.md) about signals.
 
 ### Error Start Event
 
-Can only be used to start an event sub-process. It's triggered once an error event is thrown within the same process.
+Can only be used to start an event sub-process. It is triggered once an error event is thrown within the same process.
 
 If the *Error Code* is specified, the event will be triggered only when an error with the same code occurs. If the *Error Code* is empty, it will catch any error.
 
@@ -111,7 +111,7 @@ It cannot be non-interrupting, because the process gets terminated once an error
 
 ![Error Start Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-start-error.png)
 
-It's possible to view an error code and message in the flow log.
+It is possible to view an error code and message in the flow log.
 
 The error code and the exception message can be obtained further in the flow with Formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage`.
 
@@ -122,7 +122,7 @@ The error code and the exception message can be obtained further in the flow wit
 
 ### Escalation Start Event
 
-Can be used only to start an event sub-process. It's triggered once an escalation event it thrown within the same process.
+Can be used only to start an event sub-process. It is triggered once an escalation event it thrown within the same process.
 
 If the Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If the Escalation Code is empty, it will catch any escalation.
 
@@ -160,7 +160,7 @@ This event stops the flow and waits as long as it's determined by event's parame
 
 For more complex timer settings you can utilize a [Formula](formula.md) script. Formula scripts should return a Date-Time value (date-time string in the UTC timezone). Once this time arrives, the flow is proceeded to the next element.
 
-By utilizing *datetime\closest* Formula function, it's possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
+By utilizing *datetime\closest* Formula function, it is possible to set the timer to a specific time in the future, e.g. the beginning of the next working day.
 
 ![Timer Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-timer.png)
 
@@ -198,7 +198,7 @@ Stops the flow until an email is received.
 
 Only emails sent not by internal users can trigger the event.
 
-It's possible to utilize the event in pair with the *Send Message* task. The event will wait until the sent email is replied. Specify that email in the *Replied To* parameter.
+It is possible to utilize the event in pair with the *Send Message* task. The event will wait until the sent email is replied. Specify that email in the *Replied To* parameter.
 
 The *Related To* parameter requires that the email was related (via the Parent field) to a specific record.
 
@@ -305,7 +305,7 @@ Boundary events can be attached to activities (usually sub-processes). Boundary 
 
 ### Error Intermediate Event (Boundary)
 
-It's triggered once an error event is thrown within the activity (sub-process) it's attached to.
+It is triggered once an error event is thrown within the activity (sub-process) it is attached to.
 
 It cannot be non-interrupting, because the activity gets terminated once an error event is thrown.
 
@@ -313,13 +313,13 @@ If the Error Code is specified, it will be triggered only when an error with the
 
 ![Error Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
-It's possible to view the error code and the exception message in the flow log.
+It is possible to view the error code and the exception message in the flow log.
 
 The error code and the exception message can be obtained further in the flow with Formula functions `bpm\caughtErrorCode` and `bpm\caughtErrorMessage`.
 
 !!! note
 
-    If the error event is attached to a task with the *Send HTTP Request* action, it's possible to catch a specific response error code (e.g. 404, 403).
+    If the error event is attached to a task with the *Send HTTP Request* action, it is possible to catch a specific response error code (e.g. 404, 403).
 
 
 ### Conditional Intermediate Event (Boundary)
@@ -341,7 +341,7 @@ Triggered after a specific period of time. The timer starts once the activity st
 
 ### Escalation Intermediate Event (Boundary)
 
-It's triggered once an escalation event is thrown within the activity (sub-process) it's attached to.
+It is triggered once an escalation event is thrown within the activity (sub-process) it is attached to.
 
 If the Escalation Code is specified, it will be triggered only when an escalation with the same code occurs. If the Escalation Code is empty, it will catch any escalation.
 
@@ -350,7 +350,7 @@ If the Escalation Code is specified, it will be triggered only when an escalatio
 
 ### Signal Intermediate Event (Boundary)
 
-It's triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily from the same process.
+It is triggered once a specific signal is broadcasted. Note that a signal can be triggered from anywhere in the system, not necessarily from the same process.
 
 Placeholders can be used in a signal name. E.g. `test.{$id}`, {$id} will be replaced with the target's ID.
 
@@ -372,7 +372,7 @@ Triggered once compensation is initiated for an activity it is attached to. Must
 
     Compensation can be applied only for activities that were successfully completed.
 
-When it's a sub-process being compensated, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use the compensation event sub-process inside the sub-process instead.
+When it is a sub-process being compensated, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use the compensation event sub-process inside the sub-process instead.
 
 In case of a multi-instance sub-process, the compensation activity is processed for each completed instance of the sub-process.
 
