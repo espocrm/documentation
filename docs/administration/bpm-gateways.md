@@ -13,10 +13,10 @@ Gateways:
 * [Parallel](#parallel-gateway)
 * [Event Based](#event-based-gateway)
 
-| Type | Can produce parallel flows? | Description |
+| Type | Can produce parallel flows? | Diverging behavior |
 | :--- | :--- | :--- |
 | Exclusive | No | Chooses one path. |
-| Inclusive | Yes | Chooses one or multiple paths |
+| Inclusive | Yes | Chooses one or multiple paths. |
 | Parallel | Yes | Splits the flow into multiple paths. |
 | Event Based | No | Chooses one path based on an event triggered first. |
 
