@@ -16,7 +16,7 @@ Activities encompass automated tasks, manual tasks, and sub-processes. On a flow
 
 A task can execute different actions. Available actions are listed below.
 
-The BPM task utilizes actions from the Workflow tool. The list of available actions is almost the same as in Workflows. See more details about [Workflow actions](workflows.md#actions).
+The BPM task utilizes actions from the Workflow tool. The list of available actions is almost identical as in Workflows. See more details about [Workflow actions](workflows.md#actions).
 
 ### Actions
 
