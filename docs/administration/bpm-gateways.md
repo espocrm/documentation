@@ -13,14 +13,12 @@ Gateways:
 * [Parallel](#parallel-gateway)
 * [Event Based](#event-based-gateway)
 
-| Type | Can produce parallel flows? | Diverging behavior |
-| :--- | :--- | :--- |
-| Exclusive | No | Chooses one path. |
-| Inclusive | Yes | Chooses one or multiple paths. |
-| Parallel | Yes | Splits the flow into multiple paths. |
-| Event Based | No | Chooses one path based on an event triggered first. |
-
-----
+| Type        | Can produce parallel flows? | Diverging behavior                                  | Converging behavior                                                       |
+|:------------|:----------------------------|:----------------------------------------------------|:--------------------------------------------------------------------------|
+| Exclusive   | No                          | Chooses one path.                                   | Simply passes the flow forward.                                           |
+| Inclusive   | Yes                         | Chooses one or multiple paths.                      | Waits until all activated flows produced by the diverging gateway arrive. |
+| Parallel    | Yes                         | Splits the flow into multiple paths.                | Waits until all parallel flows arrive.                                    |
+| Event Based | No                          | Chooses one path based on an event triggered first. | Not available.                                                            |
 
 ## Exclusive Gateway
 
@@ -41,8 +39,6 @@ There is the ability to specify the default flow. The default flow is chosen whe
 In case of converging, it just directs the flow to the outgoing element. It does not block the flow, hence parallel flows won't be merged into a single flow.
 
 ![exclusive gateway convergent](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/gateway-exclusive-convergent.png)
-
-----
 
 ## Inclusive Gateway
 
@@ -70,8 +66,6 @@ If there is a necessity to merge parallel flows produced by a diverging inclusiv
 
     If one of parallel flows has been ended for some reason, then the converging gateway will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
 
-----
-
 ## Parallel Gateway
 
 Can diverge or converge flows.
@@ -89,8 +83,6 @@ In case of converging, it waits until all incoming flows come and only then cont
 !!! note
 
     If one of parallel flows has been ended for some reason, then the converging gateway will never be processed. The process will be blocked. Avoid the flowchart design that can bring about such a situation.
-
-----
 
 ## Event Based Gateway
 
