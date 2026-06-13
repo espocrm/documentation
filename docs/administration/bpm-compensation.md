@@ -2,7 +2,7 @@
 
 *As of Advanced Pack v2.14.*
 
-The Compensation mechanism is supposed to perform undo actions when something went wrong. Only successfully completed activities can be compensated. Both tasks and sub-processes can be compensated.
+The Compensation mechanism is designed to perform undo actions when something went wrong. Only successfully completed activities can be compensated. Both tasks and sub-processes can be compensated.
 
 A compensation is initiated by triggering a Compensation Event (usually from an error handler). The throwing compensation event can specify an activity's ID that needs to be compensated. If the ID is omitted, all *visible* *compensable* activities will be compensated in the order reverse to their instantiation.
 
