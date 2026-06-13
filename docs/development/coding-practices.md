@@ -10,7 +10,7 @@ Within a module namespace:
 - `EntryPoints\` – entry points (accessible by `?entryPoint={name}`);
 - `Hooks\{EntityType}\` – hooks (such as before-save, after-save);
 - `Tools\` – domain level code, for business logic;
-- `Tools\{DomainName}\Api\` – API actions (entry points for API);
+- `Tools\{DomainName}\Api\` – API actions (entry points for API); class names should start with the respective HTTP method name (e.g. `PostCreateOrder`);
 - `Tools\{DomainName}\Jobs\` – jobs;
 - `Tools\{DomainName}\Exceptions\` – domain-level exceptions;
 - `Classes\` – framework related implementations;
