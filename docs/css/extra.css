@@ -10,7 +10,7 @@
 }
 
 .md-grid {
-    max-width: 62rem;
+    max-width: 63rem;
 }
 
 .md-typeset .admonition {
@@ -19,11 +19,10 @@
 
 .md-typeset > p > img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-
     border-radius: 5px;
     box-shadow: var(--md-shadow-z1);
+
+    margin: 1rem auto;
 }
 
 label.md-nav__link:not(.md-nav__container):focus,
@@ -99,7 +98,6 @@ a.md-nav__link:not(.md-nav__container):hover {
 
 .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav {
     font-size: 0.65rem;
-    //display: none;
 }
 
 .md-nav__list {
@@ -117,7 +115,9 @@ a.md-nav__link:not(.md-nav__container):hover {
 
 .md-typeset table:not([class]) {
     display: table;
-    font-size: .8rem;
+    font-size: .7rem;
+
+    margin-top: 0.4rem;
 
     tr {
         td, th {
