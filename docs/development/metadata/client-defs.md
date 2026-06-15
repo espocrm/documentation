@@ -775,47 +775,6 @@ An acl action access to which is required for the action.
 
 Detail view actions (available from the dropdown next to the *Edit* button).
 
-## editActionList
-
-*Object[]*
-
-*As of v10.0.*
-
-Edit view actions (available from the dropdown next to the *Save* button).
-
-## recordControls
-
-*As of v10.0.*
-
-Record control elements. To be used for arbitrary action elements. 
-
-Supported types: 
-
-- `editSide`
-- `modalEditSide`
-
-Example:
-
-```json
-{
-    "recordControls": {
-        "editSide": {
-            "buttons": [
-                {
-                    "name": "myAction",
-                    "labelTranslaction": "MyScope.actions.myAction",
-                    "style": "text",
-                    "handler": "my-module:my-handler",
-                    "actionFunction": "process",
-                    "checkVisibilityFunction": "isVisible",
-                    "checkAvailabilityFunction": "isAvailable"
-                }
-            ]
-        }
-    }
-}
-```
-
 ### name
 
 *string*
@@ -867,6 +826,47 @@ An acl action access to which is required for the action.
 *number*
 
 A group index. 0 – is the first group. Groups are separated by a divider. As of v8.3.0.
+
+## editActionList
+
+*Object[]*
+
+*As of v10.0.*
+
+Edit view actions (available from the dropdown next to the *Save* button). Item definition are the same as for *detailActionList*.
+
+## recordControls
+
+*As of v10.0.*
+
+Record control elements. To be used for arbitrary action elements. Item definition are the same as for *detailActionList*.
+
+Supported types: 
+
+- `editSide`
+- `modalEditSide`
+
+Example:
+
+```json
+{
+    "recordControls": {
+        "editSide": {
+            "buttons": [
+                {
+                    "name": "myAction",
+                    "labelTranslaction": "MyScope.actions.myAction",
+                    "style": "text",
+                    "handler": "my-module:my-handler",
+                    "actionFunction": "process",
+                    "checkVisibilityFunction": "isVisible",
+                    "checkAvailabilityFunction": "isAvailable"
+                }
+            ]
+        }
+    }
+}
+```
 
 ## modalDetailActionList
 
