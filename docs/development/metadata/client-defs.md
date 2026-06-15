@@ -783,6 +783,39 @@ Detail view actions (available from the dropdown next to the *Edit* button).
 
 Edit view actions (available from the dropdown next to the *Save* button).
 
+## recordControls
+
+*As of v10.0.*
+
+Record control elements. To be used for arbitrary action elements. 
+
+Supported types: 
+
+- `editSide`
+- `modalEditSide`
+
+Example:
+
+```json
+{
+    "recordControls": {
+        "editSide": {
+            "buttons": [
+                {
+                    "name": "myAction",
+                    "labelTranslaction": "MyScope.actions.myAction",
+                    "style": "text",
+                    "handler": "my-module:my-handler",
+                    "actionFunction": "process",
+                    "checkVisibilityFunction": "isVisible",
+                    "checkAvailabilityFunction": "isAvailable"
+                }
+            ]
+        }
+    }
+}
+```
+
 ### name
 
 *string*
