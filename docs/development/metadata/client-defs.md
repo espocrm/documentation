@@ -799,9 +799,17 @@ An init function of the handler.
 
 ### checkVisibilityFunction
 
-*?string*
+*string*
 
-The handler function that checks whether the action is available. Should return a boolean value. Called on model sync.
+The handler function that checks whether the action is visible. Should return a boolean value. Called on model sync.
+
+### checkAvailabilityFunction
+
+*string*
+
+*As of v10.0.*
+
+The handler function that checks whether the action is available. Should return a boolean value. Called on model change.
 
 ### configCheck
 
