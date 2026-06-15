@@ -879,7 +879,7 @@ Example:
             "buttons": [
                 {
                     "name": "myAction",
-                    "labelTranslaction": "MyScope.actions.myAction",
+                    "labelTranslation": "MyScope.actions.myAction",
                     "style": "text",
                     "handler": "my-module:my-handler",
                     "actionFunction": "process",
