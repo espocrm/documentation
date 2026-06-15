@@ -10,8 +10,8 @@ Features:
 
 * Meetings, Calls, custom entities of Event type can be synced from Espo to Outlook.
 * Attendees are synced from Outlook to Espo as Contacts, Leads, and Users.
-* Contact and Lead attendees are synced from Espo to Outlook if the corresponding parameter is enabled. Users attendees are always synce from Espo to Outlook.
-* Mirosoft Teams meetings can be created from Espo (required EspoCRM v10.0).
+* Contact and Lead attendees are synced from Espo to Outlook if the corresponding parameter is enabled. Users attendees are always synced from Espo to Outlook.
+* Microsoft Teams meetings can be created from Espo (required EspoCRM v10.0).
 
 Three modes of sync are supported:
 
@@ -57,6 +57,6 @@ After that, you need to click *Save*.
 
 If your Espo entity type has a custom *Varchar* field named `location`,  it will be synced with Outlook Calendar. As of v1.4.0.
 
-Meetings created in Espo are synced only to the Calendar of the assigned user. The assigned user acts as an event orginizer. If the meeting has other users as attendees, they will receive the event via the Mircosoft's internal sync.
+Meetings created in Espo are synced only to the Calendar of the assigned user. The assigned user acts as an event organizer. If the meeting has other users as attendees, they will receive the event via the Microsoft's internal sync.
 
-If a meeting that was created in Espo and then synced to Microsoft is reasigned to another user, the event will be removed in Microsoft Calendar and recreated in the Mirosoft Calendar of the new assignee (considering the new assignee has the calendar sync configured).
+If a meeting that was created in Espo and then synced to Microsoft is reassigned to another user, the event will be removed in Microsoft Calendar and recreated in the Microsoft Calendar of the new assignee (considering the new assignee has the calendar sync configured).
