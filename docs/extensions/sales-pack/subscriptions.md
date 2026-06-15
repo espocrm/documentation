@@ -25,7 +25,7 @@ Terms:
 - Trial period. A free period at the start of the subscription.
 - Pause period. A period during which the subscription is suspended.
 
-Subscriptions use different product prices than one-time selling pricies. Subscription prices are also defined in price books, but they additionally specify the billing period, such as 1 month or 1 year.
+Subscriptions use different product prices than one-time selling prices. Subscription prices are also defined in price books, but they additionally specify the billing period, such as 1 month or 1 year.
 
 !!! note
 
@@ -87,7 +87,7 @@ If the Price Book is not specified, then the default price book is used.
 
 ### Fields
 
-Additional fields in the Subscription entity type (not avaialble in the Detail layout by default, can be added):
+Additional fields in the Subscription entity type (not available in the Detail layout by default, can be added):
 
 - Buyer Reference – value is copied to created invoices.
 - Purchase Order Reference – value is copied to created invoices.
