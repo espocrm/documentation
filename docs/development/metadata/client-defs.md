@@ -309,6 +309,14 @@ A translatable label.
 
 A label translation path.
 
+### titleTranslation
+
+*string*
+
+*As of v10.0.*
+
+A title translation path.
+
 ### acl
 
 *"edit"|"delete"*
