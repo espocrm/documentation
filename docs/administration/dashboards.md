@@ -30,14 +30,14 @@ When editing a *Portal User*, you can specify the Dashboard Template for that us
 
 This section covers several out-of-the-box dashlets.
 
-### Recort List
+### Record List
 
 This dashlet allows users to display records of any entity type.
 
 Parameters:
 
 - Primary Filter – for example, a user can select *Open* filter to display only open Tasks.
-- Additional Filters (known as Bool filters) – for example, a user can add *Only My* filter to display only records assignmed to them, or *Shared* filter to display records where they added as a collaborator.
+- Additional Filters (known as Bool filters) – for example, a user can add *Only My* filter to display only records assigned to them, or *Shared* filter to display records where they added as a collaborator.
 - Order By and Order
 - Layout
 
@@ -66,7 +66,7 @@ Provides the ability to display a specific text. Markdown is supported. It can b
 
 Displays the user's calendar.
 
-Prameters:
+Parameters:
 
 - Mode – the calendar mode.
 - What to display – what activity types to display.
