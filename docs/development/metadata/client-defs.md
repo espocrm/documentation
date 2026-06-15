@@ -309,14 +309,6 @@ A translatable label.
 
 A label translation path.
 
-### titleTranslation
-
-*string*
-
-*As of v10.0.*
-
-A title translation path.
-
 ### acl
 
 *"edit"|"delete"*
@@ -792,6 +784,22 @@ An action name.
 ### label
 
 A translatable label.
+
+### labelTranslation
+
+*string*
+
+*As of v10.0.*
+
+A label translation path.
+
+### titleTranslation
+
+*string*
+
+*As of v10.0.*
+
+A title translation path.
 
 ### handler
 
