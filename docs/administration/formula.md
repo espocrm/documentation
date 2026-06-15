@@ -177,7 +177,7 @@ If we didn't have attributes, we would need to write more verbose:
 
 ```
 entity\setAttribute('description', 'test');
-$variable = entity\getAttribute('description');
+$variable = entity\attribute('description');
 ```
 
 ## Functions
