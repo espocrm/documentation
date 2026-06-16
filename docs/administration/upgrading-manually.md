@@ -53,7 +53,7 @@ In some cases it can be more reasonable to install a fresh instance, then copy y
 
 The following actions are the same as those that the automatic upgrade script performs when you run the *upgrade* command.
 
-## 0. Check system requirements of the new version.
+### 0. Check system requirements of the new version.
 
 Whether your system suits for the new version. Sometimes we drop support of old PHP and MySQL versions.
 
