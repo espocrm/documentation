@@ -70,7 +70,7 @@ Current application version:
 bin/command version
 ```
 
-Current version of the core (hard coded in sources):
+Current version of the core (hard coded in sources; as of v10.0):
 
 ```
 bin/command app-info --core-version
