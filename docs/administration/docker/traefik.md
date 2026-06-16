@@ -28,12 +28,12 @@ services:
       - --certificatesresolvers.esporesolver.acme.email={EMAIL_ADDRESS}
       - --certificatesresolvers.esporesolver.acme.storage=/letsencrypt/acme.json
     ports:
-      - "80:80"             
-      - "8080:8080"    
-      - "443:443"       
+      - "80:80"
+      - "8080:8080"
+      - "443:443"
     volumes:
-      - ./letsencrypt:/letsencrypt                                      
-      - /var/run/docker.sock:/var/run/docker.sock:ro     
+      - ./letsencrypt:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 
   espocrm-db:
     image: mariadb:latest
@@ -52,7 +52,7 @@ services:
       MARIADB_USER: espocrm
       MARIADB_PASSWORD: database_password
     volumes:
-      - ./espocrm-db:/var/lib/mysql
+      - espocrm-db:/var/lib/mysql
 
   espocrm:
     image: espocrm/espocrm:latest
@@ -69,9 +69,9 @@ services:
       espocrm-db:
         condition: service_healthy
     volumes:
-      - ./espocrm:/var/www/html
+      - espocrm:/var/www/html
     labels:
-      - traefik.enable=true                                           
+      - traefik.enable=true
       - traefik.http.routers.espocrm-app.rule=Host(`{ESPOCRM_DOMAIN}`)
       - traefik.http.routers.espocrm-app.entrypoints=websecure
       - traefik.http.routers.espocrm-app.tls=true
@@ -125,11 +125,11 @@ Traefik container commands explanation:
 
 EspoCRM container commands explanation:
 
-- **traefik.enable=true** – *Enable Traefik to proxy main EspoCRM container*                              
-- **traefik.http.routers.espocrm-app.rule=Host(`{ESPOCRM_DOMAIN}`)** – *Your domain name goes here for the HTTP rule* 
-- **traefik.http.routers.espocrm-app.entrypoints=websecure** – *Define entrypoint for HTTPS* 
-- **traefik.http.routers.espocrm-app.tls=true** – *Make sure all routers tied to this entrypoint are using HTTPS by default* 
-- **traefik.http.routers.espocrm-app.tls.certresolver=esporesolver** – *Define certificates resolvers for HTTPS* 
+- **traefik.enable=true** – *Enable Traefik to proxy main EspoCRM container*
+- **traefik.http.routers.espocrm-app.rule=Host(`{ESPOCRM_DOMAIN}`)** – *Your domain name goes here for the HTTP rule*
+- **traefik.http.routers.espocrm-app.entrypoints=websecure** – *Define entrypoint for HTTPS*
+- **traefik.http.routers.espocrm-app.tls=true** – *Make sure all routers tied to this entrypoint are using HTTPS by default*
+- **traefik.http.routers.espocrm-app.tls.certresolver=esporesolver** – *Define certificates resolvers for HTTPS*
 
 > The labels in the EspoCRM container for WebSocket works in exactly the same way, we only add a prefix to the host and open port 8080 for container.
 
