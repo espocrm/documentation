@@ -62,6 +62,22 @@ Example of using parameters:
 php command.php upgrade -y --file="EspoCRM-upgrade.zip"
 ```
 
+## Console commands
+
+Current application version:
+
+```
+bin/command version
+```
+
+Current version of the core (hard coded in sources):
+
+```
+bin/command app-info --core-version
+```
+
+If the core files were replaced but the migration process didn't run, the application version and core version numbers won't match.
+
 ## Upgrade from UI
 
 !!! warning
