@@ -144,7 +144,7 @@ See more detail [here](import.md#console-commands).
 bin/command app-info
 ```
 
-With this command you can get some information about the application (container services, binding, jobs).
+With this command you can get some information about the application (container services, binding, jobs, version).
 
 ## Update app timestamp
 
