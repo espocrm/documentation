@@ -92,7 +92,7 @@ Usually Processes start their execution flow from a Start Event (green colored c
 
 A Process can be **stopped manually** by a user who has edit access to that Process. You can do it from the dropdown menu next to the *Edit* button.
 
-It's possible to **manually reject or interrupt** pending and active flow nodes. You can do it from the *Log* panel on the Process detail view in the dropdown menu of a specific Flow Node. Note that in some cases after rejecting a Flow Node the Process becomes suspended and won't ever end by itself. You will need to either manually stop it or start a flow from any node to continue executing.
+It's possible to **manually reject or interrupt** pending and active flow nodes. You can do it from the *Log* panel in the Process detail view via the dropdown menu of a specific Flow Node. Note that in some cases, after rejecting a Flow Node, the Process becomes suspended and won't ever end by itself. You will need to either manually stop the process or start a flow from any node to continue executing.
 
 It's possible to **manually start a flow from any element** of an already started Process. You need to click on a specific flowchart element on the Process detail view and then click the button *Start flow from here*.
 
