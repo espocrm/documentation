@@ -15,3 +15,8 @@ Knowledge Base articles can be associated with Case records. This provides quick
 Categories allow to group articles. One category can contain multiple sub-categories. Each article can be related to one or multiple categories.
 
 The Knowledge Base Category is a separate entity type, hence access can be controlled by Roles.
+
+
+## See also
+
+- [Knowledge Base quick overview](https://app.supademo.com/demo/cmqjcth7j12tmqmx1u9jq17aq)
