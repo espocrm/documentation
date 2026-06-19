@@ -19,4 +19,4 @@ The Knowledge Base Category is a separate entity type, hence access can be contr
 
 ## See also
 
-- [Knowledge Base quick overview](https://app.supademo.com/demo/cmqjcth7j12tmqmx1u9jq17aq)
+- [Knowledge Base quick tour](https://app.supademo.com/demo/cmqjcth7j12tmqmx1u9jq17aq)
