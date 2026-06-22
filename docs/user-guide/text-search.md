@@ -22,7 +22,7 @@ It's possible to use a wildcard `*`.
 
 There is an option to force the system to use the 'contains' operator for Varchar fields by default. Parameter is available under Administration > Settings. Note that it can affect performance.
 
-To disable previous search suggestions, uncheck the checkbox at Preferences > Misc > Disable text filter storing.
+Text search history is stored in the browser's local storage. Previous search queries are available via autocomplete. To disable previous search suggestions, uncheck the checkbox at Preferences > Misc > Disable text filter storing.
 
 ## Global search
 
