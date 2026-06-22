@@ -27,19 +27,25 @@
   * [Backup and restore](administration/backup-and-restore.md)
   * [Performance tweaking](administration/performance-tweaking.md)
   * [Moving to another server](administration/moving-to-another-server.md)
-  * [Security](administration/security.md)
+* Security
+  * [Security recommendations](administration/security.md)
+  * [Passwords](administration/passwords.md)
 * Customization
   * [Entity Manager: entities, fields, relationships](administration/entity-manager.md)
   * [Fields](administration/fields.md)
   * [Layouts](administration/layout-manager.md)
   * [Dynamic Logic](administration/dynamic-logic.md)
   * [API Before-Save script](administration/api-before-save-script.md)
+* General
+  * [Collaborators](administration/collaborators.md)
+  * [Multiple assigned users](administration/multiple-assigned-users.md)
+  * [B2C mode](administration/b2c.md)
 * [Users](administration/users-management.md)
 * [Roles](administration/roles-management.md)
-* [Emails](administration/emails.md)
 * Formula
   * [Formula script](administration/formula.md)
   * [Functions](administration/formula-functions.md)
+* [Emails](administration/emails.md)
 * [Import](administration/import.md)
 * [Portal](administration/portal.md)
 * [Web-to-Lead](administration/web-to-lead.md)
@@ -57,14 +63,9 @@
   * [App secrets](administration/app-secrets.md)
   * [File storage](administration/file-storage.md)
 * Miscellaneous
-  * [Passwords](administration/passwords.md)
-  * [Security](administration/security.md)
   * [Phone numbers](administration/phone-numbers.md)
   * [Addresses](administration/addresses.md)
   * [Maps](administration/maps.md)
-  * [B2C mode](administration/b2c.md)
-  * [Collaborators](administration/collaborators.md)
-  * [Multiple assigned users](administration/multiple-assigned-users.md)
   * [SMS sending](administration/sms-sending.md)
 
 ---
