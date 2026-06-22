@@ -36,7 +36,7 @@
   * [API Before-Save script](administration/api-before-save-script.md)
 * [Users](administration/users-management.md)
 * [Roles](administration/roles-management.md)
-* [Email administration](administration/emails.md)
+* [Emails](administration/emails.md)
 * Formula
   * [Formula script](administration/formula.md)
   * [Functions](administration/formula-functions.md)
