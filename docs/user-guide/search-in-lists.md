@@ -21,9 +21,9 @@ The dropdown text shows the currently applied filter. When it displays 'All', it
 
 Examples of primary filters:
 
-- Draft, Issued, Paid – Invoice;
-- Open, Closed – Opportunity;
-- Customer, Partner –  Account.
+- Draft, Issued, Paid – in Invoice;
+- Open, Closed – in Opportunity;
+- Customer, Partner – in Account.
 
 Custom primary filters can be created with the [Report Filters](reports.md#report-filters) feature
 (available in Advanced Pack).
