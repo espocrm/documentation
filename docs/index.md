@@ -85,6 +85,7 @@
 * [Documents](user-guide/documents.md)
 * [Export](user-guide/export.md)
 * [Text search](user-guide/text-search.md)
+* [Search in lists](user-guide/search-in-lists.md)
 * [Working time calendar](user-guide/working-time-calendar.md)
 * [Printing to PDF](user-guide/printing-to-pdf.md)
 * Miscellaneous

@@ -142,6 +142,7 @@ nav:
         - 'Knowledge base': 'user-guide/knowledge-base.md'
         - 'Documents': 'user-guide/documents.md'
         - 'Export': 'user-guide/export.md'
+        - 'Search in lists': 'user-guide/search-in-lists'
         - 'Text search': 'user-guide/text-search.md'
         - 'Working time calendar': 'user-guide/working-time-calendar.md'
         - 'Printing to PDF': 'user-guide/printing-to-pdf.md'
