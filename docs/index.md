@@ -36,21 +36,10 @@
   * [Layouts](administration/layout-manager.md)
   * [Dynamic Logic](administration/dynamic-logic.md)
   * [API Before-Save script](administration/api-before-save-script.md)
-* General
-  * [Collaborators](administration/collaborators.md)
-  * [Multiple assigned users](administration/multiple-assigned-users.md)
-  * [B2C mode](administration/b2c.md)
 * [Users](administration/users-management.md)
 * [Roles](administration/roles-management.md)
-* Formula
-  * [Formula script](administration/formula.md)
-  * [Functions](administration/formula-functions.md)
 * [Emails](administration/emails.md)
-* [Import](administration/import.md)
 * [Portal](administration/portal.md)
-* [Web-to-Lead](administration/web-to-lead.md)
-* [Currency](administration/currency.md)
-* [Dashboards](administration/dashboards.md)
 * Authentication
   * [2-factor authentication](administration/2fa.md)
   * [OpenID Connect](administration/oidc.md)
@@ -63,11 +52,25 @@
   * [App secrets](administration/app-secrets.md)
   * [File storage](administration/file-storage.md)
 * Miscellaneous
-  * [Phone numbers](administration/phone-numbers.md)
   * [Addresses](administration/addresses.md)
-  * [Maps](administration/maps.md)
-  * [SMS sending](administration/sms-sending.md)
+  * [B2C mode](administration/b2c.md)
 
+---
+
+### General
+
+* Formula
+  * [Formula script](administration/formula.md)
+  * [Functions](administration/formula-functions.md)
+* [Import](administration/import.md)
+* [Dashboards](administration/dashboards.md)
+* [Web-to-Lead](administration/web-to-lead.md)
+* [Currency](administration/currency.md)
+* [Collaborators](administration/collaborators.md)
+* [Multiple assigned users](administration/multiple-assigned-users.md)
+* [Phone numbers](administration/phone-numbers.md)
+* [Maps](administration/maps.md)
+* [SMS sending](administration/sms-sending.md)
 ---
 
 ### User Guide
