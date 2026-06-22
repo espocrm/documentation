@@ -52,8 +52,11 @@
     * [Authorization](administration/ldap-authorization.md)
     * [Active Directory](administration/ldap-authorization-for-ad.md)
     * [OpenLDAP](administration/ldap-authorization-for-openldap.md)
-* Miscellaneous
+* Integrations:
   * [Webhooks](administration/webhooks.md)
+  * [App secrets](administration/app-secrets.md)
+  * [File storage](administration/file-storage.md)
+* Miscellaneous
   * [Passwords](administration/passwords.md)
   * [Security](administration/security.md)
   * [Phone numbers](administration/phone-numbers.md)
@@ -61,10 +64,8 @@
   * [Maps](administration/maps.md)
   * [B2C mode](administration/b2c.md)
   * [Collaborators](administration/collaborators.md)
-  * [Multiple assigned users](administration/multiple-assigned-users.md)  
-  * [File storage](administration/file-storage.md)
+  * [Multiple assigned users](administration/multiple-assigned-users.md)
   * [SMS sending](administration/sms-sending.md)
-  * [App secrets](administration/app-secrets.md)
 
 ---
 
