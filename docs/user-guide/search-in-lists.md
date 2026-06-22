@@ -103,3 +103,7 @@ View List from the dropdown in the top-right corner of the panel.
 
 While search criteria is applied, it is possible to select all results. For this, click the small dropdown icon
 next to the checkbox in the table header row. Then, click *Select All Results*.
+
+## See also
+
+- [List View overview](https://app.supademo.com/demo/cmq82sj3w002q0i0jsfcv5rc2)
