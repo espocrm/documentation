@@ -5,7 +5,7 @@ search:
 
 # Record locking
 
-*As of v10.0.0.*
+*As of v10.0.*
 
 Record locking can be enabled per entity type. Locked records cannot be edited (except for designated fields) or removed.
 Only users with the Lock [permission](../administration/roles-management.md#lock-permission) can lock or unlock records.

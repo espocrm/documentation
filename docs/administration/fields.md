@@ -311,7 +311,7 @@ Parameters:
 
 * Preview Size – defines a size of an image displayed on the detail/list view;
 * Max File Size (Mb) – a validation;
-* Capture – Specifies which camera to use for capture of image data. Options: Empty, User or Environment. As of v10.0.0.
+* Capture – Specifies which camera to use for capture of image data. Options: Empty, User or Environment. As of v10.0.
   
 
 ## Attachment-Multiple

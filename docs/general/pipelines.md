@@ -1,6 +1,6 @@
 # Pipelines
 
-*As of v10.0.0.*
+*As of v10.0.*
 
 The Pipelines feature allows you to configure multiple pipelines for the same entity type.
 While the status field can serve as a pipeline stage by default, with the Pipelines feature enabled,
