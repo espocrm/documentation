@@ -51,6 +51,8 @@ Types:
 
 If you click *Edit* on the entity view, you will be able to change parameters of that entity type.
 
+Parameters:
+
 * Labels – singular and plural names of the entity type.
 * Default order – how records are sorted in list views by default.
 * Stream – enables the Stream feature for the entity type.
@@ -69,6 +71,7 @@ If you click *Edit* on the entity view, you will be able to change parameters of
 * Categories – records can be organized into tree-like categories; available for Base and Base Plus types (as of v10.0).
 * Lockable – enables record locking (as of v10.0).
 * Transactional Save – enables wrapping saves and removals into DB transactions (as of v10.0).
+* Pipelines – enables multiple [pipelines](../general/pipelines.md) (as of v10.0).
 
 !!! note
 
