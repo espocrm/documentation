@@ -66,6 +66,7 @@
 * [Dashboards](administration/dashboards.md)
 * [Web-to-Lead](administration/web-to-lead.md)
 * [Currency](administration/currency.md)
+* [Pipelines](general/pipelines.md)
 * [Collaborators](administration/collaborators.md)
 * [Multiple assigned users](administration/multiple-assigned-users.md)
 * [Phone numbers](administration/phone-numbers.md)
