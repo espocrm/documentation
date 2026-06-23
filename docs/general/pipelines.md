@@ -21,9 +21,14 @@ Each pipeline has its unique stages. Each stage is mapped to the Status field va
 
 A pipeline can be set as available for all users or only for specific teams.
 
-After enabling pipelines, the Status field becomes read-only. It can be changed only by changing the pipeline stage.
+After enabling pipelines, the following Link fields are automatically created:
 
-Each record is assigned to a specific pipeline (required field).
+- Pipeline
+- Pipeline Stage
+
+The Status field becomes read-only. It can be changed only by changing the pipeline stage.
+
+Each record is assigned to a specific pipeline (the Pipeline field is required).
 The assigned pipeline defines the list of stages available for the record. A record can change its pipeline.
 
 The Kanban view displays one pipeline. The pipeline can be switched with a dropdown.
@@ -31,3 +36,6 @@ Columns of the Kanban correspond to the stages of the selected pipeline.
 
 A [Lead Capture](../administration/web-to-lead.md#lead-capture) can be configured to assign newly created leads
 to a specific pipeline.
+
+To be able to update pipeline stages with Mass Update, you need to add both Pipeline and Pipeline Stage fields
+to the Mass Update [layout](../administration/layout-manager.md#mass-update).

@@ -27,6 +27,8 @@ To prevent overlooking of new Leads, users can add the *Lead* entity type to the
 
 It may be useful to enable the Kanban view for Leads. It can be enabled under: Administration > Entity Manager > Lead > Edit > Kanban View.
 
+It is possible to enable multiple [pipelines](../general/pipelines.md) for Leads.
+
 ### Target lists
 
 Leads can be added to Target Lists, which is useful for both marketing and organizing purposes. A user can use the Target Lists filter in the Leads list view to segment leads by the selected target list for further processing.
@@ -61,6 +63,8 @@ The following opportunity stages are available by default:
 * Closed Lost
 
 An administrator can define custom stages depending on the business workflow of the company: Administration > Entity Manager > Opportunity > Fields > Stage. It's also possible to define custom probability values for each stage.
+
+It is possible to enable multiple [pipelines](../general/pipelines.md) for Opportunities.
 
 ### Probability
 
