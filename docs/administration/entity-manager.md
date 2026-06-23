@@ -127,6 +127,8 @@ Linking with multiple entity types through the *Link-Parent* field.
 
 ### Parameters
 
+For a specific relationship, parameters can be accessed from the Edit and Parameters menu items.
+
 #### Link Multiple field
 
 The parameter *Link Multiple Field* implies that the field of the *Link-Multiple* type will be created along with the relationship. You can put such a field on the layout. It's convenient for quick picking of related records. It's not a good option if your relationship is intended to have a lot of linked records that can slow down loading of the detail view screen.
@@ -140,6 +142,19 @@ Examples of link-multiple fields:
 #### Audited
 
 If the parameter **Audited** is checked, then updates of the relationship will be logged in Stream.
+
+#### Read-only
+
+A read-only link cannot be edited via the link and unlink API requests. It won't be possible to relate and
+unrelate records via the relationship panel. It still possible to edit read-only links via link and link-multiple fields.
+
+#### Cascade removal
+
+* As of v10.0.*
+
+If enabled, when a parent record is removed, associated related records will be removed as well.
+
+When an admin user restores a removed record, the associated related records are restored as well.
 
 ## Formula
 
