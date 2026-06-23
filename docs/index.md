@@ -69,6 +69,7 @@
 * [Pipelines](general/pipelines.md)
 * [Collaborators](administration/collaborators.md)
 * [Multiple assigned users](administration/multiple-assigned-users.md)
+* [Record locking](general/record-locking.md)
 * [Phone numbers](administration/phone-numbers.md)
 * [Maps](administration/maps.md)
 * [SMS sending](administration/sms-sending.md)
