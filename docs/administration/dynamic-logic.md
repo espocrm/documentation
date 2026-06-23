@@ -99,7 +99,7 @@ It's also possible to define conditions on which a specific color will be applie
 The Cascading Links feature provides the ability to define dependency between 3 link fields.
 
 Example. A quote record has Account and Contact field. When we selected an Account,
-the system will allow to select only Contact related to the selected Account.
+the system will allow the user to select only Contact related to the selected Account.
 
 Cascading links are configured under Administration > Entity Manager > {Entity Type} > Fields > {Field} > Dynamic Logic panel.
 
