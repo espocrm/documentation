@@ -92,6 +92,32 @@ Available in the following layouts:
 
 It's also possible to define conditions on which a specific color will be applied to the panel.
 
+## Cascading links
+
+*As of v10.0.*
+
+The Cascading Links feature provides the ability to define dependency between 3 link fields.
+
+Example. A quote record has Account and Contact field. When we selected an Account,
+the system will allow to select only Contact related to the selected Account.
+
+Cascading links are configured under Administration > Entity Manager > {Entity Type} > Fields > {Field} > Dynamic Logic panel.
+
+Available for Link, Link-one and Link-multiple fields. For a field (let's call it *Middle field*) we define
+*Local field* and *Foreign field*. Then, when we select a record for the *Middle field*, the *Foreign field* filter
+will be automatically applied based on the *Local field* value (in the current record).
+
+*Local field* can be Link, Link-one, Link-multiple, Link-parent. *Foreign field* can be Link, Link-one, Link-multiple.
+
+Dependency can be marked as *Match Required*, then validation won't allow to save the record if the links are not matched.
+
+When creating a record for a link field, an appropriate link (*Foreign field*) will be automatically pre-filled
+based on the *Local field* value.
+
+In case of Match Required, when the *Local field* is changed, the *Middle field* is unset.
+
+When configuring cascading links, it is possible to add multiple dependency pairs for a *Middle field*.
+
 ## Misc
 
 To determine whether a record is being created, check whether the ID is empty. It can be useful to hide some fields when the record not yet created or to show some panel with instructions described in a panel note.
