@@ -150,7 +150,7 @@ unrelate records via the relationship panel. It still possible to edit read-only
 
 #### Cascade removal
 
-* As of v10.0.*
+*As of v10.0.*
 
 If enabled, when a parent record is removed, associated related records will be removed as well.
 
