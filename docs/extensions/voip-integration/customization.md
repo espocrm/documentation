@@ -174,6 +174,32 @@ To display a Call name field in a call popup, create/modify the file `custom/Esp
 Make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
+## Adding an Enum type field to a call popup
+
+To display an Enum type field in a call popup, create/modify the file `custom/Espo/Custom/Resources/metadata/app/popupNotifications.json` with the code:
+
+```
+{
+    "voipNotification": {
+        "additionalFields": {
+            "callName" : {
+                "display": true,
+                "fullWidth": true,
+                "entity": "Call",
+                "field": "cEnum",
+                "view": "voip:views/fields/native-select",
+                "order": 9
+            }
+       }
+    }
+}
+```
+
+* default order is 10.
+
+Make sure that your JSON data is correct after changes.
+To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
+
 ## Format phone number
 
 When a telephony server returns a phone number in a wrong format e.g. `004959123456789@SIP-PROVIDER-154303332258115083be1`. To get this number in a normal format, create/edit a file `custom/Espo/Custom/Resources/metadata/app/voip.json` and add the code:
