@@ -54,10 +54,16 @@ services:
       ESPOCRM_DATABASE_PASSWORD: database_password
       ESPOCRM_ADMIN_USERNAME: admin
       ESPOCRM_ADMIN_PASSWORD: password
-      ESPOCRM_SITE_URL: "https://{YOUR_DOMAIN}"
+      ESPOCRM_SITE_URL: "https://YOUR_DOMAIN"
     volumes:
       - espocrm:/var/www/html
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:80"]
+      interval: 2s
+      start_period: 60s
+      timeout: 10s
+      retries: 15
     depends_on:
       espocrm-db:
         condition: service_healthy
@@ -70,24 +76,26 @@ services:
     volumes:
       - espocrm:/var/www/html
     restart: always
-    depends_on:
-      - espocrm
     entrypoint: docker-daemon.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
 
   espocrm-websocket:
     image: espocrm/espocrm
     container_name: espocrm-websocket
     environment:
       ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
-      ESPOCRM_CONFIG_WEB_SOCKET_URL: "wss://{YOUR_DOMAIN}/ws"
+      ESPOCRM_CONFIG_WEB_SOCKET_URL: "wss://YOUR_DOMAIN/ws"
       ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
       ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
     volumes:
       - espocrm:/var/www/html
     restart: always
-    depends_on:
-      - espocrm
     entrypoint: docker-websocket.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
     expose:
       - 8080
 
@@ -101,7 +109,7 @@ volumes:
 #### Caddyfile
 
 ```
-espocrm-example.com {
+YOUR_DOMAIN {
     reverse_proxy espocrm:80
 
     reverse_proxy /ws espocrm-websocket:8080 {
