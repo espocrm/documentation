@@ -52,4 +52,4 @@ A preparator. Optional. The preparator is called by the application. It serves f
 
 *As of v10.0.*
 
-Created upon installation or when running `populate-scheduled-jobs` commend.
+Created upon installation or when running `populate-scheduled-jobs` command.
