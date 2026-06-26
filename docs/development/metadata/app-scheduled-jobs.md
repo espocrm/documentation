@@ -47,3 +47,9 @@ A job implementation. Should implement either `Job` or `JobDataLess` interfaces.
 *class-string<Espo\Core\Job\Preparator\>*
 
 A preparator. Optional. The preparator is called by the application. It serves for creating job records. E.g. for email checking, the preparator creates jobs for each email account.
+
+## isDefault
+
+*As of v10.0.*
+
+Created upon installation or when running `populate-scheduled-jobs` commend.
