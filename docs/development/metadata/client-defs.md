@@ -859,6 +859,14 @@ An acl action access to which is required for the action.
 
 A group index. 0 – is the first group. Groups are separated by a divider. As of v8.3.0.
 
+### iconClass
+
+*string*
+
+*As of v10.0.*
+
+An icon class.
+
 ## editActionList
 
 *Object[]*
