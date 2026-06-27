@@ -133,3 +133,9 @@ A config path to check. Path items are separated by a dot. If a config value is 
 *Object[]*
 
 Access rules. See definitions in JSON schema: metadata/clientDefs.json#/definitions/accessDataList.
+
+### iconClass
+
+*As of v10.0.*
+
+An icon class.
