@@ -321,7 +321,15 @@ Required access.
 
 A group index. Starts from 0. As of v8.3.0.
 
-### nameAttribute
+### iconClass
+
+*string*
+
+*As of v10.0.*
+
+An icon class name.
+
+## nameAttribute
 
 *string*
 
