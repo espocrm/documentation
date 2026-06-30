@@ -38,7 +38,7 @@ When a product is added to a document as a line item and there's no price found 
 
 When a user changes the quantity in a line item, the system will look up the new unit price for the new quantity. If the new unit price is found, it will prompt the user to apply the new unit price. The user can reject and keep the previous price.
 
-It is possible to apply a Price Book to already added line items. The **Apply Price Book** action is available from the dropdown menu next to the plus button that adds line items.
+When editing a document, it is possible to apply a Price Book to already added line items. The **Apply Price Book** action is available from the dropdown menu next to the plus button that adds line items. Additionally,  when the Price Book is changed in the edit view and the new price book contains different prices for already added items, a dialog will appear prompting the user to update the prices of the existing line items.
 
 ### Min. Quantity
 
