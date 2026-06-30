@@ -37,7 +37,7 @@ Contact Binotel support to configure one of the following request URLs.
 ### GET request
 
 ```http
-GET https://YOUR_CRM/espo/ext-voip-integration/site/api/v1/Voip/lookup/Binotel/hh9v0zr529?externalNumber=111111
+GET https://YOUR_CRM/espo/ext-voip-integration/site/api/v1/Voip/lookup/Binotel/ACCESS_KEY?externalNumber=12764099628
 ```
 
 ### POST request
@@ -48,16 +48,16 @@ Content-Type:
 - `application/x-www-form-urlencoded`
 
 ```http
-POST https://YOUR_CRM/espo/ext-voip-integration/site/api/v1/Voip/lookup/Binotel/hh9v0zr529
+POST https://YOUR_CRM/espo/ext-voip-integration/site/api/v1/Voip/lookup/Binotel/ACCESS_KEY
 
 {
-    "externalNumber": "111111"
+    "externalNumber": "12764099628"
 }
 ```
 
 Where:
 
-- `hh9v0zr529` — the connector Access Key.
+- `ACCESS_KEY` — the connector Access Key.
 - `externalNumber` — the incoming phone number.
 
 ## How to setup Binotel Integration for users
