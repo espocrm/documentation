@@ -321,7 +321,15 @@ Required access.
 
 A group index. Starts from 0. As of v8.3.0.
 
-### nameAttribute
+### iconClass
+
+*string*
+
+*As of v10.0.*
+
+An icon class name.
+
+## nameAttribute
 
 *string*
 
@@ -850,6 +858,14 @@ An acl action access to which is required for the action.
 *number*
 
 A group index. 0 – is the first group. Groups are separated by a divider. As of v8.3.0.
+
+### iconClass
+
+*string*
+
+*As of v10.0.*
+
+An icon class.
 
 ## editActionList
 
