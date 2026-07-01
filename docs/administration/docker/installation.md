@@ -295,6 +295,211 @@ The `espocrm` images come in many flavors, each designed for a specific use case
 
 ## Troubleshooting
 
+### Incompatible customizations
+
+In most cases, this issue is caused by installed extensions that are not compatible with the upgraded version.
+
+#### 1. Stop your services
+
+Navigate to your EspoCRM directory and run:
+
+```bash
+docker compose down
+```
+
+#### 2. Update your `docker-compose.yml`
+
+Pin each service to a specific image version. Replace the image tags:
+
+```yml
+espocrm:
+  image: espocrm/espocrm:latest
+  # ....
+
+espocrm-daemon:
+  image: espocrm/espocrm:latest
+  # ....
+
+espocrm-websocket:
+  image: espocrm/espocrm:latest
+  # ....
+```
+
+With versioned tags:
+
+```yml
+espocrm:
+  image: espocrm/espocrm:VERSION
+  # ....
+
+espocrm-daemon:
+  image: espocrm/espocrm:VERSION
+  # ....
+
+espocrm-websocket:
+  image: espocrm/espocrm:VERSION
+  # ....
+```
+
+Replace `VERSION` with the EspoCRM version you were running before the upgrade (e.g. `9.3.0`, `9.3.0-fpm`). This lets you revert to that version and adjust your customizations accordingly.
+
+#### 3. Start your services
+
+```bash
+docker compose up -d
+```
+
+### Migration to EspoCRM 10
+
+Starting from EspoCRM v10, mounting the entire `/var/www/html` directory is no longer required. A one-time manual migration is needed to update your volume configuration. Your customization and data will be preserved.
+
+!!! note
+
+    This applies only to users who mounted data to a local directory (e.g. `./espocrm:/var/www/html`). If you are using Docker volumes, see the [instructions](#migration-to-espocrm-10-with-docker-volumes) below.
+
+#### 1. Stop your services
+
+Navigate to your EspoCRM directory and run:
+
+```bash
+docker compose down
+```
+
+#### 2. Update your `docker-compose.yml`
+
+Replace the existing volume mount:
+
+```yml
+espocrm:
+  image: espocrm/espocrm
+  container_name: espocrm
+  # ....
+  volumes:
+    - ./espocrm:/var/www/html
+  restart: always
+```
+
+With the following targeted mounts:
+
+```yml
+espocrm:
+  image: espocrm/espocrm
+  container_name: espocrm
+  # ....
+  volumes:
+    - ./espocrm/data:/var/www/html/data
+    - ./espocrm/custom:/var/www/html/custom
+    - ./espocrm/client/custom:/var/www/html/client/custom
+  restart: always
+```
+
+Repeat this for all EspoCRM service containers.
+
+#### 3. Start your services
+
+```bash
+docker compose up -d
+```
+
+### Migration to EspoCRM 10 with Docker volumes
+
+!!! note
+
+    This applies only to users who mounted data to Docker volumes (e.g. `espocrm:/var/www/html`). If you are using a local directory, see the [instructions](#migration-to-espocrm-10) above.
+
+#### 1. Stop your services
+
+Navigate to your EspoCRM directory and run:
+
+```bash
+docker compose down
+```
+
+#### 2. Create the required volumes
+
+```bash
+docker volume create espocrm-data; \
+docker volume create espocrm-custom; \
+docker volume create espocrm-client-custom
+```
+
+#### 3. Migrate your data
+
+```bash
+docker compose run --rm \
+  -v espocrm_espocrm:/source:ro \
+  -v espocrm-data:/dest-data \
+  -v espocrm-custom:/dest-custom \
+  -v espocrm-client-custom:/dest-client-custom \
+  --entrypoint sh \
+  espocrm -c "
+    cp -a /source/data/. /dest-data/ &&
+    cp -a /source/custom/. /dest-custom/ &&
+    cp -a /source/client/custom/. /dest-client-custom/
+  "
+```
+
+#### 4. Update your `docker-compose.yml`
+
+Replace the existing volume mount:
+
+```yml
+espocrm:
+  image: espocrm/espocrm
+  container_name: espocrm
+  # ....
+  volumes:
+    - espocrm:/var/www/html
+  restart: always
+
+# ...
+
+volumes:
+  espocrm-db:
+  espocrm:
+```
+
+With the following targeted mounts:
+
+```yml
+espocrm:
+  image: espocrm/espocrm
+  container_name: espocrm
+  # ....
+  volumes:
+    - espocrm-data:/var/www/html/data
+    - espocrm-custom:/var/www/html/custom
+    - espocrm-client-custom:/var/www/html/client/custom
+  restart: always
+
+# ...
+
+volumes:
+  espocrm-db:
+  espocrm-data:
+    external: true
+  espocrm-custom:
+    external: true
+  espocrm-client-custom:
+    external: true
+```
+
+#### 5. Start your services
+
+```bash
+docker compose up -d
+```
+
+### Undefined volume: invalid compose project
+
+If you encounter the following error when starting your containers:
+
+```
+service "espocrm" refers to undefined volume espocrm/data: invalid compose project
+```
+
+Follow the [Migration to EspoCRM 10 with Docker volumes](#migration-to-espocrm-10-with-docker-volumes) instructions to resolve it.
+
 ### Switching to MySQL 8.4
 
 In MySQL 8.4 there were changes in the authentication procedure, so you may encounter authentication related errors while upgrading EspoCRM. In this case, it is recommended to take the following steps:
