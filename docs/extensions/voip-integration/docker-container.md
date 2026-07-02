@@ -8,7 +8,7 @@ To display call pop-up windows and ensure the Asterisk provider works correctly 
 
 !!! note
 
-    This configuration is displayed for the [official EspoCRM container](../../administration/docker/installation.md#install-with-docker-compose).
+    This configuration is displayed for the [official EspoCRM container](../../administration/docker/installation.md#installing-with-docker-compose).
 
 Add the following container to your `docker-compose.yml` file:
 
