@@ -429,7 +429,7 @@ Repeat this for all EspoCRM service containers.
 docker compose up -d
 ```
 
-### Migration to EspoCRM 10 with Docker volumes
+### Migration to EspoCRM 10.0 with Docker volumes
 
 !!! note
 
