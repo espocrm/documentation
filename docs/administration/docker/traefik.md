@@ -65,11 +65,19 @@ services:
       ESPOCRM_ADMIN_PASSWORD: password
       ESPOCRM_SITE_URL: "https://{ESPOCRM_DOMAIN}"
     restart: always
+    volumes:
+      - espocrm-data:/var/www/html/data
+      - espocrm-custom:/var/www/html/custom
+      - espocrm-custom-client:/var/www/html/client/custom
     depends_on:
       espocrm-db:
         condition: service_healthy
-    volumes:
-      - espocrm:/var/www/html
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 60s
+      timeout: 20s
+      retries: 3
     labels:
       - traefik.enable=true
       - traefik.http.routers.espocrm-app.rule=Host(`{ESPOCRM_DOMAIN}`)
@@ -80,22 +88,40 @@ services:
   espocrm-daemon:
     image: espocrm/espocrm:latest
     container_name: espocrm-daemon
-    volumes:
-      - espocrm:/var/www/html
+    volumes_from:
+      - espocrm
     restart: always
     entrypoint: docker-daemon.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 180s
+      timeout: 20s
+      retries: 3
 
   espocrm-websocket:
     image: espocrm/espocrm:latest
     container_name: espocrm-websocket
     environment:
-     ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
-     ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
-     ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
-    volumes:
-      - espocrm:/var/www/html
+      ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
+      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
+      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
+    volumes_from:
+      - espocrm
     restart: always
     entrypoint: docker-websocket.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 180s
+      timeout: 20s
+      retries: 3
     labels:
       - traefik.enable=true
       - traefik.http.routers.espocrm-ws.rule=Host(`{ESPOCRM_DOMAIN}`) && PathPrefix(`/ws`)
@@ -106,7 +132,9 @@ services:
 
 volumes:
   espocrm-db:
-  espocrm:
+  espocrm-data:
+  espocrm-custom:
+  espocrm-custom-client:
 ```
 
 Traefik container commands explanation:

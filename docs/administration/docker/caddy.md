@@ -45,7 +45,7 @@ services:
       retries: 3
 
   espocrm:
-    image: espocrm/espocrm
+    image: espocrm/espocrm:latest
     container_name: espocrm
     environment:
       ESPOCRM_DATABASE_PLATFORM: Mysql
@@ -56,44 +56,68 @@ services:
       ESPOCRM_ADMIN_PASSWORD: password
       ESPOCRM_SITE_URL: "https://{YOUR_DOMAIN}"
     volumes:
-      - espocrm:/var/www/html
+      - espocrm-data:/var/www/html/data
+      - espocrm-custom:/var/www/html/custom
+      - espocrm-custom-client:/var/www/html/client/custom
     restart: always
     depends_on:
       espocrm-db:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 60s
+      timeout: 20s
+      retries: 3
     expose:
       - 80
 
   espocrm-daemon:
-    image: espocrm/espocrm
+    image: espocrm/espocrm:latest
     container_name: espocrm-daemon
-    volumes:
-      - espocrm:/var/www/html
-    restart: always
-    depends_on:
+    volumes_from:
       - espocrm
+    restart: always
     entrypoint: docker-daemon.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 180s
+      timeout: 20s
+      retries: 3
 
   espocrm-websocket:
-    image: espocrm/espocrm
+    image: espocrm/espocrm:latest
     container_name: espocrm-websocket
     environment:
       ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
       ESPOCRM_CONFIG_WEB_SOCKET_URL: "wss://{YOUR_DOMAIN}/ws"
       ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
       ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
-    volumes:
-      - espocrm:/var/www/html
-    restart: always
-    depends_on:
+    volumes_from:
       - espocrm
+    restart: always
     entrypoint: docker-websocket.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 180s
+      timeout: 20s
+      retries: 3
     expose:
       - 8080
 
 volumes:
-  espocrm:
   espocrm-db:
+  espocrm-data:
+  espocrm-custom:
+  espocrm-custom-client:
 ```
 
 3\. Create here a `Caddyfile` text file:
