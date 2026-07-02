@@ -526,7 +526,7 @@ If you encounter the following error when starting your containers:
 service "espocrm" refers to undefined volume espocrm/data: invalid compose project
 ```
 
-Follow the [Migration to EspoCRM 10 with Docker volumes](#migration-to-espocrm-100-with-docker-volumes) instructions to resolve it.
+Follow the [Migration to EspoCRM 10 with Docker volumes](#migration-to-espocrm-10-with-docker-volumes) instructions to resolve it.
 
 ### Switching to MySQL 8.4
 
