@@ -383,7 +383,7 @@ Starting from EspoCRM v10.0, mounting the entire `/var/www/html` directory is no
 
 !!! note
 
-    This applies only to users who mounted data to a local directory (e.g. `./espocrm:/var/www/html`). If you are using Docker volumes, see the [instructions](#migration-to-espocrm-10-with-docker-volumes) below.
+    This applies only to users who mounted data to a local directory (e.g. `./espocrm:/var/www/html`). If you are using Docker volumes, see the [instructions](#migration-to-espocrm-100-with-docker-volumes) below.
 
 #### 1. Stop your services
 
