@@ -377,13 +377,13 @@ Replace `VERSION` with the EspoCRM version you were running before the upgrade (
 docker compose up -d
 ```
 
-### Migration to EspoCRM 10.0
+### Migration to EspoCRM 10
 
 Starting from EspoCRM v10.0, mounting the entire `/var/www/html` directory is no longer required. A one-time manual migration is needed to update your volume configuration. Your customization and data will be preserved.
 
 !!! note
 
-    This applies only to users who mounted data to a local directory (e.g. `./espocrm:/var/www/html`). If you are using Docker volumes, see the [instructions](#migration-to-espocrm-100-with-docker-volumes) below.
+    This applies only to users who mounted data to a local directory (e.g. `./espocrm:/var/www/html`). If you are using Docker volumes, see the [instructions](#migration-to-espocrm-10-with-docker-volumes) below.
 
 #### 1. Stop your services
 
@@ -429,11 +429,11 @@ Repeat this for all EspoCRM service containers.
 docker compose up -d
 ```
 
-### Migration to EspoCRM 10.0 with Docker volumes
+### Migration to EspoCRM 10 with Docker volumes
 
 !!! note
 
-    This applies only to users who mounted data to Docker volumes (e.g. `espocrm:/var/www/html`). If you are using a local directory, see the [instructions](#migration-to-espocrm-100) above.
+    This applies only to users who mounted data to Docker volumes (e.g. `espocrm:/var/www/html`). If you are using a local directory, see the [instructions](#migration-to-espocrm-10) above.
 
 #### 1. Stop your services
 
