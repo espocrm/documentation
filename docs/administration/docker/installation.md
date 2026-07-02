@@ -2,10 +2,10 @@
 
 In this article:
 
-- [Installing with Docker](#install-espocrm-with-docker)
-- [Installing with Docker Compose](#install-espocrm-with-docker-compose)
-- [Installing with Traefik](#install-espocrm-with-traefik)
-- [Installing with Caddy](#install-espocrm-with-caddy)
+- [Installing with Docker Compose](#installing-with-docker-compose)
+- [Installing with Docker](#installing-with-docker)
+- [Installing with Traefik](#installing-with-traefik)
+- [Installing with Caddy](#installing-with-caddy)
 - [Upgrading](#upgrading)
 - [Shutdown and cleanup](#shutdown-and-cleanup-containers)
 - [Running a shell](#running-a-shell)
@@ -14,10 +14,135 @@ In this article:
 - [Image Variants](#image-variants)
 - [Troubleshooting](#troubleshooting)
 
+## Installing with Docker Compose
 
-## Install EspoCRM with Docker
+One of the ways to install EspoCRM is by using its official Docker Image. The EspoCRM Container Package contains the Docker image, which incorporates all the required files and dependencies to launch EspoCRM in development or production environments.
 
-One of the ways to install EspoCRM is by using its official Docker Image. The EspoCRM Container Package contains the Docker image, which incorporates all the required files and dependencies to launch EspoCRM in development or production environments. You can use Docker to run EspoCRM in an isolated environment built with Docker containers.
+You can use Docker Compose to run EspoCRM in an isolated environment built with Docker containers. Before starting, make sure you have [Compose](https://docs.docker.com/compose/install/) installed.
+
+1\. Create an empty directory.
+
+```
+$ mkdir espocrm-docker
+```
+
+2\. Change into this directory.
+
+```
+$ cd espocrm-docker/
+```
+
+3\. Create a **`docker-compose.yml`** file:
+
+```
+services:
+
+  espocrm-db:
+    image: mariadb:latest
+    container_name: espocrm-db
+    environment:
+      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_DATABASE: espocrm
+      MARIADB_USER: espocrm
+      MARIADB_PASSWORD: database_password
+    volumes:
+      - espocrm-db:/var/lib/mysql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 20s
+      start_period: 10s
+      timeout: 10s
+      retries: 3
+
+  espocrm:
+    image: espocrm/espocrm:latest
+    container_name: espocrm
+    environment:
+      ESPOCRM_DATABASE_HOST: espocrm-db
+      ESPOCRM_DATABASE_USER: espocrm
+      ESPOCRM_DATABASE_PASSWORD: database_password
+      ESPOCRM_ADMIN_USERNAME: admin
+      ESPOCRM_ADMIN_PASSWORD: password
+      ESPOCRM_SITE_URL: "http://localhost:8080"
+    volumes:
+      - espocrm-data:/var/www/html/data
+      - espocrm-custom:/var/www/html/custom
+      - espocrm-custom-client:/var/www/html/client/custom
+    restart: unless-stopped
+    depends_on:
+      espocrm-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 60s
+      timeout: 20s
+      retries: 3
+    ports:
+      - 8080:80
+
+  espocrm-daemon:
+    image: espocrm/espocrm:latest
+    container_name: espocrm-daemon
+    volumes_from:
+      - espocrm
+    restart: unless-stopped
+    entrypoint: docker-daemon.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 180s
+      timeout: 20s
+      retries: 3
+
+  espocrm-websocket:
+    image: espocrm/espocrm:latest
+    container_name: espocrm-websocket
+    environment:
+      ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
+      ESPOCRM_CONFIG_WEB_SOCKET_URL: "ws://localhost:8081"
+      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
+      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
+    volumes_from:
+      - espocrm
+    restart: unless-stopped
+    entrypoint: docker-websocket.sh
+    depends_on:
+      espocrm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bin/command", "app-check"]
+      start_period: 20s
+      interval: 180s
+      timeout: 20s
+      retries: 3
+    ports:
+      - 8081:8080
+
+volumes:
+  espocrm-db:
+  espocrm-data:
+  espocrm-custom:
+  espocrm-custom-client:
+```
+
+More about *Installation Environments* you can find [here](#installation-environments).
+
+4\. Build EspoCRM project from directory.
+
+```
+$ docker compose up -d
+```
+
+5\. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open `http://localhost:8080` in a web browser.
+
+## Installing with Docker
+
+You can use Docker to run EspoCRM in an isolated environment built with Docker containers.
 
 EspoCRM image requires to run MariaDB or MySQL server:
 
@@ -55,108 +180,11 @@ $ docker run --name my-espocrm -e ESPOCRM_SITE_URL=http://172.20.0.100:8080 -p 8
 
 Then, access it via `http://172.20.0.100:8080` with credentials **admin** and **password**.
 
-## Install EspoCRM with Docker Compose
-
-You can use Docker Compose to run EspoCRM in an isolated environment built with Docker containers. Before starting, make sure you have [Compose](https://docs.docker.com/compose/install/) installed.
-
-1\. Create an empty directory.
-
-```
-$ mkdir espocrm-docker
-```
-
-2\. Change into this directory.
-
-```
-$ cd espocrm-docker/
-```
-
-3\. Create a **`docker-compose.yml`** file:
-
-```
-services:
-
-  espocrm-db:
-    image: mariadb:latest
-    container_name: espocrm-db
-    environment:
-      MARIADB_ROOT_PASSWORD: root_password
-      MARIADB_DATABASE: espocrm
-      MARIADB_USER: espocrm
-      MARIADB_PASSWORD: database_password
-    volumes:
-      - espocrm-db:/var/lib/mysql
-    restart: always
-    healthcheck:
-      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
-      interval: 20s
-      start_period: 10s
-      timeout: 10s
-      retries: 3
-
-  espocrm:
-    image: espocrm/espocrm
-    container_name: espocrm
-    environment:
-      ESPOCRM_DATABASE_PLATFORM: Mysql
-      ESPOCRM_DATABASE_HOST: espocrm-db
-      ESPOCRM_DATABASE_USER: espocrm
-      ESPOCRM_DATABASE_PASSWORD: database_password
-      ESPOCRM_ADMIN_USERNAME: admin
-      ESPOCRM_ADMIN_PASSWORD: password
-      ESPOCRM_SITE_URL: "http://localhost:8080"
-    volumes:
-      - espocrm:/var/www/html
-    restart: always
-    depends_on:
-      espocrm-db:
-        condition: service_healthy
-    ports:
-      - 8080:80
-
-  espocrm-daemon:
-    image: espocrm/espocrm
-    container_name: espocrm-daemon
-    volumes:
-      - espocrm:/var/www/html
-    restart: always
-    entrypoint: docker-daemon.sh
-
-  espocrm-websocket:
-    image: espocrm/espocrm
-    container_name: espocrm-websocket
-    environment:
-      ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
-      ESPOCRM_CONFIG_WEB_SOCKET_URL: "ws://localhost:8081"
-      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
-      ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
-    volumes:
-      - espocrm:/var/www/html
-    restart: always
-    entrypoint: docker-websocket.sh
-    ports:
-      - 8081:8080
-
-volumes:
-  espocrm-db:
-  espocrm:
-```
-
-More about *Installation Environments* you can find [here](#installation-environments).
-
-4\. Build EspoCRM project from directory.
-
-```
-$ docker compose up -d
-```
-
-5\. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open http://localhost:8080 in a web browser.
-
-### Install EspoCRM with Traefik
+### Installing with Traefik
 
 You can read the instructions for installing EspoCRM in conjunction with Traefik in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/traefik/).
 
-### Install EspoCRM with Caddy
+### Installing with Caddy
 
 You can read the instructions for installing EspoCRM in conjunction with Caddy in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/caddy/).
 
@@ -253,9 +281,9 @@ The `exportDisabled` config option should be converted to `ESPOCRM_CONFIG_EXPORT
 
 There are additional options to change the `logger`:
 
-- `ESPOCRM_CONFIG_LOGGER_LEVEL: "DEBUG"`
-- `ESPOCRM_CONFIG_LOGGER_MAX_FILE_NUMBER: 30`
-- `ESPOCRM_CONFIG_LOGGER_PATH: "data/logs/espo.log"`
+- `ESPOCRM_CONFIG_LOGGER__LEVEL: "DEBUG"`
+- `ESPOCRM_CONFIG_LOGGER__MAX_FILE_NUMBER: 30`
+- `ESPOCRM_CONFIG_LOGGER__PATH: "data/logs/espo.log"`
 
 For more details, visit [documentation](../log.md).
 
@@ -376,7 +404,7 @@ espocrm:
   # ....
   volumes:
     - ./espocrm:/var/www/html
-  restart: always
+  restart: unless-stopped
 ```
 
 With the following targeted mounts:
@@ -390,7 +418,7 @@ espocrm:
     - ./espocrm/data:/var/www/html/data
     - ./espocrm/custom:/var/www/html/custom
     - ./espocrm/client/custom:/var/www/html/client/custom
-  restart: always
+  restart: unless-stopped
 ```
 
 Repeat this for all EspoCRM service containers.
@@ -450,7 +478,7 @@ espocrm:
   # ....
   volumes:
     - espocrm:/var/www/html
-  restart: always
+  restart: unless-stopped
 
 # ...
 
@@ -470,7 +498,7 @@ espocrm:
     - espocrm-data:/var/www/html/data
     - espocrm-custom:/var/www/html/custom
     - espocrm-client-custom:/var/www/html/client/custom
-  restart: always
+  restart: unless-stopped
 
 # ...
 
