@@ -433,7 +433,7 @@ docker compose up -d
 
 !!! note
 
-    This applies only to users who mounted data to Docker volumes (e.g. `espocrm:/var/www/html`). If you are using a local directory, see the [instructions](#migration-to-espocrm-10) above.
+    This applies only to users who mounted data to Docker volumes (e.g. `espocrm:/var/www/html`). If you are using a local directory, see the [instructions](#migration-to-espocrm-100) above.
 
 #### 1. Stop your services
 
