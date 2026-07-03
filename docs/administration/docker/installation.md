@@ -285,7 +285,7 @@ Database name for EspoCRM. The default value is `espocrm`.
 
 #### ESPOCRM_DATABASE_USER
 
-Database user for EspoCRM. The default value is `root`.
+Database user for EspoCRM. The default value is `espocrm`.
 
 #### ESPOCRM_DATABASE_PASSWORD
 
