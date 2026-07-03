@@ -461,7 +461,7 @@ docker volume create espocrm-custom-client
 
 ```bash
 docker compose run --rm \
-  -v espocrm_espocrm:/source:ro \
+  -v espocrm:/source:ro \
   -v espocrm-data:/dest-data \
   -v espocrm-custom:/dest-custom \
   -v espocrm-custom-client:/dest-client-custom \
