@@ -16,7 +16,6 @@ services:
   caddy:
     image: caddy:latest
     container_name: caddy
-    restart: always
     ports:
       - "80:80"
       - "443:443"
@@ -36,7 +35,7 @@ services:
       MARIADB_PASSWORD: database_password
     volumes:
       - espocrm-db:/var/lib/mysql
-    restart: always
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 20s
@@ -48,7 +47,6 @@ services:
     image: espocrm/espocrm:latest
     container_name: espocrm
     environment:
-      ESPOCRM_DATABASE_PLATFORM: Mysql
       ESPOCRM_DATABASE_HOST: espocrm-db
       ESPOCRM_DATABASE_USER: espocrm
       ESPOCRM_DATABASE_PASSWORD: database_password
@@ -59,7 +57,7 @@ services:
       - espocrm-data:/var/www/html/data
       - espocrm-custom:/var/www/html/custom
       - espocrm-custom-client:/var/www/html/client/custom
-    restart: always
+    restart: unless-stopped
     depends_on:
       espocrm-db:
         condition: service_healthy
@@ -77,7 +75,7 @@ services:
     container_name: espocrm-daemon
     volumes_from:
       - espocrm
-    restart: always
+    restart: unless-stopped
     entrypoint: docker-daemon.sh
     depends_on:
       espocrm:
@@ -99,7 +97,7 @@ services:
       ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
     volumes_from:
       - espocrm
-    restart: always
+    restart: unless-stopped
     entrypoint: docker-websocket.sh
     depends_on:
       espocrm:
@@ -125,7 +123,7 @@ volumes:
 #### Caddyfile
 
 ```
-espocrm-example.com {
+YOUR_DOMAIN {
     reverse_proxy espocrm:80
 
     reverse_proxy /ws espocrm-websocket:8080 {
