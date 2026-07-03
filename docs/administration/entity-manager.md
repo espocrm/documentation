@@ -141,7 +141,9 @@ Examples of link-multiple fields:
 
 #### Audited
 
-If the parameter **Audited** is checked, then updates of the relationship will be logged in Stream.
+If the parameter **Audited** is checked, then updates of the relationship will be logged in Stream. It logs: record creation, linking, and unlinking.
+
+Note that setting audited for links from the Account to entity types with Stream enabled will cause two stream notes in the Account's stream on related record creation, as record creation stream notes are broadcasted to the related account (super parent). Hence, it is not recommended to enable the Audited parameter for such links.
 
 #### Read-only
 
