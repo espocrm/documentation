@@ -454,7 +454,7 @@ docker compose down
 ```bash
 docker volume create espocrm-data; \
 docker volume create espocrm-custom; \
-docker volume create espocrm-client-custom
+docker volume create espocrm-custom-client
 ```
 
 #### 3. Migrate your data
@@ -464,7 +464,7 @@ docker compose run --rm \
   -v espocrm_espocrm:/source:ro \
   -v espocrm-data:/dest-data \
   -v espocrm-custom:/dest-custom \
-  -v espocrm-client-custom:/dest-client-custom \
+  -v espocrm-custom-client:/dest-client-custom \
   --entrypoint sh \
   espocrm -c "
     cp -a /source/data/. /dest-data/ &&
@@ -503,7 +503,7 @@ espocrm:
   volumes:
     - espocrm-data:/var/www/html/data
     - espocrm-custom:/var/www/html/custom
-    - espocrm-client-custom:/var/www/html/client/custom
+    - espocrm-custom-client:/var/www/html/client/custom
   restart: unless-stopped
 
 # ...
@@ -514,7 +514,7 @@ volumes:
     external: true
   espocrm-custom:
     external: true
-  espocrm-client-custom:
+  espocrm-custom-client:
     external: true
 ```
 
