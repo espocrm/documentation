@@ -43,7 +43,7 @@ The *level* parameter defines availability of the config parameter in the front-
 * `admin` – available only for admin (read and write);
 * `superAdmin` – available only for super-admin (read and write).
 
-The *readOnly* [parameter](metadata/app-config.md#readonly) disables the ability to change a parameter value for admin users. 
+The *readOnly* [parameter](metadata/app-config.md#readonly) disables the ability to change the parameter value for admin users. 
 
 ### 3. Metadata app > adminPanel
 
