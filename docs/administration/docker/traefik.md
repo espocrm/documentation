@@ -38,14 +38,6 @@ services:
   espocrm-db:
     image: mariadb:latest
     container_name: espocrm-db
-    command: --max-allowed-packet=64MB
-    restart: always
-    healthcheck:
-      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
-      interval: 20s
-      start_period: 10s
-      timeout: 10s
-      retries: 3
     environment:
       MARIADB_ROOT_PASSWORD: root_password
       MARIADB_DATABASE: espocrm
@@ -53,6 +45,13 @@ services:
       MARIADB_PASSWORD: database_password
     volumes:
       - espocrm-db:/var/lib/mysql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 20s
+      start_period: 10s
+      timeout: 10s
+      retries: 3
 
   espocrm:
     image: espocrm/espocrm:latest
@@ -64,11 +63,11 @@ services:
       ESPOCRM_ADMIN_USERNAME: admin
       ESPOCRM_ADMIN_PASSWORD: password
       ESPOCRM_SITE_URL: "https://{ESPOCRM_DOMAIN}"
-    restart: always
     volumes:
       - espocrm-data:/var/www/html/data
       - espocrm-custom:/var/www/html/custom
       - espocrm-custom-client:/var/www/html/client/custom
+    restart: unless-stopped
     depends_on:
       espocrm-db:
         condition: service_healthy
@@ -90,7 +89,7 @@ services:
     container_name: espocrm-daemon
     volumes_from:
       - espocrm
-    restart: always
+    restart: unless-stopped
     entrypoint: docker-daemon.sh
     depends_on:
       espocrm:
@@ -111,7 +110,7 @@ services:
       ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
     volumes_from:
       - espocrm
-    restart: always
+    restart: unless-stopped
     entrypoint: docker-websocket.sh
     depends_on:
       espocrm:
