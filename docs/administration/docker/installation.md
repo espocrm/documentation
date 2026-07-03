@@ -607,5 +607,8 @@ $ docker exec -i mysql mysql --user=root -p -e "
 
 ```
 $ docker stop mysql && docker rm mysql
+```
+
+```
 $ docker compose up -d --build
 ```
