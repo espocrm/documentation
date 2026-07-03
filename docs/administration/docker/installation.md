@@ -144,7 +144,7 @@ $ docker compose up -d
 
 You can use Docker to run EspoCRM in an isolated environment built with Docker containers.
 
-It is important to first create a network in which the containers will be located:
+Start by creating a dedicated Docker network for the containers:
 
 ```
 $ docker network create espocrm-network
