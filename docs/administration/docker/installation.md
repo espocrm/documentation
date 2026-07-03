@@ -189,7 +189,7 @@ $ docker run \
 - `ESPOCRM_DATABASE_HOST=espocrm-db` — database container name,
 - `ESPOCRM_DATABASE_USER=espocrm` — database username,
 - `ESPOCRM_DATABASE_PASSWORD=database_password` — database username password,
-- `ESPOCRM_ADMIN_USERNAME=admin — admin username,
+- `ESPOCRM_ADMIN_USERNAME=admin` — admin username,
 - `ESPOCRM_ADMIN_PASSWORD=password` — admin password,
 - `espocrm/espocrm:latest` — [EspoCRM image](https://hub.docker.com/r/espocrm/espocrm/tags) version.
 
