@@ -45,7 +45,6 @@ class MyJob implements Job
 
 ### Queues
 
-Jobs within a queue are processed one by one.
 
 Queues available out of the box:
 
@@ -56,6 +55,8 @@ Queues available out of the box:
 
 Portion size is controller by [config parameters](../administration/config-params.md#jobs-daemon).
 
+If the queue is not specified, it will run in the main queue (in parallel if the system supports).
+
 ### Groups
 
-A group name can be any string with max length of 128 characters. Jobs with the same group name are processed one by one.
+A group name can be an arbitrary string with max length of 128 characters. Jobs with the same group name are processed one by one.
