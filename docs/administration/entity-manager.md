@@ -158,6 +158,14 @@ If enabled, when a parent record is removed, associated related records will be 
 
 When an admin user restores a removed record, the associated related records are restored as well.
 
+Supported relationships:
+
+- one-to-many
+- has-children
+- one-to-one
+
+When cascade removal is enabled, it's recommended to also enable transactional save for the parent entity type.
+
 ## Formula
 
 ### Before-save custom script
