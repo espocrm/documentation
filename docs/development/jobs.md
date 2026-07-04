@@ -20,7 +20,7 @@ $jobSchedulerFactory->create()
     ->schedule();
 ```
 
-You can pass JobSchedulerFactory as a constructor dependency.
+You can pass *JobSchedulerFactory* as a constructor dependency.
 
 ### Job
 
