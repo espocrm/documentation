@@ -8,6 +8,13 @@ extra_javascript: [js/extra.js]
 extra_css:
     - css/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/espocrm/espocrm/
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/espocrm
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -26,6 +33,7 @@ theme:
     highlightjs: true
     features:
         - content.action.edit
+        - toc.follow
     icon:
         edit: material/pencil
     palette:
