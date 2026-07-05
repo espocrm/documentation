@@ -34,6 +34,11 @@ The assigned pipeline defines the list of stages available for the record. A rec
 The Kanban view displays one pipeline. The pipeline can be switched with a dropdown.
 Columns of the Kanban correspond to the stages of the selected pipeline.
 
+Pipeline stages can be reordered using the actions in the dropdown menu in the Stages list panel of the Pipeline detail view.
+
+The reordering is limited by the order of the Status field options. For example, if there are two statuses, Open and Closed,
+each with multiple stages, you cannot move stages belonging to the Closed status before stages belonging to the Open status.
+
 A [Lead Capture](../administration/web-to-lead.md#lead-capture) can be configured to assign newly created leads
 to a specific pipeline.
 
