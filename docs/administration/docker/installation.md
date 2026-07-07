@@ -473,7 +473,17 @@ espocrm:
 
 Repeat this for all EspoCRM service containers.
 
-#### 3. Start your services
+#### 3. Remove obsolete directories
+
+If your local `./espocrm` directory still contains application files from previous versions, remove the following directories:
+
+```bash
+rm -rf ./espocrm/application ./espocrm/vendor
+```
+
+These directories are provided by the container image and should not be kept in your local mount.
+
+#### 4. Start your services
 
 ```bash
 docker compose up -d
@@ -566,7 +576,20 @@ volumes:
     external: true
 ```
 
-#### 5. Start your services
+#### 5. Remove obsolete directories
+
+If the old `espocrm` Docker volume still contains application files from previous versions, remove the following directories:
+
+```bash
+docker run --rm \
+  -v espocrm:/source \
+  --entrypoint sh \
+  espocrm -c "rm -rf /source/application /source/vendor"
+```
+
+These directories are provided by the container image and should not be kept in the mounted source volume.
+
+#### 6. Start your services
 
 ```bash
 docker compose up -d
