@@ -473,15 +473,18 @@ espocrm:
 
 Repeat this for all EspoCRM service containers.
 
-#### 3. Remove obsolete directories
+#### 3. Remove obsolete files (optional)
 
-If your local `./espocrm` directory still contains application files from previous versions, remove the following directories:
+This step is optional.
+
+If your local `./espocrm` directory still contains image-provided files from previous versions, removing them is recommended to keep your mount clean. EspoCRM will still work if you keep them.
+
+To remove them, run the following command:
 
 ```bash
-rm -rf ./espocrm/application ./espocrm/vendor
+rm -rf ./espocrm/application ./espocrm/vendor ./espocrm/bin ./espocrm/html ./espocrm/install && \
+rm -f ./espocrm/bootstrap.php ./espocrm/clear_cache.php ./espocrm/command.php ./espocrm/cron.php ./espocrm/daemon.php ./espocrm/extension.php ./espocrm/index.php ./espocrm/preload.php ./espocrm/rebuild.php ./espocrm/upgrade.php ./espocrm/websocket.php ./espocrm/LICENSE.txt
 ```
-
-These directories are provided by the container image and should not be kept in your local mount.
 
 #### 4. Start your services
 
@@ -576,18 +579,20 @@ volumes:
     external: true
 ```
 
-#### 5. Remove obsolete directories
+#### 5. Remove obsolete files (optional)
 
-If the old `espocrm` Docker volume still contains application files from previous versions, remove the following directories:
+This step is optional.
+
+If the old `espocrm` Docker volume still contains image-provided files from previous versions, removing them is recommended to keep the volume clean. EspoCRM will still work if you keep them.
+
+To remove them, run the following command:
 
 ```bash
 docker run --rm \
   -v espocrm:/source \
   --entrypoint sh \
-  espocrm -c "rm -rf /source/application /source/vendor"
+  espocrm -c "rm -rf /source/application /source/vendor /source/bin /source/html /source/install && rm -f /source/bootstrap.php /source/clear_cache.php /source/command.php /source/cron.php /source/daemon.php /source/extension.php /source/index.php /source/preload.php /source/rebuild.php /source/upgrade.php /source/websocket.php /source/LICENSE.txt"
 ```
-
-These directories are provided by the container image and should not be kept in the mounted source volume.
 
 #### 6. Start your services
 
