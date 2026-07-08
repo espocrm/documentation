@@ -82,7 +82,7 @@ When inventory is delivered to a customer, Batch numbers should be selected for 
 
 Only one inventory item can be assigned to one Serial number.
 
-When inventory is received, Serial numbers should be assigned to every item for products that are tracked by serial. It's possible to **Import Serial Numbers** from a CSV file within a Receipt Order.
+When inventory is received, Serial numbers should be assigned to every item for products that are tracked by serial. It's possible to **Import Serial Numbers** from a CSV file within a Receipt Order. The action is available from the menu next to the Edit button if the Receipt Order contains at least one product tracked by serial number.
 
 When inventory is delivered to a customer, Serial numbers should be selected for products that are tracked by serial.
 
