@@ -283,6 +283,7 @@ You can read the instructions for installing EspoCRM in conjunction with Caddy i
 In order to upgrade the container created by the `docker-compose.yml`:
 
 1\. Open your EspoCRM container directory.
+
 2\. Run the command:
 
 ```bash
