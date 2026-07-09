@@ -80,7 +80,7 @@ docker volume create espocrm-custom && \
 docker volume create espocrm-custom-client
 ```
 
-3\. Run MariaDB container
+3\. Run MariaDB
 
 ```bash
 docker run \
@@ -95,7 +95,7 @@ docker run \
   -d mariadb
 ```
 
-4\. Run EspoCRM container
+4\. Run EspoCRM
 
 ```bash
 docker run \
@@ -112,7 +112,7 @@ docker run \
   -d espocrm/espocrm
 ```
 
-5\. Run daemon container
+5\. Run daemon
 
 ```bash
 docker run \
