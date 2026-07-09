@@ -65,6 +65,8 @@ Then, access it via `http://localhost:8080` or `http://YOUR_IP:8080` with creden
 
 #### Step by step
 
+If you prefer to run the commands individually rather than using the quick start approach above, follow the steps below.
+
 1\. Create network
 
 ```bash
