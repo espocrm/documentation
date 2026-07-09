@@ -187,7 +187,7 @@ The list of parameters along with their default values. This is not a full list 
 * jobQ0MaxPortion – `200` – *q0* is a queue for a general usage; is run as often as possible;
 * jobQ1MaxPortion – `500` – *q1* is a queue for a general usage; is run every minute;
 * jobGroupMaxPortion – `100` – a portion size for grouped jobs;
-* jobPeriodForReadyNotStarted  – max liftime of for a job in Ready status (in seconds);
+* jobPeriodForReadyNotStarted  – max lifeime of for a job in Ready status (in seconds);
 
 ### Mass Email
 
