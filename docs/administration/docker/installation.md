@@ -7,7 +7,7 @@ In this article:
 - [Installing with Traefik](#traefik)
 - [Installing with Caddy](#caddy)
 - [Upgrading](#upgrading)
-- [Shutdown and cleanup](#shutdown-and-cleanup-containers)
+- [Maintenance](#maintenance)
 - [Running a shell](#running-a-shell)
 - [Environments](#installation-environments)
 - [Config Environments](#config-environments)
@@ -148,9 +148,9 @@ docker run \
 
 Then, access it via `http://192.168.0.100:8080` with credentials `admin` and `your_admin_password`.
 
-#### Cleanup
+#### Reset
 
-If you'd like to start over or delete your data, you can use the cleanup commands below. See the [cleanup section](#docker-run-cleanup) for detailed instructions on removing containers, networks, and volumes.
+If you'd like to start over or delete your data, refer to the [reset and cleanup](#reset-and-cleanup) section.
 
 ### Docker Compose
 
@@ -276,6 +276,10 @@ docker compose up -d
 
 5\. Access it at `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
 
+#### Reset
+
+If you'd like to start over or delete your data, refer to the [reset and cleanup](#reset-and-cleanup-1) section.
+
 ### Traefik
 
 You can read the instructions for installing EspoCRM in conjunction with Traefik in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/traefik/).
@@ -298,21 +302,35 @@ docker compose pull && docker compose up -d
 
 Within a few minutes the container will be upgraded to the latest version.
 
-## Running a shell
+## Maintenance
 
-In order to enter the container and view the files, make a rebuild, etc., use the following command (`espocrm` is your container name):
+Use the commands below to monitor your containers, view logs, and manage your EspoCRM installation after deployment.
+
+### Docker Run
+
+When using Docker Run, you can manage your containers individually using Docker commands.
+
+#### Status
 
 ```bash
-docker exec -it espocrm bash
+# Running containers
+docker ps -a
+
+# Resource usage
+docker stats espocrm espocrm-db espocrm-daemon
 ```
 
-## Shutdown and cleanup containers
+#### View logs
 
-The commands you need depend on your installation method—choose either Docker Run or Docker Compose cleanup instructions.
+```bash
+# For a specific container
+docker logs espocrm
 
-### Docker Run cleanup
+# Follow logs in real-time
+docker logs -f espocrm
+```
 
-To stop and remove containers, networks, and volumes created with Docker Run:
+#### Reset and cleanup
 
 ```bash
 # Restart all containers
@@ -331,9 +349,36 @@ docker network rm espocrm-network
 docker volume rm espocrm-db espocrm-data espocrm-custom espocrm-custom-client
 ```
 
-### Docker Compose cleanup
+### Docker Compose
 
-Navigate to your EspoCRM container directory and run the appropriate command.
+Docker Compose provides streamlined commands to manage all services together.
+
+Navigate to your EspoCRM container directory (where your `docker-compose.yml` file is located) before running any of the commands below.
+
+#### Status
+
+```bash
+# Running containers
+docker compose ps
+
+# Resource usage
+docker compose stats
+```
+
+#### View logs
+
+```bash
+# For all services
+docker compose logs
+
+# For a specific service
+docker compose logs espocrm
+
+# Follow logs in real-time
+docker compose logs -f espocrm
+```
+
+#### Reset and cleanup
 
 ```bash
 # Restart all containers
@@ -344,6 +389,14 @@ docker compose down
 
 # Stop and remove all containers, networks, and volumes (all data will be lost)
 docker compose down --volumes
+```
+
+## Running a shell
+
+In order to enter the container and view the files, make a rebuild, etc., use the following command (`espocrm` is your container name):
+
+```bash
+docker exec -it espocrm bash
 ```
 
 ## Installation Environments
