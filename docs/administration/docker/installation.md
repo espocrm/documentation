@@ -278,7 +278,7 @@ docker compose up -d
 
 #### Reset
 
-If you'd like to start over or delete your data, refer to the [reset and cleanup](#reset-and-cleanup-1) section.
+If you'd like to start over or delete your data, refer to the [reset and cleanup](#reset-and-cleanup_1) section.
 
 ### Traefik
 
