@@ -2,10 +2,10 @@
 
 In this article:
 
-- [Installing with Docker Compose](#installing-with-docker-compose)
-- [Installing with Docker](#installing-with-docker)
-- [Installing with Traefik](#installing-with-traefik)
-- [Installing with Caddy](#installing-with-caddy)
+- [Installing with Docker Run](#docker-run)
+- [Installing with Docker Compose](#docker-compose)
+- [Installing with Traefik](#traefik)
+- [Installing with Caddy](#caddy)
 - [Upgrading](#upgrading)
 - [Shutdown and cleanup](#shutdown-and-cleanup-containers)
 - [Running a shell](#running-a-shell)
@@ -14,37 +14,167 @@ In this article:
 - [Image Variants](#image-variants)
 - [Troubleshooting](#troubleshooting)
 
-## Installing with Docker Compose
+## Installing
 
-One of the ways to install EspoCRM is by using its official Docker Image. The EspoCRM Container Package contains the Docker image, which incorporates all the required files and dependencies to launch EspoCRM in development or production environments.
+### Docker Run
 
-You can use Docker Compose to run EspoCRM in an isolated environment built with Docker containers. Before starting, make sure you have [Compose](https://docs.docker.com/compose/install/) installed.
+You can use Docker to run EspoCRM in an isolated environment using its official image, which includes all required files and dependencies for both development and production environments.
+
+We recommend using [Docker Compose](#docker-compose), which is easier to configure.
+
+#### Quick start
+
+```bash
+docker network create espocrm-network && \
+docker volume create espocrm-db && \
+docker volume create espocrm-data && \
+docker volume create espocrm-custom && \
+docker volume create espocrm-custom-client && \
+docker run \
+  --name espocrm-db \
+  --network espocrm-network \
+  --restart unless-stopped \
+  -e MARIADB_DATABASE=espocrm \
+  -e MARIADB_USER=espocrm \
+  -e MARIADB_PASSWORD=your_database_password \
+  -e MARIADB_ROOT_PASSWORD=your_root_password \
+  -v espocrm-db:/var/lib/mysql \
+  -d mariadb && \
+docker run \
+  --name espocrm \
+  --network espocrm-network \
+  --restart unless-stopped \
+  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
+  -e ESPOCRM_ADMIN_USERNAME=admin \
+  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
+  -v espocrm-data:/var/www/html/data \
+  -v espocrm-custom:/var/www/html/custom \
+  -v espocrm-custom-client:/var/www/html/client/custom \
+  -p 8080:80 \
+  -d espocrm/espocrm && \
+docker run \
+  --name espocrm-daemon \
+  --network espocrm-network \
+  --restart unless-stopped \
+  --volumes-from espocrm \
+  --entrypoint docker-daemon.sh \
+  -d espocrm/espocrm
+```
+
+Then, access it via `http://localhost:8080` or `http://YOUR_IP:8080` with credentials `admin` and `your_admin_password`.
+
+#### Step by step
+
+1\. Create network
+
+```bash
+docker network create espocrm-network
+```
+
+2\. Create volumes
+
+```bash
+docker volume create espocrm-db && \
+docker volume create espocrm-data && \
+docker volume create espocrm-custom && \
+docker volume create espocrm-custom-client
+```
+
+3\. Run MariaDB container
+
+```bash
+docker run \
+  --name espocrm-db \
+  --network espocrm-network \
+  --restart unless-stopped \
+  -e MARIADB_DATABASE=espocrm \
+  -e MARIADB_USER=espocrm \
+  -e MARIADB_PASSWORD=your_database_password \
+  -e MARIADB_ROOT_PASSWORD=your_root_password \
+  -v espocrm-db:/var/lib/mysql \
+  -d mariadb
+```
+
+4\. Run EspoCRM container
+
+```bash
+docker run \
+  --name espocrm \
+  --network espocrm-network \
+  --restart unless-stopped \
+  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
+  -e ESPOCRM_ADMIN_USERNAME=admin \
+  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
+  -v espocrm-data:/var/www/html/data \
+  -v espocrm-custom:/var/www/html/custom \
+  -v espocrm-custom-client:/var/www/html/client/custom \
+  -p 8080:80 \
+  -d espocrm/espocrm
+```
+
+5\. Run daemon container
+
+```bash
+docker run \
+  --name espocrm-daemon \
+  --network espocrm-network \
+  --restart unless-stopped \
+  --volumes-from espocrm \
+  --entrypoint docker-daemon.sh \
+  -d espocrm/espocrm
+```
+
+Then, access it via `http://localhost:8080` or `http://YOUR_IP:8080` with credentials `admin` and `your_admin_password`.
+
+#### Custom site URL
+
+To set a custom IP address or domain, pass the `ESPOCRM_SITE_URL` environment variable when running the container.
+
+```bash
+docker run \
+  --name espocrm \
+  --network espocrm-network \
+  -p 8080:80 \
+  -e ESPOCRM_DATABASE_HOST=espocrm-db \
+  -e ESPOCRM_DATABASE_USER=espocrm \
+  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
+  -e ESPOCRM_ADMIN_USERNAME=admin \
+  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
+  -e ESPOCRM_SITE_URL=http://192.168.0.100:8080 \
+  -d espocrm/espocrm:latest
+```
+
+Then, access it via `http://192.168.0.100:8080` with credentials `admin` and `your_admin_password`.
+
+### Docker Compose
+
+Docker Compose lets you define and run EspoCRM's multi-container setup from a single configuration file.
 
 1\. Create an empty directory.
 
-```
-$ mkdir espocrm-docker
+```bash
+mkdir espocrm-docker
 ```
 
 2\. Change into this directory.
 
-```
-$ cd espocrm-docker/
+```bash
+cd espocrm-docker/
 ```
 
 3\. Create a **`docker-compose.yml`** file:
 
-```
+```yml
 services:
 
   espocrm-db:
     image: mariadb:latest
     container_name: espocrm-db
     environment:
-      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_ROOT_PASSWORD: your_root_password
       MARIADB_DATABASE: espocrm
       MARIADB_USER: espocrm
-      MARIADB_PASSWORD: database_password
+      MARIADB_PASSWORD: your_database_password
     volumes:
       - espocrm-db:/var/lib/mysql
     restart: unless-stopped
@@ -61,9 +191,9 @@ services:
     environment:
       ESPOCRM_DATABASE_HOST: espocrm-db
       ESPOCRM_DATABASE_USER: espocrm
-      ESPOCRM_DATABASE_PASSWORD: database_password
+      ESPOCRM_DATABASE_PASSWORD: your_database_password
       ESPOCRM_ADMIN_USERNAME: admin
-      ESPOCRM_ADMIN_PASSWORD: password
+      ESPOCRM_ADMIN_PASSWORD: your_admin_password
       ESPOCRM_SITE_URL: "http://localhost:8080"
     volumes:
       - espocrm-data:/var/www/html/data
@@ -134,138 +264,50 @@ More about *Installation Environments* you can find [here](#installation-environ
 
 4\. Build EspoCRM project from directory.
 
-```
-$ docker compose up -d
-```
-
-5\. Bring up EspoCRM in a web browser. You can use http://localhost as the IP address, and open `http://localhost:8080` in a web browser.
-
-## Installing with Docker
-
-You can use Docker to run EspoCRM in an isolated environment built with Docker containers.
-
-Start by creating a dedicated Docker network for the containers:
-
-```
-$ docker network create espocrm-network
+```bash
+docker compose up -d
 ```
 
-EspoCRM image requires to run MariaDB or MySQL server:
+5\. Access it at `http://localhost:8080` or `http://YOUR_IP:8080` with credentials `admin` and `your_admin_password`.
 
-```
-$ docker run \
-  --name espocrm-db \
-  --network espocrm-network \
-  -e MARIADB_ROOT_PASSWORD=password \
-  -e MARIADB_DATABASE=espocrm \
-  -e MARIADB_USER=espocrm \
-  -e MARIADB_PASSWORD=database_password \
-  -d mariadb:latest
-```
-
-- `espocrm-db` — name of MariaDB container,
-- `MARIADB_ROOT_PASSWORD=password` — root password,
-- `MARIADB_DATABASE=espocrm` — database name,
-- `MARIADB_USER=espocrm` — database username,
-- `MARIADB_PASSWORD=database_password` — database username password,
-- `mariadb:latest` — [MariaDB image](https://hub.docker.com/_/mariadb/tags) version.
-
-Run EspoCRM container:
-
-```
-$ docker run \
-  --name espocrm \
-  --network espocrm-network \
-  -e ESPOCRM_DATABASE_HOST=espocrm-db \
-  -e ESPOCRM_DATABASE_USER=espocrm \
-  -e ESPOCRM_DATABASE_PASSWORD=database_password \
-  -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=password \
-  -d espocrm/espocrm:latest
-```
-
-- `espocrm` — name of EspoCRM container,
-- `espocrm-network` — containers network,
-- `ESPOCRM_DATABASE_HOST=espocrm-db` — database container name,
-- `ESPOCRM_DATABASE_USER=espocrm` — database username,
-- `ESPOCRM_DATABASE_PASSWORD=database_password` — database username password,
-- `ESPOCRM_ADMIN_USERNAME=admin` — admin username,
-- `ESPOCRM_ADMIN_PASSWORD=password` — admin password,
-- `espocrm/espocrm:latest` — [EspoCRM image](https://hub.docker.com/r/espocrm/espocrm/tags) version.
-
-#### Run EspoCRM container via a specific port:
-
-```
-$ docker run \
-  --name espocrm \
-  --network espocrm-network \
-  -p 8080:80 \
-  -e ESPOCRM_DATABASE_HOST=espocrm-db \
-  -e ESPOCRM_DATABASE_USER=espocrm \
-  -e ESPOCRM_DATABASE_PASSWORD=database_password \
-  -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=password \
-  -d espocrm/espocrm:latest
-```
-
-Then, access it via `http://localhost:8080` with credentials admin and password.
-
-#### Run EspoCRM via a specific IP or a domain with a port:
-
-```
-$ docker run \
-  --name espocrm \
-  --network espocrm-network \
-  -p 8080:80 \
-  -e ESPOCRM_DATABASE_HOST=espocrm-db \
-  -e ESPOCRM_DATABASE_USER=espocrm \
-  -e ESPOCRM_DATABASE_PASSWORD=database_password \
-  -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=password \
-  -e ESPOCRM_SITE_URL=http://172.20.0.100:8080 \
-  -d espocrm/espocrm:latest
-```
-
-Then, access it via `http://172.20.0.100:8080` with credentials **admin** and **password**.
-
-### Installing with Traefik
+### Traefik
 
 You can read the instructions for installing EspoCRM in conjunction with Traefik in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/traefik/).
 
-### Installing with Caddy
+### Caddy
 
 You can read the instructions for installing EspoCRM in conjunction with Caddy in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/caddy/).
 
-### Upgrading
+## Upgrading
 
 In order to upgrade the container created by the `docker-compose.yml`:
 
-1. Open your EspoCRM container directory.
-2. Run the command:
+1\. Open your EspoCRM container directory.
+2\. Run the command:
 
-  ```
-  $ docker compose pull && docker compose up -d
-  ```
+```bash
+docker compose pull && docker compose up -d
+```
 
 Within a few minutes the container will be upgraded to the latest version.
 
-### Shutdown and cleanup containers
+## Shutdown and cleanup containers
 
 The `docker compose down` command removes the containers and default network, but preserves EspoCRM database.
 
 The `docker compose down --volumes` removes the containers, default network, and the EspoCRM database.
 
-### Running a shell
+## Running a shell
 
 In order to enter the container and view the files, make a rebuild, etc., use the following command (`espocrm` is your container name):
 
-```
-$ docker exec -it espocrm bash
+```bash
+docker exec -it espocrm bash
 ```
 
 ## Installation Environments
 
-This is one-time environment variables which are using only for the fresh installation. If you need to define configuration options on the container startup, see the [Config Environments](#config-environments).
+These are one-time environment variables used only for a fresh installation. If you need to define configuration options on container startup, see the [Config Environments](#config-environments).
 
 #### ESPOCRM_DATABASE_PLATFORM
 
@@ -301,7 +343,7 @@ User password for an administrator of EspoCRM. The default value is `password`.
 
 #### ESPOCRM_SITE_URL
 
-The URL of EspoCRM. This option is very important for normal operating of EspoCRM. Examples: `http://172.20.0.100:8080`, `http://my-crm.local`.
+The URL of EspoCRM. This option is very important for normal operating of EspoCRM. Examples: `http://192.168.0.100:8080`, `http://my-crm.local`.
 
 ### Other optional options
 
