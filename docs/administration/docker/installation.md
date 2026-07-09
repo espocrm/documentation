@@ -61,7 +61,7 @@ docker run \
   -d espocrm/espocrm
 ```
 
-Then, access it via `http://localhost:8080` or `http://YOUR_IP:8080` with credentials `admin` and `your_admin_password`.
+Then, access it via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
 
 #### Step by step
 
@@ -126,7 +126,7 @@ docker run \
   -d espocrm/espocrm
 ```
 
-Then, access it via `http://localhost:8080` or `http://YOUR_IP:8080` with credentials `admin` and `your_admin_password`.
+Then, access it via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
 
 #### Custom site URL
 
@@ -147,6 +147,10 @@ docker run \
 ```
 
 Then, access it via `http://192.168.0.100:8080` with credentials `admin` and `your_admin_password`.
+
+#### Cleanup
+
+If you'd like to start over or delete your data, you can use the cleanup commands below. See the [cleanup section](#docker-run-cleanup) for detailed instructions on removing containers, networks, and volumes.
 
 ### Docker Compose
 
@@ -270,7 +274,7 @@ More about *Installation Environments* you can find [here](#installation-environ
 docker compose up -d
 ```
 
-5\. Access it at `http://localhost:8080` or `http://YOUR_IP:8080` with credentials `admin` and `your_admin_password`.
+5\. Access it at `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
 
 ### Traefik
 
@@ -294,18 +298,52 @@ docker compose pull && docker compose up -d
 
 Within a few minutes the container will be upgraded to the latest version.
 
-## Shutdown and cleanup containers
-
-The `docker compose down` command removes the containers and default network, but preserves EspoCRM database.
-
-The `docker compose down --volumes` removes the containers, default network, and the EspoCRM database.
-
 ## Running a shell
 
 In order to enter the container and view the files, make a rebuild, etc., use the following command (`espocrm` is your container name):
 
 ```bash
 docker exec -it espocrm bash
+```
+
+## Shutdown and cleanup containers
+
+The commands you need depend on your installation method—choose either Docker Run or Docker Compose cleanup instructions.
+
+### Docker Run cleanup
+
+To stop and remove containers, networks, and volumes created with Docker Run:
+
+```bash
+# Restart all containers
+docker restart espocrm espocrm-db espocrm-daemon
+
+# Stop all containers
+docker stop espocrm espocrm-db espocrm-daemon
+
+# Remove all containers
+docker rm espocrm espocrm-db espocrm-daemon
+
+# Remove network
+docker network rm espocrm-network
+
+# Remove volumes (all data will be lost)
+docker volume rm espocrm-db espocrm-data espocrm-custom espocrm-custom-client
+```
+
+### Docker Compose cleanup
+
+Navigate to your EspoCRM container directory and run the appropriate command.
+
+```bash
+# Restart all containers
+docker compose restart
+
+# Stop and remove all containers (preserves volumes and data)
+docker compose down
+
+# Stop and remove all containers, networks, and volumes (all data will be lost)
+docker compose down --volumes
 ```
 
 ## Installation Environments
