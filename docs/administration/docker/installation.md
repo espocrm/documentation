@@ -9,6 +9,7 @@ In this article:
 - [Upgrading](#upgrading)
 - [Maintenance](#maintenance)
 - [Running a shell](#running-a-shell)
+- [Docker Secrets](#docker-secrets)
 - [Environments](#installation-environments)
 - [Config Environments](#config-environments)
 - [Image Variants](#image-variants)
@@ -430,6 +431,19 @@ In order to enter the container and view the files, make a rebuild, etc., use th
 
 ```bash
 docker exec -it espocrm bash
+```
+
+## Docker Secrets
+
+To securely pass sensitive information, append `_FILE` to any [supported environment variable](#installation-environments). When this suffix is used, the variable's value is read from a file inside the container instead of being specified directly. This can be used with Docker secrets stored in `/run/secrets/<secret_name>` files. For example:
+
+```bash
+docker run \
+  --name espocrm \
+  --network espocrm-network \
+  -e ESPOCRM_DATABASE_PASSWORD_FILE=/run/secrets/espocrm_db_password \
+  -e ESPOCRM_ADMIN_PASSWORD_FILE=/run/secrets/espocrm_admin_password \
+  -d espocrm/espocrm
 ```
 
 ## Installation Environments
