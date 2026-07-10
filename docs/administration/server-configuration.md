@@ -16,7 +16,7 @@ EspoCRM can be installed on:
   * MySQL 8.0 and greater
   * MariaDB 10.3 and greater
   * PostgreSQL 15
-
+ 
 In this article:
 
 * [Recommendations & requirements](#recommendations-requirements)
@@ -24,6 +24,10 @@ In this article:
 * [Setting up crontab](#setting-up-crontab)
 * [Configuration instructions based on your server](#configuration-instructions-for-specific-web-servers)
 * [See also](#see-also)
+
+!!! note
+
+    Consider using our Docker [setup](docker/installation.md), which includes all the necessary dependencies.
 
 
 ## Recommendations & requirements
