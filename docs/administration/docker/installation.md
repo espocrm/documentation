@@ -16,7 +16,7 @@ In this article:
 
 ## Installing
 
-You can deploy EspoCRM using either [Docker Run](#docker-run) or [Docker Compose](#docker-compose). For production environments, we recommend Docker Compose, as it's easier to manage and provides better configuration control. Docker Run is suitable for quick setups or testing environments.
+You can deploy EspoCRM using either [Docker Run](#docker-run) or [Docker Compose](#docker-compose). For production environments, we recommend Docker Compose, as it's easier to manage and provides better configuration control. While Docker Run is quicker to set up, it's a good choice if you want to try the system out.
 
 ### Docker Run
 
