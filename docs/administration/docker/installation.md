@@ -16,11 +16,13 @@ In this article:
 
 ## Installing
 
+You can deploy EspoCRM using either [Docker Run](#docker-run) or [Docker Compose](#docker-compose). For production environments, we recommend Docker Compose, as it's easier to manage and provides better configuration control. Docker Run is suitable for quick setups or testing environments.
+
 ### Docker Run
 
-You can use Docker to run EspoCRM in an isolated environment using its official image, which includes all required files and dependencies for both development and production environments.
+Docker Run allows you to launch EspoCRM containers directly using command-line commands. Each container is created and managed individually. You can run the setup commands as a single operation or step by step, depending on your preference.
 
-We recommend using [Docker Compose](#docker-compose), which is easier to configure.
+See the [Maintenance](#docker-run_2) and [Upgrading](#docker-run_1) sections for operational guidance.
 
 #### Quick start
 
@@ -154,7 +156,9 @@ If you'd like to start over or delete your data, refer to the [reset and cleanup
 
 ### Docker Compose
 
-Docker Compose lets you define and run EspoCRM's multi-container setup from a single configuration file.
+Docker Compose simplifies container orchestration by defining all services in a single configuration file. It automatically manages networking, dependencies, and health checks between containers. This approach is ideal for production deployments as it's easier to version-control, scale, and maintain your entire setup.
+
+See the [Maintenance](#docker-compose_2) and [Upgrading](#docker-compose_1) sections for operational guidance.
 
 1\. Create an empty directory.
 
@@ -290,9 +294,38 @@ You can read the instructions for installing EspoCRM in conjunction with Caddy i
 
 ## Upgrading
 
-In order to upgrade the container created by the `docker-compose.yml`:
+Keeping your EspoCRM installation updated ensures you have the latest features, security patches, and bug fixes. The upgrade process differs depending on whether you're using Docker Run or Docker Compose.
 
-1\. Open your EspoCRM container directory.
+### Docker Run
+
+To upgrade EspoCRM when using Docker Run:
+
+1\. Pull the latest images:
+
+```bash
+docker pull mariadb
+docker pull espocrm/espocrm
+```
+
+2\. Stop all running containers:
+
+```bash
+docker stop espocrm espocrm-db espocrm-daemon
+```
+
+3\. Remove the old containers:
+
+```bash
+docker rm espocrm espocrm-db espocrm-daemon
+```
+
+4\. Run the containers again with the same configuration as your original deployment (using the quick start or step by step commands from the [Docker Run](#quick-start) section).
+
+### Docker Compose
+
+To upgrade EspoCRM when using Docker Compose:
+
+1\. Navigate to your EspoCRM container directory.
 
 2\. Run the command:
 
@@ -304,7 +337,7 @@ Within a few minutes the container will be upgraded to the latest version.
 
 ## Maintenance
 
-Use the commands below to monitor your containers, view logs, and manage your EspoCRM installation after deployment.
+After deploying EspoCRM, regular maintenance is essential for optimal performance and troubleshooting. Choose the commands appropriate for your deployment method.
 
 ### Docker Run
 
