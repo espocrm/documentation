@@ -32,7 +32,7 @@ In this article:
 
 EspoCRM requires PHP with the following extensions:
 
-* [pdo_mysql](https://php.net/manual/en/book.pdo.php) – for database access;
+* [pdo_mysql](https://www.php.net/manual/en/ref.pdo-mysql.php) or [pdo_pgsql](https://www.php.net/manual/en/ref.pdo-pgsql.php)  – for database access;
 * [gd](https://php.net/manual/en/book.image.php) (with enabled FreeType support) – to manipulate images and render avatars;
 * [openssl](https://php.net/manual/en/book.openssl.php) – to ensure the highest protection;
 * [zip](https://php.net/manual/en/book.zip.php) – to be able to upgrade EspoCRM and install extensions;
