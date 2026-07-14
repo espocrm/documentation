@@ -40,7 +40,7 @@ A panel label. A translation path: Admin > labels > {label}.
 
 *string*
 
-*Since v10.0.3.*
+*As of v10.0.3.*
 
 A panel label translation path.
 
@@ -70,7 +70,7 @@ An item (link) label. A translation path: Admin > labels > {label}.
 
 *string*
 
-*Since v10.0.3.*
+*As of v10.0.3.*
 
 An item label translation path.
 
