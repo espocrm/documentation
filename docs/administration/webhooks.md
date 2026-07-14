@@ -142,17 +142,17 @@ $signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $sec
 
 ## Config parameters
 
-Can be set manually in `data/config.php`.
+Config parameters related to Webhooks. Paramerers can be set manually in `data/config-internal.php`.
 
-* *webhookMaxCountPerUser* = 50
-* *webhookQueueEventPortionSize* = 20
-* *webhookQueuePortionSize* = 20
-* *webhookBatchSize* = 50
-* *webhookMaxAttemptNumber* = 4
-* *webhookFailAttemptPeriod* = '10 minutes'
-* *webhookConnectTimeout* = 5 (seconds)
-* *webhookTimeout* = 10 (seconds)
-* *webhookAllowedAddressList*
+* `webhookMaxCountPerUser` = 50
+* `webhookQueueEventPortionSize` = 20
+* `webhookQueuePortionSize` = 20
+* `webhookBatchSize` = 50
+* `webhookMaxAttemptNumber` = 4
+* `webhookFailAttemptPeriod` = '10 minutes'
+* `webhookConnectTimeout` = 5 (seconds)
+* `webhookTimeout` = 10 (seconds)
+* `webhookAllowedAddressList`
 
 ## Local host URLs
 
