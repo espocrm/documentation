@@ -111,45 +111,45 @@ The list of parameters along with their default values. This is not a full list 
 
 ### Clean-up
 
-* cleanupJobPeriod – `'10 days'` – cleaning up deleted Job records;
-* cleanupActionHistoryPeriod – `'15 days'` – action history records;
-* cleanupAuthTokenPeriod – `'1 month'` – auth tokens;
-* cleanupAuthLogPeriod – `'2 months'` – auth log;
-* cleanupAppLog – `true` – app log cleanup (as of v9.1);
-* cleanupAppLogPeriod – `'30 days'` – app log cleanup period (as of v8.3);
-* cleanupNotificationsPeriod – `'2 months'` – notifications;
-* cleanupAttachmentsPeriod – `'15 days'` – attachments with roles 'Export File', 'Mail Merge', 'Mass Pdf' and attachments relate for deleted records;
-* cleanupOrphanAttachments – `false` – cleaning up attachments that were uploaded but not linked with any record; *cleanupAttachmentsPeriod* is used; an experimental parameter;
-* cleanupBackupPeriod – `'2 months'` – backup of files created during upgrades;
-* cleanupDeletedRecordsPeriod – `'2 months'` – complete deletion of records that were marked as deleted (*deleted = 1*);
-* cleanupSubscribers – `true` – cleaning up stream subscribers for not-actual records (as of v7.3);
-* cleanupSubscribersPeriod – `'2 months'` – period for cleaning up subscribers for not-actual records (as of v7.3);
-* cleanupAudit – `true` – to perform cleanup of the audit log;
-* cleanupAuditPeriod – `3 month` – how long audit log records stay before cleanup;
+* `cleanupJobPeriod` – `'10 days'` – cleaning up deleted Job records;
+* `cleanupActionHistoryPeriod` – `'15 days'` – action history records;
+* `cleanupAuthTokenPeriod` – `'1 month'` – auth tokens;
+* `cleanupAuthLogPeriod` – `'2 months'` – auth log;
+* `cleanupAppLog` – `true` – app log cleanup (as of v9.1);
+* `cleanupAppLogPeriod` – `'30 days'` – app log cleanup period (as of v8.3);
+* `cleanupNotificationsPeriod` – `'2 months'` – notifications;
+* `cleanupAttachmentsPeriod` – `'15 days'` – attachments with roles 'Export File', 'Mail Merge', 'Mass Pdf' and attachments relate for deleted records;
+* `cleanupOrphanAttachments` – `false` – cleaning up attachments that were uploaded but not linked with any record; *cleanupAttachmentsPeriod* is used; an experimental parameter;
+* `cleanupBackupPeriod` – `'2 months'` – backup of files created during upgrades;
+* `cleanupDeletedRecordsPeriod` – `'2 months'` – complete deletion of records that were marked as deleted (*deleted = 1*);
+* `cleanupSubscribers` – `true` – cleaning up stream subscribers for not-actual records (as of v7.3);
+* `cleanupSubscribersPeriod` – `'2 months'` – period for cleaning up subscribers for not-actual records (as of v7.3);
+* `cleanupAudit` – `true` – to perform cleanup of the audit log;
+* `cleanupAuditPeriod` – `3 month` – how long audit log records stay before cleanup;
 
 ### Passwords
 
-* passwordStrengthLength – min password length;
-* passwordStrengthLetterCount – how many letters are required for passwords;
-* passwordStrengthNumberCount – how many numbers are required for passwords;
-* passwordStrengthBothCases – `false` – password must contain letters of both upper and lower case;
-* passwordRecoveryRequestLifetime – `3 hours` – how long a password recovery link is valid;
-* passwordChangeRequestNewUserLifetime – `2 days` – how long a password change link for new users is valid (as of v7.1);
-* passwordChangeRequestExistingUserLifetime – `2 days` – how long a password change link (initiated by admin) for existing users is valid (as of v7.1);
+* `passwordStrengthLength` – min password length;
+* `passwordStrengthLetterCount` – how many letters are required for passwords;
+* `passwordStrengthNumberCount` – how many numbers are required for passwords;
+* `passwordStrengthBothCases` – `false` – password must contain letters of both upper and lower case;
+* `passwordRecoveryRequestLifetime` – `3 hours` – how long a password recovery link is valid;
+* `passwordChangeRequestNewUserLifetime` – `2 days` – how long a password change link for new users is valid (as of v7.1);
+* `passwordChangeRequestExistingUserLifetime` – `2 days` – how long a password change link (initiated by admin) for existing users is valid (as of v7.1);
 
 ### Auth
 
-* authAnotherUserDisabled – `false` – disable the ability to log in as another user for admins (as of v7.3);
-* authLogDisabled – `false` – disable auth log records (as of v7.4);
-* authApiUserLogDisabled – `false` – disable auth log records for successful connections of API users (as of v7.4);
-* auth2FAEmailCodeLifetimePeriod – `'10 minutes'` – lifetime of email 2FA codes;
-* auth2FASmsCodeLifetimePeriod – `'10 minutes'` – lifetime of SMS 2FA codes;
+* `authAnotherUserDisabled` – `false` – disable the ability to log in as another user for admins (as of v7.3);
+* `authLogDisabled` – `false` – disable auth log records (as of v7.4);
+* `authApiUserLogDisabled` – `false` – disable auth log records for successful connections of API users (as of v7.4);
+* `auth2FAEmailCodeLifetimePeriod` – `'10 minutes'` – lifetime of email 2FA codes;
+* `auth2FASmsCodeLifetimePeriod` – `'10 minutes'` – lifetime of SMS 2FA codes;
 
 #### Brute force prevention for IP address
 
-* authMaxFailedAttemptNumber – `10` – if the number of failed login attempts within a specific period exceeds the specified number, then the system won't allow to login; 
-* authFailedAttemptsPeriod – `'60 seconds'` – period taken into account;
-* authFailedCodeAttemptsPeriod – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
+* `authMaxFailedAttemptNumber` – `10` – if the number of failed login attempts within a specific period exceeds the specified number, then the system won't allow to login; 
+* `authFailedAttemptsPeriod` – `'60 seconds'` – period taken into account;
+* `authFailedCodeAttemptsPeriod` – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
 
 #### Brute force prevention for user name
 
@@ -173,64 +173,64 @@ The list of parameters along with their default values. This is not a full list 
 
 ### Jobs & Daemon
 
-* jobMaxPortion – `15` – max number of jobs per one execution; a portion of jobs that is run in a queue is counted as one job;
-* jobPeriod – `7800` – max execution time (in seconds) allocated for a single job; if exceeded then set to *Failed*;
-* jobPeriodForActiveProcess – `36000` – max execution time (in seconds) allocated for a single job with active process; if exceeded then set to *Failed*;
-* jobRerunAttemptNumber – `1` – number of attempts to re-run failed jobs;
-* jobRunInParallel – `false` – jobs will be executed in parallel processes (see [here](jobs.md#running-jobs-in-parallel-processes));
-* jobPoolConcurrencyNumber – `8` – max number of processes run simultaneously;
-* cronMinInterval – `2` – min interval (in seconds) between two cron runs;
-* daemonMaxProcessNumber – `5` – max number of processes run simultaneously;
-* daemonInterval – `10` – interval between process runs (in seconds);
-* daemonProcessTimeout – `36000` – max lifetime of a process run (in seconds);
-* jobE0MaxPortion – `100` – max portion of jobs executed in a single process for *e0* queue; this queue is intended for email sending; is run as often as possible;
-* jobQ0MaxPortion – `200` – *q0* is a queue for a general usage; is run as often as possible;
-* jobQ1MaxPortion – `500` – *q1* is a queue for a general usage; is run every minute;
-* jobGroupMaxPortion – `100` – a portion size for grouped jobs;
-* jobPeriodForReadyNotStarted  – maximum lifetime for a job in Ready status (in seconds);
+* `jobMaxPortion` – `15` – max number of jobs per one execution; a portion of jobs that is run in a queue is counted as one job;
+* `jobPeriod` – `7800` – max execution time (in seconds) allocated for a single job; if exceeded then set to *Failed*;
+* `jobPeriodForActiveProcess` – `36000` – max execution time (in seconds) allocated for a single job with active process; if exceeded then set to *Failed*;
+* `jobRerunAttemptNumber` – `1` – number of attempts to re-run failed jobs;
+* `jobRunInParallel` – `false` – jobs will be executed in parallel processes (see [here](jobs.md#running-jobs-in-parallel-processes));
+* `jobPoolConcurrencyNumber` – `8` – max number of processes run simultaneously;
+* `cronMinInterval` – `2` – min interval (in seconds) between two cron runs;
+* `daemonMaxProcessNumber` – `5` – max number of processes run simultaneously;
+* `daemonInterval` – `10` – interval between process runs (in seconds);
+* `daemonProcessTimeout` – `36000` – max lifetime of a process run (in seconds);
+* `jobE0MaxPortion` – `100` – max portion of jobs executed in a single process for *e0* queue; this queue is intended for email sending; is run as often as possible;
+* `jobQ0MaxPortion` – `200` – *q0* is a queue for a general usage; is run as often as possible;
+* `jobQ1MaxPortion` – `500` – *q1* is a queue for a general usage; is run every minute;
+* `jobGroupMaxPortion` – `100` – a portion size for grouped jobs;
+* `jobPeriodForReadyNotStarted`  – maximum lifetime for a job in Ready status (in seconds);
 
 ### Mass Email
 
-* massEmailMaxAttemptCount – `3` – how many attempts to send an email will be made (can be helpful when SMTP server is gone away);
-* massEmailSiteUrl – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking URLs; you will need to configure your server to handle requests to the specified URL);
+* `massEmailMaxAttemptCount` – `3` – how many attempts to send an email will be made (can be helpful when SMTP server is gone away);
+* `massEmailSiteUrl` – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you need to handle opting out & tracking URLs; you will need to configure your server to handle requests to the specified URL);
 
 ### Kanban
 
-* kanbanMaxOrderNumber – `50` – a number of records that can be ordered within a group; as of v6.1;
-* kanbanMinColumnWidth – `220` – a min width of column; the horizontal scrolling will appear to prevent column being shrunk less than the specified value; as of v7.1;
+* `kanbanMaxOrderNumber` – `50` – a number of records that can be ordered within a group; as of v6.1;
+* `kanbanMinColumnWidth` – `220` – a min width of column; the horizontal scrolling will appear to prevent column being shrunk less than the specified value; as of v7.1;
 
 ### Text search
 
-* textFilterContainsMinLength  – `4` – actual if *Use 'contains' operator when filtering varchar fields* parameter is enabled;
+* `textFilterContainsMinLength`  – `4` – actual if *Use 'contains' operator when filtering varchar fields* parameter is enabled;
 
 
 ### PDF
 
-* pdfEngine – `Tcpdf` – what PDF engine to use; as of v6.1;
-* pdfFontFace – default font face;
-* pdfFontSize – default font size;
+* `pdfEngine` – `Tcpdf` – what PDF engine to use; as of v6.1;
+* `pdfFontFace` – default font face;
+* `pdfFontSize` – default font size;
 
 ### Events
 
-* eventAssignedUserIsAttendeeDisabled – `false` – If set *true*, then assigned user won't be automatically added to an attendee list (for meetings and calls);
-* eventInvitationForceSystemSmtp – `false` – To send invitation emails from system SMTP (otherwise a user's personal account can be used); as of v7.3;
-* busyRangesMaxRange – A max timeline range on which free/busy slots are displayed on the Scheduler panel.
+* `eventAssignedUserIsAttendeeDisabled` – `false` – If set *true*, then assigned user won't be automatically added to an attendee list (for meetings and calls);
+* `eventInvitationForceSystemSmtp` – `false` – To send invitation emails from system SMTP (otherwise a user's personal account can be used); as of v7.3;
+* `busyRangesMaxRange` – A max timeline range on which free/busy slots are displayed on the Scheduler panel.
 
 ### Attachments
 
-* attachmentUploadMaxSize – `256` – max size of attachments in Mb; as of v7.2;
-* attachmentUploadChunkSize – `4` – chunk size in Mb; attachments uploaded by chunk; `0` disables uploading by chunk; as of v7.2;
-* inlineAttachmentUploadMaxSize – `20` – max size of inline attachments in Mb (e.g. inline images for emails);
+* `attachmentUploadMaxSize` – `256` – max size of attachments in Mb; as of v7.2;
+* `attachmentUploadChunkSize` – `4` – chunk size in Mb; attachments uploaded by chunk; `0` disables uploading by chunk; as of v7.2;
+* `inlineAttachmentUploadMaxSize` – `20` – max size of inline attachments in Mb (e.g. inline images for emails);
 
 ### Misc
 
-* starsLimit – 500 – max number of stars a user can give per entity type;
-* phoneNumberMaxCount – 10 – max number of phone numbers per record;
-* emailAddressMaxCount – 10 – max number of email addresses per record;
-* iframeSandboxExcludeDomainList – array of domains that do not require adding `sandbox="allow-scripts"` in the Iframe dashlet; as of v9.0.7;
-* leadCaptureSiteUrl – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you want to expose the lead capture; you will need to configure your server to handle requests to the specified URL); as of v9.2;
-* wysiwygCodeEditorDisabled – `false` – disable the Wysiwyg field code editor; as of v8.2;
-* customPrefixDisabled – `false` – disable adding a *c* prefix to custom entity types, fields and links; as of v8.2; setting to true may cause conflicts; highly discouraged, voids official support;
+* `starsLimit` – 500 – max number of stars a user can give per entity type;
+* `phoneNumberMaxCount` – 10 – max number of phone numbers per record;
+* `emailAddressMaxCount` – 10 – max number of email addresses per record;
+* `iframeSandboxExcludeDomainList` – array of domains that do not require adding `sandbox="allow-scripts"` in the Iframe dashlet; as of v9.0.7;
+* `leadCaptureSiteUrl` – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you want to expose the lead capture; you will need to configure your server to handle requests to the specified URL); as of v9.2;
+* `wysiwygCodeEditorDisabled` – `false` – disable the Wysiwyg field code editor; as of v8.2;
+* `customPrefixDisabled` – `false` – disable adding a *c* prefix to custom entity types, fields and links; as of v8.2; setting to true may cause conflicts; highly discouraged, voids official support;
 
 ## Config files
 
