@@ -37,77 +37,77 @@ The list of parameters along with their default values. This is not a full list 
 
 ### General
 
-* siteUrl – URL of EspoCRM instance;
-* useCache – `true`;
-* isDeveloperMode – `false` – enables developer mode; not to be used on instances installed from a package; only for an instance that is run right from a repository;
-* useCacheInDeveloperMode – `false` – to use front-end cache in developer mode; front-end is not cached by default in developer mode;
-* maintenanceMode – `false` – only administrators will have access to the system;
-* disableCron – `false`;
-* useWebSocket – `false`;
-* ajaxTimeout – `60000` – timeout for ajax requests (in milliseconds);
-* language – system language;
-* timeZone – system timezone;
-* exportDelimiter – `','` – default export delimiter;
-* recordListMaxSizeLimit – `200` – max number of records can be fetched in a single GET API request;
-* maxSelectTextAttributeLengthForList – `10000` – text fields are cut when records accessed with a list request;
-* displayListViewRecordCount – `true` – to display a number of records on the list view;
-* addressCountryList – array of countries available in autocomplete;
-* addressCityList – array of cities available in autocomplete;
-* addressStateList – array of states available in autocomplete;
-* defaultCurrency – currency applied by default;
-* baseCurrency – which currency to use as base when defining rates;
-* currencyList – array of available currencies;
-* thumbImageCacheDisabled – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (as of v7.0);
-* globalSearchMaxSize – `10` – how much records is shown in the global search;
-* massActionIdleCountThreshold – `100` – record number threshold after which mass-action is processed in idle (as of v7.1);
-* exportIdleCountThreshold  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
-* leadCaptureAllowOrigin –  `*` – *Access-Control-Allow-Origin* response header value for the lead capture endpoint;
-* ipAddressServerParam – `REMOTE_ADDR` – server parameter to be used for obtaining a request IP address (as of v7.5);
+* `siteUrl` – URL of EspoCRM instance;
+* `useCache` – `true`;
+* `isDeveloperMode` – `false` – enables developer mode; not to be used on instances installed from a package; only for an instance that is run right from a repository;
+* `useCacheInDeveloperMode` – `false` – to use front-end cache in developer mode; front-end is not cached by default in developer mode;
+* `maintenanceMode` – `false` – only administrators will have access to the system;
+* `disableCron` – `false`;
+* `useWebSocket` – `false`;
+* `ajaxTimeout` – `60000` – timeout for ajax requests (in milliseconds);
+* `language` – system language;
+* `timeZone` – system timezone;
+* `exportDelimiter` – `','` – default export delimiter;
+* `recordListMaxSizeLimit` – `200` – max number of records can be fetched in a single GET API request;
+* `maxSelectTextAttributeLengthForList` – `10000` – text fields are cut when records accessed with a list request;
+* `displayListViewRecordCount` – `true` – to display a number of records on the list view;
+* `addressCountryList` – array of countries available in autocomplete;
+* `addressCityList` – array of cities available in autocomplete;
+* `addressStateList` – array of states available in autocomplete;
+* `defaultCurrency` – currency applied by default;
+* `baseCurrency` – which currency to use as base when defining rates;
+* `currencyList` – array of available currencies;
+* `thumbImageCacheDisabled` – `false` – to disable thumb image files being created in `data/upload/thumbs` directory (as of v7.0);
+* `globalSearchMaxSize` – `10` – how much records is shown in the global search;
+* `massActionIdleCountThreshold` – `100` – record number threshold after which mass-action is processed in idle (as of v7.1);
+* `exportIdleCountThreshold`  – `1000` – record number threshold after which export is processed in idle (as of v7.1);
+* `leadCaptureAllowOrigin` –  `*` – *Access-Control-Allow-Origin* response header value for the lead capture endpoint;
+* `ipAddressServerParam`– `REMOTE_ADDR` – server parameter to be used for obtaining a request IP address (as of v7.5);
 
 ### UI
 
-* applicationDescription – the text in the meta tag; default value: `EspoCRM – Open Source CRM application` (as of v7.0);
-* adminPanelIframeDisabled – `false` – disables the right iframe-panel on the administration page (as of v7.0);
-* activitiesCreateButtonMaxCount – `3` – a max number of create buttons to display on the Activities page (as of v7.2);
-* listViewSettingsDisabled – `false` – disable list view settings (as of v8.1);
-* tabQuickSearch – `true` – tab quick search in the navbar (as of v8.5);
+* `applicationDescription` – the text in the meta tag; default value: `EspoCRM – Open Source CRM application` (as of v7.0);
+* `adminPanelIframeDisabled` – `false` – disables the right iframe-panel on the administration page (as of v7.0);
+* `activitiesCreateButtonMaxCount` – `3` – a max number of create buttons to display on the Activities page (as of v7.2);
+* `listViewSettingsDisabled` – `false` – disable list view settings (as of v8.1);
+* `tabQuickSearch` – `true` – tab quick search in the navbar (as of v8.5);
 
 ### Access control
 
-* aclAllowDeleteCreated – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access to;
-* aclAllowDeleteCreatedThresholdPeriod – `24 hours` – time window available for deletion of created records;
+* `aclAllowDeleteCreated` – `true` – whether to allow regular users to delete record they created, even they don't have *delete* access to;
+* `aclAllowDeleteCreatedThresholdPeriod` – `24 hours` – time window available for deletion of created records;
 
 ### Notifications
 
-* adminNotifications – `true` – notifications in admin panel;
-* adminNotificationsNewVersion – `true` – notifications about new versions in admin panel;
-* adminNotificationsNewExtensionVersion – `true` – notifications about new extension versions in admin panel;
-* emailReminderPortionSize – `10` – how much email reminders can be sent at once (as of v7.0);
-* notificationsMaxSize – `5` – how much in-app notifications is shown when the notification panel is shown up;
-* notificationsCheckInterval – `10` – an interval between checks for new notifications (actual only if web socket is not enabled); 
-* popupNotificationsCheckInterval – `15` – an interval between checks for new popup notifications (actual only if web socket is not enabled) (as of v7.3.2);
-* reminderMaxCount – `10` – a max number of reminders per event (as of v8.3);
-* notificationGrouping – `true` – notification grouping (as of v9.2);
+* `adminNotifications` – `true` – notifications in admin panel;
+* `adminNotificationsNewVersion` – `true` – notifications about new versions in admin panel;
+* `adminNotificationsNewExtensionVersion` – `true` – notifications about new extension versions in admin panel;
+* `emailReminderPortionSize` – `10` – how much email reminders can be sent at once (as of v7.0);
+* `notificationsMaxSize` – `5` – how much in-app notifications is shown when the notification panel is shown up;
+* `notificationsCheckInterval` – `10` – an interval between checks for new notifications (actual only if web socket is not enabled); 
+* `popupNotificationsCheckInterval` – `15` – an interval between checks for new popup notifications (actual only if web socket is not enabled) (as of v7.3.2);
+* `reminderMaxCount` – `10` – a max number of reminders per event (as of v8.3);
+* `notificationGrouping` – `true` – notification grouping (as of v9.2);
 
 ### Emails
 
-* emailKeepParentTeamsEntityList – `['Case']` – when a related email is fetched, teams of the parent record will be copied to the email; by default, it's available only for cases;
-* emailForceUseExternalClient – `false` – when composing an email, all users will be forced to use external client;
-* emailAutoReplySuppressPeriod – `'2 hours'` – an auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter; to prevent looping (as of v6.1.8);
-* emailAutoReplyLimit – `5` – a max number of auto-reply emails that can be sent to one recipient within a period defined by the *emailAutoReplySuppressPeriod* parameter (as of v7.0);
-* emailFoldersDisabled – `false` – disables email folders;
-* emailRecipientAddressMaxCount – `100` – max number of addresses allowed in TO, CC, BCC (as of v7.5);
-* emailTemplateHtmlizerDisabled – `false` – disables Handlebars template engine for email templates;
-* emailServerAllowedAddressList – the list of allowed internal addresses in the format *host:port*, e.g. `localhost:587` (as of v9.3.2);
+* `emailKeepParentTeamsEntityList` – `['Case']` – when a related email is fetched, teams of the parent record will be copied to the email; by default, it's available only for cases;
+* `emailForceUseExternalClient` – `false` – when composing an email, all users will be forced to use external client;
+* `emailAutoReplySuppressPeriod` – `'2 hours'` – an auto-reply email (for group email account) won't be sent to the same recipient if one was already sent in a period of time defined by the parameter; to prevent looping (as of v6.1.8);
+* `emailAutoReplyLimit` – `5` – a max number of auto-reply emails that can be sent to one recipient within a period defined by the *emailAutoReplySuppressPeriod* parameter (as of v7.0);
+* `emailFoldersDisabled` – `false` – disables email folders;
+* `emailRecipientAddressMaxCount` – `100` – max number of addresses allowed in TO, CC, BCC (as of v7.5);
+* `emailTemplateHtmlizerDisabled` – `false` – disables Handlebars template engine for email templates;
+* `emailServerAllowedAddressList` – the list of allowed internal addresses in the format *host:port*, e.g. `localhost:587` (as of v9.3.2);
 
 ### Stream
 
-* noteEditThresholdPeriod – `'7 days'` – how much time is available for editing stream posts;
-* noteDeleteThresholdPeriod – `'1 month'` – how much time is available for deleting stream posts;
-* streamEmailWithContentEntityTypeList – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
-* recordFollowersLoadLimit – `6` – how much records loaded in the *Followers* field;
-* notePinnedMaxCount – `5` – max number of pinned notes per record;
-* streamReactionsCheckMaxSize – `50` – when refreshing a user's stream, how many posts will be checked for new reactions; as of 9.0;
+* `noteEditThresholdPeriod` – `'7 days'` – how much time is available for editing stream posts;
+* `noteDeleteThresholdPeriod` – `'1 month'` – how much time is available for deleting stream posts;
+* `streamEmailWithContentEntityTypeList` – `['Case']` – to display the content of the email in stream; by default, it's available only for cases;
+* `recordFollowersLoadLimit` – `6` – how much records loaded in the *Followers* field;
+* `notePinnedMaxCount` – `5` – max number of pinned notes per record;
+* `streamReactionsCheckMaxSize` – `50` – when refreshing a user's stream, how many posts will be checked for new reactions; as of 9.0;
 
 ### Clean-up
 
