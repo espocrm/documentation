@@ -36,6 +36,14 @@ Defines what to display on the Administration page.
 
 A panel label. A translation path: Admin > labels > {label}.
 
+## labelTranslation
+
+*string*
+
+*Since v10.0.3.*
+
+A panel label translation path.
+
 ## order
 
 *string*
@@ -57,6 +65,14 @@ A link URL. You can use an URL like #Admin/{myName}, in this case you also need 
 *string*
 
 An item (link) label. A translation path: Admin > labels > {label}.
+
+### labelTranslation
+
+*string*
+
+*Since v10.0.3.*
+
+An item label translation path.
 
 ### iconClass
 
