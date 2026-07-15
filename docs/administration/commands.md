@@ -156,6 +156,16 @@ bin/command update-app-timestamp
 
 Updates the app timestamp to the current time. When an Espo instance is updated or an extension is installed or uninstalled, the app timestamp is updated to let the browser know that the old cache is not actual anymore. Sometimes developers may need to update the app timestamp manually, for example, when writing custom JavaScript code.
 
+## Populate scheduled jobs
+
+*As of v10.0.*
+
+```
+bin/command populate-scheduled-jobs
+```
+
+Creates all default scheduled jobs if they don't exist. Can be used when installing the system via CLI.
+
 ## Rebuild category paths
 
 ```
@@ -165,7 +175,6 @@ bin/command rebuild-category-paths {EntityType}
 Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
 
 ## Populate array values
-
 
 ```
 bin/command populate-array-values {EntityType} {field}
