@@ -172,7 +172,7 @@ Creates all default scheduled jobs if they don't exist. Can be used when install
 bin/command rebuild-category-paths {EntityType}
 ```
 
-Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode.
+Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May be needed if for some reason paths data is corrupted resulting in not working expanded mode in the list view with categories.
 
 ## Populate array values
 
