@@ -2,6 +2,8 @@
 
 ## Option 1. Migration
 
+This method involves replacing the EspoCRM instance files and running the migration command. The official Docker setup uses this method (automatically).
+
 !!! note
 
     The minimal version you can upgrade from using this method is 7.1.0.
@@ -20,7 +22,6 @@ Recommendations:
 1. Make a [backup](backup-and-restore.md) before upgrading.
 2. Make sure you have enough free disk space on the server.
 3. Enable *Maintenance Mode* before upgrading (under Administration > Settings). Disable after upgrade is finished.
-
 
 ### 1. Replace files.
 
@@ -42,7 +43,7 @@ Run the command:
 bin/command migrate
 ```
 
-It will run needed prepare and after-upgrade scripts, run rebuild. The version parameter in config will be updated.
+It will run needed prepare and after-upgrade scripts. The version parameter in `data/state.php` will be updated to match the version of the core files.
 
 ## Option 2. Upgrade package
 
