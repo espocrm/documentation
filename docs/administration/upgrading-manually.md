@@ -2,7 +2,7 @@
 
 ## Option 1. Migration
 
-This method involves replacing the EspoCRM instance files and running the migration command. The official Docker setup uses this method (automatically).
+This method involves replacing the EspoCRM instance files and running the migration command. The official Docker setup uses this method automatically under the hood.
 
 !!! note
 
