@@ -17,6 +17,13 @@
 
 Check all the [recommendations](https://docs.espocrm.com/administration/upgrading/#recommendations) before performing upgrade.
 
+Recommendations:
+
+1. Make a backup before upgrading.
+2. Make sure you have enough free disk space on the server.
+3. Enable *Maintenance Mode* before upgrading (under Administration > Settings). Disable after upgrade is finished.
+
+
 ### 1. Replace files.
 
 Replace all application files with files with files from a new version package. You need to delete all existing source files except the directories listed below.
