@@ -694,6 +694,7 @@ Parameters:
 * handler
 * actionFunction
 * acl
+* iconHtml
 
 ### viewModalView
 
