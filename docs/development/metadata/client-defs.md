@@ -691,10 +691,11 @@ Parameters:
 
 * name
 * label
+* labelTranslation
 * handler
 * actionFunction
 * acl
-* iconHtml
+* iconClass
 
 ### viewModalView
 
