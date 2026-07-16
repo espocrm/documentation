@@ -43,7 +43,7 @@ Versioning (X.Y.Z):
 2. If the next Espo version requires a higher PHP version, upgrade your PHP (with all extensions). The PHP version you are upgrading to must be supported by your current Espo (usually you make a +2 minor version steps). After that, make sure your Espo is working, cron is running. Make sure that the new PHP version is applied to the CLI (command `php -v`) and to the web server (at Administration > System Requirements > PHP Version).
 3. Make sure you have enough free disk space on the server.
 4. (Not needed as of v10.1 as Maintenance Mode prevents the cron from being run.) Disable cron before upgrading (at Administration > Settings). Enable it back after upgrade is finished. This will prevent situations when a job started on the previous version and finished on the new version. In most cases this won't cause any issues though. The most significant problem it can cause is the job not being finished.
-5. Enable *Maintenance Mode* before upgrading (at Administration > Settings). Disable after upgrade is finished. This will prevent non-admin users accessing the application before you started upgrading. This also prevents cron from being run (as of v10.1).
+5. Enable *Maintenance Mode* before upgrading (at Administration > Settings). Disable after upgrade is finished. This will prevent non-admin users from accessing the application while you are upgrading the application. This also prevents cron from being run (as of v10.1).
 6. *opcache.enable_cli* parameter in PHP should be set to false (usually it is set to false by default).
 
 It's recommended to run upgrade either under the webserver user (usually *www-data*) or *root* user.
