@@ -41,7 +41,7 @@ The list of parameters along with their default values. This is not a full list 
 * `useCache` – `true`;
 * `isDeveloperMode` – `false` – enables developer mode; not to be used on instances installed from a package; only for an instance that is run right from a repository;
 * `useCacheInDeveloperMode` – `false` – to use front-end cache in developer mode; front-end is not cached by default in developer mode;
-* `maintenanceMode` – `false` – only administrators will have access to the system;
+* `maintenanceMode` – `false` – only administrators will have access to the system; as of v10.1.0 it also prevents the cron from being run;
 * `disableCron` – `false`;
 * `useWebSocket` – `false`;
 * `ajaxTimeout` – `60000` – timeout for ajax requests (in milliseconds);
