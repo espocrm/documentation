@@ -15,7 +15,7 @@ This method involves replacing the EspoCRM instance files and running the migrat
 
 !!! important
 
-    This methods does not perform before-upgrade checks that the regular upgrade method does. After replacing the files manually, it's possible that your system won't work due to reasons like PHP version incompatibility or customization incompatibility. The method is preferred for more experienced users.
+    This method does not perform before-upgrade checks that the regular upgrade method does. After replacing the files manually, it is possible that your system won't work due to reasons as uch PHP version incompatibility or customization incompatibility. The method is preferred for more experienced users.
 
 Recommendations:
 
