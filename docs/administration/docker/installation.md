@@ -563,7 +563,7 @@ In most cases, this issue is caused by installed extensions that are not compati
 Navigate to your EspoCRM directory and run:
 
 ```bash
-docker compose down
+$ docker compose down
 ```
 
 #### 2. Update your `docker-compose.yml`
@@ -605,7 +605,7 @@ Replace `VERSION` with the EspoCRM version you were running before the upgrade (
 #### 3. Start your services
 
 ```bash
-docker compose up -d
+$ docker compose up -d
 ```
 
 ### Migration to EspoCRM 10
@@ -623,7 +623,7 @@ By following these instructions, your customizations and data will be preserved.
 Navigate to your EspoCRM directory and run:
 
 ```bash
-docker compose down
+$ docker compose down
 ```
 
 #### 2. Update your `docker-compose.yml`
@@ -672,7 +672,7 @@ rm -f ./espocrm/bootstrap.php ./espocrm/clear_cache.php ./espocrm/command.php ./
 #### 4. Start your services
 
 ```bash
-docker compose up -d
+$ docker compose up -d
 ```
 
 ### Migration to EspoCRM 10 with Docker volumes
@@ -690,13 +690,13 @@ By following these instructions, your customizations and data will be preserved.
 Navigate to your EspoCRM directory and run:
 
 ```bash
-docker compose down
+$ docker compose down
 ```
 
 #### 2. Create the required volumes
 
 ```bash
-docker volume create espocrm-data; \
+$ docker volume create espocrm-data; \
 docker volume create espocrm-custom; \
 docker volume create espocrm-custom-client
 ```
@@ -704,7 +704,7 @@ docker volume create espocrm-custom-client
 #### 3. Migrate your data
 
 ```bash
-docker compose run --rm \
+$ docker compose run --rm \
   -v espocrm:/source:ro \
   -v espocrm-data:/dest-data \
   -v espocrm-custom:/dest-custom \
@@ -780,7 +780,7 @@ docker run --rm \
 #### 6. Start your services
 
 ```bash
-docker compose up -d
+$ docker compose up -d
 ```
 
 ### Undefined volume: invalid compose project
@@ -805,7 +805,7 @@ Notes:
 - Replace the `YOUR_ESPOCRM_DB_PASSWORD` with your MySQL espocrm user password.
 
 ```
-sudo docker exec -i mysql mysql --user=root -p -e "
+$ docker exec -i mysql mysql --user=root -p -e "
   ALTER USER IF EXISTS 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ROOT_PASSWORD';
   ALTER USER IF EXISTS 'root'@'%' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ROOT_PASSWORD';
   ALTER USER IF EXISTS 'espocrm'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ESPOCRM_DB_PASSWORD';
@@ -817,6 +817,9 @@ sudo docker exec -i mysql mysql --user=root -p -e "
 3\. Restart and build `mysql` container:
 
 ```
-sudo docker stop mysql && sudo docker rm mysql
-docker compose up -d --build
+$ docker stop mysql && docker rm mysql
+```
+
+```
+$ docker compose up -d --build
 ```
