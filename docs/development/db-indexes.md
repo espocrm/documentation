@@ -44,7 +44,7 @@ You need to run rebuild after changes.
 
 ## Forcing index usage in ORM
 
-You need to specify an index name in *useIndex* param.
+Specify an index name in *useIndex* param.
 
 ```php
 <?php
@@ -59,6 +59,8 @@ $collection = $entityManager->getRDBRepository($entityType)
     ->clone($query)
     ->find();
 ```
+
+Note that it works only in MariaDB / MySQL and does not have an effect in PostgreSQL.
 
 ## Relationship table indexes
 
