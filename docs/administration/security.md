@@ -32,19 +32,16 @@ Consider specifying an IP address whitelist. Parameters are available at: Admini
 
 ❗ Important.
 
-Restrict the ability to upgrade and upload extensions via the UI. Set `'adminUpgradeDisabled' => true` in `data/config-internal.php`.
+Restrict the ability to upgrade and upload extensions via the UI.
 
-!!! note
+As of v10.0, by default, the ability to upgrade via UI is disabled, while the ability to install extensions via UI is enabled.
 
-    By default, upgrades and extensions can be installed via the admin UI. Installed extensions can run code, which may pose a security risk.
+Config parameters (as of v10.0):
+- `adminUpgrade` – (boolean) – `false` by default;
+- `adminExtensionUpload` – (boolean) –`true` by default;
 
-!!! note
+The parameter `adminUpgradeDisabled` (boolean) disables both upgrade via UI and instlling extensions via UI.
 
-    As of v10.0, by default, the ability to upgrade via the UI is disabled, while the ability to install extensions via the UI is enabled.
-
-    Config parameters:
-    - `adminUpgrade` – `false` by default;
-    - `adminExtensionUpload` – `true` by default;
 
 ## Use maintenance mode when upgrading
 
