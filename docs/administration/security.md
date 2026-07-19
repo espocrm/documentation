@@ -37,3 +37,9 @@ Restrict the ability to upgrade and upload extensions via the UI. Set `'adminUpg
 ## IP address whitelist
 
 Consider specifying an IP address whitelist. Parameters are available at: Administration > Authentication > Access.
+
+## Use maintenance mode when upgrading
+
+Enable maintenance mode before upgrading. Disable it after the upgrade is complete.
+
+Maintenance mode can be enabled under Administration > System.
