@@ -24,6 +24,10 @@ Can be done at Administration > Authentication. If you lost admin access and wan
 
 Consider decreasing *Auth Token Max Idle Time*. Additionally, you can also specify *Auth Token Lifetime*.
 
+## IP address whitelist
+
+Consider specifying an IP address whitelist. Parameters are available at: Administration > Authentication > Access.
+
 ## Restrict upgrade via UI
 
 ❗ Important.
@@ -34,9 +38,13 @@ Restrict the ability to upgrade and upload extensions via the UI. Set `'adminUpg
 
     By default, upgrades and extensions can be installed via the admin UI. Installed extensions can run code, which may pose a security risk.
 
-## IP address whitelist
+!!! note
 
-Consider specifying an IP address whitelist. Parameters are available at: Administration > Authentication > Access.
+    As of v10.0. the ability to upgrade via the UI is disabled, while the ability to install extensions via the UI is enabled.
+
+    Config parameters:
+    - `adminUpgrade` – `false` by default;
+    - `adminExtensionUpload` – `true` by default;
 
 ## Use maintenance mode when upgrading
 
