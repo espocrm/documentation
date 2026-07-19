@@ -40,7 +40,7 @@ Restrict the ability to upgrade and upload extensions via the UI. Set `'adminUpg
 
 !!! note
 
-    As of v10.0. the ability to upgrade via the UI is disabled, while the ability to install extensions via the UI is enabled.
+    As of v10.0, by default, the ability to upgrade via the UI is disabled, while the ability to install extensions via the UI is enabled.
 
     Config parameters:
     - `adminUpgrade` – `false` by default;
