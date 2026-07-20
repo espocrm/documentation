@@ -431,16 +431,14 @@ $binder->bindService(
 );
 ```
 
-A qualified global match wins a contextual unqualified match (including a named match).
-
 ### Precedence
 
-Precedence order: Qualified > Named > Unnamed.
+Binding for a constructor parameter is resolved according to the following precedence order: Qualified > Named > Unnamed.
 
-Precedence and contextual binding:
+How precedence is applied to contextual bindings:
 
-- A qualified global match wins a contextual unqualified match (including a named match).
-- A named global match wins a contextual unnamed match.
+- A global qualified binding takes precedence over a contextual unqualified binding, including a contextual named binding.
+- A global named binding takes precedence over a contextual unnamed binding.
 
 ## See also
 
