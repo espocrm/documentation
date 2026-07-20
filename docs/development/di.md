@@ -422,7 +422,7 @@ class MyClass
 }
 ```
 
-Binding to qualifier example:
+Binding:
 
 ```php
 
