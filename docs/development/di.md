@@ -415,9 +415,9 @@ use Espo\Core\Binding\Attributes\Qualify;
 class MyClass
 {
     public function __construct(
-        private Language $language,
+        private Language $language1,
         #[Qualify('default')]
-        private Language $language,
+        private Language $language2,
     ) {}
 }
 ```
