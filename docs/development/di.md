@@ -433,6 +433,15 @@ $binder->bindService(
 
 A qualified global match wins a contextual unqualified match (including a named match).
 
+### Precedence
+
+Precedence order: Qualified > Named > Unnamed.
+
+Precedence and contextual binding rules:
+
+- A qualified global match wins a contextual unqualified match (including a named match).
+- A named global match wins a contextual unnamed match.
+
 ## See also
 
 * [Container services](container-services.md)
