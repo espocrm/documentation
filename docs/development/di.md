@@ -404,7 +404,7 @@ The passed binding has a higher priority than the default binding (the default b
 
 A constructor dependency can be marked with a qualifier. Then, it is possible to bind specifically for this qualifier.
 
-Example:
+Applying qualifier exmple:
 
 ```php
 <?php
@@ -420,11 +420,16 @@ class MyClass
         private Language $language,
     ) {}
 }
+```
 
-// Binding:
+Binding to qualifier example:
 
-$binder->bindService(Language::class, 'laguage');
+```php
 
+// Regular binding.
+$binder->bindService(Language::class, 'language');
+
+// Binding to a qualified class name.
 $binder->bindService(
     QualifiedClassKey::create(Language::class, 'default'),
     'defaultLanguage'
