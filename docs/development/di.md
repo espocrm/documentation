@@ -428,7 +428,7 @@ use Espo\Core\Binding\Key\QualifiedClassKey;
 // Regular binding.
 $binder->bindService(Language::class, 'language');
 
-// Binding to a qualified class name.
+// Binding a class name qualified with the qualifier named 'default'.
 $binder->bindService(
     QualifiedClassKey::create(Language::class, 'default'),
     'defaultLanguage'
