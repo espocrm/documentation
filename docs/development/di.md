@@ -398,6 +398,41 @@ $instance = $injectableFactory->createWithBinding(SomeClass::class, $bindingCont
 
 The passed binding has a higher priority than the default binding (the default binding is applied globally to all objects resolved via DI).
 
+### Qualifiers
+
+*As of v10.1.*
+
+A constructor dependency can be marked with a qualifier. Then, it is possible to bind specifically for this qualifier.
+
+Example:
+
+```php
+<?php
+// Class requiring a dependency:
+
+use Espo\Core\Binding\Attributes\Qualify;
+
+class MyClass
+{
+    public function __construct(
+        private Language $language,
+        #[Qualify('default')]
+        private Language $language,
+    ) {}
+}
+
+// Binding:
+
+$binder->bindService(Language::class, 'laguage');
+
+$binder->bindService(
+    QualifiedClassKey::create(Language::class, 'default'),
+    'defaultLanguage'
+);
+```
+
+A qualified global match wins a contextual unqualified match (including a named match).
+
 ## See also
 
 * [Container services](container-services.md)
