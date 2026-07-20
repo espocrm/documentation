@@ -408,8 +408,6 @@ Applying a qualifier to a contructor parameter:
 
 ```php
 <?php
-// Class requiring a dependency:
-
 use Espo\Core\Binding\Attributes\Qualify;
 
 class MyClass
