@@ -425,6 +425,7 @@ class MyClass
 Binding:
 
 ```php
+use Espo\Core\Binding\Key\QualifiedClassKey;
 
 // Regular binding.
 $binder->bindService(Language::class, 'language');
