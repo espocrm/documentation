@@ -46,7 +46,7 @@ To be able to update pipeline stages with Mass Update, you need to add both Pipe
 to the Mass Update [layout](../administration/layout-manager.md#mass-update).
 
 
-## Retro-assign existing records to Pipeline
+## Retro-assign existing records to pipeline
 
 If you enabled the Pipelines feature for an entity type not from the very beginning, you may want to assign all existing records to a specific pipeline. For this, you need to do the following steps:
 
