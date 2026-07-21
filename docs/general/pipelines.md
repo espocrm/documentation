@@ -44,3 +44,12 @@ to a specific pipeline.
 
 To be able to update pipeline stages with Mass Update, you need to add both Pipeline and Pipeline Stage fields
 to the Mass Update [layout](../administration/layout-manager.md#mass-update).
+
+
+## Retro-assigned existing records to Pipeline
+
+If you enabled the Pipelines feature for an entity type after records had already been created, you may want to assign all existing records to a specific pipeline. For this, you need to do the following steps:
+
+1. Add the Pipeline field to the Search Filters layout and add the Pipeline and Pipeline Stage fields to the Mass Update layout.
+2. In the list view, filter records where the Pipeline field is empty and mass update them assigning the needed Pipeline and Pipeline Stage. Do it for each possible status field option.
+
