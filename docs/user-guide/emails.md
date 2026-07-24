@@ -83,7 +83,9 @@ When a new email comes, the system tries to recognize which record this email be
 
 If an email came from a new potential client, the user can convert it to a Lead (from the top-right menu).
 
-It's possible to create a Task or Case from an email record (from the top-right menu).
+It is possible to create one or multiple Tasks from an email. Created tasks are displayed in the right panel in the Email detail view. Completed tasks are marked with a green check mark.
+
+A Case can be created from an email record (from the top-right menu). After case creation, the email will be related to the case through the Parent field.
 
 If email addresses (From, To, CC) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User, etc.). If some email address is new, you can create a Contact right from there.
 
