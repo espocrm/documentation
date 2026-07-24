@@ -96,7 +96,7 @@ If an email came from a new potential client, the user can convert it to a Lead 
 
 #### Tasks
 
-It is possible to create one or multiple Tasks from an email. Created tasks are displayed in the right panel in the Email detail view. Completed tasks are marked with a green check mark.
+It is possible to create one or multiple Tasks from an email (from the top-right menu). Created tasks are displayed in the right panel in the Email detail view. Completed tasks are marked with a green check mark.
 
 Tasks can be useful for collaboration purpose. For example, if team members see that an email already has a task named 'Reply to Email', they will know that someone else is responsible for responding and will not reply themselves. The user assigned to the task will be instructed to reply to the email through the task.
 
