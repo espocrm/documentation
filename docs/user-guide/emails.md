@@ -98,6 +98,8 @@ If an email came from a new potential client, the user can convert it to a Lead 
 
 It is possible to create one or multiple Tasks from an email. Created tasks are displayed in the right panel in the Email detail view. Completed tasks are marked with a green check mark.
 
+Tasks can be useful for collaboration purpose. For example, if team members see that an email already has a task named 'Reply to Email', they will know that someone else is responsible for responding and will not reply themselves. The user assigned to the task will be instructed to reply to the email through the task.
+
 #### Case creation
 
 A Case can be created from an email record (from the top-right menu). After case creation, the email will be related to the case through the Parent field.
