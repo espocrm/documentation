@@ -614,7 +614,7 @@ To upgrade to EspoCRM v10.0 or later, you must perform a one-time manual migrati
 
 !!! warning
 
-Before performing the following steps, be sure to make a [backup](../backup-and-restore.md#docker-installation). By following these instructions, your customizations and data will be preserved.
+Before performing the following steps, be sure to make a [backup](../backup-and-restore.md#docker-installation). 
 
 !!! note
 
@@ -681,7 +681,9 @@ docker compose up -d
 
 To upgrade to EspoCRM v10.0 or later, you must perform a one-time manual migration to update your volume configuration. Starting from v10.0, mounting the entire `/var/www/html` directory is no longer required.
 
-By following these instructions, your customizations and data will be preserved.
+!!! warning
+
+Before performing the following steps, be sure to make a [backup](../backup-and-restore.md#docker-installation). 
 
 !!! note
 
