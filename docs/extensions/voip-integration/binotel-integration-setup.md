@@ -30,6 +30,35 @@ E.g. for "+44 (203) 111-22-33": {COUNTRY_CODE} - "44", {NATIONAL_NUMBER} - "2031
 2\. Contact Binotel support to add an URL (see “Post URL” field) to handle incoming/outgoing calls (API CALL Settings and API PUSH):
 **http://espocrm.local/?entryPoint=Binotel&connector=Binotel&key=hh9v0zr529**
 
+3\. It's possible to identify the caller by phone number using the **CallerID Lookup** functionality.
+
+Contact Binotel support to configure one of the following request URLs.
+
+### GET request
+
+```http
+GET https://YOUR_CRM/espo/ext-voip-integration/site/api/v1/Voip/lookup/Binotel/ACCESS_KEY?externalNumber=12764099628
+```
+
+### POST request
+
+Content-Type:
+
+- `application/json`, or
+- `application/x-www-form-urlencoded`
+
+```http
+POST https://YOUR_CRM/espo/ext-voip-integration/site/api/v1/Voip/lookup/Binotel/ACCESS_KEY
+
+{
+    "externalNumber": "12764099628"
+}
+```
+
+Where:
+
+- `ACCESS_KEY` — the connector Access Key.
+- `externalNumber` — the incoming phone number.
 
 ## How to setup Binotel Integration for users
 
