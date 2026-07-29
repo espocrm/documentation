@@ -758,6 +758,12 @@ Do not print the link in the OpenAPI spec.
 
 When getting a related entity from an entity, it will be returned without loaded values. Values will be loaded on accessing. For belongsToParent there's a downside that it can return an entity even if it's deleted.
 
+### customizationDisabled
+
+*boolean*
+
+Disables the ability to customize the link in the Entity Manager tool.
+
 ## collection
 
 Collection parameters.
