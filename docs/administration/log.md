@@ -39,9 +39,9 @@ If enabled, the backtrace will be printed to the log when an exception is occurr
 
 ## Admin UI
 
-Parameter: `databaseHandler`.
-
 *As of v8.3.*
+
+The feature is known as *App Log*. Config parameter enabling the feature: `logger.databaseHandler`.
 
 It may be convenient to check the logs right from the application UI. The log is available under: Administration > App Log. By default, this feature is disabled – log entries are not created in the database table.
 
@@ -50,6 +50,8 @@ To make log records available in the admin UI, set the *databaseHandler* paramet
 !!! note
 
     Some log entries may be not available from the UI. For example, those that happened during upgrade or before database connection was established.
+
+By default, the log level defined with the `logger.level` parameter is used for App Log. It can be overridden with the `logger.databaseHandlerLevel` parameter (see in the example above).
 
 ## SQL queries
 
