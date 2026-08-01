@@ -10,7 +10,7 @@ The extension provides the following AI features:
 
 - [Summary](#summary)
 - [Intelligent Paste](#intelligent-paste)
-- [AI Email Compose](#ai-email-compose)
+- [AI Email Composer](#ai-email-composer)
 - [AI formula functions](ai-formula-functions.md)
 
 Additionally, it provides the [usage log and quota](usage-and-quota.md) features.
@@ -61,11 +61,11 @@ The extracted fields are then listed, allowing the user to uncheck fields they d
 
 After clicking the Apply button (or pressing Ctrl + Enter), the extracted data is applied to the record form.
 
-### AI Email Compose
+### AI Email Composer
 
 Enables the ability to compose emails with AI.
 
-The *AI Email Compose* feature can be enabled in settings at Administration > Intelligence panel > Settings.
+The *AI Email Composer* feature can be enabled in settings at Administration > Intelligence panel > Settings.
 
 Users with access to the *Intelligent Compose* role scope can use AI to compose emails.
 
