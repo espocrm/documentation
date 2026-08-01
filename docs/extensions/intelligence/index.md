@@ -67,9 +67,9 @@ Enables the ability to compose emails with AI.
 
 The *AI Email Composer* feature can be enabled in settings at Administration > Intelligence panel > Settings.
 
-Users with access to the *Intelligent Compose* role scope can use AI to compose emails.
+Users with access to the *Intelligent Composer* role scope can use AI to compose emails.
 
-When composing an email in the modal window, the AI Compose button is available at the top right.
+When composing an email in the modal window, the *AI Composer* button is available at the top right.
 
 The user can choose the desired tone and length and provide instructions.
 Then, they can generate a message by clicking the Compose button (or pressing Ctrl + Enter).
