@@ -5,6 +5,10 @@ search:
 
 # Installation
 
+!!! note
+
+    This article covers non-containerized setups. To install EspoCRM with Docker, see the instructions [here](docker/installation.md).
+
 ### Requirements
 
 EspoCRM can run on most hosting providers that support PHP and a MySQL, MariaDB, or PostgreSQL database. See the [server configuration](server-configuration.md) article for more information.
