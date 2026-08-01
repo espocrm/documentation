@@ -5,6 +5,10 @@ search:
 
 # How to upgrade EspoCRM
 
+!!! important
+
+    This article covers non-containerized setups. For upgrading EspoCRM running with Docker, see the instructions [here](https://docs.espocrm.com/administration/docker/installation/#upgrading).
+
 ## Upgrade from CLI
 
 This is the preferable way to upgrade.
