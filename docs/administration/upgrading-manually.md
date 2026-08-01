@@ -2,7 +2,7 @@
 
 !!! note
 
-    This article covers non-containerized setups. For upgrading EspoCRM running with Docker, see the instructions [here](docker/installation/#upgrading).
+    This article covers non-containerized setups. For upgrading EspoCRM running with Docker, see the instructions [here](docker/installation.md#upgrading).
 
 ## Option 1. Migration
 
