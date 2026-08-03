@@ -20,7 +20,7 @@ with the boundary [Error](../../administration/bpm-events.md#error-intermediate-
 Classifies an input. Returns a category string value or null if the CONFIDENCE_THRESHOLD is provided and the estimated
 confidence is less then the threshold value.
 
-CATEGORIES parameter type: *array{0: string, 1?: ?string}[]*. The first value is a category name, the second is a description.
+CATEGORIES parameter type: *array{0: string, 1?: ?string}[]*. The first value is a category name, the second (optional) is a description.
 
 Examples:
 
