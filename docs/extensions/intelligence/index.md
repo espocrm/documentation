@@ -51,7 +51,7 @@ The Intelligent Paste feature can be enabled per entity type under: Administrati
 
 Users with access to the *Intelligent Paste* role scope can use AI to extract data from input text and populate records.
 
-After enabling this feature, a clipboard button appears in the top-right corner when creating or editing a record.
+After enabling this feature, a clipboard icon button appears in the top-right corner when creating or editing a record.
 
 Clicking the button opens a modal window prompting the user to paste text from the clipboard.
 Alternatively, the user can switch to Compose mode, which allows manual text input.
