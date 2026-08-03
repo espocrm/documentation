@@ -14,23 +14,24 @@ This script automatically installs EspoCRM as a Docker-based application, with N
 
 3. Root or sudo access.
 
-To install, first you need to download the script with wget, then run it. See the examples below.
 
 ## Installation
+
+To install, first you need to download the script with wget, then run it. See the examples below.
 
 ```
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh
 ```
 
-## Installation with SSL/TLS certificate
+### Installation with SSL/TLS certificate
 
 ```
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl
 ```
 
-## Installation without prompts
+### Installation without prompts
 
 ```
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
