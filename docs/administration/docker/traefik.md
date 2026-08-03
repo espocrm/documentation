@@ -1,6 +1,7 @@
 # Traefik and EspoCRM
 
 Traefik is an open-source HTTP reverse proxy (and load balancer) that integrates well with containerized environments.
+It can automatically configure routing and manage TLS certificates through *Let's Encrypt*, simplifying the deployment of secure web applications.
 
 To integrate Traefik with EspoCRM, you can use the Docker Compose environment. You must also have a domain name.
 
