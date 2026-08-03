@@ -11,9 +11,13 @@ Out-of-the-box the WebSocket covers the following features:
 
 !!! important
 
-    You need to have *zmq* php extension installed.
+    You need to have the ZMQ PHP extension installed.
 
-Enable **Use WebSocket** parameter at Administration > Settings.
+!!! note
+
+    EspoCRM Docker image includes the ZMQ extension.
+
+Enable **Use WebSocket** parameter under Administration > Settings.
 
 ## Daemon
 
