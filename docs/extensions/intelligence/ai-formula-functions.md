@@ -25,7 +25,7 @@ CATEGORIES parameter type: *array{0: string, 1?: ?string}[]*. The first value is
 !!! example
 
     Categorize as 'Incident', 'Problem', or 'Question'. If the confidence is lower
-    than 10, it will fallback to 'Other'. The description field is taken as input.
+    than 10, fallback to 'Other'. The description field is taken as input.
     
     ```
     $categories = list(
