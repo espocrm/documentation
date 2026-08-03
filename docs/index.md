@@ -167,6 +167,10 @@
   * [Zoom Integration](extensions/zoom-integration/index.md)
 * Stripe Integration
   * [Stripe Integration](extensions/stripe-integration/index.md)
+* Intelligence
+  * [Overview](extensions/intelligence/index.md) 
+  * [AI formula functions](extensions/intelligence/ai-formula-functions.md) 
+  * [Usage & quota](extensions/intelligence/usage-and-quota.md) 
 * Export Import
   * [Overview](extensions/export-import/overview.md)
   * [Export](extensions/export-import/export.md)
