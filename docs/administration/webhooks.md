@@ -160,6 +160,8 @@ Config parameters related to Webhooks and their default values. Paramerers can b
 
 By default, internal URLs (like *http://localhost*) are forbidden. To allow, you need to define the needed address in the *webhookAllowedAddressList* config parameter, in the following format *host:port*.
 
+In `data/config-internal.php`:
+
 ```
 'webhookAllowedAddressList' => ['localhost:80'],
 ```
