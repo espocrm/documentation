@@ -4,7 +4,7 @@ Caddy is an open-source HTTP/2-enabled web server written in Go. It can automati
 
 To integrate Caddy with EspoCRM, you can use the Docker Compose environment. You must also have a domain name.
 
-1\. Create a directory that will contain your EspoCRM files and database.
+1\. Create a directory.
 
 2\. Create `docker-compose.yml` file in that directory:
 
