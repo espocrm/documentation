@@ -13,7 +13,7 @@ It is recommended that the process flow utilizing these functions is run in [idl
 Functions throw exceptions when an error occurs. They can be caught
 with the boundary [Error](../../administration/bpm-events.md#error-intermediate-event-boundary) event.
 
-#### intelligence\classify
+### intelligence\classify
 
 `intelligence\classify(STRING, CATEGORIES, [CONFIDENCE_THRESHOLD])`
 
@@ -52,7 +52,7 @@ CATEGORIES parameter type: *array{0: string, 1?: ?string}[]*. The first value is
     $category = intelligence\classify(description, $categories);
     ```
 
-#### intelligence\extract
+### intelligence\extract
 
 `intelligence\classify(STRING, SCHEMA)`
 
@@ -79,7 +79,7 @@ Use case. Extract data from an incoming email.
     $productName = $result['productName'] ?? null;
     ```
 
-#### intelligence\summarize
+### intelligence\summarize
 
 `intelligence\summarize(STRING)`
 
@@ -94,7 +94,7 @@ to a field.
     $summaryText = intelligence\summarize(description);
     ```
 
-#### intelligence\createSummaryNote
+### intelligence\createSummaryNote
 
 `intelligence\createSummaryNote(ENTITY_TYPE, ID)`
 
