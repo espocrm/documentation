@@ -1,6 +1,6 @@
 # Installation by Script
 
-This script automatically installs EspoCRM as a Docker image with Nginx server and MariaDB database.
+This script automatically installs EspoCRM as a Docker-based application, with Nginx web server and MariaDB database.
 
 ## Requirements
 
