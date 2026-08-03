@@ -164,7 +164,11 @@ EspoCRM container commands explanation:
 
 ----
 
-Now, start containers with the CLI command `docker compose up -d`.
+3\. Now, start containers with the CLI command:
+
+```
+docker compose up -d
+```
 
 You can track the work of Traefik on the Dashboard at *your_server_IP:8080*.
 
