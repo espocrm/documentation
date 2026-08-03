@@ -22,58 +22,62 @@ confidence is less then the threshold value.
 
 CATEGORIES parameter type: *array{0: string, 1?: ?string}[]*. The first value is a category name, the second (optional) is a description.
 
-Examples:
+!!! example
 
-```
-$categories = list(
-    list('Incident'),
-    list('Problem'),
-    list('Question'),
-);
+    Categorize as 'Incident', 'Problem', or 'Question'. If the confidence is lower
+    than 10, it will fallback to 'Other'. The description field is taken as input.
+    
+    ```
+    $categories = list(
+        list('Incident'),
+        list('Problem'),
+        list('Question'),
+    );
+    
+    $category = intelligence\classify(description, $categories, 10) ?? 'Other';
+    ```
 
-// Returns 'Incident', 'Problem', or 'Question'. If the confidence is lower
-// than 10, it will fallback to 'Other'.
-$category = intelligence\classify(description, $categories, 10) ?? 'Other';
-```
 
-```
-$categories = list(
-    list('Product', "Costomer ran into a problem with the product."),
-    list('Payment', "Customer faced a problem with payment."),
-    list('Other', "Any other issue."),
-);
+!!! example
 
-// Returns 'Product', 'Payment', or 'Other'.
-$category = intelligence\classify(description, $categories);
-```
+    Categorize as 'Product', 'Payment', or 'Other'. The description field is taken as input.
+
+    ```
+    $categories = list(
+        list('Product', "Costomer ran into a problem with the product."),
+        list('Payment', "Customer faced a problem with payment."),
+        list('Other', "Any other issue."),
+    );
+
+    $category = intelligence\classify(description, $categories);
+    ```
 
 #### intelligence\extract
 
 `intelligence\classify(STRING, SCHEMA)`
 
-
-Extract data from text according the provided schema.
+Extracts data from text according the provided schema.
 
 SCHEMA parameter type: *array{0: string, 1?: ?string, 3?: string}[]*. The first value is a name, the second is a description,
 the third (optional) is a type.
 
 Use case. Extract data from an incoming email.
 
-Examples:
-
-```
-$schema = list(
-    list('customerName', 'A customer name.'),
-    list('emailAddress', 'An email address.'),
-    list('productName', 'A product name where the problem occurred.', 'string|null'),
-);
-
-$result = intelligence\extract(description, $schema);
-
-$customerName = $result['customerName'] ?? null;
-$emailAddress = $result['emailAddress'] ?? null;
-$productName = $result['productName'] ?? null;
-```
+!!! example
+    
+    ```
+    $schema = list(
+        list('customerName', 'A customer name.'),
+        list('emailAddress', 'An email address.'),
+        list('productName', 'A product name where the problem occurred.', 'string|null'),
+    );
+    
+    $result = intelligence\extract(description, $schema);
+    
+    $customerName = $result['customerName'] ?? null;
+    $emailAddress = $result['emailAddress'] ?? null;
+    $productName = $result['productName'] ?? null;
+    ```
 
 #### intelligence\summarize
 
@@ -84,11 +88,11 @@ Summarizes a string input.
 Use case. Summarize the description field of a case. Then, the result can be sent in a notification or written
 to a field.
 
-Example:
+!!! example
 
-```
-$summaryText = intelligence\summarize(description);
-```
+    ```
+    $summaryText = intelligence\summarize(description);
+    ```
 
 #### intelligence\createSummaryNote
 
@@ -98,8 +102,8 @@ Creates a summary note in the record's stream. The note is internal (not visible
 
 Use case. Automatically create a summary note for every incoming case.
 
-Example:
+!!! example
 
-```
-intelligence\createSummaryNote('Case', id);
-```
+    ```
+    intelligence\createSummaryNote('Case', id);
+    ```
