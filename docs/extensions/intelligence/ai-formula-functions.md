@@ -10,7 +10,7 @@ The Intelligence extension provides the following AI formula functions:
 These formula functions can be utilized in the [BPM](../../administration/bpm.md) tool.
 It is recommended that the process flow utilizing these functions is run in [idle](../../administration/bpm-tips.md#execution-in-idle).
 
-Functions throw exceptions when an error occurs. Errors can be caught
+Functions throw exceptions when an error occurs. They can be caught
 with the boundary [Error](../../administration/bpm-events.md#error-intermediate-event-boundary) event.
 
 #### intelligence\classify
