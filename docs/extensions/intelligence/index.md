@@ -1,6 +1,6 @@
 # Intelligence Extension
 
-The Intelligence [extension](https://www.espocrm.com/extensions/intelligence/) integrates EspoCRM with LLM providers:
+The Intelligence [extension](https://www.espocrm.com/extensions/intelligence/) integrates EspoCRM with AI providers:
 
 - OpenAI
 - Gemini
