@@ -164,7 +164,7 @@ EspoCRM container commands explanation:
 
 ----
 
-3\. Now, start containers with the CLI command:
+3\. Now, spin up the containers with the CLI command:
 
 ```
 docker compose up -d
