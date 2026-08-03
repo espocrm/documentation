@@ -54,6 +54,8 @@ The summary output includes:
 
 The user can create an internal stream post with the summary or copy the summary to the clipboard.
 
+The record name, description and stream history are provided to the AI as context.
+
 ### Intelligent Paste
 
 The Intelligent Paste feature can be enabled per entity type under: Administration > Entity Manager > {Entity Type} > Edit.
@@ -84,4 +86,4 @@ The user can choose the desired tone and length and provide instructions.
 Then, they can generate a message by clicking the Compose button (or pressing Ctrl + Enter).
 Once the result is available, clicking the Apply button (or pressing Ctrl + Enter) copies the content to the email body.
 
-The record description and stream history are provided to the AI as context (considering the user has access to them).
+The parent record description and stream history are provided to the AI as context.
