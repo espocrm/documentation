@@ -14,7 +14,7 @@ This script automatically installs EspoCRM as a Docker-based application, with N
 
 3. Root or sudo access.
 
-To install, first you need to download the script with wget, then run it. See the example below.
+To install, first you need to download the script with wget, then run it. See the examples below.
 
 ## Installation
 
