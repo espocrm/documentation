@@ -1,11 +1,11 @@
 # Traefik and EspoCRM
 
-Traefik is an open-source reverse proxy that makes it easy to work with microservices and/or just containers with your applications.
+Traefik is an open-source HTTP reverse proxy (and load balancer) that integrates well with containerized environments.
 
-To connect Traefik and EspoCRM, you can use the Docker Compose environment. Also, you must have your own domain.
+To integrate Traefik with EspoCRM, you can use the Docker Compose environment. You must also have a domain name.
 
-1. Create a folder that will contain your EspoCRM files and database.
-2. Create here a `docker-compose.yml` file:
+1\. Create a directory that will contain your EspoCRM files and database.
+2\. Create `docker-compose.yml` file in that directory:
 
 #### docker-compose.yml
 
