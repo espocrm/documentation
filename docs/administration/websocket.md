@@ -17,6 +17,10 @@ Enable **Use WebSocket** parameter at Administration > Settings.
 
 ## Daemon
 
+!!! note
+
+    Docker compose [setup](docker/installation.md#docker-compose) already includes the WebSocket daemon.
+
 You need to run `websocket.php` as a daemon.
 
 ### Using systemd
