@@ -140,4 +140,8 @@ YOUR_DOMAIN {
 
 ----
 
-Now, start containers with the CLI command `docker compose up -d`.
+4\. Now, start containers with the CLI command:
+
+```
+docker compose up -d
+```
