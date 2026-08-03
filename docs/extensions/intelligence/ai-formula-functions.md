@@ -31,6 +31,8 @@ $categories = list(
     list('Question'),
 );
 
+// Returns 'Incident', 'Problem', or 'Question'. If the confidence is lower
+// than 10, it will fallback to 'Other'.
 $category = intelligence\classify(description, $categories, 10) ?? 'Other';
 ```
 
@@ -41,6 +43,7 @@ $categories = list(
     list('Other', "Any other issue."),
 );
 
+// Returns 'Product', 'Payment', or 'Other'.
 $category = intelligence\classify(description, $categories);
 ```
 
