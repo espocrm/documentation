@@ -54,7 +54,7 @@ The summary output includes:
 
 The user can create an internal stream post with the summary or copy the summary to the clipboard.
 
-The record name, description and stream history are provided to the AI as context.
+The record name, description and stream history are provided to the AI as context. If the user does not have access to the stream, then the stream history is omitted.
 
 ### Intelligent Paste
 
@@ -86,4 +86,4 @@ The user can choose the desired tone and length and provide instructions.
 Then, they can generate a message by clicking the Compose button (or pressing Ctrl + Enter).
 Once the result is available, clicking the Apply button (or pressing Ctrl + Enter) copies the content to the email body.
 
-The parent record description and stream history are provided to the AI as context.
+The parent record description and stream history are provided to the AI as context. If the user does not have access to the stream, then the stream history is omitted.
