@@ -60,7 +60,7 @@ Administration > Intelligence panel > Plans > top-right menu > Process Replenish
 
 ### Ledger
 
-Credits are controlled by a ledger. There three types of ledger entries:
+Credits are controlled by a ledger. There are three types of ledger entries:
 
 - Usage – negative amount, created automatically;
 - Replenishment – positive amount, created automatically;
