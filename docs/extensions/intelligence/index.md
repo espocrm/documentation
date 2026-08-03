@@ -83,3 +83,5 @@ When composing an email in the modal window, the *AI Composer* button is availab
 The user can choose the desired tone and length and provide instructions.
 Then, they can generate a message by clicking the Compose button (or pressing Ctrl + Enter).
 Once the result is available, clicking the Apply button (or pressing Ctrl + Enter) copies the content to the email body.
+
+The record description and stream history are provided to the AI as context (considering the user has access to them).
