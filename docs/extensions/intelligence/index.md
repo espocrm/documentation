@@ -31,7 +31,7 @@ as different models may perform better on specific tasks.
 
 ### Summary
 
-The Summarize feature can be enabled per entity type under: Administration > Entity Manager > {Entity Type} > Edit.
+The Summary feature can be enabled per entity type under: Administration > Entity Manager > {Entity Type} > Edit.
 
 Users with access to the *Intelligent Summary* role scope will be able to summarize records. After enabling the feature,
 the button appears in the top-right corner in the record detail view.
