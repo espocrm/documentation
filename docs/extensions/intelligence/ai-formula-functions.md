@@ -59,7 +59,7 @@ CATEGORIES parameter type: *array{0: string, 1?: ?string}[]*. The first value is
 Extracts data from text according the provided schema.
 
 SCHEMA parameter type: *array{0: string, 1?: ?string, 3?: string}[]*. The first value is a name, the second is a description,
-the third (optional) is a type.
+the third (optional) is a value type.
 
 Use case. Extract data from an incoming email.
 
