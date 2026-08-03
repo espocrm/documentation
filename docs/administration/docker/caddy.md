@@ -1,6 +1,6 @@
 # Caddy and EspoCRM
 
-Caddy is an open-source HTTP/2-enabled web server written in Go.
+Caddy is an open-source HTTP/2-enabled web server written in Go. It can automatically manage TLS certificates, simplifying the deployment of web applications.
 
 To integrate Caddy with EspoCRM, you can use the Docker Compose environment. You must also have a domain name.
 
