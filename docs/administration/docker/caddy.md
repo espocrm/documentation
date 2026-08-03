@@ -140,7 +140,7 @@ YOUR_DOMAIN {
 
 ----
 
-4\. Now, start containers with the CLI command:
+4\. Now, spin up the containers with the CLI command:
 
 ```
 docker compose up -d
