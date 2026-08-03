@@ -75,3 +75,6 @@ add the Intelligence dashlet to their dashboard.
 
 An admin can check the system user balance under:
 Administration > Intelligence panel > Ledger > top-right menu > System User Balance.
+
+By utilizing the [Reports](../../user-guide/reports.md) feature, it is possible to create a grid report
+with user balances.
