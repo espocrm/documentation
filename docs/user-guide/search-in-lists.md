@@ -94,15 +94,15 @@ text filter input.
 You can combine preset filters with boolean filters. You can also add more field filters while a preset is selected.
 In this case, all field filters as from the selected preset will show up.
 
-## Search in relationship panels
-
-All aforementioned filters are also available in relationship panels. To access the relationship list view, click
-View List from the dropdown in the top-right corner of the panel.
-
 ## Selecting all results
 
 While search criteria is applied, it is possible to select all results. For this, click the small dropdown icon
 next to the checkbox in the table header row. Then, click *Select All Results*.
+
+## Search in relationship panels
+
+All aforementioned filters are also available in relationship panels. To access the relationship list view, click
+View List from the dropdown in the top-right corner of the panel.
 
 ### Selecting all results in relationship panels
 
