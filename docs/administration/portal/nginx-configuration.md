@@ -1,6 +1,8 @@
 # Configuring Portal in Nginx
 
-It's possible to be able to access to the Portal by a different URL. You need to set the Custom URL field in the Portal record. For example, you can use your domain name `portal.my-company.com` to access the Portal.
+You can configure the web server so that the Portal is accessed by a different URL.
+
+First, you need to set the Custom URL field in the Portal record. For example, you can use your domain name `portal.my-company.com` to access the Portal.
 
 Config example:
 
