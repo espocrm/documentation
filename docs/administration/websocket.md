@@ -63,6 +63,10 @@ Command to start the service:
 
 You need to set up a proxy that will forward SSL requests to our websocket server and vice-versa.
 
+!!! note
+
+    Docker [script setup](installation-by-script.md), setups with [Traefik](docker/traefik.md) and [Caddy](docker/caddy.md) reverse proxies already include SSL for WebSocket configured.
+
 ### Apache
 
 You need to have *proxy* and *proxy_wstunnel* modules installed.
