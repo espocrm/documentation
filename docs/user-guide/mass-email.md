@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Mass Email
 
 In this article:
@@ -29,6 +34,10 @@ You need to have at least one **Target List** with target records and an **Email
 If everything is set up right, emails should go out. They will be sent in portions. You can change the portion size at Administration > Outbound Emails. The administrator can change the **scheduling** at Administration > Scheduled Jobs > Send Mass Emails.
 
 You can check if emails are sent in the Log panel on the Campaign detail view.
+
+!!! warning
+
+    If you send emails to Accounts rather than Contacts or Leads, make sure that the email template does not contain placeholders such as *{Person.firstName}*. These placeholders won't be resolved for Accounts.
 
 ## Test sending
 
