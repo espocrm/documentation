@@ -37,7 +37,7 @@ You can check if emails are sent in the Log panel on the Campaign detail view.
 
 !!! warning
 
-    If you send emails to Accounts rather than Contacts or Leads, make sure that the email template does not contain placeholders such as *{Person.firstName}*. These placeholders won't be resolved for Accounts.
+    If you send emails to Accounts rather than Contacts or Leads, make sure that the email template does not contain Person placeholders such as *{Person.firstName}*. These placeholders won't be resolved for Accounts.
 
 ## Test sending
 
