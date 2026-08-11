@@ -142,7 +142,7 @@ $signature = base64_encode($webhookId . ':' . hash_hmac('sha256', $payload, $sec
 
 ## Config parameters
 
-Config parameters related to Webhooks and their default values. Paramerers can be set manually in `data/config-internal.php`.
+Config parameters related to Webhooks and their default values. Parameters can be set manually in `data/config-internal.php`.
 
 * `webhookMaxCountPerUser` = `50`
 * `webhookQueueEventPortionSize` = `20`
