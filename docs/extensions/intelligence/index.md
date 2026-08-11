@@ -8,6 +8,7 @@ tags:
 
 # Intelligence
 
+*Requires EspoCRM v10.0.3 or greater.*
 
 The Intelligence [extension](https://www.espocrm.com/extensions/intelligence/) integrates EspoCRM with AI providers:
 
