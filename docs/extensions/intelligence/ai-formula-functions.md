@@ -44,7 +44,7 @@ CATEGORIES parameter type: *array{0: string, 1?: ?string}[]*. The first value is
 
     ```
     $categories = list(
-        list('Product', "Costomer ran into a problem with the product."),
+        list('Product', "Customer ran into a problem with the product."),
         list('Payment', "Customer faced a problem with payment."),
         list('Other', "Any other issue."),
     );

@@ -404,7 +404,7 @@ The passed binding has a higher priority than the default binding (the default b
 
 A constructor dependency can be marked with a qualifier. Then, it is possible to bind specifically for this qualifier.
 
-Applying a qualifier to a contructor parameter:
+Applying a qualifier to a constructor parameter:
 
 ```php
 <?php

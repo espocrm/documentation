@@ -40,7 +40,7 @@ Config parameters (as of v10.0):
 - `adminUpgrade` – (boolean) – `false` by default;
 - `adminExtensionUpload` – (boolean) –`true` by default;
 
-The parameter `adminUpgradeDisabled` (boolean) disables both upgrade via UI and instlling extensions via UI.
+The parameter `adminUpgradeDisabled` (boolean) disables both upgrade via UI and installing extensions via UI.
 
 
 ## Use maintenance mode when upgrading
