@@ -10,7 +10,7 @@
 * Docker
   * [Installation by script](administration/installation-by-script.md)
   * [Installation with Docker](administration/docker/installation.md)
-  * [Traefik revetse proxy](administration/docker/traefik.md)
+  * [Traefik reverse proxy](administration/docker/traefik.md)
   * [Caddy reverse proxy](administration/docker/caddy.md)
 * [Installation](administration/installation.md)
 * [Upgrading](administration/upgrading.md)
