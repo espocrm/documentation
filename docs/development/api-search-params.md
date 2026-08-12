@@ -217,9 +217,15 @@ Examples below are given in JSON format.
 }
 ```
 
-### linkedWith, notLinkedWith
+### linkedWith, notLinkedWith, linkedWithAll
 
-For link-multiple fields.
+For link-multiple fields. 
+
+Correspond to the following UI filters:
+
+- *linkedWith* – *Any Of*
+- *notLinkedWith* – *None Of*
+- *linkedWithAll* – *All Of*
 
 ```json
 {
@@ -232,6 +238,11 @@ For link-multiple fields.
 ### isLinked, isNotLinked
 
 For link-multiple fields. Whether is linked or not linked with any record.
+
+Correspond to the following UI filters:
+
+- *isLinked* – *Is Not Empty*
+- *isNotLinked* – *Is Empty*
 
 ```json
 
