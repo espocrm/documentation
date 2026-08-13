@@ -31,6 +31,6 @@ You can create a `composer.json` in your module directory to include 3rd party l
 
 ## JS modules
 
-When referencing ES (or AMD) modules located in an Espo module, use the path: `module/{your-module}/*`. Example: `module/my-module/views/fields/my-field`.
+When referencing ES (or AMD) modules located in an Espo module, use the path: `module/{your-module}/*`. Example: `module/my-module/views/my-view`, it corresponds to the file `client/custom/modules/my-module/src/views/my-view.ts` (or `*.js`).
 
 When using [ext-template](https://github.com/espocrm/ext-template), the path to your Espo module will be automatically written in *jsconfig.json*. That will allow an IDE to properly locate module files. 
