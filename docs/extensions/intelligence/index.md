@@ -15,6 +15,7 @@ The Intelligence [extension](https://www.espocrm.com/extensions/intelligence/) i
 - OpenAI
 - Gemini
 - Claude
+- Custom OpenAI-compatible
 
 The extension provides the following AI features:
 
