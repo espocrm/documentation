@@ -68,6 +68,7 @@ Parameters:
 * Preserve Audit Log – disables cleanup of the audit log; this parameter is applicable only if Stream is disabled, since if Stream is enabled, audit log records are not being deleted.
 * Collaborators – the ability to [share](roles-management.md#collaborators) records with specific users.
 * Multiple Assigned Users – the ability to assign multiple users to a record.
+* Duplicate check fields – what fields to check when performing checking for duplicates.
 * Categories – records can be organized into tree-like categories; available for Base and Base Plus types (as of v10.0).
 * Lockable – enables record locking (as of v10.0).
 * Transactional Save – enables wrapping saves and removals into DB transactions (as of v10.0).
