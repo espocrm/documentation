@@ -112,11 +112,15 @@ Class: `Espo\Core\Utils\Language`
 
 A util for a default language of the system.
 
+As of v10.1, can be injected using the [qualifier](di.md#qualifiers) `default`.
+
 ## baseLanguage
 
 Class: `Espo\Core\Utils\Language`
 
 A util for *en_US* language.
+
+As of v10.1, can be injected using the [qualifier](di.md#qualifiers) `base`.
 
 ## formulaManager
 
