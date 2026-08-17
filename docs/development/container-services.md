@@ -138,14 +138,26 @@ Class: `Espo\Tools\Stream\Service`
 
 Class: `Espo\Core\Utils\Config\ApplicationConfig`
 
+Application config.
+
 ## systemConfig
 
 *As of v9.1.*
 
 Class: `Espo\Core\Utils\Config\SystemConfig`
 
+System config.
+
 ## session
 
 *As of v10.0.*
 
 Interface: `Espo\Core\Session\Session`
+
+Sessions.
+
+## dataCache
+
+Class: `Espo\Core\Utils\DataCache`.
+
+For data caching .
