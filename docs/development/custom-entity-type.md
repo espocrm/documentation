@@ -1,6 +1,6 @@
 # Custom Entity Type
 
-This article gives information about how to create custom entity types manually (without using the UI).
+This article gives information about how to create custom entity types manually (without using the [UI tool](../administration/entity-manager.md)).
 
 In the example, the entity type will be defined in the `custom/Espo/Modules/MyModule` directory which corresponds to the `Espo\Modules\MyModule` namespace. You can also define in `custom/Espo/Custom` directory which corresponds to the `Espo\Custom` namespace.
 
