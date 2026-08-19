@@ -238,7 +238,10 @@ $account = $entityManager
     ->getById($id);
 ```
 
-Note: To be able to fetch the repository by an entity type, your [custom entity](custom-entity-type.md#entity-class) needs to have the *ENTITY_TYPE* constant.
+!!! note
+
+    To be able to fetch the repository by an entity type, your [custom entity](custom-entity-type.md#entity-class) needs to have the `ENTITY_TYPE` constant.
+    The value of the constant must be set to the entity type name.
 
 Get a repository by an entity type:
 
