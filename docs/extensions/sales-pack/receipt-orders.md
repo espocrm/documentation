@@ -34,3 +34,7 @@ It's possible to import Serial numbers from a CSV file within a Receipt Order.
 A Receipt Order can be locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure the field list at: Administration > Entity Manager > Receipt Order > Edit.
 
 If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.
+
+## Config parameters
+
+- `receiptOrderSerialNumberImportMaxSize` – `500` – max number of serial numbers per import;
