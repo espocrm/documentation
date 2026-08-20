@@ -19,6 +19,7 @@ In the article:
 * [Automatic numbering](#automatic-numbering)
 * [Copying values from product to quote item](#copying-values-from-product-to-quote-item)
 * [Locking](#locking)
+* [Expiration date](#expiration-date)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
 
 ## Converting from Opportunity
@@ -190,6 +191,13 @@ You can select which fields you need to be copied at Administration > Entity Man
 A Quote can be locked if it's completed or canceled. When a record is locked, a specific fields become read-only. An administrator can configure the field list at: Administration > Entity Manager > Quote > Edit.
 
 If the settings parameter *Forbid order unlocking* is checked, once a record is locked, it can be unlocked only by an administrator.
+
+## Expiration date
+
+*As of Sales Pack v4.3.*
+
+The Quote's Expiration Date field specifies when the quote expires and is no longer valid. Note that there’s no out-of-the-box automation that automatically updates the quote’s status based on its expiration date.
+You can utilize the Workflows tool for this purpose.
 
 ## Automation with Workflows or BPM
 
