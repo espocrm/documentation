@@ -58,7 +58,7 @@ It's possible to specify a discount in percents. To have this ability, an admini
 
 Inbound payments, credit notes, and write-offs can be allocated to an invoice. Allocations reduce the amount due of an invoice.
 
-Applied allocations can be viewed in the Allocations panel of an invoice. To view details of a specific allocation, click View from the dropdown.
+Applied allocations can be viewed in the (Incoming) Allocations panel of an invoice. To view details of a specific allocation, click View from the dropdown.
 
 ## Payment terms
 
