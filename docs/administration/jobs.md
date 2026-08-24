@@ -30,6 +30,10 @@ If you want a job to be run as often as possible, you need to set the scheduling
 
 ## Setting up
 
+!!! note
+
+    Daemon is already configured in our [Docker setup](docker/installation.md).
+
 There are two job processing setup options:
 
 * [Crontab](#cron)
@@ -40,6 +44,7 @@ For both, it's **highly recommended** to turn on processing jobs **in parallel**
 !!! note
 
     Parallel processing is not supported in a Windows environment.
+
 
 ### Cron
 
