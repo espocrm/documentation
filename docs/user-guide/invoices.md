@@ -215,6 +215,8 @@ Additional fields that are mapped to E-Invoice:
 * Purchase Order Reference
 * Note
 * Delivery Date – BT-72
+* Period Start Date 
+* Period End Date
 
 If you have a requirement to add fields that are not present in Espo out-of-the-box, a developer can implement a custom e-invoice preparator to map custom fields to e-invoice.
 
