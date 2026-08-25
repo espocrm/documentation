@@ -29,6 +29,13 @@ The Party Type field has two options: Customer and Supplier. A payment with the 
 
 A payment must be in the same currency as the document it's allocated to.
 
+### Payment-to-payment allocation
+
+*As of Sales Pack v4.4.*
+
+A payment entry can be allocated to another payment in the opposite direction. This is useful when we need to refund an overpaid amount and there is no need to issue a credit or debit note.
+Payment-to-payment allocation works for both party types: Customer and Supplier.
+
 ## Payment methods
 
 A Payment Method must be specified for each Payment entry. By default, there's no any payment method in the system, hence
