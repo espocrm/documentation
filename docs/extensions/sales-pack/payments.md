@@ -25,7 +25,7 @@ The Party Type field has two options: *Customer* and *Supplier*. A payment with 
 
 ### Allocation
 
-An inbouund payment can be allocated to:
+An inbound payment can be allocated to:
 
 - Invoices
 - Supplier Credits
