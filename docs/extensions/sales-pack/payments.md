@@ -42,7 +42,7 @@ Payment-to-payment allocation works for both party types: Customer and Supplier.
 
     A customer was invoiced for $900 but mistakenly paid $1,000. The customer requested a refund of the $100 overpayment rather than leaving it to cover future invoices.
 
-    $900 of the inbound payment entry we allocte to the invoice. To refund the rest, we create another outbound payment entry for $100 and fully allocate it to the inbound payment.
+    $900 of the inbound payment entry we allocate to the invoice. To refund the rest, we create another outbound payment entry for $100 and fully allocate it to the inbound payment.
     Then, we can complete the inbound payment because its remaining amount is zero.
 
 ## Payment methods
