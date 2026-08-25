@@ -57,6 +57,8 @@ Payment-to-payment allocation works for both party types: Customer and Supplier.
     $900 of the inbound payment entry we allocate to the invoice. To refund the rest, we create another outbound payment entry for $100 and fully allocate it to the inbound payment.
     Then, we can complete the inbound payment because its remaining amount is zero.
 
+Note that allocation is possible in both directions. However, it may be preferable to consistently follow a rule, such as allocating later payments to earlier ones.
+
 ## Payment methods
 
 A Payment Method must be specified for each Payment entry. By default, there's no any payment method in the system, hence
