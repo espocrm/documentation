@@ -25,15 +25,17 @@ When the payment amount is received, the status of the payment entry should be s
 
 If a payment exceeds the invoices' outstanding amount, the surplus can be allocated later to future invoices of the customer.
 
-The Party Type field has two options: Customer and Supplier. A payment with the Customer party type can be allocated to invoices or credit notes, depending on its direction. A payment with the Supplier party type can be allocated to bills or bill credits.
-
 A payment must be in the same currency as the document it's allocated to.
+
+### Party type
+
+The Party Type field has two options: *Customer* and *Supplier*. A payment with the Customer party type can be allocated to invoices or credit notes, depending on its direction. A payment with the Supplier party type can be allocated to bills or bill credits.
 
 ### Payment-to-payment allocation
 
 *As of Sales Pack v4.4.*
 
-A payment entry can be allocated to another payment in the opposite direction. This is useful when we need to refund an overpaid amount and there is no need to issue a credit or debit note.
+A payment entry can be allocated to another payment in of opposite direction. This is useful when we need to refund an overpaid amount and there is no need to issue a credit or debit note.
 Payment-to-payment allocation works for both party types: Customer and Supplier.
 
 ## Payment methods
