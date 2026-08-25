@@ -17,21 +17,33 @@ A Payment entry captures a single payment transaction, either inbound or outboun
 
 Access to Payments is controlled by Roles. Payments can be created from the Payments list view. Payments can also be created from the Invoice and Credit Note detail views.
 
-An inbound payment can be allocated to one or more Invoices or Supplier Credits, an outbound payment can be allocated to one or more Credit Notes or Supplier Bills.
-
-When a payment amount is received, the payment entry is supposed to be set to the *Paid* status. After the payment amount is fully allocated, it has to be set to *Completed*.
-
 When the payment amount is received, the status of the payment entry should be set to *Paid*. Once the full amount has been allocated, the status has to be updated to *Completed*.
-
-If a payment exceeds the invoices' outstanding amount, the surplus can be allocated later to future invoices of the customer.
-
-A payment must be in the same currency as the document it's allocated to.
 
 ### Party type
 
 The Party Type field has two options: *Customer* and *Supplier*. A payment with the Customer party type can be allocated to invoices or credit notes, depending on its direction. A payment with the Supplier party type can be allocated to bills or bill credits.
 
-### Payment-to-payment allocation
+### Allocation
+
+An inbouund payment can be allocated to:
+
+- Invoices
+- Supplier Credits
+- Outbound Payment
+
+An outbound payment can be allocated to:
+
+- Credit Notes
+- Supplier Bills
+- Inbound Payment
+
+A single payment entry can be allocated to multiple documents.
+
+If a payment exceeds the invoices' outstanding amount, the surplus can be allocated later to future invoices of the customer. The same applies to bills and credit notes.
+
+A payment must be in the same currency as the document it's allocated to.
+
+#### Payment-to-payment allocation
 
 *As of Sales Pack v4.4.*
 
