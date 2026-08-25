@@ -35,8 +35,15 @@ The Party Type field has two options: *Customer* and *Supplier*. A payment with 
 
 *As of Sales Pack v4.4.*
 
-A payment entry can be allocated to another payment in of opposite direction. This is useful when we need to refund an overpaid amount and there is no need to issue a credit or debit note.
+A payment entry can be allocated to another payment of the opposite direction. This is useful when we need to refund an overpaid amount and there is no need to issue a credit or debit note.
 Payment-to-payment allocation works for both party types: Customer and Supplier.
+
+!!! example
+
+    A customer was invoiced for $900 but mistakenly paid $1,000. The customer requested a refund of the $100 overpayment rather than leaving it to cover future invoices.
+
+    $900 of the inbound payment entry has been allocated to the invoice. We create another outbound payment entry for $100 and fully allocate it to the inbound payment.
+    Then, we can then complete the inbound payment because its remaining amount is zero.
 
 ## Payment methods
 
