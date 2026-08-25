@@ -28,13 +28,13 @@ The Party Type field has two options: *Customer* and *Supplier*. A payment with 
 An inbound payment can be allocated to:
 
 - Invoices
-- Supplier Credits
+- Bill Credits
 - Outbound Payment
 
 An outbound payment can be allocated to:
 
 - Credit Notes
-- Supplier Bills
+- Bills
 - Inbound Payment
 
 A single payment entry can be allocated to multiple documents.
