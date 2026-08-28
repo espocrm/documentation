@@ -280,6 +280,7 @@ For storing multiple links.
 Parameters:
 
 * Max Item Count – max number or items;
+* Require Protocol – if enabled, an URL must contain the protocol part (as of v10.1);
 * Strip – if checked, then a protocol part and trailing `/` will be stripped.
 
 ## Wysiwyg
