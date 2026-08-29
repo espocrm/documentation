@@ -332,7 +332,7 @@ An auto-incrementing number of string type with a possible prefix and specific l
 
 Parameters:
 
-* Prefix – a text that will be preprended to a number;
+* Prefix – a text that will be prepended to a number;
 * Next Number – a number that will be applied to the next created record;
 * Pad Length – a length of the numeric part; if less, then will be padded with zero digits, e.g. `00001`;
 * Copy to clipboard button.

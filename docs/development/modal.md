@@ -26,7 +26,7 @@ define('custom:views/modals/my-dialog', ['views/modal', 'model'], (ModalView, Mo
             // action buttons
             this.buttonList = [
                 {
-                    name: 'doSomething', // handler for 'doSomething' action is bellow
+                    name: 'doSomething', // handler for 'doSomething' action is below
                     text: this.translate('Some Action', 'labels', 'MyScope'), // button label 
                     style: 'danger',
                     onClick: () => this.actionDoSomething(),

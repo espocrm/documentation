@@ -42,7 +42,7 @@ By default, when displaying a field, the system tries to read the view `"views/f
 
 ## params
 
-Array of field parameters. Theses parameters then can be edited for every field of this field type in the Entity Manager tool.
+Array of field parameters. These parameters then can be edited for every field of this field type in the Entity Manager tool.
 
 ### Example
 
@@ -84,7 +84,7 @@ An object of field type definition. The most of them is used as database column 
 
 Some other parameters:
 
-- *notStorable* – the column of field with this field type wont be created in the database (_true_ | _false_);
+- *notStorable* – the column of field with this field type won't be created in the database (_true_ | _false_);
 - *readOnly* – field is not editable (_true_ | _false_);
 - *layoutListDisabled* – field can not be displayed on the list view (_true_ | _false_).
 

@@ -149,7 +149,7 @@ Note, that this won't work for new records in before-create script because a rec
 
 `ext\user\sendAccessInfo(USER_ID)`
 
-Send an email with access info to a specific user (via email). A user password will be reset. The user will be promted to specify their 
+Send an email with access info to a specific user (via email). A user password will be reset. The user will be prompted to specify their 
 new password. This function is useful when creating a new user via formula. (as of v7.1)
 
 !!! example

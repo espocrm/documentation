@@ -240,7 +240,7 @@ $account = $entityManager
 
 !!! note
 
-    To be able to acess the repository by an entity class, your [custom entity](custom-entity-type.md#entity-class) class must have a public `ENTITY_TYPE` constant.
+    To be able to access the repository by an entity class, your [custom entity](custom-entity-type.md#entity-class) class must have a public `ENTITY_TYPE` constant.
     The value of the constant must be set to the entity type name.
 
 Get a repository by an entity type:
