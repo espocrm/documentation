@@ -39,17 +39,17 @@ docker run \
   --restart unless-stopped \
   -e MARIADB_DATABASE=espocrm \
   -e MARIADB_USER=espocrm \
-  -e MARIADB_PASSWORD=your_database_password \
-  -e MARIADB_ROOT_PASSWORD=your_root_password \
+  -e MARIADB_PASSWORD=database_password \
+  -e MARIADB_ROOT_PASSWORD=database_root_password \
   -v espocrm-db:/var/lib/mysql \
   -d mariadb && \
 docker run \
   --name espocrm \
   --network espocrm-network \
   --restart unless-stopped \
-  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
+  -e ESPOCRM_DATABASE_PASSWORD=database_password \
   -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
+  -e ESPOCRM_ADMIN_PASSWORD=admin_password \
   -v espocrm-data:/var/www/html/data \
   -v espocrm-custom:/var/www/html/custom \
   -v espocrm-custom-client:/var/www/html/client/custom \
@@ -64,7 +64,7 @@ docker run \
   -d espocrm/espocrm
 ```
 
-Then, access it via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
+Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `admin_password`.
 
 #### Step by step
 
@@ -94,8 +94,8 @@ docker run \
   --restart unless-stopped \
   -e MARIADB_DATABASE=espocrm \
   -e MARIADB_USER=espocrm \
-  -e MARIADB_PASSWORD=your_database_password \
-  -e MARIADB_ROOT_PASSWORD=your_root_password \
+  -e MARIADB_PASSWORD=database_password \
+  -e MARIADB_ROOT_PASSWORD=database_root_password \
   -v espocrm-db:/var/lib/mysql \
   -d mariadb
 ```
@@ -107,9 +107,9 @@ docker run \
   --name espocrm \
   --network espocrm-network \
   --restart unless-stopped \
-  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
+  -e ESPOCRM_DATABASE_PASSWORD=database_password \
   -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
+  -e ESPOCRM_ADMIN_PASSWORD=admin_password \
   -v espocrm-data:/var/www/html/data \
   -v espocrm-custom:/var/www/html/custom \
   -v espocrm-custom-client:/var/www/html/client/custom \
@@ -129,7 +129,7 @@ docker run \
   -d espocrm/espocrm
 ```
 
-Then, access it via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
+Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `admin_password`.
 
 #### Custom site URL
 
@@ -142,14 +142,14 @@ docker run \
   -p 8080:80 \
   -e ESPOCRM_DATABASE_HOST=espocrm-db \
   -e ESPOCRM_DATABASE_USER=espocrm \
-  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
+  -e ESPOCRM_DATABASE_PASSWORD=database_password \
   -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
+  -e ESPOCRM_ADMIN_PASSWORD=admin_password \
   -e ESPOCRM_SITE_URL=http://192.168.0.100:8080 \
   -d espocrm/espocrm:latest
 ```
 
-Then, access it via `http://192.168.0.100:8080` with credentials `admin` and `your_admin_password`.
+Then, access the EspoCRM instance via `http://192.168.0.100:8080` with the credentials: `admin` and `admin_password`.
 
 #### Reset
 
@@ -182,10 +182,10 @@ services:
     image: mariadb:latest
     container_name: espocrm-db
     environment:
-      MARIADB_ROOT_PASSWORD: your_root_password
+      MARIADB_ROOT_PASSWORD: database_root_password
       MARIADB_DATABASE: espocrm
       MARIADB_USER: espocrm
-      MARIADB_PASSWORD: your_database_password
+      MARIADB_PASSWORD: database_password
     volumes:
       - espocrm-db:/var/lib/mysql
     restart: unless-stopped
@@ -202,9 +202,9 @@ services:
     environment:
       ESPOCRM_DATABASE_HOST: espocrm-db
       ESPOCRM_DATABASE_USER: espocrm
-      ESPOCRM_DATABASE_PASSWORD: your_database_password
+      ESPOCRM_DATABASE_PASSWORD: database_password
       ESPOCRM_ADMIN_USERNAME: admin
-      ESPOCRM_ADMIN_PASSWORD: your_admin_password
+      ESPOCRM_ADMIN_PASSWORD: admin_password
       ESPOCRM_SITE_URL: "http://localhost:8080"
     volumes:
       - espocrm-data:/var/www/html/data
@@ -279,7 +279,7 @@ More about *Installation Environments* you can find [here](#installation-environ
 docker compose up -d
 ```
 
-5\. Access it at `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
+5\. Access it at `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `admin_password`.
 
 #### Reset
 
@@ -809,15 +809,15 @@ In MySQL 8.4 there were changes in the authentication procedure, so you may enco
 
 Notes:
 
-- Replace the `YOUR_ROOT_PASSWORD` with your MySQL root password.
-- Replace the `YOUR_ESPOCRM_DB_PASSWORD` with your MySQL espocrm user password.
+- Replace the `DATABASE_ROOT_PASSWORD` with your MySQL root password.
+- Replace the `DATABASE_ESPOCRM_PASSWORD` with your MySQL `espocrm` user's password.
 
 ```
 sudo docker exec -i mysql mysql --user=root -p -e "
-  ALTER USER IF EXISTS 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ROOT_PASSWORD';
-  ALTER USER IF EXISTS 'root'@'%' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ROOT_PASSWORD';
-  ALTER USER IF EXISTS 'espocrm'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ESPOCRM_DB_PASSWORD';
-  ALTER USER IF EXISTS 'espocrm'@'%' IDENTIFIED WITH caching_sha2_password BY 'YOUR_ESPOCRM_DB_PASSWORD';"
+  ALTER USER IF EXISTS 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'DATABASE_ROOT_PASSWORD';
+  ALTER USER IF EXISTS 'root'@'%' IDENTIFIED WITH caching_sha2_password BY 'DATABASE_ROOT_PASSWORD';
+  ALTER USER IF EXISTS 'espocrm'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'DATABASE_ESPOCRM_PASSWORD';
+  ALTER USER IF EXISTS 'espocrm'@'%' IDENTIFIED WITH caching_sha2_password BY 'DATABASE_ESPOCRM_PASSWORD';"
 ```
 
 2\. Remove from *docker-compose.yml* file the following line: `command: --default-authentication-plugin=mysql_native_password`.
