@@ -21,11 +21,11 @@ Users can reset their password from the login form by clicking 'Forgot Password?
 
 ![Menu](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/passwords/login-form.png)
 
-An administrator can disable the ability to recover passwords at Administration > Authentications > Passwords. It can be disabled for all users, for admin users or for internal users.
+An administrator can disable the ability to recover passwords at Administration > Authentication > Passwords. It can be disabled for all users, for admin users or for internal users.
 
 ## Password strength
 
-An administrator can configure password strength settings at Administration > Authentications > Passwords. Available parameters:
+An administrator can configure password strength settings at Administration > Authentication > Passwords. Available parameters:
 
 * Minimum password length;
 * Number of letters required in password;

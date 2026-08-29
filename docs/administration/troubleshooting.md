@@ -157,8 +157,8 @@ where username is your MySQL user, password is your MySQL user password.
 
 1. Make sure [cron](server-configuration.md#setting-up-crontab) is running. You will see the error notification on the main administration page if cron is not running.
 2. Check EspoCRM log (data/logs) and server logs for errors.
-3. Check log at Administration > Scheduled Job > Check Personal Email Accounts. Make sure there are no records with failed status.
-4. Check log at Administration > Scheduled Job > Check Group Email Accounts. Make sure there are no records with failed status.
+3. Check log at Administration > Scheduled Jobs > Check Personal Email Accounts. Make sure there are no records with failed status.
+4. Check log at Administration > Scheduled Jobs > Check Group Email Accounts. Make sure there are no records with failed status.
 
 ## Delay in fetching emails
 
