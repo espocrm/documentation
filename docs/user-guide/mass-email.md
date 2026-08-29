@@ -129,7 +129,7 @@ Mass Email system parameters are available at Administration > Outbound Emails >
 * Max number of emails sent per batch – how many emails to send per job run per one Mass Email (as of v8.1);
 * Disable mandatory opt-out link − by default opt-out link is added even if it's absent in an Email Template, you can disable this behaviour;
 * Email Open Tracking − whether to track email opening (currently, not working reliably with most email providers);
-* Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path) − for more reliable bounced email precessing.
+* Use [VERP](https://en.wikipedia.org/wiki/Variable_envelope_return_path) − for more reliable bounced email processing.
 
 Configure how often the sending job is run at: Administration > Scheduled Jobs > Send Mass Emails > Scheduling.
 

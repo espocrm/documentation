@@ -229,7 +229,7 @@ It's possible to define a Formula script to calculate field values. Note: Variab
 
     Formula within an *Update Target Record* action must be utilized only for field updating. Use the *Execute Formula Script* action for any other need.
 
-For Link-Multiple, Array, Multi-Enum, and Checklist fields it's possible to add or remove items without loosing set items. For example, adding a specific Team while preserving existing Teams.
+For Link-Multiple, Array, Multi-Enum, and Checklist fields it's possible to add or remove items without losing set items. For example, adding a specific Team while preserving existing Teams.
 
 There is the ability to **delete** the record with the following formula code: `deleted = true`;
 

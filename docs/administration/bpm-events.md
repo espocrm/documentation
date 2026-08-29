@@ -166,7 +166,7 @@ By utilizing *datetime\closest* Formula function, it is possible to set the time
 
 ### Signal Intermediate Event (Catching)
 
-Stops the flow until a specific signal is catched. Placeholders can be used in a signal name.
+Stops the flow until a specific signal is caught. Placeholders can be used in a signal name.
 
 !!! note
 
@@ -208,7 +208,7 @@ There is the ability to specify Formula conditions that the email should satisfy
 
 ### Escalation Intermediate Event (Throwing)
 
-Throws an escalation. The Escalation Code can be specified. An escalation can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
+Throws an escalation. The Escalation Code can be specified. An escalation can be caught by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Escalation Intermediate Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-escalation.png)
 
@@ -240,7 +240,7 @@ Ends all flows. The process is subsequently ended.
 
 ### Error End Event
 
-Terminates the process and triggers an error. The Error Code can be specified. The error can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
+Terminates the process and triggers an error. The Error Code can be specified. The error can be caught by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Error End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-error.png)
 
@@ -250,7 +250,7 @@ Terminates the process and triggers an error. The Error Code can be specified. T
 
 ### Escalation End Event
 
-Ends the flow and triggers an escalation. The Escalation Code can be specified. The escalation can be catched by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
+Ends the flow and triggers an escalation. The Escalation Code can be specified. The escalation can be caught by a boundary event (if it's thrown within a sub-process) or by an event sub-process.
 
 ![Escalation End Event](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-end-escalation.png)
 

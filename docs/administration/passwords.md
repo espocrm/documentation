@@ -17,7 +17,7 @@ The administrator can also generate a new password for the user from the menu. T
 
 ## Password recovery
 
-Users can reset their password from the login form by clicking 'Forgot Password?' link. They will be promted to enter their username and email address. If the credentials are correct, they will receive an email with a unique link. By following the link, they will be able to specify a new password. Note that the link will be active only for 3 hours and the user is not permitted to send new password change requests during that period.
+Users can reset their password from the login form by clicking 'Forgot Password?' link. They will be prompted to enter their username and email address. If the credentials are correct, they will receive an email with a unique link. By following the link, they will be able to specify a new password. Note that the link will be active only for 3 hours and the user is not permitted to send new password change requests during that period.
 
 ![Menu](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/passwords/login-form.png)
 

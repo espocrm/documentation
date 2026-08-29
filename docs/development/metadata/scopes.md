@@ -2,7 +2,7 @@
 
 Path: metadata > scopes > {ScopeName}.
 
-Сontains scope definitions.
+Contains scope definitions.
 
 ## entity
 
@@ -20,7 +20,7 @@ Whether the entity is a business object. Means that it's not an entity for inter
 
 *string*
 
-The the name of the module, where this scope is defined. Must be set if the entity type is defined in a module.
+The name of the module, where this scope is defined. Must be set if the entity type is defined in a module.
 
 ## stream
 

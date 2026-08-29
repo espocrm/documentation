@@ -1,6 +1,6 @@
 # App Params
 
-App params are returned by the back-end once a user logged in. You can use these params in the front-end. For example, Espo has a build-in app-param containing a list of entity types that can be printed to PDF for a current user.
+App params are returned by the back-end once a user logged in. You can use these params in the front-end. For example, Espo has a built-in app-param containing a list of entity types that can be printed to PDF for a current user.
 
 ## Custom app params
 

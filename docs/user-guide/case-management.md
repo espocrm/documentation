@@ -31,7 +31,7 @@ The Case entity type can be associated with one Account and/or multiple Contacts
 
 !!! note
 
-    If a related Contact is not associated with a Portal User, then the customer won't be receiving email notifications about updates in the Stream of te Case. In this scenario, you need to use emails for communication with the customer.
+    If a related Contact is not associated with a Portal User, then the customer won't be receiving email notifications about updates in the Stream of the Case. In this scenario, you need to use emails for communication with the customer.
 
 !!! tip
 
@@ -49,7 +49,7 @@ An administrator can set up a Group Email Account that will create a new Case on
 
 Users can create Cases from Emails manually. On the Email detail view, click the dropdown in the top-right corner, then *Create Case*.
 
-When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a *Parent* of the Email that is being composed. This will force automatical addition of the group email address to the *Reply-To* field of the email. Then, when the customer replies on that email, it will be sent to the group email address rather than to the user’s one.
+When a user wants to send a reply to a customer, they need to make sure that the Case is selected as a *Parent* of the Email that is being composed. This will force automatic addition of the group email address to the *Reply-To* field of the email. Then, when the customer replies on that email, it will be sent to the group email address rather than to the user’s one.
 
 ## Knowledge base
 

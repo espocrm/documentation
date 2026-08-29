@@ -116,7 +116,7 @@ Example:
 }
 ```
 
-Without the *controller* parameter the entity type won't be available in the frontend. *controllers/record* is a build-in standard CRUD controller in the frontend.
+Without the *controller* parameter the entity type won't be available in the frontend. *controllers/record* is a built-in standard CRUD controller in the frontend.
 
 ## Entity class
 
