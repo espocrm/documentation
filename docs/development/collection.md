@@ -1,6 +1,6 @@
 # Collection
 
-A collection is a list of models. See the [class](https://github.com/espocrm/espocrm/blob/stable/client/src/collection.js).
+A collection is a list of models. See the [class](https://github.com/espocrm/espocrm/blob/stable/client/src/collection.ts).
 
 ## Methods
 
