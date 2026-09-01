@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Stream
 
 Stream in EspoCRM is a feed where you can see posts and updates of records you follow. You can also post messages to your own Stream and to the Stream of other Users.
