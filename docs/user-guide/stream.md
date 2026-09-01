@@ -36,6 +36,10 @@ The *Stream Updated At* field is available for entity types with Stream enabled.
 * Assignee change
 * Audited relation update
 
+### Email body
+
+Stream records for sent and received emails can contain the email's plain-text body. This is controlled per entity type by the following setting: Administration > Settings > General > Entities with email body in stream notes. If this setting is not enabled for an entity type, the user needs to unfold the stream record to see the email content.
+
 ## User Stream
 
 Users can view their own Stream in the *Stream* dashlet as well on the separate Stream page.
@@ -89,6 +93,7 @@ Users can add to reactions to stream posts. A user can add only one reaction to 
 A user can disable notifications about reactions in preferences. If the preferences parameter *Notifications about reactions for non-followed records* is not enabled, the user won't be notified about reactions to their posts in records they do not follow.
 
 An administrator can define which reactions are available in the system. By default, only Like is available. They can disable reactions by leaving the parameter empty.
+
 
 ## Posts to users
 
