@@ -64,6 +64,7 @@ In this article:
   * [entityManagerParams](metadata/app-entity-manager-params.md)
   * [entityTemplateList](metadata/app-entity-template-list.md)
   * [entityTemplates](metadata/app-entity-templates.md)
+  * [entryPoints](metadata/app-entry-points.md)
   * [export](metadata/app-export.md)
   * [fieldProcessing](metadata/app-field-processing.md)
   * [file](metadata/app-file.md)
