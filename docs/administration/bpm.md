@@ -88,6 +88,8 @@ The execution of a Process is visualized with colors highlighting statuses of fl
 
 Usually Processes start their execution flow from a Start Event (green colored circle). One Process Flowchart can have multiple Start Events.
 
+When multiple processes (with different flowcharts) are initiated for the same target entity, they run according to their start event *Process Order* value. The lower the order value, the sooner the process runs.
+
 ### Manipulating
 
 A Process can be **stopped manually** by a user who has edit access to that Process. You can do it via the dropdown menu next to the *Edit* button in the Process detail view.
