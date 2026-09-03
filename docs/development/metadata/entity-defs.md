@@ -736,6 +736,15 @@ Disable merging related records when duplicate records are being merged.
 
 The link will be hidden from the user on the UI whenever possible.
 
+
+### customizationDisabled
+
+*boolean*
+
+*As of v10.0.8.*
+
+Disables the ability to customize the link.
+
 ### disabled
 
 *boolean*
