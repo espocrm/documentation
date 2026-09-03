@@ -285,7 +285,7 @@ Allows to make *Sequential* Workflows. It's possible to diverge Workflows by con
 
 It's possible to delay executing of a *Sequential* Workflow. In a *Sequential* Workflow, you can define the condition that checks whether specific fields were changed since the parent Workflow was triggered by using _Changed_ and _Was Equal_ condition types.
 
-A *Target* for a triggered Workflow can be substituted with a related record.
+The *Target* for a triggered Workflow can be substituted with a related record.
 
 !!! note
 
@@ -294,6 +294,14 @@ A *Target* for a triggered Workflow can be substituted with a related record.
 !!! note
 
     It's possible to trigger only Workflow rules of *Sequential* type.
+
+If the target record is not found, an error is thrown and the next actions are skipped. The parameter *Continue if no target* prevents the error from being produced.
+
+### Start BPM Process
+
+Starts a BPM process. You can specify what target record will be used for the process.
+
+If the target record is not found, an error is thrown and the next actions are skipped. The parameter *Continue if no target* prevents the error from being produced.
 
 ### Run Service Action
 
@@ -324,10 +332,6 @@ Users:
 * *Generate Password* – generates a new password for a user and sends it to their email address
 
 Developers can write their own service actions. See [more detail](../development/workflow-service-actions.md).
-
-### Start BPM Process
-
-Starts a BPM process. You can specify what target record will be used for the process.
 
 ### Send HTTP Request
 
