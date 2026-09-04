@@ -15,3 +15,13 @@ It is possible to define preferred country codes at Administration > Settings. T
 When importing records, there is the ability to specify a regional telephone code, so that values in a regional format will be automatically converted to international. The same functionality exists for the Lead Capture feature.
 
 ![Phone numbers](../_static/images/administration/phone-numbers/phone-numbers.png)
+
+## Numberic search
+
+Numeric search for phone numbers is enabled by default. It allows you to search for phone numbers using only digits, without dashes or the + sign.
+
+Can be enabled or disabled with the parameter: Administration > Settings > General > Numeric phone number search.
+
+## Text filter and Global Search
+
+Whether phone numbers are searched by the system in [Text Filter](../user-guide/text-search.md#list-view-text-search) or [Global Search](../user-guide/text-search.md#global-search) is controlled per entity type by the following parameter: Administration > Entity Manager > {Entity Type} > Edit > Text Filter Fields. The Phone Number field must be added to the list.
