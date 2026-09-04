@@ -231,6 +231,7 @@ The list of parameters along with their default values. This is not a full list 
 * `leadCaptureSiteUrl` – to override the default site URL (can be helpful if there's no access to your CRM from the internet, but you want to expose the lead capture; you will need to configure your server to handle requests to the specified URL); as of v9.2;
 * `wysiwygCodeEditorDisabled` – `false` – disable the Wysiwyg field code editor; as of v8.2;
 * `customPrefixDisabled` – `false` – disable adding a *c* prefix to custom entity types, fields and links; as of v8.2; setting to true may cause conflicts; highly discouraged, voids official support;
+* `apiExposeExceptions` – `false` – enables exception message exposure (as of v10.1); should never be enabled on production;
 
 ## Config files
 
