@@ -14,6 +14,8 @@
   * [Caddy reverse proxy](administration/docker/caddy.md)
 * [Installation](administration/installation.md)
 * [Upgrading](administration/upgrading.md)
+* Deployment Guides
+  * [DigitalOcean](administration/docker/digital-ocean.md)
 * Miscellaneous
   * [WebSocket](administration/websocket.md)
   * Portal
