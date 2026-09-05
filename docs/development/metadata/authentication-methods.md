@@ -16,6 +16,14 @@ Defines that the method is to be used for pure API request, not from the front-e
 
 A header that is supposed to contain credentials. Actual only for API methods.
 
+## credentialsHeaderScheme
+
+*string*
+
+*As of v10.1.*
+
+An authorization header scheme. The header value should start with the specified value for this method to be used. Of omitted, the header is still checked for match.
+
 ## login
 
 *As of v7.3.*
