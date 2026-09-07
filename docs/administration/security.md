@@ -37,6 +37,7 @@ Restrict the ability to upgrade and upload extensions via the UI.
 As of v10.0, by default, the ability to upgrade via UI is disabled, while the ability to install extensions via UI is enabled.
 
 Config parameters (as of v10.0):
+
 - `adminUpgrade` – (boolean) – `false` by default;
 - `adminExtensionUpload` – (boolean) –`true` by default;
 
