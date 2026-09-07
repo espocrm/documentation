@@ -4,7 +4,7 @@
 
 ❗ Important.
 
-Configure password strength parameters (at Administration > Authentication). The minimum recommended password length is at least 10 characters (or 8 if 2FA is mandatory). Require digits, and both upper case and lower case letters.
+Configure password strength parameters (at Administration > Authentication). The minimum recommended password length is at least 10 characters (or 8 if 2-factor authentication is mandatory). Require digits, and both upper case and lower case letters.
 
 ## 2-factor authentication
 
