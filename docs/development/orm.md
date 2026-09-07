@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # ORM
 
 EspoCRM utilizes own built-in ORM (object-relational mapping). Create, update, read, delete and search operations are performed via the Entity Manager instance.
