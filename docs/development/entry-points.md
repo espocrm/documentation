@@ -11,6 +11,8 @@ Usage examples:
 
 Entry point classes are located in `Espo\Module\{ModuleName}\EntryPoint` namespace.
 
+As of v10.1, it is possible to [define](metadata/app-entry-points.md) entry points in metadata.
+
 ## Creating entry point
 
 Assuming that our module is named *ModuleName*.
