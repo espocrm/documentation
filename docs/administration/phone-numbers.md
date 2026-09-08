@@ -25,3 +25,20 @@ Can be enabled or disabled with the parameter: Administration > Settings > Gener
 ## Text filter and Global Search
 
 Whether phone numbers are searched by the system in [Text Filter](../user-guide/text-search.md#list-view-text-search) or [Global Search](../user-guide/text-search.md#global-search) is controlled per entity type by the following parameter: Administration > Entity Manager > {Entity Type} > Edit > Text Filter Fields. The Phone Number field must be added to the list.
+
+## Search without country code
+
+*As of v10.0.8.*
+
+One can search by phone number without specifying a country code. This applies only to the preferred phone number country codes.
+
+Applies for:
+
+- Text search
+- Global search
+
+Applied if:
+
+- International phone numbers enabled.
+- Phone number numeric search is enabled.
+- Phone field is added to the text filter list (in Entity Manager).
