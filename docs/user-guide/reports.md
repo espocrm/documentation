@@ -311,7 +311,7 @@ Some use cases:
 
 ## Preview
 
-The report results can be displayed without saving the report record. To do this, click the **Preview** button on the right when editing a report.
+The report results can be displayed without saving the report record. To do this, click the *Preview* button on the right when editing a report.
 
 !!! tip
 
