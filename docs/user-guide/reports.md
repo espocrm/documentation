@@ -19,6 +19,7 @@ In this article:
 * [Grid reports](#grid-reports)
 * [Joint Grid reports](#joint-grid-reports)
 * [Filters](#filters)
+* [Preview](#preview)
 * [Displaying on dashboard](#displaying-on-dashboard)
 * [Email sending](#email-sending)
 * [Printing to PDF](#printing-to-pdf)
@@ -307,6 +308,14 @@ Some use cases:
 
 * List of accounts having more than one opportunity. `COUNT / opportunities.id / Greater Than / 1`.
 * Grid report showing accounts grouped by industry where revenue is more than 1,000. `SUM / opportunities.amount / Greater Than / 1000`.
+
+## Preview
+
+The report results can be displayed without saving the report record. To do this, click the **Preview** button on the right when editing a report.
+
+!!! tip
+
+    Use Preview to quickly view analytic data without creating a report record.
 
 ## Displaying on dashboard
 
