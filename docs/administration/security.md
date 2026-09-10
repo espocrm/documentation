@@ -18,7 +18,11 @@ Don't use an admin user for everyday work. Use a regular user instead.
 
 ## Disable password recovery for admins
 
-Can be done at Administration > Authentication. If you lost admin access and want to recover your password, set 'passwordRecoveryForAdminDisabled' to *false* in `data/config.php`.
+Can be done under Administration > Authentication > Passwords > Recovery. If you lost admin access and want to recover your password, set 'passwordRecoveryForAdminDisabled' to *false* in `data/config.php`.
+
+## Enable no-exposure for password recovery
+
+Enable no-exposure mechanism preventing possibility to determine whether a specific email address or username exists in the system. Can be done under Administration > Authentication > Passwords > Recovery.
 
 ## Auth token expiration
 
