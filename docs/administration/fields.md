@@ -94,7 +94,7 @@ Parameters:
 
 * Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
 * Options Reference – options from another field to re-use (as of v7.5);
-* Is Sorted – to sort a list alphabetically;
+* Is Sorted – to sort the list alphabetically;
 * Display as Label – a value will be displayed as a label with color; a color for each option can be specified.
 
 It's possible to define conditional options with Dynamic Logic.
@@ -218,7 +218,7 @@ Parameters:
 
 * Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
 * Options Reference – options from another field to re-use (as of v7.5);
-* Is Sorted – to sort a list alphabetically;
+* Is Sorted – to sort the list alphabetically;
 * Allow Custom Options – if checked, a user can add custom values (not defined by *Options* parameter) by typing text and pressing the enter key;
 * Max Item Count – a validation: how many items can be added;
 * Display as Label – values will be displayed as a label with color; a color for each option can be specified;
@@ -234,7 +234,7 @@ Parameters:
 
 * Options – a list of values (key => label pairs); a color (style) for each value can be specified (applied when param *Display as Label* is enabled);
 * Options Reference – options from another field to re-use (as of v7.5);
-* Is Sorted – to sort a list alphabetically;
+* Is Sorted – to sort the list alphabetically;
 * Max Item Count – a validation: how many items can be checked;
 
 
