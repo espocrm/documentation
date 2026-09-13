@@ -39,7 +39,10 @@ ext\email\send($emailId);
 
 ```
 $attachmentId = ext\pdf\generate(
-    'Quote', entity\attribute('id'), 'copy-pdf-template-id-here', 'test.pdf'
+    'Quote',
+    entity\attribute('id'),
+    'copy-pdf-template-id-here',
+    'test.pdf'
 );
 
 $emailId = record\create('Email',
