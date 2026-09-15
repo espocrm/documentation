@@ -327,6 +327,14 @@ Do not print the field in the OpenAPI spec.
 
 Whether the field may contain personal data.
 
+### noOptimisticConcurrencyControlResolution
+
+*boolean*
+
+*As of v10.1.0*
+
+Disables optimistic concurrency control resolution.
+
 ### valueFactoryClassName
 
 *class-string<Espo\ORM\Value\ValueFactory\>*
