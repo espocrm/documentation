@@ -34,6 +34,14 @@ Skip converting to defs for the ORM.
 
 Records can be filtered by this field (available as filter on the list view). 
 
+## composite
+
+*boolean*
+
+*As of v10.1.*
+
+Whether the field is composite. It means it groups other fields and had no attributes that are not from the grouped fields.
+
 ## view
 
 *string*
