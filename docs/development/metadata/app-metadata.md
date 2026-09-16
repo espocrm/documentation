@@ -81,4 +81,4 @@ If the user has access to any of the listed scopes, they will have access to the
 
 *As of v8.4.*
 
-Additional builders. Allows adding conditional metadata.
+Additional builders. Allows adding conditional metadata. It also allows modifying build metadata.
