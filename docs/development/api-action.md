@@ -1,3 +1,11 @@
+---
+search:
+  boost: 2
+tags:
+  - api
+  - routes
+---
+
 # API actions
 
 This article would be useful for those who needs to create a custom [API](api.md) action.
@@ -27,7 +35,10 @@ Custom routes can be defined in the following places:
     {
         "route": "/MyScope/:id/something",
         "method": "post",
-        "actionClassName": "Espo\\Modules\\MyModule\\Api\\PostMyScopeSomething"
+        "actionClassName": "Espo\\Modules\\MyModule\\Api\\PostMyScopeSomething",
+        "consumes": [
+            "application/json"
+        ]
     },
     {
         "route": "/TestNoAuth",
@@ -43,10 +54,11 @@ Custom routes can be defined in the following places:
 
 Route parameters:
 
-* *noAuth* makes the endpoint accessible without authentication.
-* *method* specifies an HTTP method. The most used methods are: *get*, *post*, *put*, *delete*.
-* *actionClassName* defines an action class name – the entry point of the route.
-* *params* – parameters passed to the action implementation, rarely used.
+* *noAuth* – Makes the endpoint accessible without authentication.
+* *method* – Specifies an HTTP method. The most used methods are: *get*, *post*, *put*, *delete*.
+* *actionClassName* – Defines an action class name – the entry point of the route.
+* *consumes* – If defined, restricts content types allowed for the endpoint. If an empty array, the Content-Type header must be empty. As of v10.1.
+* *params* – Parameters passed to the action implementation, rarely used.
 
 A route can contain placeholders (for example, `:id`). The value will be passed to the Action in the Request object.
 
