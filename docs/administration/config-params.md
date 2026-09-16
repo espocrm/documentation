@@ -165,6 +165,7 @@ The list of parameters along with their default values. This is not a full list 
 * `adminUpgradeDisabled` – `false`, boolean – disables both the ability to upgrade and upload extensions via the UI (as of v8.1); this parameter overrides `adminUpgrade` and `adminExtensionUpload`;
 * `adminUpgrade` – `false`, boolean – enables the ability to upgrade via the UI; recommended to keep disabled on production (as of v10.0);
 * `adminExtensionUpload` – `true`, boolean – enables the ability to upload extensions via the UI; reasonable to disable on production (as of v10.0);
+* `adminExtensionManage` – `true`, boolean – enables the ability to manage extensions via the UI; reasonable to disable on production (as of v10.1);
 * `clientSecurityHeadersDisabled` – `false`, boolean – disable security headers (highly **not recommended** to disable) (as of v7.2);
 * `clientCspDisabled` – `false`, boolean – disable Content-Security-Policy header for the client page (highly **not recommended** to disable) (as of v7.2);
 * `clientCspScriptSourceList` – string[] – a script source white-list for the Content-Security-Policy header (as of v7.2);
