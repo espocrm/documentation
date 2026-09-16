@@ -41,3 +41,9 @@ If true, the entry point is not available via the regular entryPoint request –
 *('get'|'post'|'put'|'delete'|'options'|'patch')[]*
 
 Allowed HTTP methods. If not specified, only *GET* is allowed.
+
+## consumes
+
+*string[]*
+
+If defined, restricts content types allowed for the entry point. If an empty array, the Content-Type header must be empty.
