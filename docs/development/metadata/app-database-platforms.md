@@ -35,6 +35,12 @@ Example:
 
 *class-string<Espo\Core\Utils\Database\Schema\ColumnPreparator\>*
 
+## earlyRebuildActionClassNameList
+
+*class-string<Espo\Core\Utils\Database\Schema\EarlyRebuildAction\>[]*
+
+*As of v10.1.*
+
 ## preRebuildActionClassNameList
 
 *class-string<Espo\Core\Utils\Database\Schema\RebuildAction\>[]*
