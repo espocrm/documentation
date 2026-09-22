@@ -513,6 +513,14 @@ Hide the remove action.
 
 A custom translatable label.
 
+### labelTranslation
+
+*string*
+
+*As of v10.1.*
+
+A label translation path.
+
 ### createRequiredAccess
 
 *string*
