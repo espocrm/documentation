@@ -54,7 +54,7 @@ If you need to define your custom container services, do it in metadata. In your
 * `custom/Espo/Modules/{YourModule}/Resources/metadata/app/containerServices.json`;
 * `custom/Espo/Custom/Resources/metadata/app/containerServices.json`.
 
-When defining in metadata there are 2 options:
+When defining in metadata, there are 2 options:
 
 * specify a class for a service;
 * specify a loader that loads a service (the loader should implement `Espo\Core\Container\Loader` interface).
