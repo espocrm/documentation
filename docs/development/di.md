@@ -423,6 +423,7 @@ class MyClass
 Binding:
 
 ```php
+<?php
 use Espo\Core\Binding\Key\QualifiedClassKey;
 
 // Regular binding.
