@@ -499,7 +499,7 @@ The syntax is the same as for the *where* [parameter](../development/api-search-
 
 The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox. 
 
-Use the function `output\printLine` to print values for debugging purposes. 
+Use the function `output\printLine` to print values for debugging purposes. Use the Check Syntax button to check the syntax.
 
 You can also utilize the sandbox to run one-time scripts, for example, to modify some data in your system.
 
