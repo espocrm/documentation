@@ -90,13 +90,13 @@ Executes a specific Formula script.
 
 ### Formula usage
 
-When using Formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `targetEntity\attribute(ATTRIBUTE)`.
+When using Formula in a task that creates or updates another record, the current entity (for the script) is switched the the record you are creating. To access attributes of the target record you can utilize the function `bpm\targetEntity\attribute(ATTRIBUTE)`.
 
 !!! example
 
     ```
     // attribute of the target record
-    $someVariable1 = targetEntity\attribute('name');
+    $someVariable1 = bpm\targetEntity\attribute('name');
 
     // attribute of the record you are creating or updating
     $someVariable2 = name;
