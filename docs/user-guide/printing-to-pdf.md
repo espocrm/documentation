@@ -70,6 +70,7 @@ Table of content:
 * [Barcode field](#barcode-field)
 * [Raw values](#raw-values)
 * [Maps](#maps)
+* [Style](#style)
 * [Custom helpers](#custom-helpers)
 
 Available under Administration > PDF Templates.
@@ -556,6 +557,10 @@ To access a raw value of a specific attribute, you need to add a suffix  `_RAW` 
 ### Maps
 
 It's possible to print Google Maps image in PDF. See [here](../administration/maps.md#printing-in-pdf).
+
+### Style
+
+CSS style can be defined for a PDF template in the *Style* field.
 
 ### Custom helpers
 
