@@ -307,6 +307,14 @@ Indicates that import for the field is allowed even if directAccessDisabled or d
 
 To mass-update for the field.
 
+## aclDisabled
+
+*boolean*
+
+*As of v10.1.*
+
+Disables field-level ACL for the field.
+
 ### exportDisabled
 
 *boolean*
