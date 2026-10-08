@@ -6,9 +6,19 @@ The import feature is available in the [Export Import](https://github.com/espocr
 
 This extension works via console (CLI). Commands should be executed from the `root directory` of your EspoCRM instance.
 
-```
+```bash
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate
 ```
+
+## Usage with large data sets
+
+When importing large volumes of data, you may need to increase the PHP memory limit. Run the import command with a higher memory_limit value:
+
+```bash
+php -d memory_limit=512M bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate
+```
+
+Adjust the memory limit as needed based on the size of your data set and the resources available on your system.
 
 ## Available options
 
@@ -214,3 +224,17 @@ bin/command export-import import --format=json --path="./data/export-import" --i
 ```
 bin/command export-import import --format=json --path="./data/export-import" --import-type=createAndUpdate --entity-list="Account" --skip-related-entities
 ```
+
+## Troubleshooting
+
+### Memory Limit Errors
+
+If you encounter an error similar to the following:
+
+```text
+Allowed memory size of 268435456 bytes exhausted
+```
+
+the PHP process has run out of available memory during the import.
+
+To resolve this issue, follow the instructions in [Usage with large data sets](#usage-with-large-data-sets) and run the import command with an increased memory_limit value.
