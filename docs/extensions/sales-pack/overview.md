@@ -28,3 +28,4 @@ Features:
 * [Issuance locking](issuance-locking.md)
 * [Multi-currency](multi-currency.md)
 * [Reports](reports.md)
+* [API](api.md)

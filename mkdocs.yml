@@ -217,6 +217,7 @@ nav:
             - 'Issuance locking': 'extensions/sales-pack/issuance-locking.md'
             - 'Multi-currency': 'extensions/sales-pack/multi-currency.md'
             - 'Reports': 'extensions/sales-pack/reports.md'
+            - 'API': 'extensions/sales-pack/api.md'
         - 'Project Management':
             - 'Projects': 'extensions/project-management/projects.md'
         - 'Meeting Scheduler':
