@@ -1085,8 +1085,7 @@ Running a closure in a transaction:
 
 ```php
 <?php
-$entityManager
-    ->getTransactionManager()
+$entityManager->getTransactionManager()
     ->run(function () {
         // A transaction started implicitly.
         // Do here something.
