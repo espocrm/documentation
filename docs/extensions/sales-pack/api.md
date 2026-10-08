@@ -1,4 +1,4 @@
 # Sales Pack API
 
-- [API Reference](reference)
-- [OpenAPI Spec](api/reference/spec.json)
+- [API reference](reference)
+- [OpenAPI spec](api/reference/spec.json)
