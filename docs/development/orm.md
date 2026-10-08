@@ -1081,7 +1081,21 @@ $entityManager->getMapper()->massInsert($collection);
 
 ## Transaction manager
 
-Transaction:
+Running a closure in a transaction:
+
+```php
+<?php
+$entityManager
+    ->getTransactionManager()
+    ->run(function () {
+        // A transaction started implicitly.
+        // Do here something.
+        // The transaction committed implicitly or rolled back if an exception occurred.
+        // The outer most transaction is retried in case of deadlock.
+    });
+```
+
+Explicit start, commit and rollback (not recommended):
 
 ```php
 <?php
@@ -1097,7 +1111,7 @@ try {
 }
 ```
 
-Nested transactions:
+Nested transactions (save points are used):
 
 ```php
 <?php
@@ -1112,26 +1126,11 @@ $tm->commit();
 $tm->commit();
 ```
 
-Running a function in a transaction:
+Record locking:
 
 ```php
 <?php
-$entityManager
-    ->getTransactionManager()
-    ->run(
-        function () {
-            // Transaction started implicitly.
-            // Do something.
-            // Transaction committed implicitly or rolled back if an exception occurred.
-        }
-    );
-```
-
-Locking:
-
-```php
-<?php
-$entityManager->getTransactionManager()->start();
+// Assuming this code is inside a transaction.
 
 $entity = $entityManager
     ->getRDBRepository('SomeTable')
@@ -1143,7 +1142,6 @@ $entity = $entityManager
 
 $entityManager->saveEntity($entity);
 
-$entityManager->getTransactionManager()->commit();
 ```
 
 ## Locker
