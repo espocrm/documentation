@@ -1,5 +1,9 @@
 # Translation
 
+## Usage
+
+See: https://docs.espocrm.com/development/frontend/templates/#translate
+
 ## PO file
 
 ### Generating PO file
