@@ -518,7 +518,7 @@ There are additional options to change the `logger`:
 
 For more details, visit [documentation](../log.md).
 
-### Allowed types:
+### Allowed types
 
 #### String
 ```
