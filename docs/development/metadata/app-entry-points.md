@@ -47,3 +47,11 @@ Allowed HTTP methods. If not specified, only *GET* is allowed.
 *string[]*
 
 If defined, restricts content types allowed for the entry point. If an empty array, the Content-Type header must be empty.
+
+## apiAuthForbidden
+
+*boolean*
+
+*As of v10.1.*
+
+Forbids API authentication, such as the API user, OAuth.
