@@ -54,11 +54,12 @@ Custom routes can be defined in the following places:
 
 Route parameters:
 
-* *noAuth* – Makes the endpoint accessible without authentication.
+* *noAuth* – boolean – Makes the endpoint accessible without authentication.
 * *method* – Specifies an HTTP method. The most used methods are: *get*, *post*, *put*, *delete*.
 * *actionClassName* – Defines an action class name – the entry point of the route.
-* *consumes* – If defined, restricts content types allowed for the endpoint. If an empty array, the Content-Type header must be empty. As of v10.1.
+* *consumes* – string[] – If defined, restricts content types allowed for the endpoint. If an empty array, the Content-Type header must be empty. As of v10.1.
 * *params* – Parameters passed to the action implementation, rarely used.
+* *apiAuthForbidden* – boolean – Forbids API authentication, such as the API user, OAuth.
 
 A route can contain placeholders (for example, `:id`). The value will be passed to the Action in the Request object.
 
