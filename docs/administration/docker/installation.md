@@ -54,14 +54,14 @@ docker run \
   -v espocrm-custom:/var/www/html/custom \
   -v espocrm-custom-client:/var/www/html/client/custom \
   -p 8080:80 \
-  -d espocrm/espocrm && \
+  -d espocrm && \
 docker run \
   --name espocrm-daemon \
   --network espocrm-network \
   --restart unless-stopped \
   --volumes-from espocrm \
   --entrypoint docker-daemon.sh \
-  -d espocrm/espocrm
+  -d espocrm
 ```
 
 Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `admin_password`.
@@ -114,7 +114,7 @@ docker run \
   -v espocrm-custom:/var/www/html/custom \
   -v espocrm-custom-client:/var/www/html/client/custom \
   -p 8080:80 \
-  -d espocrm/espocrm
+  -d espocrm
 ```
 
 5\. Run daemon
@@ -126,7 +126,7 @@ docker run \
   --restart unless-stopped \
   --volumes-from espocrm \
   --entrypoint docker-daemon.sh \
-  -d espocrm/espocrm
+  -d espocrm
 ```
 
 Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `admin_password`.
@@ -146,7 +146,7 @@ docker run \
   -e ESPOCRM_ADMIN_USERNAME=admin \
   -e ESPOCRM_ADMIN_PASSWORD=admin_password \
   -e ESPOCRM_SITE_URL=http://192.168.0.100:8080 \
-  -d espocrm/espocrm:latest
+  -d espocrm:latest
 ```
 
 Then, access the EspoCRM instance via `http://192.168.0.100:8080` with the credentials: `admin` and `admin_password`.
@@ -197,7 +197,7 @@ services:
       retries: 3
 
   espocrm:
-    image: espocrm/espocrm:latest
+    image: espocrm:latest
     container_name: espocrm
     environment:
       ESPOCRM_DATABASE_HOST: espocrm-db
@@ -224,7 +224,7 @@ services:
       - 8080:80
 
   espocrm-daemon:
-    image: espocrm/espocrm:latest
+    image: espocrm:latest
     container_name: espocrm-daemon
     volumes_from:
       - espocrm
@@ -241,7 +241,7 @@ services:
       retries: 3
 
   espocrm-websocket:
-    image: espocrm/espocrm:latest
+    image: espocrm:latest
     container_name: espocrm-websocket
     environment:
       ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
@@ -305,7 +305,7 @@ To upgrade EspoCRM when using Docker Run:
 
 ```bash
 docker pull mariadb
-docker pull espocrm/espocrm
+docker pull espocrm
 ```
 
 2\. Stop all running containers:
@@ -443,7 +443,7 @@ docker run \
   --network espocrm-network \
   -e ESPOCRM_DATABASE_PASSWORD_FILE=/run/secrets/espocrm_db_password \
   -e ESPOCRM_ADMIN_PASSWORD_FILE=/run/secrets/espocrm_admin_password \
-  -d espocrm/espocrm
+  -d espocrm
 ```
 
 ## Installation Environments
@@ -572,15 +572,15 @@ Pin each service to a specific image version. Replace the image tags:
 
 ```yml
 espocrm:
-  image: espocrm/espocrm:latest
+  image: espocrm:latest
   # ....
 
 espocrm-daemon:
-  image: espocrm/espocrm:latest
+  image: espocrm:latest
   # ....
 
 espocrm-websocket:
-  image: espocrm/espocrm:latest
+  image: espocrm:latest
   # ....
 ```
 
@@ -588,15 +588,15 @@ With versioned tags:
 
 ```yml
 espocrm:
-  image: espocrm/espocrm:VERSION
+  image: espocrm:VERSION
   # ....
 
 espocrm-daemon:
-  image: espocrm/espocrm:VERSION
+  image: espocrm:VERSION
   # ....
 
 espocrm-websocket:
-  image: espocrm/espocrm:VERSION
+  image: espocrm:VERSION
   # ....
 ```
 
@@ -636,7 +636,7 @@ Replace the existing volume mount:
 
 ```yml
 espocrm:
-  image: espocrm/espocrm
+  image: espocrm
   container_name: espocrm
   # ....
   volumes:
@@ -648,7 +648,7 @@ With the following targeted mounts:
 
 ```yml
 espocrm:
-  image: espocrm/espocrm
+  image: espocrm
   container_name: espocrm
   # ....
   volumes:
@@ -731,7 +731,7 @@ Replace the existing volume mount:
 
 ```yml
 espocrm:
-  image: espocrm/espocrm
+  image: espocrm
   container_name: espocrm
   # ....
   volumes:
@@ -749,7 +749,7 @@ With the following targeted mounts:
 
 ```yml
 espocrm:
-  image: espocrm/espocrm
+  image: espocrm
   container_name: espocrm
   # ....
   volumes:
