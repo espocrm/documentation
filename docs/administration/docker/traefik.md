@@ -56,7 +56,7 @@ services:
       retries: 3
 
   espocrm:
-    image: espocrm/espocrm:latest
+    image: espocrm:latest
     container_name: espocrm
     environment:
       ESPOCRM_DATABASE_HOST: espocrm-db
@@ -87,7 +87,7 @@ services:
       - traefik.http.routers.espocrm-app.tls.certresolver=esporesolver
 
   espocrm-daemon:
-    image: espocrm/espocrm:latest
+    image: espocrm:latest
     container_name: espocrm-daemon
     volumes_from:
       - espocrm
@@ -104,7 +104,7 @@ services:
       retries: 3
 
   espocrm-websocket:
-    image: espocrm/espocrm:latest
+    image: espocrm:latest
     container_name: espocrm-websocket
     environment:
       ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
