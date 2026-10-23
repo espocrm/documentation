@@ -29,10 +29,6 @@ Copy *Redirect URI* from EspoCRM. Note, that type should be set to `Web`.
 
 ![App registration](../../_static/images/extensions/outlook-integration/setting-up/3.png)
 
-!!! note
-
-    It is highly recommended to select "Single tenant only" under the "Supported account types" setting.
-
 **3\.** Copy *Application (client) ID* from Azure app to EspoCRM.
 
 ![Client ID](../../_static/images/extensions/outlook-integration/setting-up/4.png)
