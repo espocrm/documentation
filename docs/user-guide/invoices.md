@@ -122,6 +122,31 @@ Invoices can be printed to PDF. This action is available in the dropdown next to
 
 See the documentation [for quote templates](quotes.md#templates).
 
+#### Items
+
+Printing invoice line items:
+
+```
+<tr iterate="{{itemList}}">
+  <td>{{order}}</td>
+  <td>{{name}}<p x-if="{{description}}" style="font-size: 0.8em">{{{description}}}</p></td>
+  <td>{{quantity}}</td>
+  <td align="right">{{unitPrice}}</td>
+  <td align="right">{{amount}}</td>
+</tr>
+```
+
+#### Installments
+
+Printing invoice installments:
+
+```
+<tr iterate="{{installments}}">
+  <td width="50%" align="left">{{date}}</td>
+  <td width="50%" align="right">{{amount}}</td>
+</tr>
+```
+
 ## Sending in email
 
 An Invoice PDF can be sent in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
