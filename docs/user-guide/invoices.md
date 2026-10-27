@@ -19,6 +19,7 @@ In the article:
 * [Rounding](#rounding)
 * [Printing to PDF](#printing-to-pdf)
 * [Sending in email](#sending-in-email)
+* [Tax number](#tax-number)
 * [Automatic numbering](#automatic-numbering)
 * [Copying values from product to invoice item](#copying-values-from-product-to-invoice-item)
 * [Automation with Workflows or BPM](#automation-with-workflows-or-bpm)
@@ -121,10 +122,6 @@ Invoices can be printed to PDF. This action is available in the dropdown next to
 
 See the documentation [for quote templates](quotes.md#templates).
 
-### Tax number
-
-The Sales Pack adds the *Tax Number* field to the Account entity type. Use this field to store VAT numbers. Note that including the VAT number on the invoice is mandatory in many jurisdictions.
-
 ## Sending in email
 
 An Invoice PDF can be sent in an email as an attachment. Open an invoice record, click the dropdown next to Edit button and then click Email PDF.
@@ -132,6 +129,10 @@ An Invoice PDF can be sent in an email as an attachment. Open an invoice record,
 The default email template can be set by the administrator: Administration > Sales Pack Settings > Email Templates.
 
 To have the Invoice entity selected as the email's parent, the administrator should add the Invoice entity type to the parent type list. Administration > Entity Manager > Email > Fields > Parent > Entity List. As of v3.0.
+
+## Tax number
+
+The Sales Pack adds the *Tax Number* field to the Account entity type. Use this field to store VAT numbers. Note that including the VAT number on the invoice is mandatory in many jurisdictions.
 
 ## Automatic numbering
 
