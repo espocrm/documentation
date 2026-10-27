@@ -124,7 +124,7 @@ See the documentation [for quote templates](quotes.md#templates).
 
 #### Items
 
-Printing invoice line items:
+Printing invoice line items example:
 
 ```
 <tr iterate="{{itemList}}">
@@ -138,13 +138,34 @@ Printing invoice line items:
 
 #### Installments
 
-Printing invoice installments:
+Printing invoice installments example:
 
 ```
 <tr iterate="{{installments}}">
   <td width="50%" align="left">{{date}}</td>
   <td width="50%" align="right">{{amount}}</td>
 </tr>
+```
+
+#### Taxes
+
+Printing tax items example:
+
+```
+<table style="border-spacing: 0; border-collapse: collapse;">
+  <tbody>
+    <tr>
+      <th width="40%" align="left">Tax Name</th>
+      <th width="30%" align="right">Base Amount</th>
+      <th width="30%" align="right">Tax Amount</th>
+    </tr>
+    <tr iterate="{{taxTotalItems}}" x-if="{{taxCodeLabel}}">
+      <td width="40%" align="left">{{taxCodeLabel}}</td>
+      <td width="30%" align="right">{{numberFormat baseAmount_RAW decimals=2}}</td>
+      <td width="30%" align="right">{{amount}}</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 ## Sending in email
