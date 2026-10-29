@@ -671,6 +671,14 @@ Enables mass select.
 
 Attributes to carry over to a related record when creating. Mapping Parent => Related.
 
+### recordSpecificSearchStorage
+
+*boolean*
+
+*As of v10.1.*
+
+Record specific search storage (previous search suggestions).
+
 ### buttonList
 
 *Record[]*
