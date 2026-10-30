@@ -298,6 +298,16 @@ Access the parent scope:
 {{/each}}
 ```
 
+Fist and last items:
+
+```
+{{#each contacts}}
+  {{#if @first}}Is First{{/if}}
+  {{#if @last}}Is Last{{/if}}
+  {{name}}
+{{/each}}​
+```
+
 ### Lookup
 
 You can use this helper to access object's and array's items.
