@@ -6,6 +6,7 @@ The Intelligence extension provides the following AI formula functions:
 - [intelligence\extract](#intelligenceextract)
 - [intelligence\summarize](#intelligencesummarize)
 - [intelligence\createSummaryNote](#intelligencecreatesummarynote)
+- [intelligence\prompt](#intelligenceprompt)
 
 These formula functions can be utilized in the [BPM](../../administration/bpm.md) tool.
 It is recommended that the process flow utilizing these functions is run in [idle](../../administration/bpm-tips.md#execution-in-idle).
@@ -106,4 +107,18 @@ Use case. Automatically create a summary note for every incoming case.
 
     ```
     intelligence\createSummaryNote('Case', id);
+    ```
+
+### intelligence\prompt
+
+`intelligence\prompt(MESSAGE, [INSTRUCTIONS])`
+
+*As of Intelligence v1.2.*
+
+Send a generic prompt to an LLM. Returns a string response.
+
+!!! example
+
+    ```
+    $translatedMessage = intelligence\prompt($message, "You are a translator to German. Translate an entire input message.");
     ```
