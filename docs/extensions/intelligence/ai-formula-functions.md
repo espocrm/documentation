@@ -115,7 +115,7 @@ Use case. Automatically create a summary note for every incoming case.
 
 *As of Intelligence v1.2.*
 
-Send a generic prompt to an LLM. Returns a string response.
+Sends a generic prompt to an LLM. Returns a string response.
 
 !!! example
 
