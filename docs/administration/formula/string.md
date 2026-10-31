@@ -14,6 +14,7 @@
 * [string\matchAll](#stringmatchall)
 * [string\matchExtract](#stringmatchextract)
 * [string\replace](#stringreplace)
+* [string\replaceMany](#stringreplacemany)
 * [string\split](#stringsplit)
 
 
@@ -213,6 +214,25 @@ Replaces all occurrences of SEARCH with REPLACE in STRING.
 
     The REPLACE parameter must be a string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
 
+## string\replaceMany
+
+`string\replaceMany(STRING, MAP)`
+
+*As of v10.1.*
+
+Replaces multiple substrings.
+
+!!! example
+
+    ```
+    $map = object\create();
+    $map['{one}'] = 'one';
+    $map['{two}'] = 'two';
+    
+    $output = string\replaceMany("Test {one} {two}.", $map);
+    ```
+
+    Will return `'Test one two'`.
 
 ## string\split
 
