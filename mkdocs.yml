@@ -68,8 +68,12 @@ nav:
             - 'Caddy reverse proxy': 'administration/docker/caddy.md'
         - 'Installation': 'administration/installation.md'
         - 'Upgrading': 'administration/upgrading.md'
+        - Deployment Guides: 
+            - 'DigitalOcean': 'administration/docker/digital-ocean.md'
         - Miscellaneous:
           - 'WebSocket': 'administration/websocket.md'
+          - 'DNS configuration': 'administration/DNS-configuration.md'
+          - 'Fail2ban configuration': 'administration/Fail2ban.md'
           - 'Portal':
             - 'Configuring portal in Apache': 'administration/portal/apache-configuration.md'
             - 'Configuring portal in Nginx': 'administration/portal/nginx-configuration.md'
