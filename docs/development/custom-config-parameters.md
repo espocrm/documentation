@@ -45,6 +45,10 @@ The *level* parameter defines availability of the config parameter in the front-
 
 The *readOnly* [parameter](metadata/app-config.md#readonly) disables the ability to change the parameter value for admin users. 
 
+!!! note
+
+    If your custom field in the Settings is of type `file` or `image`, the uploaded attachment will be readable by all users, including portal users.
+
 ### 3. Metadata app > adminPanel
 
 Create a file `custom/Espo/Modules/MyModule/Resources/metadata/app/adminPanel.json`:
