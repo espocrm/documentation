@@ -54,6 +54,7 @@ Functions:
 * [string\matchAll](formula/string.md#stringmatchall)
 * [string\matchExtract](formula/string.md#stringmatchextract)
 * [string\replace](formula/string.md#stringreplace)
+* [string\replaceMany](formula/string.md#stringreplaceMany)
 * [string\split](formula/string.md#stringsplit)
 
 ## Datetime
