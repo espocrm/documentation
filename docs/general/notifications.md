@@ -127,4 +127,6 @@ The new notification counter on the bell icon counts groups rather than individu
 For example, 10 updates in the same Account record will be counted as 1 new notification. A group displays the number of new entries in it and can be expanded to view every single notification.
 If a group contains an update about the record being assigned to the user, it is marked with the *Assigned* label.
 
+Clicking the checkbox icon on a group marks the entire group as read.
+
 Grouping is enabled by default. Each user can turn it off in their preferences with the *Group notifications* parameter.
