@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Notifications
 
 EspoCRM notifies users about events relevant to them. Notifications are delivered in-app (the bell icon on the navbar) and, optionally, by email.
