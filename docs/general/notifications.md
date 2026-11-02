@@ -43,8 +43,6 @@ If the *Notification Sound* parameter is checked in Preferences, a sound is play
 By default, the application checks for new popup notifications using a polling method.
 If [WebSocket](../administration/websocket.md) is enabled, they are delivered instantly.
 
-Popup reminders are not available in portals.
-
 Developers can add custom popup notification [types](../development/metadata/app-popup-notifications.md).
 
 #### Reminders
@@ -59,7 +57,10 @@ Notification settings are available at Administration > Notifications.
 ### In-app notifications
 
 * *Entities to notify about upon assignment* – entity types for which users receive
-an in-app notification when a record is assigned to them. Only entity types without the Stream are available here, as for entity types with the Stream enabled, users are notified about assignment via the Stream. Default: Meetings, Calls, Emails.
+an in-app notification when a record is assigned to them.
+Only entity types without the Stream are available here.
+For entity types with the Stream enabled, assignment notifications are delivered as Stream notifications.
+Default: Meetings, Calls, Emails.
 * *Display new notification number in page title* – the number of new notifications will be displayed
 in the browser tab title.
 
