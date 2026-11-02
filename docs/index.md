@@ -78,6 +78,7 @@
 * [Multiple assigned users](administration/multiple-assigned-users.md)
 * [Record locking](general/record-locking.md)
 * [Phone numbers](administration/phone-numbers.md)
+* [Notifications](general/notifications.md)
 * [Maps](administration/maps.md)
 * [SMS sending](administration/sms-sending.md)
 ---
