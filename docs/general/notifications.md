@@ -7,6 +7,8 @@ search:
 
 EspoCRM notifies users about events relevant to them. Notifications are delivered in-app (the bell icon on the navbar) and, optionally, by email.
 
+## Types
+
 ### In-app notifications
 
 Users receive in-app notifications about:
@@ -32,7 +34,7 @@ Users can receive email notifications about:
 * emails received in records they follow;
 * posts addressed to them.
 
-Email notifications are disabled by default. An administrator needs to [enable](#email-notifications) them,
+Email notifications are disabled by default. An administrator needs to [enable](#email-notifications_1) them,
 and users can opt out in their [preferences](#preferences). Notifications about followed records are sent only for the entity types specified by the administrator (by default, only Cases).
 
 ### Popup notifications
