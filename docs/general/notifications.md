@@ -13,7 +13,7 @@ EspoCRM notifies users about events relevant to them. Notifications are delivere
 
 Users receive in-app notifications about:
 
-* new Stream entries (posts, status updates, received emails, etc.) in records they [follow](../user-guide/stream.md);
+* new [Stream](../user-guide/stream.md) entries (posts, status updates, received emails, etc.) in records they follow;
 * being assigned to a record;
 * mentions in posts;
 * posts addressed to them;
