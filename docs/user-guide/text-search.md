@@ -26,7 +26,11 @@ Text search history is stored in the browser's local storage. Previous search qu
 
 ## Global search
 
-The Global Search performs search in multiple entity types simultaneously.
+The Global Search performs search in multiple entity types simultaneously. It is available in the top navbar.
+
+Type a search query into the search field in the top navbar and press *Enter* (or click the search icon). The results from all configured entity types are displayed in a single list. For entity types that have a status field (e.g. Leads), the status is shown next to the record.
+
+While typing, the search field suggests matching application features (e.g. entity types) for quick navigation. These suggestions are not search results; press *Enter* to initiate the actual search.
 
 The list of entity types used in the Global Search can be configured under Administration > Settings > Global Search Entity List.
 
