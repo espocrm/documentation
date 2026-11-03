@@ -119,9 +119,9 @@ In `data/config-internal.php`:
 ```
 'oAuthServer': [
     'ttl' => [
-        'authorizationCode' => 'PT10M,
-        'accessToken' => 'PT1H,
-        'refreshToken' => 'P1M,
+        'authorizationCode' => 'PT10M',
+        'accessToken' => ''PT1H',
+        'refreshToken' => 'P1M',
     ],
 ]
 ```
