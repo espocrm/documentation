@@ -34,12 +34,13 @@ If you want a job to be run as often as possible, you need to set the scheduling
 
     Daemon is already configured in our [Docker setup](docker/installation.md).
 
-There are two job processing setup options:
+There are the following job processing setup options:
 
 * [Crontab](#cron)
 * [Daemon](#daemon)
+* [Workers](#workers)
 
-For both, it's **highly recommended** to turn on processing jobs **in parallel** processes: Administration > Job Settings > Jobs Run in Parallel.
+For the first two, it is **highly recommended** to turn on processing jobs **in parallel** processes: Administration > Job Settings > Jobs Run in Parallel.
 
 !!! note
 
@@ -107,6 +108,10 @@ Command to start the service:
 ```
 systemctl start espocrm-daemon.service
 ```
+
+### Workers
+
+See in the separate [article](system/job-workers.md).
 
 ## Running jobs in parallel processes
 

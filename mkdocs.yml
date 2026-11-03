@@ -77,6 +77,8 @@ nav:
         - 'System':
             - 'Extensions': 'administration/extensions.md'            
             - 'Jobs': 'administration/jobs.md'
+            - 'Jobs setup':
+              - 'Job workers': 'administration/system/job-workers.md'
             - 'Config parameters': 'administration/config-params.md'
             - 'Log': 'administration/log.md'
             - 'Console commands': 'administration/commands.md'
