@@ -86,7 +86,7 @@ X-Api-Key: API_KEY_COPIED_FROM_THE_USER_DETAIL_VIEW
 
 ### HMAC Authentication
 
-The most secure method. You need to create an API User (Administration > API Users) with the *HMAC authentication* method. Apply a needed role to the user to grant access to specific scopes.
+A more secure method. You need to create an API User (Administration > API Users) with the *HMAC authentication* method. Apply a needed role to the user to grant access to specific scopes.
 
 Authentication header:
 
@@ -97,6 +97,13 @@ where
 
 * `method` – GET, POST, PUT, DELETE;
 * `uri` – a request path, e.g. `Lead/action/convert`.
+
+### OAuth 2.0
+
+*As of v10.1.*
+
+With OAuth, a remote application can access the EspoCRM API under regular and admin users.
+See more in the separate [article](../administration/authentication/oauth-server.md).
 
 ### Basic Authentication
 
