@@ -111,3 +111,17 @@ Revoke all tokens for a specific user:
 ```
 oauth-server:revoke-tokens --username={username}
 ```
+
+## Config parameters
+
+In `data/config-internal.php`:
+
+```
+'oAuthServer': [
+    'ttl' => [
+        'authorizationCode' => 'PT10M,
+        'accessToken' => 'PT1H,
+        'refreshToken' => 'P1M,
+    ],
+]
+```
