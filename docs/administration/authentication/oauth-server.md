@@ -1,4 +1,4 @@
-# OAuth 2.0 authentication
+# OAuth 2.0 Authentication
 
 *As of v10.1.*
 
