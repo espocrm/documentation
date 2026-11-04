@@ -63,6 +63,7 @@
   * [File storage](administration/file-storage.md)
 * Miscellaneous
   * [Addresses](administration/addresses.md)
+  * [OAuth providers](administration/oauth-providers.md)
   * [B2C mode](administration/b2c.md)
 
 ---
