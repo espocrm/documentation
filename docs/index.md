@@ -107,6 +107,7 @@
 * [Search in lists](user-guide/search-in-lists.md)
 * [Working time calendar](user-guide/working-time-calendar.md)
 * [Printing to PDF](user-guide/printing-to-pdf.md)
+* [Merging records](user-guide/merging-records.md)
 * Miscellaneous
   * [Shortcut keys](user-guide/shortcuts.md)
   * [Markdown syntax](user-guide/markdown.md)
