@@ -80,6 +80,7 @@
 * [Collaborators](administration/collaborators.md)
 * [Multiple assigned users](administration/multiple-assigned-users.md)
 * [Record locking](general/record-locking.md)
+* [Kanban view](general/kanban.md)
 * [Phone numbers](administration/phone-numbers.md)
 * [Notifications](general/notifications.md)
 * [Maps](administration/maps.md)
