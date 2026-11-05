@@ -63,7 +63,9 @@ Permissions that need to be enabled:
 * Calendars.ReadWrite – optional – for calendar sync;
 * Contacts.ReadWrite – optional – for contacts pushing;
 * IMAP.AccessAsUser.All – optional – for email fetching;
-* SMTP.Send – optional – for email sending.
+* SMTP.Send – optional – for email sending;
+* Mail.Send – optional – if you opt to send emails via GraphAPI;
+* Mail.Send.Shared – optional – if you opt to send emails via GraphAPI and use shared mailboxes for group email accounts.
 
 ![Permissions](../../_static/images/extensions/outlook-integration/setting-up/10.png)
 
