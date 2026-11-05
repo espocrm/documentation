@@ -230,7 +230,7 @@ Invoices can be exported to EN 16931 electronic invoices in a UBL format. The fo
 * CIUS-ES-FACE
 * NLCIUS
 
-ZUGFeRD / X-Factur (PDF with CII attachment) is also supported (as of v4.4.3). 
+ZUGFeRD / X-Factur (PDF with CII attachment) is also supported (as of v4.4.3). To be able to export to it, you need to specify the default PDF template under Administration > Sales Pack Settings > Templates.
 
 To export an Invoice to a UBL file, click **E-Invoice** from the dropdown menu next to the **Edit** button on the Invoice detail view. The UBL file can be also attached along with a PDF when sending an Invoice in email.
 
