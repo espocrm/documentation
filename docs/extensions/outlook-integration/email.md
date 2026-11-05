@@ -50,7 +50,7 @@ Requires EspoCRM v9.1 or greater.
 
 *Mail.Send* API permission should be enabled for the Azure application in the API Permissions tab.  
 
-An administrator can enable sending emails via Graph API. Under Administration > Integrations > Outlook, check *Send emails via Graph API*.
+An administrator can enable sending emails via Graph API. Under Administration > Integrations > Outlook, check *Send emails via Graph API*. If not enabled, XOAuth is used.
 
 !!! important
 
