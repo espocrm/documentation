@@ -26,7 +26,7 @@ One User can have multiple Roles applied. Roles can be set in the User record (t
 
 When a User has multiple Roles, these Roles will be merged in a way that a more permissive rule will have a higher priority over a less permissive. This enables the ability to flexibly manage access level control.
 
-It's possible to see what permissions are applied to a certain User by clicking the *Access* button on the user's detail view.
+It is possible to see what permissions are applied to a certain User by clicking the *Access* button on the user's detail view.
 
 ![1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/roles-management/scope-level.png)
 
@@ -42,7 +42,7 @@ By default, Users have minimal access levels restricting almost everything. You 
 
 *As of v9.2.*
 
-It's possible to designate one role as a baseline. This role will be applied for all internal users. Other roles assigned to a user will grant permissions on top of the baseline.
+It is possible to designate one role as a baseline. This role will be applied for all internal users. Other roles assigned to a user will grant permissions on top of the baseline.
 
 The baseline role can be set under: Administration > Settings > Access.
 
