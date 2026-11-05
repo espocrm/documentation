@@ -74,6 +74,10 @@ An administrator can configure which fields are available for field filters at A
 When multiple field filters are applied, they work exclusively.
 This means a record is listed if it matches all field filters.
 
+!!! tip
+
+    Use *Ctrl + Enter* shortcut to apply changed filters quickly.
+
 ## Storing filters as presets
 
 Field filters can be stored as a preset filter. A user can create multiple preset filters.
