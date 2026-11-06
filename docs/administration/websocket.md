@@ -7,7 +7,8 @@ Out-of-the-box the WebSocket covers the following features:
 * New in-app notifications;
 * New event reminders;
 * Updates in stream on the record detail view;
-* Updates of the detail view.
+* Updates of the detail view;
+* Updates in the Calendar.
 
 !!! important
 
