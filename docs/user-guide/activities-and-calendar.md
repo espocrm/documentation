@@ -132,6 +132,8 @@ It's possible to view the calendar of another user (is you have an access determ
 
 To refresh calendar items, you can click on the date range title at the top in the center.
 
+If [WebSocket](../administration/websocket.md) is configured, the calendar is refreshed automatically when changes occur.
+
 ### Shared calendar
 
 Users can create custom shared views that will display events of specific teams.
