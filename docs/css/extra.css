@@ -126,3 +126,8 @@ a.md-nav__link:not(.md-nav__container):hover {
         }
     }
 }
+
+
+.md-source {
+    display: none;
+}
