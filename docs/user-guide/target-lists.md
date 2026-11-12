@@ -18,6 +18,8 @@ Target lists can be populated with records manually. Records can be added one by
 
 To add multiple records in bulk, click *Select* from the dropdown menu in the bottom panel. Search using the desired criteria, then apply *Select All Results* and click *Select*.
 
+Alternatively, you can add records and remove them from target lists using Mass Update in the list view of the corresponding record type. The *Target Lists* field is available in Mass Update for Accounts, Contacts and Leads.
+
 ### Sync with report
 
 *Requires the Advanced Pack extension.*
