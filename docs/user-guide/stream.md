@@ -122,7 +122,7 @@ The separate navbar Global Stream tab is available. It can be also reached from 
 
 !!! note
 
-    If a user does not have *all* access level for all entity types, there are possible scenarios leading to an empty or not complete result list being displayed. It's a server load optimization measure when it would take too much of resources to find the first records the user has access to. Consider adding some search filters in such cases.
+    If a user does not have *all* access level for all entity types, there are possible scenarios leading to an empty or not complete result list being displayed. It is a server-load optimization measure preventing excessive resource consumption when searching for the first records the user has access to. Consider adding search filters to narrow down the results in such cases.
 
 ## See also
 
