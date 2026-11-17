@@ -42,6 +42,10 @@ Note: Column names should be in camel case.
 
 You need to run rebuild after changes.
 
+#### Delete ID
+
+For unique indexes, it may be reasonable to add the `deleteId` column. This prevents uniqueness checks from including soft-deleted records. You also need to set `deleteId` to `true` in the entity's `entityDefs` metadata.  
+
 ## Forcing index usage in ORM
 
 Specify an index name in *useIndex* param.
