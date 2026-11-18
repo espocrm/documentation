@@ -156,6 +156,24 @@ Available if the alignment is enabled and the proration policy is set to *Charge
 
 Alignment prorated periods shorter than the specified number of days won't be charged. If the value is not specified, then the alignment period will always be charged.
 
+#### Create invoices
+
+*As of v4.5.*
+
+If enabled, an invoice is created automatically for each period.
+
+If disabled, periods are created without invoices.
+
+#### Settle periods automatically
+
+*As of v4.5.*
+
+This parameter is available only if *Create Invoices* is disabled.
+
+If enabled, periods are created with the Settled billing status. The subscription is never set to Past Due or Stopped because of non-payment.
+
+If disabled, periods are created with the Pending billing status and need to be handled manually.
+
 #### Create payment requests
 
 If enabled, payment requests will be automatically created upon invoice creation.
