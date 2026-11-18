@@ -122,6 +122,8 @@ Defines how the invoice date due is calculated. The specified number of days is 
 
 How many days in advance of the next billing cycle an invoice is created. If it is set to 0, the invoice will be issued on the first day of the next billing cycle.
 
+If *Create Invoices* is disabled, the parameter controls how many days in advance the next period is created.
+
 #### Alignment
 
 Enables billing cycle alignment. The following alignment options are available:
