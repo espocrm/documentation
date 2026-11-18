@@ -166,7 +166,7 @@ If enabled, an invoice is created automatically for each period.
 
 If disabled, periods are created without invoices.
 
-#### Settle periods automatically
+#### Create periods as settled
 
 *As of v4.5.*
 
