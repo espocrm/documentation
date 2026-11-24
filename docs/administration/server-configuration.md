@@ -43,7 +43,7 @@ EspoCRM requires PHP with the following extensions:
 * [mbstring](https://php.net/manual/en/book.mbstring.php);
 * [iconv](https://php.net/manual/en/book.iconv.php);
 * [curl](https://php.net/manual/en/book.curl.php) – for integrations;
-* [xml](https://php.net/manual/en/book.xml.php) – for excel export;
+* [xml](https://php.net/manual/en/book.xml.php);
 * [xmlwriter](http://php.net/manual/en/book.xmlwriter.php) – for excel export;
 * [exif](https://php.net/manual/en/book.exif.php) – for a proper orientation of uploaded images;
 * [bcmath](https://www.php.net/manual/en/book.bc.php) – arbitrary precision mathematics;
