@@ -6,6 +6,7 @@ In this article:
 - [Installing with Docker Compose](#docker-compose)
 - [Installing with Traefik](#traefik)
 - [Installing with Caddy](#caddy)
+- [Setting passwords](#setting-passwords)
 - [Upgrading](#upgrading)
 - [Maintenance](#maintenance)
 - [Running a shell](#running-a-shell)
@@ -25,6 +26,10 @@ Docker Run allows you to launch EspoCRM containers directly using command-line c
 
 See the [Maintenance](#docker-run_2) and [Upgrading](#docker-run_1) sections for operational guidance.
 
+!!! warning
+
+    The commands below contain placeholder passwords. Replace them with your own before running anything. See [Setting passwords](#setting-passwords).
+
 #### Quick start
 
 ```bash
@@ -39,17 +44,17 @@ docker run \
   --restart unless-stopped \
   -e MARIADB_DATABASE=espocrm \
   -e MARIADB_USER=espocrm \
-  -e MARIADB_PASSWORD=database_password \
-  -e MARIADB_ROOT_PASSWORD=database_root_password \
+  -e MARIADB_PASSWORD=your_database_password \
+  -e MARIADB_ROOT_PASSWORD=your_database_root_password \
   -v espocrm-db:/var/lib/mysql \
   -d mariadb && \
 docker run \
   --name espocrm \
   --network espocrm-network \
   --restart unless-stopped \
-  -e ESPOCRM_DATABASE_PASSWORD=database_password \
+  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
   -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=admin_password \
+  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
   -v espocrm-data:/var/www/html/data \
   -v espocrm-custom:/var/www/html/custom \
   -v espocrm-custom-client:/var/www/html/client/custom \
@@ -64,7 +69,7 @@ docker run \
   -d espocrm
 ```
 
-Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `admin_password`.
+Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `your_admin_password`.
 
 #### Step by step
 
@@ -94,8 +99,8 @@ docker run \
   --restart unless-stopped \
   -e MARIADB_DATABASE=espocrm \
   -e MARIADB_USER=espocrm \
-  -e MARIADB_PASSWORD=database_password \
-  -e MARIADB_ROOT_PASSWORD=database_root_password \
+  -e MARIADB_PASSWORD=your_database_password \
+  -e MARIADB_ROOT_PASSWORD=your_database_root_password \
   -v espocrm-db:/var/lib/mysql \
   -d mariadb
 ```
@@ -107,9 +112,9 @@ docker run \
   --name espocrm \
   --network espocrm-network \
   --restart unless-stopped \
-  -e ESPOCRM_DATABASE_PASSWORD=database_password \
+  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
   -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=admin_password \
+  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
   -v espocrm-data:/var/www/html/data \
   -v espocrm-custom:/var/www/html/custom \
   -v espocrm-custom-client:/var/www/html/client/custom \
@@ -129,7 +134,7 @@ docker run \
   -d espocrm
 ```
 
-Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `admin_password`.
+Then, access the EspoCRM instance via `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with the credentials: `admin` and `your_admin_password`.
 
 #### Custom site URL
 
@@ -142,14 +147,14 @@ docker run \
   -p 8080:80 \
   -e ESPOCRM_DATABASE_HOST=espocrm-db \
   -e ESPOCRM_DATABASE_USER=espocrm \
-  -e ESPOCRM_DATABASE_PASSWORD=database_password \
+  -e ESPOCRM_DATABASE_PASSWORD=your_database_password \
   -e ESPOCRM_ADMIN_USERNAME=admin \
-  -e ESPOCRM_ADMIN_PASSWORD=admin_password \
+  -e ESPOCRM_ADMIN_PASSWORD=your_admin_password \
   -e ESPOCRM_SITE_URL=http://192.168.0.100:8080 \
   -d espocrm:latest
 ```
 
-Then, access the EspoCRM instance via `http://192.168.0.100:8080` with the credentials: `admin` and `admin_password`.
+Then, access the EspoCRM instance via `http://192.168.0.100:8080` with the credentials: `admin` and `your_admin_password`.
 
 #### Reset
 
@@ -160,6 +165,10 @@ If you'd like to start over or delete your data, refer to the [reset and cleanup
 Docker Compose simplifies container orchestration by defining all services in a single configuration file. It automatically manages networking, dependencies, and health checks between containers. This approach is ideal for production deployments as it's easier to version-control, scale, and maintain your entire setup.
 
 See the [Maintenance](#docker-compose_2) and [Upgrading](#docker-compose_1) sections for operational guidance.
+
+!!! warning
+
+    The `docker-compose.yml` file below contains placeholder passwords. Replace them with your own before running `docker compose up`. See [Setting passwords](#setting-passwords).
 
 1\. Create an empty directory.
 
@@ -182,10 +191,10 @@ services:
     image: mariadb:latest
     container_name: espocrm-db
     environment:
-      MARIADB_ROOT_PASSWORD: database_root_password
+      MARIADB_ROOT_PASSWORD: your_database_root_password
       MARIADB_DATABASE: espocrm
       MARIADB_USER: espocrm
-      MARIADB_PASSWORD: database_password
+      MARIADB_PASSWORD: your_database_password
     volumes:
       - espocrm-db:/var/lib/mysql
     restart: unless-stopped
@@ -202,9 +211,9 @@ services:
     environment:
       ESPOCRM_DATABASE_HOST: espocrm-db
       ESPOCRM_DATABASE_USER: espocrm
-      ESPOCRM_DATABASE_PASSWORD: database_password
+      ESPOCRM_DATABASE_PASSWORD: your_database_password
       ESPOCRM_ADMIN_USERNAME: admin
-      ESPOCRM_ADMIN_PASSWORD: admin_password
+      ESPOCRM_ADMIN_PASSWORD: your_admin_password
       ESPOCRM_SITE_URL: "http://localhost:8080"
     volumes:
       - espocrm-data:/var/www/html/data
@@ -279,7 +288,7 @@ More about *Installation Environments* you can find [here](#installation-environ
 docker compose up -d
 ```
 
-5\. Access it at `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `admin_password`.
+5\. Access it at `http://localhost:8080` or `http://YOUR_IP_ADDRESS:8080` with credentials `admin` and `your_admin_password`.
 
 #### Reset
 
@@ -292,6 +301,36 @@ You can read the instructions for installing EspoCRM in conjunction with Traefik
 ### Caddy
 
 You can read the instructions for installing EspoCRM in conjunction with Caddy in the Docker Compose environment [here](https://docs.espocrm.com/administration/docker/caddy/).
+
+## Setting passwords
+
+The commands and configuration files in this article contain placeholder passwords. Before running anything, replace each placeholder with your own strong, unique password. Never deploy EspoCRM with the placeholder values.
+
+| Placeholder | Variables | What it is |
+|---|---|---|
+| `your_database_password` | `MARIADB_PASSWORD`, `ESPOCRM_DATABASE_PASSWORD` | Password of the `espocrm` database user, which EspoCRM uses to connect to MariaDB. Both variables must have the same value. |
+| `your_database_root_password` | `MARIADB_ROOT_PASSWORD` | Password of the MariaDB `root` user. EspoCRM does not use it, but you will need it for database administration, such as backups or manual SQL queries. |
+| `your_admin_password` | `ESPOCRM_ADMIN_PASSWORD` | Password of the EspoCRM administrator account (username `admin`) that you use to log in to the web interface. |
+
+### Choosing a password
+
+The easiest way to get a strong password is to generate one:
+
+```bash
+openssl rand -hex 16
+```
+
+The output contains only digits and the letters `a` to `f`, so it can be pasted into both shell commands and `docker-compose.yml` without escaping. A password manager works just as well.
+
+### Production recommendation
+
+Passwords passed as environment variables are visible in your shell history, in `docker-compose.yml`, and in the output of `docker inspect`. For production, consider passing them via [Docker Secrets](#docker-secrets) instead.
+
+### Passwords are set only once
+
+These values are applied only on the first start, while the volumes are empty: MariaDB creates its users from them, and EspoCRM creates the administrator account. Changing them later in the command or in `docker-compose.yml` has no effect on an existing installation.
+
+If you started EspoCRM with the wrong passwords and have no data to keep, remove the containers and volumes and start again (see Reset and cleanup for [Docker Run](#reset-and-cleanup) or [Docker Compose](#reset-and-cleanup_1)). On an installation that is already in use, change the administrator password in EspoCRM itself. Changing a database password requires updating it both in MariaDB and in the EspoCRM configuration (`data/config-internal.php`).
 
 ## Upgrading
 

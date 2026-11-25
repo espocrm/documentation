@@ -7,7 +7,11 @@ To integrate Traefik with EspoCRM, you can use the Docker Compose environment. Y
 
 1\. Create a directory.
 
-2\. Create `docker-compose.yml` file in that directory:
+2\. Create `docker-compose.yml` file in that directory.
+
+!!! warning
+
+    The `docker-compose.yml` file below contains placeholder passwords. Replace them with your own before running `docker compose up`. See [Setting passwords](installation.md#setting-passwords).
 
 #### docker-compose.yml
 
