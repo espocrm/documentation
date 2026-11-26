@@ -308,9 +308,9 @@ The commands and configuration files in this article contain placeholder passwor
 
 | Placeholder | Variables | What it is |
 |---|---|---|
+| `your_admin_password` | `ESPOCRM_ADMIN_PASSWORD` | Password of the EspoCRM administrator account (username `admin`) that you use to log in to the web interface. |
 | `your_database_password` | `MARIADB_PASSWORD`, `ESPOCRM_DATABASE_PASSWORD` | Password of the `espocrm` database user, which EspoCRM uses to connect to MariaDB. Both variables must have the same value. |
 | `your_database_root_password` | `MARIADB_ROOT_PASSWORD` | Password of the MariaDB `root` user. EspoCRM does not use it, but you will need it for database administration, such as backups or manual SQL queries. |
-| `your_admin_password` | `ESPOCRM_ADMIN_PASSWORD` | Password of the EspoCRM administrator account (username `admin`) that you use to log in to the web interface. |
 
 ### Choosing a password
 
@@ -326,11 +326,19 @@ The output contains only digits and the letters `a` to `f`, so it can be pasted 
 
 Passwords passed as environment variables are visible in your shell history, in `docker-compose.yml`, and in the output of `docker inspect`. For production, consider passing them via [Docker Secrets](#docker-secrets) instead.
 
+### Changing the administrator password
+
+After you log in to EspoCRM for the first time, change the administrator password in your user profile. The password you set in `ESPOCRM_ADMIN_PASSWORD` stays in your shell history, in `docker-compose.yml`, and in the container configuration. Once you change it in EspoCRM, the stored value no longer grants access. The variable is used only during installation, so the new password is not overwritten when the container restarts.
+
 ### Passwords are set only once
 
 These values are applied only on the first start, while the volumes are empty: MariaDB creates its users from them, and EspoCRM creates the administrator account. Changing them later in the command or in `docker-compose.yml` has no effect on an existing installation.
 
-If you started EspoCRM with the wrong passwords and have no data to keep, remove the containers and volumes and start again (see Reset and cleanup for [Docker Run](#reset-and-cleanup) or [Docker Compose](#reset-and-cleanup_1)). On an installation that is already in use, change the administrator password in EspoCRM itself. Changing a database password requires updating it both in MariaDB and in the EspoCRM configuration (`data/config-internal.php`).
+### Changing passwords after installation
+
+If you started EspoCRM with the wrong passwords and have no data to keep, remove the containers and volumes and start again (see Reset and cleanup for [Docker Run](#reset-and-cleanup) or [Docker Compose](#reset-and-cleanup_1)).
+
+On an installation that is already in use, change the administrator password in EspoCRM itself (see [below](#changing-the-administrator-password)). Changing a database password requires updating it both in MariaDB and in the EspoCRM configuration (`data/config-internal.php`).
 
 ## Upgrading
 
