@@ -338,7 +338,7 @@ These values are applied only on the first start, while the volumes are empty: M
 
 If you started EspoCRM with the wrong passwords and have no data to keep, remove the containers and volumes and start again (see Reset and cleanup for [Docker Run](#reset-and-cleanup) or [Docker Compose](#reset-and-cleanup_1)).
 
-On an installation that is already in use, change the administrator password in EspoCRM itself (see [below](#changing-the-administrator-password)). Changing a database password requires updating it both in MariaDB and in the EspoCRM configuration (`data/config-internal.php`).
+On an installation that is already in use, change the administrator password in EspoCRM itself (see [abow](#changing-the-administrator-password)). Changing a database password requires updating it both in MariaDB and in the EspoCRM configuration (`data/config-internal.php`).
 
 ## Upgrading
 
